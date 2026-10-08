@@ -210,7 +210,7 @@ flowchart LR
 - [ ] **H:** realistic human $R$ and hard-selected load, with confidence intervals on T50
 - [ ] **Sources:** Yoo 2025's $\mu$, to rescale $N_{e,\text{anc}}$. Verify Takahata 1995, Charlesworth 2009 and the Haak 2015 panel design
 
-**R5:** final verdicts, a sensitivity table, the simulator variable list and a published summary.
+**R5:** final verdicts, a sensitivity table, the simulator variable list and a published summary. After R5: ELI5, ELI12 and ELI18 explainers ([plan](docs/research/explainers-plan.md)).
 
 **Simulator knobs (draft):**
 - Population: $N$, $N_e$, offspring variance, sexual vs asexual, demography over time, start state
