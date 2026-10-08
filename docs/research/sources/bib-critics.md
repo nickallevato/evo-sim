@@ -160,3 +160,4 @@ Third-party archives used: Arctic Shift (Reddit mirror, because reddit.com retur
 | yt/nTVRiEcswI8.info.json | 720078 | 2a3cd824ed9c1a7cf48b0e6676c2d416f0337d34ac5a304cf3d3c1969191ea28 |
 | yt/nTVRiEcswI8.log | 3323 | c6a002ed7a825163c7d937bedab9a5abe5175f2093da2f286542a7937a0fb178 |
 | yt/nTVRiEcswI8.transcript.txt | 2181 | 78d0f519773257dd9e7148c0301c277493347feef733b50be1709a1c1de7f67e |
+| DembskiWhoppers2022 | ally | William Dembski | 2022 | Jason Rosenhouse's Whoppers | https://billdembski.com/intelligent-design/jason-rosenhouses-whoppers/ | sources/raw/critics/dembski-whoppers-2022.html | 42aed3b9d29993a5a232c07d19caca8f40cd8068cf4d010b172fbeecbd8a4236 | ok | D | Rosenhouse (ID math, not Wistar) | added in R2 by D/ROOT agent |

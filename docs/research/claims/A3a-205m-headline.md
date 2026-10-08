@@ -1,0 +1,54 @@
+---
+id: A3a
+title: "Required fixations rise to 205M: 410M genomic differences from Yoo 2025, halved per lineage"
+side: day
+branch: A
+parent: A3
+edges: [{type: supersedes, target: A3}, {type: depends-on, target: A3x1}]
+load_bearing: false
+sourcing: firsthand
+status: checked
+verdicts:
+  internal: arithmetic-error
+  fidelity: misread
+  external: contested
+---
+
+## Statement (verbatim)
+> approximately 35 million SNVs, 1,140 interspecific inversions, and approximately 187 megabases of structurally divergent regions, for a total of approximately 410 million genomic differences. Apportioned symmetrically to the human lineage this yields approximately 205 million required fixations.
+
+Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.11 (s7.1).
+
+> the genetic difference between chimps and humans turned out to be 14.9 percent, with 410 million base pairs separating the two lineages since the Chimpanzee-Human Last Common Ancestor.
+
+Source: [Probability Zero 2nd edition](https://voxday.net/2026/05/23/probability-zero-2nd-edition/) (key B2026-05-23), blog, 2026-05-23, ¶6.
+
+## Formal statement
+R_2026 = 410e6 / 2 = 205e6 per lineage (`divergence.required_fixations.day_2026`, derived: 410e6 bp / 2).
+
+`derived:` the stated components do not sum to the stated total: 35e6 + 1,140 + 187e6 = 222,001,140, not 410e6; the text does not show the arithmetic and mixes units (SNVs, events, megabases). 410e6 = 14.9% of 2.75e9 bp (410/0.149 = 2,752 Mb), whereas a haploid human genome is 3.1–3.2e9 bp (0.149 x 3.1e9 = 462e6). The only reconciling arithmetic in the repo is 410/35 = 11.7 (the KITTENS ratio, A5b). Yoo 2025 SDR averages 327 Mb per lineage (x2 = 654 Mb); no pair or sum of the Yoo SDR totals gives 187 or 410 (closest: 412.1, flagged a coincidence).
+Version arithmetic that does reconcile: 1,075,000 = 205e6 / 190.6 (1,075,437); 17.5e6 SNV-only: 91,806 (paper 91,600).
+
+## Assumptions
+- Stated: complete T2T assemblies reveal more divergence than the 2005 draft; each affected base counts as a required fixation.
+- Implicit: a structural variant of length n bp requires n separate fixations (A3x); the 410M figure comes from Yoo 2025.
+
+## Responses
+- Against: McCarthy (MC-11), Dumb-and-Dumber (RE-05), Hancock (GG-10–GG-12), Sparky_6_4 (RE-08) argue the count mixes bases and events (A3x). Mansfield (MF-06): numbers he has seen are ~25 million, not 200 million.
+- In support: Day concedes in s7.3: "This is a legitimate methodological concern" and runs MITTENS on SNVs alone (A3b).
+- Weaknesses in the responses: the critics' event-count alternative (about 40M) is itself derived from the 2005 consortium counts, not recomputed from Yoo 2025; Hancock (GG-10) only "suspects" the 205M includes gap divergence.
+
+## Primary literature
+| Cited work | What it actually says (quote) | Fidelity |
+|---|---|---|
+| Yoo et al. 2025 | "We catalogued all structurally divergent regions (SDRs) among the ape genomes and found an average of 327 Mb of sequence (10%) per ape lineage"; "we curated 1,140 interspecific inversions" | **not-found** for 410 Mb and 187 Mb (ledger); see A3x1 |
+
+## Pre-registered prediction
+Not run. Prediction (claimant): a lineage-aware count of independent fixed mutational events from Yoo 2025 exceeds 100M. Prediction (critic): it is within 1.5x of 40M events (35M SNV + ~5M indels + ~1,140 inversions + other SV events).
+- Result that would change a verdict: a published count of fixed SV events in human–chimp comparisons.
+
+## Check
+Arithmetic audit (python3 -I, scratch): the 410M total does not reconcile with its stated parts. Review: pending.
+
+## Simulator variables implied
+- `required_fixations` presets: events (about 40M total, 20M per lineage), SNV only (17.5M), bp-affected (205M).

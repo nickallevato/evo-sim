@@ -41,8 +41,11 @@ def main():
     for p in sorted(glob.glob(os.path.join(CLAIMS, "*.md"))):
         if os.path.basename(p).startswith("_"):
             continue
-        fm, body = parse(p)
         name = os.path.relpath(p, ROOT)
+        try:
+            fm, body = parse(p)
+        except yaml.YAMLError as ex:
+            errs.append(f"{name}: YAML front-matter error: {str(ex).splitlines()[0]}"); continue
         if fm is None:
             errs.append(f"{name}: no YAML front-matter"); continue
         cid = str(fm.get("id", ""))

@@ -35,8 +35,8 @@ Rule: every row names the best argument on *each* side, and records weaknesses w
 - Keen gives no equations; Dembski gives no calculation.
 
 **Critics**
-- Hancock: haploid/diploid confusion (76.8), and his de novo count includes structural variants, giving a ~1.8× doubling. His bacterial μ of 1e-11 is below the measured 8.9e-11.
-- Nesslig20: the same factor of 2.
+- Hancock: his first pass used diploid 76.8 but he corrected it on screen. The retained 76 is an SV-inclusive haploid *event* count; SNV-only haploid gives 19.35M vs 35M (1.8× short). His 205M→407/gen halves an already per-lineage figure. His bacterial μ of 1e-11 is below the measured 8.9e-11. (Corrected in R2.)
+- Nesslig20: basis of μ_G = 75 not stated; the factor-of-2 charge is unsettled (R2).
 - McCarthy: assumes N = Nₑ and that all mutations are neutral; cites an uncited 3% figure.
 - Mansfield: his 2% illustration comes out ~44× short.
 - Myers: gives no numbers.

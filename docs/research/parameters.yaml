@@ -33,7 +33,7 @@ ltee:
     day_2019: {value: 1600, source: B2019-02-07, verified: false}
     day_mittens3_nonmutator: {value: 1322, note: "≥95% read-frequency rule", source: Z23003785, verified: true}
     day_ara_plus2: {value: 909, derived: "60000/66", note: "23105291 Table 1 uses 60,500 gens -> 917", source: B2026-10-01-snikker-snak, verified: true}
-    day_23105291_strict_nonmutator: {value: 1587, derived: "from strict (lineage-aware) counts; ≥95% rule inflates counts 37%", source: Z23105291, verified: true}
+    day_23105291_strict_nonmutator: {value: 1587, derived: "from strict (lineage-aware) counts; strict count 37% lower than ≥95%-rule count (≥95% rule +58%)", source: Z23105291, verified: true}
     day_ns_only_parallel_max: {value: 4615, note: "blog only; Zenodo 23003785 gives ~1,408 per beneficial fixation (clone-pair)", source: B2026-09-30, verified: true}
   whole_pop_fixations_lineage_aware:
     day_23105291: {value: 5496, units: "fixations over 723000 population-generations", source: Z23105291, verified: false}

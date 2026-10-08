@@ -15,7 +15,7 @@ Evidence is in `sources/quotes-literature.md`. Every quote there was machine-che
 | Source | Cited for (by) | Status | Evidence / note |
 |---|---|---|---|
 | Kimura 1962 | fixation prob ≈ 2s (Day, Bowers) | **verified-accurate** | p.716: "the probability of ultimate survival of an advantageous mutant gene is approximately twice the selection coefficient". |
-| Kimura 1962 | neutral fixation prob = 1/(2Nₑ) (Day, B3) | **verified-misread** | p.716: the formula is applied "by putting p = 1/(2N)", and "if we let s → 0 … we obtain U = 1/2N, the result known for a neutral gene". N is the census number. Nₑ enters only the selection exponent. |
+| Kimura 1962 | neutral fixation prob = 1/(2Nₑ) (Day, B3) | **verified-misread** | p.716: the formula is applied "by putting p = 1/(2N)", and "if we let s → 0 … we obtain U = 1/2N, the result known for a neutral gene". The paper's N is "the number of reproducing individuals" (not strictly census). It is distinct from Nₑ, which enters the selection exponent. The critics' general case rests on the martingale property (B3 check), not on this paper alone. (Correction from R2 B/F agent.) |
 | Kimura & Ohta 1969 | t̄ = 4Nₑ (Day) | **verified-accurate** | Eq. 15 and Summary: "takes about 4Nₑ generations until fixation in a population of effective size Nₑ". |
 | Kimura & Ohta 1969 | SD ≈ 2.15Nₑ (Day) | **not-found in this paper** | Only the first moment is derived here; the paper says higher moments can be obtained "step by step". The SD figure must come from a later source. Our B0.2 simulation gives SD ≈ 2.1N. |
 | Kimura & Ohta 1969 | neutral fixation fraction (B3/B7) | verified, **supports critics** | p.769: "the remaining minority (fraction 1/2N) spread over the entire population (i.e. reach fixation)", alongside Nₑ for the time. |
@@ -48,3 +48,24 @@ All six blocked papers were downloaded by the user into `sources/raw/sources/man
 
 - **Done:** the Kimura items above are verified against the full text.
 - **Still to do:** checking the mutation rate in Keightley 2012 (its numbers use characters the text grep didn't match), Haak 2015's panel design, Taylor 2001, and extracting the Prado-Martinez PSMC Nₑ histories for B1c.
+
+## R2 additions (2026-10-07): Wistar 1967 quotations in *Probability Zero* 2nd ed., ch. 6
+**Primary text:** ch. 6 is appended to the Dembski interview (`sources/raw/critics/dembski-interview.json`).
+
+**Searched copy:** the Wistar volume via its PDF text layer plus OCR. This is the 1985 Liss reprint scan, so its pagination may differ from the 1967 edition.
+
+| Day's quotation or attribution | Status | Volume says |
+|---|---|---|
+| Ulam: "What I am going to do will come to Eden's conclusions" | **not-found** | pp.22–23: his probabilities "will not come to be as fantastically small as in Professor Eden's conclusions" (pp.24–25 do support the direction) |
+| Lewontin "quasi-continuity … I don't know" exchange | **not-found** | The nearest is Schützenberger, "That's a good question…" (p.79) |
+| "The topology is itself a product of evolution" (Lewontin) | **misattributed** | Levins, p.79 |
+| Mayr: "The very fact that we have this conference…" | **not-found** | Mayr: "We are comforted by knowing that evolution has occurred" (p.30) |
+| A remark attributed to Eden | **misattributed** | Bossert, p.40, about his own model's R² |
+| Eden: hemoglobin conversion "vastly exceeds the time available" | **misread** | Eden printed 2.7M generations, "a little large but not implausible" |
+| Schützenberger "gap" | **partial** | A paraphrase presented inside quotation marks |
+| Waddington summary | **partial (omission)** | Also concedes the meaningful space is "a minute fraction of the total nucleotide space" |
+| Wald (p.19), Crosby (p.17) | verified-accurate | |
+| Eden 10^52 | arithmetic | Eden's own p.7 inputs give 10^55; his working paper says "less than 10^55" (p.110). Immaterial against 10^325. |
+| Wright's twenty-questions passage | page fix | p.117, not p.118 |
+
+**Critic side, for balance:** the Rosenhouse ch.4 and ch.6 claims are known only secondhand (Felsenstein's TOC, Day's transcriptions). We have not read the book, so its fidelity is unverified.
