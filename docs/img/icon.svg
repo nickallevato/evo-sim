@@ -1,26 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="evo-sim icon">
-  <title>evo-sim</title>
-  <!-- Two lineages diverging from a common ancestor (orange = Day's side, blue = critics'), seen through an audit lens. -->
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1e293b"/>
-      <stop offset="1" stop-color="#0b1120"/>
-    </linearGradient>
-    <clipPath id="lens"><circle cx="110" cy="110" r="66"/></clipPath>
-  </defs>
-  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
-  <circle cx="110" cy="110" r="66" fill="#0f172a"/>
-  <g clip-path="url(#lens)" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M110 196 V128" stroke="#94a3b8" stroke-width="12"/>
-    <path d="M110 130 L68 62" stroke="#f59e0b" stroke-width="12"/>
-    <path d="M110 130 L152 62" stroke="#3b82f6" stroke-width="12"/>
-  </g>
-  <g fill="#f8fafc">
-    <circle cx="96" cy="107" r="6"/>
-    <circle cx="82" cy="85" r="6"/>
-    <circle cx="131" cy="96" r="6"/>
-    <circle cx="110" cy="160" r="6"/>
-  </g>
-  <circle cx="110" cy="110" r="66" fill="none" stroke="#e2e8f0" stroke-width="14"/>
-  <path d="M160 160 L206 206" stroke="#e2e8f0" stroke-width="24" stroke-linecap="round"/>
-</svg>
+<svg role="img" aria-label="evo-sim icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+<title>evo-sim</title><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#0b1120"/></linearGradient>
+<clipPath id="lens"><circle cx="110" cy="110" r="59"/></clipPath></defs>
+<rect width="256" height="256" rx="56" fill="url(#bg)"/>
+<circle cx="110" cy="110" r="66" fill="#0f172a"/>
+<g clip-path="url(#lens)" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M101.5 -13.5 L118.5 -13.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M101.5 -4.5 L118.5 -4.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M118.5 4.5 L101.5 4.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M118.5 13.5 L101.5 13.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M101.5 22.5 L118.5 22.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M101.5 31.5 L118.5 31.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M118.5 40.5 L101.5 40.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M118.5 49.5 L101.5 49.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M101.5 58.5 L118.5 58.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M101.5 67.5 L118.5 67.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M118.5 76.5 L101.5 76.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M118.5 85.5 L101.5 85.5" stroke="#f8fafc" stroke-width="3" opacity="0.85"/><path d="M101.5 94.5 L118.5 94.5" stroke="#f8fafc" stroke-width="3" opacity="0.0"/><path d="M101.5 103.5 L118.5 103.5" stroke="#f8fafc" stroke-width="3" opacity="0.0"/><path d="M118.5 112.5 L101.5 112.5" stroke="#f8fafc" stroke-width="3" opacity="0.0"/><path d="M118.5 121.5 L101.5 121.5" stroke="#f8fafc" stroke-width="3" opacity="0.0"/><path d="M114.1 20.0 L116.9 21.5 L119.2 23.0 L120.9 24.5 L121.8 26.0 L122.0 27.5 L121.3 29.0 L119.8 30.5 L117.7 32.0 L115.1 33.5 L112.1 35.0 L109.0 36.5 L105.9 38.0 L103.1 39.5 L100.8 41.0 L99.1 42.5 L98.2 44.0 L98.0 45.5 L98.7 47.0 L100.2 48.5 L102.3 50.0 L104.9 51.5 L107.9 53.0 L111.0 54.5 L114.1 56.0 L116.9 57.5 L119.2 59.0 L120.9 60.5 L121.8 62.0 L122.0 63.5 L121.3 65.0 L119.8 66.5 L117.7 68.0 L115.1 69.5 L112.1 71.0 L109.0 72.5 L105.9 74.0 L103.1 75.5 L100.8 77.0 L99.1 78.5 L98.2 80.0 L98.0 81.5 L98.7 83.0 L100.2 84.5 L102.3 86.0 L104.9 87.5 L107.9 89.0 L111.0 90.5 L114.1 92.0 L117.3 93.5 L120.6 95.0 L123.8 96.5 L126.6 98.0 L129.1 99.5 L131.0 101.0 L132.4 102.5 L133.4 104.0 L134.1 105.5 L134.4 107.0 L134.5 108.5 L134.4 110.0 L134.0 111.5 L133.4 113.0 L132.8 114.5 L133.5 116.0 L134.8 117.5 L136.6 119.0 L139.0 120.5 L141.8 122.0 L145.0 123.5 L148.4 125.0 L152.0 126.5 L155.5 128.0 L158.8 129.5 L161.7 131.0 L164.3 132.5 L166.3 134.0 L167.7 135.5 L168.6 137.0 L168.9 138.5 L168.8 140.0 L168.3 141.5 L167.6 143.0 L166.7 144.5 L165.9 146.0 L165.3 147.5 L165.1 149.0 L165.2 150.5 L165.9 152.0 L167.2 153.5 L169.0 155.0 L171.4 156.5 L174.2 158.0 L177.4 159.5 L180.8 161.0 L184.4 162.5 L187.9 164.0 L191.2 165.5 L194.1 167.0 L196.7 168.5 L198.7 170.0 L200.1 171.5 L201.0 173.0 L201.3 174.5 L201.2 176.0 L200.7 177.5 L200.0 179.0 L199.1 180.5 L198.3 182.0 L197.7 183.5 L197.5 185.0 L197.6 186.5 L198.3 188.0 L199.6 189.5 L201.4 191.0 L203.8 192.5 L206.6 194.0 L209.8 195.5 L213.2 197.0 L216.8 198.5 L220.3 200.0" stroke="#3b82f6" stroke-width="8"/><path d="M105.9 20.0 L103.1 21.5 L100.8 23.0 L99.1 24.5 L98.2 26.0 L98.0 27.5 L98.7 29.0 L100.2 30.5 L102.3 32.0 L104.9 33.5 L107.9 35.0 L111.0 36.5 L114.1 38.0 L116.9 39.5 L119.2 41.0 L120.9 42.5 L121.8 44.0 L122.0 45.5 L121.3 47.0 L119.8 48.5 L117.7 50.0 L115.1 51.5 L112.1 53.0 L109.0 54.5 L105.9 56.0 L103.1 57.5 L100.8 59.0 L99.1 60.5 L98.2 62.0 L98.0 63.5 L98.7 65.0 L100.2 66.5 L102.3 68.0 L104.9 69.5 L107.9 71.0 L111.0 72.5 L114.1 74.0 L116.9 75.5 L119.2 77.0 L120.9 78.5 L121.8 80.0 L122.0 81.5 L121.3 83.0 L119.8 84.5 L117.7 86.0 L115.1 87.5 L112.1 89.0 L109.0 90.5 L105.9 92.0 L102.7 93.5 L99.4 95.0 L96.2 96.5 L93.4 98.0 L90.9 99.5 L89.0 101.0 L87.6 102.5 L86.6 104.0 L85.9 105.5 L85.6 107.0 L85.5 108.5 L85.6 110.0 L86.0 111.5 L86.6 113.0 L87.2 114.5 L86.5 116.0 L85.2 117.5 L83.4 119.0 L81.0 120.5 L78.2 122.0 L75.0 123.5 L71.6 125.0 L68.0 126.5 L64.5 128.0 L61.2 129.5 L58.3 131.0 L55.7 132.5 L53.7 134.0 L52.3 135.5 L51.4 137.0 L51.1 138.5 L51.2 140.0 L51.7 141.5 L52.4 143.0 L53.3 144.5 L54.1 146.0 L54.7 147.5 L54.9 149.0 L54.8 150.5 L54.1 152.0 L52.8 153.5 L51.0 155.0 L48.6 156.5 L45.8 158.0 L42.6 159.5 L39.2 161.0 L35.6 162.5 L32.1 164.0 L28.8 165.5 L25.9 167.0 L23.3 168.5 L21.3 170.0 L19.9 171.5 L19.0 173.0 L18.7 174.5 L18.8 176.0 L19.3 177.5 L20.0 179.0 L20.9 180.5 L21.7 182.0 L22.3 183.5 L22.5 185.0 L22.4 186.5 L21.7 188.0 L20.4 189.5 L18.6 191.0 L16.2 192.5 L13.4 194.0 L10.2 195.5 L6.8 197.0 L3.2 198.5 L-0.3 200.0" stroke="#f59e0b" stroke-width="8"/><path d="M110 102 V200" stroke="#f8fafc" stroke-width="14" stroke-linecap="butt"/><path d="M103 103 L110 89 L117 103 Z" fill="#f8fafc" stroke="#f8fafc" stroke-width="2"/><path d="M82 118 H138" stroke="#f8fafc" stroke-width="14"/></g>
+<circle cx="110" cy="110" r="66" fill="none" stroke="#e2e8f0" stroke-width="14"/>
+<path d="M160 160 L206 206" stroke="#e2e8f0" stroke-width="24" stroke-linecap="round"/></svg>

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/img/icon.svg" alt="evo-sim icon" width="120">
+<img src="docs/img/icon-animated.svg" alt="evo-sim icon: a double helix split by a cross into two lineages" width="140">
 
 # evo-sim
 
