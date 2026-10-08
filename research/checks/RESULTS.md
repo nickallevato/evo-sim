@@ -6,15 +6,15 @@ Run any script with:
 ```
 research/.venv/bin/python -I research/checks/<script>.py
 ```
-Run it from inside `research/checks/`, because the scripts import `wf.py` from there.
+Each script adds its own directory to `sys.path`, so `-I` works from any directory. (Fixed after review #2.)
 
 ## B0 — Textbook baselines · `baseline_textbook.py` (seed 20261007) · ALL PASS
 | Check | Simulated | Target | z |
 |---|---|---|---|
 | B0.1 neutral P_fix, N=50 | 0.009893 | 0.01 | −0.69 |
 | B0.1 neutral P_fix, N=200 | 0.00246 | 0.0025 | −0.51 |
-| B0.2 conditional mean t_fix / N, N=50 | 3.908 | 4 | −2.75 |
-| B0.2 conditional mean t_fix / N, N=200 | 4.006 | 4 | +0.08 |
+| B0.2 conditional mean t_fix / N, N=50 | 3.908 | 3.980 (diffusion at p=1/2N; exact chain 3.935) | −2.15 |
+| B0.2 conditional mean t_fix / N, N=200 | 4.006 | 3.995 | +0.16 |
 | SD of t_fix / N | 2.105, 2.108 | ≈2.15 (diffusion) | — |
 | B0.3 Kimura u, N=100, s=0.01 | 0.019995 | 0.020171 | −0.56 |
 | B0.3 Kimura u, N=500, s=0.01 | 0.019745 | 0.019801 | −0.18 |
@@ -23,21 +23,23 @@ Run it from inside `research/checks/`, because the scripts import `wf.py` from t
 | B0.5 neutral k at equilibrium, N=200 | 0.04964 | U=0.05 | −0.64 |
 
 **Notes**
-- The N=50 fixation-time z of −2.75 is consistent with known small-N discreteness corrections to the diffusion approximation. To follow up, check it against an exact Markov chain (rule E4).
+- Review #2 corrected the B0.2 target from a flat 4N to the diffusion value at p=1/(2N). Against the exact chain (3.935N) the N=50 z is about −0.8. Resolved.
 - B0.5 holds at both N values, consistent with k = U for any N.
 
 ## B0.4 / F — Fixation time of a beneficial mutant · `beneficial_fix_time.py` (seed 7)
-**Prediction:** simulated t_fix ≈ the Kimura–Ohta diffusion integral, and Day's (2/s)ln(2N) overshoots both.
+**Prediction:** simulated t_fix ≈ the Kimura–Ohta diffusion integral (tolerance 5%), and Day's (2/s)ln(2N) overshoots both.
 
-**Result:** confirmed. Simulation and diffusion agree within 1%. (2/s)ln(2N) overshoots by 1.6–2.2× across the tested range.
+**Result:** confirmed. Simulation and diffusion agree within the 5% tolerance (SE ≈ 0.4–0.7%; review #2 also checked against the exact chain). (2/s)ln(2N) overshoots by 1.6–2.2× across the tested range.
 
-| N | s | 2Ns | sim | diffusion | (2/s)ln2N | (2/s)(ln2Ns+γ) |
+*Correction (review #2):* the stochastic asymptote is (2/s)(ln(**4**Ns)+γ), not ln(2Ns). The column below uses the corrected form.
+
+| N | s | 2Ns | sim | diffusion | (2/s)ln2N | (2/s)(ln4Ns+γ) |
 |---|---|---|---|---|---|---|
-| 500 | 0.01 | 10 | 698 | 703 | 1382 | 576 |
-| 1000 | 0.005 | 10 | 1405 | 1407 | 3040 | 1152 |
-| 2500 | 0.01 | 50 | 1043 | 1033 | 1703 | 898 |
-| 5000 | 0.01 | 100 | 1177 | 1173 | 1842 | 1036 |
-| **10⁴ (Day's)** | **0.001** | **20** | — | **8,480** | **19,807** | 7,146 |
+| 500 | 0.01 | 10 | 698±3 | 703 | 1382 | 715 |
+| 1000 | 0.005 | 10 | 1405±9 | 1407 | 3040 | 1429 |
+| 2500 | 0.01 | 50 | 1043±6 | 1033 | 1703 | 1036 |
+| 5000 | 0.01 | 100 | 1177±7 | 1173 | 1842 | 1175 |
+| **10⁴ (Day's)** | **0.001** | **20** | — | **8,480** | **19,807** | 8,532 |
 
 **Interpretation**
 - **Fidelity:** (2/s)ln(2N) is a standard deterministic sweep-time approximation, so Day uses it legitimately. It does, however, overstate the mean time of an allele *conditioned on fixing* by about 2.3× at his parameters.
@@ -61,7 +63,9 @@ Run it from inside `research/checks/`, because the scripts import `wf.py` from t
 | 2000 | 1000 | 802.7 | 802.5 ± 3.4 | 1005.1 ± 4.3 |
 
 **Interpretation**
-- **Internal validity of Day's E[F(T)]: HOLDS.** For an empty starting population his formula is exact.
+- *Review #2 note:* the empty-start simulation is Poisson thinning of independent trajectories, so it matches U∫F by construction. It verifies the code, not anything deep about Day's claim. The two vacuous grid points (T ≤ 100) were removed, and burn-in was raised to 20N.
+- **Internal validity of Day's E[F(T)]: HOLDS** as mathematics. For an empty starting population his formula is exact.
+- **Caveat:** an empty pipeline means zero standing heterozygosity. That contradicts observed human diversity, so the empty start is a *counterfactual boundary case*, not a realistic scenario. This framing came from steelman review C1.
 - **The key question is external:** was the ancestral population's pipeline empty or full at the split? The standard view is that it was full, because the ancestor was a long-standing population.
 - **Day's strongest remaining argument** would be that demographic change partially emptied the pipeline. → New sub-check **B1b**: test bottleneck and expansion histories.
 
@@ -77,12 +81,73 @@ Run it from inside `research/checks/`, because the scripts import `wf.py` from t
 | Variance σ² | Nₑ | P_fix (sim) | 1/(2N) | Day: 1/(2Nₑ) | t_fix / Nₑ |
 |---|---|---|---|---|---|
 | 1.00 | 200 | 0.00250 | 0.00250 | 0.00249 | 3.98 |
-| 1.99 | 100 | 0.00257 | 0.00250 | 0.00498 | 3.97 |
+| 1.25 | 160 | 0.00252 (z=+0.50) | 0.00250 | 0.00312 | 3.95±0.04 |
+| 1.99 | 100 | 0.00257 (z=+1.34) | 0.00250 | 0.00498 | 3.97±0.04 |
 | 4.94 | 40 | 0.00248 | 0.00250 | 0.01235 | 4.01 |
 | 10.70 | 19 | 0.00257 | 0.00250 | 0.02676 | 4.07 |
 
 **Interpretation**
 - **Day is right on time:** Nₑ sets the *timescale* of fixation.
-- **Day is wrong on probability:** in an exchangeable model, Nₑ does not set the fixation *probability*. So k = μN/Nₑ fails *in this model class*.
+- *Review #2 note:* in this model P_fix = 1/M is a theorem (allele frequency is a martingale), so the simulation verifies the code and illustrates the theorem.
+- **Day is wrong on probability (provisional, pending verbatim quotes and B3b):** in an exchangeable model, Nₑ does not set the fixation *probability*. So k = μN/Nₑ fails *in this model class*.
 
 **Open fairness sub-check B3b.** Day's k = 0.743μ invokes Balloux & Lehmann 2012: fluctuating N combined with overlapping generations. That is a non-exchangeable, time-varying setting, where the neutral rate *can* differ from μ per generation. B3b must test that setting before B3 receives a final verdict.
+
+## B2a — Hard Limits tail exp(−π²Nₑ/G) · `b2a_hard_limits_chain.py` (exact WF Markov chain, no randomness)
+**Prediction:** Day's exponent is the correct leading-order short-time asymptotic. From the arcsine transform, (G/N)·ln F_cond → −π².
+
+**Result.** The exponent trends toward −π² as G/N → 0, but converges slowly:
+
+| N | (G/N)·ln F at G/N=0.05 | at 0.25 | at 1 |
+|---|---|---|---|
+| 200 | −8.59 | −8.02 | −5.88 |
+
+*As a number*, however, Day's formula badly *underestimates* the probability in the regime where he applies it (G ≤ 4Nₑ):
+
+| G/N | Exact F_cond (N=200) | Day exp(−π²N/G) | Exact / Day |
+|---|---|---|---|
+| 4 (= his threshold 4Nₑ) | 0.61 | 0.085 | 7× |
+| 2 | 0.13 | 0.0072 | 18× |
+| 1 | 2.8e−3 | 5.2e−5 | 54× |
+| 0.25 | 1.2e−14 | 7.2e−18 | 1.6e3× |
+
+**Verdicts (provisional)**
+- **Internal (asymptotic exponent): HOLDS.**
+- **Numerical use:** it overstates rarity by 1–3+ orders of magnitude. At G = 4Nₑ, 61% of eventual fixations have already happened, which is not "exponentially small".
+- **Relevance:** it is a per-allele *latency* tail. The expected substitution count across all mutations is U∫F, which equals U·T at equilibrium (B1, F1).
+
+## F1 — Latency vs throughput · `f1_throughput.py` (seed 31)
+**Setup:** N=1000, s=0.01, U_b=0.01. Independent loci (no interference).
+
+**Predictions:** the steady-state rate equals 2N·U_b·u(s) regardless of latency, and Little's law holds.
+
+**Result:** confirmed.
+- **Rate:** predicted 0.3960 per generation; simulated 0.3972 ± 0.0018.
+- **Latency vs spacing:** t_fix = 847 generations, while generations per fixation G_f = 1/rate = **3**.
+- **In flight:** about 336 eventually-fixing alleles are in transit at any time.
+- **Serial reading gives the wrong count:** dividing T by latency predicts 23.6 fixations in 20,000 generations; 7,943 were observed.
+
+**Verdict:** the F-branch inference (time divided by latency) is **invalid as a throughput bound absent interference**. Mansfield's pipelining point holds.
+
+**Limit:** Day's strongest version is that interference or cost of selection caps throughput (F2, H). Not yet tested.
+
+## B1b — Size changes from an equilibrium start · `b1b_demography.py` (seed 21; 7 min)
+**Setup:** N0=500, U=0.2, 24 replicates, T = 3×4N0. Each value is window k / U.
+
+**Predictions:**
+- **Standard theory:** contraction gives a transient *excess*; expansion gives a transient *deficit* of about 4N_new generations; the long-run mean is k=U.
+- **Day:** a deficit whenever N has not been constant for about 4Nₑ.
+
+| Scenario | First window | Recovered by | Cumulative / U·T |
+|---|---|---|---|
+| constant | 1.00 | — | 0.996 |
+| bottleneck N0→N0/10 (N0/2 gens)→N0 | 3.82 | ~4.5 N0 | 0.999 |
+| contraction N0→N0/5 | 3.79 | ~1.5 N0 | **1.259** |
+| expansion N0/5→N0 | 0.19 | ~5.5 N0 | **0.733** |
+| expansion N0/5→5N0 | 0.03 | not within 12 N0 (0.22 at end) | **0.085** |
+| founder N0→10 (20 gens)→N0 | 2.69 | ~4.5 N0 | 0.996 |
+
+**Interpretation: credit to Day.** The mechanism he describes is real.
+- After an expansion, the substitution rate falls far below μ for about 4N_new generations. A 25× expansion gave only 8.5% of μT over 3×4N0.
+- The **sign depends on demographic history.** Contractions and bottlenecks produce *excess* substitutions, and a bottleneck nets out to about zero.
+- **Open question (external validity):** what was the actual Nₑ history of each lineage since the split? The standard estimate is ancestral Nₑ > modern human Nₑ, a contraction, which would push k *above* μ, the opposite of Day's direction. This needs sourced Nₑ trajectories (PSMC/MSMC) for both lineages → new check **B1c**.

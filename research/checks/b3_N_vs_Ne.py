@@ -14,6 +14,9 @@ PRE-REGISTERED PREDICTIONS (2026-10-07):
      (i.e. Day is right that Ne sets the timescale.)
   P3 Consequently k = U for every alpha.
 """
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # allow `python -I`
+
 import numpy as np
 from wf import cannings_single_locus
 
@@ -27,5 +30,5 @@ for alpha in (1e6, 4.0, 1.0, 0.25, 0.1):
     Ne = (M / 2) / sigma2
     fixed, t = cannings_single_locus(M, alpha, reps, rng)
     p = fixed.mean(); se = np.sqrt(p * (1 - p) / reps)
-    tf = t[fixed].mean()
-    print(f"{alpha:>6g} {sigma2:>7.2f} {Ne:>8.1f} | {p:.5f}±{se:.5f} {1/M:>8.5f} {1/(2*Ne):>10.5f} | {tf/Ne:>8.2f} {tf/(M/2):>8.2f}")
+    tf = t[fixed].mean(); tfse = t[fixed].std() / np.sqrt(fixed.sum())
+    print(f"{alpha:>6g} {sigma2:>7.2f} {Ne:>8.1f} | {p:.5f}±{se:.5f} {1/M:>8.5f} {1/(2*Ne):>10.5f} z={(p-1/M)/se:+.2f} | {tf/Ne:>5.2f}±{tfse/Ne:.2f} {tf/(M/2):>8.2f}")

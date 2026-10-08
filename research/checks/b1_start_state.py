@@ -12,6 +12,9 @@ PRE-REGISTERED PREDICTIONS (2026-10-07, before first run):
   P2 Equilibrium start: E[C(T)] = U*T at all T (stationarity); the -4N deficit is absent.
   P3 Therefore the B1 correction is a statement about the initial condition, not about k=mu.
 """
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # allow `python -I`
+
 import numpy as np
 from wf import neutral_substitutions, single_locus
 
@@ -19,7 +22,7 @@ rng = np.random.default_rng(11)
 N, U = 100, 0.5
 T = 20 * N
 reps = 60
-grid = np.array([N // 2, N, 2 * N, 4 * N, 6 * N, 10 * N, 20 * N]) - 1
+grid = np.array([2 * N, 4 * N, 6 * N, 10 * N, 20 * N]) - 1
 
 # F_X from independent single-locus runs
 fixed, t = single_locus(N, 0.0, 2_000_000, rng)
@@ -28,7 +31,7 @@ F = lambda x: np.searchsorted(tf, x, side="right") / len(tf)
 intF = np.cumsum([F(u) for u in range(1, T + 1)])
 
 emp = np.array([neutral_substitutions(N, U, T, rng, start="empty") for _ in range(reps)])
-eq = np.array([neutral_substitutions(N, U, T, rng, start="equilibrium") for _ in range(reps)])
+eq = np.array([neutral_substitutions(N, U, T, rng, start="equilibrium", burn_in=20 * N) for _ in range(reps)])
 
 print(f"N={N}, U={U}/gen, reps={reps}; conditional mean t_fix={tf.mean():.0f} (4N={4*N}); n_fix_samples={len(tf)}")
 print(f"{'T':>6} {'U*T':>8} {'U*intF':>8} {'U(T-4N)+':>9} | {'empty sim':>14} | {'equil sim':>14}")

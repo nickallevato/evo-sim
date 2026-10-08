@@ -127,3 +127,35 @@ def cannings_single_locus(M, alpha, reps, rng, max_gens=10**7):
         t[idx[done]] = gen
         alive[idx[done]] = False
     return k == M, t
+
+
+def substitutions_demog(N_of_g, U, T, rng, s=0.0, burn_in=0, N_burn=None, track_transit=False):
+    """Infinite-sites, unlinked sites, genic s (same s for all new mutations), size schedule N_of_g(g).
+
+    Burn-in runs `burn_in` gens at constant N_burn (equilibrium start if burn_in >~ 10*N_burn).
+    At each generation: mutate (Poisson(2N*U) new single copies), then WF-sample at the new size
+    (binomial(2N_new, p'), p' from previous frequencies), count fixations.
+    Returns per-generation fixation counts (length T) and, if track_transit, the per-generation
+    number of segregating alleles that will eventually fix (known post hoc via ids).
+    """
+    counts = np.empty(0, dtype=np.int64)
+    M_prev = 2 * (N_burn if N_burn is not None else N_of_g(0))
+
+    def step(counts, M_prev, M):
+        new = rng.poisson(M_prev * U)
+        counts = np.concatenate([counts, np.ones(new, dtype=np.int64)])
+        p = counts / M_prev
+        if s:
+            p = p * (1 + s) / (1 + s * p)
+        counts = rng.binomial(M, p)
+        fixed = int((counts == M).sum())
+        return counts[(counts > 0) & (counts < M)], fixed
+
+    for _ in range(burn_in):
+        counts, _ = step(counts, M_prev, M_prev)
+    fix = np.empty(T, dtype=np.int64)
+    for g in range(T):
+        M = 2 * N_of_g(g)
+        counts, fix[g] = step(counts, M_prev, M)
+        M_prev = M
+    return fix
