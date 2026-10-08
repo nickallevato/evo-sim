@@ -1,0 +1,45 @@
+# Single source of truth for numeric inputs. Checks read from here.
+# Each entry: value(s) per side/version, units, source key (see sources/bibliography.md), verified: false until checked vs raw text.
+divergence:
+  t_div_years:
+    day_2019: {value: 9.0e6, source: B2019-02-07, verified: false}
+    day_2026_mittens3: {value: 6.3e6, source: Z23003785, verified: false}
+    langergraber_2012: {value: ">=7e6-8e6", source: Langergraber2012, verified: false}
+  snv_differences_total:
+    chimp_consortium_2005: {value: 3.5e7, units: "single-nucleotide changes (one genome per species; includes polymorphism)", source: CSAC2005, verified: false}
+  indel_events_total:
+    chimp_consortium_2005: {value: 5.0e6, units: events, source: CSAC2005, verified: false}
+  required_fixations:
+    day_2019: {value: 3.0e7, source: B2019-02-07, verified: false}
+    day_2025: {value: 2.0e7, source: Z18165980, verified: false}
+    day_2026: {value: 2.05e8, derived: "410e6 bp / 2 lineages", source: Z23003785, verified: false}
+generation_time_years:
+  day_2019: {value: 20, source: B2019-02-07, verified: false}
+  day_2026: {value: 25, source: Z23003785, verified: false}
+  day_alt: {value: 32.5, source: B2025-01-18, verified: false}
+generations_available:
+  day_2019: {value: 450000, source: B2019-02-07, verified: false}
+  day_2025_effective: {value: 146250, derived: "325000*0.45", source: Z18165980, verified: false}
+  day_2026: {value: 252000, source: Z23003785, verified: false}
+ltee:
+  gens_per_fixation:
+    day_2019: {value: 1600, source: B2019-02-07, verified: false}
+    day_mittens3_nonmutator: {value: 1322, source: Z23003785, verified: false}
+    day_ara_plus2: {value: 909, derived: "60000/66", source: B2026-10-01-snikker-snak, verified: false}
+    day_ns_only_parallel_max: {value: 4615, source: Z23003785, verified: false}
+  whole_pop_fixations_lineage_aware:
+    day_23105291: {value: 5496, units: "fixations over 723000 population-generations", source: Z23105291, verified: false}
+mutation:
+  mu_per_site_per_gen:
+    pedigree_human: {value: 1.2e-8, range: [1.1e-8, 1.5e-8], source: Kong2012, verified: false}
+  new_mutations_per_genome:
+    common_citation: {value: [60, 100], source: "Kong2012; critics", verified: false}
+population:
+  Ne_modern_human: {value: 1.0e4, source: textbook, verified: false}
+  Ne_ancestral_hc: {value: [5.0e4, 1.0e5], source: TBD-ILS-literature, verified: false}
+  Ne_over_N: {value: 0.1, source: Frankham1995, verified: false}
+selection:
+  s_zeng_2021: {value: 0.001, sign: negative, note: "mean |s| of variants affecting complex traits under negative selection — Day uses as beneficial", source: Zeng2021, verified: false}
+  turnover_d: {value: 0.45, source: Z18166234, verified: false}
+haldane:
+  gens_per_substitution: {value: 300, source: Haldane1957, verified: false}

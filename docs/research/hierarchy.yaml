@@ -1,0 +1,53 @@
+# Claim hierarchy v1 (from R1 pass 1 — UNVERIFIED; each node is confirmed when its claim file reaches status: extracted)
+# edge types: supports | attacks | revises | supersedes | depends-on
+# side: day | critic | ally | literature
+nodes:
+  - {id: ROOT, side: day, claim: "No evolutionary mechanism can produce observed human–chimp divergence in available time", sources: [PZ-book, Z23003785]}
+
+  # A — rate limit (MITTENS)
+  - {id: A,  side: day, parent: ROOT, edge: supports, claim: "MITTENS: F_max = (t_div*d)/(g_len*G_f) falls far short of required fixations", sources: [Z18165980, Z23003785, B2026-02-04]}
+  - {id: A1, side: day, parent: A, edge: depends-on, claim: "Generations available ~252k (t_div 6.3–9 My, g_len 20–32.5 y); later CHLCA moved to 68 kya–1.3 My"}
+  - {id: A2, side: day, parent: A, edge: depends-on, claim: "G_f from LTEE: 1,600 -> 1,322 gens/fixation (non-mutators); 909 Ara+2; 4,615 NS-only"}
+  - {id: A3, side: day, parent: A, edge: depends-on, claim: "Required fixations: 30M (2019) -> 20M (2025) -> 205M (2026, from 410 Mb Yoo 2025)"}
+  - {id: A3x, side: critic, parent: A3, edge: attacks, claim: "205M counts bp of SVs/inversions as fixations; ~35M SNVs total, ~17.5M per lineage", note: "raised by sources agent; Day concedes SNV-only variant"}
+  - {id: A4, side: day, parent: A, edge: depends-on, claim: "Selective turnover coefficient d≈0.45 reduces effective generations", sources: [Z18166234]}
+  - {id: A5, side: critic, parent: A2, edge: attacks, claim: "LTEE G_f does not transfer to humans: genome ~650–690x larger, mutation supply N*mu*L, sex/recombination, clonal interference", who: [McCarthy, Hossjer, Camestros]}
+  - {id: A5a, side: ally, parent: A5, edge: revises, claim: "After genome-length scaling the gap shrinks to ~2x; conclusion kept via cost of selection (H)", who: [Hossjer]}
+
+  # B — neutral theory insufficient
+  - {id: B,  side: day, parent: ROOT, edge: supports, claim: "Neutral theory (k=mu) cannot rescue the shortfall"}
+  - {id: B1, side: day, parent: B, edge: supports, claim: "k=mu is a steady-state identity; finite-time E[F(T)] ≈ mu*L*(T-4Ne) (empty pipeline)", sources: [Z22903977]}
+  - {id: B2, side: day, parent: B, edge: supports, claim: "Hard Limits: drift ceiling X=(Vk+2)G/16≈1e4; P(fix within G)≈exp(-pi^2 Ne/G)", sources: [Z22129121]}
+  - {id: B3, side: day, parent: B, edge: supports, claim: "k = mu*N/Ne (neutral fixation prob 1/(2Ne)); k=0.743mu; k=32.3mu", sources: [Z18429937, Z18525262, Z19984826]}
+  - {id: B4, side: day, parent: B, edge: supports, claim: "Molecular clock recalibration puts CHLCA at 200–580 kya or 68 kya", sources: [Z18525547, Z18637333]}
+  - {id: B5, side: critic, parent: B, edge: attacks, claim: "2N*mu new mutations * 1/(2N) fixation prob = mu substitutions/gen independent of N", who: [Mansfield, McCarthy, CS-commenter]}
+  - {id: B6, side: critic, parent: B1, edge: attacks, claim: "Ancestral population was at equilibrium (full pipe); E[divergence]≈2*mu*T+theta_anc", who: [Mansfield, sources-agent]}
+  - {id: B7, side: critic, parent: B3, edge: attacks, claim: "Neutral fixation prob is 1/(2N) (initial frequency), not 1/(2Ne); Day's own Hard Limits paper states 1/(2N)"}
+
+  # C — aDNA
+  - {id: C,  side: day, parent: ROOT, edge: supports, claim: "European aDNA shows ~zero fixations across ~1.1–1.2M SNPs in 7 ky", sources: [Z23046531, Z18320599]}
+  - {id: C1, side: critic, parent: C, edge: attacks, claim: "1240k panel ascertained on present-day variable sites; near-zero fixations expected by design", note: "raised by sources agent; no published critic yet"}
+
+  # D — sequence space / Wistar
+  - {id: D,  side: day, parent: ROOT, edge: supports, claim: "Functional proteins (~1e52 ever) are a vanishing fraction of sequence space (~1e325); Wistar 1966 never rebutted"}
+  - {id: D1, side: critic, parent: D, edge: attacks, claim: "Wistar calculations naive; modern simulation/landscape results refute", who: [Rosenhouse]}
+  - {id: D2, side: day, parent: D1, edge: attacks, claim: "Rosenhouse ch.4 offers no quantification; evolutionary algorithms use designed fitness functions"}
+
+  # E — LTEE / punctuated equilibrium
+  - {id: E,  side: day, parent: ROOT, edge: supports, claim: "Punctuated equilibrium fails: hypermutation hazard ~2.3%/founder event; strong-s zones", sources: [Z23020792, Z23034852]}
+  - {id: E1, side: critic, parent: A2, edge: attacks, claim: "Hitchhiked neutral mutations count as fixations; Barrick 2009 45 mutations/20k gens", who: [Taylor]}
+
+  # F — Kimura irrelevance
+  - {id: F,  side: day, parent: B, edge: supports, claim: "Kimura's fixation time (4Ne; (2/s)ln(2Ne)) limits fixations, not fixation probability"}
+  - {id: F1, side: critic, parent: F, edge: attacks, claim: "Latency is not throughput: many alleles in transit at once (pipelining)", who: [Mansfield]}
+
+  # G — Bernoulli Barrier / averages
+  - {id: G,  side: day, parent: ROOT, edge: supports, claim: "Bernoulli Barrier: parallel fixation violates LLN; p^n≈1e-34,000,000; ~230 simultaneous sweeps cap", sources: [Z18167588]}
+  - {id: G1, side: day, parent: A, edge: supports, claim: "An average rate is indifferent to parallel vs sequential timing; LTEE G_f already includes parallelism", sources: [B2026-10-01-snikker-snak, B2026-09-30]}
+  - {id: G2, side: critic, parent: A, edge: attacks, claim: "Day's math is serial (marathon analogy; 180 genes in 6.3 My)", who: [DeDzjang, Myers, Hancock]}
+  - {id: G3, side: critic, parent: G, edge: attacks, claim: "Specific-vs-any outcome: products of per-site probabilities price a pre-specified outcome", who: [Camestros]}
+
+  # H — cost of selection
+  - {id: H,  side: day, parent: ROOT, edge: supports, claim: "Haldane's limit ~1 substitution/300 gens (487 with d)", sources: [Z18168236]}
+  - {id: H1, side: day, parent: H, edge: revises, claim: "2026-05-07 partial retraction of cost-of-selection as total substitution bound"}
+  - {id: H2, side: literature, parent: H, edge: attacks, claim: "Soft selection / truncation / Kimura neutral reply / Nunney 2003 relax Haldane's limit", note: "no critic in corpus engaged this yet"}

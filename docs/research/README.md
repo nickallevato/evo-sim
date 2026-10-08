@@ -1,0 +1,45 @@
+# Research: The Mathematical Case Against Evolution (Vox Day) and Its Critics
+
+This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Probability Zero* / MITTENS corpus and in the critiques written against it. The output is a sourced map of every claim, a numerical check of each equation, and a list of variables for a user-controllable simulator to be built later.
+
+## Rules
+1. **Three verdicts per claim:**
+   - **(a) Internal validity:** does the conclusion follow from the author's own assumptions?
+   - **(b) Model fidelity:** does the cited theory or paper actually say that?
+   - **(c) External validity:** are the assumptions biologically realistic?
+2. **Both sides get equal scrutiny.** Arithmetic, sources and assumptions are audited for critics and allies just as for Day. Valid points from either side are recorded as prominently as errors.
+3. **Verbatim quotes only.** Each quote needs a locator (URL plus paragraph, page or equation) and a source date or version. A claim known only through an opponent's quotation is tagged `secondhand`.
+4. **Pre-register predictions.** Before a check runs, its claim file states what each side's model predicts.
+5. **Numeric provenance.** Every number comes from `parameters.yaml`, from a cited quote, or is marked `derived:` with its formula.
+6. **No question-begging.**
+   - Forward simulations decide disputes about equilibrium. The coalescent (msprime) is used only for baselines.
+   - Scaling (shrinking N and raising μ with θ held fixed) is validated before it is relied on.
+7. **No full texts in git.** `sources/raw/` is gitignored. The repo commits links, archive URLs, short quotes and sha256 hashes.
+
+## Layout
+| Path | Contents |
+|---|---|
+| `glossary.md` | Pinned definitions. Most disputes here turn on definitions. |
+| `parameters.yaml` | Numeric inputs, per side and per source version |
+| `hierarchy.yaml`, `hierarchy/*.md` | The claim tree, as machine-readable YAML and as per-branch Mermaid diagrams |
+| `claims/<ID>-<slug>.md` | One file per claim (see `claims/_TEMPLATE.md`) |
+| `sources/bibliography.md` | Every source, with its access status |
+| `opponents/<name>.md` | Each critic or ally, with their arguments mapped to claim IDs |
+| `ledgers/` | Citation fidelity, side-by-side balance, contradictions, version drift |
+| `../../research/checks/` | Throwaway verification code and `REVIEW.md` |
+
+## Status
+| Stage | Status |
+|---|---|
+| R0 Scaffold | done |
+| R1 Corpus harvest | pass 1 (catalogue) done 2026-10-07; pass 2 (raw copies + bibliography) in progress |
+| R2 Claim extraction | — |
+| R3 Hierarchy | v1 draft (from pass 1, unverified) |
+| R4 Math resolution | — |
+| R5 Synthesis | — |
+
+## Running checks
+```
+python3 -m venv research/.venv && research/.venv/bin/pip install -r research/requirements.txt
+research/.venv/bin/python -I research/checks/<file>.py
+```

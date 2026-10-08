@@ -1,0 +1,5 @@
+# Full texts of third-party works are never committed (copyright). Commit links, short quotes, hashes.
+sources/raw/
+research/.venv/
+__pycache__/
+*.pyc
