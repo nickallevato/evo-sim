@@ -1,5 +1,7 @@
-# Plan: ELI5 / ELI12 / ELI18 explainers (not built yet)
-*Drafted 2026-10-08. Build after R5, once the verdicts are final. Building earlier would mean rewriting three versions every time a verdict changes.*
+# Plan: ELI5 / ELI12 / ELI18 explainers
+*Drafted 2026-10-08.*
+
+> **Update, 2026-10-08:** the maintainer chose plain READMEs with no build step. Drafts now live in [`docs/explain/`](../explain/README.md), one folder per level, with graphics from `research/tools/eli_figs.py`. The `beats.yaml` generator, lint and toggle Artifact below are **dropped**. The seven-beat spine, the analogy cautions and the neutrality reviews still apply. After R5: update the numbers by hand, then run the two-sided steelman and fact-check reviews on all three versions.
 
 ## Goal
 Three versions of the whole story at three reading levels: the question, Day's argument, the critics' replies, what the checks found, and what is still open. Each version must be **as neutral as the audit itself**. Simplifying must never quietly pick a side.
