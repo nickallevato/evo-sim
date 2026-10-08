@@ -1,0 +1,30 @@
+K=500; success = no extinction AND adult mean squared deviation < 0.5 (10 reps/T); T50 = 50% crossing
+Nunney reference (R=10): M=10 n=7 ~40; M=1 n=1 ~20, n=7 ~ 3x slower than M=10; M=0.25 ~70 (n=1); M=0.1 ~300 (K=1e4)
+ hard n=1 R=10   M=0.1   T50=   25.0  rate n/T50=0.0400/gen
+ hard n=1 R=10   M=0.25  T50=   12.3  rate n/T50=0.0811/gen
+ hard n=1 R=10   M=0.5   T50=   10.5  rate n/T50=0.0949/gen
+ hard n=1 R=10   M=1.0   T50=    8.5  rate n/T50=0.1173/gen
+ hard n=1 R=10   M=10.0  T50=    6.0  rate n/T50=0.1667/gen
+ hard n=7 R=10   M=0.1   T50=  155.5  rate n/T50=0.0450/gen
+ hard n=7 R=10   M=0.25  T50=   86.2  rate n/T50=0.0812/gen
+ hard n=7 R=10   M=0.5   T50=   55.8  rate n/T50=0.1255/gen
+ hard n=7 R=10   M=1.0   T50=   43.5  rate n/T50=0.1610/gen
+ hard n=7 R=10   M=10.0  T50=   17.9  rate n/T50=0.3913/gen
+ soft n=1 R=10   M=0.1   T50=   17.6  rate n/T50=0.0568/gen
+ soft n=1 R=10   M=0.25  T50=   12.4  rate n/T50=0.0804/gen
+ soft n=1 R=10   M=0.5   T50=   10.8  rate n/T50=0.0928/gen
+ soft n=1 R=10   M=1.0   T50=    8.4  rate n/T50=0.1195/gen
+ soft n=1 R=10   M=10.0  T50=    6.0  rate n/T50=0.1667/gen
+ soft n=7 R=10   M=0.1   T50=  111.9  rate n/T50=0.0626/gen
+ soft n=7 R=10   M=0.25  T50=   71.6  rate n/T50=0.0978/gen
+ soft n=7 R=10   M=0.5   T50=   56.6  rate n/T50=0.1237/gen
+ soft n=7 R=10   M=1.0   T50=   44.2  rate n/T50=0.1585/gen
+ soft n=7 R=10   M=10.0  T50=   17.9  rate n/T50=0.3913/gen
+ hard n=1 R=2.2  M=1.0   T50=   83.7  rate n/T50=0.0120/gen
+ hard n=1 R=3    M=1.0   T50=   26.3  rate n/T50=0.0381/gen
+ hard n=1 R=5    M=1.0   T50=   13.6  rate n/T50=0.0738/gen
+ hard n=1 R=40   M=1.0   T50=    6.0  rate n/T50=0.1667/gen
+ soft n=1 R=2.2  M=1.0   T50=  210.7  rate n/T50=0.0047/gen
+ soft n=1 R=3    M=1.0   T50=   37.8  rate n/T50=0.0264/gen
+ soft n=1 R=5    M=1.0   T50=   14.2  rate n/T50=0.0704/gen
+ soft n=1 R=40   M=1.0   T50=    6.0  rate n/T50=0.1667/gen

@@ -1,0 +1,974 @@
+[
+ {
+  "id": 22903977,
+  "concept": "22903976",
+  "vi": 0,
+  "last": true,
+  "created": "2026-09-22",
+  "mod": "2026-09-22",
+  "files": [
+   [
+    "The Intrinsic Irrelevance of Kimura.pdf",
+    71442,
+    "md5:e325def9ecd74611e6e75f1befcc788f",
+    "https://zenodo.org/api/records/22903977/files/The%20Intrinsic%20Irrelevance%20of%20Kimura.pdf/content"
+   ]
+  ],
+  "title": "The Intrinsic Irrelevance of Kimura's Substitution Rate",
+  "date": "2026-09-22",
+  "doi": "10.5281/zenodo.22903977",
+  "kw": [
+   "Kimura",
+   "evolution",
+   "neutral theory"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 23003785,
+  "concept": "23003784",
+  "vi": 0,
+  "last": true,
+  "created": "2026-09-28",
+  "mod": "2026-10-04",
+  "files": [
+   [
+    "MITTENS 3.0 The Mathematical Impossibility of the Post-Darwinian Polythesis.pdf",
+    114352,
+    "md5:7ca0bc6a72964a5ba52139fbf630d399",
+    "https://zenodo.org/api/records/23003785/files/MITTENS%203.0%20The%20Mathematical%20Impossibility%20of%20the%20Post-Darwinian%20Polythesis.pdf/content"
+   ],
+   [
+    "Addendum to MITTENS 3.0 Per-Population Dispersion and Best-Case Robustness.pdf",
+    43698,
+    "md5:a8b66c5ede94f90206448c746b74fb79",
+    "https://zenodo.org/api/records/23003785/files/Addendum%20to%20MITTENS%203.0%20Per-Population%20Dispersion%20and%20Best-Case%20Robustness.pdf/content"
+   ]
+  ],
+  "title": "MITTENS 3.0 The Mathematical Impossibility of the Post-Darwinian Polythesis",
+  "date": "2026-09-28",
+  "doi": "10.5281/zenodo.23003785",
+  "kw": [
+   "evolution",
+   "natural selection",
+   "neutral theory",
+   "LTTE"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18403579,
+  "concept": "18403578",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-28",
+  "mod": "2026-01-31",
+  "files": [
+   [
+    "Falsifying_Kimura_Model.docx",
+    16398,
+    "md5:dda6ce39780575d2f73b3b465104b982",
+    "https://zenodo.org/api/records/18403579/files/Falsifying_Kimura_Model.docx/content"
+   ]
+  ],
+  "title": "Falsifying the Kimura Fixation Model: The Ne Equivocation and the Empirical Failure of Neutral Theory",
+  "date": "2026-01-28",
+  "doi": "10.5281/zenodo.18403579",
+  "kw": [
+   "effective population size, neutral theory, molecular evolution, genetic drift, nucleotide diversity, Kimura model"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 22129121,
+  "concept": "22129120",
+  "vi": 0,
+  "last": true,
+  "created": "2026-08-27",
+  "mod": "2026-08-27",
+  "files": [
+   [
+    "Hard_Limits_Fixation_Drift.pdf",
+    166546,
+    "md5:4f66a65883c63524837e304c59cf0abc",
+    "https://zenodo.org/api/records/22129121/files/Hard_Limits_Fixation_Drift.pdf/content"
+   ]
+  ],
+  "title": "The Hard Limits of Fixation Through Genetic Drift",
+  "date": "2026-08-27",
+  "doi": "10.5281/zenodo.22129121",
+  "kw": [
+   "evolution",
+   "Kimura",
+   "fixation",
+   "Neutral Theory"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18320599,
+  "concept": "18320598",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-21",
+  "mod": "2026-01-21",
+  "files": [
+   [
+    "Ne_Temporal_Variation_Paper.docx",
+    12120,
+    "md5:82fd83c7af53be8069b65812df60cc9e",
+    "https://zenodo.org/api/records/18320599/files/Ne_Temporal_Variation_Paper.docx/content"
+   ]
+  ],
+  "title": "Temporal Variation in Effective Population Size Across the Holocene: Evidence from Ancient European Genomes",
+  "date": "2026-01-10",
+  "doi": "10.5281/zenodo.18320599",
+  "kw": null,
+  "rt": "Preprint"
+ },
+ {
+  "id": 18441321,
+  "concept": "18441320",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-31",
+  "mod": "2026-01-31",
+  "files": [
+   [
+    "Pan_Paradox_Z1.docx",
+    16178,
+    "md5:6e2e65bfb773b8f6626f26decd4811f5",
+    "https://zenodo.org/api/records/18441321/files/Pan_Paradox_Z1.docx/content"
+   ]
+  ],
+  "title": "The Pan Paradox: MITTENS Applied to Chimpanzee Subspecies Divergence",
+  "date": "2026-01-31",
+  "doi": "10.5281/zenodo.18441321",
+  "kw": [
+   "MITTENS",
+   "chimpanzee",
+   "natural selection"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18168236,
+  "concept": "18168235",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-07",
+  "mod": "2026-01-07",
+  "files": [
+   [
+    "Confirmation_of_Haldanes_Limit_001.docx",
+    20246,
+    "md5:4efefc4c06be9cb801af5bd058a4e2a3",
+    "https://zenodo.org/api/records/18168236/files/Confirmation_of_Haldanes_Limit_001.docx/content"
+   ]
+  ],
+  "title": "Independent Confirmation of Haldane's Limit: Empirical Validation Through Observed Fixation Rates",
+  "date": "2026-01-05",
+  "doi": "10.5281/zenodo.18168236",
+  "kw": [
+   "population genetics"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18203514,
+  "concept": "18202767",
+  "vi": 1,
+  "last": true,
+  "created": "2026-01-10",
+  "mod": "2026-01-10",
+  "files": [
+   [
+    "Bio-Cycle_Fixation_Model (005).docx",
+    17256,
+    "md5:0329b073ec3be23181ddfc788dfa714f",
+    "https://zenodo.org/api/records/18203514/files/Bio-Cycle_Fixation_Model%20(005).docx/content"
+   ]
+  ],
+  "title": "The Bio-Cycle Fixation Model: Empirical Validation of a Generation Overlap Correction for Allele Frequency Dynamics",
+  "date": "2026-01-09",
+  "doi": "10.5281/zenodo.18203514",
+  "kw": [
+   "population genetics, generation overlap, ancient DNA, allele frequency, selection coefficient, lactase persistence, skin pigmentation"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18382379,
+  "concept": "18382378",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-27",
+  "mod": "2026-01-27",
+  "files": [
+   [
+    "Breaking Neutral Theory.docx",
+    12675,
+    "md5:9ec19c8444ac383ae0841003e2fb5404",
+    "https://zenodo.org/api/records/18382379/files/Breaking%20Neutral%20Theory.docx/content"
+   ]
+  ],
+  "title": "Breaking Neutral Theory: Empirical Falsification of Effective Population-Size Invariance in Kimura's Fixation Model",
+  "date": "2026-01-27",
+  "doi": "10.5281/zenodo.18382379",
+  "kw": [
+   "Neutral Theory",
+   "Fixation Model",
+   "Effective Population",
+   "Population Genetics"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 18888781,
+  "concept": "18888780",
+  "vi": 0,
+  "last": true,
+  "created": "2026-03-06",
+  "mod": "2026-03-07",
+  "files": [
+   [
+    "The Amphiboly in the Third Horn.pdf",
+    61055,
+    "md5:8195ba9355a7cc10aa351cd1b60655b3",
+    "https://zenodo.org/api/records/18888781/files/The%20Amphiboly%20in%20the%20Third%20Horn.pdf/content"
+   ]
+  ],
+  "title": "The Amphiboly in the Third Horn: A Structural Equivocation in the Agrippan and M\u00fcnchhausen Trilemmas",
+  "date": "2026-03-06",
+  "doi": "10.5281/zenodo.18888781",
+  "kw": [
+   "Philosophy",
+   "Trilemma",
+   "Amphiboly",
+   "Third Horn",
+   "Epistemology",
+   "Veriphysics"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18452504,
+  "concept": "18452503",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-02",
+  "mod": "2026-02-02",
+  "files": [
+   [
+    "Taxa_Wide_MITTENS_001.docx",
+    29837,
+    "md5:96b000b7f2d1bb617e8a0ba9f5988405",
+    "https://zenodo.org/api/records/18452504/files/Taxa_Wide_MITTENS_001.docx/content"
+   ]
+  ],
+  "title": "The Universal Failure of Fixation: MITTENS Applied Across the Tree of Life",
+  "date": "2026-02-02",
+  "doi": "10.5281/zenodo.18452504",
+  "kw": [
+   "natural selection",
+   "evolution",
+   "speciation"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18166426,
+  "concept": "18166425",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-06",
+  "mod": "2026-01-06",
+  "files": [
+   [
+    "GenEx_Paper_003.docx",
+    19711,
+    "md5:63bc349cd4287a02f5274fd7d4ea3598",
+    "https://zenodo.org/api/records/18166426/files/GenEx_Paper_003.docx/content"
+   ]
+  ],
+  "title": "Generational Extension and the Selective Turnover Coefficient Across Historical Epochs",
+  "date": "2025-12-25",
+  "doi": "10.5281/zenodo.18166426",
+  "kw": null,
+  "rt": "Preprint"
+ },
+ {
+  "id": 18470617,
+  "concept": "18470616",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-03",
+  "mod": "2026-02-03",
+  "files": [
+   [
+    "MITTENS_Local_Variation_Paper.docx",
+    19271,
+    "md5:c1b4c03ab1e3e451c7841493e0e9789f",
+    "https://zenodo.org/api/records/18470617/files/MITTENS_Local_Variation_Paper.docx/content"
+   ]
+  ],
+  "title": "The Scope of Natural Selection: MITTENS-Validated Case Studies in Local Adaptation",
+  "date": "2026-02-03",
+  "doi": "10.5281/zenodo.18470617",
+  "kw": [
+   "natural selection",
+   "MITTENS"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18724496,
+  "concept": "18724495",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-21",
+  "mod": "2026-02-21",
+  "files": [
+   [
+    "Triveritas Empirical Proof.pdf",
+    111229,
+    "md5:8fcec0913fd19bbbecfe69f5ee2a7507",
+    "https://zenodo.org/api/records/18724496/files/Triveritas%20Empirical%20Proof.pdf/content"
+   ]
+  ],
+  "title": "An Empirical Proof of the Triveritas: A Systematic Test Against the Historical Record",
+  "date": "2026-02-21",
+  "doi": "10.5281/zenodo.18724496",
+  "kw": [
+   "Veriphysics"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 18724487,
+  "concept": "18724486",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-21",
+  "mod": "2026-02-21",
+  "files": [
+   [
+    "Triveritas Logical Proof.pdf",
+    86344,
+    "md5:54c8cbf483b73b552fd927e047a03a42",
+    "https://zenodo.org/api/records/18724487/files/Triveritas%20Logical%20Proof.pdf/content"
+   ]
+  ],
+  "title": "A Logical Proof of the Triveritas: A Deductive Demonstration from First Principles",
+  "date": "2026-02-21",
+  "doi": "10.5281/zenodo.18724487",
+  "kw": [
+   "Veriphysics"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 18788051,
+  "concept": "18788050",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-26",
+  "mod": "2026-02-26",
+  "files": [
+   [
+    "Triveritas Philosophical Proof.pdf",
+    144775,
+    "md5:446d3013c6c8e3c151aa6f2fa6c6b5aa",
+    "https://zenodo.org/api/records/18788051/files/Triveritas%20Philosophical%20Proof.pdf/content"
+   ]
+  ],
+  "title": "A Philosophical Proof of the Triveritas: Confirmations from the Philosophical Traditions",
+  "date": "2026-02-26",
+  "doi": "10.5281/zenodo.18788051",
+  "kw": [
+   "Veriphysics",
+   "Philosophy"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 23105291,
+  "concept": "23105290",
+  "vi": 0,
+  "last": true,
+  "created": "2026-10-02",
+  "mod": "2026-10-02",
+  "files": [
+   [
+    "Fixation in the LTEE.pdf",
+    75261,
+    "md5:a27245f9e59a6a47a8ddb0eddc81d684",
+    "https://zenodo.org/api/records/23105291/files/Fixation%20in%20the%20LTEE.pdf/content"
+   ],
+   [
+    "LTEE_Fixation_Corrected.xlsx",
+    1724092,
+    "md5:e346248854359cbf96d1f40140acc7eb",
+    "https://zenodo.org/api/records/23105291/files/LTEE_Fixation_Corrected.xlsx/content"
+   ]
+  ],
+  "title": "Fixation in the LTEE: Whole-Population Fixation Counts at 500-Generation Resolution",
+  "date": "2026-10-02",
+  "doi": "10.5281/zenodo.23105291",
+  "kw": [
+   "LTEE",
+   "Evolution",
+   "Natural Selection",
+   "Fixation",
+   "Population Genetics"
+  ],
+  "rt": "Dataset"
+ },
+ {
+  "id": 18525262,
+  "concept": "18517617",
+  "vi": 1,
+  "last": true,
+  "created": "2026-02-08",
+  "mod": "2026-02-08",
+  "files": [
+   [
+    "RRME_Paper_002.docx",
+    13901,
+    "md5:eadc38d751ed72121a2290da7c6a3d5d",
+    "https://zenodo.org/api/records/18525262/files/RRME_Paper_002.docx/content"
+   ]
+  ],
+  "title": "The Real Rate of Molecular Evolution",
+  "date": "2026-02-08",
+  "doi": "10.5281/zenodo.18525262",
+  "kw": [
+   "molecular evolution",
+   "Kimura",
+   "real rate"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18209114,
+  "concept": "18209113",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-10",
+  "mod": "2026-01-10",
+  "files": [
+   [
+    "GT_STC_preprint.docx",
+    572278,
+    "md5:171caccc975be4013b2c50c56c770106",
+    "https://zenodo.org/api/records/18209114/files/GT_STC_preprint.docx/content"
+   ]
+  ],
+  "title": "Generational Turnover and the Measurement of Natural Selection: A Fundamental Correction to Population Genetics",
+  "date": "2026-01-10",
+  "doi": "10.5281/zenodo.18209114",
+  "kw": [
+   "selection coefficient",
+   "overlapping generations",
+   "Wright-Fisher model",
+   "age-structured populations",
+   "population genetics"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18166234,
+  "concept": "18166233",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-06",
+  "mod": "2026-01-06",
+  "files": [
+   [
+    "STC_Derivation_003.docx",
+    19375,
+    "md5:0acc48a43e199a3ce5575955ee747ab6",
+    "https://zenodo.org/api/records/18166234/files/STC_Derivation_003.docx/content"
+   ]
+  ],
+  "title": "The Selective Turnover Coefficient: Distinguishing Selection from Drift in Age-Structured Populations",
+  "date": "2025-12-24",
+  "doi": "10.5281/zenodo.18166234",
+  "kw": [
+   "population genetics, overlapping generations, effective population size, selection coefficient, genetic drift, Hill equation, reproductive value"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18165980,
+  "concept": "18165979",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-06",
+  "mod": "2026-01-06",
+  "files": [
+   [
+    "MITTENS_REVISED.docx",
+    15147,
+    "md5:1912776f680aa85d8414f1db12abc100",
+    "https://zenodo.org/api/records/18165980/files/MITTENS_REVISED.docx/content"
+   ]
+  ],
+  "title": "MITTENS: Mathematical Impossibility of Evolution by Natural Selection",
+  "date": "2025-12-28",
+  "doi": "10.5281/zenodo.18165980",
+  "kw": [
+   "speciation, natural selection, population genetics, fixation, mathematical impossibility"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 19984826,
+  "concept": "19984825",
+  "vi": 0,
+  "last": true,
+  "created": "2026-05-02",
+  "mod": "2026-05-02",
+  "files": [
+   [
+    "Kimura_Calculator.pdf",
+    235942,
+    "md5:92a0fbc85c22698ce490d52d59447e96",
+    "https://zenodo.org/api/records/19984826/files/Kimura_Calculator.pdf/content"
+   ]
+  ],
+  "title": "Kimura's Fixation Calculator: Providing Neutral Theory With Predictive Capacity",
+  "date": "2026-05-02",
+  "doi": "10.5281/zenodo.19984826",
+  "kw": [
+   "substitution rate",
+   "Neutral Theory",
+   "Kimura"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18525185,
+  "concept": "18525184",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-08",
+  "mod": "2026-02-08",
+  "files": [
+   [
+    "Molecular Clock Paper.odt",
+    58725,
+    "md5:7a66a885474b218d54881bfe86d9041f",
+    "https://zenodo.org/api/records/18525185/files/Molecular%20Clock%20Paper.odt/content"
+   ]
+  ],
+  "title": "The Recalibration of the Molecular Clock: Ancient DNA Falsifies the Constant-Rate Hypothesis",
+  "date": "2026-02-08",
+  "doi": "10.5281/zenodo.18525185",
+  "kw": [
+   "molecular clock",
+   "kimura"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 23020792,
+  "concept": "23020791",
+  "vi": 0,
+  "last": true,
+  "created": "2026-09-28",
+  "mod": "2026-09-28",
+  "files": [
+   [
+    "Punctuated Equilibrium and the Hypermutation Hazard.pdf",
+    112690,
+    "md5:2d0376fc5a0c5bf0c0c322330ba4b203",
+    "https://zenodo.org/api/records/23020792/files/Punctuated%20Equilibrium%20and%20the%20Hypermutation%20Hazard.pdf/content"
+   ]
+  ],
+  "title": "Punctuated Equilibrium and the Hypermutation Hazard: The Risks of Strong Selection Pressure",
+  "date": "2026-09-28",
+  "doi": "10.5281/zenodo.23020792",
+  "kw": [
+   "Evolution",
+   "Punctuated Equilibrium",
+   "LTEE",
+   "Selection"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 23034852,
+  "concept": "23034851",
+  "vi": 0,
+  "last": true,
+  "created": "2026-09-29",
+  "mod": "2026-09-29",
+  "files": [
+   [
+    "Strong Selection and the Improbability of Punctuated Equilibrium.pdf",
+    136009,
+    "md5:e7905de2be44ee65992a7292bef7a2ca",
+    "https://zenodo.org/api/records/23034852/files/Strong%20Selection%20and%20the%20Improbability%20of%20Punctuated%20Equilibrium.pdf/content"
+   ]
+  ],
+  "title": "Strong Selection and the Improbability of Punctuated Equilibrium",
+  "date": "2026-09-29",
+  "doi": "10.5281/zenodo.23034852",
+  "kw": [
+   "Punctuated Equilibrium",
+   "Evolution",
+   "Hypermutation"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18727817,
+  "concept": "18727816",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-21",
+  "mod": "2026-03-08",
+  "files": [
+   [
+    "Solving the Agrippan Trilemma.pdf",
+    143967,
+    "md5:27abe4ec9444271fae578d00ab7ccf44",
+    "https://zenodo.org/api/records/18727817/files/Solving%20the%20Agrippan%20Trilemma.pdf/content"
+   ]
+  ],
+  "title": "Solving the Agrippan Trilemma: Triveritas and the Third Horn",
+  "date": "2026-02-22",
+  "doi": "10.5281/zenodo.18727817",
+  "kw": [
+   "Philosophy",
+   "Veriphysics"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 18637297,
+  "concept": "18637296",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-14",
+  "mod": "2026-03-08",
+  "files": [
+   [
+    "Cross_Taxa_Channel_Capacity.odt",
+    58963,
+    "md5:64a87a363edcba3ea91a26673984fb0a",
+    "https://zenodo.org/api/records/18637297/files/Cross_Taxa_Channel_Capacity.odt/content"
+   ]
+  ],
+  "title": "The Transmission Channel Capacity Constraint on Molecular Fixation: A Cross-Taxa Survey of Meiotic Bandwidth in Sexual Populations",
+  "date": "2026-02-13",
+  "doi": "10.5281/zenodo.18637297",
+  "kw": null,
+  "rt": "Preprint"
+ },
+ {
+  "id": 18637333,
+  "concept": "18637332",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-14",
+  "mod": "2026-02-14",
+  "files": [
+   [
+    "End_of_Evolutionary_Deep_Time.odt",
+    58635,
+    "md5:646c55d06af674f36e57cd5856ab0f28",
+    "https://zenodo.org/api/records/18637333/files/End_of_Evolutionary_Deep_Time.odt/content"
+   ]
+  ],
+  "title": "The End of Evolutionary Deep Time: Five Independent Constraints on the Molecular Clock and the Recalibration of the Human-Chimpanzee Divergence",
+  "date": "2026-02-14",
+  "doi": "10.5281/zenodo.18637333",
+  "kw": null,
+  "rt": "Preprint"
+ },
+ {
+  "id": 18717939,
+  "concept": "18717938",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-20",
+  "mod": "2026-02-26",
+  "files": [
+   [
+    "Quantifying the Fall of Man v2.pdf",
+    133685,
+    "md5:8b2d5766ecb2980fd59103ad4aaf95cc",
+    "https://zenodo.org/api/records/18717939/files/Quantifying%20the%20Fall%20of%20Man%20v2.pdf/content"
+   ]
+  ],
+  "title": "Quantifying the Fall of Man: A Mathematical Proof of Original Sin",
+  "date": "2026-02-21",
+  "doi": "10.5281/zenodo.18717939",
+  "kw": [
+   "Veriphysics",
+   "Philosophy",
+   "Religion"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 19022126,
+  "concept": "19022125",
+  "vi": 0,
+  "last": true,
+  "created": "2026-03-14",
+  "mod": "2026-03-14",
+  "files": [
+   [
+    "Triveritas and the History of Science.pdf",
+    101484,
+    "md5:3d00d6cb2a06fb140f25fd90ccd6250d",
+    "https://zenodo.org/api/records/19022126/files/Triveritas%20and%20the%20History%20of%20Science.pdf/content"
+   ]
+  ],
+  "title": "Triveritas and the History of Science: An Analysis of Four Historical Cases",
+  "date": "2026-03-14",
+  "doi": "10.5281/zenodo.19022126",
+  "kw": [
+   "Triveritas",
+   "Veriphysics",
+   "philosophy",
+   "science",
+   "Semmelweis",
+   "Newton",
+   "Duhem-Quine",
+   "statistical mechanics",
+   "energetics"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18911901,
+  "concept": "18911900",
+  "vi": 0,
+  "last": true,
+  "created": "2026-03-08",
+  "mod": "2026-03-08",
+  "files": [
+   [
+    "Non-Arbitrary Termination and Trilemma.pdf",
+    51978,
+    "md5:f2b6f062b357a07aad0116d0d59454cc",
+    "https://zenodo.org/api/records/18911901/files/Non-Arbitrary%20Termination%20and%20Trilemma.pdf/content"
+   ]
+  ],
+  "title": "Non-Arbitrary Termination: Recursive Base Cases and the Third Horn of the Agrippan Trilemma",
+  "date": "2026-03-08",
+  "doi": "10.5281/zenodo.18911901",
+  "kw": [
+   "Veriphysics",
+   "Philosophy",
+   "Agrippan Trilemma",
+   "Recursion",
+   "Turing"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 18525547,
+  "concept": "18525546",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-08",
+  "mod": "2026-02-08",
+  "files": [
+   [
+    "Recalibrating CHLCA Divergence.docx",
+    21685,
+    "md5:6dea2e4209aa2848b75514c5fb7e5d53",
+    "https://zenodo.org/api/records/18525547/files/Recalibrating%20CHLCA%20Divergence.docx/content"
+   ]
+  ],
+  "title": "The N/N_e Distinction and the Recalibration of the Human-Chimpanzee Divergence",
+  "date": "2026-02-08",
+  "doi": "10.5281/zenodo.18525547",
+  "kw": [
+   "CHLCA",
+   "molecular clock",
+   "Kimura",
+   "N_e",
+   "evolution"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18429937,
+  "concept": "18429936",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-30",
+  "mod": "2026-01-30",
+  "files": [
+   [
+    "N_Ne_Problem_Preprint.docx",
+    12310,
+    "md5:7d31caa8fb0a654f3387790858caac73",
+    "https://zenodo.org/api/records/18429937/files/N_Ne_Problem_Preprint.docx/content"
+   ]
+  ],
+  "title": "The N \u2260 N\u2091 Problem: A Foundational Error in Neutral Theory",
+  "date": "2026-01-29",
+  "doi": "10.5281/zenodo.18429937",
+  "kw": [
+   "Neutral Theory",
+   "Kimura"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18724454,
+  "concept": "18724453",
+  "vi": 0,
+  "last": true,
+  "created": "2026-02-21",
+  "mod": "2026-02-21",
+  "files": [
+   [
+    "Triveritas Mathematical Proof.pdf",
+    113334,
+    "md5:52ab4b460513ee4c31a4638668ba3260",
+    "https://zenodo.org/api/records/18724454/files/Triveritas%20Mathematical%20Proof.pdf/content"
+   ]
+  ],
+  "title": "A Mathematical Proof of the Triveritas: The Necessity and Superiority of the Three-Condition Criterion",
+  "date": "2026-02-21",
+  "doi": "10.5281/zenodo.18724454",
+  "kw": [
+   "Veriphysics"
+  ],
+  "rt": "Working paper"
+ },
+ {
+  "id": 23046531,
+  "concept": "23046530",
+  "vi": 0,
+  "last": true,
+  "created": "2026-09-29",
+  "mod": "2026-09-29",
+  "files": [
+   [
+    "aDNA_Fixation_Trajectories_Paper.pdf",
+    107577,
+    "md5:dabd975abfe994a7b0d48eb577d7f300",
+    "https://zenodo.org/api/records/23046531/files/aDNA_Fixation_Trajectories_Paper.pdf/content"
+   ]
+  ],
+  "title": "Allele Frequency Trajectories in the European Ancient DNA Record",
+  "date": "2026-09-29",
+  "doi": "10.5281/zenodo.23046531",
+  "kw": null,
+  "rt": "Data paper"
+ },
+ {
+  "id": 18924026,
+  "concept": "18924025",
+  "vi": 0,
+  "last": true,
+  "created": "2026-03-09",
+  "mod": "2026-03-15",
+  "files": [
+   [
+    "Solving_the_Scientific_Demarcation_Problem.pdf",
+    190041,
+    "md5:9caf0982fe6a896af479362fb1243931",
+    "https://zenodo.org/api/records/18924026/files/Solving_the_Scientific_Demarcation_Problem.pdf/content"
+   ]
+  ],
+  "title": "Solving the Scientific Demarcation Problem: Structurally Warranted Termination as the Foundation of Scientific Knowledge",
+  "date": "2026-03-09",
+  "doi": "10.5281/zenodo.18924026",
+  "kw": [
+   "Veriphysics",
+   "Triveritas",
+   "Popper",
+   "Science",
+   "Epistemology"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18930279,
+  "concept": "18930278",
+  "vi": 0,
+  "last": true,
+  "created": "2026-03-09",
+  "mod": "2026-03-09",
+  "files": [
+   [
+    "Hard Problem of Consciousness.pdf",
+    115264,
+    "md5:39a069f2508b247f7cca5fea9baa3bd0",
+    "https://zenodo.org/api/records/18930279/files/Hard%20Problem%20of%20Consciousness.pdf/content"
+   ]
+  ],
+  "title": "The Hard Problem of Consciousness: Triveritas and the Third Impossibility",
+  "date": "2026-03-10",
+  "doi": "10.5281/zenodo.18930279",
+  "kw": [
+   "Veriphysics",
+   "philosophy",
+   "consciousness",
+   "Chalmers",
+   "Triveritas"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 18167588,
+  "concept": "18167587",
+  "vi": 0,
+  "last": true,
+  "created": "2026-01-07",
+  "mod": "2026-01-07",
+  "files": [
+   [
+    "Bernoulli_Barrier_FINAL.docx",
+    21585,
+    "md5:213a9e9b651bd1d68deaf5e6610f85b3",
+    "https://zenodo.org/api/records/18167588/files/Bernoulli_Barrier_FINAL.docx/content"
+   ]
+  ],
+  "title": "The Bernoulli Barrier: How Parallel Fixation Violates the Law of Large Numbers",
+  "date": "2026-01-04",
+  "doi": "10.5281/zenodo.18167588",
+  "kw": [
+   "parallel fixation, Law of Large Numbers, selection variance, population genetics, human evolution, evolutionary constraints"
+  ],
+  "rt": "Preprint"
+ },
+ {
+  "id": 23188201,
+  "concept": "23188200",
+  "vi": 0,
+  "last": true,
+  "created": "2026-10-06",
+  "mod": "2026-10-07",
+  "files": [
+   [
+    "Relictation A Third Evolutionary Mechanism.pdf",
+    105849,
+    "md5:d5f8fd736aff2aed0b8fd3d9f46f8d7c",
+    "https://zenodo.org/api/records/23188201/files/Relictation%20A%20Third%20Evolutionary%20Mechanism.pdf/content"
+   ]
+  ],
+  "title": "Relictation: A Third Evolutionary Mechanism",
+  "date": "2026-10-06",
+  "doi": "10.5281/zenodo.23188201",
+  "kw": [
+   "evolution",
+   "natural selection",
+   "drift",
+   "Kimura",
+   "relict",
+   "mechanism"
+  ],
+  "rt": "Preprint"
+ }
+]

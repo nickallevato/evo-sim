@@ -1,0 +1,33 @@
+U=2.2, e^-U=0.1108; hard persistence threshold Fmax > 18.1; K=1000, 6 reps, 500 gens
+
+## multiplicative s=0.05 (k_eq ~ U/s = 44)
+ Fmax=4   hard: extinct 6/6
+ Fmax=4   soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.0357±0.0003  mean k=68.2
+ Fmax=8   hard: extinct 6/6
+ Fmax=8   soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.0809±0.0003  mean k=51.5
+ Fmax=12  hard: extinct 6/6
+ Fmax=12  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.0941±0.0005  mean k=48.5
+ Fmax=17  hard: extinct 6/6
+ Fmax=17  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.1023±0.0013  mean k=46.7
+ Fmax=20  hard: extinct 6/6  [pred N/K=0.045]
+ Fmax=20  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.1064±0.0008  mean k=45.9
+ Fmax=30  hard: extinct 0/6  N/K=0.174±0.009  mean w(adults)=0.1202±0.0028  mean k=43.5  [pred N/K=0.188]
+ Fmax=30  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.1126±0.0009  mean k=44.8
+ Fmax=60  hard: extinct 0/6  N/K=0.344±0.004  mean w(adults)=0.1204±0.0018  mean k=43.4  [pred N/K=0.353]
+ Fmax=60  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.1187±0.0009  mean k=43.7
+
+## synergistic w=exp(-0.01k-0.0004k^2)
+ Fmax=4   hard: extinct 6/6
+ Fmax=4   soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.1423±0.0015  mean k=59.5
+ Fmax=8   hard: extinct 6/6
+ Fmax=8   soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.2189±0.0013  mean k=51.2
+ Fmax=12  hard: extinct 0/6  N/K=0.201±0.004  mean w(adults)=0.2658±0.0022  mean k=47.1
+ Fmax=12  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.2381±0.0010  mean k=49.4
+ Fmax=17  hard: extinct 0/6  N/K=0.339±0.004  mean w(adults)=0.2694±0.0020  mean k=46.8
+ Fmax=17  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.2499±0.0011  mean k=48.4
+ Fmax=20  hard: extinct 0/6  N/K=0.392±0.002  mean w(adults)=0.2732±0.0009  mean k=46.5
+ Fmax=20  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.2516±0.0010  mean k=48.3
+ Fmax=30  hard: extinct 0/6  N/K=0.481±0.001  mean w(adults)=0.2719±0.0007  mean k=46.6
+ Fmax=30  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.2603±0.0013  mean k=47.5
+ Fmax=60  hard: extinct 0/6  N/K=0.588±0.001  mean w(adults)=0.2727±0.0013  mean k=46.5
+ Fmax=60  soft: extinct 0/6  N/K=1.000±0.000  mean w(adults)=0.2655±0.0015  mean k=47.1

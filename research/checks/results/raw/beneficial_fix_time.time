@@ -1,0 +1,1 @@
+$P $f.py > $S/$f.out 2>&1  2.65s user 0.07s system 130% cpu 2.077 total

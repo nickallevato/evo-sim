@@ -1,0 +1,9 @@
+Gaussian model, K=500, n=1, R=2.2 (10% budget); success = no extinction and adult mean sq. deviation < 0.5; grid max T=1000
+ hard R=2.2 M=0.1   T50=  284.9  rate=0.0035/gen
+ hard R=2.2 M=0.25  T50=  181.3  rate=0.0055/gen
+ hard R=2.2 M=1.0   T50=   76.5  rate=0.0131/gen
+ hard R=2.2 M=10.0  T50=   33.2  rate=0.0301/gen
+ soft R=2.2 M=0.1   T50=  494.6  rate=0.0020/gen
+ soft R=2.2 M=0.25  T50=  484.2  rate=0.0021/gen
+ soft R=2.2 M=1.0   T50=  220.0  rate=0.0045/gen
+ soft R=2.2 M=10.0  T50=   86.2  rate=0.0116/gen

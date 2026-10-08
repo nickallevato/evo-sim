@@ -1,0 +1,101 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/na/projects/evo-sim/research/.venv, got /home/na/projects/evo-sim/research/checks/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/na/projects/evo-sim/research/.venv, got /home/na/projects/evo-sim/research/checks/../.venv
+== (a) Haldane arithmetic ==
+m/D = 0.10/30 per generation -> interval 300.0 generations;  146250/300 = 487.5
+ p0      D_haploid=ln(1/p0)   D_diploid(additive,s=0.01)   D_diploid(s=0.001)   gens/subst at 10%
+   1e-02     4.61                 9.23                       9.19                92
+   1e-03     6.91                13.87                      13.82               139
+   1e-04     9.21                18.50                      18.43               185
+   1e-05    11.51                23.13                      23.04               231
+   1e-06    13.82                27.76                      27.64               278
+p0 giving D=30: haploid 9.36e-14; diploid additive (s=0.01) ~ 3.1e-07
+Note: D=30 is Haldane's 'typical' input; here it is only a re-derivation of the 300 from D and m.
+
+== (c) Day's cost figures ==
+Term 3 per site 8.253e-12; genome-wide 0.0256/gen = 1 per 39.1 generations
+Term 3 implied cost per substitution 2 ln(2Ne) = 17.59 (Haldane D = 30); budget s_max = 1.0 (Haldane m = 0.10)
+Haldane+d per generation = 0.00150 (1 per 667); Term 3 / Haldane+d = 17.1; Term 3 / Haldane(no d) = 7.7; Term3(no d)/Haldane(no d) = 17.1
+s_max=0.1 in Term 3 -> 1 per 391 gens (R2 said ~390)
+  2025 (325k gens): Haldane 1,083; Haldane+d 488; Term 3 8,315
+  2019 (450k): Haldane 1,500; Haldane+d 675; Term 3 11,512
+  MITTENS 3.0 (252k): Haldane 840; Haldane+d 378; Term 3 6,447
+  Term-3 window: Haldane 867; Haldane+d 390; Term 3 6,652
+Hossjer: Haldane over 450,000 gens = 1500 (675 with d); his 'equation (3)' 15,800 is 10.5x Haldane
+Required: 20M/487 = 41068 ; 17.5M/6650 = 2632
+Scope (H1 retraction): cost bounds SELECTED substitutions only; neutral fixation rate = mu (B0.5, k=U, z=+0.13/-0.64)
+
+== (b) IBM: max sustainable substitution rate (T50 = interval at 50% persistence, 8 reps/T) ==
+
+# A:R-scan s=.03
+ hard n=1 s=0.030 R=2.2  M=2.0   T50=   50.8 rate n/T50=0.0197/gen  Deff=T50*ln(R/2)/n=  4.85
+ hard n=1 s=0.030 R=3    M=2.0   T50=   73.3 rate n/T50=0.0136/gen  Deff=T50*ln(R/2)/n= 29.71
+ hard n=1 s=0.030 R=5    M=2.0   T50=   76.1 rate n/T50=0.0131/gen  Deff=T50*ln(R/2)/n= 69.77
+ hard n=1 s=0.030 R=10   M=2.0   T50=   78.4 rate n/T50=0.0128/gen  Deff=T50*ln(R/2)/n=126.15
+ hard n=1 s=0.030 R=40   M=2.0   T50=   43.4 rate n/T50=0.0231/gen  Deff=T50*ln(R/2)/n=129.93
+ soft n=1 s=0.030 R=2.2  M=2.0   T50=  177.0 rate n/T50=0.0056/gen  Deff=T50*ln(R/2)/n= 16.87
+ soft n=1 s=0.030 R=3    M=2.0   T50=  128.0 rate n/T50=0.0078/gen  Deff=T50*ln(R/2)/n= 51.90
+ soft n=1 s=0.030 R=5    M=2.0   T50=  150.5 rate n/T50=0.0066/gen  Deff=T50*ln(R/2)/n=137.94
+ soft n=1 s=0.030 R=10   M=2.0   T50=  141.7 rate n/T50=0.0071/gen  Deff=T50*ln(R/2)/n=227.99
+ soft n=1 s=0.030 R=40   M=2.0   T50=  304.6 rate n/T50=0.0033/gen  Deff=T50*ln(R/2)/n=912.45
+
+# A:R-scan s=.10
+ hard n=1 s=0.100 R=2.2  M=2.0   T50=    nan rate n/T50=nan/gen  Deff=T50*ln(R/2)/n=   nan (no success at T<=1024)
+ hard n=1 s=0.100 R=3    M=2.0   T50=   27.7 rate n/T50=0.0361/gen  Deff=T50*ln(R/2)/n= 11.24
+ hard n=1 s=0.100 R=5    M=2.0   T50=   34.7 rate n/T50=0.0288/gen  Deff=T50*ln(R/2)/n= 31.80
+ hard n=1 s=0.100 R=10   M=2.0   T50=   36.6 rate n/T50=0.0273/gen  Deff=T50*ln(R/2)/n= 58.96
+ hard n=1 s=0.100 R=40   M=2.0   T50=   24.0 rate n/T50=0.0417/gen  Deff=T50*ln(R/2)/n= 71.90
+ soft n=1 s=0.100 R=2.2  M=2.0   T50=   96.0 rate n/T50=0.0104/gen  Deff=T50*ln(R/2)/n=  9.15
+ soft n=1 s=0.100 R=3    M=2.0   T50=   64.0 rate n/T50=0.0156/gen  Deff=T50*ln(R/2)/n= 25.95
+ soft n=1 s=0.100 R=5    M=2.0   T50=   55.4 rate n/T50=0.0180/gen  Deff=T50*ln(R/2)/n= 50.79
+ soft n=1 s=0.100 R=10   M=2.0   T50=   60.4 rate n/T50=0.0166/gen  Deff=T50*ln(R/2)/n= 97.24
+ soft n=1 s=0.100 R=40   M=2.0   T50=  105.7 rate n/T50=0.0095/gen  Deff=T50*ln(R/2)/n=316.53
+
+# B:M-scan R=10 s=.1
+ hard n=1 s=0.100 R=10   M=0.1   T50=  110.9 rate n/T50=0.0090/gen  Deff=T50*ln(R/2)/n=178.41
+ hard n=1 s=0.100 R=10   M=0.25  T50=   73.3 rate n/T50=0.0136/gen  Deff=T50*ln(R/2)/n=117.91
+ hard n=1 s=0.100 R=10   M=0.5   T50=   50.8 rate n/T50=0.0197/gen  Deff=T50*ln(R/2)/n= 81.83
+ hard n=1 s=0.100 R=10   M=1.0   T50=   39.2 rate n/T50=0.0255/gen  Deff=T50*ln(R/2)/n= 63.08
+ hard n=1 s=0.100 R=10   M=2.0   T50=   36.6 rate n/T50=0.0273/gen  Deff=T50*ln(R/2)/n= 58.96
+ hard n=1 s=0.100 R=10   M=10.0  T50=   19.6 rate n/T50=0.0510/gen  Deff=T50*ln(R/2)/n= 31.54
+ soft n=1 s=0.100 R=10   M=0.1   T50=  313.5 rate n/T50=0.0032/gen  Deff=T50*ln(R/2)/n=504.61
+ soft n=1 s=0.100 R=10   M=0.25  T50=  128.0 rate n/T50=0.0078/gen  Deff=T50*ln(R/2)/n=206.01
+ soft n=1 s=0.100 R=10   M=0.5   T50=  105.7 rate n/T50=0.0095/gen  Deff=T50*ln(R/2)/n=170.06
+ soft n=1 s=0.100 R=10   M=1.0   T50=   78.4 rate n/T50=0.0128/gen  Deff=T50*ln(R/2)/n=126.15
+ soft n=1 s=0.100 R=10   M=2.0   T50=   55.4 rate n/T50=0.0180/gen  Deff=T50*ln(R/2)/n= 89.20
+ soft n=1 s=0.100 R=10   M=10.0  T50=   36.6 rate n/T50=0.0273/gen  Deff=T50*ln(R/2)/n= 58.96
+
+# C:s-scan R=3
+ hard n=1 s=0.010 R=3    M=2.0   T50=  156.8 rate n/T50=0.0064/gen  Deff=T50*ln(R/2)/n= 63.56
+ hard n=1 s=0.030 R=3    M=2.0   T50=   83.9 rate n/T50=0.0119/gen  Deff=T50*ln(R/2)/n= 34.00
+ hard n=1 s=0.100 R=3    M=2.0   T50=   27.7 rate n/T50=0.0361/gen  Deff=T50*ln(R/2)/n= 11.24
+ hard n=1 s=0.300 R=3    M=2.0   T50=   15.1 rate n/T50=0.0662/gen  Deff=T50*ln(R/2)/n=  6.12
+ soft n=1 s=0.010 R=3    M=2.0   T50=  241.7 rate n/T50=0.0041/gen  Deff=T50*ln(R/2)/n= 98.00
+ soft n=1 s=0.030 R=3    M=2.0   T50=  138.8 rate n/T50=0.0072/gen  Deff=T50*ln(R/2)/n= 56.28
+ soft n=1 s=0.100 R=3    M=2.0   T50=   60.4 rate n/T50=0.0166/gen  Deff=T50*ln(R/2)/n= 24.50
+ soft n=1 s=0.300 R=3    M=2.0   T50=   27.7 rate n/T50=0.0361/gen  Deff=T50*ln(R/2)/n= 11.24
+
+# D:n-scan R=10 (s=.2/n) staggered
+ hard n=3 s=0.067 R=10   M=2.0   T50=   48.0 rate n/T50=0.0625/gen  Deff=T50*ln(R/2)/n= 25.75
+ hard n=5 s=0.040 R=10   M=2.0   T50=   76.1 rate n/T50=0.0657/gen  Deff=T50*ln(R/2)/n= 24.51
+ soft n=3 s=0.067 R=10   M=2.0   T50=   80.7 rate n/T50=0.0372/gen  Deff=T50*ln(R/2)/n= 43.29
+ soft n=5 s=0.040 R=10   M=2.0   T50=  138.8 rate n/T50=0.0360/gen  Deff=T50*ln(R/2)/n= 44.68
+
+# D:n-scan R=10 (s=.2/n) sync
+ hard n=1 s=0.200 R=10   M=2.0   T50=   19.6 rate n/T50=0.0510/gen  Deff=T50*ln(R/2)/n= 31.54
+ hard n=2 s=0.100 R=10   M=2.0   T50=   38.1 rate n/T50=0.0525/gen  Deff=T50*ln(R/2)/n= 30.64
+ hard n=3 s=0.067 R=10   M=2.0   T50=   40.3 rate n/T50=0.0744/gen  Deff=T50*ln(R/2)/n= 21.64
+ hard n=5 s=0.040 R=10   M=2.0   T50=   78.4 rate n/T50=0.0638/gen  Deff=T50*ln(R/2)/n= 25.23
+ soft n=1 s=0.200 R=10   M=2.0   T50=   34.7 rate n/T50=0.0288/gen  Deff=T50*ln(R/2)/n= 55.85
+ soft n=2 s=0.100 R=10   M=2.0   T50=   58.1 rate n/T50=0.0344/gen  Deff=T50*ln(R/2)/n= 46.79
+ soft n=3 s=0.067 R=10   M=2.0   T50=   83.9 rate n/T50=0.0358/gen  Deff=T50*ln(R/2)/n= 44.99
+ soft n=5 s=0.040 R=10   M=2.0   T50=  116.3 rate n/T50=0.0430/gen  Deff=T50*ln(R/2)/n= 37.43
+
+# D:n-scan R=10 (s=.2/n) sync M=10
+ hard n=1 s=0.200 R=10   M=10.0  T50=   12.0 rate n/T50=0.0833/gen  Deff=T50*ln(R/2)/n= 19.31
+ hard n=2 s=0.100 R=10   M=10.0  T50=   19.6 rate n/T50=0.1021/gen  Deff=T50*ln(R/2)/n= 15.77
+ hard n=3 s=0.067 R=10   M=10.0  T50=   25.4 rate n/T50=0.1180/gen  Deff=T50*ln(R/2)/n= 13.64
+ hard n=5 s=0.040 R=10   M=10.0  T50=   36.6 rate n/T50=0.1365/gen  Deff=T50*ln(R/2)/n= 11.79
+ soft n=1 s=0.200 R=10   M=10.0  T50=   19.6 rate n/T50=0.0510/gen  Deff=T50*ln(R/2)/n= 31.54
+ soft n=2 s=0.100 R=10   M=10.0  T50=   39.2 rate n/T50=0.0510/gen  Deff=T50*ln(R/2)/n= 31.54
+ soft n=3 s=0.067 R=10   M=10.0  T50=   52.8 rate n/T50=0.0568/gen  Deff=T50*ln(R/2)/n= 28.34
+ soft n=5 s=0.040 R=10   M=10.0  T50=   76.1 rate n/T50=0.0657/gen  Deff=T50*ln(R/2)/n= 24.51

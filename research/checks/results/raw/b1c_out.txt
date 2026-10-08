@@ -1,0 +1,48 @@
+T=252000 gens, theta=800.0, reps=150, seed=20261008
+
+## Scale validation (E4): H1 = step 1.98e5 -> 1e4 at split; K/(U T) total
+N_anc_sim=  500  K/UT = 3.951 +- 0.013   (pre 3.094, post 0.857)   analytic 1+4dN/T = 3.984
+N_anc_sim= 1000  K/UT = 3.940 +- 0.015   (pre 3.111, post 0.830)   analytic 1+4dN/T = 3.984
+N_anc_sim= 2000  K/UT = 3.933 +- 0.016   (pre 3.103, post 0.829)   analytic 1+4dN/T = 3.984
+
+Second validation: constant control at N_anc_sim 500/2000 (expect 1)
+N_anc_sim=  500  K/UT = 0.984 +- 0.009
+
+Cross-check vs wf.substitutions_demog (N_anc_sim=500, 40 reps, H1): 3.957 +- 0.020
+evolve() same setting: 3.951 +- 0.013
+
+## HUMAN lineage, ancestral Ne HCB 1.98e5; K_lineage/(U T), equilibrium start
+| scenario | K/UT +- SE | from ancestral alleles | from new mutations | telescoped analytic | verdict |
+|---|---|---|---|---|---|
+| H0 const at ancestral (control) | 0.986 +- 0.005 | 0.984 | 0.002 | 1.000 | deficit |
+| H1 step to 1.0e4 at split (textbook 1e4) | 3.945 +- 0.011 | 3.103 | 0.842 | 3.984 | excess |
+| H2 step to 1.5e4 (PM2013 Table1 humans 13.1-16.2k) | 3.865 +- 0.010 | 3.100 | 0.764 | 3.905 | excess |
+| H3 Takahata-like: 1e5 first half, then 1e4 | 3.951 +- 0.010 | 3.113 | 0.838 | 3.984 | excess |
+| H4 1e4 then growth to 5e4 in last 2% (sensitivity, unsourced) | 3.924 +- 0.010 | 3.099 | 0.825 | 3.349 | excess |
+
+## CHIMP lineage, ancestral Ne HCB 1.98e5; K_lineage/(U T), equilibrium start
+| scenario | K/UT +- SE | from ancestral alleles | from new mutations | telescoped analytic | verdict |
+|---|---|---|---|---|---|
+| C0 const at ancestral (control) | 0.986 +- 0.005 | 0.984 | 0.002 | 1.000 | deficit |
+| C1a step to 3.09e4 (PM2013 Table1 common chimp low) | 3.558 +- 0.010 | 3.034 | 0.524 | 3.652 | excess |
+| C1b step to 6.18e4 (PM2013 Table1 common chimp high) | 2.713 +- 0.008 | 2.502 | 0.211 | 3.162 | excess |
+| C2 PSMC-text: anc to 3 Mya, 1.8e4 to 1 Mya, 4.6e4 last 1 My | 3.430 +- 0.009 | 2.870 | 0.559 | 3.413 | excess |
+| C3 bonobo-like constant 1.785e4 (PM2013 Table1 bonobo mid) | 3.825 +- 0.009 | 3.103 | 0.721 | 3.860 | excess |
+
+## HUMAN lineage, ancestral Ne HCG 1.32e5; K_lineage/(U T), equilibrium start
+| scenario | K/UT +- SE | from ancestral alleles | from new mutations | telescoped analytic | verdict |
+|---|---|---|---|---|---|
+| H0 const at ancestral (control) | 0.988 +- 0.005 | 0.968 | 0.020 | 1.000 | deficit |
+| H1 step to 1.0e4 at split (textbook 1e4) | 2.920 +- 0.007 | 2.077 | 0.843 | 2.937 | excess |
+| H2 step to 1.5e4 (PM2013 Table1 humans 13.1-16.2k) | 2.846 +- 0.008 | 2.077 | 0.769 | 2.857 | excess |
+| H3 Takahata-like: 1e5 first half, then 1e4 | 2.914 +- 0.007 | 2.072 | 0.842 | 2.937 | excess |
+| H4 1e4 then growth to 5e4 in last 2% (sensitivity, unsourced) | 2.901 +- 0.007 | 2.079 | 0.822 | 2.302 | excess |
+
+## CHIMP lineage, ancestral Ne HCG 1.32e5; K_lineage/(U T), equilibrium start
+| scenario | K/UT +- SE | from ancestral alleles | from new mutations | telescoped analytic | verdict |
+|---|---|---|---|---|---|
+| C0 const at ancestral (control) | 0.988 +- 0.005 | 0.968 | 0.020 | 1.000 | deficit |
+| C1a step to 3.09e4 (PM2013 Table1 common chimp low) | 2.540 +- 0.007 | 2.016 | 0.524 | 2.605 | excess |
+| C1b step to 6.18e4 (PM2013 Table1 common chimp high) | 1.886 +- 0.005 | 1.676 | 0.210 | 2.114 | excess |
+| C2 PSMC-text: anc to 3 Mya, 1.8e4 to 1 Mya, 4.6e4 last 1 My | 2.508 +- 0.007 | 1.944 | 0.563 | 2.365 | excess |
+| C3 bonobo-like constant 1.785e4 (PM2013 Table1 bonobo mid) | 2.784 +- 0.007 | 2.067 | 0.717 | 2.812 | excess |

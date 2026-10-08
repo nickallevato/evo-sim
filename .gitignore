@@ -3,3 +3,4 @@ sources/raw/
 research/.venv/
 __pycache__/
 *.pyc
+work/

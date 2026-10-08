@@ -1,0 +1,7 @@
+p='status.html'; s=open(p).read()
+s=s.replace('<li>Fix and rerun F2 / A2 (reproducible seeds, extrapolation relabelled)</li>','<li><b>Done:</b> F2 / A2 rerun with reproducible seeds; numbers unchanged within noise; 1.5–172× relabelled as extrapolation</li>')
+s=s.replace('Free recombination stays at 97%, and fwdpy11 agrees.','Free recombination stays at 97.5% with 272 sweeps in progress, and fwdpy11 agrees.')
+s=s.replace('With free recombination the rate is 1.6–174× higher than the asexual rate; that range is extrapolated from F2, not simulated at LTEE scale.','With free recombination the rate would be 1.5–172× higher than the asexual rate; that is an extrapolation, not simulated at LTEE scale. LTEE Nₑ = 3.3e7 is unsourced.')
+s=s.replace('<h3>Five jobs running</h3>','<h3>Jobs</h3>')
+s=s.replace('</ul></div>\n  </div>\n</section>\n\n<section>\n  <h2>Argument tree</h2>','  <li><b>Running:</b> review of the two new checks (hard selection, C1b)</li>\n    </ul></div>\n  </div>\n</section>\n\n<section>\n  <h2>Argument tree</h2>',1)
+open(p,'w').write(s)

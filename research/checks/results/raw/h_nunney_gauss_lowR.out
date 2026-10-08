@@ -1,0 +1,11 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/na/projects/evo-sim/research/.venv, got /home/na/projects/evo-sim/research/checks/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/na/projects/evo-sim/research/.venv, got /home/na/projects/evo-sim/research/checks/../.venv
+Gaussian model, K=500, n=1, R=2.2 (10% budget); success = no extinction and adult mean sq. deviation < 0.5; grid max T=1000
+ hard R=2.2 M=0.1   T50=  170.0  rate=0.0059/gen
+ hard R=2.2 M=0.25  T50=  114.0  rate=0.0088/gen
+ hard R=2.2 M=1.0   T50=   47.3  rate=0.0211/gen
+ hard R=2.2 M=10.0  T50=   25.0  rate=0.0400/gen
+ soft R=2.2 M=0.1   T50= 1000.0  rate=0.0010/gen
+ soft R=2.2 M=0.25  T50=  400.0  rate=0.0025/gen
+ soft R=2.2 M=1.0   T50=  210.7  rate=0.0047/gen
+ soft R=2.2 M=10.0  T50=   89.4  rate=0.0112/gen

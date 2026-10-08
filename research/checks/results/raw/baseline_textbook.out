@@ -1,0 +1,15 @@
+PASS B0.1 P_fix neutral N=50: est=0.0098925 ± 0.00016  target=0.01  z=-0.69
+PASS B0.2 mean t_fix neutral N=50 (in units of N): est=3.908 ± 0.033  target=4  z=-2.75
+     SD t_fix / N = 2.105 (Kimura–Ohta ~2.15); n_fixed=3957
+PASS B0.1 P_fix neutral N=200: est=0.00246 ± 7.8e-05  target=0.0025  z=-0.51
+PASS B0.2 mean t_fix neutral N=200 (in units of N): est=4.0057 ± 0.067  target=4  z=+0.08
+     SD t_fix / N = 2.108 (Kimura–Ohta ~2.15); n_fixed=984
+PASS B0.3 P_fix N=100 s=0.01: est=0.019995 ± 0.00031  target=0.020171  z=-0.56
+INFO B0.4 N=100 s=0.01 2Ns=2: sim mean t_fix=335 ± 3; (2/s)ln(2N)=1060; (2/s)(ln(2Ns)+γ)=254
+PASS B0.3 P_fix N=500 s=0.01: est=0.019745 ± 0.00031  target=0.019801  z=-0.18
+INFO B0.4 N=500 s=0.01 2Ns=10: sim mean t_fix=701 ± 3; (2/s)ln(2N)=1382; (2/s)(ln(2Ns)+γ)=576
+PASS B0.3 P_fix N=1000 s=0.005: est=0.010225 ± 0.00022  target=0.0099502  z=+1.22
+INFO B0.4 N=1000 s=0.005 2Ns=10: sim mean t_fix=1408 ± 9; (2/s)ln(2N)=3040; (2/s)(ln(2Ns)+γ)=1152
+PASS B0.5 k at equilibrium N=50 (U=0.05): est=0.050175 ± 0.0014  target=0.05  z=+0.13
+PASS B0.5 k at equilibrium N=200 (U=0.05): est=0.049644 ± 0.00056  target=0.05  z=-0.64
+ALL BASELINES PASS

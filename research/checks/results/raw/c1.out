@@ -1,0 +1,158 @@
+=== Main run: Ne=1e4, 280 generations (7,000 y / 25 y), split 2000 gens, Z23046531 v62 sample sizes (n_Neo=1372, n_mod=680) ===
+--- Ne=1e4, G=280, v62: scaled N_s=1000, f=10.00, window 28 scaled gens = 280 real; split 200 scaled
+  P1 flux: derived fixations per site over window = 3.4727e-06; mu*G = 3.3600e-06; ratio 1.0335
+  P2 new-in-window mutations that fix inside the window, per site = 4.949e-151 (1.47e-145 of mu*G)
+  D0 unascertained (all polymorphic at start)
+     P(newly-100%-in-modern-sample | site in set) = 3.090e-01  -> on 1,143,671-SNP panel: 353,358.5
+       by Neolithic start band of the fixing allele: <10%: 4.023e-82; 10-50%: 1.586e-30; 50-90%: 0.03032; 90-99%: 2.095e+04; >=99%: 3.324e+05
+     P(true population fixation of derived allele | in set) = 8.847e-04 -> panel 1,011.77
+  D1 same-pop MAF>=5% (2,345 dipl.)
+     P(newly-100%-in-modern-sample | site in set) = 1.673e-29  -> on 1,143,671-SNP panel: 0.0
+       by Neolithic start band of the fixing allele: <10%: 1.497e-90; 10-50%: 2.479e-45; 50-90%: 3.189e-25; 90-99%: 1.748e-23; >=99%: 1.341e-24
+     P(true population fixation of derived allele | in set) = 0.000e+00 -> panel 0.00
+  D1b same-pop polymorphic in 2,345 dipl.
+     P(newly-100%-in-modern-sample | site in set) = 6.623e-03  -> on 1,143,671-SNP panel: 7,574.2
+       by Neolithic start band of the fixing allele: <10%: 4.074e-82; 10-50%: 1.586e-30; 50-90%: 0.01654; 90-99%: 2194; >=99%: 5381
+     P(true population fixation of derived allele | in set) = 0.000e+00 -> panel 0.00
+  D2 African single male het (Human Origins/Haak)
+     P(newly-100%-in-modern-sample | site in set) = 1.207e-02  -> on 1,143,671-SNP panel: 13,807.4
+       by Neolithic start band of the fixing allele: <10%: 5.641e-82; 10-50%: 5.381e-30; 50-90%: 0.03787; 90-99%: 4181; >=99%: 9626
+     P(true population fixation of derived allele | in set) = 9.922e-04 -> panel 1,134.77
+  D3 African MAF>=5% (100 dipl.)
+     P(newly-100%-in-modern-sample | site in set) = 1.588e-02  -> on 1,143,671-SNP panel: 18,157.3
+       by Neolithic start band of the fixing allele: <10%: 6.296e-82; 10-50%: 4.256e-30; 50-90%: 0.04318; 90-99%: 5427; >=99%: 1.273e+04
+     P(true population fixation of derived allele | in set) = 1.218e-03 -> panel 1,392.56
+  Enrichment of newly-100% events, P(event|in set)/P(event|polymorphic site), by band:
+     D0 unascertained (all polymorphic  total   1.000 | <10%:1 10-50%:1 50-90%:1 90-99%:1 >=99%:1
+     D1 same-pop MAF>=5% (2,345 dipl.)  total   0.000 | <10%:3.72e-09 10-50%:1.56e-15 50-90%:1.05e-23 90-99%:8.34e-28 >=99%:4.03e-30
+     D1b same-pop polymorphic in 2,345  total   0.021 | <10%:1.01 10-50%:1 50-90%:0.546 90-99%:0.105 >=99%:0.0162
+     D2 African single male het (Human  total   0.039 | <10%:1.4 10-50%:3.39 50-90%:1.25 90-99%:0.2 >=99%:0.029
+     D3 African MAF>=5% (100 dipl.)     total   0.051 | <10%:1.56 10-50%:2.68 50-90%:1.42 90-99%:0.259 >=99%:0.0383
+  Blog-style event (Neolithic <10% -> modern >90%), prob per site in set: unascertained-poly 3.19e-54, D1 8.86e-54, D2 4.31e-54  -> panel x1,143,671: 3.65e-48 / 1.01e-47 / 4.93e-48
+  [15s]
+
+=== Same, v66.p1 sample sizes (n_Neo=395, n_mod=441) ===
+--- Ne=1e4, G=280, v66.p1: scaled N_s=1000, f=10.00, window 28 scaled gens = 280 real; split 200 scaled
+  P1 flux: derived fixations per site over window = 3.4727e-06; mu*G = 3.3600e-06; ratio 1.0335
+  P2 new-in-window mutations that fix inside the window, per site = 4.949e-151 (1.47e-145 of mu*G)
+  D0 unascertained (all polymorphic at start)
+     P(newly-100%-in-modern-sample | site in set) = 2.245e-01  -> on 1,143,671-SNP panel: 256,797.5
+       by Neolithic start band of the fixing allele: <10%: 6.239e-74; 10-50%: 1.772e-27; 50-90%: 0.09674; 90-99%: 2.749e+04; >=99%: 2.293e+05
+     P(true population fixation of derived allele | in set) = 8.847e-04 -> panel 1,011.77
+  D1 same-pop MAF>=5% (2,345 dipl.)
+     P(newly-100%-in-modern-sample | site in set) = 8.841e-21  -> on 1,143,671-SNP panel: 0.0
+       by Neolithic start band of the fixing allele: <10%: 1.506e-76; 10-50%: 8.232e-35; 50-90%: 2.68e-16; 90-99%: 9.318e-15; >=99%: 5.247e-16
+     P(true population fixation of derived allele | in set) = 0.000e+00 -> panel 0.00
+  D1b same-pop polymorphic in 2,345 dipl.
+     P(newly-100%-in-modern-sample | site in set) = 1.071e-02  -> on 1,143,671-SNP panel: 12,253.8
+       by Neolithic start band of the fixing allele: <10%: 6.317e-74; 10-50%: 1.792e-27; 50-90%: 0.0693; 90-99%: 4336; >=99%: 7918
+     P(true population fixation of derived allele | in set) = 0.000e+00 -> panel 0.00
+  D2 African single male het (Human Origins/Haak)
+     P(newly-100%-in-modern-sample | site in set) = 1.159e-02  -> on 1,143,671-SNP panel: 13,254.2
+       by Neolithic start band of the fixing allele: <10%: 1.163e-73; 10-50%: 5.949e-27; 50-90%: 0.1122; 90-99%: 4944; >=99%: 8310
+     P(true population fixation of derived allele | in set) = 9.922e-04 -> panel 1,134.77
+  D3 African MAF>=5% (100 dipl.)
+     P(newly-100%-in-modern-sample | site in set) = 1.522e-02  -> on 1,143,671-SNP panel: 17,404.8
+       by Neolithic start band of the fixing allele: <10%: 1.209e-73; 10-50%: 4.739e-27; 50-90%: 0.1294; 90-99%: 6423; >=99%: 1.098e+04
+     P(true population fixation of derived allele | in set) = 1.218e-03 -> panel 1,392.56
+  Enrichment of newly-100% events, P(event|in set)/P(event|polymorphic site), by band:
+     D0 unascertained (all polymorphic  total   1.000 | <10%:1 10-50%:1 50-90%:1 90-99%:1 >=99%:1
+     D1 same-pop MAF>=5% (2,345 dipl.)  total   0.000 | <10%:0.00241 10-50%:4.65e-08 50-90%:2.77e-15 90-99%:3.39e-19 >=99%:2.29e-21
+     D1b same-pop polymorphic in 2,345  total   0.048 | <10%:1.01 10-50%:1.01 50-90%:0.716 90-99%:0.158 >=99%:0.0345
+     D2 African single male het (Human  total   0.052 | <10%:1.86 10-50%:3.36 50-90%:1.16 90-99%:0.18 >=99%:0.0362
+     D3 African MAF>=5% (100 dipl.)     total   0.068 | <10%:1.94 10-50%:2.67 50-90%:1.34 90-99%:0.234 >=99%:0.0479
+  Blog-style event (Neolithic <10% -> modern >90%), prob per site in set: unascertained-poly 5.98e-50, D1 1.66e-49, D2 1.02e-49  -> panel x1,143,671: 6.84e-44 / 1.9e-43 / 1.17e-43
+
+=== Sensitivity: G=350 (20 y/gen, the blog's window) ===
+--- Ne=1e4, G=350, v62: scaled N_s=1000, f=10.00, window 35 scaled gens = 350 real; split 200 scaled
+  P1 flux: derived fixations per site over window = 4.3209e-06; mu*G = 4.2000e-06; ratio 1.0288
+  P2 new-in-window mutations that fix inside the window, per site = 4.038e-122 (9.62e-117 of mu*G)
+  D0 unascertained (all polymorphic at start)
+     P(newly-100%-in-modern-sample | site in set) = 3.325e-01  -> on 1,143,671-SNP panel: 380,246.1
+       by Neolithic start band of the fixing allele: <10%: 9.052e-67; 10-50%: 1.706e-24; 50-90%: 0.3572; 90-99%: 2.997e+04; >=99%: 3.503e+05
+     P(true population fixation of derived allele | in set) = 1.101e-03 -> panel 1,258.90
+  D1 same-pop MAF>=5% (2,345 dipl.)
+     P(newly-100%-in-modern-sample | site in set) = 1.660e-29  -> on 1,143,671-SNP panel: 0.0
+       by Neolithic start band of the fixing allele: <10%: 6.773e-78; 10-50%: 2.198e-41; 50-90%: 5.073e-25; 90-99%: 1.668e-23; >=99%: 1.793e-24
+     P(true population fixation of derived allele | in set) = 0.000e+00 -> panel 0.00
+  D1b same-pop polymorphic in 2,345 dipl.
+     P(newly-100%-in-modern-sample | site in set) = 5.434e-03  -> on 1,143,671-SNP panel: 6,215.0
+       by Neolithic start band of the fixing allele: <10%: 9.159e-67; 10-50%: 1.635e-24; 50-90%: 0.1472; 90-99%: 2259; >=99%: 3956
+     P(true population fixation of derived allele | in set) = 0.000e+00 -> panel 0.00
+  D2 African single male het (Human Origins/Haak)
+     P(newly-100%-in-modern-sample | site in set) = 1.498e-02  -> on 1,143,671-SNP panel: 17,135.6
+       by Neolithic start band of the fixing allele: <10%: 1.235e-66; 10-50%: 5.811e-24; 50-90%: 0.4561; 90-99%: 6417; >=99%: 1.072e+04
+     P(true population fixation of derived allele | in set) = 1.221e-03 -> panel 1,396.69
+  D3 African MAF>=5% (100 dipl.)
+     P(newly-100%-in-modern-sample | site in set) = 1.975e-02  -> on 1,143,671-SNP panel: 22,590.9
+       by Neolithic start band of the fixing allele: <10%: 1.392e-66; 10-50%: 4.585e-24; 50-90%: 0.5202; 90-99%: 8349; >=99%: 1.424e+04
+     P(true population fixation of derived allele | in set) = 1.504e-03 -> panel 1,720.27
+  Enrichment of newly-100% events, P(event|in set)/P(event|polymorphic site), by band:
+     D0 unascertained (all polymorphic  total   1.000 | <10%:1 10-50%:1 50-90%:1 90-99%:1 >=99%:1
+     D1 same-pop MAF>=5% (2,345 dipl.)  total   0.000 | <10%:7.48e-12 10-50%:1.29e-17 50-90%:1.42e-24 90-99%:5.57e-28 >=99%:5.12e-30
+     D1b same-pop polymorphic in 2,345  total   0.016 | <10%:1.01 10-50%:0.958 50-90%:0.412 90-99%:0.0754 >=99%:0.0113
+     D2 African single male het (Human  total   0.045 | <10%:1.36 10-50%:3.41 50-90%:1.28 90-99%:0.214 >=99%:0.0306
+     D3 African MAF>=5% (100 dipl.)     total   0.059 | <10%:1.54 10-50%:2.69 50-90%:1.46 90-99%:0.279 >=99%:0.0407
+  Blog-style event (Neolithic <10% -> modern >90%), prob per site in set: unascertained-poly 8.27e-45, D1 2.30e-44, D2 1.09e-44  -> panel x1,143,671: 9.46e-39 / 2.63e-38 / 1.25e-38
+
+=== Sensitivity table (panel counts, N_panel=1,143,671; newly-100% totals and 50-90% band) ===
+     Ne    G  split |    D0 (poly) |   D1 MAF5% |  D2 AfrHet  D2 50-90% D2 true fix |  D3 AfrMAF
+   5000  280   2000 |     439227.6 |       0.00 |    22241.8       22.5     3399.42 |   23622.60   (Geff=280)
+  10000  280   1000 |     353358.5 |       0.00 |    15291.7     0.0419      617.81 |   22072.49   (Geff=280)
+  10000  280   2000 |     353358.5 |       0.00 |    13807.4     0.0379     1134.77 |   18157.34   (Geff=280)
+  10000  280   3000 |     353358.5 |       0.00 |    12484.9     0.0343     1497.51 |   14443.52   (Geff=280)
+  10000  350   2000 |     380246.1 |       0.00 |    17135.6      0.456     1396.69 |   22590.90   (Geff=350)
+  20000  280   2000 |     275965.3 |       0.00 |     7966.8    1.1e-06      331.26 |   11534.20   (Geff=280)
+  20000  350   2000 |     302813.0 |       0.00 |    10051.6    8.6e-05      417.75 |   14542.43   (Geff=360)
+
+=== Validation (a): scaling, N_s = 500 and 2000 vs 1000 (Ne=1e4, G=280, v62) ===
+  N_s=  500 D0 unascertained (all polymorphic at start total 321375.049 vs N_s=1000 353358.497 (ratio 0.9095); 50-90%: 0.0469 vs 0.0303
+  N_s=  500 D1 same-pop MAF>=5% (2,345 dipl.)          total      0.000 vs N_s=1000      0.000 (ratio 1.0001); 50-90%: 3.21e-25 vs 3.19e-25
+  N_s=  500 D1b same-pop polymorphic in 2,345 dipl.    total   5288.002 vs N_s=1000   7574.187 (ratio 0.6982); 50-90%: 0.0183 vs 0.0165
+  N_s=  500 D2 African single male het (Human Origins/ total  13681.084 vs N_s=1000  13807.387 (ratio 0.9909); 50-90%: 0.0537 vs 0.0379
+  N_s=  500 D3 African MAF>=5% (100 dipl.)             total  17967.927 vs N_s=1000  18157.337 (ratio 0.9896); 50-90%: 0.0612 vs 0.0432
+     flux ratio fix/(mu G): 1.0523 (N_s=1000: 1.0335)
+  N_s= 2000 D0 unascertained (all polymorphic at start total 360249.743 vs N_s=1000 353358.497 (ratio 1.0195); 50-90%: 0.0235 vs 0.0303
+  N_s= 2000 D1 same-pop MAF>=5% (2,345 dipl.)          total      0.000 vs N_s=1000      0.000 (ratio 0.9999); 50-90%: 3.18e-25 vs 3.19e-25
+  N_s= 2000 D1b same-pop polymorphic in 2,345 dipl.    total   8579.974 vs N_s=1000   7574.187 (ratio 1.1328); 50-90%: 0.0149 vs 0.0165
+  N_s= 2000 D2 African single male het (Human Origins/ total  13864.834 vs N_s=1000  13807.387 (ratio 1.0042); 50-90%: 0.0319 vs 0.0379
+  N_s= 2000 D3 African MAF>=5% (100 dipl.)             total  18244.366 vs N_s=1000  18157.337 (ratio 1.0048); 50-90%: 0.0363 vs 0.0432
+     flux ratio fix/(mu G): 1.0206 (N_s=1000: 1.0335)
+
+=== Validation (b): unscaled N = 1e4 forward WF Monte Carlo vs scaled exact chain (G=280, 2nm=1360 copies) ===
+  x=0.95: unscaled MC 0.00118 +/- 0.00014; scaled exact chain 0.00162; z=+3.14
+  x=0.98: unscaled MC 0.07338 +/- 0.00122; scaled exact chain 0.07860; z=+4.29
+  x=0.99: unscaled MC 0.27426 +/- 0.00214; scaled exact chain 0.28158; z=+3.43
+  x=0.995: unscaled MC 0.52353 +/- 0.00241; scaled exact chain 0.53122; z=+3.18
+  x=0.999: unscaled MC 0.87762 +/- 0.00159; scaled exact chain 0.88131; z=+2.31
+
+=== Validation (c): independent forward MC of the D2 pipeline (N_s=250) vs exact-chain algebra at N_s=250 ===
+  band    <10%: MC 0.0000e+00 +/- 4.2e-06; exact chain 1.2201e-84; z=-0.00
+  band  10-50%: MC 0.0000e+00 +/- 4.2e-06; exact chain 7.7582e-34; z=-0.00
+  band  50-90%: MC 0.0000e+00 +/- 4.2e-06; exact chain 9.5256e-08; z=-0.02
+  band  90-99%: MC 4.2919e-03 +/- 1.3e-04; exact chain 4.3325e-03; z=-0.30
+  band   >=99%: MC 7.7321e-03 +/- 1.8e-04; exact chain 7.4424e-03; z=+1.61
+  total: MC 1.2024e-02; exact 1.1775e-02
+
+=== C6 denominator accounting (Z18525185: 630 = 1.2e-8 x 1.5e8 x 350) ===
+  630 expectation (150M sites, k=mu, 350 gens): 630
+  uniform panel scaling (1,233,013 / 150e6 x 630): 5.18
+  D0 unascertained (all polymorphic at start)    true-fixation expectation on panel:   1357.25; sample-level newly-100% events:   409950.35
+  D1 same-pop MAF>=5% (2,345 dipl.)              true-fixation expectation on panel:      0.00; sample-level newly-100% events:        0.00
+  D1b same-pop polymorphic in 2,345 dipl.        true-fixation expectation on panel:      0.00; sample-level newly-100% events:     6700.53
+  D2 African single male het (Human Origins/Haak true-fixation expectation on panel:   1505.79; sample-level newly-100% events:    18474.19
+  D3 African MAF>=5% (100 dipl.)                 true-fixation expectation on panel:   1854.65; sample-level newly-100% events:    24355.67
+  Unascertained RANDOM genome sites (monomorphic ones included): true fixations 5.33 (= panel-size x mu G = 5.18); sample-level newly-100% events 1609.2
+  => uniform scaling (5.2) is the expectation for a RANDOM 1.23M-site sample; the 1240k panel is a polymorphism-ascertained set, and the model-specific
+     expectations above are 2-3 orders of magnitude larger for 'true fixation' (D2/D3) because fixations occur only at previously polymorphic sites.
+
+=== Ne scan for the 50-90% start band (D2, v62 sizes, G=280): observed 1 (v62) and 3 (v66) completions ===
+  Ne=  4000: expected 50-90% completions on 1.14M panel: v62 sizes 91.3; v66 sizes 111; total newly-100% v62 25,127
+  Ne=  5000: expected 50-90% completions on 1.14M panel: v62 sizes 22.5; v66 sizes 30.6; total newly-100% v62 22,242
+  Ne=  6000: expected 50-90% completions on 1.14M panel: v62 sizes 6.14; v66 sizes 9.42; total newly-100% v62 20,005
+  Ne=  7000: expected 50-90% completions on 1.14M panel: v62 sizes 1.55; v66 sizes 2.76; total newly-100% v62 17,901
+  Ne=  8000: expected 50-90% completions on 1.14M panel: v62 sizes 0.434; v66 sizes 0.904; total newly-100% v62 16,293
+  Ne=  9000: expected 50-90% completions on 1.14M panel: v62 sizes 0.121; v66 sizes 0.301; total newly-100% v62 14,898
+  Ne= 10000: expected 50-90% completions on 1.14M panel: v62 sizes 0.0379; v66 sizes 0.112; total newly-100% v62 13,807
+
+[total elapsed 466s]

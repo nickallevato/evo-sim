@@ -1,0 +1,32 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/na/projects/evo-sim/research/.venv, got /home/na/projects/evo-sim/research/checks/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/na/projects/evo-sim/research/.venv, got /home/na/projects/evo-sim/research/checks/../.venv
+K=500; success = no extinction AND adult mean squared deviation < 0.5 (10 reps/T); T50 = 50% crossing
+Nunney reference (R=10): M=10 n=7 ~40; M=1 n=1 ~20, n=7 ~ 3x slower than M=10; M=0.25 ~70 (n=1); M=0.1 ~300 (K=1e4)
+ hard n=1 R=10   M=0.1   T50=   25.0  rate n/T50=0.0400/gen
+ hard n=1 R=10   M=0.25  T50=   16.6  rate n/T50=0.0602/gen
+ hard n=1 R=10   M=0.5   T50=   10.0  rate n/T50=0.1000/gen
+ hard n=1 R=10   M=1.0   T50=    8.0  rate n/T50=0.1250/gen
+ hard n=1 R=10   M=10.0  T50=    6.0  rate n/T50=0.1667/gen
+ hard n=7 R=10   M=0.1   T50=  161.1  rate n/T50=0.0434/gen
+ hard n=7 R=10   M=0.25  T50=   83.7  rate n/T50=0.0837/gen
+ hard n=7 R=10   M=0.5   T50=   59.6  rate n/T50=0.1174/gen
+ hard n=7 R=10   M=1.0   T50=   44.7  rate n/T50=0.1565/gen
+ hard n=7 R=10   M=10.0  T50=   17.9  rate n/T50=0.3913/gen
+ soft n=1 R=10   M=0.1   T50=   54.3  rate n/T50=0.0184/gen
+ soft n=1 R=10   M=0.25  T50=   27.1  rate n/T50=0.0368/gen
+ soft n=1 R=10   M=0.5   T50=   17.5  rate n/T50=0.0572/gen
+ soft n=1 R=10   M=1.0   T50=   13.7  rate n/T50=0.0730/gen
+ soft n=1 R=10   M=10.0  T50=    6.5  rate n/T50=0.1535/gen
+ soft n=7 R=10   M=0.1   T50=  356.5  rate n/T50=0.0196/gen
+ soft n=7 R=10   M=0.25  T50=  185.3  rate n/T50=0.0378/gen
+ soft n=7 R=10   M=0.5   T50=  119.1  rate n/T50=0.0588/gen
+ soft n=7 R=10   M=1.0   T50=   77.1  rate n/T50=0.0908/gen
+ soft n=7 R=10   M=10.0  T50=   34.8  rate n/T50=0.2012/gen
+ hard n=1 R=2.2  M=1.0   T50=   64.0  rate n/T50=0.0156/gen
+ hard n=1 R=3    M=1.0   T50=   18.9  rate n/T50=0.0529/gen
+ hard n=1 R=5    M=1.0   T50=   10.0  rate n/T50=0.1000/gen
+ hard n=1 R=40   M=1.0   T50=    6.0  rate n/T50=0.1667/gen
+ soft n=1 R=2.2  M=1.0   T50=  220.0  rate n/T50=0.0045/gen
+ soft n=1 R=3    M=1.0   T50=   43.1  rate n/T50=0.0232/gen
+ soft n=1 R=5    M=1.0   T50=   22.0  rate n/T50=0.0454/gen
+ soft n=1 R=40   M=1.0   T50=   10.9  rate n/T50=0.0916/gen

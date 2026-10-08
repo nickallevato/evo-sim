@@ -288,7 +288,7 @@ def analyse(res):
 
 if __name__ == "__main__":
     reps = int(sys.argv[1]) if len(sys.argv) > 1 else 20
-    scratch = os.environ.get("C1B_RAW", "/tmp/claude-1000/-home-na-projects-evo-sim/1a09d35c-0829-4a9e-9e1c-591add0b31de/scratchpad/c1b_raw.json")
+    scratch = os.environ.get("C1B_RAW", os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "raw", "c1b_raw.json"))
     if len(sys.argv) > 2 and sys.argv[2] == "analyse":
         with open(scratch) as f:
             res = json.load(f)

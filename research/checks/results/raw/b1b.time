@@ -1,0 +1,1 @@
+$PY -I $S/b1b_small.py > $S/b1b.out 2>&1  73.42s user 0.12s system 94% cpu 1:17.72 total
