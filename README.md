@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/img/icon.svg" alt="evo-sim icon" width="120">
+
 # evo-sim
 
 ### Can evolution make enough mutations fix in the available time?
