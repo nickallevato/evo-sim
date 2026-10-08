@@ -137,6 +137,9 @@ Date: 2026-01-29
 - **CA-12** | para 25 | branch A4 | Camestros
   > "As this figure would clearly have changed during human evolution (and indeed demonstrably changed during human history), it doesn’t make a lot of sense."
   - note: On d.
+- **CA-14** | para 20 | branch A | Camestros
+  > "Day’s core argument hasn’t changed since February 2019"
+  - note: Contradicted by version drift (d, 205M, 1,322) in PLAN.md; he reviewed the first edition.
 
 ## KR-epi: keruru, "The Epicycle Was Elsewhere"
 URL: https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere  
@@ -455,7 +458,7 @@ Date: 2026-09-23
   > "I haven't read his book. I am relying only on the presentation"
 - **RD-02** | t=00:06:42 | branch epistemic | Davis
   > "I predict that they will provide essentially no answer."
-  - note: Falsified by 2026-10-03 GG/Hancock video (comment by PlotTwistDad).
+  - note: A 3.5 h response (GG/Hancock, 2026-10-03) now exists; whether substantive is for R4.
 - **RD-03** | t=00:12:05 | branch D | Davis (relaying Eden) `secondhand`
   > "it would take about 10 to the 36th power of genetic transmissions to do that."
   - note: Wistar/Eden gene-pair figure relayed secondhand.

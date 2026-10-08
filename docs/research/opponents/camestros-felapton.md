@@ -19,7 +19,7 @@
 | G3 | Darwillion confuses probability of a specific outcome with that of some outcome (lottery analogy) | CA-09 |
 
 ## Weaknesses noted (own math / inputs / reading of Day)
-- Reads only the first edition (9 My, 20 y, d=1/0.45, 281 fixations); later versions (1,322 gens/fixation, 205M, d) are not addressed. Part 5 asserts Day's core argument "hasn't changed since February 2019", which the version table in PLAN.md contradicts.
+- Reads only the first edition (9 My, 20 y, d=1 in the intro, 281 fixations); later versions (1,322 gens/fixation, 205M, d) are not addressed. Part 5 asserts Day's core argument "hasn't changed since February 2019" (CA-14), which the version table in PLAN.md contradicts.
 - The 429 gens/fixation re-derivation (CA-06) prints 1500/35 but means 15,000/35 = 428.6; and clones present in later clones are not necessarily population-fixed. He hedges ("I may well be misreading").
 - The Part 2 argument that fixation requires more individuals today than "a few hundred years ago" is muddled: fixation means 100% frequency at any N.
 - Parts 4-6 contain religion and politics speculation (adhom) that has no mathematical content.

@@ -16,7 +16,7 @@
 
 ## Weaknesses noted (own math / inputs / reading of Day)
 - A credential count is not a rebuttal (FP-01 makes this point fairly); the Reddit claim about "three people with doctorates" is uncited.
-- About 60% of the 3.5 h video (t~02:15-03:30) concerns Day's biography and politics, which is not math; also speculation about how the book was written (t~02:04:48), unsupported.
+- About a third of the 3.5 h video (t~02:15-03:30, derived: 75 of 210 min) concerns Day's biography and politics, which is not math; also speculation about how the book was written (t~02:04:48), unsupported.
 - The video answers the Duffy-presented version (6.3 My, 1,400, 205M), not MITTENS 3.0, and the roundtable of credentialed reviewers was not yet published at pull time.
 - Her live response during the Duffy stream contained no calculation.
 

@@ -2,7 +2,7 @@
 
 - **Side:** ally (secondhand only)
 - **Role:** Wrote the foreword/introduction and an appendix to Probability Zero (per Day, Dembski, Tree of Woe).
-- **Stated credentials (as self-described or as introduced; unverified here):** Described by others as a mathematical physicist at Tulane (Camestros, Dembski). Not self-described in any retrieved text.
+- **Stated credentials (as self-described or as introduced; unverified here):** Described by others as a mathematical physicist at Tulane (Camestros; Myers quoting Wikipedia; Dembski). Not self-described in any retrieved text.
 - **Sources (see `sources/bib-critics.md`):** TW-1, HO-2, PM-1 (secondhand mentions)
 
 ## Arguments mapped to branches

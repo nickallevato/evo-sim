@@ -16,7 +16,7 @@
 
 ## Weaknesses noted (own math / inputs / reading of Day)
 - Relies on Duffy's presentation, not the book (RD-01); mis-titles it "Zero Probability" in the transcript.
-- Prediction RD-02 was contradicted by the 2026-10-03 Gutsick Gibbon/Hancock video, per a commenter pointing to t~3:13 (PlotTwistDad).
+- A 3.5 h response with calculations (Gutsick Gibbon/Hancock, 2026-10-03) now exists; a commenter (PlotTwistDad) says Davis herself appears in it at ~3h13m. Whether that is a "substantive" answer is for R4, not a harvest judgement.
 - Wistar claims are secondhand (Eden 10^36 figure) and are contested in Rosenhouse ch.4 (RO-01).
 
 ## Strongest technical point

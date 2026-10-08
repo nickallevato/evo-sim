@@ -22,7 +22,7 @@
 - KITTENS rests on linear scaling of adaptive fixations with mutation supply; its author flags this (RE-09). It also admits citations were written from memory (RE-11) and AI assistance.
 - The 9.7M neutral figure treats every site as neutral; the Reddit OP says it is illustrative.
 - All of these target MITTENS 3.0 text that I have not myself verified against Zenodo 23003785; section numbers and values are secondhand until R2.
-- Top-voted replies are largely jokes or insults (e.g. the 9-month pregnancy analogy); there is no variance or sensitivity analysis in any critique.
+- Top-voted replies are largely jokes or insults (e.g. the 9-month pregnancy analogy); no critique gives variance or confidence intervals.
 - A comment says the Zenodo paper was "now gone"; unverified.
 
 ## Strongest technical point
