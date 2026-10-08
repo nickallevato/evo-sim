@@ -4,11 +4,18 @@ divergence:
   t_div_years:
     day_2019: {value: 9.0e6, source: B2019-02-07, verified: false}
     day_2026_mittens3: {value: 6.3e6, source: Z23003785, verified: false}
-    langergraber_2012: {value: ">=7e6-8e6", source: Langergraber2012, verified: false}
+    langergraber_2012: {value: ">=7e6-8e6", note: "independent of fossil calibration", source: Langergraber2012, verified: true}
+    yoo_2025: {value: [5.5e6, 6.3e6], note: "min-max; likely origin of Day's 6.3 My", source: Yoo2025, verified: true}
   snv_differences_total:
-    chimp_consortium_2005: {value: 3.5e7, units: "single-nucleotide changes (one genome per species; includes polymorphism)", source: CSAC2005, verified: false}
+    chimp_consortium_2005: {value: 3.5e7, units: "single-nucleotide changes (one genome per species; includes polymorphism)", source: CSAC2005, verified: true}
+  snv_divergence_fraction:
+    csac_2005_total: {value: 0.0123, source: CSAC2005, verified: true}
+    csac_2005_fixed_max: {value: 0.0106, note: "'1.06% or less corresponding to fixed divergence'", source: CSAC2005, verified: true}
+    yoo_2025_table_III14: {value: 0.0146, note: "SI text says 0.15-0.16% — internal inconsistency (likely decimal slip), unresolved", source: Yoo2025, verified: true}
+  structurally_divergent_Mb_per_lineage:
+    yoo_2025: {value: 327, note: "average per ape lineage; neither 410 Mb nor 187 Mb found in Yoo main text/SI/tables", source: Yoo2025, verified: true}
   indel_events_total:
-    chimp_consortium_2005: {value: 5.0e6, units: events, source: CSAC2005, verified: false}
+    chimp_consortium_2005: {value: 5.0e6, units: events, source: CSAC2005, verified: true}
   required_fixations:
     day_2019: {value: 3.0e7, source: B2019-02-07, verified: false}
     day_2025: {value: 2.0e7, source: Z18165980, verified: false}
@@ -32,14 +39,18 @@ ltee:
 mutation:
   mu_per_site_per_gen:
     pedigree_human: {value: 1.2e-8, range: [1.1e-8, 1.5e-8], source: Kong2012, verified: false}
+    keightley_2012: {value: 1.1e-8, note: "abstract only; ~70 new mutations per genome", source: Keightley2012, verified: partial}
   new_mutations_per_genome:
     common_citation: {value: [60, 100], source: "Kong2012; critics", verified: false}
 population:
   Ne_modern_human: {value: 1.0e4, source: textbook, verified: false}
-  Ne_ancestral_hc: {value: [5.0e4, 1.0e5], source: TBD-ILS-literature, verified: false}
+  Ne_ancestral_hc:
+    yoo_2025_HCB: {value: 1.98e5, note: "human-chimp-bonobo ancestor, average", source: Yoo2025, verified: true}
+    yoo_2025_HCG: {value: 1.32e5, note: "human-chimp-gorilla ancestor", source: Yoo2025, verified: true}
+    old_placeholder: {value: [5.0e4, 1.0e5], note: "unsourced placeholder — superseded", verified: false}
   Ne_over_N: {value: 0.1, source: Frankham1995, verified: false}
 selection:
-  s_zeng_2021: {value: 0.001, sign: negative, note: "mean |s| of variants affecting complex traits under negative selection — Day uses as beneficial", source: Zeng2021, verified: false}
+  s_zeng_2021: {value: 0.001, sign: negative, note: "mean |s| of variants affecting complex traits under negative selection; positive selection only as a simulation sensitivity scenario — Day uses as beneficial", source: Zeng2021, verified: true}
   turnover_d: {value: 0.45, source: Z18166234, verified: false}
 haldane:
   gens_per_substitution: {value: 300, source: Haldane1957, verified: false}
