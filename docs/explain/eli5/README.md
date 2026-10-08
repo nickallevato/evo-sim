@@ -5,7 +5,7 @@
 # Is there enough time?
 ### The whole story, for a five-year-old (or someone reading to one)
 
-**ELI5** · [ELI12](../eli12/README.md) · [ELI18](../eli18/README.md) · [back to the project](../../../README.md)
+**ELI5** · [ELI8](../eli8/README.md) · [ELI10](../eli10/README.md) · [ELI12](../eli12/README.md) · [ELI18](../eli18/README.md) · [back to the project](../../../README.md)
 
 </div>
 

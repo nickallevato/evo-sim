@@ -5,7 +5,7 @@
 # Is there enough time?
 ### The whole story, for a first-year undergrad (or any curious adult)
 
-[ELI5](../eli5/README.md) · [ELI12](../eli12/README.md) · **ELI18** · [back to the project](../../../README.md)
+[ELI5](../eli5/README.md) · [ELI8](../eli8/README.md) · [ELI10](../eli10/README.md) · [ELI12](../eli12/README.md) · **ELI18** · [back to the project](../../../README.md)
 
 </div>
 

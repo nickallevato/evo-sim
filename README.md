@@ -17,7 +17,7 @@
 
 ---
 
-> **New here?** Read the whole story at your level: **[ELI5](docs/explain/eli5/README.md)** · **[ELI12](docs/explain/eli12/README.md)** · **[ELI18](docs/explain/eli18/README.md)**
+> **New here?** Read the whole story at your level: **[ELI5](docs/explain/eli5/README.md)** · **[ELI8](docs/explain/eli8/README.md)** · **[ELI10](docs/explain/eli10/README.md)** · **[ELI12](docs/explain/eli12/README.md)** · **[ELI18](docs/explain/eli18/README.md)**
 
 ## Why this exists
 Vox Day argues, in *Probability Zero* (2025), the MITTENS papers on Zenodo and many blog posts, that population genetics *mathematically* rules out natural selection explaining the human–chimp divergence. His critics (McCarthy, Mansfield, Hancock, Camestros Felapton, Bowers and others) say his maths is wrong. Both sides mostly trade assertions.
@@ -212,7 +212,7 @@ flowchart LR
 - [ ] **H:** realistic human $R$ and hard-selected load, with confidence intervals on T50
 - [ ] **Sources:** Yoo 2025's $\mu$, to rescale $N_{e,\text{anc}}$. Verify Takahata 1995, Charlesworth 2009 and the Haak 2015 panel design
 
-**R5:** final verdicts, a sensitivity table, the simulator variable list and a published summary. The [ELI5 / ELI12 / ELI18 explainers](docs/explain/README.md) exist as drafts and get a final pass after R5.
+**R5:** final verdicts, a sensitivity table, the simulator variable list and a published summary. The [ELI5 / ELI8 / ELI10 / ELI12 / ELI18 explainers](docs/explain/README.md) exist as drafts and get a final pass after R5.
 
 **Simulator knobs (draft):**
 - Population: $N$, $N_e$, offspring variance, sexual vs asexual, demography over time, start state

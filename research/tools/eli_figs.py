@@ -91,6 +91,25 @@ b = [card(20, DAY, "“not enough time” side",
           ["counted some things twice", "“soft selection” fix failed", "skipped some questions"])]
 svg("both-sides.svg", 710, 270, "".join(b), "Both sides got some things right and some things wrong")
 
+# 4b. Raffle: bigger population = more new changes, each with smaller odds (k = mu)
+def town(x, n, new, label, odds):
+    s = [f"<rect x='{x}' y='40' width='300' height='190' rx='12' fill='none' stroke='{INK}' stroke-width='1.5'/>",
+         t(x + 150, 30, label, 15, INK, weight="bold")]
+    per = 10 if n <= 10 else 20
+    r = 7 if n <= 10 else 5.5
+    gap = 26 if n <= 10 else 13
+    for i in range(n):
+        cx = x + 32 + (i % per) * gap + (8 if n <= 10 else 0)
+        cy = 70 + (i // per) * (gap if n > 10 else 0) + (40 if n <= 10 else 0)
+        s.append(f"<circle cx='{cx}' cy='{cy}' r='{r}' fill='{OK if i < new else NEU}' opacity='{1 if i < new else 0.55}'/>")
+    s.append(t(x + 150, 176, f"{new} new change{'s' if new > 1 else ''} (green)", 14, OK, weight="bold"))
+    s.append(t(x + 150, 200, odds, 14, INK))
+    return "".join(s)
+b = [town(20, 10, 1, "small group: 10", "each has a 1-in-10 chance to win"),
+     town(390, 100, 10, "big group: 100", "each has a 1-in-100 chance to win"),
+     t(355, 262, "either way, about the same number of changes win each generation", 15, OK, weight="bold")]
+svg("raffle.svg", 710, 276, "".join(b), "Bigger groups make more new changes, but each has smaller odds, so it evens out")
+
 # 5. Shortfall decomposition (matplotlib)
 plt.rcParams.update({"svg.fonttype": "none", "font.family": "DejaVu Sans", "text.color": INK, "axes.labelcolor": INK,
                      "axes.edgecolor": INK, "xtick.color": INK, "ytick.color": INK, "axes.facecolor": "none",
