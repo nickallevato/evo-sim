@@ -32,10 +32,10 @@ This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Prob
 | Stage | Status |
 |---|---|
 | R0 Scaffold | done |
-| R1 Corpus harvest | pass 1 (catalogue) done 2026-10-07; pass 2 (raw copies + bibliography) in progress |
+| R1 Corpus harvest | **done** 2026-10-07: Day (154 posts, 32 Zenodo files, 75 quotes), literature (37 sources, 75+ quotes), critics/allies (48 rows, 132 quotes, 23 profiles) |
 | R2 Claim extraction | — |
 | R3 Hierarchy | v1 draft (from pass 1, unverified) |
-| R4 Math resolution | — |
+| R4 Math resolution | in progress: B0, B0.4, B1, B1b, B2a, B3, F1 done + reviewed |
 | R5 Synthesis | — |
 
 ## Running checks

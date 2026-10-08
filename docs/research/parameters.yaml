@@ -31,9 +31,10 @@ generations_available:
 ltee:
   gens_per_fixation:
     day_2019: {value: 1600, source: B2019-02-07, verified: false}
-    day_mittens3_nonmutator: {value: 1322, source: Z23003785, verified: false}
-    day_ara_plus2: {value: 909, derived: "60000/66", source: B2026-10-01-snikker-snak, verified: false}
-    day_ns_only_parallel_max: {value: 4615, source: Z23003785, verified: false}
+    day_mittens3_nonmutator: {value: 1322, note: "≥95% read-frequency rule", source: Z23003785, verified: true}
+    day_ara_plus2: {value: 909, derived: "60000/66", note: "23105291 Table 1 uses 60,500 gens -> 917", source: B2026-10-01-snikker-snak, verified: true}
+    day_23105291_strict_nonmutator: {value: 1587, derived: "from strict (lineage-aware) counts; ≥95% rule inflates counts 37%", source: Z23105291, verified: true}
+    day_ns_only_parallel_max: {value: 4615, note: "blog only; Zenodo 23003785 gives ~1,408 per beneficial fixation (clone-pair)", source: B2026-09-30, verified: true}
   whole_pop_fixations_lineage_aware:
     day_23105291: {value: 5496, units: "fixations over 723000 population-generations", source: Z23105291, verified: false}
 mutation:
@@ -53,4 +54,11 @@ selection:
   s_zeng_2021: {value: 0.001, sign: negative, note: "mean |s| of variants affecting complex traits under negative selection; positive selection only as a simulation sensitivity scenario — Day uses as beneficial", source: Zeng2021, verified: true}
   turnover_d: {value: 0.45, source: Z18166234, verified: false}
 haldane:
-  gens_per_substitution: {value: 300, source: Haldane1957, verified: false}
+  gens_per_substitution: {value: 300, source: Haldane1957, verified: "via Nunney2003"}
+  dawkins_figures: {value: [11739, 321444], note: "Dawkins's numbers quoted by Day (blog 2026-01-08), not Day's derivation", source: B2026-01-08, verified: true}
+rates:
+  day_k_over_mu_32_3: {value: 32.3, note: "first appears blog 2026-10-01; Bergeron 2023 pedigree rate vs Yoo 2025 'required' rate; no derivation; not in Zenodo", source: B2026-10-01, verified: true}
+  day_k_over_mu_0_743: {value: 0.743, source: Z18525262, verified: true}
+shortfall:
+  mittens3_full: {value: 1075000, source: Z23003785, verified: true}
+  mittens3_snv_only: {value: 91600, note: "pass-1 said ~94,000", source: Z23003785, verified: true}
