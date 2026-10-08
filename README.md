@@ -229,7 +229,7 @@ flowchart LR
 | [`docs/research/claims/`](docs/research/claims) | One file per claim, with a verbatim quote, formal statement, pre-registered prediction and three verdicts |
 | [`research/checks/`](research/checks) | Reviewed verification scripts, with [`RESULTS.md`](research/checks/RESULTS.md) and [`REVIEW.md`](research/checks/REVIEW.md) |
 | `research/checks/results/` | Write-ups, reviews and raw outputs |
-| [`research/tools/`](research/tools/README.md) | Harvest and claim-generation tooling, plus `readme_figs.py`, which draws the figures above |
+| [`research/tools/`](research/tools/README.md) | Harvest and claim-generation tooling, plus `readme_figs.py`, which draws the figures above, and `icon.py` / `icon_raster.py`, which draw the icon, favicon and social preview |
 
 ## Reproduce
 ```bash
@@ -239,6 +239,7 @@ research/.venv/bin/python -I research/checks/baseline_textbook.py     # textbook
 research/.venv/bin/python -I research/checks/b4a_two_lineage_ils.py   # any check; seeds are fixed
 research/.venv/bin/python -I research/checks/lint_research.py         # claims ↔ tree ↔ provenance lint
 research/.venv/bin/python -I research/tools/readme_figs.py            # regenerate docs/img/*.svg
+research/.venv/bin/python -I research/tools/icon.py && research/.venv/bin/python -I research/tools/icon_raster.py  # icon, PNG sizes, favicon.ico, social-preview.png
 ```
 
 ## Ground rules
