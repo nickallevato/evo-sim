@@ -7,11 +7,11 @@ parent: B5
 edges: [{type: attacks, target: B1}, {type: attacks, target: B3a}]
 load_bearing: false  # null-model comparison; its basis halves the headline match
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # arithmetic 2 x 75 x 252,000 = 37.8M
   fidelity: n/a
-  external: contested
+  external: "contested"   # basis unstated; on a haploid SNV basis 18.9M + ancestral ~15M
 ---
 
 ## Statement (verbatim)
@@ -49,6 +49,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none (arithmetic computed with python3 -I).
+
+R4 B4a (research/checks/results/R4-B1c-B4a.md; REVIEW-R4-steelman-critic): if mu_G = 75 is a zygote-level count, the haploid value gives 18.9M (= 2muT, B4a), and the observed ~35M is ~19M post-split plus ~15M ancestral polymorphism, so the 37.8M match would be a double count (same issue as B5c). The post does not state the basis. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - haploid vs diploid basis

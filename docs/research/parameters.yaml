@@ -29,6 +29,7 @@ generations_available:
   day_2025_effective: {value: 146250, derived: "325000*0.45", source: Z18165980, verified: false}
   day_2026: {value: 252000, source: Z23003785, verified: false}
 ltee:
+  Ne_effective: {value: 3.3e7, note: "UNSOURCED ASSUMPTION used by R4 A-sim (~N0 x log2(100) = 5e6 x 6.64, harmonic-mean size over the daily dilution cycle); needs a retrieved source (e.g. Lenski et al. 1991, Wiser et al. 2013). G_f depends on it only logarithmically (7,306 at 1e6 to 1,159 at 1e8 at fixed U_b)", source: none, verified: false}
   gens_per_fixation:
     day_2019: {value: 1600, source: B2019-02-07, verified: false}
     day_mittens3_nonmutator: {value: 1322, note: "≥95% read-frequency rule", source: Z23003785, verified: true}
@@ -49,6 +50,28 @@ population:
     yoo_2025_HCB: {value: 1.98e5, note: "human-chimp-bonobo ancestor, average", source: Yoo2025, verified: true}
     yoo_2025_HCG: {value: 1.32e5, note: "human-chimp-gorilla ancestor", source: Yoo2025, verified: true}
     old_placeholder: {value: [5.0e4, 1.0e5], note: "unsourced placeholder — superseded", verified: false}
+    yoo_2025_mu_rescaling: {value: null, note: "OPEN (R4 B4a): theta = 4 Ne mu is what the data fix, so Ne' = Ne_Yoo * mu_Yoo / 1.2e-8; Yoo's own mu and generation time are not recorded in the repo, so the rescaled Ne_anc is not computed. Illustration only: if mu_Yoo = 2.5e-8/gen, Ne_anc(HCB) at mu 1.2e-8 would be ~9.5e4", source: Yoo2025, verified: false}
+    day_b1d_implied: {value: 5.7e4, derived: "228000 / 4 (Day blog 2026-10-01: pipe 'full, but much shorter', 228,000 generations)", source: B2026-10-01, verified: false}
+  # R4 (B1c/B4a): sourced Ne histories. PM2013 values are Theta_w-based with mu = 1e-9..0.5e-9 /bp/yr, g = 25 y
+  # (2.5e-8..1.25e-8 /gen), so they scale as 1/mu (about 2x larger at the pedigree 1.2e-8 for the low end).
+  # PSMC trajectories (PM2013 Fig. 3; Suppl. Table S5) NOT extracted: Table S5 not retrieved.
+  Ne_histories:
+    prado_martinez_2013_table1:
+      source: PradoMartinez2013
+      locator: "Table 1, column 'Ne (10-3)', footnote d ('Calculated from Θw. μ = 1e-9 - 0.5e-9 mut·bp-1·yr-1 and g = 25 for Homo and Pan')"
+      verified: true
+      humans: [1.31e4, 1.62e4]          # flagged: not a 2x range like every other row; unresolved
+      non_african: [9.7e3, 1.95e4]
+      african: [1.39e4, 2.79e4]
+      common_chimpanzee: [3.09e4, 6.18e4]
+      nigeria_cameroon_chimpanzee: [1.85e4, 3.70e4]
+      eastern_chimpanzee: [1.97e4, 3.95e4]
+      central_chimpanzee: [2.44e4, 4.87e4]
+      western_chimpanzee: [9.8e3, 1.95e4]
+      bonobo: [1.19e4, 2.38e4]
+    prado_martinez_2013_psmc_text: {value: "qualitative only", note: "ancestral Pan Ne largest >3 Mya, then dramatic decline; chimpanzee Ne increase from ~1 Mya (text L197-200, L323-325)", source: PradoMartinez2013, verified: true}
+    takahata_1995: {value: 1.0e4, note: "Late Pleistocene human Ne from autosomal sequences, 'no indication of population expansion'; human-lineage Ne >4.6 My ago 'nearly 10 times larger' (~1e5); divergence date 4.6 My differs from 6.3 My used here", source: "Takahata, Satta & Klein 1995, Theor Popul Biol 48:198-221, doi 10.1006/tpbi.1995.1026", verified: partial}
+    charlesworth_2009: {value: [1.0e4, 2.0e4], note: "review summary of sequence-variability estimates (via search summary)", source: "Charlesworth 2009, Nat Rev Genet 10:195", verified: false}
   Ne_over_N: {value: 0.1, source: Frankham1995, verified: false}
 selection:
   s_zeng_2021: {value: 0.001, sign: negative, note: "mean |s| of variants affecting complex traits under negative selection; positive selection only as a simulation sensitivity scenario — Day uses as beneficial", source: Zeng2021, verified: true}

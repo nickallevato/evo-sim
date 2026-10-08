@@ -7,11 +7,11 @@ parent: B1
 edges: [{type: depends-on, target: B1}, {type: attacks, target: B1a}]
 load_bearing: true  # decides whether the B1 deficit exists at all for the human-chimp case
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # arithmetic for an empty start; post-split new-mutation column 0.84 = (T-4Ne)/T
   fidelity: n/a
-  external: pending
+  external: "contradicted"   # empty-start premise (withdrawn by Day, B1d); step histories give excess 1.9-4.0x; K is not the difference count
 ---
 
 ## Statement (verbatim)
@@ -50,7 +50,8 @@ Written **before** the check runs.
 - Result that would change a verdict: Proposed check **B1c** (not yet run): forward Poisson-thinning/Wright–Fisher runs with Nₑ(t) piecewise from Yoo ancestral Nₑ (1.32e5–1.98e5) to human-lineage PSMC Nₑ, lineage by lineage, reporting per-lineage fixed substitutions vs μLT and pairwise divergence vs 2μT+θ_anc. Sign pre-registered: if PSMC shows decline from ≥1.3e5 to ≈1e4 before the split-to-present window, ΔK ≥ 0 (excess), which falsifies Day's deficit for that scenario; a deficit appears only if Nₑ rises by ΔN with 4ΔN a sizeable fraction of T.
 
 ## Check
-Script: proposed `research/checks/b1c_ne_history.py` (queued; seed to be fixed before the run) · Result: none yet. Related done checks: B1, B1b.
+R4 B1c (`b1c_ne_history.py`, seed 20261008, 150 reps, burn-in 20 N_sim; research/checks/results/R4-B1c-B4a.md): every step history from Yoo's ancestral Ne (1.98e5 / 1.32e5) to a sourced modern Ne (1e4-6.18e4, Prado-Martinez 2013 Table 1) gives an excess K/UT of 1.9-4.0 (H1 3.986 vs analytic 3.984); controls 1.000. This is the B1b telescoping identity under step histories, not an independent empirical finding: Yoo's Ne is a lifetime average, and no PSMC trajectory was extracted. K counts ancestral alleles that fix in both lineages, so it is not a difference count. Credit to Day: the new-mutation column (0.84) confirms (T-4Ne)/T. Day withdrew the empty-start premise (B1d). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: proposed `research/checks/b1c_ne_history.py` (queued; seed to be fixed before the run) · Result: none yet. Related done checks: B1, B1b.
 
 ## Simulator variables implied
 - Nₑ(t) loaded from file (PSMC/MSMC curves) or presets from Yoo 2025

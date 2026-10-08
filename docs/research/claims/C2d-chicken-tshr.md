@@ -7,11 +7,11 @@ parent: C2
 edges: [{type: supports, target: C2}]
 load_bearing: false  # One data point supporting C2; ROOT does not use it.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: "holds"   # 1.02 at the point estimate
+  fidelity: "unverifiable"   # Loog posterior not in repo
+  external: "contested"   # required d spans 0.45-13.5 across dominance and s; not decisive
 ---
 
 ## Statement (verbatim)
@@ -61,7 +61,8 @@ So the chicken "d ≈ 1.02" depends on the dominance model and on where s falls 
 - Result that would change a verdict: Loog's posterior (not just the CI) with the matching dominance model giving a required-d interval that excludes 0.45.
 
 ## Check
-Script: none yet (spec: bundle with `research/checks/c2c_ratio_identity.py`; solve required d over the Loog s posterior for additive, recessive and dominant forms). · Result: not run · Review: pending
+R4 C2d (research/checks/results/R4-H-C2.md): chicken (p 0.44 to 0.97, G = 900) requires d additive 1.43 / 0.845 / 0.471 at s = 0.0029 / 0.0049 / 0.0088; recessive 1.90 / 1.13 / 0.63; dominant 13.5 / 8.0 / 4.5. The paper's 1.02 holds at the point estimate but depends on dominance and s (s conventions differ across models). Loog's posterior is not in the repo. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (spec: bundle with `research/checks/c2c_ratio_identity.py`; solve required d over the Loog s posterior for additive, recessive and dominant forms). · Result: not run · Review: pending
 
 ## Simulator variables implied
 Dominance h, s with uncertainty, generations per year, d.

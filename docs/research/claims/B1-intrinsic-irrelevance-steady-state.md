@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: holds
   fidelity: n/a
-  external: contested
+  external: "contested"   # deficit exists only for new-mutation accounting from an empty start; contradicted for the human-chimp observable (B4a)
 ---
 
 ## Statement (verbatim)
@@ -60,6 +60,8 @@ Written **before** the check runs.
 
 ## Check
 Script: `research/checks/b1_start_state.py` (seed 11) · Result: both predictions confirmed at every T. N=100, U=0.5: T=400: U·T=200, Day U∫F_X=41.6, empty-start sim 41.3±0.8, equilibrium-start sim 198.5±2.0; T=2000: 1000 / 802.7 / 802.5±3.4 / 1005.1±4.3. Review #2: the empty-start run is Poisson thinning, so it matches by construction (it verifies the code, not the claim). Internal verdict: holds as mathematics. Review: `research/checks/REVIEW.md#2026-10-07--correctness-review-2-sonnet-on-b0b3`
+
+R4 B1c/B4a (research/checks/results/R4-B1c-B4a.md): the empty-start deficit is exact for post-split new mutations (new-mutation column 0.84 = Day's (T-4Ne)/T at Ne = 1e4), a point for Day's internal validity. For the human-chimp case the deficit exists only in that accounting: step histories from Yoo's ancestral Ne give a per-lineage excess (K/UT 1.9-4.0), and pairwise divergence is not reduced by the empty-pipe term (d - 2muT = theta_anc in every row). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - start state (empty | equilibrium | user-set heterozygosity)

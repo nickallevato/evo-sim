@@ -7,11 +7,11 @@ parent: B3
 edges: [{type: supports, target: B3}, {type: depends-on, target: B3c}]
 load_bearing: false  # the only B3 leg with literature support; but magnitude (0.743, 32.3) is not from the paper
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # B&L effect reproduced
   fidelity: partial
-  external: pending
+  external: "supported"   # qualitatively (k != mu with overlap + fluctuation); human-scale size -2% to +38%, sign upward; cannot give 0.743 or 32.3
 ---
 
 ## Statement (verbatim)
@@ -58,7 +58,8 @@ Written **before** the check runs.
 - Result that would change a verdict: See Formal statement (check B3b).
 
 ## Check
-Script: proposed `research/checks/b3b_overlap_fluctuation.py` (not yet written) · Result: none. Queued in REVIEW.md "Queue".
+R4 B3b (`b3b_overlap_fluctuation.py`, 16 reps; research/checks/results/R4-B3b-C1.md): B&L 2012 eq. (3) reproduced by independent individual-based simulation in 9 scenarios (all |z| < 1.6); fluctuation without overlap gives k = mu exactly. At human-like parameters (exact eq. 3, s = 0.96/yr): symmetric cycles -0.3% to -2%; one-way growth raises the arrival rate of eventual fixers by 1.38x (transient); contrived two-state range 0.59-1.70, with k < mu only for an unrealistic survival ordering. Credit to Day: the effect exists and Kimura's k = mu is not exact with overlap (critics' blanket k = mu is a discrete-generation result). Against Day: the realistic sign is upward and the size cannot give 0.743 or 32.3. Open: per-generation-time normalisation (0.81-1.11 under strong fluctuation; Lehmann 2014 not retrieved). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: proposed `research/checks/b3b_overlap_fluctuation.py` (not yet written) · Result: none. Queued in REVIEW.md "Queue".
 
 ## Simulator variables implied
 - survival s / age structure

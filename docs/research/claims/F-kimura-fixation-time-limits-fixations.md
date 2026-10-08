@@ -9,7 +9,7 @@ load_bearing: true  # F is the conceptual bridge from per-allele fixation time t
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: pending
+  internal: "non-sequitur"   # as a throughput bound (F1, F2); interference binds only with linkage
   fidelity: partial
   external: contested
 ---
@@ -54,6 +54,8 @@ Written **before** the check runs.
 
 ## Check
 See F1 (done), F2 (proposed), F3 (done: `research/checks/beneficial_fix_time.py` (seed 7)).
+
+R4 F2 (research/checks/results/R4-F2-A.md) extends F1: latency does not bound throughput; interference bounds it only with linkage (clonal R_int 0.09-0.65; free recombination 0.975 at 272 active loci, soft selection, N = 1000). F1's strawman caveat (the serial reading must be tied to a quote) still applies. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - latency model per allele

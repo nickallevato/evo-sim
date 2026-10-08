@@ -7,11 +7,11 @@ parent: C2
 edges: [{type: supports, target: C2}, {type: depends-on, target: A4}]
 load_bearing: true  # Supplies the theoretical grounding for d = 0.45; the empirical fits in C2 are circular without it, and MITTENS 2025 and Haldane+d (487) use d.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: "holds"   # derivation correct for hazard-scale s
+  fidelity: "unverifiable"   # Coale-Demeny West tables not retrieved; Hill/Charlesworth not retrieved
+  external: "contested"   # a unit conversion, not a separate correction to the speed of selection
 ---
 
 ## Statement (verbatim)
@@ -73,7 +73,8 @@ Observation (not a verdict): the integral weights death by reproductive value, s
 - Result that would change a verdict: measured Delta-p per T years in the simulation equals d x s p q for d computed from Day's formula over several life tables (e0 = 25 to 78) to within a few percent (then C2a is supported as a result, whatever the definition of s), or equals s p q for all of them (then d is not a correction at this scale).
 
 ## Check
-Script: none yet (shared spec with C2: `research/checks/c2_overlap_vs_standard.py`, planned). Compare d(l, b) from Z18166234 eq. 3.3 against the simulated ratio for (a) viability selection at one age band, (b) fecundity selection, (c) selection on all ages. Include the standard Hill-Felsenstein Ne for the drift side of the same population, and a Wright-Fisher discrete control. · Result: not run · Review: pending
+R4 C2 (research/checks/results/R4-H-C2.md): the derivation is correct: integral of l*v = T for a stationary population, so d = mean cumulative hazard at the age of mothers (0.789 vs 0.784 numerically); first-order Euler-Lotka gives T*dr = s_gen. d is therefore a conversion between hazard-scale and per-generation s. Table 1 values (0.53 ... 0.015) not reproduced with a Siler stand-in (0.79/0.93 at e0 = 32; 0.13-0.21 at e0 = 78), unresolved because Coale-Demeny tables were not retrieved. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (shared spec with C2: `research/checks/c2_overlap_vs_standard.py`, planned). Compare d(l, b) from Z18166234 eq. 3.3 against the simulated ratio for (a) viability selection at one age band, (b) fecundity selection, (c) selection on all ages. Include the standard Hill-Felsenstein Ne for the drift side of the same population, and a Wright-Fisher discrete control. · Result: not run · Review: pending
 
 ## Simulator variables implied
 Life table l(x), fecundity b(x), age at first and last reproduction, T, selection class (viability or fecundity), Ne from Hill-Felsenstein.

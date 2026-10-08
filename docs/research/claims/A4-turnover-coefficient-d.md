@@ -7,11 +7,11 @@ parent: A
 edges: [{type: supports, target: A}, {type: depends-on, target: A4a}]
 load_bearing: false
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds for hazard-scale s"   # d*s exact for hazard-scale s (V1); factor 1 for per-generation s; a unit conversion, not an extra correction
   fidelity: n/a
-  external: pending
+  external: "contested"   # which s scale the cited aDNA papers use is unretrieved
 ---
 
 ## Statement (verbatim)
@@ -46,7 +46,8 @@ No check has run. Proposed check A4-sim: age-structured Moran or Leslie-matrix m
 - Result that would change a verdict: a ratio between 0.3 and 0.6 with T = mean age of reproduction.
 
 ## Check
-Script: none yet. Review: pending.
+R4 C2 (research/checks/results/R4-H-C2.md, `c2_overlap_vs_standard.py`): Day's d = mean cumulative hazard at the age of mothers (0.789 vs 0.784). For s defined as a fractional change of the mortality hazard at all ages, d*s is exact (V1, T*dr/s = 0.778 vs d = 0.789, within 1.5%): a point for Day. For per-generation s (fecundity, pre-maturity survival) the factor is 1 (V3/V4: Day's d*s 20-22% below exact). g_eff = d*g is standard theory with generation length T/d. Which scale the cited aDNA s values use was not retrieved (they are reported as per-generation logistic slopes, which would give d = 1). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet. Review: pending.
 
 ## Simulator variables implied
 - Life table (l(x), v(x) or fertility m(x)), generation time T; output d; toggle d on/off in F_max.

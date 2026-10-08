@@ -7,11 +7,11 @@ parent: ROOT
 edges: [{type: supports, target: ROOT}, {type: depends-on, target: Ga}, {type: depends-on, target: Gb}, {type: depends-on, target: Gc}, {type: depends-on, target: Gd}]
 load_bearing: false
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: arithmetic-error
   fidelity: partial
-  external: pending
+  external: "contested"   # no barrier in tested regime (r = 1/2, soft, <= 272 loci); human scale untested
 ---
 
 ## Statement (verbatim)
@@ -53,6 +53,8 @@ No check has run. Proposed check G-sim (not run, long): Wright-Fisher, N = 1e3â€
 
 ## Check
 Arithmetic audit (python3 -I, scratch): the 14.7Ã— formula does not reproduce as stated. Review: pending.
+
+R4 F2 (research/checks/results/R4-F2-A.md): no saturation of throughput at n_mid = 272 with r = 1/2 (rate linear in supply, R_int 0.975); throughput falls only with tight linkage. Per-locus P_fix was not measured directly (R_int is its average). Under independence the joint success probability multiplies, which is the specific-vs-any distinction (G3), not a barrier. Untested at human scale and with hard selection plus linkage. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - n_active loci, s per locus, N, fitness model (additive/multiplicative), hard vs soft selection, recombination. Outputs: per-locus P_fix, sweep time, throughput.

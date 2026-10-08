@@ -7,11 +7,11 @@ parent: H
 edges: [{type: supports, target: H}, {type: depends-on, target: C2}, {type: depends-on, target: B3}]
 load_bearing: true  # Source of the "k = mu N/Ne" and cost-ceiling predictions and of the 10^-12 adaptive limit that survives the retraction (H1). Its Term 3 uses d and s_max; its numbers disagree with Haldane + d (H).
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # arithmetic
   fidelity: pending
-  external: contested
+  external: "contested"   # s_max = 1 implies R ~ 2.7, not Haldane's 10%; 17.1x Haldane + d on the same basis
 ---
 
 ## Statement (verbatim)
@@ -38,7 +38,7 @@ derived (R2 recompute):
 - 0.45/(2 x 3.1e9 x ln 6,600) = 8.25e-12 (paper 8.3e-12; holds). K_sel = 8.25e-12 x 3.1e9 = 0.0256 per generation = one adaptive substitution per 39 generations.
 - Over 260,000 generations: 6,650 adaptive substitutions. Required 17.5M / 6,650 = 2,630 (paper: 2,700x at 6.5 MYA; holds within rounding).
 - Same formula with Ne = 1e4 (parameters.yaml `population.Ne_modern_human`): 7.3e-12 per site, one per 44 generations.
-- Haldane + d (H): one per 300 generations, i.e. 487 in 146,250 effective generations. Term 3 therefore allows about 7.7 times (300/39) more adaptive substitutions per generation than Haldane + d at the same d. The corpus contains two cost-based figures for the same species, 300 and 39 generations per substitution, which the papers do not reconcile.
+- Haldane + d (H): one per 300 generations, i.e. 487 in 146,250 effective generations. Term 3 (1/39 per nominal generation, d included) therefore allows about 17.1 times more adaptive substitutions per generation than Haldane + d (0.45/300 = 1/667 per nominal generation). The earlier 7.7 (300/39) mixed bases (Term 3 with d over Haldane without d) and is withdrawn; without d on both sides the ratio is also 17.1 (10x from the budget, 1.7x from D). The corpus contains two cost-based figures for the same species, 300 and 39 generations per substitution, which the papers do not reconcile.
 - The formula's structure: Ne appears only through ln(2Ne); the s̄ cancels; d multiplies; "s_max ≈ 1" is the single input standing in for Haldane's 10% mortality (s_max = 0.1 would give 390 generations per substitution at d = 0.45, close to 300; derived).
 - Term 2 (§6.4): k_cap = pi_max/(4 Ne) = 1e-3/(4 x 3,300) = 7.6e-8; human required k at 6.5 MYA = 2.2e-8 (17.5M/(3.1e9 x 260,000) = 2.17e-8; holds), "six-fold shortfall" refers to 4.7e-7 at the 300 kya date (the paper's own recalibration).
 
@@ -62,11 +62,12 @@ derived (R2 recompute):
 
 ## Pre-registered prediction
 - Under the claimant's model: in a forward simulation of sexual diploids with hard selection and R = 2, the sustainable genome-wide adaptive substitution rate is s_max d/(2 ln 2Ne) = 0.0256 per generation (Ne = 3,300, d = 0.45).
-- Under the opposing model (Haldane; Nunney): the hard-selection rate depends on M and on R; at small M it is near 1/300 per generation; the Term 3 value 1/39 is a factor 7.7 higher, and under soft selection there is no ceiling of this form.
+- Under the opposing model (Haldane; Nunney): the hard-selection rate depends on M and on R; at small M it is near 1/300 per generation; the Term 3 value 1/39 is a factor 17.1 higher on a same-basis comparison (1/39 vs 1/667), and under soft selection there is no ceiling of this form.
 - Result that would change a verdict: the H simulation giving a sustainable rate in agreement with either figure under stated M, R, K.
 
 ## Check
-Script: `research/checks/h_cost_of_selection.py` (planned, H). · Result: not run · Review: pending
+R4 H (research/checks/results/R4-H-C2.md): 0.45/(2 x 3.1e9 x ln 6,600) = 8.25e-12 per site (holds); 0.0256 per generation (one per 39). Implied per-substitution cost 2 ln(2Ne) = 17.6 against s_max = 1.0, vs Haldane's D = 30 and 0.10; same-basis ratio to Haldane + d is 17.1. In H2's hard model the cap is ln R / D, so s_max = 1 corresponds to a large reproductive excess (ln R = 1, R ~ 2.7), not Haldane's 10%. The two cost figures in the corpus are not reconciled. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned, H). · Result: not run · Review: pending
 
 ## Simulator variables implied
 s_max (or R), d, Ne, L, concurrent-sweep count, hard/soft switch.

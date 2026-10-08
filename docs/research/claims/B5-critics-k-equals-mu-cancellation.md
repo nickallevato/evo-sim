@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: holds
   fidelity: accurate
-  external: contested
+  external: "contested"   # exact at steady state; transient and overlap effects (B1c, B3b)
 ---
 
 ## Statement (verbatim)
@@ -55,6 +55,8 @@ Pre-registered prediction (copied from RESULTS B0.5; the check has run).
 
 ## Check
 Script: `research/checks/baseline_textbook.py` (seed 20261007) · B0.5 result: neutral k at equilibrium, N=50: 0.05018, N=200: 0.04964, vs U = 0.05 (z = +0.13, −0.64); holds for both N, consistent with k = U for any N. Review #2: B0.5 holds. Review: `research/checks/REVIEW.md#2026-10-07--correctness-review-2-sonnet-on-b0b3`
+
+R4 B1c/B3b (research/checks/results/R4-B1c-B4a.md, R4-B3b-C1.md): k = mu holds exactly at steady state with discrete generations (controls 1.000), but not exactly with overlapping generations plus fluctuation (B3b, small) and not over a finite window after a contraction (B1c, per-lineage excess 1.9-4.0x). The critics' stated totals assume stationarity. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - mutation input per generation (U)

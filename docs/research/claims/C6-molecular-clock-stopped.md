@@ -7,11 +7,11 @@ parent: C
 edges: [{type: supports, target: C}, {type: supports, target: B4}]
 load_bearing: false  # Earlier (Feb 2026) aDNA paper whose counts differ from the later Z23046531; used to support recalibration (B4). ROOT does not depend on it.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: arithmetic-error
   fidelity: n/a
-  external: pending
+  external: "untestable"   # 21 not reproducible from the published procedure (C1b); cannot adjudicate pending a call-depth model
 ---
 
 ## Statement (verbatim)
@@ -62,7 +62,8 @@ derived (R2 recompute):
 - Result that would change a verdict: the C1 simulation giving an expected panel-registered count that is (a) well above 21 (supports Day's deficit) or (b) at or below 21 (removes the deficit).
 
 ## Check
-Script: shared with C1 (`research/checks/c1_ascertainment_sim.py`, planned). · Result: not run · Review: pending
+R4 C1 + C1b (research/checks/results/R4-B3b-C1.md, research/checks/results/R4-C1b.md, `c1b_day_binned_statistic.py`, 20 reps x 13 configs x 16 readings): the 630 arithmetic (150M x 1.2e-8 x 350) is correct, but the denominator is wrong for a polymorphism-ascertained panel (neither 630 nor the uniform rescaling 5.2 is the right comparator). C1b simulated Day's binned first-passage statistic literally: every reading gives 1.2e3-1.7e4 post-7000 BP events for both neutral (Ne 7e3-2e4) and Day's d = 0.45 model, against 21 observed; but the model also misses Day's own bin profile (7000-8000 BP ~1,350 vs 4,497; pre-7000 share 38-60% vs 99.86%). Verdict: not reproducible from the published procedure; cannot adjudicate. Neither "neutral predicts ~0" (Day side) nor "does not rescue Day" / "deficit vs neutral" (earlier audit wording) is supported. Likely cause: per-site call depth in old bins (reviewer's 1-replicate direction test) and ancestry replacement; follow-up queued. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: shared with C1 (`research/checks/c1_ascertainment_sim.py`, planned). · Result: not run · Review: pending
 
 ## Simulator variables implied
 Number of neutral sites, panel fraction, window length, sample-size per bin, definition of fixation (sample versus population).

@@ -2,19 +2,19 @@
 
 ```mermaid
 flowchart TD
-  n_H["H: Haldane's cost of selection caps mammals at about one benefi<br/><small>day · int:pending · fid:partial · ext:contested</small>"]
+  n_H["H: Haldane's cost of selection caps mammals at about one benefi<br/><small>day · int:holds · fid:partial · ext:contested</small>"]
   style n_H fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_H --> n_ROOT
   n_H -->|supports| n_ROOT
   n_H -->|depends-on| n_C2
   n_H -->|depends-on| n_H9
   n_H -.->|attacks| n_G1
-  n_H1["H1: 2026-05-07 retraction: Term 3 (Haldane cost limit) was misus<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_H1["H1: 2026-05-07 retraction: Term 3 (Haldane cost limit) was misus<br/><small>day · int:holds · fid:n/a · ext:supported</small>"]
   style n_H1 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_H1 --> n_H
   n_H1 ==>|revises| n_H8
   n_H1 ==>|revises| n_H
-  n_H2["H2: Nunney 2003: the cost of selection is substantially less tha<br/><small>literature · int:n/a · fid:accurate · ext:pending</small>"]
+  n_H2["H2: Nunney 2003: the cost of selection is substantially less tha<br/><small>literature · int:n/a · fid:accurate · ext:contested</small>"]
   style n_H2 fill:#e5e7eb,stroke:#374151,stroke-width:3px
   n_H2 --> n_H
   n_H2 -.->|attacks| n_H
@@ -29,22 +29,22 @@ flowchart TD
   n_H4 --> n_H
   n_H4 -->|supports| n_H
   n_H4 -.->|attacks| n_G1
-  n_H5["H5: Hössjer: after scaling by mutation rate and genome length th<br/><small>ally · int:pending · fid:pending · ext:pending</small>"]
+  n_H5["H5: Hössjer: after scaling by mutation rate and genome length th<br/><small>ally · int:non-sequitur · fid:pending · ext:contested</small>"]
   style n_H5 fill:#fef3c7,stroke:#a16207,stroke-width:3px
   n_H5 --> n_H
   n_H5 -->|supports| n_H
   n_H5 ==>|revises| n_A5
-  n_H6["H6: Nesslig20: Haldane's reproductive cost limit applies to sele<br/><small>critic · int:pending · fid:partial · ext:pending</small>"]
+  n_H6["H6: Nesslig20: Haldane's reproductive cost limit applies to sele<br/><small>critic · int:holds · fid:partial · ext:supported</small>"]
   style n_H6 fill:#dbeafe,stroke:#1d4ed8
   n_H6 --> n_H
   n_H6 -.->|attacks| n_H
   n_H6 -->|supports| n_H1
-  n_H7["H7: Keightley 2012: a genome-wide deleterious mutation rate of U<br/><small>literature · int:n/a · fid:n/a · ext:pending</small>"]
+  n_H7["H7: Keightley 2012: a genome-wide deleterious mutation rate of U<br/><small>literature · int:n/a · fid:n/a · ext:supported</small>"]
   style n_H7 fill:#e5e7eb,stroke:#374151
   n_H7 --> n_H
   n_H7 -.->|attacks| n_H
   n_H7 -.->|attacks| n_H5
-  n_H8["H8: Kimura's Fixation Calculator: k_real = min(input flux, polym<br/><small>day · int:pending · fid:pending · ext:contested</small>"]
+  n_H8["H8: Kimura's Fixation Calculator: k_real = min(input flux, polym<br/><small>day · int:holds · fid:pending · ext:contested</small>"]
   style n_H8 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_H8 --> n_H
   n_H8 -->|supports| n_H

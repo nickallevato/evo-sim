@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: arithmetic-error
   fidelity: n/a
-  external: contested
+  external: "contradicted"   # at sourced Ne_anc the ancestral term is comparable to 2muT; holds only at Ne_anc = 1e4, where d is half the observed
 ---
 
 ## Statement (verbatim)
@@ -50,6 +50,8 @@ Written **before** the check runs.
 
 ## Check
 Script: none (arithmetic); proposed B4a.
+
+R4 B4a (research/checks/results/R4-B1c-B4a.md): "rounding error" holds only at Ne_anc = 1e4. At Yoo's Ne_anc, theta_anc = 0.63-0.95% of sites against 2muT = 0.605%. Day-side point: at Ne = 1e4 the model gives d = 0.65%, about half the observed 1.23%, so the reconciliation depends on a large Ne_anc (or longer T / higher mu). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - Nₑ,anc

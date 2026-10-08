@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart TD
-  n_F["F: Kimura's fixation-time equations (4Ne neutral; (2/s) ln 2Ne <br/><small>day · int:pending · fid:partial · ext:contested</small>"]
+  n_F["F: Kimura's fixation-time equations (4Ne neutral; (2/s) ln 2Ne <br/><small>day · int:non-sequitur · fid:partial · ext:contested</small>"]
   style n_F fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_F --> n_B
   n_F -->|supports| n_B
@@ -22,7 +22,7 @@ flowchart TD
   style n_F1b fill:#dbeafe,stroke:#1d4ed8
   n_F1b --> n_F1
   n_F1b -.->|attacks| n_F
-  n_F2["F2: Feasibility of pipelining: multi-locus sweeps under linkage,<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_F2["F2: Feasibility of pipelining: multi-locus sweeps under linkage,<br/><small>day · int:holds · fid:n/a · ext:contested</small>"]
   style n_F2 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_F2 --> n_F
   n_F2 -->|depends-on| n_F1

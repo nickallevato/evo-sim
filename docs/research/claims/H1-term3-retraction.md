@@ -7,11 +7,11 @@ parent: H
 edges: [{type: revises, target: H8}, {type: revises, target: H}]
 load_bearing: true  # Narrows what H and H8 may be used for. After this, a cost-of-selection bound cannot by itself be compared with total differences; the corrected framework puts total k at 1e-7 to 1e-8 (consistent with the observed rates, per Day).
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # arithmetic; same-basis ratio 17.1
   fidelity: n/a
-  external: pending
+  external: "supported"   # cost bounds selected substitutions only; neutral k = U (B0.5)
 ---
 
 ## Statement (verbatim)
@@ -39,7 +39,7 @@ Source: same post, ¶7 (Q68). The earlier 68 kya to 330 kya range was based on "
 Before: k_real = min(Term 1 = input flux, Term 2 = polymorphism throughput ceiling, Term 3 = selection-cost ceiling) with Term 3 = k_sel = s_max d / [2 L ln(2 Ne)] (H8). After: k_adaptive <= Term 3 (~1e-12 per site per generation); k_total = min(Term 1, Term 2), "in the 10⁻⁷ to 10⁻⁸ range".
 Version ledger (versions.md): the retraction does not change Zenodo 19984826 (the original text remains; no revised Zenodo version seen), and Zenodo 18168236 (H) was not mentioned.
 
-derived (R2): 8.3e-12 per site (Z19984826 §4.3 human case, Ne = 3,300, d = 0.45, s_max = 1, L = 3.1e9) x 3.1e9 = 0.0257 adaptive substitutions per generation = one per 39 generations. For 260,000 generations this gives 6,690 adaptive substitutions; compare Haldane + d in H: 487 (G_eff = 146,250 at one per 300 generations) and 1,083 without d at 325,000 generations. The two cost-based figures in Day's corpus therefore differ by a factor of about 7.7 per generation (300/39).
+derived (R2): 8.3e-12 per site (Z19984826 §4.3 human case, Ne = 3,300, d = 0.45, s_max = 1, L = 3.1e9) x 3.1e9 = 0.0256 adaptive substitutions per generation (0.45/(2 ln 6600) = 0.02558) = one per 39 generations. For 260,000 generations this gives about 6,650 adaptive substitutions; compare Haldane + d in H: 487 (G_eff = 146,250 at one per 300 generations) and 1,083 without d at 325,000 generations. The two cost-based figures in Day's corpus therefore differ by a factor of about 17.1 per generation on a same-basis comparison (Term 3 with d, 1/39, against Haldane + d, 1/667 per nominal generation; 17.1 also without d on both sides). An earlier figure of 7.7 divided a rate that includes d by a Haldane rate that excludes d and is withdrawn (review correction).
 
 Repo observation (R2, pending R4 review): the retraction's stated reason ("a constraint on selectively driven substitutions alone") applies to H as well, because H compares a Haldane-limited count of selected fixations with the full 20M differences (the paper's §5.1 argues that neutral change cannot explain "adaptation", which is a different claim from bounding total change). H1 does not state whether H is affected.
 
@@ -64,7 +64,8 @@ Repo observation (R2, pending R4 review): the retraction's stated reason ("a con
 - Result that would change a verdict: a revised Zenodo version of 19984826 and 18168236 stating which numbers survive.
 
 ## Check
-Script: none (document tracking; version ledger row exists). · Result: not run · Review: pending
+R4 H (research/checks/results/R4-H-C2.md): Term 3 arithmetic 0.45/(2 ln 6600) = 0.02558/gen (one per 39.1); about 6,650 over 260,000 generations. Same-basis ratio to Haldane + d is 17.1 (the earlier 7.7 mixed bases; 17.1/7.7 = 1/d). The retraction's scope (cost bounds selected substitutions only) is consistent with neutral k = U (B0.5) and applies equally to H's comparison with the 20M total; whether Day intends that is not stated. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none (document tracking; version ledger row exists). · Result: not run · Review: pending
 
 ## Simulator variables implied
 Adaptive versus total substitution rate; fraction of differences that are adaptive.

@@ -7,11 +7,11 @@ parent: ROOT
 edges: [{type: supports, target: ROOT}, {type: depends-on, target: C2}, {type: depends-on, target: C4}, {type: attacks, target: C5}]
 load_bearing: false  # ROOT does not rest on C: the MITTENS rate argument (A) and the neutral-theory argument (B) are computed without it. C is offered as empirical confirmation of d (C2) and of "evolution is inoperative" and is cited as such, so a failed C weakens only that supporting leg.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "non-sequitur"   # neutral also predicts ~0 from <50% and 0.04-0.11 from 50-90%
   fidelity: n/a
-  external: pending
+  external: "contested"   # observed 1 and 3 mildly above neutral at Ne 1e4, equal at Ne ~7k; admixture not modelled
 ---
 
 ## Statement (verbatim)
@@ -75,7 +75,8 @@ Written before any check runs.
 - Result that would change a verdict: a forward Wright-Fisher run (scaling validated first, per README rule 6) with a panel-like start-frequency spectrum in which the neutral expected count of 50-90% completions is clearly distinguishable from the d = 0.45 expectation; or evidence that the 1 and 3 observed loci are produced by sampling noise at n = 441-680.
 
 ## Check
-Script: none yet (spec: `research/checks/c_adna_neutral_expectation.py`, planned). Spec: forward Wright-Fisher, N in {1e4, 2e3}, 350 and 157 generations, start frequencies drawn from the Z23046531 Neolithic-bin spectrum, sample n = 441 / 680 diploids at both ends, count loci at 100%; report the expected count by start band. Validate scaling against an unscaled run first. · Result: not run · Review: pending
+R4 C1 (`c1_ascertainment_sim.py`, exact WF chain; research/checks/results/R4-B3b-C1.md): this is Z23046531's two-period statistic (not the Z18525185 21-count, see C6/C1b). Under neutrality at Ne = 1e4 the expected events from <50% are ~0 and from 50-90% are 0.04 (v62) / 0.11 (v66); new-in-window mutations fixing inside 280 generations: 5e-151 per site. So the headline does not discriminate. Observed 1 and 3 are above the Ne = 1e4 expectation (P(>=3 | 0.11) = 2e-4; critic reading: faster than neutral, not a stopped clock) and equal expectation at Ne ~ 7,000; the tail is extremely Ne-sensitive and Ne = 1e4 is an unverified input (Day-side reading). Admixture not modelled. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (spec: `research/checks/c_adna_neutral_expectation.py`, planned). Spec: forward Wright-Fisher, N in {1e4, 2e3}, 350 and 157 generations, start frequencies drawn from the Z23046531 Neolithic-bin spectrum, sample n = 441 / 680 diploids at both ends, count loci at 100%; report the expected count by start band. Validate scaling against an unscaled run first. · Result: not run · Review: pending
 
 ## Simulator variables implied
 Nominal generations in window, d, Ne (time series), start-frequency spectrum, sample size per period, fixation criterion (population vs sample), admixture fraction, panel ascertainment rule.

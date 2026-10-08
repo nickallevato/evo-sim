@@ -7,11 +7,11 @@ parent: C
 edges: [{type: attacks, target: C}, {type: attacks, target: C6}]
 load_bearing: false  # Does not bear on ROOT directly; it removes C and C6 as independent support. No published critic has made it (hierarchy note); it is the repo's formulation, from the literature below.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # point 1 trivially; new-in-window fixations ~0
   fidelity: accurate
-  external: pending
+  external: "supported"   # v62 total within 1.3x of neutral D2/D3; v66 3.8x below, unexplained
 ---
 
 ## Statement (verbatim)
@@ -68,7 +68,8 @@ Panel size parameters: 1,233,013 SNPs (AADR), 1,143,671 autosomal after Day's fi
 - Result that would change a verdict: a simulation that ascertains sites exactly as the panel did (African-male heterozygosity plus array SNPs) and shows (i) a non-negligible expected count of panel-registered new substitutions (verdict on point 1 reverses) or (ii) that the ascertained panel increases the neutral expected count of 50-90% completions above ~0.1 (verdict on point 2 reverses toward C1a).
 
 ## Check
-Script: none yet (spec: `research/checks/c1_ascertainment_sim.py`, planned). Spec: msprime baseline only for the discovery sample (README rule 6); forward Wright-Fisher for the 350-generation window. Steps: (1) simulate a pre-window population of Ne = 1e4 with mutation; (2) draw discovery sets D mimicking one Yoruba male, one San male and a 2,345-person array panel; keep sites polymorphic in D; (3) run 350 generations forward with new mutations arising genome-wide; (4) count, on the ascertained panel versus genome-wide, (a) substitutions of mutations that arose in-window and (b) completions of standing variants by start-frequency band; (5) repeat at Ne = 2e3 and with a 2:1 growth. Report both counts and the panel/genome ratio. · Result: not run · Review: pending
+R4 C1 (research/checks/results/R4-B3b-C1.md): point 1 holds (new-in-window fixations are ~0 genome-wide, 5e-151 per site). Sample-level newly-100% counts: D2 (African single-male discovery) 13,807 and D3 18,157 vs v62 observed 17,806 (within 1.3x); v66 3,469 is 3.8x below the model, unexplained. Same-population MAF design (D1) gives 0. Panel denominator omits African-private post-split mutations (slight upper bound). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (spec: `research/checks/c1_ascertainment_sim.py`, planned). Spec: msprime baseline only for the discovery sample (README rule 6); forward Wright-Fisher for the 350-generation window. Steps: (1) simulate a pre-window population of Ne = 1e4 with mutation; (2) draw discovery sets D mimicking one Yoruba male, one San male and a 2,345-person array panel; keep sites polymorphic in D; (3) run 350 generations forward with new mutations arising genome-wide; (4) count, on the ascertained panel versus genome-wide, (a) substitutions of mutations that arose in-window and (b) completions of standing variants by start-frequency band; (5) repeat at Ne = 2e3 and with a 2:1 growth. Report both counts and the panel/genome ratio. · Result: not run · Review: pending
 
 ## Simulator variables implied
 Discovery sample (size, ancestry), MAF cut-off for panel inclusion, panel fraction of genome, window length, standing versus new variation.

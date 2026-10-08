@@ -47,5 +47,81 @@ The code is correct; the numbers reproduced, including a 4-replicate rerun of B1
 - **B1b (major):** pairwise divergence is a different observable from fixed substitutions. → Caveat added; B4a required.
 - **B1b (minor):** recovery times were eyeballed. → Marked approximate. Analytic 4ΔN cross-check column added.
 
-## Queue
-B1c (sourced Nₑ histories), B3b (Balloux–Lehmann; structure; sweepstakes), B4a (two-lineage divergence with ILS), F2 (multi-locus interference), H (cost of selection), C1 (aDNA ascertainment), G (Bernoulli Barrier), A (full-scale window arithmetic). (B2a N-scaling script committed: b2a_scaling.py.)
+## 2026-10-08 — Review #4 (R4 batch): correctness, Day-side steelman, critic-side steelman, new-checks review
+Reviews: `results/REVIEW-R4-correctness.md`, `results/REVIEW-R4-steelman-day.md`, and `results/REVIEW-R4-steelman-critic.md` cover H/C2, B3b/C1, B1c/B4a and F2/A. `results/REVIEW-R4-new.md` covers H2-hard and C1b. The correctness review re-ran most non-IBM scripts in scratch. There were **no BLOCKERs**. Every MAJOR is listed below with its resolution.
+
+### Correctness review: MAJORs
+| # | Item | Resolution |
+|---|---|---|
+| 1 | H IBM mutation-supply confound: mutations were applied to J juveniles, which inflated M by about R/2 under soft selection. | FIXED in `wf_hc.py` (mutation rate u·K/J). H scans rerun. "Soft is worse" survives and strengthens. "Soft within 15% of hard" withdrawn. Hard M=0.1, R=2.2: 285 → 170. |
+| 2 | Post-hoc tuning toward Nunney's 300 (Model 2 adjusted twice). | Labelled EXPLORATORY. The "300 appears only at…" sentences were removed from the verdict text. |
+| 3 | B4a: the CSAC 14–22% was compared with θ_anc/d, producing a spurious "tension" and an invalid T = 400–440k alternative. | FIXED. The comparison now uses poly-but-diff/d (config B 22–25%). The tension and the alternative were deleted. |
+| 4 | B4a: the "supported" verdict used the wrong node (HCG). | FIXED. Moved to the HCB node (1.98e5), which overshoots by ~25%. Restated as a 3-parameter fit; the Yoo μ rescaling is open. |
+| 5 | B1c: "every sourced history gives an excess" holds by construction. | Reframed as the B1b telescoping identity under step histories. K is not a difference count. |
+| 6 | F2/A: extrapolations were stated as simulations (1.5–172×). | Labelled EXTRAPOLATION. "Contradicted at r = 1/2" softened to "not reproduced in the tested regime". |
+| 7 | `hash()` seeds were not reproducible (f2_multilocus, a_ltee_scaling). | FIXED with `zlib.crc32`. Both rerun; numbers moved within noise. |
+| 8 | C6/C1: "does not rescue Day" compared against a count the model does not simulate. | Withdrawn in R4-B3b-C1.md. The 21-count was then simulated in C1b (see below). |
+
+MINORs, all applied:
+- B1c/B4a burn-in raised 10N → 20N. This explains the 1.3% bias; controls now read 1.000.
+- 17.1 vs 7.7 corrected in H1/H8, and the ratio between them is 2.2× (= 1/d).
+- IBM size is 200k per type.
+- Day's d·s is 20–22% below the exact value; d·s matches "within 1.5%" rather than "exactly".
+- The paper's 0.49 is ~2% above the exact recursion.
+- The B&L r = 0.039 row label is fixed, and the direction of the B3c limit is corrected.
+- RRME 1/(2N_t) is now marked as a reconstruction.
+- The C1 panel denominator omits African-private mutations, so counts are a slight upper bound.
+- LTEE Nₑ = 3.3e7 is marked unsourced.
+- The single-s calibration conflates neutral and adaptive fixations.
+- The B4a "8Ne docstring" item was a mislabel: no such remark exists.
+
+Not done:
+- CIs on T50, and N/K in the success criterion (both stated as caveats).
+
+### Day-side steelman: main points and how they were handled
+- **Day's current position is narrower than the R4 headlines.** He has retracted the cost-on-total-k argument (H1), conceded a full pipe (B1d) and dropped d (A4d). → Verdicts now say "premise withdrawn by Day" where relevant (B1c). H's residual adaptive claim is recorded as open.
+- **No check tests hard selection at human parameters.** → H2-hard was added. Haldane's regime (R≈1.1, D≈20–30) is still untested, and that is now queued.
+- **B1c excess is not a difference count, and the human step is the most contraction-heavy.** → Reframed accordingly. Credit is given for (T−4Nₑ)/T = 0.84 on new mutations.
+- **B4a at Day's Nₑ = 1e4 gives half the observed d; the fit has 3 parameters; Yoo's μ is unrecorded.** → Recorded in B4a/B6a. The Yoo μ rescaling is queued.
+- **F2 is soft-selection only, and human-scale active loci (~1e4–1e5) are untested.** → The F2/G/Gc externals are now `contested`, not `contradicted`.
+- **H's "fails vs 20M" should read as a scope concession.** → H internal is now `holds` (arithmetic), with the scope noted under external. For new mutations, D≈20 gives ≈200, the same order as 300.
+- **C2: d·s is exact for hazard-scale s, and "fails as stated" overreaches.** → A4/C2a internal `holds for hazard-scale s`. C2 stays `non-sequitur` only for the fitted-d inference (identifiability).
+- **C1a is right in sign for the bands it addresses; C6 binning was not modelled.** → C1a internal `holds`. C1b was run.
+
+### Critic-side steelman: main points and how they were handled
+- **Several checks test arguments no critic made** (Nunney, Euler–Lotka d, ancestral Nₑ). → The balance ledger credits the audit or the literature, not the critics, for these.
+- **"Soft selection removes the cost" is not reproduced.** → Recorded against the critics in H and H2. Critics are not entitled to call H refuted.
+- **Hancock 38M / Nesslig20 37.8M double count.** → On an SNV basis, 19.4M = 2μT, and observed ≈ 19M + ~15M ancestral. Recorded in B5c (external `contradicted` as an SNV match) and B5e (`contested`, basis unstated).
+- **Asexual saturation was predicted by the critics too.** → Credit to Day is narrowed to sublinearity and to interference under linkage (A2e, A5d).
+- **KITTENS linearity is not established at 94,000×.** → A5b external remains `contested`.
+- **Observed 1 and 3 completions are faster than neutral at Nₑ = 1e4.** → Recorded in C, alongside the Day-side Nₑ-sensitivity reading.
+
+### New-checks review (REVIEW-R4-new)
+- **H2-hard, MAJOR (framing):** "literal 1/300 falsified" overreached.
+  - FIXED to: "10% is not a general bound; the cap is ln R / D. Haldane's regime (R≈1.1, diploid D≈20–30 → ≈1/300) is untested."
+  - Ceiling regulation is noted as the critics' compensatory-fecundity premise.
+- **H2-hard, MINORs:**
+  - λD < ln R is partly an identity; the real test is D ≈ ln M + 1.
+  - The pre-registration was edited after V1.
+  - Brackets use factor-2 spacing; the R=10 prediction miss is noted.
+  - All applied.
+- **C1b, MAJOR:** the "massive deficit vs neutral" and "sign stands" wording was REMOVED. The verdict is "not reproducible; cannot adjudicate". The reviewer's per-site call-depth hypothesis was added, with its 1-replicate numbers labelled direction only.
+- **Code:** no bug found in either script.
+
+## Queue (after review #4)
+1. **E checks:** hitchhikers, strong-selection zones, CMMRD, relictation, mutator counts, Tenaillon, Good 2017.
+2. **G1 / G3:** specific-vs-any outcome; the average rate includes parallelism.
+3. **D sims:** sequence-space / Wistar claims.
+4. **C1b follow-up:** a per-site, per-bin call-depth model with real AADR coverage, plus an ancestry-replacement model.
+5. **H with realistic human parameters:**
+   - R ≈ 1.1–3 with age structure, diploid D ≈ 20–30, and a hard-selected deleterious load.
+   - Human M from a sourced beneficial DFE.
+   - Hard selection combined with linkage.
+6. **Binomial CIs on H T50**, plus N/K in the success criterion.
+7. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface fitting 1.23% d and ≤1.06% fixed.
+8. **Also open:**
+   - PM2013 Table S5 / PSMC numeric curve.
+   - Lehmann 2014 normalisation.
+   - LTEE Nₑ source.
+   - Coale-Demeny tables and the s definitions in the aDNA papers.
+   - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.

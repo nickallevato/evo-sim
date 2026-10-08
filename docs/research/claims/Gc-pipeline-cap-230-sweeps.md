@@ -7,11 +7,11 @@ parent: G
 edges: [{type: depends-on, target: G}]
 load_bearing: false
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: non-sequitur
   fidelity: n/a
-  external: pending
+  external: "contested"   # falsifier not met in tested regime; ~230 concurrent sweeps persist under hard selection for R >= 5; human scale untested
 ---
 
 ## Statement (verbatim)
@@ -48,6 +48,8 @@ See G (G-sim). Prediction specific to this claim: the simulated fixation rate as
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 F2 + H2 (research/checks/results/R4-F2-A.md, research/checks/results/R4-H2-hard.md): the Gc falsifier (P_fix < 50% of 2s at ~230 active loci, soft, free recombination) is not met in the tested regime (R_int 0.975 at 272). Under hard selection with free recombination, ~255 simultaneous open loci persist at R >= 10 (s = 0.01); at R = 2, 90 persisted and 167 did not, so ~230 concurrent sweeps persist for R >= 5. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - Pipeline capacity C as a measured output of G-sim; t_transit.

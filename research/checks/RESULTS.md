@@ -166,3 +166,133 @@ Each script adds its own directory to `sys.path`, so `-I` works from any directo
 - **Observable caveat.** These are within-lineage *fixed substitutions*. The human–chimp *pairwise sequence divergence* is the mutations accumulated along both branches since coalescence (≈ 2μT + ancestral θ). That quantity does **not** depend on fixation latency or demography. A B1b deficit applies to fixed-difference counts only, not to raw divergence. Check **B4a** must do this accounting before B1b is applied to the human–chimp case.
 - **Scale.** The net effect is bounded by 4ΔN/T. At human–chimp scales (T ≈ 250k generations, ancestral Nₑ possibly 5×10⁴–10⁵), the transient regime is *not* negligible a priori. That makes **B1c** load-bearing.
 - **Open (B1c).** Use sourced Nₑ trajectories (PSMC/MSMC/ILS estimates), lineage by lineage, to determine which direction applied. Human history includes both an ancestral size change and recent growth. Nothing about direction is asserted here until B1c is sourced.
+
+---
+# R4 batch (2026-10-08) — B1c, B4a, B3b/B3c, C1, C1b, H, H2-hard, C2, F2, A-sim
+Full write-ups (post-review numbers) are in `results/R4-*.md`; review #4 is summarised in `REVIEW.md`. Pre-registered predictions are in each script docstring. All numbers below are final, after review corrections.
+
+## B1c — Sourced Nₑ histories · `b1c_ne_history.py` (seed 20261008; 150 reps; burn-in 20 N_sim) · claims B1c, B1, B1d, B5, B6
+**Setup:** ancestral population at equilibrium (Yoo 2025 Nₑ,anc = 1.98e5 HCB or 1.32e5 HCG), then step histories to sourced modern Nₑ (Prado-Martinez 2013 Table 1: humans 13.1–16.2k, common chimp 30.9–61.8k, bonobo 11.9–23.8k; textbook 1e4; Takahata-like two-step). Window T = 252,000 generations. Scaling validated (N_anc_sim 500/1000/2000 agree within SE; constant controls 1.000).
+
+**Result:** every step history gives an *excess*, K/UT = 1.9–4.0 (H1 at HCB 3.986 vs analytic 1+4ΔN/T = 3.984). The new-mutation component is 0.84 at Nₑ = 1e4, which equals Day's (T−4Nₑ)/T.
+
+**Regime limits:** this is the B1b telescoping identity applied to step histories, not an independent empirical result. Yoo's Nₑ is a lifetime average. No PSMC trajectory was extracted (Table S5 not retrieved). K counts alleles that fix in both lineages, so it is not a difference count. Unlinked neutral sites only.
+
+**Verdict:** the empty-start premise is contradicted, and Day withdrew it (B1d). Day's post-split formula is confirmed for new mutations.
+
+## B4a — Two-lineage divergence · `b4a_two_lineage_ils.py` (seed 20261009; burn-in 20 N_sim) · claims B4a, B6, B6a, B6b, B5c, B5e
+**Result:** d − 2μT = θ_anc within ~0.3% in every row, and msprime agrees. At T = 252k and μ = 1.2e-8:
+- HCB node (1.98e5): d = 1.55–1.56%, about 25% above the observed 1.23%.
+- Nₑ,anc = 1e4: d = 0.65%, about half the observed value (Day-side point).
+- CSAC's 14–22% polymorphic share corresponds to the poly-but-diff column: 22–25% in config B (human 1e4 / chimp 4.6e4). No tension.
+- Day's 2μ(T−4Nₑ) = 0.51% is below the simulated fixed differences (0.56–1.46%).
+
+**Regime limits:** a 3-parameter fit (μ, T, Nₑ,anc). Yoo's own μ is not recorded, so the Nₑ,anc rescaling is open. ILS discordance and an outgroup were not run.
+
+**Verdict:** the formula holds. The external fit is contested.
+
+**Critic-side correction (Hancock B5c / Nesslig20 B5e):** on an SNV basis, 2 × 252,000 × 38.4 = 19.4M, which equals 2μT. So the observed ~35M ≈ 19M post-split + ~15M ancestral, and the "38M matches 35–40M" claims double-count. Hancock's retained 76 is an SV-inclusive event count. Nesslig20's basis is unstated.
+
+## B3b / B3c — Balloux & Lehmann; RRME 0.743 · `b3b_overlap_fluctuation.py` (seeds 20261008+, 16 reps) · claims B3b, B3c, B3
+**Result:**
+- B&L eq. (3) was reproduced in 9 scenarios (all |z| < 1.6). Fluctuation without overlap gives k = μ.
+- At human-like parameters (analytic eq. 3): symmetric cycles give −0.3% to −2%; one-way growth raises the arrival rate of eventual fixers by 1.38× (transient). The contrived range is 0.59–1.70.
+- RRME's 0.743 depends on the window (0.868 at 2 cohorts → limit 0.598).
+- A mutant born in cohort i fixes with probability 1/N_i (P_fix·M_i = 0.973–1.018), not 1/(2N_t). The opposite sign to B&L.
+
+**Regime limits:** haploid model, uniform survival, no senescence. The per-generation-time normalisation is open (0.81–1.11; Lehmann 2014 not retrieved).
+
+**Verdict:**
+- B3b: the effect is real and supported qualitatively (credit to Day). Its size at human scale cannot give 0.743 or 32.3.
+- B3c: mechanism falsified; 0.743 is a window artefact.
+
+## C1 — 1240k ascertainment · `c1_ascertainment_sim.py` (exact chain; seed 20261009 for MC) · claims C, C1, C1a, C6
+**Result** (Nₑ = 1e4, 280 generations):
+- Expected events: from <50%, ~0; from 50–90%, 0.04 (v62) / 0.11 (v66). New-in-window fixations: 5e-151 per site.
+- Sample-level newly-100% counts: 13.8k (D2) and 18.2k (D3) vs 17,806 observed (v62). v66 (3,469) is 3.8× below, unexplained.
+- C1a's sign is right for the 10–90% bands (1.2–3.4× enrichment) but wrong for the ≥90% bands (5–30× suppression).
+- The observed 1 and 3 completions exceed expectation at Nₑ = 1e4 (P = 2e-4) and match it at Nₑ ≈ 7k.
+
+**Regime limits:** a single closed population, no admixture, assumed split time. The statistic is Z23046531's, **not** the 21-count (see C1b).
+
+**Verdict:** C: the test does not discriminate. C1: supported. C1a: right in sign for its bands, immaterial.
+
+## C1b — Day's binned 21-count · `c1b_day_binned_statistic.py` (SeedSequence 20261010; 20 reps × 13 configs × 16 readings) · claim C6
+**Result:** the literal procedure gives 1.2e3–1.7e4 post-7000 BP events under neutral (Nₑ 7e3–2e4) and under Day's d = 0.45 model, against 21 observed. The model also misses Day's own bin profile: 7000–8000 BP ≈1,350 vs 4,497 observed; pre-7000 share 38–60% vs 99.86%. Admixture pulses change S by <15%.
+
+**Regime limits:** per-bin genotyped fraction 1.0 or 0.3. Real old-bin call depth is far lower. The reviewer's 1-replicate direction test (coverage 0.3 → 0.01: S21 6,537 → 1,204; 121 if all bins are required) moves toward Day's profile but inflates the eligible count to 72–138k.
+
+**Verdict:** not reproducible from the published procedure; cannot adjudicate. The C6 external verdict is `untestable` pending a call-depth model.
+
+## H — Cost of selection · `h_cost_of_selection.py` (20261008), `h_nunney_gauss.py` (20261010), `h_nunney_gauss_lowR.py` (20261020+), `h_keightley_load.py` (20261009) · claims H, H1, H2, H5, H7, H8
+**Results:**
+- **Arithmetic:** 300 = 30/0.10, 487 and 41,068 all hold.
+- **D values:** diploid D = 2 ln(1/p0) gives 92–278 generations for standing variation and ≈200 for a new mutation.
+- **Term 3:** 0.0256/gen (1 per 39). Its same-basis ratio to Haldane + d is **17.1** (the earlier 7.7 was withdrawn).
+- **Hössjer:** his 15,800 is 10.5× Haldane's own 1,500. It comes from rate scaling, not cost.
+- **Nunney reconstruction** (EXPLORATORY: adjusted twice after seeing results; mutation timing fixed):
+  - The M-dependence is reproduced.
+  - The absolute values are not: R = 10 comes out 2–12× low; R = 2.2, M = 0.1 gives 170 vs ~300.
+  - **Soft T50 exceeds hard T50 at equal supply in both models**, so "soft selection removes the cost" is not reproduced.
+- **Keightley (U = 2.2):** hard selection needs ≥2e^U ≈ 18 offspring per female (extinct at Fmax ≤ 20; persists at 30 and 60). Soft selection persists throughout.
+
+**Regime limits:** K = 500, 8–10 reps, no CI on T50, N/K not in the success criterion. Siler life tables were used.
+
+**Verdict:**
+- H: arithmetic holds; external contested.
+- H1: supported (scope).
+- H2: contested.
+- H5: non-sequitur (cost step).
+- H7: supported.
+- H8: arithmetic holds.
+
+## H2-hard — Hard-selection multilocus treadmill · `h2_hard_selection_multilocus.py` (seed 20261030) · claims H, Gc, H7, F2
+**Setup:** haploid-equivalent, free recombination, imposed demand λ, ceiling fecundity f = min(R, K/N).
+
+**Results:**
+- Wherever the population persists, k = λ (R_int 0.9–1.1), up to ~260 open loci (λ = 0.4/gen, 120× 1/300).
+- Selective deaths reach 46–86% in persisting populations.
+- Extinction occurs when λD (+U) > ln R, with D ≈ ln M + 1 (7.0 vs 6.9).
+- The flip lies 9–100× above 1/300 for R ≥ 1.3 (factor-2 brackets).
+
+**Regime limits:**
+- The tested grid has R ≥ 1.3 and haploid D ≈ 7. **Haldane's own regime (R ≈ 1.1, diploid D ≈ 20–30 → ≈1/300) is untested.**
+- Ceiling regulation assumes compensatory fecundity.
+- No linkage; λ is imposed.
+- The pre-registration was edited after the V1 run.
+
+**Verdict:** 10% is not a general bound; the cap is ln R / D. The literal 1/300 is *not supported* in the tested range, but it is not falsified. Extrapolated (not simulated): U = 2.2 hard load with R ≈ 10 brings the cap down to ≈1/300.
+
+## C2 — Turnover coefficient d · `c2_overlap_vs_standard.py` (20261011), `c2_ratio_nonident.py` · claims C2, C2a, C2c, C2d, A4, A4a
+**Results:**
+- d = mean cumulative hazard at the age of mothers (0.789 vs 0.784).
+- d·s is exact for hazard-scale s (V1, within 1.5%): a point for Day. For per-generation s the factor is 1 (V3/V4/V5 ratio 1.000).
+- Day's formula gives d = −ln L for discrete generations.
+- C2c's ratio is invariant for random locus pairs (an identity).
+- d is not identifiable: Day's own s priors give d ∈ [0.481, 0.568].
+- Table 1 is not reproduced with a Siler stand-in; the Coale-Demeny tables were not retrieved.
+
+**Verdict:**
+- A4 / C2a: hold for hazard-scale s.
+- C2: non-sequitur as a fitted correction.
+- C2c: contradicted.
+- Externals contested, because which s scale the papers use was not retrieved.
+
+## F2 / A-sim — Multi-locus interference; LTEE scaling · `f2_multilocus.py` (4242, crc32 seeds), `f2_fwdpy11.py` (777), `a_ltee_scaling.py` (20261008, crc32) · claims F2, F, G, Gc, A, A2, A2e, A5b, A5d, A5f
+**Results** (soft selection, N = 1000, s = 0.01):
+- Clonal R_int falls 0.645 → 0.088 over 2N·U_b 0.1 → 32.
+- A 0.1 M map gives 0.204; one 1.5 M group gives 0.572.
+- Free recombination gives 0.975 ± 0.005 at 272 active loci, linear in supply. fwdpy11 agrees.
+
+**A-sim results** (LTEE, Nₑ = 3.3e7 **unsourced**):
+- G_f ≈ 1,300 is reproducible, but U_b is underdetermined over 3 orders of magnitude.
+- The asexual supply exponent is a = 0.23–0.34 per 100×.
+- The free-recombination factor of 1.5–172× is an **extrapolation**.
+
+**Regime limits:** ≤272 active loci, 2N·U_b ≤ 32, single s, soft selection, 4 reps. Human-scale active loci (~1e4–1e5) are untested.
+
+**Verdict:**
+- F2 / G / Gc: Day's cap is not reproduced in the tested regime; external contested.
+- A5f: direction supported.
+- A5b: linear only under free recombination.
+- A5d: sublinear (asexual) confirmed.

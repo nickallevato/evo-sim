@@ -7,11 +7,11 @@ parent: B4
 edges: [{type: depends-on, target: B6}, {type: depends-on, target: B1b}, {type: attacks, target: B1a}]
 load_bearing: true  # decides whether fixed-difference deficits (B1) apply to the observable that is actually compared (sequence divergence)
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
-  fidelity: n/a
-  external: pending
+  internal: "holds"   # forward sim matches formula within ~0.3%; msprime agrees
+  fidelity: "accurate"   # CSAC polymorphic share matches poly-but-diff
+  external: "contested"   # overshoots 1.23% by ~25% at HCB node; half at Ne 1e4; (mu, T, Ne_anc) underdetermined; Yoo mu unrecorded
 ---
 
 ## Statement (verbatim)
@@ -57,7 +57,8 @@ Written **before** the check runs.
 - Result that would change a verdict: If the simulated d matches 2μT + θ_anc to within SE and the fixed-count deficit does not alter d, Day's empty-pipe correction does not apply to the observable (B1a internal verdict stands, relevance falls). If d falls below the standard prediction by about μL·4Nₑ, Day is supported.
 
 ## Check
-Script: proposed `research/checks/b4a_two_lineage_ils.py` (not yet written) · Result: none. Required by REVIEW.md review #3 (B1b caveat) and queued.
+R4 B4a (`b4a_two_lineage_ils.py`, seed 20261009, burn-in 20 N_sim; research/checks/results/R4-B1c-B4a.md): forward simulation gives d - 2muT = theta_anc within ~0.3% in every row; msprime agrees. CSAC's 14-22% polymorphic share matches the poly-but-diff column (config B, human 1e4 / chimp 4.6e4: 22-25%), so there is no tension. At the relevant node (HCB, Ne_anc = 1.98e5) d = 1.55-1.56%, ~25% above observed 1.23%; at Day's Ne = 1e4, d = 0.65%, about half (Day-side point). The data fix only 2muT + 4Ne_anc*mu (a 3-parameter fit), and Yoo's own mu is not recorded, so the Ne_anc rescaling is open. ILS discordance and outgroup not run. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: proposed `research/checks/b4a_two_lineage_ils.py` (not yet written) · Result: none. Required by REVIEW.md review #3 (B1b caveat) and queued.
 
 ## Simulator variables implied
 - ancestral Nₑ

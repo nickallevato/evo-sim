@@ -17,6 +17,8 @@ Each row is a quantity that changed across sources or versions. Evidence is in `
 | Retraction 2026-05-07 | targets Term 3 (Haldane cost limit) of Z19984826 | |
 | Z23003785 | created 2026-09-28, modified 2026-10-04 | Check for content changes before quoting. |
 | N vs Nₑ in k | k = μN/Nₑ (Z18429937, Z18525547, Z18637333; Jan–Feb 2026) → **conceded 2026-08-27**: Nₑ never enters the Kimura identity (supply 2Nμ, fixation 1/(2N)); Hard Limits "accepts k=μ throughout" → k = 32.3μ reappears (blog 2026-10-01) | The Zenodo records were not revised after the concession. The concession came one day after keruru's retraction. |
-| Pipeline start state | Intrinsic Irrelevance assumes an empty pipe at the split → blog 2026-10-01: the pipe was "full, but much shorter" (228,000 gens) | Contradicts the empty-start premise (claim B1d). |
+| Pipeline start state | Intrinsic Irrelevance assumes an empty pipe at the split → blog 2026-10-01: the pipe was "full, but much shorter" (228,000 gens) | Contradicts the empty-start premise (claim B1d). Implies Nₑ,anc ≈ 5.7e4 (228,000/4); R4 B1c/B4a: Day's (T−4Nₑ)/T is exact for new mutations, and empty-start excess/deficit accounting is superseded by the full-pipe concession. |
 | Hard Limits ceiling | abstract "about ten thousand" vs its own Table 1 (35,000–114,000) | 3.5–11× gap (claim B2b). |
 | Implied Nₑ/N | Hard Limits implies Nₑ = 0.57N; the recalibration paper uses Nₑ = 3,300 for the same census | Cross-paper inconsistency. |
+| Term 3 vs Haldane ratio (audit, not Day) | R2 note "7.7×" → R4 corrected to 17.1× same-basis | The 7.7 divided a rate including d by one excluding d (H1/H8). |
+| k/μ sign across Day papers | 0.743 (Z18525262, slower) vs "15–150× shorter" dates (Z18525547, faster) vs 32.3 (blog) | R4 B3b: the realistic B&L direction is upward. Day's papers are inconsistent in sign. |

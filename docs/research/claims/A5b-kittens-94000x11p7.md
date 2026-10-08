@@ -7,11 +7,11 @@ parent: A5
 edges: [{type: attacks, target: A2e}, {type: attacks, target: A3a}]
 load_bearing: false
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: holds
   fidelity: accurate
-  external: contested
+  external: "contested"   # linear only under free recombination in tested range; asexual a = 0.23-0.34
 ---
 
 ## Statement (verbatim)
@@ -56,6 +56,8 @@ Pre-registered here, check not yet run (A-sim, see file A).
 
 ## Check
 Arithmetic audit (python3 -I, scratch): decomposition reproduces; sensitivity computed in the scratch session. Review: pending.
+
+R4 A-sim + F2 (research/checks/results/R4-F2-A.md): linear supply scaling (a = 1.00) holds under free recombination within F2's range (N = 1000, s = 0.01, 2N*U_b <= 32, <= 272 active loci) and fails for an asexual genome (a = 0.23-0.34 per 100x). KITTENS's 94,000x is 3 orders beyond the tested range, and 94,000 is total, not beneficial, supply. Credit to Day: KITTENS's linearity is not established at the claimed scale. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - Exponent a in rate ∝ U^a as a user parameter (0.5 / 0.6 / 1).

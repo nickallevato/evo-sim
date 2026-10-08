@@ -28,12 +28,12 @@ flowchart TD
   n_B1b --> n_B1
   n_B1b -->|supports| n_B1
   n_B1b -->|depends-on| n_B1c
-  n_B1c["B1c: Was the ancestral pipeline empty or full at the split? (sour<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_B1c["B1c: Was the ancestral pipeline empty or full at the split? (sour<br/><small>day · int:holds · fid:n/a · ext:contradicted</small>"]
   style n_B1c fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_B1c --> n_B1
   n_B1c -->|depends-on| n_B1
   n_B1c -.->|attacks| n_B1a
-  n_B1d["B1d: Day (blog 2026-10-01): the pipeline was full but short (228,<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_B1d["B1d: Day (blog 2026-10-01): the pipeline was full but short (228,<br/><small>day · int:pending · fid:n/a · ext:contested</small>"]
   style n_B1d fill:#fde2c8,stroke:#b45309
   n_B1d --> n_B1
   n_B1d ==>|revises| n_B1
@@ -69,7 +69,7 @@ flowchart TD
   n_B2d --> n_B2
   n_B2d -->|supports| n_B2
   n_B2d -.->|attacks| n_F1
-  n_B3["B3: k differs from mu: the family of Day k/mu values (N/Ne, 0.74<br/><small>day · int:pending · fid:partial · ext:contested</small>"]
+  n_B3["B3: k differs from mu: the family of Day k/mu values (N/Ne, 0.74<br/><small>day · int:pending · fid:partial · ext:contradicted</small>"]
   style n_B3 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_B3 --> n_B
   n_B3 -->|supports| n_B
@@ -81,12 +81,12 @@ flowchart TD
   style n_B3a fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_B3a --> n_B3
   n_B3a -->|supports| n_B3
-  n_B3b["B3b: Balloux & Lehmann 2012: k depends on N under overlapping gen<br/><small>day · int:pending · fid:partial · ext:pending</small>"]
+  n_B3b["B3b: Balloux & Lehmann 2012: k depends on N under overlapping gen<br/><small>day · int:holds · fid:partial · ext:supported</small>"]
   style n_B3b fill:#fde2c8,stroke:#b45309
   n_B3b --> n_B3
   n_B3b -->|supports| n_B3
   n_B3b -->|depends-on| n_B3c
-  n_B3c["B3c: Real Rate of Molecular Evolution: k = mu × (sum N_i^2 / sum <br/><small>day · int:pending · fid:partial · ext:pending</small>"]
+  n_B3c["B3c: Real Rate of Molecular Evolution: k = mu × (sum N_i^2 / sum <br/><small>day · int:non-sequitur · fid:misread · ext:contradicted</small>"]
   style n_B3c fill:#fde2c8,stroke:#b45309
   n_B3c --> n_B3
   n_B3c -->|supports| n_B3
@@ -119,7 +119,7 @@ flowchart TD
   n_B4 --> n_B
   n_B4 -->|supports| n_B
   n_B4 -->|depends-on| n_B3a
-  n_B4a["B4a: Pairwise divergence = 2 mu T + theta_anc: two-lineage forwar<br/><small>literature · int:pending · fid:n/a · ext:pending</small>"]
+  n_B4a["B4a: Pairwise divergence = 2 mu T + theta_anc: two-lineage forwar<br/><small>literature · int:holds · fid:accurate · ext:contested</small>"]
   style n_B4a fill:#e5e7eb,stroke:#374151,stroke-width:3px
   n_B4a --> n_B4
   n_B4a -->|depends-on| n_B6
@@ -166,7 +166,7 @@ flowchart TD
   n_B5b --> n_B5
   n_B5b -.->|attacks| n_B1
   n_B5b -.->|attacks| n_B3a
-  n_B5c["B5c: Hancock: ~76.8 new mutations fixed per generation, ~38 milli<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_B5c["B5c: Hancock: ~76.8 new mutations fixed per generation, ~38 milli<br/><small>critic · int:holds · fid:n/a · ext:contradicted</small>"]
   style n_B5c fill:#dbeafe,stroke:#1d4ed8
   n_B5c --> n_B5
   n_B5c -.->|attacks| n_B1
@@ -177,7 +177,7 @@ flowchart TD
   n_B5d --> n_B5
   n_B5d -.->|attacks| n_B1
   n_B5d -.->|attacks| n_B3a
-  n_B5e["B5e: Nesslig20: mu_G = 75 per generation, k = 75, 2 × 75 × 252,00<br/><small>critic · int:pending · fid:n/a · ext:contested</small>"]
+  n_B5e["B5e: Nesslig20: mu_G = 75 per generation, k = 75, 2 × 75 × 252,00<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
   style n_B5e fill:#dbeafe,stroke:#1d4ed8
   n_B5e --> n_B5
   n_B5e -.->|attacks| n_B1
@@ -197,16 +197,16 @@ flowchart TD
   n_B5h --> n_B5
   n_B5h -->|supports| n_B5
   n_B5h -.->|attacks| n_B3a
-  n_B6["B6: Mansfield: the ancestral pipeline was full at the split; exp<br/><small>critic · int:holds · fid:n/a · ext:pending</small>"]
+  n_B6["B6: Mansfield: the ancestral pipeline was full at the split; exp<br/><small>critic · int:holds · fid:n/a · ext:supported</small>"]
   style n_B6 fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px
   n_B6 --> n_B1
   n_B6 -.->|attacks| n_B1
   n_B6 -.->|attacks| n_B1a
-  n_B6a["B6a: Day (IR): ancestral polymorphism contributes 1.44 million di<br/><small>day · int:arithmetic-error · fid:n/a · ext:contested</small>"]
+  n_B6a["B6a: Day (IR): ancestral polymorphism contributes 1.44 million di<br/><small>day · int:arithmetic-error · fid:n/a · ext:contradicted</small>"]
   style n_B6a fill:#fde2c8,stroke:#b45309
   n_B6a --> n_B6
   n_B6a -.->|attacks| n_B6
-  n_B6b["B6b: Camestros: Day treats ALL human-chimp genetic differences as<br/><small>critic · int:holds · fid:accurate · ext:pending</small>"]
+  n_B6b["B6b: Camestros: Day treats ALL human-chimp genetic differences as<br/><small>critic · int:holds · fid:accurate · ext:supported</small>"]
   style n_B6b fill:#dbeafe,stroke:#1d4ed8
   n_B6b --> n_B6
   n_B6b -.->|attacks| n_B6a

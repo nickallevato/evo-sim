@@ -10,7 +10,7 @@ nodes:
     target: ROOT
   load_bearing: true
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: n/a
@@ -98,7 +98,7 @@ nodes:
     target: A2g
   load_bearing: false
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: unverifiable
@@ -184,7 +184,7 @@ nodes:
     target: A2
   load_bearing: true
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: non-sequitur
     fidelity: pending
@@ -366,11 +366,11 @@ nodes:
     target: A4a
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds for hazard-scale s
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/A4-turnover-coefficient-d.md
 - id: A4a
   title: d ≈ 0.45 ± 0.08 estimated from ancient-DNA time series at three loci (loci differ between two papers)
@@ -382,9 +382,9 @@ nodes:
     target: A4
   load_bearing: false
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/A4a-d-empirical-estimate.md
@@ -486,7 +486,7 @@ nodes:
     target: A3a
   load_bearing: false
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: accurate
@@ -518,7 +518,7 @@ nodes:
     target: A5b
   load_bearing: false
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: non-sequitur
     fidelity: n/a
@@ -552,11 +552,11 @@ nodes:
     target: A2e
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
-    external: contested
+    external: supported
   claim_file: docs/research/claims/A5f-clonal-lineage-vs-recombining.md
 - id: A5g
   title: 'Day: the E. coli study is cited for its fixation rate, not its mutation rate; no human or mammalian fixation has been observed faster
@@ -671,11 +671,11 @@ nodes:
     target: B1a
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: contradicted
   claim_file: docs/research/claims/B1c-ancestral-pipeline-state-ne-history.md
 - id: B1d
   title: 'Day (blog 2026-10-01): the pipeline was full but short (228,000 generations); 29-billion pipe at 8 billion'
@@ -691,11 +691,11 @@ nodes:
     target: B1a
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: pending
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/B1d-full-but-short-pipe-revision.md
 - id: B1e
   title: Chalub 2022 shows k = mu is an asymptote / 1/(2N) is imported from Wright-Fisher
@@ -827,7 +827,7 @@ nodes:
   verdicts:
     internal: pending
     fidelity: partial
-    external: contested
+    external: contradicted
   claim_file: docs/research/claims/B3-k-neq-mu-values-umbrella.md
 - id: B3a
   title: 'k = 2N mu × 1/(2Ne) = mu N/Ne: supply uses census N, fixation probability uses Ne'
@@ -857,11 +857,11 @@ nodes:
     target: B3c
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
-    external: pending
+    external: supported
   claim_file: docs/research/claims/B3b-balloux-lehmann-overlap-and-fluctuation.md
 - id: B3c
   title: 'Real Rate of Molecular Evolution: k = mu × (sum N_i^2 / sum N_i) / N_t = 0.743 mu'
@@ -875,11 +875,11 @@ nodes:
     target: B3b
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
-    fidelity: partial
-    external: pending
+    internal: non-sequitur
+    fidelity: misread
+    external: contradicted
   claim_file: docs/research/claims/B3c-rrme-k-0743-mu.md
 - id: B3d
   title: k = 32.3 mu (Bergeron pedigree rate vs Yoo required rate) and the median factor 25 across 55 vertebrates
@@ -999,11 +999,11 @@ nodes:
     target: B1a
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
-    fidelity: n/a
-    external: pending
+    internal: holds
+    fidelity: accurate
+    external: contested
   claim_file: docs/research/claims/B4a-two-lineage-divergence-with-ils.md
 - id: B4b
   title: CHLCA recalibrated from 6.5 Mya to 68 kya (census 600,000; Biraben 2003)
@@ -1173,11 +1173,11 @@ nodes:
     target: A
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: n/a
-    external: contested
+    external: contradicted
   claim_file: docs/research/claims/B5c-hancock-76-8-per-generation.md
 - id: B5d
   title: 'Relayed population geneticist: 6 My / 25 y × 30 mutations per generation = 7.2 million differences "literally no selection required"'
@@ -1209,9 +1209,9 @@ nodes:
     target: B3a
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
     external: contested
   claim_file: docs/research/claims/B5e-nesslig20-37-8-million.md
@@ -1281,11 +1281,11 @@ nodes:
     target: B1a
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: n/a
-    external: pending
+    external: supported
   claim_file: docs/research/claims/B6-ancestral-pipeline-full-mansfield.md
 - id: B6a
   title: 'Day (IR): ancestral polymorphism contributes 1.44 million differences (0.35%), "a rounding error"'
@@ -1301,7 +1301,7 @@ nodes:
   verdicts:
     internal: arithmetic-error
     fidelity: n/a
-    external: contested
+    external: contradicted
   claim_file: docs/research/claims/B6a-day-ancestral-polymorphism-rounding-error.md
 - id: B6b
   title: 'Camestros: Day treats ALL human-chimp genetic differences as mutations that occurred after the split'
@@ -1313,11 +1313,11 @@ nodes:
     target: B6a
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: accurate
-    external: pending
+    external: supported
   claim_file: docs/research/claims/B6b-camestros-all-differences-post-split.md
 - id: B6c
   title: 'Hancock: a serial one-at-a-time model predicts no genetic variation among individuals except the sweeping allele'
@@ -1426,11 +1426,11 @@ nodes:
     target: C5
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: non-sequitur
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/C-adna-zero-fixations.md
 - id: C1
   title: The 1240k capture panel is ascertained on present-day variable sites, so near-zero fixations (and zero new-mutation substitutions) are
@@ -1445,11 +1445,11 @@ nodes:
     target: C6
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: accurate
-    external: pending
+    external: supported
   claim_file: docs/research/claims/C1-1240k-ascertainment.md
 - id: C1a
   title: 'Day: panel ascertainment bias would favor detecting recent fixations, not obscure them'
@@ -1463,11 +1463,11 @@ nodes:
     target: C6
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/C1a-day-ascertainment-reply.md
 - id: C2
   title: 'Bio-Cycle model: a generation-overlap factor d = 0.45, fitted to three aDNA loci, halves the effective generations available to selection
@@ -1486,11 +1486,11 @@ nodes:
     target: C2c
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: non-sequitur
+    fidelity: unverifiable
+    external: contested
   claim_file: docs/research/claims/C2-bio-cycle-d.md
 - id: C2a
   title: d is derived from life tables as d = T x (integral of mortality weighted by l(x) v(x)) / (integral of l(x) v(x)); it is mathematically
@@ -1505,11 +1505,11 @@ nodes:
     target: A4
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: unverifiable
+    external: contested
   claim_file: docs/research/claims/C2a-d-life-table-derivation.md
 - id: C2b
   title: Across six countries 1950-2023, d and k are linearly related (d = -2.242k + 1.229, r = -0.991); the k = mu identity never applies and
@@ -1540,11 +1540,11 @@ nodes:
     target: C2
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: non-sequitur
     fidelity: n/a
-    external: pending
+    external: contradicted
   claim_file: docs/research/claims/C2c-ratio-crossvalidation.md
 - id: C2d
   title: Chicken TSHR requires d = 1.02 (discrete generations), humans 0.45, so the cross-species validation is decisive
@@ -1556,11 +1556,11 @@ nodes:
     target: C2
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: unverifiable
+    external: contested
   claim_file: docs/research/claims/C2d-chicken-tshr.md
 - id: C3
   title: CCR5-delta32 under the strongest observed selection implies about 300 generations per fixation, later 2,278; humans do not fixate faster
@@ -1670,11 +1670,11 @@ nodes:
     target: B4
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: arithmetic-error
     fidelity: n/a
-    external: pending
+    external: untestable
   claim_file: docs/research/claims/C6-molecular-clock-stopped.md
 - id: D
   title: Functional proteins are a vanishing fraction of sequence space (about 1e52 proteins ever vs 1e325 sequences), and the Wistar challenge
@@ -2557,7 +2557,7 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: pending
+    internal: non-sequitur
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/F-kimura-fixation-time-limits-fixations.md
@@ -2625,11 +2625,11 @@ nodes:
     target: F1a
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/F2-multi-locus-interference-feasibility.md
 - id: F3
   title: t ≈ (2/s) ln(2Ne) for a beneficial allele (called "Kimura's equation")
@@ -2748,11 +2748,11 @@ nodes:
     target: Gd
   load_bearing: false
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: arithmetic-error
     fidelity: partial
-    external: pending
+    external: contested
   claim_file: docs/research/claims/G-bernoulli-barrier.md
 - id: G1
   title: An average rate is indifferent to parallel versus sequential timing; the LTEE G_f already includes parallel fixation
@@ -3077,11 +3077,11 @@ nodes:
     target: G
   load_bearing: false
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: non-sequitur
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/Gc-pipeline-cap-230-sweeps.md
 - id: Gd
   title: Only 2% of beneficial mutations escape drift, so sustaining the pipeline requires about 7.8 million beneficial mutations to arise
@@ -3134,9 +3134,9 @@ nodes:
     target: G1
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/H-haldane-limit.md
@@ -3153,11 +3153,11 @@ nodes:
     target: H
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: supported
   claim_file: docs/research/claims/H1-term3-retraction.md
 - id: H2
   title: 'Nunney 2003: the cost of selection is substantially less than Haldane''s for M > 1/2 and is eliminated by soft selection, but rises
@@ -3172,11 +3172,11 @@ nodes:
     target: H
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: n/a
     fidelity: accurate
-    external: pending
+    external: contested
   claim_file: docs/research/claims/H2-nunney-2003.md
 - id: H3
   title: Dawkins's 11,739 (dominant) / 321,444 (recessive) generations to reach half frequency, doubled to 642,888, are 87,916,307 times too slow
@@ -3229,11 +3229,11 @@ nodes:
     target: A5
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: non-sequitur
     fidelity: pending
-    external: pending
+    external: contested
   claim_file: docs/research/claims/H5-hossjer-cost-step.md
 - id: H6
   title: 'Nesslig20: Haldane''s reproductive cost limit applies to selection but not to drift, so it cannot bound neutral fixations'
@@ -3247,11 +3247,11 @@ nodes:
     target: H1
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
-    external: pending
+    external: supported
   claim_file: docs/research/claims/H6-nesslig20-cost-vs-drift.md
 - id: H7
   title: 'Keightley 2012: a genome-wide deleterious mutation rate of U = 2.2 is higher than humans could tolerate under hard selection but tolerable
@@ -3266,11 +3266,11 @@ nodes:
     target: H5
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: n/a
     fidelity: n/a
-    external: pending
+    external: supported
   claim_file: docs/research/claims/H7-keightley-deleterious-load.md
 - id: H8
   title: 'Kimura''s Fixation Calculator: k_real = min(input flux, polymorphism ceiling, selection-cost ceiling), with Term 3 k_sel = s_max d /
@@ -3287,9 +3287,9 @@ nodes:
     target: B3
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: pending
     external: contested
   claim_file: docs/research/claims/H8-kimura-calculator-term3.md

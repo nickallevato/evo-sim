@@ -7,11 +7,11 @@ parent: F
 edges: [{type: depends-on, target: F1}, {type: depends-on, target: F1a}]
 load_bearing: true  # Day's strongest remaining form of the throughput argument rests on parallel width being capped at ~230 or by cost
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # interference exists (clonal R_int 0.09-0.65)
   fidelity: n/a
-  external: pending
+  external: "contested"   # no collapse to 272 active loci with free recombination (soft) or below ln R/D (hard); human scale and hard+linkage untested; tight linkage supports Day
 ---
 
 ## Statement (verbatim)
@@ -50,7 +50,8 @@ Written **before** the check runs.
 - Result that would change a verdict: See Formal statement.
 
 ## Check
-Script: proposed `research/checks/f2_multilocus.py` (not yet written) · Result: none. Queued in REVIEW.md.
+R4 F2 (`f2_multilocus.py` seed 4242 with crc32-derived seeds, `f2_fwdpy11.py`; research/checks/results/R4-F2-A.md) and H2 (`h2_hard_selection_multilocus.py`; research/checks/results/R4-H2-hard.md). Soft selection, N = 1000, s = 0.01: clonal R_int falls 0.645 -> 0.088 as 2N*U_b goes 0.1 -> 32; a 0.1 M map gives 0.204; one 1.5 M linkage group 0.572 at 208 active loci; free recombination 0.975 +/- 0.005 at 272 active loci, linear in supply; fwdpy11 agrees. Day's cap (R < 0.5 by ~230 loci) is not reproduced for r = 1/2 in the tested regime. Hard selection (H2, free recombination, imposed demand): rate = demand until total log-load exceeds ln R; ~255 open loci persist at R >= 10, ~90 at R = 2. Untested: human-scale active loci (~1e4-1e5 by Little's law), hard selection combined with linkage, N = 1e4, DFE. Credit to Day: interference is real under tight linkage. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: proposed `research/checks/f2_multilocus.py` (not yet written) · Result: none. Queued in REVIEW.md.
 
 ## Simulator variables implied
 - number of loci

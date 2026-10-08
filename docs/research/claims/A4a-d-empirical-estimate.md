@@ -7,11 +7,11 @@ parent: A4
 edges: [{type: depends-on, target: A4}]
 load_bearing: false
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # arithmetic reproduces from Day's s priors; d not identifiable apart from s, onset, T, dominance
   fidelity: unverifiable
-  external: contested
+  external: "contested"   # not identifiable (C2d)
 ---
 
 ## Statement (verbatim)
@@ -45,6 +45,8 @@ Not run. Prediction (claimant): recomputing d from the Mathieson 2015 or AADR da
 
 ## Check
 No script. Review: pending.
+
+R4 C2d (research/checks/results/R4-H-C2.md, `c2_ratio_nonident.py`): three trajectories, four unknowns: an exact fit exists for every d. Day's own published s ranges (LCT .04-.10, SLC45A2 .04-.05, TYR .02-.04) give d in [0.481, 0.568]; scaling the ranges by 0.75 / 1.25 moves it to [0.638, 0.756] / [0.387, 0.456]. The 0.45 comes from priors on s, not from the trajectories. Equivalent alternatives: onset 2,100-3,100 y later, generation length 51-66 y, or dominance (LCT dominant needs d = 0.745). Critic-side note: at d = 1 the required s (LCT 0.024) is below the published ranges, an anomaly the critics have not explained. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - None directly.

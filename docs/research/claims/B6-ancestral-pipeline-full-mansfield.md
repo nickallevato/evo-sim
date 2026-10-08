@@ -7,11 +7,11 @@ parent: B1
 edges: [{type: attacks, target: B1}, {type: attacks, target: B1a}]
 load_bearing: true  # if true, the empty-start premise of B1 fails for the human-chimp case
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: holds
   fidelity: n/a
-  external: pending
+  external: "supported"   # full pipe gives k = mu and d = 2muT + theta_anc (forward sim)
 ---
 
 ## Statement (verbatim)
@@ -50,6 +50,8 @@ Pre-registered prediction (copied from RESULTS B1; the check has run).
 
 ## Check
 Script: `research/checks/b1_start_state.py` (seed 11) · Result: equilibrium start N=100, U=0.5: T=400: 198.5±2.0 vs U·T = 200; T=2000: 1005.1±4.3 vs 1000; empty start: 41.3±0.8 and 802.5±3.4. Review: `research/checks/REVIEW.md#2026-10-07--correctness-review-2-sonnet-on-b0b3`
+
+R4 B1c/B4a (research/checks/results/R4-B1c-B4a.md): an equilibrium (full) start gives K/UT = 1.000 for constant Ne, and d = 2muT + theta_anc within ~0.3% in forward simulation. Whether the fit matches 1.23% depends on Ne_anc, T and mu (see B4a). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - start state

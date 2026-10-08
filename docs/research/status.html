@@ -1,0 +1,303 @@
+<title>Probability Zero Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: lab-notebook ledger — pipeline strip, then the claim tree as the spine, balance sheet below. */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --fg:#1c2529; --muted:#5d6b71; --line:#d5dde0; --accent:#1f6f8b;
+  --ok:#2f7d4f; --ok-bg:#e3f2e8; --pend:#9a6a00; --pend-bg:#fbf0d4; --run:#2c5fa8; --run-bg:#e2ebf8;
+  --todo:#6e7a80; --todo-bg:#eaeef0; --bad:#a63d32; --bad-bg:#f8e3e0;
+  --display:"Newsreader",Georgia,serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12181b; --panel:#1a2226; --fg:#e3eaec; --muted:#93a2a8; --line:#2c383d; --accent:#6cb8d4;
+  --ok:#7fcf9c; --ok-bg:#1d3326; --pend:#e8c46a; --pend-bg:#3a3018; --run:#8fb4ec; --run-bg:#1e2c42;
+  --todo:#9aa6ab; --todo-bg:#242e33; --bad:#ef9488; --bad-bg:#3d2320; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12181b; --panel:#1a2226; --fg:#e3eaec; --muted:#93a2a8; --line:#2c383d; --accent:#6cb8d4;
+  --ok:#7fcf9c; --ok-bg:#1d3326; --pend:#e8c46a; --pend-bg:#3a3018; --run:#8fb4ec; --run-bg:#1e2c42;
+  --todo:#9aa6ab; --todo-bg:#242e33; --bad:#ef9488; --bad-bg:#3d2320; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:980px;margin:0 auto;display:grid;gap:36px}
+h1,h2{font-family:var(--display);font-weight:650;text-wrap:balance;margin:0}
+h1{font-size:2.1rem;line-height:1.15}
+h2{font-size:1.35rem}
+.eyebrow{font:500 .72rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:10px}
+header p{margin:0;color:var(--muted);max-width:66ch}
+section{display:grid;gap:14px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* pipeline */
+.pipe{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.stage{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:grid;gap:4px;min-width:0}
+.stage b{font:600 .8rem var(--mono)}
+.stage span{font-size:.82rem;color:var(--muted)}
+.bar{height:5px;border-radius:3px;background:var(--todo-bg);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok)}
+.stage.now{border-color:var(--accent)}
+.stage.now .bar i{background:var(--accent)}
+@media (max-width:720px){.pipe{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.stats{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.88rem;color:var(--muted)}
+.stats b{color:var(--fg);font-family:var(--mono);font-weight:500}
+
+/* legend + filter */
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 .74rem/1 var(--mono);padding:5px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+button.chip{cursor:pointer;background:var(--panel);border-color:var(--line);color:var(--fg)}
+button.chip[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:1px}
+button.chip:focus-visible{outline:2px solid var(--accent)}
+.s-ok{background:var(--ok-bg);color:var(--ok)}
+.s-pend{background:var(--pend-bg);color:var(--pend)}
+.s-run{background:var(--run-bg);color:var(--run)}
+.s-todo{background:var(--todo-bg);color:var(--todo)}
+.s-data{background:var(--bad-bg);color:var(--bad)}
+
+/* tree */
+.root{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.root q{font-family:var(--display);font-size:1.15rem;quotes:"“" "”"}
+.tree{display:grid;gap:10px}
+details.br{background:var(--panel);border:1px solid var(--line);border-radius:8px}
+details.br>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:2.4rem minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:12px 16px}
+details.br>summary::-webkit-details-marker{display:none}
+details.br>summary:focus-visible{outline:2px solid var(--accent);border-radius:8px}
+.bid{font:600 1.05rem var(--display);color:var(--accent)}
+.btitle{font-weight:600;min-width:0}
+.btitle small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.dots{display:flex;gap:4px}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot.ok{background:var(--ok)}.dot.pend{background:var(--pend)}.dot.run{background:var(--run)}.dot.todo{background:var(--todo);opacity:.45}.dot.data{background:var(--bad)}
+ul.nodes{list-style:none;margin:0;padding:0 16px 12px 3.4rem;display:grid;gap:8px}
+ul.nodes li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:baseline;border-top:1px solid var(--line);padding-top:8px}
+ul.nodes .id{font:500 .8rem var(--mono);color:var(--muted)}
+ul.nodes .claim{min-width:0}
+ul.nodes .claim span.c{display:block}
+ul.nodes .claim span.f{display:block;color:var(--muted);font-size:.88rem}
+ul.nodes .claim .chip{margin-right:6px;vertical-align:1px}
+@media (max-width:560px){ul.nodes{padding-left:16px}details.br>summary{grid-template-columns:2rem minmax(0,1fr)}.dots{grid-column:2}}
+.hidden-by-filter{display:none!important}
+
+/* balance */
+.bal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:680px){.bal{grid-template-columns:1fr}}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px;min-width:0}
+.side h3{margin:0;font:600 1rem var(--display)}
+.side h4{margin:0;font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.side .holds h4{color:var(--ok)} .side .fails h4{color:var(--bad)}
+.side ul{margin:4px 0 0;padding-left:18px;display:grid;gap:3px;font-size:.92rem}
+ol.next{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+footer{color:var(--muted);font-size:.82rem}
+@media (prefers-reduced-motion:no-preference){details.br[open]>ul{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">evo-sim · research phase · status as of 2026-10-07</div>
+  <h1>Probability Zero Audit</h1>
+  <p>A neutral, two-sided audit of Vox Day's mathematical case against evolution (MITTENS, Hard Limits, Probability Zero) and of his critics. Each claim gets a numerical check and three verdicts: internal validity, citation fidelity, external validity.</p>
+</header>
+
+<section>
+  <h2>Pipeline</h2>
+  <div class="pipe">
+    <div class="stage"><b>R0 Scaffold</b><div class="bar"><i style="width:100%"></i></div><span>repo, env, templates</span></div>
+    <div class="stage"><b>R1 Harvest</b><div class="bar"><i style="width:100%"></i></div><span>Day, critics, literature</span></div>
+    <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>193 claim files</span></div>
+    <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>30 load-bearing nodes</span></div>
+    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:80%"></i></div><span>~80%, merging reviewed results</span></div>
+    <div class="stage"><b>R5 Synthesis</b><div class="bar"><i style="width:0%"></i></div><span>verdicts, simulator variables</span></div>
+  </div>
+  <div class="stats">
+    <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
+    <span><b>193</b> claims (day 107 · critic 46 · ally 16 · lit 24)</span>
+  </div>
+</section>
+
+<section>
+  <h2>Review round for R4</h2>
+  <div class="bal">
+    <div class="side"><h3>Three reviews done</h3><ul>
+      <li><b>Correctness:</b> no blockers. Bugs found: hash-based seeds that don't reproduce (F2, A2), a 10N burn-in bias (B1c, B4), mutation timing in the cost-of-selection model (H), and a 7.7× ratio that is really 17.1× (H8).</li>
+      <li><b>Day-side steelman:</b> the strongest refutations hit claims Day has already dropped. His remaining claim (cost of selection under hard selection) was never tested at scale.</li>
+      <li><b>Critic-side steelman:</b> several checks credited critics for arguments they never made. Hancock's and Nesslig20's 38M double-counts chromosome copies; corrected, it is about 19M fixed plus 15M ancestral.</li>
+    </ul></div>
+    <div class="side"><h3>Jobs</h3><ul>
+      <li><b>Done:</b> B1c / B4 rerun with 20N burn-in; correct ancestral node; CSAC tension resolved</li>
+      <li><b>Done:</b> F2 / A2 rerun with reproducible seeds; numbers unchanged within noise; 1.5–172× relabelled as extrapolation</li>
+      <li><b>Done:</b> H / C2 fixed and rerun; H1, H8 ratios corrected (17.1×)</li>
+      <li><b>Done:</b> hard selection with many loci (reviewed)</li>
+      <li><b>Done:</b> Day's exact aDNA statistic (reviewed: not reproducible, cannot adjudicate)</li>
+      <li><b>Done:</b> review of the two new checks; both stand with wording fixes</li>
+      <li><b>Running:</b> merge into RESULTS.md, claim verdicts, ledgers; then commit</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Argument tree</h2>
+  <div class="legend" role="group" aria-label="Filter by status">
+    <button class="chip" data-f="all" aria-pressed="true" id="f-all">all</button>
+    <button class="chip s-ok" data-f="ok" aria-pressed="false" id="f-ok">checked + reviewed</button>
+    <button class="chip s-pend" data-f="pend" aria-pressed="false" id="f-pend">checked, review pending</button>
+    <button class="chip s-run" data-f="run" aria-pressed="false" id="f-run">sim running</button>
+    <button class="chip s-data" data-f="data" aria-pressed="false" id="f-data">data / citation finding</button>
+    <button class="chip s-todo" data-f="todo" aria-pressed="false" id="f-todo">not started</button>
+  </div>
+
+  <div class="root"><div class="eyebrow">ROOT · Day</div><q>No evolutionary mechanism can produce the observed human–chimp divergence in the time available.</q></div>
+
+  <div class="tree" id="tree">
+    <details class="br" open>
+      <summary><span class="bid">A</span><span class="btitle">MITTENS rate limit<small>F_max = t_div · d / (g_len · G_f)</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="pend"><span class="id">A2</span><span class="claim"><span class="c">LTEE generations per fixation (1,322 / 909)</span><span class="f">An asexual model reproduces 1,322, but only as a joint product of Nₑ, beneficial-mutation rate and s, so it isn't a universal constant. Asexual rate does saturate (partial credit to Day). With free recombination the rate would be 1.5–172× higher than the asexual rate; that is an extrapolation, not simulated at LTEE scale. LTEE Nₑ = 3.3e7 is unsourced.</span></span></li>
+        <li data-s="data"><span class="id">A3</span><span class="claim"><span class="c">Required fixations: 30M → 20M → 205M</span><span class="f">"410 Mb" not found in Yoo 2025 (average is 327 Mb per lineage). 205M counts base pairs, not mutation events.</span></span></li>
+        <li data-s="pend"><span class="id">A4</span><span class="claim"><span class="c">Turnover coefficient d ≈ 0.45</span><span class="f">d works as a unit conversion, equivalent to a ~56-year generation time. Its value can't be identified from the data.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br" open>
+      <summary><span class="bid">B</span><span class="btitle">Neutral theory is insufficient<small>Empty pipeline, Hard Limits, k ≠ μ</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="ok"><span class="id">B1</span><span class="claim"><span class="c">E[F(T)] ≈ μL(T − 4Nₑ)</span><span class="f">Exact for a population starting with zero variation. A population at equilibrium gives k = μ with no deficit.</span></span></li>
+        <li data-s="ok"><span class="id">B1b</span><span class="claim"><span class="c">Population-size changes</span><span class="f">Contraction gives a surplus and expansion a deficit, ≈ U·4ΔN. The analytic formula matches the simulation.</span></span></li>
+        <li data-s="pend"><span class="id">B1c</span><span class="claim"><span class="c">Sourced human Nₑ history</span><span class="f">Rerun with full burn-in: every sourced history gives 1.9–4.0× more fixed substitutions per lineage than U·T, matching the analytic formula (3.986 vs 3.984). Day's (T−4Nₑ)/T is right for new mutations alone (0.84). The excess includes alleles fixing in both lineages, so it is not a human–chimp difference count.</span></span></li>
+        <li data-s="ok"><span class="id">B2</span><span class="claim"><span class="c">Hard Limits: P(fix within G) ≈ exp(−π²Nₑ/G)</span><span class="f">The exponent is correct. It bounds how long one allele takes, not the total rate of substitutions.</span></span></li>
+        <li data-s="ok"><span class="id">B3</span><span class="claim"><span class="c">k = μ · N / Nₑ</span><span class="f">Refuted: neutral fixation probability is 1/N in census terms, so k = μ.</span></span></li>
+        <li data-s="pend"><span class="id">B3b</span><span class="claim"><span class="c">k = 0.743μ (Balloux &amp; Lehmann)</span><span class="f">The effect is real but ranges −2% to +38% at human-like parameters (k rises). 0.743 comes from the 4-cohort window Day chose.</span></span></li>
+        <li data-s="pend"><span class="id">B4</span><span class="claim"><span class="c">Divergence including ancestral polymorphism</span><span class="f">Simulation matches 2μT + θ_anc to 0.3%. At the correct human–chimp ancestor (Nₑ 198k) predicted divergence is 1.55%, about 25% above the observed 1.23%; at Day's Nₑ = 10k it is 0.65%, about half. Observed sits between; it is a 3-parameter fit (μ, T, ancestral Nₑ). The CSAC polymorphic share (14–22%) matches the model (6–25%), so there is no tension.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br" open>
+      <summary><span class="bid">C</span><span class="btitle">Ancient DNA<small>"Zero fixations in ~7,000 years"</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="pend"><span class="id">C1</span><span class="claim"><span class="c">Zero fixations across the 1240k SNP panel</span><span class="f">The panel is built from sites that vary today, so it can't record completed fixations. Reviewers disagree: the critic side says the observed 1 and 3 exceed neutral (P≈0.0002); the Day side says the test has no power. Day's exact statistic is being simulated.</span></span></li>
+        <li data-s="pend"><span class="id">C1b</span><span class="claim"><span class="c">Day's exact time-binned statistic (new check, reviewed)</span><span class="f">Verdict: not reproducible, cannot adjudicate. The model misses Day's own table, so it isn't a valid null. Likely cause found: real ancient samples give only a few calls per site in old bins. Lowering per-site coverage drops the neutral count from ~6,500 to ~120 and moves events into the oldest bin, the same direction as Day's table. A direction, not yet a reproduction.</span></span></li>
+        <li data-s="pend"><span class="id">C2</span><span class="claim"><span class="c">Overlapping generations vs standard model</span><span class="f">The ratio is an algebraic identity, so d is not independently measured.</span></span></li>
+        <li data-s="pend"><span class="id">C6</span><span class="claim"><span class="c">The 630 comparator</span><span class="f">Day's comparison and this audit's earlier rescaling are both wrong. About 1,500–1,850 fixations are expected on an ascertained panel.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br">
+      <summary><span class="bid">D</span><span class="btitle">Wistar 1966 / sequence space<small>Eden 10³²⁵, Ulam, Weasel</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="data"><span class="id">D</span><span class="claim"><span class="c">Quotations from the Wistar proceedings</span><span class="f">Six misquotes found, including Eden's 2.7M called "not implausible".</span></span></li>
+        <li data-s="todo"><span class="id">D-sim</span><span class="claim"><span class="c">Sequence-space search simulations</span><span class="f">Specified, not started.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br">
+      <summary><span class="bid">E</span><span class="btitle">LTEE hazards / punctuated equilibrium<small>Hypermutator founder hazard, relictation</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="todo"><span class="id">E</span><span class="claim"><span class="c">Founder hazard 2.3%; relictation exact chains</span><span class="f">Queued.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br" open>
+      <summary><span class="bid">F</span><span class="btitle">"Kimura irrelevance"<small>Fixation time vs fixation rate</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="ok"><span class="id">F1</span><span class="claim"><span class="c">Slow fixation limits the rate</span><span class="f">Latency is not throughput. Overlapping sweeps give one fixation every 3 generations against an 847-generation fixation time.</span></span></li>
+        <li data-s="pend"><span class="id">F2</span><span class="claim"><span class="c">Multi-locus interference</span><span class="f">Interference is real. Asexual genomes run at 9% of the independent rate at the highest supply tested and tight linkage at 20%. Free recombination stays at 97.5% with 272 sweeps in progress, and fwdpy11 agrees. Tested at N = 1,000, a single s, soft selection only.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br">
+      <summary><span class="bid">G</span><span class="btitle">Bernoulli Barrier<small>0.02^(2×10⁷); ~230 simultaneous sweeps</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="pend"><span class="id">G</span><span class="claim"><span class="c">~230 simultaneous sweeps cap</span><span class="f">No collapse at ~260–270 open loci under soft selection, or under hard selection when R ≥ 5. Under hard selection with R = 2 the population fails at ~167. The cap depends on reproductive excess and load.</span></span></li>
+        <li data-s="todo"><span class="id">G1</span><span class="claim"><span class="c">0.02^(2×10⁷): specific outcome vs any outcome</span><span class="f">Queued.</span></span></li>
+      </ul>
+    </details>
+
+    <details class="br" open>
+      <summary><span class="bid">H</span><span class="btitle">Cost of selection<small>Haldane 300 generations per substitution → 487</small></span><span class="dots"></span></summary>
+      <ul class="nodes">
+        <li data-s="pend"><span class="id">H1</span><span class="claim"><span class="c">487 vs 20M required</span><span class="f">A category error, the same one Day conceded in his 2026-05-07 retraction. Haldane's D = 30 is an assumption; realistic values give 92–278 generations.</span></span></li>
+        <li data-s="pend"><span class="id">H2</span><span class="claim"><span class="c">Hard vs soft selection (Nunney 2003)</span><span class="f">Corrected model: soft selection is 1.5–2.8× <em>slower</em> than hard at equal mutation supply, so the critics' "soft selection removes the cost" did not reproduce. Haldane's 300 is a bounding case; the human value is undetermined, so H is neither refuted nor binding.</span></span></li>
+        <li data-s="pend"><span class="id">H-hard</span><span class="claim"><span class="c">Many simultaneous sweeps under hard selection (new check, reviewed with fixes)</span><span class="f">The limit is ln R / D (reproductive excess over cost per substitution), not a fixed 1 in 300. Populations sustained 9–120× Haldane's rate at R ≥ 1.3. Haldane's own case (R ≈ 1.1, diploid D ≈ 20–30) gives ≈ 1/300 and was not tested, so "1/300 falsified" is withdrawn; "10% is not a general bound" stands. Day's ~230 sweeps persist at R ≥ 5, fail at R = 2. Model favours critics (free recombination, imposed opportunity rate).</span></span></li>
+        <li data-s="pend"><span class="id">H8</span><span class="claim"><span class="c">Hössjer's 15,800</span><span class="f">10.5× Haldane's own figure. Day's Term 3 differs from Haldane's cost by 17.1× at the same d.</span></span></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<section>
+  <h2>Balance sheet</h2>
+  <div class="bal">
+    <div class="side"><h3>Day and allies</h3>
+      <div class="holds"><h4>Holds up</h4><ul>
+        <li>LTEE G_f is a measured throughput, so "you forgot parallelism" misses</li>
+        <li>Hard Limits math is internally correct</li>
+        <li>Haldane's cost is real under hard selection, and soft selection does not remove it in these models</li>
+        <li>The aDNA panel does enrich mid-frequency sites</li>
+        <li>Asexual (LTEE-like) rates do saturate as mutation supply rises</li>
+        <li>His LTEE data paper is careful and corrects itself</li>
+      </ul></div>
+      <div class="fails"><h4>Fails</h4><ul>
+        <li>Reads Kimura's fixation probability as 1/(2Nₑ); Kimura's N is breeding individuals</li>
+        <li>Uses Zeng's s (negative selection) as beneficial</li>
+        <li>Assumes the population starts with no variation; sourced Nₑ history gives an excess, not a deficit</li>
+        <li>Required fixations drift 30M → 20M → 205M</li>
+        <li>0.743μ and 32.3μ</li>
+      </ul></div>
+    </div>
+    <div class="side"><h3>Critics</h3>
+      <div class="holds"><h4>Holds up</h4><ul>
+        <li>k = μ regardless of population size</li>
+        <li>Fixation time is not substitution rate</li>
+        <li>Ancestral polymorphism adds to divergence</li>
+        <li>Base pairs are not mutation events</li>
+        <li>Recombination lifts the interference ceiling</li>
+      </ul></div>
+      <div class="fails"><h4>Fails</h4><ul>
+        <li>Loose, unsourced inputs</li>
+        <li>Expected values without variances</li>
+        <li>No one engaged cost of selection, aDNA or the Bernoulli Barrier</li>
+        <li>Nothing peer-reviewed on either side</li>
+        <li>Hancock's and Nesslig20's 38M double-counts chromosome copies</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Next</h2>
+  <ol class="next">
+        <li>Merge the review fixes and the two new checks into RESULTS.md, the claim verdicts and the ledgers. Results marked "review pending" become final then.</li>
+    <li>Commit, then run E, G and D checks.</li>
+    <li>R5: final verdicts, sensitivity table, simulator variable list.</li>
+  </ol>
+</section>
+
+<footer>Canonical source: <span class="mono">docs/research/</span> in the evo-sim repo (branch <span class="mono">research</span>). Results marked "review pending" or "running" are provisional.</footer>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll('details.br').forEach(function(d){
+    var dots=d.querySelector('.dots');
+    d.querySelectorAll('li[data-s]').forEach(function(li){
+      var s=li.getAttribute('data-s'); var e=document.createElement('i'); e.className='dot '+s; dots.appendChild(e);
+      var label={ok:'reviewed',pend:'review pending',run:'running',data:'data',todo:'not started'}[s];
+      var c=document.createElement('span'); c.className='chip s-'+s; c.textContent=label;
+      li.querySelector('.claim').insertBefore(c, li.querySelector('.c'));
+    });
+  });
+  var btns=document.querySelectorAll('.legend button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    btns.forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false')});
+    document.querySelectorAll('details.br').forEach(function(d){
+      var any=false;
+      d.querySelectorAll('li[data-s]').forEach(function(li){
+        var show=f==='all'||li.getAttribute('data-s')===f;
+        li.classList.toggle('hidden-by-filter',!show); if(show) any=true;
+      });
+      d.classList.toggle('hidden-by-filter',!any);
+      if(f!=='all'&&any) d.open=true;
+    });
+  })});
+})();
+</script>

@@ -7,11 +7,11 @@ parent: ROOT
 edges: [{type: supports, target: ROOT}, {type: depends-on, target: C2}, {type: depends-on, target: H9}, {type: attacks, target: G1}]
 load_bearing: true  # This is the only argument in the corpus that does not rely on the LTEE rate: it bounds *selected* substitutions from first principles. If it fails, ROOT rests on A (LTEE scaling) and B. It was narrowed by the 2026-05-07 retraction (H1) and Hössjer (ally) leans on it (H5) to keep a conclusion after conceding most of A5.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"   # arithmetic 300, 487, 41,068
   fidelity: partial   # the 300-generation figure is reported accurately by Nunney 2003 (primary Haldane 1957 not retrieved); the d extension, parallel-budget claim and the Kimura & Ohta recombination citation are Day's
-  external: contested   # Nunney 2003 and Keightley 2012 relax or qualify the hard-selection premise; no check run yet
+  external: "contested"   # cap is ln R/D, so 10% is not general; Haldane regime (R ~1.1, D ~20-30) untested; soft selection did not remove cost; human M, R undetermined; H1 scope applies to the 20M comparison
 ---
 
 ## Statement (verbatim)
@@ -65,7 +65,8 @@ Written before any check runs.
 - Result that would change a verdict: the human value of M. If M for the ancestral population (K near 1e4-1e5, with u the per-locus beneficial-mutation rate) lies well below 0.5, Haldane's 300 binds under hard selection (supports H); if above 1, it does not; and under soft selection it does not bind at any M. A direct question for R4 is whether the selection regime for human adaptation is hard or soft (Keightley 2012 says soft/relative fitness operates for the deleterious load).
 
 ## Check
-Script: none yet (spec: `research/checks/h_cost_of_selection.py`, planned). Spec: reproduce Nunney's (2003) model: K in {500, 5,000, 50,000}, M = 2Ku in {0.05, 0.1, 0.25, 1, 10}, net reproductive rate R, n loci selected at once; measure the minimum substitution interval (generations per locus) compatible with persistence under (a) hard selection (juvenile survival independent of density) and (b) soft selection (density-dependent). Targets: hard, M = 0.1, K = 10,000: about 300 per substitution; hard, M = 10: 7 loci per 40 generations; hard, M = 1: 1 locus per 20 generations; soft: no cost. Then apply d as a time rescaling to the result and compare with 487. · Result: not run · Review: pending
+R4 H (`h_cost_of_selection.py`, `h_nunney_gauss*.py`, `h_keightley_load.py`; research/checks/results/R4-H-C2.md) and H2 hard multilocus (research/checks/results/R4-H2-hard.md). Arithmetic holds (300 = 30/0.10; 487 = 146,250/300; 41,068). D = 30 is Haldane's input: diploid D = 2 ln(1/p0) gives 92-278 generations for standing variation (p0 1e-2 to 1e-6) and ~200 for a new mutation (p0 = 1/2N, D ~ 20), so 300 is the same order as the new-mutation case (Day-side point). Under hard selection the cap is ln R / D, so 10% is not a general bound; at R >= 1.3, haploid D ~ 7 the flip lies 9-100x above 1/300 (bracket). Haldane's own regime (R ~ 1.1, diploid D ~ 20-30 = ~1/300) was not tested, so the literal 1/300 is untested, not falsified. In the Nunney reconstruction soft selection did NOT remove the cost (soft T50 > hard T50 at equal supply, both models): the critics' stock reply is not reproduced (credit to Day). Human M and R are undetermined by the repo. The comparison with the 20M total falls under the scope argument Day conceded for Term 3 (H1). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (spec: `research/checks/h_cost_of_selection.py`, planned). Spec: reproduce Nunney's (2003) model: K in {500, 5,000, 50,000}, M = 2Ku in {0.05, 0.1, 0.25, 1, 10}, net reproductive rate R, n loci selected at once; measure the minimum substitution interval (generations per locus) compatible with persistence under (a) hard selection (juvenile survival independent of density) and (b) soft selection (density-dependent). Targets: hard, M = 0.1, K = 10,000: about 300 per substitution; hard, M = 10: 7 loci per 40 generations; hard, M = 1: 1 locus per 20 generations; soft: no cost. Then apply d as a time rescaling to the result and compare with 487. · Result: not run · Review: pending
 
 ## Simulator variables implied
 Selective mortality budget m, cost per substitution (30 N), hard versus soft selection, M = 2Ku, K, R, number of loci selected at once, d.

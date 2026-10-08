@@ -7,11 +7,11 @@ parent: B6
 edges: [{type: attacks, target: B6a}]
 load_bearing: false  # first-edition critique; quantified here only through CSAC's 14–22%
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: holds
   fidelity: accurate
-  external: pending
+  external: "supported"   # qualitatively (B4a)
 ---
 
 ## Statement (verbatim)
@@ -48,6 +48,8 @@ Written **before** the check runs.
 
 ## Check
 Script: proposed B4a.
+
+R4 B4a (research/checks/results/R4-B1c-B4a.md): qualitatively vindicated: ancestral alleles also sort into fixed differences (Day's 2mu(T-4Ne) = 0.51% is below the simulated fixed differences 0.56-1.46%), and raw d is not reduced by the empty-pipe term. Critic-side caveat: 2muT alone already supplies ~19M of the differences, so the point is accounting, not a gap filled only by ancestry. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - polymorphic fraction of divergence

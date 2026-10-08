@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart TD
-  n_G["G: Bernoulli Barrier: parallel fixation of many loci is limited<br/><small>day · int:arithmetic-error · fid:partial · ext:pending</small>"]
+  n_G["G: Bernoulli Barrier: parallel fixation of many loci is limited<br/><small>day · int:arithmetic-error · fid:partial · ext:contested</small>"]
   style n_G fill:#fde2c8,stroke:#b45309
   n_G --> n_ROOT
   n_G -->|supports| n_ROOT
@@ -89,7 +89,7 @@ flowchart TD
   style n_Gb fill:#fde2c8,stroke:#b45309
   n_Gb --> n_G
   n_Gb -->|depends-on| n_G
-  n_Gc["Gc: The active zone limits the pipeline to about 230 simultaneou<br/><small>day · int:non-sequitur · fid:n/a · ext:pending</small>"]
+  n_Gc["Gc: The active zone limits the pipeline to about 230 simultaneou<br/><small>day · int:non-sequitur · fid:n/a · ext:contested</small>"]
   style n_Gc fill:#fde2c8,stroke:#b45309
   n_Gc --> n_G
   n_Gc -->|depends-on| n_G

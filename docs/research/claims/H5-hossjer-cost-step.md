@@ -7,11 +7,11 @@ parent: H
 edges: [{type: supports, target: H}, {type: revises, target: A5}]
 load_bearing: true  # The ally's route to keeping the conclusion after conceding most of the LTEE-scaling objection (A5). The cost step carries the conclusion and is asserted, not computed.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "non-sequitur"   # the 15,800 is a rate scaling, not a cost computation (10.5x Haldane's 1,500)
   fidelity: pending
-  external: pending
+  external: "contested"   # depends on H
 ---
 
 ## Statement (verbatim)
@@ -57,7 +57,8 @@ derived (R2 recompute):
 - Result that would change a verdict: the H simulation, run with Hössjer's inputs (t_div = 450,000 generations, m = 0.10), giving a number between 1,500 and 15,800 or outside.
 
 ## Check
-Script: `research/checks/h_cost_of_selection.py` (planned, H). · Result: not run · Review: pending
+R4 H (research/checks/results/R4-H-C2.md): Hössjer's 15,800 is 10.5x Haldane's own 1,500 over 450,000 generations (675 with d); it comes from a mutation-rate scaling, not a cost computation, so the cost step is unsupported by the Haldane arithmetic. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned, H). · Result: not run · Review: pending
 
 ## Simulator variables implied
 Fraction of lineage fixations that are selected, selective mortality budget, d, L, mu ratio.

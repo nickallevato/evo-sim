@@ -7,11 +7,11 @@ parent: A
 edges: [{type: supports, target: A}, {type: depends-on, target: A2}]
 load_bearing: true   # If the LTEE rate is not a ceiling for humans, the shortfall in A has no basis and ROOT loses its selection-rate branch.
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: non-sequitur
   fidelity: pending
-  external: contested
+  external: "contested"   # not supported for recombining organisms only by extrapolation from F2 (1.5-172x); asexual interference confirmed
 ---
 
 ## Statement (verbatim)
@@ -53,7 +53,8 @@ No check has run (queued as A-sim in the file for A).
 - Result that would change a verdict: a forward simulation in which fixation rate per generation, at fixed s and N, rises by more than an order of magnitude when supply rises by 1e4–1e5 with recombination on.
 
 ## Check
-Script: none yet. Internal verdict is from the paper's own tables (above). Review: pending.
+R4 A-sim + F2 (research/checks/results/R4-F2-A.md): the LTEE is interference-limited in the clonal model; free recombination would raise the rate 1.5-172x at the calibrated supply, but that factor is an EXTRAPOLATION of F2's R_int ~ 1 beyond its tested range (<= 272 active loci), not a simulation. Credit to Day: sublinearity and real interference under linkage are borne out (critics also predicted asexual saturation, so that is not Day-specific credit). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet. Internal verdict is from the paper's own tables (above). Review: pending.
 
 ## Simulator variables implied
 - Supply (U per genome), recombination rate, population size, s distribution; output fixations per generation compared to 1/G_f.

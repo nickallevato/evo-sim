@@ -40,6 +40,19 @@ Evidence is in `sources/quotes-literature.md`. Every quote there was machine-che
 | Mathieson 2015 / Fu 2015 / Mallick 2024 | 1240k panel design (C1) | verified | Targets array SNPs (Human Origins, 610-Quad) plus functional SNPs, i.e. ascertained on present-day variation. Supports the C1 check premise. |
 | Wistar 1967 | Eden 10^325 vs 10^52 (Day) | verified-accurate | p.7. Ulam (pp.21–22) says the random-construction framing "is not the problem at all". Wright (p.118) rebuts. Schützenberger argues a "gap", not a probability. |
 | "Weasel 540,000 gens" | (Day) | n/a | Day's own calculation (blog 2026-09-12), not from Wistar. |
+
+## R4 (2026-10-08) citation verdicts from checks
+| Source | Cited for (by) | Status | Evidence / note |
+|---|---|---|---|
+| Balloux & Lehmann 2012 | "RRME confirm[s] Balloux and Lehmann's finding" (Day, Z18525262) | **verified-misread** (changed from partial for this use) | B&L eq. (3) was reproduced by simulation (B3b). For realistic growth the B&L effect is an *acceleration* (B&L: "the effect will generally translate into an acceleration"). RRME predicts a decrease (0.743). 0.743 does not appear in B&L. The general k≠μ citation (B3b) stays verified-partial. |
+| Nunney 2003 | soft selection "eliminates" the cost (critics' use) | verified quote; **not reproduced** | The quote is accurate, but in a reconstructed model (Eq. 3 and 5 lost in extraction) soft selection did not reduce the cost at equal mutation supply. Nunney's absolute values were not reproduced (2–12× low at R = 10). This is a model-reproduction gap, not a misquote. |
+| Prado-Martinez 2013 | human/chimp Nₑ (B1c) | **verified-accurate** (Table 1) | Θw-based Nₑ, μ = 1e-9–0.5e-9/yr, g = 25 (footnote d). The PSMC trajectory is graphical only (Fig. 3), and Suppl. Table S5 was not retrieved. The "Humans" row (13.1–16.2k) is not a 2× range, unlike every other row (unresolved). |
+| Takahata, Satta & Klein 1995 | human Nₑ ≈ 1e4; ancestral ~10× larger | unverified (partial) | Quoted from a search snippet and a publisher summary. The abstract PDF was not read. |
+| Charlesworth 2009 | human Nₑ 1–2e4 | unverified | Via search summary. |
+| LTEE Nₑ = 3.3e7 | A-sim calibration (audit) | **not sourced** | An audit assumption (≈N0·log2 100). Needs Lenski 1991 / Wiser 2013 or similar. |
+| Z23046531 §2.4 | definition of fixation ("an allele reaching 100% frequency in the modern period") | used as quoted in R4 C1 | The 21-count of Z18525185 is a different statistic (first-passage in time bins). |
+| Haak 2015 | 1240k discovery "as heterozygous in a Yoruba male" (C1 design D2) | quoted in R4 C1 | Haak's panel design is still on the manual-download to-do list (below), so it has not been re-verified against the PDF. |
+| Coale-Demeny West life tables | Day's Table 1 d values (C2a) | **unverified** | Not retrieved. A Siler stand-in gives 0.79/0.93 vs Day's 0.53 at e0 = 32. This is an unresolved gap of 1.5–14×, not a refutation. |
 | Axe 2004 | 1 in 10^77 functional | verified-accurate (abstract) | One β-lactamase domain, extrapolated. Counter-estimates (Taylor 2001, Keefe & Szostak 2001) are abstract-only and not directly comparable. |
 | Frankham 1995, Maruyama 1970/74, Cannings 1974, Crow & Kimura 1970, Kimura 1983, ReMine 2005, Wright Nₑ | various | unverified | Record only. |
 
@@ -47,7 +60,7 @@ Evidence is in `sources/quotes-literature.md`. Every quote there was machine-che
 All six blocked papers were downloaded by the user into `sources/raw/sources/manual/`: Kimura 1962, Kimura & Ohta 1969, Keightley 2012, Haak 2015, Prado-Martinez 2013, Taylor 2001.
 
 - **Done:** the Kimura items above are verified against the full text.
-- **Still to do:** checking the mutation rate in Keightley 2012 (its numbers use characters the text grep didn't match), Haak 2015's panel design, Taylor 2001, and extracting the Prado-Martinez PSMC Nₑ histories for B1c.
+- **Still to do:** checking the mutation rate in Keightley 2012 (its numbers use characters the text grep didn't match), Haak 2015's panel design, Taylor 2001, and extracting the Prado-Martinez PSMC Nₑ histories for B1c (R4: Table 1 extracted and verified; PSMC numeric curve not available, Table S5 not retrieved).
 
 ## R2 additions (2026-10-07): Wistar 1967 quotations in *Probability Zero* 2nd ed., ch. 6
 **Primary text:** ch. 6 is appended to the Dembski interview (`sources/raw/critics/dembski-interview.json`).

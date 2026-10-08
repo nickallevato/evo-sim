@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: pending
   fidelity: partial
-  external: contested
+  external: "contradicted"   # for the listed values (N/Ne, 0.743, 32.3, 800,000); the qualitative B&L effect is real but small (B3b)
 ---
 
 ## Statement (verbatim)
@@ -64,6 +64,8 @@ Written **before** the check runs.
 
 ## Check
 Script: `research/checks/b3_N_vs_Ne.py` (seed 13) · see B3a. Review: `research/checks/REVIEW.md#2026-10-07--correctness-review-2-sonnet-on-b0b3`
+
+R4 B3b/B3c (research/checks/results/R4-B3b-C1.md): k != mu under overlapping generations plus fluctuating N is real (B&L eq. 3 reproduced, all |z| < 1.6), but at human-like parameters it is -2% to +38% (sign upward for realistic growth). 0.743 is a window artefact whose mechanism (fixation probability 1/(2N_t)) is falsified by simulation; 32.3 has no derivation and cannot come from B&L. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - mutation-supply N (census | reproducing | user)

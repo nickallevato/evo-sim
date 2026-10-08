@@ -7,11 +7,11 @@ parent: ROOT
 edges: [{type: supports, target: ROOT}]
 load_bearing: true   # ROOT is a conjunction over mechanisms; if branch A fails, selection is an admissible mechanism and ROOT fails.
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: holds
   fidelity: n/a
-  external: contested
+  external: "contested"   # asexual saturation real (logarithmic); recombining-genome use of G_f not supported in F2's tested regime; LTEE-scale factor extrapolated
 ---
 
 ## Statement (verbatim)
@@ -60,7 +60,8 @@ No check has run on this claim as a whole. Component checks are linked from A1â€
 - Proposed check (A-sim, not run): Wright-Fisher forward simulation, N = 1e4 (scaled), L loci, per-generation beneficial supply U_b swept over 4.1e-4 x [1, 1e2, 1e4, 9.4e4] of the LTEE value, recombination off versus free; record fixations per generation. A prediction that would change a verdict: if fixations per generation grow roughly linearly in U_b with free recombination, the unscaled formula is not a ceiling (verdict external: contradicted); if it saturates near 1/1,322 regardless of U_b, the ceiling reading (A2e) gains support.
 
 ## Check
-Script: none yet (arithmetic audit run in scratch only). Result: arithmetic reconciles for 2025 and 3.0; 2019 table (125) and text (562) do not reconcile with each other or with 281. Review: pending.
+R4 A-sim (`a_ltee_scaling.py`, F2 `f2_multilocus.py`; research/checks/results/R4-F2-A.md): formula arithmetic unchanged. Using LTEE G_f as a global constant is not supported for recombining genomes in F2's tested regime (free recombination R_int 0.975 at 272 active loci; the LTEE-scale factor 1.5-172x is an EXTRAPOLATION). For asexual genomes a saturation is real but logarithmic (a = 0.23-0.34 per 100x supply). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (arithmetic audit run in scratch only). Result: arithmetic reconciles for 2025 and 3.0; 2019 table (125) and text (562) do not reconcile with each other or with 281. Review: pending.
 
 ## Simulator variables implied
 - `t_div`, `g_len`, `G_f`, `d` as user-controllable inputs; displayed output F_max and shortfall R/F_max for each version preset (2019, 2025, 3.0).

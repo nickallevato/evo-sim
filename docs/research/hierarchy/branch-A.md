@@ -95,12 +95,12 @@ flowchart TD
   style n_A3x1 fill:#e5e7eb,stroke:#374151
   n_A3x1 --> n_A3x
   n_A3x1 -->|supports| n_A3x
-  n_A4["A4: The Selective Turnover Coefficient d (about 0.45) reduces ef<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_A4["A4: The Selective Turnover Coefficient d (about 0.45) reduces ef<br/><small>day · int:holds for hazard-scale s · fid:n/a · ext:contested</small>"]
   style n_A4 fill:#fde2c8,stroke:#b45309
   n_A4 --> n_A
   n_A4 -->|supports| n_A
   n_A4 -->|depends-on| n_A4a
-  n_A4a["A4a: d ≈ 0.45 ± 0.08 estimated from ancient-DNA time series at th<br/><small>day · int:pending · fid:unverifiable · ext:contested</small>"]
+  n_A4a["A4a: d ≈ 0.45 ± 0.08 estimated from ancient-DNA time series at th<br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_A4a fill:#fde2c8,stroke:#b45309
   n_A4a --> n_A4
   n_A4a -->|depends-on| n_A4
@@ -145,7 +145,7 @@ flowchart TD
   n_A5e --> n_A5
   n_A5e -.->|attacks| n_A5b
   n_A5e -->|depends-on| n_A4
-  n_A5f["A5f: The LTEE is nonrecombining, one clone, one environment; sex <br/><small>critic · int:pending · fid:partial · ext:contested</small>"]
+  n_A5f["A5f: The LTEE is nonrecombining, one clone, one environment; sex <br/><small>critic · int:holds · fid:partial · ext:supported</small>"]
   style n_A5f fill:#dbeafe,stroke:#1d4ed8
   n_A5f --> n_A5
   n_A5f -.->|attacks| n_A2e

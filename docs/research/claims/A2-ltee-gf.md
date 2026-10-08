@@ -7,11 +7,11 @@ parent: A
 edges: [{type: supports, target: A}, {type: depends-on, target: A2a}, {type: depends-on, target: A2g}]
 load_bearing: false
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: holds
   fidelity: unverifiable
-  external: contested
+  external: "contested"   # order of magnitude reproducible; calibration underdetermined (R4 A-sim)
 ---
 
 ## Statement (verbatim)
@@ -59,6 +59,8 @@ No check has run. Component of the pre-registration: the metagenomic count depen
 
 ## Check
 Arithmetic audit (python3 -I, scratch) reconciles every G_f row. No recount from raw LTEE data has been run. Review: pending.
+
+R4 A-sim (research/checks/results/R4-F2-A.md): G_f of order 1,300-1,600 is reproducible in a clonal fixed-s model at Ne = 3.3e7 (unsourced assumption), but the calibration is underdetermined (U_b spans 3 orders of magnitude: 6.7e-7 / 8.4e-9 / 6.3e-10 for s = 0.003 / 0.01 / 0.03) and a single-s fit conflates neutral and adaptive fixations (neutral expectation ~54% of 1/1322). G_f is a statement about an Ne*U_b*s combination, not a universal constant. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - LTEE preset library: G_f by population and counting rule (≥95% pooled vs lineage-aware), mutator flag, window length.

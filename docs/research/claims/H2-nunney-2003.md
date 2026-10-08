@@ -7,11 +7,11 @@ parent: H
 edges: [{type: attacks, target: H}, {type: supports, target: H}]
 load_bearing: true  # The only H-branch rebuttal in the corpus (balance ledger) and also the source that confirms Haldane's 300. Whether H survives depends on the human value of M and on hard versus soft selection.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: n/a
   fidelity: accurate
-  external: pending
+  external: "contested"   # M-dependence reproduced; absolute T and the soft-selection 'elimination' not reproduced in the reconstruction; human M undetermined
 ---
 
 ## Statement (verbatim)
@@ -64,7 +64,8 @@ Parameter link: `haldane.gens_per_substitution` = 300 (verified via Nunney); pro
 - Result that would change a verdict: the check in H reproducing Nunney's M-dependence (supports H2) or not; and the human M value from independent sources (K ancestral near 1e4-1e5; u beneficial per locus). The fixed-cost mechanism ("time to escape drift") suggests a link to the cost rising as M falls; the simulation should check it.
 
 ## Check
-Script: `research/checks/h_cost_of_selection.py` (planned; spec in H). · Result: not run · Review: pending
+R4 H Model 1/2 (research/checks/results/R4-H-C2.md; EXPLORATORY reconstruction, Nunney's Eq. 3 and 5 lost in extraction, adjusted twice after seeing results): the qualitative M-dependence is reproduced (T50 rises as M falls, more steeply for n = 7). Absolute values are not (R = 10 is 2-12x below Nunney; R = 2.2, M = 0.1 hard gives 170 vs ~300). Soft selection did not reduce the cost at equal mutation supply (soft T50 1.5-3.5x hard). Human M is undetermined. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned; spec in H). · Result: not run · Review: pending
 
 ## Simulator variables implied
 K, u (per-locus beneficial mutation rate), M = 2Ku, R (net reproductive rate), n loci, hard versus soft switch, density dependence.

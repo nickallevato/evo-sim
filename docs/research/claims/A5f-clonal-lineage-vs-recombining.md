@@ -7,11 +7,11 @@ parent: A5
 edges: [{type: attacks, target: A2e}]
 load_bearing: false
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"
   fidelity: partial
-  external: contested
+  external: "supported"   # direction (R_int 0.09 clonal vs 0.97 free); magnitude at LTEE scale extrapolated
 ---
 
 ## Statement (verbatim)
@@ -45,7 +45,8 @@ Claim: rate_human(recombining) ≠ rate_LTEE(asexual), direction unspecified by 
 No check run. Proposed A-sim arm: recombination on/off at fixed supply. Prediction (critics): rate per generation higher with free recombination. Prediction (Day): no gain, or net loss, from segregation cost. Result that would change a verdict: a monotone dependence of fixation rate on recombination rate in simulation at human-scale supply.
 
 ## Check
-Script: none. Review: pending.
+R4 F2 (research/checks/results/R4-F2-A.md): direction supported: recombination raises the rate (R_int clonal 0.088 vs free 0.975 at 2N*U_b = 32; fwdpy11 agrees at three points). The magnitude at LTEE scale (1.5-172x) is extrapolated, not simulated. Day's "double-edged sword" (recombination also breaks favourable combinations) is not tested (single s, no epistasis). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none. Review: pending.
 
 ## Simulator variables implied
 - Recombination rate (0 to free), mating system toggle, population-size variability.

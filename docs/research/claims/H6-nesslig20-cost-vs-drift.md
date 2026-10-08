@@ -7,11 +7,11 @@ parent: H
 edges: [{type: attacks, target: H}, {type: supports, target: H1}]
 load_bearing: false  # Fixes the scope of H: the limit is a bound on selected substitutions. Consistent with Day's own 2026-05-07 narrowing (H1). It does not dispute the limit for selected changes.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending
+  internal: "holds"
   fidelity: partial
-  external: pending
+  external: "supported"   # cost bounds selected substitutions; neutral k = U (B0.5)
 ---
 
 ## Statement (verbatim)
@@ -52,7 +52,8 @@ derived: 30/0.1 = 300 (holds). The same ratio results with N or N_e because the 
 - Result that would change a verdict: none beyond H's check; H6 is a scope statement.
 
 ## Check
-Script: none (scope claim; covered by H and H1). · Result: not run · Review: pending
+R4 H/H1 (research/checks/results/R4-H-C2.md): consistent with neutral k = U (B0.5, z = +0.13 / -0.64) and with Day's own 2026-05-07 narrowing (H1). The scope point says nothing about the cost of selected substitutions, which remains open (H). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none (scope claim; covered by H and H1). · Result: not run · Review: pending
 
 ## Simulator variables implied
 Fraction of fixations neutral versus selected; selective mortality budget.

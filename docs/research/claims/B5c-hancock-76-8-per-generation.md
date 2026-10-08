@@ -7,11 +7,11 @@ parent: B5
 edges: [{type: attacks, target: B1}, {type: attacks, target: B3a}, {type: attacks, target: A}]
 load_bearing: false  # null-model comparison; its haploid/diploid basis halves the headline match
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: holds
   fidelity: n/a
-  external: contested
+  external: "contradicted"   # as an SNV match (double count; correct split ~19M post-split + ~15M ancestral); event-basis reading untested
 ---
 
 ## Statement (verbatim)
@@ -59,6 +59,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none (arithmetic computed with python3 -I). Related: B5.
+
+R4 B4a (research/checks/results/R4-B1c-B4a.md; REVIEW-R4-steelman-critic): on an SNV basis the 38M agreement double-counts. Haploid SNV supply is 38.4 per generation per lineage, so 2 x 252,000 x 38.4 = 19.4M, which is B4a's 2muT (0.605%). The observed ~35M SNVs are then ~19M from post-split mutation plus ~15M remainder attributable to ancestral polymorphism (B4a: theta_anc = 0.63% x 3.2e9 = 20M at Yoo HCG Ne; at the relevant HCB node Ne 1.98e5 theta_anc is ~0.95% = ~30M, overshooting the remainder, as in B4a's 25% overshoot). The retained 76 is an SV-inclusive event count (152/2), whose comparator is the ~40M event total, so the event-basis reading is not contradicted. Hancock's "38M matches 35-40M SNVs" lands on the observed value for the wrong reason. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - haploid vs diploid genome basis

@@ -35,7 +35,7 @@ This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Prob
 | R1 Corpus harvest | **done** 2026-10-07: Day (154 posts, 32 Zenodo files, 75 quotes), literature (37 sources, 75+ quotes), critics/allies (48 rows, 132 quotes, 23 profiles) |
 | R2 Claim extraction | **done** 2026-10-07: 193 claims (day 107, critic 46, ally 16, literature 24); lint clean |
 | R3 Hierarchy | generated from claims (`hierarchy.yaml`, `hierarchy/branch-*.md`); 30 load-bearing nodes |
-| R4 Math resolution | in progress: B0, B0.4, B1, B1b, B2a, B3, F1 done + reviewed |
+| R4 Math resolution | in progress: B0, B0.4, B1, B1b, B2a, B3, F1 done + reviewed (reviews #1–#3); B1c, B4a, B3b/B3c, C1, C1b, H, H2-hard, C2, F2, A-sim done + reviewed (review #4, 2026-10-08; 40 claim files updated). Remaining: E checks, G1/G3 (specific-vs-any), D sims, C1b call-depth follow-up, H at realistic human R with hard-selected load (plus T50 CIs), Yoo μ rescaling |
 | R5 Synthesis | — |
 
 ## Running checks

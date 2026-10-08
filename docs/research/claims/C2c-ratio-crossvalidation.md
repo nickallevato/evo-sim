@@ -7,11 +7,11 @@ parent: C2
 edges: [{type: supports, target: C2}]
 load_bearing: false  # Supports the empirical reality of d (C2). If it fails, C2 rests only on the per-locus fits and on C2a.
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: non-sequitur
   fidelity: n/a
-  external: pending
+  external: "contradicted"   # ratio is invariant for random locus pairs, so it cannot validate d
 ---
 
 ## Statement (verbatim)
@@ -46,7 +46,8 @@ Why: under weak selection the logit gain over G nominal generations is about s x
 - Result that would change a verdict: if the required-s ratio for the same two loci at d = 0.2 and d = 2.0 departs from 0.48 by more than a few percent, the identity argument fails (the recursion would be outside the weak-selection regime, so the result must be checked with the discrete recursion, not the logit approximation).
 
 ## Check
-Script: none yet (spec: `research/checks/c2c_ratio_identity.py`, planned; solve the discrete recursion for required s at d in {0.2, 0.4, 0.5, 0.6, 0.8, 1, 2} for both loci with the Table 1 inputs; report ratio and s x d). · Result: not run (the Table 3 arithmetic above is a recompute from the paper's own rounded numbers) · Review: pending
+R4 C2c (`c2_ratio_nonident.py`; research/checks/results/R4-H-C2.md): the TYR/SLC45A2 ratio is 0.4646-0.4778 over d in [0.2, 2], and random synthetic locus pairs show the same invariance (<= 6%): the odds multiply by (1+s) each generation, so ln(1+s)*d*G is fixed. An algebraic identity, not a test of d. The paper's 0.49 is ~2% above the exact recursion. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Earlier note: Script: none yet (spec: `research/checks/c2c_ratio_identity.py`, planned; solve the discrete recursion for required s at d in {0.2, 0.4, 0.5, 0.6, 0.8, 1, 2} for both loci with the Table 1 inputs; report ratio and s x d). · Result: not run (the Table 3 arithmetic above is a recompute from the paper's own rounded numbers) · Review: pending
 
 ## Simulator variables implied
 d, s per locus, number of generations, p0.

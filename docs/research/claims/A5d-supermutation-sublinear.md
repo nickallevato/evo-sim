@@ -7,11 +7,11 @@ parent: A5
 edges: [{type: attacks, target: A5b}]
 load_bearing: false
 sourcing: firsthand
-status: checked
+status: reviewed
 verdicts:
   internal: non-sequitur
   fidelity: n/a
-  external: contested
+  external: "contested"   # sublinear confirmed for asexual; not for free recombination in F2's tested regime
 ---
 
 ## Statement (verbatim)
@@ -44,6 +44,8 @@ Pre-registered in A (A-sim): measured exponent a of fixation rate versus supply 
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 A-sim (research/checks/results/R4-F2-A.md): sublinear response confirmed for an asexual genome (simulated 100x supply gives 2.9-4.8x, a = 0.23-0.34, more sublinear than Day's 0.47-0.61; the model lacks a DFE, so the exponent comparison is qualitative). Day's mechanism (sweep dynamics) is right for linked loci; for unlinked loci F2 gives a = 1.00 in its tested range. Credit to Day: sublinearity is real. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 ## Simulator variables implied
 - Fixation rate vs supply curve for asexual vs recombining populations (output of A-sim).
