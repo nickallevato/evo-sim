@@ -47,7 +47,7 @@ Added later the same day: [`docs/explain/`](explain/README.md) tells the whole s
 - shortfall breakdown;
 - divergence fit.
 
-Simplifying can quietly pick a side, so each level keeps both sides' wins and slips. The ELI10 and higher levels also keep the AI and branding disclosures. They are drafts. After R5 the numbers get updated by hand, and each level gets a Day-side and a critic-side review.
+Simplifying can quietly pick a side, so each level keeps both sides' wins and slips. ELI10 adds the AI disclosure, and ELI12 and ELI18 add the branding disclosure as well. They are drafts. After R5 the numbers get updated by hand, and each level gets a Day-side and a critic-side review.
 
 ## Where things stand
 ```
