@@ -93,7 +93,7 @@ footer{color:var(--muted);font-size:.82rem}
 
 <div class="wrap">
 <header>
-  <div class="eyebrow">evo-sim · research phase · status as of 2026-10-07</div>
+  <div class="eyebrow">evo-sim · research phase · status as of 2026-10-08</div>
   <h1>Probability Zero Audit</h1>
   <p>A neutral, two-sided audit of Vox Day's mathematical case against evolution (MITTENS, Hard Limits, Probability Zero) and of his critics. Each claim gets a numerical check and three verdicts: internal validity, citation fidelity, external validity.</p>
 </header>
@@ -105,12 +105,17 @@ footer{color:var(--muted);font-size:.82rem}
     <div class="stage"><b>R1 Harvest</b><div class="bar"><i style="width:100%"></i></div><span>Day, critics, literature</span></div>
     <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>193 claim files</span></div>
     <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>30 load-bearing nodes</span></div>
-    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:80%"></i></div><span>~80%, merging reviewed results</span></div>
+    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:80%"></i></div><span>~80%, round 2 reviewed and committed</span></div>
     <div class="stage"><b>R5 Synthesis</b><div class="bar"><i style="width:0%"></i></div><span>verdicts, simulator variables</span></div>
   </div>
   <div class="stats">
     <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
     <span><b>193</b> claims (day 107 · critic 46 · ally 16 · lit 24)</span>
+  </div>
+  <div class="stats">
+    <span>Verdicts so far, internal: <b>89</b> holds · <b>14</b> non-sequitur · <b>6</b> arithmetic error · <b>61</b> pending</span>
+    <span>External: <b>21</b> supported · <b>97</b> contested · <b>9</b> contradicted · <b>5</b> untestable · <b>50</b> pending</span>
+    <span>Citation fidelity: <b>35</b> accurate · <b>31</b> partial · <b>9</b> misread · <b>35</b> unverifiable</span>
   </div>
 </section>
 
@@ -129,7 +134,7 @@ footer{color:var(--muted);font-size:.82rem}
       <li><b>Done:</b> hard selection with many loci (reviewed)</li>
       <li><b>Done:</b> Day's exact aDNA statistic (reviewed: not reproducible, cannot adjudicate)</li>
       <li><b>Done:</b> review of the two new checks; both stand with wording fixes</li>
-      <li><b>Running:</b> merge into RESULTS.md, claim verdicts, ledgers; then commit</li>
+      <li><b>Done:</b> merged and committed (54 verdict fields across 33 claims)</li>
     </ul></div>
   </div>
 </section>
@@ -151,9 +156,9 @@ footer{color:var(--muted);font-size:.82rem}
     <details class="br" open>
       <summary><span class="bid">A</span><span class="btitle">MITTENS rate limit<small>F_max = t_div · d / (g_len · G_f)</small></span><span class="dots"></span></summary>
       <ul class="nodes">
-        <li data-s="pend"><span class="id">A2</span><span class="claim"><span class="c">LTEE generations per fixation (1,322 / 909)</span><span class="f">An asexual model reproduces 1,322, but only as a joint product of Nₑ, beneficial-mutation rate and s, so it isn't a universal constant. Asexual rate does saturate (partial credit to Day). With free recombination the rate would be 1.5–172× higher than the asexual rate; that is an extrapolation, not simulated at LTEE scale. LTEE Nₑ = 3.3e7 is unsourced.</span></span></li>
+        <li data-s="ok"><span class="id">A2</span><span class="claim"><span class="c">LTEE generations per fixation (1,322 / 909)</span><span class="f">An asexual model reproduces 1,322, but only as a joint product of Nₑ, beneficial-mutation rate and s, so it isn't a universal constant. Asexual rate does saturate (partial credit to Day). With free recombination the rate would be 1.5–172× higher than the asexual rate; that is an extrapolation, not simulated at LTEE scale. LTEE Nₑ = 3.3e7 is unsourced.</span></span></li>
         <li data-s="data"><span class="id">A3</span><span class="claim"><span class="c">Required fixations: 30M → 20M → 205M</span><span class="f">"410 Mb" not found in Yoo 2025 (average is 327 Mb per lineage). 205M counts base pairs, not mutation events.</span></span></li>
-        <li data-s="pend"><span class="id">A4</span><span class="claim"><span class="c">Turnover coefficient d ≈ 0.45</span><span class="f">d works as a unit conversion, equivalent to a ~56-year generation time. Its value can't be identified from the data.</span></span></li>
+        <li data-s="ok"><span class="id">A4</span><span class="claim"><span class="c">Turnover coefficient d ≈ 0.45</span><span class="f">d works as a unit conversion, equivalent to a ~56-year generation time. Its value can't be identified from the data.</span></span></li>
       </ul>
     </details>
 
@@ -162,21 +167,21 @@ footer{color:var(--muted);font-size:.82rem}
       <ul class="nodes">
         <li data-s="ok"><span class="id">B1</span><span class="claim"><span class="c">E[F(T)] ≈ μL(T − 4Nₑ)</span><span class="f">Exact for a population starting with zero variation. A population at equilibrium gives k = μ with no deficit.</span></span></li>
         <li data-s="ok"><span class="id">B1b</span><span class="claim"><span class="c">Population-size changes</span><span class="f">Contraction gives a surplus and expansion a deficit, ≈ U·4ΔN. The analytic formula matches the simulation.</span></span></li>
-        <li data-s="pend"><span class="id">B1c</span><span class="claim"><span class="c">Sourced human Nₑ history</span><span class="f">Rerun with full burn-in: every sourced history gives 1.9–4.0× more fixed substitutions per lineage than U·T, matching the analytic formula (3.986 vs 3.984). Day's (T−4Nₑ)/T is right for new mutations alone (0.84). The excess includes alleles fixing in both lineages, so it is not a human–chimp difference count.</span></span></li>
+        <li data-s="ok"><span class="id">B1c</span><span class="claim"><span class="c">Sourced human Nₑ history</span><span class="f">Rerun with full burn-in: every sourced history gives 1.9–4.0× more fixed substitutions per lineage than U·T, matching the analytic formula (3.986 vs 3.984). Day's (T−4Nₑ)/T is right for new mutations alone (0.84). The excess includes alleles fixing in both lineages, so it is not a human–chimp difference count.</span></span></li>
         <li data-s="ok"><span class="id">B2</span><span class="claim"><span class="c">Hard Limits: P(fix within G) ≈ exp(−π²Nₑ/G)</span><span class="f">The exponent is correct. It bounds how long one allele takes, not the total rate of substitutions.</span></span></li>
         <li data-s="ok"><span class="id">B3</span><span class="claim"><span class="c">k = μ · N / Nₑ</span><span class="f">Refuted: neutral fixation probability is 1/N in census terms, so k = μ.</span></span></li>
-        <li data-s="pend"><span class="id">B3b</span><span class="claim"><span class="c">k = 0.743μ (Balloux &amp; Lehmann)</span><span class="f">The effect is real but ranges −2% to +38% at human-like parameters (k rises). 0.743 comes from the 4-cohort window Day chose.</span></span></li>
-        <li data-s="pend"><span class="id">B4</span><span class="claim"><span class="c">Divergence including ancestral polymorphism</span><span class="f">Simulation matches 2μT + θ_anc to 0.3%. At the correct human–chimp ancestor (Nₑ 198k) predicted divergence is 1.55%, about 25% above the observed 1.23%; at Day's Nₑ = 10k it is 0.65%, about half. Observed sits between; it is a 3-parameter fit (μ, T, ancestral Nₑ). The CSAC polymorphic share (14–22%) matches the model (6–25%), so there is no tension.</span></span></li>
+        <li data-s="ok"><span class="id">B3b</span><span class="claim"><span class="c">k = 0.743μ (Balloux &amp; Lehmann)</span><span class="f">The effect is real but ranges −2% to +38% at human-like parameters (k rises). 0.743 comes from the 4-cohort window Day chose.</span></span></li>
+        <li data-s="ok"><span class="id">B4</span><span class="claim"><span class="c">Divergence including ancestral polymorphism</span><span class="f">Simulation matches 2μT + θ_anc to 0.3%. At the correct human–chimp ancestor (Nₑ 198k) predicted divergence is 1.55%, about 25% above the observed 1.23%; at Day's Nₑ = 10k it is 0.65%, about half. Observed sits between; it is a 3-parameter fit (μ, T, ancestral Nₑ). The CSAC polymorphic share (14–22%) matches the model (6–25%), so there is no tension.</span></span></li>
       </ul>
     </details>
 
     <details class="br" open>
       <summary><span class="bid">C</span><span class="btitle">Ancient DNA<small>"Zero fixations in ~7,000 years"</small></span><span class="dots"></span></summary>
       <ul class="nodes">
-        <li data-s="pend"><span class="id">C1</span><span class="claim"><span class="c">Zero fixations across the 1240k SNP panel</span><span class="f">The panel is built from sites that vary today, so it can't record completed fixations. Reviewers disagree: the critic side says the observed 1 and 3 exceed neutral (P≈0.0002); the Day side says the test has no power. Day's exact statistic is being simulated.</span></span></li>
-        <li data-s="pend"><span class="id">C1b</span><span class="claim"><span class="c">Day's exact time-binned statistic (new check, reviewed)</span><span class="f">Verdict: not reproducible, cannot adjudicate. The model misses Day's own table, so it isn't a valid null. Likely cause found: real ancient samples give only a few calls per site in old bins. Lowering per-site coverage drops the neutral count from ~6,500 to ~120 and moves events into the oldest bin, the same direction as Day's table. A direction, not yet a reproduction.</span></span></li>
-        <li data-s="pend"><span class="id">C2</span><span class="claim"><span class="c">Overlapping generations vs standard model</span><span class="f">The ratio is an algebraic identity, so d is not independently measured.</span></span></li>
-        <li data-s="pend"><span class="id">C6</span><span class="claim"><span class="c">The 630 comparator</span><span class="f">Day's comparison and this audit's earlier rescaling are both wrong. About 1,500–1,850 fixations are expected on an ascertained panel.</span></span></li>
+        <li data-s="ok"><span class="id">C1</span><span class="claim"><span class="c">Zero fixations across the 1240k SNP panel</span><span class="f">The panel is built from sites that vary today, so it can't record completed fixations. Reviewers disagree: the critic side says the observed 1 and 3 exceed neutral (P≈0.0002); the Day side says the test has no power. Day's exact statistic is being simulated.</span></span></li>
+        <li data-s="ok"><span class="id">C1b</span><span class="claim"><span class="c">Day's exact time-binned statistic (new check, reviewed)</span><span class="f">Verdict: not reproducible, cannot adjudicate. The model misses Day's own table, so it isn't a valid null. Likely cause found: real ancient samples give only a few calls per site in old bins. Lowering per-site coverage drops the neutral count from ~6,500 to ~120 and moves events into the oldest bin, the same direction as Day's table. A direction, not yet a reproduction.</span></span></li>
+        <li data-s="ok"><span class="id">C2</span><span class="claim"><span class="c">Overlapping generations vs standard model</span><span class="f">The ratio is an algebraic identity, so d is not independently measured.</span></span></li>
+        <li data-s="ok"><span class="id">C6</span><span class="claim"><span class="c">The 630 comparator</span><span class="f">Day's comparison and this audit's earlier rescaling are both wrong. About 1,500–1,850 fixations are expected on an ascertained panel.</span></span></li>
       </ul>
     </details>
 
@@ -199,14 +204,14 @@ footer{color:var(--muted);font-size:.82rem}
       <summary><span class="bid">F</span><span class="btitle">"Kimura irrelevance"<small>Fixation time vs fixation rate</small></span><span class="dots"></span></summary>
       <ul class="nodes">
         <li data-s="ok"><span class="id">F1</span><span class="claim"><span class="c">Slow fixation limits the rate</span><span class="f">Latency is not throughput. Overlapping sweeps give one fixation every 3 generations against an 847-generation fixation time.</span></span></li>
-        <li data-s="pend"><span class="id">F2</span><span class="claim"><span class="c">Multi-locus interference</span><span class="f">Interference is real. Asexual genomes run at 9% of the independent rate at the highest supply tested and tight linkage at 20%. Free recombination stays at 97.5% with 272 sweeps in progress, and fwdpy11 agrees. Tested at N = 1,000, a single s, soft selection only.</span></span></li>
+        <li data-s="ok"><span class="id">F2</span><span class="claim"><span class="c">Multi-locus interference</span><span class="f">Interference is real. Asexual genomes run at 9% of the independent rate at the highest supply tested and tight linkage at 20%. Free recombination stays at 97.5% with 272 sweeps in progress, and fwdpy11 agrees. Tested at N = 1,000, a single s, soft selection only.</span></span></li>
       </ul>
     </details>
 
     <details class="br">
       <summary><span class="bid">G</span><span class="btitle">Bernoulli Barrier<small>0.02^(2×10⁷); ~230 simultaneous sweeps</small></span><span class="dots"></span></summary>
       <ul class="nodes">
-        <li data-s="pend"><span class="id">G</span><span class="claim"><span class="c">~230 simultaneous sweeps cap</span><span class="f">No collapse at ~260–270 open loci under soft selection, or under hard selection when R ≥ 5. Under hard selection with R = 2 the population fails at ~167. The cap depends on reproductive excess and load.</span></span></li>
+        <li data-s="ok"><span class="id">G</span><span class="claim"><span class="c">~230 simultaneous sweeps cap</span><span class="f">No collapse at ~260–270 open loci under soft selection, or under hard selection when R ≥ 5. Under hard selection with R = 2 the population fails at ~167. The cap depends on reproductive excess and load.</span></span></li>
         <li data-s="todo"><span class="id">G1</span><span class="claim"><span class="c">0.02^(2×10⁷): specific outcome vs any outcome</span><span class="f">Queued.</span></span></li>
       </ul>
     </details>
@@ -214,10 +219,10 @@ footer{color:var(--muted);font-size:.82rem}
     <details class="br" open>
       <summary><span class="bid">H</span><span class="btitle">Cost of selection<small>Haldane 300 generations per substitution → 487</small></span><span class="dots"></span></summary>
       <ul class="nodes">
-        <li data-s="pend"><span class="id">H1</span><span class="claim"><span class="c">487 vs 20M required</span><span class="f">A category error, the same one Day conceded in his 2026-05-07 retraction. Haldane's D = 30 is an assumption; realistic values give 92–278 generations.</span></span></li>
-        <li data-s="pend"><span class="id">H2</span><span class="claim"><span class="c">Hard vs soft selection (Nunney 2003)</span><span class="f">Corrected model: soft selection is 1.5–2.8× <em>slower</em> than hard at equal mutation supply, so the critics' "soft selection removes the cost" did not reproduce. Haldane's 300 is a bounding case; the human value is undetermined, so H is neither refuted nor binding.</span></span></li>
-        <li data-s="pend"><span class="id">H-hard</span><span class="claim"><span class="c">Many simultaneous sweeps under hard selection (new check, reviewed with fixes)</span><span class="f">The limit is ln R / D (reproductive excess over cost per substitution), not a fixed 1 in 300. Populations sustained 9–120× Haldane's rate at R ≥ 1.3. Haldane's own case (R ≈ 1.1, diploid D ≈ 20–30) gives ≈ 1/300 and was not tested, so "1/300 falsified" is withdrawn; "10% is not a general bound" stands. Day's ~230 sweeps persist at R ≥ 5, fail at R = 2. Model favours critics (free recombination, imposed opportunity rate).</span></span></li>
-        <li data-s="pend"><span class="id">H8</span><span class="claim"><span class="c">Hössjer's 15,800</span><span class="f">10.5× Haldane's own figure. Day's Term 3 differs from Haldane's cost by 17.1× at the same d.</span></span></li>
+        <li data-s="ok"><span class="id">H1</span><span class="claim"><span class="c">487 vs 20M required</span><span class="f">A category error, the same one Day conceded in his 2026-05-07 retraction. Haldane's D = 30 is an assumption; realistic values give 92–278 generations.</span></span></li>
+        <li data-s="ok"><span class="id">H2</span><span class="claim"><span class="c">Hard vs soft selection (Nunney 2003)</span><span class="f">Corrected model: soft selection is 1.5–2.8× <em>slower</em> than hard at equal mutation supply, so the critics' "soft selection removes the cost" did not reproduce. Haldane's 300 is a bounding case; the human value is undetermined, so H is neither refuted nor binding.</span></span></li>
+        <li data-s="ok"><span class="id">H-hard</span><span class="claim"><span class="c">Many simultaneous sweeps under hard selection (new check, reviewed with fixes)</span><span class="f">The limit is ln R / D (reproductive excess over cost per substitution), not a fixed 1 in 300. Populations sustained 9–120× Haldane's rate at R ≥ 1.3. Haldane's own case (R ≈ 1.1, diploid D ≈ 20–30) gives ≈ 1/300 and was not tested, so "1/300 falsified" is withdrawn; "10% is not a general bound" stands. Day's ~230 sweeps persist at R ≥ 5, fail at R = 2. Model favours critics (free recombination, imposed opportunity rate).</span></span></li>
+        <li data-s="ok"><span class="id">H8</span><span class="claim"><span class="c">Hössjer's 15,800</span><span class="f">10.5× Haldane's own figure. Day's Term 3 differs from Haldane's cost by 17.1× at the same d.</span></span></li>
       </ul>
     </details>
   </div>
@@ -265,8 +270,8 @@ footer{color:var(--muted);font-size:.82rem}
 <section>
   <h2>Next</h2>
   <ol class="next">
-        <li>Merge the review fixes and the two new checks into RESULTS.md, the claim verdicts and the ledgers. Results marked "review pending" become final then.</li>
-    <li>Commit, then run E, G and D checks.</li>
+    <li>Remaining checks: E (founder hazard, relictation), G1 (specific vs any outcome), D (sequence space).</li>
+    <li>Follow-ups: C1b with realistic per-site call depth; H at realistic human reproductive excess and hard-selected load; confidence intervals on H; Yoo's mutation rate for rescaling ancestral Nₑ.</li>
     <li>R5: final verdicts, sensitivity table, simulator variable list.</li>
   </ol>
 </section>
