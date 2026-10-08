@@ -14,9 +14,12 @@ Evidence is in `sources/quotes-literature.md`. Every quote there was machine-che
 ## R1 pass 2 (2026-10-07) — supersedes the pass-1 ledger in PLAN.md
 | Source | Cited for (by) | Status | Evidence / note |
 |---|---|---|---|
-| Kimura 1962 | fixation prob ≈ 2s; 1/(2N) (Day, critics) | **unverified** (pass 1 said accurate) | PMC bot challenge; no abstract. Result is textbook; B0.1/B0.3 reproduce it numerically. |
-| Kimura & Ohta 1969 | t̄ = 4Nₑ, SD ≈ 2.15Nₑ (Day) | **unverified** (pass 1 said accurate) | Same block. B0.2 reproduces it numerically. |
-| Kimura & Ohta 1969 | "fixation time does not depend on recombination" (Day) | unverified | Was recorded as a misread in pass 1; not re-checked. |
+| Kimura 1962 | fixation prob ≈ 2s (Day, Bowers) | **verified-accurate** | p.716: "the probability of ultimate survival of an advantageous mutant gene is approximately twice the selection coefficient". |
+| Kimura 1962 | neutral fixation prob = 1/(2Nₑ) (Day, B3) | **verified-misread** | p.716: the formula is applied "by putting p = 1/(2N)", and "if we let s → 0 … we obtain U = 1/2N, the result known for a neutral gene". N is the census number. Nₑ enters only the selection exponent. |
+| Kimura & Ohta 1969 | t̄ = 4Nₑ (Day) | **verified-accurate** | Eq. 15 and Summary: "takes about 4Nₑ generations until fixation in a population of effective size Nₑ". |
+| Kimura & Ohta 1969 | SD ≈ 2.15Nₑ (Day) | **not-found in this paper** | Only the first moment is derived here; the paper says higher moments can be obtained "step by step". The SD figure must come from a later source. Our B0.2 simulation gives SD ≈ 2.1N. |
+| Kimura & Ohta 1969 | neutral fixation fraction (B3/B7) | verified, **supports critics** | p.769: "the remaining minority (fraction 1/2N) spread over the entire population (i.e. reach fixation)", alongside Nₑ for the time. |
+| Kimura & Ohta 1969 | "fixation time does not depend on recombination" (Day, Bernoulli and Haldane papers) | **verified-misread (misattribution)** | The word "recombination" appears 0 times in the paper. It is a single-locus model. |
 | Haldane 1957 | ~1 substitution / 300 gens (Day) | **verified-accurate, via Nunney 2003 only** | Primary text not retrieved. |
 | Nunney 2003 | cost of selection | verified | Cost "substantially less" than Haldane's for M > 1/2; soft selection "eliminates" it. This is the only H-branch rebuttal in the corpus. |
 | Chalub 2022 | k = μ is a misapplied steady-state identity (Day) | **verified-partial** | Math correct. The model is neutral, two alleles, "without mutation or selection", so it says nothing about the substitution rate k. That limits its relevance to B1. |
@@ -40,7 +43,8 @@ Evidence is in `sources/quotes-literature.md`. Every quote there was machine-che
 | Axe 2004 | 1 in 10^77 functional | verified-accurate (abstract) | One β-lactamase domain, extrapolated. Counter-estimates (Taylor 2001, Keefe & Szostak 2001) are abstract-only and not directly comparable. |
 | Frankham 1995, Maruyama 1970/74, Cannings 1974, Crow & Kimura 1970, Kimura 1983, ReMine 2005, Wright Nₑ | various | unverified | Record only. |
 
-## Retrieval blocked — manual browser download requested from the user
-Kimura 1962; Kimura & Ohta 1969; Keightley 2012; Haak 2015; Prado-Martinez 2013; Taylor 2001.
+## Manual downloads (user, 2026-10-07)
+All six blocked papers were downloaded by the user into `sources/raw/sources/manual/`: Kimura 1962, Kimura & Ohta 1969, Keightley 2012, Haak 2015, Prado-Martinez 2013, Taylor 2001.
 
-All are free on PMC, but its bot challenge blocked automated download. We did not try to get around the challenge.
+- **Done:** the Kimura items above are verified against the full text.
+- **Still to do:** checking the mutation rate in Keightley 2012 (its numbers use characters the text grep didn't match), Haak 2015's panel design, Taylor 2001, and extracting the Prado-Martinez PSMC Nₑ histories for B1c.

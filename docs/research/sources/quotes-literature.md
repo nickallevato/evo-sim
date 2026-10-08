@@ -341,3 +341,16 @@ These are computed by the harvest agent from the xlsx rows (Python/openpyxl, no 
 | selection.s_zeng_2021 | confirmed: 0.001, sign negative | Zeng abstract |
 | haldane.gens_per_substitution | 300 (as reported by Nunney 2003; Haldane original unread) | Nunney abstract |
 | population.Ne_over_N Frankham1995 | 0.1 (unverified here; abstract not retrieved verbatim) | - |
+
+## Manual downloads (2026-10-07; text via pdftotext of user-downloaded PMC PDFs; OCR artefacts normalised only in spacing)
+### Kimura1962 (sha256 24baddd6…f85e1)
+> "The probability of fixation of an individual mutant gene is obtained from (8) by putting p = 1/(2N)."
+> - locator: p.715–716, eq. 10; role: critics (B7)
+> "the probability of ultimate survival of an advantageous mutant gene is approximately twice the selection coefficient (HALDANE 1927). On the other hand, if we let s → 0 in (10), we obtain U = 1/2N, the result known for a neutral gene."
+> - locator: p.716; role: Day (≈2s) and critics (1/2N)
+### KimuraOhta1969 (sha256 80694ab2…299fc5)
+> "a single mutant gene, if it is selectively neutral, takes about 4Ne generations until fixation in a population of effective size Ne."
+> - locator: Summary, p.770; role: Day (B2/F)
+> "the remaining minority (fraction 1/2N) spread over the entire population (i.e. reach fixation) taking a very large number of generations."
+> - locator: p.769; role: critics (B7)
+> Note: "recombination" occurs 0 times; no SD/2.15 figure present (first moment only).
