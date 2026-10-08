@@ -94,60 +94,75 @@ Each script adds its own directory to `sys.path`, so `-I` works from any directo
 **Open fairness sub-check B3b.** Day's k = 0.743μ invokes Balloux & Lehmann 2012: fluctuating N combined with overlapping generations. That is a non-exchangeable, time-varying setting, where the neutral rate *can* differ from μ per generation. B3b must test that setting before B3 receives a final verdict.
 
 ## B2a — Hard Limits tail exp(−π²Nₑ/G) · `b2a_hard_limits_chain.py` (exact WF Markov chain, no randomness)
-**Prediction:** Day's exponent is the correct leading-order short-time asymptotic. From the arcsine transform, (G/N)·ln F_cond → −π².
+**Prediction:** Day's exponent is the correct leading-order short-time asymptotic. From the arcsine transform y=arccos(1−2p) (variance 1/(2N) per generation, path length π), (G/N)·ln F_cond → −π².
 
-**Result.** The exponent trends toward −π² as G/N → 0, but converges slowly:
+**Result.** The exponent is **consistent with −π²**. Review #3 took the right limit order: N → ∞ at fixed r = G/N first, then r → 0. Values of r·ln F_cond at N = 100 / 400 / 1600:
 
-| N | (G/N)·ln F at G/N=0.05 | at 0.25 | at 1 |
-|---|---|---|---|
-| 200 | −8.59 | −8.02 | −5.88 |
+| r = G/N | N = 100 | N = 400 | N = 1600 | limit |
+|---|---|---|---|---|
+| 0.25 | −7.75 | −8.19 | −8.33 | ≈ −8.4 |
+| 0.5 | −7.03 | −7.31 | −7.40 | ≈ −7.45 |
+| 1 | −5.78 | −5.94 | −5.99 | ≈ −6.0 |
 
-*As a number*, however, Day's formula badly *underestimates* the probability in the regime where he applies it (G ≤ 4Nₑ):
+- **Fit:** ln F_cond ≈ −π²/r + 1.5·ln(1/r) + 3.9, i.e. a power-law prefactor of about 50·r^−1.5. This is the reviewer's empirical fit from 3 points, not derived analytically.
+- **Small-N rows:** the earlier G/N = 0.05 rows at small N (G = 10 generations) are dominated by discreteness and are disregarded.
 
-| G/N | Exact F_cond (N=200) | Day exp(−π²N/G) | Exact / Day |
-|---|---|---|---|
-| 4 (= his threshold 4Nₑ) | 0.61 | 0.085 | 7× |
-| 2 | 0.13 | 0.0072 | 18× |
-| 1 | 2.8e−3 | 5.2e−5 | 54× |
-| 0.25 | 1.2e−14 | 7.2e−18 | 1.6e3× |
+**Numerical use depends on which probability Day means. The verbatim definition is UNVERIFIED (fetcher quote only).**
+- *Reading 1: conditional on eventual fixation.* exp(−π²N/G) *understates* the true probability:
+
+  | G/N | Exact (N=200) | Day | Exact / Day |
+  |---|---|---|---|
+  | 4 (his threshold) | 0.61 | 0.085 | 7× |
+  | 1 | 2.8e−3 | 5.2e−5 | 54× |
+  | 0.25 | 1.2e−14 | 7.2e−18 | 1.6e3× |
+
+- *Reading 2: unconditional, per new mutation (= F_cond / 2N).* At G = 4N and N = 200: 0.61/400 = 1.5e−3, which is *smaller* than Day's 0.085. Under this reading Day overstates the probability at moderate G.
+- **Fairness note:** Day presents it as an "of order" leading exponent. Judging it on prefactor accuracy, especially at G = 4Nₑ where e^(−π²/4) is not small, is harsher than its asymptotic framing warrants.
 
 **Verdicts (provisional)**
-- **Internal (asymptotic exponent): HOLDS.**
-- **Numerical use:** it overstates rarity by 1–3+ orders of magnitude. At G = 4Nₑ, 61% of eventual fixations have already happened, which is not "exponentially small".
-- **Relevance:** it is a per-allele *latency* tail. The expected substitution count across all mutations is U∫F, which equals U·T at equilibrium (B1, F1).
+- **Internal (exponent): HOLDS.**
+- **Numerical:** depends on the reading; resolve from the verbatim text in R1p2.
+- **Relevance:** whichever reading applies, it is a per-allele *latency* tail. The expected number of substitutions across all mutations is U∫F, which equals U·T at equilibrium (B1).
 
 ## F1 — Latency vs throughput · `f1_throughput.py` (seed 31)
-**Setup:** N=1000, s=0.01, U_b=0.01. Independent loci (no interference).
+**Setup:** N=1000, s=0.01, U_b=0.01. Independent loci, no interference, no cost of selection.
 
-**Predictions:** the steady-state rate equals 2N·U_b·u(s) regardless of latency, and Little's law holds.
+**Prediction:** the steady-state rate equals 2N·U_b·u(s), independent of latency.
 
-**Result:** confirmed.
-- **Rate:** predicted 0.3960 per generation; simulated 0.3972 ± 0.0018.
-- **Latency vs spacing:** t_fix = 847 generations, while generations per fixation G_f = 1/rate = **3**.
-- **In flight:** about 336 eventually-fixing alleles are in transit at any time.
-- **Serial reading gives the wrong count:** dividing T by latency predicts 23.6 fixations in 20,000 generations; 7,943 were observed.
+**Result:**
+- **Rate: confirmed.** Predicted 0.3960 per generation; simulated 0.3972 ± 0.0018.
+- **Spacing vs latency:** t_fix = 847 generations, but G_f = 1/rate = 3 generations.
+- **In-transit count, *computed, not measured*:** rate × t_fix ≈ 336 fixers. This is Little's law used as an identity; `track_transit` is unused. Measuring it directly is a TODO.
 
-**Verdict:** the F-branch inference (time divided by latency) is **invalid as a throughput bound absent interference**. Mansfield's pipelining point holds.
+**Verdict.** As logic, dividing elapsed time by fixation latency is **not** a throughput bound. Without interference, many fixations are in flight at once, which is the critics' pipelining point.
 
-**Limit:** Day's strongest version is that interference or cost of selection caps throughput (F2, H). Not yet tested.
+**Caveats (review #3)**
+- **Unrealistic regime.** The parameters (20 new beneficial mutations per generation, 0.4 substitutions per generation) are far above any realistic regime, and they dodge selective load and cost by construction. **This shows pipelining is *possible*, not that it is *feasible* at realistic parameters.** Feasibility is Day's actual argument, tested in F2 (interference) and H (cost of selection).
+- **Strawman risk.** "Serial reading = T / latency" must be tied to a specific quote, from Day or from a critic's rendering of him, before it is attributed to anyone. Day explicitly says his LTEE G_f is a throughput measurement (blog 2026-10-01, per fetcher).
 
 ## B1b — Size changes from an equilibrium start · `b1b_demography.py` (seed 21; 7 min)
 **Setup:** N0=500, U=0.2, 24 replicates, T = 3×4N0. Each value is window k / U.
 
 **Predictions:**
-- **Standard theory:** contraction gives a transient *excess*; expansion gives a transient *deficit* of about 4N_new generations; the long-run mean is k=U.
+- **Standard theory:** contraction gives a transient *excess*; expansion gives a transient *deficit* of about 4N_new generations; the long-run mean is k = U.
 - **Day:** a deficit whenever N has not been constant for about 4Nₑ.
 
-| Scenario | First window | Recovered by | Cumulative / U·T |
-|---|---|---|---|
-| constant | 1.00 | — | 0.996 |
-| bottleneck N0→N0/10 (N0/2 gens)→N0 | 3.82 | ~4.5 N0 | 0.999 |
-| contraction N0→N0/5 | 3.79 | ~1.5 N0 | **1.259** |
-| expansion N0/5→N0 | 0.19 | ~5.5 N0 | **0.733** |
-| expansion N0/5→5N0 | 0.03 | not within 12 N0 (0.22 at end) | **0.085** |
-| founder N0→10 (20 gens)→N0 | 2.69 | ~4.5 N0 | 0.996 |
+| Scenario | First window | Recovered by (approx., by eye from means) | Cumulative / U·T | Analytic 1 − 4ΔN/T |
+|---|---|---|---|---|
+| constant | 1.00 | — | 0.996 | 1 |
+| bottleneck N0→N0/10 (N0/2 gens)→N0 | 3.82 | ~4–5 N0 | 0.999 | ≈1 (net ΔN=0) |
+| contraction N0→N0/5 | 3.79 | ~1.5 N0 | 1.259 | 1.267 |
+| expansion N0/5→N0 | 0.19 | ~5–6 N0 | 0.733 | 0.733 |
+| expansion N0/5→5N0 | 0.03 | not within 12 N0 | 0.085 | (bound 4ΔN = 9.6 N0 > T; deficit saturates) |
+| founder N0→10 (20 gens)→N0 | 2.69 | ~4–5 N0 | 0.996 | ≈1 |
 
-**Interpretation: credit to Day.** The mechanism he describes is real.
-- After an expansion, the substitution rate falls far below μ for about 4N_new generations. A 25× expansion gave only 8.5% of μT over 3×4N0.
-- The **sign depends on demographic history.** Contractions and bottlenecks produce *excess* substitutions, and a bottleneck nets out to about zero.
-- **Open question (external validity):** what was the actual Nₑ history of each lineage since the split? The standard estimate is ancestral Nₑ > modern human Nₑ, a contraction, which would push k *above* μ, the opposite of Day's direction. This needs sourced Nₑ trajectories (PSMC/MSMC) for both lineages → new check **B1c**.
+**Analytic cross-check (review #3).** The cumulative excess or deficit ≈ U·4ΔN, independent of the simulation. Contraction predicts 1.267 (sim 1.259); expansion predicts 0.733 (sim 0.733).
+
+**Interpretation**
+- **Day's claim as stated is half right.**
+  - *Right for expansions:* the substitution rate does lag below μ for about 4N_new generations.
+  - *Wrong in sign for contractions and bottlenecks:* those produce an excess, or a net of about zero.
+  - The mechanism is **standard theory**: the transient lag of the substitution rate after a size change. The pre-registration predicted it. It is not a novel result of Day's.
+- **Observable caveat.** These are within-lineage *fixed substitutions*. The human–chimp *pairwise sequence divergence* is the mutations accumulated along both branches since coalescence (≈ 2μT + ancestral θ). That quantity does **not** depend on fixation latency or demography. A B1b deficit applies to fixed-difference counts only, not to raw divergence. Check **B4a** must do this accounting before B1b is applied to the human–chimp case.
+- **Scale.** The net effect is bounded by 4ΔN/T. At human–chimp scales (T ≈ 250k generations, ancestral Nₑ possibly 5×10⁴–10⁵), the transient regime is *not* negligible a priori. That makes **B1c** load-bearing.
+- **Open (B1c).** Use sourced Nₑ trajectories (PSMC/MSMC/ILS estimates), lineage by lineage, to determine which direction applied. Human history includes both an ancestral size change and recent growth. Nothing about direction is asserted here until B1c is sourced.

@@ -35,5 +35,17 @@ No simulation-code bugs. Findings and their resolution:
 
 Reviewer's independent verification: an exact WF Markov chain (in session scratchpad, not committed). It confirmed `single_locus`, `diffusion_cond_fix_time` (within 0.2% for 4Ns ≥ 20), and the Cannings BetaBinomial marginal.
 
-## Pending reviews
-B1b, B2a and F1 need a correctness review and a two-sided steelman review.
+## 2026-10-07 — Review #3 (Sonnet, correctness + two-sided steelman) of B1b, B2a, F1
+The code is correct; the numbers reproduced, including a 4-replicate rerun of B1b. All changes were to wording and framing:
+- **B2a (major):** the exponent was evaluated with the wrong limit order. → Replaced with N-convergence at fixed r (reviewer's runs; a script to commit is TODO).
+- **B2a (major):** conditional vs unconditional reading. → Both shown; flagged pending the verbatim quote.
+- **B2a (minor):** the G=4N comparison is harsh for an "of order" claim. → Fairness note added.
+- **F1 (major):** Little's law was computed, not measured. → Relabeled. Measuring in-transit counts is a TODO.
+- **F1 (major):** unrealistic regime, and the serial reading needs a quote. → Caveats added.
+- **B1b (major):** "credit to Day" overcredited him, since this is standard theory and wrong in sign for contractions. → Reworded.
+- **B1b (major):** "standard estimate ancestral Nₑ > modern" was unsourced. → Removed; deferred to B1c.
+- **B1b (major):** pairwise divergence is a different observable from fixed substitutions. → Caveat added; B4a required.
+- **B1b (minor):** recovery times were eyeballed. → Marked approximate. Analytic 4ΔN cross-check column added.
+
+## Queue
+B1c (sourced Nₑ histories), B3b (Balloux–Lehmann; structure; sweepstakes), B4a (two-lineage divergence with ILS), F2 (multi-locus interference), H (cost of selection), C1 (aDNA ascertainment), G (Bernoulli Barrier), A (full-scale window arithmetic), and committing the B2a N-scaling script.
