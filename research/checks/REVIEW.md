@@ -48,4 +48,4 @@ The code is correct; the numbers reproduced, including a 4-replicate rerun of B1
 - **B1b (minor):** recovery times were eyeballed. → Marked approximate. Analytic 4ΔN cross-check column added.
 
 ## Queue
-B1c (sourced Nₑ histories), B3b (Balloux–Lehmann; structure; sweepstakes), B4a (two-lineage divergence with ILS), F2 (multi-locus interference), H (cost of selection), C1 (aDNA ascertainment), G (Bernoulli Barrier), A (full-scale window arithmetic), and committing the B2a N-scaling script.
+B1c (sourced Nₑ histories), B3b (Balloux–Lehmann; structure; sweepstakes), B4a (two-lineage divergence with ILS), F2 (multi-locus interference), H (cost of selection), C1 (aDNA ascertainment), G (Bernoulli Barrier), A (full-scale window arithmetic). (B2a N-scaling script committed: b2a_scaling.py.)

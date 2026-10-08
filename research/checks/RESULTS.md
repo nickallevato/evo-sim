@@ -104,7 +104,7 @@ Each script adds its own directory to `sys.path`, so `-I` works from any directo
 | 0.5 | −7.03 | −7.31 | −7.40 | ≈ −7.45 |
 | 1 | −5.78 | −5.94 | −5.99 | ≈ −6.0 |
 
-- **Fit:** ln F_cond ≈ −π²/r + 1.5·ln(1/r) + 3.9, i.e. a power-law prefactor of about 50·r^−1.5. This is the reviewer's empirical fit from 3 points, not derived analytically.
+- **Fit:** ln F_cond ≈ −π²/r + 1.5·ln(1/r) + 3.9, i.e. a power-law prefactor of about 50·r^−1.5. Empirical fit, not derived analytically. Reproduced in-repo by `b2a_scaling.py` (N=1600 row: −8.33 / −7.40 / −5.99 vs fit −8.37 / −7.40 / −5.97).
 - **Small-N rows:** the earlier G/N = 0.05 rows at small N (G = 10 generations) are dominated by discreteness and are disregarded.
 
 **Numerical use depends on which probability Day means. The verbatim definition is UNVERIFIED (fetcher quote only).**
