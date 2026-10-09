@@ -53,7 +53,7 @@ research/.venv/bin/python -I research/checks/baseline_textbook.py   # baselines 
 ```
 **No computation on the workstation** (it ran out of RAM on 2026-10-09). Locally: git, edits, trivial checks only (one process, <500 MB, <1 min). Everything else runs on **`na-workhorse`** (12 cores, 14 GB):
 1. Commit the script (pre-registration), then `rsync` it to `na-workhorse:projects/evo-sim/research/checks/`.
-2. `ssh -o BatchMode=yes na-workhorse 'cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/<x>.py … > research/checks/results/raw/<x>.out 2>&1 < /dev/null &'` (the `< /dev/null` lets ssh return; otherwise the launching agent hangs open); record hostname and md5s in `raw/<x>.host`. Check `uptime` first. At most 4 processes per agent; keep RAM well under 14 GB.
+2. `ssh -o BatchMode=yes na-workhorse 'cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/<x>.py … > research/checks/results/raw/<x>.out 2>&1 < /dev/null &'` (the `< /dev/null` lets ssh return; otherwise the launching agent hangs open); record hostname and md5s in `raw/<x>.host`. Check `uptime` first. Keep the host near full but not over: at most 11 busy processes in total across all agents (user, 2026-10-09), RAM under ~12 GB. Launch async and return; collect later.
 3. `rsync` `results/raw/<x>*` back. **Never commit or push from workhorse.**
 
 ## Lifecycle of a check
