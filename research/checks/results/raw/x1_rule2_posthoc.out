@@ -1,0 +1,8 @@
+(a) A3a: parts read per lineage: 35e6 + 1,140 + 2 x 187e6 = 409M vs 410M (eps 0.24%); per lineage 17.5e6 + 187e6 = 204.5M vs 205M (eps 0.24%); literal sum 35e6 + 1,140 + 187e6 = 222M (eps 46%)
+(b) G: ln(1.01^1474) = 14.67; additive 1474 x 0.01 = 14.74; required additive 1570; ln(1.01^157000) = 1562; ratios: additive 106.5, log 106.5 (printed 107); 1.01^1474 = 2.34e+06
+(c) HCG 1.32e5: ancestral SNV term 20.28M; event null 58.58M; vs 40M (CSAC events) +46%; vs 42.07M (GAP-07b measured) +39%; vs Hancock's own 35-40M range top +46%
+(c) HCB 1.98e5: ancestral SNV term 30.41M; event null 68.72M; vs 40M (CSAC events) +72%; vs 42.07M (GAP-07b measured) +63%; vs Hancock's own 35-40M range top +72%
+(c) no-ancestral event null 38.30M: vs 40M -4.2%, vs 42.07M -9.0%
+(d) Nesslig20 HCG 1.32e5: 37.8M + 20.28M = 58.08M vs 31-62M: -6% vs the top (62M)
+(d) Nesslig20 HCB 1.98e5: 37.8M + 30.41M = 68.21M vs 31-62M: +10% vs the top (62M)
+(e) diffusion p=.5: u(2N=16,000) 1.52e-36, u(2N=20,000) 1.79e-45; elasticity d ln u / d ln(2N) = -92 (a +-25% change in the input moves the output by a factor of 10^9)
