@@ -1,0 +1,752 @@
+[
+ {
+  "id": "M01",
+  "claim": "B5a",
+  "author": "McCarthy",
+  "stated": "50,000/yr; 4.5e11; 22.5M",
+  "recomputed": "50000/yr; 4.5e+11; 2.25e+07",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces from Day's inputs (100 mutations/newborn, N = 10,000, 9 My, 20 y)"
+ },
+ {
+  "id": "M02",
+  "claim": "B5a/F1b",
+  "author": "McCarthy",
+  "stated": "320,000 gens; 400e9; 20M",
+  "recomputed": "chain 20M; 25 y throughout 16M; 20 y throughout 20.5M (50,000 gens subtracted: 20M)",
+  "outcome": "P",
+  "material": "yes (20%)",
+  "note": "time uses 25 y/gen (360,000 = 9 My/25) but supply uses the 20 y/gen figure 50,000/yr; consistent 25 y gives 16.0M; also '40,000 years' is 40,000 generations (units slip in prose)"
+ },
+ {
+  "id": "M02f",
+  "claim": "B5a/F1b",
+  "author": "McCarthy",
+  "stated": "text 'Nine million years divided by 25'",
+  "recomputed": "present=True; '50,000 x 8,000,000' present=True",
+  "outcome": "R",
+  "material": "no",
+  "note": "fidelity: comment text confirmed in raw JSON"
+ },
+ {
+  "id": "M03",
+  "claim": "B5a",
+  "author": "McCarthy",
+  "stated": "400 billion x 1/20000 = 35 million",
+  "recomputed": "2e+07",
+  "outcome": "N",
+  "material": "no",
+  "note": "arithmetic-error; the same comment's headline (35M vs 180) is unaffected; 20M in his post and his comment 337116873"
+ },
+ {
+  "id": "M03f",
+  "claim": "B5a",
+  "author": "McCarthy",
+  "stated": "text '400 billion x 1/20000 = 35 million'",
+  "recomputed": "present=True",
+  "outcome": "R",
+  "material": "no",
+  "note": "fidelity: confirmed in raw JSON (comment 340149310)"
+ },
+ {
+  "id": "M04",
+  "claim": "A5",
+  "author": "McCarthy",
+  "stated": "roughly 690x",
+  "recomputed": "673.9 (3.1e9/4.6e6); 689 if E. coli = 4.5 Mb",
+  "outcome": "N",
+  "material": "no",
+  "note": "immaterial 2.4% rounding; ratio direction and size unaffected"
+ },
+ {
+  "id": "M05",
+  "claim": "G3",
+  "author": "McCarthy",
+  "stated": "P_specific tiny; P_any ~ 1",
+  "recomputed": "supply 22.5M, sd 4743, z = -527 sd, log10 P_specific = -86020600",
+  "outcome": "R",
+  "material": "no",
+  "note": "Day's 10^-86,000,000 is 10^-86020600 exactly"
+ },
+ {
+  "id": "M06",
+  "claim": "B5a",
+  "author": "McCarthy",
+  "stated": "22.5M from 100/newborn",
+  "recomputed": "60-100 range x 0.97 non-deleterious x 450,000 gens: 13.1M-21.8M",
+  "outcome": "P",
+  "material": "no",
+  "note": "headline uses top of his own range (Day's input); his stated 60-100 gives 13.1-21.8M against 20M required; 3% is uncited"
+ },
+ {
+  "id": "F01",
+  "claim": "B5b",
+  "author": "Mansfield",
+  "stated": "2N neutral alleles x 1/(2N) = 1 per generation",
+  "recomputed": "symbolic: 1",
+  "outcome": "R",
+  "material": "no",
+  "note": "N cancels; exact"
+ },
+ {
+  "id": "F02",
+  "claim": "B5b",
+  "author": "Mansfield",
+  "stated": "(illustration) 1/generation",
+  "recomputed": "450000 fixations over 450000 gens; 20M/450000 = 44.4x short; f for 20M = 0.889; f for 17.5M over 252,000 gens = 1.389",
+  "outcome": "R",
+  "material": "no",
+  "note": "Mansfield says the real proportion is 'much higher'; the needed neutral share (0.89) is consistent with that and with McCarthy's 97%"
+ },
+ {
+  "id": "F03",
+  "claim": "F1",
+  "author": "Mansfield",
+  "stated": "20,000 trucks/h, p = 1/20,000, 100 arrivals in 100 h",
+  "recomputed": "1 arrivals/h; 100 h for 100",
+  "outcome": "R",
+  "material": "no",
+  "note": "steady-state throughput = arrival x probability, latency irrelevant (full pipe assumed, B6)"
+ },
+ {
+  "id": "F04",
+  "claim": "B5b",
+  "author": "Mansfield",
+  "stated": "'genome is only about 10 times that number' (200M)",
+  "recomputed": "15.5",
+  "outcome": "P",
+  "material": "no",
+  "note": "imprecise (15.5x), referent unclear; immaterial"
+ },
+ {
+  "id": "F05",
+  "claim": "A3x",
+  "author": "Mansfield",
+  "stated": "~25M SNV differences",
+  "recomputed": "1% of 3.1e9 = 31M; 35M (CSAC), 37.8M (GAP-07b)",
+  "outcome": "R",
+  "material": "no",
+  "note": "loose, uncited, inside the 25-35M literature spread"
+ },
+ {
+  "id": "H01",
+  "claim": "B5c",
+  "author": "Hancock",
+  "stated": "76.8 per generation",
+  "recomputed": "6.4e9 x 1.2e-8 = 76.8; haploid 3.2e9 x 1.2e-8 = 38.4",
+  "outcome": "R",
+  "material": "no",
+  "note": "arithmetic reproduces; diploid genome was the wrong basis for a fixation rate and Hancock corrected it on screen (GG-05)"
+ },
+ {
+  "id": "H02",
+  "claim": "B5c",
+  "author": "Hancock",
+  "stated": "38M",
+  "recomputed": "2 x 252,000 x 76.8 = 38.7M; with 38.4: 19.35M",
+  "outcome": "R",
+  "material": "no",
+  "note": "first pass reproduces; the corrected SNV value is half"
+ },
+ {
+  "id": "H03",
+  "claim": "B5c",
+  "author": "Hancock",
+  "stated": "152 / 2 = 76; ~38M",
+  "recomputed": "mean(98,206) = 152; /2 = 76; 2 x 252,000 x 76 = 38.30M",
+  "outcome": "R",
+  "material": "no",
+  "note": "the retained 76 is an event count (cited de novo range 98-206), not 76.8; reproduces"
+ },
+ {
+  "id": "H04",
+  "claim": "B5c",
+  "author": "Hancock",
+  "stated": "38M matches 35-40M observed",
+  "recomputed": "2muT L = 19.35M; theta_anc L = 20.28M (Ne_anc 1.32e5); sum 39.6M vs observed ~35M (SNV) / ~40M (events)",
+  "outcome": "P",
+  "material": "no (conclusion survives)",
+  "note": "arithmetic holds; on an SNV basis the observed total is post-split supply PLUS ancestral polymorphism, so 19M + 20M (not 38M alone) is the null; the qualitative conclusion (neutral supply is enough) survives, the match is coincidental on an SNV reading and fine on an event reading"
+ },
+ {
+  "id": "H05",
+  "claim": "B5c",
+  "author": "Hancock",
+  "stated": "205M -> 'something like 407' per generation; ~5x",
+  "recomputed": "205e6/(2 x 252,000) = 406.7; per-lineage reading 205e6/252,000 = 813; 813/76.8 = 10.6x (2 lineages: 813/153.6 = 5.3x)",
+  "outcome": "R",
+  "material": "no",
+  "note": "arithmetic reproduces; fidelity: Day's 205M is already per lineage (apportioned symmetrically, Z23003785), so dividing by BOTH lineages' generations halves the requirement"
+ },
+ {
+  "id": "H05f",
+  "claim": "B5c/A3d",
+  "author": "Hancock",
+  "stated": "Day: 205M per lineage",
+  "recomputed": "'apportioned symmetrically to the human lineage' present=True; '205 million required fixations on the human lineage' present=True",
+  "outcome": "R",
+  "material": "no",
+  "note": "fidelity: Day's text confirmed (read-only grep of sources/raw/day/zenodo-23003785.txt)"
+ },
+ {
+  "id": "H06",
+  "claim": "A3d",
+  "author": "Hancock",
+  "stated": "should be 2 x 180 = 360 (factor of two)",
+  "recomputed": "205e6/191 = 1073298; 410e6/(2 x 191) = 1073298 (same)",
+  "outcome": "R",
+  "material": "no",
+  "note": "the doubling is arithmetically right if the comparator is a two-lineage total; Day's comparator is per lineage, so the shortfall ratio is invariant (no effect)"
+ },
+ {
+  "id": "H07",
+  "claim": "A5c",
+  "author": "Hancock",
+  "stated": "4e-5 per gen; ~22,000 gens",
+  "recomputed": "4.6e6 x 1e-11 = 4.60e-05; 1/that = 21739; at 8.9e-11: 4.09e-04, 2443 gens (stated 8.9x lower rate)",
+  "outcome": "P",
+  "material": "partly (17x vs 1.8x)",
+  "note": "22,000 reproduces from 1e-11; '4e-5' is 4.6e-5 rounded down 13%; the input 1e-11 is 8.9x below the measured LTEE 8.9e-11 (neutral 2,439 gens vs observed 1,322, not 22,000)"
+ },
+ {
+  "id": "H08",
+  "claim": "B5",
+  "author": "Hancock",
+  "stated": "neutral substitution rate = mutation rate",
+  "recomputed": "limit s->0 of Kimura u(p0) = p0; k = 2N mu x (1/2N) = mu",
+  "outcome": "R",
+  "material": "no",
+  "note": "sympy; with p0 = 1/(2N) census N"
+ },
+ {
+  "id": "H09",
+  "claim": "B6c",
+  "author": "Hancock",
+  "stated": "no variation under serial model",
+  "recomputed": "theta = 4.80e-04 per site; 1.54e+06 differences per genome pair",
+  "outcome": "R",
+  "material": "no",
+  "note": "observed diversity ~1e-3 per site is >> 0, so the serial reading fails; consistent"
+ },
+ {
+  "id": "H10",
+  "claim": "G2",
+  "author": "Hancock",
+  "stated": "serial divisions",
+  "recomputed": "252000/1400 = 180; /66000 = 3.8; /20000 = 12.6; /27600 = 9.1",
+  "outcome": "R",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "N01",
+  "claim": "B5e",
+  "author": "Nesslig20",
+  "stated": "37.8M",
+  "recomputed": "2 x 75 x 6.3e6/25 = 37.8M",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; the post's last step writes 12.6e6/0.33 = 37.8M (0.33 is 1/3 rounded; exact 1/75 x 25 = 0.3333)"
+ },
+ {
+  "id": "N02",
+  "claim": "B5e",
+  "author": "Nesslig20",
+  "stated": "mu_G = 75 'per haploid genome'",
+  "recomputed": "if haploid events: 150 per newborn (inside 98-206); SNV pedigree haploid 38.4 (ratio 1.95); if zygote count: 18.9M",
+  "outcome": "P",
+  "material": "yes if zygote-level (2x)",
+  "note": "own definition is per haploid genome, own range '100 to 200 per generation' is not labelled; internally either reading is possible; a haploid-events value matches Hancock's 76 but then the comparator '31-62M SNVs' is an SNV count"
+ },
+ {
+  "id": "N03",
+  "claim": "B5e",
+  "author": "Nesslig20",
+  "stated": "1-2% = 31-62M SNVs",
+  "recomputed": "31-62M",
+  "outcome": "R",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "N04",
+  "claim": "B5e",
+  "author": "Nesslig20",
+  "stated": "50% at 3.48Ne; 60.6% at 4Ne; 95% at 8.19Ne; 99% at 11.41Ne; 99.9% at 16.01Ne",
+  "recomputed": "series: 50% at 3.48Ne; 60.6% at 4Ne; 95% at 8.19Ne; 99% at 11.41Ne; 99.9% at 16.01Ne; exact WF (2N=1000) F(3.48Ne)=0.502 F(4Ne)=0.608 F(8.19Ne)=0.950 F(11.41Ne)=0.990",
+  "outcome": "R",
+  "material": "no",
+  "note": "his CDF is the standard conditional fixation-time distribution; mean = 4Ne (telescoping series)"
+ },
+ {
+  "id": "N05",
+  "claim": "B5e",
+  "author": "Nesslig20",
+  "stated": "constant rate reached after a lag of 4Ne",
+  "recomputed": "lag = int(1-F) = 4Ne = 40,000 gens; applied: 2 x 75 x (252,000-40,000) = 31.8M (vs 37.8M)",
+  "outcome": "R",
+  "material": "no (he states it)",
+  "note": "his own plot reproduces Day's B1a subtraction; he sets it aside on the standing-variation ground (B1c), the same step Mansfield makes"
+ },
+ {
+  "id": "N06",
+  "claim": "A2d",
+  "author": "Nesslig20",
+  "stated": "444; 23; 0.0023; 0.0046; 37.8M",
+  "recomputed": "20000/45 = 444; 13500/593 = 22.8; 1/444 = 0.0023; 4.6e6 x 1e-9 = 0.0046; 1/75 x 25 = 0.3333",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; the Barrick citation year is printed '2019' where the link is the 2009 Nature paper (typo, fidelity only)"
+ },
+ {
+  "id": "N07",
+  "claim": "(none)",
+  "author": "Nesslig20",
+  "stated": "69,314,717; 0.86; 0.98; 0.51",
+  "recomputed": "n = 69314717; P(2e8) = 0.8647; P(4e8) = 0.9817; P(7e7) = 0.5034",
+  "outcome": "R",
+  "material": "no",
+  "note": "0.51 should read 0.50 (rounding); immaterial; lottery illustration, no claim file"
+ },
+ {
+  "id": "N08",
+  "claim": "A3x",
+  "author": "Nesslig20",
+  "stated": "1.7%, 15.0%, 16.7%; 10 bp vs 2 mutations; 205M from ~14% of 3 Gbp",
+  "recomputed": "1/60 = 0.0167; 9/60 = 0.15; sum 0.1667; 14% x 3e9 = 420Mbp; /2 = 210M",
+  "outcome": "R",
+  "material": "no",
+  "note": "toy and reading of the 410 Mbp -> 205M step reproduce; supports A3x's unit point"
+ },
+ {
+  "id": "N09",
+  "claim": "(none)",
+  "author": "Nesslig20",
+  "stated": "504 fused chromosomes; P_fix = 1/Ne = 0.00005",
+  "recomputed": "1/500 x 6.3e6/25 = 504; 1/(2 x 1e4) = 5e-05; 1/Ne would be 1e-04",
+  "outcome": "P",
+  "material": "no",
+  "note": "arithmetic reproduces; symbol slip (1/Ne for 1/(2Ne)); and 1/500-625 is a birth PREVALENCE used as the new-mutation rate in k = mu (reductio only, immaterial to the argument)"
+ },
+ {
+  "id": "N10",
+  "claim": "H6",
+  "author": "Nesslig20",
+  "stated": "300 generations per beneficial mutation",
+  "recomputed": "30/0.1 = 300",
+  "outcome": "R",
+  "material": "no",
+  "note": "Haldane; T_fix(p) -> 4Ne as p -> 0: 4*Ne"
+ },
+ {
+  "id": "R01",
+  "claim": "B5f",
+  "author": "Dumb-and-Dumber",
+  "stated": "~9.7M; gap under a factor of two",
+  "recomputed": "38.4 x 252,000 = 9.68M; 17.5/9.68 = 1.81",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces"
+ },
+ {
+  "id": "R02",
+  "claim": "B5f",
+  "author": "Dumb-and-Dumber",
+  "stated": "40,000-132,000 gens window",
+  "recomputed": "(252,000-40,000) x 38.4 = 8.14M; (252,000-132,000) x 38.4 = 4.61M",
+  "outcome": "R",
+  "material": "no",
+  "note": "own 4Ne subtraction would lower the 9.7M he quotes (not applied); noted in claim file"
+ },
+ {
+  "id": "R03",
+  "claim": "A2h",
+  "author": "Dumb-and-Dumber",
+  "stated": "3.2e9 x 1.2e-8 x 100 = 3,840, not 38,400",
+  "recomputed": "3840",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT; Day's s6.4 prints 38,400"
+ },
+ {
+  "id": "R03f",
+  "claim": "A2h",
+  "author": "Dumb-and-Dumber",
+  "stated": "Day prints 38,400",
+  "recomputed": "'approximately 38,400 mutations per' present=True",
+  "outcome": "R",
+  "material": "no",
+  "note": "fidelity confirmed in raw Z23003785"
+ },
+ {
+  "id": "R04",
+  "claim": "A2c/E5",
+  "author": "Dumb-and-Dumber",
+  "stated": "-906; Ara+5 38 -> 0",
+  "recomputed": "mutator mean 477.6 -> 104.7 gen/fix; non-mutator 45.4 -> 1321.6 gen/fix",
+  "outcome": "R",
+  "material": "no",
+  "note": "values exist in Day's tables; Day's own means reproduce; critic's quote accurate"
+ },
+ {
+  "id": "R05",
+  "claim": "A3a",
+  "author": "Fun-Friendship4898",
+  "stated": "multiplying 187Mb by 2, then adding 35M SNVs",
+  "recomputed": "2 x 187 + 35 = 409M (Day: 410M)",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT reconstruction of Day's total; Day's listed parts do not sum otherwise (A3a)"
+ },
+ {
+  "id": "K01",
+  "claim": "A5b",
+  "author": "Sparky_6_4/KITTENS",
+  "stated": "94,000 x 11.7 ~ 1.1M",
+  "recomputed": "38.4/4.1e-4 = 93659; 205/17.5 = 11.714; product 1.097M vs paper 1.075M (2.1% high)",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; rounding of F = 190.6 explains the 2%"
+ },
+ {
+  "id": "K02",
+  "claim": "A5b",
+  "author": "Sparky_6_4/KITTENS",
+  "stated": "achievable 17.9M ~ 17.5M required",
+  "recomputed": "191 x 93659 = 17.89M (190.6: 17.85M)",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; linear scaling is flagged by the author as an illustration (RE-09)"
+ },
+ {
+  "id": "K03",
+  "claim": "A5b",
+  "author": "Sparky_6_4/KITTENS",
+  "stated": "'shortfall = 94,000 x 11.7'",
+  "recomputed": "paper SNV-only shortfall 17.5M/191 = 91623 (3.0 prints 91,600); 91,600 x 11.7 = 1.07M; ratio 94,000/91,600 = 1.026",
+  "outcome": "P",
+  "material": "no",
+  "note": "the decomposition is exact only if scaled achievable equals required (parity); the 2.6% difference is that parity gap; immaterial"
+ },
+ {
+  "id": "K03f",
+  "claim": "A5b",
+  "author": "Sparky_6_4/KITTENS",
+  "stated": "inputs in Day's paper",
+  "recomputed": "4.1e-4 line: True; '191' row: True; '1,075,000' present: True",
+  "outcome": "R",
+  "material": "no",
+  "note": "fidelity: inputs found in Z23003785"
+ },
+ {
+  "id": "C01",
+  "claim": "(CA-06)",
+  "author": "Camestros",
+  "stated": "1500/35 ~ 429",
+  "recomputed": "15,000/35 = 428.6; 1,500/35 = 42.9",
+  "outcome": "P",
+  "material": "no",
+  "note": "numerator typo (extra digit missing); the result 429 is right; author hedges; immaterial, no claim file"
+ },
+ {
+  "id": "C02",
+  "claim": "(CA-01/02)",
+  "author": "Camestros",
+  "stated": "F_max = t d /(g G_f); 'arithmetic isn't wrong'",
+  "recomputed": "9e6 x 0.45/(20 x 1,600) = 126.6 (Hossjer's 127)",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT credit: transcription and concession reproduce; also Hossjer's check"
+ },
+ {
+  "id": "C03",
+  "claim": "B6b",
+  "author": "Camestros",
+  "stated": "all differences treated as post-split",
+  "recomputed": "Day 2019: 15M + 15M = 30M; CSAC fixed share: 27.3-30.1M of 35M (13.7-15.0M per lineage)",
+  "outcome": "R",
+  "material": "no",
+  "note": "accurate to Day 2019 text; qualitatively right (B4a quantifies)"
+ },
+ {
+  "id": "J01",
+  "claim": "A5a",
+  "author": "Hossjer",
+  "stated": "127; 15,800; 10 million; factor 2",
+  "recomputed": "126.56; x125 = 15820; x652 = 10.32M; 20/10.32 = 1.94",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; 125 x 127 = 15,875 vs printed 15,800 is rounding"
+ },
+ {
+  "id": "J02",
+  "claim": "A5a",
+  "author": "Hossjer",
+  "stated": "three orders / five orders below 20M",
+  "recomputed": "20e6/15,800 = 1266; 20e6/127 = 157480",
+  "outcome": "R",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "J03",
+  "claim": "B5h",
+  "author": "Hossjer",
+  "stated": "7.6M; ~10M 'very close'",
+  "recomputed": "3e9 x 0.45 x 1.25e-8 x 450,000 = 7.59M; without d 16.9M; 20/7.59 = 2.63; G_neutral = 1/(4.6e6 x 1e-10) = 2174",
+  "outcome": "R",
+  "material": "no",
+  "note": "arithmetic holds; the neutral count carries d = 0.45 in the mutation supply (the factor that accounts for most of the gap, A5a/B5h); 7.6M and 10M are called 'very close' (ratio 1.34)"
+ },
+ {
+  "id": "J04",
+  "claim": "H5",
+  "author": "Hossjer",
+  "stated": "cost step 'in line with equation (3)' (15,800)",
+  "recomputed": "450,000/300 = 1500 Haldane; 15,800/1,500 = 10.5; 650 vs 3e9/4.6e6 = 652",
+  "outcome": "R",
+  "material": "no",
+  "note": "arithmetic reproduces; internal non-sequitur (the 15,800 is a rate scaling, not a cost computation) stands [cf]"
+ },
+ {
+  "id": "J05",
+  "claim": "A5a",
+  "author": "Hossjer",
+  "stated": "d = g_len/A = 0.45",
+  "recomputed": "A = 20/0.45 = 44.4 y",
+  "outcome": "R",
+  "material": "no",
+  "note": "implied expected human age 44 y (not stated)"
+ },
+ {
+  "id": "V01",
+  "claim": "B3i",
+  "author": "Matev",
+  "stated": "sum over alleles of 1/(2Ne) = N/Ne > 1",
+  "recomputed": "N/Ne for N = 1e6, Ne = 1e4: 100; exact chains (2N = 40): max|u - i/2N| WF 3.0e-15, sweepstakes 5.0e-16; Ne_var/N at p=.5: WF 1.00, sweep 0.15; sum_i u_i(1 copy) = 1.000000000000",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT: absorption probability is exactly i/2N for exchangeable models whatever Ne; the 2N copies' probabilities must sum to 1"
+ },
+ {
+  "id": "V02",
+  "claim": "G5",
+  "author": "Matev",
+  "stated": "CV falls, variance rises with n",
+  "recomputed": "Var = 39250, sd = 198.1, CV = 0.252%; at 2n: Var 78500, CV 0.178%",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT (binomial)"
+ },
+ {
+  "id": "V03",
+  "claim": "B3e",
+  "author": "Matev",
+  "stated": "'one over sixteen-billion'",
+  "recomputed": "1/(2 x 8e9) = 6.25e-11 = 1/1.6e+10",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces Day's use of census N = 8e9 in 1/(2N)"
+ },
+ {
+  "id": "K-01",
+  "claim": "B7c",
+  "author": "keruru",
+  "stated": "P_fix = 1/(2N_census); sweepstakes same",
+  "recomputed": "exact solves above: max error 3.0e-15 (WF), 5.0e-16 (sweepstakes, Ne_var/N = 0.15)",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC (former ally) CORRECT, retraction of k = (N/Ne) mu is right; code not retrieved but the claim is verified independently"
+ },
+ {
+  "id": "K-02",
+  "claim": "C5",
+  "author": "keruru",
+  "stated": "0.6%; ~1 My; sd 0.05",
+  "recomputed": "240/40,000 = 0.006; 40,000 x 25 y = 1.0 My; sd = sqrt(.25 x 240/20000) = 0.0548",
+  "outcome": "R",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "K-03a",
+  "claim": "C5",
+  "author": "keruru",
+  "stated": "4e-35 at p = 0.5",
+  "recomputed": "exact WF 5.12e-45 (Gaussian one-boundary 6.21e-47; reflection-doubled 1.24e-46; repo 1.2e-46)",
+  "outcome": "N",
+  "material": "no (conclusion robust)",
+  "note": "keruru's per-locus value is off by 9.9 orders (too large); direction conservative"
+ },
+ {
+  "id": "K-03b",
+  "claim": "C5",
+  "author": "keruru",
+  "stated": "6e-93 at p = 0.1",
+  "recomputed": "exact WF 5.88e-113 (Gaussian 2.08e-115)",
+  "outcome": "N",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "K-03c",
+  "claim": "C5",
+  "author": "keruru",
+  "stated": "'only above ~0.99 any meaningful chance'",
+  "recomputed": "exact WF: p=.9 3.73e-08; .95 0.000224; .99 0.191",
+  "outcome": "R",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "K-03d",
+  "claim": "C5",
+  "author": "keruru",
+  "stated": "expected count ~1e-29 over a million loci 'from intermediate frequencies'",
+  "recomputed": "all at 0.5: 5.1e-39; uniform 0.1-0.5: 4.9e-41; uniform 0.1-0.9: 0.00026; uniform 0.1-0.99: 1.3e+03; uniform 0.5-0.9: 0.00053",
+  "outcome": "N",
+  "material": "no",
+  "note": "the figure equals 1e6 x 4e-35 (all loci at 0.5); with the exact value that is ~1e-40; any spectrum reaching 0.9 is dominated by its top edge; conclusion (zero is expected unless loci start above ~0.9) stands"
+ },
+ {
+  "id": "K-04",
+  "claim": "B4g",
+  "author": "keruru",
+  "stated": "fossil-calibrated ~2x pedigree",
+  "recomputed": "1.23%/(2 x 252,000) = 2.44e-08 = 2.03 x 1.2e-8; minus theta_anc 6.3e-3: 1.19e-08",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; the factor 2 disappears when the ancestral term is subtracted (B4a)"
+ },
+ {
+  "id": "K-05",
+  "claim": "C5b",
+  "author": "keruru",
+  "stated": "Ne 8,139 (102 gens), 9,835 (250 gens)",
+  "recomputed": "E[F] = 250/(2 x 9835) = 0.0127; Ne = 2: 62.5 (saturated)",
+  "outcome": "R",
+  "material": "no",
+  "note": "arithmetic only; temporal estimator not re-run here (C1d)"
+ },
+ {
+  "id": "K-06",
+  "claim": "B2e",
+  "author": "keruru",
+  "stated": "Wright ratio 4/(Vk+2) vs measured; 4Ne transits",
+  "recomputed": "4/7 = 0.571; /8.1e-4 = 705; /6.9e-4 = 828; 4Ne/260,000 = 1.4, 10.7, 12.5, 15.1%",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces"
+ },
+ {
+  "id": "K-07",
+  "claim": "B2e",
+  "author": "keruru",
+  "stated": "ratio 1e-4 / 4e-4 / 8e-4 in one draft",
+  "recomputed": "6,933/1e7 = 6.9e-04; 8,139/1e7 = 8.1e-04",
+  "outcome": "P",
+  "material": "no",
+  "note": "draft inconsistency (flagged '[CHECK]' by the author); not a conclusion-bearing error"
+ },
+ {
+  "id": "G01",
+  "claim": "G2a",
+  "author": "Ghijselen",
+  "stated": "60,000 x 4 h; 27 y",
+  "recomputed": "240000 h = 27.4 y",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces; fidelity partial (analogy to a latency division, not to G_f)"
+ },
+ {
+  "id": "G02",
+  "claim": "G2b",
+  "author": "Duffy/Ghijselen",
+  "stated": "180; 360",
+  "recomputed": "252,000/1,400 = 180; 205e6/180 = 1138889 (paper 1,139,000x)",
+  "outcome": "R",
+  "material": "no",
+  "note": "reproduces the book's 2nd-edition arithmetic"
+ },
+ {
+  "id": "G03",
+  "claim": "A4c",
+  "author": "Duffy",
+  "stated": "25 generations at 80%",
+  "recomputed": "1,600/25 = 64; 1,600/15.7 = 102; 1,600 x 0.45 = 720",
+  "outcome": "P",
+  "material": "no",
+  "note": "units and derivation not stated in the quote; not determinable; no verdict beyond fidelity unverifiable"
+ },
+ {
+  "id": "G04",
+  "claim": "G1b",
+  "author": "Samson",
+  "stated": "total / time = average rate",
+  "recomputed": "205e6/252,000 = 813; 17.5e6/252,000 = 69.4",
+  "outcome": "R",
+  "material": "no",
+  "note": ""
+ },
+ {
+  "id": "G05",
+  "claim": "ROOT-k",
+  "author": "Keen",
+  "stated": "orders of magnitude beyond the age of the universe",
+  "recomputed": "6.3e6 x 1.075e6 = 6.77e+12 y = 491 x 13.8e9 y",
+  "outcome": "R",
+  "material": "no",
+  "note": "R only if the shortfall is read as a time multiplier at a fixed rate (A2e); preface gives no numbers; defers to Day"
+ },
+ {
+  "id": "G06",
+  "claim": "D14",
+  "author": "Davis (Eden)",
+  "stated": "1e36 transfers",
+  "recomputed": "1/(1e-15 x 1e-21) = 1e+36; population 1e36/(1e12 x 1e-6) = 1e+30; 1e13 t / 1e30 = 1e-11 g per cell; 1e16 kg/5.1e14 m2/1000 = 0.020 m",
+  "outcome": "P",
+  "material": "no",
+  "note": "relays Eden's arithmetic correctly; 1e-11 g/cell is ~10x a typical E. coli (~1e-12 g); Eden's inputs are unsourced and he calls it 'very rough'"
+ },
+ {
+  "id": "G07",
+  "claim": "D8",
+  "author": "Day (quoting Milton)",
+  "stated": "1e-65 = winning the lottery every week for a thousand years with the same numbers",
+  "recomputed": "52,143 weeks x log10(1/1.4e8) = 10^-424764; 10^-65 is 8.0 weeks of a 1-in-1.4e8 lottery; 20^50 = 10^65.05",
+  "outcome": "N",
+  "material": "no",
+  "note": "the analogy does not match the number by ~5 orders of magnitude of exponent; rhetorical, unattributed summary, immaterial to any calculation"
+ },
+ {
+  "id": "G08",
+  "claim": "F4",
+  "author": "Bowers (via Day)",
+  "stated": "u ~ 2s",
+  "recomputed": "Kimura u(N=100,s=.01) = 0.02017; 2s = 0.02",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT (original not found; reposted by Day)"
+ },
+ {
+  "id": "G09",
+  "claim": "A2d",
+  "author": "Camestros/Duffy",
+  "stated": "average, not the fastest",
+  "recomputed": "1,322/78 = 16.9; 893/104.7 = 8.5; Ara-4 43 gens/fix",
+  "outcome": "R",
+  "material": "no",
+  "note": "CRITIC CORRECT: Day's own table has faster LTEE rates"
+ },
+ {
+  "id": "S01",
+  "claim": "A3",
+  "author": "CSAC (read by Day, Hancock)",
+  "stated": "~5M indel events vs ~35M substitutions",
+  "recomputed": "two-lineage total per GAP-07/07b (measured 4.30M); not recomputed",
+  "outcome": "R",
+  "material": "no",
+  "note": "resolved elsewhere; 40M = 35M + 5M total, 20M per lineage"
+ }
+]

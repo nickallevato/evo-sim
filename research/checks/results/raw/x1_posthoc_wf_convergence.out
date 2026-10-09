@@ -1,0 +1,10 @@
+M=  2000 t=  24 W=  223 exact=1.786e-42 gauss1=6.211e-47 ratio=28756.8
+M=  5000 t=  60 W=  353 exact=5.123e-44 gauss1=6.211e-47 ratio=824.7
+M= 10000 t= 120 W=  500 exact=1.188e-44 gauss1=6.211e-47 ratio=191.2
+M= 20000 t= 240 W=  707 exact=5.119e-45 gauss1=6.211e-47 ratio=82.4
+M= 40000 t= 480 W= 1000 exact=3.186e-45 gauss1=6.211e-47 ratio=51.3
+M= 20000 t= 240 W= 1000 exact=5.119e-45 gauss1=6.211e-47 ratio=82.4
+p=0.10 exact=5.883e-113
+p=0.50 exact=5.119e-45
+p=0.90 exact=3.733e-08
+p=0.99 exact=0.1906
