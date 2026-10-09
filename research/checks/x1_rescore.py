@@ -116,7 +116,8 @@ DAY = {  # id: (rule_internal, rule_fidelity, reason)
  "C2c": ("non-sequitur", "n/a", "N2a: constant s-ratio is an algebraic identity for any d; stays"),
  "C2b": ("non-sequitur", "unverifiable", "N2a: own regression gives k = 0.10 mu at d = 1; k = mu gives d < 0; data source uncited (F)"),
  "C": ("non-sequitur", "n/a", "N2a on Day's own Ne = 1e4: neutral predicts ~0 from <50% and 0.04-0.11 from 50-90%; same computation makes keruru's C5 'holds' (the conclusion points the other way)"),
- "H1": ("holds", "n/a", "SC: retraction corrects a slip in a later source; holds"),
+ "H1": ("holds", "partial", "SC: retraction corrects a slip in a later source; holds. F: Bergeron cited, 40-fold accurate, the 25x comparison is Day's own and not in the paper (own table)"),
+ "B1d": ("=", "unverifiable", "F: Wright's Ne formula cited, original not retrieved (own table)"),
  "B3a": ("holds", "misread", "fidelity unchanged: source text in hand (Kimura 1/2Ne vs 1/2N)"),
  "F3a": ("pending", "misread", "fidelity unchanged: Zeng 2021 text in hand"),
  "A1c": ("=", "unverifiable", "F: revised CHLCA range (250 kya-1.3 Mya) given without citation in the claim"),
@@ -231,6 +232,21 @@ out.append("| Side | Before | After |")
 out.append("|---|---|---|")
 for s in ("day", "critic", "ally"):
     out.append("| %s | %d / %d | %d / %d |" % (s, fcount(s, "before"), den[s], fcount(s, "after"), den[s]))
+# appendix: Day fidelity-n/a numeric files left unchanged, with the category
+CAT = {
+ "A": "D (formula node; inputs are scored in A1-A3)", "A4": "D (definition; the estimate is A4a)", "A4d": "D (describes the paper's choice)",
+ "B1": "C (cites Kimura-Ohta, accurate; Chalub is B1e)", "B1a": "C (Kimura-Ohta first moment, accurate)", "B1b": "D (derived from 4Ne)",
+ "B2d": "Q (qualitative)", "B3e": "D (own inputs, standard values)", "B3f": "D (own inputs, standard values)", "B3h": "C (Keightley cited, partial in the table)",
+ "B6a": "C (Yoo and CSAC cited, verified)", "C": "C (Mallick, Mathieson cited, accurate)", "C1a": "Q", "C2c": "D (own table)", "C5a": "C (Keightley cited, verified)",
+ "C7": "D (inference from C)", "D2i": "C (Schutzenberger quote, accurate)", "D9": "D (hypothetical parameters, 'Under N = ...')", "D9a": "Q (inference)",
+ "F1a": "C (Good verified; Zeng is F3a)", "F2": "Q (proposed check)", "F4a": "Q", "G1": "C (Good verified)", "G2g": "Q", "G3b": "Q", "G4": "Q", "G4b": "D",
+ "Gb": "D (own model)", "Gc": "D (own model)", "Ge": "Q", "H10": "C (Keightley cited, H7)", "ROOT": "Q", "ROOT-B": "Q", "ROOT-M": "Q",
+}
+unch = [c for c in sides["day"] if c["fidelity"] == "n/a" and c["id"] not in DAY and c["id"] not in NEW_DAY]
+out.append("\n## Day files with fidelity n/a that were NOT changed (%d), by category\n" % len(unch))
+out.append("D = derivation or definition from the author's own assumptions (no external input borrowed); C = cites a source whose own row is accurate or verified (a bookkeeping change to `accurate` is available, not an uncited-input case); Q = qualitative or position statement. Categories are a claim-level reading from the title and the primary-literature table, not a full re-read.\n")
+for c in sorted(unch, key=lambda c: c["id"]):
+    out.append("- %s: %s" % (c["id"], CAT.get(c["id"], "not categorised (no numeric input or position)")))
 txt = "\n".join(out) + "\n"
 open(os.path.join(HERE, "results", "R4-X1-rescore.md"), "w").write(txt)
 print(txt)
