@@ -4,10 +4,10 @@ The live queue (moved out of `REVIEW.md` on 2026-10-09 to save tokens: agents th
 
 ## Queue (after review #13)
 In flight (2026-10-09; one subagent at a time from now on, per the user; compute on na-workhorse only):
-- **XT (cross-tool replication in fwdpy11 / SLiM):** paused after pre-registration (da1c178). `xt_cross_tool.py` has an uncommitted edit made after pre-registration (smaller run sizes; bootstrap SE robust to chunks with 0 fixations): commit it labelled post hoc, or discard it, before running. Low-stakes tier (tool validation): one combined review.
+- **XT (cross-tool replication in fwdpy11):** post hoc edit committed (sizes, bootstrap SE; before any main run). Smoke passed on na-workhorse (SLiM not available; fwdpy11 0.24.7 is the independent tool). Main run `xt_cross_tool.py all 1` (1 worker, PID 3896711, launched 2026-10-09 16:34 -06:00; `results/raw/xt_all.{out,host}` on workhorse). Pace: b0n 10/36 chunks in 630 s, so the whole run is expected to take several hours (not within 90 min). Next: when `xt_all.out` shows the last stage (cohort) done, rsync `results/raw/xt_*` back, write `results/R4-XT.md` (with "Who this helps"), one combined review, fix pass, integration. Low-stakes tier. Note: smoke-size cohort/B1 rows are noisy and meaningless; ignore them.
 - **D15 (Hössjer regulatory waiting time):** load-bearing tier (three reviews).
-  - D15: the `sweep` stage was launched 2026-10-09 15:44 -06:00 (3 workers, PID 3860703; record `results/raw/d15_sweep.host`) after the post hoc f=3 amendment for the N_e=1e5 S2/S3/Fin2/Fin3 cells (639b94b). Then: write-up, reviews.
-- **P1 (machine-checked derivations, sympy/mpmath): awaiting reviews.** Pre-registered c17b44a; run 2026-10-09 on na-workhorse; write-up `results/R4-P1.md`. All 17 identity groups and 33 Day-arithmetic rows came out as predicted (no failures). Low-stakes tier (re-confirmation): one combined review, then integration.
+  - D15 progress at 2026-10-09 16:45: 17 of 714 cells in `results/raw/d15_sweep.jsonl`. The `sweep` stage was launched 2026-10-09 15:44 -06:00 (3 workers, PID 3860703; record `results/raw/d15_sweep.host`) after the post hoc f=3 amendment for the N_e=1e5 S2/S3/Fin2/Fin3 cells (639b94b). Then: write-up, reviews.
+- **P1: DONE** (combined review #14 and integration 2026-10-09; milestone post and board patch deferred to the next milestone). Pre-registered c17b44a; run 2026-10-09 on na-workhorse; write-up `results/R4-P1.md`. All 17 identity groups and 33 Day-arithmetic rows came out as predicted (no failures). Low-stakes tier (re-confirmation): one combined review, then integration.
 
 Next:
 1. **C1e:** the C1c model run on each published Holocene trajectory (Gravel, Gazave, Coventry, Nelson; `sources/holocene-ne.md`), pre-registered.
