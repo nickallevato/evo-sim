@@ -1,0 +1,87 @@
+# Correctness review of GAP-07b (direct event count, hg38 vs panTro6)
+
+Reviewer scope: parsing (net, chain, axtNet), double counting, gorilla polarization, N and repeat masking, arithmetic and denominators, pre-registration fidelity, labelling. Date 2026-10-09. Files reviewed: `R4-GAP07b-alignment.md`, `gap07b_alignment_count.py` (3c847b8), `gap07b_posthoc_{blocks,polarize,ladder}.py`, `results/raw/gap07b_*`, context `R4-GAPS-04-07-02.md`, `gaps.md` GAP-07, `quotes-day.md` Q14/Q15/Q74, A3a/A3d/A3x claims.
+
+Method: read all code; re-ran the cheap parts against `sources/raw/ucsc-2026-10-09/` (read-only, `research/.venv/bin/python -I`, `nice -n 19`, scratch scripts in the session scratchpad, nothing written to the repo apart from this file). Where I wrote an independent implementation it is named below.
+
+## Verdict
+
+**No BLOCKER.** The headline numbers (37.77 M SNVs, 4.30 M indel events, 42.1 M events, 21.05 M per lineage, 205 M / 21.05 M = 9.74) reproduce and the parsing is correct. There are 3 MAJOR findings (all about secondary claims: indel polarization, per-lineage figures in §7, and the N-masking / filter-robustness story) and 10 MINOR findings (mostly labelling, wording and one arithmetic slip in §13). None of them changes the central ratio; the direction of every identified bias is stated below.
+
+## What I verified and found correct
+
+| # | check | evidence |
+|---|---|---|
+| V1 | Net indent semantics: fill at odd indent, gap at even indent; no top-level gap lines | scan of the primary-chromosome net: fills at indent 1/3/5/7/9/11/13 = 2,153/24,279/6,066/1,472/214/13/1; gaps at 2/4/6/8/10/12 = 2,052,685/134,337/17,560/2,201/194/13; total gap lines 2,206,990, equal to `gap07b_net.out` |
+| V2 | Net `oStart` is on the + strand, so `qcover` (net stage) needs no strand flip | first fills of `chr1`: fill `chr4 - 188602557 50273`; gap lines inside it have qStart 188650801, 188648809, 188648686, 188641665 ... decreasing as t increases and lying inside [188602557, 188652830) |
+| V3 | Chain parse (header fields, block lines, `p += size; p += dt`) and the fill-matching rule | independent re-implementation (own net range builder, own chain pass) gives **4,301,652** counted gaps in 24,260 chains, identical to `gap07b_chain.out`, and identical size/kind cells; `tStrand` is "+" for every used chain (asserted) |
+| V4 | Net gap lines and chain gaps are the same objects | human-containing chain gaps by class (894,824; 1,049,158; 194,483; 53,477; 15,048) equal the net-gap-line counts in `gap07b_report.out` exactly, including 15,048 = 6,576 + 8,472 at >1000 bp |
+| V5 | A chain gap is counted at most once; no overlap of fills of one chain id | 24,260 ids, 3,573 with more than one fill, 0 overlapping same-id ranges; `break` after first match |
+| V6 | Gaps of used chains outside the fills are rightly excluded | 888,841 gaps (1.13 Gb raw) lie in trimmed-away parts of used chains; only 563 of them (34 Mb) are "bridging" gaps between two pieces of the same chain whose span is filled by another chain. Negligible for counts |
+| V7 | No t-side double coverage in the axt | chr21: 2,568 records, 0 overlapping t-intervals. Pan axt is grouped by chromosome (no repeated chromosome in the 358 header runs; 157,734 records), so `finish_chrom` cannot double-add events |
+| V8 | SNV parse and counts | independent numpy implementation (different encoding, own parser) over the whole pan axt: valid columns 2,805,082,624, SNVs **37,767,396**, transitions 25,397,185 (Ts/Tv 2.053), SNVs in records <2% divergent 33,765,842. All identical to the note |
+| V9 | SNV polarization (gorilla) | chr21: original code (imported, run on extracted chr21 records) gives human-derived/chimp-derived/third/unpolarized = 266,749 / 284,546 / 7,915 / 29,768; my independent gorilla map and classifier give the same four numbers; gorilla maps agree on all 36,041,400 covered positions. Logic ("gorilla = chimp base means human-derived") is right |
+| V10 | Ladder and arithmetic | `gap07b_posthoc_ladder.py` re-run reproduces `gap07b_posthoc_ladder.out` byte for byte. 205/21.054 = 9.74; 205/19.053 = 10.76; fixed-share rows 11.33-12.49 reproduce. Scorecard cells P1, P2 (all size classes), P3, P4, P5, P6 (as run), P7, P8 (as run) match the raw tables |
+| V11 | Pre-registration chain | `git diff 3c847b8 -- gap07b_alignment_count.py` is empty; commit 00:51:11, main-run start 00:51:23; post hoc scripts committed after the raw outputs (c1727f0 after 51cea1f) and carry "POST HOC" in their docstrings |
+| V12 | Denominator like for like | Day Q15: "approximately 410 million genomic differences. Apportioned symmetrically to the human lineage this yields approximately 205 million"; Q74: "410 million base pairs separating the two lineages". So 410 M is a **both-lineage total** and 205 M is its half. The check halves a both-lineage total (42.1 M) the same way, so 205 M / 21.05 M = 410 M / 42.1 M = 9.74 regardless of polarization. Using only the polarized human-lineage SNVs (48.6%) moves it to about 10.0-10.2 (see M2) |
+
+## Findings
+
+### MAJOR
+
+**M1. The post hoc "symmetric" indel polarization cannot see events longer than ~100 bp, and defaults "no signal" to "chimp lineage"; the note's explanation of the >50 bp result is incomplete.**
+- `gor_stage` records gorilla gap columns (`gbase == 5`) and gorilla-only insertions (`gins`) only from inside axt records. Net-axt records are broken at chain gaps longer than 100 bp (the script's own docstring, design fact ii), so inside a >100 bp gorilla gap `gbase` is 255 ("not aligned"), never 5, and the gorilla insertion is in no record, so `gins` is 0.
+- `polar()` (post hoc) for human-only gaps requires `D = count(gbase == 5) >= 0.5 L` to call a human insertion, and otherwise calls "chimp lineage" if `D == 0` with aligned flanks. For a >100 bp human insertion absent from gorilla, D = 0 and the flanks are aligned, so it is called a **chimp** deletion. The same holds for chimp-only gaps (`I = sum gins`).
+- Evidence (chr21, `chainev_chr21.npz` against `gor_chr21.npz`): across the 489 human-only gaps >100 bp the mean gorilla "unaligned" (255) fraction is 0.49 but the in-record gorilla-gap (5) fraction is only 0.02; the post hoc rule can call only **8** of them human-lineage, while the pre-registered rule (aligned fraction <= 0.1) would call **219**. Of 595 chimp-only gaps >100 bp only **38** have any gorilla insertion visible within +-5 columns.
+- This is why the post hoc table shows human share exactly 0.000 for the >1000 class under every w and 0.09-0.19 for 51-1000; §7 says only that these "polarize unreliably". The post hoc rule is thus worse than the pre-registered one for large human-only events, while fixing the 1-10 bp asymmetry. The strong w dependence (0.378 to 0.516 for w = 2 to 20, monotone) comes from the same default: wider windows pick up unrelated gorilla-lineage indels, which are read as "human".
+- Effect on the headline: small (events >50 bp are 2.6% of indel events and 0.3% of all events; 1-50 bp events carry the share). But §7 calls the post hoc rule the fix of a "flawed" rule and then cites it as support ("Halving the total ... is supported"). The support actually comes from the SNV split (90% of events). Suggest: state the 100 bp limit and the cause, restrict indel polarization claims to <=50 bp, and report the pre-registered rule's >100 bp result separately.
+
+**M2. The §7 per-lineage figures "19.9 M human / 22.1 M chimp" come from the flawed pre-registered indel polarization, but the text attributes them to the symmetric post hoc rule.**
+- `gap07b_report.out`: "human 19919435; chimp 22149613". These are built in `report_stage` from `cev[:2, :, 1]` = 1,215,112 human-lineage and 2,470,476 chimp-lineage single-sided indels, i.e. the 33%/67% split the note itself calls a method artefact (§7, "as pre-registered").
+- §7 final bullet says "per-lineage events are about 21 M (19.9-22.1 M under the SNV split plus symmetric indels)". Recomputed with the post hoc counts (SNV: 17.28 M + 0.5 x 2.24 M unpolarized/third for human, 18.25 M + 0.5 x 2.24 M for chimp; indels: human/chimp polarized counts plus half of the unpolarized and complex events, 417,877 at w = 5):
+  - w = 2: human 20.07 M, chimp 22.0 M
+  - w = 5: human 20.25 M, chimp 21.82 M
+  - w = 20: human 20.62 M, chimp 21.47 M
+  So the range is about 20.1-20.6 M (human) and 21.5-22.0 M (chimp). The conclusion (near-symmetric, mean 21.0 M) is unchanged; 205 M / human-lineage events = 9.9-10.2.
+- Fix: cite the recomputed numbers or label the 19.9/22.1 M as "with the flawed pre-registered indel rule".
+
+**M3. The N-masking and filter-robustness story (§0 "bp" caveats, §8, scorecard P5/P7) over-states what the filters do.**
+- F1 removes whole *events* that touch at least one N, not N bases. The net has 680 flagged gap lines (137 with tN, 557 with qN); their entire span is 327.1 Mb, but the N bases in them total only 40.4 Mb (post hoc blocks: 44.9 Mb). So of the drop 597 Mb to 270 Mb, about 280 Mb is ordinary non-N, mostly rearranged material (post hoc: 64% of >1 kb bp is aligned elsewhere). §8 "N and gap artefacts ... only move raw bp (597 to 270 Mb)" and the label "no assembly-N" suggest N accounts for the 327 Mb; it accounts for about 12% of it.
+- The flags are asymmetric: chimp-only gaps (dt = 0) have no net gap line, so they get no N, repeat or TRF flag at any size and pass every filter; human-containing >50 bp events and small events (axt runs) are filtered. Chimp-only bp is 96.7 Mb raw, larger than human-only 52.0 Mb. F1-F3 bp are therefore filtered on one side only. The docstring states this; the results note does not.
+- `report_stage` builds L3 as `L2 + unaligned_bp` with `unal_bp = 69.9 + 10.1 = 80.0 Mb` identical in F0-F3 (no filter touches it; 59.5 Mb of it is hg38 centromere models). Of F3's 194 Mb, 41% is this constant. The P7 claim "L3 bp/event stays within 6-25 under every filter" is true as computed, but the filters barely act on the term that drives L3.
+- For the masked rows, events are computed from repeat-masked-free sequence only (about half of the genome) and divided into Day's whole-genome 205 M; §8 says the ratio "stays" 9.7 and lists 22.2 and 23.7. It more than doubles; a lower event count from excluding half of the genome is not a robustness result for the ratio. (§8 does call F2 "a lower bound for unique sequence events"; the sentence "stays" should go.)
+- Consequence: the pre-registered robustness claim is met in the letter, but a reader would take it as stronger than it is. State the event-level (not base-level) N exclusion, the one-sided flagging and the constant unaligned term.
+
+### MINOR
+
+**m1. Arithmetic slip in §13 (and an inconsistent range in §11).** §13: "A3b: the SNV-only concession leaves about 20% of events out (indels, ~2.2 M per lineage)". 2.15 M of 21.05 M is **10%** (11.4% of the SNV-only 18.9 M; 12.3% of Day's 17.5 M). §11 says "about 12-20%". The 17% arithmetic (21.05 - 17.5)/21.05 mixes the indel gap with the SNV excess (18.9 M measured against 17.5 M assumed). Use 10-12%.
+
+**m2. Headline 42.1 M uses post hoc totals and a different event definition from the pre-registered report.** `gap07b_report.out` L3 events F0 = 42,102,514 (1,421 outside-fill unaligned segments: human 1,093 + chimp placed 328). The note (§0, §6) uses 42,108,545 from the post hoc ladder, which adds 6,031 segments from chimp *unplaced scaffolds* as events while their bp are excluded from the same ladder row. Immaterial (0.014%), but the two constructions are not disclosed as different and P4 was scored on the second.
+
+**m3. Post hoc numbers appear in the §0 table and §2 scorecard without a label.** Examples: "33.77 M if records with >2% divergence are dropped" (§0, P1 row), "38.1 M with the <2% SNV set", "10.8 times", "11.3-12.5 times", per-lineage "19.1 M". They are labelled post hoc only in §4 and in the §1 script list. The 2% cut-off was chosen after seeing 37.77 M against CSAC's 35 M; §4 then says CSAC "matches the <2% class well", which is circular unless the threshold is declared as post hoc and selected after the miss.
+
+**m4. The scorecard omits two pre-registered sub-predictions.** (i) P6: "polarizable fraction 60-90% of single-sided events": as run 86.4% (held); post hoc 91% (just outside). (ii) P8: the chimp half "unaligned share of ... chimp 5-12%": net-fill definition 10.1 Mb / 2.80 Gb = 0.36%; block definition 3.2%; with nested fills 7.8% (only the last appears, in §9). P8's human half is scored as "pre-registered definition missed", so the chimp half should be too.
+
+**m5. Smoke-test disclosure is weaker in the committed docstring than in the note.** The docstring says the smoke test on the first 60k net lines and 777 axt records "showed two DESIGN facts" and that "No smoke-test number was used to set any prediction". The note §1 adds "I did glance at the smoke tables after writing the predictions". The ordering is not verifiable from git (the predictions and script are one commit). Because the smoke test covered the chr1 start (subtelomere), it could not move P1-P8 by much, but the claim "predictions written before the smoke tables were seen" rests on the author's word. Also the scorecard's P5/P8 outcomes ("near 10") and the "FAVOUR CRITICS" text in the docstring (events per lineage 15-30 M, L3 bp/event near 10) are met only loosely: F0 L3 is 17.0, F1 9.2, F2 12.5, F3 11.3 (a factor 1.85 spread).
+
+**m6. "Human-only / chimp-only" are not "per species" counts.** A human-only chain gap (extra human bases) is a human-lineage insertion *or* a chimp-lineage deletion. §2 (P2 row: "per species 2.17 M / 2.09 M") and §5 present them as per-species/per-lineage event counts and §6/§9 compare "clean" human-only 37.5 Mb and chimp-only 59.8 Mb with CSAC's lineage-specific ~32 and ~35 Mb. The resolution "5 M is a two-lineage total" is unaffected (the sum 4.30 M is the same), but the per-species comparison needs polarization (which the check cannot do for large events, M1). Say "extra human bases" / "extra chimp bases".
+
+**m7. Minor double representation across net levels (quantified).** Chain gaps are unique per (chain, position) so there is no double counting of indel events; SNVs are unique per human position (V7). Two small overlaps: (a) 19,111 net gap lines have child fills; each such underlying event is counted as an indel event and again through its nested fill (32,045 nested fills are added to L3 events). Upper bound 0.05% of 42.1 M. (b) Both-sided chain gaps <=10 bp (73 at 1 bp, 948 at 2-10 bp; the chain count exceeds the axt in-record gap-run count by exactly these numbers: 1,754,185 - 1,754,112 = 73 and 2,080,225 - 2,079,277 = 948) are not axt gap runs, so their bases appear as aligned columns and any mismatches are also counted as SNVs. About 1,000 events. Neither matters for the ratio.
+
+**m8. "Non-colinear nested fills" includes syntenic fills.** The 131.3 Mb "non-colinear" aligned bases in the Yoo-style row are `ali` of all level >=2 fills: inv 80.7 Mb, nonSyn 35.6 Mb and **syn 15.0 Mb**. UCSC "syn" fills are syntenic with the parent (colinear); excluding them gives 116.4 Mb and the Yoo-style total 493 Mb rather than 523 Mb. The same SNV bases are also counted in the 37.8 M SNV term (aligned bases in nested fills carry SNVs), so adding them as divergent bp double counts those SNV positions in that row. P4's "rearrangement fills" (32,045) has the same syn component (18,240 fills).
+
+**m9. Query-duplicated alignments inflate SNV counts by an unquantified amount.** Level-1 fills carry `qDup`: 176.5 Mb of 2.96 Gb of chimp span (6.0%) in top fills is also aligned elsewhere in the query (e.g. the second fill of chr1, `qDup 32544` of `qSize 32544`). SNVs from paralogous alignments to the same chimp bases are counted once per human copy. The note attributes 4 M extra SNVs to records >2% divergent but does not quantify qDup records with <2% divergence, so the match to CSAC's 35 M (33.8 M) may be partly coincidental. Direction: toward Day (more events).
+
+**m10. Two statements of fact in §7 are interpretation.** "The chimp branch is slightly longer" is read off 48.6/51.4 from one hg38 haplotype against one panTro6 assembly; assembly errors in either genome, ancestral polymorphism sorting into either lineage (14-22% of SNVs) and incomplete-lineage-sorting loci (where a gorilla-matching base marks the wrong branch, symmetrically) all feed that number. "SNV polarization ... is reliable" should read "mechanically correct (V9) and symmetric to first order; accuracy against the true branch assignment was not measured".
+
+## Pre-registration scorecard check
+
+Every cell in §2 that I could reconstruct from the docstring bands and the raw tables is right (list in V10). The scorecard is honest on the misses (P1 SNV, P2 size mix 2-10 bp and >1000 bp, P3 gap bp, P5 L2 bp and L2 bp/event, P6 indel as run, P7 F2, P8 definition). Items needing a correction are m3, m4, m5 above. The Day / critics criteria text matches the docstring.
+
+## Suggested corrections (not applied)
+
+1. Replace the §7 per-lineage bullet with recomputed figures (M2) and add the 100 bp limit (M1).
+2. Rewrite §8's first bullet: F1 excludes events touching any N (327 Mb), real N is 45 Mb; flag one-sided filtering and the constant 80 Mb term (M3).
+3. Fix §13 "about 20%" to "about 10-12%" (m1).
+4. Label the >2% cut-off numbers post hoc in §0/§2, add the two missing sub-predictions (m3, m4).
+5. Reword "per species" to "extra human / extra chimp bases" (m6).
