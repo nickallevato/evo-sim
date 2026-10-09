@@ -1,0 +1,62 @@
+covered chromosomes: chr21 chr22
+SNV sites covered: 1187615  polarization {'H': 524304, 'C': 568188, 'third': 16068, 'unpol': 79055}
+REF agreement of matched records: {'matched': 142992, 'ref_eq_hg38': 142992, 'ref_ne_hg38': 0}
+
+SNV: share with chimp-matching allele frequency >= 0.01 (poly_T), bands, etc.
+  all sites                                  n=   1187615 poly(>=.01)=  6.75%  >=.001=  7.98% >=.05=  5.68% seen= 10.40% anypop=  7.85% hg38notfixed=  7.06%
+  in strict mask                             n=    703183 poly(>=.01)=  8.54%  >=.001=  9.97% >=.05=  7.29% seen= 13.05% anypop=  9.83% hg38notfixed=  8.89%
+  outside mask                               n=    484432 poly(>=.01)=  4.17%  >=.001=  5.11% >=.05=  3.36% seen=  6.55% anypop=  4.98% hg38notfixed=  4.41%
+  H-derived, in mask                         n=    331155 poly(>=.01)= 16.11%  >=.001= 17.88% >=.05= 14.04% seen= 20.63% anypop= 17.74% hg38notfixed= 16.47%
+  H-derived, all                             n=    524304 poly(>=.01)= 13.12%  >=.001= 14.64% >=.05= 11.34% seen= 16.83% anypop= 14.49% hg38notfixed= 13.43%
+  C-derived, in mask                         n=    339002 poly(>=.01)=  1.13%  >=.001=  2.21% >=.05=  0.69% seen=  5.63% anypop=  2.09% hg38notfixed=  1.38%
+  C-derived, all                             n=    568188 poly(>=.01)=  1.17%  >=.001=  2.17% >=.05=  0.73% seen=  4.91% anypop=  2.05% hg38notfixed=  1.41%
+  third, in mask                             n=      7140 poly(>=.01)=  5.99%  >=.001=  7.34% >=.05=  5.10% seen=  9.86% anypop=  7.20% hg38notfixed= 10.50%
+  unpolarized, in mask                       n=     25886 poly(>=.01)=  9.29%  >=.001= 10.96% >=.05=  7.82% seen= 14.28% anypop= 10.77% hg38notfixed=  9.77%
+  top-level fills, in mask                   n=    703183 poly(>=.01)=  8.54%  >=.001=  9.97% >=.05=  7.29% seen= 13.05% anypop=  9.83% hg38notfixed=  8.89%
+  records <2% div, in mask                   n=    632049 poly(>=.01)=  8.87%  >=.001= 10.31% >=.05=  7.58% seen= 13.40% anypop= 10.17% hg38notfixed=  9.21%
+  H-derived, top-level, in mask              n=    331155 poly(>=.01)= 16.11%  >=.001= 17.88% >=.05= 14.04% seen= 20.63% anypop= 17.74% hg38notfixed= 16.47%
+  H-derived, CpG, in mask                    n=     96007 poly(>=.01)= 15.99%  >=.001= 18.99% >=.05= 13.64% seen= 25.19% anypop= 18.70% hg38notfixed= 16.62%
+  H-derived, non-CpG, in mask                n=    235148 poly(>=.01)= 16.16%  >=.001= 17.43% >=.05= 14.20% seen= 18.76% anypop= 17.34% hg38notfixed= 16.40%
+  H-derived, transitions, in mask            n=    230295 poly(>=.01)= 16.08%  >=.001= 18.11% >=.05= 13.95% seen= 21.67% anypop= 17.94% hg38notfixed= 16.24%
+  H-derived, transversions, in mask          n=    100860 poly(>=.01)= 16.17%  >=.001= 17.36% >=.05= 14.24% seen= 18.24% anypop= 17.28% hg38notfixed= 16.99%
+  H-derived, lowercase (repeat), in mask     n=    141045 poly(>=.01)= 16.24%  >=.001= 18.06% >=.05= 14.11% seen= 20.81% anypop= 17.92% hg38notfixed= 16.60%
+  H-derived, not lowercase, in mask          n=    190110 poly(>=.01)= 16.01%  >=.001= 17.75% >=.05= 13.99% seen= 20.49% anypop= 17.60% hg38notfixed= 16.37%
+  H-derived, near gap, in mask               n=      5587 poly(>=.01)= 12.19%  >=.001= 13.75% >=.05= 10.15% seen= 15.97% anypop= 13.69% hg38notfixed= 13.07%
+  bands (0 (not seen), (0,0.001), [0.001,0.01), [0.01,0.1), [0.1,0.5), [0.5,0.9), [0.9,0.99), >=0.99):
+    all sites                      89.60%  2.42%  1.23%  1.64%  2.44%  2.16%  0.33%  0.18%
+    in strict mask                 86.95%  3.09%  1.43%  1.92%  3.13%  2.84%  0.43%  0.21%
+    H-derived, in mask             79.37%  2.74%  1.77%  3.28%  5.95%  5.59%  0.86%  0.43%
+    C-derived, in mask             94.37%  3.42%  1.08%  0.58%  0.36%  0.16%  0.02%  0.01%
+s_H thresholds: {'0.001': 0.1788286451963582, '0.005': 0.16754389938246442, '0.01': 0.16110280684271716, '0.02': 0.15349005752593198, '0.05': 0.1403874318672525, '0.1': 0.12829339735169332}
+s_H per chromosome: {'chr21': 16.7, 'chr22': 15.5}
+
+INDELS (events 134726): share with matched record AF >= 0.01; obs / null / net
+  all events                     n=   134726  w0:  2.99/ 0.01/ 2.98% w2:  4.02/ 0.04/ 3.98% w5:  4.71/ 0.07/ 4.64%
+  human lineage (pol 1)          n=    35509  w0:  7.30/ 0.00/ 7.29% w2: 10.01/ 0.03/ 9.97% w5: 11.35/ 0.06/11.28%
+  chimp lineage (pol 2)          n=    77342  w0:  1.33/ 0.01/ 1.32% w2:  1.63/ 0.04/ 1.59% w5:  2.11/ 0.07/ 2.04%
+  unpolarized                    n=    21875  w0:  1.87/ 0.01/ 1.86% w2:  2.74/ 0.04/ 2.70% w5:  3.13/ 0.06/ 3.07%
+  human-only bases               n=    68196  w0:  2.39/ 0.01/ 2.39% w2:  3.20/ 0.04/ 3.15% w5:  3.72/ 0.08/ 3.64%
+  chimp-only bases               n=    65090  w0:  3.68/ 0.01/ 3.67% w2:  4.96/ 0.03/ 4.93% w5:  5.85/ 0.06/ 5.80%
+  both-sided                     n=     1440  w0:  0.00/ 0.00/ 0.00% w2:  0.00/ 0.00/ 0.00% w5:  0.00/ 0.00/ 0.00%
+  size 1                         n=    54129  w0:  4.70/ 0.02/ 4.69% w2:  6.36/ 0.08/ 6.28% w5:  7.17/ 0.13/ 7.04%
+  size 2-10                      n=    63810  w0:  2.12/ 0.00/ 2.11% w2:  2.82/ 0.01/ 2.80% w5:  3.55/ 0.03/ 3.53%
+  size 11-50                     n=    12218  w0:  1.06/ 0.00/ 1.06% w2:  1.38/ 0.00/ 1.38% w5:  1.57/ 0.00/ 1.57%
+  size 51-1000                   n=     3753  w0:  0.03/ 0.00/ 0.03% w2:  0.03/ 0.00/ 0.03% w5:  0.03/ 0.00/ 0.03%
+  size >1000                     n=      816  w0:  0.00/ 0.00/ 0.00% w2:  0.00/ 0.00/ 0.00% w5:  0.00/ 0.00/ 0.00%
+  in mask, all                   n=    63645  w0:  4.65/ 0.01/ 4.65% w2:  6.17/ 0.04/ 6.12% w5:  7.23/ 0.08/ 7.14%
+  human lineage, in mask         n=    21869  w0:  9.41/ 0.00/ 9.41% w2: 12.78/ 0.04/12.74% w5: 14.51/ 0.08/14.43%
+  human lineage, size 1          n=    16740  w0: 10.19/ 0.01/10.18% w2: 13.92/ 0.07/13.86% w5: 15.30/ 0.13/15.18%
+  human lineage, size 2-10       n=    16090  w0:  5.00/ 0.00/ 5.00% w2:  6.89/ 0.00/ 6.89% w5:  8.34/ 0.01/ 8.33%
+  human lineage, size 11-50      n=     2236  w0:  3.62/ 0.00/ 3.62% w2:  5.05/ 0.00/ 5.05% w5:  5.64/ 0.00/ 5.64%
+
+LINEAGES (SNV): {"human_events": 18185919.508626953, "chimp_events": 19581476.491373047, "human_fixed": 15256116.830771424, "chimp_fixed_symmetric": 16426845.666488169, "chimp_fixed_if_human_panel_share": 19360016.49742633}
+CORRECTED RATIO (Day 205 M / fixed events per lineage):
+  raw (GAP-07b)                                                          s_snv=  0.00% s_ind=  0.00% fixed/lineage= 21.051M ratio=  9.74
+  (a) human data only, SNV pooled in-mask share; indel share = measured  s_snv=  8.54% s_ind= 12.74% fixed/lineage= 19.165M ratio= 10.70
+  (a) same, SNV pooled over all sites (floor)                            s_snv=  6.75% s_ind= 12.74% fixed/lineage= 19.502M ratio= 10.51
+  (b) symmetric s_C = s_H, SNV; indel measured net                       s_snv= 16.11% s_ind= 12.74% fixed/lineage= 17.735M ratio= 11.56
+  (b) symmetric, SNV only (indels fixed)                                 s_snv= 16.11% s_ind=  0.00% fixed/lineage= 18.009M ratio= 11.38
+  (b) symmetric, SNV share also applied to indels                        s_snv= 16.11% s_ind= 16.11% fixed/lineage= 17.663M ratio= 11.61
+  (c) chimp share = 2 x human: SNV (s_H + 2 s_H)/2                       s_snv= 24.17% s_ind= 19.12% fixed/lineage= 16.077M ratio= 12.75
+  (b) symmetric with T = 0.001                                           s_snv= 17.88% s_ind= 12.74% fixed/lineage= 17.400M ratio= 11.78
+  (b) symmetric with T = 0.05                                            s_snv= 14.04% s_ind= 12.74% fixed/lineage= 18.126M ratio= 11.31

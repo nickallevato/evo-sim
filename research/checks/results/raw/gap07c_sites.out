@@ -1,0 +1,25 @@
+flushed chr1 2830836
+flushed chr10 1708138
+flushed chr11 1694144
+flushed chr12 1618815
+flushed chr13 1250938
+flushed chr14 1134250
+flushed chr15 1110620
+flushed chr16 1219533
+flushed chr17 1004791
+flushed chr18 978685
+flushed chr19 831326
+flushed chr2 3039716
+flushed chr20 834315
+flushed chr21 588978
+flushed chr22 598637
+flushed chr3 2455454
+flushed chr4 2501290
+flushed chr5 2254345
+flushed chr6 2128352
+flushed chr7 2064825
+flushed chr8 1984435
+flushed chr9 1639734
+flushed chrX 1536778
+flushed chrY 758461
+sites stage done: {'snv_chr1': 2830836, 'snv_total': 37767396, 'indel_total': 4301652, 'snv_chr10': 1708138, 'snv_chr11': 1694144, 'snv_chr12': 1618815, 'snv_chr13': 1250938, 'snv_chr14': 1134250, 'snv_chr15': 1110620, 'snv_chr16': 1219533, 'snv_chr17': 1004791, 'snv_chr18': 978685, 'snv_chr19': 831326, 'snv_chr2': 3039716, 'snv_chr20': 834315, 'snv_chr21': 588978, 'snv_chr22': 598637, 'snv_chr3': 2455454, 'snv_chr4': 2501290, 'snv_chr5': 2254345, 'snv_chr6': 2128352, 'snv_chr7': 2064825, 'snv_chr8': 1984435, 'snv_chr9': 1639734, 'snv_chrX': 1536778, 'snv_chrY': 758461}

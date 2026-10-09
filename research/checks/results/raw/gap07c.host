@@ -1,0 +1,29 @@
+GAP-07c host and md5 record (2026-10-09)
+
+== stage 'sites' (LOCAL workstation, nice -n 19, one process; reads sources/raw/ucsc-2026-10-09, GAP-07b derived files) ==
+script md5 (pre-registered, commit 078850b): c5211f896a2716fd4c9ca5dfa9dbcdca
+site lists (sources/raw/gap07c-sites/*.npz, not committed) combined md5-of-md5s: 82e2e7adb73fdce10a1caec6e43d1053 (as rsynced to workhorse)
+
+== stage 'afq' (na-workhorse.allevato.io, Linux 7.0.0-30-generic x86_64, 12 cores, started 2026-10-09 02:43 MDT; 1 process p3 run, then 2 processes NYGC chr21 / chr22) ==
+na-workhorse.allevato.io
+Fri Oct  9 02:49:24 AM MDT 2026
+Linux 7.0.0-30-generic x86_64
+a96ef90421ad0da9463d352ee4609355  1kg-phase3-grch38-sites-2026-10-09/ALL.wgs.shapeit2_integrated_snvindels_v2a.GRCh38.27022019.sites.vcf.gz
+71afa596393e5215ee032c7b5d57a8e8  1kg-phase3-grch38-sites-2026-10-09/strict_mask_20160622.allChr.bed
+c42e9f75fff906c6a7143cb2fac86602  ucsc-2026-10-09/meta/hg38_bigZips_hg38.chrom.sizes
+c5211f896a2716fd4c9ca5dfa9dbcdca  research/checks/gap07c_polymorphic_share.py
+63eb5e15b67c3ba83b130f3ddad72cab  (md5 of gap07c-sites/sites_stats.json, on workhorse)
+NYGC 30x phased panel (downloaded to ~/projects/evo-sim/sources/raw/1kg-nygc30x-2026-10-09/ on workhorse; md5 equals the project manifest 20220804_manifest.txt):
+1eb1f48bf5608d3abacf5047c8889456  1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+a2653cc7a1c8d03a96ca4f14d0fabdd2  1kGP_high_coverage_Illumina.chr22.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+a722a94b74d9a807924b22316a22b6dd  20220804_manifest.txt
+phase-3 sites VCF md5 a96ef90421ad0da9463d352ee4609355 equals the 20190312_biallelic_SNV_and_INDEL_MANIFEST.txt value (977,746,786 bytes). Mask BED has no published md5.
+URLs: https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/release/20190312_biallelic_SNV_and_INDEL/ALL.wgs.shapeit2_integrated_snvindels_v2a.GRCh38.27022019.sites.vcf.gz
+      https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/working/20160622_genome_mask_GRCh38/StrictMask/20160622.allChr.mask.bed
+      https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/ (chr21, chr22 only)
+Downloads were segmented range requests (8 / 5 parallel curl ranges, concatenated) because the server gave ~0.2-0.4 MB/s per connection; md5 checked after assembly.
+Never executed; read through gzip -dc and Python parsing only. Nothing committed or pushed from workhorse.
+
+== derived outputs rsynced back (md5) ==
+gap07c-af-p3: 1105df4c5acdc73100eb081cf5b2c133 (md5 of sorted per-file md5 list; 47 files)
+gap07c-af-nygc: 8acdc4bc64d353046c8cff18398febf2 (md5 of sorted per-file md5 list; 6 files)

@@ -1,0 +1,37 @@
+{
+ "baseline_snv_records_by_band": {
+  "band_names": [
+   "0 (not seen)",
+   "(0,0.001)",
+   "[0.001,0.01)",
+   "[0.01,0.1)",
+   "[0.1,0.5)",
+   "[0.5,0.9)",
+   "[0.9,0.99)",
+   ">=0.99"
+  ],
+  "outside_mask": [
+   0,
+   132101,
+   79433,
+   34063,
+   14512,
+   4989,
+   673,
+   251
+  ],
+  "inside_mask": [
+   0,
+   321881,
+   156502,
+   70170,
+   42014,
+   17497,
+   1828,
+   518
+  ]
+ },
+ "lines": 1002753,
+ "fmt": "nygc",
+ "vcf": "1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz"
+}

@@ -1,0 +1,35 @@
+{
+ "n": 35472157,
+ "top_level": 33183899,
+ "nested": 2288258,
+ "neither": 0,
+ "top & H & mask": {
+  "n": 12255781,
+  "poly_T01": 0.15690938015292538
+ },
+ "nested & H & mask": {
+  "n": 416275,
+  "poly_T01": 0.12750705663323525
+ },
+ "top & C & mask": {
+  "n": 12286918,
+  "poly_T01": 0.009971092832230181
+ },
+ "nested & C & mask": {
+  "n": 502479,
+  "poly_T01": 0.007948590886385302
+ },
+ "top & mask (all pol)": {
+  "n": 25320743,
+  "poly_T01": 0.0832453060322914
+ },
+ "nested & mask (all pol)": {
+  "n": 951055,
+  "poly_T01": 0.06193858399356504
+ },
+ "ratio_top_level_snv_symmetric": {
+  "s_H_top": 0.15690938015292538,
+  "fixed_snv": 29522553.134440966,
+  "note": "indels (4.30 M, share from the main report, human lineage net w=2 in mask) and 33,466 other events added separately in the note"
+ }
+}
