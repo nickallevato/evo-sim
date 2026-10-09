@@ -487,3 +487,152 @@ Locators: PDF = page number of the PDF; docx/odt/blog = `¶n` is the n-th non-em
 - locator: ¶12 of extracted text
 - quote: "the number he got out — fixation equals starting frequency — is false for any real population because it’s the answer to the frictionless-coin problem, not the breeding one."
 - note: Athos text posted by Day. Z23188201 (2026-10-06) later states p = 1/(2N) "holds exactly regardless of offspring distribution" (claim E4).
+
+
+## Refresh 2026-10-09 additions (Q79-Q96)
+
+Verified as exact substrings (whitespace and quote-mark normalised) of the local raw copies under `sources/raw/refresh-2026-10-09/` by script, 2026-10-09. For Substack comments the locator is the Substack comment id (the id appears in the comment URL). Blog and newsletter locators are paragraph numbers of the extracted non-empty lines (title line = para 1). Q79-Q81 come from a blog post that reposts comments; Q82-Q96 are Day's comments or posts on third-party or secondary venues (Dembski's and McCarthy's Substacks, Sigma Game, AI Central). Q84 is a re-read of a post already in `bib-day.md`.
+
+### Q79 Evo-Avengers: selection and drift both "impossible" (added 2026-10-09)
+- source: `B2026-10-08-not-just-the-evo-avengers`; URL: https://voxday.net/2026/10/08/not-just-the-evo-avengers/
+- locator: para 8 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/day-post-2026-10-08-not-just-the-evo-avengers/page.txt`
+- branch: A,B,ROOT
+- quote: "What I know is natural selection is impossible. Neutral substitution through genetic drift is impossible. Those things are firmly established."
+- note: Day replying to an EES advocate (Dembski's Substack, comment 353314959, 2026-10-05, reposted in the blog). Restates the two-sided conclusion (selection and drift both excluded).
+
+### Q80 Evo-Avengers: Day's admission test for any mechanism (added 2026-10-09)
+- source: `B2026-10-08-not-just-the-evo-avengers`; URL: https://voxday.net/2026/10/08/not-just-the-evo-avengers/
+- locator: para 8 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/day-post-2026-10-08-not-just-the-evo-avengers/page.txt`
+- branch: ROOT
+- quote: "Unless the model addresses the existing and observable accounting, it is irrelevant."
+- note: Day's stated criterion for admitting any positive mechanism (EES/Third Way): it must be quantified against 'timescales and reproductive limits'. No EES model was examined (same comment 353314959: 'That doesn't mean EES is wrong. I have no idea.').
+
+### Q81 Evo-Avengers: "one single game designer" (added 2026-10-09)
+- source: `B2026-10-08-not-just-the-evo-avengers`; URL: https://voxday.net/2026/10/08/not-just-the-evo-avengers/
+- locator: para 17 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/day-post-2026-10-08-not-just-the-evo-avengers/page.txt`
+- branch: misc
+- quote: "But one single game designer can do in a week what 170 years worth of naturalists couldn’t."
+- note: Rhetoric; no number or method. Recorded for completeness (same comment as the 'nuke' remark, Dembski thread comment 355857440, 2026-10-08).
+
+### Q82 Dembski thread: "to the very base-pair ... six different genomes" (added 2026-10-09)
+- source: `Dembski-interview-comments`; URL: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary/comment/356282255
+- locator: comment id 356282255 (2026-10-08, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/dembski-interview/comments.json`
+- branch: ROOT,E
+- quote: "I know, to the very base-pair, precisely what level of influence natural selection, EES, and every other adaptive mechanism has had on six different genomes."
+- note: Substack comment by Vox Day, 2026-10-08. Not in the blog repost. 'Six different genomes' is not defined; the 2nd-edition abstract Day quotes in comment 340102853 says 'Scaling analysis across 18 species pairs'.
+
+### Q83 Dembski thread: Chalub, steady-state identity, not a martingale (added 2026-10-09)
+- source: `Dembski-interview-comments`; URL: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary/comment/348667799
+- locator: comment id 348667799 (2026-09-29, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/dembski-interview/comments.json`
+- branch: B1
+- quote: "Ironically, as it turns out, it's not even correct to invoke martingales in defense of neutral theory because as Franco Chalub demonstrated mathematically, k = μ is a steady-state identity, not a martingale property."
+- note: Substack comment by Vox Day, 2026-09-29 (replying to Dembski on 'martingale'). Chalub is cited as a source for the steady-state claim (claims B1, B1e).
+
+### Q84 An Epic Test: new disproof, "Reverse-MITTENS" (added 2026-10-09)
+- source: `B2026-10-07-an-epic-test`; URL: https://voxday.net/2026/10/07/an-epic-test/
+- locator: para 2 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/day-recheck-an-epic-test/page.txt`
+- branch: ROOT
+- quote: "today I came up with a new disproof of the Post-Darwinian polythesis that has nothing to do with either MITTENS or Reverse-MITTENS"
+- note: Re-read of a post already in the corpus (bib-day B2026-10-07-an-epic-test). 'Reverse-MITTENS' is not defined in any harvested text. Pre-registration: an announced, unpublished argument and an 'epic data analysis' were pending as of 2026-10-07.
+
+### Q85 AI Central: 1,587 generations per fixation, 273,000 generations (added 2026-10-09)
+- source: `AICentral-An-Intelligent-Groove`; URL: https://substack.aicentral.blog/p/an-intelligent-groove
+- locator: para 16 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/aicentral-groove/page.txt`
+- branch: A2
+- quote: "The more accurate number, as it turns out when you do what the scientists didn’t do and go to the high-resolution data set for all 273,000 generations across the 12 populations, then run the numbers, is 1,587 generations per fixation."
+- note: Vox Day, AI Central Substack, 2026-10-03. Day's own statement of the strict-count G_f (previously derived by the audit from Z23105291; claim A2b). '273,000 generations' differs from the 252,000 human-lineage generations (different quantities). The same post repeats the Z23003785 abstract (1,322; 893; 1,075,000; 104,873).
+
+### Q86 Sigma Game Apologies: "tactical nuke" on neutral theory (added 2026-10-09)
+- source: `SigmaGame-Apologies`; URL: https://sigmagame.substack.com/p/apologies
+- locator: para 4 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/sigma-apologies/post.txt`
+- branch: B1,F
+- quote: "neutral theory, the primary Neo-Darwinian retreat, and the field of population genetics was just hit by a tactical nuke."
+- note: Vox Day, Sigma Game, 2026-09-22 (day Z22903977 was deposited). Same post quotes the abstract: 'at realistic human values, ranges from 16 percent to 100 percent of the total available time frame'.
+
+### Q87 Sigma Game Gamma Always Runs: "every single proposed mechanism" (added 2026-10-09)
+- source: `SigmaGame-The-Gamma-Always-Runs`; URL: https://sigmagame.substack.com/p/the-gamma-always-runs
+- locator: para 44 of extracted text (title line = para 1)
+- local copy: `sources/raw/refresh-2026-10-09/sigma-the-gamma-always-runs/post.txt`
+- branch: ROOT
+- quote: "Nothing is going to change the fact that evolution by every single proposed mechanism, including natural selection, has been comprehensively, mathematically, and empirically disproven."
+- note: Vox Day, Sigma Game, 2026-10-02 (final paragraph; repost of the Mansfield exchange, see Q-series for blog 2026-10-01). The post also has an unattributed block repeating '200,000,000' from the 410 Mb figure and a commenter's 'I have never seen a reliable estimate that is much about 30 million' (commenter unnamed).
+
+### Q88 McCarthy thread: drift "deader than dead" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/335155894
+- locator: comment id 335155894 (2026-09-12, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: B2,C
+- quote: "Genetic drift is now deader than dead. A Portuguese mathematician corrected Kimura's math, and subsequent analysis revealed that no vertebrate population can fixate even a single mutation through neutral drift once the population passes a certain point."
+- note: Vox Day comment, 2026-09-12, on McCarthy's Substack (not previously harvested). 'Portuguese mathematician' = Chalub; the concession of 2026-08-27 (B3g) had already said Ne never enters the Kimura identity.
+
+### Q89 McCarthy thread: selection ceased "since around 1800" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/335325560
+- locator: comment id 335325560 (2026-09-12, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: H
+- quote: "natural selection hasn't been performing its real function, keeping the genome from degrading, since around 1800."
+- note: Vox Day comment, 2026-09-12. New claim (selection 'ended' ~1800; human genome degrading; fertility decline). Repeated 2026-09-16 (comment 338847889) and 2026-09-18 (Dembski/Hossjer thread, comment 339689335). No parameters given; touches the H branch (cost of selection / deleterious load, claims H7).
+
+### Q90 McCarthy thread: improbability equation "irrelevant" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874
+- locator: comment id 337302874 (2026-09-15, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: G4
+- quote: "My improbability equation is irrelevant, as it even says in the book. It's not "wrong" because it doesn't exist."
+- note: Vox Day comment, 2026-09-15, replying to McCarthy's Darwillion rebuttal. McCarthy answers on 2026-09-16 (comment 338774739) by quoting the book: 'The probability is one in one Darwillion ... absolute zero.' (claims G4, G3).
+
+### Q91 McCarthy thread: 2nd-edition abstract, 180 fixations, 1,139,000-fold (added 2026-10-09)
+- source: `McCarthy-comments (Vox Day Responds)`; URL: https://dennismccarthy.substack.com/p/vox-day-responds/comment/340102853
+- locator: comment id 340102853 (2026-09-18, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+- branch: A3,A2
+- quote: "we calculate that natural selection can accomplish at most 180 fixations on the human lineage given 252,000 generations and 1,400 generations per fixation (the fastest empirical rate ever measured in any organism). This represents 0.000088% of the approximately 205 million fixations required on the human lineage. The shortfall is 1,139,000-fold."
+- note: Vox Day comment, 2026-09-18, quoting the Probability Zero 2nd-edition abstract. Check: 252,000/1,400 = 180; 180/205e6 = 8.78e-7 = 0.0000878%; 205e6/180 = 1,138,889. Same comment: 'That is my core argument. Kimura and neutral theory don't even begin to enter into it.'
+
+### Q92 McCarthy thread: scope statement, vertebrate mammals (added 2026-10-09)
+- source: `McCarthy-comments (Vox Day Responds)`; URL: https://dennismccarthy.substack.com/p/vox-day-responds/comment/339391408
+- locator: comment id 339391408 (2026-09-17, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+- branch: ROOT
+- quote: "I am specifically and literally claiming that no vertebrate mammalian species has ever originated through evolution by natural selection, by genetic drift, or any combination thereof."
+- note: Vox Day comment, 2026-09-17. Scope statement: vertebrate mammals, any mechanism combination. Compare ROOT-excluded-mechanisms; contrast with the 'ceiling' reading offered by an ally (C-series, The Deuce).
+
+### Q93 McCarthy thread: "over 10,000 ... will not fixate at all" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337074301
+- locator: comment id 337074301 (2026-09-14, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: B2
+- quote: "In any population over 10,000, neutral substitution will not fixate at all."
+- note: Vox Day comment, 2026-09-14 (Hard Limits ceiling restated as a population-size cutoff; claims B2, B2b). Same comment gives t = 4Ne = 40,000 generations = 1,000,000 years at 25 y.
+
+### Q94 Hossjer thread: 3x more deleterious than neutral (added 2026-10-09)
+- source: `Hossjer-review-comments`; URL: https://billdembski.substack.com/p/a-review-of-vox-days-main-argument/comment/339689335
+- locator: comment id 339689335 (2026-09-18, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/dembski-a-review-of-vox-days-main-argument/comments.json`
+- branch: H
+- quote: "With 3x more deleterious mutations than neutral ones now drifting freely, the human genome is degrading."
+- note: Vox Day comment, 2026-09-18, on Dembski's Substack. '3x more harmful mutations than neutral ones' is also asserted 2026-09-15 (comment 337302874 on McCarthy's Substack); McCarthy's MC-2 post is the earlier source for the 3x figure (bib MC-2).
+
+### Q95 McCarthy thread: book quote, 1,017 fixations per generation (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874
+- locator: comment id 337302874 (2026-09-15, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: G,B5
+- quote: "mutations can spread through populations by random chance alone, fixating 1,017 times per generation, without needing natural selection at all."
+- note: Vox Day comment, 2026-09-15, quoting Probability Zero ('Chapter 10', parallel drift) as the defenders' position. The figure 1,017 per generation is not derived in the comment; compare the critics' per-generation rates (claims B5, B5a-B5c, A5). Book not accessible, so this is the comment's quotation of the book (secondhand).
+
+### Q96 McCarthy thread: "genetic drift isn't happening at all over the last 7000 years" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/335823489
+- locator: comment id 335823489 (2026-09-13, Vox Day)
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: C,B2
+- quote: "And we've now got hard evidence that genetic drift isn't happening at all over the last 7000 years, and that there is a hard population limit on the neutral pipeline."
+- note: Vox Day comment, 2026-09-13. Restates claim C (aDNA 'zero fixation') as 'no drift' and ties it to the Hard Limits ceiling (B2). Z23046531 (2026-09-29, 1 and 3 completions) post-dates this comment; R4 C1/C1b found the aDNA counts at or mildly above neutral expectation, which is not the same as 'no drift'.

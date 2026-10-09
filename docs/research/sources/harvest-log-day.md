@@ -235,3 +235,54 @@ Posts inside the windows were scanned from archive-page text for 22 keywords, no
 | 2018-08-23 | https://voxday.net/2018/08/23/scientistry-in-action/ | evotag | pre2019 |
 | 2018-09-24 | https://voxday.net/2018/09/24/the-pseudoscience-of-darwin/ | evotag | pre2019 |
 | 2018-09-25 | https://voxday.net/2018/09/25/the-darwinian-fraud/ | evotag | pre2019 |
+
+
+## Refresh 2026-10-09 (corpus refresh, Day slice)
+Run date 2026-10-09. Last prior harvest 2026-10-07 (latest dated item then: blog 2026-10-07 "An Epic Test", Zenodo 23188201 of 2026-10-06). Requests were serial with at least 1 s spacing; `curl -A 'Mozilla/5.0'` for voxday.net, Substack public JSON API for newsletters, Zenodo REST API (page size 25). Nothing posted, archived on Wayback, or sent. Raw copies: `sources/raw/refresh-2026-10-09/` (gitignored). Each fetch is in its own subdirectory; text was extracted with `research/.venv/bin/python -I` and read or grepped only.
+
+### Counts
+| item | count |
+|---|---|
+| New Day blog posts dated after 2026-10-07 | 2 (2026-10-08 "Not Just the Evo-Avengers" kept; "Black Britons and White Japanese" excluded) |
+| Day blog posts dated 2026-10-02..07 not triaged on 2026-10-07 (fetched now) | 11 (1 kept as low-value: "Better than a PhD"; 10 excluded) |
+| New Zenodo records by "Day, Vox" | 0 (API total still 39; newest 23188201, 2026-10-06) |
+| Zenodo records changed since the local copy | 0 (md5 identical for Z23188201, Z23003785 and its addendum, Z23105291, Z23046531, Z22903977, Z22129121) |
+| Day posts on other venues fetched (not previously in bib) | 5 newsletter posts (AI Central 1; Sigma Game 4) |
+| Day comment threads harvested for the first time | 4 Substack threads (Dembski interview, Hossjer review, McCarthy x2; includes pre-2026-10-07 backfill from 2026-09-12 onward) |
+| New quotes | 18 (Q79-Q96) |
+
+### Method
+1. `/tag/evolution/` page 1 (latest 13 posts through 2026-10-08) and `/2026/10/` pages 1-3 (23 unique URLs; pages 4-5 are 404). Compared every URL with `bib-day.md` and the 2026-10-07 exclusion list; fetched the 12 not present.
+2. voxday.net site search (`/?s=`) for MITTENS, Kimura, fixation, "Probability Zero", evolution, Mansfield, McCarthy, Hancock, Gutsick, Dembski, Hossjer, population genetics, aDNA, Haldane, mutation, genome, Athos, neutral. The newest hits dated 2026-09-25 onward are all already in `bib-day.md` or listed below. No untagged post touching MITTENS, fixation, Haldane or aDNA was found beyond those.
+3. Front page on 2026-10-09: no post dated 2026-10-09 yet.
+4. Zenodo: `creators.name:"Day, Vox"` sorted newest, two pages; also `creators.name:"Athos, Claude"` (38 hits, all of them Day co-authored), `"Vox Day"` (5 hits: none by Day; one is a 2026-02-18 record by Camestros Felapton, "Vox Day and Baron Muenchhausen: Trilemmas and Right-Wing Epistemology", a philosophy item, out of scope).
+5. Day's other venues: Sigma Game archive (100 posts listed through 2026-10-08; three touch evolution: 09-22, 10-02, 10-05, plus the 2026-01-30 series announcement), AI Central (cross-post of 2026-10-03). Substack comment threads under McCarthy's and Dembski's posts, where Day replied in person.
+
+### Excluded posts (fetched 2026-10-09, triaged out)
+| Post | Reason |
+|---|---|
+| 2026-10-02 "Repent, Richard" | Atheism/Dawkins; one assertion ("proven that evolution by natural selection never happened") with no math |
+| 2026-10-02 "Sign Up Now for Unlimited" | promo |
+| 2026-10-03 "The Scholars' Revolt" | politics/books |
+| 2026-10-04 "Back to the 70s" | politics/culture |
+| 2026-10-05 "An Epic Day" | Castalia House translation announcement |
+| 2026-10-05 "Skol, But" | off-topic |
+| 2026-10-05 "Watering the Desert" | EU/Ukraine |
+| 2026-10-06 "Let Them Take Out LA" | politics (cited by a Reddit commenter, not math) |
+| 2026-10-06 "Lockdown Fakery Incoming" | 18 words, link only |
+| 2026-10-08 "Black Britons and White Japanese" | politics |
+| Sigma Game 2026-10-05 "What We Think We Know" | evolutionary psychology list; only consequence statement, no math |
+| Sigma Game 2026-01-08 "Gamma Doubts", 2026-01-30 "The Mathematics of Evolution" | pre-harvest backfill; no new numbers (covered by existing Q-series and claim B3g); hashed and listed in bib |
+
+### Not fetched or not read (with reasons)
+- socialgalactic.com micropost links (the Vibe Patrol music video of "Better than a PhD", `728e642c-...`; the micropost under the 10-08 post, `bef3d348-...`): `curl` fails TLS verification (certificate chain not verifiable). Not bypassed (no `-k`). Logged as inaccessible.
+- The "Vibe Patrol" music video itself: not located.
+- Amazon book pages: not attempted again (bot check on 2026-10-07).
+- Sigma Game posts "Working with the Sigma", "SSH is Not Evolutionary Psychology" (2026-01-07): search results only; not read (evopsych/SSH).
+- wholereason.com, audaxconsilium "Scorched & Salted" (2026-02-18): skimmed grep only; ally summaries, no new numbers. Not in bib.
+- Day's X, Gab, YouTube (banned per his own comments), Rumble: not accessed.
+- Probability Zero book (paid, 2nd edition): still not accessed. The 2nd-edition abstract is known only through Day's own quotation of it (Q91).
+
+### Findings that affect existing ledgers
+- `ledgers/versions.md`: three rows added (2nd-edition numbers 180 / 1,400 / 1,139,000-fold; Day's own adoption of 1,587; "selection ceased ~1800" claim; Darwillion status in comments).
+- Day's 2026-10-07 "An Epic Test" (already in the corpus) announces a new unpublished disproof and an unpublished "epic data analysis"; Q84 records "Reverse-MITTENS", a term not defined in any harvested text. Nothing to check until it is published.

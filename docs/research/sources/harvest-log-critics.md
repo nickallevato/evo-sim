@@ -52,3 +52,57 @@ Run date: 2026-10-07. All fetches were read-only GETs (curl with a generic UA, y
 5. Capture the Gutsick Gibbon "credentialed roundtable" video when published.
 6. Obtain Cambridge TOC PDF for Rosenhouse's remaining chapters (7 Thermodynamics, 8 Epilogue already known from Felsenstein).
 7. Read keruru Zenodo deposits (22969407 and 21866797 are other topics; the k=mu simulation deposit is not identified) to check the exact-Markov-chain claim.
+
+
+## Refresh 2026-10-09 (corpus refresh, critics/allies slice)
+Run date 2026-10-09. Last prior harvest 2026-10-07. All fetches were read-only GETs (curl with a generic UA, Substack public API, Zenodo API, yt-dlp flat listings, WebSearch). Nothing was posted, commented, archived on Wayback, or sent to anyone. Raw copies: `sources/raw/refresh-2026-10-09/`.
+
+### Counts
+| item | count |
+|---|---|
+| New critic/ally items with relevant content | 3 sources: Matev comments (new critic), keruru Zenodo 22184713 (new to corpus), EES commenter "Hilbert" in the Dembski thread (new voice) |
+| Other new comment threads harvested (backfill) | McCarthy x2 (37 and 75 comments), Dembski interview (74), Hossjer review (18), Reddit 1wws70t (101), 1wxgamf (4) |
+| New critic-side posts since 2026-10-07 | 0 (no new post by McCarthy, keruru, Camestros, Pharyngula, Hancock, Gutsick Gibbon, Mansfield, Nesslig20 on this topic found) |
+| New quotes | 17 (RF-1 to RF-17) |
+
+### Per-target results
+| Target | Result |
+|---|---|
+| McCarthy Substack | Archive through 2026-10-08: no new evolution post (latest posts: Shakespeare authorship, AI doom, Pinker/Alexander). Comment threads under "Why Probability Zero is Wrong" (37) and "Vox Day Responds" (75) captured for the first time. Both contain extended Day, McCarthy and Matev exchanges. |
+| keruru (claudekeruru.substack.com) | Archive through 2026-09-27: no post after "Nobody in the Room". Five previously unlisted posts (07-16 to 08-27) fetched: none touch fixation or Day (AI-authorship essay "Not Fishing, Maxxing" mentions Day's Byron AI posts only). Zenodo deposits found via API: 22184713 (aDNA temporal Ne; directly relevant) and 22121270 (demography; irrelevant). Open item 7 of 2026-10-07: the exact-Markov-chain k = mu simulation deposit is still not identified; 22184713 is the aDNA/Ne deposit. |
+| Camestros Felapton | Feed through 2026-10-06; site search for "Vox Day" lists 2026-10-06 "Speaking of failed encyclopedias..." and 2026-08-29 "Milo and the Puppies" among its newest hits (titles only; not read; not about the fixation math by title). Series still 6 parts; MITTENS and "Probability Zero" searches return only parts 1-6. |
+| PZ Myers (Pharyngula) | Search feeds for "Vox Day", MITTENS, "Probability Zero", Dembski: only the three known posts (2026-10-02, 10-03, 10-04). |
+| Zach Hancock / Gutsick Gibbon | Channel listings (flat): no Day-related video after `_Vu0ZVVjwHc` (2026-10-03). Hancock's newest (2026-10-04) is a course announcement. The promised "credentialed roundtable" is not published. |
+| Reddit | `old.reddit.com` search returns 302 to a login wall (not bypassed). Arctic Shift (intermittent timeouts) and PullPush used instead. r/DebateEvolution: new thread 1wws70t (GG video announcement), 1wxgamf harvested; 1wwqzu3, 1wtlmz4, 1wncr1b relate to Duffy/Gould letter, not math (not mined). No new math threads. |
+| Peaceful Science (Nesslig20) | **Inaccessible this run:** `discourse.peacefulscience.org` and `peacefulscience.org` do not resolve (DNS ENOTFOUND from both curl and WebFetch). Nesslig20 Part III, if any, not checked. |
+| Dembski Substack | Archive: two new posts (2026-10-05 "Darwinism: Scientific Inference or Philosophical Preference?", 10-07 "The Art of Academic Disinvitation") do not mention Day. Comment threads captured. No Hossjer update found. |
+| Mansfield | No independent publication found (web search); his statements remain in the YouTube comments and Day's quotations. |
+| Tree of Woe, Uncle John's Band, American Hypnotist, Fandom Pulse, Keen | Archives checked through 2026-10-08: no new post on the topic. |
+| New critics (searches) | Matev (Substack @ns670106), found via McCarthy's comment threads. Web searches for Moran/Sandwalk, Felsenstein/Panda's Thumb, ReMine/Truman, Bowers, Graur found nothing new. Bowers' original review is still not found (item 1 of 2026-10-07). |
+| Zenodo | Search for KITTENS/Day-critique deposits: none. keruru deposits as above. |
+
+### Excluded (with reasons)
+| Item | Reason |
+|---|---|
+| Kurgan Fiction posts 2026-10-01 to 10-06 (5 hashed) | Supporter essays/debate about the Socio-Sexual Hierarchy; no fixation math |
+| Rhino UP review 2026-01-09 | Praise review; no numbers |
+| gatheringgoateggs "Contra Vox Day" (2024-08-20) | Pre-dates the corpus topic (2024) and is not about evolution math (title match only); not fetched |
+| keruru "The Long Generation" (Zenodo 22121270) | Demography/religion methods paper; hashed, not quoted |
+| keruru Substack posts 07-16..08-27 (5) | Not about Day's math (see above) |
+| Reddit 1wwqzu3, 1wtlmz4, 1wncr1b, 1wvtoiz | Duffy/Gutsick Gibbon personal dispute and Gould-Dawkins letter; ad hominem and biography, no math |
+| McCarthy comments by Bryan Wildenthal, Mike, Nathan etc. | Common-descent evidence arguments and religion; off the fixation math |
+| ns670106.substack.com | Empty archive (no posts) |
+
+### Inaccessible
+- discourse.peacefulscience.org (DNS).
+- old.reddit.com search (login wall; not bypassed).
+- socialgalactic.com microposts linked from Day's blog (TLS chain not verifiable; not bypassed).
+- McCarthy paid posts (unchanged from 2026-10-07; e.g. 2026-10-08 "Exclusive: ... Swordfish" is unrelated).
+
+### Open items carried forward
+1. Bowers' original review: still not found.
+2. Dembski's attached "Mittens 3" PDF: still not downloaded (the 2026-09-28 interview post JSON is in `sources/raw/critics/`).
+3. GG "credentialed roundtable": not published as of 2026-10-09.
+4. Cambridge TOC for Rosenhouse chapters 7-8: not retried.
+5. Peaceful Science: retry when DNS resolves (Nesslig20 Part III).
+6. keruru's k = mu exact-Markov-chain deposit: not identified.

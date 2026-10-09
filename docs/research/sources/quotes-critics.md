@@ -553,3 +553,109 @@ Date: 2026-01-23/24
 - **CA-13** | para 12 | branch epistemic | Camestros
   > "I’m not a biologist, I’m not really a mathematician and I have no real idea what the current state of mathematical modelling of genetics and evolution is"
   - note: Self-described; footnote digit follows in source.
+
+
+## RF: Refresh 2026-10-09 (comment threads and one Zenodo deposit)
+Harvested 2026-10-09. Sources are Substack comment threads (McCarthy, Dembski), a Reddit thread tree (Arctic Shift mirror) and keruru's Zenodo deposit 22184713 (Draft 1, 2026-08-31). Each quote was machine-checked as an exact substring (whitespace and quote-mark normalised) of the local raw copy. For Substack comments the locator is the comment id (it appears in the comment URL). Matev, Hilbert and The Deuce are new commenters, not previously in the corpus. Side tags: `critic`, `ally`, `adjacent`. Notes with "ARITHMETIC FLAG" or "derived" record harvester arithmetic, not verdicts.
+
+- **RF-1** | comment id 338963242 (2026-09-17, Matev) | branch G | Matev
+  > "While this coefficient of variation does go to zero as n increases, the variance of the beneficial allele count of an individual just increases as n increases."
+  - source: MV: Matev comments on McCarthy Substack; https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/338963242
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+  - note: Matev (Substack @ns670106; no own publication found), 2026-09-17. Targets the Bernoulli Barrier paper Z18167588: CV of allele count vs Fisher's theorem (claims G, Gc, Gd, G1). Also says the paper mixes additive and multiplicative fitness in the 'fitness ratio'.
+
+- **RF-2** | comment id 345248135 (2026-09-25, Matev) | branch B3 | Matev
+  > "the probability that some allele from this set will eventually fix would be 2N/(2Nₑ) = N/Nₑ, which is greater than one and therefore not even a valid probability when N > Nₑ."
+  - source: MV: Matev comments on McCarthy Substack; https://dennismccarthy.substack.com/p/vox-day-responds/comment/345248135
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+  - note: Matev, 2026-09-25. A reductio of k = 2Nμ x 1/(2Nₑ) for a site with all neutral alleles (claims B3, B3a, B3g, B3h). Postdates Day's 2026-08-27 concession; same N vs Nₑ point, stated as a reductio. Matev's comment says Day conceded 'for the wrong reasons'.
+
+- **RF-3** | comment id 345248135 (2026-09-25, Matev) | branch B3e | Matev
+  > "He is using a fixation probability of one over sixteen-billion for every single mutation under consideration, including the ones introduced in the first generation after the split."
+  - source: MV: Matev comments on McCarthy Substack; https://dennismccarthy.substack.com/p/vox-day-responds/comment/345248135
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+  - note: Matev on Day's 8.25-fixation 'corrected calculation' (claim B3e): applies current census N = 8e9 to mutations arising 400,000 generations ago.
+
+- **RF-4** | comment id 340270022 (2026-09-18, Matev) | branch A2e,F3 | Matev
+  > "The reasoning is that 1/X1 is high (due to 1/B1 being high), so it very generous for the estimation of X2 to use the A1 value as an estimate for A2 even though A1 isn't why 1/X1 is high."
+  - source: MV: Matev comments on McCarthy Substack; https://dennismccarthy.substack.com/p/vox-day-responds/comment/340270022
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+  - note: Matev, 2026-09-18. Unit argument against using generations-per-fixation from bacteria as a 'generous' bound for humans: X = A x B (gens/fixation x years/gen). Not a Day-equation-by-equation audit; the claim sits at A2/A2e (LTEE as ceiling) and F3.
+
+- **RF-5** | comment id 340270022 (2026-09-18, Matev) | branch G3,A2 | Matev
+  > "use a binomial distribution and the numbers from the book to calculate the probability of there being 180 or fewer eventual fixations from neutral mutations alone."
+  - source: MV: Matev comments on McCarthy Substack; https://dennismccarthy.substack.com/p/vox-day-responds/comment/340270022
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+  - note: Matev, 2026-09-18: a variance/tail check on the 180-fixation figure that does not commit the specific-set error of the Darwillion (claim G3). Offered as an argument; no number computed in the comment.
+
+- **RF-6** | comment id 340149310 (2026-09-18, Dennis McCarthy) | branch B3,A3 (arith. flag) | Dennis McCarthy
+  > "And the numbers work 400 billion x 1/20000 = 35 million point mutations fixing alone."
+  - source: McCarthy comment on Vox Day Responds; https://dennismccarthy.substack.com/p/vox-day-responds/comment/340149310
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-vdr/comments.json`
+  - note: Dennis McCarthy, 2026-09-18. ARITHMETIC FLAG (harvester, derived): 400e9 x (1/20,000) = 2.0e7 = 20 million, not 35 million (the same figure he gives as 20 million in his post, comment 337116873 and Q in MC-1). Critic-side slip; the 35M target figure is the SNV count. Same comment gives flatwing in Hawaiian crickets (>90% by 2004, 'fewer than about 20 generations') as an observed fast sweep.
+
+- **RF-7** | comment id 337116873 (2026-09-14, Dennis McCarthy) | branch B1b,B6 | Dennis McCarthy
+  > "So neutral mutations that have occurred in the last 40,000 years have not had time to fix yet."
+  - source: McCarthy comment on Why PZ is Wrong; https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337116873
+  - local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+  - note: Dennis McCarthy, 2026-09-14: concedes the 4Ne window but applies it as a lag (320,000 productive generations x 50,000/yr mutation input = 400 billion; x 1/20,000 = 20 million). Derived check: 360,000 - 40,000 = 320,000 gens; 8e6 y x 5e4 = 4e11. Claims B1b, B6, F.
+
+- **RF-8** | comment id 355694421 (2026-10-08, Hilbert) | branch ROOT-excluded | Hilbert (EES commenter)
+  > "For EES, the quant problem is not an issue in the way it was for Neo-Darwinism."
+  - source: Dembski-interview-comments; https://billdembski.substack.com/p/vox-day-interview-on-evolutionary/comment/355694421
+  - local copy: `sources/raw/refresh-2026-10-09/dembski-interview/comments.json`
+  - note: Commenter 'Hilbert' (EES/Third Way advocate; not a population geneticist as far as the thread shows), 2026-10-08. Response type: denial that MITTENS applies to non-Neo-Darwinian mechanisms; no model or number offered. Day's reply: D1-D4.
+
+- **RF-9** | comment id 340781062 (2026-09-19, The Deuce) | branch A2e | The Deuce (ally commenter)
+  > "It's either/or. In a maximally selective environment, there is little to no drift occurring, and in a maximally neutral fixation scenario, there is little to no selective pressure occurring."
+  - source: Hossjer-review-comments; https://billdembski.substack.com/p/a-review-of-vox-days-main-argument/comment/340781062
+  - local copy: `sources/raw/refresh-2026-10-09/dembski-a-review-of-vox-days-main-argument/comments.json`
+  - note: 'The Deuce' (Day-sympathetic commenter), 2026-09-19. An ally gloss of MITTENS: the ~180-191 beneficial fixations are a ceiling under maximal selection, not an additive contribution (claims A2e, ROOT-excluded-mechanisms). Not Day's own wording.
+
+- **RF-10** | comment id 353774770 (2026-10-05, Bill Dembski) | branch ROOT-h | Bill Dembski
+  > "Ola wrote up his review with Vox's older numbers -- the newer numbers make Vox's case even stronger."
+  - source: Dembski-interview-comments; https://billdembski.substack.com/p/vox-day-interview-on-evolutionary/comment/353774770
+  - local copy: `sources/raw/refresh-2026-10-09/dembski-interview/comments.json`
+  - note: Bill Dembski, 2026-10-05. Says Hossjer has not yet reviewed the 2nd-edition/3.0 numbers; no Hossjer update was found by 2026-10-09 (claim ROOT-h).
+
+- **RF-11** | comment id pdpbf3d (u/justatest90) | branch A3d | justatest90 (Reddit) | secondhand
+  > "Dr. Hancock says Day makes a 2n mistake, but Day just accounts for it elsewhere, by halving the mutation target."
+  - source: Reddit 1wws70t (r/DebateEvolution, "It's here!"); https://www.reddit.com/r/DebateEvolution/comments/1wws70t/
+  - local copy: `sources/raw/refresh-2026-10-09/arctic-trees/1wws70t.json`
+  - note: justatest90 (Reddit user, says has read the book), 2026-10-03, commenting on the Gutsick Gibbon/Hancock video. A defence of Day on one Hancock point, from a non-ally reader (claims A3, A3d, B6c). Secondhand report of the video; the video itself is in the 10-07 harvest.
+
+- **RF-12** | line 689 of adna-draft-1.md | branch B2,C4 | keruru (C. Kereru)
+  > "Wright's N_e = 4N/(V_k + 2) is the input to that argument. In the one period where it can be checked against a direct measurement it is wrong by three orders of magnitude"
+  - source: keruru Zenodo 22184713, adna-draft-1.md s6; https://zenodo.org/records/22184713
+  - local copy: `sources/raw/refresh-2026-10-09/zenodo-22184713/x/adna-temporal-ne/adna-draft-1.md`
+  - note: C. Kereru (keruru), Zenodo 2026-08-31, 'Draft 1, for stress testing. Nothing here has been through a review pass.' Targets Day's Hard Limits ceiling X = (Vk+2)G/16 via its Ne = 4N/(Vk+2) input (claims B2, B2a, B2b, C4, C5b).
+
+- **RF-13** | line 696 of adna-draft-1.md | branch B2,C5b | keruru
+  > "We do not claim the ceiling argument is refuted. We claim its input is measurably wrong where it can be tested"
+  - source: keruru Zenodo 22184713, adna-draft-1.md s6; https://zenodo.org/records/22184713
+  - local copy: `sources/raw/refresh-2026-10-09/zenodo-22184713/x/adna-temporal-ne/adna-draft-1.md`
+  - note: keruru, same section. Deliberately narrow claim. Table in s6: measured Ne 938 (Mesolithic), 6,933 (Bronze Age), 8,139 (Bronze->Medieval), 9,835 (modern); 4Ne transit = 1.4%, 10.7%, 12.5%, 15.1% of a ~260,000-generation lineage (derived: 4 x Ne / 260,000).
+
+- **RF-14** | line 620 of adna-draft-1.md | branch C5b (flag) | keruru
+  > "The measured ratio is of order 8 × 10⁻⁴. The saturation floor of the three tested artefacts is about 5 × 10⁻²."
+  - source: keruru Zenodo 22184713, adna-draft-1.md s6.2; https://zenodo.org/records/22184713
+  - local copy: `sources/raw/refresh-2026-10-09/zenodo-22184713/x/adna-temporal-ne/adna-draft-1.md`
+  - note: keruru. INTERNAL INCONSISTENCY in the draft (harvester): the abstract says Ne/census 'of order 10^-4', s6 says 'of order 4 x 10^-4' (Bronze Age), s6.2 says 8 x 10^-4. 8,139/1e7 = 8.1e-4 (derived). Draft flags [CHECK] figures.
+
+- **RF-15** | line 415 of adna-draft-1.md | branch C1 | keruru
+  > "A published analysis of the same resource reports this variant at 29.3% in a Neolithic sample and 91.3% in a modern European one, a twelve-sigma excursion. We are unable to reproduce that."
+  - source: keruru Zenodo 22184713, adna-draft-1.md s4b.1; https://zenodo.org/records/22184713
+  - local copy: `sources/raw/refresh-2026-10-09/zenodo-22184713/x/adna-temporal-ne/adna-draft-1.md`
+  - note: keruru on rs35619459 (chr3:153.96 Mb): his series 0.858, 0.836, 0.790, 0.854 across four bins. The 'published analysis' is not named in the draft and not identified by the harvester. Relevance to C1/C1b: a reproducibility disagreement over an aDNA frequency series, with data and code deposited.
+
+- **RF-16** | line 710 of adna-draft-1.md | branch C1 | keruru
+  > "The 1240K panel was designed on modern variation."
+  - source: keruru Zenodo 22184713, adna-draft-1.md s7; https://zenodo.org/records/22184713
+  - local copy: `sources/raw/refresh-2026-10-09/zenodo-22184713/x/adna-temporal-ne/adna-draft-1.md`
+  - note: keruru limitation list (also names no ancestry control, no relatedness filtering, extrapolated generation time). Same ascertainment point as claim C1 (originally made against Day's aDNA papers).
+
+- **RF-17** | comment id 354585408 (2026-10-06, Hilbert) | branch D | Hilbert (EES commenter)
+  > "The bigger problem, even if you can explain speed, is solving functionality (we see almost no failures in nature)."
+  - source: Dembski-interview-comments; https://billdembski.substack.com/p/vox-day-interview-on-evolutionary/comment/354585408
+  - local copy: `sources/raw/refresh-2026-10-09/dembski-interview/comments.json`
+  - note: Hilbert (EES commenter), 2026-10-06. Claims speed (Day's subject) is among the smaller problems and function is the larger one. Third-party support for branch D's premise (sequence space / function) from outside Day's camp; not an argument with numbers.
