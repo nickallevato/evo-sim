@@ -1,0 +1,11 @@
+stage H: 38 runs, 4250 s wall
+Traceback (most recent call last):
+  File "/home/na/projects/evo-sim/research/checks/h3_fixpass.py", line 349, in <module>
+    run_stage(st, w)
+    ~~~~~~~~~^^^^^^^
+  File "/home/na/projects/evo-sim/research/checks/h3_fixpass.py", line 100, in run_stage
+    sm = h3.summarize(rows)
+  File "/home/na/projects/evo-sim/research/checks/h3_human_scale.py", line 595, in summarize
+    k_over_lam=(m("k", True) / r0["lam"]) if nper else float("nan"),
+                ~~~~~~~~~~~~~^~~~~~~~~~~
+ZeroDivisionError: division by zero

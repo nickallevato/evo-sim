@@ -1,0 +1,11 @@
+na-workhorse.allevato.io
+2026-10-08T22:48:07-06:00
+a314a0b27e9a0f076dcb0730c8569fca  research/checks/h3_fixpass.py
+a2f861bfc8e63b320cdcbc583261b5f6  research/checks/h3_human_scale.py
+numpy 2.5.3 scipy 1.18.1 python 3.14.4
+L exit=0 wall=1544 s end=2026-10-08T23:13:51-06:00
+H exit=1 wall=4250 s end=2026-10-09T00:24:41-06:00
+M exit=0 wall=224 s end=2026-10-09T00:28:25-06:00
+W exit=0 wall=692 s end=2026-10-09T00:39:57-06:00
+X exit=0 wall=1389 s end=2026-10-09T01:03:06-06:00
+chain-end 2026-10-09T01:03:07-06:00

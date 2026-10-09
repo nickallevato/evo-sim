@@ -1,0 +1,209 @@
+== A0. Haldane D (deterministic, diploid log-additive, s=0.01): D = sum -ln wbar ~ 2 ln(1/p0)
+  N=1e3 new mut                p0=5.00e-04  D_det= 15.20  2ln(1/p0)= 15.20
+  N=4e3                        p0=1.25e-04  D_det= 17.97  2ln(1/p0)= 17.97
+  N=1e4                        p0=5.00e-05  D_det= 19.81  2ln(1/p0)= 19.81
+  N=1e5                        p0=5.00e-06  D_det= 24.41  2ln(1/p0)= 24.41
+  N=1e6                        p0=5.00e-07  D_det= 29.02  2ln(1/p0)= 29.02
+  standing p0=1e-2             p0=1.00e-02  D_det=  9.19  2ln(1/p0)=  9.21
+  standing p0=1e-3             p0=1.00e-03  D_det= 13.81  2ln(1/p0)= 13.82
+  standing p0=1e-4             p0=1.00e-04  D_det= 18.42  2ln(1/p0)= 18.42
+  Haldane D=30 equiv p0=3e-7   p0=3.00e-07  D_det= 30.04  2ln(1/p0)= 30.04
+
+== A1. Nei/Felsenstein check (PA-07): n = -ln p0 / ln k, k = 1.1, p0 = 1e-4 -> 96.6 generations;  252,000 / 96.6 = 2608
+   Haldane's 10% budget as ln R: -ln(0.9) = 0.1054  (R = 1/0.9 = 1.111); ln 1.1 = 0.0953
+
+== A2. Sustainable adaptive substitutions per generation lam* = (ln R - U_hard)/D  [per lineage over 252,000 gens]
+  U_hard = 0.0  (load soft)
+    R     D=10 rate   per-252k  D=20 rate   per-252k  D=30 rate   per-252k
+    1.05    0.00488      1230   0.00244       615   0.00163       410
+    1.1     0.00953      2402   0.00477      1201   0.00318       801
+    1.2     0.01823      4595   0.00912      2297   0.00608      1532
+    1.5     0.04055     10218   0.02027      5109   0.01352      3406
+    2       0.06931     17467   0.03466      8734   0.02310      5822
+    3       0.10986     27685   0.05493     13843   0.03662      9228
+    5       0.16094     40558   0.08047     20279   0.05365     13519
+    10      0.23026     58025   0.11513     29013   0.07675     19342
+    20      0.29957     75492   0.14979     37746   0.09986     25164
+  U_hard = 0.35  (load hard)
+    R     D=10 rate   per-252k  D=20 rate   per-252k  D=30 rate   per-252k
+    1.05    extinct         -   extinct         -   extinct         -
+    1.1     extinct         -   extinct         -   extinct         -
+    1.2     extinct         -   extinct         -   extinct         -
+    1.5     0.00555      1398   0.00277       699   0.00185       466
+    2       0.03431      8647   0.01716      4324   0.01144      2882
+    3       0.07486     18865   0.03743      9433   0.02495      6288
+    5       0.12594     31738   0.06297     15869   0.04198     10579
+    10      0.19526     49205   0.09763     24603   0.06509     16402
+    20      0.26457     66672   0.13229     33336   0.08819     22224
+  U_hard = 2.2  (load hard)
+    R     D=10 rate   per-252k  D=20 rate   per-252k  D=30 rate   per-252k
+    1.05    extinct         -   extinct         -   extinct         -
+    1.1     extinct         -   extinct         -   extinct         -
+    1.2     extinct         -   extinct         -   extinct         -
+    1.5     extinct         -   extinct         -   extinct         -
+    2       extinct         -   extinct         -   extinct         -
+    3       extinct         -   extinct         -   extinct         -
+    5       extinct         -   extinct         -   extinct         -
+    10      0.01026      2585   0.00513      1293   0.00342       862
+    20      0.07957     20052   0.03979     10026   0.02652      6684
+
+== A3. Required rate K_a / T (per generation), by target and generation count
+       146250    202500    206897    252000    325000    350000    450000
+  coding, alpha~0.1 low (GAP-01)          8.89e-03  6.42e-03  6.28e-03  5.16e-03  4.00e-03  3.71e-03  2.89e-03
+  coding+a_nc=0 (GAP-01 central)          2.05e-02  1.48e-02  1.45e-02  1.19e-02  9.23e-03  8.57e-03  6.67e-03
+  coding, alpha=0.2 high end (GAP-01)     4.10e-02  2.96e-02  2.90e-02  2.38e-02  1.85e-02  1.71e-02  1.33e-02
+  coding max (alpha 0.4 x 3e4)            8.21e-02  5.93e-02  5.80e-02  4.76e-02  3.69e-02  3.43e-02  2.67e-02
+  a_nc = 0.1% (GAP-01)                    1.37e-01  9.88e-02  9.67e-02  7.94e-02  6.15e-02  5.71e-02  4.44e-02
+  a_nc = 1% (GAP-01)                      1.16e+00  8.40e-01  8.22e-01  6.75e-01  5.23e-01  4.86e-01  3.78e-01
+  a_nc = 5% (GAP-01)                      6.15e+00  4.44e+00  4.35e+00  3.57e+00  2.77e+00  2.57e+00  2.00e+00
+  Day SNV-only 17.5M (A3b)                1.20e+02  8.64e+01  8.46e+01  6.94e+01  5.38e+01  5.00e+01  3.89e+01
+  Day 20M (A3)                            1.37e+02  9.88e+01  9.67e+01  7.94e+01  6.15e+01  5.71e+01  4.44e+01
+  Day 205M (A3a)                          1.40e+03  1.01e+03  9.91e+02  8.13e+02  6.31e+02  5.86e+02  4.56e+02
+  Haldane + d, 146,250/300 (H)            3.33e-03  2.40e-03  2.35e-03  1.93e-03  1.50e-03  1.39e-03  1.08e-03
+  Haldane, 252,000/300                    5.74e-03  4.15e-03  4.06e-03  3.33e-03  2.58e-03  2.40e-03  1.87e-03
+  Haldane, 450,000/300 (H5)               1.03e-02  7.41e-03  7.25e-03  5.95e-03  4.62e-03  4.29e-03  3.33e-03
+  Term 3, 260,000 x 0.0256 (H1/H8)        4.55e-02  3.28e-02  3.21e-02  2.64e-02  2.05e-02  1.90e-02  1.48e-02
+  Hossjer 'perhaps' eq.(3) (H5)           1.08e-01  7.80e-02  7.64e-02  6.27e-02  4.86e-02  4.51e-02  3.51e-02
+
+== A4. FLIP: minimum reproductive excess  R_min = exp(U_hard + D K_a / T); shown as R_min (or ln R_min if huge)
+  T = 146250, U_hard = 0.0:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              1.09       1.19       1.31
+    coding+a_nc=0 (GAP-01 central)              1.23       1.51       1.85
+    coding, alpha=0.2 high end (GAP-01)         1.51       2.27       3.42
+    coding max (alpha 0.4 x 3e4)                2.27       5.16       11.7
+    a_nc = 0.1% (GAP-01)                        3.93       15.4       60.5
+    a_nc = 1% (GAP-01)                      1.12e+05  ln=   23.2  ln=   34.9
+    a_nc = 5% (GAP-01)                     ln=   61.5  ln=    123  ln=    185
+    Day SNV-only 17.5M (A3b)               ln=1.2e+03  ln=2.39e+03  ln=3.59e+03
+    Day 20M (A3)                           ln=1.37e+03  ln=2.74e+03  ln=4.1e+03
+    Day 205M (A3a)                         ln=1.4e+04  ln=2.8e+04  ln=4.21e+04
+  T = 146250, U_hard = 0.35:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              1.55        1.7       1.85
+    coding+a_nc=0 (GAP-01 central)              1.74       2.14       2.63
+    coding, alpha=0.2 high end (GAP-01)         2.14       3.22       4.86
+    coding max (alpha 0.4 x 3e4)                3.22       7.32       16.6
+    a_nc = 0.1% (GAP-01)                        5.57       21.9       85.8
+    a_nc = 1% (GAP-01)                      1.59e+05  ln=   23.6  ln=   35.2
+    a_nc = 5% (GAP-01)                     ln=   61.9  ln=    123  ln=    185
+    Day SNV-only 17.5M (A3b)               ln=1.2e+03  ln=2.39e+03  ln=3.59e+03
+    Day 20M (A3)                           ln=1.37e+03  ln=2.74e+03  ln=4.1e+03
+    Day 205M (A3a)                         ln=1.4e+04  ln=2.8e+04  ln=4.21e+04
+  T = 146250, U_hard = 2.2:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              9.86       10.8       11.8
+    coding+a_nc=0 (GAP-01 central)              11.1       13.6       16.7
+    coding, alpha=0.2 high end (GAP-01)         13.6       20.5       30.9
+    coding max (alpha 0.4 x 3e4)                20.5       46.6        106
+    a_nc = 0.1% (GAP-01)                        35.4        139        546
+    a_nc = 1% (GAP-01)                      1.01e+06  ln=   25.4  ln=   37.1
+    a_nc = 5% (GAP-01)                     ln=   63.7  ln=    125  ln=    187
+    Day SNV-only 17.5M (A3b)               ln=1.2e+03  ln=2.4e+03  ln=3.59e+03
+    Day 20M (A3)                           ln=1.37e+03  ln=2.74e+03  ln=4.1e+03
+    Day 205M (A3a)                         ln=1.4e+04  ln=2.8e+04  ln=4.21e+04
+  T = 252000, U_hard = 0.0:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              1.05       1.11       1.17
+    coding+a_nc=0 (GAP-01 central)              1.13       1.27       1.43
+    coding, alpha=0.2 high end (GAP-01)         1.27       1.61       2.04
+    coding max (alpha 0.4 x 3e4)                1.61       2.59       4.17
+    a_nc = 0.1% (GAP-01)                        2.21       4.89       10.8
+    a_nc = 1% (GAP-01)                           851   7.24e+05  ln=   20.2
+    a_nc = 5% (GAP-01)                     ln=   35.7  ln=   71.4  ln=    107
+    Day SNV-only 17.5M (A3b)               ln=    694  ln=1.39e+03  ln=2.08e+03
+    Day 20M (A3)                           ln=    794  ln=1.59e+03  ln=2.38e+03
+    Day 205M (A3a)                         ln=8.13e+03  ln=1.63e+04  ln=2.44e+04
+  T = 252000, U_hard = 0.35:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              1.49       1.57       1.66
+    coding+a_nc=0 (GAP-01 central)               1.6        1.8       2.03
+    coding, alpha=0.2 high end (GAP-01)          1.8       2.28        2.9
+    coding max (alpha 0.4 x 3e4)                2.28       3.68       5.92
+    a_nc = 0.1% (GAP-01)                        3.14       6.94       15.3
+    a_nc = 1% (GAP-01)                      1.21e+03   1.03e+06  ln=   20.6
+    a_nc = 5% (GAP-01)                     ln=   36.1  ln=   71.8  ln=    107
+    Day SNV-only 17.5M (A3b)               ln=    695  ln=1.39e+03  ln=2.08e+03
+    Day 20M (A3)                           ln=    794  ln=1.59e+03  ln=2.38e+03
+    Day 205M (A3a)                         ln=8.14e+03  ln=1.63e+04  ln=2.44e+04
+  T = 252000, U_hard = 2.2:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)               9.5         10       10.5
+    coding+a_nc=0 (GAP-01 central)              10.2       11.5       12.9
+    coding, alpha=0.2 high end (GAP-01)         11.5       14.5       18.4
+    coding max (alpha 0.4 x 3e4)                14.5       23.4       37.7
+    a_nc = 0.1% (GAP-01)                          20       44.1       97.6
+    a_nc = 1% (GAP-01)                      7.68e+03   6.53e+06  ln=   22.4
+    a_nc = 5% (GAP-01)                     ln=   37.9  ln=   73.6  ln=    109
+    Day SNV-only 17.5M (A3b)               ln=    697  ln=1.39e+03  ln=2.09e+03
+    Day 20M (A3)                           ln=    796  ln=1.59e+03  ln=2.38e+03
+    Day 205M (A3a)                         ln=8.14e+03  ln=1.63e+04  ln=2.44e+04
+  T = 450000, U_hard = 0.0:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              1.03       1.06       1.09
+    coding+a_nc=0 (GAP-01 central)              1.07       1.14       1.22
+    coding, alpha=0.2 high end (GAP-01)         1.14       1.31       1.49
+    coding max (alpha 0.4 x 3e4)                1.31        1.7       2.23
+    a_nc = 0.1% (GAP-01)                        1.56       2.43       3.79
+    a_nc = 1% (GAP-01)                          43.7   1.91e+03   8.36e+04
+    a_nc = 5% (GAP-01)                     ln=     20  ln=     40  ln=     60
+    Day SNV-only 17.5M (A3b)               ln=    389  ln=    778  ln=1.17e+03
+    Day 20M (A3)                           ln=    444  ln=    889  ln=1.33e+03
+    Day 205M (A3a)                         ln=4.56e+03  ln=9.11e+03  ln=1.37e+04
+  T = 450000, U_hard = 0.35:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              1.46        1.5       1.55
+    coding+a_nc=0 (GAP-01 central)              1.52       1.62       1.73
+    coding, alpha=0.2 high end (GAP-01)         1.62       1.85       2.12
+    coding max (alpha 0.4 x 3e4)                1.85       2.42       3.16
+    a_nc = 0.1% (GAP-01)                        2.21       3.45       5.38
+    a_nc = 1% (GAP-01)                            62   2.71e+03   1.19e+05
+    a_nc = 5% (GAP-01)                     ln=   20.4  ln=   40.4  ln=   60.4
+    Day SNV-only 17.5M (A3b)               ln=    389  ln=    778  ln=1.17e+03
+    Day 20M (A3)                           ln=    445  ln=    889  ln=1.33e+03
+    Day 205M (A3a)                         ln=4.56e+03  ln=9.11e+03  ln=1.37e+04
+  T = 450000, U_hard = 2.2:   D=10   D=20   D=30
+    coding, alpha~0.1 low (GAP-01)              9.29       9.56       9.84
+    coding+a_nc=0 (GAP-01 central)              9.65       10.3         11
+    coding, alpha=0.2 high end (GAP-01)         10.3       11.8       13.5
+    coding max (alpha 0.4 x 3e4)                11.8       15.4       20.1
+    a_nc = 0.1% (GAP-01)                        14.1         22       34.2
+    a_nc = 1% (GAP-01)                           395   1.72e+04   7.54e+05
+    a_nc = 5% (GAP-01)                     ln=   22.2  ln=   42.2  ln=   62.2
+    Day SNV-only 17.5M (A3b)               ln=    391  ln=    780  ln=1.17e+03
+    Day 20M (A3)                           ln=    447  ln=    891  ln=1.34e+03
+    Day 205M (A3a)                         ln=4.56e+03  ln=9.11e+03  ln=1.37e+04
+
+== A5. FLIP in the noncoding adaptive share: K_max = T (ln R - U)/D;  a_nc,max = (K_max - 3e3)/1.7e7
+  T = 146250, U_hard = 0.0
+    R=1.1  K_max=    1394 a_nc<= -0.009% | K_max=     697 a_nc<= -0.014% | K_max=     465 a_nc<= -0.015%
+    R=1.5  K_max=    5930 a_nc<=  0.017% | K_max=    2965 a_nc<= -0.000% | K_max=    1977 a_nc<= -0.006%
+    R=2    K_max=   10137 a_nc<=  0.042% | K_max=    5069 a_nc<=  0.012% | K_max=    3379 a_nc<=  0.002%
+    R=3    K_max=   16067 a_nc<=  0.077% | K_max=    8034 a_nc<=  0.030% | K_max=    5356 a_nc<=  0.014%
+    R=10   K_max=   33675 a_nc<=  0.180% | K_max=   16838 a_nc<=  0.081% | K_max=   11225 a_nc<=  0.048%
+  T = 146250, U_hard = 0.35
+    R=1.1      extinct               |     extinct               |     extinct              
+    R=1.5  K_max=     811 a_nc<= -0.013% | K_max=     406 a_nc<= -0.015% | K_max=     270 a_nc<= -0.016%
+    R=2    K_max=    5019 a_nc<=  0.012% | K_max=    2509 a_nc<= -0.003% | K_max=    1673 a_nc<= -0.008%
+    R=3    K_max=   10948 a_nc<=  0.047% | K_max=    5474 a_nc<=  0.015% | K_max=    3649 a_nc<=  0.004%
+    R=10   K_max=   28557 a_nc<=  0.150% | K_max=   14278 a_nc<=  0.066% | K_max=    9519 a_nc<=  0.038%
+  T = 252000, U_hard = 0.0
+    R=1.1  K_max=    2402 a_nc<= -0.004% | K_max=    1201 a_nc<= -0.011% | K_max=     801 a_nc<= -0.013%
+    R=1.5  K_max=   10218 a_nc<=  0.042% | K_max=    5109 a_nc<=  0.012% | K_max=    3406 a_nc<=  0.002%
+    R=2    K_max=   17467 a_nc<=  0.085% | K_max=    8734 a_nc<=  0.034% | K_max=    5822 a_nc<=  0.017%
+    R=3    K_max=   27685 a_nc<=  0.145% | K_max=   13843 a_nc<=  0.064% | K_max=    9228 a_nc<=  0.037%
+    R=10   K_max=   58025 a_nc<=  0.324% | K_max=   29013 a_nc<=  0.153% | K_max=   19342 a_nc<=  0.096%
+  T = 252000, U_hard = 0.35
+    R=1.1      extinct               |     extinct               |     extinct              
+    R=1.5  K_max=    1398 a_nc<= -0.009% | K_max=     699 a_nc<= -0.014% | K_max=     466 a_nc<= -0.015%
+    R=2    K_max=    8647 a_nc<=  0.033% | K_max=    4324 a_nc<=  0.008% | K_max=    2882 a_nc<= -0.001%
+    R=3    K_max=   18865 a_nc<=  0.093% | K_max=    9433 a_nc<=  0.038% | K_max=    6288 a_nc<=  0.019%
+    R=10   K_max=   49205 a_nc<=  0.272% | K_max=   24603 a_nc<=  0.127% | K_max=   16402 a_nc<=  0.079%
+  T = 450000, U_hard = 0.0
+    R=1.1  K_max=    4289 a_nc<=  0.008% | K_max=    2144 a_nc<= -0.005% | K_max=    1430 a_nc<= -0.009%
+    R=1.5  K_max=   18246 a_nc<=  0.090% | K_max=    9123 a_nc<=  0.036% | K_max=    6082 a_nc<=  0.018%
+    R=2    K_max=   31192 a_nc<=  0.166% | K_max=   15596 a_nc<=  0.074% | K_max=   10397 a_nc<=  0.044%
+    R=3    K_max=   49438 a_nc<=  0.273% | K_max=   24719 a_nc<=  0.128% | K_max=   16479 a_nc<=  0.079%
+    R=10   K_max=  103616 a_nc<=  0.592% | K_max=   51808 a_nc<=  0.287% | K_max=   34539 a_nc<=  0.186%
+  T = 450000, U_hard = 0.35
+    R=1.1      extinct               |     extinct               |     extinct              
+    R=1.5  K_max=    2496 a_nc<= -0.003% | K_max=    1248 a_nc<= -0.010% | K_max=     832 a_nc<= -0.013%
+    R=2    K_max=   15442 a_nc<=  0.073% | K_max=    7721 a_nc<=  0.028% | K_max=    5147 a_nc<=  0.013%
+    R=3    K_max=   33688 a_nc<=  0.181% | K_max=   16844 a_nc<=  0.081% | K_max=   11229 a_nc<=  0.048%
+    R=10   K_max=   87866 a_nc<=  0.499% | K_max=   43933 a_nc<=  0.241% | K_max=   29289 a_nc<=  0.155%
+
+== A6. Day's own figures expressed in the same formula
+  Haldane 1/300 = ln R / D at (D=30, R=e^0.1=1.105);  Term 3 0.0256/gen at Ne=3300 = 0.45/(2 ln 6600): equals ln R / D with D = 2 ln 2Ne = 17.6 and ln R = 0.45 (R = 1.57), or d=1: R = e = 2.72
+  0.0256 x 252,000 = 6451 ; 1/300 x 252,000 = 840

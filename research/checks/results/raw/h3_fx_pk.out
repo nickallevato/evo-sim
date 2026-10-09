@@ -1,0 +1,6 @@
+R=1.05: packet-model phi(12k gens incl. burn) = 0.352
+R=1.1: packet-model phi(12k gens incl. burn) = 0.475
+R=1.2: packet-model phi(12k gens incl. burn) = 0.557
+R=1.5: packet-model phi(12k gens incl. burn) = 0.673
+R=2.0: packet-model phi(12k gens incl. burn) = 0.734
+R=3.0: packet-model phi(12k gens incl. burn) = 0.777
