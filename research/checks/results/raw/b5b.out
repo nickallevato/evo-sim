@@ -1,0 +1,42 @@
+identity (2 neutral per zygote x N zygotes x 1/(2N)): [(10, '1'), (100, '1'), (1000, '1'), (10000, '1'), (1000000, '1')]
+
+(b,c) supply S = n_dn*f/2 * G per lineage; ratio to each requirement
+n_dn           f                       G        S (M) Day 20M (450k gen)     Day 17.5M (252k gen)  
+Mansfield 100  Mansfield 0.02     252000        0.252 0.013                  0.014                 
+Mansfield 100  Mansfield 0.02     450000        0.450 0.022                  0.026                 
+Mansfield 100  Rands lo 0.908     252000       11.441 0.572                  0.654                 
+Mansfield 100  Rands lo 0.908     450000       20.430 1.022                  1.167                 
+Mansfield 100  Rands mid 0.918    252000       11.567 0.578                  0.661                 
+Mansfield 100  Rands mid 0.918    450000       20.655 1.033                  1.180                 
+Mansfield 100  Rands hi 0.929     252000       11.705 0.585                  0.669                 
+Mansfield 100  Rands hi 0.929     450000       20.902 1.045                  1.194                 
+Mansfield 100  all sites 1.0      252000       12.600 0.630                  0.720                 
+Mansfield 100  all sites 1.0      450000       22.500 1.125                  1.286                 
+Kong 76.8      Mansfield 0.02     252000        0.194 0.010                  0.011                 
+Kong 76.8      Mansfield 0.02     450000        0.346 0.017                  0.020                 
+Kong 76.8      Rands lo 0.908     252000        8.787 0.439                  0.502                 
+Kong 76.8      Rands lo 0.908     450000       15.690 0.785                  0.897                 
+Kong 76.8      Rands mid 0.918    252000        8.883 0.444                  0.508                 
+Kong 76.8      Rands mid 0.918    450000       15.863 0.793                  0.906                 
+Kong 76.8      Rands hi 0.929     252000        8.990 0.449                  0.514                 
+Kong 76.8      Rands hi 0.929     450000       16.053 0.803                  0.917                 
+Kong 76.8      all sites 1.0      252000        9.677 0.484                  0.553                 
+Kong 76.8      all sites 1.0      450000       17.280 0.864                  0.987                 
+
+(d) f needed to meet each requirement: f = 2*R/(n_dn*G)
+  Mansfield 100  Day 20M (450k gen)     f_needed = 0.889
+  Mansfield 100  Day 17.5M (252k gen)   f_needed = 1.389  (> 1: impossible)
+  Kong 76.8      Day 20M (450k gen)     f_needed = 1.157  (> 1: impossible)
+  Kong 76.8      Day 17.5M (252k gen)   f_needed = 1.808  (> 1: impossible)
+
+(e) vs MEASURED events per lineage at G = 252,000 (supply/measured)
+  Mansfield 100  Rands lo 0.908   S=11.44M  GAP-07b21.05M: 0.54  GAP-07c17.2M: 0.67  GAP-07c17.9M: 0.64
+  Mansfield 100  Rands mid 0.918  S=11.57M  GAP-07b21.05M: 0.55  GAP-07c17.2M: 0.67  GAP-07c17.9M: 0.65
+  Mansfield 100  Rands hi 0.929   S=11.71M  GAP-07b21.05M: 0.56  GAP-07c17.2M: 0.68  GAP-07c17.9M: 0.65
+  Mansfield 100  all sites 1.0    S=12.60M  GAP-07b21.05M: 0.60  GAP-07c17.2M: 0.73  GAP-07c17.9M: 0.70
+  Kong 76.8      Rands lo 0.908   S=8.79M  GAP-07b21.05M: 0.42  GAP-07c17.2M: 0.51  GAP-07c17.9M: 0.49
+  Kong 76.8      Rands mid 0.918  S=8.88M  GAP-07b21.05M: 0.42  GAP-07c17.2M: 0.52  GAP-07c17.9M: 0.50
+  Kong 76.8      Rands hi 0.929   S=8.99M  GAP-07b21.05M: 0.43  GAP-07c17.2M: 0.52  GAP-07c17.9M: 0.50
+  Kong 76.8      all sites 1.0    S=9.68M  GAP-07b21.05M: 0.46  GAP-07c17.2M: 0.56  GAP-07c17.9M: 0.54
+
+shortfall at f=0.02, n_dn=100: 20M/450k = 44.4x; 17.5M/252k = 69.4x

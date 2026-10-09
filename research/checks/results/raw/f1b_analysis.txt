@@ -1,0 +1,12 @@
+cell A Ub=0.01 reps=12: pred rate 0.39603 (G_f 3), diffusion latency 847, pred L=335.47
+   L_direct = 333.324 +- 0.919 ; lambda_hat*W_hat = 333.285 ; ratio L/little = 1.000 ; W_hat = 847 ; lambda_hat = 0.39355
+   var/mean of L(t) = 0.971 ; min L = 265 ; max L = 401 ; frac(L>=1) = 1.0000 ; frac(L>=2) = 1.0000
+   fixations in window = 8264.5 ; serial cap window/latency = 24.8 ; ratio = 333.37 ; segregating (no hindsight) = 474.4
+cell B Ub=0.0005 reps=24: pred rate 0.01980 (G_f 51), diffusion latency 847, pred L=16.77
+   L_direct = 17.073 +- 0.179 ; lambda_hat*W_hat = 17.089 ; ratio L/little = 0.999 ; W_hat = 850 ; lambda_hat = 0.02011
+   var/mean of L(t) = 0.946 ; min L = 3 ; max L = 33 ; frac(L>=1) = 1.0000 ; frac(L>=2) = 1.0000
+   fixations in window = 422.3 ; serial cap window/latency = 24.8 ; ratio = 17.03 ; segregating (no hindsight) = 24.2
+cell C Ub=3e-05 reps=96: pred rate 0.00119 (G_f 842), diffusion latency 847, pred L=1.01
+   L_direct = 0.984 +- 0.022 ; lambda_hat*W_hat = 0.985 ; ratio L/little = 0.999 ; W_hat = 844 ; lambda_hat = 0.00117
+   var/mean of L(t) = 0.997 ; min L = 0 ; max L = 7 ; frac(L>=1) = 0.6171 ; frac(L>=2) = 0.2574
+   fixations in window = 24.5 ; serial cap window/latency = 24.8 ; ratio = 0.99 ; segregating (no hindsight) = 1.4

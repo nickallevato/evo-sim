@@ -1,0 +1,330 @@
+{
+ "identity": [
+  [
+   10,
+   "1"
+  ],
+  [
+   100,
+   "1"
+  ],
+  [
+   1000,
+   "1"
+  ],
+  [
+   10000,
+   "1"
+  ],
+  [
+   1000000,
+   "1"
+  ]
+ ],
+ "supply": [
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Mansfield 0.02",
+   "G": 252000,
+   "S": 252000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.0126,
+    "Day 17.5M (252k gen)": 0.0144
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Mansfield 0.02",
+   "G": 450000,
+   "S": 450000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.0225,
+    "Day 17.5M (252k gen)": 0.025714285714285714
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands lo 0.908",
+   "G": 252000,
+   "S": 11440800.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.57204,
+    "Day 17.5M (252k gen)": 0.65376
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands lo 0.908",
+   "G": 450000,
+   "S": 20430000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 1.0215,
+    "Day 17.5M (252k gen)": 1.1674285714285715
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands mid 0.918",
+   "G": 252000,
+   "S": 11566800.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.57834,
+    "Day 17.5M (252k gen)": 0.66096
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands mid 0.918",
+   "G": 450000,
+   "S": 20655000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 1.03275,
+    "Day 17.5M (252k gen)": 1.1802857142857144
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands hi 0.929",
+   "G": 252000,
+   "S": 11705400.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.58527,
+    "Day 17.5M (252k gen)": 0.66888
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands hi 0.929",
+   "G": 450000,
+   "S": 20902500.0,
+   "ratios": {
+    "Day 20M (450k gen)": 1.045125,
+    "Day 17.5M (252k gen)": 1.1944285714285714
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "all sites 1.0",
+   "G": 252000,
+   "S": 12600000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.63,
+    "Day 17.5M (252k gen)": 0.72
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "all sites 1.0",
+   "G": 450000,
+   "S": 22500000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 1.125,
+    "Day 17.5M (252k gen)": 1.2857142857142858
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Mansfield 0.02",
+   "G": 252000,
+   "S": 193536.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.0096768,
+    "Day 17.5M (252k gen)": 0.0110592
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Mansfield 0.02",
+   "G": 450000,
+   "S": 345600.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.01728,
+    "Day 17.5M (252k gen)": 0.019748571428571428
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands lo 0.908",
+   "G": 252000,
+   "S": 8786534.399999999,
+   "ratios": {
+    "Day 20M (450k gen)": 0.43932671999999995,
+    "Day 17.5M (252k gen)": 0.5020876799999999
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands lo 0.908",
+   "G": 450000,
+   "S": 15690239.999999998,
+   "ratios": {
+    "Day 20M (450k gen)": 0.7845119999999999,
+    "Day 17.5M (252k gen)": 0.8965851428571427
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands mid 0.918",
+   "G": 252000,
+   "S": 8883302.399999999,
+   "ratios": {
+    "Day 20M (450k gen)": 0.4441651199999999,
+    "Day 17.5M (252k gen)": 0.50761728
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands mid 0.918",
+   "G": 450000,
+   "S": 15863039.999999998,
+   "ratios": {
+    "Day 20M (450k gen)": 0.7931519999999999,
+    "Day 17.5M (252k gen)": 0.9064594285714285
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands hi 0.929",
+   "G": 252000,
+   "S": 8989747.2,
+   "ratios": {
+    "Day 20M (450k gen)": 0.44948735999999995,
+    "Day 17.5M (252k gen)": 0.5136998399999999
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands hi 0.929",
+   "G": 450000,
+   "S": 16053120.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.802656,
+    "Day 17.5M (252k gen)": 0.9173211428571428
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "all sites 1.0",
+   "G": 252000,
+   "S": 9676800.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.48384,
+    "Day 17.5M (252k gen)": 0.55296
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "all sites 1.0",
+   "G": 450000,
+   "S": 17280000.0,
+   "ratios": {
+    "Day 20M (450k gen)": 0.864,
+    "Day 17.5M (252k gen)": 0.9874285714285714
+   }
+  }
+ ],
+ "needed_f": [
+  {
+   "n_dn": "Mansfield 100",
+   "req": "Day 20M (450k gen)",
+   "f_needed": 0.8888888888888888
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "req": "Day 17.5M (252k gen)",
+   "f_needed": 1.3888888888888888
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "req": "Day 20M (450k gen)",
+   "f_needed": 1.1574074074074074
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "req": "Day 17.5M (252k gen)",
+   "f_needed": 1.8084490740740742
+  }
+ ],
+ "vs_measured": [
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands lo 0.908",
+   "S": 11440800.0,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.5435059382422803,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.6651627906976744,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.6391508379888268
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands mid 0.918",
+   "S": 11566800.0,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.5494916864608076,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.6724883720930233,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.6461899441340783
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "Rands hi 0.929",
+   "S": 11705400.0,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.5560760095011876,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.680546511627907,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.6539329608938548
+   }
+  },
+  {
+   "n_dn": "Mansfield 100",
+   "f": "all sites 1.0",
+   "S": 12600000.0,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.5985748218527316,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.7325581395348837,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.7039106145251397
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands lo 0.908",
+   "S": 8786534.399999999,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.4174125605700712,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.5108450232558138,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.4908678435754189
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands mid 0.918",
+   "S": 8883302.399999999,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.42200961520190017,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.5164710697674417,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.496273877094972
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "Rands hi 0.929",
+   "S": 8989747.2,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.4270663752969121,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.5226597209302325,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.5022205139664804
+   }
+  },
+  {
+   "n_dn": "Kong 76.8",
+   "f": "all sites 1.0",
+   "S": 9676800.0,
+   "ratios": {
+    "GAP-07b events/lineage 21.05M": 0.45970546318289784,
+    "GAP-07c fixed events/lineage lo 17.2M": 0.5626046511627907,
+    "GAP-07c fixed events/lineage hi 17.9M": 0.5406033519553073
+   }
+  }
+ ]
+}

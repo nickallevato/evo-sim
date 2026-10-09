@@ -1,0 +1,5 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-09T17:47:31-06:00
+a1c53c5ad8d33ab5fac3ba54e5a31585  research/checks/b5b_mansfield_supply.py
+fd3967f5d7eecc5c30f133c6e4235597  research/checks/wf.py
+e2264383685e644c3b6656dc10666963  research/checks/c1c_call_depth_replacement.py

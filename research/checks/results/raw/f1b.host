@@ -1,0 +1,5 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-09T17:47:31-06:00
+800c45d02a8530d5a88587697b1de6fb  research/checks/f1b_in_transit_measured.py
+fd3967f5d7eecc5c30f133c6e4235597  research/checks/wf.py
+e2264383685e644c3b6656dc10666963  research/checks/c1c_call_depth_replacement.py
