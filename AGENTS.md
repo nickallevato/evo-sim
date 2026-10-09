@@ -107,5 +107,12 @@ As of 2026-10-09 (after review #13), R4 is in progress:
 - reviewed and integrated: H3, GAP-04/07/02, GAP-07b, GAP-07c, the 2026-10-09 corpus refresh, C1c, C1d, D1, and X1 (critic arithmetic plus one verdict rule for both sides, blind-audited; both sides re-scored); A3 is load-bearing (31 nodes incl. ROOT);
 - mapping done: every critic and ally argument is attached ("mapped" ratified in `docs/research/argmap/NOTES.md`, judgement call 12); the 12 new claims from the Hancock video are `pending` review;
 - Holocene Nₑ retrieved (`docs/research/sources/holocene-ne.md`; RG-01): the literature does not decide C1c's reading;
-- running (one subagent at a time, compute on na-workhorse only): XT (cross-tool replication), D15 (Hössjer waiting time);
+- **paused at a stopping point (2026-10-09), one subagent at a time, compute on na-workhorse only:**
+  - **D15 (Hössjer waiting time):**
+    - Done: the baselines reproduce, and the engine and scaling are validated. See `research/checks/results/R4-D15-status.md`.
+    - Next: run the main `sweep` stage (714 cells, several hours). First choose the scale factor for the Nₑ=1e5 runs: f=3 for the stepping-stone and final-benefit cells. Commit before the run.
+    - Then the full write-up and the three reviews.
+  - **XT (cross-tool replication):**
+    - Paused after pre-registration (`da1c178`).
+    - `research/checks/xt_cross_tool.py` has an uncommitted edit made after pre-registration. Commit it labelled post hoc, or discard it, before running.
 - queued: C1e (the C1c model on each published Holocene trajectory), Mansfield's supply argument (B5b), latency vs throughput (F1/F1b), Hancock's standing-variation prediction (G2c/B6c), review of the 12 mapping claims, then the remaining load-bearing checks in the R5 draft (`docs/research/R5-draft.md`) and R5 synthesis.
