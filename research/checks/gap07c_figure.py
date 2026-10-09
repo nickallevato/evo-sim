@@ -1,6 +1,6 @@
 """GAP-07c figure (post hoc, presentation only): AF bands of the chimp-matching allele among GAP-07b divergent sites,
 and the corrected 205 M / fixed-events ratio by treatment. Reads results/raw/gap07c_report.json.
-Run: research/.venv/bin/python -I research/checks/gap07c_figure.py <report.json> <out.png>"""
+Run: research/.venv/bin/python -I research/checks/gap07c_figure.py <report.json> <out.png> <posthoc_review.json>"""
 import json
 import sys
 
@@ -32,17 +32,20 @@ a1.set_title('Human allele frequency of the chimp allele', fontsize=11, loc='lef
 a1.legend(ncol=4, fontsize=7.5, frameon=False, loc='lower center', bbox_to_anchor=(0.45, -0.52))
 for s in ('top', 'right'):
     a1.spines[s].set_visible(False)
-a2.set_title('205 M / fixed events per lineage', fontsize=11, loc='left')
-c = r['corrected']
-items = [('raw count (GAP-07b)', 'raw (GAP-07b)'),
-         ('(a) human data only', '(a) human data only, SNV pooled in-mask share; indel share = measured'),
-         ('(b) chimp = human share', '(b) symmetric s_C = s_H, SNV; indel measured net'),
-         ('(b) at AF >= 0.1%', '(b) symmetric with T = 0.001'),
-         ('(c) chimp share 2x human', '(c) chimp share = 2 x human: SNV (s_H + 2 s_H)/2')]
-for i, (lab, k) in enumerate(items):
-    x = c[k]['ratio']
-    a2.barh(i, x, color='#4a7bb5' if i else '#9aa5b1', height=0.55)
-    a2.text(x + 0.15, i, '%.1f  (%.1f M)' % (x, c[k]['fixed_per_lineage'] / 1e6), va='center', fontsize=10)
+a2.set_title('205 M / fixed events per lineage (post hoc bracket)', fontsize=11, loc='left')
+ph = json.load(open(sys.argv[3]))
+byname = {x['name']: x for x in ph['rows']}
+def find(prefix):
+    return [x for x in ph['rows'] if x['name'].startswith(prefix)][0]
+items = [('raw count (GAP-07b)', find('raw')), ('(a) human data only, pooled', find('(a)')), ('human lineage alone', find('human lineage alone')),
+         ('chimp share 0.5x human', find('chimp share 0.5x')), ('(b) chimp = human, AF >= 1%', find('(b) symmetric:')),
+         ('(b) at AF >= 10%', find('(b) symmetric at AF >= 10%')), ('(b) seen at any frequency', find('(b) symmetric at seen')),
+         ('(b) top-level fills', find('(b) top-level')), ('(c) chimp share 2x human', find('(c) chimp share 2x'))]
+for i, (lab, r) in enumerate(items):
+    x = r['ratio']
+    assume = r['chimp_assumption'].startswith('YES')
+    a2.barh(i, x, color='#4a7bb5' if assume else ('#9aa5b1' if i == 0 else '#1f4678'), height=0.55)
+    a2.text(x + 0.15, i, '%.1f  (%.1f M)' % (x, r['fixed_per_lineage'] / 1e6), va='center', fontsize=10)
 a2.set_yticks(range(len(items)))
 a2.set_yticklabels([x[0] for x in items], fontsize=10)
 a2.invert_yaxis()
@@ -50,6 +53,6 @@ a2.set_xlim(0, 16)
 a2.set_xlabel('times (Day 205 M / fixed events per lineage)', fontsize=9)
 for s in ('top', 'right'):
     a2.spines[s].set_visible(False)
-fig.text(0.01, 0.01, 'Chimp lineage NOT measured (no chimp population data); (b) and (c) assume it. 1000 Genomes phase 3 (2,548 samples), GRCh38.', fontsize=8, color='#555')
+fig.text(0.01, 0.01, 'Dark bars use human data only; light blue bars assume a chimp-lineage share (no chimp data); grey = raw. 1000 Genomes phase 3 (2,548 samples), GRCh38.', fontsize=8, color='#555')
 fig.tight_layout(rect=(0, 0.04, 1, 1))
 fig.savefig(sys.argv[2], dpi=140)
