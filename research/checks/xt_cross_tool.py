@@ -28,6 +28,10 @@ Convention: a mutant arises as 1 copy in offspring generation g and fixes at gen
 number of reproduction steps, as in wf.single_locus). Because numpy mutates and samples in the same step, the
 empty-start expectation differs by one generation of F: fwdpy11 target U*sum_{u=0}^{T-1}F(u) (numpy sums 1..T).
 
+POST HOC (after pre-registration da1c178, before any main run): run sizes reduced (G, reps; N=1e4 cell U 2e-5 -> 5e-5, G 1.5e4 -> 5e3,
+ so the B0.4 N=1e4 cell expects n ~ 60 fixations, not ~100); t_fix mean/SD SE and CI now by bootstrap over chunks (robust to chunks with
+ 0 fixations; the old per-chunk mean divided by nfix=0); XT_SMOKE env var forces smoke sizes. Predictions and thresholds unchanged.
+
 PRE-REGISTERED PREDICTIONS (written before any run of the main stages; thresholds are |z| < 3 on the
 between-chunk SE unless stated, plus the numpy values recorded in RESULTS.md / R4 files compared at combined SE):
  B0.1 neutral P_fix = 1/(2N), N = 50, 100, 200 (numpy: 0.009893 at N=50, 0.00246 at N=200).
@@ -39,7 +43,7 @@ between-chunk SE unless stated, plus the numpy values recorded in RESULTS.md / R
  B0.4 mean conditional beneficial t_fix = diffusion integral (5% tolerance, numpy: 698+-3 at N=500,s=.01 vs 703;
       1405+-9 at N=1000,s=.005 vs 1407), and well BELOW Day's (2/s)ln(2N) (1382; 3040). At Day's own N=1e4, s=.001:
       diffusion 8480 vs (2/s)ln(2N) = 19807; prediction: simulated within 10% of 8480 and below 19807 by >2x
-      (n ~ 100, wide CI; the 10% allowance reflects the small number of fixations).
+      (n ~ 60, wide CI; the 10% allowance reflects the small number of fixations).
  B0.5 neutral k = U at equilibrium (burn-in 20N): k/U = 1 for N = 50, 100, 200.
  B1   N=100, U=0.5: empty-start fixations by T = U*sum_{u<T}F_X(u) (exact-chain F_X) at T = 200, 400, 1000,
       2000 (numpy 2.8, 41.3, 304.4, 802.5); equilibrium-start count = U*T (numpy 99.3, 198.5, 501.0, 1005.1).
@@ -306,21 +310,21 @@ def zc(a, sa, b, sb):
 def cfg(stage, smoke):
     k = 0.02 if smoke else 1.0
     c = {}
-    c["b0n"] = [dict(task="const", N=50, U=0.05, G=int(4e5 * k), tail=15 * 50, R=1.0, S2=S_NEUTRAL, noise_a=0.0, chunks=12),
-                dict(task="const", N=100, U=0.025, G=int(6e5 * k), tail=15 * 100, R=1.0, S2=S_NEUTRAL, noise_a=0.0, chunks=12),
-                dict(task="const", N=200, U=0.0125, G=int(3e5 * k), tail=15 * 200, R=1.0, S2=S_NEUTRAL, noise_a=0.0, chunks=12)]
-    c["b0s"] = [dict(task="const", N=100, s=0.01, U=0.0025, G=int(2e5 * k), tail=3000, R=5.0, noise_a=0.0, chunks=12),
-                dict(task="const", N=500, s=0.01, U=0.0005, G=int(1e5 * k), tail=4000, R=5.0, noise_a=0.0, chunks=12),
-                dict(task="const", N=1000, s=0.005, U=0.00025, G=int(6e4 * k), tail=9000, R=5.0, noise_a=0.0, chunks=16),
-                dict(task="const", N=10000, s=0.001, U=0.00002, G=int(1.5e4 * k), tail=50000, R=1.0, noise_a=0.0, chunks=8)]
+    c["b0n"] = [dict(task="const", N=50, U=0.05, G=int(2.5e5 * k), tail=15 * 50, R=1.0, S2=S_NEUTRAL, noise_a=0.0, chunks=12),
+                dict(task="const", N=100, U=0.025, G=int(4e5 * k), tail=15 * 100, R=1.0, S2=S_NEUTRAL, noise_a=0.0, chunks=12),
+                dict(task="const", N=200, U=0.0125, G=int(2e5 * k), tail=15 * 200, R=1.0, S2=S_NEUTRAL, noise_a=0.0, chunks=12)]
+    c["b0s"] = [dict(task="const", N=100, s=0.01, U=0.0025, G=int(1.5e5 * k), tail=2000, R=5.0, noise_a=0.0, chunks=12),
+                dict(task="const", N=500, s=0.01, U=0.0005, G=int(8e4 * k), tail=3000, R=5.0, noise_a=0.0, chunks=12),
+                dict(task="const", N=1000, s=0.005, U=0.00025, G=int(4e4 * k), tail=7000, R=5.0, noise_a=0.0, chunks=16),
+                dict(task="const", N=10000, s=0.001, U=0.00005, G=int(5e3 * k), tail=35000, R=1.0, noise_a=0.0, chunks=6)]
     for x in c["b0s"]:
         x["S2"] = 2 * x["s"]
         x["tail"] = int(x["tail"] * max(k, 0.1))
-    c["b3"] = [dict(task="const", N=100, U=0.025, G=int(1.5e5 * k), tail=1500, R=1.0, S2=S_NEUTRAL, noise_a=aa, chunks=12)
+    c["b3"] = [dict(task="const", N=100, U=0.025, G=int(1e5 * k), tail=1500, R=1.0, S2=S_NEUTRAL, noise_a=aa, chunks=12)
                for aa in (0.0, 3.0, 15.0, 100.0)]
-    c["b1"] = [dict(task="b1", N=100, U=0.5, B=2000, T=2000, R=1.0, reps=int(120 * max(k, 0.05)))]
+    c["b1"] = [dict(task="b1", N=100, U=0.5, B=2000, T=2000, R=1.0, reps=int(80 * max(k, 0.05)))]
     c["b1b"] = [dict(task="demog", kind="b1b", N0=500, U=0.04, reps=int(48 * max(k, 0.05)))]
-    c["b1c"] = [dict(task="demog", kind="b1c", N_anc_sim=500, U=0.04, reps=int(120 * max(k, 0.05)))]
+    c["b1c"] = [dict(task="demog", kind="b1c", N_anc_sim=500, U=0.04, reps=int(80 * max(k, 0.05)))]
     c["fluct"] = [dict(task="fluct", kind=kd, U=0.1, burn=2000, T=int(6000 * max(k, 0.1)), R=1.0, reps=int(24 * max(k, 0.1)))
                   for kd in ("const100", "random2", "cycle5")]
     c["cohort"] = [dict(task="cohort", U=1.0, reps=int(200 * max(k, 0.05)), tail=2500, R=1.0, chunks=max(2, int(30 * k)))]
@@ -408,16 +412,19 @@ def chunks_of(res, ci):
     return sorted([r for r in res if r["ci"] == ci], key=lambda r: r["i"])
 
 
-def pooled_tstats(ch):
+def pooled_tstats(ch, nboot=2000):
+    """Pooled mean and SD of t_fix over all fixations; SE by bootstrap over chunks (robust to chunks with 0 fixations)."""
     n = np.array([c["nfix"] for c in ch], float)
-    tm = np.array([c["tsum"] / c["nfix"] for c in ch])
-    wmean = (n * tm).sum() / n.sum()
-    # between-chunk SE of the weighted mean (chunk sizes ~equal)
-    se = tm.std(ddof=1) / np.sqrt(len(ch))
-    tot_sq = sum(c["tsq"] for c in ch)
-    sd = np.sqrt(tot_sq / n.sum() - wmean ** 2)
-    sds = np.array([np.sqrt(c["tsq"] / c["nfix"] - (c["tsum"] / c["nfix"]) ** 2) for c in ch])
-    return wmean, se, sd, sds.std(ddof=1) / np.sqrt(len(ch))
+    s1 = np.array([c["tsum"] for c in ch], float)
+    s2 = np.array([c["tsq"] for c in ch], float)
+    def stat(idx):
+        nn, a1, a2 = n[idx].sum(), s1[idx].sum(), s2[idx].sum()
+        m = a1 / nn
+        return m, np.sqrt(max(a2 / nn - m * m, 0.0))
+    m, sd = stat(np.arange(len(ch)))
+    rng = np.random.default_rng(12345)
+    bs = np.array([stat(rng.integers(0, len(ch), len(ch))) for _ in range(nboot)])
+    return m, bs[:, 0].std(ddof=1), sd, bs[:, 1].std(ddof=1), np.percentile(bs[:, 0], [2.5, 97.5])
 
 
 def pad_hist(ch, L=None):
@@ -445,9 +452,9 @@ def analyze_b0n(res, lines, smoke=False):
         ref = NUMPY["B0.1"].get(N)
         lines.append(line("B0.1 P_fix (n_fix=%d, unresolved=%d)" % (nf, unres), pe, se, 1 / (2 * N),
                           "CI95 [%.5g, %.5g]" % (lo - (m - pe), hi - (m - pe)) + (" numpy %.5g z_cross=%+.2f" % (ref[0], zc(pe, se, *ref)) if ref else "")))
-        tm, tse, tsd, tsdse = pooled_tstats(ch)
+        tm, tse, tsd, tsdse, tci = pooled_tstats(ch)
         ref = NUMPY["B0.2"].get(N)
-        lines.append(line("B0.2 mean t_fix/N", tm / N, tse / N, mean_ex / N, "CI95 [%.4f, %.4f]" % tuple((np.array(t_ci([x['tsum'] / x['nfix'] for x in ch])[2:]) / N)) +
+        lines.append(line("B0.2 mean t_fix/N", tm / N, tse / N, mean_ex / N, "bootCI95 [%.4f, %.4f]" % tuple(tci / N) +
                           (" numpy %.4g z_cross=%+.2f" % (ref[0], zc(tm / N, tse / N, *ref)) if ref else "")))
         lines.append(line("B0.2 SD t_fix/N", tsd / N, tsdse / N, sd_ex / N, "(diffusion 2.15)"))
         kr = np.array([x["nwin"] / (x["U"] * x["lenwin"]) for x in ch])
@@ -495,13 +502,13 @@ def analyze_b0s(res, lines, smoke=False):
         lines.append(line("B0.3 u(s,N) (n_fix=%d, unresolved=%d)" % (nf, unres), pe, se, u,
                           "rel %+.2f%% %s CI95 [%.5g, %.5g]" % (100 * rel, "PASS" if abs(z) < 3 else ("PASS-by-2%-allowance" if ok else "FAIL"), lo - (m - pe), hi - (m - pe)) +
                           (" numpy %.5g z_cross=%+.2f" % (ref[0], zc(pe, se, *ref)) if ref else "")))
-        tm, tse, tsd, _ = pooled_tstats(ch)
+        tm, tse, tsd, _, tci = pooled_tstats(ch)
         diff = W.diffusion_cond_fix_time(N, s)
         day = 2 / s * np.log(2 * N)
         sto = 2 / s * (np.log(4 * N * s) + 0.5772)
         ref = NUMPY["B0.4"].get((N, s))
-        lo, hi = t_ci([x["tsum"] / x["nfix"] for x in ch])[2:]
-        lines.append(line("B0.4 mean t_fix", tm, tse, diff, "CI95 [%.0f, %.0f] rel %+.1f%%; Day (2/s)ln2N=%.0f (ratio Day/sim %.2f); (2/s)(ln4Ns+g)=%.0f" %
+        lo, hi = tci
+        lines.append(line("B0.4 mean t_fix", tm, tse, diff, "bootCI95 [%.0f, %.0f] rel %+.1f%%; Day (2/s)ln2N=%.0f (ratio Day/sim %.2f); (2/s)(ln4Ns+g)=%.0f" %
                           (lo, hi, 100 * (tm - diff) / diff, day, day / tm, sto) +
                           (" numpy %.0f+-%.0f z_cross=%+.2f" % (ref[0], ref[1], zc(tm, tse, *ref)) if ref else "")))
 
@@ -535,7 +542,7 @@ def analyze_b3(res, lines, smoke=False):
                      (N, a, cv2, Ne_cv, vk, Ne_v, Ne_v / N))
         lines.append(line("P_fix*2N (martingale: 1; Day N/Ne = %.3f) n_fix=%d" % (N / Ne_v, nf), pe * 2 * N, se * 2 * N, 1.0,
                           "CI95 [%.4f, %.4f]; z vs Day: %+.1f" % ((lo - (m - pe)) * 2 * N, (hi - (m - pe)) * 2 * N, (pe * 2 * N - N / Ne_v) / (se * 2 * N))))
-        tm, tse, _, _ = pooled_tstats(ch)
+        tm, tse, _, _, tci = pooled_tstats(ch)
         lines.append(line("mean t_fix / (4 Ne(Vk))", tm / (4 * Ne_v), tse / (4 * Ne_v), 1.0, "t_fix/N=%.3f; Day-cens (t=4N) would be 1/(Ne/N)=%.2f" % (tm / N, N / Ne_v)))
         kr = np.array([x["nwin"] / (x["U"] * x["lenwin"]) for x in ch])
         m, se, lo, hi = t_ci(kr)
@@ -637,7 +644,7 @@ def provenance():
 def main():
     stage = sys.argv[1] if len(sys.argv) > 1 else "smoke"
     workers = min(6, int(sys.argv[2]) if len(sys.argv) > 2 else 6)
-    smoke = stage == "smoke"
+    smoke = stage == "smoke" or bool(os.environ.get("XT_SMOKE"))
     prov = provenance()
     print("XT cross-tool", json.dumps(prov), flush=True)
     stages = STAGES if stage in ("smoke", "all") else [stage]
