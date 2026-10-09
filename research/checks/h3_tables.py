@@ -90,5 +90,48 @@ def main():
     json.dump(dict(phi=phis, extrap=ext), open(os.path.join(RAW, "h3_extrap.json"), "w"), indent=1)
 
 
+def logit_lam50():
+    """Review fix m1 (post hoc): binomial logistic fit of persistence on ln(lam) over the pooled stage-A points
+    (free + map36), per R.  lam50 = exp(-a/b); 95% CI by profile likelihood on ln lam50 (overdispersion ignored)."""
+    import numpy as np
+    from scipy.optimize import minimize
+    from scipy.stats import chi2
+    pooled = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+    for st in ("A",):
+        for r in json.load(open(os.path.join(RAW, f"h3_{st}_summary.json"))):
+            a = pooled[r["R"]][round(r["lam"], 7)]
+            a[0] += round(r["persist"] * r["reps"])
+            a[1] += r["reps"]
+    out = {}
+    print("\nLogistic fit (pooled stage A; persistence ~ logit(b (ln lam - ln lam50))), 95% profile CI:")
+    for R in sorted(pooled):
+        pts = sorted(pooled[R].items())
+        x = np.array([math.log(l) for l, _ in pts])
+        k = np.array([v[0] for _, v in pts], float)
+        n = np.array([v[1] for _, v in pts], float)
+
+        def nll(m, b):
+            z = b * (x - m)
+            p = 1 / (1 + np.exp(z))          # persistence falls with lam (b > 0)
+            p = np.clip(p, 1e-12, 1 - 1e-12)
+            return -float(np.sum(k * np.log(p) + (n - k) * np.log(1 - p)))
+        best = minimize(lambda v: nll(v[0], math.exp(v[1])), [float(np.median(x)), 1.0], method="Nelder-Mead",
+                        options=dict(xatol=1e-6, fatol=1e-8, maxiter=5000))
+        m0, b0 = best.x[0], math.exp(best.x[1])
+        L0 = best.fun
+        crit = chi2.ppf(0.95, 1) / 2
+
+        def prof(m):
+            return minimize(lambda v: nll(m, math.exp(v[0])), [math.log(b0)], method="Nelder-Mead").fun - L0
+        grid = np.linspace(m0 - 1.0, m0 + 1.0, 801)
+        ok = [g for g in grid if prof(g) <= crit]
+        lo, hi = math.exp(min(ok)), math.exp(max(ok))
+        out[R] = dict(lam50=math.exp(m0), lo=lo, hi=hi, slope=b0)
+        print(f"  R={R:<5} lam50(10k) = {math.exp(m0):.5f}  95% CI [{lo:.5f}, {hi:.5f}]  x300 = {300*math.exp(m0):.2f} "
+              f"[{300*lo:.2f}, {300*hi:.2f}]  phi = {math.exp(m0)/(math.log(R)/(2*math.log(2000))):.3f}")
+    json.dump(out, open(os.path.join(RAW, "h3_logit_lam50.json"), "w"), indent=1)
+
+
 if __name__ == "__main__":
     main()
+    logit_lam50()
