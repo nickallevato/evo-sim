@@ -206,6 +206,7 @@ new_node = {"A5h": dict(id="A5h", side="day", numeric=True, qwords=60, internal=
 def verdict(c):
     return over.get(c["id"], c["internal"])
 
+NUMKEY = "numeric"
 def stats(side, scen=None):
     """errors (all files), numeric files (excluding E1/U), errors among them, quoted words of the numeric files"""
     allerr = nnum = nerr = words = 0
@@ -213,7 +214,7 @@ def stats(side, scen=None):
         v = verdict(c)
         if scen and c["id"] in scen:
             v = scen[c["id"]]
-        isnum = c["numeric"] and c["id"] not in EXCLUDE
+        isnum = (True if NUMKEY == "all" else c[NUMKEY]) and c["id"] not in EXCLUDE
         if v in ERR:
             allerr += 1
         if isnum:
@@ -273,7 +274,16 @@ al_all, al_n, al_e, al_w = res["ally"][:4]
 p = fisher(d_e, d_n, c_e, c_n)
 out.append("\nFinal after the rule: **Day %d / %d (%.1f%%) vs critics %d / %d (%.1f%%); Fisher exact two-sided p = %.4f**. Allies %d / %d.\n" % (d_e, d_n, 100.0 * d_e / d_n, c_e, c_n, 100.0 * c_e / c_n, p, al_e, al_n))
 
-out.append("## Sensitivity (Day vs critics, Fisher exact p)\n")
+out.append("## Denominator choice (after the rule; E1, B5d, D8 excluded each time)\n")
+out.append("| Denominator | Day | Critics | Allies | Fisher p (Day vs critics) |")
+out.append("|---|---|---|---|---|")
+for key, lab in (("numeric", "numeric by the author's quoted text (primary)"), ("numeric_old", "numeric by the Formal-statement regex (the audit's derived: lines included; the 31 / 82 of revision 1)"), ("all", "all claim files")):
+    NUMKEY = key
+    dd, cc, aa = stats("day"), stats("critic"), stats("ally")
+    out.append("| %s | %d / %d = %.1f%% | %d / %d = %.1f%% | %d / %d | %.4f |" % (lab, dd[2], dd[1], 100.0 * dd[2] / dd[1], cc[2], cc[1], 100.0 * cc[2] / cc[1], aa[2], aa[1], fisher(dd[2], dd[1], cc[2], cc[1])))
+NUMKEY = "numeric"
+out.append("\nIn the 'all files' row the error verdicts are counted over every file on the side (Day 113 incl. A5h, critics 51 less E1, allies 15 less D8). The quote-based regex drops Day error nodes whose quoted Statement has no figure (for example G3b, C7, G2g), which is why Day falls from 18 to 13 in the primary row.\n")
+out.append("## Sensitivity (Day vs critics, Fisher exact p; primary denominator)\n")
 out.append("| Scenario | Day | Critics | p |")
 out.append("|---|---|---|---|")
 def scen_row(name, dscen=None, cscen=None, pool_allies=False, d_extra=0):
