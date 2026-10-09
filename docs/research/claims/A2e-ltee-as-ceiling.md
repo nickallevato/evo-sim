@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: non-sequitur
   fidelity: pending
-  external: "contested"   # not supported for recombining organisms only by extrapolation from F2 (1.5-172x); asexual interference confirmed
+  external: "contested"   # not supported for recombining organisms only by extrapolation from F2 (1.5-172x); asexual interference confirmed; R4 GAP-04: the recombining-genome asymptote is set by map length (R/2; R/4 with an exponential DFE), independent of N and s; the LTEE clonal G_f is outside W&B's domain
 ---
 
 ## Statement (verbatim)
@@ -55,6 +55,8 @@ No check has run (queued as A-sim in the file for A).
 ## Check
 R4 A-sim + F2 (research/checks/results/R4-F2-A.md): the LTEE is interference-limited in the clonal model; free recombination would raise the rate 1.5-172x at the calibrated supply, but that factor is an EXTRAPOLATION of F2's R_int ~ 1 beyond its tested range (<= 272 active loci), not a simulation. Credit to Day: sublinearity and real interference under linkage are borne out (critics also predicted asexual saturation, so that is not Day-specific credit). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none yet. Internal verdict is from the paper's own tables (above). Review: pending.
+
+R4 GAP-04 (research/checks/results/R4-GAPS-04-07-02.md): Weissman & Barton 2012: in a recombining genome the adaptive-substitution asymptote is R/2 per generation (R/4 for an exponential DFE), independent of N and s; at R = 35-38 M that is 17.5-19 per generation (4.4-4.8M per lineage), 1,800-25,000x the MITTENS achievable count. The clonal LTEE is outside W&B's domain (they require R >> s), so W&B do not supply a transfer factor from G_f; they show the recombining rate is bounded by map length, not by the clonal rate. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - Supply (U per genome), recombination rate, population size, s distribution; output fixations per generation compared to 1/G_f.

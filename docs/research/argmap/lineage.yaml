@@ -2954,3 +2954,88 @@
   fate: alive
   fate_date:
   fate_locator: "Exploratory runs (claims/D9): parallel completion ~13,100 generations, not pre-registered"
+
+# ---------------------------------------------------------------- added 2026-10-08 (R4 GAP-04 / GAP-07 / GAP-02)
+- id: L-pan-sweeps-2026
+  label: "Pan Paradox: 326,000 selective fixations in bonobos would leave a genome-wide mosaic of sweep signatures"
+  side: day
+  kind: argument
+  date: 2026-01-31
+  claim_ids: [A6a]
+  locator: "https://zenodo.org/records/18441321 §3.1 'Third' (raw zenodo-18441321.txt l.119)"
+  quote: "If 326,000 loci fixed by selection in bonobos over 930,000 years, the entire genome should be a mosaic of overlapping sweep signatures."
+  parents:
+    - {id: L-mittens-2025, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 GAP-02: holds against 326,000 selective fixations (window 43–50% of the split; Yoo SweepFinder2 finds 30 bonobo candidates)"
+
+- id: L-sweep-signatures-2026
+  label: "Universal Failure §4.3(4): 3,200+ sweeps would saturate selection scans; scans find dozens to hundreds"
+  side: day
+  kind: argument
+  date: 2026-02-02
+  claim_ids: [A6]
+  locator: "https://zenodo.org/records/18452504 §4.3 item (4) (raw zenodo-18452504.txt l.331)"
+  quote: "If 3,200+ sweeps had occurred, selection scans would be saturated with signals. They are not."
+  parents:
+    - {id: L-pan-sweeps-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-02-02
+  fate_locator: "Not restated in MITTENS 3.0 (2026-09-28), whose §8.2 instead calls human neutral fixations hitchhikers; R4 GAP-02: at most ~98 detectable at the stated 3,200 (claims/A6)"
+
+- id: L-audit-gap04-2026
+  label: "Audit GAP-04: Weissman–Barton bracket R/4–R/2–simulated envelope vs Day's all-fixations model and the critics' adaptive share"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [F2, A, A2e, Gc]
+  locator: "research/checks/results/R4-GAPS-04-07-02.md §1.1"
+  quote: "So it lies above both analytic asymptotes but inside W&B's simulated range."
+  parents:
+    - {id: L-mittens-3-2026, relation: responds-to}
+    - {id: L-bb-230-2026, relation: responds-to}
+    - {id: L-audit-f2-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #6 (REVIEW-R4-GAPS-*): 'bound' and 'supply-infeasible' withdrawn, Eq. 13 and the two-model framing added"
+
+- id: L-audit-gap07-2026
+  label: "Audit GAP-07: events per lineage 18–22.5M; a base-pair numerator is a unit mismatch with G_f"
+  side: audit
+  kind: reply
+  date: 2026-10-08
+  claim_ids: [A3a, A3x]
+  locator: "research/checks/results/R4-GAPS-04-07-02.md §2.1"
+  quote: "A base-pair numerator divided by an events-per-generation rate is a unit mismatch inside Day's own method."
+  parents:
+    - {id: L-req-205m-2026, relation: responds-to}
+    - {id: L-mccarthy-bp-events-2026, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #6: the indel 'undercount' and the 'few large events' reading of Yoo's SDRs withdrawn"
+
+- id: L-audit-gap02-2026
+  label: "Audit GAP-02: with a ~10,000-generation window, Day's 3,200 sweeps give at most ~98 detectable"
+  side: audit
+  kind: reply
+  date: 2026-10-08
+  claim_ids: [A6, A6a]
+  locator: "research/checks/results/R4-GAPS-04-07-02.md §3.1"
+  quote: "So the saturation-by-count inference does not follow at his stated number."
+  parents:
+    - {id: L-sweep-signatures-2026, relation: responds-to}
+    - {id: L-pan-sweeps-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #6: power-1 upper bound stated; non-sequitur verdict softened to pending (range-dependent)"

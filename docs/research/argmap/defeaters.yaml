@@ -66,7 +66,7 @@
   first_date: 2026-09-17
   locator: https://dennismccarthy.substack.com/p/vox-day-responds para 26 (MC-11)
   audit_status: upheld
-  audit_basis: A3x holds/accurate/supported; A3a arithmetic-error/misread/contested; Day concedes the concern in 3.0 §7.3 (A3b)
+  audit_basis: 'A3x holds/accurate/supported; A3a arithmetic-error/misread/contested; Day concedes the concern in 3.0 §7.3 (A3b); R4 GAP-07: events per lineage 18–22.5M (calibrated / CSAC-observed), 205M ≈ 9–11×; G_f counts events, so a bp numerator is a unit mismatch'
   counter: []
   note: Base pairs inside structural variants are not separate fixation events.
   quote: a single mutational event can cause hundreds, thousands, or even millions of base-pair differences.
@@ -93,7 +93,7 @@
   first_date: 2026-01-26
   locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 60-62 (MC-05, MC-07)
   audit_status: partly
-  audit_basis: 'A5 holds/n/a/contested; R4 A-sim: asexual response sublinear (a = 0.23–0.34), free-recombination factor 1.5–172× is an extrapolation'
+  audit_basis: 'A5 holds/n/a/contested; R4 A-sim: asexual response sublinear (a = 0.23–0.34), free-recombination factor 1.5–172× is an extrapolation; R4 GAP-04: W&B recombining asymptote R/2 per lineage is 1,800–25,000× MITTENS'' achievable count'
   counter: [d016, d129]
   note: Per-genome mutation supply and genome size differ by orders of magnitude, so the bacterial rate is not a ceiling without scaling.
   hierarchy_edge: true
@@ -106,8 +106,8 @@
   first_date: 2026-10-04
   locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ s3
   audit_status: partly
-  audit_basis: 'A5b holds/accurate/contested; R4 A-sim: linear only under free recombination; KITTENS calls it an illustration (RE-09)'
-  counter: [d013, d014, d182, d223]
+  audit_basis: 'A5b holds/accurate/contested; R4 A-sim: linear only under free recombination; KITTENS calls it an illustration (RE-09); R4 GAP-04: W&B recombining asymptote R/2 per lineage is 1,800–25,000× MITTENS'' achievable count; linear supply scaling of a sweep-carried rate exceeds R/2 (d249)'
+  counter: [d013, d014, d182, d223, d249]
   note: After scaling for per-genome supply and counting SNV events, achievable ≈ required.
   hierarchy_edge: true
 - id: d011
@@ -119,8 +119,8 @@
   first_date: 2026-10-04
   locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ s3
   audit_status: upheld
-  audit_basis: A3x supported; A3a arithmetic-error/misread
-  counter: [d013, d014, d182, d223]
+  audit_basis: 'A3x supported; A3a arithmetic-error/misread; R4 GAP-07: events per lineage 18–22.5M, 205M ≈ 9–11× (>= 8× at observation-consistent inputs)'
+  counter: [d013, d014, d182, d223, d249]
   note: The 11.7 factor is bases counted as events.
   hierarchy_edge: true
 - id: d012
@@ -171,7 +171,7 @@
   first_date: 2019-02-11
   locator: https://voxday.net/2019/02/11/whopping-the-floor/ ¶4 (GA-01); https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-07)
   audit_status: upheld
-  audit_basis: 'A5f holds/partial/supported; R4 F2: free recombination R_int 0.975 vs clonal 0.09–0.65 (direction supported)'
+  audit_basis: 'A5f holds/partial/supported; R4 F2: free recombination R_int 0.975 vs clonal 0.09–0.65 (direction supported); R4 GAP-04: W&B (2012) bounds the recombining rate by map length (R/2, R/4 with an exponential DFE), not by the clonal rate'
   counter: [d128]
   note: No recombination is a handicap (clonal interference), not an advantage; sex and population-size variation change fixation rates.
   hierarchy_edge: true
@@ -1622,7 +1622,7 @@
   locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ §11
   audit_status: partly
   audit_basis: RESULTS F1 (latency is not throughput); Appendix D not retrieved
-  counter: [d013, d014, d182, d223]
+  counter: [d013, d014, d182, d223, d249]
   note: §8.2 and Appendix D revert to the interval form.
   hierarchy_edge: false
 - id: d131
@@ -2213,7 +2213,7 @@
   locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ §11
   audit_status: partly
   audit_basis: claims/G2 support list (s8.2, s8.6 interval form); F1a non-sequitur
-  counter: [d013, d014, d182, d223]
+  counter: [d013, d014, d182, d223, d249]
   note: 3.0 §8.2 and Appendix D divide time by fixation time.
   hierarchy_edge: false
 - id: d176
@@ -2252,7 +2252,7 @@
   first_date: 2026-10-08
   locator: research/checks/RESULTS.md §F2
   audit_status: partly
-  audit_basis: F2/G/Gc external contested; tested regime only
+  audit_basis: 'F2/G/Gc external contested; tested regime only; R4 GAP-04: W&B Eq. 7 agrees with F2 at 1.5 M within ~6–10%'
   counter: [d232, d238]
   note: No collapse to 272 active loci with free recombination (R_int 0.975).
   hierarchy_edge: false
@@ -2278,7 +2278,7 @@
   first_date: 2026-10-08
   locator: research/checks/RESULTS.md §F2
   audit_status: partly
-  audit_basis: F2 external contested
+  audit_basis: 'F2 external contested; R4 GAP-04: W&B Eq. 7 agrees with F2 at 1.5 M within ~6–10%; Day''s all-fixations requirement is 3.3–9× above the W&B asymptotes'
   counter: [d232, d238]
   note: Day's cap is not reproduced in the tested regime; interference is real under tight linkage (credit to Day).
   hierarchy_edge: false
@@ -2369,7 +2369,7 @@
   first_date: 2026-09-28
   locator: https://zenodo.org/records/23003785 p.12 (§7.3)
   audit_status: upheld
-  audit_basis: A3b holds/partial
+  audit_basis: 'A3b holds/partial; R4 GAP-07: the event count corroborates the 17.5M SNV-only magnitude; s7.3 wording ambiguous on bp vs events'
   counter: []
   note: 'Self-concession: counting structural variants per base is ''a legitimate methodological concern''.'
   quote: This is a legitimate methodological concern.
@@ -3129,4 +3129,174 @@
   audit_basis: 'E3 holds only under an inferred mean-field formulation; external contested (overreach)'
   counter: []
   note: 'The literal §3.1 reading gives 2.75%, outside the pre-registered band; population-level fitness dips are 1–5× rarer at N = 20–30 and 6–620× rarer at N = 100, so ''independently sufficient'' and ''minefields'' overreach.'
+  hierarchy_edge: false
+# ---------------------------------------------------------------- R4 GAP-04 / GAP-07 / GAP-02 (added 2026-10-08; research/checks/results/R4-GAPS-04-07-02.md)
+- id: d246
+  attacker: chk:GAP04
+  target: Gc
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §1.7 (POST HOC)
+  audit_status: partly
+  audit_basis: 'Gc external contested; post hoc; W&B soft-selection model only; the R/2 ceiling needs a beneficial supply of order U_tot; 230 matches the concurrency implied by K_a ~ 1e5 (s = 0.01)'
+  counter: [d256, d257]
+  note: 'As a cap, 230 has no support in interference theory: the W&B ceiling at R/2 is 7.7–8.3e3 concurrent active-zone sweeps at s = 0.01 in a 35–38 M genome. As a number, 230 is the order implied by K_a ~ 1e5 or by Day''s own 200,000.'
+  hierarchy_edge: false
+- id: d247
+  attacker: chk:GAP04
+  target: F2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §1.1, §1.5
+  audit_status: partly
+  audit_basis: 'F2 external contested; holds only on the critics'' model (branch B decides the model); interference leg only, hard selection with linkage untested'
+  counter: [d256, d257]
+  note: 'Granting that sweeps interfere, the W&B asymptotes (R/4–R/2 = 8.75–19 per generation at R = 35–38 M) are reached only if more than 13–27% of the 17.5M differences are adaptive; below that, interference costs <= 4.3% (K_a <= 1e5) to 31% (1e6). On Day''s all-fixations model the requirement is 3.3–9× above the asymptotes (credit to Day).'
+  hierarchy_edge: false
+- id: d248
+  attacker: chk:GAP04
+  target: A2e
+  target_part: P4
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §1.5
+  audit_status: partly
+  audit_basis: 'A2e internal non-sequitur, external contested; the clonal LTEE is outside W&B''s domain, so no transfer factor is computed'
+  counter: [d256, d257]
+  note: 'Recombination does raise the attainable rate: W&B''s recombining asymptote R/2 per lineage (4.4–4.8M) is 1,800–25,000× the MITTENS achievable count (191–2,407). Linkage limits parallelism in form, not in magnitude.'
+  hierarchy_edge: false
+- id: d249
+  attacker: chk:GAP04
+  target: A5b
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §1.5, §1.9
+  audit_status: partly
+  audit_basis: 'A5b external contested; applies only if the supply-scaled fixations are sweep-carried (Day''s model); on the critics'' neutral reading the scaling is not a sweep rate'
+  counter: [d256, d257]
+  note: 'Linear supply scaling of a sweep-carried rate to ~71 per generation exceeds W&B''s recombining asymptote R/2 by ~4× and is reached in W&B''s simulations only at a very large beneficial supply (credit to Day).'
+  hierarchy_edge: false
+- id: d250
+  attacker: chk:GAP07
+  target: A3a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §2
+  audit_status: upheld
+  audit_basis: 'A3x supported; A3a arithmetic-error/misread/contested (contradicted as an event count is the alternative reading); reviewed (review #6)'
+  counter: [d255]
+  note: 'Events per lineage are 18–22.5M (clock-free calibrated / CSAC-observed), 9.6–10.4M rate × time; 205M is ~9–11× (>= 8× at observation-consistent inputs). G_f counts events, so a base-pair numerator is a unit mismatch; a repeat-unit reading gives 21–30M at Yoo''s satellite units. The event count corroborates Day''s 17.5M/20M (credit to Day).'
+  hierarchy_edge: false
+- id: d251
+  attacker: chk:GAP02
+  target: A6
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §3.5, §3.7
+  audit_status: partly
+  audit_basis: 'A6 internal pending (range-dependent), fidelity partial, external contested; E_detect is a power-1 upper bound'
+  counter: [d254, d258]
+  note: 'With a ~10,000-generation detection window (Hernandez 2011), Day''s stated 3,200 sweeps give at most ~98 detectable completed sweeps, which is ''dozens to hundreds''; at the top of his own range (32,000; N_e 33,000) the bound is ~1,000–3,250, and the cited scans are threshold-limited top-1% lists of mostly incomplete sweeps.'
+  hierarchy_edge: false
+- id: d252
+  attacker: chk:GAP02
+  target: x:darwinzdf42-hitchhiking
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-GAPS-04-07-02.md §3.7, §3.8
+  audit_status: partly
+  audit_basis: 'Hernandez 2011 trough test: strongly favoured classic sweeps < 10% of human-specific amino-acid substitutions; scan-count comparisons are illustrative only'
+  counter: [d254, d258]
+  note: 'If sweeps carried most fixations, the diversity data (Hernandez 2011; Murphy 2023 as recorded in gaps.md) are a real constraint; critics who say most differences fixed by drift are not exposed (credit to Day''s argument).'
+  hierarchy_edge: false
+- id: d253
+  attacker: A6
+  target: x:darwinzdf42-hitchhiking
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-02-02
+  locator: https://zenodo.org/records/18452504 §4.3 items (1)–(4) (raw zenodo-18452504.txt l.318–331)
+  audit_status: partly
+  audit_basis: 'A6 internal pending, external contested: the rarity premise is supported (Hernandez), the saturation-by-count inference is not shown'
+  counter: [d251]
+  note: 'Pre-emptive (2026-02-02, before the 2026-09/10 comments): hitchhiking blocks would need 600–6,250 fixed differences per sweep, and 3,200+ sweeps would leave signatures that scans do not show.'
+  hierarchy_edge: false
+- id: d254
+  attacker: rev:R4-GAPS-correctness
+  target: chk:GAP02
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #6)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-GAPS-correctness.md finding 1
+  audit_status: upheld
+  audit_basis: applied (R4-GAPS-04-07-02 §3.5–3.7; 'tension at K_a >= 1e5' withdrawn)
+  counter: []
+  note: 'E_detect is computed at power 1, so it is an upper bound; tension with 722 candidate regions needs power >= 0.65 at K_a = 1e5 (f_strong 0.28), and the candidate lists are threshold-limited.'
+  hierarchy_edge: false
+- id: d255
+  attacker: rev:R4-GAPS-correctness
+  target: chk:GAP07
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #6)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-GAPS-correctness.md findings 2 and 3
+  audit_status: upheld
+  audit_basis: applied (R4-GAPS-04-07-02 §2.5; indel 'undercount' and the SV-bp 'few large events' reading withdrawn)
+  counter: []
+  note: 'The 1.2–13.5× indel undercount mixed M1''s clock deficit with the 5M reading (like-for-like 1.16–3.55×); k = μ SV base pairs vs Yoo''s SDRs is order-of-magnitude only.'
+  hierarchy_edge: false
+- id: d256
+  attacker: rev:R4-GAPS-steelman-critic
+  target: chk:GAP04
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #6)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-GAPS-steelman-critic.md findings 1–3
+  audit_status: upheld
+  audit_basis: applied (R4-GAPS-04-07-02 §1.1, §1.6; 'bound' and 'supply-infeasible' withdrawn)
+  counter: []
+  note: 'R/2 is the asymptote of an additive approximation that W&B''s own simulations exceed; the supply estimate rests on a by-eye Fig. 4 reading at s = 0.05 and an extrapolated e^{4Λs} factor, and depends on N_e.'
+  hierarchy_edge: false
+- id: d257
+  attacker: rev:R4-GAPS-steelman-day
+  target: chk:GAP04
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #6)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-GAPS-steelman-day.md MAJOR 1–4
+  audit_status: upheld
+  audit_basis: applied (R4-GAPS-04-07-02 §0, §1.1, §1.5; two-model framing, Eq. 13 column, crossing shares, interference-only scope)
+  counter: []
+  note: 'The all-fixations reading is Day''s stated model (MITTENS 3.0 §4.3/§8.2), not a side reading; Eq. 13 (R/4) was omitted at human scale; the critic credit holds only on the interference leg and below the crossing share.'
+  hierarchy_edge: false
+- id: d258
+  attacker: rev:R4-GAPS-steelman-day
+  target: chk:GAP02
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #6)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-GAPS-steelman-day.md MAJOR 5–6
+  audit_status: upheld
+  audit_basis: applied (R4-GAPS-04-07-02 §3.5; Day's full block and N_e ranges tabulated; internal verdict softened to pending)
+  counter: []
+  note: 'The non-sequitur verdict rested on K = 3,200 and N_e = 1e4 only, and on predictions that could not fail; at the top of Day''s own range the count bound reaches ~1,000–3,250.'
   hierarchy_edge: false

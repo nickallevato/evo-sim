@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: arithmetic-error
-  fidelity: misread
-  external: contested
+  internal: arithmetic-error   # stated parts do not sum to 410M (35e6 + 1,140 + 187e6 = 222e6); 410 = 35 + 2 x 187 (Fun-Friendship4898's reading)
+  fidelity: misread   # Yoo 2025 gives 327 Mb average SDR per ape lineage; 410/187 not found (A3x1)
+  external: contested   # R4 GAP-07: as 'required fixations' (Day's wording) the figure is ~9-11x the event count (contradicted as an event count is the alternative reading, pending branch B / the two-model framing); the base-pair magnitude (~1e8 per lineage, Yoo) is real but not a fixation count
 ---
 
 ## Statement (verbatim)
@@ -34,7 +34,7 @@ Version arithmetic that does reconcile: 1,075,000 = 205e6 / 190.6 (1,075,437); 1
 - Implicit: a structural variant of length n bp requires n separate fixations (A3x); the 410M figure comes from Yoo 2025.
 
 ## Responses
-- Against: McCarthy (MC-11), Dumb-and-Dumber (RE-05), Hancock (GG-10–GG-12), Sparky_6_4 (RE-08) argue the count mixes bases and events (A3x). Mansfield (MF-06): numbers he has seen are ~25 million, not 200 million.
+- Against: McCarthy (MC-11), Dumb-and-Dumber (RE-05), Hancock (GG-10–GG-12), Sparky_6_4 (RE-08) argue the count mixes bases and events (A3x). Mansfield (MF-06): numbers he has seen are ~25 million, not 200 million. Fun-Friendship4898 (Reddit 1wv4zeg, comment pdbyv0a; verified in `sources/raw/critics/arctic-tree-1wv4zeg.json`) reconstructs the total: "multiplying 187Mb by 2, then adding the 35 million SNVs onto it", and notes "a good chunk of those 35 million SNVs are already contained within those SDRs" (R4 GAP-07 credit).
 - In support: Day concedes in s7.3: "This is a legitimate methodological concern" and runs MITTENS on SNVs alone (A3b).
 - Weaknesses in the responses: the critics' event-count alternative (about 40M) is itself derived from the 2005 consortium counts, not recomputed from Yoo 2025; Hancock (GG-10) only "suspects" the 205M includes gap divergence.
 
@@ -49,6 +49,8 @@ Not run. Prediction (claimant): a lineage-aware count of independent fixed mutat
 
 ## Check
 Arithmetic audit (python3 -I, scratch): the 410M total does not reconcile with its stated parts. Review: pending.
+
+R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): 205M is a base-pair figure; events per lineage are 18-22.5M (calibrated / CSAC-observed), ~9-11x lower (>= 8x at observation-consistent inputs). Under k = mu, de novo SVs alone deliver 0.35-0.92 Gb per lineage, the same order as SDR base pairs (Yoo human-lineage 148-184 Mb, Day's 187 Mb, cross-ape 327 Mb); the agreement is order-of-magnitude only, since SDRs are dominated by centromeres, acrocentric arms and heterochromatic caps. On a repeat-unit reading (Yoo's 171/32 bp satellite units) the count is 21-30M. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - `required_fixations` presets: events (about 40M total, 20M per lineage), SNV only (17.5M), bp-affected (205M).

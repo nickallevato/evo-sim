@@ -1,0 +1,8 @@
+s = 0.001, R = 35.0 M: Lambda = R/2 = 17.50/gen; t_mid = 4394 gen; concurrent active-zone sweeps 7.69e+04-1.54e+05 (334x-669x Day's 230); e^{-4 Lambda s} = 0.932
+s = 0.001, R = 37.9 M: Lambda = R/2 = 18.95/gen; t_mid = 4394 gen; concurrent active-zone sweeps 8.33e+04-1.67e+05 (362x-724x Day's 230); e^{-4 Lambda s} = 0.927
+s = 0.01, R = 35.0 M: Lambda = R/2 = 17.50/gen; t_mid = 439 gen; concurrent active-zone sweeps 7.69e+03-1.54e+04 (33x-67x Day's 230); e^{-4 Lambda s} = 0.497
+s = 0.01, R = 37.9 M: Lambda = R/2 = 18.95/gen; t_mid = 439 gen; concurrent active-zone sweeps 8.33e+03-1.67e+04 (36x-72x Day's 230); e^{-4 Lambda s} = 0.469
+s = 0.05, R = 35.0 M: Lambda = R/2 = 17.50/gen; t_mid = 88 gen; concurrent active-zone sweeps 1.54e+03-3.08e+03 (7x-13x Day's 230); e^{-4 Lambda s} = 0.0302
+s = 0.05, R = 37.9 M: Lambda = R/2 = 18.95/gen; t_mid = 88 gen; concurrent active-zone sweeps 1.67e+03-3.33e+03 (7x-14x Day's 230); e^{-4 Lambda s} = 0.0226
+Day's 157,000 over 300,000 generations = 0.523 fixations/gen; W&B R/2 at 35-37.9 M = 17.5-18.95/gen (33x-36x higher)
+F2 check, map 1.5 M, 2N*U_b = 32: n_mid / rate = 207.5 / 0.363 = 572 gen vs ln(81)/0.01 = 439 gen

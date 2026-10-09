@@ -234,7 +234,14 @@ def main():
 
     print('\n## Predictions')
     for k, v in preds.items():
-        print(k, 'HELD' if v is True else ('FAILED' if v is False else v))
+        # cosmetic print fix (review pass, after the main run; prediction logic unchanged): numpy bools printed
+        # as 'True', and a False falsifier flag printed as 'FAILED'
+        if k.endswith('_falsifier_hit'):
+            print(k, 'hit' if bool(v) else 'not hit')
+        elif isinstance(v, (bool, np.bool_)):
+            print(k, 'HELD' if v else 'FAILED')
+        else:
+            print(k, v)
     out['predictions'] = preds
     json.dump(out, open(os.path.join(RAW, 'gap04.json'), 'w'), indent=1, default=float)
 

@@ -10,6 +10,8 @@ Files:
 
 ## Counts (checker output, 2026-10-08, after the integration fixes)
 
+**Update 2026-10-08 (R4 GAP-04/07/02 integration).** The checker now reports 251 defeaters (238 before this integration; the 238 already included the R4 E and G1 rows d240–d245), 183 lineage nodes and 117 standard forms, 0 errors. Added: d246–d253 (attackers chk:GAP04, chk:GAP07, chk:GAP02, and Day's new claim A6 against the registry id x:darwinzdf42-hitchhiking), d254–d258 (review #6 against the three checks), the A6 mini-form, and lineage nodes L-pan-sweeps-2026, L-sweep-signatures-2026, L-audit-gap04-2026, L-audit-gap07-2026, L-audit-gap02-2026. Counters were recomputed mechanically (only rows with attacker A5b gained a counter, d249). The side/type/status tables below are as of the integration fixes and were not re-broken-down.
+
 | | count |
 |---|---|
 | Standard forms | 30 full (ROOT + 29 other load-bearing nodes) + 83 mini-forms = 113 |
@@ -91,6 +93,7 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | x:BO-paths | critic | Bowers Point 1: multiple mutational paths can lead to similar phenotypes | Day's repost, voxday.net 2026-03-04 |
 | x:dawkins-weasel | literature | Dawkins's Weasel program (1986): cumulative selection reaches a 28-letter target in about 50 generations; quoted in Day's post from approxion.com (secondhand) | voxday.net 2026-09-12 "Probability Weasel" (added 2026-10-08) |
 | x:eugine-sqrtN | critic | Commenter "Eugine" at Tree of Woe: "Vox is wrong about parallel fixation" (sqrt(N) / LessWrong speed-limit summary; recombination), known only as quoted by Day | voxday.net 2026-01-10 "A First Challenge" ¶2–¶3 (added 2026-10-08) |
+| x:darwinzdf42-hitchhiking | critic | DarwinZDF42: selective sweeps fix many loci at once, mostly neutral (hitchhiking as a source of fixations) | Reddit r/DebateEvolution 1wv4zeg comment pd99y5x and 1wss2wj comment pcovtvf (raw `sources/raw/critics/arctic-tree-1wv4zeg.json`, `arctic-tree-1wss2wj.json`) (added 2026-10-08) |
 | chk:B0 | audit | textbook baselines | research/checks/RESULTS.md §B0 |
 | chk:B0.4 | audit | beneficial fixation time | RESULTS §B0.4 |
 | chk:B1 | audit | empty vs full pipeline | RESULTS §B1 |
@@ -113,6 +116,9 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:E | audit | founder hazard (LTEE mutators) | RESULTS §E; results/R4-E.md |
 | chk:E4 | audit | relictation exact chain | RESULTS §E; results/R4-E.md |
 | chk:G1 | audit | Bernoulli barrier: specific vs any, many-locus response | RESULTS §G1; results/R4-G1.md |
+| chk:GAP04 | audit | Weissman–Barton finite-map limit vs F2 and human requirements (R/4–R/2–simulated envelope) | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §1 (added 2026-10-08) |
+| chk:GAP07 | audit | indel/SV event counts from germline rates (k = μ) vs Day's base-pair totals | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §2 (added 2026-10-08) |
+| chk:GAP02 | audit | sweep-scan detection window: expected detectable completed sweeps (power-1 upper bound) | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §3 (added 2026-10-08) |
 | chk:ROOT-M-survey | audit | keyword survey of computed vs asserted exclusions | claims/ROOT-excluded-mechanisms.md |
 | chk:D9-exploratory | audit | exploratory Weasel runs (not pre-registered) | claims/D9, D9a Responses |
 | rev:review-2 | audit | correctness review #2 | research/checks/REVIEW.md (2026-10-07) |
@@ -121,6 +127,9 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-new | audit | review #4, new checks | results/REVIEW-R4-new.md |
 | rev:R4-steelman-day | audit | review #4, Day-side steelman | results/REVIEW-R4-steelman-day.md |
 | rev:R4-steelman-critic | audit | review #4, critic-side steelman | results/REVIEW-R4-steelman-critic.md |
+| rev:R4-GAPS-correctness | audit | review #6, correctness (GAP-04/07/02) | results/REVIEW-R4-GAPS-correctness.md (2026-10-08) |
+| rev:R4-GAPS-steelman-day | audit | review #6, Day-side steelman (GAP-04/07/02) | results/REVIEW-R4-GAPS-steelman-day.md (2026-10-08) |
+| rev:R4-GAPS-steelman-critic | audit | review #6, critic-side steelman (GAP-04/07/02) | results/REVIEW-R4-GAPS-steelman-critic.md (2026-10-08) |
 
 ## Judgement calls
 

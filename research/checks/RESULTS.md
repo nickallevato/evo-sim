@@ -365,3 +365,71 @@ Full write-ups (post-review numbers) are in `results/R4-*.md`; review #4 is summ
 - G3b is an incomplete dilemma: the middle case is missing. Its "neutral ≠ functional" half is valid.
 - Gc: no derivation.
 - G2 / G2e / G2f hold against the serial p^n chain only, not against arithmetic built on the LTEE rate (G1).
+
+## GAP-04 / GAP-07 / GAP-02 — Finite-map limit; indel/SV event counts; sweep detection window · `gap04_weissman_barton.py`, `gap07_event_counts.py`, `gap02_sweep_window.py` (deterministic; pre-registered at b812741), post hoc `gap04_posthoc_concurrency.py`, `gap0x_posthoc_review.py` · claims F2, A, A2e, Gc, A3, A3a, A3b, A3x, H, A6, A6a, ROOT-M · full write-up `results/R4-GAPS-04-07-02.md`
+**Disclosure.** All 20 F2 cells were known before registration, so GAP-04 P1–P3 and P5 test formula forms and tolerances on known data. GAP-02's predictions are arithmetic consequences of its model. The only later change to a committed script is a cosmetic print-label fix in `gap04_weissman_barton.py`.
+
+**GAP-04, Weissman & Barton 2012** (PLoS Genet 8:e1002740; equations read from the PDF):
+- The cap is a bracket, not one number:
+  - R/4 for an exponential DFE (Eq. 13);
+  - R/2 for fixed s (Eq. 7);
+  - simulations up to ~3R at Λ₀/R = 10³.
+  - None depends on N or s. The brief's "R × log factor" is only a heuristic bound on growth above R/2.
+- **F2 fit:**
+  - 1.5 M map: Eq. 7 agrees within ~6–10% (c = 1.79 ± 0.03 vs 2).
+  - Free recombination: Eq. 1 within 1.4 SE.
+  - 0.1 M map: the form fails (observed rate 2.6 × R/2).
+  - Clonal runs are out of domain.
+- **Day's stated model** (MITTENS 3.0 §4.3/§8.2: every fixation sweep-carried). 17.5–20M per lineage is:
+  - 3.3–4.5× over R/2 and 6.5–9.1× over R/4 (R = 35–38 M);
+  - 0.54–0.76 of the simulated maximum, reachable only with a beneficial supply of order 1% to several hundred % of all new mutations (Fig. 4 read at s = 0.05; N_e- and s-dependent).
+- **Critics' model:**
+  - the asymptotes bind only above a 13–14% (R/4) or 25–27% (R/2) adaptive share;
+  - interference costs ≤ 4.3% at K_a ≤ 10⁵ and 17–31% at 10⁶;
+  - Day's own 99%-neutral 200,000 is 22–31× below R/2.
+  - This is the interference leg only; the H2-hard cap (1,200–8,700) is exceeded by K_a ≥ 10⁴.
+- **Magnitude:** R/2 per lineage is 1,800–25,000× MITTENS' achievable count.
+- **Post hoc, concurrency:** the R/2 ceiling is 7.7–8.3×10³ concurrent active-zone sweeps at s = 0.01. At GAP-01 rates it is 1.7–1,744.
+
+**GAP-07, event counts (k = μ):**
+- Events per lineage, by route:
+  - rate × time: 9.6–10.4M;
+  - clock-free calibrated: 18.2–19.7M;
+  - CSAC-observed basis: 20.0M (22.5M upper bound).
+- 205M is ≈ 9–11× these; ≥ 8× at observation-consistent grid points; 5.3× at the extreme corner.
+- CSAC's 5M indel events are a two-lineage total.
+- SV base pairs under k = μ (0.35–0.92 Gb) match SDR base pairs only in order of magnitude; SDRs are mostly satellite and heterochromatin.
+- A repeat-unit reading gives 21–30M at Yoo's satellite units.
+- G_f counts events, so a base-pair numerator is a unit mismatch.
+
+**GAP-02, detection window:**
+- Expected detectable completed sweeps are power-1 upper bounds.
+  - Day's stated 3,200 sweeps over 325,000 generations: ≈ 98 in the sourced ~10,000-generation window (Hernandez 2011).
+  - Top of his own range (32,000; N_e 33,000): ~1,000–3,250.
+- The cited scans are threshold-limited top-1% lists of mostly incomplete sweeps.
+- Hernandez's trough test supports rarity of classic sweeps (< 10% of human-specific amino-acid substitutions strongly favoured).
+- Bonobos: 326,000 selective sweeps would leave ~1.4–1.6×10⁵ detectable against Yoo's 30.
+
+**Predictions:**
+- GAP-04 P1 **failed** (strict 0.03 tolerance: 0.046 at one low-supply free cell, 1.4 SE). P2, P3, P5, P6, P7 and P8 held (P8's falsifier was set at the favourable N_e). P4 was not a test.
+- GAP-07 P1–P5 held. P3's base-pair band is non-discriminating.
+- GAP-02 P1–P6 held as arithmetic. P1's falsifier could not fail. P3's stated consequence ("tension with scans") is withdrawn.
+
+**Reviews:** correctness (0 BLOCKER, 6 MAJOR, 11 MINOR), Day-side steelman (7 MAJOR, 7 MINOR) and critic-side steelman (7 MAJOR, 6 MINOR), in `results/REVIEW-R4-GAPS-*.md`. Every MAJOR was resolved in the fix pass. The main changes:
+- a bracket in place of a single cap, with Day's model stated as his;
+- "supply-infeasible" withdrawn;
+- concurrency presented as a ceiling;
+- the indel "undercount" and the "few large events" reading withdrawn;
+- E_detect stated as an upper bound and scan lists marked illustrative;
+- Day's full block and N_e ranges added.
+
+The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a different loss definition).
+
+**Verdict:**
+- **F2, A, A2e, Gc:** unchanged cells, new comments (two models; bracket; Gc "as a cap" vs "as a number").
+- **A3x:** supported.
+- **A3a:** external contested; "contradicted as an event count" is the alternative reading.
+- **A3 and A3b:** magnitudes corroborated.
+- **New claims:**
+  - A6 (Z18452504 §4.3(4)): pending / partial / contested.
+  - A6a (Z18441321 §3.1, bonobos): holds / n/a / supported, as against selective fixations.

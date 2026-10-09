@@ -136,6 +136,31 @@ Files: `results/REVIEW-R4-E-{correctness,steelman-day,steelman-critic}.md`, `res
 
 **Process note:** the check scripts were uncommitted at run time, so pre-registration can't be proven from git. From now on, commit the script with its predictions before the main run.
 
+## 2026-10-08 — Review #6 (Sonnet): correctness + Day-side and critic-side steelman of GAP-04, GAP-07, GAP-02
+Files: `results/REVIEW-R4-GAPS-{correctness,steelman-day,steelman-critic}.md`. The write-up `results/R4-GAPS-04-07-02.md` ends with a "Review resolution" table. Pre-registration commit `b812741` (scripts only, before the main run), verified byte-identical by the correctness review.
+
+- **Correctness:** 0 BLOCKER, 6 MAJOR, 11 MINOR. Every headline number reproduced independently, and the W&B equations match the PDF. The MAJORs were overreach and disclosure:
+  - E_detect is an upper bound (power 1).
+  - The "1.2–13.5× undercount" mixed bases.
+  - The SV bp comparison with Yoo's SDRs carries no weight.
+  - All 20 F2 cells were known before the predictions, so P1–P3 and P5 test formula forms, not blind outcomes.
+  - "Supply-infeasible" rested on one Fig. 4 reading at s = 0.05.
+  - The concurrency figure is a ceiling, not an implication.
+- **Steelman conflict on GAP-04:**
+  - Day-side wanted the R/4 cap (exponential DFE) carried to human scale.
+  - Critic-side noted that R/2 is an asymptote that W&B's own simulations exceed, at about 3R.
+  - **Resolved:** report the bracket R/4 – R/2 – simulated max. Day's 17.5–20M is 6.5–9.1× / 3.3–4.5× / 0.54–0.76 of these.
+- **Day-side:** the all-fixations reading is Day's stated model (MITTENS 3.0 §4.3, §8.2), not a side reading. Both models are now shown side by side, and branch B decides between them. Critic credits are scoped to the interference leg only. Day's full 3,200–32,000 sweep range is used.
+- **Critic-side:**
+  - Scan candidate lists are threshold-limited, so the 722/5,110 comparison is now illustrative only.
+  - CSAC 5M is resolved as a total; the first-pass fidelity flag against A3/A3x is withdrawn.
+  - Missed credits added: McCarthy, Fun-Friendship4898, Nesslig20/Neukamm, Mansfield, justatest90/Wrevellyn, DarwinZDF42, KITTENS.
+- **Numbers that moved:**
+  - GAP-07 headline 9–21× → ~9–11× (≥ 8× on observation-consistent points).
+  - GAP-02 "K_a ≥ 10⁵ in tension with scans" withdrawn.
+  - The agent's own "4–16% → 4–19%" correction to gaps.md retracted (different definitions).
+- **Integrated:** verdict comments on F2, A, A2e, Gc, A3, A3a, A3b, A3x and H. New Day claims A6 (sweep signatures absent) and A6a (bonobo sweep mosaic). gaps.md R4 blocks; defeaters d246–d258.
+
 ## Queue (after review #5)
 1. **H with realistic human parameters** (largest open item):
    - R ≈ 1.1–3 with age structure, diploid D ≈ 20–30, and a hard-selected deleterious load.

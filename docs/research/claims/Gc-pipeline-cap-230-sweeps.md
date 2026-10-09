@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: non-sequitur   # no derivation given; 230 equals 157,000 x t_transit/T, so the 'match' is circular if fitted; near-candidates: additive halving 200, s6.1 ceiling 100-200
   fidelity: n/a
-  external: "contested"   # falsifier not met in tested regime; ~230 concurrent sweeps persist under hard selection for R >= 5; human scale untested
+  external: "contested"   # falsifier not met in tested regime; ~230 concurrent sweeps persist under hard selection for R >= 5; R4 GAP-04 (post hoc): as a cap, 230 has no support in interference theory (W&B soft-selection ceiling at R/2 is 7.7-8.3e3 at s = 0.01, reached only at very large supply); as a number, 230 matches the concurrency implied by K_a ~ 1e5 (s = 0.01), 1e4 (s = 0.001) or Day's own 200,000 (349 at s = 0.01); human scale untested
 ---
 
 ## Statement (verbatim)
@@ -52,6 +52,8 @@ Arithmetic audit (python3 -I, scratch). Review: pending.
 R4 F2 + H2 (research/checks/results/R4-F2-A.md, research/checks/results/R4-H2-hard.md): the Gc falsifier (P_fix < 50% of 2s at ~230 active loci, soft, free recombination) is not met in the tested regime (R_int 0.975 at 272). Under hard selection with free recombination, ~255 simultaneous open loci persist at R >= 10 (s = 0.01); at R = 2, 90 persisted and 167 did not, so ~230 concurrent sweeps persist for R >= 5. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 R4 G1 (research/checks/results/R4-G1.md): multiplicative fitness, soft selection, free recombination, N = 1000: no cap at 230. Additive-exclusive convention: 0.85x at 230 concurrent. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+
+R4 GAP-04 (research/checks/results/R4-GAPS-04-07-02.md): POST HOC (`gap04_posthoc_concurrency.py`, `gap0x_posthoc_review.py`). Concurrent active-zone sweeps n_mid = Lambda * ln(81)/s (Day's own 440 at s = 0.01). At W&B's R/2 asymptote (R = 35-37.9 M) the ceiling is 7.7-8.3e3 (s = 0.01) to 7.7-8.3e4 (s = 0.001), up to 2x with interference slowing (W&B Fig. 5 conditions extrapolated); it is reached only at a beneficial supply of order U_tot. At GAP-01 rates (K_a 1e3-1e6) n_mid is 1.7-1,744 at s = 0.01; Day's 200,000 gives 349. Day's separate s6.1 reproductive ceiling (sum of s <= 1-2), untested here, would bind at K_a ~ 6e4-1.2e5 on the active zone alone. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - Pipeline capacity C as a measured output of G-sim; t_transit.

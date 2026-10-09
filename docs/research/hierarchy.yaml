@@ -571,6 +571,39 @@ nodes:
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/A5g-mutation-supply-irrelevant-reply.md
+- id: A6
+  title: 'Sweep signatures are absent: 3,200+ sweeps over 325,000 generations would saturate selection scans, which find only dozens to hundreds
+    of candidate regions'
+  side: day
+  branch: A
+  parent: A
+  edges:
+  - type: supports
+    target: A
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: pending
+    fidelity: partial
+    external: contested
+  claim_file: docs/research/claims/A6-sweep-signatures-absent.md
+- id: A6a
+  title: 'Bonobos: if 326,000 loci fixed by selection in 930,000 years, the genome would be a mosaic of overlapping sweep signatures; it is not'
+  side: day
+  branch: A
+  parent: A6
+  edges:
+  - type: supports
+    target: A6
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: holds
+    fidelity: n/a
+    external: supported
+  claim_file: docs/research/claims/A6a-bonobo-sweep-mosaic.md
 - id: B
   title: Neutral theory (k = mu) cannot rescue the shortfall
   side: day

@@ -1,0 +1,156 @@
+# A. GAP-04 (post hoc)
+fit c, map 1.5 M: c = 1.794 (Delta chi2 = 1 interval 1.760-1.829, i.e. +/- 0.034); chi2 min 7.6; chi2 at c = 2: 40.7
+fit c, map 0.1 M: c = 1.017 (Delta chi2 = 1 interval 0.998-1.036, i.e. +/- 0.019); chi2 min 317.6; chi2 at c = 2: 1421.2
+
+| requirement | rate/gen | Lambda/R | x over R/4 (Eq.13 asymptote) | x over R/2 (Eq.7 asymptote) | x over 3R (sim. max at Lambda0/R=1e3) | loss Eq.7 | loss Eq.13 | K / H2-hard cap (1,200-8,700) |
+|---|---|---|---|---|---|---|---|---|
+| Day 2019 15M / 450,000 (not in P6) | 33.33 | 0.88-0.952 | 3.52-3.81 | 1.76-1.9 | 0.293-0.317 | above asymptote | above asymptote | 1.72e+03-1.25e+04 |
+| Day 2025 20M / 325,000 | 61.54 | 1.62-1.76 | 6.49-7.03 | 3.25-3.52 | 0.541-0.586 | above asymptote | above asymptote | 2.3e+03-1.67e+04 |
+| Day 20M / 252,000 | 79.37 | 2.09-2.27 | 8.38-9.07 | 4.19-4.54 | 0.698-0.756 | above asymptote | above asymptote | 2.3e+03-1.67e+04 |
+| Day 3.0 17.5M / 252,000 | 69.44 | 1.83-1.98 | 7.33-7.94 | 3.66-3.97 | 0.611-0.661 | above asymptote | above asymptote | 2.01e+03-1.46e+04 |
+| Day 205M bp / 252,000 (bp, not events) | 813.5 | 21.5-23.2 | 85.9-93 | 42.9-46.5 | 7.15-7.75 | above asymptote | above asymptote | 2.36e+04-1.71e+05 |
+| Day 99%-neutral 200,000 / 252,000 (Z18165980 l.66) | 0.7937 | 0.0209-0.0227 | 0.0838-0.0907 | 0.0419-0.0454 | 0.00698-0.00756 | 0.042-0.045 | 0.084-0.091 | 23-167 |
+| Day 99%-neutral 200,000 / 325,000 | 0.6154 | 0.0162-0.0176 | 0.0649-0.0703 | 0.0325-0.0352 | 0.00541-0.00586 | 0.032-0.035 | 0.065-0.07 | 23-167 |
+| GAP-01 K_a 1e3 | 0.003968 | 0.000105-0.000113 | 0.000419-0.000454 | 0.000209-0.000227 | 3.49e-05-3.78e-05 | 0.00021-0.00023 | 0.00042-0.00045 | 0.115-0.833 |
+| GAP-01 K_a 1e4 | 0.03968 | 0.00105-0.00113 | 0.00419-0.00454 | 0.00209-0.00227 | 0.000349-0.000378 | 0.0021-0.0023 | 0.0042-0.0045 | 1.15-8.33 |
+| GAP-01 K_a 1e5 | 0.3968 | 0.0105-0.0113 | 0.0419-0.0454 | 0.0209-0.0227 | 0.00349-0.00378 | 0.021-0.023 | 0.042-0.045 | 11.5-83.3 |
+| GAP-01 K_a 1e6 | 3.968 | 0.105-0.113 | 0.419-0.454 | 0.209-0.227 | 0.0349-0.0378 | 0.21-0.23 | 0.42-0.45 | 115-833 |
+| adaptive share 1.0% of 17.5M | 0.6944 | 0.0183-0.0198 | 0.0733-0.0794 | 0.0366-0.0397 | 0.00611-0.00661 | 0.037-0.04 | 0.073-0.079 | 20.1-146 |
+| adaptive share 5.0% of 17.5M | 3.472 | 0.0916-0.0992 | 0.366-0.397 | 0.183-0.198 | 0.0305-0.0331 | 0.18-0.2 | 0.37-0.4 | 101-729 |
+| adaptive share 10.0% of 17.5M | 6.944 | 0.183-0.198 | 0.733-0.794 | 0.366-0.397 | 0.0611-0.0661 | 0.37-0.4 | 0.73-0.79 | 201-1.46e+03 |
+| adaptive share 12.5% of 17.5M | 8.681 | 0.229-0.248 | 0.916-0.992 | 0.458-0.496 | 0.0763-0.0827 | 0.46-0.5 | 0.92-0.99 | 251-1.82e+03 |
+| adaptive share 25.0% of 17.5M | 17.36 | 0.458-0.496 | 1.83-1.98 | 0.916-0.992 | 0.153-0.165 | 0.92-0.99 | above asymptote | 503-3.65e+03 |
+| adaptive share 50.0% of 17.5M | 34.72 | 0.916-0.992 | 3.66-3.97 | 1.83-1.98 | 0.305-0.331 | above asymptote | above asymptote | 1.01e+03-7.29e+03 |
+| adaptive share 100.0% of 17.5M | 69.44 | 1.83-1.98 | 7.33-7.94 | 3.66-3.97 | 0.611-0.661 | above asymptote | above asymptote | 2.01e+03-1.46e+04 |
+
+Two definitions of the interference "loss" for the K_a rows (R = 35-37.9 M):
+  (a) fixed supply: baseline Lambda0 = K/T, realised Lambda = Lambda0/(1 + c Lambda0/R) -> loss 1 - 1/(1 + c Lambda0/R)
+  (b) realised rate = K/T: supply must be Lambda0 = Lambda/(1 - c Lambda/R) -> loss 1 - Lambda/Lambda0 = c Lambda/R (columns above; pre-registered P7 definition)
+  Day 99%-neutral 200,000 / 252,000 (Z18165980 l.66): (a) Eq.7 0.0402-0.0434, Eq.13 0.0773-0.0832
+  Day 99%-neutral 200,000 / 325,000: (a) Eq.7 0.0315-0.034, Eq.13 0.061-0.0657
+  GAP-01 K_a 1e3: (a) Eq.7 0.000209-0.000227, Eq.13 0.000419-0.000453
+  GAP-01 K_a 1e4: (a) Eq.7 0.00209-0.00226, Eq.13 0.00417-0.00451
+  GAP-01 K_a 1e5: (a) Eq.7 0.0205-0.0222, Eq.13 0.0402-0.0434
+  GAP-01 K_a 1e6: (a) Eq.7 0.173-0.185, Eq.13 0.295-0.312
+  adaptive share 1.0% of 17.5M: (a) Eq.7 0.0354-0.0382, Eq.13 0.0683-0.0735
+  adaptive share 5.0% of 17.5M: (a) Eq.7 0.155-0.166, Eq.13 0.268-0.284
+  adaptive share 10.0% of 17.5M: (a) Eq.7 0.268-0.284, Eq.13 0.423-0.442
+  adaptive share 12.5% of 17.5M: (a) Eq.7 0.314-0.332, Eq.13 0.478-0.498
+  adaptive share 25.0% of 17.5M: (a) Eq.7 0.478-0.498, Eq.13 0.647-0.665
+  adaptive share 50.0% of 17.5M: (a) Eq.7 0.647-0.665, Eq.13 0.786-0.799
+  adaptive share 100.0% of 17.5M: (a) Eq.7 0.786-0.799, Eq.13 0.88-0.888
+  gaps.md check, rate 0.7/gen, R = 35: (a) 0.038, (b) 0.040
+  gaps.md check, rate 3.4/gen, R = 35: (a) 0.163, (b) 0.194
+
+Crossing adaptive share (fraction of 17.5M per lineage at which each asymptote/ceiling is reached):
+  T = 252000, R/4: 12.6%-13.6% (2.2e+06-2.39e+06 per lineage)
+  T = 252000, R/2: 25.2%-27.3% (4.41e+06-4.78e+06 per lineage)
+  T = 252000, 3R: 151.2%-163.7% (2.65e+07-2.87e+07 per lineage)
+  T = 325000, R/4: 16.2%-17.6% (2.84e+06-3.08e+06 per lineage)
+  T = 325000, R/2: 32.5%-35.2% (5.69e+06-6.16e+06 per lineage)
+  T = 325000, 3R: 195.0%-211.2% (3.41e+07-3.7e+07 per lineage)
+
+R/2 per lineage vs Day MITTENS 3.0 achievable 191-2,407: 4.41e+06-4.78e+06 per lineage = 1832x-25002x
+mean log-fitness gain v = Lambda*s: at R/2 (17.5/gen) s=0.001 -> 0.0175/gen; at K_a=1e6 (3.97/gen) -> 0.00397/gen
+mean log-fitness gain v = Lambda*s: at R/2 (17.5/gen) s=0.01 -> 0.175/gen; at K_a=1e6 (3.97/gen) -> 0.0397/gen
+
+Supply for Day 17.5M/252,000 (Lambda ~ 69.4/gen, Lambda/R ~ 2 at R = 35): U_tot = 36.5 per haploid genome
+Lambda0/R read by eye from W&B Fig. 4 at s = 0.05, R = 1 (sR = 0.05): 30-300 (+/-2x); s- and R/s-dependence NOT tested by W&B.
+| N_e | s | no-interference U_b (Lambda/(2Ne*2s)) | U_b, Fig.4 only (finite-map) | U_b x e^{4 Lambda s} (soft-selection variance factor, extrapolated) | share of U_tot (Fig.4 only) | share (with factor) | log-heuristic max Lambda0/R for Lambda/R=2: (Ns)^2 |
+|---|---|---|---|---|---|---|---|
+| 10000 | 0.001 | 1.74 | 26.2-262 | 34.7-347 | 0.72-7.2 | 0.95-9.5 | 400 |
+| 10000 | 0.01 | 0.174 | 2.62-26.2 | 42.2-422 | 0.072-0.72 | 1.2-12 | 4e+04 |
+| 33000 | 0.001 | 0.526 | 7.95-79.5 | 10.5-105 | 0.22-2.2 | 0.29-2.9 | 4.36e+03 |
+| 33000 | 0.01 | 0.0526 | 0.795-7.95 | 12.8-128 | 0.022-0.22 | 0.35-3.5 | 4.36e+05 |
+| 100000 | 0.001 | 0.174 | 2.62-26.2 | 3.47-34.7 | 0.072-0.72 | 0.095-0.95 | 4e+04 |
+| 100000 | 0.01 | 0.0174 | 0.263-2.62 | 4.22-42.2 | 0.0072-0.072 | 0.12-1.2 | 4e+06 |
+| 200000 | 0.001 | 0.0868 | 1.31-13.1 | 1.73-17.3 | 0.036-0.36 | 0.047-0.47 | 1.6e+05 |
+| 200000 | 0.01 | 0.00868 | 0.131-1.31 | 2.11-21.1 | 0.0036-0.036 | 0.058-0.58 | 1.6e+07 |
+
+Concurrent active-zone sweeps n_mid = Lambda * ln(81)/s (x up to 2 from W&B Fig. 5, simulated at s = 0.1, Lambda0/R ~ 14.5, R = 1, N = 1e4-1e5)
+  R/2, R = 35 M, s = 0.001: n_mid = 7.69e+04 (to 1.54e+05 with 2x slowing); x Day 230 = 334; sum of s over active loci = 76.9
+  R/2, R = 35 M, s = 0.01: n_mid = 7.69e+03 (to 1.54e+04 with 2x slowing); x Day 230 = 33.4; sum of s over active loci = 76.9
+  R/2, R = 37.9 M, s = 0.001: n_mid = 8.33e+04 (to 1.67e+05 with 2x slowing); x Day 230 = 362; sum of s over active loci = 83.3
+  R/2, R = 37.9 M, s = 0.01: n_mid = 8.33e+03 (to 1.67e+04 with 2x slowing); x Day 230 = 36.2; sum of s over active loci = 83.3
+  R/4, R = 35 M, s = 0.001: n_mid = 3.85e+04 (to 7.69e+04 with 2x slowing); x Day 230 = 167; sum of s over active loci = 38.5
+  R/4, R = 35 M, s = 0.01: n_mid = 3.85e+03 (to 7.69e+03 with 2x slowing); x Day 230 = 16.7; sum of s over active loci = 38.5
+  Day 200,000 / 252,000, s = 0.001: n_mid = 3.49e+03 (to 6.98e+03 with 2x slowing); x Day 230 = 15.2; sum of s over active loci = 3.49
+  Day 200,000 / 252,000, s = 0.01: n_mid = 349 (to 698 with 2x slowing); x Day 230 = 1.52; sum of s over active loci = 3.49
+  K_a 1e3 / 252,000, s = 0.001: n_mid = 17.4 (to 34.9 with 2x slowing); x Day 230 = 0.0758; sum of s over active loci = 0.0174
+  K_a 1e3 / 252,000, s = 0.01: n_mid = 1.74 (to 3.49 with 2x slowing); x Day 230 = 0.00758; sum of s over active loci = 0.0174
+  K_a 1e4 / 252,000, s = 0.001: n_mid = 174 (to 349 with 2x slowing); x Day 230 = 0.758; sum of s over active loci = 0.174
+  K_a 1e4 / 252,000, s = 0.01: n_mid = 17.4 (to 34.9 with 2x slowing); x Day 230 = 0.0758; sum of s over active loci = 0.174
+  K_a 1e5 / 252,000, s = 0.001: n_mid = 1.74e+03 (to 3.49e+03 with 2x slowing); x Day 230 = 7.58; sum of s over active loci = 1.74
+  K_a 1e5 / 252,000, s = 0.01: n_mid = 174 (to 349 with 2x slowing); x Day 230 = 0.758; sum of s over active loci = 1.74
+  K_a 1e6 / 252,000, s = 0.001: n_mid = 1.74e+04 (to 3.49e+04 with 2x slowing); x Day 230 = 75.8; sum of s over active loci = 17.4
+  K_a 1e6 / 252,000, s = 0.01: n_mid = 1.74e+03 (to 3.49e+03 with 2x slowing); x Day 230 = 7.58; sum of s over active loci = 17.4
+Day s6.1 reproductive ceiling (Z18167588 l.60: sum of s over simultaneously segregating loci <= s_max ~ 1.0-2.0):
+  active-zone sum of s = Lambda * ln 81 (independent of s) -> Lambda <= 0.228-0.455/gen -> K <= 5.73e+04-1.15e+05 per lineage at T = 252,000 (active zone only; counting all segregating loci would lower it; validity of the ceiling is branch H, not tested here)
+
+# B. GAP-07 (post hoc)
+Indels, like-for-like M3 (clock-free) vs CSAC observed, total reading (2.5M/lineage): observed / M3 = 1.16 (Besenbacher) - 3.55 (Kloosterman)
+Indels, like-for-like M3 (clock-free) vs CSAC observed, per-species reading (5M/lineage): observed / M3 = 2.32 (Besenbacher) - 7.09 (Kloosterman)
+Indel:SNV ratio: CSAC total reading 5/35 = 0.143; per-species reading 10/35 = 0.286; germline Kloosterman 0.040, Besenbacher 0.123
+Grid: 128 points; min 205M/events 5.32 overall; 104 points with predicted SNV <= 1.3 x 17.5M, min 7.96
+
+Repeat-unit-scale reading of SDR base pairs (events = SDR bp / unit size); totals add 17.5M SNV + 2.5M indel events per lineage
+| SDR bp per lineage | unit | unit events | total events | 205M / total |
+|---|---|---|---|---|
+| Yoo human h1/h2 147.8-183.6 Mb (SI T.V.24 via A3x1) | 171 bp alpha-satellite (Yoo) | 8.64e+05-1.07e+06 | 2.09e+07-2.11e+07 | 9.73-9.83 |
+| Yoo human h1/h2 147.8-183.6 Mb (SI T.V.24 via A3x1) | 32 bp pCht7 satellite (Yoo) | 4.62e+06-5.74e+06 | 2.46e+07-2.57e+07 | 7.97-8.33 |
+| Yoo human h1/h2 147.8-183.6 Mb (SI T.V.24 via A3x1) | 6 bp microsatellite (ASSUMPTION) | 2.46e+07-3.06e+07 | 4.46e+07-5.06e+07 | 4.05-4.59 |
+| Yoo human h1/h2 147.8-183.6 Mb (SI T.V.24 via A3x1) | 2 bp microsatellite (ASSUMPTION) | 7.39e+07-9.18e+07 | 9.39e+07-1.12e+08 | 1.83-2.18 |
+| Day 187 Mb | 171 bp alpha-satellite (Yoo) | 1.09e+06-1.09e+06 | 2.11e+07-2.11e+07 | 9.72-9.72 |
+| Day 187 Mb | 32 bp pCht7 satellite (Yoo) | 5.84e+06-5.84e+06 | 2.58e+07-2.58e+07 | 7.93-7.93 |
+| Day 187 Mb | 6 bp microsatellite (ASSUMPTION) | 3.12e+07-3.12e+07 | 5.12e+07-5.12e+07 | 4.01-4.01 |
+| Day 187 Mb | 2 bp microsatellite (ASSUMPTION) | 9.35e+07-9.35e+07 | 1.14e+08-1.14e+08 | 1.81-1.81 |
+| Yoo cross-ape average 327 Mb | 171 bp alpha-satellite (Yoo) | 1.91e+06-1.91e+06 | 2.19e+07-2.19e+07 | 9.36-9.36 |
+| Yoo cross-ape average 327 Mb | 32 bp pCht7 satellite (Yoo) | 1.02e+07-1.02e+07 | 3.02e+07-3.02e+07 | 6.78-6.78 |
+| Yoo cross-ape average 327 Mb | 6 bp microsatellite (ASSUMPTION) | 5.45e+07-5.45e+07 | 7.45e+07-7.45e+07 | 2.75-2.75 |
+| Yoo cross-ape average 327 Mb | 2 bp microsatellite (ASSUMPTION) | 1.64e+08-1.64e+08 | 1.84e+08-1.84e+08 | 1.12-1.12 |
+(Upper bound: every SDR bp counted as unit-scale events; most SDR sequence is not a tandem array of that unit.)
+
+Kloosterman SV bp heavy tail: total ~ 4.1 kbp x 258 children = 1058 kbp; the 327 kbp event = 31%; without it 2.83 kbp per child -> 357 Mb per lineage at T = 252,000 (vs 517 Mb with it)
+
+# C. GAP-02 (post hoc)
+Day block range (Z18452504 l.318) over 325,000 generations, power 1, f_strong 1:
+| K | W = 4,000 (unsourced) | W = 10,000 (Hernandez; N_e = 1e4) | W = 20,000 (unsourced) | W = 33,000 (0.25 x 4 x 33,000; Day N_e upper) |
+|---|---|---|---|---|
+| 3200 | 39.4 | 98.5 | 197 | 325 |
+| 10000 | 123 | 308 | 615 | 1.02e+03 |
+| 32000 | 394 | 985 | 1.97e+03 | 3.25e+03 |
+
+Minimum detection power p* = 722 / E_detect(power 1) for tension with Akey replicated count (ILLUSTRATIVE: threshold-limited list)
+| K_a | f_strong | T | W=4,000 | W=10,000 | W=20,000 |
+|---|---|---|---|---|---|
+| 10000 | 1.00 | 252000 | >1 (4.5) | >1 (1.8) | 0.91 |
+| 10000 | 1.00 | 325000 | >1 (5.9) | >1 (2.3) | >1 (1.2) |
+| 10000 | 0.28 | 252000 | >1 (16) | >1 (6.5) | >1 (3.2) |
+| 10000 | 0.28 | 325000 | >1 (21) | >1 (8.4) | >1 (4.2) |
+| 100000 | 1.00 | 252000 | 0.45 | 0.18 | 0.091 |
+| 100000 | 1.00 | 325000 | 0.59 | 0.23 | 0.12 |
+| 100000 | 0.28 | 252000 | >1 (1.6) | 0.65 | 0.32 |
+| 100000 | 0.28 | 325000 | >1 (2.1) | 0.84 | 0.42 |
+| 1e+06 | 1.00 | 252000 | 0.045 | 0.018 | 0.0091 |
+| 1e+06 | 1.00 | 325000 | 0.059 | 0.023 | 0.012 |
+| 1e+06 | 0.28 | 252000 | 0.16 | 0.065 | 0.032 |
+| 1e+06 | 0.28 | 325000 | 0.21 | 0.084 | 0.042 |
+K_a at which E_detect (power 1) = 722, band over W in {4,000, 10,000, 20,000} and T in {252,000, 325,000}:
+  f_strong 1.00: 9.1e+03 - 5.87e+04
+  f_strong 0.28: 3.25e+04 - 2.1e+05
+  f_strong 0.10: 9.1e+04 - 5.87e+05
+
+SFS-type comparator, Yoo 2025 SweepFinder2 per ape taxon [11, 18, 22, 30, 62] (median 22; power-limited: 5 of 10 taxa, n = 11-27, q-value regions merged within 1 Mb)
+  K_a 1000, f_strong 1.00, W 10,000: E = 39.7 = 1.8x median, 0.64x-3.6x range
+  K_a 1000, f_strong 0.28, W 10,000: E = 11.1 = 0.51x median, 0.18x-1x range
+  K_a 10000, f_strong 1.00, W 10,000: E = 397 = 18x median, 6.4x-36x range
+  K_a 10000, f_strong 0.28, W 10,000: E = 111 = 5.1x median, 1.8x-10x range
+
+Genome coverage of detectable completed sweeps (footprint 0.1 or 1 Mb, Day r/s range; non-overlapping upper bound) vs Hernandez "~10% of the human genome"
+  Day 3,200 (W 10,000, power 1): E = 98.5; coverage 0.32%-3.2% of 3.1 Gb (capped at 100)
+  Day 32,000 (W 10,000, power 1): E = 985; coverage 3.2%-32% of 3.1 Gb (capped at 100)
+  K_a 1e4 (W 10,000, power 1): E = 397; coverage 1.3%-13% of 3.1 Gb (capped at 100)
+  K_a 1e5 (W 10,000, power 1): E = 3.97e+03; coverage 13%-1e+02% of 3.1 Gb (capped at 100)
+  K_a 1e6 (W 10,000, power 1): E = 3.97e+04; coverage 1e+02%-1e+02% of 3.1 Gb (capped at 100)
+
+Bonobo with Day effective generations 40,000 (d = 0.86): window 20,000 = 50%; E(326,000) = 1.63e+05; with W = 2,000 (10x smaller) E = 1.63e+04 vs Yoo 30

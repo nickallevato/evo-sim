@@ -10,7 +10,7 @@ Colours: orange = Day, amber = ally, blue = critic, green = this audit's checks,
 
 ## A · MITTENS rate limit (part 1)
 
-Objections to A1, A2, A2e, A3, A4, A2a, A2d, A5, A3a, A5a.
+Objections to A1, A2, A2e, A3, A4, A6, A2a, A2d, A5, A3a.
 
 ```mermaid
 flowchart RL
@@ -34,19 +34,20 @@ flowchart RL
   A4["A4: The Selective Turnover Coefficient d (about 0.45) reduces ef…"]:::day
   A4b["A4b: Camestros: d is not defined where it is introduced and would…"]:::critic
   A5["A5: The LTEE rate does not transfer to humans: the human genome …"]:::critic
-  A5a["A5a: Hössjer: scaling the MITTENS bound for mutation rate and gen…"]:::ally
   A5b["A5b: KITTENS: the 1.075M shortfall factors into 94,000 (mutation-…"]:::critic
   A5c["A5c: Hancock: on neutral supply alone E. coli expects ~4e-5 fixat…"]:::critic
-  A5d["A5d: Hypermutators: a 100x mutation rate gives only 8.5x–17x fast…"]:::day
   A5f["A5f: The LTEE is nonrecombining, one clone, one environment; sex …"]:::critic
   A5g["A5g: Day: the E. coli study is cited for its fixation rate, not i…"]:::day
+  A6["A6: Sweep signatures are absent: 3,200+ sweeps over 325,000 gene…"]:::day
   E1["E1: LTEE fixation counts include hitchhiked neutral and mildly d…"]:::critic
   E5["E5: MITTENS 3.0's own tables give -906 'true fixations' in Ara-2…"]:::critic
   E6["E6: LTEE whole-population fixations are 5,496 by a strict lineag…"]:::day
   E9["E9: Good et al. 2017: LTEE trajectories are inconsistent with sw…"]:::literature
   G1["G1: An average rate is indifferent to parallel versus sequential…"]:::day
   chk_F2["chk:F2: multi-locus interference"]:::audit
-  chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
+  chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
+  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
+  chk_GAP07["chk:GAP07: indel/SV event counts from germline rates (k = μ) vs Day's b…"]:::audit
   chk_R2_fidelity["chk:R2-fidelity: R1–R2 fidelity checks of cited sources"]:::audit
   x_CA_06["x:CA-06: Camestros: 35 fixed by 15,000 generations, ~429 gens/fixatio…"]:::critic
   x_day_dembski_scaling["x:day-dembski-scaling: Day's answer to Dembski's scaling question (DE-01)"]:::day
@@ -62,8 +63,10 @@ flowchart RL
   A5c -.->|"undermines · partly"| A2e
   A5f -.->|"undermines · upheld"| A2e
   chk_F2 -.->|"undermines · partly"| A2e
+  chk_GAP04 -.->|"undermines · partly"| A2e
   A3d -.->|"undermines · partly"| A3
   A4b -.->|"undermines · untested"| A4
+  chk_GAP02 ==>|"undercuts · partly"| A6
   x_CA_06 -.->|"undermines · untested"| A2a
   G1 ==>|"undercuts · partly"| A2d
   A5g -.->|"undermines · not_upheld"| A5
@@ -72,13 +75,12 @@ flowchart RL
   A5b -.->|"undermines · upheld"| A3a
   chk_R2_fidelity -.->|"undermines · upheld"| A3a
   A3b -.->|"undermines · upheld"| A3a
-  A5d -.->|"undermines · partly"| A5a
-  chk_R2_arith -.->|"undermines · upheld"| A5a
+  chk_GAP07 -.->|"undermines · upheld"| A3a
 ```
 
 ## A · MITTENS rate limit (part 2)
 
-Objections to A5b, A5c, A5d, A5e, A5f, A.
+Objections to A5a, A5b, A5c, A5d, A5e, A5f, A.
 
 ```mermaid
 flowchart RL
@@ -89,6 +91,7 @@ flowchart RL
   classDef audit fill:#22c55e22,stroke:#22c55e,stroke-width:2px
   A["A: MITTENS rate-limit formula F_max = (t_div x d) / (g_len x G_…"]:::day
   A2h["A2h: Day's s6.4 supermutator arithmetic is a tenfold slip: 3.2e9 …"]:::critic
+  A5a["A5a: Hössjer: scaling the MITTENS bound for mutation rate and gen…"]:::ally
   A5b["A5b: KITTENS: the 1.075M shortfall factors into 94,000 (mutation-…"]:::critic
   A5c["A5c: Hancock: on neutral supply alone E. coli expects ~4e-5 fixat…"]:::critic
   A5d["A5d: Hypermutators: a 100x mutation rate gives only 8.5x–17x fast…"]:::day
@@ -98,11 +101,15 @@ flowchart RL
   G2["G2: Hancock: the formula assumes each mutation must arise and go…"]:::critic
   H9["H9: Kimura and Ohta (1969) established that the expected time to…"]:::day
   chk_A_sim["chk:A-sim: LTEE scaling simulation"]:::audit
+  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
+  A5d -.->|"undermines · partly"| A5a
+  chk_R2_arith -.->|"undermines · upheld"| A5a
   A5d -.->|"undermines · partly"| A5b
   A5e -->|"rebuts · untested"| A5b
   chk_A_sim -.->|"undermines · partly"| A5b
   chk_R2_arith -.->|"undermines · partly"| A5b
+  chk_GAP04 -.->|"undermines · partly"| A5b
   chk_R2_arith -.->|"undermines · upheld"| A5c
   A2h ==>|"undercuts · partly"| A5d
   chk_R2_arith ==>|"undercuts · upheld"| A5d
@@ -497,6 +504,7 @@ flowchart RL
   chk_B0_4["chk:B0.4: beneficial fixation time"]:::audit
   chk_F1["chk:F1: latency vs throughput"]:::audit
   chk_F2["chk:F2: multi-locus interference"]:::audit
+  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
   chk_R2_fidelity["chk:R2-fidelity: R1–R2 fidelity checks of cited sources"]:::audit
   F1 ==>|"undercuts · upheld"| F
@@ -507,6 +515,7 @@ flowchart RL
   F1a ==>|"undercuts · partly"| F1
   chk_F2 -.->|"undermines · partly"| F1
   chk_F2 -.->|"undermines · partly"| F2
+  chk_GAP04 ==>|"undercuts · partly"| F2
   chk_B0_4 -.->|"undermines · partly"| F3
   F4a ==>|"undercuts · untested"| F4
   G2e -->|"rebuts · partly"| F1a
@@ -546,6 +555,7 @@ flowchart RL
   H["H: Haldane's cost of selection caps mammals at about one benefi…"]:::day
   chk_F2["chk:F2: multi-locus interference"]:::audit
   chk_G1["chk:G1: Bernoulli barrier: specific vs any, many-locus response"]:::audit
+  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
   chk_H2_hard["chk:H2-hard: hard-selection multilocus treadmill"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
   x_BO_paths["x:BO-paths: Bowers Point 1: multiple mutational paths can lead to simila…"]:::critic
@@ -571,6 +581,7 @@ flowchart RL
   chk_F2 -.->|"undermines · partly"| Gc
   chk_H2_hard -.->|"undermines · partly"| Gc
   chk_G1 -.->|"undermines · partly"| Gc
+  chk_GAP04 -.->|"undermines · partly"| Gc
   E9 -->|"rebuts · partly"| G1a
   x_day_math_teacher ==>|"undercuts · partly"| G2a
   x_BO_paths -.->|"undermines · upheld"| G3b
@@ -655,7 +666,7 @@ flowchart RL
 
 ## Other: objections to audit checks and unregistered items
 
-Objections to chk:A-sim, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B3, chk:B4a, chk:C1, chk:C1b, chk:C2, chk:F1, chk:F2, chk:H, chk:H2-hard, chk:R2-term3-ratio, x:dawkins-weasel, x:eugine-sqrtN.
+Objections to chk:A-sim, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B3, chk:B4a, chk:C1, chk:C1b, chk:C2, chk:F1, chk:F2, chk:GAP02, chk:GAP04, chk:GAP07, chk:H, chk:H2-hard, chk:R2-term3-ratio, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
 
 ```mermaid
 flowchart RL
@@ -664,6 +675,7 @@ flowchart RL
   classDef critic fill:#3b82f622,stroke:#3b82f6,stroke-width:2px
   classDef literature fill:#a3a3a322,stroke:#a3a3a3,stroke-width:2px
   classDef audit fill:#22c55e22,stroke:#22c55e,stroke-width:2px
+  A6["A6: Sweep signatures are absent: 3,200+ sweeps over 325,000 gene…"]:::day
   D9["D9: Under N = 10,000 weasels, 12 offspring and s = 0.001, each W…"]:::day
   D9a["D9a: Dawkins's Weasel actually demonstrates the opposite of its p…"]:::day
   H4["H4: Worden's O(1) bits per generation is exactly the Haldane-sca…"]:::day
@@ -679,15 +691,22 @@ flowchart RL
   chk_C2["chk:C2: turnover coefficient d"]:::audit
   chk_F1["chk:F1: latency vs throughput"]:::audit
   chk_F2["chk:F2: multi-locus interference"]:::audit
+  chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
+  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
+  chk_GAP07["chk:GAP07: indel/SV event counts from germline rates (k = μ) vs Day's b…"]:::audit
   chk_H["chk:H: cost of selection (Haldane, Nunney, Keightley)"]:::audit
   chk_H2_hard["chk:H2-hard: hard-selection multilocus treadmill"]:::audit
   chk_R2_term3_ratio["chk:R2-term3-ratio: R2 note comparing Term 3 with Haldane + d (7.7×, corrected t…"]:::audit
+  rev_R4_GAPS_correctness["rev:R4-GAPS-correctness: review #6, correctness (GAP-04/07/02)"]:::audit
+  rev_R4_GAPS_steelman_critic["rev:R4-GAPS-steelman-critic: review #6, critic-side steelman (GAP-04/07/02)"]:::audit
+  rev_R4_GAPS_steelman_day["rev:R4-GAPS-steelman-day: review #6, Day-side steelman (GAP-04/07/02)"]:::audit
   rev_R4_correctness["rev:R4-correctness: review #4, correctness"]:::audit
   rev_R4_new["rev:R4-new: review #4, new checks"]:::audit
   rev_R4_steelman_critic["rev:R4-steelman-critic: review #4, critic-side steelman"]:::audit
   rev_R4_steelman_day["rev:R4-steelman-day: review #4, Day-side steelman"]:::audit
   rev_review_2["rev:review-2: correctness review #2"]:::audit
   rev_review_3["rev:review-3: review #3 (correctness + two-sided steelman)"]:::audit
+  x_darwinzdf42_hitchhiking["x:darwinzdf42-hitchhiking: DarwinZDF42: selective sweeps fix many loci at once, mostly …"]:::critic
   x_dawkins_weasel["x:dawkins-weasel: Dawkins's Weasel program (1986): cumulative selection reache…"]:::literature
   x_eugine_sqrtN["x:eugine-sqrtN: Commenter 'Eugine' at Tree of Woe: 'Vox is wrong about paral…"]:::critic
   rev_R4_steelman_critic ==>|"undercuts · upheld"| chk_A_sim
@@ -703,9 +722,16 @@ flowchart RL
   rev_review_3 ==>|"undercuts · upheld"| chk_F1
   rev_R4_correctness ==>|"undercuts · upheld"| chk_F2
   rev_R4_steelman_day ==>|"undercuts · upheld"| chk_F2
+  rev_R4_GAPS_correctness ==>|"undercuts · upheld"| chk_GAP02
+  rev_R4_GAPS_steelman_day ==>|"undercuts · upheld"| chk_GAP02
+  rev_R4_GAPS_steelman_critic ==>|"undercuts · upheld"| chk_GAP04
+  rev_R4_GAPS_steelman_day ==>|"undercuts · upheld"| chk_GAP04
+  rev_R4_GAPS_correctness ==>|"undercuts · upheld"| chk_GAP07
   rev_R4_correctness ==>|"undercuts · upheld"| chk_H
   rev_R4_new ==>|"undercuts · upheld"| chk_H2_hard
   rev_R4_correctness ==>|"undercuts · upheld"| chk_R2_term3_ratio
+  chk_GAP02 -.->|"undermines · partly"| x_darwinzdf42_hitchhiking
+  A6 -.->|"undermines · partly"| x_darwinzdf42_hitchhiking
   D9 ==>|"undercuts · partly"| x_dawkins_weasel
   D9a ==>|"undercuts · partly"| x_dawkins_weasel
   H4 ==>|"undercuts · untested"| x_eugine_sqrtN
@@ -723,10 +749,10 @@ This uses grounded semantics (Dung 1995): an argument is *accepted* when every a
 | Side | as argued: accepted / rejected / undecided | audited, strict: accepted / rejected / undecided | audited, lenient: accepted / rejected / undecided |
 |---|---|---|---|
 | literature (19) | 14 / 5 / 0 | 19 / 0 / 0 | 14 / 5 / 0 |
-| day (86) | 33 / 52 / 1 | 58 / 28 / 0 | 35 / 51 / 0 |
+| day (87) | 34 / 52 / 1 | 59 / 28 / 0 | 36 / 51 / 0 |
 | ally (4) | 2 / 2 / 0 | 3 / 1 / 0 | 2 / 2 / 0 |
-| critic (46) | 25 / 20 / 1 | 44 / 2 / 0 | 32 / 14 / 0 |
-| audit (29) | 14 / 15 / 0 | 14 / 15 / 0 | 14 / 15 / 0 |
+| critic (47) | 25 / 21 / 1 | 45 / 2 / 0 | 32 / 15 / 0 |
+| audit (35) | 17 / 18 / 0 | 17 / 18 / 0 | 17 / 18 / 0 |
 
 **Support is not modelled by Dung's framework.** A claim can be *accepted* (no surviving direct objection) while claims it rests on are rejected. The last column lists those rejected supports (lenient reading), so read both together. ROOT, for instance, draws few direct objections; most objections target its supports.
 
@@ -758,6 +784,7 @@ Load-bearing claims are in **bold**.
 | A5e | day | accepted | accepted | accepted | – |
 | A5f | critic | accepted | accepted | accepted | – |
 | A5g | day | accepted | accepted | accepted | – |
+| A6 | day | accepted | accepted | accepted | – |
 | **B** | day | accepted | accepted | accepted | B1, B2, B4, F |
 | **B1** | day | rejected | rejected | rejected | B1a |
 | B1a | day | rejected | rejected | rejected | – |
@@ -896,12 +923,18 @@ Load-bearing claims are in **bold**.
 | chk:F1 | audit | rejected | rejected | rejected | – |
 | chk:F2 | audit | rejected | rejected | rejected | – |
 | chk:G1 | audit | accepted | accepted | accepted | – |
+| chk:GAP02 | audit | rejected | rejected | rejected | – |
+| chk:GAP04 | audit | rejected | rejected | rejected | – |
+| chk:GAP07 | audit | rejected | rejected | rejected | – |
 | chk:H | audit | rejected | rejected | rejected | – |
 | chk:H2-hard | audit | rejected | rejected | rejected | – |
 | chk:R2-arith | audit | accepted | accepted | accepted | – |
 | chk:R2-fidelity | audit | accepted | accepted | accepted | – |
 | chk:R2-term3-ratio | audit | rejected | rejected | rejected | – |
 | chk:ROOT-M-survey | audit | accepted | accepted | accepted | – |
+| rev:R4-GAPS-correctness | audit | accepted | accepted | accepted | – |
+| rev:R4-GAPS-steelman-critic | audit | accepted | accepted | accepted | – |
+| rev:R4-GAPS-steelman-day | audit | accepted | accepted | accepted | – |
 | rev:R4-correctness | audit | accepted | accepted | accepted | – |
 | rev:R4-new | audit | accepted | accepted | accepted | – |
 | rev:R4-steelman-critic | audit | accepted | accepted | accepted | – |
@@ -911,6 +944,7 @@ Load-bearing claims are in **bold**.
 | x:BO-paths | critic | accepted | accepted | accepted | – |
 | x:CA-06 | critic | accepted | accepted | accepted | – |
 | x:Z23003785-s5.2 | day | accepted | accepted | accepted | – |
+| x:darwinzdf42-hitchhiking | critic | rejected | accepted | rejected | – |
 | x:dawkins-weasel | literature | accepted | accepted | accepted | – |
 | x:day-TNSL | day | accepted | accepted | accepted | – |
 | x:day-clue | day | accepted | accepted | accepted | – |

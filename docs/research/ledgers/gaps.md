@@ -1,6 +1,6 @@
 # Gaps Ledger: Considerations No Party Has Addressed
 
-Version: 2026-10-08 (first pass; revised the same day after the fact-check in `ledgers/gaps-review.md`, see "Review resolution" at the end). Scope: the 30 load-bearing nodes in `hierarchy.yaml`. Companion file: `sources/prior-art.md` (PA-xx IDs below).
+Version: 2026-10-08 (first pass; revised the same day after the fact-check in `ledgers/gaps-review.md`, see "Review resolution" at the end; R4 check results for GAP-04, GAP-07 and GAP-02 added in blocks marked "(R4 2026-10-08)", from `research/checks/results/R4-GAPS-04-07-02.md`). Scope: the 30 load-bearing nodes in `hierarchy.yaml`. Companion file: `sources/prior-art.md` (PA-xx IDs below).
 
 ## Definition
 A **gap** is a consideration that meets all four conditions:
@@ -282,7 +282,7 @@ See PA-19.
   |---|---|---|---|
   | All 17.5–20M treated as adaptive | ≈ 70–80 per generation (≈ 54–62 at Day's 325,000 generations) | ≈ 2 | exceeds the ceiling by ≈ 4× (≈ 3× at 325,000 generations) |
   | Coding-only K_a (GAP-01) | 0.005–0.04 per generation | ≈ 10⁻⁴–10⁻³ | far below the interference threshold; interference negligible |
-  | K_a with a_nc = 1–5% (GAP-01) | ≈ 0.7–3.4 per generation | ≈ 0.02–0.1 | below the ceiling; interference reduces the rate by ≈ 4–16% at R = 35 M (`derived:` 2Λ/R) |
+  | K_a with a_nc = 1–5% (GAP-01) | ≈ 0.7–3.4 per generation | ≈ 0.02–0.1 | below the ceiling; interference reduces the rate by ≈ 4–16% at R = 35 M (`derived:` at fixed supply, 1 − 1/(1 + 2Λ₀/R) with Λ₀ equal to the rate; (R4 2026-10-08) the label '2Λ/R' gives 4–19%, which is the extra supply needed to *realise* the rate; both definitions are stated in R4-GAPS-04-07-02 §1.5) |
 
 - *Rough consistency with F2.* At F2's own parameters (2N·U_b = 32, s = 0.01; Λ₀ = 2N·U_b·u(s) with u(s) ≈ 2s, so Λ₀ ≈ 0.63), the formula predicts R_int ≈ 0.54 at 1.5 M (F2: 0.572) and ≈ 0.07 at 0.1 M (F2: 0.204). It agrees at the longer map and is off by about 3× at the very short one.
 
@@ -292,7 +292,7 @@ See PA-19.
 - It also bounds Day's channel-capacity argument (Z18637297). The binding quantity is map length in Morgans, not μ/r per site.
 
 **Literature:**
-- Weissman & Barton 2012, PLoS Genet 8:e1002740, doi:10.1371/journal.pgen.1002740 (full text read by agent)
+- Weissman & Barton 2012, PLoS Genet 8:e1002740, doi:10.1371/journal.pgen.1002740 (full text read by agent; (R4 2026-10-08) PDF read by the R4 check and locators verified by its reviewer: Eq. (1) p.3; Eq. (6)–(7) p.7; Fig. 4 caption p.7 (simulated Λ/R "remaining <3 even for Λ₀/R = 10³"); asymptote and validity "N > 10³ up to Λ₀/R ~ 1" p.8; Fig. 5 caption p.9; Eq. (13) p.12 (exponential DFE, asymptote R/4))
 - Neher, Shraiman & Fisher 2010 (abstract)
 
 See PA-21.
@@ -301,6 +301,16 @@ See PA-21.
 1. Fit the W&B formula to the existing F2 grid (no new simulation). Report where it fails (short maps, small N).
 2. Evaluate the formula at R = 35–38 M with Λ₀ = 2N·U_b·u(s) over the K_a range of GAP-01, including the noncoding rows.
 3. One fwdpy11 run with a 35 M map and the largest feasible Λ₀, to anchor the human-scale extrapolation.
+
+**R4 check (R4 2026-10-08)** (`research/checks/results/R4-GAPS-04-07-02.md` §1; scripts `gap04_weissman_barton.py`, pre-registered at b812741; post hoc `gap04_posthoc_concurrency.py`, `gap0x_posthoc_review.py`). Proposed checks 1 and 2 are done; check 3 (fwdpy11 at 35 M) is still open.
+- *The cap is a bracket, not one number.* W&B give the additive-approximation asymptote R/2 (fixed s, Eq. 7) and R/4 (exponential DFE, Eq. 13); their simulations exceed both, up to ~3R at Λ₀/R = 10³. The brief's "R × a log factor" is not the paper's cap: the log appears only in a heuristic lower bound on growth above R/2.
+- *F2 fit.* Eq. 7 agrees with F2 at 1.5 M within ~6–10% (c = 1.79 ± 0.03 vs 2; c = 2 formally excluded at n = 4 replicates); Eq. 1 matches free recombination within 1.4 SE; the form fails at 0.1 M (R/s = 10; observed rate 2.6 × R/2); clonal runs are outside the domain. All 20 F2 cells were known before registration, so these are formula tests on known data.
+- *Day's stated model* (MITTENS 3.0 §4.3/§8.2: every fixation sweep-carried, "The remainder are hitchhikers"): 17.5–20M per lineage needs 61.5–79 per generation, 3.3–4.5× over R/2 and 6.5–9.1× over R/4 (R = 35–38 M), 0.54–0.76 of the simulated maximum. Exceeding R/2 needs Λ₀/R ≈ 30–300 (Fig. 4 read at s = 0.05, ±2×; s-dependence untested), i.e. a beneficial supply of order 1% to several hundred % of all new mutations depending on N_e (10⁴–2×10⁵) and s, and on an extrapolated e^{4Λs} factor. "Implausible in most cells", not "infeasible".
+- *Critics' model.* The asymptotes are crossed only if more than 13–14% (R/4) or 25–27% (R/2) of the 17.5M differences are adaptive (16–18% / 33–35% at 325,000 generations). Day's own "Even if 99% of divergence is neutral, 200,000 fixations remain required" (Z18165980 l.66) is 22–31× below R/2. Interference costs ≤ 4.3% for K_a ≤ 10⁵ and 17–31% at 10⁶ (fixed supply; Eq. 7–13).
+- *Separate constraint.* This is the interference leg only. The audit's hard-selection cap (H2-hard, 1,200–8,700 per lineage) is exceeded by K_a ≥ 10⁴.
+- *POST HOC, concurrency.* At R/2 the soft-selection ceiling is 7.7–8.3×10³ concurrent active-zone sweeps at s = 0.01 (×10 at s = 0.001), reached only at very large supply; at GAP-01 rates it is 1.7–1,744 (s = 0.01); Day's 200,000 gives 349. So 230 (Gc) has no support as a cap but matches the concurrency implied by K_a ≈ 10⁵. Day's §6.1 Σs ≤ 1–2 ceiling, untested, would bind near K_a ≈ 6×10⁴–1.2×10⁵.
+- *Magnitude.* W&B's R/2 per lineage (4.4–4.8M) is 1,800–25,000× MITTENS' achievable count: "linkage limits parallelism" holds in form, not in magnitude.
+- *Beneficiary (weighted).* Day's leg is conditional on his all-fixations model, which branch B decides; the critics' leg is interference-only and holds below the crossing share.
 
 ### GAP-02: Day's "sweep signatures absent" argument: an unanswered empirical point with an unexamined detection window
 **Nodes:** ROOT, ROOT-M (row 6, hitchhiking), F2, H.
@@ -315,7 +325,7 @@ See PA-21.
 **But the literature also supports Day's premise.**
 - Hernandez et al. 2011: the diversity trough around human-specific amino-acid substitutions "is no more pronounced than around synonymous substitutions"; "classic sweeps were not a dominant mode of adaptation".
 - Murphy et al. 2023: a background-selection-only model explains ~60% of megabase-scale diversity variance, and "adding sweeps did not improve the fit" (abstract). The appendix's fitted sweep α is "essentially 0 (< 10⁻⁹)" (lead agent, Europe PMC full text). This constrains the combined rate × strength of strong sweeps, not the MK α.
-- The reviewer reports that the Hernandez 2011 main text bounds the share of human-specific substitutions that left a detectable classic sweep at about 5% ("far below 10%"). This was not read here (the full text did not load) and is marked unverified. If confirmed, it is the most direct number for the Day-favouring leg.
+- The reviewer reports that the Hernandez 2011 main text bounds the share of human-specific substitutions that left a detectable classic sweep at about 5% ("far below 10%"). This was not read here (the full text did not load) and is marked unverified. If confirmed, it is the most direct number for the Day-favouring leg. **(R4 2026-10-08) Corrected after reading the main text (PMC3669691):** three numbers were conflated. "approximately 5% of human-specific substitutions could have left a detectable sweep" is the *window share* (250,000 years of ~5 My); "a rate of classic sweeps far below 10%" is the YRI–CEU local-adaptation rate since the population split; the trough test excludes "even if only 10% of human-specific amino acid substitutions were strongly favored or if 25% ... with weak effects".
 - These are evidence that hard sweeps of new mutations are rare. That bears on whatever K_a (GAP-01) is claimed to have fixed by classic sweeps.
 
 **Likely beneficiary: both**
@@ -323,7 +333,7 @@ See PA-21.
 - **Day.** Peer-reviewed analyses do find classic sweeps rare, which constrains the hard-sweep share of adaptive substitution. The critics have not engaged this. It sits uneasily with the α ≈ 0.1–0.2 estimates unless most adaptation is weak or soft (Uricchio: 72% weakly adaptive).
 
 **Literature:**
-- Hernandez et al. 2011, Science 331:920 (abstract and summaries; full text not read)
+- Hernandez et al. 2011, Science 331:920 (abstract and summaries; full text not read; (R4 2026-10-08) main text read, PMC3669691 author manuscript: "In humans, the effects of sweeps are expected to persist for approximately 10,000 generations or about 250,000 years (4)", ref. 4 = Przeworski 2002, whose full text is behind a bot check and was not read)
 - Sabeti et al. 2006, Science 312:1614. The phrase "several hundred thousand years" came via a secondary source (bionumbers) and the reviewer could not find it: **unverified**. The ~250,000-year window above rests on Hernandez 2011's abstract instead.
 - Murphy et al. 2023, eLife 12:e76065 (abstract; appendix α sentence read in Europe PMC full text)
 
@@ -332,7 +342,17 @@ See PA-22.
 **Proposed check (R4 arithmetic)**
 1. Expected detectable sweeps = (sweeps per generation) × (detection window in generations) × (power), under each side's K and s. Windows come from Hernandez 2011 (and Przeworski 2002/2003, to be retrieved).
 2. Compare with the Hernandez estimate of the classic-sweep fraction.
-3. Extract Z18452504 §4.3(4) as a claim (none exists).
+3. Extract Z18452504 §4.3(4) as a claim (none exists). (R4 2026-10-08) Done: claims A6 (Z18452504 §4.3(4)) and A6a (Z18441321 §3.1, bonobos).
+
+**R4 check (R4 2026-10-08)** (`research/checks/results/R4-GAPS-04-07-02.md` §3; `gap02_sweep_window.py`, pre-registered at b812741; post hoc `gap0x_posthoc_review.py`).
+- *Upper bound.* Expected detectable completed sweeps E = K × W/T are computed at detection power 1, so all figures are upper bounds. Day's stated 3,200 over 325,000 generations gives ≈ 98 at the sourced window (W ≈ 10,000; 39 at an unsourced 4,000): "dozens to hundreds". The top of his own block range (32,000) gives 985, and his upper N_e (33,000, W ≈ 33,000) up to 3,250, so the inference is range-dependent; the claim's internal verdict is pending.
+- *Comparators.* The cited scans (Voight 2006 "~250 signals ... in each population", abstract; Sabeti 2007 "more than 300"; Pickrell 2009 1% tail) target incomplete or population-specific sweeps through top-1% lists, and Akey 2009's union of nine scans (5,110 regions, 722 replicated, "poor concordance") is threshold-limited too; these comparisons are illustrative only. The SFS-type comparator is Yoo 2025's SweepFinder2 (11–62 candidates per ape taxon; power-limited). K_a = 10³ matches it; 10⁴ is 5–18× above the ape median at power 1.
+- *Power needed for "tension".* For K_a = 10⁵ to conflict with 722 regions needs power ≥ 0.65–0.84 (f_strong 0.28, W = 10,000; > 1 at W = 4,000). The real constraint on large strong-sweep counts is Hernandez's trough test (and Murphy 2023), not scan counts.
+- *Hernandez bound.* Strongly favoured classic sweeps < 10% of human-specific amino-acid substitutions, i.e. < 1.3–3×10³ per lineage (constant-rate extrapolation), while Hernandez states 10–15% (possibly 40%) of amino-acid differences were adaptive: most adaptation weak or soft.
+- *Bonobos (A6a).* The window covers 43–50% of the split; 326,000 selective sweeps would leave ~1.4–1.6×10⁵ detectable against Yoo's 30. Supported as against *selective* fixations, which no critic asserts.
+- *Day's strongest variant.* If sweeps carry most fixations (Day's §8.2 hitchhikers; DarwinZDF42, Reddit 1wv4zeg and 1wss2wj: "selective sweeps cause many fixations, mostly for neutral variation"), the diversity data are a real constraint on that account, whoever holds it.
+- *Lead for GAP-01.* Hernandez cites "5% of substitutions in conserved non-coding regions" and "~20% in UTRs" as adaptive (Torgerson 2009; Eyre-Walker & Keightley 2009), read second-hand: a partial, sourced noncoding α (CNCs and UTRs only).
+- *Caveats.* Demographic confounding, background selection (mimic and power loss), polygenic adaptation, power only at 4N_e·s ≳ 400; Day's bullet (6) (clustering of fixed differences) untested.
 
 ### GAP-03: Neutral substitution rate under complete linkage (Birky & Walsh 1988) vs Day's "channel capacity" paper
 **Nodes:** B, B1, B3, B5, H8, ROOT, ROOT-M (row 11).
@@ -459,13 +479,22 @@ See PA-34.
 
 **Literature:**
 - Besenbacher 2015 (full)
-- Kloosterman 2015 (abstract)
-- Belyeu 2021 (abstract)
-- Collins 2020 (main text, Europe PMC)
+- Kloosterman 2015 (abstract; (R4 2026-10-08) full text, PMC4448676)
+- Belyeu 2021 (abstract; (R4 2026-10-08) full text, PMC8059337)
+- Collins 2020 (main text, Europe PMC; Results, paragraph before Fig. 3; "certainly underestimates")
 - Nachman & Crowell 2000 (abstract)
 - CSAC 2005 (full)
 
 **Proposed check (R4 arithmetic).** Expected events per lineage = (rate per class) × T + ancestral share. Compare with CSAC event counts and Yoo's SV and inversion counts per lineage. Record in A3x.
+
+**R4 check (R4 2026-10-08)** (`research/checks/results/R4-GAPS-04-07-02.md` §2; `gap07_event_counts.py`, pre-registered at b812741; post hoc `gap0x_posthoc_review.py`).
+- *Event counts per lineage, three routes (two share the CSAC 17.5M SNV anchor):* rate × time with k = μ 9.6–10.4M (first argued by justatest90 and Wrevellyn, Reddit 1wv4zeg: "about 9.7 million"); clock-free calibrated 18.2–19.7M; CSAC-observed basis 20.0M (22.5M upper bound). Day's 205M is ≈ 9–11× these; ≥ 8.0× over observation-consistent grid points (μ CIs × T 169,231–450,000 × N_anc 0–1.98×10⁵); 5.3× at the extreme corner, which predicts ~2× the observed SNV divergence.
+- *CSAC 5M is a two-lineage total.* Abstract ("five million insertion/deletion events") and p.73 ("~5 million compared with ~35 million"); the p.73 "in each species" sentence describes insertions of 1 bp–15 kb relative to the other genome; indel:SNV 0.14 (total) vs 0.29 (per species) against germline 0.04–0.12. CSAC's alignment-gap counts are an upper bound on events.
+- *Indels, like for like.* Clock-free M3 vs observed: 1.16× (Besenbacher) to 3.55× (Kloosterman).
+- *SV base pairs.* Under k = μ, de novo SVs give 0.35–0.92 Gb per lineage (517 Mb at 252,000; 357 Mb without Kloosterman's single 327 kbp event, 31% of its SV base pairs). That is the same order as SDR base pairs (Yoo human-lineage 148–184 Mb; Day's 187 Mb; cross-ape 327 Mb), but SDRs are mostly centromeres, acrocentric arms and heterochromatic caps, so the agreement does not show that SDR megabases come from 10⁴–10⁵ ordinary SV events.
+- *Base-pair reading.* Counting SDR base pairs as repeat-unit events gives 21–30M per lineage at Yoo's 171 bp and 32 bp satellite units (45–184M only at assumed 2–6 bp units). G_f counts events, so a base-pair numerator is a unit mismatch inside Day's method; that, not the §7.3 wording, is the decisive point.
+- *Credits (verified):* McCarthy (one event, many base pairs); Fun-Friendship4898 (Reddit 1wv4zeg: the 35M + 2 × 187 Mb construction; SDR composition); Nesslig20 relaying Neukamm (Peaceful Science 18094: indel spans); Mansfield's uncited ~25M.
+- *Beneficiary.* Critics on the unit argument; Day credited for corroboration of the 17.5M/20M magnitudes, whose shortfall is untouched.
 
 ---
 
@@ -501,12 +530,12 @@ The prior art does not support a waiting-time cap on *total* fixations (PA-25 to
 | Gap | Likely beneficiary | Rank (verdict impact) |
 |---|---|---|
 | GAP-01 adaptive fraction α | **Both, depending on the unmeasured noncoding share a_nc.** Critics at every a_nc: Day's 17.5M is overstated by 20× to ~6,000×, and §6.4 is contradicted for coding sequence. Day on H/H1: K_a exceeds Haldane by 1.5–7× coding-only and by 25–1,000× once a_nc ≥ 0.1%. | 1 |
-| GAP-04 finite-map limit (Weissman–Barton) | **Both.** Day on node A's all-fixations reading (≈ 4× over the cap); critics at α-scale rates (this inherits GAP-01's uncertainty). | 2 |
-| GAP-02 sweep-signature window | **Both.** Critics on the saturation inference; Day on classic-sweep rarity (Hernandez; Murphy's model fit). | 3 |
+| GAP-04 finite-map limit (Weissman–Barton) | **Both.** Day on node A's all-fixations reading (≈ 4× over the cap); critics at α-scale rates (this inherits GAP-01's uncertainty). (R4 2026-10-08) Weighted: Day's leg is conditional on his stated all-fixations model (3.3–4.5× over R/2, 6.5–9.1× over R/4; branch B decides the model); the critics' leg is interference-only and holds below a 13–27% adaptive share. | 2 |
+| GAP-02 sweep-signature window | **Both.** Critics on the saturation inference; Day on classic-sweep rarity (Hernandez; Murphy's model fit). (R4 2026-10-08) Weighted: the saturation inference fails at Day's stated 3,200 (≈ 98 detectable, upper bound) but is range-dependent at the top of his range; no critic made the window argument; Day's leg is against hitchhiking as the main source of fixations, whoever holds it. | 3 |
 | GAP-03 neutral rate under linkage (Birky–Walsh) | **Critics** on B/B5 (expected rate only). Day on beneficial efficacy, minor. | 4 |
 | GAP-05 slightly deleterious fixations | **Day-leaning** on the premise; critics on the "collapse". The size figure is an upper-end scenario. | 5 |
 | GAP-06 μ×g consistency, BGS-aware Nₑ,anc | **Critics, weak** (B4a/B6 only, and only if the fit closes). Neither on ROOT. | 6 |
-| GAP-07 rate-based event counts | **Critics** (modest; the indel rate is uncertain by ~3×). | 7 |
+| GAP-07 rate-based event counts | **Critics** (modest; the indel rate is uncertain by ~3×). (R4 2026-10-08) Critics on the unit argument (205M ≈ 9–11× the event count); Day credited for corroboration of the 17.5M/20M magnitudes. | 7 |
 
 **Counts by primary beneficiary:** two-sided 3; critic-leaning 3; Day-leaning 1; neither 0. (First pass: 3/2/1/1. GAP-06 moved from "neither" to "critics, weak" because its own text said so.)
 

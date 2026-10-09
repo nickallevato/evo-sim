@@ -9,9 +9,9 @@ load_bearing: true  # Day's strongest remaining form of the throughput argument 
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: "holds"   # interference exists (clonal R_int 0.09-0.65)
+  internal: "holds"   # interference exists (clonal R_int 0.09-0.65); W&B 2012 Eq. 7 agrees with F2 at 1.5 M within ~6-10% (R4 GAP-04)
   fidelity: n/a
-  external: "contested"   # no collapse to 272 active loci with free recombination (soft) or below ln R/D (hard); human scale and hard+linkage untested; tight linkage supports Day
+  external: "contested"   # no collapse to 272 active loci with free recombination (soft) or below ln R/D (hard); R4 GAP-04: W&B asymptotes R/4-R/2 = 8.75-19 per generation at R = 35-38 M bound the interference leg for adaptive shares below ~13-27% (loss <= 4.3% at K_a <= 1e5, <= 31% at 1e6); Day's all-fixations requirement is 3.3-9x above the asymptotes, inside W&B's simulated range only at a beneficial supply of order 1% to several hundred % of all mutations; hard selection with linkage untested; tight linkage supports Day
 ---
 
 ## Statement (verbatim)
@@ -52,6 +52,8 @@ Written **before** the check runs.
 ## Check
 R4 F2 (`f2_multilocus.py` seed 4242 with crc32-derived seeds, `f2_fwdpy11.py`; research/checks/results/R4-F2-A.md) and H2 (`h2_hard_selection_multilocus.py`; research/checks/results/R4-H2-hard.md). Soft selection, N = 1000, s = 0.01: clonal R_int falls 0.645 -> 0.088 as 2N*U_b goes 0.1 -> 32; a 0.1 M map gives 0.204; one 1.5 M linkage group 0.572 at 208 active loci; free recombination 0.975 +/- 0.005 at 272 active loci, linear in supply; fwdpy11 agrees. Day's cap (R < 0.5 by ~230 loci) is not reproduced for r = 1/2 in the tested regime. Hard selection (H2, free recombination, imposed demand): rate = demand until total log-load exceeds ln R; ~255 open loci persist at R >= 10, ~90 at R = 2. Untested: human-scale active loci (~1e4-1e5 by Little's law), hard selection combined with linkage, N = 1e4, DFE. Credit to Day: interference is real under tight linkage. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: proposed `research/checks/f2_multilocus.py` (not yet written) · Result: none. Queued in REVIEW.md.
+
+R4 GAP-04 (research/checks/results/R4-GAPS-04-07-02.md): Weissman & Barton 2012 (PLoS Genet 8:e1002740) Eq. 7 agrees with the F2 grid at 1.5 M within ~6-10% (fitted c = 1.79 +/- 0.03 vs 2; c = 2 formally excluded at n = 4) and Eq. 1 with the free cells within 1.4 SE; the form fails at 0.1 M (R/s = 10). At human R = 35-38 M the analytic asymptotes are R/4 (exponential DFE) to R/2 = 8.75-19 per generation; simulations reach ~3R only at baseline density 1e3. Crossing adaptive share: 13-14% (R/4), 25-27% (R/2) of 17.5M. Interference costs <= 4.3% for K_a <= 1e5 and 17-31% at 1e6 (fixed supply). The 'human-scale untested' caveat is partly bounded (interference leg only); hard selection with linkage untested; the H2-hard cap (1,200-8,700 per lineage) is exceeded for K_a >= 1e4. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - number of loci

@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: holds
-  fidelity: partial
-  external: contested
+  internal: holds   # 35e6 + 5e6 = 40e6, /2 = 20e6
+  fidelity: partial   # CSAC verified-partial (one genome per species, includes polymorphism; A3c); 40M called 'single-nucleotide variants' though 5M are indel events; CSAC's 5M indel events are a two-lineage total (abstract; p.73 '5M vs 35M'), consistent with the 40M reading (R4 GAP-07)
+  external: contested   # polymorphism share (A3c); R4 GAP-07: the event count (~20M per lineage, calibrated / CSAC-observed) corroborates the 20M magnitude
 ---
 
 ## Statement (verbatim)
@@ -47,6 +47,8 @@ Not a simulation target. Prediction (claimant): R_2025 = 20M. Prediction (critic
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): CSAC's abstract ('five million insertion/deletion events') and p.73 ('~5 million compared with ~35 million') read as two-lineage totals; the p.73 'in each species' sentence concerns insertions of 1 bp-15 kb relative to the other genome, and the per-species reading gives indel:SNV 0.29 against germline 0.04-0.12. Events per lineage 18-22.5M (calibrated / observed) corroborate the 20M (2025) magnitude. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - `required_fixations` per lineage with a polymorphism-correction toggle (fixed fraction 0.78–0.86).

@@ -9,9 +9,9 @@ load_bearing: true   # ROOT is a conjunction over mechanisms; if branch A fails,
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: holds
-  fidelity: n/a
-  external: "contested"   # asexual saturation real (logarithmic); recombining-genome use of G_f not supported in F2's tested regime; LTEE-scale factor extrapolated
+  internal: holds   # arithmetic reconciles (2025, 3.0)
+  fidelity: n/a   # formula, not a citation
+  external: "contested"   # asexual saturation real (logarithmic); recombining-genome use of G_f not supported in F2's tested regime; R4 GAP-04 (two models): on Day's stated all-fixations model the requirement is 3.3-4.5x above W&B's R/2 (6.5-9.1x above R/4), reachable in W&B's simulations only at implausibly large supply in most N_e/s cells; on the critics' model the asymptote binds only if > 13-27% of differences are adaptive; which model holds is branch B; W&B's R/2 per lineage is 1,800-25,000x MITTENS' achievable count
 ---
 
 ## Statement (verbatim)
@@ -62,6 +62,8 @@ No check has run on this claim as a whole. Component checks are linked from A1â€
 ## Check
 R4 A-sim (`a_ltee_scaling.py`, F2 `f2_multilocus.py`; research/checks/results/R4-F2-A.md): formula arithmetic unchanged. Using LTEE G_f as a global constant is not supported for recombining genomes in F2's tested regime (free recombination R_int 0.975 at 272 active loci; the LTEE-scale factor 1.5-172x is an EXTRAPOLATION). For asexual genomes a saturation is real but logarithmic (a = 0.23-0.34 per 100x supply). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none yet (arithmetic audit run in scratch only). Result: arithmetic reconciles for 2025 and 3.0; 2019 table (125) and text (562) do not reconcile with each other or with 281. Review: pending.
+
+R4 GAP-04 (research/checks/results/R4-GAPS-04-07-02.md): Two models. Day's stated model (MITTENS 3.0 s4.3 'total throughput â€” every fixation, regardless of mechanism'; s8.2 'The remainder are hitchhikers') puts all 17.5-20M per lineage through sweeps: 61.5-79 per generation, 3.3-4.5x over W&B's R/2 and 6.5-9.1x over R/4 (R = 35-38 M), 0.54-0.76 of W&B's simulated maximum; exceeding R/2 needs Lambda0/R ~ 30-300 (Fig. 4 read at s = 0.05), i.e. a beneficial supply of order 1% to several hundred % of all new mutations depending on N_e and s. On the critics' model only K_a passes through sweeps and the asymptote is not reached below a 13-27% adaptive share; Day's own 99%-neutral 200,000 (Z18165980) is 22-31x below R/2. W&B's R/2 per lineage (4.4-4.8M) is 1,800-25,000x MITTENS' achievable 191-2,407: 'linkage limits parallelism' holds in form, not in magnitude. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - `t_div`, `g_len`, `G_f`, `d` as user-controllable inputs; displayed output F_max and shortfall R/F_max for each version preset (2019, 2025, 3.0).

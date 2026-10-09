@@ -1,0 +1,56 @@
+Symbolic: M1 = T*r ; M2 = r*(2*N_anc + T) ; M3 = S_obs*r/r_SNV
+Sensitivity (elasticities): dlnM1/dln r = 1 ; dlnM1/dln T = 1 ; dlnM2/dln T = T/(2*N_anc + T)
+
+## A. Point estimates per lineage, T = 252,000 (M1) and calibrated (M3)
+| class | source | per haploid genome per gen | M1 events (T=252k) | M1 (T=325k) | M3 events (calibrated to 17.5M SNV) |
+|---|---|---|---|---|---|
+| SNV | Kong2012 | 34.5 | 8.69e+06 | 1.12e+07 | 1.65e+07 |
+| SNV | Besenbacher2015 | 36.5 | 9.2e+06 | 1.19e+07 | 1.75e+07 |
+| indel | Kloosterman2015 | 1.47 | 3.7e+05 | 4.78e+05 | 7.05e+05 |
+| indel | Besenbacher2015 | 4.5 | 1.13e+06 | 1.46e+06 | 2.16e+06 |
+| SV | Kloosterman2015 | 0.08 | 2.02e+04 | 2.6e+04 | 3.84e+04 |
+| SV | Belyeu2021 | 0.08 | 2.02e+04 | 2.6e+04 | 3.84e+04 |
+| SV | Collins2020 | 0.145 | 3.65e+04 | 4.71e+04 | 6.95e+04 |
+
+## B. Totals per lineage (SNV + indel + SV events)
+M1 T=252k: 9.589e+06 - 1.037e+07 events; SNV 9.198e+06; ratio to SNV 1.042 - 1.127; 205M / total = 19.8 - 21.4
+M3 calibrated: 1.824e+07 - 1.973e+07 events; 205M / total = 10.4 - 11.2
+Observed-count basis (CSAC SNV 17.5M + indel 2.5M or 5M per lineage + inversions): 2e+07 - 2.25e+07; 205M / = 9.1 - 10.2
+
+## C. Full sensitivity grid (M2 incl. M1 at N_anc = 0): SNV CI x indel CI x SV CI x T x N_anc
+205M / events: min 5.32 at {'snv': 39.661417322834644, 'indel': 5.699999999999999, 'sv': 0.22, 'T': 450000, 'N_anc': 198000.0}; max 35.1 at {'snv': 33.33858267716535, 'indel': 1.145735294117647, 'sv': 0.065, 'T': 169231, 'N_anc': 0}
+| T | N_anc | total events per lineage (min-max over rate CIs) | 205M / total (min-max) |
+|---|---|---|---|
+| 169231 | 0 | 5.85e+06 - 7.71e+06 | 26.6 - 35.1 |
+| 169231 | 50000 | 9.3e+06 - 1.23e+07 | 16.7 - 22.0 |
+| 169231 | 100000 | 1.28e+07 - 1.68e+07 | 12.2 - 16.1 |
+| 169231 | 198000 | 1.95e+07 - 2.58e+07 | 8.0 - 10.5 |
+| 252000 | 0 | 8.71e+06 - 1.15e+07 | 17.8 - 23.5 |
+| 252000 | 50000 | 1.22e+07 - 1.6e+07 | 12.8 - 16.9 |
+| 252000 | 100000 | 1.56e+07 - 2.06e+07 | 10.0 - 13.1 |
+| 252000 | 198000 | 2.24e+07 - 2.95e+07 | 6.9 - 9.2 |
+| 325000 | 0 | 1.12e+07 - 1.48e+07 | 13.8 - 18.3 |
+| 325000 | 50000 | 1.47e+07 - 1.94e+07 | 10.6 - 14.0 |
+| 325000 | 100000 | 1.81e+07 - 2.39e+07 | 8.6 - 11.3 |
+| 325000 | 198000 | 2.49e+07 - 3.29e+07 | 6.2 - 8.2 |
+| 450000 | 0 | 1.55e+07 - 2.05e+07 | 10.0 - 13.2 |
+| 450000 | 50000 | 1.9e+07 - 2.51e+07 | 8.2 - 10.8 |
+| 450000 | 100000 | 2.25e+07 - 2.96e+07 | 6.9 - 9.1 |
+| 450000 | 198000 | 2.92e+07 - 3.86e+07 | 5.3 - 7.0 |
+
+## D. Indel and SV detail
+indel events per lineage: M1 3.7e+05 - 1.13e+06; M3 7.05e+05 - 2.16e+06; CSAC observed 2.5M (total reading) or 5M (per-species reading)
+  observed / rate-based: 1.2 - 13.5
+SV events per lineage (M1, T=252k): CI-low 1.64e+04, Kloosterman 2.02e+04, Collins 3.65e+04, CI-high 5.54e+04
+SV bp per lineage if k = mu (2.05 kbp/haploid/gen x T): T=169231: 347 Mb, T=252000: 517 Mb, T=325000: 666 Mb, T=450000: 922 Mb
+  Yoo SDR 327 Mb per lineage; CSAC species-specific indel sequence 40-45 Mb per species.
+  mean bp per de novo SV (Kloosterman 4.1 kbp / 0.16) = 25.6 kbp; events needed for 327 Mb at that mean = 1.28e+04
+
+## Predictions
+P1 HELD
+P2 HELD
+P2_detail {'min_M1_dayT': 13.838297881387689, 'M3_min': 10.391819870492855, 'grid_min': 5.3161309828025995}
+P3 HELD
+P4 HELD
+P5 HELD
+P5_detail {'max_total_M1': 20511637.79527559}

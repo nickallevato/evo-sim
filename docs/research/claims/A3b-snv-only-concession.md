@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: holds
-  fidelity: partial
-  external: contested
+  internal: holds   # 35M / 2 = 17.5M
+  fidelity: partial   # CSAC 1.23% includes polymorphism (verified-partial); 's7.3 concession' wording is ambiguous on bp vs events (R4 GAP-07)
+  external: contested   # R4 GAP-07: the event count (18-22.5M per lineage) corroborates the 17.5M magnitude; only the 205M bp headline falls
 ---
 
 ## Statement (verbatim)
@@ -49,6 +49,8 @@ Covered by A5/A5b predictions. Result recorded above.
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): The SNV-only 17.5M is corroborated in magnitude by the event count (18.2-19.7M calibrated; 20.0M CSAC-observed per lineage); the shortfall built on it (~1e5) is untouched by this check. s7.3 says SVs 'should not each count as a single fixation event in the same sense as a point mutation'; the wording does not settle whether Day regards base-pair counts as wrong. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 ## Simulator variables implied
 - Preset: SNV-only requirement.

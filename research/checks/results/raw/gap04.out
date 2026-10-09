@@ -1,0 +1,81 @@
+## A. W&B formulas vs the F2 grid (s = 0.01, N = M = 2000 haploid copies)
+| map | 2N*U_b | Lambda0 | Lambda0/R | F2 R_int (SE) | Eq7 | Eq8 | Eq13 | Eq1(free) | F2/Eq7 | F2 rate / (R/2) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0.1 M | 0.1 | 0.00198 | 0.0198 | 0.942 (0.008) | 0.962 | 0.962 | 0.927 | - | 0.98 | 0.04 |
+| 0.1 M | 0.5 | 0.0099 | 0.099 | 0.868 (0.024) | 0.835 | 0.834 | 0.716 | - | 1.04 | 0.17 |
+| 0.1 M | 2 | 0.0396 | 0.396 | 0.617 (0.010) | 0.558 | 0.558 | 0.387 | - | 1.11 | 0.49 |
+| 0.1 M | 8 | 0.158 | 1.58 | 0.372 (0.003) | 0.240 | 0.240 | 0.137 | - | 1.55 | 1.18 |
+| 0.1 M | 32 | 0.634 | 6.34 | 0.204 (0.001) | 0.073 | 0.073 | 0.038 | - | 2.79 | 2.60 |
+| 1.5 M | 0.1 | 0.00198 | 0.00132 | 1.035 (0.039) | 0.997 | 0.997 | 0.995 | - | 1.04 | 0.00 |
+| 1.5 M | 0.5 | 0.0099 | 0.0066 | 0.967 (0.014) | 0.987 | 0.987 | 0.974 | - | 0.98 | 0.01 |
+| 1.5 M | 2 | 0.0396 | 0.0264 | 0.980 (0.026) | 0.950 | 0.948 | 0.904 | - | 1.03 | 0.05 |
+| 1.5 M | 8 | 0.158 | 0.105 | 0.829 (0.007) | 0.826 | 0.822 | 0.704 | - | 1.00 | 0.17 |
+| 1.5 M | 32 | 0.634 | 0.423 | 0.572 (0.004) | 0.542 | 0.538 | 0.372 | - | 1.06 | 0.48 |
+| clonal | 0.1 | 0.00198 | inf | 0.645 (0.002) | 0 (R=0) | out of domain | - | - | - | - |
+| clonal | 0.5 | 0.0099 | inf | 0.370 (0.012) | 0 (R=0) | out of domain | - | - | - | - |
+| clonal | 2 | 0.0396 | inf | 0.215 (0.006) | 0 (R=0) | out of domain | - | - | - | - |
+| clonal | 8 | 0.158 | inf | 0.132 (0.003) | 0 (R=0) | out of domain | - | - | - | - |
+| clonal | 32 | 0.634 | inf | 0.088 (0.002) | 0 (R=0) | out of domain | - | - | - | - |
+| free | 0.1 | 0.00198 | - | 1.046 (0.033) | - | - | - | 0.9999 | - | - |
+| free | 0.5 | 0.0099 | - | 1.011 (0.036) | - | - | - | 0.9996 | - | - |
+| free | 2 | 0.0396 | - | 1.000 (0.012) | - | - | - | 0.9984 | - | - |
+| free | 8 | 0.158 | - | 0.979 (0.014) | - | - | - | 0.9937 | - | - |
+| free | 32 | 0.634 | - | 0.975 (0.005) | - | - | - | 0.9756 | - | - |
+fit Lambda = Lambda0/(1 + c Lambda0/R), map 0.1 M: c = 1.017 (chi2 317.6 on 5 cells)
+fit Lambda = Lambda0/(1 + c Lambda0/R), map 1.5 M: c = 1.794 (chi2 7.6 on 5 cells)
+max |F2 - Eq1| free = 0.0461; max |F2/Eq7 - 1| at 1.5 M = 0.056; F2/Eq7 at 0.1 M: 0.1: 0.98, 0.5: 1.04, 2: 1.11, 8: 1.55, 32: 2.79
+
+## B. Human scale
+| requirement | rate/gen | Lambda/R (R=35-37.9) | x over R/2 | x over sim. envelope 3R | Eq7 interference loss (1-Lambda/Lambda0) |
+|---|---|---|---|---|---|
+| Day 2019: 15M / 450,000 | 33.33 | 0.88-0.952 | 1.76-1.9 | 0.293-0.317 | n/a (above R/2) |
+| Day 2025: 20M / 325,000 | 61.54 | 1.62-1.76 | 3.25-3.52 | 0.541-0.586 | n/a (above R/2) |
+| Day 20M / 252,000 | 79.37 | 2.09-2.27 | 4.19-4.54 | 0.698-0.756 | n/a (above R/2) |
+| Day 3.0 SNV-only: 17.5M / 252,000 | 69.44 | 1.83-1.98 | 3.66-3.97 | 0.611-0.661 | n/a (above R/2) |
+| Day 3.0 headline: 205M (bp) / 252,000 | 813.5 | 21.5-23.2 | 42.9-46.5 | 7.15-7.75 | n/a (above R/2) |
+| GAP-01 K_a = 1e3 / 252,000 | 0.003968 | 0.000105-0.000113 | 0.000209-0.000227 | 3.49e-05-3.78e-05 | 0.00021-0.00023 |
+| GAP-01 K_a = 1e4 / 252,000 | 0.03968 | 0.00105-0.00113 | 0.00209-0.00227 | 0.000349-0.000378 | 0.0021-0.0023 |
+| GAP-01 K_a = 1e5 / 252,000 | 0.3968 | 0.0105-0.0113 | 0.0209-0.0227 | 0.00349-0.00378 | 0.021-0.023 |
+| GAP-01 K_a = 1e6 / 252,000 | 3.968 | 0.105-0.113 | 0.209-0.227 | 0.0349-0.0378 | 0.21-0.23 |
+
+## C. Beneficial supply needed (Lambda0 = 2 N_e U_b 2s; U_tot ~ 36.5 per haploid genome)
+| target | N_e | s | Lambda0 needed | U_b per haploid genome | U_b / U_tot |
+|---|---|---|---|---|---|
+| Day 17.5M / 252,000 (Lambda/R ~ 2; Fig. 4 by eye Lambda0/R ~ 30-300) | 10000 | 0.001 | 1.39e+03-1.39e+04 | 34.7-347 | 0.949-9.49 |
+| Day 17.5M / 252,000 (Lambda/R ~ 2; Fig. 4 by eye Lambda0/R ~ 30-300) | 10000 | 0.01 | 1.69e+04-1.69e+05 | 42.2-422 | 1.16-11.6 |
+| Day 17.5M / 252,000 (Lambda/R ~ 2; Fig. 4 by eye Lambda0/R ~ 30-300) | 10000 | 0.1 | 1.22e+15-1.22e+16 | 3.04e+11-3.04e+12 | 8.33e+09-8.33e+10 |
+| Day 17.5M / 252,000 (Lambda/R ~ 2; Fig. 4 by eye Lambda0/R ~ 30-300) | 100000 | 0.001 | 1.39e+03-1.39e+04 | 3.47-34.7 | 0.0949-0.949 |
+| Day 17.5M / 252,000 (Lambda/R ~ 2; Fig. 4 by eye Lambda0/R ~ 30-300) | 100000 | 0.01 | 1.69e+04-1.69e+05 | 4.22-42.2 | 0.116-1.16 |
+| Day 17.5M / 252,000 (Lambda/R ~ 2; Fig. 4 by eye Lambda0/R ~ 30-300) | 100000 | 0.1 | 1.22e+15-1.22e+16 | 3.04e+10-3.04e+11 | 8.33e+08-8.33e+09 |
+| GAP-01 1e3 / 252,000 (Eq. 8 inverse) | 10000 | 0.001 | 0.00397 | 9.92e-05 | 2.72e-06 |
+| GAP-01 1e3 / 252,000 (Eq. 8 inverse) | 10000 | 0.01 | 0.00397 | 9.92e-06 | 2.72e-07 |
+| GAP-01 1e4 / 252,000 (Eq. 8 inverse) | 10000 | 0.001 | 0.0398 | 0.000994 | 2.72e-05 |
+| GAP-01 1e4 / 252,000 (Eq. 8 inverse) | 10000 | 0.01 | 0.0398 | 9.96e-05 | 2.73e-06 |
+| GAP-01 1e5 / 252,000 (Eq. 8 inverse) | 10000 | 0.001 | 0.407 | 0.0102 | 0.000279 |
+| GAP-01 1e5 / 252,000 (Eq. 8 inverse) | 10000 | 0.01 | 0.413 | 0.00103 | 2.83e-05 |
+| GAP-01 1e6 / 252,000 (Eq. 8 inverse) | 10000 | 0.001 | 5.21 | 0.13 | 0.00357 |
+| GAP-01 1e6 / 252,000 (Eq. 8 inverse) | 10000 | 0.01 | 6.01 | 0.015 | 0.000412 |
+
+## D. Back-of-envelope growth above R/2: Lambda/R >~ log(Lambda0/R)/log(N s) (W&B p.8)
+N(haploid copies) = 20000, s = 0.001, Lambda0/R = 10: lower bound Lambda/R >= 0.77
+N(haploid copies) = 20000, s = 0.001, Lambda0/R = 100: lower bound Lambda/R >= 1.54
+N(haploid copies) = 20000, s = 0.001, Lambda0/R = 1000: lower bound Lambda/R >= 2.31
+N(haploid copies) = 20000, s = 0.01, Lambda0/R = 10: lower bound Lambda/R >= 0.43
+N(haploid copies) = 20000, s = 0.01, Lambda0/R = 100: lower bound Lambda/R >= 0.87
+N(haploid copies) = 20000, s = 0.01, Lambda0/R = 1000: lower bound Lambda/R >= 1.30
+N(haploid copies) = 200000, s = 0.001, Lambda0/R = 10: lower bound Lambda/R >= 0.43
+N(haploid copies) = 200000, s = 0.001, Lambda0/R = 100: lower bound Lambda/R >= 0.87
+N(haploid copies) = 200000, s = 0.001, Lambda0/R = 1000: lower bound Lambda/R >= 1.30
+N(haploid copies) = 200000, s = 0.01, Lambda0/R = 10: lower bound Lambda/R >= 0.30
+N(haploid copies) = 200000, s = 0.01, Lambda0/R = 100: lower bound Lambda/R >= 0.61
+N(haploid copies) = 200000, s = 0.01, Lambda0/R = 1000: lower bound Lambda/R >= 0.91
+
+## Predictions
+P1 FAILED
+P2 HELD
+P3 HELD
+P5 HELD
+P6 HELD
+P7 HELD
+P8 HELD
+P8_falsifier_hit not hit
