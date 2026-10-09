@@ -49,3 +49,5 @@ R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4
 
 ## Simulator variables implied
 - Selectable rate model: aggregate throughput vs 1/t_fix; Bio-Cycle toggle.
+
+R4 P1 (research/checks/results/R4-P1.md): Q19 recomputed, 252,000/27,600 = 9.13 against the printed "8" (-12%); a ledger slip under the verdict rule (already recorded). Verdicts unchanged.

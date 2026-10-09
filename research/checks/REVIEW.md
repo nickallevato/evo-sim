@@ -279,5 +279,8 @@ Files: `results/REVIEW-R4-GAP07c-{correctness,steelman}.md` (346520c, 0301f12). 
 - **Mapping** (`docs/research/argmap/mapping-proposals-2026-10-09.md`, 19d0c55): applied as d301–d327, 11 flipped edges, 13 + 3 mini-forms, registry row x:eden-p9-caveat, 5 lineage nodes, 32 caption quotes (GG-17 onward, verified verbatim). G2c recorded as an alias of B6c. "Mapped" ratified (argmap/NOTES.md judgement call 12); G1b, G1c, ROOT-DE carry a "no attack warranted" note. Three unverified Hancock slips entered as `untested` rows (d328–d330). Exit criterion 2 (every critic and ally argument mapped) is **met** under that definition; the new claims stay `pending` until reviewed.
 - **Holocene Nₑ** (`docs/research/sources/holocene-ne.md`, e746eb7): RG-01 → retrieved; decision pending **C1e** (rerun the C1c model on the published trajectories).
 
+## 2026-10-09 - Review #14 (Sonnet, combined, low-stakes tier): P1 (machine-checked derivations)
+File: `results/REVIEW-R4-P1-combined.md`. Write-up `results/R4-P1.md` ("Review resolution"). Pre-registration c17b44a. 0 MAJOR, 5 MINOR (Q03 labelling, Q33 2% tolerance, textbook Haldane definition, A3 exchangeable scope, critic-column wording), 6 NOTE. All fixed in wording; no new run. Integrated: Check paragraphs in B2a, B7, B3a, H, A5e; no verdict changed; registry ids chk:P1, rev:R4-P1-combined; no defeaters (no new attack warranted: a re-confirmation). Milestone post and board patch deferred to the next milestone.
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).

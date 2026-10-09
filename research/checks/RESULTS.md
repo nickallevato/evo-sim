@@ -559,3 +559,6 @@ The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a differen
 **For the critics.** Polymorphism is real and of CSAC's size; the unit mismatch (about 10x) is untouched. Day's 17.5M, like for like, is 9.8% above the measured fixed SNVs and 2.2% below all fixed events (two offsetting errors); his SNV-only shortfall falls about 9%.
 
 **Verdicts.** A3 contested, A3b supported, A3c supported (status reviewed), A3x supported; comments updated. Reviews: `results/REVIEW-R4-GAP07c-{correctness,steelman}.md` (review #13).
+
+## P1: machine-checked derivations (2026-10-09)
+Pre-registered c17b44a; run on na-workhorse (34 s). All 17 identity groups (k = mu, P_fix = i/M, exchangeable low-N_e P_fix = 1/M, empty-start deficit mu E[tau], Kimura/Moran, diffusion and exact fixation times, Haldane's D) and 33 Day-arithmetic rows came out as pre-registered; Q03 (table 125 vs 281.25), Q19 (8 vs 9.13) and Q30 (printed-input rounding) are slips/discrepancies. **For Day:** 30/33 rows hold, the empty-start formula and the -pi^2 N_e/G exponent are exact at the level proved. **For the critics:** k = mu and P_fix = 1/(2N) are exact and independent of N_e (exchangeable models); D is not a constant. **Verdicts:** none changed (re-confirmation); scope limits in the Review resolution. Review: `results/REVIEW-R4-P1-combined.md` (0 MAJOR, 5 MINOR, 6 NOTE).

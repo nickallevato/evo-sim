@@ -135,6 +135,7 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:D1 | audit | sequence-space spike: alternatives per needed change from RNA neutral networks (ViennaRNA), ProteinGym DMS and the GB1 landscape, against G1's flip | RESULTS §D1; results/R4-D1-spike.md (added 2026-10-09) |
 | chk:X1 | audit | arithmetic and internal-validity audit of every numeric critic and ally claim, plus the single both-sides verdict rule (rev 2) and the re-score of both sides | RESULTS §X1; results/R4-X1-critic-arithmetic.md, R4-X1-verdict-rule.md, R4-X1-rescore.md (added 2026-10-09) |
 | chk:GAP07c | audit | share of human–chimp divergent sites still polymorphic in humans (1000 Genomes phase 3, NYGC cross-check); fixed events per lineage and the 205M / fixed-events bracket | RESULTS §GAP-07c; results/R4-GAP07c.md (added 2026-10-09) |
+| chk:P1 | audit | machine-checked derivations (sympy/mpmath/exact chains) of the load-bearing identities and 33 Day-arithmetic rows | RESULTS §P1; results/R4-P1.md (added 2026-10-09) |
 | chk:ROOT-M-survey | audit | keyword survey of computed vs asserted exclusions | claims/ROOT-excluded-mechanisms.md |
 | chk:D9-exploratory | audit | exploratory Weasel runs (not pre-registered) | claims/D9, D9a Responses |
 | rev:review-2 | audit | correctness review #2 | research/checks/REVIEW.md (2026-10-07) |
@@ -167,6 +168,7 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-X1-rule-audit | audit | review #12, blind audit of the verdict rule (X1) | results/REVIEW-R4-X1-rule-audit.md (2026-10-09) |
 | rev:R4-GAP07c-correctness | audit | review #13, correctness (GAP-07c) | results/REVIEW-R4-GAP07c-correctness.md (2026-10-09) |
 | rev:R4-GAP07c-steelman | audit | review #13, combined two-sided steelman (GAP-07c) | results/REVIEW-R4-GAP07c-steelman.md (2026-10-09) |
+| rev:R4-P1-combined | audit | combined review (correctness, Day-side and critic-side steelman) of P1; low-stakes tier | results/REVIEW-R4-P1-combined.md (2026-10-09) |
 
 ## Judgement calls
 

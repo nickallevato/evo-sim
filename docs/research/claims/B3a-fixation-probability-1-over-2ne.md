@@ -64,3 +64,5 @@ Script: `research/checks/b3_N_vs_Ne.py` (seed 13) · Result: both predictions co
 - Nₑ/N via offspring variance
 - exchangeable vs non-exchangeable reproduction
 - sweepstakes events
+
+R4 P1 (research/checks/results/R4-P1.md): in an exchangeable low-N_e model P_fix = 1/(2N), not 1/(2N_e) (exact; machine-checked at M = 100, alpha = 0.25 and 1). The test does not cover non-exchangeable (fitness-linked) offspring variance (review MINOR-4); Day's own 2026-08-27 concession (B3g) is the stronger support. Verdicts unchanged.

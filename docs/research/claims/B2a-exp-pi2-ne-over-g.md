@@ -67,3 +67,5 @@ Script: `research/checks/b2a_hard_limits_chain.py` (exact chain, no randomness) 
 - G/Nₑ ratio
 - exact chain vs asymptotic
 - conditional vs unconditional F
+
+R4 P1 (research/checks/results/R4-P1.md; `p1_symbolic_proofs.py` pre-registered c17b44a; na-workhorse): the arcsine transform y = arccos(1-2p) gives the neutral diffusion constant variance 1/(2N) and path length pi, so the exponent -pi^2 N/G follows (machine-proved at the transform level). Varadhan's short-time theorem is cited, not proved, and the prefactor is not proved. Verdicts unchanged (re-confirmation).

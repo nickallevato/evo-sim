@@ -74,3 +74,5 @@ R4 H3 (research/checks/results/R4-H3-human.md; `h3_human_scale.py` pre-registere
 
 ## Simulator variables implied
 Selective mortality budget m, cost per substitution (30 N), hard versus soft selection, M = 2Ku, K, R, number of loci selected at once, d.
+
+R4 P1 (research/checks/results/R4-P1.md): Haldane's 300 = 30/0.1 holds; D is not a constant (D = int(1 - wbar/wmax) depends on starting frequency p0 and dominance; D = 30 needs p0 about 3e-7 semidominant; one new copy at N_e = 1e4 gives D = 2 ln(2e4) = 19.8). Textbook definition used; the Haldane 1957 primary is not retrieved. Verdicts unchanged.

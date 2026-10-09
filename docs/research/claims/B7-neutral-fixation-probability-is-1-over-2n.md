@@ -58,3 +58,5 @@ Script: `research/checks/b3_N_vs_Ne.py` (seed 13) · Result: P_fix = 0.00250/0.0
 ## Simulator variables implied
 - starting-frequency definition
 - Nₑ via variance
+
+R4 P1 (research/checks/results/R4-P1.md): P_fix = i/M and k = mu are machine-proved (sympy, exact rationals, banded WF to N = 1e4). In an exchangeable Cannings model with low N_e (Dirichlet-multinomial, M = 100) P_fix stays 1/M while fixation time follows M_e. Scope: exchangeable models only (review MINOR-4). Verdicts unchanged.
