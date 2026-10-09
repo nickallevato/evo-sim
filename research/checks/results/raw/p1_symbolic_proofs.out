@@ -1,0 +1,141 @@
+P1 start 2026-10-09T15:56:01-0600 python 3.14.4 sympy 1.14.0 mpmath 1.3.0 numpy 2.5.3 scipy 1.18.1
+[A1] PROVED     pred_met=True  neutral k = mu: haploid N mu * 1/N and diploid 2N mu * 1/(2N)
+      haploid_minus_mu: 0
+      diploid_minus_mu: 0
+[A2] PROVED     pred_met=True  neutral P_fix = initial frequency i/M (martingale; exact WF chains)
+      binomial_mean: polynomial identity in p for each M = 1..40
+      mean_ok: True
+      exact_rational_M10: True
+      banded_max_dev: {'50': 4.107825191113079e-15, '500': 5.928590951498336e-14, '10000': 4.24027479795086e-12}
+      rss_mb: 1303.52734375
+[A3] CONFIRMED  pred_met=True  P_fix independent of N_e in an exchangeable low-N_e Cannings chain; time scales with N_e
+      rows: [{'alpha': 0.25, 'M_e': 20.8, 'Pfix_1': 0.010000000000000365, 'one_over_M': 0.01, 'one_over_Me': 0.04807692307692307, 'beta_binomial_mean_max_err': 1.7053025658242404e-13, 'tstar_gens': 41.091139000557746, 'diffusion_Me': 41.39130317906034, 'ratio_to_diffusion': np.float64(0.9927481341381288), 'tstar_WF_sameM': 196.7416877999709, 'ratio_DM_over_WF': 0.2088583231141917, 'Me_over_M': 0.20800000000000002}, {'alpha': 1.0, 'M_e': 50.5, 'Pfix_1': 0.009999999999985111, 'one_over_M': 0.01, 'one_over_Me': 0.019801980198019802, 'beta_binomial_mean_max_err': 5.5848659030743875e-12, 'tstar_gens': 99.49833336660066, 'diffusion_Me': 100.49330819916091, 'ratio_to_diffusion': np.float64(0.990099093657178), 'tstar_WF_sameM': 196.7416877999709, 'ratio_DM_over_WF': 0.5057308111932106, 'Me_over_M': 0.505}]
+[A4] PROVED     pred_met=True  start state: stationary past gives k = mu exactly; empty start gives deficit -> mu E[tau]
+      geometric_limits_ok: True
+      closed_form_by_induction: True
+      WF_M20_Etau_cond: 37.27206449042808
+      Etau_over_N: 3.727206449042808
+      T_used: 1118
+      deficit_over_muEtau_minus_1: -1.7774e-25
+      stationary_sum_minus_1: -3.3123e-25
+== block A done in 11.8 s; peak RSS 1304 MB
+[B1] PROVED     pred_met=True  Kimura u(p) solves the backward equation with u(0)=0, u(1)=1
+      residual: 0
+      boundary: (0, 1)
+[B2] PROVED     pred_met=True  Kimura limits: s->0 gives p; N->inf at p=1/(2N) gives 1-e^{-2s} = 2s - 2s^2 + ...
+      lim_s0: p
+      lim_Ninf: (exp(2*s) - 1)*exp(-2*s)
+      series: -2*s**2 + 2*s
+   B3 row {'N': 100, 's': 0.01, 'twoNs': 2.0, 'exact': 0.020057926452842142, 'kimura': 0.020170767181041386, 'ratio': 0.9944057294803689, 'ratio_to_2s': 1.002896322642107, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(1.3322676295501878e-15), 'band': (130, 131), 'sec': 0.0, 'rss_mb': 1304}
+   B3 row {'N': 500, 's': 0.01, 'twoNs': 10.0, 'exact': 0.019723262750743095, 'kimura': 0.019801326734058274, 'ratio': 0.9960576387449378, 'ratio_to_2s': 0.9861631375371547, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(1.5543122344752192e-15), 'band': (265, 270), 'sec': 0.2, 'rss_mb': 1304}
+   B3 row {'N': 1000, 's': 0.005, 'twoNs': 10.0, 'exact': 0.00993041010995267, 'kimura': 0.009950166271340767, 'ratio': 0.9980144893211483, 'ratio_to_2s': 0.9930410109952671, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(1.9984014443252818e-15), 'band': (363, 368), 'sec': 0.3, 'rss_mb': 1304}
+   B3 row {'N': 10000, 's': 0.001, 'twoNs': 20.0, 'exact': 0.001997269868405251, 'kimura': 0.001998001332666933, 'ratio': 0.9996339020151173, 'ratio_to_2s': 0.9986349342026254, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(5.773159728050814e-15), 'band': (1086, 1096), 'sec': 8.0, 'rss_mb': 1310}
+   B3 row {'N': 50, 's': 0.05, 'twoNs': 5.0, 'exact': 0.09308643633978606, 'kimura': 0.09516690253473122, 'ratio': 0.9781387631673113, 'ratio_to_2s': 0.9308643633978605, 'tol': 0.05, 'ok': True, 'trunc_mass': np.float64(1.1102230246251565e-15), 'band': (83, 84), 'sec': 0.0, 'rss_mb': 1310}
+[B3] CONFIRMED  pred_met=True  exact diploid additive WF P_fix vs Kimura at the audit's parameters
+      rows: [{'N': 100, 's': 0.01, 'twoNs': 2.0, 'exact': 0.020057926452842142, 'kimura': 0.020170767181041386, 'ratio': 0.9944057294803689, 'ratio_to_2s': 1.002896322642107, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(1.3322676295501878e-15), 'band': (130, 131), 'sec': 0.0, 'rss_mb': 1304}, {'N': 500, 's': 0.01, 'twoNs': 10.0, 'exact': 0.019723262750743095, 'kimura': 0.019801326734058274, 'ratio': 0.9960576387449378, 'ratio_to_2s': 0.9861631375371547, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(1.5543122344752192e-15), 'band': (265, 270), 'sec': 0.2, 'rss_mb': 1304}, {'N': 1000, 's': 0.005, 'twoNs': 10.0, 'exact': 0.00993041010995267, 'kimura': 0.009950166271340767, 'ratio': 0.9980144893211483, 'ratio_to_2s': 0.9930410109952671, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(1.9984014443252818e-15), 'band': (363, 368), 'sec': 0.3, 'rss_mb': 1304}, {'N': 10000, 's': 0.001, 'twoNs': 20.0, 'exact': 0.001997269868405251, 'kimura': 0.001998001332666933, 'ratio': 0.9996339020151173, 'ratio_to_2s': 0.9986349342026254, 'tol': 0.02, 'ok': True, 'trunc_mass': np.float64(5.773159728050814e-15), 'band': (1086, 1096), 'sec': 8.0, 'rss_mb': 1310}, {'N': 50, 's': 0.05, 'twoNs': 5.0, 'exact': 0.09308643633978606, 'kimura': 0.09516690253473122, 'ratio': 0.9781387631673113, 'ratio_to_2s': 0.9308643633978605, 'tol': 0.05, 'ok': True, 'trunc_mass': np.float64(1.1102230246251565e-15), 'band': (83, 84), 'sec': 0.0, 'rss_mb': 1310}]
+      mp_vs_float_N10: {'mp': '0.059980393763627623302', 'fl': 0.059980393763627814, 'ok': True}
+[B4] PROVED     pred_met=True  Moran fixation probability (1 - r^-i)/(1 - r^-M) solves the chain; M->inf gives 1 - 1/r
+      residual: 0
+      boundary: (0, 1)
+      limit: rr/(rr + 1)
+== block B done in 8.9 s; peak RSS 1310 MB
+[C1] PROVED     pred_met=True  diffusion conditional neutral fixation time -4N(1-p)ln(1-p)/p; -> 4N as p -> 0
+      residual: 0
+      limit_p0: 4*N
+      limit_p1: 0
+   C2 row {'N': 10, 'exact_gens': 37.27206449042804, 'exact_over_N': 3.7272064490428045, 'diffusion': 38.982903734538404, 'ratio': 0.9561130885538787, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}
+   C2 row {'N': 25, 'exact_gens': 96.97119768518307, 'exact_over_N': 3.878847907407323, 'diffusion': 98.9932658558453, 'ratio': 0.9795736795510235, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}
+   C2 row {'N': 50, 'exact_gens': 196.7416877999709, 'exact_over_N': 3.934833755999418, 'diffusion': 198.99664989932853, 'ratio': 0.9886683413992224, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}
+   C2 row {'N': 100, 'exact_gens': 396.5114131147712, 'exact_over_N': 3.965114131147712, 'diffusion': 398.99832915412486, 'ratio': 0.9937671016201348, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}
+   C2 row {'N': 200, 'exact_gens': 796.2807527457277, 'exact_over_N': 3.9814037637286384, 'diffusion': 798.9991656234348, 'ratio': 0.9965977275137878, 'ok': True, 'sec': 0.1, 'rss_mb': 1310}
+   C2 row {'N': 500, 'exact_gens': 1995.9755563021265, 'exact_over_N': 3.991951112604253, 'diffusion': 1998.9996664998998, 'ratio': 0.9984871882429733, 'ok': True, 'sec': 0.2, 'rss_mb': 1310}
+   C2 row {'N': 10000, 'exact_gens': 39994.97712736955, 'exact_over_N': 3.999497712736955, 'diffusion': 39998.99998333291, 'ratio': 0.9998994260865263, 'ok': True, 'sec': 9.9, 'rss_mb': 1323}
+[C2] CONFIRMED  pred_met=True  exact WF conditional neutral fixation time vs diffusion 4N
+      rows: [{'N': 10, 'exact_gens': 37.27206449042804, 'exact_over_N': 3.7272064490428045, 'diffusion': 38.982903734538404, 'ratio': 0.9561130885538787, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}, {'N': 25, 'exact_gens': 96.97119768518307, 'exact_over_N': 3.878847907407323, 'diffusion': 98.9932658558453, 'ratio': 0.9795736795510235, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}, {'N': 50, 'exact_gens': 196.7416877999709, 'exact_over_N': 3.934833755999418, 'diffusion': 198.99664989932853, 'ratio': 0.9886683413992224, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}, {'N': 100, 'exact_gens': 396.5114131147712, 'exact_over_N': 3.965114131147712, 'diffusion': 398.99832915412486, 'ratio': 0.9937671016201348, 'ok': True, 'sec': 0.0, 'rss_mb': 1310}, {'N': 200, 'exact_gens': 796.2807527457277, 'exact_over_N': 3.9814037637286384, 'diffusion': 798.9991656234348, 'ratio': 0.9965977275137878, 'ok': True, 'sec': 0.1, 'rss_mb': 1310}, {'N': 500, 'exact_gens': 1995.9755563021265, 'exact_over_N': 3.991951112604253, 'diffusion': 1998.9996664998998, 'ratio': 0.9984871882429733, 'ok': True, 'sec': 0.2, 'rss_mb': 1310}, {'N': 10000, 'exact_gens': 39994.97712736955, 'exact_over_N': 3.999497712736955, 'diffusion': 39998.99998333291, 'ratio': 0.9998994260865263, 'ok': True, 'sec': 9.9, 'rss_mb': 1323}]
+[C3] PROVED     pred_met=True  exact Moran conditional neutral fixation time = M(M-1) events = M-1 generations
+      rows: [{'M': 5, 'tstar_events': '20', 'equals_M_Mminus1': True, 'gens': 4.0, 'diffusion_gens': 4.462871026284195}, {'M': 10, 'tstar_events': '90', 'equals_M_Mminus1': True, 'gens': 9.0, 'diffusion_gens': 9.482446409204368}, {'M': 20, 'tstar_events': '380', 'equals_M_Mminus1': True, 'gens': 19.0, 'diffusion_gens': 19.491451867269205}, {'M': 50, 'tstar_events': '2450', 'equals_M_Mminus1': True, 'gens': 49.0, 'diffusion_gens': 49.49663292792265}, {'M': 100, 'tstar_events': '9900', 'equals_M_Mminus1': True, 'gens': 99.0, 'diffusion_gens': 99.49832494966428}]
+== block C done in 10.3 s; peak RSS 1323 MB
+[D1] PROVED     pred_met=True  Haldane cost D (continuous): dominant ln(1/p0), semidominant 2 ln(1/p0), recessive 1/p0-1+ln(1/p0)
+      integrals: {'0': '-log(p0)', '1/2': '-2*log(p0)', '1': '-log(p0) - 1 + 1/p0'}
+      definition: D = sum (1 - wbar/w_max); AA=1, Aa=1-hs, aa=1-s; Haldane 1957 primary NOT retrieved
+   D2 row {'h': 0.0, 's': 0.01, 'D_discrete': 6.880553550887884, 'D_continuous': 6.907655273981804, 'ratio': 0.9960765669363958, 'tol': 0.02, 'ok': True, 'generations': 1001499, 'sec': 0.3}
+   D2 row {'h': 0.0, 's': 0.001, 'D_discrete': 6.904949869469083, 'D_continuous': 6.907655273981804, 'ratio': 0.9996083469128937, 'tol': 0.003, 'ok': True, 'generations': 10015104, 'sec': 2.6}
+   D2 row {'h': 0.5, 's': 0.01, 'D_discrete': 13.726638276492567, 'D_continuous': 13.815310547963607, 'ratio': 0.993581594046461, 'tol': 0.02, 'ok': True, 'generations': 3209, 'sec': 0.0}
+   D2 row {'h': 0.5, 's': 0.001, 'D_discrete': 13.806447099934141, 'D_continuous': 13.815310547963607, 'ratio': 0.9993584329502624, 'tol': 0.003, 'ok': True, 'generations': 32220, 'sec': 0.0}
+   D2 row {'h': 1.0, 's': 0.01, 'D_discrete': 995.9250179082239, 'D_continuous': 1005.9075552639808, 'ratio': 0.9900760886986905, 'tol': 0.02, 'ok': True, 'generations': 100509, 'sec': 0.0}
+   D2 row {'h': 1.0, 's': 0.001, 'D_discrete': 1004.9093045659716, 'D_continuous': 1005.9075552639808, 'ratio': 0.9990076118895963, 'tol': 0.003, 'ok': True, 'generations': 1014114, 'sec': 0.3}
+[D2] CONFIRMED  pred_met=True  discrete genotype recursion matches the continuous Haldane integral to O(s)
+      rows: [{'h': 0.0, 's': 0.01, 'D_discrete': 6.880553550887884, 'D_continuous': 6.907655273981804, 'ratio': 0.9960765669363958, 'tol': 0.02, 'ok': True, 'generations': 1001499, 'sec': 0.3}, {'h': 0.0, 's': 0.001, 'D_discrete': 6.904949869469083, 'D_continuous': 6.907655273981804, 'ratio': 0.9996083469128937, 'tol': 0.003, 'ok': True, 'generations': 10015104, 'sec': 2.6}, {'h': 0.5, 's': 0.01, 'D_discrete': 13.726638276492567, 'D_continuous': 13.815310547963607, 'ratio': 0.993581594046461, 'tol': 0.02, 'ok': True, 'generations': 3209, 'sec': 0.0}, {'h': 0.5, 's': 0.001, 'D_discrete': 13.806447099934141, 'D_continuous': 13.815310547963607, 'ratio': 0.9993584329502624, 'tol': 0.003, 'ok': True, 'generations': 32220, 'sec': 0.0}, {'h': 1.0, 's': 0.01, 'D_discrete': 995.9250179082239, 'D_continuous': 1005.9075552639808, 'ratio': 0.9900760886986905, 'tol': 0.02, 'ok': True, 'generations': 100509, 'sec': 0.0}, {'h': 1.0, 's': 0.001, 'D_discrete': 1004.9093045659716, 'D_continuous': 1005.9075552639808, 'ratio': 0.9990076118895963, 'tol': 0.003, 'ok': True, 'generations': 1014114, 'sec': 0.3}]
+[D3] PROVED     pred_met=True  Haldane arithmetic: 300 = 30/0.1; D=30 <-> p0 = e^-15 (h=1/2); single copy at N_e=1e4: D=19.8
+      gens_per_sub: 300
+      p0_for_D30_semidominant: 3.059023205018258e-07
+      p0_for_D30_dominant: 9.357622968840175e-14
+      D_single_copy_Ne1e4_semidominant: 19.806975105072254
+      gens_at_I_0p1: 198.06975105072254
+== block D done in 3.2 s; peak RSS 1323 MB
+   E Q01   holds       (pred holds      ) exact=7.1347032e-05 printed=7.1347e-05 rel=-0.0000%  37.5 min in years (365-d year)
+   E Q03   discrepancy (pred discrepancy) exact=281.25 printed=125 rel=-55.5556%  9e6/20/1600 vs table 125
+   E Q04   holds       (pred holds      ) exact=562.5 printed=562 rel=-0.0889%  2 x 450,000/1,600 vs 562
+   E Q09   holds       (pred holds      ) exact=146250 printed=146250 rel=+0.0000%  325,000 x 0.45
+   E Q09   holds       (pred holds      ) exact=91.40625 printed=91 rel=-0.4444%  146,250/1,600 vs 91
+   E Q09   holds       (pred holds      ) exact=219780.22 printed=219780 rel=-0.0001%  20e6/91 vs 219,780
+   E Q11   holds       (pred holds      ) exact=-33979400 printed=-34000000 rel=+0.0606%  log10(0.02^2e7) vs -34,000,000
+   E Q12   holds       (pred holds      ) exact=300000 printed=300000 rel=+0.0000%  6e6/20 and 7e6/20
+   E Q14   holds       (pred holds      ) exact=1075436.5 printed=1075000 rel=-0.0406%  205e6/(252,000/1,322) vs 1,075,000
+   E Q17   holds       (pred holds      ) exact=91623.037 printed=91600 rel=-0.0251%  17.5e6/191 vs 91,600
+   E Q17   holds       (pred holds      ) exact=2400 printed=2407 rel=+0.2917%  252,000/105 vs 2,407
+   E Q17   holds       (pred holds      ) exact=7270.4612 printed=7271 rel=+0.0074%  17.5e6/2,407 vs 7,271
+   E Q18   holds       (pred holds      ) exact=252000 printed=252000 rel=+0.0000%  6.3e6/25
+   E Q19   slip        (pred slip       ) exact=9.1304348 printed=8 rel=-12.3810%  252,000/27,600 vs 8
+   E Q30   slip        (pred slip       ) exact=77153665 printed=78000000 rel=+1.0969%  pi^2 x 1.8e7 / ln10 decades vs 78e6
+   E Q30   holds       (pred holds      ) exact=78225244 printed=78000000 rel=-0.2879%  pi^2 x (7.3e9/400) / ln10 decades vs 78e6
+   E Q40   holds       (pred holds      ) exact=0.74280488 printed=0.743 rel=+0.0263%  6.091/8.2 vs 0.743
+   E Q44   holds       (pred holds      ) exact=19806.975 printed=19800 rel=-0.0352%  (2/0.001) ln(20,000) vs 19,800
+   E Q48   holds       (pred holds      ) exact=487.5 printed=487 rel=-0.1026%  146,250/300 vs 487
+   E Q49   holds       (pred holds      ) exact=1200 printed=1200 rel=+0.0000%  9e6/25/300 vs 1,200
+   E Q51   holds       (pred holds      ) exact=642888 printed=642888 rel=+0.0000%  2 x 321,444 vs 642,888
+   E Q51   holds       (pred holds      ) exact=4.3958154 printed=4.4 rel=+0.0952%  642,888/146,250 vs 4.4
+   E Q51   holds       (pred holds      ) exact=87916308 printed=87916307 rel=-0.0000%  642,888/146,250 x 20e6 vs 87,916,307
+   E Q58   holds       (pred holds      ) exact=1321.5859 printed=1322 rel=+0.0313%  60,000/45.4 vs 1,322
+   E Q62   holds       (pred holds      ) exact=909.09091 printed=909 rel=-0.0100%  60,000/66 vs 909
+   E Q85   holds       (pred holds      ) exact=1587.3016 printed=1587 rel=-0.0190%  60,000/37.8 vs 1,587 (37.8 = mean of 66,73,14,9,27)
+   E Q91   holds       (pred holds      ) exact=180 printed=180 rel=+0.0000%  252,000/1,400 vs 180
+   E Q91   holds       (pred holds      ) exact=8.7804878e-05 printed=8.8e-05 rel=+0.2222%  180/205e6 in % vs 0.000088
+   E Q91   holds       (pred holds      ) exact=1138888.9 printed=1139000 rel=+0.0098%  205e6/180 vs 1,139,000
+   E Q118  holds       (pred holds      ) exact=5.999e+08 printed=5.999e+08 rel=+0.0000%  7e9 x 0.0857 vs 599,900,000
+   E Q33   holds       (pred holds      ) exact=113750 printed=114000 rel=+0.2198%  X human lineage: (V_k+2) G/16
+   E Q33   holds       (pred holds      ) exact=35000 printed=35000 rel=+0.0000%  X human species: (V_k+2) G/16
+   E Q33   holds       (pred holds      ) exact=28409.091 printed=28000 rel=-1.4400%  X elephant: (V_k+2) G/16
+[E] CONFIRMED  pred_met=True  Day's quoted closed-form arithmetic, recomputed exactly
+      rows: [{'q': 'Q01', 'what': '37.5 min in years (365-d year)', 'exact': 7.134703196347032e-05, 'printed': 7.1347e-05, 'rel_dev': -4.479999998752149e-07, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q03', 'what': '9e6/20/1600 vs table 125', 'exact': 281.25, 'printed': 125.0, 'rel_dev': -0.5555555555555556, 'label': 'discrepancy', 'predicted': 'discrepancy', 'met': True}, {'q': 'Q04', 'what': '2 x 450,000/1,600 vs 562', 'exact': 562.5, 'printed': 562.0, 'rel_dev': -0.000888888888888939, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q09', 'what': '325,000 x 0.45', 'exact': 146250.0, 'printed': 146250.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q09', 'what': '146,250/1,600 vs 91', 'exact': 91.40625, 'printed': 91.0, 'rel_dev': -0.004444444444444473, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q09', 'what': '20e6/91 vs 219,780', 'exact': 219780.21978021978, 'printed': 219780.0, 'rel_dev': -1.0000000000287557e-06, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q11', 'what': 'log10(0.02^2e7) vs -34,000,000', 'exact': -33979400.08672038, 'printed': -34000000.0, 'rel_dev': 0.0006062471152241677, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q12', 'what': '6e6/20 and 7e6/20', 'exact': 300000.0, 'printed': 300000.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q14', 'what': '205e6/(252,000/1,322) vs 1,075,000', 'exact': 1075436.507936508, 'printed': 1075000.0, 'rel_dev': -0.00040588908158367687, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q17', 'what': '17.5e6/191 vs 91,600', 'exact': 91623.03664921466, 'printed': 91600.0, 'rel_dev': -0.0002514285714285691, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q17', 'what': '252,000/105 vs 2,407', 'exact': 2400.0, 'printed': 2407.0, 'rel_dev': 0.0029166666666666785, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q17', 'what': '17.5e6/2,407 vs 7,271', 'exact': 7270.461154964686, 'printed': 7271.0, 'rel_dev': 7.411428571435508e-05, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q18', 'what': '6.3e6/25', 'exact': 252000.0, 'printed': 252000.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q19', 'what': '252,000/27,600 vs 8', 'exact': 9.130434782608695, 'printed': 8.0, 'rel_dev': -0.12380952380952381, 'label': 'slip', 'predicted': 'slip', 'met': True}, {'q': 'Q30', 'what': 'pi^2 x 1.8e7 / ln10 decades vs 78e6', 'exact': 77153665.13930082, 'printed': 78000000.0, 'rel_dev': 0.010969470590556085, 'label': 'slip', 'predicted': 'slip', 'met': True}, {'q': 'Q30', 'what': 'pi^2 x (7.3e9/400) / ln10 decades vs 78e6', 'exact': 78225243.82179111, 'printed': 78000000.0, 'rel_dev': -0.0028794262668487836, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q40', 'what': '6.091/8.2 vs 0.743', 'exact': 0.7428048780487805, 'printed': 0.743, 'rel_dev': 0.0002626826465277343, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q44', 'what': '(2/0.001) ln(20,000) vs 19,800', 'exact': 19806.975105072255, 'printed': 19800.0, 'rel_dev': -0.0003521539778412741, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q48', 'what': '146,250/300 vs 487', 'exact': 487.5, 'printed': 487.0, 'rel_dev': -0.0010256410256410664, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q49', 'what': '9e6/25/300 vs 1,200', 'exact': 1200.0, 'printed': 1200.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q51', 'what': '2 x 321,444 vs 642,888', 'exact': 642888.0, 'printed': 642888.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q51', 'what': '642,888/146,250 vs 4.4', 'exact': 4.395815384615385, 'printed': 4.4, 'rel_dev': 0.0009519543061933256, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q51', 'what': '642,888/146,250 x 20e6 vs 87,916,307', 'exact': 87916307.6923077, 'printed': 87916307.0, 'rel_dev': -7.874622065529024e-09, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q58', 'what': '60,000/45.4 vs 1,322', 'exact': 1321.5859030837005, 'printed': 1322.0, 'rel_dev': 0.00031333333333338764, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q62', 'what': '60,000/66 vs 909', 'exact': 909.0909090909091, 'printed': 909.0, 'rel_dev': -9.999999999998899e-05, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q85', 'what': '60,000/37.8 vs 1,587 (37.8 = mean of 66,73,14,9,27)', 'exact': 1587.3015873015872, 'printed': 1587.0, 'rel_dev': -0.00018999999999991246, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q91', 'what': '252,000/1,400 vs 180', 'exact': 180.0, 'printed': 180.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q91', 'what': '180/205e6 in % vs 0.000088', 'exact': 8.780487804878048e-05, 'printed': 8.8e-05, 'rel_dev': 0.0022222222222223476, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q91', 'what': '205e6/180 vs 1,139,000', 'exact': 1138888.888888889, 'printed': 1139000.0, 'rel_dev': 9.756097560975618e-05, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q118', 'what': '7e9 x 0.0857 vs 599,900,000', 'exact': 599900000.0, 'printed': 599900000.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q33', 'what': 'X human lineage: (V_k+2) G/16', 'exact': 113750.0, 'printed': 114000.0, 'rel_dev': 0.00219780219780219, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q33', 'what': 'X human species: (V_k+2) G/16', 'exact': 35000.0, 'printed': 35000.0, 'rel_dev': 0.0, 'label': 'holds', 'predicted': 'holds', 'met': True}, {'q': 'Q33', 'what': 'X elephant: (V_k+2) G/16', 'exact': 28409.090909090908, 'printed': 28000.0, 'rel_dev': -0.014399999999999968, 'label': 'holds', 'predicted': 'holds', 'met': True}]
+      n_rows: 33
+      n_predictions_met: 33
+[E-HL] PROVED     pred_met=True  Hard Limits: N_e(WF V_k) = N; 4N_e = G gives N = (V_k+2)G/16 + 1/2
+      wf_Ne_equals_N: True
+      solve_4Ne_eq_G: [G*V_k/16 + G/8 + 1/2]
+      X_drops_half: True
+[E-B2a] PROVED     pred_met=True  arcsine transform: constant variance 1/(2N), path length pi -> exponent -pi^2 N/G
+      var_y: 1/(2*N)
+      path: pi
+      exponent: -pi**2*N/G
+== block E done in 0.1 s; peak RSS 1323 MB
+
+SUMMARY
+  A1      proved     pred_met=True  neutral k = mu: haploid N mu * 1/N and diploid 2N mu * 1/(2N)
+  A2      proved     pred_met=True  neutral P_fix = initial frequency i/M (martingale; exact WF chains)
+  A3      confirmed  pred_met=True  P_fix independent of N_e in an exchangeable low-N_e Cannings chain; time scales with N_e
+  A4      proved     pred_met=True  start state: stationary past gives k = mu exactly; empty start gives deficit -> mu E[tau]
+  B1      proved     pred_met=True  Kimura u(p) solves the backward equation with u(0)=0, u(1)=1
+  B2      proved     pred_met=True  Kimura limits: s->0 gives p; N->inf at p=1/(2N) gives 1-e^{-2s} = 2s - 2s^2 + ...
+  B3      confirmed  pred_met=True  exact diploid additive WF P_fix vs Kimura at the audit's parameters
+  B4      proved     pred_met=True  Moran fixation probability (1 - r^-i)/(1 - r^-M) solves the chain; M->inf gives 1 - 1/r
+  C1      proved     pred_met=True  diffusion conditional neutral fixation time -4N(1-p)ln(1-p)/p; -> 4N as p -> 0
+  C2      confirmed  pred_met=True  exact WF conditional neutral fixation time vs diffusion 4N
+  C3      proved     pred_met=True  exact Moran conditional neutral fixation time = M(M-1) events = M-1 generations
+  D1      proved     pred_met=True  Haldane cost D (continuous): dominant ln(1/p0), semidominant 2 ln(1/p0), recessive 1/p0-1+ln(1/p0)
+  D2      confirmed  pred_met=True  discrete genotype recursion matches the continuous Haldane integral to O(s)
+  D3      proved     pred_met=True  Haldane arithmetic: 300 = 30/0.1; D=30 <-> p0 = e^-15 (h=1/2); single copy at N_e=1e4: D=19.8
+  E       confirmed  pred_met=True  Day's quoted closed-form arithmetic, recomputed exactly
+  E-HL    proved     pred_met=True  Hard Limits: N_e(WF V_k) = N; 4N_e = G gives N = (V_k+2)G/16 + 1/2
+  E-B2a   proved     pred_met=True  arcsine transform: constant variance 1/(2N), path length pi -> exponent -pi^2 N/G
+wall 34 s, peak RSS 1323 MB

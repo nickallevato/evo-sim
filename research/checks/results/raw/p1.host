@@ -1,0 +1,8 @@
+host: na-workhorse.allevato.io
+script: research/checks/p1_symbolic_proofs.py, commit c17b44a (pre-registration; no edits since)
+script md5: bad8cb435b965c832fe13d45d1736368 (local and workhorse identical)
+start: 2026-10-09T15:56:01-06:00; wall 34 s; peak RSS 1,323 MB; single process (OMP/OPENBLAS threads = 1)
+command: cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/p1_symbolic_proofs.py > research/checks/results/raw/p1_symbolic_proofs.out 2>&1 < /dev/null &
+versions: python 3.14.4, sympy 1.14.0, mpmath 1.3.0, numpy 2.5.3, scipy 1.18.1
+outputs (md5): p1_symbolic_proofs.json d2edd6476dc2c4c5f7bc9f19bf5b46e9; p1_symbolic_proofs.out 071680d8215e00c1a9a893d8db2ee554
+concurrent load: D15 sweep (3 workers) running on the same host

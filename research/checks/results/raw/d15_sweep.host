@@ -1,0 +1,10 @@
+host: na-workhorse.allevato.io
+script: research/checks/d15_waiting_time.py, commit 639b94b (post hoc amendment after valid, before sweep: N_e=1e5 S2/S3/Fin2/Fin3 at f=3)
+script md5: 5cc54a4814238716d5d4b98d4a736a6b (local and workhorse identical, checked 2026-10-09 15:44 -06:00)
+start: 2026-10-09T15:44:34-06:00
+command: cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/d15_waiting_time.py sweep 3 > research/checks/results/raw/d15_sweep.out 2>&1 &
+pid: 3860703 (main; 3 pool workers via forkserver; SIGHUP ignored)
+workers: 3 (1 process left for P1)
+load before launch: 0.24; mem available 12 GB
+cells: 714 x R=60 (357 at N_e=1e4 f=1; 175 at N_e=1e5 f=10; 182 at N_e=1e5 f=3)
+outputs: results/raw/d15_sweep.jsonl (one line per finished cell), d15_sweep.out

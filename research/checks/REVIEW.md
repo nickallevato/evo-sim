@@ -282,6 +282,8 @@ Files: `results/REVIEW-R4-GAP07c-{correctness,steelman}.md` (346520c, 0301f12). 
 ## Queue (after review #13)
 In flight (2026-10-09; one subagent at a time from now on, per the user; compute on na-workhorse only):
 - **XT (cross-tool replication in fwdpy11 / SLiM)** and **D15 (Hössjer regulatory waiting time)**: running on na-workhorse; each pre-registers by commit and gets reviews before integration.
+  - D15: the `sweep` stage was launched 2026-10-09 15:44 -06:00 (3 workers, PID 3860703; record `results/raw/d15_sweep.host`) after the post hoc f=3 amendment for the N_e=1e5 S2/S3/Fin2/Fin3 cells (639b94b). Then: write-up, reviews.
+- **P1 (machine-checked derivations, sympy/mpmath): awaiting reviews.** Pre-registered c17b44a; run 2026-10-09 on na-workhorse; write-up `results/R4-P1.md`. All 17 identity groups and 33 Day-arithmetic rows came out as predicted (no failures). Needs the review trio (correctness, steelman-day, steelman-critic), then integration.
 
 Next:
 1. **C1e:** the C1c model run on each published Holocene trajectory (Gravel, Gazave, Coventry, Nelson; `sources/holocene-ne.md`), pre-registered.
