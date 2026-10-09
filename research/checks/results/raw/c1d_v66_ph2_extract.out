@@ -1,0 +1,72 @@
+  part 0  0/205824  2s
+  part 1  0/205824  2s
+  part 5  0/203893  2s
+  part 2  0/205824  2s
+  part 3  0/205824  2s
+  part 4  0/205824  2s
+  part 5  20480/203893  25s
+  part 1  20480/205824  25s
+  part 0  20480/205824  26s
+  part 3  20480/205824  26s
+  part 2  20480/205824  26s
+  part 4  20480/205824  27s
+  part 5  40960/203893  46s
+  part 3  40960/205824  48s
+  part 1  40960/205824  48s
+  part 4  40960/205824  50s
+  part 2  40960/205824  53s
+  part 0  40960/205824  53s
+  part 5  61440/203893  67s
+  part 3  61440/205824  69s
+  part 1  61440/205824  70s
+  part 4  61440/205824  72s
+  part 2  61440/205824  80s
+  part 0  61440/205824  80s
+  part 5  81920/203893  92s
+  part 3  81920/205824  96s
+  part 4  81920/205824  97s
+  part 1  81920/205824  98s
+  part 2  81920/205824  104s
+  part 0  81920/205824  106s
+  part 5  102400/203893  115s
+  part 3  102400/205824  118s
+  part 4  102400/205824  120s
+  part 1  102400/205824  121s
+  part 2  102400/205824  127s
+  part 0  102400/205824  129s
+  part 5  122880/203893  136s
+  part 3  122880/205824  142s
+  part 4  122880/205824  144s
+  part 1  122880/205824  145s
+  part 2  122880/205824  151s
+  part 5  143360/203893  152s
+  part 0  122880/205824  153s
+  part 3  143360/205824  165s
+  part 5  163840/203893  166s
+  part 4  143360/205824  167s
+  part 1  143360/205824  169s
+  part 2  143360/205824  174s
+  part 0  143360/205824  177s
+  part 5  184320/203893  180s
+  part 3  163840/205824  190s
+  part 4  163840/205824  190s
+  part 1  163840/205824  192s
+wrote /home/na/projects/evo-sim/sources/raw/aadr-geno-2026-10-09/derived_ph2/c1d_v66_part5.npz
+  part 2  163840/205824  197s
+  part 0  163840/205824  202s
+  part 3  184320/205824  213s
+  part 4  184320/205824  214s
+  part 1  184320/205824  217s
+  part 2  184320/205824  222s
+  part 0  184320/205824  227s
+  part 3  204800/205824  237s
+  part 4  204800/205824  237s
+wrote /home/na/projects/evo-sim/sources/raw/aadr-geno-2026-10-09/derived_ph2/c1d_v66_part3.npz
+wrote /home/na/projects/evo-sim/sources/raw/aadr-geno-2026-10-09/derived_ph2/c1d_v66_part4.npz
+  part 1  204800/205824  241s
+wrote /home/na/projects/evo-sim/sources/raw/aadr-geno-2026-10-09/derived_ph2/c1d_v66_part1.npz
+  part 2  204800/205824  244s
+wrote /home/na/projects/evo-sim/sources/raw/aadr-geno-2026-10-09/derived_ph2/c1d_v66_part2.npz
+  part 0  204800/205824  247s
+wrote /home/na/projects/evo-sim/sources/raw/aadr-geno-2026-10-09/derived_ph2/c1d_v66_part0.npz
+extract exit codes [0, 0, 0, 0, 0, 0]

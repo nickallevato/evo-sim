@@ -1,0 +1,42 @@
+== v62 ==
+BA shares [0.149, 0.391, 0.238, 0.046, 0.175]  Med shares [0.032, 0.614, 0.098, 0.205, 0.05]
+BA-Med F_adj (B) 0.00619 ; F_comp 0.00106 (17.2%) with BA-bin pairs ; 0.00037 (6.0%) with Medieval-bin pairs
+census 1e+05: Wright N_e 5.71e+04, F_drift 8.91e-04, measured F_adj / F_drift 6.9, non-drift share needed 85.60%
+census 3e+05: Wright N_e 1.71e+05, F_drift 2.97e-04, measured F_adj / F_drift 20.8, non-drift share needed 95.20%
+census 1e+06: Wright N_e 5.71e+05, F_drift 8.91e-05, measured F_adj / F_drift 69.4, non-drift share needed 98.56%
+census 3e+06: Wright N_e 1.71e+06, F_drift 2.97e-05, measured F_adj / F_drift 208.3, non-drift share needed 99.52%
+census 1e+07: Wright N_e 5.71e+06, F_drift 8.91e-06, measured F_adj / F_drift 694.5, non-drift share needed 99.86%
+break-even census N = Ne(B)/0.571 = 14399
+BA-Med   K   6368  B1(mean n)   7625 (+19.7% vs K)  B(site-wise)   8228 (+7.9% vs B1; +29.2% vs K; +1.1% vs published 8139)
+EN-Mod   K   7269  B1(mean n)   7870 (+8.3% vs K)  B(site-wise)   8086 (+2.7% vs B1; +11.2% vs K; -17.8% vs published 9835)
+Meso-EN  K    692  B1(mean n)    684 (-1.2% vs K)  B(site-wise)    694 (+1.4% vs B1; +0.2% vs K; -26.1% vs published 938)
+EN-LN    K   4655  B1(mean n)   6439 (+38.3% vs K)  B(site-wise)   7380 (+14.6% vs B1; +58.5% vs K; +49.9% vs published 4922)
+EN-BA    K   4049  B1(mean n)   4585 (+13.2% vs K)  B(site-wise)   4898 (+6.8% vs B1; +21.0% vs K; -29.4% vs published 6933)
+EN-Iron  K   7100  B1(mean n)   8578 (+20.8% vs K)  B(site-wise)   9215 (+7.4% vs B1; +29.8% vs K; -5.9% vs published 9792)
+EN-Med   K   5401  B1(mean n)   5861 (+8.5% vs K)  B(site-wise)   6018 (+2.7% vs B1; +11.4% vs K; -29.5% vs published 8530)
+within-region BA-Med Iberia        N_e   4375  S 101/24  S / (10 N_e / t) = 0.06
+within-region BA-Med CentralEur    N_e   2670  S 232/559  S / (10 N_e / t) = 0.89
+within-region BA-Med ItalyBalkans  N_e   9298  S 154/101  S / (10 N_e / t) = 0.11
+within-region BA-Med Scandinavia   N_e  12692  S 25/175  S / (10 N_e / t) = 0.02
+within-region BA-Med EastEur       N_e   1918  S 130/44  S / (10 N_e / t) = 0.23
+== v66 ==
+BA shares [0.127, 0.373, 0.215, 0.066, 0.219]  Med shares [0.054, 0.649, 0.068, 0.158, 0.07]
+BA-Med F_adj (B) 0.00527 ; F_comp 0.00082 (15.5%) with BA-bin pairs ; 0.00032 (6.1%) with Medieval-bin pairs
+census 1e+05: Wright N_e 5.71e+04, F_drift 8.91e-04, measured F_adj / F_drift 5.9, non-drift share needed 83.09%
+census 3e+05: Wright N_e 1.71e+05, F_drift 2.97e-04, measured F_adj / F_drift 17.7, non-drift share needed 94.36%
+census 1e+06: Wright N_e 5.71e+05, F_drift 8.91e-05, measured F_adj / F_drift 59.1, non-drift share needed 98.31%
+census 3e+06: Wright N_e 1.71e+06, F_drift 2.97e-05, measured F_adj / F_drift 177.4, non-drift share needed 99.44%
+census 1e+07: Wright N_e 5.71e+06, F_drift 8.91e-06, measured F_adj / F_drift 591.2, non-drift share needed 99.83%
+break-even census N = Ne(B)/0.571 = 16913
+BA-Med   K   7812  B1(mean n)   9165 (+17.3% vs K)  B(site-wise)   9665 (+5.5% vs B1; +23.7% vs K; +18.7% vs published 8139)
+EN-Mod   K   9672  B1(mean n)  10271 (+6.2% vs K)  B(site-wise)  10508 (+2.3% vs B1; +8.6% vs K; +6.8% vs published 9835)
+Meso-EN  K    866  B1(mean n)    863 (-0.3% vs K)  B(site-wise)    872 (+1.0% vs B1; +0.7% vs K; -7.1% vs published 938)
+EN-LN    K   4706  B1(mean n)   5585 (+18.7% vs K)  B(site-wise)   5954 (+6.6% vs B1; +26.5% vs K; +21.0% vs published 4922)
+EN-BA    K   6761  B1(mean n)   7792 (+15.2% vs K)  B(site-wise)   8273 (+6.2% vs B1; +22.4% vs K; +19.3% vs published 6933)
+EN-Iron  K   9691  B1(mean n)  11107 (+14.6% vs K)  B(site-wise)  11520 (+3.7% vs B1; +18.9% vs K; +17.6% vs published 9792)
+EN-Med   K   8410  B1(mean n)   9100 (+8.2% vs K)  B(site-wise)   9302 (+2.2% vs B1; +10.6% vs K; +9.1% vs published 8530)
+within-region BA-Med Iberia        N_e   4442  S 79/56  S / (10 N_e / t) = 0.13
+within-region BA-Med CentralEur    N_e   3407  S 262/887  S / (10 N_e / t) = 0.78
+within-region BA-Med ItalyBalkans  N_e   7166  S 168/112  S / (10 N_e / t) = 0.16
+within-region BA-Med Scandinavia   N_e  14637  S 51/220  S / (10 N_e / t) = 0.04
+within-region BA-Med EastEur       N_e   3909  S 179/112  S / (10 N_e / t) = 0.29

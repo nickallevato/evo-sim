@@ -709,3 +709,99 @@ Verified as exact substrings (whitespace and quote-mark normalised) of the local
 - branch: B3a,B3g
 - quote: "1/2Nₑ is the fixation probability for a neutral mutation. It is not a general fixation probability that applies to all mutations. There are 3x more harmful mutations than neutral ones."
 - note: Restates 1/(2Nₑ) nineteen days after the 2026-08-27 concession that Nₑ never enters the Kimura identity (B3g; versions.md "N vs Nₑ in k"). The same comment says "every single neutral substitution requires ~one million years apiece to fixate" (Q104's comment). Its second sentence is the premise that makes B9 a non-sequitur.
+
+### Q106 Z18525185 s3.1: sample "restricted ... to European samples (n = 8,738)" (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: section 3.1, ¶57 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "We restricted analysis to European samples (n = 8,738) to maintain population continuity and minimize confounding from population structure."
+- note: Sample definition is only "European samples"; no country list, coordinate rule, quality filter or damage treatment is stated. Source for the C1c/C1d sample reconstruction.
+
+### Q107 Z18525185 s3.3: the fixation-event rule (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: section 3.3, ¶72 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "A "fixation event" was recorded when an allele that was polymorphic (<100%) in an earlier bin reached 100% frequency in a later bin."
+- note: The rule that C1b/C1c/C1d implement as E1/E2 eligibility. "<100%" includes 0%; no minimum count of calls is stated.
+
+### Q108 Z18525185 s3.3: "22,428 alleles that reached fixation" (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: section 3.3, ¶73 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "We identified 22,428 alleles that reached fixation between the earliest samples (Neolithic, 6000-8000 BP) and modern Europeans (<500 BP)."
+- note: Source of the 22,428 eligible count; the "Neolithic" pool is 6000-8000 BP (bins 6000-7000 and 7000-8000).
+
+### Q109 Z18525185 s3.4: dating rule "oldest time bin in which the allele appeared fixed" (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: section 3.4, ¶75 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "This was determined as the oldest time bin in which the allele appeared fixed, working backward from the present."
+- note: Ambiguous between T2 (oldest bin at 100%, gaps allowed) and T1 (start of the unbroken run to the present); C1c review #5 and C1d show only T2 can produce the published profile.
+
+### Q110 Z18525185 s4.1: "tracked timing for 16,299 ... insufficient coverage in intermediate time bins" (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: section 4.1, ¶78 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "Of 22,428 alleles that reached fixation, we successfully tracked timing for 16,299 (the remainder had insufficient coverage in intermediate time bins)."
+- note: The coverage threshold is not stated; the C1d minimum-call grid tries to find it.
+
+### Q111 Z18525185 s4.3: "completion events for alleles already near fixation" (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: section 4.3, ¶139 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "This confirms that essentially all "fixations" were completion events for alleles already near fixation—not new substitutions traversing the frequency spectrum."
+- note: Day's own description of the 22,428; the C1d real-data run confirms it in kind (98.8% of v62 eligible alleles start at 95-100% in the Neolithic).
+
+### Q112 Z18525185 Appendix B: data availability names only the AADR (added 2026-10-09)
+- source: `Z18525185` (Zenodo pub. 2026-02-08, "The Recalibration of the Molecular Clock"); URL: https://zenodo.org/records/18525185
+- locator: Appendix B, ¶301 of zenodo-18525185.txt
+- local copy: `sources/raw/day/zenodo-18525185.txt`
+- branch: C
+- quote: "Analysis was performed on the Allen Ancient DNA Resource (AADR) v62.0, publicly available at the Reich Lab website."
+- note: The "21" paper makes no code-availability statement (no "script", "code" or "github" in its text). The scripts sentence is in Z23046531 s5 (next entries).
+
+### Q113 Z23046531 s2.2: two periods, date = 0 moderns, 1,372 / 680 (added 2026-10-09)
+- source: `Z23046531` (Zenodo pub. 2026-09-29, record modified 2026-09-29); URL: https://zenodo.org/records/23046531
+- locator: p.2, section 2.2
+- local copy: `sources/raw/day/zenodo-23046531.txt`
+- branch: C
+- quote: "Two temporal groups were defined: a Neolithic period (6000–8000 BP) and a modern period (date = 0, i.e., present-day)."
+- note: Followed by "The v62 run yielded 1,372 Neolithic and 680 modern European samples." (same section) and, for v66, 395 and 441. The country list is not published ("identical country lists").
+
+### Q114 Z23046531 s2.3: autosomes only, minimum of 100 genotyped samples per period (added 2026-10-09)
+- source: `Z23046531` (Zenodo pub. 2026-09-29, record modified 2026-09-29); URL: https://zenodo.org/records/23046531
+- locator: p.2, section 2.3
+- local copy: `sources/raw/day/zenodo-23046531.txt`
+- branch: C
+- quote: "Autosomal SNPs only were analyzed; X and Y chromosome loci were excluded. SNPs were required to have a minimum of 100 genotyped samples in each period."
+- note: The only stated call-count filter in either Day aDNA paper; it applies to the two-period statistic of Z23046531, not stated for the 11-bin statistic of Z18525185.
+
+### Q115 Z23046531 s2.4: frequency = minor-allele proportion among genotyped individuals (added 2026-10-09)
+- source: `Z23046531` (Zenodo pub. 2026-09-29, record modified 2026-09-29); URL: https://zenodo.org/records/23046531
+- locator: p.2, section 2.4
+- local copy: `sources/raw/day/zenodo-23046531.txt`
+- branch: C
+- quote: "Allele frequencies were estimated as the proportion of the minor allele among genotyped individuals in each period."
+- note: Individual-based frequency; pseudo-haploid individuals count as one genotyped individual.
+
+### Q116 Z23046531 s5: "Analysis scripts are available from the authors at Zenodo." (added 2026-10-09)
+- source: `Z23046531` (Zenodo pub. 2026-09-29, record modified 2026-09-29); URL: https://zenodo.org/records/23046531
+- locator: p.7, section 5 (Data Availability)
+- local copy: `sources/raw/day/zenodo-23046531.txt`
+- branch: C
+- quote: "Analysis scripts are available from the authors at Zenodo."
+- note: The only code statement in the Day aDNA papers. Ambiguous: "available from the authors" can mean on request. No code file is attached to or linked from any Zenodo record found (C1d search, 2026-10-09). Applies to the two-period statistic of this paper.
+
+### Q117 Z23046531 s2.1: v62.0 PACKEDANCESTRYMAP; v66.p1 TGENO converted by PLINK 2 (added 2026-10-09)
+- source: `Z23046531` (Zenodo pub. 2026-09-29, record modified 2026-09-29); URL: https://zenodo.org/records/23046531
+- locator: p.2, section 2.1
+- local copy: `sources/raw/day/zenodo-23046531.txt`
+- branch: C
+- quote: "Data was distributed in TGENO format and converted to PACKEDANCESTRYMAP format via PLINK 2 for analysis."
+- note: Said of v66.p1. For v62.0 the same section says the data were "distributed in PACKEDANCESTRYMAP format". The v62.0.p1 file retrieved in 2026-10-09 is TGENO.

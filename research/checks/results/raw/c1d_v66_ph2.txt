@@ -1,0 +1,156 @@
+== C1d POST HOC 2 v66 ==
+sizes V1 bins: [184, 152, 774, 784, 838, 1356, 1173, 1522, 3493, 1344, 715]
+sizes dayE bins: [184, 155, 774, 781, 838, 1362, 1183, 1519, 3501, 1382, 819]   (Day n [168, 129, 668, 573, 721, 1141, 980, 952, 2093, 688, 625])
+sizes lib:minus (ancient bins): [103, 41, 67, 70, 128, 218, 163, 80, 414, 340, 54]
+sizes lib:half (ancient bins): [47, 82, 587, 523, 565, 960, 697, 812, 1036, 262, 48]
+sizes lib:plus (ancient bins): [1, 7, 59, 37, 45, 55, 117, 260, 1244, 24, 1]
+sizes lib:unk (ancient bins): [33, 22, 61, 154, 100, 123, 196, 370, 799, 718, 612]
+sizes dmg:lo (ancient bins): [8, 23, 200, 141, 236, 265, 229, 312, 404, 237, 43]
+sizes dmg:mid (ancient bins): [14, 18, 258, 225, 192, 258, 200, 520, 1111, 203, 14]
+sizes dmg:hi (ancient bins): [20, 25, 90, 58, 58, 82, 141, 95, 678, 60, 1]
+sizes dmg:na (ancient bins): [142, 86, 226, 360, 352, 751, 603, 595, 1300, 844, 657]
+tp sizes (neo / mod): S1 1558/443, S2 1675/498, S3 1784/462, S4 1555/562, S5 1912/683
+-- minimum-call grid (E1/T2 all11 all SNPs) --
+V1 m= 1 elig 48888 tracked 1.000 S21 3649 pre7k 0.9148
+V1 m=10 elig 48883 tracked 0.999 S21 3649 pre7k 0.9147
+V1 m=20 elig 48838 tracked 0.989 S21 3632 pre7k 0.9143
+V1 m=25 elig 48784 tracked 0.982 S21 3626 pre7k 0.9137
+V1 m=30 elig 48725 tracked 0.969 S21 3607 pre7k 0.9129
+V1 m=35 elig 48672 tracked 0.946 S21 3555 pre7k 0.9120
+V1 m=40 elig 48631 tracked 0.913 S21 3498 pre7k 0.9103
+V1 m=45 elig 48579 tracked 0.873 S21 3388 pre7k 0.9088
+V1 m=50 elig 48507 tracked 0.824 S21 3223 pre7k 0.9078
+V1 m=60 elig 48341 tracked 0.693 S21 2793 pre7k 0.9048
+dayE m= 1 elig 49014 tracked 1.000 S21 3717 pre7k 0.9136
+dayE m=10 elig 49004 tracked 0.998 S21 3717 pre7k 0.9135
+dayE m=20 elig 48933 tracked 0.989 S21 3699 pre7k 0.9131
+dayE m=25 elig 48850 tracked 0.982 S21 3694 pre7k 0.9124
+dayE m=30 elig 48781 tracked 0.969 S21 3670 pre7k 0.9117
+dayE m=35 elig 48741 tracked 0.946 S21 3618 pre7k 0.9107
+dayE m=40 elig 48681 tracked 0.913 S21 3563 pre7k 0.9089
+dayE m=45 elig 48607 tracked 0.873 S21 3453 pre7k 0.9073
+dayE m=50 elig 48519 tracked 0.824 S21 3286 pre7k 0.9063
+dayE m=60 elig 48373 tracked 0.694 S21 2854 pre7k 0.9032
+-- dayE sample --
+dayE all                  elig   49014 trk   49012 S21   3717 S23   4235 pre7k 0.9136 S21/elig 0.07584 tsS21 0.984 start [np.float64(86.9), np.float64(12.8), np.float64(0.3), np.float64(0.0)] prof 35923/8232/622/518/206/66/107/30/1/20/3287
+dayE auto                 elig   43816 trk   43816 S21   3552 S23   4033 pre7k 0.9080 S21/elig 0.08107 tsS21 0.990 start [np.float64(87.6), np.float64(12.2), np.float64(0.2), np.float64(0.0)] prof 31527/7655/601/481/191/63/98/28/1/17/3154
+dayE transversions        elig    9719 trk    9717 S21     60 S23    105 pre7k 0.9892 S21/elig 0.00617 tsS21 0.000 start [np.float64(97.7), np.float64(1.9), np.float64(0.3), np.float64(0.1)] prof 8317/1251/44/45/16/5/5/2/0/3/29
+dayE transversions_auto   elig    7319 trk    7319 S21     35 S23     65 pre7k 0.9911 S21/elig 0.00478 tsS21 0.000 start [np.float64(99.5), np.float64(0.4), np.float64(0.1), np.float64(0.0)] prof 6209/1009/36/30/10/4/5/1/0/3/12
+dayE transitions          elig   39295 trk   39295 S21   3657 S23   4130 pre7k 0.8949 S21/elig 0.09307 tsS21 1.000 start [np.float64(84.3), np.float64(15.4), np.float64(0.2), np.float64(0.0)] prof 27606/6981/578/473/190/61/102/28/1/17/3258
+-- V1 split (all11) --
+V1 all                  elig   48888 trk   48886 S21   3649 S23   4164 pre7k 0.9148 S21/elig 0.07464 tsS21 0.982 start [np.float64(87.3), np.float64(12.4), np.float64(0.2), np.float64(0.0)] prof 35753/8342/627/515/213/66/109/33/1/21/3206
+V1 auto                 elig   43748 trk   43748 S21   3490 S23   3971 pre7k 0.9092 S21/elig 0.07978 tsS21 0.987 start [np.float64(88.0), np.float64(11.9), np.float64(0.2), np.float64(0.0)] prof 31399/7768/610/481/197/64/99/31/1/18/3080
+V1 transversions        elig   10034 trk   10032 S21     66 S23    113 pre7k 0.9887 S21/elig 0.00658 tsS21 0.000 start [np.float64(97.9), np.float64(1.8), np.float64(0.2), np.float64(0.1)] prof 8522/1351/46/47/21/4/10/2/0/3/26
+V1 transversions_auto   elig    7614 trk    7614 S21     44 S23     77 pre7k 0.9899 S21/elig 0.00578 tsS21 0.000 start [np.float64(99.5), np.float64(0.5), np.float64(0.0), np.float64(0.0)] prof 6398/1100/39/33/14/4/10/1/0/3/12
+V1 transversions_X      elig    1442 trk    1442 S21     13 S23     25 pre7k 0.9827 S21/elig 0.00902 tsS21 0.000 start [np.float64(98.1), np.float64(1.8), np.float64(0.1), np.float64(0.0)] prof 1211/203/3/12/5/0/0/1/0/0/7
+V1 transversions_Y      elig     978 trk     976 S21      9 S23     11 pre7k 0.9887 S21/elig 0.00920 tsS21 0.000 start [np.float64(85.7), np.float64(11.8), np.float64(1.5), np.float64(1.0)] prof 913/48/4/2/2/0/0/0/0/0/7
+V1 transitions_auto     elig   36134 trk   36134 S21   3446 S23   3894 pre7k 0.8922 S21/elig 0.09537 tsS21 1.000 start [np.float64(85.5), np.float64(14.3), np.float64(0.2), np.float64(0.0)] prof 25001/6668/571/448/183/60/89/30/1/15/3068
+-- modern-bin variants (V1) --
+diploid_only                     elig   80862 trk   80861 S21  12430 S23  13319 pre7k 0.8353 S21/elig 0.15372 tsS21 0.970 start [np.float64(75.6), np.float64(23.0), np.float64(0.7), np.float64(0.6)] prof 52488/14036/1018/889/337/117/196/60/2/47/11671
+pseudohaploid_only               elig   82729 trk   82720 S21   9529 S23  10725 pre7k 0.8703 S21/elig 0.11518 tsS21 0.880 start [np.float64(79.6), np.float64(18.8), np.float64(1.0), np.float64(0.6)] prof 53172/17606/1217/1196/558/183/281/106/1/70/8330
+mod:date0                        elig   80897 trk   80896 S21  12394 S23  13288 pre7k 0.8357 S21/elig 0.15321 tsS21 0.965 start [np.float64(75.6), np.float64(23.0), np.float64(0.8), np.float64(0.6)] prof 52528/14059/1021/894/338/117/197/60/2/47/11633
+mod:hist                         elig   83257 trk   83248 S21   9735 S23  10946 pre7k 0.8685 S21/elig 0.11693 tsS21 0.878 start [np.float64(79.3), np.float64(19.0), np.float64(1.1), np.float64(0.6)] prof 53333/17744/1225/1211/559/183/287/106/1/71/8528
+mod:wide                         elig   45480 trk   45478 S21   2790 S23   3265 pre7k 0.9282 S21/elig 0.06135 tsS21 0.982 start [np.float64(89.4), np.float64(10.3), np.float64(0.2), np.float64(0.0)] prof 34102/7526/585/475/195/60/101/31/1/18/2384
+modern_bin_dropped_S21_bins4to9  443
+-- per library / damage class (class-restricted ancient bins; V1 modern bin) --
+lib:minus    none : elig   18119 trk   18119 S21    105 S23    278 pre7k 0.9847 S21/elig 0.00580 tsS21 0.981 start [np.float64(0.0), np.float64(94.0), np.float64(5.5), np.float64(0.5)] prof 14021/3514/306/173/51/10/25/9/3/2/5
+             all11: elig   18119 trk   18115 S21    105 S23    278 pre7k 0.9847 S21/elig 0.00580 tsS21 0.981 start [np.float64(0.0), np.float64(94.0), np.float64(5.5), np.float64(0.5)] prof 14018/3513/306/173/51/10/25/9/3/2/5
+lib:half     none : elig   30414 trk   30414 S21   1737 S23   1794 pre7k 0.9410 S21/elig 0.05711 tsS21 0.990 start [np.float64(81.2), np.float64(18.2), np.float64(0.5), np.float64(0.1)] prof 26959/1594/67/57/34/19/41/6/1/160/1476
+             all11: elig   30414 trk   30408 S21   1735 S23   1791 pre7k 0.9411 S21/elig 0.05705 tsS21 0.991 start [np.float64(81.2), np.float64(18.2), np.float64(0.5), np.float64(0.1)] prof 26957/1593/67/56/34/17/41/6/1/160/1476
+lib:plus     none : elig    6780 trk    6780 S21      4 S23     15 pre7k 0.9978 S21/elig 0.00059 tsS21 0.750 start [np.float64(0.0), np.float64(85.5), np.float64(12.6), np.float64(1.9)] prof 6668/96/1/11/2/2/0/0/0/0/0
+             all11: elig    6780 trk    6728 S21      3 S23     10 pre7k 0.9985 S21/elig 0.00044 tsS21 1.000 start [np.float64(0.0), np.float64(85.5), np.float64(12.6), np.float64(1.9)] prof 6637/80/1/7/1/2/0/0/0/0/0
+lib:unk      none : elig   18556 trk   18556 S21     39 S23    123 pre7k 0.9934 S21/elig 0.00210 tsS21 0.872 start [np.float64(30.8), np.float64(67.2), np.float64(1.8), np.float64(0.2)] prof 16227/2092/114/84/24/3/2/0/0/0/10
+             all11: elig   18556 trk   18391 S21     36 S23    115 pre7k 0.9937 S21/elig 0.00194 tsS21 0.944 start [np.float64(30.8), np.float64(67.2), np.float64(1.8), np.float64(0.2)] prof 16208/1962/106/79/21/3/2/0/0/0/10
+dmg:lo       none : elig   13502 trk   13502 S21     70 S23    106 pre7k 0.9921 S21/elig 0.00518 tsS21 0.971 start [np.float64(56.4), np.float64(41.4), np.float64(1.9), np.float64(0.3)] prof 12290/1084/22/36/19/11/6/0/1/6/27
+             all11: elig   13502 trk   12505 S21     36 S23     49 pre7k 0.9961 S21/elig 0.00267 tsS21 1.000 start [np.float64(56.4), np.float64(41.4), np.float64(1.9), np.float64(0.3)] prof 12286/166/4/13/4/4/4/0/0/6/18
+dmg:mid      none : elig   18825 trk   18825 S21    334 S23    373 pre7k 0.9802 S21/elig 0.01774 tsS21 0.988 start [np.float64(66.4), np.float64(31.2), np.float64(2.1), np.float64(0.3)] prof 17308/1096/48/39/32/22/20/2/0/78/180
+             all11: elig   18825 trk   18598 S21    327 S23    357 pre7k 0.9808 S21/elig 0.01737 tsS21 0.994 start [np.float64(66.4), np.float64(31.2), np.float64(2.1), np.float64(0.3)] prof 17137/1073/31/30/25/22/20/2/0/78/180
+dmg:hi       none : elig   20239 trk   20239 S21     22 S23     57 pre7k 0.9972 S21/elig 0.00109 tsS21 0.909 start [np.float64(0.0), np.float64(94.6), np.float64(4.9), np.float64(0.5)] prof 19310/821/51/35/12/4/3/2/0/1/0
+             all11: elig   20239 trk   19990 S21     20 S23     45 pre7k 0.9977 S21/elig 0.00099 tsS21 0.900 start [np.float64(0.0), np.float64(94.6), np.float64(4.9), np.float64(0.5)] prof 19252/649/44/25/12/3/2/2/0/1/0
+dmg:na       none : elig   26488 trk   26488 S21   1607 S23   1905 pre7k 0.9281 S21/elig 0.06067 tsS21 0.984 start [np.float64(77.5), np.float64(22.1), np.float64(0.3), np.float64(0.1)] prof 19070/5036/477/298/105/16/90/20/0/26/1350
+             all11: elig   26488 trk   26486 S21   1606 S23   1904 pre7k 0.9281 S21/elig 0.06063 tsS21 0.984 start [np.float64(77.5), np.float64(22.1), np.float64(0.3), np.float64(0.1)] prof 19069/5036/477/298/105/16/89/20/0/26/1350
+rnd:minus    none : elig   10533 trk   10533 S21    229 S23    501 pre7k 0.9524 S21/elig 0.02174 tsS21 0.983 start [np.float64(0.2), np.float64(94.5), np.float64(4.8), np.float64(0.5)] prof 7603/2220/209/272/62/26/22/34/1/11/73
+             all11: elig   10533 trk   10529 S21    229 S23    501 pre7k 0.9524 S21/elig 0.02174 tsS21 0.983 start [np.float64(0.2), np.float64(94.5), np.float64(4.8), np.float64(0.5)] prof 7600/2219/209/272/62/26/22/34/1/11/73
+rnd:half     none : elig   39578 trk   39578 S21   1085 S23   1240 pre7k 0.9687 S21/elig 0.02741 tsS21 0.983 start [np.float64(84.2), np.float64(15.4), np.float64(0.3), np.float64(0.1)] prof 33957/4237/144/155/54/18/43/12/3/300/655
+             all11: elig   39578 trk   39559 S21   1083 S23   1237 pre7k 0.9687 S21/elig 0.02736 tsS21 0.985 start [np.float64(84.2), np.float64(15.4), np.float64(0.3), np.float64(0.1)] prof 33956/4222/144/154/53/18/42/12/3/300/655
+rnd:plus     none : elig    6607 trk    6607 S21     74 S23    219 pre7k 0.9669 S21/elig 0.01120 tsS21 0.959 start [np.float64(0.0), np.float64(90.5), np.float64(8.3), np.float64(1.2)] prof 105/6195/88/145/46/10/3/1/0/14/0
+             all11: elig    6607 trk     106 S21      0 S23      0 pre7k 1.0000 S21/elig 0.00000 tsS21 0.000 start [np.float64(0.0), np.float64(90.5), np.float64(8.3), np.float64(1.2)] prof 105/1/0/0/0/0/0/0/0/0/0
+rnd:plushalf none : elig   42339 trk   42339 S21   1237 S23   1416 pre7k 0.9666 S21/elig 0.02922 tsS21 0.986 start [np.float64(85.1), np.float64(14.5), np.float64(0.3), np.float64(0.0)] prof 36600/4156/167/179/70/14/48/8/0/257/840
+             all11: elig   42339 trk   42318 S21   1235 S23   1412 pre7k 0.9666 S21/elig 0.02917 tsS21 0.987 start [np.float64(85.1), np.float64(14.5), np.float64(0.3), np.float64(0.0)] prof 36599/4140/167/177/69/14/48/8/0/257/839
+rnd:dlo      none : elig   19888 trk   19888 S21     60 S23     91 pre7k 0.9954 S21/elig 0.00302 tsS21 0.967 start [np.float64(62.9), np.float64(35.6), np.float64(1.4), np.float64(0.1)] prof 18620/1160/17/31/7/4/7/2/1/14/25
+             all11: elig   19888 trk   19173 S21     50 S23     71 pre7k 0.9963 S21/elig 0.00251 tsS21 0.980 start [np.float64(62.9), np.float64(35.6), np.float64(1.4), np.float64(0.1)] prof 18620/472/10/21/2/4/4/2/1/13/24
+rnd:nothi    none : elig   46313 trk   46313 S21   3094 S23   3502 pre7k 0.9244 S21/elig 0.06681 tsS21 0.984 start [np.float64(86.7), np.float64(13.0), np.float64(0.3), np.float64(0.0)] prof 34195/8073/543/408/165/53/105/25/3/15/2728
+             all11: elig   46313 trk   46311 S21   3094 S23   3501 pre7k 0.9244 S21/elig 0.06681 tsS21 0.984 start [np.float64(86.7), np.float64(13.0), np.float64(0.3), np.float64(0.0)] prof 34194/8073/543/407/165/53/105/25/3/15/2728
+-- damage-aware masking (transitions: allowed set only; transversions: everyone) --
+M1 drop minus        class   all  elig   42190 trk   42187 S21   2556 S23   2758 pre7k 0.9346 S21/elig 0.06058 tsS21 0.974 start [np.float64(85.8), np.float64(13.8), np.float64(0.3), np.float64(0.0)] prof 34093/5131/205/202/71/36/50/7/0/46/2346
+M1 drop minus        class   auto elig   37418 trk   37417 S21   2434 S23   2611 pre7k 0.9302 S21/elig 0.06505 tsS21 0.982 start [np.float64(86.4), np.float64(13.4), np.float64(0.2), np.float64(0.0)] prof 29947/4672/187/177/59/33/45/4/0/41/2252
+M1 drop minus        control all  elig   46939 trk   46937 S21   2012 S23   2249 pre7k 0.9521 S21/elig 0.04286 tsS21 0.967 start [np.float64(86.7), np.float64(13.0), np.float64(0.2), np.float64(0.0)] prof 38759/5618/311/237/104/41/65/12/1/24/1765
+M1 drop minus        control auto elig   41950 trk   41950 S21   1924 S23   2139 pre7k 0.9490 S21/elig 0.04586 tsS21 0.977 start [np.float64(87.4), np.float64(12.5), np.float64(0.2), np.float64(0.0)] prof 34400/5113/298/215/95/40/59/11/1/20/1698
+M2 keep plus only    class   all  elig   16104 trk   16073 S21     69 S23    123 pre7k 0.9923 S21/elig 0.00428 tsS21 0.043 start [np.float64(61.0), np.float64(33.2), np.float64(5.1), np.float64(0.7)] prof 14476/1427/47/54/22/6/10/2/0/3/26
+M2 keep plus only    class   auto elig   13280 trk   13271 S21     47 S23     87 pre7k 0.9934 S21/elig 0.00354 tsS21 0.064 start [np.float64(57.0), np.float64(37.6), np.float64(5.0), np.float64(0.4)] prof 11971/1173/40/40/15/6/10/1/0/3/12
+M2 keep plus only    control all  elig   15823 trk   10117 S21     66 S23    113 pre7k 0.9888 S21/elig 0.00417 tsS21 0.000 start [np.float64(62.1), np.float64(34.1), np.float64(3.4), np.float64(0.5)] prof 8606/1352/46/47/21/4/10/2/0/3/26
+M2 keep plus only    control auto elig   13022 trk    7696 S21     44 S23     77 pre7k 0.9900 S21/elig 0.00338 tsS21 0.000 start [np.float64(58.2), np.float64(38.4), np.float64(3.1), np.float64(0.3)] prof 6479/1101/39/33/14/4/10/1/0/3/12
+M3 keep plus+half    class   all  elig   33811 trk   33809 S21   1938 S23   2034 pre7k 0.9398 S21/elig 0.05732 tsS21 0.966 start [np.float64(82.7), np.float64(16.8), np.float64(0.4), np.float64(0.1)] prof 29015/2658/102/96/47/21/45/8/1/161/1655
+M3 keep plus+half    class   auto elig   29614 trk   29614 S21   1849 S23   1925 pre7k 0.9350 S21/elig 0.06244 tsS21 0.976 start [np.float64(83.2), np.float64(16.5), np.float64(0.3), np.float64(0.0)] prof 25322/2278/89/76/36/18/37/7/0/152/1599
+M3 keep plus+half    control all  elig   44118 trk   44107 S21   1285 S23   1485 pre7k 0.9663 S21/elig 0.02913 tsS21 0.949 start [np.float64(85.8), np.float64(13.9), np.float64(0.3), np.float64(0.0)] prof 37638/4780/204/200/83/18/56/9/0/259/860
+M3 keep plus+half    control auto elig   39318 trk   39312 S21   1222 S23   1400 pre7k 0.9644 S21/elig 0.03108 tsS21 0.964 start [np.float64(86.6), np.float64(13.2), np.float64(0.2), np.float64(0.0)] prof 33343/4380/189/178/76/15/52/7/0/243/829
+M4 drop dmg-hi       class   all  elig   41073 trk   41071 S21   3103 S23   3404 pre7k 0.9171 S21/elig 0.07555 tsS21 0.979 start [np.float64(85.6), np.float64(14.0), np.float64(0.3), np.float64(0.0)] prof 30222/7079/366/301/91/32/79/8/0/20/2873
+M4 drop dmg-hi       class   auto elig   36393 trk   36393 S21   2970 S23   3245 pre7k 0.9108 S21/elig 0.08161 tsS21 0.985 start [np.float64(86.1), np.float64(13.6), np.float64(0.2), np.float64(0.0)] prof 26263/6536/349/275/79/31/68/7/0/16/2769
+M4 drop dmg-hi       control all  elig   46976 trk   46974 S21   3109 S23   3529 pre7k 0.9249 S21/elig 0.06618 tsS21 0.979 start [np.float64(86.9), np.float64(12.8), np.float64(0.2), np.float64(0.0)] prof 34709/8186/550/420/167/53/107/25/2/16/2739
+M4 drop dmg-hi       control auto elig   41951 trk   41951 S21   2981 S23   3368 pre7k 0.9197 S21/elig 0.07106 tsS21 0.985 start [np.float64(87.5), np.float64(12.3), np.float64(0.2), np.float64(0.0)] prof 30425/7624/534/387/153/52/99/23/2/13/2639
+M5 keep dmg-lo only  class   all  elig   20732 trk   19961 S21    102 S23    161 pre7k 0.9919 S21/elig 0.00492 tsS21 0.353 start [np.float64(73.7), np.float64(25.0), np.float64(1.2), np.float64(0.2)] prof 18236/1514/50/59/25/8/14/2/0/9/44
+M5 keep dmg-lo only  class   auto elig   17473 trk   16861 S21     79 S23    124 pre7k 0.9926 S21/elig 0.00452 tsS21 0.443 start [np.float64(73.5), np.float64(25.4), np.float64(1.0), np.float64(0.1)] prof 15441/1253/43/45/18/8/14/1/0/8/30
+M5 keep dmg-lo only  control all  elig   26950 trk   26372 S21    115 S23    182 pre7k 0.9931 S21/elig 0.00427 tsS21 0.426 start [np.float64(73.9), np.float64(25.0), np.float64(1.0), np.float64(0.1)] prof 24337/1797/56/67/23/8/14/4/1/16/49
+M5 keep dmg-lo only  control auto elig   23366 trk   23266 S21     93 S23    146 pre7k 0.9937 S21/elig 0.00398 tsS21 0.527 start [np.float64(74.2), np.float64(25.1), np.float64(0.8), np.float64(0.0)] prof 21535/1536/49/53/16/8/14/3/1/16/35
+-- minor-allele frequency in older bins (bins 10000+..500-1000) at E1/T2 events dated 0-500 BP, by class --
+transition   lib:minus  minor    29015 / chromosomes   2240986 = 0.0129
+transition   lib:half   minor   177826 / chromosomes   9871081 = 0.0180
+transition   lib:plus   minor    50011 / chromosomes   2709194 = 0.0185
+transition   lib:unk    minor    50397 / chromosomes   3315372 = 0.0152
+transition   dmg:lo     minor    47729 / chromosomes   3191953 = 0.0150
+transition   dmg:mid    minor    99388 / chromosomes   5322412 = 0.0187
+transition   dmg:hi     minor    27667 / chromosomes   1521889 = 0.0182
+transition   dmg:na     minor   132465 / chromosomes   8100379 = 0.0164
+transition   rnd:minus  minor    42994 / chromosomes   2527628 = 0.0170
+transition   rnd:plus   minor    49564 / chromosomes   2992708 = 0.0166
+transversion lib:minus  minor      264 / chromosomes     13487 = 0.0196
+transversion lib:half   minor      931 / chromosomes     52486 = 0.0177
+transversion lib:plus   minor      324 / chromosomes     16186 = 0.0200
+transversion lib:unk    minor      299 / chromosomes     19273 = 0.0155
+transversion dmg:lo     minor      272 / chromosomes     16884 = 0.0161
+transversion dmg:mid    minor      529 / chromosomes     29242 = 0.0181
+transversion dmg:hi     minor      181 / chromosomes      9259 = 0.0195
+transversion dmg:na     minor      836 / chromosomes     46047 = 0.0182
+transversion rnd:minus  minor      276 / chromosomes     14169 = 0.0195
+transversion rnd:plus   minor      298 / chromosomes     17249 = 0.0173
+-- two-period pipeline (Z23046531) --  Day v62: tested 1,143,671, events 17,814, MAF>=10%: 1, bands 80.9/18.9/0.22 %; v66: 1,143,230, 3,470, 3
+S1 ind100_auto tested  1101602 events  55051 (modern 0%-type 2424) bands% [75.35, 24.12, 0.53] MAF>=10% 1 start50-90 1 start90-99 55050 start<50 0
+S1 ind100_all tested  1161771 events  57024 (modern 0%-type 2507) bands% [75.86, 23.62, 0.52] MAF>=10% 2 start50-90 2 start90-99 57022 start<50 0
+S1 ind20_auto tested  1147839 events  73279 (modern 0%-type 2447) bands% [76.1, 23.37, 0.51] MAF>=10% 17 start50-90 16 start90-99 73262 start<50 1
+S1 ind20_all  tested  1226494 events  78747 (modern 0%-type 2538) bands% [76.28, 23.12, 0.54] MAF>=10% 54 start50-90 51 start90-99 78693 start<50 3
+S1 ind1_auto  tested  1150480 events  74184 (modern 0%-type 2564) bands% [75.59, 23.34, 0.67] MAF>=10% 298 start50-90 287 start90-99 73887 start<50 10
+S1 ind1_all   tested  1232782 events  80892 (modern 0%-type 2701) bands% [75.37, 23.24, 0.8] MAF>=10% 473 start50-90 438 start90-99 80413 start<50 41
+S2 ind100_auto tested  1101689 events  56233 (modern 0%-type 2508) bands% [76.58, 22.92, 0.5] MAF>=10% 2 start50-90 2 start90-99 56231 start<50 0
+S2 ind100_all tested  1162811 events  58408 (modern 0%-type 2600) bands% [77.12, 22.38, 0.49] MAF>=10% 3 start50-90 3 start90-99 58405 start<50 0
+S2 ind20_auto tested  1147847 events  75064 (modern 0%-type 2532) bands% [77.22, 22.28, 0.48] MAF>=10% 18 start50-90 17 start90-99 75046 start<50 1
+S2 ind20_all  tested  1226937 events  80841 (modern 0%-type 2634) bands% [77.41, 22.01, 0.5] MAF>=10% 61 start50-90 58 start90-99 80779 start<50 4
+S2 ind1_auto  tested  1150481 events  75978 (modern 0%-type 2651) bands% [76.72, 22.26, 0.62] MAF>=10% 303 start50-90 293 start90-99 75675 start<50 10
+S2 ind1_all   tested  1232783 events  82964 (modern 0%-type 2798) bands% [76.54, 22.14, 0.74] MAF>=10% 479 start50-90 444 start90-99 82478 start<50 42
+S3 ind100_auto tested  1101847 events  54301 (modern 0%-type 2382) bands% [77.39, 22.27, 0.34] MAF>=10% 0 start50-90 0 start90-99 54301 start<50 0
+S3 ind100_all tested  1163550 events  56416 (modern 0%-type 2474) bands% [77.92, 21.74, 0.34] MAF>=10% 0 start50-90 0 start90-99 56416 start<50 0
+S3 ind20_auto tested  1148214 events  74227 (modern 0%-type 2406) bands% [78.23, 21.42, 0.33] MAF>=10% 14 start50-90 13 start90-99 74213 start<50 1
+S3 ind20_all  tested  1227836 events  80340 (modern 0%-type 2507) bands% [78.47, 21.13, 0.36] MAF>=10% 37 start50-90 36 start90-99 80302 start<50 2
+S3 ind1_auto  tested  1150494 events  74727 (modern 0%-type 2434) bands% [78.07, 21.44, 0.4] MAF>=10% 62 start50-90 60 start90-99 74665 start<50 2
+S3 ind1_all   tested  1232808 events  81760 (modern 0%-type 2550) bands% [78.05, 21.31, 0.5] MAF>=10% 117 start50-90 113 start90-99 81641 start<50 6
+S4 ind100_auto tested  1101603 events  51499 (modern 0%-type 2176) bands% [75.47, 24.0, 0.53] MAF>=10% 1 start50-90 1 start90-99 51498 start<50 0
+S4 ind100_all tested  1161893 events  53365 (modern 0%-type 2252) bands% [75.98, 23.5, 0.52] MAF>=10% 2 start50-90 2 start90-99 53363 start<50 0
+S4 ind20_auto tested  1147841 events  69710 (modern 0%-type 2198) bands% [76.23, 23.24, 0.51] MAF>=10% 15 start50-90 14 start90-99 69695 start<50 1
+S4 ind20_all  tested  1226556 events  75073 (modern 0%-type 2282) bands% [76.39, 23.01, 0.54] MAF>=10% 53 start50-90 50 start90-99 75020 start<50 3
+S4 ind1_auto  tested  1150480 events  70554 (modern 0%-type 2295) bands% [75.76, 23.23, 0.66] MAF>=10% 247 start50-90 240 start90-99 70308 start<50 6
+S4 ind1_all   tested  1232788 events  77117 (modern 0%-type 2413) bands% [75.53, 23.16, 0.79] MAF>=10% 399 start50-90 375 start90-99 76714 start<50 28
+S5 ind100_auto tested  1101898 events  53748 (modern 0%-type 2325) bands% [78.11, 21.54, 0.35] MAF>=10% 0 start50-90 0 start90-99 53748 start<50 0
+S5 ind100_all tested  1163757 events  55887 (modern 0%-type 2414) bands% [78.66, 21.0, 0.34] MAF>=10% 0 start50-90 0 start90-99 55887 start<50 0
+S5 ind20_auto tested  1148991 events  74185 (modern 0%-type 2358) bands% [78.87, 20.76, 0.35] MAF>=10% 16 start50-90 15 start90-99 74169 start<50 1
+S5 ind20_all  tested  1228840 events  80492 (modern 0%-type 2459) bands% [79.11, 20.46, 0.37] MAF>=10% 40 start50-90 39 start90-99 80451 start<50 2
+S5 ind1_auto  tested  1150494 events  74500 (modern 0%-type 2373) bands% [78.75, 20.78, 0.4] MAF>=10% 49 start50-90 48 start90-99 74451 start<50 1
+S5 ind1_all   tested  1232810 events  81631 (modern 0%-type 2482) bands% [78.76, 20.63, 0.48] MAF>=10% 99 start50-90 96 start90-99 81530 start<50 5
