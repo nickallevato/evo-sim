@@ -63,6 +63,7 @@ SIMULATION (numpy; fwdpy11 not used).  Haploid Wright-Fisher, M = 2*N_e gene cop
   guide.  "Hossjer holds" = p9 <= 0.05; "far exceeds" (my convention, 10x) = p90 <= 0.05; "fails" = p9 >= 0.5.
   Scaling: N_e = 1e4 is run unscaled (M = 2e4); N_e = 1e5 is run with scale factor f = 10 (M = 2e4, mu*10,
   s*10, T/10 reported back x10).  Scale validity is TESTED in stage `valid`, not assumed.
+  [Post hoc amendment 2026-10-09, see end of docstring: N_e = 1e5 S2/S3/Fin2/Fin3 cells run at f = 3.]
 
 PREDICTIONS (written before the runs; "Hossjer-side model" = the 2021 fixed-state theory; "critic-side model" =
   Durrett-Schmidt / Lynch):
@@ -100,6 +101,24 @@ PREDICTIONS (written before the runs; "Hossjer-side model" = the 2021 fixed-stat
   not its arithmetic.
 
 Seeds: SeedSequence([20261090, stage, cell, rep]).  Outputs: results/raw/d15_<stage>.jsonl / .json / .out
+
+POST HOC AMENDMENT (2026-10-09; made AFTER stage `valid` was run and seen, BEFORE any `sweep` run; own commit).
+  Why: `valid` showed that scaling at f = 10 inflates strong selection.  At N_e = 1e4, S2 (m=2, kmult=1) gave
+  mean 2.45e5 / 3.0e5 / 3.1e5 / 5.9e5 generations and p9 0.82 / 0.65 / 0.65 / 0.35 at f = 1 / 3 / 10 / 100
+  (f = 10: +27%, outside P8's 25% band); Fin2 (m=2, kmult=3) was within ~25% to f = 10.  At f = 10 the
+  selected cells' s = 0.01 becomes 0.1 in simulation units, which biases them long (conservative for Hossjer).
+  Change: the N_e = 1e5 cells of the selected fitness classes S2, S3, Fin2, Fin3 run at f = 3 (M = 66,667,
+  mu*3, s*3, cap 100*T9/3 generations, T reported x3); every other N_e = 1e5 cell stays at f = 10; N_e = 1e4
+  stays unscaled.  M, the generation cap and the chain prediction all follow from f exactly as before
+  (sweep_job reads f from scale_for()); each cell records its f.  Caveat stated in advance: f = 3 reduces but
+  does not remove the bias (valid, N_e = 1e4: S2 at f = 3 was +23% in mean, p9 0.82 -> 0.65), so the
+  N_e = 1e5 S/Fin cells remain biased long, i.e. conservative for Hossjer; the write-up must flag this.
+  Wall guard: unchanged at 1500 s per cell.  Reason: `valid` timings put f = 3 cells at 3-4x their f = 10
+  counterparts (Fin2 30 s vs 7 s; N 60 s vs 25 s; worst unscaled V3 m=3 cell 1543 s), so the f = 3 S/Fin cells
+  (simulated span 1.2e7 generations, a third of an unscaled cell) are expected well inside 1500 s; any cell that
+  hits the guard is censored at its clock and flagged by complete_at_900My as before.
+  Scheduling only: the heaviest-first sort key now divides by f (no effect on results; seeds are per cell index).
+  Predictions P1-P9 are NOT changed.
 """
 import os
 os.environ.setdefault("OMP_NUM_THREADS", "1")
@@ -566,6 +585,14 @@ def stage_valid(workers):
 # ----------------------------------------------------------------------------------------------------------
 KMULTS = (1 / 12, 1.0, 3.0, 10.0, 15.0, 30.0, 100.0)
 SCALE = {1e4: 1.0, 1e5: 10.0}
+SELECTED_F3 = ("S2", "S3", "Fin2", "Fin3")     # post hoc amendment 2026-10-09 (see docstring)
+
+
+def scale_for(Ne, F):
+    """Scale factor f for a sweep cell: N_e = 1e5 selected classes at f = 3, else SCALE[Ne]."""
+    if Ne == 1e5 and F in SELECTED_F3:
+        return 3.0
+    return SCALE[Ne]
 
 
 def sweep_cells():
@@ -584,7 +611,7 @@ def sweep_cells():
 def sweep_job(a):
     ci, cell = a
     Ne, kmult, F, m, rho, R = cell["Ne"], cell["kmult"], cell["F"], cell["m"], cell["rho"], cell["R"]
-    f = SCALE[Ne]
+    f = scale_for(Ne, F)
     M = int(round(2 * Ne / f))
     rng = np.random.default_rng(np.random.SeedSequence([SEED, 4, ci, 0]))
     t0 = time.time()
@@ -601,7 +628,7 @@ def stage_sweep(workers):
     cells = sweep_cells()
     jobs = list(enumerate(cells))
     # heaviest first: many mutation arrivals and long caps
-    jobs.sort(key=lambda a: -(a[1]["kmult"] * a[1]["m"] * (1 if a[1]["Ne"] == 1e4 else 1)))
+    jobs.sort(key=lambda a: -(a[1]["kmult"] * a[1]["m"] / scale_for(a[1]["Ne"], a[1]["F"])))
     return run_pool(jobs, sweep_job, workers, os.path.join(RAW, "d15_sweep.jsonl"))
 
 
