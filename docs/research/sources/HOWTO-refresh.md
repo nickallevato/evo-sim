@@ -61,3 +61,17 @@ Copy the structure of `refresh-2026-10-09b.md`: scope paragraph; bottom line (bu
 - Day's pages show `updated` later than `published` for same-day edits; re-check a kept post on the next pass.
 - Day writes "ESS" for EES in places; quote exactly and note it.
 - Arctic Shift outages and the PullPush lag make Reddit coverage uncertain; always state the unverified date range.
+
+
+## What to watch (moved here from AGENTS.md, 2026-10-09), and what to update when it changes
+| Watch | Why | Update |
+|---|---|---|
+| voxday.net (evolution / Probability Zero tags and untagged posts), AI Central, Sigma Game, Day's Substack replies | Day's parameters drift between versions (1,322 / 1,400 / 1,587 generations per fixation; 205M; 1,075,000× / 1,139,000×). He has also announced a new "disproof" and an "epic data analysis" (10-07) | `ledgers/versions.md`, `quotes-day.md`, the affected claims, `parameters.yaml` |
+| Zenodo records by "Day, Vox" (39 as of 2026-10-09; compare md5s) | Silent revisions of papers | `bib-day.md`, `versions.md` |
+| Critics: McCarthy, keruru (Substack + Zenodo 22184713), Camestros, Mansfield, Hancock / Gutsick Gibbon (roundtable pending), Nesslig20 / Matheson, Matev (McCarthy comments), r/DebateEvolution, Peaceful Science | New rebuttals, and critic errors (record both) | `quotes-critics.md`, `opponents/`, argmap defeaters |
+| Allies: Hössjer, Dembski, Tree of Woe and others | Endorsements are tied to edition numbers | `opponents/`, balance ledger |
+| *Probability Zero* 2nd edition (paid; not bought) | Book-only claims stay `secondhand` | the claims tagged `secondhand` |
+| Social media: Day on X (@voxday), Gab, Telegram, SocialGalactic, Rumble/Locals and UATV/Darkstream streams; critics and allies on Bluesky, Mastodon and YouTube | Announcements (e.g. the 96-core "data analysis" teased for UATV, 10-09) often appear here first. X, Gab, Telegram, Rumble and Locals were not readable without login on 2026-10-09; Bluesky search and YouTube (yt-dlp) work | as above. Record what can't be read as inaccessible; flag quotes taken from a mirror or snippet |
+| Inaccessible items list | Retry periodically | the latest `sources/refresh-*.md` |
+
+The latest refresh, with its proposals and inaccessible list, is [`docs/research/sources/refresh-2026-10-09b.md`](docs/research/sources/refresh-2026-10-09b.md). **How to run a refresh** (endpoints, walk order, numbering, pitfalls): [`docs/research/sources/HOWTO-refresh.md`](docs/research/sources/HOWTO-refresh.md). Run a refresh before each milestone post.

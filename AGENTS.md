@@ -1,120 +1,68 @@
 # AGENTS.md: working on evo-sim
 
-Read this file first. It holds the rules, how to run things, and what to watch for updates. Details live in the files it points to; when this file and those files disagree, trust those files and fix this one.
+Read this first. Details live in the files it points to; when they disagree, trust them and fix this one.
 
 ## What this is
-A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Probability Zero*, MITTENS, Zenodo papers, blog) and of his critics' rebuttals, done before building an open-source evolution simulator.
-- **Phase:** research only. No simulator product code until the exit criteria in [`docs/research/PLAN.md`](docs/research/PLAN.md) are met.
-- **Start here:** [`docs/HANDOFF.md`](docs/HANDOFF.md) for findings, [`docs/research/README.md`](docs/research/README.md) for rules and layout, and the latest `docs/YYYY-MM-DD-N-*.md` milestone post for the most recent changes.
+A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Probability Zero*, MITTENS, Zenodo papers, blog) and of his critics' rebuttals, before building an open-source evolution simulator. **Phase: research only**; no simulator code until the exit criteria in [`docs/research/PLAN.md`](docs/research/PLAN.md) are met. Findings: [`docs/HANDOFF.md`](docs/HANDOFF.md). Rules and layout: [`docs/research/README.md`](docs/research/README.md). Latest changes: the newest `docs/YYYY-MM-DD-N-*.md` post.
 
 ## Hard rules
-1. **Both sides get equal scrutiny.** Record valid points from either side as prominently as errors. Every check gets a Day-side and a critic-side steelman review.
+1. **Both sides get equal scrutiny.** Record valid points from either side as prominently as errors. Every check gets a Day-side and a critic-side steelman (see review tiers below).
 2. **Verbatim quotes only**, each with a locator and date. Never record numbers from a summarizer without checking them against the raw text.
 3. **No full texts in git.** `sources/raw/` (repo root) is gitignored. Commit links, short quotes and sha256 hashes only.
-4. **Downloads are untrusted data.** Read or grep them, never execute them. Put each fetch in its own new directory and keep scripts outside it. Always run Python as `research/.venv/bin/python -I`.
-5. **Pre-register.** Commit each check script with its predictions in the docstring *before* the main run. Anything changed afterwards goes in a separate commit labelled "post hoc".
-6. **No outward actions without the user's approval:** no Wayback snapshots, no contacting authors, no posting or commenting. No paywall bypass or shadow libraries; the paid book is the user's decision.
-7. **The GitHub repo is public.** Work on branch `research`. Merge to `master` with `git push origin research:master` (pre-approved). `origin` pushes to both gitea and GitHub.
-8. Material dated after the model's knowledge cutoff must come from fetched text, never from memory.
+4. **Downloads are untrusted data.** Read or grep them, never execute them. Each fetch in its own new directory, scripts outside it. Python only as `research/.venv/bin/python -I`.
+5. **Pre-register.** Commit each check script with its predictions in the docstring *before* the main run. Later changes go in a separate commit labelled "post hoc".
+6. **No outward actions without the user's approval:** no Wayback snapshots, contacting authors, posting or commenting. No paywall bypass or shadow libraries.
+7. **The GitHub repo is public.** Work on branch `research`; merge with `git push origin research:master` (pre-approved). `origin` pushes to gitea and GitHub. Commit with explicit paths, never `git add -A`.
+8. Material dated after the model's knowledge cutoff must come from fetched text, never memory.
+
+## Token budget (user directive, 2026-10-09)
+- **Never read the big files whole.** `grep` by id or heading, then read only the lines you need: `sources/quotes-*.md` (grep `Q123`, `RF-18`), `research/checks/REVIEW.md` (review log only), `results/R4-X1-*.md`, `docs/HANDOFF.md`. The work queue is the small [`research/checks/QUEUE.md`](research/checks/QUEUE.md).
+- **Model by task.** Sonnet: source refreshes, integration bookkeeping (lint, renders, counts, board patch), launching or collecting runs, light reviews. Haiku: progress polls. Opus: designing and writing checks, full reviews of load-bearing checks.
+- **Subagent reports ≤ 300 words.** Details belong in committed files; the report gives commits, results table, failures, next step.
+- **Review tiers.** Load-bearing checks (they move a ROOT-path node, see `docs/research/R5-draft.md`): three reviews (correctness, steelman-day, steelman-critic). Low-stakes checks (re-confirmations, bookkeeping, tool validation): **one combined review** file `REVIEW-R4-<ID>-combined.md` with a correctness section and both steelman sections, same severity labels.
+- Don't poll long runs; check once when they should be done.
 
 ## Where things are
 | What | Where |
 |---|---|
-| Plan, stages R0–R5, exit criteria | `docs/research/PLAN.md` |
-| Claims (one file each, three verdicts) | `docs/research/claims/` (template `_TEMPLATE.md`) |
-| Claim tree | `docs/research/hierarchy.yaml`, `hierarchy/*.md` (generated by lint) |
+| Plan, stages, exit criteria | `docs/research/PLAN.md` |
+| Claims (one file each, three verdicts); claim tree | `docs/research/claims/` (`_TEMPLATE.md`); `hierarchy.yaml`, `hierarchy/*.md` (generated) |
 | Parameters (numeric provenance) | `docs/research/parameters.yaml` |
-| Sources, quotes, harvest logs | `docs/research/sources/` (`bib-*`, `quotes-*`, `harvest-log-*`, `prior-art.md`, `refresh-*.md`) |
-| Ledgers: fidelity, balance, version drift, gaps | `docs/research/ledgers/` |
-| Argument map data | `docs/research/argmap/` (`NOTES.md` = method + id registry + counts) |
-| Argument map, rendered | `docs/arguments/` |
-| Check scripts | `research/checks/*.py` |
-| Check results, reviews, raw outputs | `research/checks/results/R4-*.md`, `REVIEW-*.md`, `raw/` |
-| Review log and work queue | `research/checks/REVIEW.md` (see "## Queue") |
-| One-paragraph result per check | `research/checks/RESULTS.md` |
-| Tools (argmap, figures, board) | `research/tools/` (see its `README.md`) |
-| Status board (the published status Artifact) | `docs/research/status.html`, patched by `research/tools/board/updN.py` |
-| Milestone posts | `docs/YYYY-MM-DD-N-slug.md` |
-| Plain-language explainers | `docs/explain/` (revise after R5) |
+| Sources, quotes, harvest logs, refreshes | `docs/research/sources/` (`bib-*`, `quotes-*`, `harvest-log-*`, `prior-art.md`, `refresh-*.md`) |
+| Ledgers: fidelity, balance, versions, gaps, slips/rhetoric | `docs/research/ledgers/` |
+| Argument map data / rendered | `docs/research/argmap/` (`NOTES.md` = method + id registry) / `docs/arguments/` |
+| Check scripts, results, reviews, raw outputs | `research/checks/*.py`; `results/R4-*.md`, `REVIEW-*.md`, `raw/` |
+| Work queue / review log / one-paragraph results | `research/checks/QUEUE.md` / `REVIEW.md` / `RESULTS.md` |
+| Tools (argmap, figures, board) | `research/tools/` (`README.md`) |
+| Status board Artifact | `docs/research/status.html`, patched by `research/tools/board/updN.py` |
+| Milestone posts; explainers | `docs/YYYY-MM-DD-N-slug.md`; `docs/explain/` (revise after R5) |
+| Refresh procedure and the watch list | [`docs/research/sources/HOWTO-refresh.md`](docs/research/sources/HOWTO-refresh.md); run one before each milestone post |
 
-**One verdict rule, applied to Day, critics and allies alike** (R4 X1, 2026-10-09; full text and test cases in [`R4-X1-verdict-rule.md`](research/checks/results/R4-X1-verdict-rule.md)):
-- **R1 materiality:** a printed-number slip and an omitted-term slip are judged the same way; each is an error only if the correction moves the author's stated conclusion (on the author's own basis) or a downstream number in the same source by more than 25%, or flips it. Otherwise it goes to a slip ledger. R1c: no input-looseness rescue for steep outputs (tail probabilities, exponentials).
-- **S scope:** only a claim's verbatim Statement quotes and its derivation are scored; slips in comments, replies, asides and captions go to the ledger on every side, unless the number carries an argument no node holds (then it gets its own node).
-- **SC self-correction:** corrected in the same source = ledger; corrected in a later source = the quoted version is scored, with a note.
-- **N non-sequitur:** the conclusion fails against the author's own table, equation or text, is circular, or overreaches; a contested premise is external, not internal (N1).
-- **F fidelity:** an uncited non-standard input is `unverifiable` (never `partial`); standard values are exempt; human Nₑ ≈ 1e4 is contested-standard and flagged.
-- **U unidentified authors:** relays and unidentified authors are not scored internal.
-- **C charity:** the most charitable reading of an ambiguous referent is tried, and recorded, on every node.
-- **RH rhetoric** (added 2026-10-09, user directive): Day knows rhetoric versus dialectic and uses it deliberately, so **rhetorical claims are handled rhetorically**. Tag each quoted statement `dialectic` (a truth claim or argument) or `rhetoric` (a boast, hyperbole, taunt or frame) before scoring it. Rhetoric is not literal-fact-checked: record its device, audience, function and any dialectical core in `ledgers/slips.md`. It changes no verdict. **Rhetoric is answered with better rhetoric:** a counter that is true, aimed at the move rather than the person, and that turns the audience back to the method or number. Applies to all sides, including critics' sneers.
+## Verdict rule (one rule for Day, critics and allies)
+Full text and test cases: [`R4-X1-verdict-rule.md`](research/checks/results/R4-X1-verdict-rule.md). In brief:
+- **R1 materiality:** a slip is an error only if correcting it moves the author's stated conclusion or a downstream number in the same source by >25%, or flips it; otherwise it goes to the slip ledger. R1c: no input-looseness rescue for steep outputs.
+- **S scope:** only verbatim Statement quotes and their derivation are scored. **SC:** corrected in the same source = ledger. **N:** non-sequitur against the author's own material. **F:** uncited non-standard input = `unverifiable`. **U:** relays are not scored internal. **C:** try the most charitable reading.
+- **RH rhetoric:** tag each quoted statement `dialectic` or `rhetoric` first. Rhetoric is not literal-fact-checked and changes no verdict. Record its device, audience, function and dialectical core in `ledgers/slips.md`, and answer it with better rhetoric: true, aimed at the move, turning the audience back to the method or number. Applies to all sides.
 
-**Verdict vocabulary** (claim files; a `# comment` may follow each value):
-- internal: `holds | arithmetic-error | non-sequitur | pending | n/a`
-- fidelity: `accurate | partial | misread | unverifiable | pending | n/a`
-- external: `supported | contested | contradicted | untestable | pending | n/a`
+Verdict vocabulary: internal `holds | arithmetic-error | non-sequitur | pending | n/a`; fidelity `accurate | partial | misread | unverifiable | pending | n/a`; external `supported | contested | contradicted | untestable | pending | n/a`.
 
 ## How to run
 ```sh
-python3 -m venv research/.venv && research/.venv/bin/pip install -r research/requirements.txt   # pinned versions
-research/.venv/bin/python -I research/checks/baseline_textbook.py   # textbook baselines must pass first
-research/.venv/bin/python -I research/checks/<check>.py [stage] [workers]
+python3 -m venv research/.venv && research/.venv/bin/pip install -r research/requirements.txt   # pinned
+research/.venv/bin/python -I research/checks/baseline_textbook.py   # baselines must pass first
 ```
-**Heavy runs go to `na-workhorse`** (12 cores, 14 GB; the local machine is the user's workstation):
-1. Commit the script locally (pre-registration).
-2. `rsync` it to `na-workhorse:projects/evo-sim/research/checks/`, where the same venv path holds the same pins.
-3. Run it there with `ssh -o BatchMode=yes na-workhorse 'cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/<x>.py … > research/checks/results/raw/<x>.out 2>&1 &'`. Record the hostname and md5s in a `raw/<x>.host` file.
-4. `rsync` `results/raw/<x>*` back. **Never commit or push from workhorse.** Check `uptime` first and share the cores.
-
-**No computation on the workstation.** On 2026-10-09 parallel agent runs exhausted its RAM. Locally, do only git, file edits and trivial checks: a single process, under 500 MB, under a minute. Every smoke test, main run, post hoc run and large-file parse goes to workhorse. When several agents share workhorse, each uses at most 4 processes there, and keeps its RAM well under the host's 14 GB.
+**No computation on the workstation** (it ran out of RAM on 2026-10-09). Locally: git, edits, trivial checks only (one process, <500 MB, <1 min). Everything else runs on **`na-workhorse`** (12 cores, 14 GB):
+1. Commit the script (pre-registration), then `rsync` it to `na-workhorse:projects/evo-sim/research/checks/`.
+2. `ssh -o BatchMode=yes na-workhorse 'cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/<x>.py … > research/checks/results/raw/<x>.out 2>&1 &'`; record hostname and md5s in `raw/<x>.host`. Check `uptime` first. At most 4 processes per agent; keep RAM well under 14 GB.
+3. `rsync` `results/raw/<x>*` back. **Never commit or push from workhorse.**
 
 ## Lifecycle of a check
-1. **Spec:** the target claims and their quotes, plus what each side's model predicts.
-2. **Pre-register:** commit the script with its predictions, then run.
-3. **Write up** `results/R4-<ID>.md`, including a "Who this helps" section crediting both sides.
-4. **Three reviews,** written to `results/REVIEW-R4-<ID>-{correctness,steelman-day,steelman-critic}.md`.
-5. **Fix pass** by the original author: answer every MAJOR and MINOR in a "Review resolution" section, labelling new runs as post hoc.
-6. **Integrate** (only after reviews; parallel agents must not edit these shared files):
-   1. Write a review entry in `REVIEW.md` and update the queue. Add the entry to `RESULTS.md`.
-   2. Add verdict comments and an "R4 …" Check paragraph to each affected claim file. Keep the verdict vocabulary.
-   3. Argmap:
-      - register `chk:<ID>` and the review ids in `argmap/NOTES.md`;
-      - add defeaters to `defeaters.yaml` (next free `dNNN`), attacking both sides where warranted;
-      - add a lineage node to `lineage.yaml`;
-      - add a mini-form to `standard-forms.md` for any new target.
-   4. Run `research/checks/lint_research.py` (with `--write-hierarchy`), then `research/tools/argmap_check.py`, then `research/tools/argmap_render.py`.
-   5. Refresh the counts in `docs/arguments/README.md`, `README.md` and `docs/HANDOFF.md`. Run `research/tools/readme_figs.py`, then `git checkout` any SVG whose only change is random ids.
-   6. Write a milestone post, and add update notes to any older post the result changes.
-   7. Write a board patch `research/tools/board/upd<N+1>.py`, then republish the status Artifact (same file, same URL; see `docs/research/status.html`).
-   8. Commit with explicit paths (never `git add -A`; other agents may be committing). Then run `git push origin research` and `git push origin research:master`.
-
-## What to watch, and what to update when it changes
-| Watch | Why | Update |
-|---|---|---|
-| voxday.net (evolution / Probability Zero tags and untagged posts), AI Central, Sigma Game, Day's Substack replies | Day's parameters drift between versions (1,322 / 1,400 / 1,587 generations per fixation; 205M; 1,075,000× / 1,139,000×). He has also announced a new "disproof" and an "epic data analysis" (10-07) | `ledgers/versions.md`, `quotes-day.md`, the affected claims, `parameters.yaml` |
-| Zenodo records by "Day, Vox" (39 as of 2026-10-09; compare md5s) | Silent revisions of papers | `bib-day.md`, `versions.md` |
-| Critics: McCarthy, keruru (Substack + Zenodo 22184713), Camestros, Mansfield, Hancock / Gutsick Gibbon (roundtable pending), Nesslig20 / Matheson, Matev (McCarthy comments), r/DebateEvolution, Peaceful Science | New rebuttals, and critic errors (record both) | `quotes-critics.md`, `opponents/`, argmap defeaters |
-| Allies: Hössjer, Dembski, Tree of Woe and others | Endorsements are tied to edition numbers | `opponents/`, balance ledger |
-| *Probability Zero* 2nd edition (paid; not bought) | Book-only claims stay `secondhand` | the claims tagged `secondhand` |
-| Social media: Day on X (@voxday), Gab, Telegram, SocialGalactic, Rumble/Locals and UATV/Darkstream streams; critics and allies on Bluesky, Mastodon and YouTube | Announcements (e.g. the 96-core "data analysis" teased for UATV, 10-09) often appear here first. X, Gab, Telegram, Rumble and Locals were not readable without login on 2026-10-09; Bluesky search and YouTube (yt-dlp) work | as above. Record what can't be read as inaccessible; flag quotes taken from a mirror or snippet |
-| Inaccessible items list | Retry periodically | the latest `sources/refresh-*.md` |
-
-The latest refresh, with its proposals and inaccessible list, is [`docs/research/sources/refresh-2026-10-09b.md`](docs/research/sources/refresh-2026-10-09b.md). **How to run a refresh** (endpoints, walk order, numbering, pitfalls): [`docs/research/sources/HOWTO-refresh.md`](docs/research/sources/HOWTO-refresh.md). Run a refresh before each milestone post.
+1. **Spec** (target claims, quotes, each side's prediction) → 2. **pre-register** → run → 3. **write up** `results/R4-<ID>.md` with a "Who this helps" section crediting both sides → 4. **reviews** (tier above) → 5. **fix pass** answering every MAJOR and MINOR in a "Review resolution" section, new runs labelled post hoc → 6. **integrate** (Sonnet is fine; one agent at a time on shared files):
+   - `REVIEW.md` entry, `QUEUE.md`, `RESULTS.md`; verdict comments and an "R4 …" paragraph in each affected claim file.
+   - Argmap: register `chk:<ID>` and review ids in `argmap/NOTES.md`; defeaters in `defeaters.yaml` (next `dNNN`, both sides where warranted); lineage node; mini-form in `standard-forms.md`.
+   - Run `lint_research.py --write-hierarchy`, `research/tools/argmap_check.py`, `argmap_render.py`; refresh counts in `docs/arguments/README.md`, `README.md`, `docs/HANDOFF.md`; `research/tools/readme_figs.py`, then `git checkout` SVGs whose only change is random ids.
+   - Milestone post (and update notes on older posts the result changes); board patch `upd<N+1>.py` and republish the status Artifact (same file, same URL).
+   - Commit with explicit paths; `git push origin research` and `git push origin research:master`.
 
 ## Current state
-**Do not duplicate it here.** Read:
-- the queue at the end of `research/checks/REVIEW.md`;
-- the "Still open" list in `docs/HANDOFF.md`;
-- the latest milestone post.
-
-As of 2026-10-09 (after review #13), R4 is in progress:
-- reviewed and integrated: H3, GAP-04/07/02, GAP-07b, GAP-07c, the 2026-10-09 corpus refresh, C1c, C1d, D1, and X1 (critic arithmetic plus one verdict rule for both sides, blind-audited; both sides re-scored); A3 is load-bearing (31 nodes incl. ROOT);
-- mapping done: every critic and ally argument is attached ("mapped" ratified in `docs/research/argmap/NOTES.md`, judgement call 12); the 12 new claims from the Hancock video are `pending` review;
-- Holocene Nₑ retrieved (`docs/research/sources/holocene-ne.md`; RG-01): the literature does not decide C1c's reading;
-- **paused at a stopping point (2026-10-09), one subagent at a time, compute on na-workhorse only:**
-  - **D15 (Hössjer waiting time):**
-    - Done: the baselines reproduce, and the engine and scaling are validated. See `research/checks/results/R4-D15-status.md`.
-    - Next: run the main `sweep` stage (714 cells, several hours). First choose the scale factor for the Nₑ=1e5 runs: f=3 for the stepping-stone and final-benefit cells. Commit before the run.
-    - Then the full write-up and the three reviews.
-  - **XT (cross-tool replication):**
-    - Paused after pre-registration (`da1c178`).
-    - `research/checks/xt_cross_tool.py` has an uncommitted edit made after pre-registration. Commit it labelled post hoc, or discard it, before running.
-- queued: C1e (the C1c model on each published Holocene trajectory), Mansfield's supply argument (B5b), latency vs throughput (F1/F1b), Hancock's standing-variation prediction (G2c/B6c), review of the 12 mapping claims, then the remaining load-bearing checks in the R5 draft (`docs/research/R5-draft.md`) and R5 synthesis.
+Not duplicated here. Read `research/checks/QUEUE.md`, the "Still open" list in `docs/HANDOFF.md`, and the latest milestone post. One subagent at a time; compute on na-workhorse only.
