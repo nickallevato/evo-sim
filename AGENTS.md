@@ -45,7 +45,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 - **F fidelity:** an uncited non-standard input is `unverifiable` (never `partial`); standard values are exempt; human Nₑ ≈ 1e4 is contested-standard and flagged.
 - **U unidentified authors:** relays and unidentified authors are not scored internal.
 - **C charity:** the most charitable reading of an ambiguous referent is tried, and recorded, on every node.
-- **RH rhetoric** (added 2026-10-09, user directive): Day knows rhetoric versus dialectic and uses it deliberately, so **rhetorical claims are handled rhetorically**. Tag each quoted statement `dialectic` (a truth claim or argument) or `rhetoric` (a boast, hyperbole, taunt or frame) before scoring it. Rhetoric is not literal-fact-checked: record its device, audience, function and any dialectical core in `ledgers/slips.md`. It changes no verdict. Applies to all sides, including critics' sneers.
+- **RH rhetoric** (added 2026-10-09, user directive): Day knows rhetoric versus dialectic and uses it deliberately, so **rhetorical claims are handled rhetorically**. Tag each quoted statement `dialectic` (a truth claim or argument) or `rhetoric` (a boast, hyperbole, taunt or frame) before scoring it. Rhetoric is not literal-fact-checked: record its device, audience, function and any dialectical core in `ledgers/slips.md`. It changes no verdict. **Rhetoric is answered with better rhetoric:** a counter that is true, aimed at the move rather than the person, and that turns the audience back to the method or number. Applies to all sides, including critics' sneers.
 
 **Verdict vocabulary** (claim files; a `# comment` may follow each value):
 - internal: `holds | arithmetic-error | non-sequitur | pending | n/a`

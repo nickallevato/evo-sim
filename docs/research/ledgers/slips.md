@@ -10,7 +10,12 @@ Entries made under the one verdict rule (`research/checks/results/R4-X1-verdict-
 
 ## Rhetoric (rule RH)
 
-Each statement is classified by how it works in its source (RH1). It is analysed rhetorically, not literal-fact-checked (RH2). Any dialectical core it signals is listed so that a node can pick it up once there is a method to score.
+Each statement is classified by how it works in its source (RH1). It is analysed rhetorically, not literal-fact-checked (RH2). Any dialectical core it signals is listed so that a node can pick it up once there is a method to score. Each entry gets a **counter** (RH2): better rhetoric that is true, aimed at the move rather than the person, and that turns the audience back to the dialectical core. Counters stay in the repo; posting them needs the user's approval.
+
+| Id | Counter |
+|---|---|
+| RH-1 | "A bigger engine doesn't help if the map is wrong. Ninety-six cores will compute any model you give them, good or bad, and they can be rented for an afternoon. What can't be rented is the model, so publish it: the parameters, the code, what counts as a fixation. Then anyone's cores can check it." |
+| RH-2 | "Calling both sides cranks costs nothing. Giving a number costs something, and so far neither the 'leading theory' nor its advocate has put one on the table." |
 
 | Id | Side | Quote (verbatim), source | Device | Audience, function | Dialectical core signalled | Literal reading (recorded, not scored) |
 |---|---|---|---|---|---|---|

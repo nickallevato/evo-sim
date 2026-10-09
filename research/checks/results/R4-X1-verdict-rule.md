@@ -182,7 +182,12 @@ Day knows the classical distinction between rhetoric and dialectic and uses it o
   - function (what it is meant to make the audience believe or feel);
   - any dialectical core it signals.
 
-  It changes no node verdict and goes to the ledger (`ledgers/slips.md`, section "Rhetoric"). Where the audit's public writing answers it, the answer is rhetorical in kind (it names the move), not a pedantic correction.
+  It changes no node verdict and goes to the ledger (`ledgers/slips.md`, section "Rhetoric"). **Rhetoric is answered with better rhetoric** (user directive 2026-10-09). Where the audit's public writing (milestone posts, explainers) answers a rhetorical move, it uses a short counter that is rhetorically stronger, not a pedantic correction. "Better" has three conditions:
+  - it is true;
+  - it aims at the move, not the person (no ad hominem);
+  - it turns the audience back to the dialectical core (show the method, the number, the code).
+
+  The counter is recorded in the ledger's "Counter" column. Every side's rhetoric gets one, Day's, critics' and allies' alike. The counters live only in the repo. Posting them anywhere is an outward action and needs the user's approval (hard rule 6).
 - **RH3. Mixed statements.** The dialectical core is extracted and scored under R1–U. The rhetorical wrapper is handled under RH2. A node whose only support is rhetoric is marked "no dialectical support offered". It is not marked an error.
 - **RH4. Relabelling.** If an author later calls a statement rhetorical after it was challenged, that is recorded in `ledgers/versions.md`. The statement is classified by how it worked in its source at the time, like rule SC. For example, a book line that says "The probability is absolute zero" was presented as dialectic.
 - **RH5. Symmetry.** Critics' and allies' rhetoric (for example "cranks" and sneers) is handled the same way. A critic who literal-fact-checks Day's rhetoric and presents it as a refutation gets an N entry for overreach. So does Day, when he does the same to a critic.
