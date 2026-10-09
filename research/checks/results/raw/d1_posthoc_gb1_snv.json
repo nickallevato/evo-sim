@@ -1,0 +1,13 @@
+{
+ "n_adj_pairs_per_aa_mean": 7.5,
+ "n_functional": 5822,
+ "local_maxima_among_functional": 87,
+ "frac_functional_reach_globalmax_uphill_SNV": 0.44280316042597045,
+ "frac_functional_with_improving_nbr_SNV": 0.9850566815527311,
+ "n_components": 5,
+ "frac_in_largest_component_SNV": 0.9984541394709722,
+ "wt_in_largest": true,
+ "mean_functional_snv_nbrs_of_functional": 12.305736860185503,
+ "frac_snv_nbrs_functional_given_functional": 0.4135606134948077,
+ "frac_functional_isolated_SNV": 0.00034352456200618345
+}

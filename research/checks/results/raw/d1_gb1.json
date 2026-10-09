@@ -1,0 +1,39 @@
+{
+ "positions": [
+  265,
+  266,
+  267,
+  280
+ ],
+ "wt": [
+  "V",
+  "D",
+  "G",
+  "V"
+ ],
+ "n_variants": 149361,
+ "n_missing": 10639,
+ "frac_lt0.3": 0.949558452340303,
+ "frac_ge0.5": 0.03897938551562992,
+ "frac_ge1": 0.024397265685152082,
+ "frac_ge1.2": 0.02103628122468382,
+ "n_functional_ge0.5": 5822,
+ "local_maxima_among_functional": 18,
+ "frac_functional_with_improving_nbr": 0.9969082789419443,
+ "mean_functional_nbrs_of_functional": 29.21607694950189,
+ "frac_functional_isolated_no_functional_nbr": 0.0,
+ "frac_nbrs_functional_given_functional": 0.38442206512502486,
+ "n_components": 2,
+ "largest_component": 5819,
+ "frac_in_largest_component": 0.9994847131569907,
+ "wt_in_largest_component": true,
+ "global_max_fitness": 8.76196565571,
+ "frac_functional_reach_globalmax_uphill": 0.9854002061147372,
+ "frac_all_functional_ge1_reach": 0.9774972557628979,
+ "local_maxima_fit_ge1": 18,
+ "n_fit_ge1": 3644,
+ "wt_singles_n": 76,
+ "wt_singles_frac_ge0.5": 0.35526315789473684,
+ "wt_singles_frac_ge1.2": 0.19736842105263158,
+ "wt_singles_frac_lt0.2": 0.5263157894736842
+}

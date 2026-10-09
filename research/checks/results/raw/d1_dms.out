@@ -1,0 +1,23 @@
+/home/na/projects/evo-sim/research/checks/d1_sequence_space_spike.py:720: RuntimeWarning: Mean of empty slice
+  out[f"site_mean_frac_{nm}"] = float(np.nanmean(fs))
+/home/na/projects/evo-sim/research/checks/d1_sequence_space_spike.py:721: RuntimeWarning: Mean of empty slice
+  out[f"m_aa_mean_{nm}"] = float(np.nanmean(fs) * 19)
+/home/na/projects/evo-sim/research/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/na/projects/evo-sim/research/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/na/projects/evo-sim/research/checks/d1_sequence_space_spike.py:725: RuntimeWarning: invalid value encountered in divide
+  out["site_hist_deciles"] = [float(x) for x in np.histogram(fs[good], bins=10, range=(0, 1.0000001))[0] / good.sum()]
+skip AICDA_HUMAN_Gajula_2014_3cycles
+skip B2L11_HUMAN_Dutta_2010_binding-Mcl-1
+skip F7YBW8_MESOW_Ding_2023
+skip F7YBW8_MESOW_Aakre_2015
+skip GCN4_YEAST_Staller_2018
+skip HIS7_YEAST_Pokusaeva_2019
+skip KCNH2_HUMAN_Kozek_2020
+skip NPC1_HUMAN_Erwood_2022_RPE1
+skip OPSD_HUMAN_Wan_2019
+skip SCN5A_HUMAN_Glazer_2019
+skip SPG1_STRSG_Wu_2016
+datasets analysed 206
+total wall 14 s

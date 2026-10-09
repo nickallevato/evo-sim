@@ -1,0 +1,11 @@
+na-workhorse.allevato.io
+2026-10-09T01:03:21-06:00
+42f8da52778488759639a7f3c0192d4a  research/checks/d1_sequence_space_spike.py
+ViennaRNA 2.7.2 numpy 2.5.3 3.14.4
+nn exit=0 wall=2231
+rna exit=0 wall=2123
+d1-end
+ca9628e880240490890f34a3d5154847  research/checks/d1_posthoc_refine.py
+42f8da52778488759639a7f3c0192d4a  research/checks/d1_sequence_space_spike.py
+posthoc exit=0 wall=732
+d1-posthoc-end

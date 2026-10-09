@@ -1,0 +1,16 @@
+done rand30_0 wall 120 nu 0.303
+done rand30_1 wall 124 nu 0.299
+done rand30_2 wall 119 nu 0.425
+done rand30_3 wall 126 nu 0.342
+done rand50_2 wall 955 nu 0.322
+done rand50_0 wall 964 nu 0.274
+done rand50_3 wall 1047 nu 0.228
+done rand76_0 wall 1058 nu 0.272
+done rand76_2 wall 1095 nu 0.277
+done rand50_1 wall 1103 nu 0.294
+done rand76_1 wall 1123 nu 0.358
+done tRNA76 wall 1723 nu 0.313
+done rand100_2 wall 2025 nu 0.267
+done rand100_1 wall 2105 nu 0.305
+done rand100_0 wall 2123 nu 0.268
+total wall 2124 s

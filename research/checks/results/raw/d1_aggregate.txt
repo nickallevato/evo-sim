@@ -1,0 +1,232 @@
+== flip thresholds (G1): m* = lam50(n_f)/lam_alt for each q basis
+  T3e5_s0.01: lam_alt=0.480  m*(n_f=1e3,1e4,2e5,2e7) = 15, 20, 26, 36
+  T146250_s0.01: lam_alt=0.234  m*(n_f=1e3,1e4,2e5,2e7) = 31, 41, 54, 73
+  T3e5_s0.001: lam_alt=0.048  m*(n_f=1e3,1e4,2e5,2e7) = 151, 199, 261, 357
+  T146250_s0.001: lam_alt=0.023  m*(n_f=1e3,1e4,2e5,2e7) = 313, 412, 540, 738
+
+-- RNA group all (n=15 targets)
+  nu_mean: med 0.299 [0.228..0.425] n=15
+  site_neu paired: med 0.094 [0.0306..0.139] n=15 ; unpaired: med 0.545 [0.443..0.781] n=15
+  del strict / >2bp / shape: med 0.701 [0.575..0.772] n=15 | med 0.558 [0.398..0.682] n=15 | med 0.266 [0.157..0.498] n=15
+  E0_uniform: reach med 0.0177 [0.00475..0.0295] n=15 ; m|reach med 2.3 [1.53..4.45] n=15 ; m_all med 0.0507 [0.00725..0.112] n=15
+       mpop5 mean med 0.26 [0.03..0.41] n=15 ; mpop(K=KB) mean med 2.11 [0.29..6.72] n=15
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.10; T146250_s0.01: 0.54; T3e5_s0.001: 0.11; T146250_s0.001: 0.05
+  E0_freqw: reach med 0.179 [0.0875..0.318] n=15 ; m|reach med 2.86 [2.19..5.76] n=15 ; m_all med 0.527 [0.206..1.66] n=15
+       mpop5 mean med 2.58 [0.89..8.56] n=15 ; mpop(K=KB) mean med 30 [8.23..99.6] n=15
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.37; T146250_s0.01: 0.67; T3e5_s0.001: 0.14; T146250_s0.001: 0.07
+  E1_uniform: reach med 0.031 [0.00625..0.0852] n=15 ; m|reach med 3.43 [2.05..5.1] n=15 ; m_all med 0.0885 [0.016..0.434] n=15
+       mpop5 mean med 0.43 [0.05..2.81] n=15 ; mpop(K=KB) mean med 3.88 [0.64..26.1] n=15
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.65; T146250_s0.01: 0.80; T3e5_s0.001: 0.17; T146250_s0.001: 0.08
+  E1_freqw: reach med 0.0478 [0.0103..0.214] n=15 ; m|reach med 3.61 [2.33..6.32] n=15 ; m_all med 0.161 [0.0297..1.35] n=15
+       mpop5 mean med 1.12 [0.05..5.53] n=15 ; mpop(K=KB) mean med 9.67 [1.19..81.3] n=15
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.73; T146250_s0.01: 0.85; T3e5_s0.001: 0.17; T146250_s0.001: 0.08
+  E2_uniform: reach med 0.912 [0.672..1] n=15 ; m|reach med 28 [14.5..45.2] n=15 ; m_all med 24.9 [11.1..45.2] n=15
+       mpop5 mean med 104 [56.2..202] n=15 ; mpop(K=KB) mean med 1.2e+03 [445..2.71e+03] n=15
+       lam = m|reach * lam_alt: T3e5_s0.01: 13.42; T146250_s0.01: 6.56; T3e5_s0.001: 1.35; T146250_s0.001: 0.65
+  E2_freqw: reach med 0.915 [0.689..1] n=15 ; m|reach med 28.2 [12.7..45.2] n=15 ; m_all med 25.7 [10..45.2] n=15
+       mpop5 mean med 104 [64.8..202] n=15 ; mpop(K=KB) mean med 1.24e+03 [401..2.71e+03] n=15
+       lam = m|reach * lam_alt: T3e5_s0.01: 13.55; T146250_s0.01: 6.62; T3e5_s0.001: 1.36; T146250_s0.001: 0.66
+  double E0: frac_m1_zero med 0.982 [0.97..0.993] n=15; P(m2>0|m1=0) med 0.0377 [0.0178..0.0768] n=15; m2|pos med 4.72 [3..18.9] n=15
+  double E1: frac_m1_zero med 0.97 [0.908..0.997] n=15; P(m2>0|m1=0) med 0.0862 [0.0304..0.299] n=15; m2|pos med 8.88 [4.83..13.7] n=15
+  double E2: frac_m1_zero med 0.0617 [0..0.32] n=15; P(m2>0|m1=0) med 0.926 [0.714..1] n=11; m2|pos med 105 [20.4..398] n=11
+  graded near d0_1-4: f_ben med 0.0102 [0.000439..0.0544] n=11; f_worse med 0.69 [0.524..0.73] n=11; P_any_improver med 0.528 [0.1..0.883] n=11; strict_local_opt med 0.472 [0.117..0.9] n=11
+  graded near d0_5-10: f_ben med 0.0342 [0.0149..0.136] n=15; f_worse med 0.649 [0.422..0.71] n=15; P_any_improver med 0.883 [0.733..0.991] n=15; strict_local_opt med 0.117 [0.00889..0.267] n=15
+  graded near d0_11+: f_ben med 0.306 [0.116..0.506] n=15; f_worse med 0.326 [0.0701..0.588] n=15; P_any_improver med 0.996 [0.973..1] n=15; strict_local_opt med 0.00403 [0..0.0268] n=15
+  graded far d0_1-4: f_ben med 0.124 [0.124..0.124] n=1; f_worse med 0.43 [0.43..0.43] n=1; P_any_improver med 0.983 [0.983..0.983] n=1; strict_local_opt med 0.0167 [0.0167..0.0167] n=1
+  graded far d0_5-10: f_ben med 0.382 [0.316..0.402] n=4; f_worse med 0.194 [0.101..0.306] n=4; P_any_improver med 1 [0.983..1] n=4; strict_local_opt med 0 [0..0.0167] n=4
+  graded far d0_11+: f_ben med 0.409 [0.263..0.503] n=15; f_worse med 0.19 [0.0675..0.329] n=15; P_any_improver med 1 [1..1] n=15; strict_local_opt med 0 [0..0] n=15
+  walk near: success med 0.767 [0.167..0.85] n=9; trapped_no_move med 0 [0..0] n=9; mean d_end med 0.467 [0.267..5.83] n=9
+  walk far: success med 0.733 [0..0.933] n=9; trapped_no_move med 0 [0..0] n=9; mean d_end med 1.1 [0.2..5.33] n=9
+
+-- RNA group L30 (n=4 targets)
+  nu_mean: med 0.323 [0.299..0.425] n=4
+  site_neu paired: med 0.0846 [0.055..0.113] n=4 ; unpaired: med 0.612 [0.543..0.781] n=4
+  del strict / >2bp / shape: med 0.677 [0.575..0.701] n=4 | med 0.534 [0.475..0.63] n=4 | med 0.407 [0.372..0.498] n=4
+  E0_uniform: reach med 0.0236 [0.013..0.0295] n=4 ; m|reach med 2.49 [2.04..4.45] n=4 ; m_all med 0.0554 [0.0348..0.112] n=4
+       mpop5 mean med 0.34 [0.27..0.41] n=4 ; mpop(K=KB) mean med 3.33 [2.09..6.72] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.19; T146250_s0.01: 0.58; T3e5_s0.001: 0.12; T146250_s0.001: 0.06
+  E0_freqw: reach med 0.253 [0.146..0.31] n=4 ; m|reach med 5.28 [3.43..5.76] n=4 ; m_all med 1.39 [0.5..1.66] n=4
+       mpop5 mean med 6.79 [2.46..8.56] n=4 ; mpop(K=KB) mean med 83.6 [30..99.6] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 2.53; T146250_s0.01: 1.24; T3e5_s0.001: 0.25; T146250_s0.001: 0.12
+  E1_uniform: reach med 0.0781 [0.0705..0.0852] n=4 ; m|reach med 4.07 [3.43..5.1] n=4 ; m_all med 0.302 [0.267..0.434] n=4
+       mpop5 mean med 1.61 [1.28..2.81] n=4 ; mpop(K=KB) mean med 18.1 [16..26.1] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.95; T146250_s0.01: 0.95; T3e5_s0.001: 0.20; T146250_s0.001: 0.09
+  E1_freqw: reach med 0.114 [0.0808..0.192] n=4 ; m|reach med 4.3 [4.23..4.95] n=4 ; m_all med 0.524 [0.35..0.814] n=4
+       mpop5 mean med 2.29 [1.93..3.73] n=4 ; mpop(K=KB) mean med 31.5 [21..48.9] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 2.06; T146250_s0.01: 1.01; T3e5_s0.001: 0.21; T146250_s0.001: 0.10
+  E2_uniform: reach med 1 [1..1] n=4 ; m|reach med 37.3 [32.7..45.2] n=4 ; m_all med 37.3 [32.7..45.2] n=4
+       mpop5 mean med 184 [104..202] n=4 ; mpop(K=KB) mean med 2.24e+03 [1.96e+03..2.71e+03] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 17.90; T146250_s0.01: 8.75; T3e5_s0.001: 1.80; T146250_s0.001: 0.87
+  E2_freqw: reach med 1 [1..1] n=4 ; m|reach med 37.3 [32.7..45.2] n=4 ; m_all med 37.3 [32.7..45.2] n=4
+       mpop5 mean med 184 [104..202] n=4 ; mpop(K=KB) mean med 2.24e+03 [1.96e+03..2.71e+03] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 17.90; T146250_s0.01: 8.75; T3e5_s0.001: 1.80; T146250_s0.001: 0.87
+  double E0: frac_m1_zero med 0.976 [0.972..0.978] n=4; P(m2>0|m1=0) med 0.0685 [0.0511..0.0768] n=4; m2|pos med 5.5 [4.31..6.8] n=4
+  double E1: frac_m1_zero med 0.918 [0.908..0.928] n=4; P(m2>0|m1=0) med 0.224 [0.19..0.299] n=4; m2|pos med 9.07 [6.31..10.8] n=4
+  double E2: frac_m1_zero med 0 [0..0] n=4; P(m2>0|m1=0) -; m2|pos -
+  graded near d0_1-4: f_ben med 0.0233 [0.0142..0.0544] n=3; f_worse med 0.638 [0.524..0.641] n=3; P_any_improver med 0.528 [0.49..0.722] n=3; strict_local_opt med 0.472 [0.278..0.51] n=3
+  graded near d0_5-10: f_ben med 0.127 [0.11..0.136] n=4; f_worse med 0.527 [0.422..0.57] n=4; P_any_improver med 0.959 [0.948..0.991] n=4; strict_local_opt med 0.0408 [0.00889..0.0515] n=4
+  graded near d0_11+: f_ben med 0.44 [0.416..0.506] n=4; f_worse med 0.118 [0.0701..0.15] n=4; P_any_improver med 1 [0.999..1] n=4; strict_local_opt med 0.00017 [0..0.000794] n=4
+  graded far d0_1-4: f_ben med 0.124 [0.124..0.124] n=1; f_worse med 0.43 [0.43..0.43] n=1; P_any_improver med 0.983 [0.983..0.983] n=1; strict_local_opt med 0.0167 [0.0167..0.0167] n=1
+  graded far d0_5-10: f_ben med 0.382 [0.316..0.402] n=4; f_worse med 0.194 [0.101..0.306] n=4; P_any_improver med 1 [0.983..1] n=4; strict_local_opt med 0 [0..0.0167] n=4
+  graded far d0_11+: f_ben med 0.434 [0.414..0.503] n=4; f_worse med 0.121 [0.0675..0.149] n=4; P_any_improver med 1 [1..1] n=4; strict_local_opt med 0 [0..0] n=4
+  walk near: success med 0.767 [0.733..0.833] n=4; trapped_no_move med 0 [0..0] n=4; mean d_end med 0.317 [0.267..0.467] n=4
+  walk far: success med 0.85 [0.733..0.933] n=4; trapped_no_move med 0 [0..0] n=4; mean d_end med 0.317 [0.2..0.6] n=4
+
+-- RNA group L50 (n=4 targets)
+  nu_mean: med 0.284 [0.228..0.322] n=4
+  site_neu paired: med 0.0843 [0.0306..0.129] n=4 ; unpaired: med 0.532 [0.443..0.667] n=4
+  del strict / >2bp / shape: med 0.716 [0.678..0.772] n=4 | med 0.564 [0.499..0.682] n=4 | med 0.214 [0.167..0.253] n=4
+  E0_uniform: reach med 0.0165 [0.00667..0.0258] n=4 ; m|reach med 2.1 [1.73..3.18] n=4 ; m_all med 0.0428 [0.0115..0.0642] n=4
+       mpop5 mean med 0.175 [0.03..0.27] n=4 ; mpop(K=KB) mean med 2.57 [0.69..3.85] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.01; T146250_s0.01: 0.49; T3e5_s0.001: 0.10; T146250_s0.001: 0.05
+  E0_freqw: reach med 0.184 [0.157..0.195] n=4 ; m|reach med 2.93 [2.76..3.32] n=4 ; m_all med 0.54 [0.433..0.647] n=4
+       mpop5 mean med 2.75 [1.86..3.21] n=4 ; mpop(K=KB) mean med 32.4 [26..38.8] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.41; T146250_s0.01: 0.69; T3e5_s0.001: 0.14; T146250_s0.001: 0.07
+  E1_uniform: reach med 0.0281 [0.0158..0.0583] n=4 ; m|reach med 3.61 [2.49..3.95] n=4 ; m_all med 0.102 [0.0395..0.231] n=4
+       mpop5 mean med 0.435 [0.23..0.98] n=4 ; mpop(K=KB) mean med 6.11 [2.37..13.8] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.73; T146250_s0.01: 0.85; T3e5_s0.001: 0.17; T146250_s0.001: 0.08
+  E1_freqw: reach med 0.0929 [0.0447..0.214] n=4 ; m|reach med 4.18 [3.61..6.32] n=4 ; m_all med 0.385 [0.161..1.35] n=4
+       mpop5 mean med 1.75 [1.12..5.53] n=4 ; mpop(K=KB) mean med 23.1 [9.67..81.3] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 2.00; T146250_s0.01: 0.98; T3e5_s0.001: 0.20; T146250_s0.001: 0.10
+  E2_uniform: reach med 0.919 [0.89..0.929] n=4 ; m|reach med 24.4 [18.3..28] n=4 ; m_all med 22.7 [16.7..24.9] n=4
+       mpop5 mean med 111 [84.3..185] n=4 ; mpop(K=KB) mean med 1.36e+03 [1e+03..1.49e+03] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 11.72; T146250_s0.01: 5.73; T3e5_s0.001: 1.18; T146250_s0.001: 0.57
+  E2_freqw: reach med 0.928 [0.91..0.951] n=4 ; m|reach med 24.8 [18.2..28.2] n=4 ; m_all med 23.5 [16.7..25.7] n=4
+       mpop5 mean med 112 [87.7..191] n=4 ; mpop(K=KB) mean med 1.41e+03 [1e+03..1.54e+03] n=4
+       lam = m|reach * lam_alt: T3e5_s0.01: 11.91; T146250_s0.01: 5.82; T3e5_s0.001: 1.20; T146250_s0.001: 0.58
+  double E0: frac_m1_zero med 0.983 [0.973..0.992] n=4; P(m2>0|m1=0) med 0.0358 [0.0202..0.0541] n=4; m2|pos med 4.94 [3.75..6.75] n=4
+  double E1: frac_m1_zero med 0.97 [0.945..0.975] n=4; P(m2>0|m1=0) med 0.0908 [0.0636..0.122] n=4; m2|pos med 9.5 [6.46..13.7] n=4
+  double E2: frac_m1_zero med 0.055 [0.045..0.205] n=4; P(m2>0|m1=0) med 0.957 [0.926..1] n=4; m2|pos med 65.2 [20.4..105] n=4
+  graded near d0_1-4: f_ben med 0.00681 [0.00625..0.00737] n=2; f_worse med 0.704 [0.69..0.718] n=2; P_any_improver med 0.406 [0.396..0.417] n=2; strict_local_opt med 0.594 [0.583..0.604] n=2
+  graded near d0_5-10: f_ben med 0.0634 [0.0342..0.0812] n=4; f_worse med 0.639 [0.572..0.695] n=4; P_any_improver med 0.874 [0.81..0.969] n=4; strict_local_opt med 0.126 [0.0312..0.19] n=4
+  graded near d0_11+: f_ben med 0.318 [0.306..0.328] n=4; f_worse med 0.313 [0.264..0.326] n=4; P_any_improver med 0.998 [0.995..0.999] n=4; strict_local_opt med 0.00197 [0.00102..0.00476] n=4
+  graded far d0_11+: f_ben med 0.417 [0.38..0.443] n=4; f_worse med 0.183 [0.119..0.223] n=4; P_any_improver med 1 [1..1] n=4; strict_local_opt med 0 [0..0] n=4
+  walk near: success med 0.8 [0.65..0.85] n=4; trapped_no_move med 0 [0..0] n=4; mean d_end med 0.75 [0.3..1.35] n=4
+  walk far: success med 0.7 [0.55..0.75] n=4; trapped_no_move med 0 [0..0] n=4; mean d_end med 1.15 [1.1..2.4] n=4
+
+-- RNA group L76(rand) (n=3 targets)
+  nu_mean: med 0.277 [0.272..0.358] n=3
+  site_neu paired: med 0.102 [0.0717..0.139] n=3 ; unpaired: med 0.545 [0.495..0.658] n=3
+  del strict / >2bp / shape: med 0.723 [0.642..0.728] n=3 | med 0.585 [0.398..0.59] n=3 | med 0.222 [0.157..0.421] n=3
+  E0_uniform: reach med 0.0145 [0.00875..0.019] n=3 ; m|reach med 1.91 [1.74..2.78] n=3 ; m_all med 0.0278 [0.0152..0.0527] n=3
+       mpop5 mean med 0.15 [0.1..0.29] n=3 ; mpop(K=KB) mean med 1.11 [0.61..2.11] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 0.92; T146250_s0.01: 0.45; T3e5_s0.001: 0.09; T146250_s0.001: 0.04
+  E0_freqw: reach med 0.103 [0.1..0.262] n=3 ; m|reach med 2.68 [2.19..2.81] n=3 ; m_all med 0.281 [0.227..0.702] n=3
+       mpop5 mean med 0.92 [0.89..3.4] n=3 ; mpop(K=KB) mean med 11.3 [9.06..28.1] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.28; T146250_s0.01: 0.63; T3e5_s0.001: 0.13; T146250_s0.001: 0.06
+  E1_uniform: reach med 0.0177 [0.0105..0.031] n=3 ; m|reach med 3.13 [2.45..3.14] n=3 ; m_all med 0.0558 [0.0257..0.097] n=3
+       mpop5 mean med 0.42 [0.18..0.94] n=3 ; mpop(K=KB) mean med 2.23 [1.03..3.88] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.50; T146250_s0.01: 0.73; T3e5_s0.001: 0.15; T146250_s0.001: 0.07
+  E1_freqw: reach med 0.0217 [0.0138..0.0297] n=3 ; m|reach med 2.92 [2.33..2.93] n=3 ; m_all med 0.0635 [0.032..0.0872] n=3
+       mpop5 mean med 0.29 [0.05..0.88] n=3 ; mpop(K=KB) mean med 2.54 [1.28..3.49] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.40; T146250_s0.01: 0.68; T3e5_s0.001: 0.14; T146250_s0.001: 0.07
+  E2_uniform: reach med 0.767 [0.745..0.915] n=3 ; m|reach med 17.1 [14.5..30.1] n=3 ; m_all med 12.7 [11.1..27.5] n=3
+       mpop5 mean med 101 [89.8..152] n=3 ; mpop(K=KB) mean med 508 [445..1.1e+03] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 8.18; T146250_s0.01: 4.00; T3e5_s0.001: 0.82; T146250_s0.001: 0.40
+  E2_freqw: reach med 0.788 [0.711..0.898] n=3 ; m|reach med 17.1 [12.7..29.1] n=3 ; m_all med 12.2 [10..26.2] n=3
+       mpop5 mean med 86.7 [80.7..166] n=3 ; mpop(K=KB) mean med 487 [401..1.05e+03] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 8.21; T146250_s0.01: 4.01; T3e5_s0.001: 0.82; T146250_s0.001: 0.40
+  double E0: frac_m1_zero med 0.985 [0.973..0.988] n=3; P(m2>0|m1=0) med 0.0203 [0.0178..0.0643] n=3; m2|pos med 4.38 [3..6.68] n=3
+  double E1: frac_m1_zero med 0.98 [0.965..0.993] n=3; P(m2>0|m1=0) med 0.0655 [0.0587..0.106] n=3; m2|pos med 8.73 [6.65..9.37] n=3
+  double E2: frac_m1_zero med 0.177 [0.035..0.198] n=3; P(m2>0|m1=0) med 0.873 [0.714..0.924] n=3; m2|pos med 83.1 [78.4..165] n=3
+  graded near d0_1-4: f_ben med 0.0112 [0.000439..0.0255] n=3; f_worse med 0.708 [0.609..0.73] n=3; P_any_improver med 0.787 [0.1..0.883] n=3; strict_local_opt med 0.212 [0.117..0.9] n=3
+  graded near d0_5-10: f_ben med 0.0292 [0.0168..0.0332] n=3; f_worse med 0.687 [0.603..0.688] n=3; P_any_improver med 0.88 [0.8..0.942] n=3; strict_local_opt med 0.12 [0.0583..0.2] n=3
+  graded near d0_11+: f_ben med 0.179 [0.161..0.191] n=3; f_worse med 0.437 [0.417..0.522] n=3; P_any_improver med 0.995 [0.989..0.996] n=3; strict_local_opt med 0.00515 [0.00403..0.0115] n=3
+  graded far d0_11+: f_ben med 0.33 [0.263..0.382] n=3; f_worse med 0.228 [0.225..0.329] n=3; P_any_improver med 1 [1..1] n=3; strict_local_opt med 0 [0..0] n=3
+
+-- RNA group L100 (n=3 targets)
+  nu_mean: med 0.268 [0.267..0.305] n=3
+  site_neu paired: med 0.101 [0.0833..0.126] n=3 ; unpaired: med 0.521 [0.483..0.612] n=3
+  del strict / >2bp / shape: med 0.732 [0.695..0.733] n=3 | med 0.558 [0.483..0.565] n=3 | med 0.266 [0.194..0.372] n=3
+  E0_uniform: reach med 0.0177 [0.0115..0.0245] n=3 ; m|reach med 3.08 [1.85..3.12] n=3 ; m_all med 0.0548 [0.0213..0.0765] n=3
+       mpop5 mean med 0.14 [0.08..0.3] n=3 ; mpop(K=KB) mean med 2.19 [0.85..3.06] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.48; T146250_s0.01: 0.72; T3e5_s0.001: 0.15; T146250_s0.001: 0.07
+  E0_freqw: reach med 0.164 [0.161..0.318] n=3 ; m|reach med 2.72 [2.43..2.86] n=3 ; m_all med 0.438 [0.399..0.909] n=3
+       mpop5 mean med 1.75 [1.6..4.17] n=3 ; mpop(K=KB) mean med 17.5 [15.9..36.4] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.31; T146250_s0.01: 0.64; T3e5_s0.001: 0.13; T146250_s0.001: 0.06
+  E1_uniform: reach med 0.0253 [0.0125..0.0335] n=3 ; m|reach med 2.64 [2.05..3.66] n=3 ; m_all med 0.0517 [0.0457..0.0885] n=3
+       mpop5 mean med 0.19 [0.09..0.43] n=3 ; mpop(K=KB) mean med 2.07 [1.83..3.54] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.27; T146250_s0.01: 0.62; T3e5_s0.001: 0.13; T146250_s0.001: 0.06
+  E1_freqw: reach med 0.0285 [0.0238..0.0478] n=3 ; m|reach med 3.3 [2.94..3.44] n=3 ; m_all med 0.0838 [0.0818..0.158] n=3
+       mpop5 mean med 0.34 [0.14..0.44] n=3 ; mpop(K=KB) mean med 3.35 [3.27..6.31] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.58; T146250_s0.01: 0.77; T3e5_s0.001: 0.16; T146250_s0.001: 0.08
+  E2_uniform: reach med 0.76 [0.672..0.82] n=3 ; m|reach med 27.2 [18.9..36.5] n=3 ; m_all med 20.7 [12.7..29.9] n=3
+       mpop5 mean med 72.9 [56.2..127] n=3 ; mpop(K=KB) mean med 827 [508..1.2e+03] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 13.05; T146250_s0.01: 6.38; T3e5_s0.001: 1.31; T146250_s0.001: 0.63
+  E2_freqw: reach med 0.768 [0.689..0.872] n=3 ; m|reach med 25.7 [20.4..35.6] n=3 ; m_all med 19.7 [14..31] n=3
+       mpop5 mean med 68.8 [64.8..143] n=3 ; mpop(K=KB) mean med 788 [561..1.24e+03] n=3
+       lam = m|reach * lam_alt: T3e5_s0.01: 12.31; T146250_s0.01: 6.02; T3e5_s0.001: 1.24; T146250_s0.001: 0.60
+  double E0: frac_m1_zero med 0.99 [0.97..0.993] n=3; P(m2>0|m1=0) med 0.0241 [0.0236..0.0638] n=3; m2|pos med 3.43 [3.37..8.29] n=3
+  double E1: frac_m1_zero med 0.987 [0.967..0.997] n=3; P(m2>0|m1=0) med 0.0602 [0.0304..0.0862] n=3; m2|pos med 9.92 [4.83..12.2] n=3
+  double E2: frac_m1_zero med 0.267 [0.137..0.32] n=3; P(m2>0|m1=0) med 0.951 [0.885..1] n=3; m2|pos med 214 [117..245] n=3
+  graded near d0_1-4: f_ben med 0.00788 [0.0065..0.0102] n=3; f_worse med 0.724 [0.686..0.727] n=3; P_any_improver med 0.625 [0.494..0.775] n=3; strict_local_opt med 0.375 [0.225..0.506] n=3
+  graded near d0_5-10: f_ben med 0.0202 [0.0149..0.0203] n=3; f_worse med 0.71 [0.673..0.71] n=3; P_any_improver med 0.794 [0.733..0.883] n=3; strict_local_opt med 0.206 [0.117..0.267] n=3
+  graded near d0_11+: f_ben med 0.199 [0.116..0.22] n=3; f_worse med 0.46 [0.446..0.588] n=3; P_any_improver med 0.988 [0.973..0.994] n=3; strict_local_opt med 0.0121 [0.00571..0.0268] n=3
+  graded far d0_11+: f_ben med 0.39 [0.318..0.444] n=3; f_worse med 0.206 [0.19..0.329] n=3; P_any_improver med 1 [1..1] n=3; strict_local_opt med 0 [0..0] n=3
+
+-- RNA group tRNA76 (n=1 targets)
+  nu_mean: med 0.313 [0.313..0.313] n=1
+  site_neu paired: med 0.0997 [0.0997..0.0997] n=1 ; unpaired: med 0.577 [0.577..0.577] n=1
+  del strict / >2bp / shape: med 0.687 [0.687..0.687] n=1 | med 0.57 [0.57..0.57] n=1 | med 0.443 [0.443..0.443] n=1
+  E0_uniform: reach med 0.00475 [0.00475..0.00475] n=1 ; m|reach med 1.53 [1.53..1.53] n=1 ; m_all med 0.00725 [0.00725..0.00725] n=1
+       mpop5 mean med 0.08 [0.08..0.08] n=1 ; mpop(K=KB) mean med 0.29 [0.29..0.29] n=1
+       lam = m|reach * lam_alt: T3e5_s0.01: 0.73; T146250_s0.01: 0.36; T3e5_s0.001: 0.07; T146250_s0.001: 0.04
+  E0_freqw: reach med 0.0875 [0.0875..0.0875] n=1 ; m|reach med 2.35 [2.35..2.35] n=1 ; m_all med 0.206 [0.206..0.206] n=1
+       mpop5 mean med 1 [1..1] n=1 ; mpop(K=KB) mean med 8.23 [8.23..8.23] n=1
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.13; T146250_s0.01: 0.55; T3e5_s0.001: 0.11; T146250_s0.001: 0.05
+  E1_uniform: reach med 0.00625 [0.00625..0.00625] n=1 ; m|reach med 2.56 [2.56..2.56] n=1 ; m_all med 0.016 [0.016..0.016] n=1
+       mpop5 mean med 0.05 [0.05..0.05] n=1 ; mpop(K=KB) mean med 0.64 [0.64..0.64] n=1
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.23; T146250_s0.01: 0.60; T3e5_s0.001: 0.12; T146250_s0.001: 0.06
+  E1_freqw: reach med 0.0103 [0.0103..0.0103] n=1 ; m|reach med 2.9 [2.9..2.9] n=1 ; m_all med 0.0297 [0.0297..0.0297] n=1
+       mpop5 mean med 0.34 [0.34..0.34] n=1 ; mpop(K=KB) mean med 1.19 [1.19..1.19] n=1
+       lam = m|reach * lam_alt: T3e5_s0.01: 1.39; T146250_s0.01: 0.68; T3e5_s0.001: 0.14; T146250_s0.001: 0.07
+  E2_uniform: reach med 0.904 [0.904..0.904] n=1 ; m|reach med 28.5 [28.5..28.5] n=1 ; m_all med 25.8 [25.8..25.8] n=1
+       mpop5 mean med 80.2 [80.2..80.2] n=1 ; mpop(K=KB) mean med 1.03e+03 [1.03e+03..1.03e+03] n=1
+       lam = m|reach * lam_alt: T3e5_s0.01: 13.69; T146250_s0.01: 6.69; T3e5_s0.001: 1.37; T146250_s0.001: 0.66
+  E2_freqw: reach med 0.941 [0.941..0.941] n=1 ; m|reach med 29.3 [29.3..29.3] n=1 ; m_all med 27.6 [27.6..27.6] n=1
+       mpop5 mean med 87.8 [87.8..87.8] n=1 ; mpop(K=KB) mean med 1.1e+03 [1.1e+03..1.1e+03] n=1
+       lam = m|reach * lam_alt: T3e5_s0.01: 14.08; T146250_s0.01: 6.88; T3e5_s0.001: 1.41; T146250_s0.001: 0.68
+  double E0: frac_m1_zero med 0.99 [0.99..0.99] n=1; P(m2>0|m1=0) med 0.0227 [0.0227..0.0227] n=1; m2|pos med 18.9 [18.9..18.9] n=1
+  double E1: frac_m1_zero med 0.993 [0.993..0.993] n=1; P(m2>0|m1=0) med 0.0353 [0.0353..0.0353] n=1; m2|pos med 5.86 [5.86..5.86] n=1
+  double E2: frac_m1_zero med 0.147 [0.147..0.147] n=1; P(m2>0|m1=0) med 0.847 [0.847..0.847] n=1; m2|pos med 398 [398..398] n=1
+  graded near d0_5-10: f_ben med 0.0218 [0.0218..0.0218] n=1; f_worse med 0.649 [0.649..0.649] n=1; P_any_improver med 0.856 [0.856..0.856] n=1; strict_local_opt med 0.144 [0.144..0.144] n=1
+  graded near d0_11+: f_ben med 0.136 [0.136..0.136] n=1; f_worse med 0.502 [0.502..0.502] n=1; P_any_improver med 0.988 [0.988..0.988] n=1; strict_local_opt med 0.0125 [0.0125..0.0125] n=1
+  graded far d0_11+: f_ben med 0.308 [0.308..0.308] n=1; f_worse med 0.283 [0.283..0.283] n=1; P_any_improver med 1 [1..1] n=1; strict_local_opt med 0 [0..0] n=1
+  walk near: success med 0.167 [0.167..0.167] n=1; trapped_no_move med 0 [0..0] n=1; mean d_end med 5.83 [5.83..5.83] n=1
+  walk far: success med 0 [0..0] n=1; trapped_no_move med 0 [0..0] n=1; mean d_end med 5.33 [5.33..5.33] n=1
+
+-- NN size
+  L30: log10|NN| med 12.4 [11.4..13.3] n=4 ; log10 fraction of 4^L med -5.64 [-6.63..-4.71] n=4
+  L50: log10|NN| med 20.2 [19.4..21.6] n=4 ; log10 fraction of 4^L med -9.89 [-10.7..-8.47] n=4
+  L76: log10|NN| med 33.2 [31.6..33.2] n=3 ; log10 fraction of 4^L med -12.6 [-14.1..-12.5] n=3
+  L100: log10|NN| med 42.1 [41.8..42.4] n=2 ; log10 fraction of 4^L med -18.1 [-18.5..-17.8] n=2
+  zero-hit targets (upper bound only): rand76_0: log10|NN|<=32.3, rand100_2: log10|NN|<=44.0
+
+-- post hoc refined classes
+  E0far all: reach med 0.002 [0.00025..0.0117] n=15; m|reach med 1.5 [1..2.27] n=15; p90 med 2 [1..4] n=15; mpop(K=KB) med 0.12 [0.01..1.57] n=15; lam@T3e5s.01 0.72
+  E0far L<=50: reach med 0.00683 [0.00133..0.0117] n=8; m|reach med 1.82 [1.33..2.27] n=8; p90 med 2.4 [2..4] n=8; mpop(K=KB) med 0.745 [0.11..1.57] n=8; lam@T3e5s.01 0.87
+  E0far L>=76: reach med 0.0015 [0.00025..0.002] n=7; m|reach med 1.5 [1..1.83] n=7; p90 med 2 [1..3.5] n=7; mpop(K=KB) med 0.09 [0.01..0.12] n=7; lam@T3e5s.01 0.72
+  E0far tRNA76: reach med 0.00025 [0.00025..0.00025] n=1; m|reach med 1 [1..1] n=1; p90 med 1 [1..1] n=1; mpop(K=KB) med 0.01 [0.01..0.01] n=1; lam@T3e5s.01 0.48
+  E2g all: reach med 0.589 [0.0167..0.776] n=12; m|reach med 7.16 [1..25.3] n=12; p90 med 18 [1..58] n=12; mpop(K=KB) med 207 [1..787] n=12; lam@T3e5s.01 3.44
+  E2g L<=50: reach med 0.369 [0.0167..0.73] n=5; m|reach med 4.95 [1..9.36] n=5; p90 med 12 [1..24] n=5; mpop(K=KB) med 131 [1..410] n=5; lam@T3e5s.01 2.37
+  E2g L>=76: reach med 0.643 [0.191..0.776] n=7; m|reach med 11.8 [4.49..25.3] n=7; p90 med 26 [9..58] n=7; mpop(K=KB) med 301 [45.1..787] n=7; lam@T3e5s.01 5.68
+  E2g tRNA76: reach med 0.191 [0.191..0.191] n=1; m|reach med 5.9 [5.9..5.9] n=1; p90 med 18 [18..18] n=1; mpop(K=KB) med 45.1 [45.1..45.1] n=1; lam@T3e5s.01 2.83
+  E2rare all: reach med 0.206 [0.0167..0.4] n=12; m|reach med 4.52 [1..6.6] n=12; p90 med 11.5 [1..28] n=12; mpop(K=KB) med 42.6 [1..114] n=12; lam@T3e5s.01 2.17
+  E2rare L<=50: reach med 0.288 [0.0167..0.4] n=5; m|reach med 3.87 [1..6.6] n=5; p90 med 10 [1..28] n=5; mpop(K=KB) med 89 [1..114] n=5; lam@T3e5s.01 1.86
+  E2rare L>=76: reach med 0.173 [0.124..0.295] n=7; m|reach med 5.05 [3.85..6.23] n=7; p90 med 12 [9..18] n=7; mpop(K=KB) med 42.1 [24.7..53.1] n=7; lam@T3e5s.01 2.42
+  E2rare tRNA76: reach med 0.155 [0.155..0.155] n=1; m|reach med 4.54 [4.54..4.54] n=1; p90 med 16 [16..16] n=1; mpop(K=KB) med 28.2 [28.2..28.2] n=1; lam@T3e5s.01 2.18
+  E2g_rare all: reach med 0.206 [0.0167..0.4] n=12; m|reach med 4.52 [1..6.6] n=12; p90 med 11.5 [1..28] n=12; mpop(K=KB) med 42.6 [1..114] n=12; lam@T3e5s.01 2.17
+  E2g_rare L<=50: reach med 0.288 [0.0167..0.4] n=5; m|reach med 3.87 [1..6.6] n=5; p90 med 10 [1..28] n=5; mpop(K=KB) med 89 [1..114] n=5; lam@T3e5s.01 1.86
+  E2g_rare L>=76: reach med 0.173 [0.123..0.295] n=7; m|reach med 5.05 [3.85..6.23] n=7; p90 med 12 [9..18] n=7; mpop(K=KB) med 42.1 [24.7..53.1] n=7; lam@T3e5s.01 2.42
+  E2g_rare tRNA76: reach med 0.155 [0.155..0.155] n=1; m|reach med 4.54 [4.54..4.54] n=1; p90 med 16 [16..16] n=1; mpop(K=KB) med 28.2 [28.2..28.2] n=1; lam@T3e5s.01 2.18
+  neighbourhood composition: same-shape share med 0.624 [0.294..0.752] n=15; fewer-helix share med 0.33 [0.0388..0.706] n=15; >=helix share med 0.032 [0..0.337] n=15
+  distinct shapes: med 5 [2..18] n=15; top3 share med 0.992 [0.772..1] n=15
+  Hamming mean/L among samples (random pair = 0.75): med 0.561 [0.401..0.594] n=15; seed->last med 0.592 [0.333..0.733] n=15
+  E0 pool d_bp(S1,S2) quantiles 10/25/50/75/90 (median across targets): [7.0, 14.0, 22.0, 28.0, 30.0]
+
+-- DMS lam at single-codon and gene granularity (non-stability, coverage>=0.5; post hoc subset)
+  func_0.5: m_snv per codon med 5.06 [2.54..6.5] n=114 -> lam@0.48 2.43; m_gene med 1.11e+03 [67.6..5.57e+03] n=114 -> lam@0.48 533
+  nearWT_0.8: m_snv per codon med 3.51 [1.51..5.74] n=114 -> lam@0.48 1.69; m_gene med 764 [40.4..3.62e+03] n=114 -> lam@0.48 367
+  ben_proxy_1.2: m_snv per codon med 0.206 [0..2.6] n=114 -> lam@0.48 0.10; m_gene med 50.7 [0..1.76e+03] n=114 -> lam@0.48 24.3
+  n datasets = 114; share with m_gene(ben proxy) >= m*(n_f=1e3, T3e5 s.01)=15: 0.66; >= 36 (n_f=2e7): 0.56; >=151 (s=.001,n_f=1e3): 0.18
+  share of datasets with m_snv per codon (functional) >= 15: 0.00 (max possible ~7)

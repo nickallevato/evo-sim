@@ -1,0 +1,81 @@
+done rand30_0
+done rand30_1
+done rand30_2
+done rand30_3
+done rand50_0
+done rand50_3
+done rand50_2
+done rand50_1
+done rand76_0
+done rand76_1
+done tRNA76
+done rand76_2
+done rand100_2
+done rand100_1
+done rand100_0
+rand30_0 L=30 hamming/L=0.54 same_shape=0.44 fewer_helix=0.56 ge_helix=0.00 nshapes=2 top3=1.00 d10/50/90=7/15/18
+    E0far ncand=591 reach=0.006 mean_all=0.01 mean_pos=1.82 med_pos=1.0 p90=2.0 max=14
+rand30_1 L=30 hamming/L=0.50 same_shape=0.29 fewer_helix=0.71 ge_helix=0.00 nshapes=2 top3=1.00 d10/50/90=8/14/16
+    E0far ncand=701 reach=0.012 mean_all=0.03 mean_pos=2.24 med_pos=1.0 p90=4.0 max=15
+rand30_2 L=30 hamming/L=0.58 same_shape=0.33 fewer_helix=0.67 ge_helix=0.00 nshapes=3 top3=1.00 d10/50/90=7/14/17
+    E0far ncand=486 reach=0.011 mean_all=0.02 mean_pos=2.27 med_pos=2.0 p90=3.0 max=15
+    E2g ncand=2 reach=0.017 mean_all=0.02 mean_pos=1.0 med_pos=1.0 p90=1.0 max=1
+    E2rare ncand=2 reach=0.017 mean_all=0.02 mean_pos=1.0 med_pos=1.0 p90=1.0 max=1
+    E2g_rare ncand=2 reach=0.017 mean_all=0.02 mean_pos=1.0 med_pos=1.0 p90=1.0 max=1
+rand30_3 L=30 hamming/L=0.58 same_shape=0.39 fewer_helix=0.61 ge_helix=0.00 nshapes=2 top3=1.00 d10/50/90=7/14/17
+    E0far ncand=602 reach=0.008 mean_all=0.02 mean_pos=2.27 med_pos=2.0 p90=4.0 max=14
+rand50_0 L=50 hamming/L=0.55 same_shape=0.69 fewer_helix=0.29 ge_helix=0.03 nshapes=5 top3=0.99 d10/50/90=7/23/28
+    E0far ncand=1414 reach=0.003 mean_all=0.00 mean_pos=1.33 med_pos=1.0 p90=2.0 max=3
+    E2g ncand=72 reach=0.369 mean_all=2.18 mean_pos=5.9 med_pos=3.0 p90=16.0 max=35
+    E2rare ncand=20 reach=0.288 mean_all=1.90 mean_pos=6.6 med_pos=1.0 p90=28.0 max=35
+    E2g_rare ncand=20 reach=0.288 mean_all=1.90 mean_pos=6.6 med_pos=1.0 p90=28.0 max=35
+rand50_1 L=50 hamming/L=0.54 same_shape=0.75 fewer_helix=0.21 ge_helix=0.04 nshapes=4 top3=0.99 d10/50/90=6/18/30
+    E0far ncand=1244 reach=0.004 mean_all=0.00 mean_pos=1.38 med_pos=1.0 p90=2.0 max=3
+    E2g ncand=89 reach=0.542 mean_all=2.68 mean_pos=4.95 med_pos=3.0 p90=12.0 max=32
+    E2rare ncand=20 reach=0.400 mean_all=1.58 mean_pos=3.96 med_pos=2.0 p90=10.0 max=18
+    E2g_rare ncand=20 reach=0.400 mean_all=1.58 mean_pos=3.96 med_pos=2.0 p90=10.0 max=18
+rand50_2 L=50 hamming/L=0.57 same_shape=0.64 fewer_helix=0.35 ge_helix=0.02 nshapes=4 top3=1.00 d10/50/90=10/24/30
+    E0far ncand=1377 reach=0.001 mean_all=0.00 mean_pos=1.38 med_pos=1.0 p90=2.0 max=2
+    E2g ncand=47 reach=0.320 mean_all=0.85 mean_pos=2.64 med_pos=1.0 p90=5.0 max=19
+    E2rare ncand=11 reach=0.383 mean_all=1.48 mean_pos=3.87 med_pos=2.0 p90=15.0 max=19
+    E2g_rare ncand=11 reach=0.383 mean_all=1.48 mean_pos=3.87 med_pos=2.0 p90=15.0 max=19
+rand50_3 L=50 hamming/L=0.40 same_shape=0.65 fewer_helix=0.27 ge_helix=0.08 nshapes=5 top3=0.99 d10/50/90=11/20/27
+    E0far ncand=1696 reach=0.007 mean_all=0.01 mean_pos=1.81 med_pos=2.0 p90=2.8000000000000043 max=3
+    E2g ncand=209 reach=0.730 mean_all=6.83 mean_pos=9.36 med_pos=5.0 p90=24.0 max=40
+    E2rare ncand=26 reach=0.231 mean_all=0.37 mean_pos=1.6 med_pos=2.0 p90=2.0 max=3
+    E2g_rare ncand=26 reach=0.231 mean_all=0.37 mean_pos=1.6 med_pos=2.0 p90=2.0 max=3
+rand76_0 L=76 hamming/L=0.57 same_shape=0.69 fewer_helix=0.11 ge_helix=0.20 nshapes=11 top3=0.90 d10/50/90=9/28/41
+    E0far ncand=2055 reach=0.001 mean_all=0.00 mean_pos=1.0 med_pos=1.0 p90=1.0 max=1
+    E2g ncand=576 reach=0.643 mean_all=9.92 mean_pos=15.42 med_pos=7.0 p90=48.0 max=75
+    E2rare ncand=65 reach=0.180 mean_all=1.05 mean_pos=5.84 med_pos=3.0 p90=17.0 max=24
+    E2g_rare ncand=65 reach=0.180 mean_all=1.05 mean_pos=5.84 med_pos=3.0 p90=17.0 max=24
+rand76_1 L=76 hamming/L=0.56 same_shape=0.75 fewer_helix=0.09 ge_helix=0.16 nshapes=8 top3=0.93 d10/50/90=5/20/43
+    E0far ncand=1189 reach=0.002 mean_all=0.00 mean_pos=1.5 med_pos=1.5 p90=2.0 max=2
+    E2g ncand=384 reach=0.754 mean_all=6.35 mean_pos=8.42 med_pos=5.0 p90=18.0 max=43
+    E2rare ncand=26 reach=0.161 mean_all=0.62 mean_pos=3.85 med_pos=2.0 p90=12.0 max=13
+    E2g_rare ncand=26 reach=0.161 mean_all=0.62 mean_pos=3.85 med_pos=2.0 p90=12.0 max=13
+rand76_2 L=76 hamming/L=0.56 same_shape=0.41 fewer_helix=0.58 ge_helix=0.01 nshapes=9 top3=0.79 d10/50/90=9/23/35
+    E0far ncand=1962 reach=0.002 mean_all=0.00 mean_pos=1.83 med_pos=1.0 p90=3.5 max=6
+    E2g ncand=33 reach=0.295 mean_all=1.33 mean_pos=4.49 med_pos=4.0 p90=9.0 max=16
+    E2rare ncand=33 reach=0.295 mean_all=1.33 mean_pos=4.49 med_pos=4.0 p90=9.0 max=16
+    E2g_rare ncand=33 reach=0.295 mean_all=1.33 mean_pos=4.49 med_pos=4.0 p90=9.0 max=16
+tRNA76 L=76 hamming/L=0.59 same_shape=0.34 fewer_helix=0.62 ge_helix=0.03 nshapes=11 top3=0.77 d10/50/90=9/22/41
+    E0far ncand=2047 reach=0.000 mean_all=0.00 mean_pos=1.0 med_pos=1.0 p90=1.0 max=1
+    E2g ncand=91 reach=0.191 mean_all=1.13 mean_pos=5.9 med_pos=3.0 p90=18.0 max=27
+    E2rare ncand=44 reach=0.155 mean_all=0.70 mean_pos=4.54 med_pos=3.0 p90=16.0 max=19
+    E2g_rare ncand=44 reach=0.155 mean_all=0.70 mean_pos=4.54 med_pos=3.0 p90=16.0 max=19
+rand100_0 L=100 hamming/L=0.55 same_shape=0.75 fewer_helix=0.06 ge_helix=0.19 nshapes=13 top3=0.90 d10/50/90=5/23/61
+    E0far ncand=1979 reach=0.001 mean_all=0.00 mean_pos=1.5 med_pos=1.5 p90=1.9 max=2
+    E2g ncand=716 reach=0.747 mean_all=14.96 mean_pos=20.02 med_pos=11.0 p90=58.0 max=100
+    E2rare ncand=52 reach=0.173 mean_all=1.07 mean_pos=6.23 med_pos=3.0 p90=18.0 max=49
+    E2g_rare ncand=52 reach=0.173 mean_all=1.07 mean_pos=6.23 med_pos=3.0 p90=18.0 max=49
+rand100_1 L=100 hamming/L=0.56 same_shape=0.48 fewer_helix=0.33 ge_helix=0.19 nshapes=15 top3=0.81 d10/50/90=7/27/59
+    E0far ncand=2410 reach=0.002 mean_all=0.00 mean_pos=1.38 med_pos=1.0 p90=2.3 max=3
+    E2g ncand=632 reach=0.635 mean_all=7.53 mean_pos=11.85 med_pos=6.0 p90=26.0 max=98
+    E2rare ncand=57 reach=0.261 mean_all=1.32 mean_pos=5.05 med_pos=3.0 p90=10.0 max=42
+    E2g_rare ncand=57 reach=0.261 mean_all=1.32 mean_pos=5.05 med_pos=3.0 p90=10.0 max=42
+rand100_2 L=100 hamming/L=0.58 same_shape=0.62 fewer_helix=0.04 ge_helix=0.34 nshapes=18 top3=0.85 d10/50/90=8/33/53
+    E0far ncand=2540 reach=0.002 mean_all=0.00 mean_pos=1.71 med_pos=2.0 p90=2.4000000000000004 max=3
+    E2g ncand=1256 reach=0.776 mean_all=19.67 mean_pos=25.34 med_pos=18.0 p90=57.0 max=136
+    E2rare ncand=110 reach=0.124 mean_all=0.65 mean_pos=5.23 med_pos=3.0 p90=11.0 max=36
+    E2g_rare ncand=110 reach=0.123 mean_all=0.64 mean_pos=5.21 med_pos=3.0 p90=11.0 max=36

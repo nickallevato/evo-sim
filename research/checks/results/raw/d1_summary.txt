@@ -1,0 +1,494 @@
+== lambda bookkeeping (G1): flip lam_50 by n_f and lam_alt by q basis
+lam50: n_f=1000: 7.27, n_f=10000: 9.58, n_f=200000: 12.57, n_f=2e+07: 17.18
+lam_alt: T3e5_s0.01: q=0.381 lam_alt=0.480 m*(1e3..2e7)=15..36, T146250_s0.01: q=0.209 lam_alt=0.234 m*(1e3..2e7)=31..73, T3e5_s0.001: q=0.047 lam_alt=0.048 m*(1e3..2e7)=151..357, T146250_s0.001: q=0.023 lam_alt=0.023 m*(1e3..2e7)=313..738
+
+== NN size
+name L bp f hits log10|NN| [95% lo,hi] log10 frac of 4^L
+rand30_0 L=30 bp=8 f=0.00127 hits=506/400000 log10NN=11.8 [11.7,11.8] log10frac=-6.31
+rand30_1 L=30 bp=8 f=0.0006 hits=240/400000 log10NN=11.4 [11.4,11.5] log10frac=-6.63
+rand30_2 L=30 bp=8 f=0.0493 hits=19724/400000 log10NN=13.3 [13.3,13.4] log10frac=-4.71
+rand30_3 L=30 bp=8 f=0.0276 hits=11023/400000 log10NN=13.1 [13.1,13.1] log10frac=-4.97
+rand50_0 L=50 bp=14 f=0.00033 hits=132/400000 log10NN=20.7 [20.6,20.7] log10frac=-9.45
+rand50_1 L=50 bp=15 f=0.000115 hits=46/400000 log10NN=19.8 [19.6,19.9] log10frac=-10.3
+rand50_2 L=50 bp=15 f=0.00833 hits=3330/400000 log10NN=21.6 [21.6,21.6] log10frac=-8.47
+rand50_3 L=50 bp=13 f=7.5e-06 hits=3/400000 log10NN=19.4 [19.0,19.9] log10frac=-10.7
+rand76_0 L=76 bp=20 f=0 hits=0/300000 log10NN=- [-262.8,32.3] log10frac=-
+rand76_1 L=76 bp=22 f=0.00067 hits=201/300000 log10NN=33.2 [33.2,33.3] log10frac=-12.5
+rand76_2 L=76 bp=23 f=4.67e-05 hits=14/300000 log10NN=31.6 [31.4,31.9] log10frac=-14.1
+tRNA76 L=76 bp=21 f=0.000223 hits=67/300000 log10NN=33.2 [33.1,33.3] log10frac=-12.6
+rand100_0 L=100 bp=32 f=1.5e-05 hits=3/200000 log10NN=41.8 [41.3,42.2] log10frac=-18.5
+rand100_1 L=100 bp=30 f=1e-05 hits=2/200000 log10NN=42.4 [41.9,43.0] log10frac=-17.8
+rand100_2 L=100 bp=27 f=0 hits=0/200000 log10NN=- [-251.3,44.0] log10frac=-
+
+== neutrality / ruggedness (per target)
+name L nu nu_sd nu_min fracNu>.37 paired unpaired | del_strict del_>2bp del_shape del_>10bp
+rand30_0 L=30 nu=0.303 sd=0.066 min=0.111 fr>.37=0.18 paired=0.094 unpaired=0.543 | 0.697 0.533 0.409 0.294
+rand30_1 L=30 nu=0.299 sd=0.062 min=0.178 fr>.37=0.12 paired=0.055 unpaired=0.578 | 0.701 0.630 0.498 0.390
+rand30_2 L=30 nu=0.425 sd=0.067 min=0.178 fr>.37=0.77 paired=0.113 unpaired=0.781 | 0.575 0.475 0.372 0.235
+rand30_3 L=30 nu=0.342 sd=0.073 min=0.167 fr>.37=0.37 paired=0.075 unpaired=0.647 | 0.658 0.534 0.404 0.280
+rand50_0 L=50 nu=0.274 sd=0.065 min=0.113 fr>.37=0.06 paired=0.077 unpaired=0.524 | 0.726 0.572 0.214 0.402
+rand50_1 L=50 nu=0.294 sd=0.044 min=0.180 fr>.37=0.00 paired=0.129 unpaired=0.541 | 0.706 0.499 0.167 0.354
+rand50_2 L=50 nu=0.322 sd=0.068 min=0.160 fr>.37=0.30 paired=0.092 unpaired=0.667 | 0.678 0.556 0.215 0.425
+rand50_3 L=50 nu=0.228 sd=0.058 min=0.120 fr>.37=0.00 paired=0.031 unpaired=0.443 | 0.772 0.682 0.253 0.477
+rand76_0 L=76 nu=0.272 sd=0.056 min=0.145 fr>.37=0.03 paired=0.072 unpaired=0.495 | 0.728 0.590 0.222 0.493
+rand76_1 L=76 nu=0.358 sd=0.041 min=0.263 fr>.37=0.44 paired=0.139 unpaired=0.658 | 0.642 0.398 0.157 0.289
+rand76_2 L=76 nu=0.277 sd=0.055 min=0.145 fr>.37=0.07 paired=0.102 unpaired=0.545 | 0.723 0.585 0.421 0.484
+tRNA76 L=76 nu=0.313 sd=0.065 min=0.154 fr>.37=0.21 paired=0.100 unpaired=0.577 | 0.687 0.570 0.443 0.482
+rand100_0 L=100 nu=0.268 sd=0.036 min=0.190 fr>.37=0.00 paired=0.126 unpaired=0.521 | 0.732 0.483 0.194 0.358
+rand100_1 L=100 nu=0.305 sd=0.064 min=0.143 fr>.37=0.10 paired=0.101 unpaired=0.612 | 0.695 0.565 0.372 0.477
+rand100_2 L=100 nu=0.267 sd=0.059 min=0.147 fr>.37=0.03 paired=0.083 unpaired=0.483 | 0.733 0.558 0.266 0.452
+
+== single-mutation alternatives per change (genotype-level K=1; pooled K)
+-- E0 uniform: reach, mean_all, mean_pos, median_pos, p90_pos, | mpop5 mean, mpop{KB} mean | lam@0.48(mean_pos)
+rand30_0 L=30 reach=0.025 mean_all=0.112 mean_pos=4.45 med_pos=2 p90=15 max=24 | mpop5=0.41 mpopKB=6.72 | lam=2.14
+rand30_1 L=30 reach=0.013 mean_all=0.035 mean_pos=2.68 med_pos=2 p90=6.3 max=13 | mpop5=0.39 mpopKB=2.09 | lam=1.29
+rand30_2 L=30 reach=0.022 mean_all=0.051 mean_pos=2.3 med_pos=2 p90=4 max=21 | mpop5=0.27 mpopKB=3.04 | lam=1.11
+rand30_3 L=30 reach=0.029 mean_all=0.060 mean_pos=2.04 med_pos=2 p90=3.4 max=6 | mpop5=0.29 mpopKB=3.61 | lam=0.979
+rand50_0 L=50 reach=0.026 mean_all=0.063 mean_pos=2.45 med_pos=2 p90=5 max=8 | mpop5=0.27 mpopKB=3.79 | lam=1.17
+rand50_1 L=50 reach=0.013 mean_all=0.022 mean_pos=1.75 med_pos=1 p90=3 max=13 | mpop5=0.09 mpopKB=1.35 | lam=0.842
+rand50_2 L=50 reach=0.007 mean_all=0.011 mean_pos=1.73 med_pos=1 p90=3 max=6 | mpop5=0.03 mpopKB=0.69 | lam=0.828
+rand50_3 L=50 reach=0.020 mean_all=0.064 mean_pos=3.18 med_pos=2 p90=7 max=7 | mpop5=0.26 mpopKB=3.85 | lam=1.53
+rand76_0 L=76 reach=0.015 mean_all=0.028 mean_pos=1.91 med_pos=2 p90=3 max=4 | mpop5=0.1 mpopKB=1.11 | lam=0.919
+rand76_1 L=76 reach=0.019 mean_all=0.053 mean_pos=2.78 med_pos=3 p90=5 max=8 | mpop5=0.29 mpopKB=2.11 | lam=1.33
+rand76_2 L=76 reach=0.009 mean_all=0.015 mean_pos=1.74 med_pos=1 p90=3 max=5 | mpop5=0.15 mpopKB=0.61 | lam=0.837
+tRNA76 L=76 reach=0.005 mean_all=0.007 mean_pos=1.53 med_pos=1 p90=2.2 max=4 | mpop5=0.08 mpopKB=0.29 | lam=0.733
+rand100_0 L=100 reach=0.018 mean_all=0.055 mean_pos=3.08 med_pos=2 p90=6 max=16 | mpop5=0.14 mpopKB=2.19 | lam=1.48
+rand100_1 L=100 reach=0.025 mean_all=0.076 mean_pos=3.12 med_pos=2 p90=6 max=12 | mpop5=0.3 mpopKB=3.06 | lam=1.5
+rand100_2 L=100 reach=0.011 mean_all=0.021 mean_pos=1.85 med_pos=2 p90=3 max=5 | mpop5=0.08 mpopKB=0.85 | lam=0.887
+-- E0 freqw: reach, mean_all, mean_pos, median_pos, p90_pos, | mpop5 mean, mpop{KB} mean | lam@0.48(mean_pos)
+rand30_0 L=30 reach=0.310 mean_all=1.660 mean_pos=5.35 med_pos=3 p90=15 max=24 | mpop5=6.91 mpopKB=99.6 | lam=2.57
+rand30_1 L=30 reach=0.146 mean_all=0.500 mean_pos=3.43 med_pos=3 p90=5 max=19 | mpop5=2.46 mpopKB=30 | lam=1.64
+rand30_2 L=30 reach=0.230 mean_all=1.198 mean_pos=5.21 med_pos=3 p90=13 max=21 | mpop5=6.67 mpopKB=71.8 | lam=2.5
+rand30_3 L=30 reach=0.276 mean_all=1.588 mean_pos=5.76 med_pos=3 p90=14 max=20 | mpop5=8.56 mpopKB=95.3 | lam=2.76
+rand50_0 L=50 reach=0.157 mean_all=0.433 mean_pos=2.76 med_pos=2 p90=5 max=17 | mpop5=1.86 mpopKB=26 | lam=1.32
+rand50_1 L=50 reach=0.195 mean_all=0.647 mean_pos=3.32 med_pos=3 p90=4 max=16 | mpop5=3.21 mpopKB=38.8 | lam=1.59
+rand50_2 L=50 reach=0.179 mean_all=0.527 mean_pos=2.94 med_pos=2 p90=5 max=23 | mpop5=2.91 mpopKB=31.6 | lam=1.41
+rand50_3 L=50 reach=0.189 mean_all=0.552 mean_pos=2.93 med_pos=2 p90=6 max=13 | mpop5=2.58 mpopKB=33.1 | lam=1.4
+rand76_0 L=76 reach=0.103 mean_all=0.227 mean_pos=2.19 med_pos=2 p90=4 max=6 | mpop5=0.92 mpopKB=9.06 | lam=1.05
+rand76_1 L=76 reach=0.262 mean_all=0.702 mean_pos=2.68 med_pos=3 p90=4 max=8 | mpop5=3.4 mpopKB=28.1 | lam=1.28
+rand76_2 L=76 reach=0.100 mean_all=0.281 mean_pos=2.81 med_pos=3 p90=4 max=25 | mpop5=0.89 mpopKB=11.3 | lam=1.35
+tRNA76 L=76 reach=0.087 mean_all=0.206 mean_pos=2.35 med_pos=2 p90=4 max=10 | mpop5=1 mpopKB=8.23 | lam=1.13
+rand100_0 L=100 reach=0.318 mean_all=0.909 mean_pos=2.86 med_pos=3 p90=5 max=13 | mpop5=4.17 mpopKB=36.4 | lam=1.37
+rand100_1 L=100 reach=0.161 mean_all=0.438 mean_pos=2.72 med_pos=2 p90=5 max=12 | mpop5=1.6 mpopKB=17.5 | lam=1.31
+rand100_2 L=100 reach=0.164 mean_all=0.399 mean_pos=2.43 med_pos=2 p90=4 max=9 | mpop5=1.75 mpopKB=15.9 | lam=1.17
+-- E1 uniform: reach, mean_all, mean_pos, median_pos, p90_pos, | mpop5 mean, mpop{KB} mean | lam@0.48(mean_pos)
+rand30_0 L=30 reach=0.079 mean_all=0.305 mean_pos=3.89 med_pos=2 p90=11 max=28 | mpop5=1.54 mpopKB=18.3 | lam=1.87
+rand30_1 L=30 reach=0.078 mean_all=0.267 mean_pos=3.43 med_pos=2 p90=8 max=28 | mpop5=1.68 mpopKB=16 | lam=1.65
+rand30_2 L=30 reach=0.070 mean_all=0.299 mean_pos=4.25 med_pos=2 p90=11 max=25 | mpop5=1.28 mpopKB=18 | lam=2.04
+rand30_3 L=30 reach=0.085 mean_all=0.434 mean_pos=5.1 med_pos=3 p90=14 max=22 | mpop5=2.81 mpopKB=26.1 | lam=2.45
+rand50_0 L=50 reach=0.022 mean_all=0.079 mean_pos=3.51 med_pos=2.5 p90=7.7 max=16 | mpop5=0.23 mpopKB=4.71 | lam=1.69
+rand50_1 L=50 reach=0.034 mean_all=0.125 mean_pos=3.7 med_pos=2 p90=9 max=27 | mpop5=0.47 mpopKB=7.51 | lam=1.78
+rand50_2 L=50 reach=0.016 mean_all=0.040 mean_pos=2.49 med_pos=2 p90=5 max=27 | mpop5=0.4 mpopKB=2.37 | lam=1.2
+rand50_3 L=50 reach=0.058 mean_all=0.231 mean_pos=3.95 med_pos=2 p90=9 max=25 | mpop5=0.98 mpopKB=13.8 | lam=1.9
+rand76_0 L=76 reach=0.018 mean_all=0.056 mean_pos=3.14 med_pos=2 p90=6 max=24 | mpop5=0.42 mpopKB=2.23 | lam=1.51
+rand76_1 L=76 reach=0.031 mean_all=0.097 mean_pos=3.13 med_pos=2 p90=7.7 max=23 | mpop5=0.94 mpopKB=3.88 | lam=1.5
+rand76_2 L=76 reach=0.011 mean_all=0.026 mean_pos=2.45 med_pos=2 p90=5 max=7 | mpop5=0.18 mpopKB=1.03 | lam=1.18
+tRNA76 L=76 reach=0.006 mean_all=0.016 mean_pos=2.56 med_pos=2 p90=4 max=16 | mpop5=0.05 mpopKB=0.64 | lam=1.23
+rand100_0 L=100 reach=0.025 mean_all=0.052 mean_pos=2.05 med_pos=1 p90=4 max=18 | mpop5=0.43 mpopKB=2.07 | lam=0.984
+rand100_1 L=100 reach=0.013 mean_all=0.046 mean_pos=3.66 med_pos=2 p90=8 max=21 | mpop5=0.09 mpopKB=1.83 | lam=1.76
+rand100_2 L=100 reach=0.034 mean_all=0.088 mean_pos=2.64 med_pos=2 p90=6.7 max=12 | mpop5=0.19 mpopKB=3.54 | lam=1.27
+-- E1 freqw: reach, mean_all, mean_pos, median_pos, p90_pos, | mpop5 mean, mpop{KB} mean | lam@0.48(mean_pos)
+rand30_0 L=30 reach=0.113 mean_all=0.558 mean_pos=4.95 med_pos=2 p90=15 max=28 | mpop5=2.47 mpopKB=33.5 | lam=2.37
+rand30_1 L=30 reach=0.192 mean_all=0.814 mean_pos=4.23 med_pos=2 p90=10 max=24 | mpop5=3.73 mpopKB=48.9 | lam=2.03
+rand30_2 L=30 reach=0.115 mean_all=0.491 mean_pos=4.26 med_pos=2 p90=12 max=27 | mpop5=1.93 mpopKB=29.4 | lam=2.05
+rand30_3 L=30 reach=0.081 mean_all=0.350 mean_pos=4.33 med_pos=3 p90=12 max=21 | mpop5=2.11 mpopKB=21 | lam=2.08
+rand50_0 L=50 reach=0.087 mean_all=0.414 mean_pos=4.75 med_pos=3 p90=11 max=23 | mpop5=2.08 mpopKB=24.8 | lam=2.28
+rand50_1 L=50 reach=0.099 mean_all=0.356 mean_pos=3.61 med_pos=2 p90=9 max=33 | mpop5=1.41 mpopKB=21.4 | lam=1.73
+rand50_2 L=50 reach=0.045 mean_all=0.161 mean_pos=3.61 med_pos=2 p90=9 max=23 | mpop5=1.12 mpopKB=9.67 | lam=1.73
+rand50_3 L=50 reach=0.214 mean_all=1.355 mean_pos=6.32 med_pos=5 p90=13 max=21 | mpop5=5.53 mpopKB=81.3 | lam=3.03
+rand76_0 L=76 reach=0.022 mean_all=0.064 mean_pos=2.92 med_pos=2 p90=5 max=24 | mpop5=0.29 mpopKB=2.54 | lam=1.4
+rand76_1 L=76 reach=0.030 mean_all=0.087 mean_pos=2.93 med_pos=2 p90=8 max=20 | mpop5=0.88 mpopKB=3.49 | lam=1.41
+rand76_2 L=76 reach=0.014 mean_all=0.032 mean_pos=2.33 med_pos=2 p90=3 max=20 | mpop5=0.05 mpopKB=1.28 | lam=1.12
+tRNA76 L=76 reach=0.010 mean_all=0.030 mean_pos=2.9 med_pos=2 p90=7 max=8 | mpop5=0.34 mpopKB=1.19 | lam=1.39
+rand100_0 L=100 reach=0.048 mean_all=0.158 mean_pos=3.3 med_pos=2 p90=8 max=16 | mpop5=0.44 mpopKB=6.31 | lam=1.59
+rand100_1 L=100 reach=0.024 mean_all=0.082 mean_pos=3.44 med_pos=2 p90=7.6 max=15 | mpop5=0.34 mpopKB=3.27 | lam=1.65
+rand100_2 L=100 reach=0.029 mean_all=0.084 mean_pos=2.94 med_pos=2 p90=6.7 max=11 | mpop5=0.14 mpopKB=3.35 | lam=1.41
+-- E2 uniform: reach, mean_all, mean_pos, median_pos, p90_pos, | mpop5 mean, mpop{KB} mean | lam@0.48(mean_pos)
+rand30_0 L=30 reach=1.000 mean_all=38.000 mean_pos=38 med_pos=39 p90=55.1 max=65 | mpop5=195 mpopKB=2.28e+03 | lam=18.2
+rand30_1 L=30 reach=1.000 mean_all=45.217 mean_pos=45.2 med_pos=45 p90=58 max=68 | mpop5=202 mpopKB=2.71e+03 | lam=21.7
+rand30_2 L=30 reach=1.000 mean_all=32.717 mean_pos=32.7 med_pos=32 p90=47.1 max=58 | mpop5=104 mpopKB=1.96e+03 | lam=15.7
+rand30_3 L=30 reach=1.000 mean_all=36.633 mean_pos=36.6 med_pos=37.5 p90=52.1 max=60 | mpop5=173 mpopKB=2.2e+03 | lam=17.6
+rand50_0 L=50 reach=0.929 mean_all=23.561 mean_pos=25.4 med_pos=16 p90=67 max=88 | mpop5=89.3 mpopKB=1.41e+03 | lam=12.2
+rand50_1 L=50 reach=0.912 mean_all=16.667 mean_pos=18.3 med_pos=11 p90=49 max=80 | mpop5=132 mpopKB=1e+03 | lam=8.78
+rand50_2 L=50 reach=0.890 mean_all=24.900 mean_pos=28 med_pos=24 p90=56 max=86 | mpop5=185 mpopKB=1.49e+03 | lam=13.4
+rand50_3 L=50 reach=0.926 mean_all=21.785 mean_pos=23.5 med_pos=20 p90=52 max=66 | mpop5=84.3 mpopKB=1.31e+03 | lam=11.3
+rand76_0 L=76 reach=0.745 mean_all=12.709 mean_pos=17.1 med_pos=8 p90=51 max=81 | mpop5=89.8 mpopKB=508 | lam=8.19
+rand76_1 L=76 reach=0.767 mean_all=11.116 mean_pos=14.5 med_pos=9 p90=43 max=86 | mpop5=101 mpopKB=445 | lam=6.96
+rand76_2 L=76 reach=0.915 mean_all=27.527 mean_pos=30.1 med_pos=26 p90=64 max=104 | mpop5=152 mpopKB=1.1e+03 | lam=14.4
+tRNA76 L=76 reach=0.904 mean_all=25.789 mean_pos=28.5 med_pos=20 p90=68 max=102 | mpop5=80.2 mpopKB=1.03e+03 | lam=13.7
+rand100_0 L=100 reach=0.672 mean_all=12.707 mean_pos=18.9 med_pos=9 p90=58 max=114 | mpop5=56.2 mpopKB=508 | lam=9.08
+rand100_1 L=100 reach=0.820 mean_all=29.924 mean_pos=36.5 med_pos=24 p90=86 max=153 | mpop5=127 mpopKB=1.2e+03 | lam=17.5
+rand100_2 L=100 reach=0.760 mean_all=20.677 mean_pos=27.2 med_pos=19 p90=58 max=136 | mpop5=72.9 mpopKB=827 | lam=13.1
+-- E2 freqw: reach, mean_all, mean_pos, median_pos, p90_pos, | mpop5 mean, mpop{KB} mean | lam@0.48(mean_pos)
+rand30_0 L=30 reach=1.000 mean_all=38.000 mean_pos=38 med_pos=39 p90=55.1 max=65 | mpop5=195 mpopKB=2.28e+03 | lam=18.2
+rand30_1 L=30 reach=1.000 mean_all=45.217 mean_pos=45.2 med_pos=45 p90=58 max=68 | mpop5=202 mpopKB=2.71e+03 | lam=21.7
+rand30_2 L=30 reach=1.000 mean_all=32.717 mean_pos=32.7 med_pos=32 p90=47.1 max=58 | mpop5=104 mpopKB=1.96e+03 | lam=15.7
+rand30_3 L=30 reach=1.000 mean_all=36.633 mean_pos=36.6 med_pos=37.5 p90=52.1 max=60 | mpop5=173 mpopKB=2.2e+03 | lam=17.6
+rand50_0 L=50 reach=0.951 mean_all=24.301 mean_pos=25.6 med_pos=16 p90=67 max=88 | mpop5=91.7 mpopKB=1.46e+03 | lam=12.3
+rand50_1 L=50 reach=0.915 mean_all=16.695 mean_pos=18.2 med_pos=11 p90=49 max=80 | mpop5=132 mpopKB=1e+03 | lam=8.75
+rand50_2 L=50 reach=0.910 mean_all=25.691 mean_pos=28.2 med_pos=24 p90=56 max=86 | mpop5=191 mpopKB=1.54e+03 | lam=13.6
+rand50_3 L=50 reach=0.941 mean_all=22.666 mean_pos=24.1 med_pos=21 p90=52 max=66 | mpop5=87.7 mpopKB=1.36e+03 | lam=11.6
+rand76_0 L=76 reach=0.711 mean_all=12.169 mean_pos=17.1 med_pos=8 p90=56 max=81 | mpop5=86.7 mpopKB=487 | lam=8.22
+rand76_1 L=76 reach=0.788 mean_all=10.020 mean_pos=12.7 med_pos=6 p90=33 max=86 | mpop5=80.7 mpopKB=401 | lam=6.11
+rand76_2 L=76 reach=0.898 mean_all=26.168 mean_pos=29.1 med_pos=25 p90=64 max=104 | mpop5=166 mpopKB=1.05e+03 | lam=14
+tRNA76 L=76 reach=0.941 mean_all=27.607 mean_pos=29.3 med_pos=22 p90=68 max=102 | mpop5=87.8 mpopKB=1.1e+03 | lam=14.1
+rand100_0 L=100 reach=0.689 mean_all=14.025 mean_pos=20.4 med_pos=10 p90=58 max=114 | mpop5=64.8 mpopKB=561 | lam=9.78
+rand100_1 L=100 reach=0.872 mean_all=31.020 mean_pos=35.6 med_pos=23 p90=86 max=153 | mpop5=143 mpopKB=1.24e+03 | lam=17.1
+rand100_2 L=100 reach=0.768 mean_all=19.711 mean_pos=25.7 med_pos=18 p90=57 max=136 | mpop5=68.8 mpopKB=788 | lam=12.3
+
+== doubles (requiring both): P(m2>=1|m1=0), m2 mean|pos, m2 median|pos
+rand30_0 L=30 E0 frac_m1_zero=0.978 P(m2>0|m1=0)=0.0511 m2_mean_pos=6.8 med=3.5 ndbl_per_geno=3915
+rand30_0 L=30 E1 frac_m1_zero=0.918 P(m2>0|m1=0)=0.23 m2_mean_pos=6.31 med=4 ndbl_per_geno=3915
+rand30_0 L=30 E2 frac_m1_zero=0.000 P(m2>0|m1=0)=- m2_mean_pos=- med=- ndbl_per_geno=3915
+rand30_1 L=30 E0 frac_m1_zero=0.977 P(m2>0|m1=0)=0.0768 m2_mean_pos=4.31 med=3 ndbl_per_geno=3915
+rand30_1 L=30 E1 frac_m1_zero=0.918 P(m2>0|m1=0)=0.299 m2_mean_pos=8.88 med=5 ndbl_per_geno=3915
+rand30_1 L=30 E2 frac_m1_zero=0.000 P(m2>0|m1=0)=- m2_mean_pos=- med=- ndbl_per_geno=3915
+rand30_2 L=30 E0 frac_m1_zero=0.975 P(m2>0|m1=0)=0.0752 m2_mean_pos=6.27 med=4 ndbl_per_geno=3915
+rand30_2 L=30 E1 frac_m1_zero=0.928 P(m2>0|m1=0)=0.19 m2_mean_pos=10.8 med=4.5 ndbl_per_geno=3915
+rand30_2 L=30 E2 frac_m1_zero=0.000 P(m2>0|m1=0)=- m2_mean_pos=- med=- ndbl_per_geno=3915
+rand30_3 L=30 E0 frac_m1_zero=0.972 P(m2>0|m1=0)=0.0617 m2_mean_pos=4.72 med=3 ndbl_per_geno=3915
+rand30_3 L=30 E1 frac_m1_zero=0.908 P(m2>0|m1=0)=0.217 m2_mean_pos=9.27 med=3 ndbl_per_geno=3915
+rand30_3 L=30 E2 frac_m1_zero=0.000 P(m2>0|m1=0)=- m2_mean_pos=- med=- ndbl_per_geno=3915
+rand50_0 L=50 E0 frac_m1_zero=0.973 P(m2>0|m1=0)=0.0377 m2_mean_pos=4.64 med=3.5 ndbl_per_geno=11025
+rand50_0 L=50 E1 frac_m1_zero=0.970 P(m2>0|m1=0)=0.0636 m2_mean_pos=13.7 med=9 ndbl_per_geno=11025
+rand50_0 L=50 E2 frac_m1_zero=0.045 P(m2>0|m1=0)=0.926 m2_mean_pos=105 med=16 ndbl_per_geno=11025
+rand50_1 L=50 E0 frac_m1_zero=0.985 P(m2>0|m1=0)=0.0541 m2_mean_pos=5.25 med=3 ndbl_per_geno=11025
+rand50_1 L=50 E1 frac_m1_zero=0.975 P(m2>0|m1=0)=0.106 m2_mean_pos=10.1 med=7.5 ndbl_per_geno=11025
+rand50_1 L=50 E2 frac_m1_zero=0.205 P(m2>0|m1=0)=0.967 m2_mean_pos=103 med=134 ndbl_per_geno=11025
+rand50_2 L=50 E0 frac_m1_zero=0.992 P(m2>0|m1=0)=0.0202 m2_mean_pos=3.75 med=4 ndbl_per_geno=11025
+rand50_2 L=50 E1 frac_m1_zero=0.970 P(m2>0|m1=0)=0.0756 m2_mean_pos=8.86 med=3.5 ndbl_per_geno=11025
+rand50_2 L=50 E2 frac_m1_zero=0.048 P(m2>0|m1=0)=1 m2_mean_pos=20.4 med=12 ndbl_per_geno=11025
+rand50_3 L=50 E0 frac_m1_zero=0.982 P(m2>0|m1=0)=0.034 m2_mean_pos=6.75 med=4 ndbl_per_geno=11025
+rand50_3 L=50 E1 frac_m1_zero=0.945 P(m2>0|m1=0)=0.122 m2_mean_pos=6.46 med=4 ndbl_per_geno=11025
+rand50_3 L=50 E2 frac_m1_zero=0.062 P(m2>0|m1=0)=0.946 m2_mean_pos=27.4 med=21 ndbl_per_geno=11025
+rand76_0 L=76 E0 frac_m1_zero=0.988 P(m2>0|m1=0)=0.0203 m2_mean_pos=4.38 med=2.5 ndbl_per_geno=25650
+rand76_0 L=76 E1 frac_m1_zero=0.980 P(m2>0|m1=0)=0.0587 m2_mean_pos=6.65 med=3 ndbl_per_geno=25650
+rand76_0 L=76 E2 frac_m1_zero=0.177 P(m2>0|m1=0)=0.873 m2_mean_pos=165 med=149 ndbl_per_geno=25650
+rand76_1 L=76 E0 frac_m1_zero=0.973 P(m2>0|m1=0)=0.0643 m2_mean_pos=6.68 med=3 ndbl_per_geno=25650
+rand76_1 L=76 E1 frac_m1_zero=0.965 P(m2>0|m1=0)=0.106 m2_mean_pos=9.37 med=5 ndbl_per_geno=25650
+rand76_1 L=76 E2 frac_m1_zero=0.198 P(m2>0|m1=0)=0.924 m2_mean_pos=78.4 med=48 ndbl_per_geno=25650
+rand76_2 L=76 E0 frac_m1_zero=0.985 P(m2>0|m1=0)=0.0178 m2_mean_pos=3 med=2 ndbl_per_geno=25650
+rand76_2 L=76 E1 frac_m1_zero=0.993 P(m2>0|m1=0)=0.0655 m2_mean_pos=8.73 med=3 ndbl_per_geno=25650
+rand76_2 L=76 E2 frac_m1_zero=0.035 P(m2>0|m1=0)=0.714 m2_mean_pos=83.1 med=36 ndbl_per_geno=25650
+tRNA76 L=76 E0 frac_m1_zero=0.990 P(m2>0|m1=0)=0.0227 m2_mean_pos=18.9 med=9 ndbl_per_geno=25650
+tRNA76 L=76 E1 frac_m1_zero=0.993 P(m2>0|m1=0)=0.0353 m2_mean_pos=5.86 med=3 ndbl_per_geno=25650
+tRNA76 L=76 E2 frac_m1_zero=0.147 P(m2>0|m1=0)=0.847 m2_mean_pos=398 med=646 ndbl_per_geno=25650
+rand100_0 L=100 E0 frac_m1_zero=0.993 P(m2>0|m1=0)=0.0638 m2_mean_pos=3.37 med=2 ndbl_per_geno=44550
+rand100_0 L=100 E1 frac_m1_zero=0.967 P(m2>0|m1=0)=0.0862 m2_mean_pos=9.92 med=4 ndbl_per_geno=44550
+rand100_0 L=100 E2 frac_m1_zero=0.267 P(m2>0|m1=0)=1 m2_mean_pos=214 med=187 ndbl_per_geno=44550
+rand100_1 L=100 E0 frac_m1_zero=0.970 P(m2>0|m1=0)=0.0241 m2_mean_pos=8.29 med=5 ndbl_per_geno=44550
+rand100_1 L=100 E1 frac_m1_zero=0.987 P(m2>0|m1=0)=0.0304 m2_mean_pos=12.2 med=6 ndbl_per_geno=44550
+rand100_1 L=100 E2 frac_m1_zero=0.137 P(m2>0|m1=0)=0.951 m2_mean_pos=117 med=59 ndbl_per_geno=44550
+rand100_2 L=100 E0 frac_m1_zero=0.990 P(m2>0|m1=0)=0.0236 m2_mean_pos=3.43 med=3 ndbl_per_geno=44550
+rand100_2 L=100 E1 frac_m1_zero=0.997 P(m2>0|m1=0)=0.0602 m2_mean_pos=4.83 med=3 ndbl_per_geno=44550
+rand100_2 L=100 E2 frac_m1_zero=0.320 P(m2>0|m1=0)=0.885 m2_mean_pos=245 med=169 ndbl_per_geno=44550
+
+== graded fitness (-d_bp to S*)
+rand30_0 L=30 near d0_1-4 n_star=3 d0=2.3 f_ben=0.054 f_eq=0.307 f_worse=0.638 P_any_improver=0.528 local_opt=0.472 m_ben_mean=4.90
+rand30_0 L=30 near d0_5-10 n_star=15 d0=7.7 f_ben=0.127 f_eq=0.324 f_worse=0.549 P_any_improver=0.958 local_opt=0.042 m_ben_mean=11.41
+rand30_0 L=30 near d0_11+ n_star=42 d0=15.5 f_ben=0.464 f_eq=0.395 f_worse=0.140 P_any_improver=1.000 local_opt=0.000 m_ben_mean=41.79
+rand30_0 L=30 near all n_star=60 d0=12.9 f_ben=0.359 f_eq=0.373 f_worse=0.268 P_any_improver=0.966 local_opt=0.034 m_ben_mean=32.35
+rand30_0 L=30 far d0_5-10 n_star=4 d0=8.5 f_ben=0.384 f_eq=0.382 f_worse=0.233 P_any_improver=1.000 local_opt=0.000 m_ben_mean=34.58
+rand30_0 L=30 far d0_11+ n_star=56 d0=14.3 f_ben=0.454 f_eq=0.398 f_worse=0.149 P_any_improver=1.000 local_opt=0.000 m_ben_mean=40.83
+rand30_0 L=30 far all n_star=60 d0=13.9 f_ben=0.449 f_eq=0.397 f_worse=0.154 P_any_improver=1.000 local_opt=0.000 m_ben_mean=40.41
+rand30_1 L=30 near d0_5-10 n_star=11 d0=8.5 f_ben=0.110 f_eq=0.320 f_worse=0.570 P_any_improver=0.948 local_opt=0.052 m_ben_mean=9.91
+rand30_1 L=30 near d0_11+ n_star=49 d0=13.9 f_ben=0.506 f_eq=0.398 f_worse=0.096 P_any_improver=1.000 local_opt=0.000 m_ben_mean=45.54
+rand30_1 L=30 near all n_star=60 d0=12.9 f_ben=0.433 f_eq=0.384 f_worse=0.183 P_any_improver=0.990 local_opt=0.010 m_ben_mean=39.00
+rand30_1 L=30 far d0_5-10 n_star=2 d0=8.5 f_ben=0.316 f_eq=0.378 f_worse=0.306 P_any_improver=0.983 local_opt=0.017 m_ben_mean=28.46
+rand30_1 L=30 far d0_11+ n_star=58 d0=14.0 f_ben=0.503 f_eq=0.403 f_worse=0.094 P_any_improver=1.000 local_opt=0.000 m_ben_mean=45.31
+rand30_1 L=30 far all n_star=60 d0=13.8 f_ben=0.497 f_eq=0.402 f_worse=0.101 P_any_improver=0.999 local_opt=0.001 m_ben_mean=44.75
+rand30_2 L=30 near d0_1-4 n_star=3 d0=2.3 f_ben=0.023 f_eq=0.452 f_worse=0.524 P_any_improver=0.722 local_opt=0.278 m_ben_mean=2.09
+rand30_2 L=30 near d0_5-10 n_star=15 d0=7.6 f_ben=0.127 f_eq=0.450 f_worse=0.422 P_any_improver=0.991 local_opt=0.009 m_ben_mean=11.46
+rand30_2 L=30 near d0_11+ n_star=42 d0=15.4 f_ben=0.416 f_eq=0.514 f_worse=0.070 P_any_improver=1.000 local_opt=0.000 m_ben_mean=37.46
+rand30_2 L=30 near all n_star=60 d0=12.8 f_ben=0.324 f_eq=0.495 f_worse=0.181 P_any_improver=0.984 local_opt=0.016 m_ben_mean=29.19
+rand30_2 L=30 far d0_1-4 n_star=2 d0=4.0 f_ben=0.124 f_eq=0.446 f_worse=0.430 P_any_improver=0.983 local_opt=0.017 m_ben_mean=11.13
+rand30_2 L=30 far d0_5-10 n_star=7 d0=8.4 f_ben=0.379 f_eq=0.521 f_worse=0.101 P_any_improver=1.000 local_opt=0.000 m_ben_mean=34.10
+rand30_2 L=30 far d0_11+ n_star=51 d0=14.2 f_ben=0.414 f_eq=0.518 f_worse=0.067 P_any_improver=1.000 local_opt=0.000 m_ben_mean=37.27
+rand30_2 L=30 far all n_star=60 d0=13.2 f_ben=0.400 f_eq=0.516 f_worse=0.083 P_any_improver=0.999 local_opt=0.001 m_ben_mean=36.03
+rand30_3 L=30 near d0_1-4 n_star=7 d0=1.7 f_ben=0.014 f_eq=0.345 f_worse=0.641 P_any_improver=0.490 local_opt=0.510 m_ben_mean=1.27
+rand30_3 L=30 near d0_5-10 n_star=11 d0=7.5 f_ben=0.136 f_eq=0.359 f_worse=0.505 P_any_improver=0.961 local_opt=0.039 m_ben_mean=12.23
+rand30_3 L=30 near d0_11+ n_star=42 d0=15.0 f_ben=0.416 f_eq=0.433 f_worse=0.150 P_any_improver=0.999 local_opt=0.001 m_ben_mean=37.48
+rand30_3 L=30 near all n_star=60 d0=12.1 f_ben=0.318 f_eq=0.409 f_worse=0.273 P_any_improver=0.933 local_opt=0.067 m_ben_mean=28.62
+rand30_3 L=30 far d0_5-10 n_star=6 d0=8.7 f_ben=0.402 f_eq=0.443 f_worse=0.155 P_any_improver=1.000 local_opt=0.000 m_ben_mean=36.20
+rand30_3 L=30 far d0_11+ n_star=54 d0=14.2 f_ben=0.414 f_eq=0.438 f_worse=0.148 P_any_improver=1.000 local_opt=0.000 m_ben_mean=37.28
+rand30_3 L=30 far all n_star=60 d0=13.7 f_ben=0.413 f_eq=0.439 f_worse=0.148 P_any_improver=1.000 local_opt=0.000 m_ben_mean=37.17
+rand50_0 L=50 near d0_1-4 n_star=4 d0=1.5 f_ben=0.006 f_eq=0.275 f_worse=0.718 P_any_improver=0.396 local_opt=0.604 m_ben_mean=0.94
+rand50_0 L=50 near d0_5-10 n_star=6 d0=7.0 f_ben=0.034 f_eq=0.291 f_worse=0.675 P_any_improver=0.828 local_opt=0.172 m_ben_mean=5.14
+rand50_0 L=50 near d0_11+ n_star=50 d0=22.1 f_ben=0.306 f_eq=0.368 f_worse=0.326 P_any_improver=0.997 local_opt=0.003 m_ben_mean=45.90
+rand50_0 L=50 near all n_star=60 d0=19.2 f_ben=0.259 f_eq=0.354 f_worse=0.387 P_any_improver=0.940 local_opt=0.060 m_ben_mean=38.82
+rand50_0 L=50 far d0_11+ n_star=60 d0=25.5 f_ben=0.425 f_eq=0.391 f_worse=0.184 P_any_improver=1.000 local_opt=0.000 m_ben_mean=63.75
+rand50_0 L=50 far all n_star=60 d0=25.5 f_ben=0.425 f_eq=0.391 f_worse=0.184 P_any_improver=1.000 local_opt=0.000 m_ben_mean=63.75
+rand50_1 L=50 near d0_1-4 n_star=3 d0=1.7 f_ben=0.007 f_eq=0.303 f_worse=0.690 P_any_improver=0.417 local_opt=0.583 m_ben_mean=1.11
+rand50_1 L=50 near d0_5-10 n_star=8 d0=6.8 f_ben=0.074 f_eq=0.324 f_worse=0.603 P_any_improver=0.969 local_opt=0.031 m_ben_mean=11.03
+rand50_1 L=50 near d0_11+ n_star=49 d0=22.7 f_ben=0.313 f_eq=0.377 f_worse=0.310 P_any_improver=0.999 local_opt=0.001 m_ben_mean=46.88
+rand50_1 L=50 near all n_star=60 d0=19.6 f_ben=0.265 f_eq=0.367 f_worse=0.368 P_any_improver=0.966 local_opt=0.034 m_ben_mean=39.81
+rand50_1 L=50 far d0_11+ n_star=60 d0=26.6 f_ben=0.409 f_eq=0.409 f_worse=0.182 P_any_improver=1.000 local_opt=0.000 m_ben_mean=61.41
+rand50_1 L=50 far all n_star=60 d0=26.6 f_ben=0.409 f_eq=0.409 f_worse=0.182 P_any_improver=1.000 local_opt=0.000 m_ben_mean=61.41
+rand50_2 L=50 near d0_5-10 n_star=4 d0=8.0 f_ben=0.081 f_eq=0.347 f_worse=0.572 P_any_improver=0.921 local_opt=0.079 m_ben_mean=12.18
+rand50_2 L=50 near d0_11+ n_star=56 d0=22.8 f_ben=0.328 f_eq=0.409 f_worse=0.264 P_any_improver=0.995 local_opt=0.005 m_ben_mean=49.13
+rand50_2 L=50 near all n_star=60 d0=21.8 f_ben=0.311 f_eq=0.405 f_worse=0.284 P_any_improver=0.990 local_opt=0.010 m_ben_mean=46.66
+rand50_2 L=50 far d0_11+ n_star=60 d0=27.4 f_ben=0.443 f_eq=0.438 f_worse=0.119 P_any_improver=1.000 local_opt=0.000 m_ben_mean=66.48
+rand50_2 L=50 far all n_star=60 d0=27.4 f_ben=0.443 f_eq=0.438 f_worse=0.119 P_any_improver=1.000 local_opt=0.000 m_ben_mean=66.48
+rand50_3 L=50 near d0_5-10 n_star=8 d0=7.2 f_ben=0.053 f_eq=0.252 f_worse=0.695 P_any_improver=0.810 local_opt=0.190 m_ben_mean=7.98
+rand50_3 L=50 near d0_11+ n_star=52 d0=21.6 f_ben=0.323 f_eq=0.360 f_worse=0.317 P_any_improver=0.999 local_opt=0.001 m_ben_mean=48.48
+rand50_3 L=50 near all n_star=60 d0=19.7 f_ben=0.287 f_eq=0.345 f_worse=0.367 P_any_improver=0.974 local_opt=0.026 m_ben_mean=43.08
+rand50_3 L=50 far d0_11+ n_star=60 d0=24.4 f_ben=0.380 f_eq=0.397 f_worse=0.223 P_any_improver=1.000 local_opt=0.000 m_ben_mean=57.06
+rand50_3 L=50 far all n_star=60 d0=24.4 f_ben=0.380 f_eq=0.397 f_worse=0.223 P_any_improver=1.000 local_opt=0.000 m_ben_mean=57.06
+rand76_0 L=76 near d0_1-4 n_star=2 d0=2.0 f_ben=0.011 f_eq=0.281 f_worse=0.708 P_any_improver=0.787 local_opt=0.212 m_ben_mean=2.55
+rand76_0 L=76 near d0_5-10 n_star=1 d0=7.0 f_ben=0.017 f_eq=0.295 f_worse=0.688 P_any_improver=0.800 local_opt=0.200 m_ben_mean=3.83
+rand76_0 L=76 near d0_11+ n_star=37 d0=30.6 f_ben=0.191 f_eq=0.372 f_worse=0.437 P_any_improver=0.989 local_opt=0.011 m_ben_mean=43.64
+rand76_0 L=76 near all n_star=40 d0=28.6 f_ben=0.178 f_eq=0.365 f_worse=0.456 P_any_improver=0.974 local_opt=0.026 m_ben_mean=40.59
+rand76_0 L=76 far d0_11+ n_star=40 d0=38.4 f_ben=0.263 f_eq=0.408 f_worse=0.329 P_any_improver=1.000 local_opt=0.000 m_ben_mean=59.97
+rand76_0 L=76 far all n_star=40 d0=38.4 f_ben=0.263 f_eq=0.408 f_worse=0.329 P_any_improver=1.000 local_opt=0.000 m_ben_mean=59.97
+rand76_1 L=76 near d0_1-4 n_star=3 d0=4.0 f_ben=0.026 f_eq=0.366 f_worse=0.609 P_any_improver=0.883 local_opt=0.117 m_ben_mean=5.82
+rand76_1 L=76 near d0_5-10 n_star=6 d0=7.0 f_ben=0.033 f_eq=0.363 f_worse=0.603 P_any_improver=0.942 local_opt=0.058 m_ben_mean=7.56
+rand76_1 L=76 near d0_11+ n_star=31 d0=27.3 f_ben=0.179 f_eq=0.404 f_worse=0.417 P_any_improver=0.996 local_opt=0.004 m_ben_mean=40.79
+rand76_1 L=76 near all n_star=40 d0=22.5 f_ben=0.146 f_eq=0.395 f_worse=0.460 P_any_improver=0.979 local_opt=0.021 m_ben_mean=33.18
+rand76_1 L=76 far d0_11+ n_star=40 d0=41.4 f_ben=0.330 f_eq=0.442 f_worse=0.228 P_any_improver=1.000 local_opt=0.000 m_ben_mean=75.33
+rand76_1 L=76 far all n_star=40 d0=41.4 f_ben=0.330 f_eq=0.442 f_worse=0.228 P_any_improver=1.000 local_opt=0.000 m_ben_mean=75.33
+rand76_2 L=76 near d0_1-4 n_star=1 d0=1.0 f_ben=0.000 f_eq=0.270 f_worse=0.730 P_any_improver=0.100 local_opt=0.900 m_ben_mean=0.10
+rand76_2 L=76 near d0_5-10 n_star=5 d0=8.0 f_ben=0.029 f_eq=0.284 f_worse=0.687 P_any_improver=0.880 local_opt=0.120 m_ben_mean=6.65
+rand76_2 L=76 near d0_11+ n_star=34 d0=26.7 f_ben=0.161 f_eq=0.318 f_worse=0.522 P_any_improver=0.995 local_opt=0.005 m_ben_mean=36.68
+rand76_2 L=76 near all n_star=40 d0=23.7 f_ben=0.140 f_eq=0.312 f_worse=0.547 P_any_improver=0.958 local_opt=0.042 m_ben_mean=32.02
+rand76_2 L=76 far d0_11+ n_star=40 d0=41.1 f_ben=0.382 f_eq=0.394 f_worse=0.225 P_any_improver=1.000 local_opt=0.000 m_ben_mean=87.05
+rand76_2 L=76 far all n_star=40 d0=41.1 f_ben=0.382 f_eq=0.394 f_worse=0.225 P_any_improver=1.000 local_opt=0.000 m_ben_mean=87.05
+tRNA76 L=76 near d0_5-10 n_star=4 d0=8.8 f_ben=0.022 f_eq=0.329 f_worse=0.649 P_any_improver=0.856 local_opt=0.144 m_ben_mean=4.97
+tRNA76 L=76 near d0_11+ n_star=36 d0=25.7 f_ben=0.136 f_eq=0.362 f_worse=0.502 P_any_improver=0.988 local_opt=0.013 m_ben_mean=31.04
+tRNA76 L=76 near all n_star=40 d0=24.0 f_ben=0.125 f_eq=0.358 f_worse=0.517 P_any_improver=0.974 local_opt=0.026 m_ben_mean=28.43
+tRNA76 L=76 far d0_11+ n_star=40 d0=40.0 f_ben=0.308 f_eq=0.409 f_worse=0.283 P_any_improver=1.000 local_opt=0.000 m_ben_mean=70.19
+tRNA76 L=76 far all n_star=40 d0=40.0 f_ben=0.308 f_eq=0.409 f_worse=0.283 P_any_improver=1.000 local_opt=0.000 m_ben_mean=70.19
+rand100_0 L=100 near d0_1-4 n_star=4 d0=2.2 f_ben=0.008 f_eq=0.268 f_worse=0.724 P_any_improver=0.625 local_opt=0.375 m_ben_mean=2.36
+rand100_0 L=100 near d0_5-10 n_star=3 d0=6.7 f_ben=0.020 f_eq=0.270 f_worse=0.710 P_any_improver=0.883 local_opt=0.117 m_ben_mean=6.08
+rand100_0 L=100 near d0_11+ n_star=33 d0=36.2 f_ben=0.220 f_eq=0.320 f_worse=0.460 P_any_improver=0.988 local_opt=0.012 m_ben_mean=66.00
+rand100_0 L=100 near all n_star=40 d0=30.6 f_ben=0.184 f_eq=0.311 f_worse=0.505 P_any_improver=0.944 local_opt=0.056 m_ben_mean=55.15
+rand100_0 L=100 far d0_11+ n_star=40 d0=58.2 f_ben=0.444 f_eq=0.366 f_worse=0.190 P_any_improver=1.000 local_opt=0.000 m_ben_mean=133.30
+rand100_0 L=100 far all n_star=40 d0=58.2 f_ben=0.444 f_eq=0.366 f_worse=0.190 P_any_improver=1.000 local_opt=0.000 m_ben_mean=133.30
+rand100_1 L=100 near d0_1-4 n_star=2 d0=2.5 f_ben=0.010 f_eq=0.304 f_worse=0.686 P_any_improver=0.775 local_opt=0.225 m_ben_mean=3.05
+rand100_1 L=100 near d0_5-10 n_star=3 d0=7.0 f_ben=0.015 f_eq=0.312 f_worse=0.673 P_any_improver=0.733 local_opt=0.267 m_ben_mean=4.47
+rand100_1 L=100 near d0_11+ n_star=35 d0=35.5 f_ben=0.199 f_eq=0.355 f_worse=0.446 P_any_improver=0.994 local_opt=0.006 m_ben_mean=59.74
+rand100_1 L=100 near all n_star=40 d0=31.7 f_ben=0.176 f_eq=0.349 f_worse=0.475 P_any_improver=0.964 local_opt=0.036 m_ben_mean=52.76
+rand100_1 L=100 far d0_11+ n_star=40 d0=56.2 f_ben=0.390 f_eq=0.404 f_worse=0.206 P_any_improver=1.000 local_opt=0.000 m_ben_mean=116.95
+rand100_1 L=100 far all n_star=40 d0=56.2 f_ben=0.390 f_eq=0.404 f_worse=0.206 P_any_improver=1.000 local_opt=0.000 m_ben_mean=116.95
+rand100_2 L=100 near d0_1-4 n_star=4 d0=3.8 f_ben=0.006 f_eq=0.266 f_worse=0.727 P_any_improver=0.494 local_opt=0.506 m_ben_mean=1.95
+rand100_2 L=100 near d0_5-10 n_star=8 d0=7.2 f_ben=0.020 f_eq=0.270 f_worse=0.710 P_any_improver=0.794 local_opt=0.206 m_ben_mean=6.05
+rand100_2 L=100 near d0_11+ n_star=28 d0=28.0 f_ben=0.116 f_eq=0.297 f_worse=0.588 P_any_improver=0.973 local_opt=0.027 m_ben_mean=34.72
+rand100_2 L=100 near all n_star=40 d0=21.4 f_ben=0.086 f_eq=0.288 f_worse=0.626 P_any_improver=0.889 local_opt=0.111 m_ben_mean=25.71
+rand100_2 L=100 far d0_11+ n_star=40 d0=52.9 f_ben=0.318 f_eq=0.353 f_worse=0.329 P_any_improver=1.000 local_opt=0.000 m_ben_mean=95.26
+rand100_2 L=100 far all n_star=40 d0=52.9 f_ben=0.318 f_eq=0.353 f_worse=0.329 P_any_improver=1.000 local_opt=0.000 m_ben_mean=95.26
+
+== adaptive walks
+rand30_0 L=30 near n=30 success=0.83 trapped=0.00 budget=0.17 d_start=13.3 d_end=0.3 steps=47.6
+rand30_0 L=30 far n=30 success=0.93 trapped=0.00 budget=0.07 d_start=14.1 d_end=0.2 steps=41.0
+rand30_1 L=30 near n=30 success=0.73 trapped=0.00 budget=0.27 d_start=12.7 d_end=0.5 steps=49.4
+rand30_1 L=30 far n=30 success=0.73 trapped=0.00 budget=0.27 d_start=13.5 d_end=0.6 steps=53.4
+rand30_2 L=30 near n=30 success=0.77 trapped=0.00 budget=0.23 d_start=13.7 d_end=0.3 steps=42.6
+rand30_2 L=30 far n=30 success=0.83 trapped=0.00 budget=0.17 d_start=12.8 d_end=0.4 steps=44.9
+rand30_3 L=30 near n=30 success=0.77 trapped=0.00 budget=0.23 d_start=12.0 d_end=0.3 steps=54.8
+rand30_3 L=30 far n=30 success=0.87 trapped=0.00 budget=0.13 d_start=13.8 d_end=0.2 steps=39.8
+rand50_0 L=50 near n=20 success=0.75 trapped=0.00 budget=0.25 d_start=19.8 d_end=0.9 steps=62.2
+rand50_0 L=50 far n=20 success=0.70 trapped=0.00 budget=0.30 d_start=26.5 d_end=1.1 steps=69.4
+rand50_1 L=50 near n=20 success=0.85 trapped=0.00 budget=0.15 d_start=17.8 d_end=0.3 steps=56.7
+rand50_1 L=50 far n=20 success=0.70 trapped=0.00 budget=0.30 d_start=26.9 d_end=1.2 steps=77.5
+rand50_2 L=50 near n=20 success=0.85 trapped=0.00 budget=0.15 d_start=20.6 d_end=0.6 steps=51.9
+rand50_2 L=50 far n=20 success=0.75 trapped=0.00 budget=0.25 d_start=27.3 d_end=1.1 steps=68.8
+rand50_3 L=50 near n=20 success=0.65 trapped=0.00 budget=0.35 d_start=19.1 d_end=1.4 steps=64.3
+rand50_3 L=50 far n=20 success=0.55 trapped=0.00 budget=0.45 d_start=24.6 d_end=2.4 steps=79.5
+tRNA76 L=76 near n=6 success=0.17 trapped=0.00 budget=0.83 d_start=35.8 d_end=5.8 steps=68.2
+tRNA76 L=76 far n=6 success=0.00 trapped=0.00 budget=1.00 d_start=40.2 d_end=5.3 steps=80.7
+
+== DMS survey
+-- group NONSTAB_cov>=0.5 (post hoc) (n=114): median [q25, q75] (min..max)
+   frac_func_0.5: 0.711 [0.594, 0.793] (0.29..0.904)
+   frac_nearWT_0.8: 0.466 [0.368, 0.573] (0.216..0.807)
+   frac_reduced_lt0.8: 0.534 [0.427, 0.632] (0.193..0.784)
+   frac_destroyed_lt0.2: 0.111 [0.079, 0.175] (0.0495..0.615)
+   frac_ben_proxy_1.2: 0.0357 [0.00563, 0.0918] (0..0.264)
+   site_intolerant_le0.1: 0.0383 [0.0102, 0.0997] (0..0.329)
+   site_tolerant_ge0.9: 0.376 [0.218, 0.53] (0..0.735)
+   m_aa_mean_func_0.5: 13.5 [11.3, 15.1] (5.51..17.2)
+   m_snv_site_mean_func_0.5: 5.06 [4.46, 5.69] (2.54..6.5)
+   m_snv_total_per_site: 7 [6.92, 7.05] (6.24..7.63)
+   frac_snv_func_func_0.5: 0.726 [0.641, 0.808] (0.366..0.894)
+   m_gene_snv_func_0.5: 1.11e+03 [554, 2.03e+03] (67.6..5.57e+03)
+   m_gene_snv_nearWT_0.8: 764 [426, 1.34e+03] (40.4..3.62e+03)
+   m_gene_snv_ben_proxy_1.2: 50.7 [3.76, 112] (0..1.76e+03)
+   m_snv_site_mean_ben_proxy_1.2: 0.206 [0.0261, 0.574] (0..2.6)
+   coverage: 0.972 [0.877, 0.999] (0.577..1)
+   n_sites: 241 [100, 418] (15..934)
+   majority-reduced(<0.8) datasets: 0.61; majority-destroyed(<0.2): 0.02
+   author-cutoff (manual) fraction fit: median 0.672 [0.56, 0.762] n=54
+-- group NON-STABILITY (n=140): median [q25, q75] (min..max)
+   frac_func_0.5: 0.725 [0.596, 0.799] (0.29..0.94)
+   frac_nearWT_0.8: 0.478 [0.375, 0.601] (0.216..0.894)
+   frac_reduced_lt0.8: 0.522 [0.399, 0.625] (0.106..0.784)
+   frac_destroyed_lt0.2: 0.111 [0.0792, 0.179] (0.0415..0.615)
+   frac_ben_proxy_1.2: 0.0341 [0.00379, 0.0871] (0..0.264)
+   site_intolerant_le0.1: 0.0383 [0.0102, 0.0999] (0..1)
+   site_tolerant_ge0.9: 0.376 [0.203, 0.53] (0..1)
+   m_aa_mean_func_0.5: 13.5 [11.3, 15.1] (0..18.1)
+   m_snv_site_mean_func_0.5: 5.06 [4.44, 5.7] (0..6.5)
+   m_snv_total_per_site: 7 [6.92, 7.06] (6..7.63)
+   frac_snv_func_func_0.5: 0.726 [0.64, 0.809] (0..0.894)
+   m_gene_snv_func_0.5: 1.04e+03 [516, 2.01e+03] (0..5.57e+03)
+   m_gene_snv_nearWT_0.8: 711 [369, 1.3e+03] (0..3.62e+03)
+   m_gene_snv_ben_proxy_1.2: 49 [3.65, 112] (0..1.76e+03)
+   m_snv_site_mean_ben_proxy_1.2: 0.206 [0.0234, 0.584] (0..2.6)
+   coverage: 0.947 [0.715, 0.996] (0.136..1)
+   n_sites: 238 [102, 405] (15..1.37e+03)
+   majority-reduced(<0.8) datasets: 0.57; majority-destroyed(<0.2): 0.02
+   author-cutoff (manual) fraction fit: median 0.685 [0.57, 0.773] n=66
+-- group Stability (n=66): median [q25, q75] (min..max)
+   frac_func_0.5: 0.774 [0.736, 0.806] (0.636..0.888)
+   frac_nearWT_0.8: 0.527 [0.486, 0.572] (0.354..0.78)
+   frac_reduced_lt0.8: 0.473 [0.428, 0.514] (0.22..0.646)
+   frac_destroyed_lt0.2: 0.0868 [0.075, 0.103] (0.0507..0.154)
+   frac_ben_proxy_1.2: 0.0171 [0.00491, 0.039] (0..0.0908)
+   site_intolerant_le0.1: 0.0303 [0.00982, 0.051] (0..0.145)
+   site_tolerant_ge0.9: 0.555 [0.474, 0.611] (0.236..0.789)
+   m_aa_mean_func_0.5: 14.6 [13.8, 15.3] (12..16.9)
+   m_snv_site_mean_func_0.5: 5.26 [4.95, 5.49] (4.39..6.15)
+   m_snv_total_per_site: 7.01 [6.93, 7.09] (6.71..7.32)
+   frac_snv_func_func_0.5: 0.752 [0.716, 0.784] (0.638..0.873)
+   m_gene_snv_func_0.5: 307 [255, 349] (174..870)
+   m_gene_snv_nearWT_0.8: 205 [173, 253] (98.1..545)
+   m_gene_snv_ben_proxy_1.2: 5.3 [1.67, 9.9] (0..76.6)
+   m_snv_site_mean_ben_proxy_1.2: 0.0939 [0.0274, 0.203] (0..0.456)
+   coverage: 0.965 [0.921, 0.985] (0.68..1)
+   n_sites: 57 [52, 66] (35..168)
+   majority-reduced(<0.8) datasets: 0.32; majority-destroyed(<0.2): 0.00
+   author-cutoff (manual) fraction fit: median 0.685 [0.559, 0.737] n=21
+-- group ALL (n=206): median [q25, q75] (min..max)
+   frac_func_0.5: 0.748 [0.658, 0.803] (0.29..0.94)
+   frac_nearWT_0.8: 0.503 [0.412, 0.588] (0.216..0.894)
+   frac_reduced_lt0.8: 0.497 [0.412, 0.588] (0.106..0.784)
+   frac_destroyed_lt0.2: 0.0972 [0.0761, 0.143] (0.0415..0.615)
+   frac_ben_proxy_1.2: 0.0236 [0.00483, 0.0646] (0..0.264)
+   site_intolerant_le0.1: 0.0353 [0.0096, 0.0782] (0..1)
+   site_tolerant_ge0.9: 0.471 [0.305, 0.585] (0..1)
+   m_aa_mean_func_0.5: 14.1 [12.5, 15.3] (0..18.1)
+   m_snv_site_mean_func_0.5: 5.17 [4.73, 5.58] (0..6.5)
+   m_snv_total_per_site: 7 [6.92, 7.07] (6..7.63)
+   frac_snv_func_func_0.5: 0.742 [0.668, 0.799] (0..0.894)
+   m_gene_snv_func_0.5: 474 [294, 1.43e+03] (0..5.57e+03)
+   m_gene_snv_nearWT_0.8: 362 [205, 935] (0..3.62e+03)
+   m_gene_snv_ben_proxy_1.2: 12.1 [1.96, 69.6] (0..1.76e+03)
+   m_snv_site_mean_ben_proxy_1.2: 0.134 [0.026, 0.37] (0..2.6)
+   coverage: 0.956 [0.834, 0.992] (0.136..1)
+   n_sites: 116 [59, 323] (15..1.37e+03)
+   majority-reduced(<0.8) datasets: 0.49; majority-destroyed(<0.2): 0.01
+   author-cutoff (manual) fraction fit: median 0.685 [0.561, 0.754] n=87
+-- group OrganismalFitness (n=73): median [q25, q75] (min..max)
+   frac_func_0.5: 0.663 [0.515, 0.786] (0.29..0.94)
+   frac_nearWT_0.8: 0.414 [0.33, 0.574] (0.216..0.894)
+   frac_reduced_lt0.8: 0.586 [0.426, 0.67] (0.106..0.784)
+   frac_destroyed_lt0.2: 0.124 [0.0801, 0.203] (0.0415..0.615)
+   frac_ben_proxy_1.2: 0.0438 [0.00753, 0.102] (0..0.264)
+   site_intolerant_le0.1: 0.0463 [0.0161, 0.122] (0..1)
+   site_tolerant_ge0.9: 0.311 [0.157, 0.49] (0..1)
+   m_aa_mean_func_0.5: 12.4 [9.77, 14.5] (0..18.1)
+   m_snv_site_mean_func_0.5: 4.78 [3.93, 5.36] (0..6.5)
+   m_snv_total_per_site: 6.99 [6.92, 7.06] (6..7.33)
+   frac_snv_func_func_0.5: 0.685 [0.559, 0.774] (0..0.894)
+   m_gene_snv_func_0.5: 951 [429, 2.12e+03] (0..5.57e+03)
+   m_gene_snv_nearWT_0.8: 705 [341, 1.32e+03] (0..3.62e+03)
+   m_gene_snv_ben_proxy_1.2: 50.7 [3.7, 137] (0..1.76e+03)
+   m_snv_site_mean_ben_proxy_1.2: 0.344 [0.0358, 0.702] (0..2.6)
+   coverage: 0.987 [0.802, 1] (0.136..1)
+   n_sites: 263 [86, 498] (20..934)
+   majority-reduced(<0.8) datasets: 0.67; majority-destroyed(<0.2): 0.04
+   author-cutoff (manual) fraction fit: median 0.657 [0.449, 0.75] n=37
+-- group Activity (n=40): median [q25, q75] (min..max)
+   frac_func_0.5: 0.753 [0.696, 0.798] (0.486..0.916)
+   frac_nearWT_0.8: 0.534 [0.456, 0.628] (0.329..0.866)
+   frac_reduced_lt0.8: 0.466 [0.372, 0.544] (0.134..0.671)
+   frac_destroyed_lt0.2: 0.104 [0.0706, 0.164] (0.0496..0.342)
+   frac_ben_proxy_1.2: 0.0159 [0.00123, 0.0538] (0..0.157)
+   site_intolerant_le0.1: 0.0333 [0.00773, 0.0682] (0..0.278)
+   site_tolerant_ge0.9: 0.395 [0.265, 0.558] (0.109..0.722)
+   m_aa_mean_func_0.5: 14 [13.3, 14.9] (10.6..16.5)
+   m_snv_site_mean_func_0.5: 5.19 [4.77, 5.76] (3.73..6.25)
+   m_snv_total_per_site: 7 [6.94, 7.07] (6.67..7.63)
+   frac_snv_func_func_0.5: 0.742 [0.675, 0.815] (0.536..0.859)
+   m_gene_snv_func_0.5: 1.26e+03 [616, 1.98e+03] (185..3.61e+03)
+   m_gene_snv_nearWT_0.8: 928 [467, 1.3e+03] (139..2.48e+03)
+   m_gene_snv_ben_proxy_1.2: 21.5 [0.241, 110] (0..458)
+   m_snv_site_mean_ben_proxy_1.2: 0.0784 [0.00414, 0.424] (0..1.11)
+   coverage: 0.886 [0.313, 0.966] (0.241..1)
+   n_sites: 240 [117, 368] (38..1.37e+03)
+   majority-reduced(<0.8) datasets: 0.42; majority-destroyed(<0.2): 0.00
+   author-cutoff (manual) fraction fit: median 0.735 [0.659, 0.785] n=17
+-- group Binding (n=10): median [q25, q75] (min..max)
+   frac_func_0.5: 0.796 [0.729, 0.847] (0.535..0.888)
+   frac_nearWT_0.8: 0.531 [0.399, 0.665] (0.352..0.76)
+   frac_reduced_lt0.8: 0.469 [0.335, 0.601] (0.24..0.648)
+   frac_destroyed_lt0.2: 0.093 [0.0645, 0.131] (0.0495..0.297)
+   frac_ben_proxy_1.2: 0.0417 [0.000478, 0.0834] (0..0.155)
+   site_intolerant_le0.1: 0.0273 [0.00718, 0.0853] (0..0.169)
+   site_tolerant_ge0.9: 0.522 [0.346, 0.65] (0.224..0.735)
+   m_aa_mean_func_0.5: 15.1 [13.8, 16.1] (10.2..16.9)
+   m_snv_site_mean_func_0.5: 5.66 [5.39, 5.91] (4.07..6.23)
+   m_snv_total_per_site: 7.02 [6.97, 7.04] (6.76..7.37)
+   frac_snv_func_func_0.5: 0.804 [0.756, 0.836] (0.578..0.889)
+   m_gene_snv_func_0.5: 1.08e+03 [536, 1.39e+03] (157..2.01e+03)
+   m_gene_snv_nearWT_0.8: 656 [450, 985] (99.4..1.55e+03)
+   m_gene_snv_ben_proxy_1.2: 34.2 [0, 75.9] (0..200)
+   m_snv_site_mean_ben_proxy_1.2: 0.205 [0, 0.564] (0..0.987)
+   coverage: 0.987 [0.765, 1] (0.577..1)
+   n_sites: 182 [91.5, 254] (33..477)
+   majority-reduced(<0.8) datasets: 0.40; majority-destroyed(<0.2): 0.00
+   author-cutoff (manual) fraction fit: median 0.668 [0.471, 0.8] n=4
+-- group Expression (n=17): median [q25, q75] (min..max)
+   frac_func_0.5: 0.731 [0.663, 0.81] (0.593..0.836)
+   frac_nearWT_0.8: 0.494 [0.441, 0.544] (0.359..0.675)
+   frac_reduced_lt0.8: 0.506 [0.456, 0.559] (0.325..0.641)
+   frac_destroyed_lt0.2: 0.108 [0.0918, 0.121] (0.0633..0.303)
+   frac_ben_proxy_1.2: 0.0333 [0.0222, 0.0613] (0..0.106)
+   site_intolerant_le0.1: 0.013 [0.00556, 0.0455] (0..0.13)
+   site_tolerant_ge0.9: 0.43 [0.335, 0.511] (0.0435..0.585)
+   m_aa_mean_func_0.5: 14 [12.6, 15.4] (11.2..15.9)
+   m_snv_site_mean_func_0.5: 5.17 [5, 5.69] (4.37..6.01)
+   m_snv_total_per_site: 6.99 [6.82, 7.05] (6.24..7.17)
+   frac_snv_func_func_0.5: 0.764 [0.713, 0.811] (0.623..0.852)
+   m_gene_snv_func_0.5: 1.03e+03 [740, 2.32e+03] (75.7..2.83e+03)
+   m_gene_snv_nearWT_0.8: 709 [512, 1.82e+03] (57.8..2.08e+03)
+   m_gene_snv_ben_proxy_1.2: 58.5 [24.3, 75] (0..112)
+   m_snv_site_mean_ben_proxy_1.2: 0.206 [0.149, 0.331] (0..1.06)
+   coverage: 0.918 [0.822, 0.969] (0.69..0.995)
+   n_sites: 201 [162, 391] (15..547)
+   majority-reduced(<0.8) datasets: 0.59; majority-destroyed(<0.2): 0.00
+   author-cutoff (manual) fraction fit: median 0.678 [0.627, 0.781] n=8
+-- named cases
+   BLAT_ECOLX_Deng_2012: frac_func_0.5=0.534, frac_nearWT_0.8=0.307, frac_reduced_lt0.8=0.693, frac_destroyed_lt0.2=0.166, frac_ben_proxy_1.2=0.0446, site_intolerant_le0.1=0.0951, site_tolerant_ge0.9=0.198, m_aa_mean_func_0.5=10.2, m_snv_site_mean_func_0.5=4.29, m_snv_total_per_site=6.85, frac_snv_func_func_0.5=0.625, m_gene_snv_func_0.5=1.13e+03, m_gene_snv_nearWT_0.8=712, m_gene_snv_ben_proxy_1.2=96.2, m_snv_site_mean_ben_proxy_1.2=0.366, coverage=1, n_sites=263
+   BLAT_ECOLX_Firnberg_2014: frac_func_0.5=0.448, frac_nearWT_0.8=0.317, frac_reduced_lt0.8=0.683, frac_destroyed_lt0.2=0.376, frac_ben_proxy_1.2=0.0349, site_intolerant_le0.1=0.221, site_tolerant_ge0.9=0.198, m_aa_mean_func_0.5=8.55, m_snv_site_mean_func_0.5=3.49, m_snv_total_per_site=6.85, frac_snv_func_func_0.5=0.509, m_gene_snv_func_0.5=917, m_gene_snv_nearWT_0.8=669, m_gene_snv_ben_proxy_1.2=50.4, m_snv_site_mean_ben_proxy_1.2=0.192, coverage=0.957, n_sites=263
+   BLAT_ECOLX_Jacquier_2013: frac_func_0.5=0.743, frac_nearWT_0.8=0.627, frac_reduced_lt0.8=0.373, frac_destroyed_lt0.2=0.179, frac_ben_proxy_1.2=0, site_intolerant_le0.1=nan, site_tolerant_ge0.9=nan, m_aa_mean_func_0.5=nan, m_snv_site_mean_func_0.5=-, m_snv_total_per_site=-, frac_snv_func_func_0.5=-, m_gene_snv_func_0.5=-, m_gene_snv_nearWT_0.8=-, m_gene_snv_ben_proxy_1.2=-, m_snv_site_mean_ben_proxy_1.2=-, coverage=0.198, n_sites=263
+   BLAT_ECOLX_Stiffler_2015: frac_func_0.5=0.575, frac_nearWT_0.8=0.444, frac_reduced_lt0.8=0.556, frac_destroyed_lt0.2=0.203, frac_ben_proxy_1.2=0, site_intolerant_le0.1=0.0875, site_tolerant_ge0.9=0.327, m_aa_mean_func_0.5=10.9, m_snv_site_mean_func_0.5=4.29, m_snv_total_per_site=6.85, frac_snv_func_func_0.5=0.626, m_gene_snv_func_0.5=1.13e+03, m_gene_snv_nearWT_0.8=907, m_gene_snv_ben_proxy_1.2=0, m_snv_site_mean_ben_proxy_1.2=0, coverage=1, n_sites=263
+   SPG1_STRSG_Olson_2014: frac_func_0.5=0.783, frac_nearWT_0.8=0.556, frac_reduced_lt0.8=0.444, frac_destroyed_lt0.2=0.143, frac_ben_proxy_1.2=0.00191, site_intolerant_le0.1=0.0909, site_tolerant_ge0.9=0.618, m_aa_mean_func_0.5=14.9, m_snv_site_mean_func_0.5=5.47, m_snv_total_per_site=7.02, frac_snv_func_func_0.5=0.779, m_gene_snv_func_0.5=301, m_gene_snv_nearWT_0.8=219, m_gene_snv_ben_proxy_1.2=0, m_snv_site_mean_ben_proxy_1.2=0, coverage=1, n_sites=55
+
+== GB1 four-site landscape
+   positions: [265, 266, 267, 280]
+   wt: ['V', 'D', 'G', 'V']
+   n_variants: 149361
+   n_missing: 10639
+   frac_lt0.3: 0.949558452340303
+   frac_ge0.5: 0.03897938551562992
+   frac_ge1: 0.024397265685152082
+   frac_ge1.2: 0.02103628122468382
+   n_functional_ge0.5: 5822
+   local_maxima_among_functional: 18
+   frac_functional_with_improving_nbr: 0.9969082789419443
+   mean_functional_nbrs_of_functional: 29.21607694950189
+   frac_functional_isolated_no_functional_nbr: 0.0
+   frac_nbrs_functional_given_functional: 0.38442206512502486
+   n_components: 2
+   largest_component: 5819
+   frac_in_largest_component: 0.9994847131569907
+   wt_in_largest_component: True
+   global_max_fitness: 8.76196565571
+   frac_functional_reach_globalmax_uphill: 0.9854002061147372
+   frac_all_functional_ge1_reach: 0.9774972557628979
+   local_maxima_fit_ge1: 18
+   n_fit_ge1: 3644
+   wt_singles_n: 76
+   wt_singles_frac_ge0.5: 0.35526315789473684
+   wt_singles_frac_ge1.2: 0.19736842105263158
+   wt_singles_frac_lt0.2: 0.5263157894736842
