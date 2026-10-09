@@ -1,0 +1,102 @@
+## SNV differences (primary chromosomes; both lineages plus polymorphism)
+| filter | SNVs | share of F0 |
+|---|---|---|
+| F0 raw (columns with N already excluded) | 37767396 | 1.000 |
+| F1 (no N) | 37767396 | 1.000 |
+| F2 drop lowercase (repeat-masked) in either species | 16722020 | 0.443 |
+| F3 = F2 + drop within 5 columns of a gap + alignment records >5% divergent | 15557169 | 0.412 |
+
+valid columns 2805082624; SNV/valid = 0.0135; unmasked valid 1351919525, SNV/unmasked valid = 0.0124; Ts/Tv = 2.053; adjacent mismatch pairs 1443846; N columns (excluded) 2094
+
+| polarization (F0) | SNVs | share of polarizable |
+|---|---|---|
+| unpolarized (no gorilla base) | 1808787 |  |
+| human-derived | 17277924 | 0.480 |
+| chimp-derived | 18252738 | 0.508 |
+| third state | 427947 | 0.012 |
+| human-derived share of (human + chimp derived) | | 0.486 |
+
+polarized SNV F0: human 17277924, chimp 18252738, third 427947, unpolarized 1808787; human share 0.486
+polarized SNV F2 (not lowercase): human 7809024, chimp 8116682, third 182131, unpolarized 614183; human share 0.490
+polarized SNV F3: human 7452659, chimp 7576746, third 153229, unpolarized 374535; human share 0.496
+
+## Indel events (chain gaps inside the net), primary chromosomes, both lineages
+| size class | human-only events | chimp-only events | both-sided events | all events | share of events | bp | share of bp |
+|---|---|---|---|---|---|---|---|
+| 1 | 894751 | 859361 | 73 | 1754185 | 0.4078 | 1754258 | 0.003 |
+| 2-10 | 1048210 | 1031067 | 948 | 2080225 | 0.4836 | 8175269 | 0.014 |
+| 11-50 | 185074 | 159466 | 9409 | 353949 | 0.0823 | 7069234 | 0.012 |
+| 51-1000 | 37241 | 36567 | 16236 | 90044 | 0.0209 | 22937758 | 0.038 |
+| >1000 | 6576 | 8201 | 8472 | 23249 | 0.0054 | 556723712 | 0.933 |
+| all | 2171852 | 2094662 | 35138 | 4301652 | 1 | 596660231 | 1 |
+
+human-only bp (tSize sum) 212709117 ; chimp-only bp (qSize sum) 383951114 ; events/bp 138.70
+
+| polarization of single-sided chain gaps (F0) | events | bp |
+|---|---|---|
+| unpolarized | 580926 | 37602159 |
+| human lineage | 1215112 | 15070775 |
+| chimp lineage | 2470476 | 96013365 |
+| complex (both-sided), unpolarized | 35138 | 447973932 |
+
+| size class | human lineage | chimp lineage | unpolarized (single-sided) |
+|---|---|---|---|
+| 1 | 563940 | 1025150 | 165022 |
+| 2-10 | 565608 | 1204436 | 309233 |
+| 11-50 | 69168 | 188301 | 87071 |
+| 51-1000 | 14135 | 42314 | 17359 |
+| >1000 | 2261 | 10275 | 2241 |
+
+### Validation against other representations
+| size class | chain gaps (all kinds) | axt in-record gap runs (<=100 bp) | net gap lines (human-containing) |
+|---|---|---|---|
+| 1 | 1754185 | 1754112 | 894824 |
+| 2-10 | 2080225 | 2079277 | 1049158 |
+| 11-50 | 353949 | 342016 | 194483 |
+| 51-1000 | 90044 | 24140 | 53477 |
+| >1000 | 23249 | 0 | 15048 |
+
+### Masking sensitivity of indel events
+| filter | events | gap bp | bp/event |
+|---|---|---|---|
+| F0 raw | 4301652 | 596660231 | 138.70 |
+| F1 no assembly-N in gap | 4300949 | 269529381 | 62.67 |
+| F2 + not repeat-masked (>=50%) | 1699274 | 134210092 | 78.98 |
+| F3 + no TRF/unplaced-chimp (net gaps), no adjacent opposite gap (axt) | 1680903 | 98789871 | 58.77 |
+
+## Net fills (primary human chromosomes)
+| type | level | fills | tSize bp | qSize bp | ali bp |
+|---|---|---|---|---|---|
+| inv | L2 | 3996 | 88951522 | 141967434 | 80745863 |
+| nonSyn | L2 | 9809 | 40618448 | 44028809 | 35610901 |
+| syn | L2 | 18240 | 18493103 | 41022498 | 14980046 |
+| top | L1 | 2153 | 2869729175 | 2962015504 | 2673746321 |
+
+nested fills (level >= 2) with max(t,q) >= 10 kb by type: {"nonSyn": 563, "syn": 270, "inv": 453}
+
+## Unaligned segments (non-N, outside every net fill)
+| side | segments | bp | segments >1 kb | bp in >1 kb segments | overlap with hg38 centromere models (bp) |
+|---|---|---|---|---|---|
+| human primary | 1093 | 69886608 | 537 | 69840844 | 59539749 |
+| chimp placed | 328 | 10109186 | 253 | 10083167 | n/a |
+| chimp unplaced scaffolds | 6031 | 185385291 | 5296 | 185154384 | n/a |
+
+human primary: length 3088269832, N 150610728, non-N 2937659104, unaligned share of non-N = 0.0238
+
+## Events vs base pairs ladder (primary chromosomes, both lineages)
+| level / filter | events | bp | bp/event | 410M / events | 205M / (events/2) |
+|---|---|---|---|---|---|
+| F0 L1 SNV | 37767396 | 37767396 | 1.00 | 10.86 | 10.86 |
+| F0 L2 + indels | 42069048 | 634427627 | 15.08 | 9.75 | 9.75 |
+| F0 L3 + nested fills + unaligned | 42102514 | 714423421 | 16.97 | 9.74 | 9.74 |
+| F1 L1 SNV | 37767396 | 37767396 | 1.00 | 10.86 | 10.86 |
+| F1 L2 + indels | 42068345 | 307296777 | 7.30 | 9.75 | 9.75 |
+| F1 L3 + nested fills + unaligned | 42101811 | 387292571 | 9.20 | 9.74 | 9.74 |
+| F2 L1 SNV | 16722020 | 16722020 | 1.00 | 24.52 | 24.52 |
+| F2 L2 + indels | 18421294 | 150932112 | 8.19 | 22.26 | 22.26 |
+| F2 L3 + nested fills + unaligned | 18454760 | 230927906 | 12.51 | 22.22 | 22.22 |
+| F3 L1 SNV | 15557169 | 15557169 | 1.00 | 26.35 | 26.35 |
+| F3 L2 + indels | 17238072 | 114347040 | 6.63 | 23.78 | 23.78 |
+| F3 L3 + nested fills + unaligned | 17271538 | 194342834 | 11.25 | 23.74 | 23.74 |
+
+Per-lineage events, F0 (SNV and indel only; unpolarized and complex split 50/50): human 19919435 ; chimp 22149613 ; mean 21034524 ; 205M / mean = 9.75 ; 205M / max lineage = 9.26
