@@ -27,3 +27,9 @@ Never executed; read through gzip -dc and Python parsing only. Nothing committed
 == derived outputs rsynced back (md5) ==
 gap07c-af-p3: 1105df4c5acdc73100eb081cf5b2c133 (md5 of sorted per-file md5 list; 47 files)
 gap07c-af-nygc: 8acdc4bc64d353046c8cff18398febf2 (md5 of sorted per-file md5 list; 6 files)
+
+== POST HOC 2 (review fix pass), 2026-10-09 ==
+script gap07c_posthoc_review.py (commit ae42a91, committed before it was run) md5 b2caa71734b7f537a9c4bc252bff617d (same md5 locally and on workhorse)
+stage 'ctl' (workhorse na-workhorse.allevato.io, 1 process, started 03:34 MDT, load average 0.2): streamed the phase-3 sites VCF (md5 a96ef904... as above); outputs sources/raw/gap07c-ctl (gitignored) -> research/checks/results/raw/gap07c_posthoc_ctl.out
+stage 'report' (first run locally on the workstation, which ran out of RAM and was killed by the coordinator; re-run on workhorse, 1 process, 03:37 MDT; inputs rsynced there: gap07c-sites, gap07c-af-p3, gap07c-af-nygc, gor_chr*.npz, gap07c_posthoc_toplevel.json); outputs rsynced back: gap07c_posthoc_review.{json,out}
+Nothing was committed or pushed from workhorse.

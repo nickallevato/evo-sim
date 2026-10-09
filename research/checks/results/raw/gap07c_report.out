@@ -1,3 +1,4 @@
+[PH note 2026-10-09: the two rows "top-level fills, in mask" and "H-derived, top-level, in mask" were removed from this file after review; the main-run flag was true for every SNV (coding bug), so they equalled the unrestricted rows. Corrected values: gap07c_posthoc_toplevel.json. The unedited main-run output is in git commit bd26aaa.]
 covered chromosomes: chr1 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr2 chr20 chr21 chr22 chr3 chr4 chr5 chr6 chr7 chr8 chr9
 SNV sites covered: 35472157  polarization {'H': 16415810, 'C': 17351731, 'third': 393258, 'unpol': 1311358}
 REF agreement of matched records: {'matched': 4925478, 'ref_eq_hg38': 4925478, 'ref_ne_hg38': 0}
@@ -12,9 +13,7 @@ SNV: share with chimp-matching allele frequency >= 0.01 (poly_T), bands, etc.
   C-derived, all                             n=  17351731 poly(>=.01)=  1.21%  >=.001=  2.30% >=.05=  0.75% seen=  5.34% anypop=  2.18% hg38notfixed=  1.46%
   third, in mask                             n=    251940 poly(>=.01)=  6.33%  >=.001=  7.57% >=.05=  5.41% seen= 10.08% anypop=  7.45% hg38notfixed= 10.68%
   unpolarized, in mask                       n=    558405 poly(>=.01)=  8.62%  >=.001= 10.22% >=.05=  7.31% seen= 13.48% anypop= 10.05% hg38notfixed=  9.03%
-  top-level fills, in mask                   n=  26271798 poly(>=.01)=  8.25%  >=.001=  9.61% >=.05=  7.11% seen= 12.52% anypop=  9.49% hg38notfixed=  8.57%
   records <2% div, in mask                   n=  25032662 poly(>=.01)=  8.32%  >=.001=  9.69% >=.05=  7.18% seen= 12.58% anypop=  9.56% hg38notfixed=  8.64%
-  H-derived, top-level, in mask              n=  12672056 poly(>=.01)= 15.59%  >=.001= 17.33% >=.05= 13.69% seen= 20.01% anypop= 17.18% hg38notfixed= 15.93%
   H-derived, CpG, in mask                    n=   3168874 poly(>=.01)= 15.86%  >=.001= 18.96% >=.05= 13.54% seen= 25.97% anypop= 18.65% hg38notfixed= 16.48%
   H-derived, non-CpG, in mask                n=   9503182 poly(>=.01)= 15.51%  >=.001= 16.78% >=.05= 13.74% seen= 18.03% anypop= 16.69% hg38notfixed= 15.74%
   H-derived, transitions, in mask            n=   8647513 poly(>=.01)= 15.61%  >=.001= 17.61% >=.05= 13.63% seen= 21.13% anypop= 17.43% hg38notfixed= 15.75%

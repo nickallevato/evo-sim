@@ -182,25 +182,6 @@
    "any_pop_T": 0.10766437456540215,
    "hg38_not_fixed_T": 0.0977362280769528
   },
-  "top-level fills, in mask": {
-   "n": 703183,
-   "bands": [
-    611386,
-    21713,
-    10067,
-    13510,
-    22001,
-    19952,
-    3051,
-    1503
-   ],
-   "poly_T": 0.08535047064562142,
-   "poly_T001": 0.09966680081856359,
-   "poly_T005": 0.0728501684483271,
-   "seen_any": 0.13054496482423494,
-   "any_pop_T": 0.0982816706319692,
-   "hg38_not_fixed_T": 0.08888866767256888
-  },
   "records <2% div, in mask": {
    "n": 632049,
    "bands": [
@@ -219,25 +200,6 @@
    "seen_any": 0.1339516398253933,
    "any_pop_T": 0.10174844038990648,
    "hg38_not_fixed_T": 0.09212102226251445
-  },
-  "H-derived, top-level, in mask": {
-   "n": 331155,
-   "bands": [
-    262850,
-    9085,
-    5870,
-    10865,
-    19696,
-    18512,
-    2839,
-    1438
-   ],
-   "poly_T": 0.16110280684271716,
-   "poly_T001": 0.1788286451963582,
-   "poly_T005": 0.1403874318672525,
-   "seen_any": 0.2062629282360224,
-   "any_pop_T": 0.17736407422506079,
-   "hg38_not_fixed_T": 0.16466911265117543
   },
   "H-derived, CpG, in mask": {
    "n": 96007,
@@ -1267,5 +1229,6 @@
    "fixed_per_lineage": 18126120.428332634,
    "ratio": 11.309645702208176
   }
- }
+ },
+ "_note": "rows top-level fills / H-derived top-level removed post hoc (flag bug); see gap07c_posthoc_toplevel.json; original in commit bd26aaa"
 }

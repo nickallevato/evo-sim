@@ -1,3 +1,4 @@
+[PH note 2026-10-09: the two rows "top-level fills, in mask" and "H-derived, top-level, in mask" were removed from this file after review; the main-run flag was true for every SNV (coding bug), so they equalled the unrestricted rows. Corrected values: gap07c_posthoc_toplevel.json. The unedited main-run output is in git commit bd26aaa.]
 covered chromosomes: chr21 chr22
 SNV sites covered: 1187615  polarization {'H': 524304, 'C': 568188, 'third': 16068, 'unpol': 79055}
 REF agreement of matched records: {'matched': 142992, 'ref_eq_hg38': 142992, 'ref_ne_hg38': 0}
@@ -12,9 +13,7 @@ SNV: share with chimp-matching allele frequency >= 0.01 (poly_T), bands, etc.
   C-derived, all                             n=    568188 poly(>=.01)=  1.17%  >=.001=  2.17% >=.05=  0.73% seen=  4.91% anypop=  2.05% hg38notfixed=  1.41%
   third, in mask                             n=      7140 poly(>=.01)=  5.99%  >=.001=  7.34% >=.05=  5.10% seen=  9.86% anypop=  7.20% hg38notfixed= 10.50%
   unpolarized, in mask                       n=     25886 poly(>=.01)=  9.29%  >=.001= 10.96% >=.05=  7.82% seen= 14.28% anypop= 10.77% hg38notfixed=  9.77%
-  top-level fills, in mask                   n=    703183 poly(>=.01)=  8.54%  >=.001=  9.97% >=.05=  7.29% seen= 13.05% anypop=  9.83% hg38notfixed=  8.89%
   records <2% div, in mask                   n=    632049 poly(>=.01)=  8.87%  >=.001= 10.31% >=.05=  7.58% seen= 13.40% anypop= 10.17% hg38notfixed=  9.21%
-  H-derived, top-level, in mask              n=    331155 poly(>=.01)= 16.11%  >=.001= 17.88% >=.05= 14.04% seen= 20.63% anypop= 17.74% hg38notfixed= 16.47%
   H-derived, CpG, in mask                    n=     96007 poly(>=.01)= 15.99%  >=.001= 18.99% >=.05= 13.64% seen= 25.19% anypop= 18.70% hg38notfixed= 16.62%
   H-derived, non-CpG, in mask                n=    235148 poly(>=.01)= 16.16%  >=.001= 17.43% >=.05= 14.20% seen= 18.76% anypop= 17.34% hg38notfixed= 16.40%
   H-derived, transitions, in mask            n=    230295 poly(>=.01)= 16.08%  >=.001= 18.11% >=.05= 13.95% seen= 21.67% anypop= 17.94% hg38notfixed= 16.24%

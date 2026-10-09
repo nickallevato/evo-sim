@@ -1,0 +1,52 @@
+[PH] GAP-07c review fix pass (conventions: autosome shares applied to all sites)
+
+SNV shares by threshold (in mask): H-derived {'0.001': 17.33, '0.01': 15.59, '0.05': 13.69, '0.10': 12.57, 'seen': 20.01}
+   pooled {'0.001': 9.61, '0.01': 8.25, '0.05': 7.11, '0.10': 6.5, 'seen': 12.52}
+   third {'0.001': 7.57, '0.01': 6.33, '0.05': 5.41, '0.10': 4.95, 'seen': 10.08} unpol {'0.001': 10.22, '0.01': 8.62, '0.05': 7.31, '0.10': 6.62, 'seen': 13.48}
+   s_H on <2% records 15.70%; all-sites s_H 14.86%
+
+INDEL human-lineage share, symmetric polarization (events <= 50 bp, net of null, T=1%, match w=2):
+  rule w=2   all sites: human 8.70% (n 1387011)  chimp 1.78%  human share of polarized 0.383 | in mask: human 10.54% chimp 1.89%
+  rule w=5   all sites: human 8.33% (n 1557053)  chimp 1.49%  human share of polarized 0.429 | in mask: human 10.12% chimp 1.47%
+  rule w=10  all sites: human 7.92% (n 1746184)  chimp 1.24%  human share of polarized 0.480 | in mask: human 9.74% chimp 1.15%
+  rule w=20  all sites: human 7.44% (n 1906804)  chimp 1.19%  human share of polarized 0.523 | in mask: human 9.49% chimp 1.10%
+  central (w=5, in mask) shares by threshold: {'0.001': 11.14, '0.01': 10.12, '0.05': 8.9, '0.10': 8.15, 'seen': 11.79}
+  pooled (in mask, all events) shares: {'0.001': 6.17, '0.01': 5.28, '0.05': 4.53, '0.10': 4.11, 'seen': 7.06}
+  by size (human, w=5, in mask): {"1": {"n": 498149, "obs": 0.1206426189754471, "null": 0.0006734932720932894, "net": 0.11996912570335382}, "2-10": {"n": 494054, "obs": 0.0856748452598299, "null": 0.00013864881166836013, "net": 0.08553619644816153}, "11-50": {"n": 51100, "obs": 0.06892367906066536, "null": 0.0, "net": 0.06892367906066536}}
+
+INDEL chance-match controls at AF >= 1%, w=2 (same-d observed vs controls):
+  human lineage, <=50 bp, all sites      n= 1557053 same_d 8.37% | -d 0.49%  d+1 0.45%  d-1 0.30% | shift +-10kb 0.036% 0.034%  +-20kb 0.031% 0.033%
+  human lineage, in mask                 n= 1043303 same_d 10.16% | -d 0.41%  d+1 0.30%  d-1 0.23% | shift +-10kb 0.039% 0.038%  +-20kb 0.037% 0.036%
+  chimp lineage, <=50 bp                 n= 2075584 same_d 1.53% | -d 0.69%  d+1 0.28%  d-1 0.25% | shift +-10kb 0.033% 0.037%  +-20kb 0.035% 0.037%
+  all <=50 bp                            n= 3948420 same_d 4.27% | -d 0.59%  d+1 0.35%  d-1 0.26% | shift +-10kb 0.033% 0.035%  +-20kb 0.033% 0.034%
+  human lineage, size 1                  n=  666986 same_d 11.20% | -d 0.89%  d+1 0.08%  d-1 0.16% | shift +-10kb 0.068% 0.066%  +-20kb 0.061% 0.064%
+
+SV >= 50 bp (NYGC chr21+22; polarization is the as-run rule, which GAP-07b does not give for > 50 bp):
+  all                            n= 4623 obs 1.73% null 0.05% net 1.68%  95% CI (obs) 1.4-2.1%
+  human lineage (as-run pol)     n=  450 obs 6.89% null 0.11% net 6.78%  95% CI (obs) 4.9-9.6%
+  chimp lineage                  n= 2305 obs 1.17% null 0.04% net 1.13%  95% CI (obs) 0.8-1.7%
+  unpolarized                    n= 1868 obs 1.18% null 0.05% net 1.12%  95% CI (obs) 0.8-1.8%
+  human 50-100                   n=  186 obs 3.76% null 0.00% net 3.76%  95% CI (obs) 1.8-7.6%
+  human 100-1000                 n=  219 obs 9.59% null 0.23% net 9.36%  95% CI (obs) 6.4-14.2%
+  human >=1000                   n=   45 obs 6.67% null 0.00% net 6.67%  95% CI (obs) 2.3-17.9%
+
+BRACKET (205 M / fixed events per lineage); last column: numerator corrected for the SNV part (205 - 17.5 x s_snv)
+  raw count (GAP-07b)                                                                                                      s_snv  0.00% s_ind  0.00% fixed  21.051 M ratio   9.74  num-corr   9.74  chimp-assumption: none (no correction)
+  (a) human data only: pooled SNV share, pooled indel share (in mask)                                                      s_snv  8.25% s_ind  5.28% fixed  19.380 M ratio  10.58  num-corr  10.50  chimp-assumption: no (human data only; chimp credited with nothing)
+  human lineage alone, own conventions (SNV H + half of unpolarized/third; indel human + half of unpolarized, symmetric ru s_snv 15.59% s_ind 10.12% fixed  17.221 M ratio  11.90  num-corr  11.75  chimp-assumption: no (human lineage; no chimp assumption)
+     human-lineage events 20.278 M (SNV 18.385 + indel 1.876 + other); raw ratio same conventions 10.11
+  chimp share 0.5x human                                                                                                   s_snv 11.70% s_ind  7.59% fixed  18.679 M ratio  10.97  num-corr  10.87  chimp-assumption: YES (chimp = 0.5 x human)
+  (b) symmetric: chimp share = human share                                                                                 s_snv 15.59% s_ind 10.12% fixed  17.889 M ratio  11.46  num-corr  11.31  chimp-assumption: YES (chimp = human)
+  (b) with measured third / unpolarized shares (6.3% / 8.6%)                                                               s_snv 15.23% s_ind 10.12% fixed  17.957 M ratio  11.42  num-corr  11.27  chimp-assumption: YES
+  (b) symmetric at AF >= 0.1%, indel share at the same threshold                                                           s_snv 17.33% s_ind 11.14% fixed  17.539 M ratio  11.69  num-corr  11.52  chimp-assumption: YES
+  (b) symmetric at AF >= 5%, indel share at the same threshold                                                             s_snv 13.69% s_ind  8.90% fixed  18.274 M ratio  11.22  num-corr  11.09  chimp-assumption: YES
+  (b) symmetric at AF >= 10% (Day's operational 'fixed' > 90%, Q55), indel share at the same threshold                     s_snv 12.57% s_ind  8.15% fixed  18.501 M ratio  11.08  num-corr  10.96  chimp-assumption: YES
+  (b) symmetric at seen at any frequency, indel share at the same threshold                                                s_snv 20.01% s_ind 11.79% fixed  17.019 M ratio  12.05  num-corr  11.84  chimp-assumption: YES
+  (c) chimp share 2x human                                                                                                 s_snv 23.39% s_ind 15.17% fixed  16.308 M ratio  12.57  num-corr  12.32  chimp-assumption: YES (chimp = 2 x human)
+  (c) as pre-registered point: 2 x s_H on all events                                                                       s_snv 31.19% s_ind 20.23% fixed  14.727 M ratio  13.92  num-corr  13.55  chimp-assumption: YES
+  (b) top-level fills only (35,017,058 SNVs)                                                                               s_snv 15.69% s_ind 10.12% fixed  16.711 M ratio  12.27  num-corr  12.10  chimp-assumption: YES
+  measured counterpart of the GAP-07b combined row: <2%-divergent records, measured s on SNVs only, indels unchanged       s_snv 15.70% s_ind  0.00% fixed  16.400 M ratio  12.50  num-corr  12.33  chimp-assumption: YES
+  same, with the measured indel share                                                                                      s_snv 15.70% s_ind 10.12% fixed  16.182 M ratio  12.67  num-corr  12.50  chimp-assumption: YES
+GAP-07b combined critic rows for comparison: {'0.86': 12.29, '0.78': 13.37}
+Day-favourable GAP-07b rows x 1.177: {'repeat-unit 171 bp': 11.12, 'repeat-unit 32 bp': 9.83, 'nested + unaligned 171/32 bp': 10.73, 'nested + unaligned 32 bp': 8.43, 'indels x2': 10.4, 'indels x3': 9.52}
+SNV-only like for like: {"day_17_5M": 17500000.0, "measured_fixed_snv_per_lineage": 15938907.690499315, "day_over_measured": 0.09794223919316658, "raw_snv_per_lineage": 18883698.0, "shortfall_91800_scaled_snv_only": 83610.95577073355, "shortfall_scaled_all_events": 93839.96376736565, "day_vs_all_events": -0.0217387527175823, "shortfall_reduction_snv_only": 0.08920527482861051}
