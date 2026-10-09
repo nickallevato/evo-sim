@@ -236,6 +236,42 @@ nodes:
     fidelity: accurate
     external: n/a
   claim_file: docs/research/claims/A2h-supermutation-arithmetic-slip.md
+- id: A2i
+  title: 'Matev: an LTEE generations-per-fixation figure is not a ''generous'' bound for humans, because bacteria are fast per year (short generations),
+    not per generation'
+  side: critic
+  branch: A
+  parent: A2e
+  edges:
+  - type: attacks
+    target: A2e
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: holds
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/A2i-matev-gf-units-years-vs-generations.md
+- id: A2j
+  title: 'Day''s headline G_f drifts between versions: 1,400 (2nd-edition abstract, 180 fixations, 1,139,000-fold), 1,322 (Z23003785) and 1,587
+    (2026-10-03, ''the more accurate number'')'
+  side: day
+  branch: A
+  parent: A2
+  edges:
+  - type: revises
+    target: A2
+  - type: depends-on
+    target: A3a
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: holds
+    fidelity: pending
+    external: contested
+  claim_file: docs/research/claims/A2j-day-2nd-edition-1400-and-1587.md
 - id: A3
   title: 'Required fixations: 30M (2019) then 20M on the human lineage (2025)'
   side: day
@@ -286,7 +322,7 @@ nodes:
   verdicts:
     internal: holds
     fidelity: partial
-    external: contested
+    external: supported
   claim_file: docs/research/claims/A3b-snv-only-concession.md
 - id: A3c
   title: The 35M SNV and 5M indel counts are human–chimp genome differences that include polymorphism
@@ -333,7 +369,7 @@ nodes:
   status: checked
   verdicts:
     internal: holds
-    fidelity: accurate
+    fidelity: partial
     external: supported
   claim_file: docs/research/claims/A3x-bp-vs-events.md
 - id: A3x1
@@ -834,6 +870,23 @@ nodes:
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/B2d-parallel-fixation-second-objection.md
+- id: B2e
+  title: 'keruru (Zenodo draft): a temporal N_e measured from ancient genomes is about three orders of magnitude below Wright''s 4N/(V_k+2) applied
+    to the Bronze Age census, so the input to Day''s census ceiling is wrong where it can be tested'
+  side: critic
+  branch: B
+  parent: B2b
+  edges:
+  - type: attacks
+    target: B2b
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: holds
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/B2e-keruru-measured-ne-vs-wright.md
 - id: B3
   title: 'k differs from mu: the family of Day k/mu values (N/Ne, 0.743, 0.5, 32.3, 800,000) and their status'
   side: day
@@ -996,6 +1049,23 @@ nodes:
     fidelity: n/a
     external: contested
   claim_file: docs/research/claims/B3h-ne-10000-presupposes-k-mu.md
+- id: B3i
+  title: 'Matev: if every allele at a site had fixation probability 1/(2N_e), the 2N alleles'' probabilities would sum to N/N_e > 1 when N > N_e,
+    which is not a probability'
+  side: critic
+  branch: B
+  parent: B3a
+  edges:
+  - type: attacks
+    target: B3a
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: holds
+    fidelity: n/a
+    external: supported
+  claim_file: docs/research/claims/B3i-matev-sum-over-alleles-exceeds-one.md
 - id: B4
   title: 'Molecular clock recalibration: CHLCA collapses from 6-7 Mya to 200-580 kya via N/Ne'
   side: day
@@ -1438,6 +1508,25 @@ nodes:
     fidelity: accurate
     external: supported
   claim_file: docs/research/claims/B7c-keruru-retraction-census-n-cancels.md
+- id: B9
+  title: 'Day: if drift could change the genome, the 3x excess of harmful mutations would have made humans ''infertile and gone extinct within
+    centuries'''
+  side: day
+  branch: B
+  parent: B
+  edges:
+  - type: supports
+    target: B
+  - type: depends-on
+    target: H10
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: non-sequitur
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/B9-drift-would-cause-extinction-within-centuries.md
 - id: C
   title: 'European aDNA shows ~zero fixations from intermediate frequency across ~1.1-1.2M SNPs in ~7,000 years (blog: 0 of 1,211,499; Zenodo:
     1 and 3 of 1,143,671)'
@@ -1705,6 +1794,24 @@ nodes:
     fidelity: n/a
     external: untestable
   claim_file: docs/research/claims/C6-molecular-clock-stopped.md
+- id: C7
+  title: 'Day: ''genetic drift isn''t happening at all over the last 7000 years'', from the aDNA near-zero fixation counts'
+  side: day
+  branch: C
+  parent: C
+  edges:
+  - type: depends-on
+    target: C
+  - type: supports
+    target: B2
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: non-sequitur
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/C7-no-drift-last-7000-years.md
 - id: D
   title: Functional proteins are a vanishing fraction of sequence space (about 1e52 proteins ever vs 1e325 sequences), and the Wistar challenge
     was never answered quantitatively
@@ -3081,6 +3188,23 @@ nodes:
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/G4b-darwillion-25x-reply.md
+- id: G5
+  title: 'Matev: the Bernoulli Barrier''s coefficient of variation falls as loci are added, but the variance of the beneficial-allele count rises,
+    and selection responds to variance'
+  side: critic
+  branch: G
+  parent: G
+  edges:
+  - type: attacks
+    target: G
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: holds
+    fidelity: n/a
+    external: n/a
+  claim_file: docs/research/claims/G5-matev-cv-falls-variance-rises.md
 - id: Ga
   title: 'P(all) = p^n: 0.02^20,000,000 ≈ 10^−34,000,000 for 20 million fixations at p = 0.02'
   side: day
@@ -3205,6 +3329,23 @@ nodes:
     fidelity: n/a
     external: supported
   claim_file: docs/research/claims/H1-term3-retraction.md
+- id: H10
+  title: 'Day: natural selection has not kept the human genome from degrading ''since around 1800'', with 3x more deleterious than neutral mutations
+    ''drifting freely'''
+  side: day
+  branch: H
+  parent: H
+  edges:
+  - type: depends-on
+    target: H7
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/H10-selection-ceased-1800-genome-degrading.md
 - id: H2
   title: 'Nunney 2003: the cost of selection is substantially less than Haldane''s for M > 1/2 and is eliminated by soft selection, but rises
     sharply for M < 1/2 and Haldane''s 300 binds at M = 0.1'

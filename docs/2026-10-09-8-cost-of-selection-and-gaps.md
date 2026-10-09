@@ -21,6 +21,8 @@ Each check had its scripts committed with their predictions before the main run.
 - **For Day:** the same arithmetic corroborates the size of his SNV-only figures (17.5M and 20M).
 - **Next:** a direct count from the human–chimp whole-genome alignment (GAP-07b) is in progress. It will replace the rate-based estimate.
 
+*Update 2026-10-09 (later the same day): the direct count is done (GAP-07b, reviewed). See the update at the end of this post.*
+
 ## GAP-02: how far back sweep scans can see
 **The question.** Day argues that if selection had driven thousands of fixations, the genome would be full of sweep signatures. Sweep scans can only see sweeps from roughly the last 10,000 generations.
 
@@ -87,3 +89,22 @@ R0 ██████████  R1 ██████████  R2 ██�
 ```
 - **Argument map:** 258 typed objections, 185 dated versions, 196 claims.
 - **Surviving their objections:** 95 as argued; 146 under a strict reading of the audit's verdicts; 104 under a lenient one.
+
+## Update 2026-10-09: GAP-07b and the corpus refresh
+*Added after this post was published, the same day. The "In progress" list above is superseded for GAP-07b and the refresh; D and C1c are still running.*
+
+**GAP-07b: a direct count from the human–chimp alignment.** The script and its predictions were committed before the run (3c847b8); three reviews and a fix pass followed (review #8).
+- **Measured** (UCSC hg38 vs panTro6, which are older, non-T2T assemblies; both lineages plus polymorphism): 37.8M single-letter differences and 4.3M insertion/deletion events, 42.1M events in all, **21.05M per lineage**.
+- **Against Day:** his 205M is **9.7×** that. Over the reviewers' adjustments the ratio stays within about **7–14×**: friendlier to Day if repeat-rich sequence is under-counted in these assemblies (7.2–9.5), less friendly if polymorphism and paralogous alignments are removed (10.1–13.4). Counting events is a unit argument only: it says nothing about how many events needed selection.
+- **For Day:** his SNV-only 17.5M is 83% of the measured events and brackets the count once polymorphism is removed (16.4–18.1M), so his SNV-only shortfall survives and grows slightly on the measured count. His base-pair total is the right order for sequence that does not align one-to-one. His own stated position (posts of 04-28 and 05-13) is a range with a weighting claim, not a literal 205M events; as a weight, 205M would need about 3,250 SNV-equivalents per event above 50 bp, which nobody has measured.
+- **Graded against the measurement:** the critics' observation-based estimates land within 7–19% (McCarthy 22.5M, Mansfield 25M per lineage; Nesslig20 and Hancock ~38M in total). The rate-based route some critics used (9.7M) is about 2× low.
+- **Corrections:** the audit's own 22.5M upper bound (a per-species reading of CSAC's 5M) is retired; CSAC's 5M is a two-lineage total; one critic-side claim file added Yoo's six-ape inversion count to a human–chimp total.
+- **Verdicts:** A3a external stays *contested* (contradicted only if 205M is read as an event count); A3b external moves to *supported*; A3x fidelity moves to *partial*.
+- **Next:** measure the polymorphic share directly (GAP-07c) and re-run on T2T assemblies.
+
+**Corpus refresh.** Both sides were quiet after 10-07; most new material came from comment threads the first harvest missed. Eight claims were added, four per side:
+- **Critics:** Matev (a commenter on McCarthy's Substack): the LTEE rate is fast per year, not per generation (A2i); 1/(2Nₑ) per copy sums to more than 1 (B3i); in the Bernoulli Barrier, the coefficient of variation falls while the variance rises (G5). keruru's Zenodo draft: measured Nₑ is about 700–800× below the formula feeding Day's census ceiling (B2e; unreviewed, replication queued). Matev's arithmetic checks out.
+- **Day:** the second edition's 1,400 generations per fixation and 1,139,000×, and his 10-03 adoption of 1,587 (A2j); natural selection "since around 1800" has not kept the genome from degrading (H10; no numbers); drift would have caused extinction "within centuries" (B9; a non-sequitur on his own stated premise); "genetic drift isn't happening at all" in the last 7,000 years (C7; few completed fixations are what drift predicts). He also restated 1/(2Nₑ) on 09-15, after conceding it on 08-27.
+
+**Argument map now:** 271 typed objections, 192 dated versions, 204 claims. Surviving their objections: 102 as argued; 154 under a strict reading of the audit's verdicts; 111 under a lenient one.
+

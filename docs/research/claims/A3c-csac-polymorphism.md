@@ -52,5 +52,7 @@ Prediction: removing polymorphism lowers the SNV requirement by 14–22% (derive
 ## Check
 No script. Review: pending.
 
+R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): with CSAC's fixed share (0.78-0.86) applied to SNVs only, measured fixed events per lineage are 16.9-18.4M; applied to all events, 16.4-18.1M (post hoc). The 14-22% is an SNV estimate; the polymorphic share of indels and SVs is unmeasured, and Day holds that SVs are 'with very few exceptions, post-divergence' (Q100). Proposed follow-up GAP-07c: intersect the alignment differences with population allele frequencies to measure the polymorphic share directly. Review: `research/checks/REVIEW.md` (review #8, 2026-10-09).
+
 ## Simulator variables implied
 - `fixed_fraction_of_observed` toggle on the requirement.

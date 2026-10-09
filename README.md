@@ -38,7 +38,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 ## Scorecard so far
 
-<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 196 claims" width="760"></p>
+<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 204 claims" width="760"></p>
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
@@ -50,7 +50,8 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 | Soft selection does **not** make the cost of selection disappear (H) | The cap is $\ln R / D$, not a flat 10% (H2). The $0.743\mu$ figure is a window artefact (B3c) |
 | Haldane arithmetic (300, 487) holds. Critics' "38M matches 35M SNVs" double-counts (B5c) | 205M "required fixations" counts base pairs, not mutation events. The cited $s=0.001$ is *negative* selection (A3, Zeng 2021) |
 | The founder hazard's size (~2.3% per event) and the relictation chain reproduce (E, E4) | $0.02^{2\times10^7}$ prices one pre-specified list. No cap near 230 sweeps under multiplicative fitness (G3, Gc) |
-| Parallel sweeps share **one** reproductive budget, so concurrency cannot raise the selected total beyond it. At Haldane's assumed $R\approx1.1$ the long-run rate is *below* 1/300 (H3) | The budget is $\ln R$, not 10%: a coding-only adaptive count is payable at $R\approx1.2$–3 (hard adaptive selection, soft load). 205M base pairs ≈ 9–11× the event count (H3, GAP-07) |
+| Parallel sweeps share **one** reproductive budget, so concurrency cannot raise the selected total beyond it. At Haldane's assumed $R\approx1.1$ the long-run rate is *below* 1/300 (H3) | The budget is $\ln R$, not 10%: a coding-only adaptive count is payable at $R\approx1.2$–3 (hard adaptive selection, soft load) (H3) |
+| Day's SNV-only 17.5M is 83% of the directly counted events and brackets the polymorphism-corrected count; his base-pair total is the right order for non-aligned sequence (GAP-07b) | By direct count from the human–chimp alignment, 205M is 9.7× the mutation events per lineage (bracket ~7–14×, non-T2T assemblies); the critics' observation-based estimates land within 7–19% (GAP-07b) |
 
 **Still open:**
 - Cost of selection at human scale (H3) is decided only conditionally. It flips at an adaptive non-coding share of ~0.01–0.6%, below what any α estimate resolves; $R$ is unsourced; soft selection, absolute-fitness gain and epistasis are untested at human scale.
@@ -67,7 +68,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 flowchart LR
   ROOT(["<b>ROOT</b><br/>No evolutionary mechanism can produce<br/>the human–chimp divergence in the time available"]):::day
 
-  A["<b>A · MITTENS rate limit</b><br/>F_max = t_div·d / (g_len·G_f)<br/><i>G_f reproduces; required-fixation count disputed</i>"]:::mixed
+  A["<b>A · MITTENS rate limit</b><br/>F_max = t_div·d / (g_len·G_f)<br/><i>G_f reproduces; 205M is bp, ~21M events</i>"]:::mixed
   B["<b>B · Neutral theory insufficient</b><br/>k = μN/Nₑ, empty pipe, Hard Limits<br/><i>k = μ confirmed; pipe was full</i>"]:::critic
   C["<b>C · Ancient DNA: zero fixations</b><br/>1240k panel, turnover d<br/><i>test does not discriminate</i>"]:::open
   D["<b>D · Sequence space</b><br/>10³²⁵ vs 10⁵² (Wistar 1966)<br/><i>checks pending</i>"]:::todo
@@ -105,7 +106,7 @@ G_f &= 1{,}322\ \text{gens per fixation (LTEE throughput)}\\
 \end{aligned}
 ```
 The parameters drift between versions (2019 → 2025 → 2026; see [`ledgers/versions.md`](docs/research/ledgers/versions.md)). The dispute is over three inputs:
-- **Numerator:** how many fixations are actually required. Counting base pairs gives 205M; counting SNV events gives about 17.5M per lineage.
+- **Numerator:** how many fixations are actually required. Counting base pairs gives 205M; a direct count of mutation events in the human–chimp alignment gives about 21M per lineage, of which SNVs are about 19M (17.5M on CSAC's figure).
 - **$G_f$:** whether an asexual bacterial throughput transfers to a sexual, recombining, much larger genome.
 - **$d$:** the turnover coefficient.
 
@@ -205,9 +206,9 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
-  R1 --> R2["R2<br/>196 claims<br/>verbatim + sourced"]:::done
+  R1 --> R2["R2<br/>204 claims<br/>verbatim + sourced"]:::done
   R2 --> R3["R3<br/>Argument tree<br/>30 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>23 checks reviewed"]:::active
+  R3 --> R4["R4<br/>Math resolution<br/>24 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo
@@ -222,7 +223,7 @@ flowchart LR
 - [x] **G1:** what $0.02^{2\times10^7}$ prices: a *specific* outcome or *any* outcome
 - [x] **Gaps:** finite-map cap fit (GAP-04), indel/SV event counts (GAP-07), sweep-scan windows (GAP-02)
 - [x] **H3:** cost of selection at human scale (long-run hazard, finite supply, hard load at K ≥ 4000)
-- [ ] **GAP-07b:** direct event count from the human–chimp alignment (in progress)
+- [x] **GAP-07b:** direct event count from the human–chimp alignment (9.7×, bracket ~7–14×; follow-ups GAP-07c and a T2T re-run)
 - [ ] **D:** sequence-space simulations (Wistar, Ulam, Weasel); a ViennaRNA + deep-mutational-scan spike is in progress
 - [ ] **C1b:** the aDNA 21-count with realistic per-site call depth and ancestry structure (C1c in progress)
 - [ ] **H follow-ups:** soft-selection rate limit and epistasis at human $R$; a sourced beneficial DFE and $M$; CIs on T50

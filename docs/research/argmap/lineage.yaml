@@ -3072,3 +3072,120 @@
   fate: retracted
   fate_date: 2026-10-09
   fate_locator: "research/checks/REVIEW.md review #7 correctness MAJOR 1"
+
+# ---------------------------------------------------------------- 2026-10-09: GAP-07b direct count and corpus refresh
+- id: L-day-bp-generous-2026
+  label: "Day: a large SV fixes as one low-probability event, so counting it by base pair is 'generous to the standard model'"
+  side: day
+  kind: argument
+  date: 2026-04-28
+  claim_ids: [A3a, A3x]
+  locator: "https://voxday.net/2026/04/28/less-than-zero-3/ ¶19 (Q99)"
+  quote: "Counting these by base pair, as the gap-divergence figure does, is generous to the standard model. Counting them by independent fixation events would be more devastating still."
+  parents:
+    - {id: L-yoo-2025, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 GAP-07b: as a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp; untested"
+
+- id: L-day-bp-range-2026
+  label: "Day: SNV-only and bp-per-SV bracket the shortfall; 'the conclusion holds either way'"
+  side: day
+  kind: reply
+  date: 2026-05-13
+  claim_ids: [A3a, A3b, A3x]
+  locator: "https://voxday.net/2026/05/13/reddit-takes-on-probability-zero/ ¶6 (Q103)"
+  quote: "Counting structural variants as single events is the maximally generous treatment, and the model still fails."
+  parents:
+    - {id: L-day-bp-generous-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 GAP-07b: the SNV-only row brackets the measured fixed-event count (16.4–18.1M per lineage)"
+
+- id: L-audit-gap07b-2026
+  label: "Audit GAP-07b: direct alignment count, 42.1M events (21.05M per lineage); 205M is 9.7× raw, bracket 7–14×"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [A3, A3a, A3b, A3x]
+  locator: "research/checks/results/R4-GAP07b-alignment.md §0"
+  quote: "The SNV-only row is therefore neither a floor nor a ceiling"
+  parents:
+    - {id: L-req-205m-2026, relation: responds-to}
+    - {id: L-day-bp-generous-2026, relation: responds-to}
+    - {id: L-audit-gap07-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #8: bracket replaces a single ratio; Day's weighting rationale added; 22.5M upper bound retired; hg38 vs panTro6 (non-T2T)"
+
+- id: L-day-gf-1587-2026
+  label: "Day adopts the strict-count G_f: 1,587 generations per fixation"
+  side: day
+  kind: revision
+  date: 2026-10-03
+  claim_ids: [A2j, A2b]
+  locator: "https://substack.aicentral.blog/p/an-intelligent-groove para 16 (Q85)"
+  quote: "then run the numbers, is 1,587 generations per fixation."
+  parents:
+    - {id: L-strict-counts-2026, relation: descends}
+    - {id: L-gf-1322-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "The same post reposts the Z23003785 abstract with 1,322 unchanged"
+
+- id: L-day-1-over-2ne-restated-2026
+  label: "Day restates 1/(2Nₑ) as the neutral fixation probability, after the 08-27 concession"
+  side: day
+  kind: value
+  date: 2026-09-15
+  claim_ids: [B3a, B3g, B9]
+  locator: "https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874 (Q105)"
+  quote: "1/2Nₑ is the fixation probability for a neutral mutation."
+  parents:
+    - {id: L-day-concession-2026-08-27, relation: revises}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-10-06
+  fate_locator: "Z23188201: p = 1/(2N) 'holds exactly regardless of offspring distribution'"
+
+- id: L-matev-n-over-ne-2026
+  label: "Matev: 1/(2Nₑ) per copy sums to N/Nₑ > 1 over a site's 2N copies"
+  side: critic
+  kind: reply
+  date: 2026-09-25
+  claim_ids: [B3i]
+  locator: "https://dennismccarthy.substack.com/p/vox-day-responds/comment/345248135 (RF-2)"
+  quote: "2N/(2Nₑ) = N/Nₑ, which is greater than one and therefore not even a valid probability when N > Nₑ."
+  parents:
+    - {id: L-day-k-nne-blog-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-keruru-measured-ne-draft-2026
+  label: "keruru (Zenodo draft): measured Nₑ is ~3 orders below Wright's 4N/(Vₖ+2), the input to the census ceiling"
+  side: critic
+  kind: reply
+  date: 2026-08-31
+  claim_ids: [B2e]
+  locator: "https://zenodo.org/records/22184713 adna-draft-1.md s6 (RF-13)"
+  quote: "We do not claim the ceiling argument is refuted. We claim its input is measurably wrong where it can be tested"
+  parents:
+    - {id: L-hard-limits-2026, relation: responds-to}
+    - {id: L-keruru-temporal-ne-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Unreviewed Draft 1 with [CHECK] marks; replication pending"

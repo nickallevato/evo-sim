@@ -1,6 +1,6 @@
 # Gaps Ledger: Considerations No Party Has Addressed
 
-Version: 2026-10-08 (first pass; revised the same day after the fact-check in `ledgers/gaps-review.md`, see "Review resolution" at the end; R4 check results for GAP-04, GAP-07 and GAP-02 added in blocks marked "(R4 2026-10-08)", from `research/checks/results/R4-GAPS-04-07-02.md`). Scope: the 30 load-bearing nodes in `hierarchy.yaml`. Companion file: `sources/prior-art.md` (PA-xx IDs below).
+Version: 2026-10-08 (first pass; revised the same day after the fact-check in `ledgers/gaps-review.md`, see "Review resolution" at the end; R4 check results for GAP-04, GAP-07 and GAP-02 added in blocks marked "(R4 2026-10-08)", from `research/checks/results/R4-GAPS-04-07-02.md`; GAP-01 (H3) and the GAP-07 direct alignment count (R4-GAP07b-alignment.md) added in blocks marked "(R4 2026-10-09)"). Scope: the 30 load-bearing nodes in `hierarchy.yaml`. Companion file: `sources/prior-art.md` (PA-xx IDs below).
 
 ## Definition
 A **gap** is a consideration that meets all four conditions:
@@ -506,6 +506,13 @@ See PA-34.
 - *Credits (verified):* McCarthy (one event, many base pairs); Fun-Friendship4898 (Reddit 1wv4zeg: the 35M + 2 × 187 Mb construction; SDR composition); Nesslig20 relaying Neukamm (Peaceful Science 18094: indel spans); Mansfield's uncited ~25M.
 - *Beneficiary.* Critics on the unit argument; Day credited for corroboration of the 17.5M/20M magnitudes, whose shortfall is untouched.
 
+**R4 direct count (R4 2026-10-09)** (`research/checks/results/R4-GAP07b-alignment.md`; `gap07b_alignment_count.py`, pre-registered at 3c847b8; post hoc 3798b92, fbbc580; review #8).
+- *Measured, UCSC hg38 vs panTro6 (non-T2T; both lineages plus polymorphism):* 37.77M SNVs, 4.30M indel events, 42.10M events, 21.05M per lineage. Day's 205M is 9.7× raw; bracket about 7–14× (Day-favourable repeat-unit and slippage readings 7.2–9.5; critic-favourable lineage, fill, divergence and polymorphism corrections 10.1–13.4; all post hoc).
+- *Replaces the "~20× rate-based / ~10× observed" line above.* The direct count agrees with the calibrated and CSAC-observed routes (18–22M per lineage). The k = μ rate route (9.6–10.4M) is about 2× below it; that tension is the clock question (B4a / GAP-06), on which it favours Day; this check does not resolve it.
+- *CSAC's 5M* resolves as a two-lineage total (4.30M measured); the 22.5M per-lineage upper bound above is retired.
+- *Day's stated position* (Q99, Q101–Q103) is a weighting claim with a range (SNV-only lower bracket, bp upper bracket). His SNV-only 17.5M is 83% of measured events and brackets the polymorphism-corrected fixed events (16.4–18.1M). As a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp; untested.
+- *Open:* GAP-07c (polymorphic share of SNVs, indels and SVs from population frequencies) and a T2T re-run (CHM13/hs1 vs mPanTro3).
+
 ---
 
 ## Candidates rejected (considered, but already addressed or immaterial)
@@ -545,7 +552,7 @@ The prior art does not support a waiting-time cap on *total* fixations (PA-25 to
 | GAP-03 neutral rate under linkage (Birky–Walsh) | **Critics** on B/B5 (expected rate only). Day on beneficial efficacy, minor. | 4 |
 | GAP-05 slightly deleterious fixations | **Day-leaning** on the premise; critics on the "collapse". The size figure is an upper-end scenario. | 5 |
 | GAP-06 μ×g consistency, BGS-aware Nₑ,anc | **Critics, weak** (B4a/B6 only, and only if the fit closes). Neither on ROOT. | 6 |
-| GAP-07 rate-based event counts | **Critics** (modest; the indel rate is uncertain by ~3×). (R4 2026-10-08) Critics on the unit argument (205M ≈ 9–11× the event count); Day credited for corroboration of the 17.5M/20M magnitudes. | 7 |
+| GAP-07 rate-based event counts | **Critics** (modest; the indel rate is uncertain by ~3×). (R4 2026-10-08) Critics on the unit argument (205M ≈ 9–11× the event count); Day credited for corroboration of the 17.5M/20M magnitudes. (R4 2026-10-09, direct count) 9.7× raw, bracket 7–14× (hg38 vs panTro6, non-T2T); Day's SNV-only 17.5M brackets the polymorphism-corrected fixed events. | 7 |
 
 **Counts by primary beneficiary:** two-sided 3; critic-leaning 3; Day-leaning 1; neither 0. (First pass: 3/2/1/1. GAP-06 moved from "neither" to "critics, weak" because its own text said so.)
 

@@ -36,6 +36,7 @@ Other items: the "150,000 fixed differences" for McCarthy's model from P(unchang
 
 ## Responses
 - Against: "450 billion x 1/20,000 = 22.5 million fixed mutations." ([McCarthy, "Why Probability Zero is Wrong About Evolution" (free repost)](https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1), 2026-09-11 (original paid post 2026-01-26), para 52 (McCarthy))
+- Against (added 2026-10-09, corpus refresh): Matev, comment on McCarthy "Vox Day Responds" (comment id 345248135, 2026-09-25; RF-3): "He is using a fixation probability of one over sixteen-billion for every single mutation under consideration, including the ones introduced in the first generation after the split." (1/(2 x 8e9) = 1/16e9: the present census applied to mutations that arose when N was far smaller.)
 - In support: Day's reproduction of McCarthy's 20M under McCarthy's inputs is arithmetically correct (400e9/20,000 = 20M).
 - Weaknesses in the responses: McCarthy uses N = Nₑ = 10,000 and treats all mutations as neutral (B5a). The sign problem above is on Day's side.
 

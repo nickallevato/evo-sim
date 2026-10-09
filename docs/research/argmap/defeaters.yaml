@@ -67,7 +67,7 @@
   locator: https://dennismccarthy.substack.com/p/vox-day-responds para 26 (MC-11)
   audit_status: upheld
   audit_basis: 'A3x holds/accurate/supported; A3a arithmetic-error/misread/contested; Day concedes the concern in 3.0 §7.3 (A3b); R4 GAP-07: events per lineage 18–22.5M (calibrated / CSAC-observed), 205M ≈ 9–11×; G_f counts events, so a bp numerator is a unit mismatch'
-  counter: []
+  counter: [d272]
   note: Base pairs inside structural variants are not separate fixation events.
   quote: a single mutational event can cause hundreds, thousands, or even millions of base-pair differences.
   hierarchy_edge: true
@@ -488,7 +488,7 @@
   locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/
   audit_status: partly
   audit_basis: B5f holds/n/a/contested; the 17.5M comparator includes polymorphism (claims/B5f)
-  counter: [d219]
+  counter: [d219, d271]
   note: ~9.7M over 252,000 generations; the window is long compared with fixation time.
   hierarchy_edge: true
 - id: d040
@@ -501,7 +501,7 @@
   locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/
   audit_status: upheld
   audit_basis: B3a contradicted (RESULTS B3; B3g)
-  counter: [d219]
+  counter: [d219, d271]
   note: 38.4 per generation = μ_G.
   hierarchy_edge: true
 - id: d041
@@ -3193,7 +3193,7 @@
   locator: research/checks/results/R4-GAPS-04-07-02.md §2
   audit_status: upheld
   audit_basis: 'A3x supported; A3a arithmetic-error/misread/contested (contradicted as an event count is the alternative reading); reviewed (review #6)'
-  counter: [d255]
+  counter: [d255, d273]
   note: 'Events per lineage are 18–22.5M (clock-free calibrated / CSAC-observed), 9.6–10.4M rate × time; 205M is ~9–11× (>= 8× at observation-consistent inputs). G_f counts events, so a base-pair numerator is a unit mismatch; a repeat-unit reading gives 21–30M at Yoo''s satellite units. The event count corroborates Day''s 17.5M/20M (credit to Day).'
   hierarchy_edge: false
 - id: d251
@@ -3390,4 +3390,172 @@
   audit_basis: 'applied (R4-H3-human Headline matrix, §5 condition labels, §7 not-modelled table, §6 credits)'
   counter: []
   note: 'Verdicts were stated without the hard/soft condition; R = 1.1 is Haldane''s assumption and needs a soft load; D >= 20 was a default; truncation/epistasis and soft selection were unnamed; the hard-load rows are bounding cases; Hancock and Nesslig20 were under-credited.'
+  hierarchy_edge: false
+- id: d266
+  attacker: A2i
+  target: A2e
+  target_part: inference
+  type: undercutting
+  by: [Matev (McCarthy Substack commenter)]
+  first_date: 2026-09-18
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds/comment/340270022 (RF-4)
+  audit_status: partly
+  audit_basis: 'A2i internal holds; A2e internal non-sequitur already (d003); whether human generations per fixation can fall below the LTEE value is the A2 scaling question (A-sim, GAP-04), not settled by this point'
+  counter: []
+  note: 'Bacteria are fast per year because their generations are short, not because they fix more per generation; so a per-generation LTEE figure is not shown to be a generous bound for humans.'
+  hierarchy_edge: true
+- id: d267
+  attacker: B2e
+  target: B2b
+  target_part: P1
+  type: undermining
+  by: [keruru]
+  first_date: 2026-08-31
+  locator: https://zenodo.org/records/22184713 adna-draft-1.md s6 (RF-12, RF-13)
+  audit_status: untested
+  counter: []
+  note: 'A temporal N_e measured from ancient genomes (6,933–8,139) is about 700–820× below Wright''s 4N/(V_k+2) applied to a Bronze Age census of ~1e7; a smaller N_e at a given census raises the ceiling. Unreviewed draft with [CHECK] marks and an inconsistent ratio (1e-4 / 4e-4 / 8e-4); replication pending.'
+  hierarchy_edge: true
+- id: d268
+  attacker: B3i
+  target: B3a
+  target_part: P2
+  type: undermining
+  by: [Matev (McCarthy Substack commenter)]
+  first_date: 2026-09-25
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds/comment/345248135 (RF-2)
+  audit_status: upheld
+  audit_basis: 'B3i holds/n/a/supported; B3a external contradicted; Day conceded 2026-08-27 (B3g), though he restated 1/2Nₑ on 2026-09-15 (Q105)'
+  counter: []
+  note: 'Exactly one of the 2N copies at a site is ancestral to the eventual population, so per-copy fixation probabilities sum to 1; 1/(2N_e) per copy would sum to N/N_e > 1.'
+  hierarchy_edge: true
+- id: d269
+  attacker: G5
+  target: G
+  target_part: inference
+  type: undercutting
+  by: [Matev (McCarthy Substack commenter)]
+  first_date: 2026-09-17
+  locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/338963242 (RF-1)
+  audit_status: upheld
+  audit_basis: 'G5 internal holds; G internal arithmetic-error, and G''s own derivation records absolute variance n/4 rising with n; R4 G1: no ~230 cap under multiplicative fitness'
+  counter: []
+  note: 'The coefficient of variation of the beneficial-allele count falls as loci are added, but its variance rises; selection responds to variance in (log) fitness, not to the CV.'
+  hierarchy_edge: true
+- id: d270
+  attacker: chk:GAP07b
+  target: A3a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07b-alignment.md §0, §6, §11
+  audit_status: upheld
+  audit_basis: 'A3a arithmetic-error / misread / contested (contradicted if read as an event count; Day''s weighting reading untested); reviewed (review #8)'
+  counter: [d276, d277, d278]
+  note: 'A direct count from the hg38–panTro6 alignment (non-T2T; both lineages plus polymorphism) gives 42.1M events, 21.05M per lineage; 205M is 9.7× raw, bracket about 7–14×. As a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp, against Day''s own event-counting G_f. Bases outside aligned blocks are 201–261 Mb, so the bp magnitude is real but not a fixation count (credit to Day).'
+  hierarchy_edge: false
+- id: d271
+  attacker: chk:GAP07b
+  target: B5f
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07b-alignment.md §11 (critics graded against the measurement)
+  audit_status: partly
+  audit_basis: 'measured 17.3M human-derived SNVs and 21.05M events per lineage; the k = μ rate route gives 9.7M (−44% / −54%); the tension is the clock question (B4a / GAP-06), not resolved here'
+  counter: [d276, d277, d278]
+  note: 'The critics'' rate-based 9.7M per lineage is about 2× below the measured divergence, while their observation-based estimates (McCarthy 22.5M, Mansfield 25M, Nesslig20 and Hancock ~38M total) land within 7–19% (credit to Day on the rate route).'
+  hierarchy_edge: false
+- id: d272
+  attacker: chk:GAP07b
+  target: A3x
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07b-alignment.md §11 (attribution of errors)
+  audit_status: partly
+  audit_basis: 'A3x fidelity partial; external supported (the 40M is met by the measured 42.1M within 5%, with SNV +8% and indels −14% offsetting)'
+  counter: [d276, d277, d278]
+  note: 'A3x adds Yoo''s six-ape curated count of 1,140 inversions to a human–chimp total (the human–chimp net has 453 nested inversion fills >= 10 kb); the effect on the 40M is nil, and the 40M itself is confirmed.'
+  hierarchy_edge: false
+- id: d273
+  attacker: chk:GAP07b
+  target: chk:GAP07
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07b-alignment.md §11 (attribution of errors), §13
+  audit_status: upheld
+  audit_basis: 'CSAC 5M measured as a two-lineage total (4.30M); the 22.5M per-lineage upper bound retired; the rate-based "9–11×" range corrected (that route gives ~20×)'
+  counter: [d276, d277, d278]
+  note: 'The audit''s own GAP-07 used a per-species reading of CSAC''s 5M for a 22.5M upper bound and folded the k = μ route into a "9–11×" range; the direct count retires the bound and separates the routes.'
+  hierarchy_edge: false
+- id: d274
+  attacker: B7a
+  target: B9
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: docs/research/claims/B9-drift-would-cause-extinction-within-centuries.md (Formal statement)
+  audit_status: upheld
+  audit_basis: 'B9 internal non-sequitur on Day''s own premise in the same comment (Q105: 1/2Nₑ "is not a general fixation probability that applies to all mutations"); external pending (GAP-05)'
+  counter: []
+  note: 'A harmful mutation with N_e|s| >> 1 fixes with probability ~2|s|e^(−4N_e|s|) (8.5e-21 at N_e = 1e4, s = −0.001), not 1/(2N); a 3:1 excess of harmful mutations does not imply a 3:1 excess of harmful fixations, and "within centuries" conflicts with Day''s own ~1 My per neutral fixation.'
+  hierarchy_edge: false
+- id: d275
+  attacker: C5b
+  target: C7
+  target_part: C
+  type: rebutting
+  by: [keruru]
+  first_date: 2026-08-31
+  locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'; https://zenodo.org/records/22184713 s6
+  audit_status: partly
+  audit_basis: 'C7 internal non-sequitur (few completions are the neutral expectation, claim C); measured temporal frequency change gives N_e ~ 8,000–10,000; drift vs admixture in the window is the C1c question'
+  counter: []
+  note: 'Allele frequencies in the same AADR data change between dated samples at a rate that implies N_e of order 1e4, which is drift operating, not its absence; completed fixations are the wrong statistic for detecting it.'
+  hierarchy_edge: false
+- id: d276
+  attacker: rev:R4-GAP07b-correctness
+  target: chk:GAP07b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #8)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-GAP07b-correctness.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied (R4-GAP07b §0 bracket, §7 recomputed, §8, §14; indel polarization restricted to <= 50 bp)'
+  counter: []
+  note: 'Indel polarization blind above ~100 bp; §7 per-lineage figures came from the flawed rule (recomputed 20.1–20.6M human); N-mask and F1 description overstated; post hoc numbers in §0/§2 unlabelled; SNV-only omission is ~10–12%, not ~20%.'
+  hierarchy_edge: false
+- id: d277
+  attacker: rev:R4-GAP07b-steelman-day
+  target: chk:GAP07b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #8)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-GAP07b-steelman-day.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied (R4-GAP07b §0 "What survives for Day", §11, quotes Q97–Q103; non-T2T label; weight test)'
+  counter: []
+  note: 'Day''s stated rationale (04-28 ¶19, 05-13 ¶4–6) was missing: a weighting claim with a range, not a literal 205M events; hg38 vs panTro6 is not T2T; the SNV-only shortfall rises on the measured count and Day''s valid points were buried in §11.'
+  hierarchy_edge: false
+- id: d278
+  attacker: rev:R4-GAP07b-steelman-critic
+  target: chk:GAP07b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #8)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-GAP07b-steelman-critic.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied (R4-GAP07b §0 bracket critic side, §11 graded table and attributions; 523M corrected to 521M)'
+  counter: []
+  note: '9.7× was the lowest ratio the note''s own numbers support (10–14× with human-lineage and polymorphism corrections); "SNV-only is a floor" contradicted the data; two Day credits overreached (523M, 261M); critics'' independent numbers were never graded; errors were not attributed.'
   hierarchy_edge: false

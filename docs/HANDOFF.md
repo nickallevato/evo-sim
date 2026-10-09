@@ -1,6 +1,6 @@
 # evo-sim: a briefing for independent assessment
 
-*Status as of 2026-10-09 (H3 and GAP-04/07/02 added; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
+*Status as of 2026-10-09 (GAP-07b direct count and the 2026-10-09 corpus refresh added; earlier the same day H3 and GAP-04/07/02; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
 
 This note is for a team that has not followed the project and wants to form its own view of it. It describes what the project is, what it has found, and where its findings and methods are weakest. It does not argue for any side. Wherever this note and the repo disagree, trust the repo.
 
@@ -13,9 +13,9 @@ evo-sim has two stages.
 
 ## How the audit works
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
-2. **Claims.** 196 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
+2. **Claims.** 204 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty nodes are marked as load-bearing.
-4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-three checks have been reviewed so far.
+4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-four checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
@@ -36,6 +36,7 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Cost of selection.** In the audit's reconstruction, soft selection does not make the cost disappear. At human scale (H3), concurrent sweeps do share one reproductive budget, as Day says, and at Haldane's assumed R ≈ 1.1 the long-run sustainable rate is below 1/300 (≈ 1/530–1/1,050).
 - **Haldane's arithmetic** (300 and 487) holds.
 - **A critic's double count.** The critics' claim that "38M matches 35M SNVs" counts the same differences twice.
+- **SNV-only count.** Day's SNV-only figure (17.5M per lineage) is 83% of the directly counted events and brackets the count once polymorphism is removed (16.4–18.1M); his SNV-only shortfall grows slightly on the measured count. His base-pair total is the right order for sequence that does not align one-to-one (GAP-07b).
 - **LTEE founders.** The founder hazard's size (2.0–2.75% per event against Day's 2.3%) and the relictation chain both reproduce. The route to the 2.3% is wrong, and its consequence for real populations is untested.
 
 **Points where the critics' maths holds up:**
@@ -45,7 +46,7 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Recombination.** In the tested regime, recombination removes the clonal-interference ceiling.
 - **Divergence.** Human–chimp divergence includes ancestral polymorphism: d = 2μT + θ_anc.
 - **Hard-selection cap.** The cap is ln R / D, not a flat 1/300. At human scale (H3, hard adaptive selection with a soft load), a coding-only adaptive count of 10³–10⁴ is payable at R ≈ 1.2–3. Day's 17.5M–205M fail under any cost model, which says nothing about whether most differences were neutral.
-- **Event counts.** 205M base pairs is about 9–11× the number of mutational events (GAP-07).
+- **Event counts.** A direct count from the human–chimp genome alignment finds about 42M mutational events (21M per lineage). Day's 205M is 9.7× that, within a bracket of about 7–14× depending on assumptions; the alignment uses older, non-T2T assemblies (GAP-07b).
 - **Required fixations.** The "205M required fixations" figure counts base pairs rather than mutation events.
 - **A misread citation.** A selection coefficient Day cites (s = 0.001, from Zeng 2021) is for negative selection, not beneficial.
 - **Bernoulli barrier.** 0.02^(2×10⁷) prices one pre-specified list of outcomes, and its value doesn't depend on timing. No cap near 230 concurrent sweeps appears under multiplicative fitness. One earlier audit objection to Day's 14.7× was itself withdrawn.
@@ -61,9 +62,9 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 
 | Verdict | Counts |
 |---|---|
-| Internal | 96 hold, 15 non-sequitur, 6 arithmetic error, 56 pending |
-| Fidelity | 37 accurate, 32 partial, 9 misread, 35 unverifiable, 9 pending |
-| External | 22 supported, 102 contested, 9 contradicted, 5 untestable, 47 pending |
+| Internal | 101 hold, 17 non-sequitur, 6 arithmetic error, 57 pending |
+| Fidelity | 36 accurate, 33 partial, 9 misread, 35 unverifiable, 11 pending |
+| External | 24 supported, 102 contested, 9 contradicted, 5 untestable, 52 pending |
 
 Note that the largest external category is *contested*.
 

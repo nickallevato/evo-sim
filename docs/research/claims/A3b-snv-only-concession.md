@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds   # 35M / 2 = 17.5M
   fidelity: partial   # CSAC 1.23% includes polymorphism (verified-partial); 's7.3 concession' wording is ambiguous on bp vs events (R4 GAP-07)
-  external: contested   # R4 GAP-07: the event count (18-22.5M per lineage) corroborates the 17.5M magnitude; only the 205M bp headline falls
+  external: supported   # R4 GAP-07b: 17.5M is 83% of measured events per lineage (21.05M, hg38 vs panTro6) and brackets the polymorphism-corrected fixed-event count 16.4-18.1M; the omitted indels (~10-12%) and the included polymorphism (14-22% of SNV differences) roughly cancel. The shortfall built on it rises slightly on the measured count (~99,000-110,000 at G_f 1,322; 86,000-95,000 polymorphism-corrected)
 ---
 
 ## Statement (verbatim)
@@ -51,6 +51,8 @@ Covered by A5/A5b predictions. Result recorded above.
 Arithmetic audit (python3 -I, scratch). Review: pending.
 
 R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): The SNV-only 17.5M is corroborated in magnitude by the event count (18.2-19.7M calibrated; 20.0M CSAC-observed per lineage); the shortfall built on it (~1e5) is untouched by this check. s7.3 says SVs 'should not each count as a single fixation event in the same sense as a point mutation'; the wording does not settle whether Day regards base-pair counts as wrong. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
+
+R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): SNVs are 90% of measured events (37.77 / 42.10M). Day's SNV-only row is neither a lower nor an upper bound on the fixed-event count: with CSAC's fixed share (0.78-0.86) applied, fixed events per lineage are 16.4-18.1M [post hoc], which bracket 17.5M. 'Discount every structural variant ... to zero' (Q103) also drops the 4.3M small indel events (89% are 1-10 bp), so it is an SNV count, not an event count. The SNV-only shortfall at MITTENS 3.0 s7.3 rates is 91,800 on 17.5M (Day prints 91,600), 99,100 on measured SNVs/2 and 110,400 on measured events per lineage; the rate side (G_f) is outside this check. Review: `research/checks/REVIEW.md` (review #8, 2026-10-09).
 
 ## Simulator variables implied
 - Preset: SNV-only requirement.

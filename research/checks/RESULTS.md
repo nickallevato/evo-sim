@@ -482,3 +482,24 @@ The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a differen
 - **H7:** n/a / n/a / supported; these are bounding cases.
 - **H8:** holds / pending / contested.
 - **ROOT-M row 1:** pending / n/a / pending, now carrying its conditions.
+
+## GAP-07b — Direct count of human–chimp divergence events from a whole-genome alignment · `gap07b_alignment_count.py` (deterministic; pre-registered 3c847b8), post hoc `gap07b_posthoc_{blocks,polarize,ladder}.py` (c1727f0), `gap07b_posthoc_review.py` (3798b92), `gap07b_posthoc_review2.py` (fbbc580) · claims A3, A3a, A3b, A3c, A3d, A3x · full write-up `results/R4-GAP07b-alignment.md`
+
+**Data.** UCSC hg38 vs panTro6 net, chain and axtNet, and hg38 vs gorGor6 axtNet as outgroup (md5s match UCSC). Primary chromosomes only. **Not T2T**: every ratio is for this pair of assemblies, which counts both lineages plus ancestral and within-species polymorphism.
+
+**Measured (pre-registered main run).**
+- 37.77M SNVs (Ts/Tv 2.05; divergence 1.35%); 4.30M indel events (chain gaps inside the net; 40.8% 1 bp, 48.4% 2–10 bp, 0.54% > 1 kb, largest 25.2 Mb); total 42.10M events, **21.05M per lineage**.
+- SNV lineage split (gorilla outgroup, 95% polarizable): 48.6% human-derived. The indel split is consistent with 50/50 for events <= 50 bp only.
+- Bases outside every aligned block: 261 Mb (201 Mb without hg38 centromere models); with aligned nested sequence 521 Mb.
+
+**Ratio.** Day's 205M per lineage = **9.7× the measured events** (pre-registered quantity). Bracket about **7–14×** (all rows post hoc): Day-favourable 7.2–9.5 (non-aligned bases as 171/32-bp repeat units, indel slippage ×2–×3, non-T2T undercount); critic-favourable 10.1–13.4 (human lineage alone, top-level fills, <2%-divergent records, CSAC's 14–22% polymorphic share). Repeat masking gives 22–24×, a unique-sequence bound. **Events are not fixations, and events are not selected**: the ratio is the unit mismatch only.
+
+**For Day.** His SNV-only 17.5M is 83% of measured events per lineage and brackets the polymorphism-corrected fixed events (16.4–18.1M); his SNV-only shortfall rises on the measured count (99,100–110,400 at G_f 1,322). The bp magnitude of non-1:1 sequence is the same order as 410M. His first-edition "40 million" was an events figure (42.1M measured). His stated position (04-28 ¶19; 05-13 ¶4–6) is a weighting claim with a range; as a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp (untested; his own G_f counts events). The k = μ rate route undershoots the measurement ~2× (the clock question, B4a / GAP-06).
+
+**For the critics.** The unit argument (A3x) holds by direct count. Observation-based critic estimates land within 7–19% (McCarthy 22.5M, Mansfield 25M per lineage; Nesslig20 and Hancock ~38M total, −10% of events). CSAC's "5M indels" is a two-lineage total (4.30M measured).
+
+**Errors recorded, both sides.** CSAC's ambiguous "in each species"; the audit's own 22.5M per-lineage upper bound (retired); A3x's 1,140 six-ape inversions (453 nested inversion fills >= 10 kb in the human–chimp net); the first-published 523M row double-counted 2.75M SNVs; critic slips RF-6, MF-03, PS-01, GG-11.
+
+**Scorecard.** Held: indel total (3.5–6.5M), CSAC 5M a total, total events (33–45M), per lineage (16–23M), L3 bp/event 7–18 under all four filters, nested inversions 200–1,500. Missed: SNV total (37.8M vs 27–35M), raw gap bp, 2–10 bp share, > 1 kb count, repeat-masking sensitivity, unaligned shares (P8). The pre-registered indel polarization was asymmetric (33% human as run; a method artefact).
+
+**Open.** GAP-07c (polymorphic share from population frequencies) and a T2T re-run (CHM13/hs1 vs mPanTro3). Reviews: `results/REVIEW-R4-GAP07b-*.md`; resolution in the write-up §14; `REVIEW.md` review #8.

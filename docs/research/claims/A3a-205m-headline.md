@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: arithmetic-error   # stated parts do not sum to 410M (35e6 + 1,140 + 187e6 = 222e6); 410 = 35 + 2 x 187 (Fun-Friendship4898's reading)
   fidelity: misread   # Yoo 2025 gives 327 Mb average SDR per ape lineage; 410/187 not found (A3x1)
-  external: contested   # R4 GAP-07: as 'required fixations' (Day's wording) the figure is ~9-11x the event count (contradicted as an event count is the alternative reading, pending branch B / the two-model framing); the base-pair magnitude (~1e8 per lineage, Yoo) is real but not a fixation count
+  external: contested   # contradicted if 205M is read as an event count (R4 GAP-07b: measured ~21M events per lineage, hg38 vs panTro6, non-T2T; bracket 7-14x). Day's stated reading (04-28 ¶19, 05-13 ¶4-6; Q99, Q101-Q103) is a weighting claim with a range; it is untested, and as a weight it would need ~3,250 SNV-equivalents per >50 bp event, against his own event-counting G_f. Base-pair magnitude of non-1:1 sequence is the same order (201-523 Mb, assembly dependent) but not a fixation count
 ---
 
 ## Statement (verbatim)
@@ -51,6 +51,8 @@ Not run. Prediction (claimant): a lineage-aware count of independent fixed mutat
 Arithmetic audit (python3 -I, scratch): the 410M total does not reconcile with its stated parts. Review: pending.
 
 R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): 205M is a base-pair figure; events per lineage are 18-22.5M (calibrated / CSAC-observed), ~9-11x lower (>= 8x at observation-consistent inputs). Under k = mu, de novo SVs alone deliver 0.35-0.92 Gb per lineage, the same order as SDR base pairs (Yoo human-lineage 148-184 Mb, Day's 187 Mb, cross-ape 327 Mb); the agreement is order-of-magnitude only, since SDRs are dominated by centromeres, acrocentric arms and heterochromatic caps. On a repeat-unit reading (Yoo's 171/32 bp satellite units) the count is 21-30M. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
+
+R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): direct count from the UCSC hg38 vs panTro6 net/chain/axtNet alignment (non-T2T; both lineages plus polymorphism): 37.77M SNVs + 4.30M indel events = 42.10M events, 21.05M per lineage; 205M is 9.7x raw (pre-registered), bracket about 7-14x (Day-favourable repeat-unit and slippage readings 7.2-9.5; critic-favourable human-lineage, top-level-fill, <2%-divergence and polymorphism corrections 10.1-13.4, all post hoc). Day's stated position is a range (SNV-only lower, bp upper) with a weighting claim (Q99: SVs fix 'as a single low-probability event'; bp counting 'is generous to the standard model'); as a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp. Bases outside every aligned block are 261 Mb (201 Mb without hg38 centromere models), so 410M is not an invented magnitude, but the check does not show 410 Mb *differ*. The 410.09 Mb and 187.0 Mb matches among component sums are at the chance base rate (3 hits in 3,458 subsets). Review: `research/checks/REVIEW.md` (review #8, 2026-10-09).
 
 ## Simulator variables implied
 - `required_fixations` presets: events (about 40M total, 20M per lineage), SNV only (17.5M), bp-affected (205M).

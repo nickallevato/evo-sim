@@ -90,16 +90,16 @@ Following Pollock's classification:
 | Attacker | Undermining | Undercutting | Rebutting | Upheld | Partly | Not upheld | Untested |
 |---|---|---|---|---|---|---|---|
 | Day (63) | 28 | 19 | 16 | 7 | 32 | 14 | 10 |
-| Critics (69) | 32 | 15 | 22 | 25 | 34 | 0 | 10 |
+| Critics (74) | 34 | 17 | 23 | 27 | 36 | 0 | 11 |
 | Allies (2) | 0 | 0 | 2 | 1 | 0 | 0 | 1 |
-| Literature (23; includes the audit-raised nodes B1c, B4a and C1, which the lint files under `literature`) | 12 | 8 | 3 | 5 | 16 | 1 | 1 |
-| This audit (101) | 54 | 46 | 1 | 52 | 49 | 0 | 0 |
+| Literature (24; includes the audit-raised nodes B1c, B4a and C1, which the lint files under `literature`) | 12 | 9 | 3 | 6 | 16 | 1 | 1 |
+| This audit (108) | 57 | 49 | 2 | 57 | 51 | 0 | 0 |
 
 **What the counts do and don't mean**
-- More attacks land on Day than on the critics. His is the positive argument with most of the load-bearing numbers: 108 of 196 claims.
+- More attacks land on Day than on the critics. His is the positive argument with most of the load-bearing numbers: 112 of 204 claims.
 - 11 of Day's 63 are Day against Day: self-revisions and statements that don't agree with each other. (Before the 2026-10-08 edge fixes this read 19 of 67. Eight of those were mis-typed or mis-aimed edges.)
 - Most of Day's 14 not-upheld objections rest on premises he later withdrew himself, such as N/Nₑ and the empty pipeline.
-- The audit's 101 attacks fall on Day (53), the critics (20), its own earlier checks (24, all from review rounds), allies (3) and literature (1). (Counts as of the H3 integration, 2026-10-09.)
+- The audit's 108 attacks fall on Day (54), the critics (22), its own earlier checks (28: 27 from review rounds, plus GAP-07b retiring GAP-07's upper bound), allies (3) and literature (1). (Counts as of the GAP-07b integration, 2026-10-09.)
 
 The [objection graph](defeaters.md) draws every attack, branch by branch, and computes which arguments survive their objections (grounded semantics, Dung 1995), read three ways. Read its caveats: the computation is all-or-nothing, and it doesn't model support between claims.
 
@@ -114,7 +114,7 @@ The [objection graph](defeaters.md) draws every attack, branch by branch, and co
 | **GAP-03** | Engage Birky & Walsh 1988: **linkage doesn't change the neutral rate**, though it slows beneficial substitution. | Critics, mainly. |
 | **GAP-05** | Put numbers on **slightly harmful fixations** in hominids. | Day-leaning on the premise. |
 | **GAP-06** | Fit **mutation rate and generation time** consistently, with linked selection, in the divergence fit (this audit's own gap). | Critics, weakly. |
-| **GAP-07** | Count **indel and structural-variant events** from measured mutation rates. | Critics, modestly: it confirms "bases ≠ events" independently. |
+| **GAP-07** | Count **indel and structural-variant events** from measured mutation rates. | Critics, modestly: it confirms "bases ≠ events" independently. A direct alignment count (GAP-07b) gives 21M events per lineage, 205M ≈ 9.7× (bracket ~7–14×), and credits Day's SNV-only 17.5M as close to the event count. |
 
 Tally by main beneficiary: two-sided 3, critics 3, Day 1.
 

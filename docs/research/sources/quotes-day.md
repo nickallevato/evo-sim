@@ -693,3 +693,19 @@ Verified as exact substrings (whitespace and quote-mark normalised) of the local
 - branch: A3a,A3b,A3x
 - quote: "Now, the critic’s excuse is to say “but inversions and structural variants are single events, not millions of mutations.” Fine. Discount every structural variant in the Yoo data to zero. Count nothing but single-nucleotide variants. The shortfall on the SNV-only subset is still four to five orders of magnitude. Going the other direction — counting every base pair in every structural variant as a separate mutation — pushes the shortfall to six orders of magnitude. The conclusion holds either way. Counting structural variants as single events is the maximally generous treatment, and the model still fails."
 - note: Day's two-row range: SNV-only = lower bracket (4-5 orders of magnitude), every bp of every SV counted separately = upper bracket (6 orders). "Discount every SV to zero" drops the ~4.3M indel events too (~10% of events), so it is an SNV floor and not an event count (R4-GAP07b). Compare MITTENS 3.0 s7.3 (Q16).
+
+### Q104 McCarthy thread: drift would have caused extinction "within centuries" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874
+- locator: comment id 337302874 (2026-09-15, Vox Day), last paragraph
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: B,H
+- quote: "So if genetic drift were capable of producing actual changes to the genome, the human species would have been rendered infertile and gone extinct within centuries."
+- note: Premises in the same comment: "1. For neutral substitution to work to fixation at its maximum speed, natural selection cannot be operating." and "2. There are 3x more harmful substitutions than neutral substitutions." Claim B9. Verified against the saved comment text during the 2026-10-09 integration.
+
+### Q105 McCarthy thread: "1/2Nₑ is the fixation probability for a neutral mutation" (added 2026-10-09)
+- source: `McCarthy-comments (Why PZ is Wrong)`; URL: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874
+- locator: comment id 337302874 (2026-09-15, Vox Day), fourth paragraph
+- local copy: `sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json`
+- branch: B3a,B3g
+- quote: "1/2Nₑ is the fixation probability for a neutral mutation. It is not a general fixation probability that applies to all mutations. There are 3x more harmful mutations than neutral ones."
+- note: Restates 1/(2Nₑ) nineteen days after the 2026-08-27 concession that Nₑ never enters the Kimura identity (B3g; versions.md "N vs Nₑ in k"). The same comment says "every single neutral substitution requires ~one million years apiece to fixate" (Q104's comment). Its second sentence is the premise that makes B9 a non-sequitur.

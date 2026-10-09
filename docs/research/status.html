@@ -105,19 +105,19 @@ footer{color:var(--muted);font-size:.82rem}
   <div class="pipe">
     <div class="stage"><b>R0 Scaffold</b><div class="bar"><i style="width:100%"></i></div><span>repo, env, templates</span></div>
     <div class="stage"><b>R1 Harvest</b><div class="bar"><i style="width:100%"></i></div><span>Day, critics, literature</span></div>
-    <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>196 claim files</span></div>
+    <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>204 claim files</span></div>
     <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>30 load-bearing nodes</span></div>
-    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:93%"></i></div><span>~93%, H3 and three gaps reviewed; D, C1c, GAP-07b running</span></div>
+    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:94%"></i></div><span>~94%, H3, four gaps and GAP-07b reviewed; D, C1c running</span></div>
     <div class="stage"><b>R5 Synthesis</b><div class="bar"><i style="width:0%"></i></div><span>verdicts, simulator variables</span></div>
   </div>
   <div class="stats">
     <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
-    <span><b>196</b> claims (day 108 · critic 47 · ally 15 · lit 26)</span><span><b>258</b> typed objections</span><span><b>185</b> dated argument versions</span>
+    <span><b>204</b> claims (day 112 · critic 51 · ally 15 · lit 26)</span><span><b>271</b> typed objections</span><span><b>192</b> dated argument versions</span>
   </div>
   <div class="stats">
-    <span>Verdicts so far, internal: <b>96</b> holds · <b>15</b> non-sequitur · <b>6</b> arithmetic error · <b>56</b> pending</span>
-    <span>External: <b>22</b> supported · <b>102</b> contested · <b>9</b> contradicted · <b>5</b> untestable · <b>47</b> pending</span>
-    <span>Citation fidelity: <b>37</b> accurate · <b>32</b> partial · <b>9</b> misread · <b>35</b> unverifiable · <b>9</b> pending</span>
+    <span>Verdicts so far, internal: <b>101</b> holds · <b>17</b> non-sequitur · <b>6</b> arithmetic error · <b>57</b> pending</span>
+    <span>External: <b>24</b> supported · <b>102</b> contested · <b>9</b> contradicted · <b>5</b> untestable · <b>52</b> pending</span>
+    <span>Citation fidelity: <b>36</b> accurate · <b>33</b> partial · <b>9</b> misread · <b>35</b> unverifiable · <b>11</b> pending</span>
   </div>
 </section>
 
@@ -140,6 +140,8 @@ footer{color:var(--muted);font-size:.82rem}
       <li><b>Done:</b> review #5 (E, G1, gap ledger): E split into "size holds, route wrong, consequence untested"; G1 reworded ("reverse-engineered" dropped); the audit's own 14.7× objection withdrawn; verdicts applied to 16 claims</li>
       <li><b>Done:</b> review #6 (GAP-04/07/02): a cap bracket R/4–R/2–simulated max replaces a single cap; "supply-infeasible" and the scan "tension" withdrawn; Day's all-fixations model shown alongside</li>
       <li><b>Done:</b> review #7 (H3): long-run runs on na-workhorse replace the 10k window ("1/300 reproduced" withdrawn); every verdict made conditional on hard vs soft selection; the K = 1000 hard-load extinction found to be an artefact</li>
+      <li><b>Done:</b> review #8 (GAP-07b): a single 9.7× replaced by a stated bracket (~7–14×); Day's own weighting rationale (04-28, 05-13) added and tested; "SNV-only is a floor" withdrawn; the audit's own 22.5M upper bound retired; critics' numbers graded against the measurement</li>
+      <li><b>Done:</b> corpus refresh since 2026-10-07: both sides quiet; 8 new claims from comment threads and one Zenodo draft, 4 per side (Matev ×3 and keruru; Day's 2nd-edition 1,400 / 1,587, "selection ended ~1800", "extinct within centuries", "no drift in 7,000 years")</li>
     </ul></div>
   </div>
 </section>
@@ -163,6 +165,7 @@ footer{color:var(--muted);font-size:.82rem}
       <ul class="nodes">
         <li data-s="ok"><span class="id">A2</span><span class="claim"><span class="c">LTEE generations per fixation (1,322 / 909)</span><span class="f">An asexual model reproduces 1,322, but only as a joint product of Nₑ, beneficial-mutation rate and s, so it isn't a universal constant. Asexual rate does saturate (partial credit to Day). With free recombination the rate would be 1.5–172× higher than the asexual rate; that is an extrapolation, not simulated at LTEE scale. LTEE Nₑ = 3.3e7 is unsourced.</span></span></li>
         <li data-s="data"><span class="id">A3</span><span class="claim"><span class="c">Required fixations: 30M → 20M → 205M</span><span class="f">"410 Mb" not found in Yoo 2025 (average is 327 Mb per lineage). 205M counts base pairs, not mutation events.</span></span></li>
+        <li data-s="ok"><span class="id">GAP-07b</span><span class="claim"><span class="c">Direct event count from the human–chimp alignment (reviewed)</span><span class="f">hg38 vs panTro6 (non-T2T): 37.8M SNVs + 4.3M indel events = 42.1M, 21.05M per lineage. 205M is 9.7× (bracket ~7–14×). For Day: his SNV-only 17.5M brackets the polymorphism-corrected count (16.4–18.1M), and his base-pair total is the right order for non-aligned sequence. His stated position is a weighting claim; as a weight 205M needs ~3,250 SNV-equivalents per large event (untested).</span></span></li>
         <li data-s="ok"><span class="id">A4</span><span class="claim"><span class="c">Turnover coefficient d ≈ 0.45</span><span class="f">d works as a unit conversion, equivalent to a ~56-year generation time. Its value can't be identified from the data.</span></span></li>
       </ul>
     </details>
@@ -283,7 +286,7 @@ footer{color:var(--muted);font-size:.82rem}
   <ol class="next">
     <li><b>GAP-01 adaptive fraction</b> (both): cuts Day's 17.5M by 20×–6,000×, yet the adaptive count still exceeds Haldane's rate by 1.5–7× on coding sites alone.</li>
     <li><b>GAP-04 finite-map cap</b> (both; checked): Day's 17.5–20M is 6.5–9.1× over R/4 and 3.3–4.5× over R/2 if all adaptive, but 0.54–0.76 of the simulated maximum; the adaptive count stays under the cap until 13–27% of differences are adaptive.</li>
-    <li><b>GAP-07 event counts</b> (critics, modestly; checked): 205M base pairs ≈ 9–11× the event count; Day's SNV-only magnitudes corroborated. A direct alignment count is running.</li>
+    <li><b>GAP-07 event counts</b> (critics, modestly; checked, then counted directly): 205M base pairs ≈ 9.7× the 21M events per lineage in the human–chimp alignment (bracket ~7–14×); Day's SNV-only figure is close to the event count. Next: GAP-07c (polymorphic share) and a T2T re-run.</li>
     <li><b>GAP-02 sweep window</b> (both; checked): Day's 3,200 sweeps predict ≤ ~98 detectable today; the top of his range (32,000) ~1,000–3,250. Verdict pending (range-dependent).</li>
     <li><b>GAP-03</b> linkage and the neutral rate (critics), <b>GAP-05</b> slightly harmful fixations (Day), <b>GAP-06</b> μ and generation time in the fit (critics, weakly), open.</li>
   </ol>
@@ -296,7 +299,7 @@ footer{color:var(--muted);font-size:.82rem}
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/explain/README.md">Explainers</a> at five levels: ELI5 · ELI8 · ELI10 · ELI12 · ELI18 (drafts, revised after R5).</li>
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/HANDOFF.md">Handoff briefing</a>: a neutral summary for outside teams, including the audit's own limitations.</li>
     <li>Eight dated milestone posts, linked from the handoff.</li>
-    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 258 objections typed undermining / undercutting / rebutting, a genealogy of 185 dated versions since 1966, and seven gaps nobody closed.</li>
+    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 271 objections typed undermining / undercutting / rebutting, a genealogy of 192 dated versions since 1966, and seven gaps nobody closed.</li>
     <li>A README with the math, figures and roadmap, plus the Wide Peel icon.</li>
   </ol>
 </section>
@@ -304,7 +307,8 @@ footer{color:var(--muted);font-size:.82rem}
 <section>
   <h2>Next</h2>
   <ol class="next">
-    <li><b>Running now</b> (pre-registered; three reviews each when done): D spike (RNA folding + deep mutational scans: routes per needed change vs G1's 12–17), C1c (Day's aDNA "21" with real per-site coverage and ancestry turnover), GAP-07b (direct event count from the human–chimp alignment), corpus refresh since 2026-10-07.</li>
+    <li><b>Running now</b> (pre-registered; three reviews each when done): D spike (RNA folding + deep mutational scans: routes per needed change vs G1's 12–17), C1c (Day's aDNA "21" with real per-site coverage and ancestry turnover).</li>
+    <li>Queued from GAP-07b and the refresh: the polymorphic share of the alignment differences (GAP-07c), a T2T re-run, and an independent replication of keruru's measured Nₑ (B2e) before the Hard Limits verdict can move.</li>
     <li>H follow-ups: soft-selection rate limit and epistasis at human R; a sourced beneficial DFE; confidence intervals on T50. Then Yoo's μ / GAP-06.</li>
     <li>R5: final verdicts, sensitivity table, simulator variable list.</li>
   </ol>

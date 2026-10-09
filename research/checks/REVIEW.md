@@ -196,25 +196,54 @@ Files: `results/REVIEW-R4-H3-{correctness,steelman-day,steelman-critic}.md`. The
 - **Not run (with reason):** the soft-adaptive variant. In H3's model soft selection has no demographic cap by construction; the soft-selection rate-limit question stays with R4-H-C2.
 - **Integrated:** verdict comments on H, H1, H2, H5, H6, H7, H8 and ROOT-M row 1; RESULTS.md H3 entry; gaps.md GAP-01 R4 block; defeaters from d259.
 
-## Queue (after review #7)
+## 2026-10-09 — Review #8 (Sonnet): correctness + Day-side and critic-side steelman of GAP-07b (direct alignment event count)
+Files: `results/REVIEW-R4-GAP07b-{correctness,steelman-day,steelman-critic}.md` (committed f8625f6). The write-up `results/R4-GAP07b-alignment.md` ends with a "Review resolution" section (§14). Pre-registration commit `3c847b8` (script and predictions P1–P8 before the main run; unchanged since, verified by the correctness review; main run started 12 s after the commit). Post hoc: `c1727f0` (first pass), `3798b92` and `fbbc580` (fix pass, each committed before it ran); fix-pass note and outputs `56b6023`. Data: UCSC hg38 vs panTro6 net/chain/axtNet and hg38 vs gorGor6 axtNet (md5s in the note); all runs local, `nice -n 19`, one process.
+
+- **Correctness** (0 BLOCKER, 3 MAJOR, 10 MINOR). An independent re-implementation reproduced the headline exactly: 37,767,396 SNVs, 4,301,652 chain gaps, 42.1M events, 205M/21.05M = 9.74; Day's 410M is a two-lineage total and 205M its half, so the comparison is like for like.
+  - M1: the post hoc symmetric indel polarization cannot see events > ~100 bp (axt records break there). Indel lineage claims are now restricted to <= 50 bp (97.4% of indel events); effect on per-lineage totals <= 0.27%.
+  - M2: the §7 per-lineage figures came from the flawed pre-registered rule. Recomputed: human 20.07–20.63M, chimp 21.46–22.0M; 205M / human lineage 9.9–10.2.
+  - M3: the N filter is event-level (327 Mb flagged, 40–45 Mb N), chimp-only gaps are never flagged, and a constant 80 Mb unaligned term is 41% of F3; the masked 22–24× rows are a unique-sequence bound, not "the ratio stays".
+  - MINORs applied: the SNV-only omission is ~10–12%, not ~20%; the headline uses the main-run 42,102,514; every post hoc number tagged (the <2% threshold was chosen after the miss against CSAC's 35M); P6/P8 sub-predictions added. qDup overcount noted but not quantified.
+- **Day-side steelman** (4 MAJOR, 6 MINOR):
+  - Day's stated rationale was missing: 04-28 ¶19 (one large SV fixes "as a single low-probability event"; bp counting "is generous to the standard model") and 05-13 ¶4–6 (SNV-only and bp brackets; "the conclusion holds either way"). Added as Q97–Q103; A3x's "Day has not defended" is superseded. Tested: as a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp, against Day's own event-counting G_f.
+  - hg38 vs panTro6 is not T2T, while Day's figure rests on T2T data: labelled everywhere; repeat-unit and slippage sensitivities give the Day-favourable side of the bracket (7.2–9.5).
+  - "What survives for Day" box: SNV-only 17.5M is 83% of measured events and brackets the polymorphism-corrected fixed events (16.4–18.1M); the SNV-only shortfall rises on the measured count (99,100–110,400 at 1,322); the bp magnitude of non-1:1 sequence is the same order as 410M; his first-edition "40 million" was an events figure (42.1M measured).
+- **Critic-side steelman** (6 MAJOR, 6 MINOR):
+  - 9.7× is the lowest ratio the note's numbers support: human lineage 10.1, top-level fills 10.4, <2% 10.8, polymorphism 11.1–12.5, combined 12.3–13.4 (critic-favourable side of the bracket, all post hoc).
+  - "SNV-only is a floor" contradicted the data and was removed. The 523M "Yoo-style" row counted aligned nested sequence and double-counted 2.75M SNVs (corrected to 521M; 491M without syntenic fills); the 261M row contains 59.5 Mb of centromere models.
+  - The critics' independent numbers are now graded: McCarthy 22.5M +7%, Mansfield 25M +19% (per lineage assumed), Nesslig20/Hancock ~38M −10% of events; the k = μ rate route (9.7M) is ~2× low. Errors attributed on both sides: CSAC's ambiguous "5M in each species" (a total), the audit's own 22.5M upper bound (retired), A3x's 1,140 six-ape inversions (453 in the net), critic slips RF-6, MF-03, PS-01, GG-11.
+- **Steelman conflict on the headline:** Day-side 7–10× (non-T2T, between-bp-and-events readings), critic-side 10–14× (lineage, fill and polymorphism corrections). **Resolved:** the pre-registered raw 9.7× stays as one point in a stated bracket of about 7–14×, each row labelled with its assumption and direction; "events are not fixations, and events are not selected" sits beside the headline.
+- **Not run (with reason):** the population-frequency measurement of polymorphism (GAP-07c; new data set) and a T2T re-run (CHM13/hs1 vs mPanTro3); both queued.
+- **Integrated:** verdicts A3 (holds / partial / contested), A3a (arithmetic-error / misread / **contested**, not contradicted: contradicted only as an event count; Day's weighting reading untested), A3b (holds / partial / **supported**), A3x (holds / **partial** / supported); check paragraphs on A3c and A3d; RESULTS.md GAP-07b entry; gaps.md GAP-07 R4 2026-10-09 block; quotes PS-05, RE-14, RE-15; defeaters d270–d278.
+
+## 2026-10-09 — Corpus refresh integration (not a check; no review)
+Memo `docs/research/sources/refresh-2026-10-09.md` (commit 0bd548e). Eight claim files created from items with verbatim quotes in `quotes-*.md`, four per side:
+- Critic: A2i (Matev, LTEE G_f units), B2e (keruru Zenodo draft, measured N_e vs Wright's formula; `untested`, replication queued), B3i (Matev, 1/(2N_e) per copy sums to N/N_e > 1), G5 (Matev, CV falls while variance rises). Matev's arithmetic was checked: all three numeric points hold; his additive-vs-multiplicative and binomial-tail points carry no numbers and are recorded as proposals.
+- Day: A2j (2nd-edition 1,400 / 1,139,000× and his 2026-10-03 adoption of 1,587), H10 (selection ceased ~1800; no parameters), B9 (drift would cause extinction "within centuries"; internal non-sequitur on his own premise, Q105), C7 ("no drift in 7000 years"; internal non-sequitur, as for C).
+- Also: Q104–Q105 added (Day's 2026-09-15 comment, verified against the saved text; Q105 restates 1/(2Nₑ) after the 08-27 concession, noted in `ledgers/versions.md`); B3e gained Matev's RF-3 as a second source. Defeaters d266–d269, d274–d275.
+- Not made into claims: Hilbert (EES; no model or number), Day's "Reverse-MITTENS"/new disproof (unpublished), the 1,017-per-generation book quote (book not accessible), keruru's rs35619459 non-reproduction (C1d; needs the unnamed source).
+
+## Queue (after review #8)
 In flight (Sonnet agents, 2026-10-09; each pre-registers by commit and gets three reviews before integration):
-- **GAP-07b:** direct indel/SV event count from the UCSC hg38–panTro6 alignment.
 - **D1 spike:** sequence-space alternatives per needed change, from ViennaRNA neutral networks plus MaveDB/ProteinGym DMS, against G1's 12–17 threshold.
 - **C1c:** C1b follow-up, with a per-site, per-bin call-depth model on real AADR coverage plus ancestry replacement.
-- **Corpus refresh:** new material on both sides since 2026-10-07.
 
 Next:
 1. **D sims** beyond the spike: the Wistar/sequence-space claims; the G1 middle case needs a per-site m.
-2. **H follow-ups:**
+2. **GAP-07 follow-ups:** GAP-07c (polymorphic share of SNVs, indels and SVs from population allele frequencies intersected with the alignment) and a T2T re-run (CHM13/hs1 vs mPanTro3), which bounds the non-T2T side of the 7–14× bracket.
+3. **B2e replication:** an independent ancestry-stratified temporal-N_e estimate from AADR, before B2/B2b external can move (keruru's draft is unreviewed).
+4. **H follow-ups:**
    - the soft-selection rate limit (R4-H-C2's model) at human R;
    - truncation/synergistic epistasis at human scale;
    - a sourced human beneficial DFE and M;
-   - binomial CIs on H T50, plus N/K in the success criterion.
-3. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface, now with GAP-06 (consistent μ × g, a BGS-aware Nₑ,anc).
-4. **E leftovers:** E7 mutator sublinearity; E1/E2/E5/E6/E9; heterozygote-load and meltdown pathways (E3 §4); mutator fertility.
-5. **Also open:**
+   - binomial CIs on H T50, plus N/K in the success criterion;
+   - GAP-05 (slightly harmful fixations under drift), now also the external test of Day's B9.
+5. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface, now with GAP-06 (consistent μ × g, a BGS-aware Nₑ,anc); the k = μ route undershoots the GAP-07b count ~2×.
+6. **E leftovers:** E7 mutator sublinearity; E1/E2/E5/E6/E9; heterozygote-load and meltdown pathways (E3 §4); mutator fertility.
+7. **Also open:**
    - PM2013 Table S5 / PSMC numeric curve.
    - Lehmann 2014 normalisation.
    - LTEE Nₑ source.
    - Coale-Demeny tables and the s definitions in the aDNA papers.
    - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.
+   - Matev's additive-vs-multiplicative point against the Z18167588 fitness ratio; his binomial tail on 180 fixations.

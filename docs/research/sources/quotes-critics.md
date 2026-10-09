@@ -367,6 +367,9 @@ Date: 2026-10-05
   - note: Reference-genome differences vs fixed differences.
 - **PS-04** | post 1 by Nesslig20 | branch H | Nesslig20
   > "Haldane’s reproductive cost limit does not apply to drift, but can it account for most of the genomic differences between humans and chimps?"
+- **PS-05** | post 1 by Nesslig20 (relaying Martin Neukamm, Panda's Thumb) | branch A3x | Nesslig20 / Neukamm
+  > "While one point mutation only affects one base-pair (bp), one InDel can affect many base-pairs, ranging from 10s to 10s of thousands or even 100s of thousands of bp."
+  - note: Added 2026-10-09 (R4 GAP-07b integration); verified in `sources/raw/critics/ps-topic-18094.json` (post 1, 2026-10-05). The illustration is credited to Neukamm. R4 GAP-07b size spectrum: largest indel event 25.2 Mb; 71 events > 1 Mb.
 
 ## YT-_Vu0ZVVjwHc: Gutsick Gibbon + Zach Hancock, "No, Vox Day's AI-Generated Books Did Not Debunk Evolution" (auto-captions)
 URL: https://www.youtube.com/watch?v=_Vu0ZVVjwHc  
@@ -545,6 +548,12 @@ Date: 2026-10-01
 - **RE-12** | post 1wv4zeg by Gutsick_Gibbon | branch epistemic | Gutsick Gibbon
   > "I am only aware of three people with doctorates who have "vetted" Day's work, and they are all associates of the Discovery Institute"
   - note: Claim about Day's "10 math PhDs"; unverified.
+- **RE-14** | comment pdbyv0a by Fun-Friendship4898 | branch A3a,A3x | Fun-Friendship4898
+  > "It seems like he (or rather, his LLM), is multiplying 187Mb by 2, then adding the 35 million SNVs onto it?"
+  - note: Added 2026-10-09 (R4 GAP-07b integration); verified in `sources/raw/critics/arctic-tree-1wv4zeg.json`. Same comment: "Within any given SDR, the true nucleotide difference might be tiny, like a 1-Mb inversion is a single mutational event". R4 GAP-07b: 2.75M SNVs lie inside nested (non-1:1) fills, so the SNV and SDR terms overlap.
+- **RE-15** | comment pdebkr5 by Fun-Friendship4898 | branch A3a,A3x | Fun-Friendship4898
+  > "Looking at the graphs provided, over half of these human SDRs are classified as centromere and acrocentric."
+  - note: Added 2026-10-09; verified in `sources/raw/critics/arctic-tree-1wv4zeg.json`. R4 GAP-07b independently finds 85% of unaligned human sequence outside the net fills overlaps hg38 centromere models.
 
 ## CA1: Camestros Felapton, Reading Vox Day So You Don't Have To 2026 [1]
 URL: https://camestrosfelapton.wordpress.com/2026/01/24/reading-vox-day-so-you-dont-have-to-2026-1/  

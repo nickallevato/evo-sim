@@ -94,8 +94,7 @@ The latest refresh, with its proposals and inaccessible list, is [`docs/research
 - the "Still open" list in `docs/HANDOFF.md`;
 - the latest milestone post.
 
-As of 2026-10-09, R4 is in progress:
-- reviewed: H3, GAP-04/07/02;
-- in review: GAP-07b;
+As of 2026-10-09 (after review #8), R4 is in progress:
+- reviewed and integrated: H3, GAP-04/07/02, GAP-07b (direct alignment count), and the 2026-10-09 corpus refresh (8 new claims, 4 per side);
 - running: D1 sequence-space spike, C1c aDNA call depth;
-- next: R5 synthesis.
+- queued: GAP-07c and a T2T re-run, B2e replication (temporal N_e), H follow-ups, then R5 synthesis.
