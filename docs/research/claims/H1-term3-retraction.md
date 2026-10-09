@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"   # arithmetic; same-basis ratio 17.1
   fidelity: n/a
-  external: "supported"   # cost bounds selected substitutions only; neutral k = U (B0.5)
+  external: "supported"   # cost bounds selected substitutions only; neutral k = U (B0.5). R4 H3: scope is Term 3 (Z19984826) only; H has its own section 5.1 reply; Day calls neutral fixations "the great majority" here
 ---
 
 ## Statement (verbatim)
@@ -66,6 +66,8 @@ Repo observation (R2, pending R4 review): the retraction's stated reason ("a con
 ## Check
 R4 H (research/checks/results/R4-H-C2.md): Term 3 arithmetic 0.45/(2 ln 6600) = 0.02558/gen (one per 39.1); about 6,650 over 260,000 generations. Same-basis ratio to Haldane + d is 17.1 (the earlier 7.7 mixed bases; 17.1/7.7 = 1/d). The retraction's scope (cost bounds selected substitutions only) is consistent with neutral k = U (B0.5) and applies equally to H's comparison with the 20M total; whether Day intends that is not stated. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none (document tracking; version ledger row exists). · Result: not run · Review: pending
+
+R4 H3 (research/checks/results/R4-H3-human.md): the scope concession is about Term 3 of Z19984826 only. Z18168236 has its own scope reply (§5.1, 'First, neutral mutations do not explain adaptation...'), yet still compares 487 with 20M (§4.4), so its intent is ambiguous. In this post Day says observed substitutions are mostly 'neutral fixations (which are the great majority)'. H3 shows that no cost-of-selection model pays 17.5M-205M selected fixations. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
 ## Simulator variables implied
 Adaptive versus total substitution rate; fraction of differences that are adaptive.

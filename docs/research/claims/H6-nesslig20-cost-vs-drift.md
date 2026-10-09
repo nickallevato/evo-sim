@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"
   fidelity: partial
-  external: "supported"   # cost bounds selected substitutions; neutral k = U (B0.5)
+  external: "supported"   # cost bounds selected substitutions; neutral k = U (B0.5). R4 H3: his Matheson 2025 pointer is the right source for the missing selective-death share
 ---
 
 ## Statement (verbatim)
@@ -54,6 +54,8 @@ derived: 30/0.1 = 300 (holds). The same ratio results with N or N_e because the 
 ## Check
 R4 H/H1 (research/checks/results/R4-H-C2.md): consistent with neutral k = U (B0.5, z = +0.13 / -0.64) and with Day's own 2026-05-07 narrowing (H1). The scope point says nothing about the cost of selected substitutions, which remains open (H). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none (scope claim; covered by H and H1). · Result: not run · Review: pending
+
+R4 H3 (research/checks/results/R4-H3-human.md): 'does not apply to drift' holds. Nesslig20's pointer to Matheson et al. 2025 ('other solutions that allow selection to exceed the limit') is the right source for the missing selective-death share (8.5-95% in one plant; no human value; unrepresentative by the authors' caveat). Matheson's k = 1.1 mapping matches H3's R ~ 1.1. No adaptive count is given. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
 ## Simulator variables implied
 Fraction of fixations neutral versus selected; selective mortality budget.

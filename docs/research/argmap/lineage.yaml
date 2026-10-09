@@ -3039,3 +3039,36 @@
   fate: alive
   fate_date:
   fate_locator: "Review #6: power-1 upper bound stated; non-sequitur verdict softened to pending (range-dependent)"
+
+- id: L-audit-h3-2026
+  label: "Audit H3: Day's shared budget holds as structure; its size is ln R, not a fixed 10%; Haldane's 1/300 only at his assumed R ≈ 1.1"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [H, H5, H8]
+  locator: "research/checks/results/R4-H3-human.md Headline"
+  quote: "concurrent sweeps share one budget, and parallelism does not raise the total beyond it."
+  parents:
+    - {id: L-haldane-d-487-2026, relation: responds-to}
+    - {id: L-audit-ln-r-d-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #7: every verdict conditional (hard adaptive / soft load); long-run phi replaces the 10k window; a_nc flip below estimator resolution"
+
+- id: L-audit-h3-1-300-2026
+  label: "Audit H3 (pre-review): '1/300 reproduced at R = 1.1' — replaced (10k window; long run ≈ 1/530–1/1,050)"
+  side: audit
+  kind: retraction
+  date: 2026-10-09
+  claim_ids: [H]
+  locator: "research/checks/results/R4-H3-human.md §4.6.1"
+  quote: "The hard-sweep cap is tighter over the lineage than the 10k window suggested, which favours Day."
+  parents:
+    - {id: L-audit-h3-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-09
+  fate_locator: "research/checks/REVIEW.md review #7 correctness MAJOR 1"

@@ -433,3 +433,52 @@ The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a differen
 - **New claims:**
   - A6 (Z18452504 §4.3(4)): pending / partial / contested.
   - A6a (Z18441321 §3.1, bonobos): holds / n/a / supported, as against selective fixations.
+
+## H3 — Cost of selection at human scale · `h3_human_scale.py` (pre-registered 0061b28), post hoc `h3_posthoc.py`, `h3_tables.py` (70d83cc, 872d8b1), `h3_fixpass.py` (e48a5af, 3688bcb; stages L/H/M/W/X on na-workhorse) · claims H, H1, H2, H5, H6, H7, H8, ROOT-M · full write-up `results/R4-H3-human.md`
+**Model:** a hard-selection treadmill, where the environment makes the ancestral allele costly. Costs are log-additive across loci, with ceiling regulation, K = 1000 (4000 and 10⁴ for the load runs) and a 36.8 M map. Sustainable adaptive rate = φ·(ln R − U_hard)/D, where D ≈ 2 ln 2N (validated against K) and φ ≤ 1 is the shortfall from load fluctuations.
+
+**Results (every one conditional):**
+- **Shared budget (Day's structure, D1a): held.** Concurrent sweeps share one budget, and parallelism does not raise the total beyond it. The 10% is Haldane's assumed parameter (R ≈ 1.1); under ceiling regulation the budget is ln R.
+- **R = 1.1:**
+  - 10k-window λ50 = 0.00340 [0.00300, 0.00379] (≈ 1/300; circular in R by construction; needs a soft deleterious load);
+  - fails over 40k;
+  - long-run φ_252k = 0.30, i.e. ≈ 1/530–1/1,050 at D = 15–30 (s = 0.01). At s = 0.003 it is ≈ 1/230–1/460.
+- **Long-run φ_252k** (s = 0.01): 0.30 / 0.57 / 0.59 / 0.73 at R = 1.1 / 1.5 / 2 / 3. At s = 0.003: 0.69 (R = 1.1), 0.94 (R = 2). At s = 0.001 the long run is unresolved.
+- **Minimum R for K_a adaptive substitutions in 252,000 generations** (hard adaptive / soft load, D = 20, long-run φ): 1.22 (10³), 2.98 (10⁴), 5.4×10⁴ (10⁵), none (10⁶). With a whole-genome hard load (U = 2.2), multiply by ≈ 9. D = 5 (intermediate-frequency standing variation): 1.07 / 1.45 / 15 / 6.7×10¹¹.
+- **Finite supply:** D ≈ 15 + 1/M at M ≤ 0.03 (39–163). At M = 0.01 even R = 2 sustains only ≈ 1/430.
+- **Hard load:** U = 2.2 is incompatible with R ≤ 9 (analytic). R = 20 persists at K ≥ 4000, so the K = 1000 extinction was an artefact.
+- **GAP-01 targets:**
+  - Coding-only K_a (1.3×10³–1.2×10⁴) is payable at R ≈ 1.2–3.
+  - a_nc ≈ 0.1% (2×10⁴) needs R ≈ 3–9.
+  - a_nc ≥ 1% is unpayable at R ≤ 3–4 (the anchor range) for D ≥ 5.
+  - The flip (a_nc ≈ 0.01–0.6%) is below the resolution of any α estimate, so it is **undetermined**.
+- **Day's 17.5M–205M:** unpayable under any cost model, which is uninformative about A/B (branch B decides that).
+- **Not modelled:** soft selection on the adaptive loci, absolute-fitness gain, truncation/synergistic epistasis.
+
+**Predictions:**
+- Held: S1, S2 (well-sampled cells), S7 (except 2Ns = 100, −23%), D1a, P-V.
+- S3 is a marginal miss at R = 1.5.
+- The λ50 parts of S4 could not be resolved; p_fix on the 36.8 M map failed marginally.
+- S5 failed or was untestable at R = 1.5.
+- S6 failed at M ≥ 0.1 and approximately held at M ≤ 0.03 (post hoc).
+- D2 held in the 10k window if R = 2 is intended.
+- D3 is cut to R ≤ 9.
+
+**Reviews:** correctness (0 BLOCKER, 4 MAJOR, 11 MINOR), Day-side steelman (7 MAJOR, 5 MINOR) and critic-side steelman (6 MAJOR, 8 MINOR), in `results/REVIEW-R4-H3-*.md`. Every MAJOR was resolved in the fix pass:
+- long-window runs;
+- the low-M and hard-load-K runs;
+- D1 split;
+- R anchors;
+- conditional verdicts;
+- the "not modelled" table;
+- credits (Hancock ×4, Nesslig20 → Matheson, keruru KR-09).
+
+**Verdict:** every cell is unchanged, and the comments now state the condition.
+- **H:** holds / partial / contested.
+- **H1:** holds / n/a / supported, scoped to Term 3.
+- **H2:** n/a / accurate / contested.
+- **H5:** non-sequitur / pending / contested; the conditional is mechanically supported.
+- **H6:** holds / partial / supported.
+- **H7:** n/a / n/a / supported; these are bounding cases.
+- **H8:** holds / pending / contested.
+- **ROOT-M row 1:** pending / n/a / pending, now carrying its conditions.

@@ -161,23 +161,60 @@ Files: `results/REVIEW-R4-GAPS-{correctness,steelman-day,steelman-critic}.md`. T
   - The agent's own "4–16% → 4–19%" correction to gaps.md retracted (different definitions).
 - **Integrated:** verdict comments on F2, A, A2e, Gc, A3, A3a, A3b, A3x and H. New Day claims A6 (sweep signatures absent) and A6a (bonobo sweep mosaic). gaps.md R4 blocks; defeaters d246–d258.
 
-## Queue (after review #5)
-1. **H with realistic human parameters** (largest open item):
-   - R ≈ 1.1–3 with age structure, diploid D ≈ 20–30, and a hard-selected deleterious load.
-   - Human M from a sourced beneficial DFE.
-   - Hard selection combined with linkage.
-   - Now bounded by GAP-01: the adaptive count is about 10³–10⁴ (coding) up to ~10⁶ (if 5% of noncoding changes were adaptive). Also use the published Nei/Felsenstein −ln p₀/ln k spacing (prior-art.md) as an analytic cross-check of H2-hard.
-2. **GAP-04:** fit the Weissman–Barton map-length cap to the F2 grid, then evaluate it at 35–38 M.
-3. **GAP-07:** arithmetic for indel/SV event counts from published rates (sharpens A3x).
-4. **GAP-02:** expected detectable sweeps per side within scan windows.
-5. **D sims:** sequence-space / Wistar claims. The G1 middle case (λ threshold) needs a per-site m, which branch D's per-sequence estimates don't supply.
-6. **C1b follow-up:** a per-site, per-bin call-depth model with real AADR coverage, plus an ancestry-replacement model.
-7. **Binomial CIs on H T50**, plus N/K in the success criterion.
-8. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface, now with GAP-06 (consistent μ × g, a BGS-aware Nₑ,anc).
-9. **E leftovers:** E7 mutator sublinearity; E1/E2/E5/E6/E9; heterozygote-load and meltdown pathways (E3 §4); mutator fertility.
-10. **Also open:**
-    - PM2013 Table S5 / PSMC numeric curve.
-    - Lehmann 2014 normalisation.
-    - LTEE Nₑ source.
-    - Coale-Demeny tables and the s definitions in the aDNA papers.
-    - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.
+## 2026-10-09 — Review #7 (Sonnet): correctness + Day-side and critic-side steelman of H3 (H at human scale)
+Files: `results/REVIEW-R4-H3-{correctness,steelman-day,steelman-critic}.md`. The write-up `results/R4-H3-human.md` ends with a "Review resolution" table (§9). Pre-registration commit `0061b28` (script only, before any main run), verified byte-identical by the correctness review. Post hoc scripts: `70d83cc` (tables, P runs) and `e48a5af` (fix pass, committed before any fix-pass run; `3688bcb` speed-only rewrite of the packet model before it produced output; `872d8b1` logistic λ50 in the table builder). Fix-pass stages L, H, M, W, X ran on na-workhorse (12 workers); hosts and md5s in `raw/h3fp.host` and `raw/h3_fx.host`.
+
+- **Correctness:** 0 BLOCKER, 4 MAJOR, 11 MINOR.
+  - M1: the 10k-generation window had been read as a lifetime rate. Stage L (100k generations) gives long-run φ_252k = 0.30 / 0.57 / 0.59 / 0.73 at R = 1.1 / 1.5 / 2 / 3 (10k window: 0.54 / 0.69 / 0.76 / 0.76). The R_min tables were rebuilt and are now higher.
+  - M2: φ ≈ 1 at s = 0.003 was promoted without a long run. Stage W gives 0.69 (R = 1.1) and 0.94 (R = 2); stage X (s = 0.001) is unresolved over the long run (2Ns = 2).
+  - M3: only favourable mutation supplies had been run. Stage M gives D ≈ 15 + 1/M at M ≤ 0.03 (39–163), and at M = 0.01 even R = 2 sustains only ≈ 1/430. Listed as Day-favourable.
+  - M4: the hard-load extinction at K = 1000 was an artefact. At K = 4000 / 10⁴, U = 2.2 with R = 20 persists. The Day-favourable list is cut to R ≤ 9 (analytic), and the H2-hard comparison is withdrawn (its load was not heritable).
+- **Day-side steelman** (7 MAJOR, 5 MINOR):
+  - Day never claimed R-independence. D1 is split: **D1a "parallelism does not raise the total beyond the shared budget" held**; D1b "the budget is 10%" is a parameter (R ≈ 1.1).
+  - R anchors added: Haldane 1.1 (Matheson 2025, k = 1.1), Day's s_max ≈ "twice as many descendants" (R ≈ 2), and Day's own total fertility 6–8 (R ≤ 3–4 before mortality).
+  - H1 is scoped to Term 3 (Z19984826) only; Z18168236 §5.1 has its own scope reply.
+  - The 17.5M–205M failure holds for any cost model and is **uninformative about A/B**.
+  - The a_nc flip threshold (≈ 0.01–0.6%) is below the resolution of any α estimate, so "coding-only fits" is **undetermined**, not a critic win.
+  - Hössjer's conditional is mechanically confirmed. A headline box was added.
+- **Critic-side steelman** (6 MAJOR, 8 MINOR):
+  - Every verdict is now conditional (hard/soft adaptive × hard/soft load). The hybrid H3 tests is the audit's construction.
+  - Named but not modelled, with the direction of each: soft selection (Wallace/Nunney), absolute-fitness gain, truncation/synergistic epistasis.
+  - D = 5 rows and a break-even D table were added, for Hancock's intermediate-frequency point.
+  - The hard-load rows are labelled bounding cases (Keightley, PA-16/17).
+  - Credits fixed: Hancock (four timestamped points), Nesslig20 → Matheson, keruru KR-09.
+- **Steelman conflict on what "1/300" means:**
+  - Day-side: the rate is reproduced at R = 1.1.
+  - Critic-side: R = 1.1 is Haldane's assumption, so the match is circular, and it needs a soft deleterious load.
+  - **Resolved:** stated as a consistency check at Haldane's chosen R, within a factor of about 1–3 of ln R/D. 10k λ50 = 0.00340 [0.00300, 0.00379]; it fails over 40k; long run ≈ 1/530–1/1,050 (s = 0.01).
+- **Numbers that moved:**
+  - φ(R = 1.1): 0.53 → 0.30 (long run).
+  - R_min for K_a = 10⁴ (T = 252k, D = 20): ≈ 2.7 → 2.98.
+  - Hard U = 2.2 at R = 20: "extinct" → persists at K ≥ 4000.
+  - Finite-supply D: 6.5–22 → 6.5–163.
+  - Single-locus total cost at 2Ns = 2,000: 16.8 → 15.8.
+  - Term 3's 0.0296 at R = 2: sustained in 10k only.
+- **Not run (with reason):** the soft-adaptive variant. In H3's model soft selection has no demographic cap by construction; the soft-selection rate-limit question stays with R4-H-C2.
+- **Integrated:** verdict comments on H, H1, H2, H5, H6, H7, H8 and ROOT-M row 1; RESULTS.md H3 entry; gaps.md GAP-01 R4 block; defeaters from d259.
+
+## Queue (after review #7)
+In flight (Sonnet agents, 2026-10-09; each pre-registers by commit and gets three reviews before integration):
+- **GAP-07b:** direct indel/SV event count from the UCSC hg38–panTro6 alignment.
+- **D1 spike:** sequence-space alternatives per needed change, from ViennaRNA neutral networks plus MaveDB/ProteinGym DMS, against G1's 12–17 threshold.
+- **C1c:** C1b follow-up, with a per-site, per-bin call-depth model on real AADR coverage plus ancestry replacement.
+- **Corpus refresh:** new material on both sides since 2026-10-07.
+
+Next:
+1. **D sims** beyond the spike: the Wistar/sequence-space claims; the G1 middle case needs a per-site m.
+2. **H follow-ups:**
+   - the soft-selection rate limit (R4-H-C2's model) at human R;
+   - truncation/synergistic epistasis at human scale;
+   - a sourced human beneficial DFE and M;
+   - binomial CIs on H T50, plus N/K in the success criterion.
+3. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface, now with GAP-06 (consistent μ × g, a BGS-aware Nₑ,anc).
+4. **E leftovers:** E7 mutator sublinearity; E1/E2/E5/E6/E9; heterozygote-load and meltdown pathways (E3 §4); mutator fertility.
+5. **Also open:**
+   - PM2013 Table S5 / PSMC numeric curve.
+   - Lehmann 2014 normalisation.
+   - LTEE Nₑ source.
+   - Coale-Demeny tables and the s definitions in the aDNA papers.
+   - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.

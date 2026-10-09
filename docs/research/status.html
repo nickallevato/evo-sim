@@ -83,7 +83,7 @@ ul.nodes .claim .chip{margin-right:6px;vertical-align:1px}
 /* balance */
 .bal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 @media (max-width:680px){.bal{grid-template-columns:1fr}}
-.side{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px;min-width:0}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px;min-width:0;align-content:start}
 .side h3{margin:0;font:600 1rem var(--display)}
 .side h4{margin:0;font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
 .side .holds h4{color:var(--ok)} .side .fails h4{color:var(--bad)}
@@ -95,7 +95,7 @@ footer{color:var(--muted);font-size:.82rem}
 
 <div class="wrap">
 <header>
-  <div class="eyebrow">evo-sim · research phase · status as of 2026-10-08</div>
+  <div class="eyebrow">evo-sim · research phase · status as of 2026-10-09</div>
   <div class="brand"><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIGFyaWEtbGFiZWw9ImV2by1zaW0gaWNvbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+Cjx0aXRsZT5ldm8tc2ltPC90aXRsZT48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMWUyOTNiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGIxMTIwIi8+PC9saW5lYXJHcmFkaWVudD4KPGNsaXBQYXRoIGlkPSJsZW5zIj48Y2lyY2xlIGN4PSIxMTAiIGN5PSIxMTAiIHI9IjU5Ii8+PC9jbGlwUGF0aD48L2RlZnM+CjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiByeD0iNTYiIGZpbGw9InVybCgjYmcpIi8+CjxjaXJjbGUgY3g9IjExMCIgY3k9IjExMCIgcj0iNjYiIGZpbGw9IiMwZjE3MmEiLz4KPGcgY2xpcC1wYXRoPSJ1cmwoI2xlbnMpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0xMDEuNSAtMTMuNSBMMTE4LjUgLTEzLjUiIHN0cm9rZT0iI2Y4ZmFmYyIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjg1Ii8+PHBhdGggZD0iTTEwMS41IC00LjUgTDExOC41IC00LjUiIHN0cm9rZT0iI2Y4ZmFmYyIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjg1Ii8+PHBhdGggZD0iTTExOC41IDQuNSBMMTAxLjUgNC41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMTguNSAxMy41IEwxMDEuNSAxMy41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMDEuNSAyMi41IEwxMTguNSAyMi41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMDEuNSAzMS41IEwxMTguNSAzMS41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMTguNSA0MC41IEwxMDEuNSA0MC41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMTguNSA0OS41IEwxMDEuNSA0OS41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMDEuNSA1OC41IEwxMTguNSA1OC41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMDEuNSA2Ny41IEwxMTguNSA2Ny41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMTguNSA3Ni41IEwxMDEuNSA3Ni41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMTguNSA4NS41IEwxMDEuNSA4NS41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik0xMDEuNSA5NC41IEwxMTguNSA5NC41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC4wIi8+PHBhdGggZD0iTTEwMS41IDEwMy41IEwxMTguNSAxMDMuNSIgc3Ryb2tlPSIjZjhmYWZjIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuMCIvPjxwYXRoIGQ9Ik0xMTguNSAxMTIuNSBMMTAxLjUgMTEyLjUiIHN0cm9rZT0iI2Y4ZmFmYyIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjAiLz48cGF0aCBkPSJNMTE4LjUgMTIxLjUgTDEwMS41IDEyMS41IiBzdHJva2U9IiNmOGZhZmMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC4wIi8+PHBhdGggZD0iTTExNC4xIDIwLjAgTDExNi45IDIxLjUgTDExOS4yIDIzLjAgTDEyMC45IDI0LjUgTDEyMS44IDI2LjAgTDEyMi4wIDI3LjUgTDEyMS4zIDI5LjAgTDExOS44IDMwLjUgTDExNy43IDMyLjAgTDExNS4xIDMzLjUgTDExMi4xIDM1LjAgTDEwOS4wIDM2LjUgTDEwNS45IDM4LjAgTDEwMy4xIDM5LjUgTDEwMC44IDQxLjAgTDk5LjEgNDIuNSBMOTguMiA0NC4wIEw5OC4wIDQ1LjUgTDk4LjcgNDcuMCBMMTAwLjIgNDguNSBMMTAyLjMgNTAuMCBMMTA0LjkgNTEuNSBMMTA3LjkgNTMuMCBMMTExLjAgNTQuNSBMMTE0LjEgNTYuMCBMMTE2LjkgNTcuNSBMMTE5LjIgNTkuMCBMMTIwLjkgNjAuNSBMMTIxLjggNjIuMCBMMTIyLjAgNjMuNSBMMTIxLjMgNjUuMCBMMTE5LjggNjYuNSBMMTE3LjcgNjguMCBMMTE1LjEgNjkuNSBMMTEyLjEgNzEuMCBMMTA5LjAgNzIuNSBMMTA1LjkgNzQuMCBMMTAzLjEgNzUuNSBMMTAwLjggNzcuMCBMOTkuMSA3OC41IEw5OC4yIDgwLjAgTDk4LjAgODEuNSBMOTguNyA4My4wIEwxMDAuMiA4NC41IEwxMDIuMyA4Ni4wIEwxMDQuOSA4Ny41IEwxMDcuOSA4OS4wIEwxMTEuMCA5MC41IEwxMTQuMSA5Mi4wIEwxMTcuMyA5My41IEwxMjAuNiA5NS4wIEwxMjMuOCA5Ni41IEwxMjYuNiA5OC4wIEwxMjkuMSA5OS41IEwxMzEuMCAxMDEuMCBMMTMyLjQgMTAyLjUgTDEzMy40IDEwNC4wIEwxMzQuMSAxMDUuNSBMMTM0LjQgMTA3LjAgTDEzNC41IDEwOC41IEwxMzQuNCAxMTAuMCBMMTM0LjAgMTExLjUgTDEzMy40IDExMy4wIEwxMzIuOCAxMTQuNSBMMTMzLjUgMTE2LjAgTDEzNC44IDExNy41IEwxMzYuNiAxMTkuMCBMMTM5LjAgMTIwLjUgTDE0MS44IDEyMi4wIEwxNDUuMCAxMjMuNSBMMTQ4LjQgMTI1LjAgTDE1Mi4wIDEyNi41IEwxNTUuNSAxMjguMCBMMTU4LjggMTI5LjUgTDE2MS43IDEzMS4wIEwxNjQuMyAxMzIuNSBMMTY2LjMgMTM0LjAgTDE2Ny43IDEzNS41IEwxNjguNiAxMzcuMCBMMTY4LjkgMTM4LjUgTDE2OC44IDE0MC4wIEwxNjguMyAxNDEuNSBMMTY3LjYgMTQzLjAgTDE2Ni43IDE0NC41IEwxNjUuOSAxNDYuMCBMMTY1LjMgMTQ3LjUgTDE2NS4xIDE0OS4wIEwxNjUuMiAxNTAuNSBMMTY1LjkgMTUyLjAgTDE2Ny4yIDE1My41IEwxNjkuMCAxNTUuMCBMMTcxLjQgMTU2LjUgTDE3NC4yIDE1OC4wIEwxNzcuNCAxNTkuNSBMMTgwLjggMTYxLjAgTDE4NC40IDE2Mi41IEwxODcuOSAxNjQuMCBMMTkxLjIgMTY1LjUgTDE5NC4xIDE2Ny4wIEwxOTYuNyAxNjguNSBMMTk4LjcgMTcwLjAgTDIwMC4xIDE3MS41IEwyMDEuMCAxNzMuMCBMMjAxLjMgMTc0LjUgTDIwMS4yIDE3Ni4wIEwyMDAuNyAxNzcuNSBMMjAwLjAgMTc5LjAgTDE5OS4xIDE4MC41IEwxOTguMyAxODIuMCBMMTk3LjcgMTgzLjUgTDE5Ny41IDE4NS4wIEwxOTcuNiAxODYuNSBMMTk4LjMgMTg4LjAgTDE5OS42IDE4OS41IEwyMDEuNCAxOTEuMCBMMjAzLjggMTkyLjUgTDIwNi42IDE5NC4wIEwyMDkuOCAxOTUuNSBMMjEzLjIgMTk3LjAgTDIxNi44IDE5OC41IEwyMjAuMyAyMDAuMCIgc3Ryb2tlPSIjM2I4MmY2IiBzdHJva2Utd2lkdGg9IjgiLz48cGF0aCBkPSJNMTA1LjkgMjAuMCBMMTAzLjEgMjEuNSBMMTAwLjggMjMuMCBMOTkuMSAyNC41IEw5OC4yIDI2LjAgTDk4LjAgMjcuNSBMOTguNyAyOS4wIEwxMDAuMiAzMC41IEwxMDIuMyAzMi4wIEwxMDQuOSAzMy41IEwxMDcuOSAzNS4wIEwxMTEuMCAzNi41IEwxMTQuMSAzOC4wIEwxMTYuOSAzOS41IEwxMTkuMiA0MS4wIEwxMjAuOSA0Mi41IEwxMjEuOCA0NC4wIEwxMjIuMCA0NS41IEwxMjEuMyA0Ny4wIEwxMTkuOCA0OC41IEwxMTcuNyA1MC4wIEwxMTUuMSA1MS41IEwxMTIuMSA1My4wIEwxMDkuMCA1NC41IEwxMDUuOSA1Ni4wIEwxMDMuMSA1Ny41IEwxMDAuOCA1OS4wIEw5OS4xIDYwLjUgTDk4LjIgNjIuMCBMOTguMCA2My41IEw5OC43IDY1LjAgTDEwMC4yIDY2LjUgTDEwMi4zIDY4LjAgTDEwNC45IDY5LjUgTDEwNy45IDcxLjAgTDExMS4wIDcyLjUgTDExNC4xIDc0LjAgTDExNi45IDc1LjUgTDExOS4yIDc3LjAgTDEyMC45IDc4LjUgTDEyMS44IDgwLjAgTDEyMi4wIDgxLjUgTDEyMS4zIDgzLjAgTDExOS44IDg0LjUgTDExNy43IDg2LjAgTDExNS4xIDg3LjUgTDExMi4xIDg5LjAgTDEwOS4wIDkwLjUgTDEwNS45IDkyLjAgTDEwMi43IDkzLjUgTDk5LjQgOTUuMCBMOTYuMiA5Ni41IEw5My40IDk4LjAgTDkwLjkgOTkuNSBMODkuMCAxMDEuMCBMODcuNiAxMDIuNSBMODYuNiAxMDQuMCBMODUuOSAxMDUuNSBMODUuNiAxMDcuMCBMODUuNSAxMDguNSBMODUuNiAxMTAuMCBMODYuMCAxMTEuNSBMODYuNiAxMTMuMCBMODcuMiAxMTQuNSBMODYuNSAxMTYuMCBMODUuMiAxMTcuNSBMODMuNCAxMTkuMCBMODEuMCAxMjAuNSBMNzguMiAxMjIuMCBMNzUuMCAxMjMuNSBMNzEuNiAxMjUuMCBMNjguMCAxMjYuNSBMNjQuNSAxMjguMCBMNjEuMiAxMjkuNSBMNTguMyAxMzEuMCBMNTUuNyAxMzIuNSBMNTMuNyAxMzQuMCBMNTIuMyAxMzUuNSBMNTEuNCAxMzcuMCBMNTEuMSAxMzguNSBMNTEuMiAxNDAuMCBMNTEuNyAxNDEuNSBMNTIuNCAxNDMuMCBMNTMuMyAxNDQuNSBMNTQuMSAxNDYuMCBMNTQuNyAxNDcuNSBMNTQuOSAxNDkuMCBMNTQuOCAxNTAuNSBMNTQuMSAxNTIuMCBMNTIuOCAxNTMuNSBMNTEuMCAxNTUuMCBMNDguNiAxNTYuNSBMNDUuOCAxNTguMCBMNDIuNiAxNTkuNSBMMzkuMiAxNjEuMCBMMzUuNiAxNjIuNSBMMzIuMSAxNjQuMCBMMjguOCAxNjUuNSBMMjUuOSAxNjcuMCBMMjMuMyAxNjguNSBMMjEuMyAxNzAuMCBMMTkuOSAxNzEuNSBMMTkuMCAxNzMuMCBMMTguNyAxNzQuNSBMMTguOCAxNzYuMCBMMTkuMyAxNzcuNSBMMjAuMCAxNzkuMCBMMjAuOSAxODAuNSBMMjEuNyAxODIuMCBMMjIuMyAxODMuNSBMMjIuNSAxODUuMCBMMjIuNCAxODYuNSBMMjEuNyAxODguMCBMMjAuNCAxODkuNSBMMTguNiAxOTEuMCBMMTYuMiAxOTIuNSBMMTMuNCAxOTQuMCBMMTAuMiAxOTUuNSBMNi44IDE5Ny4wIEwzLjIgMTk4LjUgTC0wLjMgMjAwLjAiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PHBhdGggZD0iTTExMCAxMDIgVjIwMCIgc3Ryb2tlPSIjZjhmYWZjIiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0iYnV0dCIvPjxwYXRoIGQ9Ik0xMDMgMTAzIEwxMTAgODkgTDExNyAxMDMgWiIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZjhmYWZjIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNODIgMTE4IEgxMzgiIHN0cm9rZT0iI2Y4ZmFmYyIgc3Ryb2tlLXdpZHRoPSIxNCIvPjwvZz4KPGNpcmNsZSBjeD0iMTEwIiBjeT0iMTEwIiByPSI2NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJlOGYwIiBzdHJva2Utd2lkdGg9IjE0Ii8+CjxwYXRoIGQ9Ik0xNjAgMTYwIEwyMDYgMjA2IiBzdHJva2U9IiNlMmU4ZjAiIHN0cm9rZS13aWR0aD0iMjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==" alt="evo-sim icon: a double helix split by a cross into two lineages"><h1>Probability Zero Audit</h1></div>
   <p>A neutral, two-sided audit of Vox Day's mathematical case against evolution (MITTENS, Hard Limits, Probability Zero) and of his critics. Each claim gets a numerical check and three verdicts: internal validity, citation fidelity, external validity.</p>
 </header>
@@ -105,19 +105,19 @@ footer{color:var(--muted);font-size:.82rem}
   <div class="pipe">
     <div class="stage"><b>R0 Scaffold</b><div class="bar"><i style="width:100%"></i></div><span>repo, env, templates</span></div>
     <div class="stage"><b>R1 Harvest</b><div class="bar"><i style="width:100%"></i></div><span>Day, critics, literature</span></div>
-    <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>194 claim files</span></div>
+    <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>196 claim files</span></div>
     <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>30 load-bearing nodes</span></div>
-    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:88%"></i></div><span>~88%, E and G1 reviewed; H, D, C1b left</span></div>
+    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:93%"></i></div><span>~93%, H3 and three gaps reviewed; D, C1c, GAP-07b running</span></div>
     <div class="stage"><b>R5 Synthesis</b><div class="bar"><i style="width:0%"></i></div><span>verdicts, simulator variables</span></div>
   </div>
   <div class="stats">
     <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
-    <span><b>194</b> claims (day 106 · critic 47 · ally 15 · lit 26)</span><span><b>238</b> typed objections</span><span><b>178</b> dated argument versions</span>
+    <span><b>196</b> claims (day 108 · critic 47 · ally 15 · lit 26)</span><span><b>258</b> typed objections</span><span><b>185</b> dated argument versions</span>
   </div>
   <div class="stats">
-    <span>Verdicts so far, internal: <b>95</b> holds · <b>15</b> non-sequitur · <b>6</b> arithmetic error · <b>55</b> pending</span>
-    <span>External: <b>21</b> supported · <b>101</b> contested · <b>9</b> contradicted · <b>5</b> untestable · <b>47</b> pending</span>
-    <span>Citation fidelity: <b>37</b> accurate · <b>31</b> partial · <b>9</b> misread · <b>35</b> unverifiable · <b>9</b> pending</span>
+    <span>Verdicts so far, internal: <b>96</b> holds · <b>15</b> non-sequitur · <b>6</b> arithmetic error · <b>56</b> pending</span>
+    <span>External: <b>22</b> supported · <b>102</b> contested · <b>9</b> contradicted · <b>5</b> untestable · <b>47</b> pending</span>
+    <span>Citation fidelity: <b>37</b> accurate · <b>32</b> partial · <b>9</b> misread · <b>35</b> unverifiable · <b>9</b> pending</span>
   </div>
 </section>
 
@@ -138,6 +138,8 @@ footer{color:var(--muted);font-size:.82rem}
       <li><b>Done:</b> review of the two new checks; both stand with wording fixes</li>
       <li><b>Done:</b> merged and committed (54 verdict fields across 33 claims)</li>
       <li><b>Done:</b> review #5 (E, G1, gap ledger): E split into "size holds, route wrong, consequence untested"; G1 reworded ("reverse-engineered" dropped); the audit's own 14.7× objection withdrawn; verdicts applied to 16 claims</li>
+      <li><b>Done:</b> review #6 (GAP-04/07/02): a cap bracket R/4–R/2–simulated max replaces a single cap; "supply-infeasible" and the scan "tension" withdrawn; Day's all-fixations model shown alongside</li>
+      <li><b>Done:</b> review #7 (H3): long-run runs on na-workhorse replace the 10k window ("1/300 reproduced" withdrawn); every verdict made conditional on hard vs soft selection; the K = 1000 hard-load extinction found to be an artefact</li>
     </ul></div>
   </div>
 </section>
@@ -184,6 +186,7 @@ footer{color:var(--muted);font-size:.82rem}
         <li data-s="ok"><span class="id">C1</span><span class="claim"><span class="c">Zero fixations across the 1240k SNP panel</span><span class="f">The panel is built from sites that vary today, so it can't record completed fixations. Reviewers disagree: the critic side says the observed 1 and 3 exceed neutral (P≈0.0002); the Day side says the test has no power. Day's exact statistic is being simulated.</span></span></li>
         <li data-s="ok"><span class="id">C1b</span><span class="claim"><span class="c">Day's exact time-binned statistic (new check, reviewed)</span><span class="f">Verdict: not reproducible, cannot adjudicate. The model misses Day's own table, so it isn't a valid null. Likely cause found: real ancient samples give only a few calls per site in old bins. Lowering per-site coverage drops the neutral count from ~6,500 to ~120 and moves events into the oldest bin, the same direction as Day's table. A direction, not yet a reproduction.</span></span></li>
         <li data-s="ok"><span class="id">C2</span><span class="claim"><span class="c">Overlapping generations vs standard model</span><span class="f">The ratio is an algebraic identity, so d is not independently measured.</span></span></li>
+        <li data-s="run"><span class="id">C1c</span><span class="claim"><span class="c">Day's "21" with real per-site coverage and ancestry turnover</span><span class="f">Running (pre-registered): per-site, per-bin call depth from AADR plus the steppe and Anatolian farmer pulses.</span></span></li>
         <li data-s="ok"><span class="id">C6</span><span class="claim"><span class="c">The 630 comparator</span><span class="f">Day's comparison and this audit's earlier rescaling are both wrong. About 1,500–1,850 fixations are expected on an ascertained panel.</span></span></li>
       </ul>
     </details>
@@ -192,7 +195,8 @@ footer{color:var(--muted);font-size:.82rem}
       <summary><span class="bid">D</span><span class="btitle">Wistar 1966 / sequence space<small>Eden 10³²⁵, Ulam, Weasel</small></span><span class="dots"></span></summary>
       <ul class="nodes">
         <li data-s="data"><span class="id">D</span><span class="claim"><span class="c">Quotations from the Wistar proceedings</span><span class="f">Six misquotes found, including Eden's 2.7M called "not implausible".</span></span></li>
-        <li data-s="todo"><span class="id">D-sim</span><span class="claim"><span class="c">Sequence-space search simulations</span><span class="f">Specified, not started.</span></span></li>
+        <li data-s="run"><span class="id">D1</span><span class="claim"><span class="c">Spike: interchangeable routes per needed change</span><span class="f">Running (pre-registered): RNA folding (ViennaRNA neutral networks) and deep mutational scans (MaveDB / ProteinGym), measured against G1's 12–17 threshold; engages Day's "DMS shows ruggedness" (D2h).</span></span></li>
+        <li data-s="todo"><span class="id">D-sim</span><span class="claim"><span class="c">Sequence-space search simulations</span><span class="f">Specified; follows the D1 spike.</span></span></li>
       </ul>
     </details>
 
@@ -228,6 +232,7 @@ footer{color:var(--muted);font-size:.82rem}
         <li data-s="ok"><span class="id">H2</span><span class="claim"><span class="c">Hard vs soft selection (Nunney 2003)</span><span class="f">Corrected model: soft selection is 1.5–2.8× <em>slower</em> than hard at equal mutation supply, so the critics' "soft selection removes the cost" did not reproduce. Haldane's 300 is a bounding case; the human value is undetermined, so H is neither refuted nor binding.</span></span></li>
         <li data-s="ok"><span class="id">H-hard</span><span class="claim"><span class="c">Many simultaneous sweeps under hard selection (new check, reviewed with fixes)</span><span class="f">The limit is ln R / D (reproductive excess over cost per substitution), not a fixed 1 in 300. Populations sustained 9–120× Haldane's rate at R ≥ 1.3. Haldane's own case (R ≈ 1.1, diploid D ≈ 20–30) gives ≈ 1/300 and was not tested, so "1/300 falsified" is withdrawn; "10% is not a general bound" stands. Day's ~230 sweeps persist at R ≥ 5, fail at R = 2. Model favours critics (free recombination, imposed opportunity rate).</span></span></li>
         <li data-s="ok"><span class="id">H8</span><span class="claim"><span class="c">Hössjer's 15,800</span><span class="f">10.5× Haldane's own figure. Day's Term 3 differs from Haldane's cost by 17.1× at the same d.</span></span></li>
+        <li data-s="ok"><span class="id">H3</span><span class="claim"><span class="c">Cost of selection at human scale (reviewed; conditional on hard adaptive selection + soft load)</span><span class="f">Day's structure holds: concurrent sweeps share one budget. At Haldane's assumed R ≈ 1.1 the long-run rate is ≈ 1/530–1/1,050, below 1/300. The budget is ln R, not 10%: 10³ / 10⁴ adaptive substitutions need R ≈ 1.2 / 3.0, so a coding-only count fits; a 1% adaptive non-coding share does not. Day's 17.5M–205M fail under any cost model. The flip (0.01–0.6% non-coding) is below what any α estimate resolves, and R is unsourced, so H stays open.</span></span></li>
       </ul>
     </details>
   </div>
@@ -277,8 +282,10 @@ footer{color:var(--muted);font-size:.82rem}
   <p>Seven gaps no party (including this audit) had addressed, each backed by re-runnable search counts and fact-checked. Main beneficiary: two-sided 3 · critics 3 · Day 1.</p>
   <ol class="next">
     <li><b>GAP-01 adaptive fraction</b> (both): cuts Day's 17.5M by 20×–6,000×, yet the adaptive count still exceeds Haldane's rate by 1.5–7× on coding sites alone.</li>
-    <li><b>GAP-04 finite-map cap</b> (both): Weissman &amp; Barton 2012. About 4× over the cap if every difference were adaptive; negligible at realistic adaptive rates.</li>
-    <li><b>GAP-02 sweep signatures</b> (both), <b>GAP-03</b> linkage and the neutral rate (critics), <b>GAP-05</b> slightly harmful fixations (Day), <b>GAP-06</b> μ and generation time in the fit (critics, weakly), <b>GAP-07</b> indel/SV event counts (critics, modestly).</li>
+    <li><b>GAP-04 finite-map cap</b> (both; checked): Day's 17.5–20M is 6.5–9.1× over R/4 and 3.3–4.5× over R/2 if all adaptive, but 0.54–0.76 of the simulated maximum; the adaptive count stays under the cap until 13–27% of differences are adaptive.</li>
+    <li><b>GAP-07 event counts</b> (critics, modestly; checked): 205M base pairs ≈ 9–11× the event count; Day's SNV-only magnitudes corroborated. A direct alignment count is running.</li>
+    <li><b>GAP-02 sweep window</b> (both; checked): Day's 3,200 sweeps predict ≤ ~98 detectable today; the top of his range (32,000) ~1,000–3,250. Verdict pending (range-dependent).</li>
+    <li><b>GAP-03</b> linkage and the neutral rate (critics), <b>GAP-05</b> slightly harmful fixations (Day), <b>GAP-06</b> μ and generation time in the fit (critics, weakly), open.</li>
   </ol>
 </section>
 
@@ -288,8 +295,8 @@ footer{color:var(--muted);font-size:.82rem}
   <ol class="next">
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/explain/README.md">Explainers</a> at five levels: ELI5 · ELI8 · ELI10 · ELI12 · ELI18 (drafts, revised after R5).</li>
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/HANDOFF.md">Handoff briefing</a>: a neutral summary for outside teams, including the audit's own limitations.</li>
-    <li>Seven dated milestone posts, linked from the handoff.</li>
-    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 238 objections typed undermining / undercutting / rebutting, a genealogy of 178 dated versions since 1966, and seven gaps nobody closed.</li>
+    <li>Eight dated milestone posts, linked from the handoff.</li>
+    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 258 objections typed undermining / undercutting / rebutting, a genealogy of 185 dated versions since 1966, and seven gaps nobody closed.</li>
     <li>A README with the math, figures and roadmap, plus the Wide Peel icon.</li>
   </ol>
 </section>
@@ -297,9 +304,8 @@ footer{color:var(--muted);font-size:.82rem}
 <section>
   <h2>Next</h2>
   <ol class="next">
-    <li><b>H at human scale</b>, bounded by the adaptive fraction (GAP-01: 10³–10⁶ selected changes), with a Nei / Felsenstein analytic cross-check.</li>
-    <li>Quick gap checks: Weissman–Barton finite-map cap (GAP-04), indel/SV event counts (GAP-07), sweep-scan windows (GAP-02).</li>
-    <li>D (sequence space): how many interchangeable routes per needed change. Then C1b call depth, H confidence intervals, Yoo's μ.</li>
+    <li><b>Running now</b> (pre-registered; three reviews each when done): D spike (RNA folding + deep mutational scans: routes per needed change vs G1's 12–17), C1c (Day's aDNA "21" with real per-site coverage and ancestry turnover), GAP-07b (direct event count from the human–chimp alignment), corpus refresh since 2026-10-07.</li>
+    <li>H follow-ups: soft-selection rate limit and epistasis at human R; a sourced beneficial DFE; confidence intervals on T50. Then Yoo's μ / GAP-06.</li>
     <li>R5: final verdicts, sensitivity table, simulator variable list.</li>
   </ol>
 </section>

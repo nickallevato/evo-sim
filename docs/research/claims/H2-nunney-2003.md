@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: n/a
   fidelity: accurate
-  external: "contested"   # M-dependence reproduced; absolute T and the soft-selection 'elimination' not reproduced in the reconstruction; human M undetermined
+  external: "contested"   # M-dependence reproduced both ways (R4 H3: D ~6.5 at M = 1 up to 99-163 at M = 0.01, ~15 + 1/M at low M); absolute T and soft-selection elimination not reproduced in R4-H-C2; human M unsourced
 ---
 
 ## Statement (verbatim)
@@ -66,6 +66,8 @@ Parameter link: `haldane.gens_per_substitution` = 300 (verified via Nunney); pro
 ## Check
 R4 H Model 1/2 (research/checks/results/R4-H-C2.md; EXPLORATORY reconstruction, Nunney's Eq. 3 and 5 lost in extraction, adjusted twice after seeing results): the qualitative M-dependence is reproduced (T50 rises as M falls, more steeply for n = 7). Absolute values are not (R = 10 is 2-12x below Nunney; R = 2.2, M = 0.1 hard gives 170 vs ~300). Soft selection did not reduce the cost at equal mutation supply (soft T50 1.5-3.5x hard). Human M is undetermined. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned; spec in H). · Result: not run · Review: pending
+
+R4 H3 (research/checks/results/R4-H3-human.md, stages C and M): the M-dependence is reproduced in both directions. D_eff ~ 6.5 (M = 1), 10.5 (0.3), 17-22 (0.1), 39-52 (0.03), 99-163 (0.01), i.e. ~15 + 1/M at low M. The pre-registered D + 1/M form failed at M >= 0.1 and approximately held at M <= 0.03. At M = 0.01 even R = 2 sustains only ~1/430. M >= 1 needs about 4e3 target sites per locus (derived:). Human M is unsourced. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
 ## Simulator variables implied
 K, u (per-locus beneficial mutation rate), M = 2Ku, R (net reproductive rate), n loci, hard versus soft switch, density dependence.

@@ -38,7 +38,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 ## Scorecard so far
 
-<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 194 claims" width="760"></p>
+<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 196 claims" width="760"></p>
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
@@ -50,9 +50,10 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 | Soft selection does **not** make the cost of selection disappear (H) | The cap is $\ln R / D$, not a flat 10% (H2). The $0.743\mu$ figure is a window artefact (B3c) |
 | Haldane arithmetic (300, 487) holds. Critics' "38M matches 35M SNVs" double-counts (B5c) | 205M "required fixations" counts base pairs, not mutation events. The cited $s=0.001$ is *negative* selection (A3, Zeng 2021) |
 | The founder hazard's size (~2.3% per event) and the relictation chain reproduce (E, E4) | $0.02^{2\times10^7}$ prices one pre-specified list. No cap near 230 sweeps under multiplicative fitness (G3, Gc) |
+| Parallel sweeps share **one** reproductive budget, so concurrency cannot raise the selected total beyond it. At Haldane's assumed $R\approx1.1$ the long-run rate is *below* 1/300 (H3) | The budget is $\ln R$, not 10%: a coding-only adaptive count is payable at $R\approx1.2$–3 (hard adaptive selection, soft load). 205M base pairs ≈ 9–11× the event count (H3, GAP-07) |
 
 **Still open:**
-- Cost of selection at real human fecundity and hard-selected load.
+- Cost of selection at human scale (H3) is decided only conditionally. It flips at an adaptive non-coding share of ~0.01–0.6%, below what any α estimate resolves; $R$ is unsourced; soft selection, absolute-fitness gain and epistasis are untested at human scale.
 - Day's ancient-DNA "21 fixations" statistic, which is not reproducible from the published method.
 - The ancestral $N_e$ needed to fit the divergence.
 - Branch D (sequence space). G1 reduced the specific-vs-any dispute to one number D has to supply: how many interchangeable routes exist per needed change (the "any" reading wins above about 12–17).
@@ -73,7 +74,7 @@ flowchart LR
   E["<b>E · LTEE / punctuated</b><br/>mutator hazard, relictation<br/><i>numbers reproduce; consequence untested</i>"]:::mixed
   F["<b>F · Kimura irrelevance</b><br/>fixation time vs fixation rate<br/><i>latency ≠ throughput</i>"]:::critic
   G["<b>G · Bernoulli barrier</b><br/>0.02^(2×10⁷), ~230 parallel sweeps<br/><i>prices a specific list; no 230 cap</i>"]:::critic
-  H["<b>H · Cost of selection</b><br/>Haldane 1/300<br/><i>arithmetic holds; human regime open</i>"]:::open
+  H["<b>H · Cost of selection</b><br/>Haldane 1/300<br/><i>shared budget holds; its size is ln R;<br/>turns on adaptive share and R</i>"]:::open
 
   ROOT --> A & B & C & D & E & F & G & H
 
@@ -180,7 +181,15 @@ $R_{\text{int}}$ = (realised rate) / (independent-sites rate).
 ```
 <p align="center"><img src="docs/img/h2_persistence.svg" alt="Hard-selection persistence" width="620"></p>
 
-Under hard selection, a population with maximum fecundity $R$ survives only while the cost it pays per generation stays below $\ln R$. In the tested grid ($R\ge1.3$) it sustains 9–120× Haldane's rate (`h2_hard_selection_multilocus.py`). Soft selection does not remove the cost; the soft-selection runs are in fact slower. Haldane's own regime ($R\approx1.1$, diploid $D\approx 20$–$30$) and real human hard-selected load remain **untested**, so H stays open.
+Under hard selection, a population with maximum fecundity $R$ survives only while the cost it pays per generation stays below $\ln R$. In the tested grid ($R\ge1.3$) it sustains 9–120× Haldane's rate (`h2_hard_selection_multilocus.py`). Soft selection does not remove the cost in the audit's reconstruction; the soft-selection runs are in fact slower.
+
+**At human scale** (H3, `h3_human_scale.py`, conditional on hard adaptive selection with a soft deleterious load):
+- Day's structure holds: concurrent sweeps share one budget.
+- At Haldane's assumed $R \approx 1.1$ the rate is ≈ 1/300 over 10,000 generations but only ≈ 1/530–1/1,050 over the 252,000-generation lineage, because load fluctuations eat 27–70% of the cap.
+- The minimum $R$ for $10^3$ / $10^4$ / $10^5$ adaptive substitutions is 1.2 / 3.0 / 5×10⁴.
+- So a coding-only adaptive count fits at plausible $R$. An adaptive non-coding share of 1% or more does not. Day's 17.5M–205M fail under any cost model.
+
+The flip sits below what any α estimate can resolve, and no sourced net hominid $R$ exists, so **H stays open**.
 
 ### 9 · Fixation time of a beneficial mutant
 ```math
@@ -196,9 +205,9 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
-  R1 --> R2["R2<br/>194 claims<br/>verbatim + sourced"]:::done
+  R1 --> R2["R2<br/>196 claims<br/>verbatim + sourced"]:::done
   R2 --> R3["R3<br/>Argument tree<br/>30 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>19 checks reviewed"]:::active
+  R3 --> R4["R4<br/>Math resolution<br/>23 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo
@@ -211,10 +220,12 @@ flowchart LR
 **R4 remaining**
 - [x] **E:** hypermutator hazard per founder; exact chains for relictation (Cannings)
 - [x] **G1:** what $0.02^{2\times10^7}$ prices: a *specific* outcome or *any* outcome
-- [ ] **Gaps:** finite-map cap fit (GAP-04), indel/SV event counts (GAP-07), sweep-scan windows (GAP-02)
-- [ ] **D:** sequence-space simulations (Wistar, Ulam, Weasel)
-- [ ] **C1b:** the aDNA 21-count with realistic per-site call depth and ancestry structure
-- [ ] **H:** realistic human $R$ and hard-selected load, with confidence intervals on T50
+- [x] **Gaps:** finite-map cap fit (GAP-04), indel/SV event counts (GAP-07), sweep-scan windows (GAP-02)
+- [x] **H3:** cost of selection at human scale (long-run hazard, finite supply, hard load at K ≥ 4000)
+- [ ] **GAP-07b:** direct event count from the human–chimp alignment (in progress)
+- [ ] **D:** sequence-space simulations (Wistar, Ulam, Weasel); a ViennaRNA + deep-mutational-scan spike is in progress
+- [ ] **C1b:** the aDNA 21-count with realistic per-site call depth and ancestry structure (C1c in progress)
+- [ ] **H follow-ups:** soft-selection rate limit and epistasis at human $R$; a sourced beneficial DFE and $M$; CIs on T50
 - [ ] **Sources:** Yoo 2025's $\mu$, to rescale $N_{e,\text{anc}}$. Verify Takahata 1995, Charlesworth 2009 and the Haak 2015 panel design
 
 **R5:** final verdicts, a sensitivity table, the simulator variable list and a published summary. The [ELI5 / ELI8 / ELI10 / ELI12 / ELI18 explainers](docs/explain/README.md) exist as drafts and get a final pass after R5.

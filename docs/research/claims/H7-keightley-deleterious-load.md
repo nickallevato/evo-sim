@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: n/a
   fidelity: n/a
-  external: "supported"   # hard selection at U = 2.2 needs ~18 offspring per female; does not decide hard vs soft
+  external: "supported"   # R4 H3: hard U = 2.2 incompatible with R <= 9 (analytic; R = 10 extinct at K = 4000), compatible with R = 20 at K >= 4000 (K = 1000 extinction was an artefact); hard U = 0.35 removes R <= 1.42 if the whole class is hard; bounding cases; does not decide hard vs soft
 ---
 
 ## Statement (verbatim)
@@ -55,6 +55,8 @@ Link: `mutation.mu_per_site_per_gen.keightley_2012` = 1.1e-8 and `mutation.new_m
 ## Check
 R4 H7 (`h_keightley_load.py`, K = 1000, 6 reps; research/checks/results/R4-H-C2.md) and H2 (research/checks/results/R4-H2-hard.md): hard multiplicative selection at U = 2.2, s = 0.05 goes extinct for Fmax = 4-20 and persists at 30 (N/K 0.174 vs predicted 0.188; ratchet regime) and 60 (0.344 vs 0.353); threshold 2e^U = 18.1 offspring per female. Soft selection persists at every Fmax. In H2 the combined condition is lam*D + U < ln R. This supports Keightley's statement but does not decide whether human selection is hard or soft (Day-side use: a hard-selection population at U = 2.2 is near its limit). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned; extend with a deleterious load term U). · Result: not run · Review: pending
+
+R4 H3 (research/checks/results/R4-H3-human.md, stage H at K = 4000 and 10^4): hard U = 2.2 with R = 20 persists, so the K = 1000 extinction (R4-H-C2) was a small-population artefact. U = 2.2 is incompatible with R <= 9 (analytic); R = 10 at K = 4000 dies even with no adaptation (marginal). Hard U = 0.35 removes R <= 1.42 if the whole amino-acid class is hard-selected (R = 1.5 at K = 4000 persists without adaptation, dies at x = 0.5). The H2-hard comparison is withdrawn: its deleterious load was not heritable. These are bounding cases; the cited literature (PA-16, PA-17) argues the human load is not hard, which cuts against using it for Day. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
 ## Simulator variables implied
 Deleterious mutation rate U, beneficial substitution rate, hard/soft mixing fraction, synergistic epistasis, offspring number.

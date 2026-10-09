@@ -75,3 +75,5 @@ R0 ██████████  R1 ██████████  R2 ██�
 | GAP-04, GAP-07, GAP-02 | Quick fits and arithmetic: the finite-map cap, indel/SV event counts, how far back sweep scans can see |
 | D | The number G1 left open: interchangeable routes per needed change |
 | C1b | Day's ancient-DNA "21" with realistic call depth |
+
+*Update 2026-10-09: H at human scale and GAP-04, GAP-07 and GAP-02 are done; see [milestone 8](2026-10-09-8-cost-of-selection-and-gaps.md). H stays open, now for a stated reason: the adaptive non-coding share that decides it is below what any estimate resolves.*

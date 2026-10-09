@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"   # arithmetic
   fidelity: pending
-  external: "contested"   # s_max = 1 implies R ~ 2.7, not Haldane's 10%; 17.1x Haldane + d on the same basis
+  external: "contested"   # 17.1x Haldane + d on the same basis. R4 H3: the R = 2 form matched in a 10k window (if R = 2 is intended; s_max*d = ln R is the audit mapping), overshoots the long-run cap over 252k; R-independence not claimed by Day
 ---
 
 ## Statement (verbatim)
@@ -68,6 +68,8 @@ derived (R2 recompute):
 ## Check
 R4 H (research/checks/results/R4-H-C2.md): 0.45/(2 x 3.1e9 x ln 6,600) = 8.25e-12 per site (holds); 0.0256 per generation (one per 39). Implied per-substitution cost 2 ln(2Ne) = 17.6 against s_max = 1.0, vs Haldane's D = 30 and 0.10; same-basis ratio to Haldane + d is 17.1. In H2's hard model the cap is ln R / D, so s_max = 1 corresponds to a large reproductive excess (ln R = 1, R ~ 2.7), not Haldane's 10%. The two cost figures in the corpus are not reconciled. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned, H). · Result: not run · Review: pending
+
+R4 H3 (research/checks/results/R4-H3-human.md): Term 3's 0.0296 per generation at R = 2 matched the pre-registered form in a 10k window (lambda50 = 0.0345 [0.0330, 0.0368]) if R = 2 is the intended value; at the R implied by the audit's s_max*d = ln R mapping (1.57) it fails (lambda50 ~ 0.020). Over 252k it is above the long-run cap (phi_252k = 0.59 at R = 2). The R-independence tested as D2 was not claimed by Day; it holds only if s_max = 1 is read as a constant. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
 ## Simulator variables implied
 s_max (or R), d, Ne, L, concurrent-sweep count, hard/soft switch.

@@ -268,6 +268,16 @@ See PA-19.
 2. *R4 simulation.* Run H2-hard at λ = K_a/T ∈ {0.005, 0.015, 0.04} with diploid D ≈ 20 and R ∈ {1.1, 1.3, 2}. This is the "Haldane's own regime" cell, flagged untested.
 3. *Fidelity.* Add a CSAC 2005 Table 3 row to the fidelity ledger as evidence against Z19984826 §6.4.
 
+**R4 check (R4 2026-10-09)** (`research/checks/results/R4-H3-human.md`; `h3_human_scale.py` pre-registered at 0061b28, fix pass e48a5af; review #7). Proposed check 2 is done at human scale, with conditions: hard adaptive treadmill selection, soft deleterious load, D ≈ 2 ln 2N, long-run φ over 252,000 generations at s = 0.01.
+- **Coding-only K_a** (≈ 1.3×10³–1.2×10⁴) is payable at R ≈ 1.2–3.
+- **a_nc ≈ 0.1%** (≈ 2×10⁴) needs R ≈ 3 (D = 10) to ≈ 9 (D = 20).
+- **a_nc ≥ 1%** is unpayable at any R in the anchor range (≤ 3–4) for D ≥ 5.
+- **The flip** sits at a_nc ≈ 0.01–0.6%, below the resolution of any α estimate here (coding α CI −0.30 to 0.24; no genome-wide noncoding α). So the gap's decisive input remains **undetermined**. Each side's favourable reading needs an unsourced a_nc.
+- **Not modelled:** soft selection on the adaptive loci, absolute-fitness gain, truncation/synergistic epistasis. All of these would lower the cost.
+- **Low mutation supply (M ≤ 0.03) and a hard load** would raise it.
+- **Beneficiary unchanged** (two-sided).
+- **Check 1** (parameters.yaml K_a row) and **check 3** (fidelity row) are still open.
+
 ### GAP-04: A published finite-map limit on adaptive substitution applies at human scale and is cited by no one
 **Nodes:** F2, F, A2e, A, ROOT. F2's open caveat is "human-scale active loci untested".
 

@@ -1,6 +1,6 @@
 # evo-sim: a briefing for independent assessment
 
-*Status as of 2026-10-08 (revised the same day: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
+*Status as of 2026-10-09 (H3 and GAP-04/07/02 added; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
 
 This note is for a team that has not followed the project and wants to form its own view of it. It describes what the project is, what it has found, and where its findings and methods are weakest. It does not argue for any side. Wherever this note and the repo disagree, trust the repo.
 
@@ -13,9 +13,9 @@ evo-sim has two stages.
 
 ## How the audit works
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
-2. **Claims.** 193 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
+2. **Claims.** 196 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty nodes are marked as load-bearing.
-4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Seventeen checks have been reviewed so far.
+4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-three checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
@@ -33,7 +33,7 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Hard Limits tail.** The exponent −π²Nₑ/G is the correct leading-order tail.
 - **LTEE rate.** The bacterial figure of about 1,300 generations per fixation is a real throughput measurement, and it reproduces.
 - **Balloux–Lehmann effect.** It is real: with overlapping generations and a fluctuating population size, k ≠ μ. The critics' blanket "k = μ" holds only for discrete generations.
-- **Cost of selection.** In the audit's reconstruction, soft selection does not make the cost disappear.
+- **Cost of selection.** In the audit's reconstruction, soft selection does not make the cost disappear. At human scale (H3), concurrent sweeps do share one reproductive budget, as Day says, and at Haldane's assumed R ≈ 1.1 the long-run sustainable rate is below 1/300 (≈ 1/530–1/1,050).
 - **Haldane's arithmetic** (300 and 487) holds.
 - **A critic's double count.** The critics' claim that "38M matches 35M SNVs" counts the same differences twice.
 - **LTEE founders.** The founder hazard's size (2.0–2.75% per event against Day's 2.3%) and the relictation chain both reproduce. The route to the 2.3% is wrong, and its consequence for real populations is untested.
@@ -44,13 +44,14 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Latency vs throughput.** The time a single fixation takes is not the rate at which fixations happen. Many sweeps can be in flight at once.
 - **Recombination.** In the tested regime, recombination removes the clonal-interference ceiling.
 - **Divergence.** Human–chimp divergence includes ancestral polymorphism: d = 2μT + θ_anc.
-- **Hard-selection cap.** The cap is ln R / D, not a flat 1/300.
+- **Hard-selection cap.** The cap is ln R / D, not a flat 1/300. At human scale (H3, hard adaptive selection with a soft load), a coding-only adaptive count of 10³–10⁴ is payable at R ≈ 1.2–3. Day's 17.5M–205M fail under any cost model, which says nothing about whether most differences were neutral.
+- **Event counts.** 205M base pairs is about 9–11× the number of mutational events (GAP-07).
 - **Required fixations.** The "205M required fixations" figure counts base pairs rather than mutation events.
 - **A misread citation.** A selection coefficient Day cites (s = 0.001, from Zeng 2021) is for negative selection, not beneficial.
 - **Bernoulli barrier.** 0.02^(2×10⁷) prices one pre-specified list of outcomes, and its value doesn't depend on timing. No cap near 230 concurrent sweeps appears under multiplicative fitness. One earlier audit objection to Day's 14.7× was itself withdrawn.
 
 **Still open:**
-- **Cost of selection** at real human fecundity and hard-selected load. This regime is untested.
+- **Cost of selection** at human scale is decided only conditionally. The answer flips at an adaptive non-coding share of about 0.01–0.6%, below what any estimate resolves. R is unsourced. Soft selection, absolute-fitness gain and epistasis are untested at human scale.
 - **Ancient DNA.** Day's "21 fixations" statistic, which could not be reproduced from its published method.
 - **Ancestral Nₑ.** The value needed to fit the observed divergence has three free parameters, so no side gets a clean fit.
 - **Sequence space (D)** has no check yet. It now has a precise question from G1: how many interchangeable routes exist per needed change. Above about 12–17, the "any outcome" reading wins.
@@ -60,9 +61,9 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 
 | Verdict | Counts |
 |---|---|
-| Internal | 95 hold, 15 non-sequitur, 6 arithmetic error, 55 pending |
-| Fidelity | 37 accurate, 31 partial, 9 misread, 35 unverifiable, 9 pending |
-| External | 21 supported, 101 contested, 9 contradicted, 5 untestable, 47 pending |
+| Internal | 96 hold, 15 non-sequitur, 6 arithmetic error, 56 pending |
+| Fidelity | 37 accurate, 32 partial, 9 misread, 35 unverifiable, 9 pending |
+| External | 22 supported, 102 contested, 9 contradicted, 5 untestable, 47 pending |
 
 Note that the largest external category is *contested*.
 
@@ -77,7 +78,7 @@ These are the limits of the project itself, not of either side:
   - Some sources could not be accessed and are listed as such.
   - Full texts are not in the repo, for copyright reasons. Readers must fetch them to check quotes.
   - None of the authors on either side has been contacted, so no one has had a right of reply.
-- **Untested regimes.** Several conclusions hold only in the regimes tested: N = 1000, s = 0.01, and a single closed population. Human-scale parameters for the number of loci under selection at once, and for hard-selected load, have not been run. "Holds in the tested regime" is weaker than "holds".
+- **Untested regimes.** Several conclusions hold only in the regimes tested: N = 1000, s = 0.01, and a single closed population. Human-scale cost of selection (H3) has been run only for hard adaptive selection with K up to 10⁴; the number of loci under selection at once at human scale has not been run. "Holds in the tested regime" is weaker than "holds".
 - **A moving target.** The critics are informal and have not engaged several branches, and Day's numbers change between versions. A verdict on one version may not apply to the next.
 - **Branding.** The project icon combines a double helix with a Christian cross. That was the maintainer's choice. Readers may weigh it as they see fit when judging the claim of neutrality.
 
@@ -100,6 +101,7 @@ These dated posts tell the story in order:
 5. [2026-10-08: R4 round two, the load-bearing checks](2026-10-08-5-r4-round-two.md)
 6. [2026-10-08: Making it inspectable](2026-10-08-6-going-public.md)
 7. [2026-10-08: Founders, the Bernoulli barrier, and a map of the argument](2026-10-08-7-argument-map.md)
+8. [2026-10-09: The cost of selection at human scale, and three gaps closed](2026-10-09-8-cost-of-selection-and-gaps.md)
 
 ## Not yet decided
 - The final verdicts and the sensitivity table (R5).

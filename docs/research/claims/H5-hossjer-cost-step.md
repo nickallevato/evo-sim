@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "non-sequitur"   # the 15,800 is a rate scaling, not a cost computation (10.5x Haldane's 1,500)
   fidelity: pending
-  external: "contested"   # depends on H
+  external: "contested"   # depends on H. R4 H3: the conditional is mechanically supported (shared budget); 15,800/450k payable at R ~2-3 under hard adaptive + soft load; cost step still uncomputed by Hössjer
 ---
 
 ## Statement (verbatim)
@@ -59,6 +59,8 @@ derived (R2 recompute):
 ## Check
 R4 H (research/checks/results/R4-H-C2.md): Hössjer's 15,800 is 10.5x Haldane's own 1,500 over 450,000 generations (675 with d); it comes from a mutation-rate scaling, not a cost computation, so the cost step is unsupported by the Haldane arithmetic. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned, H). · Result: not run · Review: pending
+
+R4 H3 (research/checks/results/R4-H3-human.md): Hössjer's conditional (if many fixations were selected, a parallel reproductive cost applies) is mechanically confirmed: concurrent sweeps share one budget (D1a). His 15,800 over 450,000 generations (0.035 per generation) is payable at R ~ 2-3 (D = 20; R ~ 3 with long-run phi) under hard adaptive selection with a soft load. It is close to GAP-01's coding-only maximum (1.2e4), so it is compatible with a coding-only reading. 'Perhaps' is a hedge, not a target, and the cost step remains asserted rather than computed. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
 ## Simulator variables implied
 Fraction of lineage fixations that are selected, selective mortality budget, d, L, mu ratio.

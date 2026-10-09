@@ -10,6 +10,8 @@ Files:
 
 ## Counts (checker output, 2026-10-08, after the integration fixes)
 
+**Update 2026-10-09 (R4 H3 integration).** The checker now reports 258 defeaters, 185 lineage nodes and 117 standard forms, 0 errors. Added: d259–d262 (attacker chk:H3 against H P2, G2's inference, H8 P1 and H5 P4; all `partly`, all conditional on hard adaptive treadmill selection with a soft deleterious load), d263–d265 (review #7 against chk:H3, all upheld and applied), registry ids chk:H3 and rev:R4-H3-{correctness,steelman-day,steelman-critic}, and lineage nodes L-audit-h3-2026 and L-audit-h3-1-300-2026 (the pre-review "1/300 reproduced" wording, replaced). Counters recomputed mechanically: d107, d108 (attacker G2) gained d260; d118 (attacker H) gained d259. Grounded labels (accepted/rejected/undecided): as argued 95/99/2, audited strict 146/50/0, audited lenient 104/92/0.
+
 **Update 2026-10-08 (R4 GAP-04/07/02 integration).** The checker now reports 251 defeaters (238 before this integration; the 238 already included the R4 E and G1 rows d240–d245), 183 lineage nodes and 117 standard forms, 0 errors. Added: d246–d253 (attackers chk:GAP04, chk:GAP07, chk:GAP02, and Day's new claim A6 against the registry id x:darwinzdf42-hitchhiking), d254–d258 (review #6 against the three checks), the A6 mini-form, and lineage nodes L-pan-sweeps-2026, L-sweep-signatures-2026, L-audit-gap04-2026, L-audit-gap07-2026, L-audit-gap02-2026. Counters were recomputed mechanically (only rows with attacker A5b gained a counter, d249). The side/type/status tables below are as of the integration fixes and were not re-broken-down.
 
 | | count |
@@ -119,6 +121,7 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:GAP04 | audit | Weissman–Barton finite-map limit vs F2 and human requirements (R/4–R/2–simulated envelope) | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §1 (added 2026-10-08) |
 | chk:GAP07 | audit | indel/SV event counts from germline rates (k = μ) vs Day's base-pair totals | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §2 (added 2026-10-08) |
 | chk:GAP02 | audit | sweep-scan detection window: expected detectable completed sweeps (power-1 upper bound) | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §3 (added 2026-10-08) |
+| chk:H3 | audit | cost of selection at human scale: hard adaptive treadmill, soft/hard load, long-run φ, finite supply (all conditional) | RESULTS §H3; results/R4-H3-human.md (added 2026-10-09) |
 | chk:ROOT-M-survey | audit | keyword survey of computed vs asserted exclusions | claims/ROOT-excluded-mechanisms.md |
 | chk:D9-exploratory | audit | exploratory Weasel runs (not pre-registered) | claims/D9, D9a Responses |
 | rev:review-2 | audit | correctness review #2 | research/checks/REVIEW.md (2026-10-07) |
@@ -130,6 +133,9 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-GAPS-correctness | audit | review #6, correctness (GAP-04/07/02) | results/REVIEW-R4-GAPS-correctness.md (2026-10-08) |
 | rev:R4-GAPS-steelman-day | audit | review #6, Day-side steelman (GAP-04/07/02) | results/REVIEW-R4-GAPS-steelman-day.md (2026-10-08) |
 | rev:R4-GAPS-steelman-critic | audit | review #6, critic-side steelman (GAP-04/07/02) | results/REVIEW-R4-GAPS-steelman-critic.md (2026-10-08) |
+| rev:R4-H3-correctness | audit | review #7, correctness (H3) | results/REVIEW-R4-H3-correctness.md (2026-10-08) |
+| rev:R4-H3-steelman-day | audit | review #7, Day-side steelman (H3) | results/REVIEW-R4-H3-steelman-day.md (2026-10-08) |
+| rev:R4-H3-steelman-critic | audit | review #7, critic-side steelman (H3) | results/REVIEW-R4-H3-steelman-critic.md (2026-10-08) |
 
 ## Judgement calls
 

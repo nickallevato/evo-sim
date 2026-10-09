@@ -1346,7 +1346,7 @@
   locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:31:58
   audit_status: partly
   audit_basis: G1 holds as accounting; F1a non-sequitur for latency-based figures; Hancock answers the Duffy version (balance ledger)
-  counter: [d118, d171, d172, d220]
+  counter: [d118, d171, d172, d220, d260]
   note: The formula assumes each mutation fixes before the next arises.
   hierarchy_edge: true
 - id: d108
@@ -1359,7 +1359,7 @@
   locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:31:58
   audit_status: partly
   audit_basis: as G2 → A
-  counter: [d118, d171, d172, d220]
+  counter: [d118, d171, d172, d220, d260]
   note: The rate is serial, so a parallelism divisor is needed.
   hierarchy_edge: true
 - id: d109
@@ -1477,7 +1477,7 @@
   locator: https://zenodo.org/records/18168236 §2.3
   audit_status: untested
   audit_basis: 'no check on this reply; R4 H2-hard: the hard-selection cap is ln R / D (10% is not a general bound); R4 H: soft selection did not remove the cost'
-  counter: [d119, d121, d122, d190, d191]
+  counter: [d119, d121, d122, d190, d191, d259]
   note: 'The 10% budget is shared by all loci, so parallel fixation is costly. A pre-emptive reply (2026-01-05) to the generic parallel-fixation objection. Retargeted 2026-10-08 from G1 (Day''s own claim) to G2.'
   hierarchy_edge: true
   edge_flag: 'judgement call 2026-10-08: Z18168236 §2.3 answers an unnamed ''most common objection''; G2 is the corpus''s main critic statement of it'
@@ -3299,4 +3299,95 @@
   audit_basis: applied (R4-GAPS-04-07-02 §3.5; Day's full block and N_e ranges tabulated; internal verdict softened to pending)
   counter: []
   note: 'The non-sequitur verdict rested on K = 3,200 and N_e = 1e4 only, and on predictions that could not fail; at the top of Day''s own range the count bound reaches ~1,000–3,250.'
+  hierarchy_edge: false
+- id: d259
+  attacker: chk:H3
+  target: H
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-H3-human.md Headline, §5, §6 Day 1
+  audit_status: partly
+  audit_basis: 'H external contested; conditional on hard adaptive treadmill selection with a soft deleterious load; R unsourced (anchors 1.1, ~2, <= 3-4)'
+  counter: [d263, d264, d265]
+  note: 'The 10% is Haldane''s assumed parameter (R ≈ 1.1), not a law: under ceiling regulation the budget is ln R. Day''s own anchors (s_max ''twice as many descendants'', total fertility 6–8) put R near 2 to 3–4, where the long-run cap is several times 1/300.'
+  hierarchy_edge: false
+- id: d260
+  attacker: chk:H3
+  target: G2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-H3-human.md §4.7 D1a, §6 Day 1
+  audit_status: partly
+  audit_basis: 'D1a held; applies to selected substitutions only; the parallelism objection still helps through ln R > 0.1 and through neutral fixations (B0.5)'
+  counter: [d263, d264, d265]
+  note: 'Granting the serial reading of the formula, parallelism does not raise the total rate of selected substitutions beyond the shared budget: k equals λ up to the cap, and the cap is independent of concurrency.'
+  hierarchy_edge: false
+- id: d261
+  attacker: chk:H3
+  target: H8
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-H3-human.md §4.7 D2, §6 Day 3
+  audit_status: partly
+  audit_basis: 'H8 external contested; s_max·d = ln R is the audit''s mapping; R-independence was not claimed by Day'
+  counter: [d263, d264, d265]
+  note: 'Term 3''s 0.0296 per generation matches the R = 2 form only in a 10k window; over 252,000 generations it is above the long-run cap (φ = 0.59 at R = 2), and at the R implied by the audit mapping (1.57) it fails.'
+  hierarchy_edge: false
+- id: d262
+  attacker: chk:H3
+  target: H5
+  target_part: P4
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-H3-human.md Headline, §5, §6 Allies
+  audit_status: partly
+  audit_basis: 'GAP-01 targets; a_nc flip threshold (0.01–0.6%) below the resolution of any α estimate; conditional on hard adaptive / soft load'
+  counter: [d263, d264, d265]
+  note: 'Hössjer''s conditional holds mechanically, but whether most differences are selected is undetermined: coding-only K_a (≈ 10³–10⁴) is payable at R ≈ 1.2–3, a noncoding adaptive share ≥ 1% is not, and the data cannot tell these apart.'
+  hierarchy_edge: false
+- id: d263
+  attacker: rev:R4-H3-correctness
+  target: chk:H3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #7)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-H3-correctness.md M1–M4
+  audit_status: upheld
+  audit_basis: 'applied (R4-H3-human §4.6, §5, §9; ''1/300 reproduced'' replaced; R_min tables rebuilt from long-run φ; D3 cut to R <= 9)'
+  counter: []
+  note: 'A 10k-window rate was read as a lifetime rate (long-run φ at R = 1.1 is 0.30, not 0.54); φ ≈ 1 at s = 0.003 was promoted without a long run; only favourable mutation supplies were run; the hard-load extinction at K = 1000 was an artefact (R = 20 persists at K ≥ 4000).'
+  hierarchy_edge: false
+- id: d264
+  attacker: rev:R4-H3-steelman-day
+  target: chk:H3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #7)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-H3-steelman-day.md MAJOR 1–7
+  audit_status: upheld
+  audit_basis: 'applied (R4-H3-human Headline, §4.7 D1 split, §5, §6; R anchors; H1 scoped to Term 3)'
+  counter: []
+  note: 'Day never claimed R-independence, so the structure (shared budget) is vindicated and only the parameter is in dispute; R was unanchored; the a_nc threshold is below estimator resolution, so "coding-only fits" is undetermined, not a critic win.'
+  hierarchy_edge: false
+- id: d265
+  attacker: rev:R4-H3-steelman-critic
+  target: chk:H3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #7)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-H3-steelman-critic.md MAJOR 1–6
+  audit_status: upheld
+  audit_basis: 'applied (R4-H3-human Headline matrix, §5 condition labels, §7 not-modelled table, §6 credits)'
+  counter: []
+  note: 'Verdicts were stated without the hard/soft condition; R = 1.1 is Haldane''s assumption and needs a soft load; D >= 20 was a default; truncation/epistasis and soft selection were unnamed; the hard-load rows are bounding cases; Hancock and Nesslig20 were under-credited.'
   hierarchy_edge: false
