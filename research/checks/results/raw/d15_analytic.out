@@ -1,0 +1,80 @@
+== B1  Hossjer 2021 fixed-state chain vs printed tables ==
+{'table': '4', 'm': 1, 'col': 'c0 fixed', 'mine': 53812954.30092, 'printed': 53813000.0, 'ratio': 1.0}
+{'table': '4', 'm': 1, 'col': 'c0 arb', 'mine': 53812954.30092, 'printed': 53813000.0, 'ratio': 1.0}
+{'table': '4', 'm': 1, 'col': 'c1', 'mine': 53812954.30092, 'printed': 53813000.0, 'ratio': 1.0}
+{'table': '4', 'm': 2, 'col': 'c0 fixed', 'mine': 107625908.60184, 'printed': 107630000.0, 'ratio': 0.99996}
+{'table': '4', 'm': 2, 'col': 'c0 arb', 'mine': 86522235.16185, 'printed': 86522000.0, 'ratio': 1.0}
+{'table': '4', 'm': 2, 'col': 'c1', 'mine': 205479555.82743, 'printed': 205480000.0, 'ratio': 1.0}
+{'table': '4', 'm': 3, 'col': 'c0 fixed', 'mine': 161438862.90275, 'printed': 161440000.0, 'ratio': 0.99999}
+{'table': '4', 'm': 3, 'col': 'c0 arb', 'mine': 109162732.81067, 'printed': 109160000.0, 'ratio': 1.00003}
+{'table': '4', 'm': 3, 'col': 'c1', 'mine': 692249648.96474, 'printed': 692250000.0, 'ratio': 1.0}
+{'table': '4', 'm': 4, 'col': 'c0 fixed', 'mine': 215251817.20367, 'printed': 215230000.0, 'ratio': 1.0001}
+{'table': '4', 'm': 4, 'col': 'c0 arb', 'mine': 126278055.13889, 'printed': 126280000.0, 'ratio': 0.99998}
+{'table': '4', 'm': 4, 'col': 'c1', 'mine': 2398496885.32232, 'printed': 2398500000.0, 'ratio': 1.0}
+{'table': '4', 'm': 5, 'col': 'c0 fixed', 'mine': 269064771.50459, 'printed': 269060000.0, 'ratio': 1.00002}
+{'table': '4', 'm': 5, 'col': 'c0 arb', 'mine': 139993596.11161, 'printed': 139990000.0, 'ratio': 1.00003}
+{'table': '4', 'm': 5, 'col': 'c1', 'mine': 8738489905.98294, 'printed': 8738500000.0, 'ratio': 1.0}
+{'table': '4', 'm': 6, 'col': 'c0 fixed', 'mine': 322877725.80551, 'printed': 322880000.0, 'ratio': 0.99999}
+{'table': '4', 'm': 6, 'col': 'c0 arb', 'mine': 151427398.06206, 'printed': 151430000.0, 'ratio': 0.99998}
+{'table': '4', 'm': 6, 'col': 'c1', 'mine': 33245225365.43203, 'printed': 33245000000.0, 'ratio': 1.00001}
+{'table': '5', 'W': 6, 'dmax': 0, 'm': 1, 'mine': 53812954.30092, 'printed': 53813000.0, 'ratio': 1.0}
+{'table': '5', 'W': 6, 'dmax': 0, 'm': 2, 'mine': 205479555.82743, 'printed': 205180000.0, 'ratio': 1.00146}
+{'table': '5', 'W': 6, 'dmax': 1, 'm': 1, 'mine': 45270.73099, 'printed': 45271.0, 'ratio': 0.99999}
+{'table': '5', 'W': 6, 'dmax': 1, 'm': 2, 'mine': 90767.7338, 'printed': 90758.0, 'ratio': 1.00011}
+{'table': '5', 'W': 8, 'dmax': 0, 'm': 1, 'mine': 812569047.13558, 'printed': 812570000.0, 'ratio': 1.0}
+{'table': '5', 'W': 8, 'dmax': 0, 'm': 2, 'mine': 28236469090.03591, 'printed': 28186000000.0, 'ratio': 1.00179}
+{'table': '5', 'W': 8, 'dmax': 1, 'm': 1, 'mine': 26897436.72468, 'printed': 26897000.0, 'ratio': 1.00002}
+{'table': '5', 'W': 8, 'dmax': 1, 'm': 2, 'mine': 82997566.04148, 'printed': 82858000.0, 'ratio': 1.00168}
+{'table': '5', 'W': 10, 'dmax': 0, 'm': 1, 'mine': 10570993624.06882, 'printed': 10571000000.0, 'ratio': 1.0}
+{'table': '5', 'W': 10, 'dmax': 0, 'm': 2, 'mine': 5611077965080.431, 'printed': 5598600000000.0, 'ratio': 1.00223}
+{'table': '5', 'W': 10, 'dmax': 1, 'm': 1, 'mine': 380573556.95329, 'printed': 380570000.0, 'ratio': 1.00001}
+{'table': '5', 'W': 10, 'dmax': 1, 'm': 2, 'mine': 7161378916.27289, 'printed': 7147300000.0, 'ratio': 1.00197}
+{'table': '9', 'W': 6, 'dmax': 0, 'K': 2, 'mine': 21103673.43999, 'printed': 21100000.0, 'ratio': 1.00017}
+{'table': '9', 'W': 6, 'dmax': 0, 'K': 3, 'mine': 11034890.22789, 'printed': 11000000.0, 'ratio': 1.00317}
+{'table': '9', 'W': 6, 'dmax': 1, 'K': 2, 'mine': 224.03231, 'printed': 224.0, 'ratio': 1.00014}
+{'table': '9', 'W': 6, 'dmax': 1, 'K': 3, 'mine': 1.47823, 'printed': 1.48, 'ratio': 0.99881}
+{'table': '9', 'W': 7, 'dmax': 0, 'K': 2, 'mine': 104281949.83161, 'printed': 104000000.0, 'ratio': 1.00271}
+{'table': '9', 'W': 7, 'dmax': 0, 'K': 3, 'mine': 65428911.55668, 'printed': 65400000.0, 'ratio': 1.00044}
+{'table': '9', 'W': 7, 'dmax': 1, 'K': 3, 'mine': 79535.55862, 'printed': 79500.0, 'ratio': 1.00045}
+B1 worst |ratio-1| = 0.0032
+
+== B2  Durrett & Schmidt 2008 (preprint) headline numbers ==
+  human_gens                   8.70388e+06
+  human_My_25y                 217.597
+  human_My_25y_x0p747          162.545
+  dros_gens                    34815.5
+  dros_years_10gy              3481.55
+  dros_neutralB_factor         2236.07
+  dros_neutralB_My             9.73124
+  dros_beta1e4_years           435194
+  thm4_factor_1mr_1e4          2.19612
+  behe_CCC_gens                3.16228e+07
+  behe_sqrt_u2_factor          31622.8
+
+== B4  Behe & Snoke 2004 rate model (CTMC reading of their text; see docstring) ==
+  lambda=2 T=1e+08: N_req = 8.83e+07
+  lambda=2 T=1e+06: N_req = 5.04e+11
+  lambda=3 T=1e+08: N_req = 1.81e+11  (text ~1e+11; ratio 1.81)
+  lambda=3 T=1e+06: N_req = 5.09e+16  (text ~1e+17; ratio 0.51)
+  lambda=4 T=1e+08: N_req = 3.97e+14
+  lambda=4 T=1e+06: N_req = 5.14e+21
+  lambda=5 T=1e+08: N_req = 9.11e+17
+  lambda=5 T=1e+06: N_req = 5.2e+26
+  lambda=6 T=1e+08: N_req = 2.15e+21  (text ~1e+22; ratio 0.21)
+  lambda=6 T=1e+06: N_req = 5.25e+31  (text ~1e+30; ratio 52.50)
+  lambda=7 T=1e+08: N_req = 5.17e+24  (text ~1e+25; ratio 0.52)
+  lambda=7 T=1e+06: N_req = 5.31e+36
+
+== B5  Lynch 2005 asymptote ==
+  theta/N at large N, n=50, mu=1e-6: 1.429e-06  (text: 1.43e-6)
+
+== Chain predictions for the sweep cells (single-mutation fixed-state; no ST, no recombination) ==
+  Ne=10000 N     kmult=1: m=1: 6.86e+07  m=2: 2.28e+08  m=3: 7.19e+08  m=4: 2.43e+09
+  Ne=10000 V3    kmult=1: m=2: 9.54e+23  m=3: 1.19e+25  m=4: 2.82e+25
+  Ne=10000 Fin2  kmult=1: m=1: 1.74e+05  m=2: 3.48e+07  m=3: 1e+08  m=4: 2.59e+08
+  Ne=10000 S2    kmult=1: m=1: 1.74e+05  m=2: 2.61e+05  m=3: 3.19e+05  m=4: 3.63e+05
+  Ne=100000 N     kmult=1: m=1: 6.86e+07  m=2: 2.28e+08  m=3: 7.19e+08  m=4: 2.43e+09
+  Ne=100000 V3    kmult=1: m=2: 2.53e+179  m=3: 2.7e+181  m=4: 6.27e+181
+  Ne=100000 Fin2  kmult=1: m=1: 1.74e+04  m=2: 3.44e+07  m=3: 9.89e+07  m=4: 2.54e+08
+  Ne=100000 S2    kmult=1: m=1: 1.74e+04  m=2: 2.61e+04  m=3: 3.19e+04  m=4: 3.63e+04
+  9 My = 3.6e+05 generations (25 y), 4.5e+05 (20 y)

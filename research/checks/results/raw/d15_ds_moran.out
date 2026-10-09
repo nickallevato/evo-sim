@@ -1,0 +1,6 @@
+{'stage': 'ds_moran', 'case': 'case1', 'n': 1000, 'R': 2000, 'pred': 100.0, 'sim_mean': 158.3301, 'se': 2.5318, 'ratio': 1.5833, 'published_ratio': 1.565, 'sec': 10.7071}
+{'stage': 'ds_moran', 'case': 'case2', 'n': 1000, 'R': 2000, 'pred': 400.0, 'sim_mean': 457.5504, 'se': 8.6471, 'ratio': 1.1439, 'published_ratio': 1.15, 'sec': 11.164}
+{'stage': 'ds_moran', 'case': 'case3', 'n': 1000, 'R': 2000, 'pred': 1000.0, 'sim_mean': 1033.4883, 'se': 22.2463, 'ratio': 1.0335, 'published_ratio': 1.048, 'sec': 11.2913}
+{'stage': 'ds_moran', 'case': 'drosophila', 'n': 1000, 'R': 2000, 'pred': 346.4102, 'sim_mean': 447.2511, 'se': 7.7212, 'ratio': 1.2911, 'published_ratio': 1.273, 'sec': 21.8678}
+{'stage': 'ds_moran', 'case': 'case4', 'n': 1000, 'R': 2000, 'pred': 2500.0, 'sim_mean': 2464.7659, 'se': 50.7154, 'ratio': 0.9859, 'published_ratio': 0.997, 'sec': 47.9003}
+{'stage': 'ds_moran', 'case': 'case5', 'n': 1000, 'R': 2000, 'pred': 10000.0, 'sim_mean': 8165.92, 'se': 161.913, 'ratio': 0.8166, 'published_ratio': 0.781, 'sec': 257.354}

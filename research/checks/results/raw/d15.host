@@ -1,0 +1,3 @@
+host: na-workhorse.allevato.io
+script md5: 455430cd77c187446a1b9ff22f4ada9b (commit b74b6d6)
+stages run: analytic, ds_moran 4, valid 4 (2026-10-09 03:37-04:3x); sweep NOT run
