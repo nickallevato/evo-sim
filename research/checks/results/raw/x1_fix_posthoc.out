@@ -1,0 +1,18 @@
+(1) diffusion limit at 2N = 20,000 (tau = 0.012): p=.5 1.789e-45 ; p=.1 5.816e-114
+(2) 2N giving keruru's 4e-35 at p=.5: 15364 (Ne 7682); 6e-93 at p=.1: 16278 (Ne 8139); stated 2N = 20,000; ratios 0.768, 0.814; 2 x 8,139 = 16,278
+    2N=15000 exact WF p=.5 5.72e-34 p=.1 5.62e-85 | diffusion p=.5 2.6e-34 p=.1 9.9e-86
+    2N=15365 exact WF p=.5 8.87e-35 p=.1 5.01e-87 | diffusion p=.5 3.98e-35 p=.1 8.61e-88
+    2N=16278 exact WF p=.5 8.58e-37 p=.1 3.85e-92 | diffusion p=.5 3.65e-37 p=.1 6.02e-93
+    2N=18000 exact WF p=.5 1.34e-40 p=.1 9.15e-102 | diffusion p=.5 5.22e-41 p=.1 1.14e-102
+    2N=20000 exact WF p=.5 5.12e-45 p=.1 5.88e-113 | diffusion p=.5 1.79e-45 p=.1 5.82e-114
+    at 2N = 20,000, p = .5: repo Brownian 1.24e-46; exact WF 5.12e-45 (x41 over repo); diffusion limit 1.79e-45 (x14 over repo)
+(3) Hancock 1e-11              neutral gens/fixation 21739 (4.6e6 sites); observed LTEE 1,322 -> neutral/observed 16.44
+(3) Wielgoss CI low 4.0e-11    neutral gens/fixation 5435 (4.6e6 sites); observed LTEE 1,322 -> neutral/observed 4.11
+(3) Wielgoss 8.9e-11           neutral gens/fixation 2443 (4.6e6 sites); observed LTEE 1,322 -> neutral/observed 1.85
+(3) Wielgoss CI high 14e-11    neutral gens/fixation 1553 (4.6e6 sites); observed LTEE 1,322 -> neutral/observed 1.17
+(4) post-split SNV supply 19.35M; post-split events at 76/haploid-gen 38.30M; non-SNV post-split events 18.95M vs observed indel events (total, incl. polymorphic) 4.30M (x4.4)
+    ancestral SNV share: residual vs CSAC 35M = 15.6M; residual vs GAP-07b 37.77M = 18.4M; Yoo-Ne_anc prediction 20.3M (Ne_anc 1.32e5), 30.4M (1.98e5)
+    SNV null (post-split + Yoo 1.32e5) = 39.6M vs observed 37.77M (x1.05), vs CSAC 35M (x1.13)
+    event null >= post-split events + ancestral SNV + post-split non-SNV only = 58.6M vs observed events 42.07M (x1.39); 38.3M post-split events alone = 91% of observed events
+    38.3M vs 42.1M measured events: 9.0% below
+(5) G07: exponents 424,764 vs 65: ratio 6535 (= 3.8 orders of magnitude in the exponent)
