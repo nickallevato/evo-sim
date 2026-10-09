@@ -1,0 +1,57 @@
+== uniform comparator (40+40 uniform genotypes by rejection) vs walk (same sizes)
+targets: rand30_0, rand30_1, rand30_2, rand30_3, rand50_0, rand50_1, rand50_2
+hamming/L uniform 0.731 [0.701-0.740]; walk 0.545 [0.497-0.589]
+nu walk - uniform per target: [-0.016, 0.008, 0.018, 0.025, 0.023, -0.004, 0.004]; mean 0.008; uniform SE ~ 0.008
+E0: n=7 reach uniform median 0.014 walk 0.018; per-target ratio uniform/walk [2.56, 0.81, 2.25, 0.38, 0.58, 0.57, 0.3]; sum ratio 0.75; m|reach uniform 2.11 walk 3.62
+E1: n=7 reach uniform median 0.047 walk 0.050; per-target ratio uniform/walk [3.28, 0.4, 0.81, 0.52, 0.84, 0.57, 1.46]; sum ratio 0.80; m|reach uniform 4.56 walk 3.24
+E2g: n=3 reach uniform median 0.388 walk 0.373; per-target ratio uniform/walk [1.43, 1.32, 0.78]; sum ratio 1.11; m|reach uniform 8.95 walk 4.24
+
+== first passage (accepted neutral substitutions), pooled over the 8 targets with L<=50
+E0 (targets 8): by_step median over targets 0: 0.012, 1: 0.016, 2: 0.019, 5: 0.025, 10: 0.031, 20: 0.035, 50: 0.059, 100: 0.087, 150: 0.112; median first-passage among found 53.5 (range 36-80)
+E1 (targets 8): by_step median over targets 0: 0.052, 1: 0.062, 2: 0.066, 5: 0.082, 10: 0.109, 20: 0.141, 50: 0.211, 100: 0.283, 150: 0.341; median first-passage among found 29.5 (range 26-46)
+E2g (targets 5): by_step median over targets 0: 0.434, 1: 0.509, 2: 0.509, 5: 0.613, 10: 0.731, 20: 0.884, 50: 0.952, 100: 1.000, 150: 1.000; median first-passage among found 1.0 (range 0-59)
+proposals per accepted step 4.46
+neutral substitutions available in a locus over the window = L*mu*nu*T (mu=1.2e-8):
+  rand30_0 L=30 nu=0.303: T=3e5 -> 0.033; T=146,250 -> 0.016; standing neutral heterozygous sites 4N mu L nu = 0.0044
+  rand30_1 L=30 nu=0.299: T=3e5 -> 0.032; T=146,250 -> 0.016; standing neutral heterozygous sites 4N mu L nu = 0.0043
+  rand30_2 L=30 nu=0.425: T=3e5 -> 0.046; T=146,250 -> 0.022; standing neutral heterozygous sites 4N mu L nu = 0.0061
+  rand30_3 L=30 nu=0.342: T=3e5 -> 0.037; T=146,250 -> 0.018; standing neutral heterozygous sites 4N mu L nu = 0.0049
+  rand50_0 L=50 nu=0.274: T=3e5 -> 0.049; T=146,250 -> 0.024; standing neutral heterozygous sites 4N mu L nu = 0.0066
+  rand50_1 L=50 nu=0.294: T=3e5 -> 0.053; T=146,250 -> 0.026; standing neutral heterozygous sites 4N mu L nu = 0.0071
+  rand50_2 L=50 nu=0.322: T=3e5 -> 0.058; T=146,250 -> 0.028; standing neutral heterozygous sites 4N mu L nu = 0.0077
+  rand50_3 L=50 nu=0.228: T=3e5 -> 0.041; T=146,250 -> 0.020; standing neutral heterozygous sites 4N mu L nu = 0.0055
+
+== tRNA76 row (main + post hoc)
+  E0_uniform: reach 0.0047, m|reach 1.5263157894736843, m_all 0.0073
+  E0_freqw: reach 0.0875, m|reach 2.3514285714285714, m_all 0.2057
+  E1_uniform: reach 0.0063, m|reach 2.56, m_all 0.0160
+  E2_uniform: reach 0.9038, m|reach 28.53526970954357, m_all 25.7888
+  E0far: reach 0.0003, m|reach 1.0, m_all 0.0003
+  E2g: reach 0.1912, m|reach 5.899425287356322, m_all 1.1280
+  E2rare: reach 0.1551, m|reach 4.538461538461538, m_all 0.7040
+
+== E2g by target (L>=76): m|reach, m_all, lam(m_all) at s=0.01 T=3e5
+  rand100_0: m|reach 20.02 m_all 14.96 lam(m_all) 7.18 lam(m|reach) 9.61
+  rand100_1: m|reach 11.85 m_all 7.53 lam(m_all) 3.61 lam(m|reach) 5.69
+  rand100_2: m|reach 25.34 m_all 19.67 lam(m_all) 9.44 lam(m|reach) 12.17
+  rand76_0: m|reach 15.42 m_all 9.92 lam(m_all) 4.76 lam(m|reach) 7.40
+  rand76_1: m|reach 8.42 m_all 6.35 lam(m_all) 3.05 lam(m|reach) 4.04
+  rand76_2: m|reach 4.49 m_all 1.33 lam(m_all) 0.64 lam(m|reach) 2.16
+  tRNA76: m|reach 5.90 m_all 1.13 lam(m_all) 0.54 lam(m|reach) 2.83
+
+== NN hits per target
+  rand30_0 L=30 hits 506/400000 log10NN 11.75614040717246 CI [11.7,11.8]
+  rand30_1 L=30 hits 240/400000 log10NN 11.432201132044266 CI [11.4,11.5]
+  rand30_2 L=30 hits 19724/400000 log10NN 13.34698488419176 CI [13.3,13.4]
+  rand30_3 L=30 hits 11023/400000 log10NN 13.094289697746285 CI [13.1,13.1]
+  rand50_0 L=50 hits 132/400000 log10NN 20.65795125446407 CI [20.6,20.7]
+  rand50_1 L=50 hits 46/400000 log10NN 19.774166422667513 CI [19.6,19.9]
+  rand50_2 L=50 hits 3330/400000 log10NN 21.63385282449226 CI [21.6,21.6]
+  rand50_3 L=50 hits 3/400000 log10NN 19.440467310250163 CI [19.0,19.9]
+  rand76_0 L=76 hits 0/300000 log10NN None CI [-262.8,32.3]
+  rand76_1 L=76 hits 201/300000 log10NN 33.21132203363578 CI [33.2,33.3]
+  rand76_2 L=76 hits 14/300000 log10NN 31.628285279621252 CI [31.4,31.9]
+  tRNA76 L=76 hits 67/300000 log10NN 33.1601695111884 CI [33.1,33.3]
+  rand100_0 L=100 hits 3/200000 log10NN 41.75109095913892 CI [41.3,42.2]
+  rand100_1 L=100 hits 2/200000 log10NN 42.4269371646278 CI [41.9,43.0]
+  rand100_2 L=100 hits 0/200000 log10NN None CI [-251.3,44.0]

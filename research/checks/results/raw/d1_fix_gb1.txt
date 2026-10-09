@@ -1,0 +1,12 @@
+aa margin 0.0: maxima 15, uphill-nbr share 0.997, reach global 0.989, reach >=1 1.000, reach >=1.2 1.000, maxima fitness quantiles [1.45, 4.78, 5.38, 5.99, 8.76]
+aa margin 0.05: maxima 16, uphill-nbr share 0.997, reach global 0.987, reach >=1 1.000, reach >=1.2 1.000, maxima fitness quantiles [1.45, 4.93, 5.44, 6.37, 8.76]
+aa margin 0.1: maxima 18, uphill-nbr share 0.997, reach global 0.985, reach >=1 1.000, reach >=1.2 1.000, maxima fitness quantiles [1.45, 5.07, 5.44, 6.26, 8.76]; walk: P(end global) 0.310, mean end fitness 7.10, P(end>=1) 1.000, from WT {'P_end_global': 0.09036902169287442, 'mean_end_fitness': 5.720124415988186, 'P_end_ge1': 0.9999999999999999}
+aa margin 0.2: maxima 21, uphill-nbr share 0.996, reach global 0.973, reach >=1 1.000, reach >=1.2 1.000, maxima fitness quantiles [1.45, 5.07, 5.38, 6.27, 8.76]
+aa margin 0.3: maxima 26, uphill-nbr share 0.996, reach global 0.946, reach >=1 1.000, reach >=1.2 1.000, maxima fitness quantiles [0.52, 4.4, 5.27, 6.26, 8.76]
+snv margin 0.0: maxima 67, uphill-nbr share 0.988, reach global 0.510, reach >=1 0.999, reach >=1.2 0.999, maxima fitness quantiles [0.52, 2.32, 4.17, 5.44, 8.76]
+snv margin 0.05: maxima 79, uphill-nbr share 0.986, reach global 0.474, reach >=1 0.999, reach >=1.2 0.999, maxima fitness quantiles [0.52, 2.22, 4.05, 5.31, 8.76]
+snv margin 0.1: maxima 87, uphill-nbr share 0.985, reach global 0.443, reach >=1 0.999, reach >=1.2 0.999, maxima fitness quantiles [0.52, 2.19, 4.03, 5.25, 8.76]; walk: P(end global) 0.058, mean end fitness 5.94, P(end>=1) 0.999, from WT {'P_end_global': 0.010752217752566441, 'mean_end_fitness': 4.667058463048217, 'P_end_ge1': 1.0}
+snv margin 0.2: maxima 109, uphill-nbr share 0.981, reach global 0.372, reach >=1 0.999, reach >=1.2 0.998, maxima fitness quantiles [0.52, 1.91, 3.82, 5.14, 8.76]
+snv margin 0.3: maxima 158, uphill-nbr share 0.973, reach global 0.301, reach >=1 0.997, reach >=1.2 0.996, maxima fitness quantiles [0.52, 1.75, 3.09, 4.74, 8.76]
+counts: {0.3: 7534, 0.5: 5822, 0.8: 4309, 1.0: 3644, 1.2: 3142}; share below 0.3: 0.950
+WT single substitutions (76): {'n': 76, 'ge0_5': 0.35526315789473684, 'ge1': 0.2631578947368421, 'ge1_2': 0.19736842105263158, 'lt0_2': 0.5263157894736842}

@@ -1,0 +1,181 @@
+{
+ "n_present": 149361,
+ "global_max": 8.76196565571,
+ "aa": {
+  "0.0": {
+   "local_maxima_functional": 15,
+   "lm_fitness_quantiles": [
+    1.45,
+    4.78,
+    5.38,
+    5.99,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9974235657849536,
+   "reach_global": 0.9893507385778083,
+   "reach_ge1": 1.0,
+   "reach_ge1.2": 1.0
+  },
+  "0.05": {
+   "local_maxima_functional": 16,
+   "lm_fitness_quantiles": [
+    1.45,
+    4.93,
+    5.44,
+    6.37,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9972518035039505,
+   "reach_global": 0.9867743043627619,
+   "reach_ge1": 1.0,
+   "reach_ge1.2": 1.0
+  },
+  "0.1": {
+   "local_maxima_functional": 18,
+   "lm_fitness_quantiles": [
+    1.45,
+    5.07,
+    5.44,
+    6.26,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9969082789419443,
+   "reach_global": 0.9854002061147372,
+   "reach_ge1": 1.0,
+   "reach_ge1.2": 1.0,
+   "walk_P_end_global": 0.3100695249782167,
+   "walk_P_end_in_functional_max": 1.0,
+   "walk_mean_end_fitness": 7.1000425119999075,
+   "walk_P_end_ge1_given_end_functional": 1.0000000000000002,
+   "walk_from_WT": {
+    "P_end_global": 0.09036902169287442,
+    "mean_end_fitness": 5.720124415988186,
+    "P_end_ge1": 0.9999999999999999
+   }
+  },
+  "0.2": {
+   "local_maxima_functional": 21,
+   "lm_fitness_quantiles": [
+    1.45,
+    5.07,
+    5.38,
+    6.27,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9963929920989351,
+   "reach_global": 0.9725180350395053,
+   "reach_ge1": 1.0,
+   "reach_ge1.2": 1.0
+  },
+  "0.3": {
+   "local_maxima_functional": 26,
+   "lm_fitness_quantiles": [
+    0.52,
+    4.4,
+    5.27,
+    6.26,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9955341806939196,
+   "reach_global": 0.94555135692202,
+   "reach_ge1": 0.9998282377189969,
+   "reach_ge1.2": 0.9998282377189969
+  }
+ },
+ "snv": {
+  "0.0": {
+   "local_maxima_functional": 67,
+   "lm_fitness_quantiles": [
+    0.52,
+    2.32,
+    4.17,
+    5.44,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9884919271727929,
+   "reach_global": 0.5097904500171763,
+   "reach_ge1": 0.9987976640329783,
+   "reach_ge1.2": 0.9987976640329783
+  },
+  "0.05": {
+   "local_maxima_functional": 79,
+   "lm_fitness_quantiles": [
+    0.52,
+    2.22,
+    4.05,
+    5.31,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9864307798007558,
+   "reach_global": 0.47389213328753005,
+   "reach_ge1": 0.9987976640329783,
+   "reach_ge1.2": 0.9986259017519753
+  },
+  "0.1": {
+   "local_maxima_functional": 87,
+   "lm_fitness_quantiles": [
+    0.52,
+    2.19,
+    4.03,
+    5.25,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9850566815527311,
+   "reach_global": 0.44280316042597045,
+   "reach_ge1": 0.9987976640329783,
+   "reach_ge1.2": 0.9986259017519753,
+   "walk_P_end_global": 0.05823232982585557,
+   "walk_P_end_in_functional_max": 1.0,
+   "walk_mean_end_fitness": 5.935394290772958,
+   "walk_P_end_ge1_given_end_functional": 0.9987820492801599,
+   "walk_from_WT": {
+    "P_end_global": 0.010752217752566441,
+    "mean_end_fitness": 4.667058463048217,
+    "P_end_ge1": 1.0
+   }
+  },
+  "0.2": {
+   "local_maxima_functional": 109,
+   "lm_fitness_quantiles": [
+    0.52,
+    1.91,
+    3.82,
+    5.14,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.981277911370663,
+   "reach_global": 0.3715218138096874,
+   "reach_ge1": 0.9987976640329783,
+   "reach_ge1.2": 0.998110614908966
+  },
+  "0.3": {
+   "local_maxima_functional": 158,
+   "lm_fitness_quantiles": [
+    0.52,
+    1.75,
+    3.09,
+    4.74,
+    8.76
+   ],
+   "share_func_with_uphill_nbr": 0.9728615596015115,
+   "reach_global": 0.3005839917554105,
+   "reach_ge1": 0.9974235657849536,
+   "reach_ge1.2": 0.9958777052559258
+  }
+ },
+ "functional_counts": {
+  "0.3": 7534,
+  "0.5": 5822,
+  "0.8": 4309,
+  "1.0": 3644,
+  "1.2": 3142
+ },
+ "frac_below_0.3": 0.949558452340303,
+ "wt_singles": {
+  "n": 76,
+  "ge0_5": 0.35526315789473684,
+  "ge1": 0.2631578947368421,
+  "ge1_2": 0.19736842105263158,
+  "lt0_2": 0.5263157894736842
+ }
+}

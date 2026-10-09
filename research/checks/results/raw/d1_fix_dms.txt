@@ -1,0 +1,65 @@
+headline group n = 114
+
+== S. lam = m * lam_alt(s, T); T=3e5.  lam_alt = 0.480 * (s/0.01)
+lam_50(n_f): 1000: 7.27, 10000: 9.58, 20000: 10.27, 200000: 12.57, 2e+07: 17.18
+row | m | s=0.001 | s=0.003 | s=0.01 | s=0.02 | s=0.03 | s=0.05 | s at which lam = lam50 for n_f=1000,10000,20000,200000,2e+07
+RNA exact S2, m|reach (E0 uniform) | 2.3 | 0.111 | 0.332 | 1.11 | 2.21 | 3.32 | 5.53 | 0.0658, 0.0866, 0.0929, 0.114, 0.155
+RNA exact S2, m_all (unconditional) | 0.0507 | 0.00243 | 0.0073 | 0.0243 | 0.0486 | 0.073 | 0.122 | 2.99, 3.94, 4.22, 5.17, 7.06
+RNA exact S2 >=5bp (E0far, post hoc), m|reach | 1.5 | 0.072 | 0.216 | 0.72 | 1.44 | 2.16 | 3.6 | 0.101, 0.133, 0.143, 0.175, 0.239
+RNA exact S2 >=5bp (E0far), m_all | 0.003 | 0.000144 | 0.000432 | 0.00144 | 0.00288 | 0.00432 | 0.0072 | 50.5, 66.5, 71.3, 87.3, 119
+RNA <=2bp (E1 uniform), m|reach | 3.43 | 0.165 | 0.494 | 1.65 | 3.29 | 4.94 | 8.24 | 0.0442, 0.0581, 0.0624, 0.0763, 0.104
+RNA topology-no-loss L>=76 (E2g), m|reach | 11.8 | 0.569 | 1.71 | 5.69 | 11.4 | 17.1 | 28.4 | 0.0128, 0.0168, 0.0181, 0.0221, 0.0302
+RNA topology-no-loss L>=76 (E2g), m_all | 7.53 | 0.361 | 1.08 | 3.61 | 7.23 | 10.8 | 18.1 | 0.0201, 0.0265, 0.0284, 0.0348, 0.0475
+DMS one codon tolerated (s*>=0.5) | 5.06 | 0.243 | 0.728 | 2.43 | 4.85 | 7.28 | 12.1 | 0.03, 0.0395, 0.0423, 0.0518, 0.0708
+DMS one codon near-WT (s*>=0.8) | 3.51 | 0.169 | 0.506 | 1.69 | 3.37 | 5.06 | 8.43 | 0.0432, 0.0568, 0.0609, 0.0746, 0.102
+DMS one codon beneficial proxy (s*>=1.2) | 0.206 | 0.00988 | 0.0297 | 0.0988 | 0.198 | 0.297 | 0.494 | 0.736, 0.969, 1.04, 1.27, 1.74
+DMS gene-level beneficial proxy (s*>=1.2) | 50.7 | 2.43 | 7.3 | 24.3 | 48.7 | 73 | 122 | 0.00299, 0.00394, 0.00422, 0.00517, 0.00706
+(same with T=146,250 -> crossing s doubles; see json)
+
+== K. k needed changes from one shared pool of m proxy-beneficial SNVs, P(Bin(m,q)>=k)
+share of datasets with m_gene proxy == 0: 0.167; with proxy fraction exactly 0: 0.140; m_gene quantiles 0/10/25/50/75/90/100: [0.0, 0.0, 3.8, 50.7, 112.2, 368.7, 1763.0]
+s0.01_T3e5 q=0.381 k=10: P at median m (51) = 0.999; median over datasets 0.998; share of datasets with P>=0.5 0.61
+s0.01_T3e5 q=0.381 k=25: P at median m (51) = 0.0737; median over datasets 0.0659; share of datasets with P>=0.5 0.42
+s0.01_T3e5 q=0.381 k=50: P at median m (51) = 3.66e-20; median over datasets 1.88e-20; share of datasets with P>=0.5 0.21
+s0.01_T146250 q=0.209 k=10: P at median m (51) = 0.642; median over datasets 0.628; share of datasets with P>=0.5 0.54
+s0.01_T146250 q=0.209 k=25: P at median m (51) = 7.35e-06; median over datasets 6.01e-06; share of datasets with P>=0.5 0.23
+s0.01_T146250 q=0.209 k=50: P at median m (51) = 3.78e-33; median over datasets 1.94e-33; share of datasets with P>=0.5 0.14
+s0.001_T3e5 q=0.047 k=10: P at median m (51) = 0.000111; median over datasets 0.000102; share of datasets with P>=0.5 0.17
+s0.001_T3e5 q=0.047 k=25: P at median m (51) = 4.42e-20; median over datasets 3.39e-20; share of datasets with P>=0.5 0.06
+s0.001_T3e5 q=0.047 k=50: P at median m (51) = 1.7e-65; median over datasets 8.67e-66; share of datasets with P>=0.5 0.01
+
+== P10. G1 required beneficial fraction (n / (p * supply)) vs measured within-gene proxy fraction (s*>=1.2, upper bound)
+measured proxy fraction: median 0.0357, IQR 0.0056-0.0918, mean 0.0532
+n=200000 p=0.02 supply=4.5e+11: required 2.22e-05; median proxy / required = 1.61e+03; share of datasets at or above 0.86; ratio if only 1% of mutations fall in such genes 16.1
+n=200000 p=0.02 supply=2.3e+11: required 4.35e-05; median proxy / required = 822; share of datasets at or above 0.86; ratio if only 1% of mutations fall in such genes 8.22
+n=200000 p=0.002 supply=4.5e+11: required 2.22e-04; median proxy / required = 161; share of datasets at or above 0.86; ratio if only 1% of mutations fall in such genes 1.61
+n=200000 p=0.002 supply=2.3e+11: required 4.35e-04; median proxy / required = 82.2; share of datasets at or above 0.85; ratio if only 1% of mutations fall in such genes 0.822
+n=2e+07 p=0.02 supply=4.5e+11: required 2.22e-03; median proxy / required = 16.1; share of datasets at or above 0.80; ratio if only 1% of mutations fall in such genes 0.161
+n=2e+07 p=0.02 supply=2.3e+11: required 4.35e-03; median proxy / required = 8.22; share of datasets at or above 0.76; ratio if only 1% of mutations fall in such genes 0.0822
+n=2e+07 p=0.002 supply=4.5e+11: required 2.22e-02; median proxy / required = 1.61; share of datasets at or above 0.57; ratio if only 1% of mutations fall in such genes 0.0161
+n=2e+07 p=0.002 supply=2.3e+11: required 4.35e-02; median proxy / required = 0.822; share of datasets at or above 0.47; ratio if only 1% of mutations fall in such genes 0.00822
+
+== N. normalisation sensitivity over the headline group (median over datasets; share of datasets with majority reduced / destroyed)
+q75sites/low5: n=114 functional 0.711, reduced 0.534, destroyed 0.111, majority-reduced 0.61, majority-destroyed 0.02, ben 0.0357
+q75sites/low1: n=114 functional 0.766, reduced 0.501, destroyed 0.059, majority-reduced 0.51, majority-destroyed 0.01, ben 0.0295
+q75sites/low10: n=114 functional 0.683, reduced 0.560, destroyed 0.151, majority-reduced 0.64, majority-destroyed 0.02, ben 0.0424
+top10sites/low5: n=114 functional 0.683, reduced 0.608, destroyed 0.123, majority-reduced 0.68, majority-destroyed 0.02, ben 0.0146
+p90all/low5: n=114 functional 0.678, reduced 0.631, destroyed 0.125, majority-reduced 0.74, majority-destroyed 0.03, ben 0.0089
+p90all/low1: n=114 functional 0.732, reduced 0.588, destroyed 0.068, majority-reduced 0.69, majority-destroyed 0.03, ben 0.0062
+baseline: share of substitutions AT THE W-DEFINING (most tolerant quartile) SITES with s*<0.8: median 0.142 IQR 0.088-0.234
+mirror check at W-defining sites: share s*>=1.2 median 0.097; share s*<=0.8 (mirror of 1.2 about W) median 0.142; datasets where upper tail > lower tail: 0.29
+(the lower tail contains real damage, so it is an UPPER bound on a symmetric-noise tail; the proxy has no replicate-based noise null)
+missense-only: missense SNVs per codon 6.60, stop SNVs per codon 0.40; functional per codon 5.06; fraction of missense SNVs functional 0.766
+
+protein-level: 91 distinct proteins among 114 datasets (key = first two tokens of DMS_id)
+  frac_func_0.5: dataset median 0.7109; protein-level median 0.7132
+  frac_nearWT_0.8: dataset median 0.4659; protein-level median 0.4582
+  frac_reduced_lt0.8: dataset median 0.5341; protein-level median 0.5418
+  frac_destroyed_lt0.2: dataset median 0.111; protein-level median 0.1153
+  frac_ben_proxy_1.2: dataset median 0.03572; protein-level median 0.04305
+  m_snv_site_mean_func_0.5: dataset median 5.056; protein-level median 5.044
+  m_gene_snv_ben_proxy_1.2: dataset median 50.68; protein-level median 48.86
+  proteins whose (averaged) datasets have majority reduced: 0.58
+
+== D. D2h as worded
+'reduce or destroy' (s*<0.8) majority in 0.61 of datasets (median share 0.534); 'destroy' alone (s*<0.2) majority in 0.02 (median 0.111); author-cutoff manual sets n=54: fit 0.672, unfit 0.328

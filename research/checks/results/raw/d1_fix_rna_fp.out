@@ -1,0 +1,69 @@
+uni done rand50_2 119
+uni done rand50_0 552
+fp done rand50_0 630
+fp done rand30_0 128
+uni done rand30_0 62
+fp done rand50_2 695
+fp done rand50_1 770
+uni done rand30_2 25
+fp done rand30_1 122
+uni done rand30_1 114
+fp done rand30_2 122
+uni done rand30_3 17
+fp done rand50_3 708
+fp done rand30_3 64
+uni done rand50_1 1038
+rand30_0 L 30 props/accept 4.57
+    E0 n_pairs 960 by_step {'0': 0.01, '1': 0.016, '2': 0.018, '5': 0.026, '10': 0.041, '20': 0.057, '50': 0.092, '100': 0.154, '150': 0.19} median_found 53.0
+    E1 n_pairs 960 by_step {'0': 0.072, '1': 0.095, '2': 0.113, '5': 0.14, '10': 0.186, '20': 0.248, '50': 0.364, '100': 0.477, '150': 0.562} median_found 27.0
+rand30_1 L 30 props/accept 4.4
+    E0 n_pairs 960 by_step {'0': 0.023, '1': 0.028, '2': 0.028, '5': 0.033, '10': 0.04, '20': 0.056, '50': 0.091, '100': 0.144, '150': 0.188} median_found 55.0
+    E1 n_pairs 960 by_step {'0': 0.085, '1': 0.101, '2': 0.111, '5': 0.132, '10': 0.17, '20': 0.256, '50': 0.394, '100': 0.531, '150': 0.633} median_found 30.0
+rand30_2 L 30 props/accept 3.25
+    E0 n_pairs 960 by_step {'0': 0.027, '1': 0.037, '2': 0.041, '5': 0.051, '10': 0.068, '20': 0.09, '50': 0.126, '100': 0.195, '150': 0.244} median_found 46.0
+    E1 n_pairs 960 by_step {'0': 0.067, '1': 0.084, '2': 0.091, '5': 0.129, '10': 0.151, '20': 0.193, '50': 0.317, '100': 0.424, '150': 0.498} median_found 35.0
+    E2g n_pairs 32 by_step {'0': 0.0, '1': 0.0, '2': 0.0, '5': 0.0, '10': 0.0, '20': 0.0, '50': 0.0, '100': 0.062, '150': 0.062} median_found 59.0
+rand30_3 L 30 props/accept 3.7
+    E0 n_pairs 960 by_step {'0': 0.017, '1': 0.019, '2': 0.023, '5': 0.026, '10': 0.03, '20': 0.036, '50': 0.061, '100': 0.094, '150': 0.126} median_found 54.0
+    E1 n_pairs 960 by_step {'0': 0.071, '1': 0.083, '2': 0.087, '5': 0.11, '10': 0.15, '20': 0.2, '50': 0.301, '100': 0.393, '150': 0.466} median_found 29.0
+rand50_0 L 50 props/accept 4.88
+    E0 n_pairs 960 by_step {'0': 0.006, '1': 0.006, '2': 0.007, '5': 0.008, '10': 0.013, '20': 0.016, '50': 0.028, '100': 0.041, '150': 0.054} median_found 48.5
+    E1 n_pairs 960 by_step {'0': 0.023, '1': 0.027, '2': 0.031, '5': 0.034, '10': 0.044, '20': 0.057, '50': 0.08, '100': 0.103, '150': 0.129} median_found 27.0
+    E2g n_pairs 960 by_step {'0': 0.434, '1': 0.509, '2': 0.509, '5': 0.613, '10': 0.731, '20': 0.884, '50': 0.941, '100': 0.981, '150': 0.981} median_found 1.0
+rand50_1 L 50 props/accept 4.51
+    E0 n_pairs 960 by_step {'0': 0.014, '1': 0.017, '2': 0.02, '5': 0.024, '10': 0.032, '20': 0.034, '50': 0.056, '100': 0.081, '150': 0.098} median_found 36.0
+    E1 n_pairs 960 by_step {'0': 0.037, '1': 0.041, '2': 0.042, '5': 0.051, '10': 0.069, '20': 0.084, '50': 0.117, '100': 0.156, '150': 0.179} median_found 26.0
+    E2g n_pairs 960 by_step {'0': 0.607, '1': 0.67, '2': 0.721, '5': 0.795, '10': 0.829, '20': 0.903, '50': 0.977, '100': 1.0, '150': 1.0} median_found 0.0
+rand50_2 L 50 props/accept 4.1
+    E0 n_pairs 960 by_step {'0': 0.002, '1': 0.002, '2': 0.002, '5': 0.002, '10': 0.003, '20': 0.004, '50': 0.007, '100': 0.02, '150': 0.029} median_found 79.5
+    E1 n_pairs 960 by_step {'0': 0.017, '1': 0.023, '2': 0.03, '5': 0.037, '10': 0.044, '20': 0.057, '50': 0.091, '100': 0.136, '150': 0.173} median_found 45.5
+    E2g n_pairs 752 by_step {'0': 0.235, '1': 0.331, '2': 0.394, '5': 0.456, '10': 0.548, '20': 0.735, '50': 0.952, '100': 1.0, '150': 1.0} median_found 9.0
+rand50_3 L 50 props/accept 5.76
+    E0 n_pairs 960 by_step {'0': 0.004, '1': 0.005, '2': 0.005, '5': 0.006, '10': 0.006, '20': 0.008, '50': 0.02, '100': 0.037, '150': 0.054} median_found 77.5
+    E1 n_pairs 960 by_step {'0': 0.037, '1': 0.042, '2': 0.045, '5': 0.054, '10': 0.066, '20': 0.089, '50': 0.122, '100': 0.173, '150': 0.216} median_found 33.0
+    E2g n_pairs 960 by_step {'0': 0.686, '1': 0.749, '2': 0.76, '5': 0.795, '10': 0.846, '20': 0.92, '50': 0.977, '100': 1.0, '150': 1.0} median_found 0.0
+rand30_0 uniform nu 0.285 hamming 0.701 | walk nu 0.303 hamming 0.545
+     E0 uniform reach 0.026 m|reach 2.111111111111111 | walk reach 0.012 m|reach 1.7857142857142858
+     E1 uniform reach 0.041 m|reach 3.122448979591837 | walk reach 0.05 m|reach 2.884297520661157
+rand30_1 uniform nu 0.28 hamming 0.705 | walk nu 0.302 hamming 0.497
+     E0 uniform reach 0.014 m|reach 3.212121212121212 | walk reach 0.024 m|reach 4.982456140350878
+     E1 uniform reach 0.056 m|reach 3.2222222222222223 | walk reach 0.067 m|reach 3.0434782608695654
+rand30_2 uniform nu 0.401 hamming 0.733 | walk nu 0.426 hamming 0.576
+     E0 uniform reach 0.007 m|reach 1.375 | walk reach 0.018 m|reach 4.904761904761905
+     E1 uniform reach 0.062 m|reach 5.389261744966443 | walk reach 0.119 m|reach 4.1328671328671325
+rand30_3 uniform nu 0.347 hamming 0.734 | walk nu 0.343 hamming 0.589
+     E0 uniform reach 0.014 m|reach 2.264705882352941 | walk reach 0.025 m|reach 4.633333333333334
+     E1 uniform reach 0.047 m|reach 5.044642857142857 | walk reach 0.082 m|reach 5.16751269035533
+     E2g uniform reach 0.0 m|reach None | walk reach None m|reach None
+rand50_0 uniform nu 0.266 hamming 0.731 | walk nu 0.273 hamming 0.544
+     E0 uniform reach 0.005 m|reach 1.8461538461538463 | walk reach 0.007 m|reach 2.0625
+     E1 uniform reach 0.014 m|reach 3.264705882352941 | walk reach 0.035 m|reach 3.235294117647059
+     E2g uniform reach 0.492 m|reach 11.99655172413793 | walk reach 0.373 m|reach 6.40625
+rand50_1 uniform nu 0.292 hamming 0.713 | walk nu 0.296 hamming 0.527
+     E0 uniform reach 0.01 m|reach 1.9583333333333333 | walk reach 0.034 m|reach 2.0987654320987654
+     E1 uniform reach 0.045 m|reach 4.555555555555555 | walk reach 0.031 m|reach 3.0
+     E2g uniform reach 0.388 m|reach 8.954887218045112 | walk reach 0.495 m|reach 4.242424242424242
+rand50_2 uniform nu 0.339 hamming 0.74 | walk nu 0.323 hamming 0.564
+     E0 uniform reach 0.017 m|reach 2.902439024390244 | walk reach 0.007 m|reach 3.625
+     E1 uniform reach 0.059 m|reach 4.588652482269503 | walk reach 0.018 m|reach 4.348837209302325
+     E2g uniform reach 0.373 m|reach 5.719153936545241 | walk reach 0.26 m|reach 3.114519427402863
