@@ -306,12 +306,11 @@ def packet(R, x, s=0.01, K=1000, gens=12000, reps=400, seed=0):
     traj = np.array(traj)
     Lp = len(traj)
     lam = x * math.log(R) / (2 * math.log(2 * K))
-    arrivals = rng.poisson(lam, size=(reps, gens))
-    load = np.zeros((reps, gens + Lp))
-    for t in range(gens):
-        n = arrivals[:, t]
-        if n.any():
-            load[:, t:t + Lp] += n[:, None] * traj[None, :]
+    arrivals = rng.poisson(lam, size=(reps, gens)).astype(float)
+    # load[:, t] = sum_k arrivals[:, t - k] * traj[k]  (same model; FFT convolution replaces the original O(gens*Lp)
+    # Python loop, which was too slow -- edit made after the first launch, before any pk output existed)
+    from scipy.signal import fftconvolve
+    load = np.maximum(fftconvolve(arrivals, traj[None, :], axes=1), 0.0)
     lnN = np.full(reps, math.log(K))
     alive = np.ones(reps, bool)
     lnR, lnK, lnE = math.log(R), math.log(K), math.log(20)
