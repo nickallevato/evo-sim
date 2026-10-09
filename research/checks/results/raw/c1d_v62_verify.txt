@@ -1,0 +1,20 @@
+decode kr:EN            rs4988235    direct n_ph/n_dip/dose_ph/dose_dip (732, 4, 1462, 8)  extracted (732, 4, 1462, 8)  OK
+decode kr:EN            rs56367091   direct n_ph/n_dip/dose_ph/dose_dip (89, 1, 178, 2)  extracted (89, 1, 178, 2)  OK
+decode kr:EN            rs10898134   direct n_ph/n_dip/dose_ph/dose_dip (246, 4, 258, 4)  extracted (246, 4, 258, 4)  OK
+decode kr:Mod           rs4988235    direct n_ph/n_dip/dose_ph/dose_dip (39, 437, 56, 651)  extracted (39, 437, 56, 651)  OK
+decode kr:Mod           rs56367091   direct n_ph/n_dip/dose_ph/dose_dip (25, 271, 50, 542)  extracted (25, 271, 50, 542)  OK
+decode kr:Mod           rs10898134   direct n_ph/n_dip/dose_ph/dose_dip (37, 437, 44, 527)  extracted (37, 437, 44, 527)  OK
+decode day1:6000-7000   rs4988235    direct n_ph/n_dip/dose_ph/dose_dip (365, 0, 726, 0)  extracted (365, 0, 726, 0)  OK
+decode day1:6000-7000   rs56367091   direct n_ph/n_dip/dose_ph/dose_dip (35, 0, 70, 0)  extracted (35, 0, 70, 0)  OK
+decode day1:6000-7000   rs10898134   direct n_ph/n_dip/dose_ph/dose_dip (113, 0, 110, 0)  extracted (113, 0, 110, 0)  OK
+rs4988235 chr2:136608646 counted-allele frequency (individual weighting, keruru form) by bin:
+   Meso  n_called   158  freq 0.987
+   EN    n_called   736  freq 0.999
+   LN    n_called   598  freq 1.000
+   BA    n_called   966  freq 0.966
+   Iron  n_called   572  freq 0.902
+   Med   n_called  1174  freq 0.739
+   Mod   n_called   476  freq 0.743
+brute force on 20000 random SNPs: eligible 1032 profile [766, 141, 17, 16, 6, 1, 1, 1, 0, 4, 79]
+vectorised               : eligible 1032 profile [766, 141, 17, 16, 6, 1, 1, 1, 0, 4, 79]
+MATCH

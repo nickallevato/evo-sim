@@ -1,0 +1,19 @@
+host: na-workhorse.allevato.io
+date: 2026-10-09T08:23:32Z
+ce613f521d86b1c950eafc14a8a053ab  research/checks/c1d_aadr_real.py
+6468eb195e6cad5b98dac4a1286a42ae  v62.0.p1_1240k_public.anno
+24419bbaf673274e21fc9e2dc3dd145f  v62.0.p1_1240k_public.geno
+3f23dd87521dc1ccf6335c262571ecef  v62.0.p1_1240k_public.ind
+50f66178fc81b8aa087cc4b135317e59  v62.0.p1_1240k_public.snp
+ef9e9d78750808e28d33b4074098c5e8  v66.p1__files.md5sum
+5ea1d2675a271c81e55b8f8b08b3ff3b  v66.p1_1240K.aadr.patch.PUB.geno
+19a434ac954bcd10dbb8dba1d1188a09  v66.p1_1240K.aadr.patch.PUB.ind
+50f66178fc81b8aa087cc4b135317e59  v66.p1_1240K.aadr.patch.PUB.snp
+a2db1ac16f0f3558ed66fb251e1d5c7d  v66.p1_1240K.aadr.PUB.anno
+
+# later runs (posthoc, verify, sim) on the same host, 2026-10-09
+8646ea8f825fa78d5b0a934a9a32d9bb  research/checks/c1d_posthoc.py
+29f3753841e3816e55864c38f00f0293  research/checks/c1d_verify.py
+ce613f521d86b1c950eafc14a8a053ab  research/checks/c1d_aadr_real.py
+ 02:41:10 up 38 days,  4:34,  3 users,  load average: 0.47, 2.38, 4.22
+extract: 6 processes per release (nice 0), ~2 min wall; analyse/posthoc/verify single process; sim single process. Never committed from this host.

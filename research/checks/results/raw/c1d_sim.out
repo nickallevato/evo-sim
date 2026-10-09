@@ -1,0 +1,8 @@
+pulse 0.00  F 0.00692  K 0.84  B 1.00  intercept 1.00  (ratio to true Ne)
+pulse 0.02  F 0.00682  K 0.85  B 1.02  intercept 1.02  (ratio to true Ne)
+pulse 0.05  F 0.00674  K 0.86  B 1.04  intercept 1.06  (ratio to true Ne)
+pulse 0.10  F 0.00676  K 0.86  B 1.03  intercept 1.11  (ratio to true Ne)
+pulse 0.20  F 0.00736  K 0.78  B 0.92  intercept 1.23  (ratio to true Ne)
+pulse 0.40  F 0.01077  K 0.51  B 0.56  intercept 1.48  (ratio to true Ne)
+Ne 30000 closed: B ratio 1.00
+Ne 100000 closed: B ratio 0.99

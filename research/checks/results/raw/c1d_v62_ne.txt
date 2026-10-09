@@ -1,0 +1,63 @@
+group n (kr): [267, 1165, 1064, 1531, 1031, 1809, 532]
+== Temporal Ne, v62 ==
+pair      t_gen | K (keruru) Ne  F  corr  Sa/Sb  nSNP | B (allele-count corr) Ne [95%% CI]  corr | C (Fc) Ne
+BA-Med    101.9 |     6368 0.009322 0.001325 637/925  1101513 |     8228 [7928-8552] 0.003137 |     8257
+EN-Mod    250.0 |     7269 0.019249 0.002053 505/470  1081649 |     8086 [7730-8478] 0.003500 |     8134
+Meso-EN    92.6 |      692 0.072046 0.005162 120/506  1074129 |      694 [682-706] 0.010635 |      709
+EN-LN      64.8 |     4655 0.009053 0.002091 506/453  1074170 |     7380 [7171-7602] 0.004786 |     7418
+EN-BA     120.4 |     4049 0.016636 0.001771 507/638  1079967 |     4898 [4789-5012] 0.004363 |     4926
+EN-Iron   175.9 |     7100 0.014536 0.002147 506/431  1077754 |     9215 [8672-9832] 0.004983 |     9268
+EN-Med    222.2 |     5401 0.022102 0.001529 506/925  1099045 |     6018 [5827-6221] 0.003534 |     6057
+LN-BA      55.6 |     3065 0.010950 0.001887 453/638  1078827 |     4377 [4258-4503] 0.004388 |     4399
+BA-Iron    55.6 |     5001 0.007497 0.001943 638/432  1081060 |     9471 [9076-9903] 0.004585 |     9523
+Iron-Med   46.3 |     2766 0.010068 0.001700 431/925  1099867 |     3660 [3549-3778] 0.003758 |     3675
+Med-Mod    27.8 |     2231 0.007831 0.001606 924/469  1101929 |     2322 [2244-2405] 0.002279 |     2329
+keruru reported: {"BA-Med": {"ne": 8139, "F": 0.007183, "S": [842, 1548], "snps": 1117492, "t": 102}, "EN-Mod": {"ne": 9835, "F": 0.014339, "S": [865, 476], "snps": 1090099, "t": 250}, "EN-Meso": {"ne": 938, "t": 111}, "EN-LN": {"ne": 4922, "t": 65}, "EN-BA": {"ne": 6933, "t": 120}, "EN-Iron": {"ne": 9792, "t": 176}, "EN-Med": {"ne": 8530, "t": 222}}
+generation-time sensitivity (form B): {"BA-Med": {"25": 8886.424231339384, "27": 8228.170584573503, "29": 7660.7105442580905, "31": 7166.471154305955}, "EN-Mod": {"25": 8733.39539431031, "27": 8086.47721695399, "29": 7528.789133026128, "31": 7043.060801863153}}
+-- ancestry informativeness quintiles (form B), 887570 SNPs with all three sources --
+BA-Med: intercept F 0.006567 slope -0.0022 -> drift-only Ne 7754 ; top/bottom F_adj 0.95
+    q1  s 0.0103  nSNP 173209  F 0.009110  F_adj 0.006471  Ne 7870
+    q2  s 0.0293  nSNP 172123  F 0.009279  F_adj 0.006612  Ne 7702
+    q3  s 0.0539  nSNP 172224  F 0.009162  F_adj 0.006453  Ne 7891
+    q4  s 0.0920  nSNP 172059  F 0.009073  F_adj 0.006312  Ne 8068
+    q5  s 0.1938  nSNP 170157  F 0.009088  F_adj 0.006149  Ne 8282
+EN-Mod: intercept F 0.013008 slope 0.0291 -> drift-only Ne 9609 ; top/bottom F_adj 1.41
+    q1  s 0.0103  nSNP 172012  F 0.016314  F_adj 0.013235  Ne 9445
+    q2  s 0.0293  nSNP 171562  F 0.016963  F_adj 0.013861  Ne 9018
+    q3  s 0.0539  nSNP 171952  F 0.017734  F_adj 0.014598  Ne 8563
+    q4  s 0.0920  nSNP 172011  F 0.018976  F_adj 0.015798  Ne 7913
+    q5  s 0.1938  nSNP 170155  F 0.021934  F_adj 0.018602  Ne 6720
+EN-BA: intercept F 0.008596 slope 0.0462 -> drift-only Ne 7002 ; top/bottom F_adj 1.96
+    q1  s 0.0103  nSNP 172640  F 0.012455  F_adj 0.008901  Ne 6762
+    q2  s 0.0293  nSNP 171826  F 0.013445  F_adj 0.009846  Ne 6113
+    q3  s 0.0539  nSNP 172080  F 0.014919  F_adj 0.011253  Ne 5348
+    q4  s 0.0920  nSNP 172036  F 0.016850  F_adj 0.013101  Ne 4594
+    q5  s 0.1938  nSNP 170156  F 0.021459  F_adj 0.017417  Ne 3456
+EN-Med: intercept F 0.015095 slope 0.0491 -> drift-only Ne 7361 ; top/bottom F_adj 1.60
+    q1  s 0.0103  nSNP 173162  F 0.018266  F_adj 0.015255  Ne 7284
+    q2  s 0.0293  nSNP 172088  F 0.019584  F_adj 0.016543  Ne 6717
+    q3  s 0.0539  nSNP 172216  F 0.021060  F_adj 0.017976  Ne 6181
+    q4  s 0.0920  nSNP 172058  F 0.023033  F_adj 0.019893  Ne 5586
+    q5  s 0.1938  nSNP 170155  F 0.027753  F_adj 0.024421  Ne 4550
+LN-BA: intercept F 0.004662 slope 0.0139 -> drift-only Ne 5959 ; top/bottom F_adj 1.54
+    q1  s 0.0103  nSNP 172616  F 0.008502  F_adj 0.004768  Ne 5826
+    q2  s 0.0293  nSNP 171822  F 0.008817  F_adj 0.005042  Ne 5510
+    q3  s 0.0539  nSNP 172294  F 0.009288  F_adj 0.005456  Ne 5091
+    q4  s 0.0920  nSNP 172078  F 0.009897  F_adj 0.005991  Ne 4636
+    q5  s 0.1938  nSNP 170156  F 0.011483  F_adj 0.007327  Ne 3791
+-- regions (form B) --
+Iberia        BA-Med  Ne     4375  F 0.06388 corr 0.05224  S 101/24  nSNP 366801
+Iberia        EN-Mod  Ne     4533  F 0.08059 corr 0.05301  S 21/221  nSNP 36704
+Iberia        EN-BA   Ne     3403  F 0.07511 corr 0.05742  S 21/114  nSNP 36602
+CentralEur    BA-Med  Ne     2670  F 0.02773 corr 0.00866  S 232/559  nSNP 1054072
+CentralEur    EN-Mod  Ne      nan  F nan corr nan  S nan/nan  nSNP 0
+CentralEur    EN-BA   Ne     1778  F 0.04653 corr 0.01268  S 222/233  nSNP 1008682
+ItalyBalkans  BA-Med  Ne     9298  F 0.02451 corr 0.01904  S 154/101  nSNP 1007218
+ItalyBalkans  EN-Mod  Ne     6827  F 0.03070 corr 0.01239  S 134/350  nSNP 1016633
+ItalyBalkans  EN-BA   Ne     8382  F 0.02479 corr 0.01761  S 134/154  nSNP 1007731
+Scandinavia   BA-Med  Ne    12692  F 0.05080 corr 0.04679  S 25/175  nSNP 883069
+Scandinavia   EN-Mod  Ne     1347  F 0.18809 corr 0.09527  S 22/20  nSNP 401
+Scandinavia   EN-BA   Ne      578  F 0.19021 corr 0.08608  S 22/26  nSNP 307981
+EastEur       BA-Med  Ne     1918  F 0.05872 corr 0.03217  S 130/44  nSNP 1000800
+EastEur       EN-Mod  Ne     5692  F 0.04233 corr 0.02036  S 68/212  nSNP 1001194
+EastEur       EN-BA   Ne     2188  F 0.05144 corr 0.02393  S 68/130  nSNP 1018916

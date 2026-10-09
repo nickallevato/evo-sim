@@ -1,0 +1,354 @@
+{
+ "groups": [
+  {
+   "name": "day1:10000+",
+   "n": 167,
+   "n_dip": 1
+  },
+  {
+   "name": "day1:8000-10000",
+   "n": 133,
+   "n_dip": 3
+  },
+  {
+   "name": "day1:7000-8000",
+   "n": 669,
+   "n_dip": 3
+  },
+  {
+   "name": "day1:6000-7000",
+   "n": 579,
+   "n_dip": 0
+  },
+  {
+   "name": "day1:5000-6000",
+   "n": 726,
+   "n_dip": 1
+  },
+  {
+   "name": "day1:4000-5000",
+   "n": 1155,
+   "n_dip": 0
+  },
+  {
+   "name": "day1:3000-4000",
+   "n": 1015,
+   "n_dip": 0
+  },
+  {
+   "name": "day1:2000-3000",
+   "n": 1000,
+   "n_dip": 2
+  },
+  {
+   "name": "day1:1000-2000",
+   "n": 2125,
+   "n_dip": 0
+  },
+  {
+   "name": "day1:500-1000",
+   "n": 715,
+   "n_dip": 0
+  },
+  {
+   "name": "day1:0-500",
+   "n": 524,
+   "n_dip": 430
+  },
+  {
+   "name": "day2:10000+",
+   "n": 112,
+   "n_dip": 1
+  },
+  {
+   "name": "day2:8000-10000",
+   "n": 115,
+   "n_dip": 3
+  },
+  {
+   "name": "day2:7000-8000",
+   "n": 612,
+   "n_dip": 3
+  },
+  {
+   "name": "day2:6000-7000",
+   "n": 535,
+   "n_dip": 0
+  },
+  {
+   "name": "day2:5000-6000",
+   "n": 654,
+   "n_dip": 1
+  },
+  {
+   "name": "day2:4000-5000",
+   "n": 1062,
+   "n_dip": 0
+  },
+  {
+   "name": "day2:3000-4000",
+   "n": 910,
+   "n_dip": 0
+  },
+  {
+   "name": "day2:2000-3000",
+   "n": 930,
+   "n_dip": 2
+  },
+  {
+   "name": "day2:1000-2000",
+   "n": 1963,
+   "n_dip": 0
+  },
+  {
+   "name": "day2:500-1000",
+   "n": 652,
+   "n_dip": 0
+  },
+  {
+   "name": "day2:0-500",
+   "n": 521,
+   "n_dip": 430
+  },
+  {
+   "name": "kr:Meso",
+   "n": 267,
+   "n_dip": 10
+  },
+  {
+   "name": "kr:EN",
+   "n": 1165,
+   "n_dip": 4
+  },
+  {
+   "name": "kr:LN",
+   "n": 1064,
+   "n_dip": 5
+  },
+  {
+   "name": "kr:BA",
+   "n": 1531,
+   "n_dip": 1
+  },
+  {
+   "name": "kr:Iron",
+   "n": 1031,
+   "n_dip": 1
+  },
+  {
+   "name": "kr:Med",
+   "n": 1809,
+   "n_dip": 0
+  },
+  {
+   "name": "kr:Mod",
+   "n": 532,
+   "n_dip": 438
+  },
+  {
+   "name": "krreg_Iberia:Meso",
+   "n": 8,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Iberia:EN",
+   "n": 30,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Iberia:LN",
+   "n": 148,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Iberia:BA",
+   "n": 218,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Iberia:Iron",
+   "n": 68,
+   "n_dip": 1
+  },
+  {
+   "name": "krreg_Iberia:Med",
+   "n": 56,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Iberia:Mod",
+   "n": 115,
+   "n_dip": 109
+  },
+  {
+   "name": "krreg_CentralEur:Meso",
+   "n": 26,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_CentralEur:EN",
+   "n": 471,
+   "n_dip": 3
+  },
+  {
+   "name": "krreg_CentralEur:LN",
+   "n": 267,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_CentralEur:BA",
+   "n": 571,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_CentralEur:Iron",
+   "n": 341,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_CentralEur:Med",
+   "n": 1074,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_CentralEur:Mod",
+   "n": 6,
+   "n_dip": 4
+  },
+  {
+   "name": "krreg_ItalyBalkans:Meso",
+   "n": 91,
+   "n_dip": 1
+  },
+  {
+   "name": "krreg_ItalyBalkans:EN",
+   "n": 302,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_ItalyBalkans:LN",
+   "n": 105,
+   "n_dip": 1
+  },
+  {
+   "name": "krreg_ItalyBalkans:BA",
+   "n": 348,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_ItalyBalkans:Iron",
+   "n": 452,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_ItalyBalkans:Med",
+   "n": 171,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_ItalyBalkans:Mod",
+   "n": 193,
+   "n_dip": 170
+  },
+  {
+   "name": "krreg_Scandinavia:Meso",
+   "n": 14,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Scandinavia:EN",
+   "n": 41,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Scandinavia:LN",
+   "n": 239,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Scandinavia:BA",
+   "n": 67,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Scandinavia:Iron",
+   "n": 13,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Scandinavia:Med",
+   "n": 359,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_Scandinavia:Mod",
+   "n": 30,
+   "n_dip": 1
+  },
+  {
+   "name": "krreg_EastEur:Meso",
+   "n": 103,
+   "n_dip": 9
+  },
+  {
+   "name": "krreg_EastEur:EN",
+   "n": 201,
+   "n_dip": 1
+  },
+  {
+   "name": "krreg_EastEur:LN",
+   "n": 222,
+   "n_dip": 4
+  },
+  {
+   "name": "krreg_EastEur:BA",
+   "n": 256,
+   "n_dip": 1
+  },
+  {
+   "name": "krreg_EastEur:Iron",
+   "n": 130,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_EastEur:Med",
+   "n": 88,
+   "n_dip": 0
+  },
+  {
+   "name": "krreg_EastEur:Mod",
+   "n": 128,
+   "n_dip": 98
+  },
+  {
+   "name": "src:WHG",
+   "n": 88,
+   "n_dip": 2
+  },
+  {
+   "name": "src:EEF",
+   "n": 43,
+   "n_dip": 1
+  },
+  {
+   "name": "src:Yam",
+   "n": 26,
+   "n_dip": 0
+  }
+ ],
+ "qc": {
+  "n_indiv": 9799,
+  "corr": 0.9999997240707283,
+  "ratio_median": 1.0,
+  "ratio_iqr": [
+   1.0,
+   1.0
+  ],
+  "het_ph_median": 0.0,
+  "het_ph_max": 0.012353878852284804,
+  "n_ph_with_het_gt_1e3": 1,
+  "het_dip_median": 0.26573757045467705,
+  "n_dip": 582,
+  "n_dip_with_het_lt_0p01": 1
+ }
+}

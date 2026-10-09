@@ -1,0 +1,74 @@
+== C1d POST HOC v66 ==
+panel transition share 0.776
+-- A. anatomy of events dated 6000-7000 BP and younger (E1-T2, m=1, all11) --
+S23_all: n=4164  older-bin minor freq {'0-0.01': 1077, '0.01-0.02': 2073, '0.02-0.05': 1002, '0.05-0.1': 12, '0.1-1.01': 0}  all-bin minor freq {'0-0.01': 1484, '0.01-0.02': 2068, '0.02-0.05': 603, '0.05-0.1': 9, '0.1-1.01': 0}  transition share 0.973  median minor copies 77.0
+S21: n=3649  older-bin minor freq {'0-0.01': 741, '0.01-0.02': 1928, '0.02-0.05': 971, '0.05-0.1': 9, '0.1-1.01': 0}  all-bin minor freq {'0-0.01': 994, '0.01-0.02': 2049, '0.02-0.05': 598, '0.05-0.1': 8, '0.1-1.01': 0}  transition share 0.982  median minor copies 84.0
+modern_only_0-500: n=3206  older-bin minor freq {'0-0.01': 392, '0.01-0.02': 1858, '0.02-0.05': 948, '0.05-0.1': 8, '0.1-1.01': 0}  all-bin minor freq {'0-0.01': 594, '0.01-0.02': 2012, '0.02-0.05': 592, '0.05-0.1': 8, '0.1-1.01': 0}  transition share 0.992  median minor copies 91.0
+dated_3-9: n=958  older-bin minor freq {'0-0.01': 685, '0.01-0.02': 215, '0.02-0.05': 54, '0.05-0.1': 4, '0.1-1.01': 0}  all-bin minor freq {'0-0.01': 890, '0.01-0.02': 56, '0.02-0.05': 11, '0.05-0.1': 1, '0.1-1.01': 0}  transition share 0.909  median minor copies 6.0
+-- B. substitution class (E1-T2 m=1 all11) --
+all: elig 48888 tracked 48886 pre7000 0.9148 S21 3649 S23 4164 profile [35753, 8342, 627, 515, 213, 66, 109, 33, 1, 21, 3206] start ['87.3', '12.4', '0.2', '0.0']
+transversions: elig 10034 tracked 10032 pre7000 0.9887 S21 66 S23 113 profile [8522, 1351, 46, 47, 21, 4, 10, 2, 0, 3, 26] start ['97.9', '1.8', '0.2', '0.1']
+transitions: elig 38854 tracked 38854 pre7000 0.8957 S21 3583 S23 4051 profile [27231, 6991, 581, 468, 192, 62, 99, 31, 1, 18, 3180] start ['84.6', '15.1', '0.2', '0.0']
+transversions_autosomes: elig 7614 tracked 7614 pre7000 0.9899 S21 44 S23 77 profile [6398, 1100, 39, 33, 14, 4, 10, 1, 0, 3, 12] start ['99.5', '0.5', '0.0', '0.0']
+-- C. other readings --
+T3_forward: elig 48888 events 48886 pre7000 0.2171 S21 24698 S23 38272 profile [0, 8342, 2272, 13574, 11861, 2592, 1890, 851, 47, 228, 7229]
+minor>=2_T2: elig 22410 events 22409 pre7000 0.8287 S21 3649 S23 3839 profile [14210, 4128, 232, 190, 213, 66, 109, 33, 1, 21, 3206]
+minor>=2_T2_transversions: elig 3004 events 3003 pre7000 0.9717 S21 66 S23 85 profile [2456, 449, 13, 19, 21, 4, 10, 2, 0, 3, 26]
+minor>=3_T2: elig 12774 events 12773 pre7000 0.7275 S21 3409 S23 3481 profile [6911, 2306, 75, 72, 116, 32, 77, 21, 1, 17, 3145]
+minor>=3_T2_transversions: elig 952 events 951 pre7000 0.9422 S21 53 S23 55 profile [735, 160, 1, 2, 14, 2, 8, 2, 0, 2, 25]
+minor>=5_T2: elig 7527 events 7527 pre7000 0.5879 S21 3087 S23 3102 profile [3144, 1266, 15, 15, 24, 16, 40, 9, 1, 13, 2984]
+minor>=5_T2_transversions: elig 163 events 163 pre7000 0.8037 S21 32 S23 32 profile [98, 33, 0, 0, 5, 1, 3, 1, 0, 1, 21]
+minor>=10_T2: elig 4335 events 4335 pre7000 0.4770 S21 2266 S23 2267 profile [1455, 613, 0, 1, 0, 2, 8, 1, 0, 4, 2251]
+minor>=10_T2_transversions: elig 45 events 45 pre7000 0.7111 S21 13 S23 13 profile [23, 9, 0, 0, 0, 0, 1, 1, 0, 1, 10]
+T3_minor>=2: elig 22410 events 22409 pre7000 0.2141 S21 14972 S23 17611 profile [0, 4128, 670, 2639, 4878, 1298, 1168, 525, 27, 181, 6895]
+-- D. F_adj between regions in the same bin (form B) --
+EN    Iberia        CentralEur    F 0.09446 corr 0.04820 F_adj 0.04627 S 22/438 nSNP 290841
+EN    Iberia        ItalyBalkans  F 0.09242 corr 0.05031 F_adj 0.04211 S 22/229 nSNP 287849
+EN    Iberia        Scandinavia   F 0.18823 corr 0.09092 F_adj 0.09730 S 22/22 nSNP 172745
+EN    Iberia        EastEur       F 0.15316 corr 0.04937 F_adj 0.10379 S 22/289 nSNP 294470
+EN    CentralEur    ItalyBalkans  F 0.01415 corr 0.01036 F_adj 0.00379 S 334/179 nSNP 1016662
+EN    CentralEur    Scandinavia   F 0.20479 corr 0.04872 F_adj 0.15607 S 385/22 nSNP 458888
+EN    CentralEur    EastEur       F 0.12489 corr 0.00853 F_adj 0.11637 S 334/238 nSNP 1039891
+EN    ItalyBalkans  Scandinavia   F 0.19649 corr 0.05107 F_adj 0.14541 S 204/22 nSNP 454336
+EN    ItalyBalkans  EastEur       F 0.11857 corr 0.01126 F_adj 0.10732 S 179/238 nSNP 1035433
+EN    Scandinavia   EastEur       F 0.16938 corr 0.04979 F_adj 0.11959 S 22/265 nSNP 464329
+LN    Iberia        CentralEur    F 0.03709 corr 0.02507 F_adj 0.01201 S 67/157 nSNP 962746
+LN    Iberia        ItalyBalkans  F 0.05181 corr 0.03220 F_adj 0.01961 S 67/82 nSNP 935178
+LN    Iberia        Scandinavia   F 0.05881 corr 0.03297 F_adj 0.02584 S 67/67 nSNP 954955
+LN    Iberia        EastEur       F 0.09778 corr 0.02071 F_adj 0.07707 S 67/377 nSNP 998349
+LN    CentralEur    ItalyBalkans  F 0.03316 corr 0.02218 F_adj 0.01098 S 157/81 nSNP 966975
+LN    CentralEur    Scandinavia   F 0.03815 corr 0.02283 F_adj 0.01532 S 155/67 nSNP 1004645
+LN    CentralEur    EastEur       F 0.06180 corr 0.01071 F_adj 0.05110 S 155/370 nSNP 1034424
+LN    ItalyBalkans  Scandinavia   F 0.05619 corr 0.03007 F_adj 0.02612 S 81/67 nSNP 963146
+LN    ItalyBalkans  EastEur       F 0.07208 corr 0.01781 F_adj 0.05427 S 81/377 nSNP 999932
+LN    Scandinavia   EastEur       F 0.08201 corr 0.01830 F_adj 0.06371 S 67/370 nSNP 1035084
+BA    Iberia        CentralEur    F 0.03916 corr 0.02006 F_adj 0.01910 S 80/277 nSNP 941863
+BA    Iberia        ItalyBalkans  F 0.03226 corr 0.02209 F_adj 0.01017 S 80/177 nSNP 930523
+BA    Iberia        Scandinavia   F 0.06343 corr 0.03557 F_adj 0.02785 S 79/51 nSNP 914141
+BA    Iberia        EastEur       F 0.07649 corr 0.02141 F_adj 0.05508 S 79/186 nSNP 946483
+BA    CentralEur    ItalyBalkans  F 0.02812 corr 0.01237 F_adj 0.01575 S 262/168 nSNP 1022328
+BA    CentralEur    Scandinavia   F 0.03336 corr 0.02518 F_adj 0.00818 S 262/51 nSNP 1014183
+BA    CentralEur    EastEur       F 0.03405 corr 0.01129 F_adj 0.02276 S 262/179 nSNP 1034680
+BA    ItalyBalkans  Scandinavia   F 0.05021 corr 0.02720 F_adj 0.02301 S 168/51 nSNP 1003960
+BA    ItalyBalkans  EastEur       F 0.06244 corr 0.01331 F_adj 0.04913 S 168/179 nSNP 1028114
+BA    Scandinavia   EastEur       F 0.05154 corr 0.02612 F_adj 0.02542 S 51/179 nSNP 1018269
+Iron  Iberia        CentralEur    F 0.03643 corr 0.02408 F_adj 0.01235 S 63/169 nSNP 998631
+Iron  Iberia        ItalyBalkans  F 0.03156 corr 0.02103 F_adj 0.01054 S 63/297 nSNP 1013946
+Iron  Iberia        Scandinavia   F 0.04796 corr 0.02440 F_adj 0.02355 S 63/141 nSNP 999576
+Iron  Iberia        EastEur       F 0.06829 corr 0.02796 F_adj 0.04033 S 63/98 nSNP 1001671
+Iron  CentralEur    ItalyBalkans  F 0.01673 corr 0.01086 F_adj 0.00588 S 168/295 nSNP 1039121
+Iron  CentralEur    Scandinavia   F 0.02319 corr 0.01416 F_adj 0.00903 S 167/141 nSNP 1025136
+Iron  CentralEur    EastEur       F 0.04303 corr 0.01783 F_adj 0.02520 S 168/97 nSNP 1027978
+Iron  ItalyBalkans  Scandinavia   F 0.03055 corr 0.01104 F_adj 0.01951 S 294/141 nSNP 1042007
+Iron  ItalyBalkans  EastEur       F 0.04852 corr 0.01471 F_adj 0.03381 S 295/97 nSNP 1043416
+Iron  Scandinavia   EastEur       F 0.04732 corr 0.01802 F_adj 0.02930 S 141/97 nSNP 1028339
+Med   Iberia        CentralEur    F 0.03739 corr 0.02068 F_adj 0.01670 S 55/887 nSNP 1076639
+Med   Iberia        ItalyBalkans  F 0.03530 corr 0.02920 F_adj 0.00610 S 55/112 nSNP 1011588
+Med   Iberia        Scandinavia   F 0.03493 corr 0.02403 F_adj 0.01091 S 55/220 nSNP 1047530
+Med   Iberia        EastEur       F 0.07412 corr 0.02980 F_adj 0.04432 S 55/112 nSNP 1021011
+Med   CentralEur    ItalyBalkans  F 0.02274 corr 0.01107 F_adj 0.01167 S 887/112 nSNP 1072300
+Med   CentralEur    Scandinavia   F 0.02165 corr 0.00588 F_adj 0.01577 S 886/220 nSNP 1087842
+Med   CentralEur    EastEur       F 0.02530 corr 0.01169 F_adj 0.01361 S 888/112 nSNP 1073343
+Med   ItalyBalkans  Scandinavia   F 0.02378 corr 0.01441 F_adj 0.00937 S 112/220 nSNP 1044686
+Med   ItalyBalkans  EastEur       F 0.05720 corr 0.02020 F_adj 0.03700 S 112/112 nSNP 1015385
+Med   Scandinavia   EastEur       F 0.05208 corr 0.01503 F_adj 0.03705 S 220/112 nSNP 1047890
