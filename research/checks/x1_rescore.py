@@ -283,22 +283,29 @@ for key, lab in (("numeric", "numeric by the author's quoted text (primary)"), (
     out.append("| %s | %d / %d = %.1f%% | %d / %d = %.1f%% | %d / %d | %.4f |" % (lab, dd[2], dd[1], 100.0 * dd[2] / dd[1], cc[2], cc[1], 100.0 * cc[2] / cc[1], aa[2], aa[1], fisher(dd[2], dd[1], cc[2], cc[1])))
 NUMKEY = "numeric"
 out.append("\nIn the 'all files' row the error verdicts are counted over every file on the side (Day 113 incl. A5h, critics 51 less E1, allies 15 less D8). The quote-based regex drops Day error nodes whose quoted Statement has no figure (for example G3b, C7, G2g), which is why Day falls from 18 to 13 in the primary row.\n")
-out.append("## Sensitivity (Day vs critics, Fisher exact p; primary denominator)\n")
-out.append("| Scenario | Day | Critics | p |")
+out.append("## Sensitivity (Day vs critics; Fisher exact p under each denominator)\n")
+out.append("| Scenario | Primary (quoted-text numeric): Day, critics, p | Formal-statement numeric (revision 1's 31 / 82): Day, critics, p | All files: Day, critics, p |")
 out.append("|---|---|---|---|")
-def scen_row(name, dscen=None, cscen=None, pool_allies=False, d_extra=0):
-    de = stats("day", dscen)[2]; dn = stats("day", dscen)[1]
-    ce = stats("critic", cscen)[2]; cn = stats("critic", cscen)[1]
-    if pool_allies:
-        ae = stats("ally", cscen)[2]; an = stats("ally", cscen)[1]
-        ce += ae; cn += an
-    out.append("| %s | %d / %d = %.1f%% | %d / %d = %.1f%% | %.4f |" % (name, de, dn, 100.0 * de / dn, ce, cn, 100.0 * ce / cn, fisher(de, dn, ce, cn)))
+def scen_row(name, dscen=None, cscen=None, pool_allies=False):
+    global NUMKEY
+    cells = []
+    for key in ("numeric", "numeric_old", "all"):
+        NUMKEY = key
+        de, dn = stats("day", dscen)[2], stats("day", dscen)[1]
+        ce, cn = stats("critic", cscen)[2], stats("critic", cscen)[1]
+        if pool_allies:
+            ce += stats("ally", cscen)[2]; cn += stats("ally", cscen)[1]
+        cells.append("%d/%d, %d/%d, p = %.3f" % (de, dn, ce, cn, fisher(de, dn, ce, cn)))
+    NUMKEY = "numeric"
+    out.append("| %s | %s |" % (name, " | ".join(cells)))
+FLIP = {"C5": "non-sequitur", "A3d": "non-sequitur", "B5f": "non-sequitur"}
+WEAK4 = {"C2": "holds", "C2b": "holds", "B9": "holds", "G2g": "holds"}
 scen_row("base (this revision)")
-scen_row("critic tie-breaks flipped to errors (C5, A3d, B5f, in addition to B5c)", cscen={"C5": "non-sequitur", "A3d": "non-sequitur", "B5f": "non-sequitur"})
-scen_row("critic tie-breaks flipped AND B5c scored holds (audit's reading of N3)", cscen={"C5": "non-sequitur", "A3d": "non-sequitur", "B5f": "non-sequitur", "B5c": "holds"})
-scen_row("Day weakest four dropped (C2, C2b, B9, G2g)", dscen={"C2": "holds", "C2b": "holds", "B9": "holds", "G2g": "holds"})
-scen_row("both: Day weakest four dropped and critic tie-breaks flipped", dscen={"C2": "holds", "C2b": "holds", "B9": "holds", "G2g": "holds"}, cscen={"C5": "non-sequitur", "A3d": "non-sequitur", "B5f": "non-sequitur"})
-scen_row("10% materiality line (A5e, G1a back to error; Hancock caption slip A5c error)", dscen={"A5e": "arithmetic-error", "G1a": "arithmetic-error"}, cscen={"A5c": "arithmetic-error"})
+scen_row("critic tie-breaks flipped to errors (C5, A3d, B5f, in addition to B5c)", cscen=FLIP)
+scen_row("tie-breaks flipped and B5c scored holds (audit's reading of N3)", cscen=dict(FLIP, B5c="holds"))
+scen_row("Day weakest four dropped (C2, C2b, B9, G2g)", dscen=WEAK4)
+scen_row("Day weakest four dropped and critic tie-breaks flipped", dscen=WEAK4, cscen=FLIP)
+scen_row("10% materiality line (A5e, G1a back to error; A5c caption slip error)", dscen={"A5e": "arithmetic-error", "G1a": "arithmetic-error"}, cscen={"A5c": "arithmetic-error"})
 scen_row("critics and allies pooled", pool_allies=True)
 scen_row("no charity (A3a and G back to error)", dscen={"A3a": "arithmetic-error", "G": "arithmetic-error"})
 out.append("")
