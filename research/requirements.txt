@@ -4,3 +4,4 @@ sympy
 pyyaml
 msprime
 tskit
+ViennaRNA==2.7.2
