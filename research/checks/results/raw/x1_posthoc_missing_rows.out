@@ -4,3 +4,5 @@ B6   Ne_anc 1e+04: 2muT = 0.605%, theta_anc = 0.048%, E[d] = 0.65% (observed CSA
 B6   Ne_anc 1.32e+05: 2muT = 0.605%, theta_anc = 0.634%, E[d] = 1.24% (observed CSAC 1.23%)  -> 39.6M SNVs
 B6   Ne_anc 1.98e+05: 2muT = 0.605%, theta_anc = 0.950%, E[d] = 1.56% (observed CSAC 1.23%)  -> 49.8M SNVs
 B6   Mansfield 'X generations': full pipe needs >= 4 Ne_anc = 4e+04, 5.28e+05, 7.92e+05 generations before the split
+CA-3 15,000/35 = 428.57; 9e6/20/(15000/35) = 1050 (Camestros prints 1051; the 'd' factor is left out in that line: with d = 0.45 -> 472)
+CA-3 20,000/20 = 1000 ('fastest of that range would be 1000'); 20,000/12.5 = 1600 ('1600 consistent with 10-20 in 20,000')

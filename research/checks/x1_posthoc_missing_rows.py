@@ -12,3 +12,7 @@ for ne in (1e4, 1.32e5, 1.98e5):
     tot = 2 * mu * T + th
     print("B6   Ne_anc %.3g: 2muT = %.3f%%, theta_anc = %.3f%%, E[d] = %.2f%% (observed CSAC 1.23%%)  -> %.1fM SNVs" % (ne, 100 * 2 * mu * T, 100 * th, 100 * tot, tot * L / 1e6))
 print("B6   Mansfield 'X generations': full pipe needs >= 4 Ne_anc = %s generations before the split" % ", ".join("%.3g" % (4 * n) for n in (1e4, 1.32e5, 1.98e5)))
+# Camestros 2026 [3] (raw ca-part3.html, read after the pre-registration): arithmetic in the post that the quote file does not carry
+print("CA-3 15,000/35 = %.2f; 9e6/20/(15000/35) = %.0f (Camestros prints 1051; the 'd' factor is left out in that line: with d = 0.45 -> %.0f)" % (
+    15000 / 35, 9e6 / 20 / (15000 / 35), 0.45 * 9e6 / 20 / (15000 / 35)))
+print("CA-3 20,000/20 = %.0f ('fastest of that range would be 1000'); 20,000/12.5 = %.0f ('1600 consistent with 10-20 in 20,000')" % (20000 / 20, 20000 / 12.5))
