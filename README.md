@@ -52,12 +52,14 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 | The founder hazard's size (~2.3% per event) and the relictation chain reproduce (E, E4) | $0.02^{2\times10^7}$ prices one pre-specified list. No cap near 230 sweeps under multiplicative fitness (G3, Gc) |
 | Parallel sweeps share **one** reproductive budget, so concurrency cannot raise the selected total beyond it. At Haldane's assumed $R\approx1.1$ the long-run rate is *below* 1/300 (H3) | The budget is $\ln R$, not 10%: a coding-only adaptive count is payable at $R\approx1.2$–3 (hard adaptive selection, soft load) (H3) |
 | Day's SNV-only 17.5M is 83% of the directly counted events and brackets the polymorphism-corrected count; his base-pair total is the right order for non-aligned sequence (GAP-07b) | By direct count from the human–chimp alignment, 205M is 9.7× the mutation events per lineage (bracket ~7–14×, non-T2T assemblies); the critics' observation-based estimates land within 7–19% (GAP-07b) |
+| On the real ancient-DNA genotypes his start-frequency table reproduces to 0.4 points, and his "completions of near-fixed alleles" reading is right in kind (C1d) | His "21" does not reproduce from his stated method on the real genotypes (thousands; his own documented pipeline is 3.6× off). keruru's measured $N_e$ replicates within 4%, and Day's $N_e \approx 2$ is excluded (C1d) |
+| Exact-outcome alternatives are about 1 per needed change; the GB1 landscape is rugged at single-nucleotide steps; "reduce or destroy" holds as worded for deep mutational scans (D1) | 71% of single substitutions keep at least half of function and "destroy" alone is rare; GB1's functional variants form one connected network; within genes the beneficial fraction exceeds G1's requirement for up to ~$2\times10^5$ changes (D1) |
 
 **Still open:**
 - Cost of selection at human scale (H3) is decided only conditionally. It flips at an adaptive non-coding share of ~0.01–0.6%, below what any α estimate resolves; $R$ is unsourced; soft selection, absolute-fitness gain and epistasis are untested at human scale.
-- Day's ancient-DNA "21 fixations" statistic, which is not reproducible from the published method.
+- Ancient DNA: Day's "21" is contradicted as stated on the real genotypes (C1d), but what it means turns on the Holocene $N_e$ (unsourced; retrieval in progress), and a neutral comparison for the damage-resistant transversion class (36–44 events) is open.
 - The ancestral $N_e$ needed to fit the divergence.
-- Branch D (sequence space). G1 reduced the specific-vs-any dispute to one number D has to supply: how many interchangeable routes exist per needed change (the "any" reading wins above about 12–17).
+- Branch D (sequence space). D1 measured G1's open number: about 1–6 routes per needed change per locus (below the flip of ~7–17), while a gene's shared pool of beneficial mutations clears it for about ten needed changes but not 25 or more. Per-sequence prevalence (Axe, Taylor) and cross-family connectivity are untouched.
 - What fraction of the differences needed selection at all ([GAP-01](docs/arguments/README.md#4-what-everyone-missed)). It cuts Day's requirement by 20×–6,000×, yet the adaptive count still exceeds Haldane's rate.
 
 ---
@@ -70,8 +72,8 @@ flowchart LR
 
   A["<b>A · MITTENS rate limit</b><br/>F_max = t_div·d / (g_len·G_f)<br/><i>G_f reproduces; 205M is bp, ~21M events</i>"]:::mixed
   B["<b>B · Neutral theory insufficient</b><br/>k = μN/Nₑ, empty pipe, Hard Limits<br/><i>k = μ confirmed; pipe was full</i>"]:::critic
-  C["<b>C · Ancient DNA: zero fixations</b><br/>1240k panel, turnover d<br/><i>test does not discriminate</i>"]:::open
-  D["<b>D · Sequence space</b><br/>10³²⁵ vs 10⁵² (Wistar 1966)<br/><i>checks pending</i>"]:::todo
+  C["<b>C · Ancient DNA: zero fixations</b><br/>1240k panel, turnover d<br/><i>21 contradicted as stated on real data;<br/>meaning turns on Holocene Nₑ</i>"]:::mixed
+  D["<b>D · Sequence space</b><br/>10³²⁵ vs 10⁵² (Wistar 1966)<br/><i>~1 route per locus; gene pools shared;<br/>prevalence untouched</i>"]:::mixed
   E["<b>E · LTEE / punctuated</b><br/>mutator hazard, relictation<br/><i>numbers reproduce; consequence untested</i>"]:::mixed
   F["<b>F · Kimura irrelevance</b><br/>fixation time vs fixation rate<br/><i>latency ≠ throughput</i>"]:::critic
   G["<b>G · Bernoulli barrier</b><br/>0.02^(2×10⁷), ~230 parallel sweeps<br/><i>prices a specific list; no 230 cap</i>"]:::critic
@@ -207,8 +209,8 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
   R1 --> R2["R2<br/>204 claims<br/>verbatim + sourced"]:::done
-  R2 --> R3["R3<br/>Argument tree<br/>30 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>24 checks reviewed"]:::active
+  R2 --> R3["R3<br/>Argument tree<br/>31 load-bearing nodes"]:::done
+  R3 --> R4["R4<br/>Math resolution<br/>27 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo
@@ -224,8 +226,11 @@ flowchart LR
 - [x] **Gaps:** finite-map cap fit (GAP-04), indel/SV event counts (GAP-07), sweep-scan windows (GAP-02)
 - [x] **H3:** cost of selection at human scale (long-run hazard, finite supply, hard load at K ≥ 4000)
 - [x] **GAP-07b:** direct event count from the human–chimp alignment (9.7×, bracket ~7–14×; follow-ups GAP-07c and a T2T re-run)
-- [ ] **D:** sequence-space simulations (Wistar, Ulam, Weasel); a ViennaRNA + deep-mutational-scan spike is in progress
-- [ ] **C1b:** the aDNA 21-count with realistic per-site call depth and ancestry structure (C1c in progress)
+- [x] **C1c / C1d:** Day's aDNA 21-count with real call depth and ancestry replacement (model), then on the real AADR genotypes (contradicted as stated; keruru's $N_e$ replicates)
+- [x] **D1:** sequence-space spike (RNA folding, deep mutational scans, GB1): alternatives per needed change against G1's flip
+- [ ] **In progress:** X1 (critic arithmetic and one verdict rule for both sides), GAP-07c (polymorphic share), XT (cross-tool replication), D15 (regulatory waiting time), Holocene $N_e$ retrieval, mapping of the remaining critic/ally arguments
+- [ ] **D follow-ups:** per-sequence prevalence (Axe, Taylor, Keefe–Szostak), multi-mutant decay, a noise null for the beneficial proxy
+- [ ] **C follow-ups:** a transversion-matched neutral model; what the transition excess is
 - [ ] **H follow-ups:** soft-selection rate limit and epistasis at human $R$; a sourced beneficial DFE and $M$; CIs on T50
 - [ ] **Sources:** Yoo 2025's $\mu$, to rescale $N_{e,\text{anc}}$. Verify Takahata 1995, Charlesworth 2009 and the Haak 2015 panel design
 

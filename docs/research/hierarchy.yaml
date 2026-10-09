@@ -282,7 +282,7 @@ nodes:
     target: A
   - type: depends-on
     target: A3c
-  load_bearing: false
+  load_bearing: true
   sourcing: firsthand
   status: checked
   verdicts:
@@ -881,11 +881,11 @@ nodes:
     target: B2b
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/B2e-keruru-measured-ne-vs-wright.md
 - id: B3
   title: 'k differs from mu: the family of Day k/mu values (N/Ne, 0.743, 0.5, 32.3, 800,000) and their status'
@@ -1769,11 +1769,11 @@ nodes:
     target: C4
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: supported
   claim_file: docs/research/claims/C5b-keruru-temporal-ne.md
 - id: C6
   title: 'Ancient DNA falsifies the constant-rate clock: 99.8% of fixation events fall before 7,000 BP; the clock predicts ~630 fixations in 350
@@ -1792,7 +1792,7 @@ nodes:
   verdicts:
     internal: arithmetic-error
     fidelity: n/a
-    external: untestable
+    external: contradicted
   claim_file: docs/research/claims/C6-molecular-clock-stopped.md
 - id: C7
   title: 'Day: ''genetic drift isn''t happening at all over the last 7000 years'', from the aDNA near-zero fixation counts'
@@ -1806,11 +1806,11 @@ nodes:
     target: B2
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: non-sequitur
     fidelity: n/a
-    external: pending
+    external: contradicted
   claim_file: docs/research/claims/C7-no-drift-last-7000-years.md
 - id: D
   title: Functional proteins are a vanishing fraction of sequence space (about 1e52 proteins ever vs 1e325 sequences), and the Wistar challenge
@@ -2017,11 +2017,11 @@ nodes:
     target: D
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: n/a
     fidelity: n/a
-    external: pending
+    external: supported
   claim_file: docs/research/claims/D1d-camestros-no-developments-since-1966.md
 - id: D2
   title: Rosenhouse ch.4 offers no quantitative refutation of Eden, Ulam or Schützenberger; evolutionary algorithms use designed fitness functions
@@ -2179,7 +2179,7 @@ nodes:
     target: D1a
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: pending
     fidelity: unverifiable

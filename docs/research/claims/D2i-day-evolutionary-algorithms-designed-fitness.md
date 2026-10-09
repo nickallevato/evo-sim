@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds      # valid against an existence-proof reading; silent on plausibility readings
   fidelity: n/a      # 
-  external: contested      # biological fitness feedback exists (survival/reproduction) but the sequence-to-fitness map is not designed; whether it is smooth is the open question
+  external: contested   # biological fitness feedback exists (survival/reproduction) but the sequence-to-fitness map is not designed; whether it is smooth is the open question; R4 D1: the spike's RNA walks are known-target and illustrate the objection; on the measured GB1 landscape uphill walks are not trapped at poor optima
 ---
 
 ## Statement (verbatim)
@@ -42,6 +42,8 @@ Evolutionary-algorithm success is conditional on a fitness mapping F: sequence -
 Written before any check. Under Day: evolutionary algorithms on empirical landscapes without built-in gradient fail to find high-fitness sequences. Under the opposing model: they succeed whenever measured landscapes have local gradients (low K). Result that would change a verdict: success/failure on DMS-derived landscapes (D2h step S2/S3).
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): the spike's RNA walks use a known target structure and so illustrate Day's objection; the discriminating test is a measured landscape (GB1), where uphill walks end well above WT and are not trapped at poor optima, though rarely at the top.
+
 Specification only: reuse the S2/S3 module.
 
 ## Simulator variables implied

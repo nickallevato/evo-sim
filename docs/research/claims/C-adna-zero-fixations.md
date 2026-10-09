@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "non-sequitur"   # neutral also predicts ~0 from <50% and 0.04-0.11 from 50-90%
   fidelity: n/a
-  external: "contested"   # observed 1 and 3 mildly above neutral at Ne 1e4, equal at Ne ~7k; admixture not modelled
+  external: "contested"   # observed 1 and 3 mildly above neutral at Ne 1e4, equal at Ne ~7k; admixture not modelled; R4 C1c/C1d do not address this intermediate-start statistic (their 21-class events start at >=95%); C1d reproduces the completions in kind (2 and 0 from Neolithic MAF >=10% vs Day's 1 and 3), with his event total 3.6x below the reproduction
 ---
 
 ## Statement (verbatim)
@@ -75,6 +75,8 @@ Written before any check runs.
 - Result that would change a verdict: a forward Wright-Fisher run (scaling validated first, per README rule 6) with a panel-like start-frequency spectrum in which the neutral expected count of 50-90% completions is clearly distinguishable from the d = 0.45 expectation; or evidence that the 1 and 3 observed loci are produced by sampling noise at n = 441-680.
 
 ## Check
+R4 C1d (research/checks/results/R4-C1d.md §3.6, review #10): Day's documented two-period pipeline (Z23046531) was run on the real genotypes. Sample (1,377 Neolithic / 683 modern vs his 1,372 / 680) and tested SNP count (1,143,870 vs 1,143,671) reproduce; completions from Neolithic MAF >= 10% reproduce in kind (2 on v62, 0 on v66; Day 1 and 3); the event total does not (63,631 vs 17,814). The 21-statistic results (C1c, C1d) concern alleles already near fixation and do not by themselves change this claim's verdicts.
+
 R4 C1 (`c1_ascertainment_sim.py`, exact WF chain; research/checks/results/R4-B3b-C1.md): this is Z23046531's two-period statistic (not the Z18525185 21-count, see C6/C1b). Under neutrality at Ne = 1e4 the expected events from <50% are ~0 and from 50-90% are 0.04 (v62) / 0.11 (v66); new-in-window mutations fixing inside 280 generations: 5e-151 per site. So the headline does not discriminate. Observed 1 and 3 are above the Ne = 1e4 expectation (P(>=3 | 0.11) = 2e-4; critic reading: faster than neutral, not a stopped clock) and equal expectation at Ne ~ 7,000; the tail is extremely Ne-sensitive and Ne = 1e4 is an unverified input (Day-side reading). Admixture not modelled. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none yet (spec: `research/checks/c_adna_neutral_expectation.py`, planned). Spec: forward Wright-Fisher, N in {1e4, 2e3}, 350 and 157 generations, start frequencies drawn from the Z23046531 Neolithic-bin spectrum, sample n = 441 / 680 diploids at both ends, count loci at 100%; report the expected count by start band. Validate scaling against an unscaled run first. · Result: not run · Review: pending
 

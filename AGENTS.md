@@ -54,7 +54,7 @@ research/.venv/bin/python -I research/checks/<check>.py [stage] [workers]
 3. Run it there with `ssh -o BatchMode=yes na-workhorse 'cd ~/projects/evo-sim && nohup research/.venv/bin/python -I research/checks/<x>.py … > research/checks/results/raw/<x>.out 2>&1 &'`. Record the hostname and md5s in a `raw/<x>.host` file.
 4. `rsync` `results/raw/<x>*` back. **Never commit or push from workhorse.** Check `uptime` first and share the cores.
 
-Keep local runs light: `nice -n 19`, at most 4 processes.
+**No computation on the workstation.** On 2026-10-09 parallel agent runs exhausted its RAM. Locally, do only git, file edits and trivial checks: a single process, under 500 MB, under a minute. Every smoke test, main run, post hoc run and large-file parse goes to workhorse. When several agents share workhorse, each uses at most 4 processes there, and keeps its RAM well under the host's 14 GB.
 
 ## Lifecycle of a check
 1. **Spec:** the target claims and their quotes, plus what each side's model predicts.
@@ -94,7 +94,8 @@ The latest refresh, with its proposals and inaccessible list, is [`docs/research
 - the "Still open" list in `docs/HANDOFF.md`;
 - the latest milestone post.
 
-As of 2026-10-09 (after review #8), R4 is in progress:
-- reviewed and integrated: H3, GAP-04/07/02, GAP-07b (direct alignment count), and the 2026-10-09 corpus refresh (8 new claims, 4 per side);
-- running: D1 sequence-space spike, C1c aDNA call depth;
-- queued: GAP-07c and a T2T re-run, B2e replication (temporal N_e), H follow-ups, then R5 synthesis.
+As of 2026-10-09 (after review #11), R4 is in progress:
+- reviewed and integrated: H3, GAP-04/07/02, GAP-07b, the 2026-10-09 corpus refresh, C1c and C1d (Day's aDNA 21: model, then real AADR genotypes; keruru's temporal N_e replicated) and D1 (sequence-space spike); A3 is now load-bearing (31 nodes incl. ROOT);
+- fix pass done, awaiting integration: X1 (critic arithmetic) with the single both-sides verdict rule (`research/checks/results/R4-X1-verdict-rule.md`, re-score in `R4-X1-rescore.md`; a blind audit of its application is running); GAP-07c (polymorphic share; reviews running);
+- running: XT (cross-tool replication), D15 (Hössjer waiting time), Holocene N_e retrieval (`docs/research/sources/holocene-ne.md`; RG-01 in `ledgers/gaps.md`), mapping cleanup (`argmap/mapping-proposals-2026-10-09.md`);
+- then: the remaining load-bearing checks listed in the R5 draft (`docs/research/R5-draft.md`), and R5 synthesis.

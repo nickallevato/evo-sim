@@ -106,17 +106,17 @@ footer{color:var(--muted);font-size:.82rem}
     <div class="stage"><b>R0 Scaffold</b><div class="bar"><i style="width:100%"></i></div><span>repo, env, templates</span></div>
     <div class="stage"><b>R1 Harvest</b><div class="bar"><i style="width:100%"></i></div><span>Day, critics, literature</span></div>
     <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>204 claim files</span></div>
-    <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>30 load-bearing nodes</span></div>
-    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:94%"></i></div><span>~94%, H3, four gaps and GAP-07b reviewed; D, C1c running</span></div>
+    <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>31 load-bearing nodes</span></div>
+    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:96%"></i></div><span>~96%, 27 checks reviewed (C1c, C1d, D1 added); X1, GAP-07c, XT, D15 in progress</span></div>
     <div class="stage"><b>R5 Synthesis</b><div class="bar"><i style="width:0%"></i></div><span>verdicts, simulator variables</span></div>
   </div>
   <div class="stats">
     <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
-    <span><b>204</b> claims (day 112 · critic 51 · ally 15 · lit 26)</span><span><b>271</b> typed objections</span><span><b>192</b> dated argument versions</span>
+    <span><b>204</b> claims (day 112 · critic 51 · ally 15 · lit 26)</span><span><b>293</b> typed objections</span><span><b>196</b> dated argument versions</span>
   </div>
   <div class="stats">
-    <span>Verdicts so far, internal: <b>101</b> holds · <b>17</b> non-sequitur · <b>6</b> arithmetic error · <b>57</b> pending</span>
-    <span>External: <b>24</b> supported · <b>102</b> contested · <b>9</b> contradicted · <b>5</b> untestable · <b>52</b> pending</span>
+    <span>Verdicts so far, internal: <b>102</b> holds · <b>17</b> non-sequitur · <b>6</b> arithmetic error · <b>56</b> pending</span>
+    <span>External: <b>26</b> supported · <b>103</b> contested · <b>11</b> contradicted · <b>4</b> untestable · <b>48</b> pending</span>
     <span>Citation fidelity: <b>36</b> accurate · <b>33</b> partial · <b>9</b> misread · <b>35</b> unverifiable · <b>11</b> pending</span>
   </div>
 </section>
@@ -142,6 +142,8 @@ footer{color:var(--muted);font-size:.82rem}
       <li><b>Done:</b> review #7 (H3): long-run runs on na-workhorse replace the 10k window ("1/300 reproduced" withdrawn); every verdict made conditional on hard vs soft selection; the K = 1000 hard-load extinction found to be an artefact</li>
       <li><b>Done:</b> review #8 (GAP-07b): a single 9.7× replaced by a stated bracket (~7–14×); Day's own weighting rationale (04-28, 05-13) added and tested; "SNV-only is a floor" withdrawn; the audit's own 22.5M upper bound retired; critics' numbers graded against the measurement</li>
       <li><b>Done:</b> corpus refresh since 2026-10-07: both sides quiet; 8 new claims from comment threads and one Zenodo draft, 4 per side (Matev ×3 and keruru; Day's 2nd-edition 1,400 / 1,587, "selection ended ~1800", "extinct within centuries", "no drift in 7,000 years")</li>
+      <li><b>Done:</b> reviews #9–#11 (C1c, C1d, D1): C1c's "thousands" from capture heterogeneity withdrawn (design flaw); C1d ran Day's documented two-period pipeline (3.6× off), a library-type damage test (not damage) and keruru's census sensitivity; D1 shown along an axis of readings, two fired pre-registered triggers acknowledged, "Day's m ≈ 1" (the audit's own wording) and pooled counts withdrawn</li>
+      <li><b>Done:</b> A3 (the required-fixation count) marked load-bearing: 31 nodes including ROOT</li>
     </ul></div>
   </div>
 </section>
@@ -187,10 +189,11 @@ footer{color:var(--muted);font-size:.82rem}
       <summary><span class="bid">C</span><span class="btitle">Ancient DNA<small>"Zero fixations in ~7,000 years"</small></span><span class="dots"></span></summary>
       <ul class="nodes">
         <li data-s="ok"><span class="id">C1</span><span class="claim"><span class="c">Zero fixations across the 1240k SNP panel</span><span class="f">The panel is built from sites that vary today, so it can't record completed fixations. Reviewers disagree: the critic side says the observed 1 and 3 exceed neutral (P≈0.0002); the Day side says the test has no power. Day's exact statistic is being simulated.</span></span></li>
-        <li data-s="ok"><span class="id">C1b</span><span class="claim"><span class="c">Day's exact time-binned statistic (new check, reviewed)</span><span class="f">Verdict: not reproducible, cannot adjudicate. The model misses Day's own table, so it isn't a valid null. Likely cause found: real ancient samples give only a few calls per site in old bins. Lowering per-site coverage drops the neutral count from ~6,500 to ~120 and moves events into the oldest bin, the same direction as Day's table. A direction, not yet a reproduction.</span></span></li>
+        <li data-s="ok"><span class="id">C1b</span><span class="claim"><span class="c">Day's exact time-binned statistic (new check, reviewed)</span><span class="f">Verdict: not reproducible, cannot adjudicate. Its suspected cause (few calls per site in old bins) was refuted by C1c: mean depth is 49 / 62 / 282 chromosomes in the three oldest bins. Superseded by C1c and C1d.</span></span></li>
         <li data-s="ok"><span class="id">C2</span><span class="claim"><span class="c">Overlapping generations vs standard model</span><span class="f">The ratio is an algebraic identity, so d is not independently measured.</span></span></li>
-        <li data-s="run"><span class="id">C1c</span><span class="claim"><span class="c">Day's "21" with real per-site coverage and ancestry turnover</span><span class="f">Running (pre-registered): per-site, per-bin call depth from AADR plus the steppe and Anatolian farmer pulses.</span></span></li>
-        <li data-s="ok"><span class="id">C6</span><span class="claim"><span class="c">The 630 comparator</span><span class="f">Day's comparison and this audit's earlier rescaling are both wrong. About 1,500–1,850 fixations are expected on an ascertained panel.</span></span></li>
+        <li data-s="ok"><span class="id">C1c</span><span class="claim"><span class="c">Day's "21" with real per-site coverage and ancestry turnover (reviewed)</span><span class="f">Model-conditional. At the textbook Nₑ ≈ 10⁴ neutral predicts 1,500–3,900 post-6000 events, 70–190× the 21 (for Day); closed Nₑ ~10⁵ or growth to 10⁶ gives 15–67 (for the critics). Day's d = 0.45 gives 739. No setting reproduces his table. Turns on the Holocene Nₑ, which nobody has sourced (retrieval running).</span></span></li>
+        <li data-s="ok"><span class="id">C1d</span><span class="claim"><span class="c">Day's statistic on the real AADR genotypes (reviewed)</span><span class="f">His stated method gives 62,757 eligible / 4,957 post-6000 events (v62) against 22,428 / 21; his own documented two-period pipeline reproduces his sample and SNP count but is 3.6× off on events; no code found. The excess is 98% transitions but not damage (library test). For Day: start table to 0.4 points; transversions alone 36–44. keruru's Nₑ replicates within 4% (his sampling term is halved, a minor slip); Day's Nₑ ≈ 2 is excluded. C6 and C7 now contradicted as stated.</span></span></li>
+        <li data-s="ok"><span class="id">C6</span><span class="claim"><span class="c">The 630 comparator, and the 21 itself</span><span class="f">Day's comparison and this audit's earlier rescaling are both wrong. About 1,500–1,850 fixations are expected on an ascertained panel. External verdict now <i>contradicted</i> as stated (C1d); his best reading is "underspecified", and it reopens as contested if he documents a pipeline.</span></span></li>
       </ul>
     </details>
 
@@ -198,8 +201,9 @@ footer{color:var(--muted);font-size:.82rem}
       <summary><span class="bid">D</span><span class="btitle">Wistar 1966 / sequence space<small>Eden 10³²⁵, Ulam, Weasel</small></span><span class="dots"></span></summary>
       <ul class="nodes">
         <li data-s="data"><span class="id">D</span><span class="claim"><span class="c">Quotations from the Wistar proceedings</span><span class="f">Six misquotes found, including Eden's 2.7M called "not implausible".</span></span></li>
-        <li data-s="run"><span class="id">D1</span><span class="claim"><span class="c">Spike: interchangeable routes per needed change</span><span class="f">Running (pre-registered): RNA folding (ViennaRNA neutral networks) and deep mutational scans (MaveDB / ProteinGym), measured against G1's 12–17 threshold; engages Day's "DMS shows ruggedness" (D2h).</span></span></li>
-        <li data-s="todo"><span class="id">D-sim</span><span class="claim"><span class="c">Sequence-space search simulations</span><span class="f">Specified; follows the D1 spike.</span></span></li>
+        <li data-s="ok"><span class="id">D1</span><span class="claim"><span class="c">Spike: interchangeable routes per needed change (reviewed)</span><span class="f">Per locus, about 1–6 routes (exact RNA structure 1.5–2.3; beneficial per protein site 0.21): below G1's flip, so Day's multiplication holds there. Per gene, a shared pool of ~51 beneficial mutations clears the flip for ~10 needed changes, not 25+. For Day: GB1 95% nonfunctional and rugged at single-letter steps; "reduce or destroy" holds as worded (61%). For the critics: 71% of singles keep function, "destroy" rare (2%), GB1 one connected network. Prevalence among random sequences (Axe, Taylor) untouched.</span></span></li>
+        <li data-s="run"><span class="id">D15</span><span class="claim"><span class="c">Hössjer: coordinated regulatory changes take far more than 9 My</span><span class="f">Running (pre-registered): Durrett–Schmidt / Lynch / Behe–Snoke baselines, then forward simulation over the number of mutations, target redundancy and intermediate fitness.</span></span></li>
+        <li data-s="todo"><span class="id">D-sim</span><span class="claim"><span class="c">Per-sequence prevalence and multi-mutant decay</span><span class="f">Axe / Taylor / Keefe–Szostak (literature and fidelity); ProteinGym multi-mutants; a noise null for the beneficial proxy.</span></span></li>
       </ul>
     </details>
 
@@ -298,8 +302,8 @@ footer{color:var(--muted);font-size:.82rem}
   <ol class="next">
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/explain/README.md">Explainers</a> at five levels: ELI5 · ELI8 · ELI10 · ELI12 · ELI18 (drafts, revised after R5).</li>
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/HANDOFF.md">Handoff briefing</a>: a neutral summary for outside teams, including the audit's own limitations.</li>
-    <li>Eight dated milestone posts, linked from the handoff.</li>
-    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 271 objections typed undermining / undercutting / rebutting, a genealogy of 192 dated versions since 1966, and seven gaps nobody closed.</li>
+    <li>Nine dated milestone posts, linked from the handoff.</li>
+    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 293 objections typed undermining / undercutting / rebutting, a genealogy of 196 dated versions since 1966, and seven gaps nobody closed.</li>
     <li>A README with the math, figures and roadmap, plus the Wide Peel icon.</li>
   </ol>
 </section>
@@ -307,8 +311,8 @@ footer{color:var(--muted);font-size:.82rem}
 <section>
   <h2>Next</h2>
   <ol class="next">
-    <li><b>Running now</b> (pre-registered; three reviews each when done): D spike (RNA folding + deep mutational scans: routes per needed change vs G1's 12–17), C1c (Day's aDNA "21" with real per-site coverage and ancestry turnover).</li>
-    <li>Queued from GAP-07b and the refresh: the polymorphic share of the alignment differences (GAP-07c), a T2T re-run, and an independent replication of keruru's measured Nₑ (B2e) before the Hard Limits verdict can move.</li>
+    <li><b>In progress:</b> X1, an arithmetic audit of every critic and ally number plus one written verdict rule applied to both sides (fix pass done; a blind audit of the rule's application running); GAP-07c, the polymorphic share (15.6% of human-derived differences; reviews running); XT, core results re-run in fwdpy11; D15, Hössjer's regulatory waiting time; the Holocene Nₑ retrieval that decides the C1c reading; mapping the 41 unplaced critic and ally arguments.</li>
+    <li>Queued: a transversion-matched neutral model for Day's 21; a T2T re-run of the event count; the remaining load-bearing claims without a reviewed check (R5 draft).</li>
     <li>H follow-ups: soft-selection rate limit and epistasis at human R; a sourced beneficial DFE; confidence intervals on T50. Then Yoo's μ / GAP-06.</li>
     <li>R5: final verdicts, sensitivity table, simulator variable list.</li>
   </ol>

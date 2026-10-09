@@ -5,7 +5,7 @@ side: day
 branch: A
 parent: A
 edges: [{type: supports, target: A}, {type: depends-on, target: A3c}]
-load_bearing: false
+load_bearing: true   # ROOT P1 and A P4 rest on the required-fixation count; it is the largest quantified factor in the audit (205M vs measured events, bracket 7-14x, R4 GAP-07b); promoted 2026-10-09 (R5 draft recommendation)
 sourcing: firsthand
 status: checked
 verdicts:

@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending      # one-sentence assertion
   fidelity: unverifiable      # book not accessed
-  external: contested      # Day's reply (D2i) turns on designed fitness functions
+  external: contested   # Day's reply (D2i) turns on designed fitness functions; R4 D1: RNA walks are known-target (D2i); on the measured GB1 landscape random-uphill walks end at a mean of 5.9x WT and at the best variant only 5.8% of the time: navigable, not trapped, not finding the top
 ---
 
 ## Statement (verbatim)
@@ -40,6 +40,8 @@ Existence of working evolutionary computations is offered as evidence against th
 Written before any check. Under the claimant (Rosenhouse): evolutionary computations with biologically derived fitness (e.g. protein-folding or measured-fitness landscapes) succeed. Under the opposing model: success occurs only where the designer builds in matching; with measured biological landscapes success rate falls with ruggedness. Result that would change a verdict: success of selection on an empirical, designer-independent landscape (DMS-derived).
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): RNA adaptive walks toward a known target never got trapped (known-target, as D2i objects). On the measured GB1 landscape random-uphill walks from functional starts end at a mean 5.9x WT; 5.8% reach the global maximum (1.1% from WT).
+
 Specification: NK / DMS-derived landscapes in D, step S2 and S3. No script.
 
 ## Simulator variables implied

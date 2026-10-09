@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending
   fidelity: n/a
-  external: pending
+  external: pending   # R4 C1d: the N_e near 2 reading is excluded by the measured between-bin F (0.002-0.014); the observed temporal N_e is ~1e4 (lower bound)
 ---
 
 ## Statement (verbatim)
@@ -57,6 +57,8 @@ Claim 3: a drift-variance Ne near 2. Z18320599's own Limitations section says th
 - Result that would change a verdict: Ne(theta; pedigree mu) versus Ne(theta; phylogenetic mu) differing by about 2x only (the Keightley numbers) would show the circularity is a factor of 2, not a refutation; a forward simulation with an admixture pulse reproducing a 29% to 91% excursion at some locus among 1.14M under Ne = 1e4 would show that the single-locus excursion is explicable without Ne near 2.
 
 ## Check
+R4 C1d (research/checks/results/R4-C1d.md §4; review #10): the measured drift variance between AADR bins implies N_e of order 1e4 (lower bound), not near 2; a population with N_e near 2 would carry almost no polymorphism, contradicting Day's own 11-bin table (C1c §8). The circularity point (θ = 4N_eμ presupposes k = μ) does not apply to the temporal estimate, which uses no mutation rate.
+
 Script: none yet (spec: part of `research/checks/c4_drift_variance_null.py`; add a genome-wide max-excursion statistic and admixture pulse). · Result: not run · Review: pending
 
 ## Simulator variables implied

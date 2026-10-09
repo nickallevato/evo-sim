@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"   # for the 10-90% bands (1.2-3.4x enrichment)
   fidelity: n/a
-  external: "contested"   # wrong sign for >=90% bands and same-population discovery; immaterial to the ~0 headline
+  external: "contested"   # wrong sign for >=90% bands and same-population discovery; immaterial to the ~0 headline; not tested by R4 C1c/C1d, which concern the near-fixation 21-statistic
 ---
 
 ## Statement (verbatim)

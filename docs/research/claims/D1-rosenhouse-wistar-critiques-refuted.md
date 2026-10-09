@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending      # book not accessed
   fidelity: unverifiable      # only Felsenstein's chapter summary seen
-  external: contested      # depends on D2/D2g checks
+  external: contested   # depends on D2/D2g checks; R4 D1: not tested directly; see D1a, D1b
 ---
 
 ## Statement (verbatim)

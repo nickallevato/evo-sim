@@ -741,7 +741,7 @@
   locator: https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶3-4
   audit_status: partly
   audit_basis: 'C5a pending; C5b answers without θ (closed-population caveat); R4 C1: tail extremely Nₑ-sensitive'
-  counter: [d061]
+  counter: [d061, d283]
   note: Nₑ ≈ 10⁴ comes from θ = 4Nₑμ; rs35619459 implies a drift-variance Nₑ near 2.
   hierarchy_edge: true
 - id: d061
@@ -752,9 +752,9 @@
   by: [keruru]
   first_date: 2026-08-31
   locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'
-  audit_status: partly
-  audit_basis: 'C5b pending; claims/C5a: closed-population assumption across a replacement window'
-  counter: []
+  audit_status: upheld
+  audit_basis: 'C5b external supported (R4 C1d: temporal N_e replicates within 1-8% in two AADR releases; it uses no mutation rate, so the θ-circularity does not apply to it)'
+  counter: [d284]
   note: Temporal-method Nₑ (8,139; 9,835) uses no μ, no coalescent, no substitution identity.
   hierarchy_edge: true
 - id: d062
@@ -767,7 +767,7 @@
   locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'
   audit_status: partly
   audit_basis: C4 and C5b agree in direction (Nₑ rising); they disagree on magnitude
-  counter: []
+  counter: [d284]
   note: Contests reading the drift-variance numbers as Nₑ near 2 rather than C4's fold-change.
   hierarchy_edge: true
   edge_flag: 'judgement call, kept 2026-10-08: C5b agrees with C4''s direction (Nₑ rising); its window averages answer C4''s use against C5; main target is C5a'
@@ -847,7 +847,7 @@
   locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 3 (Rosenhouse p.124)
   audit_status: untested
   audit_basis: D1a pending/unverifiable; no citations in the paragraph; ch.6 not read
-  counter: [d074, d083]
+  counter: [d074, d083, d291]
   note: Protein-space geometry makes Eden's combinatorics 'hopelessly naive'.
   hierarchy_edge: true
 - id: d069
@@ -859,9 +859,9 @@
   first_date: '2022'
   date_note: Book year 2022.
   locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 3
-  audit_status: untested
-  audit_basis: as D1a → D3
-  counter: [d074, d083]
+  audit_status: partly
+  audit_basis: 'D1a external contested (R4 D1): local connectivity supports D1a''s premise; D''s per-sequence prevalence and cross-family claims are untouched'
+  counter: [d074, d083, d291]
   note: Same, against Day's use of Eden.
   hierarchy_edge: true
 - id: d070
@@ -1042,9 +1042,9 @@
   by: [Vox Day]
   first_date: 2026-10-06
   locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 5
-  audit_status: untested
-  audit_basis: D2h pending/unverifiable; no DMS source in the corpus
-  counter: [d166]
+  audit_status: partly
+  audit_basis: 'D2h external contested (R4 D1): ''reduce or destroy'' passes as worded in 61% of DMS datasets, but the functional set is connected and 71% of singles keep half of WT-like function, which is the local geometry D1a alludes to'
+  counter: [d166, d287]
   note: Deep mutational scanning shows rugged landscapes.
   hierarchy_edge: true
 - id: d084
@@ -1424,7 +1424,7 @@
   locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 47-48
   audit_status: upheld
   audit_basis: G3 holds/accurate/contested; Day calls the Darwillion 'a rhetorical absurdity' (G4)
-  counter: [d116, d117, d222]
+  counter: [d116, d117, d222, d290]
   note: p^n prices a pre-specified list; evolution needs some 20M of a large pool.
   quote: only that some 20 million out of an enormous pool of candidate mutations become fixed.
   hierarchy_edge: true
@@ -1438,7 +1438,7 @@
   locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 47-48
   audit_status: upheld
   audit_basis: as G3 → Ga
-  counter: [d116, d117, d222]
+  counter: [d116, d117, d222, d290]
   note: Same, against the Darwillion.
   hierarchy_edge: true
 - id: d116
@@ -1451,7 +1451,7 @@
   locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶28
   audit_status: partly
   audit_basis: 'R4 G1: G3b is an incomplete dilemma (internal non-sequitur); the neutral-is-not-functional half is valid; the neutral horn relies on B2/B3, whose N/Nₑ leg Day withdrew (B3g)'
-  counter: [d176, d241]
+  counter: [d176, d241, d288]
   note: If the fixations are interchangeable they are neutral noise that cannot explain function.
   hierarchy_edge: true
 - id: d117
@@ -1740,7 +1740,7 @@
   locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'
   audit_status: partly
   audit_basis: closed-population caveat (claims/C5a)
-  counter: []
+  counter: [d284]
   note: A temporal-method Nₑ of ~10⁴ needs no θ.
   hierarchy_edge: false
 - id: d140
@@ -1950,7 +1950,7 @@
   locator: research/checks/RESULTS.md §C1b
   audit_status: upheld
   audit_basis: 'R4 C1b verdict: not reproducible; cannot adjudicate'
-  counter: [d236]
+  counter: [d236, d279]
   note: The 21-count cannot be reproduced from the published procedure.
   hierarchy_edge: false
 - id: d156
@@ -2092,9 +2092,9 @@
   first_date: '2022'
   date_note: Book year 2022.
   locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 3
-  audit_status: untested
-  audit_basis: both sides uncited (claims/D2h)
-  counter: [d074, d083]
+  audit_status: partly
+  audit_basis: 'D1a external contested (R4 D1): local connectivity measured (RNA networks ~1e33, 71% functional DMS singles, GB1 one component) against D2h''s ''destroy''; ''hopelessly naive'' and Eden''s cross-family arithmetic untested'
+  counter: [d074, d083, d291]
   note: Protein-space results do not support Eden. Predates D2h.
   hierarchy_edge: false
 - id: d167
@@ -3412,8 +3412,9 @@
   by: [keruru]
   first_date: 2026-08-31
   locator: https://zenodo.org/records/22184713 adna-draft-1.md s6 (RF-12, RF-13)
-  audit_status: untested
-  counter: []
+  audit_status: partly
+  audit_basis: 'B2e external contested (R4 C1d): RF-12''s ''three orders'' not established at the unsourced 1e7 census; a gap of at least ~6x survives at any census >=1e5; RF-13 partly supported'
+  counter: [d285]
   note: 'A temporal N_e measured from ancient genomes (6,933–8,139) is about 700–820× below Wright''s 4N/(V_k+2) applied to a Bronze Age census of ~1e7; a smaller N_e at a given census raises the ceiling. Unreviewed draft with [CHECK] marks and an inconsistent ratio (1e-4 / 4e-4 / 8e-4); replication pending.'
   hierarchy_edge: true
 - id: d268
@@ -3516,8 +3517,8 @@
   first_date: 2026-08-31
   locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'; https://zenodo.org/records/22184713 s6
   audit_status: partly
-  audit_basis: 'C7 internal non-sequitur (few completions are the neutral expectation, claim C); measured temporal frequency change gives N_e ~ 8,000–10,000; drift vs admixture in the window is the C1c question'
-  counter: []
+  audit_basis: 'C7 external contradicted for frequency movement (R4 C1d: F_adj 0.002-0.014 between bins; keruru''s N_e replicates); attribution to drift vs admixture/composition still open'
+  counter: [d284]
   note: 'Allele frequencies in the same AADR data change between dated samples at a rate that implies N_e of order 1e4, which is drift operating, not its absence; completed fixations are the wrong statistic for detecting it.'
   hierarchy_edge: false
 - id: d276
@@ -3558,4 +3559,290 @@
   audit_basis: 'applied (R4-GAP07b §0 bracket critic side, §11 graded table and attributions; 523M corrected to 521M)'
   counter: []
   note: '9.7× was the lowest ratio the note''s own numbers support (10–14× with human-lineage and polymorphism corrections); "SNV-only is a floor" contradicted the data; two Day credits overreached (523M, 261M); critics'' independent numbers were never graded; errors were not attributed.'
+  hierarchy_edge: false
+- id: d279
+  attacker: chk:C1c
+  target: chk:C1b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1c.md Result in brief item 3, §1
+  audit_status: upheld
+  audit_basis: 'measured mean depth 49 / 62 / 282 chromosomes per site in the three oldest bins (AADR v62.0.p1 anno)'
+  counter: [d286, d292, d293, d294]
+  note: 'C1b''s likely cause for the unreproduced 21 (sparse per-site calls in old bins) is refuted at the level of mean depth; the earlier ''thousands'' from capture heterogeneity was a design flaw (modern bin given Gamma capture) and is withdrawn.'
+  hierarchy_edge: false
+- id: d280
+  attacker: chk:C1c
+  target: C6
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1c.md §2, §6, §8
+  audit_status: partly
+  audit_basis: 'C6 external contradicted (on C1d); C1c is model-conditional: no cell passes the full gate'
+  counter: [d286, d292, d293, d294]
+  note: 'What the 21 means depends on the Holocene N_e trajectory, which is unsourced: deficit against neutral at N_e <= ~5e4 or under strong replacement (credit to Day), neutral-compatible at closed N_e ~1e5-3e5 or growth to 1e5-1e6 (credit to critics). Day''s own d = 0.45 gives 739, so his parameter does not produce the 21.'
+  hierarchy_edge: false
+- id: d281
+  attacker: chk:C1d
+  target: C6
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1d.md Result in brief items 1-3, §3.1, §3.6
+  audit_status: upheld
+  audit_basis: 'C6 external contradicted as stated; best Day reading ''underspecified''; reopens as contested if a pipeline is documented'
+  counter: [d295, d296, d297]
+  note: 'Day''s stated method on the real AADR genotypes gives 62,757 eligible / 4,957 post-6000 events (v62) and 48,888 / 3,649 (v66) against 22,428 / 21; 132 grid cells and his documented two-period pipeline (sample and SNP count reproduced, events 3.6x) do not close it; library type and damage rate do not explain the transition excess. Credit to Day: start table to 0.4 points; near-fixation description right in kind.'
+  hierarchy_edge: false
+- id: d282
+  attacker: chk:C1d
+  target: C7
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1d.md §4
+  audit_status: upheld
+  audit_basis: 'C7 external contradicted for frequency movement; drift attribution open'
+  counter: [d295, d296, d297]
+  note: 'Allele frequencies move between dated AADR bins (F_adj 0.002-0.014 over 28-250 generations); ''no drift'' in the sense of no movement is contradicted. Whether it is drift or admixture/composition is open (composition explains 6-17% of the BA-to-Medieval F).'
+  hierarchy_edge: false
+- id: d283
+  attacker: chk:C1d
+  target: C5a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1d.md Result in brief item 6, §4
+  audit_status: upheld
+  audit_basis: 'measured between-bin F implies temporal N_e of order 1e4 (lower bound); a population with N_e near 2 would carry almost no polymorphism'
+  counter: [d295, d296, d297]
+  note: 'Day''s N_e near 2 (C5a) is excluded by the measured drift variance and is inconsistent with his own polymorphic 11-bin table.'
+  hierarchy_edge: false
+- id: d284
+  attacker: chk:C1d
+  target: C5b
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1d.md §4 (sampling correction)
+  audit_status: partly
+  audit_basis: 'C5b internal holds with a slip-ledger note (X1 rule: <25%, no flip); external supported'
+  counter: [d295, d296, d297]
+  note: 'keruru''s sampling term 1/(2S), with S an allele count, under-corrects pseudo-haploid bins by half; correcting it raises his N_e by 7-19% on the headline windows (0.7-26.5% across windows), in the direction he disclosed. Minor; his values replicate within 1-8%.'
+  hierarchy_edge: false
+- id: d285
+  attacker: chk:C1d
+  target: B2e
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1d.md Result in brief item 7, §4
+  audit_status: partly
+  audit_basis: 'B2e external contested: RF-12 not established at 1e7; >=6x gap at any census >=1e5; RF-13 partly supported'
+  counter: [d295, d296, d297]
+  note: 'The temporal N_e is a lower bound on a drift N_e; for Wright''s 4N/(V_k+2) to hold the BA-to-Medieval F would have to be 83% non-drift at N = 1e5, 98.3% at 1e6, 99.83% at 1e7 (break-even census ~17k). ''Three orders of magnitude'' rests on the unsourced 1e7 census.'
+  hierarchy_edge: false
+- id: d286
+  attacker: chk:C1d
+  target: chk:C1c
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1d.md §3.4, §6
+  audit_status: partly
+  audit_basis: 'C1c''s neutral-plus-error model predicted the real all-SNP counts within ~20%, but the library test shows the excess is not damage-specific'
+  counter: [d295, d296, d297]
+  note: 'C1c''s 0.1% false-minor-call term reproduces the size of the real excess for a reason the data do not support (damage-prone libraries do not carry it); the ''assay error'' reading on the critics'' side is withdrawn. The agreement is partly coincidence and the model is not a valid null for Day''s table.'
+  hierarchy_edge: false
+- id: d287
+  attacker: chk:D1
+  target: D2h
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-D1-spike.md §0.3, §4
+  audit_status: partly
+  audit_basis: 'D2h external contested: partial support as worded'
+  counter: [d298, d299, d300]
+  note: '''Reduce or destroy'' passes as worded (majority below 0.8 of WT-like in 61% of 114 DMS sets); ''destroy'' alone is a minority (median 11%, majority in 2%); GB1 is rugged at single-nucleotide steps (67-158 local maxima across margins) yet its functional set is one connected component. ''Eden confirmed'' is untested.'
+  hierarchy_edge: false
+- id: d288
+  attacker: chk:D1
+  target: G3b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-D1-spike.md §0.2, §0.5 Tables B-C
+  audit_status: partly
+  audit_basis: 'G3b internal non-sequitur stands (incomplete dilemma); D1 measures the middle case'
+  counter: [d298, d299, d300]
+  note: 'The middle case is real at gene granularity (a shared pool of 51 proxy-beneficial SNVs clears the G1 flip for ~10 needed changes at s = 0.01) but not at locus granularity (exact-outcome lambda ~1), where the specific horn stands (credit to Day).'
+  hierarchy_edge: false
+- id: d289
+  attacker: chk:D1
+  target: Ga
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-D1-spike.md §0.5 Table B
+  audit_status: partly
+  audit_basis: 'any-n-of-M comparison, first measured fraction; an upper bound with no noise null'
+  counter: [d298, d299, d300]
+  note: 'Against the ''one specific outcome per needed change'' reading (m ~ 1): exact RNA structures have 1.5-2.3 one-step routes given a route, and the within-gene beneficial fraction (median 3.6%, upper bound) is 82-1,600x G1''s requirement for n <= 2e5 and 8-16x for n = 2e7 at p = 0.02; scaled to a 1% genome share it falls below 1 at n = 2e7.'
+  hierarchy_edge: false
+- id: d290
+  attacker: chk:D1
+  target: G3
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-D1-spike.md §0.2, §0.5 Table C, §3.5
+  audit_status: partly
+  audit_basis: 'G3 premise P2 supported within genes, not per locus; pooling across genotypes withdrawn as supply'
+  counter: [d298, d299, d300]
+  note: 'Against the ''plenty of interchangeable alternatives'' reading: per needed change the alternatives are few (exact structure lambda ~1; beneficial-proxy per codon 0.21), a gene''s pool is shared (k = 25 changes from 51 SNVs: P 0.07 at s = 0.01; 4e-20 at k = 50), and drifting across the neutral network does not rescue a short locus (median 36-80 neutral steps needed vs 0.03-0.06 available).'
+  hierarchy_edge: false
+- id: d291
+  attacker: chk:D1
+  target: D1a
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-D1-spike.md §0.3, §9
+  audit_status: partly
+  audit_basis: 'D1a external contested: partial support at the local level'
+  counter: [d298, d299, d300]
+  note: 'Local connectivity that D1a alludes to is measured (RNA networks ~1e33; 71% functional singles; GB1 one component), but ''hopelessly naive'' goes beyond it: Eden''s cross-family arithmetic is untouched and exact-outcome lambda is ~1.'
+  hierarchy_edge: false
+- id: d292
+  attacker: rev:R4-C1c-correctness
+  target: chk:C1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #9)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1c-correctness.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-C1c.md Review resolution)'
+  counter: []
+  note: 'Capture heterogeneity was applied to the modern bin too (95-99% of the ''inflation'' sat in 0-500 BP); the 10000+ bin is not at 10,500 BP (median 15.5 kBP); ''strongest lever'' and ''tracked fraction only with S21 in thousands'' withdrawn.'
+  hierarchy_edge: false
+- id: d293
+  attacker: rev:R4-C1c-steelman-day
+  target: chk:C1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #9)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1c-steelman-day.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-C1c.md Review resolution)'
+  counter: []
+  note: 'The ''N_e >= 1e5 is consistent'' cells ignored Day''s tracked fraction; the textbook-N_e error cell reproduces his eligible count and start table; ''literature Holocene N_e well above 1e4'' was unsourced; stasis is Day''s stated model.'
+  hierarchy_edge: false
+- id: d294
+  attacker: rev:R4-C1c-steelman-critic
+  target: chk:C1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #9)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1c-steelman-critic.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-C1c.md Review resolution)'
+  counter: []
+  note: 'Growth schedules (1e4 to 1e6 gives 15-35) were left out of the summary; keruru''s own downward-bias caveat (up to 5x) was ignored; the error-rate result (the one prediction that broke the critics'' way) was omitted; critic errors unattributed.'
+  hierarchy_edge: false
+- id: d295
+  attacker: rev:R4-C1d-correctness
+  target: chk:C1d
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #10)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1d-correctness.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-C1d.md Review resolution)'
+  counter: []
+  note: 'Day''s documented two-period pipeline (published counts) was skipped; the regional-composition caveat on keruru was asserted, not computed (6-20%); ''no setting gives tracked 0.65-0.80'' was false (m = 40-45).'
+  hierarchy_edge: false
+- id: d296
+  attacker: rev:R4-C1d-steelman-day
+  target: chk:C1d
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #10)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1d-steelman-day.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-C1d.md Review resolution)'
+  counter: []
+  note: 'No damage or library-type dimension in the grid; ''scripts do not exist'' overstated (promise is in Z23046531; only Zenodo searched); the 17,806 calibration unused; the transversion comparison left unresolved in opposite directions.'
+  hierarchy_edge: false
+- id: d297
+  attacker: rev:R4-C1d-steelman-critic
+  target: chk:C1d
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #10)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1d-steelman-critic.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-C1d.md Review resolution)'
+  counter: []
+  note: '''Transversions same order as 21'' over-read (6-13x per eligible allele); damage asserted after conceding it could not be separated; ''untestable'' wrong for a tested statistic; ''not established'' harsh on RF-13; the composition point speculative and mis-scaled.'
+  hierarchy_edge: false
+- id: d298
+  attacker: rev:R4-D1-correctness
+  target: chk:D1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #11)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-D1-correctness.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-D1-spike.md Review resolution)'
+  counter: []
+  note: 'Two pre-registered ''would change the reading'' triggers fired unacknowledged; pooled counts not comparable to m*; GB1 ''strictly uphill'' used an unstated 0.1 margin; the walk sampler under-mixed (reach inflated 1.1-1.7x).'
+  hierarchy_edge: false
+- id: d299
+  attacker: rev:R4-D1-steelman-day
+  target: chk:D1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #11)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-D1-steelman-day.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-D1-spike.md Review resolution)'
+  counter: []
+  note: 'Tolerance rows counted as alternatives (Day''s ''neutral noise'' horn); ''Day''s m ~ 1'' was the docstring''s, not Day''s; the gene pool is shared (k-of-m); ''reduce or destroy'' was split; pooling assumes a population that does not exist.'
+  hierarchy_edge: false
+- id: d300
+  attacker: rev:R4-D1-steelman-critic
+  target: chk:D1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #11)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-D1-steelman-critic.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (research/checks/results/R4-D1-spike.md Review resolution)'
+  counter: []
+  note: 'Exact-structure-per-locus is Day''s horn by construction; the pre-registered P10 comparison (beneficial fraction vs G1''s requirement) was never reported; the s-sweep only went down; critic-favourable facts were kept out of §0; the critics'' ''strong form'' was unsourced.'
   hierarchy_edge: false

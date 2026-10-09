@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending      # the inference from hemoglobin variants to landscape ruggedness is not worked out
   fidelity: accurate      # Day's quotation matches Wald p.19 (two sentences combined)
-  external: contested      # ascertainment bias and counter-examples (Lewontin, Wistar pp.76-79); modern DMS not in corpus
+  external: contested   # ascertainment bias and counter-examples (Lewontin, Wistar pp.76-79); modern DMS not in corpus; R4 D1: hemoglobin not tested; modern DMS gives 53% of singles below 80% of the WT-like level but 71% keeping at least half, compatible with Wald's 'markedly change the properties' and with retained function
 ---
 
 ## Statement (verbatim)
@@ -48,6 +48,8 @@ Observation O: among known hemoglobin variants, a single amino-acid substitution
 Written before any check. Under Day's inference: in a DMS dataset, the median fraction of tolerated single substitutions per position is low (< ~20%) for most globular proteins. Under the opposing inference: it is high (> ~40%) with most positions tolerating many substitutions, and most deleterious effects are mild. Result that would change a verdict: harvested DMS distributions (e.g. median tolerated fraction) from the literature.
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): hemoglobin itself is not tested. Across 114 DMS sets, 53% of single substitutions fall below 80% of the WT-like level but 71% keep at least half.
+
 No script (data not in corpus). Action: harvest DMS datasets (e.g. ProteinGym-style summaries).
 
 ## Simulator variables implied

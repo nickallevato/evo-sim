@@ -108,3 +108,5 @@ R0 ██████████  R1 ██████████  R2 ██�
 
 **Argument map now:** 271 typed objections, 192 dated versions, 204 claims. Surviving their objections: 102 as argued; 154 under a strict reading of the audit's verdicts; 111 under a lenient one.
 
+
+*Update 2026-10-09 (later): C1c, C1d and D1 are done and reviewed; see [milestone 9](2026-10-09-9-ancient-dna-and-sequence-space.md).*

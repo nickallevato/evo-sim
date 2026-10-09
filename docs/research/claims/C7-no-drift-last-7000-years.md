@@ -7,11 +7,11 @@ parent: C
 edges: [{type: depends-on, target: C}, {type: supports, target: B2}]
 load_bearing: false  # comment-level restatement of C
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: non-sequitur   # few or no fixations from intermediate frequency in ~280 generations is what neutral drift predicts at N_e ~ 1e4 (claim C, R4 C1/C1b); it does not imply no allele-frequency drift
   fidelity: n/a
-  external: pending   # temporal allele-frequency change in the same AADR data is observed (C5b, B2e); attributing it to drift vs admixture vs selection is the C1c question
+  external: contradicted   # for 'no allele-frequency movement': R4 C1d measures F_adj 0.002-0.014 between AADR bins (28-250 generations), far from zero; attribution to drift vs admixture, structure and composition stays open (B2e)
 ---
 
 ## Statement (verbatim)
@@ -38,6 +38,8 @@ None cited.
 Covered by C1/C1b/C1c.
 
 ## Check
+R4 C1d (research/checks/results/R4-C1d.md §4, review #10, 2026-10-09): on the real AADR genotypes allele frequencies change between dated bins (F_adj 0.002-0.014 across 28-250 generations; keruru's temporal N_e replicates within 1-8%), so "no drift" in the sense of no frequency movement is contradicted. Whether the movement is drift or admixture/composition is open: composition among five regions explains 6-17% of the BA-to-Medieval F, and within-region N_e (3.4k-14.6k) does not move toward a no-drift reading. C1c: the stasis edge (N_e -> infinity) gives about 2-5 post-6000 events against 21 observed; Day's other position (C5a, N_e near 2) predicts no polymorphism and is excluded by the measured F.
+
 None separate. Precedes Day's Z23046531 counts (2026-09-29: 1 and 3 completions). From the 2026-10-09 corpus refresh (D-5a).
 
 ## Simulator variables implied

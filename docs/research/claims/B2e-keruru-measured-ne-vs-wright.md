@@ -7,11 +7,11 @@ parent: B2b
 edges: [{type: attacks, target: B2b}]
 load_bearing: false  # attacks the input of a load-bearing node (B2b); unreviewed draft
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: holds   # direction is right: if N_e << 4N/(V_k+2) at a given census, 4N_e < G holds up to a much larger census, so X = (V_k+2)G/16 understates the ceiling; 0.57 / (6.9e-4 to 8.1e-4) = 700-820x
   fidelity: n/a
-  external: pending   # Draft 1, '[CHECK]' marks, ratio stated three ways (1e-4, 4e-4, 8e-4); census 1e7 assumed; temporal N_e in an admixing population is model-dependent; needs independent AADR replication before B2/B2b can move
+  external: contested   # R4 C1d: score RF-12 and RF-13 separately. RF-12 ('three orders of magnitude') is not established at the unsourced census of 1e7 (it needs <0.2% non-drift F); a gap of at least ~6x survives at any census >=1e5 (59x at 1e6; break-even census ~17k), robust to the non-drift terms tested (ancestry axis <4%, composition 6-17%). RF-13 ('measurably wrong where it can be tested', not a refutation) is partly supported: the measurement replicates and is a lower bound
 ---
 
 ## Statement (verbatim)
@@ -47,6 +47,8 @@ Not run. A replication would estimate temporal N_e from AADR frequency series wi
 - Result that would change a verdict: an independent replication within a factor of 3 of keruru's N_e would move B2b external toward contradicted (as a census bound); a replication near 0.5 N would support B2b's input.
 
 ## Check
+R4 C1d (research/checks/results/R4-C1d.md §4, review #10, 2026-10-09): independent replication of the temporal N_e on AADR v62.0.p1 and v66.p1 (see C5b): within 1-8% of all seven published values. Against Wright's N_e = 4N/(V_k+2) as keruru frames it (census and V_k neither retrieved nor tested here): measured BA-to-Medieval F is 5.9x the drift-only F at N = 1e5 (83% would have to be non-drift for Wright to hold), 59x at 1e6 (98.3%), 591x at 1e7 (99.83%); break-even census ~16,900. A WF simulation shows the estimator is unbiased for closed populations and ancestry pulses up to 10% and halves at a 40% pulse. Minor slip (ledger): the halved pseudo-haploid correction (C5b).
+
 None yet (proposed: independent AADR temporal-N_e replication; queue in `research/checks/REVIEW.md`). From the 2026-10-09 corpus refresh (C-9).
 
 ## Simulator variables implied

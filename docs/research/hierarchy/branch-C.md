@@ -64,17 +64,17 @@ flowchart TD
   n_C5a --> n_C5
   n_C5a -.->|attacks| n_C5
   n_C5a -->|depends-on| n_C4
-  n_C5b["C5b: A temporal-method Ne from ancient genomes (8,139 over 102 ge<br/><small>critic · int:pending · fid:n/a · ext:pending</small>"]
+  n_C5b["C5b: A temporal-method Ne from ancient genomes (8,139 over 102 ge<br/><small>critic · int:holds · fid:n/a · ext:supported</small>"]
   style n_C5b fill:#dbeafe,stroke:#1d4ed8
   n_C5b --> n_C5
   n_C5b -.->|attacks| n_C5a
   n_C5b -.->|attacks| n_C4
-  n_C6["C6: Ancient DNA falsifies the constant-rate clock: 99.8% of fixa<br/><small>day · int:arithmetic-error · fid:n/a · ext:untestable</small>"]
+  n_C6["C6: Ancient DNA falsifies the constant-rate clock: 99.8% of fixa<br/><small>day · int:arithmetic-error · fid:n/a · ext:contradicted</small>"]
   style n_C6 fill:#fde2c8,stroke:#b45309
   n_C6 --> n_C
   n_C6 -->|supports| n_C
   n_C6 -->|supports| n_B4
-  n_C7["C7: Day: 'genetic drift isn't happening at all over the last 700<br/><small>day · int:non-sequitur · fid:n/a · ext:pending</small>"]
+  n_C7["C7: Day: 'genetic drift isn't happening at all over the last 700<br/><small>day · int:non-sequitur · fid:n/a · ext:contradicted</small>"]
   style n_C7 fill:#fde2c8,stroke:#b45309
   n_C7 --> n_C
   n_C7 -->|depends-on| n_C

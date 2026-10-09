@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: non-sequitur      # the published Weasel is a truncation-selection algorithm; the 540,000 figure is for a different system (a population with constant s); a Weasel with Day's own 12 offspring and 5% mutation (exploratory run) completes in ~1,760 generations, not 540,000
   fidelity: n/a      # Day's inference, not a source quote
-  external: contested      # the "known target" objection (also Day's) cuts the other way
+  external: contested   # the "known target" objection (also Day's) cuts the other way; R4 D1: known-target walks are Weasel-like and uninformative on this
 ---
 
 ## Statement (verbatim)
@@ -42,6 +42,8 @@ Claim: T_Weasel(Dawkins parameters) = 50 generations; T_real(population-genetic 
 Written before the algorithm runs. Under Day: T(N=12, P=0.05, truncation) is much larger than 50 and scales as 540,000/50 = 10^4. Under the opposing model: T scales weakly with N (log N) and is 10^2-10^3. Result that would change a verdict: T(N=12, P=5%) >= 10^5 (not observed).
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): the RNA walks are known-target and Weasel-like; they carry no weight on this claim.
+
 Exploratory scratch run (python3 -I, numpy, seed 20261007/8, not committed): Weasel with 28 letters, alphabet 27, 400 replicates each: N = 100, P = 0.05: mean 78.3 (elitist and always-different-letter variants 78-79); N = 12, P = 0.05: mean 1,763 (300 replicates); N = 100, P = 0.01: mean 140. Not reproducing 50 (Day) is a 1.6x difference. Ranks of the claim: arithmetic of the 'four orders' holds only for the non-Weasel system.
 
 ## Simulator variables implied

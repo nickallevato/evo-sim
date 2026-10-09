@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending
   fidelity: pending
-  external: pending
+  external: pending   # R4 C1d: keruru's windowed trajectory replicates (7.8k-10.5k across windows, trajectory shape held, P13), so the variation C4 claims is not contradicted; a sourced Holocene European N_e is a recorded retrieval gap (gaps.md, in progress)
 ---
 
 ## Statement (verbatim)
@@ -60,6 +60,8 @@ Link to parameters.yaml: `population.Ne_modern_human` = 1.0e4 (textbook, unverif
 - Result that would change a verdict: a simulation with constant Ne = 1e4, sample sizes matching each bin, and the Britain/pan-European admixture history reproduces a 3-5x range of apparent drift variance (verdict: artefact) or does not (verdict: real variation, magnitude pending).
 
 ## Check
+R4 C1c/C1d (research/checks/results/R4-C1c.md §2; research/checks/results/R4-C1d.md §4): the Holocene N_e trajectory is the load-bearing, unsourced input to the C1c reading of Day's 21 (deficit at N_e <= ~5e4; neutral-compatible at closed N_e >= ~1e5 or growth to 1e5-1e6). C1d's temporal estimates (lower bounds on drift N_e) are 6.4k-10.5k by window and release; within-region BA-to-Medieval values 3.4k-7.2k (Scandinavia 14.6k). A literature retrieval of IBD and aDNA demographic estimates is in progress (gaps.md).
+
 Script: none yet (spec: `research/checks/c4_drift_variance_null.py`, planned): simulate bins with Ne constant at 1e4 and with the paper's reported n per bin; add a migration pulse of 10-50% in a Bronze-Age bin; estimate Var_drift with Day's correction; report the ratio. · Result: not run · Review: pending
 
 ## Simulator variables implied

@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending      # conclusion (evolution cannot search the space) needs a landscape-structure premise that D does not state
   fidelity: partial      # Eden's 20^250 reproduces; Eden's 10^52 counts protein molecules, not functional proteins; Waddington conceded the minute-fraction premise
-  external: contested      # functional-fraction estimates differ by ~53 orders of magnitude (Axe vs Taylor) and landscape structure is disputed
+  external: contested   # functional-fraction estimates differ by ~53 orders of magnitude (Axe vs Taylor) and landscape structure is disputed; R4 D1 bears on local landscape structure only: exact-outcome alternatives per change lambda ~1 (RNA m given a route 1.5-2.3); GB1 rugged at SNV steps yet one connected component; per-sequence prevalence (D10-D12) and cross-family connectivity untouched
 ---
 
 ## Statement (verbatim)
@@ -65,6 +65,8 @@ Written before the S1/S2 checks below.
 - Result that would change a verdict: an empirical estimate of K (or of the fraction of single-step neighbors of a functional protein that remain functional) from deep mutational scanning data would move D's external verdict: if p(neighbor functional) is high (> ~30%) and landscapes percolate, D's inference is contradicted; if low and non-percolating, supported.
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): the spike measured alternatives per needed change along an axis of readings. Exact RNA structure: m given a route 2.3 (m_all 0.05), far-from-S1 1.5, tRNA 1.5; lambda ~1 at s = 0.01, below the G1 flip (lambda_50 7-17) even at s = 0.05. Within 2 bp: 3.4. Pre-registered same-shape class: 28 (a fired trigger, dominated by helix loss); refined without helix loss 11.8 at L >= 76. DMS: tolerated substitutions per codon 5.1 of 6.6 (Day's 'neutral noise' horn); beneficial-proxy per codon 0.21 (lambda 0.10); gene-level beneficial pool 51 (0-1,760), which clears the flip for ~10 needed changes per gene at s = 0.01 but not 25+ and not at s = 0.001. Within-gene beneficial fraction (3.6%, upper bound) is 82-1,600x G1's requirement for n <= 2e5. Per-sequence prevalence and cross-family connectivity are untouched.
+
 S1 (arithmetic, done): `python3 -I -c "import math;print(250*math.log10(20), 10**((250*math.log10(20))%1))"` -> 325.257, 1.81; so 20^250 = 1.81e325. 10^325 - 10^52 gap: 273 orders. Reconciles.
 S2 (NK reachability, exploratory): **specification only** (Branch D simulations are a separate later module). Alphabet 4 (nucleotides) and 20 (amino acids) variants; L in {10,16,24}; K in {0,1,2,4,8,L-1}; random-neighbor and adjacent epistasis; measure walk length, final fitness percentile, fraction of starts reaching top 1%, and generations under WF with N=1e4, s derived from fitness differences. Output: reachability vs K. Not decisive for real proteins.
 S3 (data-based): estimate p(single-substitution neighbor functional) from published deep mutational scans (not in corpus; to be harvested).

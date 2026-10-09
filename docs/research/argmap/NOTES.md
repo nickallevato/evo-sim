@@ -3,12 +3,14 @@
 *Draft 2026-10-08, built against commit 7cc7b27 (branch `research`). Data only; the renderer is separate. Nothing here changes a verdict: every `audit_status` is read from the current claim-file verdicts or from `research/checks/RESULTS.md`, and is provisional until R5. Integration fixes were applied on 2026-10-08 (edges, side labels and sources; each item is marked "fixed 2026-10-08" under "Errors and inconsistencies"). The counts below were re-run after them.*
 
 Files:
-- `standard-forms.md`: premise–conclusion reconstructions. Full forms for ROOT and the other 29 load-bearing nodes; one-row mini-forms for every other claim a defeater targets.
+- `standard-forms.md`: premise–conclusion reconstructions. Full forms for ROOT and the other 30 load-bearing nodes (A3 promoted 2026-10-09); one-row mini-forms for every other claim a defeater targets.
 - `defeaters.yaml`: every attack, typed (undermining / undercutting / rebutting), with first date, locator, audit status and counters.
 - `lineage.yaml`: dated versions of arguments and numbers, linked by descent, revision, borrowing, reply, citation and (inferred) resemblance.
 - `research/tools/argmap_check.py`: the checker (verbatim quotes, ids, dates, edge coverage). Run `research/.venv/bin/python -I research/tools/argmap_check.py`.
 
 ## Counts (checker output, 2026-10-08, after the integration fixes)
+
+**Update 2026-10-09 (R4 C1c, C1d and D1 integration).** The checker now reports 293 defeaters, 196 lineage nodes and 122 standard forms, 0 errors, 0 warnings. A3 promoted to load-bearing (ROOT P1 and A P4 rest on it; full standard form added, mini-form row removed); mini-forms B2e and C5b added. Added: d279–d280 (chk:C1c against chk:C1b's call-depth inference, upheld, and C6's inference, partly), d281–d286 (chk:C1d against C6 C and C7 C, upheld; C5a P2, upheld; keruru's C5b P2 sampling correction, partly, a slip-ledger item; B2e C, partly; and the audit's own chk:C1c error-term reading, partly), d287–d291 (chk:D1 against D2h C, G3b's inference, Ga's inference (the one-specific-outcome reading), G3 P2 (the plenty-of-alternatives reading) and D1a C; all partly), d292–d300 (reviews #9–#11 against chk:C1c, chk:C1d, chk:D1; all upheld and applied). Status updates from the new verdicts: d061 (C5b → C5a) partly → upheld; d267 (B2e → B2b) untested → partly; d083, d166, d069 (D2h ↔ D1a, D1a → D) untested → partly; d275 (C5b → C7) basis updated. Registry ids chk:C1c, chk:C1d, chk:D1 and rev:R4-{C1c,C1d,D1}-{correctness,steelman-day,steelman-critic}; lineage nodes L-audit-c1c-2026, L-audit-c1d-2026, L-audit-d1-first-2026 (the first-pass 'Day's m ≈ 1' wording, retracted; quote from git e70363d) and L-audit-d1-2026. Counters recomputed mechanically (only rows whose attacker is a new target changed). Grounded labels (accepted/rejected/undecided): as argued 111/105/2, audited strict 162/56/0, audited lenient 120/98/0.
 
 **Update 2026-10-09 (R4 GAP-07b and corpus-refresh integration).** The checker now reports 271 defeaters, 192 lineage nodes and 120 standard forms, 0 errors. Added: d266–d269 (new critic claims from the 2026-10-09 refresh: Matev A2i → A2e, B3i → B3a, G5 → G; keruru B2e → B2b, `untested`; all `hierarchy_edge: true`), d270–d273 (chk:GAP07b against A3a P2, the critics' rate route B5f, A3x P1 and the audit's own chk:GAP07 P1, the last retiring its 22.5M upper bound), d274 (B7a against Day's new B9) and d275 (C5b against Day's new C7), d276–d278 (review #8 against chk:GAP07b, all upheld and applied); mini-forms A3x, B9, C7; registry ids chk:GAP07b and rev:R4-GAP07b-{correctness,steelman-day,steelman-critic}; lineage nodes L-day-bp-generous-2026, L-day-bp-range-2026, L-audit-gap07b-2026, L-day-gf-1587-2026, L-day-1-over-2ne-restated-2026, L-matev-n-over-ne-2026, L-keruru-measured-ne-draft-2026. Counters recomputed mechanically: d006 (attacker A3x) gained d272; d039, d040 (attacker B5f) gained d271; d250 (attacker chk:GAP07) gained d273. Grounded labels (accepted/rejected/undecided): as argued 102/102/2, audited strict 154/52/0, audited lenient 111/95/0.
 
@@ -125,6 +127,9 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:GAP02 | audit | sweep-scan detection window: expected detectable completed sweeps (power-1 upper bound) | RESULTS §GAP-04/07/02; results/R4-GAPS-04-07-02.md §3 (added 2026-10-08) |
 | chk:H3 | audit | cost of selection at human scale: hard adaptive treadmill, soft/hard load, long-run φ, finite supply (all conditional) | RESULTS §H3; results/R4-H3-human.md (added 2026-10-09) |
 | chk:GAP07b | audit | direct count of divergence events from the UCSC hg38–panTro6 alignment (non-T2T): SNVs, indel events, bp ladder, bracket 7–14× | RESULTS §GAP-07b; results/R4-GAP07b-alignment.md (added 2026-10-09) |
+| chk:C1c | audit | Day's 11-bin aDNA statistic under real AADR call depth and an ancestry-replacement WF model (N_e axis; model-conditional) | RESULTS §C1c; results/R4-C1c.md (added 2026-10-09) |
+| chk:C1d | audit | Day's 11-bin and two-period aDNA statistics on the real AADR v62.0.p1 / v66.p1 genotypes; replication of keruru's temporal N_e | RESULTS §C1d; results/R4-C1d.md (added 2026-10-09) |
+| chk:D1 | audit | sequence-space spike: alternatives per needed change from RNA neutral networks (ViennaRNA), ProteinGym DMS and the GB1 landscape, against G1's flip | RESULTS §D1; results/R4-D1-spike.md (added 2026-10-09) |
 | chk:ROOT-M-survey | audit | keyword survey of computed vs asserted exclusions | claims/ROOT-excluded-mechanisms.md |
 | chk:D9-exploratory | audit | exploratory Weasel runs (not pre-registered) | claims/D9, D9a Responses |
 | rev:review-2 | audit | correctness review #2 | research/checks/REVIEW.md (2026-10-07) |
@@ -142,6 +147,15 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-GAP07b-correctness | audit | review #8, correctness (GAP-07b) | results/REVIEW-R4-GAP07b-correctness.md (2026-10-09) |
 | rev:R4-GAP07b-steelman-day | audit | review #8, Day-side steelman (GAP-07b) | results/REVIEW-R4-GAP07b-steelman-day.md (2026-10-09) |
 | rev:R4-GAP07b-steelman-critic | audit | review #8, critic-side steelman (GAP-07b) | results/REVIEW-R4-GAP07b-steelman-critic.md (2026-10-09) |
+| rev:R4-C1c-correctness | audit | review #9, correctness (C1c) | results/REVIEW-R4-C1c-correctness.md (2026-10-09) |
+| rev:R4-C1c-steelman-day | audit | review #9, Day-side steelman (C1c) | results/REVIEW-R4-C1c-steelman-day.md (2026-10-09) |
+| rev:R4-C1c-steelman-critic | audit | review #9, critic-side steelman (C1c) | results/REVIEW-R4-C1c-steelman-critic.md (2026-10-09) |
+| rev:R4-C1d-correctness | audit | review #10, correctness (C1d) | results/REVIEW-R4-C1d-correctness.md (2026-10-09) |
+| rev:R4-C1d-steelman-day | audit | review #10, Day-side steelman (C1d) | results/REVIEW-R4-C1d-steelman-day.md (2026-10-09) |
+| rev:R4-C1d-steelman-critic | audit | review #10, critic-side steelman (C1d) | results/REVIEW-R4-C1d-steelman-critic.md (2026-10-09) |
+| rev:R4-D1-correctness | audit | review #11, correctness (D1) | results/REVIEW-R4-D1-correctness.md (2026-10-09) |
+| rev:R4-D1-steelman-day | audit | review #11, Day-side steelman (D1) | results/REVIEW-R4-D1-steelman-day.md (2026-10-09) |
+| rev:R4-D1-steelman-critic | audit | review #11, critic-side steelman (D1) | results/REVIEW-R4-D1-steelman-critic.md (2026-10-09) |
 
 ## Judgement calls
 

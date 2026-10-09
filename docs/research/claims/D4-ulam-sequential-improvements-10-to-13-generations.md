@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds      # arithmetic reproduces to order of magnitude (logistic: 2.3e7 per sweep, 2.3e13 total) given the serial assumption
   fidelity: n/a      # Ulam's own claims; Day's ch.6 description ("a sequence of ten improvements") differs from the printed 10^6
-  external: contested      # serial assumption and gamma = 1e-6 are disputed in the volume (Mayr, p.24)
+  external: contested   # serial assumption and gamma = 1e-6 are disputed in the volume (Mayr, p.24); R4 D1: serial assumption not tested; the shared-pool table (k = 25 needed changes from 51 beneficial SNVs succeeds with P 0.07 at s = 0.01) is the stepping-stone logic
 ---
 
 ## Statement (verbatim)
@@ -47,6 +47,8 @@ Ulam's scheme (p.24): population M = 1e11, generation = 1 day; favourable-mutati
 Written before the Ulam simulation spec. Under Ulam's model (serial): total time T = n * t_sweep(gamma, N, alpha) with t_sweep ~ ln(1/p0)/gamma. Under the opposing model (Mayr): improvements at different loci proceed simultaneously; total time ~ t_sweep + waiting for the last arrival, with total mutation supply across 10^6 loci of order 10^7 carriers per generation if alpha applies per locus (Ulam's alpha is 'per individual' for 'an improvement'; whether it applies to each of 10^6 loci is ambiguous in the text, Medawar asks 'In one locus?', Ulam: 'specific loci'). Result that would change a verdict: a WF simulation of n loci with independent sweeps at gamma = 1e-6, M = 1e11 (scaled) showing whether the completion time is ~n*t_sweep (serial) or ~t_sweep*(1 + small) (parallel).
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): Table C models k needed changes in one gene drawing on a shared pool of beneficial SNVs (median 51): P(success) 0.999 for k = 10, 0.074 for k = 25, 4e-20 for k = 50 at s = 0.01 and T = 3e5; at s = 0.001 even k = 10 gives 1e-4. The serial assumption itself is not tested.
+
 Specification (later module): scaled WF with n in {10,100,1000} loci, gamma scaled, tracks completion time; compares serial prediction n*t_sweep with parallel max; checks Hill-Robertson interference at gamma*M scales. Arithmetic done: `python3 -I -c "import math;print(math.log(1e10)/1e-6, math.log(1e10*99)/1e-6)"` -> 2.30e7, 2.76e7. (Scratch.)
 
 ## Simulator variables implied

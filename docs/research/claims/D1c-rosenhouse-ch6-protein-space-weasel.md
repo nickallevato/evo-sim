@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending      # chapter 6 not accessed
   fidelity: unverifiable      # only the table-of-contents entry seen
-  external: contested      # pending
+  external: contested   # pending; R4 D1: chapter not read; no evidence from D1
 ---
 
 ## Statement (verbatim)

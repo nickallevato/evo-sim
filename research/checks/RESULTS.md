@@ -220,9 +220,9 @@ Full write-ups (post-review numbers) are in `results/R4-*.md`; review #4 is summ
 ## C1b — Day's binned 21-count · `c1b_day_binned_statistic.py` (SeedSequence 20261010; 20 reps × 13 configs × 16 readings) · claim C6
 **Result:** the literal procedure gives 1.2e3–1.7e4 post-7000 BP events under neutral (Nₑ 7e3–2e4) and under Day's d = 0.45 model, against 21 observed. The model also misses Day's own bin profile: 7000–8000 BP ≈1,350 vs 4,497 observed; pre-7000 share 38–60% vs 99.86%. Admixture pulses change S by <15%.
 
-**Regime limits:** per-bin genotyped fraction 1.0 or 0.3. Real old-bin call depth is far lower. The reviewer's 1-replicate direction test (coverage 0.3 → 0.01: S21 6,537 → 1,204; 121 if all bins are required) moves toward Day's profile but inflates the eligible count to 72–138k.
+**Regime limits:** per-bin genotyped fraction 1.0 or 0.3. Real old-bin call depth is far lower. (Corrected by C1c, 2026-10-09: measured mean depth is 49 / 62 / 282 chromosomes per site in the three oldest bins, so sparse calls are not the cause; C6 was then decided on C1d.) The reviewer's 1-replicate direction test (coverage 0.3 → 0.01: S21 6,537 → 1,204; 121 if all bins are required) moves toward Day's profile but inflates the eligible count to 72–138k.
 
-**Verdict:** not reproducible from the published procedure; cannot adjudicate. The C6 external verdict is `untestable` pending a call-depth model.
+**Verdict:** not reproducible from the published procedure; cannot adjudicate. The C6 external verdict is `untestable` pending a call-depth model. (Superseded 2026-10-09 by C1c and C1d: C6 external `contradicted` as stated.)
 
 ## H — Cost of selection · `h_cost_of_selection.py` (20261008), `h_nunney_gauss.py` (20261010), `h_nunney_gauss_lowR.py` (20261020+), `h_keightley_load.py` (20261009) · claims H, H1, H2, H5, H7, H8
 **Results:**
@@ -503,3 +503,33 @@ The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a differen
 **Scorecard.** Held: indel total (3.5–6.5M), CSAC 5M a total, total events (33–45M), per lineage (16–23M), L3 bp/event 7–18 under all four filters, nested inversions 200–1,500. Missed: SNV total (37.8M vs 27–35M), raw gap bp, 2–10 bp share, > 1 kb count, repeat-masking sensitivity, unaligned shares (P8). The pre-registered indel polarization was asymmetric (33% human as run; a method artefact).
 
 **Open.** GAP-07c (polymorphic share from population frequencies) and a T2T re-run (CHM13/hs1 vs mPanTro3). Reviews: `results/REVIEW-R4-GAP07b-*.md`; resolution in the write-up §14; `REVIEW.md` review #8.
+
+## C1c — Day's aDNA 21 with real AADR call depth and an ancestry-replacement model · `c1c_call_depth_replacement.py` (pre-registered b128110), post hoc `c1c_posthoc_mindepth.py` (ee0b725), `c1c_posthoc_variant_gate.py` (9045329), `c1c_posthoc2_fixpass.py` (d2fe788) · claims C6, C, C1, C4, C5, C5b, C7 · full write-up `results/R4-C1c.md`
+
+**Model.** Exact frequency-level Wright-Fisher, one pooled European population per bin, Anatolian and steppe pulses (R0 none to R3 strong), real per-bin call depth from the AADR v62.0.p1 anno (mean 49 / 62 / 282 chromosomes per site in the three oldest bins), Day's E1 eligibility and T2 dating; 44 base scenarios, 4 replicates.
+
+**Result.** No cell reproduces Day's eligible count (22,428), profile, tracked fraction (0.727) and start table together. Post-6000 count S21: 1.5k–3.9k at constant N_e 1e4 (70–190x Day's 21); about 21 only at closed N_e ~1e5–3e5 or growth/step schedules to 1e5–1e6 (15–67); replacement raises it at high N_e (to ~40x, R3). Day's d = 0.45 gives 739. S21 / eligible is the density-robust number (Day 0.129%; error-free cells 0.5–27%). Matched capture (tracked 0.72–0.74) changes S21 by at most ~1.6x; the earlier "thousands" came from a design flaw (modern bin given capture heterogeneity) and is withdrawn.
+
+**Reading.** Model-conditional and conditional on the Holocene N_e trajectory, which is not sourced in the repo (retrieval in progress): a deficit against neutral at N_e <= ~5e4 or strong replacement (Day); neutral-compatible at closed N_e >= ~1e5 or growth (critics). The 21-class events start at >= 95%, so the intermediate-start claim (C) is untouched. Reviews: `results/REVIEW-R4-C1c-*.md`; `REVIEW.md` review #9.
+
+## C1d — Day's aDNA statistics on the real AADR genotypes; keruru's temporal N_e · `c1d_aadr_real.py` (pre-registered c0a4071), post hoc `c1d_posthoc.py` (814f5da, 982366c), `c1d_verify.py` (d308586), `c1d_posthoc2.py` (c09b957), `c1d_posthoc3_keruru.py` (5f0ba57), `c1d_posthoc4_tp.py` (3f70039), `c1d_figure.py` (6f43473) · claims C6, C7, C, C5a, C5b, B2e, C4 · full write-up `results/R4-C1d.md`
+
+**Data.** AADR v62.0.p1 and v66.p1 1240K genotypes (TGENO), md5-verified, downloaded and processed on na-workhorse only. Day's European sample rebuilt (8,808 vs his 8,738).
+
+**Day's 11-bin statistic.** Literal reading (E1, T2): 62,757 eligible / 4,957 events dated 5000–6000 BP or younger (v62), 48,888 / 3,649 (v66), against 22,428 / 21; 84% of the 4,957 in 0–500 BP. 132 grid cells do not close the gap. Start table reproduces to 0.4 points on v62 (credit to Day). 97.7% of the post-6000 events are transitions; a library-type test with matched random controls shows the excess is not specific to damage-prone libraries (so not damage); transversions alone give 36–44 on autosomes (0.57% per eligible allele vs Day's 0.094%; neutral comparison open).
+
+**Day's two-period pipeline (Z23046531).** Sample (1,377 / 683 vs 1,372 / 680) and SNP count (1,143,870 vs 1,143,671) reproduce; completions from MAF >= 10% reproduce in kind (2 and 0 vs 1 and 3); the event total does not (63,631 vs 17,814, 3.6x). No code was found (Zenodo, GitHub, OSF, the saved blog corpus); the promise is in Z23046531 and may mean on request.
+
+**keruru (B2e, C5b).** His temporal N_e replicates within 1–8% (7,812 / 9,672 vs 8,139 / 9,835); his pseudo-haploid sampling term is half the standard one (corrected 9.7k / 10.5k; a slip-ledger item). The estimate is a lower bound on a drift N_e. Against Wright's formula: 5.9x at census 1e5, 59x at 1e6, 591x at 1e7 (break-even ~17k); composition explains 6–17% of the F. "Three orders" is not established at the unsourced 1e7; a >= 6x gap survives at any census >= 1e5. Day's N_e near 2 is excluded.
+
+**Verdicts.** C6 external **contradicted** as stated (best Day reading "underspecified"; reopens as contested if a pipeline is documented); C7 external **contradicted** for "no allele-frequency movement" (drift attribution open); C5b holds (slip ledger) / supported; B2e contested. Reviews: `results/REVIEW-R4-C1d-*.md`; `REVIEW.md` review #10.
+
+## D1 — Sequence-space spike: alternatives per needed change · `d1_sequence_space_spike.py` (pre-registered d72c733; ViennaRNA 2.7.2), post hoc `d1_posthoc_refine.py` (88dda5a), `d1_posthoc_gb1_snv.py`, `d1_aggregate.py`, fix-pass scripts (40d9261, e92de84) · claims D, D1a, D1b, D1d, D2c, D2h, D2i, D3, D4, D9a, D10–D12, G3b · full write-up `results/R4-D1-spike.md`
+
+**What it measures.** G1's open number: interchangeable alternatives per needed change, against the flip λ_50 = 7–17 (λ = 0.48 m at s = 0.01, linear in s). Stand-ins: RNA folding (ViennaRNA) and 114 non-stability ProteinGym DMS sets plus the complete GB1 four-site landscape. Shown along an axis of readings (H1 Day's specific horn, H2 tolerated "neutral noise", H3 the middle case, H4 any-n-of-M).
+
+**Result.** Exact RNA structure: m given a route 2.3 (m_all 0.05; far from S1 1.5; tRNA 1.5): λ ~1, below the flip even at s = 0.05. Within 2 bp: 3.4. Pre-registered same-shape class: 28 (a fired trigger; dominated by helix loss); without helix loss 11.8 at L >= 76. DMS: tolerated substitutions per codon 5.1 of 6.6 (H2); beneficial-proxy per codon 0.21 (λ 0.10); gene-level beneficial pool median 51 (0–1,760; 17% none), shared: P(success) 0.999 for 10 needed changes, 0.074 for 25, 4e-20 for 50 at s = 0.01. Any-n-of-M: within-gene beneficial fraction (3.6%, upper bound) 82–1,600x G1's requirement for n <= 2e5, 8–16x for n = 2e7 at p = 0.02.
+
+**For Day.** Exact-outcome λ ~1; GB1 95% nonfunctional, 67–158 SNV-level local maxima, 30–51% reach of the best variant; "reduce or destroy" passes as worded (61% of datasets); a short locus cannot drift its way to a one-step route (36–80 neutral steps needed vs 0.03–0.06 available). **For the critics.** 71% of singles keep half of WT-like function; "destroy" alone is a minority (majority in 2% of datasets); GB1 is one connected component and 98.5% of functional variants have an uphill SNV neighbour; RNA neutral networks ~1e33. **Untouched:** per-sequence prevalence (D10–D12), cross-family connectivity, regulatory waiting times (D15).
+
+**Verdicts.** D1d external **supported** (existence part); D2h contested (partial support as worded); others unchanged with comments; G3b's open item replaced by measured numbers. Reviews: `results/REVIEW-R4-D1-*.md`; `REVIEW.md` review #11.

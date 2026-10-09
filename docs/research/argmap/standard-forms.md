@@ -12,7 +12,7 @@
 
 ---
 
-## Full standard forms: ROOT and the other 29 load-bearing nodes (30 forms)
+## Full standard forms: ROOT and the other 30 load-bearing nodes (31 forms)
 
 ### ROOT — No evolutionary mechanism can produce the human–chimp divergence in the available time (Day)
 Steelman source: [ROOT](../claims/ROOT-no-mechanism-suffices.md) (Best They've Got I, 2026-10-05; MITTENS 3.0, 2026-09-28; Z18452504, 2026-02-02).
@@ -54,6 +54,16 @@ Steelman source: [A2e](../claims/A2e-ltee-as-ceiling.md) (MITTENS 3.0 pp.2, 4).
 - Inference: analogical (a fortiori).
 - C. rate_human ≤ 1/G_f, so the human shortfall in A is a lower bound.
 - Audit: non-sequitur / pending / contested ([A2e](../claims/A2e-ltee-as-ceiling.md)).
+
+### A3 — Required fixations per lineage: 15M (2019), 20M (2025) (Day)
+Steelman source: [A3](../claims/A3-required-fixations-2019-2025.md) (blog 2019-02-07; MITTENS 2025, Z18165980); the 2026 bp version is [A3a](../claims/A3a-205m-headline.md), the SNV-only variant [A3b](../claims/A3b-snv-only-concession.md). Promoted to load-bearing 2026-10-09: ROOT P1 and A P4 rest on it.
+- P1. The human–chimp divergence comprises about 40M differences, 35M single-nucleotide changes plus 5M insertion/deletion events (CSAC 2005); 30M in the 2019 version ([A3](../claims/A3-required-fixations-2019-2025.md)).
+- P2. Each difference is one fixation that some mechanism has to explain ([A3](../claims/A3-required-fixations-2019-2025.md)).
+- P3. The differences split symmetrically between the human and chimp lineages ([A3](../claims/A3-required-fixations-2019-2025.md)).
+- P4. [implicit] Differences between one human and one chimp genome are fixed differences, not polymorphism within either species ([A3c](../claims/A3c-csac-polymorphism.md)).
+- Inference: arithmetic.
+- C. 15M + 15M (2019) / 20M (2025) fixations required per lineage.
+- Audit: holds / partial / contested ([A3](../claims/A3-required-fixations-2019-2025.md)).
 
 ### B — Neutral theory (k = μ) cannot rescue the shortfall (Day)
 Steelman source: [B](../claims/B-neutral-theory-cannot-rescue.md) (blog 2026-02-04; Hard Limits abstract 2026-08-27).
@@ -309,7 +319,6 @@ These are reduced to the premise(s) a defeater actually targets. Same convention
 | A2a | P1: 25 fixed mutations in ~40,000 LTEE generations (Nature 2009 / Good 2017) ([A2a](../claims/A2a-gf-datum-source-2019.md)) | G_f = 1,600 [day] | statistical |
 | A2b | P1: strict lineage-aware count 5,496; P2: the ≥95% rule overcounts ([A2b](../claims/A2b-gf-counting-rule-1322-vs-1587.md)) | revised counts and rate [day] | statistical |
 | A2d | P1: G_f is an average, so it includes faster fixations ([A2d](../claims/A2d-gf-average-not-fastest.md)) | it is not the fastest rate, so not shown to be a ceiling [critic] | deductive |
-| A3 | P1: 30M (2019) / 40M SNV (2025) differences; P2: each difference is one fixation; P3: split per lineage ([A3](../claims/A3-required-fixations-2019-2025.md)) | 15M + 15M / 20M required [day] | arithmetic |
 | A3a | P1: 35M SNVs + 1,140 inversions + 187 Mb SDR ≈ 410M differences (Yoo 2025); P2: each base pair counts as one fixation; P3: halve per lineage ([A3a](../claims/A3a-205m-headline.md)) | 205M required [day] | arithmetic |
 | A3x | P1: 35M SNVs + 5M indel events (CSAC) + 1,140 inversions ≈ 40M events; P2: one structural change can affect many base pairs ([A3x](../claims/A3x-bp-vs-events.md)) | ~20M events per lineage, not 205M [critic] | arithmetic |
 | A4 | P1: overlapping generations slow allele-frequency change per nominal generation; P2: d is that ratio ([A4](../claims/A4-turnover-coefficient-d.md)) | effective generations = d × nominal [day] | deductive |
@@ -325,6 +334,7 @@ These are reduced to the premise(s) a defeater actually targets. Same convention
 | B1a | P1: ∫₀ᵀF_X ≈ T − 4Nₑ; P2: μL ≈ 30, T = 252,000; P3: [implicit] empty start ([B1a](../claims/B1a-eF-formula-and-numbers.md)) | the naive 7.56M overstates the count [day] | arithmetic |
 | B2c | P1: Nₑ/T ≈ 1.8×10⁷ for the current-census era; P2: tail exp(−π²Nₑ/T) ([B2c](../claims/B2c-one-in-ten-to-78-millionth.md)) | ~1 in 10^78,000,000 per neutral mutation [day] | arithmetic |
 | B2d | P1: steady-state flux is μ whatever the transit time; P2: the pipeline cannot fill ([B2d](../claims/B2d-parallel-fixation-second-objection.md)) | the drift limit does not rest on "nothing finishes" [day] | deductive |
+| B2e | P1: measured temporal Nₑ for Bronze Age Europe is 6,933–8,139; P2: Wright's 4N/(Vₖ+2) at a census of ~10⁷ gives Nₑ/N ≈ 0.57 ([B2e](../claims/B2e-keruru-measured-ne-vs-wright.md)) | Wright's input to the census ceiling is wrong by about three orders where it can be tested [critic] | statistical |
 | B3c | P1: k_i = μN_i/N_t (fixation probability 1/(2N_t)); P2: four human census cohorts ([B3c](../claims/B3c-rrme-k-0743-mu.md)) | k = 0.743μ [day] | arithmetic |
 | B3d | P1: Bergeron pedigree μ against Yoo's required rate; P2: [implicit] the gap measures k/μ and nothing else ([B3d](../claims/B3d-k-32-3-mu-and-factor-25.md)) | k = 32.3μ; median factor 25 [day] | statistical |
 | B3e | P1: supply 132 billion × fixation 1/(16 billion) under N/Nₑ ([B3e](../claims/B3e-corrected-calculation-8-25-fixations.md)) | 8.25 fixations; shortfall 2,424,242× [day] | arithmetic |
@@ -351,6 +361,7 @@ These are reduced to the premise(s) a defeater actually targets. Same convention
 | C4 | P1: drift variance varied 3.3–4.6-fold across the Holocene ([C4](../claims/C4-holocene-ne.md)) | Nₑ varied at least 3.3-fold [day] | statistical |
 | C5 | P1: Nₑ ~ 10⁴; P2: neutral transit from intermediate frequency in 240 generations ([C5](../claims/C5-keruru-neutral-zero.md)) | ~10⁻²⁹ expected fixations; zero is the prediction [critic] | arithmetic |
 | C5a | P1: Nₑ ≈ 10⁴ comes from θ = 4Nₑμ, which presupposes k = μ; P2: rs35619459 29.3% → 91.3% implies a drift-variance Nₑ near 2 ([C5a](../claims/C5a-day-ne-circularity.md)) | keruru's zero-prediction is circular [day] | deductive |
+| C5b | P1: the temporal method takes allele frequencies from two dated ancient samples, the sample sizes and the generations between them, with no μ and no coalescent; P2: it gives Nₑ 8,139 (102 generations) and 9,835 (250) ([C5b](../claims/C5b-keruru-temporal-ne.md)) | Nₑ ≈ 10⁴ is measured, not presupposed by the clock [critic] | statistical |
 | C6 | P1: the clock predicts ~630 fixations per 350 generations (150M sites); P2: 21 are observed after 7,000 BP; P3: [implicit] panel sites register new substitutions at the genome-wide rate ([C6](../claims/C6-molecular-clock-stopped.md)) | the constant-rate clock is falsified [day] | statistical |
 | C7 | P1: ~zero completed fixations from intermediate frequency in ~7,000 years (C) ([C7](../claims/C7-no-drift-last-7000-years.md)) | genetic drift is not happening at all [day] | abductive |
 | D | P1: sequence space ~10^325 (Eden); P2: functional proteins ever ~10^52; P3: time is insufficient for random search; P4: no biologist calculated otherwise ([D](../claims/D-sequence-space-wistar.md)) | functional sequences are unreachable in the time available [day] | arithmetic + abductive |

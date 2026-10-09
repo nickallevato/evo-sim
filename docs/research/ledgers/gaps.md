@@ -513,6 +513,17 @@ See PA-34.
 - *Day's stated position* (Q99, Q101–Q103) is a weighting claim with a range (SNV-only lower bracket, bp upper bracket). His SNV-only 17.5M is 83% of measured events and brackets the polymorphism-corrected fixed events (16.4–18.1M). As a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp; untested.
 - *Open:* GAP-07c (polymorphic share of SNVs, indels and SVs from population frequencies) and a T2T re-run (CHM13/hs1 vs mPanTro3).
 
+
+## Retrieval gaps (sources the audit needs but does not yet hold)
+These are not gaps in the sense defined above (a consideration nobody raised); they are inputs that a verdict depends on and that no file in the repo sources.
+
+### RG-01: Holocene European effective population size (recorded 2026-10-09; retrieval in progress)
+**Nodes:** C6, C7, C4, C5b, B2e (and C1c/C1d readings).
+- **Why it matters.** R4 C1c shows that what Day's aDNA 21 means turns on the Holocene N_e trajectory: a deficit against neutral at N_e <= ~5e4 or under strong replacement, neutral-compatible at closed-population N_e >= ~1e5 or growth to 1e5–1e6 within the window (`research/checks/results/R4-C1c.md` §2, §6).
+- **What the repo holds.** The textbook N_e = 1e4 (`parameters.yaml`, marked unverified) and keruru's temporal estimates (8,139 / 9,835), which R4 C1d replicates but which are lower bounds on a drift N_e. An earlier audit sentence ("literature Holocene N_e plausibly well above 1e4") was removed as unsourced.
+- **What is needed.** IBD-based (IBDNe, Palamara), ARG/coalescent (Relate, tsdate, SMC++, MSMC2) and aDNA-based (hapROH, ancIBD) estimates of European or West Eurasian N_e over the last ~10,000 years, with locators and access status, recorded two-sidedly.
+- **Status.** A retrieval agent is working on it (2026-10-09; output `docs/research/sources/holocene-ne.md`). Until it lands, C1c's reading stays conditional.
+
 ---
 
 ## Candidates rejected (considered, but already addressed or immaterial)

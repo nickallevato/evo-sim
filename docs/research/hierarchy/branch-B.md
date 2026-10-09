@@ -69,7 +69,7 @@ flowchart TD
   n_B2d --> n_B2
   n_B2d -->|supports| n_B2
   n_B2d -.->|attacks| n_F1
-  n_B2e["B2e: keruru (Zenodo draft): a temporal N_e measured from ancient <br/><small>critic · int:holds · fid:n/a · ext:pending</small>"]
+  n_B2e["B2e: keruru (Zenodo draft): a temporal N_e measured from ancient <br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
   style n_B2e fill:#dbeafe,stroke:#1d4ed8
   n_B2e --> n_B2b
   n_B2e -.->|attacks| n_B2b

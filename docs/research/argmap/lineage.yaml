@@ -3189,3 +3189,75 @@
   fate: alive
   fate_date:
   fate_locator: "Unreviewed Draft 1 with [CHECK] marks; replication pending"
+
+- id: L-audit-c1c-2026
+  label: "Audit C1c: with real AADR call depth, what Day's 21 means depends on the unsourced Holocene Nₑ"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [C6, C4]
+  locator: "research/checks/results/R4-C1c.md Result in brief item 6"
+  quote: "Verdict conditional on Holocene Ne, which is not sourced in this repo."
+  parents:
+    - {id: L-audit-c1b-2026, relation: descends}
+    - {id: L-adna-630-21-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #9: modern-bin capture flaw and 'strongest lever' withdrawn; growth schedules (15-35) and keruru's downward-bias caveat added"
+
+- id: L-audit-c1d-2026
+  label: "Audit C1d: Day's 21 on the real AADR genotypes gives thousands; keruru's temporal Nₑ replicates"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [C6, C7, C5b, B2e, C5a]
+  locator: "research/checks/results/R4-C1d.md Result in brief item 1"
+  quote: "Day's table is not reproduced on the real genotypes by the literal reading of his method or by any of the 132 grid cells."
+  parents:
+    - {id: L-audit-c1c-2026, relation: descends}
+    - {id: L-adna-630-21-2026, relation: responds-to}
+    - {id: L-keruru-temporal-ne-2026, relation: responds-to}
+    - {id: L-keruru-measured-ne-draft-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #10: damage/library test, Day's two-period pipeline (3.6x), census sensitivity for B2e; 'untestable' replaced by 'contradicted as stated'"
+
+- id: L-audit-d1-first-2026
+  label: "Audit D1 first pass: 'Day's m ≈ 1 is too low'; pooled counts credited to the critics"
+  side: audit
+  kind: argument
+  date: 2026-10-09
+  claim_ids: [G3b, D2h]
+  locator: "research/checks/results/R4-D1-spike.md (first version, e70363d) §0"
+  quote: "Day's m ≈ 1 is too low even for exact-structure RNA"
+  quote_source: "git:e70363d:research/checks/results/R4-D1-spike.md"
+  parents:
+    - {id: L-day-dilemma-2026, relation: responds-to}
+    - {id: L-mccarthy-specific-any-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-09
+  fate_locator: "Review #11: m ≈ 1 came from the audit's docstring, not from Day; pooled counts withdrawn as supply (1/K split); fired triggers acknowledged"
+
+- id: L-audit-d1-2026
+  label: "Audit D1: alternatives per needed change are ~1-6 per locus; a gene's shared beneficial pool clears G1's flip for ~10 changes, not 25+"
+  side: audit
+  kind: revision
+  date: 2026-10-09
+  claim_ids: [D, D2h, G3b, D1a, D1d]
+  locator: "research/checks/results/R4-D1-spike.md §0.5 Table C"
+  quote: "So the gene-level pool does clear the flip for a gene needing about ten adaptive changes at s = 0.01 and not for a gene needing twenty-five or more"
+  parents:
+    - {id: L-audit-d1-first-2026, relation: revises}
+    - {id: L-day-dilemma-2026, relation: responds-to}
+    - {id: L-camestros-lottery-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #11: axis of readings and s-sweep; RNA/DMS stand-ins; per-sequence prevalence (D10-D12) untouched"

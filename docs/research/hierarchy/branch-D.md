@@ -54,7 +54,7 @@ flowchart TD
   style n_D1c fill:#dbeafe,stroke:#1d4ed8
   n_D1c --> n_D1
   n_D1c -.->|attacks| n_D
-  n_D1d["D1d: Camestros Felapton: a serious treatment of maths and evoluti<br/><small>critic · int:n/a · fid:n/a · ext:pending</small>"]
+  n_D1d["D1d: Camestros Felapton: a serious treatment of maths and evoluti<br/><small>critic · int:n/a · fid:n/a · ext:supported</small>"]
   style n_D1d fill:#dbeafe,stroke:#1d4ed8
   n_D1d --> n_D
   n_D1d -.->|attacks| n_D

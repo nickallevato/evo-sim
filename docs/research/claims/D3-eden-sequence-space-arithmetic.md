@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds      # 20^250 = 10^325.26 reproduces; the 10^52 figure does not reproduce from the printed inputs (see D3a) but the comparison is insensitive to it
   fidelity: accurate      # Day's transcription of the two numbers matches p.7; Day's "functional proteins" wording is looser than Eden's "protein molecules" (D3a)
-  external: contested      # whether the size comparison bears on evolutionary search depends on landscape structure (D3b)
+  external: contested   # whether the size comparison bears on evolutionary search depends on landscape structure (D3b); R4 D1: the arithmetic is unaffected; whether the size comparison bears on search depends on landscape structure, measured locally by D1
 ---
 
 ## Statement (verbatim)

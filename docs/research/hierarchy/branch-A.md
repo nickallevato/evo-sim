@@ -74,7 +74,7 @@ flowchart TD
   n_A2j ==>|revises| n_A2
   n_A2j -->|depends-on| n_A3a
   n_A3["A3: Required fixations: 30M (2019) then 20M on the human lineage<br/><small>day · int:holds · fid:partial · ext:contested</small>"]
-  style n_A3 fill:#fde2c8,stroke:#b45309
+  style n_A3 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_A3 --> n_A
   n_A3 -->|supports| n_A
   n_A3 -->|depends-on| n_A3c

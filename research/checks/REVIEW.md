@@ -223,27 +223,55 @@ Memo `docs/research/sources/refresh-2026-10-09.md` (commit 0bd548e). Eight claim
 - Also: Q104–Q105 added (Day's 2026-09-15 comment, verified against the saved text; Q105 restates 1/(2Nₑ) after the 08-27 concession, noted in `ledgers/versions.md`); B3e gained Matev's RF-3 as a second source. Defeaters d266–d269, d274–d275.
 - Not made into claims: Hilbert (EES; no model or number), Day's "Reverse-MITTENS"/new disproof (unpublished), the 1,017-per-generation book quote (book not accessible), keruru's rs35619459 non-reproduction (C1d; needs the unnamed source).
 
-## Queue (after review #8)
-In flight (Sonnet agents, 2026-10-09; each pre-registers by commit and gets three reviews before integration):
-- **D1 spike:** sequence-space alternatives per needed change, from ViennaRNA neutral networks plus MaveDB/ProteinGym DMS, against G1's 12–17 threshold.
-- **C1c:** C1b follow-up, with a per-site, per-bin call-depth model on real AADR coverage plus ancestry replacement.
+## 2026-10-09 — Review #9 (Sonnet): correctness + Day-side and critic-side steelman of C1c (Day's aDNA 21 with real call depth and ancestry replacement)
+Files: `results/REVIEW-R4-C1c-{correctness,steelman-day,steelman-critic}.md` (committed e5e4b15). Write-up `results/R4-C1c.md`, "Review resolution" §10. Pre-registration `b128110` (script, depth table and P1–P8 before the main run). Post hoc, each committed before its run: `ee0b725`, `9045329`, `d2fe788` (fix pass); results `f6fdc50`, revised note `04ae7e9`. All runs local (`nice -n 19`, 4 processes).
+
+- **Correctness** (0 BLOCKER, 2 MAJOR, 6 MINOR, 1 NIT). Independent re-parse of the AADR v62.0.p1 anno reproduced the depth table (8,808 individuals); `selftest` passed; a fresh seed reproduced the grid; a closed-form N_e → ∞ integral matched the statistic code.
+  - M1: capture heterogeneity was applied to the modern bin too (82% high-coverage diploid); 95–99% of the "inflation" sat in 0–500 BP. Rerun with ancient-only heterogeneity: S21 moves x0.5–x1.7. "Strongest lever", "tracked fraction only with S21 in thousands" and the P7 outcome withdrawn or re-scored.
+  - M2: the 10000+ bin was placed at 10,500 BP; its AADR dates have median 15.5 kBP. At real dates the all-bin profile distance falls 0.69 → 0.25 (R0 N_e 1e5); bins 1–10 stay unexplained.
+  - MINORs applied: T1 excluded deductively; v62.0.p1 labelled; tuned European filter and 101 rescaled moderns disclosed; 4 replicates support factor-of-2 statements, not a point N_e*; post hoc gate criteria labelled.
+- **Day-side steelman** (8 MAJOR, 5 MINOR): matched capture (tracked 0.72–0.74) gives S21 50 (R0 N_e 1e5) and 26 (R2 N_e 1e6), not thousands; the textbook-N_e error cell (R2, N_e 1e4, eps 1e-3) reproduces Day's eligible count and start table; "literature Holocene N_e well above 1e4" was unsourced and is removed (retrieval gap recorded); stasis is Day's stated model and is the N_e → ∞ edge (S21 ≈ 2–5); S21 / eligible is the density-robust comparison (Day 0.129%).
+- **Critic-side steelman** (6 MAJOR, 6 MINOR): growth schedules (1e4 → 1e6: S21 15–35; step 1e4/1e5/1e6: 32) were left out of the summary; keruru's own downward-bias caveat (up to fivefold) was ignored; the error-rate result was the one pre-registered prediction that broke the critics' way; the 21-class events start at ≥ 95%, so the intermediate-start claim (C) is untouched; critic errors are now attributed (keruru 1e-29 vs 1e-46; ratio stated three ways).
+- **Integrated:** see review #10 (C6 and C-branch verdicts set on C1c + C1d together). Holocene-N_e retrieval gap recorded in `ledgers/gaps.md`.
+
+## 2026-10-09 — Review #10 (Sonnet): correctness + Day-side and critic-side steelman of C1d (Day's aDNA statistics on the real AADR genotypes; keruru's temporal N_e)
+Files: `results/REVIEW-R4-C1d-{correctness,steelman-day,steelman-critic}.md` (committed 43cb710, 0674221). Write-up `results/R4-C1d.md`, "Review resolution" §10. Pre-registration `c0a4071` (P1–P16 before the main run). Post hoc, each committed before its run: `814f5da` (+ bug fix `982366c` before its first successful run), `d308586`, `c09b957` (fix pass: library/damage, two-period pipeline, m-grid, modern-bin variants), `5f0ba57`, `3f70039`; figure `6f43473`; results `0c696f9`, revised note `ab04785` (with quotes-day Q106–Q117). Genotypes (AADR v62.0.p1 and v66.p1 1240K, md5-verified) downloaded and processed on na-workhorse only (host and md5s in `raw/c1d.host`).
+
+- **Correctness** (0 BLOCKER, 3 MAJOR, 10 MINOR). Independent decode confirmed TGENO layout and bit order (SLC24A5, SLC45A2, LCT), the sample (8,808), ploidy labels, the statistic on named SNPs, keruru's replication and the factor of 2.
+  - M1: Day's documented two-period pipeline (Z23046531) was skipped → run in the fix pass: sample 1,377 / 683 (his 1,372 / 680), SNPs 1,143,870 (his 1,143,671), completions from MAF ≥ 10% 2 and 0 (his 1 and 3), events 63,631 vs 17,814 (3.6x).
+  - M2: the regional-composition caveat on keruru was asserted → computed: 6–17% of the BA-to-Medieval F; within-region N_e (3.4k–14.6k) points away from composition.
+  - M3: "no setting gives tracked 0.65–0.80" was false (m = 40 gives 0.755, m = 45 0.671; S21 still ~3.9k). P9 held on v62.
+- **Day-side steelman** (4 MAJOR, 6 MINOR): no damage/library dimension → library-type test run (matched random controls): the transition excess is not specific to damage-prone libraries, so damage is not the missing piece; "scripts do not exist" → "not found in the Zenodo records searched; the promise is in Z23046531 and may mean on request" (GitHub, OSF and the blog corpus also searched, read-only); the transversion comparison was left open in both bullets and the "~900 expected" figure withdrawn; Day's wins (start table to 0.4 points; 98.8% near-fixation; transversion pre-7000 share 0.98–0.99) moved into the brief.
+- **Critic-side steelman** (5 MAJOR, 4 MINOR): "transversions same order as 21" re-stated per eligible allele (0.57% vs Day 0.094%) and per site (31x autosomes, v62); "untestable" is wrong for a tested statistic; B2e scored separately for RF-12 (not established at 1e7) and RF-13 (partly supported; ≥ 6x at any census ≥ 1e5); the composition point is now computed; keruru's factor of 2 is an error (his code comments) but small and disclosed.
+- **Integrated (C1c + C1d):** C6 external untestable → **contradicted** (as stated; best Day reading "underspecified"; reopens as contested if a pipeline is documented); C7 external pending → **contradicted** for "no allele-frequency movement" (drift attribution open); C unchanged (contested; C1c/C1d do not address the intermediate-start statistic; completions reproduce in kind); C5b internal pending → **holds** with a slip-ledger note (halved pseudo-haploid correction, 7–19% on the headline windows; under the X1 25%/no-flip rule this is ledgered, not an error) and external pending → **supported** (lower-bound variance N_e; replicates within 4%); B2e external pending → **contested**; comments on C1, C1a, C4, C5a (N_e near 2 excluded); B2, B2b unchanged. Defeaters d279–d286, d292–d297.
+
+## 2026-10-09 — Review #11 (Sonnet): correctness + Day-side and critic-side steelman of D1 (sequence-space spike)
+Files: `results/REVIEW-R4-D1-{correctness,steelman-day,steelman-critic}.md` (committed 43cb710). Write-up `results/R4-D1-spike.md` (first version `e70363d`), "Review resolution" at the end. Pre-registration `d72c733` (ViennaRNA 2.7.2 pinned; predictions before the main run). Post hoc: `582428a` (summarizer only), `88dda5a`, fix pass `40d9261` and `e92de84` (each committed before its run), outputs `8b4acfd`, `a4c640d`, revised note `5f82925`. RNA runs on na-workhorse; DMS (ProteinGym; URL, date and sha256 in §1) and GB1 local.
+
+- **Correctness** (0 BLOCKER, 4 MAJOR, 10 MINOR). Shape level, neutral-network estimator (exact enumeration of 10-mers), the m → λ mapping (λ_alt = 0.48 at s = 0.01), DMS counts and GB1 maxima all reproduced independently.
+  - M1: two pre-registered "would change the reading" triggers fired unacknowledged (E2 m 24–37 at L 30–50; DMS majority-destroyed 2%) → acknowledged in §0.4; "below the flip for every single-genotype definition" withdrawn for the pre-registered lenient class (λ 13.4).
+  - M2: pooled counts ignore the 1/K split → withdrawn as supply; a first-passage run replaces them (median 36–80 neutral steps to a one-step route vs 0.03–0.06 available per locus).
+  - M3: GB1 "strictly uphill" used an unstated 0.1 margin → margin table 0–0.3 (SNV-level maxima 67–158; reach 51–30%).
+  - M4: the walk sampler under-mixed (0.55 L vs 0.73 L uniform) → reach inflated ~1.25–1.3x; m given reach unaffected.
+- **Day-side steelman** (7 MAJOR, 8 MINOR): tolerance rows are Day's "neutral noise" horn, not alternatives → tagged H2; the needed-change analogue (beneficial-proxy per codon 0.21, λ 0.10) added; "Day's m ≈ 1" came from the docstring → removed; the gene pool is shared → Table C (k = 10: 0.999; k = 25: 0.074; k = 50: 4e-20 at s = 0.01); D2h scored as worded ("reduce or destroy" passes in 61%); GB1 SNV-level ruggedness shown robust to margin.
+- **Critic-side steelman** (6 MAJOR, 8 MINOR): exact-structure-per-locus is Day's horn by construction → axis of readings (H1–H4) with H4 named as untested by per-requirement rows; the pre-registered P10 comparison now reported (Table B: within-gene beneficial fraction 82–1,600x G1's requirement for n ≤ 2e5, 8–16x for n = 2e7 at p = 0.02); s-sweep to 0.05 (one-codon tolerance reaches the flip near s 0.03–0.04); critic-favourable facts moved into §0; the unsourced "critics' strong form" removed and Camestros/McCarthy quoted.
+- **Integrated:** D1d external pending → **supported** (existence part); D2h external contested with the as-worded comment; D, D1, D1a, D1b, D1c, D2c, D2i, D3, D4, D9a, D10–D12 external unchanged (contested) with D1 comments; G3b's open item replaced by the measured per-locus λ, Table C and Table B. Defeaters d287–d291, d298–d300; lineage L-audit-d1-first-2026 (retracted first-pass wording) and L-audit-d1-2026.
+- **Also this round:** A3 marked load-bearing (ROOT P1 and A P4 rest on the required-fixation count; full standard form added).
+
+## Queue (after review #11)
+In flight (agents, 2026-10-09; each pre-registers by commit and gets reviews before integration):
+- **X1 (critic arithmetic) and the single verdict rule:** fix pass done (`R4-X1-verdict-rule.md`, `R4-X1-rescore.md`); a blind audit of the rule's application is running. Integration applies the both-sides re-score and corrects the repo's 1.2e-46 (C5, R4-C1c.md, the C1c critic review).
+- **GAP-07c (polymorphic share, 1000 Genomes):** done; two reviews running (correctness; combined two-sided steelman).
+- **XT (cross-tool replication in fwdpy11 / SLiM)**, **D15 (Hössjer regulatory waiting time)**: running on na-workhorse.
+- **Holocene European N_e retrieval** (`sources/holocene-ne.md`): running; it decides the C1c reading.
+- **Mapping cleanup:** proposals for the 41 unmapped critic/ally nodes and the Hancock video (`argmap/mapping-proposals-2026-10-09.md`).
 
 Next:
-1. **D sims** beyond the spike: the Wistar/sequence-space claims; the G1 middle case needs a per-site m.
-2. **GAP-07 follow-ups:** GAP-07c (polymorphic share of SNVs, indels and SVs from population allele frequencies intersected with the alignment) and a T2T re-run (CHM13/hs1 vs mPanTro3), which bounds the non-T2T side of the 7–14× bracket.
-3. **B2e replication:** an independent ancestry-stratified temporal-N_e estimate from AADR, before B2/B2b external can move (keruru's draft is unreviewed).
-4. **H follow-ups:**
-   - the soft-selection rate limit (R4-H-C2's model) at human R;
-   - truncation/synergistic epistasis at human scale;
-   - a sourced human beneficial DFE and M;
-   - binomial CIs on H T50, plus N/K in the success criterion;
-   - GAP-05 (slightly harmful fixations under drift), now also the external test of Day's B9.
-5. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface, now with GAP-06 (consistent μ × g, a BGS-aware Nₑ,anc); the k = μ route undershoots the GAP-07b count ~2×.
-6. **E leftovers:** E7 mutator sublinearity; E1/E2/E5/E6/E9; heterozygote-load and meltdown pathways (E3 §4); mutator fertility.
-7. **Also open:**
-   - PM2013 Table S5 / PSMC numeric curve.
-   - Lehmann 2014 normalisation.
-   - LTEE Nₑ source.
-   - Coale-Demeny tables and the s definitions in the aDNA papers.
-   - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.
-   - Matev's additive-vs-multiplicative point against the Z18167588 fitness ratio; his binomial tail on 180 fixations.
+1. **C1d follow-ups:** a transversion-restricted, SFS-matched neutral model (the open comparison in R4-C1d §3.5); what the transition excess is (low-frequency loss, hypermutable transitions, reference or capture bias).
+2. **D follow-ups:** ProteinGym multi-mutant decay; a noise null for the beneficial proxy; per-sequence prevalence (D10–D12, literature/fidelity); cross-family connectivity is out of reach by simulation.
+3. **GAP-07 follow-up:** T2T re-run (CHM13/hs1 vs mPanTro3); chimp-population polymorphism.
+4. **H follow-ups:** the soft-selection rate limit at human R; truncation/synergistic epistasis at human scale; a sourced human beneficial DFE and M; binomial CIs on H T50; GAP-05 (also the external test of Day's B9).
+5. **Yoo 2025 μ and generation time / GAP-06:** rescale N_e,anc to the pedigree μ; joint (T, μ, N_e,anc) surface.
+6. **Load-bearing claims without a reviewed check** (R5 draft): A2e, B, B2, B3, H5, H8, B2b, B3g (bookkeeping), E5, E6, F1a, F3a (small checks), ROOT, ROOT-M (roll-up).
+7. **E leftovers, GAP-03, also open:** E7 mutator sublinearity; E1/E2/E5/E6/E9; PM2013 Table S5 / PSMC curve; Lehmann 2014 normalisation; LTEE N_e source; Matev's additive-vs-multiplicative point and binomial tail.
+

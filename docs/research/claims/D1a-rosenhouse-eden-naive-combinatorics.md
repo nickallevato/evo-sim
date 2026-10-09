@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: pending      # no argument visible in the quoted paragraph
   fidelity: unverifiable      # book not accessed; quote is Day's transcription
-  external: contested      # contradictory literature estimates and Day's unsourced DMS claim (D2h)
+  external: contested   # contradictory literature estimates and Day's unsourced DMS claim (D2h); R4 D1: partial support at the local level (10^33-sequence RNA neutral networks, 71% functional DMS singles, 99.8% GB1 functional component); 'hopelessly naive' is unquantified and goes beyond the evidence; Eden's cross-family arithmetic is untouched and exact-outcome lambda is ~1
 ---
 
 ## Statement (verbatim)
@@ -40,6 +40,8 @@ A is-a claim: 'the geometrical structure of protein space (known since 1966) mak
 Written before any check. Under the claimant (Rosenhouse): published measurements of protein-space geometry (e.g. neutral-network sizes, fraction of functional single mutants) show connectivity sufficient for selection. Under the opposing model: measured fractions of functional single mutants are low and decline with distance. Result that would change a verdict: a named study with a measured fraction of functional single-substitution neighbors (D2h).
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): local connectivity is measured: RNA neutral networks of ~10^33 sequences spread across sequence space (uniform samples differ at 0.73 L), 71% of DMS singles functional, GB1 functional set one component. This supports the local geometry D1a alludes to; it does not test Eden's cross-family arithmetic, and exact-outcome alternatives are ~1 per change.
+
 No check possible until ch.6 or the cited studies are obtained. Action: harvest ch.6 and DMS literature (neither in corpus).
 
 ## Simulator variables implied

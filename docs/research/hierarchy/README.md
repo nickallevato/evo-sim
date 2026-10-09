@@ -6,7 +6,7 @@ Colors: Day = orange, ally = yellow, critic = blue, literature = gray. A dashed 
 
 | Branch | Claims | Load-bearing |
 |---|---|---|
-| [A](branch-A.md) | 38 | A, A2e |
+| [A](branch-A.md) | 38 | A, A2e, A3 |
 | [B](branch-B.md) | 49 | B, B1, B1c, B2, B2b, B3, B3a, B3g, B4a, B5, B6, B7 |
 | [C](branch-C.md) | 15 | C2, C2a |
 | [D](branch-D.md) | 39 |  |

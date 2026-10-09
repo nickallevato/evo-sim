@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: n/a      # 
   fidelity: unverifiable      # abstract only; the numerical frequency is not in the abstract and the full text (PMC4476321) was not read
-  external: contested      # binding is not catalysis; function is weak ATP binding after enrichment
+  external: contested   # binding is not catalysis; function is weak ATP binding after enrichment; R4 D1: per-sequence prevalence regime untouched
 ---
 
 ## Statement (verbatim)
@@ -40,6 +40,8 @@ Library size M = 6e12; selected functional (ATP-binding) clones = 4. Derived low
 No separate check. Action: read PMC4476321 for the stated frequency.
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): untouched (see D10).
+
 Arithmetic only: 4/6e12 = 6.7e-13.
 
 ## Simulator variables implied

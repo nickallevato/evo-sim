@@ -7,11 +7,11 @@ parent: D
 edges: [{type: attacks, target: D}]
 load_bearing: false  # D is not required for ROOT
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
   internal: n/a      # observation about the book's coverage, not an argument
   fidelity: n/a      # reviewer read the first edition only (opponents/camestros-felapton.md)
-  external: pending      # pending (post-1966 literature is D10-D12, D1a)
+  external: supported   # existence part only (R4 D1): the quantitative post-1966 literature exists and is usable (ProteinGym deep mutational scans, the complete GB1 four-site landscape of Wu 2016); whether it settles the Wistar question is separate
 ---
 
 ## Statement (verbatim)
@@ -40,6 +40,8 @@ No formal content. Coverage claim: the book's D chapter omits post-1966 work.
 None (no formal content). The question 'does the Day corpus cite post-1966 protein-space work' is answered by search: no hits for Axe, Taylor 2001, Keefe, 'deep mutational' with a citation in blog or Zenodo texts (see D2h).
 
 ## Check
+R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): the spike used post-1966 quantitative data directly: 114 non-stability ProteinGym deep mutational scans and the GB1 four-site landscape (149,360 of 160,000 variants). Day's D2h cites none of it. This supports the existence part of the claim; whether this literature settles Eden's question is a separate matter (per-sequence prevalence, D10-D12, is untouched).
+
 Search result only: `grep -n -E 'Axe|lactamase|Keefe|Szostak|Taylor 2001' sources/raw/day/*.txt` finds no relevant citation.
 
 ## Simulator variables implied

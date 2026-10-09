@@ -1,6 +1,6 @@
 # evo-sim: a briefing for independent assessment
 
-*Status as of 2026-10-09 (GAP-07b direct count and the 2026-10-09 corpus refresh added; earlier the same day H3 and GAP-04/07/02; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
+*Status as of 2026-10-09 (C1c, C1d and D1 added; A3 marked load-bearing; earlier the same day GAP-07b and the corpus refresh; earlier the same day H3 and GAP-04/07/02; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
 
 This note is for a team that has not followed the project and wants to form its own view of it. It describes what the project is, what it has found, and where its findings and methods are weakest. It does not argue for any side. Wherever this note and the repo disagree, trust the repo.
 
@@ -14,8 +14,8 @@ evo-sim has two stages.
 ## How the audit works
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
 2. **Claims.** 204 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
-3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty nodes are marked as load-bearing.
-4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-four checks have been reviewed so far.
+3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-one nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09).
+4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-seven checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
@@ -37,6 +37,8 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Haldane's arithmetic** (300 and 487) holds.
 - **A critic's double count.** The critics' claim that "38M matches 35M SNVs" counts the same differences twice.
 - **SNV-only count.** Day's SNV-only figure (17.5M per lineage) is 83% of the directly counted events and brackets the count once polymorphism is removed (16.4–18.1M); his SNV-only shortfall grows slightly on the measured count. His base-pair total is the right order for sequence that does not align one-to-one (GAP-07b).
+- **Ancient DNA, in part.** On the real AADR genotypes Day's start-frequency table reproduces to 0.4 points, and his description of the events as completions of alleles already near fixation is right in kind (98.8%) (C1d).
+- **Sequence space, at the locus.** Exact-outcome alternatives are about one per needed change, the GB1 landscape is rugged at single-nucleotide steps, and "reduce or destroy" holds as worded for deep mutational scans (D1).
 - **LTEE founders.** The founder hazard's size (2.0–2.75% per event against Day's 2.3%) and the relictation chain both reproduce. The route to the 2.3% is wrong, and its consequence for real populations is untested.
 
 **Points where the critics' maths holds up:**
@@ -49,22 +51,24 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Event counts.** A direct count from the human–chimp genome alignment finds about 42M mutational events (21M per lineage). Day's 205M is 9.7× that, within a bracket of about 7–14× depending on assumptions; the alignment uses older, non-T2T assemblies (GAP-07b).
 - **Required fixations.** The "205M required fixations" figure counts base pairs rather than mutation events.
 - **A misread citation.** A selection coefficient Day cites (s = 0.001, from Zeng 2021) is for negative selection, not beneficial.
+- **Ancient DNA, the 21.** Day's statistic does not reproduce from his stated method on the real genotypes (thousands of post-6000 BP events, not 21; his own documented two-period pipeline is 3.6× off; no code found). keruru's measured temporal Nₑ replicates within 4%, and Day's Nₑ ≈ 2 is excluded (C1d).
+- **Sequence space, within genes.** 71% of single substitutions keep at least half of function and "destroy" alone is rare; GB1's functional variants form one connected network; within genes the beneficial fraction exceeds G1's requirement for up to ~2×10⁵ needed changes (D1).
 - **Bernoulli barrier.** 0.02^(2×10⁷) prices one pre-specified list of outcomes, and its value doesn't depend on timing. No cap near 230 concurrent sweeps appears under multiplicative fitness. One earlier audit objection to Day's 14.7× was itself withdrawn.
 
 **Still open:**
 - **Cost of selection** at human scale is decided only conditionally. The answer flips at an adaptive non-coding share of about 0.01–0.6%, below what any estimate resolves. R is unsourced. Soft selection, absolute-fitness gain and epistasis are untested at human scale.
-- **Ancient DNA.** Day's "21 fixations" statistic, which could not be reproduced from its published method.
+- **Ancient DNA.** Day's "21" is contradicted as stated, but what it means turns on the Holocene Nₑ, which the repo does not yet source (retrieval in progress), and the neutral comparison for the damage-resistant transversion class is open.
 - **Ancestral Nₑ.** The value needed to fit the observed divergence has three free parameters, so no side gets a clean fit.
-- **Sequence space (D)** has no check yet. It now has a precise question from G1: how many interchangeable routes exist per needed change. Above about 12–17, the "any outcome" reading wins.
+- **Sequence space (D).** D1 found about 1–6 routes per needed change per locus (below G1's flip of ~7–17); a gene's shared pool of beneficial mutations clears the flip for about ten needed changes, not 25 or more. Per-sequence prevalence (Axe, Taylor) and cross-family connectivity are untouched.
 - **Adaptive fraction.** How many differences needed selection at all. Nobody on either side has put this in the argument ([gaps](arguments/README.md#4-what-everyone-missed)).
 
 **Overall verdict counts** (all sides combined, n/a omitted):
 
 | Verdict | Counts |
 |---|---|
-| Internal | 101 hold, 17 non-sequitur, 6 arithmetic error, 57 pending |
+| Internal | 102 hold, 17 non-sequitur, 6 arithmetic error, 56 pending |
 | Fidelity | 36 accurate, 33 partial, 9 misread, 35 unverifiable, 11 pending |
-| External | 24 supported, 102 contested, 9 contradicted, 5 untestable, 52 pending |
+| External | 26 supported, 103 contested, 11 contradicted, 4 untestable, 48 pending |
 
 Note that the largest external category is *contested*.
 
@@ -103,6 +107,7 @@ These dated posts tell the story in order:
 6. [2026-10-08: Making it inspectable](2026-10-08-6-going-public.md)
 7. [2026-10-08: Founders, the Bernoulli barrier, and a map of the argument](2026-10-08-7-argument-map.md)
 8. [2026-10-09: The cost of selection at human scale, and three gaps closed](2026-10-09-8-cost-of-selection-and-gaps.md)
+9. [2026-10-09: Day's 21 on real genomes, and how many routes a mutation has](2026-10-09-9-ancient-dna-and-sequence-space.md)
 
 ## Not yet decided
 - The final verdicts and the sensitivity table (R5).
