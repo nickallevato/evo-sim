@@ -636,3 +636,60 @@ Verified as exact substrings (whitespace and quote-mark normalised) of the local
 - branch: C,B2
 - quote: "And we've now got hard evidence that genetic drift isn't happening at all over the last 7000 years, and that there is a hard population limit on the neutral pipeline."
 - note: Vox Day comment, 2026-09-13. Restates claim C (aDNA 'zero fixation') as 'no drift' and ties it to the Hard Limits ceiling (B2). Z23046531 (2026-09-29, 1 and 3 completions) post-dates this comment; R4 C1/C1b found the aDNA counts at or mildly above neutral expectation, which is not the same as 'no drift'.
+
+
+### Q97 Less Than Zero: CSAC headline "35 million SNVs and 5 million indels affecting roughly 90 million base pairs" (added 2026-10-09)
+- source: `B2026-04-28-less-than-zero-3` (blog post dated 2026-04-28); URL: https://voxday.net/2026/04/28/less-than-zero-3/
+- locator: ¶5 of extracted text
+- local copy: `sources/raw/day/blog-2026-04-28-less-than-zero-3.txt`
+- branch: A3,A3x
+- quote: "The headline number from that paper was approximately 35 million single nucleotide differences and 5 million indels affecting roughly 90 million base pairs of sequence. Forty million differences out of three billion base pairs. About 1.2 percent."
+- note: Day himself describes the 2005 count as 35M SNVs plus 5M indels (events) spanning ~90M bp, "Forty million differences": so his first-edition "40 million" is an event count, not a bp count (compare Q75, Q74). Cited in R4-GAP07b (Day-side review minor 8).
+
+### Q98 Less Than Zero: requirement rises "from 20 million fixations to roughly 207 million" (added 2026-10-09)
+- source: `B2026-04-28-less-than-zero-3` (blog post dated 2026-04-28); URL: https://voxday.net/2026/04/28/less-than-zero-3/
+- locator: ¶18 of extracted text
+- local copy: `sources/raw/day/blog-2026-04-28-less-than-zero-3.txt`
+- branch: A3a
+- quote: "Since the genuine chimp-human divergence is 415 million base pairs rather than 40 million, the requirement on the human lineage rises from 20 million fixations to roughly 207 million. A maximum of 91 fixations on the human lineage in the time available was the ceiling before, and it remains the ceiling now. The shortfall ratio rises from 220,000-fold to more than 2.3 million-fold against the chimp-human gap alone."
+- note: Point statement (415M bp -> ~207M fixations on the human lineage) before the two-row framing of 2026-05-13 (Q101-Q103). 415 vs the later 410 (Q15, Q74) is a version drift.
+
+### Q99 Less Than Zero: one event, one fixation; bp counting is "generous to the standard model" (added 2026-10-09)
+- source: `B2026-04-28-less-than-zero-3` (blog post dated 2026-04-28); URL: https://voxday.net/2026/04/28/less-than-zero-3/
+- locator: ¶19 of extracted text
+- local copy: `sources/raw/day/blog-2026-04-28-less-than-zero-3.txt`
+- branch: A3a,A3x
+- quote: "And every structural difference longer than a single base pair makes the problem mathematically worse, not better. A point mutation requires one mutation event and one fixation event. A 50,000 base pair insertion or a chromosomal inversion requires the entire structural rearrangement to occur as a single low-probability event and then to fix. Counting these by base pair, as the gap-divergence figure does, is generous to the standard model. Counting them by independent fixation events would be more devastating still."
+- note: Day's stated rationale for the bp count: a weighting claim. An SV is "a single low-probability event" that must then fix; bp counting is said to be the generous (low) treatment; counting by independent fixation events "would be more devastating still". Not in A3x before R4-GAP07b (A3x said Day gave no defence).
+
+### Q100 Less Than Zero: structural variation is "with very few exceptions, post-divergence" (added 2026-10-09)
+- source: `B2026-04-28-less-than-zero-3` (blog post dated 2026-04-28); URL: https://voxday.net/2026/04/28/less-than-zero-3/
+- locator: ¶25 of extracted text (last two sentences)
+- local copy: `sources/raw/day/blog-2026-04-28-less-than-zero-3.txt`
+- branch: A3a,A3c
+- quote: "It is a structural rearrangement that occurred in a specific lineage at a specific time, and either fixed or did not fix. ILS cannot sort what was never segregating. Structural variation is, with very few exceptions, post-divergence, and it must be accounted for by the same fixation arithmetic that the SNPs already break."
+- note: Relevant to polymorphism correction (A3c): Day holds that SVs were not segregating in the ancestor, so the CSAC 14-22% polymorphic share (an SNV estimate) would not apply to them. The polymorphic share of indels/SVs is unmeasured (R4-GAP07b).
+
+### Q101 Reddit Takes on PROBABILITY ZERO: "The answer is that it doesn't matter" (multi-bp mutations) (added 2026-10-09)
+- source: `B2026-05-13-reddit-takes-on-probability-zero` (blog post dated 2026-05-13); URL: https://voxday.net/2026/05/13/reddit-takes-on-probability-zero/
+- locator: ¶4 of extracted text (answers the objection quoted in ¶3)
+- local copy: `sources/raw/day/blog-2026-05-13-reddit-takes-on-probability-zero.txt`
+- branch: A3a,A3x
+- quote: "This is the most substantive question in the thread, which is presumably why it’s the one that inspires the least engagement. The answer is that it doesn’t matter."
+- note: Answer to Objection 1 (¶3: "does he count those as single events or as hundreds of thousands of mutations each?").
+
+### Q102 Reddit Takes on PROBABILITY ZERO: Yoo numbers, "35 million ... on the human lineage ... Total: about 205 million" (added 2026-10-09)
+- source: `B2026-05-13-reddit-takes-on-probability-zero` (blog post dated 2026-05-13); URL: https://voxday.net/2026/05/13/reddit-takes-on-probability-zero/
+- locator: ¶5 of extracted text
+- local copy: `sources/raw/day/blog-2026-05-13-reddit-takes-on-probability-zero.txt`
+- branch: A3a
+- quote: "In Yoo et al. (2025) the complete telomere-to-telomere assemblies of all great ape genomes are published. The Yoo numbers give us approximately 35 million single-nucleotide variants on the human lineage, plus 1,140 interspecific inversions, plus ~187 Mb of structurally divergent sequence. Total: about 205 million genomic differences requiring explanation."
+- note: FLAG: "approximately 35 million single-nucleotide variants on the human lineage" (CSAC's 35M is a two-lineage total) and "Total: about 205 million" (the 205M is the per-lineage half of 410M, ¶7). Lineage/total mix-up inside one paragraph; measured human-derived SNVs are ~17.3M (R4-GAP07b).
+
+### Q103 Reddit Takes on PROBABILITY ZERO: SNV-only to bp-per-SV as a range; SVs as single events "the maximally generous treatment" (added 2026-10-09)
+- source: `B2026-05-13-reddit-takes-on-probability-zero` (blog post dated 2026-05-13); URL: https://voxday.net/2026/05/13/reddit-takes-on-probability-zero/
+- locator: ¶6 of extracted text
+- local copy: `sources/raw/day/blog-2026-05-13-reddit-takes-on-probability-zero.txt`
+- branch: A3a,A3b,A3x
+- quote: "Now, the critic’s excuse is to say “but inversions and structural variants are single events, not millions of mutations.” Fine. Discount every structural variant in the Yoo data to zero. Count nothing but single-nucleotide variants. The shortfall on the SNV-only subset is still four to five orders of magnitude. Going the other direction — counting every base pair in every structural variant as a separate mutation — pushes the shortfall to six orders of magnitude. The conclusion holds either way. Counting structural variants as single events is the maximally generous treatment, and the model still fails."
+- note: Day's two-row range: SNV-only = lower bracket (4-5 orders of magnitude), every bp of every SV counted separately = upper bracket (6 orders). "Discount every SV to zero" drops the ~4.3M indel events too (~10% of events), so it is an SNV floor and not an event count (R4-GAP07b). Compare MITTENS 3.0 s7.3 (Q16).

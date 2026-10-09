@@ -1,0 +1,8 @@
+SNV top-level fills 35017058 ; nested fills 2750338 ; sum 37767396 (main run 37767396) ; nested divergence 0.0209 vs top 0.0131
+events with SNVs from top-level (colinear) fills only: 39352176 ; per lineage 19.68 M ; 205M/that = 10.42
+bases that differ (lower-bound row): SNV 37767396 + human unaligned 134476208 minus centromere models 59539749 + chimp placed unaligned 88576196 = 201280051 ; 410M/that = 2.04 ; per event 4.78
+upper row with centromere models: 260819800 ; per event 6.19
+nested ali bp: syn 14980046 inv 80745863 nonSyn 35610901
+Yoo-style row (all nested), SNVs inside nested fills not double counted: 520743082 ; per event 12.37
+Yoo-style row excluding syntenic nested fills, no double count: 490782990 ; per event 11.66
+SNV positions inside nested fills counted twice in the published 523M row: 2750338

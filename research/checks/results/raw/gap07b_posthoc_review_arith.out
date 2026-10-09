@@ -1,0 +1,78 @@
+events (main-run report definition) 42102514 ; with unplaced-scaffold segments 42108545
+
+## (a) ratio bracket (205M / events per lineage)
+per-lineage events, SNV split + symmetric indels w=2 (all sizes): human 20073221 chimp 21995827 ; 205M/human 10.21 ; 205M/chimp 9.32
+per-lineage events, SNV split + symmetric indels w=2 (<=50 bp polarized): human 20098776 chimp 21970272 ; 205M/human 10.20 ; 205M/chimp 9.33
+per-lineage events, SNV split + symmetric indels w=5 (all sizes): human 20249030 chimp 21820018 ; 205M/human 10.12 ; 205M/chimp 9.40
+per-lineage events, SNV split + symmetric indels w=5 (<=50 bp polarized): human 20273985 chimp 21795063 ; 205M/human 10.11 ; 205M/chimp 9.41
+per-lineage events, SNV split + symmetric indels w=10 (all sizes): human 20446041 chimp 21623007 ; 205M/human 10.03 ; 205M/chimp 9.48
+per-lineage events, SNV split + symmetric indels w=10 (<=50 bp polarized): human 20470269 chimp 21598779 ; 205M/human 10.01 ; 205M/chimp 9.49
+per-lineage events, SNV split + symmetric indels w=20 (all sizes): human 20610826 chimp 21458222 ; 205M/human 9.95 ; 205M/chimp 9.55
+per-lineage events, SNV split + symmetric indels w=20 (<=50 bp polarized): human 20633961 chimp 21435087 ; 205M/human 9.94 ; 205M/chimp 9.56
+
+non-aligned non-N bp (human + chimp placed) 223052404 ; plus nested aligned both sides 485726024
+| reading | events per lineage | 205M / that | note |
+|---|---|---|---|
+| RAW pooled (pre-registered headline) | 21.05 M | 9.74 | total/2 |
+| human lineage alone (w=5, indels <=50 bp polarized) [post hoc] | 20.27 M | 10.11 | SNV gorilla split + symmetric indel rule; range over w 20.07-20.63 M |
+| <2%-divergence SNV records only [post hoc; threshold chosen after the CSAC miss] | 19.05 M | 10.76 | drops 4.0 M SNVs in paralog/nested/low-quality records |
+| fixed share 0.78 applied to SNVs only [post hoc] | 16.90 M | 12.13 | CSAC 14-22%% polymorphism is an SNV estimate |
+| fixed share 0.86 applied to SNVs only [post hoc] | 18.41 M | 11.14 | CSAC 14-22%% polymorphism is an SNV estimate |
+| fixed share 0.78 applied to ALL events [post hoc] | 16.42 M | 12.48 | assumes indels/SVs are as polymorphic as SNVs (unmeasured) |
+| fixed share 0.86 applied to ALL events [post hoc] | 18.10 M | 11.32 | assumes indels/SVs are as polymorphic as SNVs (unmeasured) |
+| <2% records and fixed share 0.78 on SNVs (not additive) [post hoc] | 15.34 M | 13.37 | upper end; overlaps |
+| <2% records and fixed share 0.86 on SNVs (not additive) [post hoc] | 16.69 M | 12.29 | upper end; overlaps |
+| MNV runs merged (adjacent mismatches count once) [post hoc] | 20.33 M | 10.08 | critic-favourable correction, unused in the main run |
+| indel gaps merged if separated by <= 1 aligned bp [post hoc] | 21.05 M | 9.74 | 160 merges (same-chain adjacency approximated by file order) |
+| indel gaps merged if separated by <= 10 aligned bp [post hoc] | 21.01 M | 9.76 | 89133 merges (same-chain adjacency approximated by file order) |
+| indel gaps merged if separated by <= 50 aligned bp [post hoc] | 20.79 M | 9.86 | 520696 merges (same-chain adjacency approximated by file order) |
+| Day-favourable: non-aligned only counted as 171-bp units (replaces nothing; ADDED to events) [post hoc] | 21.70 M | 9.45 | +1.30 M events |
+| Day-favourable: non-aligned + nested aligned counted as 171-bp units (replaces nothing; ADDED to events) [post hoc] | 22.47 M | 9.12 | +2.84 M events |
+| Day-favourable: non-aligned only counted as 32-bp units (replaces nothing; ADDED to events) [post hoc] | 24.54 M | 8.35 | +6.97 M events |
+| Day-favourable: non-aligned + nested aligned counted as 32-bp units (replaces nothing; ADDED to events) [post hoc] | 28.64 M | 7.16 | +15.18 M events |
+| Day-favourable: non-aligned only counted as 6-bp units (replaces nothing; ADDED to events) [post hoc] | 39.64 M | 5.17 | +37.18 M events |
+| Day-favourable: non-aligned + nested aligned counted as 6-bp units (replaces nothing; ADDED to events) [post hoc] | 61.53 M | 3.33 | +80.95 M events |
+| Day-favourable: non-aligned only counted as 2-bp units (replaces nothing; ADDED to events) [post hoc] | 76.81 M | 2.67 | +111.53 M events |
+| Day-favourable: non-aligned + nested aligned counted as 2-bp units (replaces nothing; ADDED to events) [post hoc] | 142.48 M | 1.44 | +242.86 M events |
+| Day-favourable: non-aligned only counted as 1-bp units (replaces nothing; ADDED to events) [post hoc] | 132.58 M | 1.55 | +223.05 M events |
+| Day-favourable: non-aligned + nested aligned counted as 1-bp units (replaces nothing; ADDED to events) [post hoc] | 263.91 M | 0.78 | +485.73 M events |
+| Day-favourable: indel events x2 (microsatellite slippage / merged opposite steps) [post hoc] | 23.20 M | 8.84 | assumption, not measured |
+| Day-favourable: indel events x3 (microsatellite slippage / merged opposite steps) [post hoc] | 25.35 M | 8.09 | assumption, not measured |
+
+## (b) weight per large event needed for 205M per lineage
+events >50 bp: 113293 (56646 per lineage); others weight 1 -> weight needed per event = 3248 SNV-equivalents
+events >1000 bp: 23249 (11624 per lineage); others weight 1 -> weight needed per event = 15825 SNV-equivalents
+mean raw bp per 51-1000 bp event 255
+
+## (c) SNV-only shortfall at MITTENS 3.0 s7.3 rates (252,000 generations)
+non-mutator 1,322 gen/fix: achievable 190.6 ; Day 17.5M 17.50 M -> shortfall 91806
+non-mutator 1,322 gen/fix: achievable 190.6 ; measured SNV/2 18.88 M -> shortfall 99064
+non-mutator 1,322 gen/fix: achievable 190.6 ; measured SNV(<2%)/2 16.88 M -> shortfall 88568
+non-mutator 1,322 gen/fix: achievable 190.6 ; measured events/2 21.05 M -> shortfall 110436
+non-mutator 1,322 gen/fix: achievable 190.6 ; fixed-corrected events 0.78 16.42 M -> shortfall 86140
+non-mutator 1,322 gen/fix: achievable 190.6 ; fixed-corrected events 0.86 18.10 M -> shortfall 94975
+mutator 105 gen/fix: achievable 2400.0 ; Day 17.5M 17.50 M -> shortfall 7292
+mutator 105 gen/fix: achievable 2400.0 ; measured SNV/2 18.88 M -> shortfall 7868
+mutator 105 gen/fix: achievable 2400.0 ; measured SNV(<2%)/2 16.88 M -> shortfall 7035
+mutator 105 gen/fix: achievable 2400.0 ; measured events/2 21.05 M -> shortfall 8771
+mutator 105 gen/fix: achievable 2400.0 ; fixed-corrected events 0.78 16.42 M -> shortfall 6842
+mutator 105 gen/fix: achievable 2400.0 ; fixed-corrected events 0.86 18.10 M -> shortfall 7543
+strict 1,587 gen/fix: achievable 158.8 ; Day 17.5M 17.50 M -> shortfall 110208
+strict 1,587 gen/fix: achievable 158.8 ; measured SNV/2 18.88 M -> shortfall 118922
+strict 1,587 gen/fix: achievable 158.8 ; measured SNV(<2%)/2 16.88 M -> shortfall 106322
+strict 1,587 gen/fix: achievable 158.8 ; measured events/2 21.05 M -> shortfall 132573
+strict 1,587 gen/fix: achievable 158.8 ; fixed-corrected events 0.78 16.42 M -> shortfall 103407
+strict 1,587 gen/fix: achievable 158.8 ; fixed-corrected events 0.86 18.10 M -> shortfall 114013
+
+## (d) indel polarization by size class
+pre-registered rule (human share of polarized) by kind and size:
+  human_only [0.253, 0.155, 0.155, 0.437, 0.422] polarized fraction [0.894, 0.83, 0.678, 0.698, 0.815]
+  chimp_only [0.458, 0.479, 0.377, 0.092, 0.0] polarized fraction [0.918, 0.873, 0.828, 0.833, 0.875]
+ post hoc w=2 <=50 bp: human share 0.382 ; >50 bp: 0.110 ; polarized fraction <=50 bp 0.912, >50 bp 0.739
+ post hoc w=5 <=50 bp: human share 0.428 ; >50 bp: 0.117 ; polarized fraction <=50 bp 0.914, >50 bp 0.736
+ post hoc w=10 <=50 bp: human share 0.480 ; >50 bp: 0.125 ; polarized fraction <=50 bp 0.916, >50 bp 0.730
+ post hoc w=20 <=50 bp: human share 0.523 ; >50 bp: 0.137 ; polarized fraction <=50 bp 0.918, >50 bp 0.720
+
+## (e) 410 Mb coincidence base rate
+subsets 3458 ; within +-0.1% of 410: 3 ; fraction 0.00087
+hits: [(410.1, (0, 1, 2)), (409.6, (0, 5, 6, 7)), (410.4, (1, 2, 4, 5, 9))]
