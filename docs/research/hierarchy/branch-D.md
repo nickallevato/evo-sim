@@ -37,6 +37,10 @@ flowchart TD
   style n_D14 fill:#fef3c7,stroke:#a16207
   n_D14 --> n_D
   n_D14 -->|supports| n_D
+  n_D15["D15: Hössjer (prediction): the waiting time for several genes to <br/><small>ally · int:pending · fid:pending · ext:pending</small>"]
+  style n_D15 fill:#fef3c7,stroke:#a16207
+  n_D15 --> n_D
+  n_D15 -->|supports| n_D
   n_D1a["D1a: Rosenhouse p.124: molecular biologists learned the geometry <br/><small>critic · int:pending · fid:unverifiable · ext:contested</small>"]
   style n_D1a fill:#dbeafe,stroke:#1d4ed8
   n_D1a --> n_D1
@@ -127,7 +131,7 @@ flowchart TD
   n_D3c["D3c: Eden calculated that hemoglobin alpha-to-beta conversion tak<br/><small>day · int:pending · fid:misread · ext:contested</small>"]
   style n_D3c fill:#fde2c8,stroke:#b45309
   n_D3c --> n_D3
-  n_D3c -.->|attacks| n_D2g
+  n_D3c -->|supports| n_D2g
   n_D3c -->|depends-on| n_D3b
   n_D4["D4: Ulam: 10^6 successive improvements each needing ~10^7 genera<br/><small>literature · int:holds · fid:n/a · ext:contested</small>"]
   style n_D4 fill:#e5e7eb,stroke:#374151
@@ -178,11 +182,11 @@ flowchart TD
   style n_D9 fill:#fde2c8,stroke:#b45309
   n_D9 --> n_D
   n_D9 -->|depends-on| n_D2i
-  n_D9 -.->|attacks| n_D
+  n_D9 -->|supports| n_D
   n_D9a["D9a: Dawkins's Weasel actually demonstrates the opposite of its p<br/><small>day · int:non-sequitur · fid:n/a · ext:contested</small>"]
   style n_D9a fill:#fde2c8,stroke:#b45309
   n_D9a --> n_D9
   n_D9a -->|depends-on| n_D9
-  n_D9a -.->|attacks| n_D
+  n_D9a -->|supports| n_D
   n_ROOT(["ROOT (other branch)"])
 ```

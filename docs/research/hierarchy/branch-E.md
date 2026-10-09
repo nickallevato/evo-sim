@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart TD
-  n_E["E: Punctuated equilibrium's peripatric mechanism sits where hyp<br/><small>day · int:pending · fid:pending · ext:pending</small>"]
+  n_E["E: Punctuated equilibrium's peripatric mechanism sits where hyp<br/><small>day · int:holds · fid:accurate · ext:pending</small>"]
   style n_E fill:#fde2c8,stroke:#b45309
   n_E --> n_ROOT
   n_E -->|supports| n_ROOT
@@ -17,11 +17,11 @@ flowchart TD
   n_E2 --> n_E
   n_E2 -->|supports| n_E
   n_E2 -->|depends-on| n_F
-  n_E3["E3: A Wright-Fisher simulation of 50,000 founder events validate<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_E3["E3: A Wright-Fisher simulation of 50,000 founder events validate<br/><small>day · int:holds · fid:n/a · ext:contested</small>"]
   style n_E3 fill:#fde2c8,stroke:#b45309
   n_E3 --> n_E
   n_E3 -->|supports| n_E
-  n_E4["E4: Relictation: when one family replaces more than ~10% of a po<br/><small>day · int:pending · fid:pending · ext:pending</small>"]
+  n_E4["E4: Relictation: when one family replaces more than ~10% of a po<br/><small>day · int:holds · fid:accurate · ext:contested</small>"]
   style n_E4 fill:#fde2c8,stroke:#b45309
   n_E4 --> n_E
   n_E4 -->|depends-on| n_B3

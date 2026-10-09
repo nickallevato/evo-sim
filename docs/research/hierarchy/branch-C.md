@@ -9,8 +9,8 @@ flowchart TD
   n_C -->|depends-on| n_C2
   n_C -->|depends-on| n_C4
   n_C -.->|attacks| n_C5
-  n_C1["C1: The 1240k capture panel is ascertained on present-day variab<br/><small>critic · int:holds · fid:accurate · ext:supported</small>"]
-  style n_C1 fill:#dbeafe,stroke:#1d4ed8
+  n_C1["C1: The 1240k capture panel is ascertained on present-day variab<br/><small>literature · int:holds · fid:accurate · ext:supported</small>"]
+  style n_C1 fill:#e5e7eb,stroke:#374151
   n_C1 --> n_C
   n_C1 -.->|attacks| n_C
   n_C1 -.->|attacks| n_C6
@@ -25,7 +25,7 @@ flowchart TD
   n_C2 -->|supports| n_C
   n_C2 -->|supports| n_A4
   n_C2 -->|depends-on| n_C2a
-  n_C2 -.->|attacks| n_C2c
+  n_C2 -->|depends-on| n_C2c
   n_C2a["C2a: d is derived from life tables as d = T x (integral of mortal<br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_C2a fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_C2a --> n_C2
@@ -74,9 +74,15 @@ flowchart TD
   n_C6 --> n_C
   n_C6 -->|supports| n_C
   n_C6 -->|supports| n_B4
+  n_C7["C7: Day: 'genetic drift isn't happening at all over the last 700<br/><small>day · int:non-sequitur · fid:n/a · ext:pending</small>"]
+  style n_C7 fill:#fde2c8,stroke:#b45309
+  n_C7 --> n_C
+  n_C7 -->|depends-on| n_C
+  n_C7 -->|supports| n_B2
   n_A(["A (other branch)"])
   n_A2(["A2 (other branch)"])
   n_A4(["A4 (other branch)"])
+  n_B2(["B2 (other branch)"])
   n_B3(["B3 (other branch)"])
   n_B4(["B4 (other branch)"])
   n_ROOT(["ROOT (other branch)"])

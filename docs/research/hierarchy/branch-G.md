@@ -27,7 +27,7 @@ flowchart TD
   style n_G1c fill:#dbeafe,stroke:#1d4ed8
   n_G1c --> n_G1
   n_G1c -->|supports| n_G1
-  n_G2["G2: Hancock: the formula assumes each mutation must arise and go<br/><small>critic · int:pending · fid:partial · ext:contested</small>"]
+  n_G2["G2: Hancock: the formula assumes each mutation must arise and go<br/><small>critic · int:holds · fid:partial · ext:contested</small>"]
   style n_G2 fill:#dbeafe,stroke:#1d4ed8
   n_G2 --> n_A
   n_G2 -.->|attacks| n_A
@@ -43,19 +43,19 @@ flowchart TD
   n_G2c["G2c: Hancock: a strictly serial model predicts almost no genetic <br/><small>critic · int:pending · fid:n/a · ext:pending</small>"]
   style n_G2c fill:#dbeafe,stroke:#1d4ed8
   n_G2c --> n_G2
-  n_G2c -.->|attacks| n_G2
+  n_G2c -->|supports| n_G2
   n_G2d["G2d: Camestros: 'Generations per fixation' reads as if each fixat<br/><small>critic · int:holds · fid:accurate · ext:n/a</small>"]
   style n_G2d fill:#dbeafe,stroke:#1d4ed8
   n_G2d --> n_G2
   n_G2d -.->|attacks| n_G1
-  n_G2e["G2e: Myers: evolution is a property of populations and involves m<br/><small>critic · int:pending · fid:partial · ext:pending</small>"]
+  n_G2e["G2e: Myers: evolution is a property of populations and involves m<br/><small>critic · int:holds · fid:partial · ext:contested</small>"]
   style n_G2e fill:#dbeafe,stroke:#1d4ed8
   n_G2e --> n_G2
   n_G2e -.->|attacks| n_G2g
-  n_G2f["G2f: Bowers (as reposted by Day): treating evolution like a seria<br/><small>critic · int:pending · fid:n/a · ext:pending</small>"]
+  n_G2f["G2f: Bowers (as reposted by Day): treating evolution like a seria<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
   style n_G2f fill:#dbeafe,stroke:#1d4ed8
   n_G2f --> n_G2
-  n_G2f -.->|attacks| n_G3
+  n_G2f -.->|attacks| n_Ga
   n_G2g["G2g: Day (Appendix A, quoted in his blog): the Bernoulli Barrier <br/><small>day · int:non-sequitur · fid:n/a · ext:contested</small>"]
   style n_G2g fill:#fde2c8,stroke:#b45309
   n_G2g --> n_G
@@ -69,7 +69,7 @@ flowchart TD
   style n_G3a fill:#dbeafe,stroke:#1d4ed8
   n_G3a --> n_G3
   n_G3a -->|supports| n_G3
-  n_G3b["G3b: Day: either the specific fixations matter (Darwillion applie<br/><small>day · int:pending · fid:n/a · ext:contested</small>"]
+  n_G3b["G3b: Day: either the specific fixations matter (Darwillion applie<br/><small>day · int:non-sequitur · fid:n/a · ext:contested</small>"]
   style n_G3b fill:#fde2c8,stroke:#b45309
   n_G3b --> n_G3
   n_G3b -.->|attacks| n_G3
@@ -81,6 +81,10 @@ flowchart TD
   style n_G4b fill:#fde2c8,stroke:#b45309
   n_G4b --> n_G4
   n_G4b -.->|attacks| n_G3
+  n_G5["G5: Matev: the Bernoulli Barrier's coefficient of variation fall<br/><small>critic · int:holds · fid:n/a · ext:n/a</small>"]
+  style n_G5 fill:#dbeafe,stroke:#1d4ed8
+  n_G5 --> n_G
+  n_G5 -.->|attacks| n_G
   n_Ga["Ga: P(all) = p^n: 0.02^20,000,000 ≈ 10^−34,000,000 for 20 millio<br/><small>day · int:holds · fid:accurate · ext:contested</small>"]
   style n_Ga fill:#fde2c8,stroke:#b45309
   n_Ga --> n_G

@@ -42,7 +42,6 @@ flowchart TD
   n_A2c["A2c: The paper's own correction gives −906 fixations for Ara-2 an<br/><small>critic · int:holds · fid:accurate · ext:pending</small>"]
   style n_A2c fill:#dbeafe,stroke:#1d4ed8
   n_A2c --> n_A2
-  n_A2c -.->|attacks| n_A2b
   n_A2c -.->|attacks| n_A2
   n_A2d["A2d: Day's G_f is an average, not the fastest fixation rate that <br/><small>critic · int:holds · fid:accurate · ext:supported</small>"]
   style n_A2d fill:#dbeafe,stroke:#1d4ed8
@@ -65,6 +64,15 @@ flowchart TD
   style n_A2h fill:#dbeafe,stroke:#1d4ed8
   n_A2h --> n_A5d
   n_A2h -.->|attacks| n_A5d
+  n_A2i["A2i: Matev: an LTEE generations-per-fixation figure is not a 'gen<br/><small>critic · int:holds · fid:pending · ext:pending</small>"]
+  style n_A2i fill:#dbeafe,stroke:#1d4ed8
+  n_A2i --> n_A2e
+  n_A2i -.->|attacks| n_A2e
+  n_A2j["A2j: Day's headline G_f drifts between versions: 1,400 (2nd-editi<br/><small>day · int:holds · fid:pending · ext:contested</small>"]
+  style n_A2j fill:#fde2c8,stroke:#b45309
+  n_A2j --> n_A2
+  n_A2j ==>|revises| n_A2
+  n_A2j -->|depends-on| n_A3a
   n_A3["A3: Required fixations: 30M (2019) then 20M on the human lineage<br/><small>day · int:holds · fid:partial · ext:contested</small>"]
   style n_A3 fill:#fde2c8,stroke:#b45309
   n_A3 --> n_A
@@ -75,7 +83,7 @@ flowchart TD
   n_A3a --> n_A3
   n_A3a ==>|supersedes| n_A3
   n_A3a -->|depends-on| n_A3x1
-  n_A3b["A3b: Day's SNV-only variant: 17.5M required fixations still gives<br/><small>day · int:holds · fid:partial · ext:contested</small>"]
+  n_A3b["A3b: Day's SNV-only variant: 17.5M required fixations still gives<br/><small>day · int:holds · fid:partial · ext:supported</small>"]
   style n_A3b fill:#fde2c8,stroke:#b45309
   n_A3b --> n_A3a
   n_A3b ==>|revises| n_A3a
@@ -87,7 +95,7 @@ flowchart TD
   style n_A3d fill:#dbeafe,stroke:#1d4ed8
   n_A3d --> n_A3
   n_A3d -.->|attacks| n_A3
-  n_A3x["A3x: The 205M requirement counts base pairs in structural variant<br/><small>critic · int:holds · fid:accurate · ext:supported</small>"]
+  n_A3x["A3x: The 205M requirement counts base pairs in structural variant<br/><small>critic · int:holds · fid:partial · ext:supported</small>"]
   style n_A3x fill:#dbeafe,stroke:#1d4ed8
   n_A3x --> n_A3
   n_A3x -.->|attacks| n_A3a
@@ -121,7 +129,6 @@ flowchart TD
   style n_A5 fill:#dbeafe,stroke:#1d4ed8
   n_A5 --> n_A2
   n_A5 -.->|attacks| n_A2e
-  n_A5 -.->|attacks| n_A2
   n_A5a["A5a: Hössjer: scaling the MITTENS bound for mutation rate and gen<br/><small>ally · int:holds · fid:n/a · ext:contested</small>"]
   style n_A5a fill:#fef3c7,stroke:#a16207
   n_A5a --> n_A5
@@ -153,6 +160,14 @@ flowchart TD
   style n_A5g fill:#fde2c8,stroke:#b45309
   n_A5g --> n_A5
   n_A5g -.->|attacks| n_A5
+  n_A6["A6: Sweep signatures are absent: 3,200+ sweeps over 325,000 gene<br/><small>day · int:pending · fid:partial · ext:contested</small>"]
+  style n_A6 fill:#fde2c8,stroke:#b45309
+  n_A6 --> n_A
+  n_A6 -->|supports| n_A
+  n_A6a["A6a: Bonobos: if 326,000 loci fixed by selection in 930,000 years<br/><small>day · int:holds · fid:n/a · ext:supported</small>"]
+  style n_A6a fill:#fde2c8,stroke:#b45309
+  n_A6a --> n_A6
+  n_A6a -->|supports| n_A6
   n_B4(["B4 (other branch)"])
   n_ROOT(["ROOT (other branch)"])
 ```

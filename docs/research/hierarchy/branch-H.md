@@ -8,12 +8,16 @@ flowchart TD
   n_H -->|supports| n_ROOT
   n_H -->|depends-on| n_C2
   n_H -->|depends-on| n_H9
-  n_H -.->|attacks| n_G1
+  n_H -.->|attacks| n_G2
   n_H1["H1: 2026-05-07 retraction: Term 3 (Haldane cost limit) was misus<br/><small>day · int:holds · fid:n/a · ext:supported</small>"]
   style n_H1 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_H1 --> n_H
   n_H1 ==>|revises| n_H8
   n_H1 ==>|revises| n_H
+  n_H10["H10: Day: natural selection has not kept the human genome from de<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  style n_H10 fill:#fde2c8,stroke:#b45309
+  n_H10 --> n_H
+  n_H10 -->|depends-on| n_H7
   n_H2["H2: Nunney 2003: the cost of selection is substantially less tha<br/><small>literature · int:n/a · fid:accurate · ext:contested</small>"]
   style n_H2 fill:#e5e7eb,stroke:#374151,stroke-width:3px
   n_H2 --> n_H
@@ -28,7 +32,6 @@ flowchart TD
   style n_H4 fill:#fde2c8,stroke:#b45309
   n_H4 --> n_H
   n_H4 -->|supports| n_H
-  n_H4 -.->|attacks| n_G1
   n_H5["H5: Hössjer: after scaling by mutation rate and genome length th<br/><small>ally · int:non-sequitur · fid:pending · ext:contested</small>"]
   style n_H5 fill:#fef3c7,stroke:#a16207,stroke-width:3px
   n_H5 --> n_H
@@ -54,10 +57,12 @@ flowchart TD
   style n_H9 fill:#fde2c8,stroke:#b45309
   n_H9 --> n_H
   n_H9 -->|supports| n_H
-  n_H9 -.->|attacks| n_G1
+  n_H9 -.->|attacks| n_A5f
   n_A5(["A5 (other branch)"])
+  n_A5f(["A5f (other branch)"])
   n_B3(["B3 (other branch)"])
   n_C2(["C2 (other branch)"])
   n_G1(["G1 (other branch)"])
+  n_G2(["G2 (other branch)"])
   n_ROOT(["ROOT (other branch)"])
 ```

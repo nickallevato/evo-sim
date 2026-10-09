@@ -28,8 +28,8 @@ flowchart TD
   n_B1b --> n_B1
   n_B1b -->|supports| n_B1
   n_B1b -->|depends-on| n_B1c
-  n_B1c["B1c: Was the ancestral pipeline empty or full at the split? (sour<br/><small>day · int:holds · fid:n/a · ext:contradicted</small>"]
-  style n_B1c fill:#fde2c8,stroke:#b45309,stroke-width:3px
+  n_B1c["B1c: Was the ancestral pipeline empty or full at the split? (sour<br/><small>literature · int:holds · fid:n/a · ext:contradicted</small>"]
+  style n_B1c fill:#e5e7eb,stroke:#374151,stroke-width:3px
   n_B1c --> n_B1
   n_B1c -->|depends-on| n_B1
   n_B1c -.->|attacks| n_B1a
@@ -69,6 +69,10 @@ flowchart TD
   n_B2d --> n_B2
   n_B2d -->|supports| n_B2
   n_B2d -.->|attacks| n_F1
+  n_B2e["B2e: keruru (Zenodo draft): a temporal N_e measured from ancient <br/><small>critic · int:holds · fid:n/a · ext:pending</small>"]
+  style n_B2e fill:#dbeafe,stroke:#1d4ed8
+  n_B2e --> n_B2b
+  n_B2e -.->|attacks| n_B2b
   n_B3["B3: k differs from mu: the family of Day k/mu values (N/Ne, 0.74<br/><small>day · int:pending · fid:partial · ext:contradicted</small>"]
   style n_B3 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_B3 --> n_B
@@ -114,6 +118,10 @@ flowchart TD
   style n_B3h fill:#fde2c8,stroke:#b45309
   n_B3h --> n_B3
   n_B3h -.->|attacks| n_B7c
+  n_B3i["B3i: Matev: if every allele at a site had fixation probability 1/<br/><small>critic · int:holds · fid:n/a · ext:supported</small>"]
+  style n_B3i fill:#dbeafe,stroke:#1d4ed8
+  n_B3i --> n_B3a
+  n_B3i -.->|attacks| n_B3a
   n_B4["B4: Molecular clock recalibration: CHLCA collapses from 6-7 Mya <br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_B4 fill:#fde2c8,stroke:#b45309
   n_B4 --> n_B
@@ -146,8 +154,8 @@ flowchart TD
   style n_B4f fill:#fef3c7,stroke:#a16207
   n_B4f --> n_B4
   n_B4f -->|supports| n_B4d
-  n_B4g["B4g: keruru: fossil-calibrated rate is about twice the pedigree r<br/><small>ally · int:pending · fid:unverifiable · ext:contested</small>"]
-  style n_B4g fill:#fef3c7,stroke:#a16207
+  n_B4g["B4g: keruru: fossil-calibrated rate is about twice the pedigree r<br/><small>critic · int:pending · fid:unverifiable · ext:contested</small>"]
+  style n_B4g fill:#dbeafe,stroke:#1d4ed8
   n_B4g --> n_B4
   n_B4g -->|supports| n_B4d
   n_B5["B5: Critics: 2N mu new mutations × 1/(2N) fixation probability =<br/><small>critic · int:holds · fid:accurate · ext:contested</small>"]
@@ -191,7 +199,7 @@ flowchart TD
   style n_B5g fill:#dbeafe,stroke:#1d4ed8
   n_B5g --> n_B5
   n_B5g -.->|attacks| n_B3a
-  n_B5g -.->|attacks| n_F1
+  n_B5g -->|supports| n_F1
   n_B5h["B5h: Hossjer (ally): neutral fixation rate is d × mu per site; 3e<br/><small>ally · int:holds · fid:accurate · ext:contested</small>"]
   style n_B5h fill:#fef3c7,stroke:#a16207
   n_B5h --> n_B5
@@ -214,7 +222,7 @@ flowchart TD
   style n_B6c fill:#dbeafe,stroke:#1d4ed8
   n_B6c --> n_B6
   n_B6c -.->|attacks| n_B1
-  n_B6c -.->|attacks| n_G1
+  n_B6c -.->|attacks| n_G2g
   n_B7["B7: Neutral fixation probability is 1/(2N), the starting frequen<br/><small>critic · int:holds · fid:accurate · ext:supported</small>"]
   style n_B7 fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px
   n_B7 --> n_B3
@@ -230,13 +238,19 @@ flowchart TD
   n_B7b --> n_B7
   n_B7b -->|supports| n_B7
   n_B7b -->|supports| n_B1a
-  n_B7c["B7c: keruru (former ally): supply is 2N mu with census N; fixatio<br/><small>ally · int:holds · fid:accurate · ext:supported</small>"]
-  style n_B7c fill:#fef3c7,stroke:#a16207
+  n_B7c["B7c: keruru (former ally): supply is 2N mu with census N; fixatio<br/><small>critic · int:holds · fid:accurate · ext:supported</small>"]
+  style n_B7c fill:#dbeafe,stroke:#1d4ed8
   n_B7c --> n_B7
   n_B7c -.->|attacks| n_B3a
   n_B7c -->|supports| n_B7
+  n_B9["B9: Day: if drift could change the genome, the 3x excess of harm<br/><small>day · int:non-sequitur · fid:n/a · ext:pending</small>"]
+  style n_B9 fill:#fde2c8,stroke:#b45309
+  n_B9 --> n_B
+  n_B9 -->|supports| n_B
+  n_B9 -->|depends-on| n_H10
   n_A(["A (other branch)"])
   n_F1(["F1 (other branch)"])
-  n_G1(["G1 (other branch)"])
+  n_G2g(["G2g (other branch)"])
+  n_H10(["H10 (other branch)"])
   n_ROOT(["ROOT (other branch)"])
 ```
