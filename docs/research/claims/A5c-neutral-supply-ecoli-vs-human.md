@@ -10,7 +10,7 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: holds
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contested
 ---
 
@@ -47,6 +47,8 @@ Covered by B-branch checks (B0.5: neutral k = U at equilibrium; B1/B1b). Result 
 
 ## Check
 Link: `research/checks/RESULTS.md` B0.5, B1, B1b. Arithmetic audit (python3 -I, scratch).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. F: 1e-11 uncited and 8.9x below the measured rate (neutral 1.2-4.1x, not 17x, of observed); '4e-5' is a 13% speech slip -> ledger (S2) Charitable reading tried: tried 4.6e-5 for the spoken '4e-5' (caption).
 
 ## Simulator variables implied
 - Mutation rate, genome length, N, demographic history (B1b), neutral fraction.

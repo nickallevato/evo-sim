@@ -1,5 +1,8 @@
 # R4 C1c: Day's "21" with real AADR call depth and an ancestry-replacement model (revised after reviews)
 
+> **Correction (2026-10-09, R4 X1):** the repo figure 1.2e-46 quoted below was wrong. The exact Wright-Fisher chain gives 5.1e-45 at p = 0.5 (2N = 20,000, 240 generations), and the diffusion limit gives 1.8e-45; the old value was 41x low against the exact chain and 14x low against the diffusion limit. keruru's 4e-35 is about 10 orders above the exact value at Ne = 1e4 (it reproduces at 2N of about 16k). C5 is now internal `pending`, fidelity `unverifiable` (rule R1c). See `R4-X1-verdict-rule.md` section 8 item 11.
+
+
 Scripts: `research/checks/c1c_call_depth_replacement.py` (pre-registered, commit b128110, predictions P1-P8 in its docstring), `c1c_posthoc_mindepth.py`, `c1c_posthoc_variant_gate.py`, `c1c_posthoc2_fixpass.py` (post hoc, each committed before its run). Inputs: `results/c1c_depth_table.json`, `results/c1c_old_bin_dates.json`. Raw: `results/raw/c1c_rep0..3.json` (main), `c1c2_rep0..3.json` (post hoc 2); tables `results/raw/c1c_analysis.txt`, `c1c2_analysis.txt`. Figure: `results/R4-C1c-S21-vs-Ne.png`.
 
 ## Result in brief

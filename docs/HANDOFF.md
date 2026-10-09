@@ -1,6 +1,6 @@
 # evo-sim: a briefing for independent assessment
 
-*Status as of 2026-10-09 (C1c, C1d and D1 added; A3 marked load-bearing; earlier the same day GAP-07b and the corpus refresh; earlier the same day H3 and GAP-04/07/02; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
+*Status as of 2026-10-09 (X1 fairness audit with one verdict rule for both sides, GAP-07c, the mapping of every critic and ally argument, and the Holocene Nₑ retrieval added; earlier the same day C1c, C1d and D1 added; A3 marked load-bearing; earlier the same day GAP-07b and the corpus refresh; earlier the same day H3 and GAP-04/07/02; earlier 2026-10-08 revision: Day's dated concessions added; milestone posts linked). Repo: <https://github.com/nickallevato/evo-sim> (branch `research`).*
 
 This note is for a team that has not followed the project and wants to form its own view of it. It describes what the project is, what it has found, and where its findings and methods are weakest. It does not argue for any side. Wherever this note and the repo disagree, trust the repo.
 
@@ -13,9 +13,9 @@ evo-sim has two stages.
 
 ## How the audit works
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
-2. **Claims.** 204 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
+2. **Claims.** 217 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-one nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09).
-4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-seven checks have been reviewed so far.
+4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-nine checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
@@ -48,7 +48,7 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Recombination.** In the tested regime, recombination removes the clonal-interference ceiling.
 - **Divergence.** Human–chimp divergence includes ancestral polymorphism: d = 2μT + θ_anc.
 - **Hard-selection cap.** The cap is ln R / D, not a flat 1/300. At human scale (H3, hard adaptive selection with a soft load), a coding-only adaptive count of 10³–10⁴ is payable at R ≈ 1.2–3. Day's 17.5M–205M fail under any cost model, which says nothing about whether most differences were neutral.
-- **Event counts.** A direct count from the human–chimp genome alignment finds about 42M mutational events (21M per lineage). Day's 205M is 9.7× that, within a bracket of about 7–14× depending on assumptions; the alignment uses older, non-T2T assemblies (GAP-07b).
+- **Event counts.** A direct count from the human–chimp genome alignment finds about 42M mutational events (21M per lineage). Day's 205M is 9.7× that, within a bracket of about 7–14× depending on assumptions; the alignment uses older, non-T2T assemblies (GAP-07b). With the polymorphic share measured on the human side (GAP-07c: 15.6% of human-derived differences are still variable), 205M is 10.6–12.6× the *fixed* events per lineage, about 8–13× combined.
 - **Required fixations.** The "205M required fixations" figure counts base pairs rather than mutation events.
 - **A misread citation.** A selection coefficient Day cites (s = 0.001, from Zeng 2021) is for negative selection, not beneficial.
 - **Ancient DNA, the 21.** Day's statistic does not reproduce from his stated method on the real genotypes (thousands of post-6000 BP events, not 21; his own documented two-period pipeline is 3.6× off; no code found). keruru's measured temporal Nₑ replicates within 4%, and Day's Nₑ ≈ 2 is excluded (C1d).
@@ -57,18 +57,28 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 
 **Still open:**
 - **Cost of selection** at human scale is decided only conditionally. The answer flips at an adaptive non-coding share of about 0.01–0.6%, below what any estimate resolves. R is unsourced. Soft selection, absolute-fitness gain and epistasis are untested at human scale.
-- **Ancient DNA.** Day's "21" is contradicted as stated, but what it means turns on the Holocene Nₑ, which the repo does not yet source (retrieval in progress), and the neutral comparison for the damage-resistant transversion class is open.
+- **Ancient DNA.** Day's "21" is contradicted as stated, but what it means turns on the Holocene Nₑ. The published estimates are now retrieved (`research/sources/holocene-ne.md`): they agree on recent growth of 100× or more but disagree on its timing, so the literature does not decide it; C1e will run the model on each published trajectory. The neutral comparison for the damage-resistant transversion class is also open.
 - **Ancestral Nₑ.** The value needed to fit the observed divergence has three free parameters, so no side gets a clean fit.
 - **Sequence space (D).** D1 found about 1–6 routes per needed change per locus (below G1's flip of ~7–17); a gene's shared pool of beneficial mutations clears the flip for about ten needed changes, not 25 or more. Per-sequence prevalence (Axe, Taylor) and cross-family connectivity are untouched.
 - **Adaptive fraction.** How many differences needed selection at all. Nobody on either side has put this in the argument ([gaps](arguments/README.md#4-what-everyone-missed)).
+
+**Fairness audit (X1).** The audit's own first synthesis found 22 of 112 Day claims carrying an "arithmetic error" or "doesn't follow" verdict, against 0 of 51 critic claims, and only one check aimed at a critic claim. It then recomputed every numeric critic and ally claim, wrote [one verdict rule](../research/checks/results/R4-X1-verdict-rule.md) for both sides, re-scored every numeric claim on both sides, and had the rule's application checked by a blind audit. Result under the final rule:
+
+| Error verdicts | Day | Critics | Fisher p |
+|---|---|---|---|
+| claims with a number in the author's quoted words (primary) | 13/81 | 1/20 | 0.29 |
+| claims with a number in the formal statement | 16/82 | 1/31 | 0.038 |
+| all claims | 18/114 | 1/51 | 0.008 |
+
+Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls went the other way, the gap disappears (16/82 vs 4/31, p = 0.58). Day's errors are robust to reading; the audit cannot claim critics err less per argument. Three earlier Day error verdicts were withdrawn under the rule, one critic claim gained one (Hancock's 38M match, on his own event basis), and the audit's own figure for keruru's tail probability was found 41× too low and corrected.
 
 **Overall verdict counts** (all sides combined, n/a omitted):
 
 | Verdict | Counts |
 |---|---|
-| Internal | 102 hold, 17 non-sequitur, 6 arithmetic error, 56 pending |
-| Fidelity | 36 accurate, 33 partial, 9 misread, 35 unverifiable, 11 pending |
-| External | 26 supported, 103 contested, 11 contradicted, 4 untestable, 48 pending |
+| Internal | 109 hold, 18 non-sequitur, 2 arithmetic error, 64 pending |
+| Fidelity | 39 accurate, 34 partial, 9 misread, 53 unverifiable, 22 pending |
+| External | 26 supported, 103 contested, 11 contradicted, 6 untestable, 59 pending |
 
 Note that the largest external category is *contested*.
 
@@ -94,7 +104,7 @@ These are the limits of the project itself, not of either side:
 - **Questions worth asking:**
   - Does each check test the claim as its author stated it, or a convenient variant?
   - Are the "tested regime" caveats load-bearing for the headline conclusions?
-  - Is the scrutiny actually symmetric?
+  - Is the scrutiny actually symmetric? (The X1 fairness audit above is the audit's own attempt to answer this; its rule and re-score are in `research/checks/results/R4-X1-*.md`.)
 - **Corrections** from either side are invited as GitHub issues, with a locator.
 
 ## Milestone posts
@@ -108,6 +118,7 @@ These dated posts tell the story in order:
 7. [2026-10-08: Founders, the Bernoulli barrier, and a map of the argument](2026-10-08-7-argument-map.md)
 8. [2026-10-09: The cost of selection at human scale, and three gaps closed](2026-10-09-8-cost-of-selection-and-gaps.md)
 9. [2026-10-09: Day's 21 on real genomes, and how many routes a mutation has](2026-10-09-9-ancient-dna-and-sequence-space.md)
+10. [2026-10-09: Auditing the audit: one rule for both sides](2026-10-09-10-fairness-audit.md)
 
 ## Not yet decided
 - The final verdicts and the sensitivity table (R5).

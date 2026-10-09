@@ -10,7 +10,7 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: holds
-  fidelity: partial
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was partial): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: n/a
 ---
 
@@ -43,6 +43,8 @@ Arithmetic; no pre-registration needed beyond the invariance statement above.
 Arithmetic only. Review: pending.
 
 R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): the gorilla-polarized SNV split is 48.6% human-derived / 51.4% chimp-derived (95% of SNVs polarizable), which supports 'apportion symmetrically'. The indel split is consistent with 50/50 only for events <= 50 bp (38-52% human depending on window); above ~100 bp the polarization rule cannot see the gorilla state, so support for symmetry comes from SNVs. Review: `research/checks/REVIEW.md` (review #8, 2026-10-09).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. N2b needs the author's own text to contradict the premise and it does not (he uses the two-lineage reading in B5c too); N5 does not apply (360 is recoverable); the comparator unit is fidelity: slide absent, Day's 3.0 text is per lineage, so not misread Charitable reading tried: tried the two-lineage-total comparator (the reading under which 360 follows).
 
 ## Simulator variables implied
 - A "per lineage / both lineages" accounting toggle.

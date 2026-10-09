@@ -9,8 +9,8 @@ load_bearing: false  # anonymous, relayed, informal; Day's reply is a disagreeme
 sourcing: secondhand
 status: extracted
 verdicts:
-  internal: holds
-  fidelity: n/a
+  internal: n/a   # R4 X1 rule rev 2 (was holds): U: unidentified geneticist relayed by the host: not scored internal (also truncated, N5); 30 per generation uncited; excluded from the denominator
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contested
 ---
 
@@ -49,6 +49,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none (arithmetic). Locator in Day's post: ¶9 of extracted text.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is n/a / unverifiable. U: unidentified geneticist relayed by the host: not scored internal (also truncated, N5); 30 per generation uncited; excluded from the denominator Charitable reading tried: relayed and truncated: no reading recoverable.
 
 ## Simulator variables implied
 - μL per lineage

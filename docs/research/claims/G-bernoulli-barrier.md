@@ -9,7 +9,7 @@ load_bearing: false
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: arithmetic-error
+  internal: holds   # R4 X1 rule rev 2 (was arithmetic-error): symmetric slip test + charity: the printed '(1.01)^1474 = 14.7' is a label slip (2.34e6); ln = 14.67 and additive 14.74 give 106.5 against the printed 107 (0.5%), so the stated conclusion survives: ledger. (The ...
   fidelity: partial
   external: "contested"   # no barrier in tested regime (r = 1/2, soft, <= 272 loci); human scale untested
 ---
@@ -24,7 +24,7 @@ n = 157,000 loci at p = 0.5, N = 10,000, s = 0.01 per locus (uniform).
 Count per individual ~ Binomial(n, 0.5): mean 78,500, SD √(n·p·(1−p)) = 198.1, CV = 0.252%  (paper: 198.1, 0.25%).
 Extreme genotypes in N = 10,000 (normal order statistics): ±3.72σ → 79,237 / 77,763, difference 1,474 = 7.44σ.   Paper: "Fitness ratio = (1.01)¹⁴⁷⁴ ≈ 14.7×". Required: "157,000 × 0.01 = 1,570×". Shortfall = 1,570/14.7 ≈ 107×.
 
-`derived:` (python3 -I) The binomial and order-statistic numbers reconcile. The fitness numbers do not as stated: (1.01)^1,474 = 2.34e6 (e^14.67), not 14.7. The value 14.7 equals 1,474 x 0.01 = 14.74, an additive quantity; likewise 1,570 = 157,000 x 0.01 is additive, whereas the multiplicative counterpart is 1.01^157,000 = 10^678. The ratio of the two additive increments (1,570/14.74 = 106.5; 106.8 with 14.7) reproduces "107". So the paper labels additive fitness differences as multiplicative "ratios", and the stated multiplicative formula (stated as conservative for epistasis in s3.1) gives 2.3e6 vs 10^678 instead. In both readings the conclusion direction is the same; the magnitude of the "shortfall" differs from 107 by hundreds of orders of magnitude in the multiplicative reading.
+`derived:` (python3 -I) The binomial and order-statistic numbers reconcile. The fitness numbers do not as stated: (1.01)^1,474 = 2.34e6 (e^14.67), not 14.7. The value 14.7 equals 1,474 x 0.01 = 14.74, an additive quantity; likewise 1,570 = 157,000 x 0.01 is additive, whereas the multiplicative counterpart is 1.01^157,000 = 10^678. The ratio of the two additive increments (1,570/14.74 = 106.5; 106.8 with 14.7) reproduces "107". So the paper labels additive fitness differences as multiplicative "ratios", and the stated multiplicative formula (stated as conservative for epistasis in s3.1) gives 2.3e6 vs 10^678 instead. In both readings the conclusion direction is the same. (A sentence here saying the multiplicative reading moves the shortfall by "hundreds of orders of magnitude" was deleted 2026-10-09: R4 G1 withdrew that framing, since 14.7 and 107 are recoverable as additive or log quantities; R4 X1 scores the printed "(1.01)^1474 = 14.7" as a label slip, holds + ledger.)
 Further `derived:` Absolute variance of the allele count grows with n (n/4 = 39,250); only the coefficient of variation (SD/mean) falls as 1/√n. The text of s7.6 says "fitness variance decreases as the number of segregating loci increases", and s7.10 itself states "the variance in total beneficial allele count is 250, but the mean is 500" for 1,000 loci. The claim is true for relative dispersion, not for absolute variance.
 
 ## Assumptions
@@ -57,6 +57,8 @@ Arithmetic audit (python3 -I, scratch): the 14.7× formula does not reproduce as
 R4 F2 (research/checks/results/R4-F2-A.md): no saturation of throughput at n_mid = 272 with r = 1/2 (rate linear in supply, R_int 0.975); throughput falls only with tight linkage. Per-locus P_fix was not measured directly (R_int is its average). Under independence the joint success probability multiplies, which is the specific-vs-any distinction (G3), not a barrier. Untested at human scale and with hard selection plus linkage. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
 R4 G1 (research/checks/results/R4-G1.md): "(1.01)^1474 = 14.7x" is still false as written, but 14.7 is recoverable (14.74 additive, 14.67 log) and 107 is valid as a log ratio, so the audit's earlier "mixed scales / 10^672" framing is withdrawn. The open issue is the best/worst vs all/none criterion. Multiplicative fitness: expected per-locus response unchanged to 0.6% at n = 157,000; per-locus P_fix about -14% when var(ln w) ~ 3.6 (scaled); reproductive excess ~340x in the s3 configuration (1.3x at 230). Additive dilution is convention-dependent. All results soft selection. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / partial. symmetric slip test + charity: the printed '(1.01)^1474 = 14.7' is a label slip (2.34e6); ln = 14.67 and additive 14.74 give 106.5 against the printed 107 (0.5%), so the stated conclusion survives: ledger. (The earlier 'hundreds of orders' framing is withdrawn by R4 G1 and is not used) Charitable reading tried: tried the log scale: ln ratio 14.67 (additive 14.74), shortfall 106.5 vs printed 107 -> holds + ledger.
 
 ## Simulator variables implied
 - n_active loci, s per locus, N, fitness model (additive/multiplicative), hard vs soft selection, recombination. Outputs: per-locus P_fix, sweep time, throughput.

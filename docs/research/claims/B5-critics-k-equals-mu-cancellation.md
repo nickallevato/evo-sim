@@ -37,7 +37,7 @@ Acceptance by Day's side: Z22129121 "this paper accepts it throughout"; blog 202
 
 ## Responses
 - Against: Day (B1, B2): steady state not reached; k(T) = μF(T).
-- In support: "It needs the elapsed time to be long compared with the fixation time." ([r/DebateEvolution, Dumb-and-Dumber, "New anti-evolution paper today from Vox Day"](https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/), 2026-09-28, post 1wss2wj, comment-body (Dumb-and-Dumber; accepts the 4Nₑ time and argues 252,000 is long compared with it))
+- In support: "It needs the elapsed time to be long compared with the fixation time." ([r/DebateEvolution, justatest90, comment pcug1j0 under "New anti-evolution paper today from Vox Day"](https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/new_antievolution_paper_today_from_vox_day/pcug1j0/), 2026-09-29; RE-16. Attribution corrected 2026-10-09, R4 X1 section 8: this is justatest90's comment, not the OP Dumb-and-Dumber. The commenter accepts the 4Nₑ time and argues 252,000 is long compared with it)
   Related checks (below).
 - Weaknesses in the responses: The Reddit author uses Nₑ ≈ 10⁴–3.3×10⁴ for 4Nₑ, which is the quantity Day calls circular (B3h). Mansfield's and Darwin's comments are one-liners.
 

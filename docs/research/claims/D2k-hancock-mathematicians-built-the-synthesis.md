@@ -4,7 +4,7 @@ title: "Hancock: mathematicians and statisticians (Pearson, Fisher, Wright, Hald
 side: critic
 branch: D
 parent: D2g
-edges: []  # PROPOSED: [{type: attacks, target: D2l}]; left empty until defeater dNEW-28 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: D2l}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # historical fidelity point; not a numeric claim
 sourcing: firsthand
 status: extracted

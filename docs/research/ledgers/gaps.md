@@ -513,16 +513,22 @@ See PA-34.
 - *Day's stated position* (Q99, Q101–Q103) is a weighting claim with a range (SNV-only lower bracket, bp upper bracket). His SNV-only 17.5M is 83% of measured events and brackets the polymorphism-corrected fixed events (16.4–18.1M). As a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp; untested.
 - *Open:* GAP-07c (polymorphic share of SNVs, indels and SVs from population frequencies) and a T2T re-run (CHM13/hs1 vs mPanTro3).
 
+**R4 polymorphic share (R4 2026-10-09)** (`research/checks/results/R4-GAP07c.md`; `gap07c_polymorphic_share.py`, pre-registered at 078850b; post hoc ae42a91; review #13).
+- *Measured, 1000 Genomes phase 3 on GRCh38 (NYGC 30x cross-check on chr21+22, same people):* 15.6% of human-derived divergent SNVs have the chimp allele at >= 1% (14.8-16.7% per chromosome), consistent with the human half of CSAC's 14-22%. Human-lineage indels 7.4-8.7% (9.5-10.5% in mask); SVs >= 50 bp 6.8% net (n = 450; short-read, lower bound). The chimp side is not measured (assumed in the symmetric rows).
+- *Fixed events per lineage:* 17.2-17.9M (human lineage alone 17.22M; symmetric 17.89M), so 205M is 10.6-12.6x fixed events; 11.1-12.1 across allele-frequency thresholds; combined with GAP-07b's Day-favourable rows the bracket is about **8-13x**.
+- *Day's 17.5M, like for like:* 9.8% above the measured fixed SNVs (15.94M) and 2.2% below all fixed events (17.89M), two offsetting errors; his SNV-only shortfall falls about 9%. 84.4% of human-derived SNV differences are fixed. Day's own remarks on ancestral polymorphism (Q37; 04-28 ¶24) are now credited in A3c.
+- *Still open:* a chimp population panel; the T2T re-run; a long-read SV set.
+
 
 ## Retrieval gaps (sources the audit needs but does not yet hold)
 These are not gaps in the sense defined above (a consideration nobody raised); they are inputs that a verdict depends on and that no file in the repo sources.
 
-### RG-01: Holocene European effective population size (recorded 2026-10-09; retrieval in progress)
+### RG-01: Holocene European effective population size (recorded 2026-10-09; retrieved 2026-10-09; decision pending C1e)
 **Nodes:** C6, C7, C4, C5b, B2e (and C1c/C1d readings).
 - **Why it matters.** R4 C1c shows that what Day's aDNA 21 means turns on the Holocene N_e trajectory: a deficit against neutral at N_e <= ~5e4 or under strong replacement, neutral-compatible at closed-population N_e >= ~1e5 or growth to 1e5–1e6 within the window (`research/checks/results/R4-C1c.md` §2, §6).
 - **What the repo holds.** The textbook N_e = 1e4 (`parameters.yaml`, marked unverified) and keruru's temporal estimates (8,139 / 9,835), which R4 C1d replicates but which are lower bounds on a drift N_e. An earlier audit sentence ("literature Holocene N_e plausibly well above 1e4") was removed as unsourced.
 - **What is needed.** IBD-based (IBDNe, Palamara), ARG/coalescent (Relate, tsdate, SMC++, MSMC2) and aDNA-based (hapROH, ancIBD) estimates of European or West Eurasian N_e over the last ~10,000 years, with locators and access status, recorded two-sidedly.
-- **Status.** A retrieval agent is working on it (2026-10-09; output `docs/research/sources/holocene-ne.md`). Until it lands, C1c's reading stays conditional.
+- **Status.** Retrieved; decision pending C1e (rerun the C1c model on published trajectories). The retrieval (`docs/research/sources/holocene-ne.md`, commit e746eb7; 37 open-access full texts, 63 verified quotes) finds no estimate supporting a constant ~1e4 to the present: every method that sees recent times shows growth of 100x or more. For most of the window fitted values cluster at about 1.5k-12k (IBS tracts, ROH, SFS, temporal F); the timing of growth differs by model (Ne crosses 1e5 about 0.7-1.4 kya in Coventry and Gazave, about 5.4 kya under Nelson's central trajectory). The 3-7 kya interval, where C1c's events accumulate, is the least constrained. Derived harmonic-mean Ne over 0-7 kya: Gazave 9.4k, Coventry 9.2k, Gravel 20k, Nelson 160k. Under the flatter models C1c gives about 900-3,900 events (a 40-190x deficit for Day's 21); under a Nelson-type trajectory about 32-35 (no deficit). The literature does not decide between them; C1e will run the C1c model on each published trajectory.
 
 ---
 

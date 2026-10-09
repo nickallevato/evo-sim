@@ -10,7 +10,7 @@ sourcing: firsthand
 status: extracted
 verdicts:
   internal: pending
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: pending
 ---
 
@@ -48,6 +48,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is pending / unverifiable. F: dates (250 kya-1.3 Mya) uncited Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 - divergence-time prior

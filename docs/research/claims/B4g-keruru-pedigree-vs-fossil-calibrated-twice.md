@@ -9,7 +9,7 @@ load_bearing: false  # auxiliary; magnitude (×2) is far from Day's ×15–150 a
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
+  internal: holds   # R4 X1 rule rev 2 (was pending): N3: states an unreconciled 2x, makes no match/negligibility claim; omitted ancestral term (B4a) noted in comment
   fidelity: unverifiable
   external: contested
 ---
@@ -44,6 +44,8 @@ Written **before** the check runs.
 
 ## Check
 Script: proposed B4a.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. N3: states an unreconciled 2x, makes no match/negligibility claim; omitted ancestral term (B4a) noted in comment Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 - θ_anc term

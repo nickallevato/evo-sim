@@ -4,7 +4,7 @@ title: "Hancock: overlapping generations are handled by effective size and the M
 side: critic
 branch: A
 parent: A4
-edges: []  # PROPOSED: [{type: attacks, target: A4g}]; left empty until defeaters dNEW-01..03 in argmap/mapping-proposals-2026-10-09.md are pasted (argmap_check requires a defeater for every attacks edge)
+edges: [{type: attacks, target: A4g}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # answers the Duffy/book version (d = 0.45, 20 -> 25 generations); MITTENS 3.0 dropped d (A4d)
 sourcing: firsthand
 status: extracted

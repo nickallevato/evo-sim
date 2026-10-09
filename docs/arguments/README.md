@@ -89,17 +89,19 @@ Following Pollock's classification:
 
 | Attacker | Undermining | Undercutting | Rebutting | Upheld | Partly | Not upheld | Untested |
 |---|---|---|---|---|---|---|---|
-| Day (63) | 28 | 19 | 16 | 7 | 33 | 14 | 9 |
-| Critics (74) | 34 | 17 | 23 | 28 | 38 | 0 | 8 |
-| Allies (2) | 0 | 0 | 2 | 1 | 0 | 0 | 1 |
-| Literature (24; includes the audit-raised nodes B1c, B4a and C1, which the lint files under `literature`) | 12 | 9 | 3 | 6 | 16 | 1 | 1 |
-| This audit (130) | 60 | 63 | 7 | 70 | 60 | 0 | 0 |
+| Day (65) | 30 | 19 | 16 | 7 | 34 | 14 | 10 |
+| Critics (94) | 46 | 23 | 25 | 29 | 46 | 0 | 19 |
+| Allies (3) | 0 | 1 | 2 | 1 | 1 | 0 | 1 |
+| Literature (31; includes the audit-raised nodes B1c, B4a and C1, which the lint files under `literature`) | 19 | 9 | 3 | 6 | 21 | 1 | 3 |
+| This audit (142) | 62 | 72 | 8 | 75 | 67 | 0 | 0 |
 
 **What the counts do and don't mean**
-- More attacks land on Day than on the critics. His is the positive argument with most of the load-bearing numbers: 112 of 204 claims.
-- 11 of Day's 63 are Day against Day: self-revisions and statements that don't agree with each other. (Before the 2026-10-08 edge fixes this read 19 of 67. Eight of those were mis-typed or mis-aimed edges.)
+- More attacks land on Day than on the critics. His is the positive argument with most of the load-bearing numbers: 115 of 217 claims.
+- 11 of Day's 65 are Day against Day: self-revisions and statements that don't agree with each other. (Before the 2026-10-08 edge fixes this read 19 of 67. Eight of those were mis-typed or mis-aimed edges.)
 - Most of Day's 14 not-upheld objections rest on premises he later withdrew himself, such as N/Nₑ and the empty pipeline.
-- The audit's 130 attacks fall on Day (61), the critics (26), its own earlier checks (39: 36 from review rounds, plus GAP-07b retiring GAP-07's upper bound, C1c refuting C1b's call-depth explanation and C1d undercutting C1c's error-term reading), allies (3) and literature (1). (Counts as of the C1c/C1d/D1 integration, 2026-10-09.)
+- The critics' count rose from 74 to 94 when the mapping round (2026-10-09) attached the remaining critic and ally arguments, mostly from Hancock's video; 19 of their attacks are still `untested`.
+- The audit's 142 attacks fall on Day (63), the critics (28), its own earlier checks (46: reviews, plus GAP-07b retiring GAP-07's upper bound, C1c refuting C1b's call-depth explanation, C1d undercutting C1c's error-term reading, and GAP-07c replacing GAP-07b's raw ratio for fixed events), allies (4) and literature (1). (Counts as of the X1 / GAP-07c / mapping integration, 2026-10-09.)
+- **One verdict rule for both sides.** Since 2026-10-09 the internal and fidelity verdicts that feed `audit_status` follow [one rule](../../research/checks/results/R4-X1-verdict-rule.md), applied to Day, critics and allies alike and checked by a blind audit. Under it Day's error rate is higher in every denominator, but the gap is not robust (13/81 vs 1/20 on the primary denominator, p = 0.29; see the [HANDOFF](../HANDOFF.md)).
 
 The [objection graph](defeaters.md) draws every attack, branch by branch, and computes which arguments survive their objections (grounded semantics, Dung 1995), read three ways. Read its caveats: the computation is all-or-nothing, and it doesn't model support between claims.
 

@@ -113,6 +113,14 @@ flowchart TD
   n_D2j --> n_D2
   n_D2j -.->|attacks| n_D1
   n_D2j -->|supports| n_D2e
+  n_D2k["D2k: Hancock: mathematicians and statisticians (Pearson, Fisher, <br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  style n_D2k fill:#dbeafe,stroke:#1d4ed8
+  n_D2k --> n_D2g
+  n_D2k -.->|attacks| n_D2l
+  n_D2l["D2l: Day (as presented by Duffy): the modern synthesis was built <br/><small>day · int:pending · fid:pending · ext:pending</small>"]
+  style n_D2l fill:#fde2c8,stroke:#b45309
+  n_D2l --> n_D2g
+  n_D2l -->|supports| n_D2g
   n_D3["D3: Eden: there are about 20^250 = 10^325 polypeptide chains of <br/><small>literature · int:holds · fid:accurate · ext:contested</small>"]
   style n_D3 fill:#e5e7eb,stroke:#374151
   n_D3 --> n_D

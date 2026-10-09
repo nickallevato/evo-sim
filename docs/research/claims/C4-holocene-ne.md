@@ -64,5 +64,7 @@ R4 C1c/C1d (research/checks/results/R4-C1c.md §2; research/checks/results/R4-C1
 
 Script: none yet (spec: `research/checks/c4_drift_variance_null.py`, planned): simulate bins with Ne constant at 1e4 and with the paper's reported n per bin; add a migration pulse of 10-50% in a Bronze-Age bin; estimate Var_drift with Day's correction; report the ratio. · Result: not run · Review: pending
 
+R4 RG-01 retrieval (docs/research/sources/holocene-ne.md, 2026-10-09): published Holocene European Ne estimates by method. No estimate supports a constant ~1e4 to the present; fitted values cluster at about 1.5k-12k for most of the window, with growth of 100x or more in recent millennia whose timing differs by model (crossing 1e5 at about 0.7-1.4 kya, or about 5.4 kya under Nelson 2012). The decision for C1c/C6 is pending C1e (the C1c model run on each published trajectory).
+
 ## Simulator variables implied
 Ne(t), sample size per bin, migration pulses, bin width, sampling-variance correction.

@@ -14,6 +14,9 @@ verdicts:
   external: n/a
 ---
 
+> **Mapping (2026-10-09): no attack warranted.** This node is mapped under the ratified definition (argmap/NOTES.md judgement call 12) with no defeater row, because it is a concession on a definition (Day's rate was an average); the same post's point that an average is not the fastest rate is already a row (CA-11, d003).
+
+
 ## Statement (verbatim)
 > He is correct that when he calculated the number it was an average. It isn’t intended to be a time for an individual chromosome.
 

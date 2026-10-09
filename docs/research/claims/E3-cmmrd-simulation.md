@@ -10,7 +10,7 @@ sourcing: firsthand
 status: extracted
 verdicts:
   internal: holds   # only under an inferred mean-field (HW-expected) selection formulation; the literal §3.1 reading gives 2.75%, outside the pre-registered 2.33 +/- 0.15% band (falsifier fired). Table 8 not reproduced by either
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contested   # overreach: 'independently sufficient' and 'minefields' not supported on the direct-viability endpoint; withdrawal of the hitchhiking pathway credited
 ---
 
@@ -64,6 +64,8 @@ Written before any check runs.
 Script: `research/checks/e_founder_hazard.py` (planned, shared with E). Add output: P(hom) split by founder copy count 0 / 1 / >= 2 and time of first homozygote. · Result: not run · Review: pending
 
 R4 E (research/checks/results/R4-E.md): see E. Literal reading 2.75% (+18%), s_hom inert for this metric; mean-field formulation reproduces 2.33%. Cumulative and G-insensitivity results hold. Growth variant raises the hazard (2.75 -> 9.0%). Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. F: cited literature not retrieved Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 Founder size, q, s_hom, s_het, replicates, generations, event count, copy-number breakdown.

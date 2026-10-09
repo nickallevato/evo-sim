@@ -4,7 +4,7 @@ title: "Hancock: Haldane's cost of selection applies only to hard (viability) se
 side: critic
 branch: H
 parent: H
-edges: []  # PROPOSED: [{type: attacks, target: H}]; left empty until defeater dNEW-24 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: H}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # restates H2 (Nunney 2003) and H3 in a critic's words; Day's H1 already limits the cost bound to adaptive substitutions
 sourcing: firsthand
 status: extracted

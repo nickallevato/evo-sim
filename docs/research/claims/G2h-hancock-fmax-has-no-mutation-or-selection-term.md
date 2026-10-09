@@ -4,7 +4,7 @@ title: "Hancock: MITTENS's F_max contains no mutation input and no selection coe
 side: critic
 branch: G
 parent: G2
-edges: []  # PROPOSED: [{type: attacks, target: A}]; left empty until defeater dNEW-23 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: A}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # structural point; the supply side is argued numerically in B5c / A5c, the serial reading in G2
 sourcing: firsthand
 status: extracted

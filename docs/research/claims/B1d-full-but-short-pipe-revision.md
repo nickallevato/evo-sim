@@ -10,7 +10,7 @@ sourcing: firsthand
 status: reviewed
 verdicts:
   internal: pending
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: "contested"   # implied Ne_anc ~5.7e4 is below Yoo's 1.3-2.0e5; derived d ~0.88% vs 1.23% observed (not simulated)
 ---
 
@@ -59,6 +59,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 ## Check
 R4 context (research/checks/results/R4-B1c-B4a.md; REVIEW-R4-steelman-day): a full pipe of 228,000 generations implies Ne_anc ~ 5.7e4 (4Ne). Not simulated; derived by the Day-side reviewer: d ~ 0.605% + 0.274% = 0.88%, about 71% of the observed 1.23%, against Yoo's sourced 1.32-1.98e5. B1d contradicts the empty-start premise of B1c. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none yet. Arithmetic computed in python3 -I (this session). Version-ledger entry proposed: B1 start state, empty (IR 2026-09-22) then full but 228,000 generations long (blog 2026-10-01).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is pending / unverifiable. F: Wright's Ne formula cited, original not retrieved (own table) Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 - census N(t)

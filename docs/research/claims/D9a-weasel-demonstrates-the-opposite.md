@@ -9,7 +9,7 @@ load_bearing: false  # illustrative
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: non-sequitur      # the published Weasel is a truncation-selection algorithm; the 540,000 figure is for a different system (a population with constant s); a Weasel with Day's own 12 offspring and 5% mutation (exploratory run) completes in ~1,760 generations, not 540,000
+  internal: non-sequitur      # N2d (R4 X1 rule rev 2): 'demonstrates the opposite' compares an algorithm's runtime with a different population model (the published Weasel is truncation selection; 540,000 is for constant s), and his own para 7 concedes the Weasel is not a model. The exploratory 12-offspring run (~1,760 generations) is external (N1) and not the basis
   fidelity: n/a      # Day's inference, not a source quote
   external: contested   # the "known target" objection (also Day's) cuts the other way; R4 D1: known-target walks are Weasel-like and uninformative on this
 ---
@@ -45,6 +45,8 @@ Written before the algorithm runs. Under Day: T(N=12, P=0.05, truncation) is muc
 R4 D1 (research/checks/results/R4-D1-spike.md, review #11, 2026-10-09): the RNA walks are known-target and Weasel-like; they carry no weight on this claim.
 
 Exploratory scratch run (python3 -I, numpy, seed 20261007/8, not committed): Weasel with 28 letters, alphabet 27, 400 replicates each: N = 100, P = 0.05: mean 78.3 (elitist and always-different-letter variants 78-79); N = 12, P = 0.05: mean 1,763 (300 replicates); N = 100, P = 0.01: mean 140. Not reproducing 50 (Day) is a 1.6x difference. Ranks of the claim: arithmetic of the 'four orders' holds only for the non-Weasel system.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / n/a. N2d: 'demonstrates the opposite' is drawn from comparing an algorithm's runtime with a different population model; his own para 7 concedes the Weasel is not a model. The exploratory 12-offspring run is external (N1) and is not the basis Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 Selection scheme (truncation vs proportional); offspring number; per-letter mutation probability P; alphabet; target-known flag.

@@ -9,7 +9,7 @@ load_bearing: false  # dismisses the ancestral-polymorphism objection; the B1 de
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: arithmetic-error
+  internal: arithmetic-error   # R1(ii) on Day's own table basis (R4 X1 rule rev 2): the empty-pipe removal at Ne = 1e4 is 1.2M, not 2.4M, so 1.44M / 1.2M = 1.2 and 'less than half' is 0.6; the sign of 'the net adjustment still reduces' flips (+0.24M). Ne_anc is a contested premise (N1) and is not the basis
   fidelity: n/a
   external: "contradicted"   # at sourced Ne_anc the ancestral term is comparable to 2muT; holds only at Ne_anc = 1e4, where d is half the observed
 ---
@@ -52,6 +52,8 @@ Written **before** the check runs.
 Script: none (arithmetic); proposed B4a.
 
 R4 B4a (research/checks/results/R4-B1c-B4a.md): "rounding error" holds only at Ne_anc = 1e4. At Yoo's Ne_anc, theta_anc = 0.63-0.95% of sites against 2muT = 0.605%. Day-side point: at Ne = 1e4 the model gives d = 0.65%, about half the observed 1.23%, so the reconciliation depends on a large Ne_anc (or longer T / higher mu). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is arithmetic-error / n/a. R1b on Day's own table basis (not Yoo's Ne): IR's empty-pipe removal at Ne = 1e4 is 1.2M, not 2.4M, so 1.44M / 1.2M = 1.2 and 'less than half' is 0.6; the sign of 'the net adjustment still reduces' flips (+0.24M). The Ne_anc value is a contested premise (N1) and is not the basis Charitable reading tried: tried other Ne_anc: that is a contested premise (N1), not an ambiguity; 'less than half' = 0.6 stands.
 
 ## Simulator variables implied
 - Nₑ,anc

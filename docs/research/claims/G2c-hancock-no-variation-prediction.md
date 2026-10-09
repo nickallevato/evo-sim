@@ -9,8 +9,8 @@ load_bearing: false
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: n/a
+  internal: holds   # R4 X1 rule rev 2 (was pending): conditional correct; applies a serial reading that Day's Appendix A (G2g) asserts but his 1-22 denies
+  fidelity: partial   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: pending
 ---
 
@@ -42,6 +42,8 @@ Proposed check G2c-sim (not run): forward simulation with sweep rate 1/1,322 per
 
 ## Check
 Script: none yet. Review: pending.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / partial. conditional correct; applies a serial reading that Day's Appendix A (G2g) asserts but his 1-22 denies Charitable reading tried: tried the conditional reading.
 
 ## Simulator variables implied
 - Neutral diversity output; sweep rate; recombination.

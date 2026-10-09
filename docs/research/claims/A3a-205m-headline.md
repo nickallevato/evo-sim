@@ -9,7 +9,7 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: arithmetic-error   # stated parts do not sum to 410M (35e6 + 1,140 + 187e6 = 222e6); 410 = 35 + 2 x 187 (Fun-Friendship4898's reading)
+  internal: holds   # R4 X1 rule rev 2 (was arithmetic-error): charity (rule 3): 187 Mb read as SDRs per lineage, the pairwise total is 35M + 1,140 + 2 x 187M = 409.0M vs 410M (0.24%) and per lineage 204.5M vs 205M, so ledger (literal sum 222M, 46%/85%). Fidelity misread (187 ...
   fidelity: misread   # Yoo 2025 gives 327 Mb average SDR per ape lineage; 410/187 not found (A3x1)
   external: contested   # contradicted if 205M is read as an event count (R4 GAP-07b: measured ~21M events per lineage, hg38 vs panTro6, non-T2T; bracket 7-14x). Day's stated reading (04-28 ¶19, 05-13 ¶4-6; Q99, Q101-Q103) is a weighting claim with a range; it is untested, and as a weight it would need ~3,250 SNV-equivalents per >50 bp event, against his own event-counting G_f. Base-pair magnitude of non-1:1 sequence is the same order (201-523 Mb, assembly dependent) but not a fixation count
 ---
@@ -28,6 +28,8 @@ R_2026 = 410e6 / 2 = 205e6 per lineage (`divergence.required_fixations.day_2026`
 
 `derived:` the stated components do not sum to the stated total: 35e6 + 1,140 + 187e6 = 222,001,140, not 410e6; the text does not show the arithmetic and mixes units (SNVs, events, megabases). 410e6 = 14.9% of 2.75e9 bp (410/0.149 = 2,752 Mb), whereas a haploid human genome is 3.1–3.2e9 bp (0.149 x 3.1e9 = 462e6). The only reconciling arithmetic in the repo is 410/35 = 11.7 (the KITTENS ratio, A5b). Yoo 2025 SDR averages 327 Mb per lineage (x2 = 654 Mb); no pair or sum of the Yoo SDR totals gives 187 or 410 (closest: 412.1, flagged a coincidence).
 Version arithmetic that does reconcile: 1,075,000 = 205e6 / 190.6 (1,075,437); 17.5e6 SNV-only: 91,806 (paper 91,600).
+
+Reconciling reading (R4 X1 rule C, 2026-10-09): if Day's 187 Mb is read as SDRs per lineage, the pairwise total is 35M + 1,140 + 2 x 187M = 409.0M (0.24% from 410M), and per lineage 204.5M vs 205M. On that reading the parts sum; the literal list (222M) does not. Under the single both-sides rule this is a ledger slip (internal holds). The fidelity (187 and 410 not in Yoo) and the unit question (bp vs events, A3x) are unaffected.
 
 ## Assumptions
 - Stated: complete T2T assemblies reveal more divergence than the 2005 draft; each affected base counts as a required fixation.
@@ -53,6 +55,8 @@ Arithmetic audit (python3 -I, scratch): the 410M total does not reconcile with i
 R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): 205M is a base-pair figure; events per lineage are 18-22.5M (calibrated / CSAC-observed), ~9-11x lower (>= 8x at observation-consistent inputs). Under k = mu, de novo SVs alone deliver 0.35-0.92 Gb per lineage, the same order as SDR base pairs (Yoo human-lineage 148-184 Mb, Day's 187 Mb, cross-ape 327 Mb); the agreement is order-of-magnitude only, since SDRs are dominated by centromeres, acrocentric arms and heterochromatic caps. On a repeat-unit reading (Yoo's 171/32 bp satellite units) the count is 21-30M. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): direct count from the UCSC hg38 vs panTro6 net/chain/axtNet alignment (non-T2T; both lineages plus polymorphism): 37.77M SNVs + 4.30M indel events = 42.10M events, 21.05M per lineage; 205M is 9.7x raw (pre-registered), bracket about 7-14x (Day-favourable repeat-unit and slippage readings 7.2-9.5; critic-favourable human-lineage, top-level-fill, <2%-divergence and polymorphism corrections 10.1-13.4, all post hoc). Day's stated position is a range (SNV-only lower, bp upper) with a weighting claim (Q99: SVs fix 'as a single low-probability event'; bp counting 'is generous to the standard model'); as a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp. Bases outside every aligned block are 261 Mb (201 Mb without hg38 centromere models), so 410M is not an invented magnitude, but the check does not show 410 Mb *differ*. The 410.09 Mb and 187.0 Mb matches among component sums are at the chance base rate (3 hits in 3,458 subsets). Review: `research/checks/REVIEW.md` (review #8, 2026-10-09).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / misread. charity (rule 3): 187 Mb read as SDRs per lineage, the pairwise total is 35M + 1,140 + 2 x 187M = 409.0M vs 410M (0.24%) and per lineage 204.5M vs 205M, so ledger (literal sum 222M, 46%/85%). Fidelity misread (187 and 410 not in Yoo) and external contested (bp vs events, A3x) are separate and unchanged Charitable reading tried: tried 187 Mb per lineage: pairwise 409.0M, per lineage 204.5M reproduce 410M/205M (0.24%) -> holds + ledger.
 
 ## Simulator variables implied
 - `required_fixations` presets: events (about 40M total, 20M per lineage), SNV only (17.5M), bp-affected (205M).

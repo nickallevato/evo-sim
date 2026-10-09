@@ -10,7 +10,7 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: holds   # R4 GAP-02: the detection window (~20,000 generations at Day's N_e ~ 20,000) covers 43-50% of the 46,500 nominal / 40,000 effective generations, so 326,000 selective sweeps would leave ~1.4-1.6 x 10^5 detectable at power 1 (still 1.6 x 10^4 with a window 10x smaller)
-  fidelity: n/a   # no source is cited for the absence of the mosaic
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: supported   # as against 326,000 *selective* fixations: Yoo 2025 SweepFinder2 finds 30 bonobo candidates; consistent with the neutral reading; the logical work is also done by Day's own 'First' argument (G_f already selection-driven)
 ---
 
@@ -47,6 +47,8 @@ R4 GAP-02 (`research/checks/gap02_sweep_window.py`, committed b812741). P5: the 
 
 ## Check
 R4 GAP-02 (research/checks/results/R4-GAPS-04-07-02.md): window 43% (nominal) to 50% (effective generations) of the span; E ≈ 1.4–1.6 × 10⁵ at power 1, still 1.6 × 10⁴ with a 10× smaller window, against 30 SweepFinder2 candidates in bonobos (Yoo 2025). The margin exceeds any plausible power or window error. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. F: sweep-signature claim has no source Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 Sweep count, detection window vs split time, detection power, N_e of Pan.

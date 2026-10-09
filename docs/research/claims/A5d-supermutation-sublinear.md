@@ -10,7 +10,7 @@ sourcing: firsthand
 status: reviewed
 verdicts:
   internal: non-sequitur
-  fidelity: n/a
+  fidelity: accurate   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: "contested"   # sublinear confirmed for asexual; not for free recombination in F2's tested regime
 ---
 
@@ -46,6 +46,8 @@ Pre-registered in A (A-sim): measured exponent a of fixation rate versus supply 
 Arithmetic audit (python3 -I, scratch). Review: pending.
 
 R4 A-sim (research/checks/results/R4-F2-A.md): sublinear response confirmed for an asexual genome (simulated 100x supply gives 2.9-4.8x, a = 0.23-0.34, more sublinear than Day's 0.47-0.61; the model lacks a DFE, so the exponent comparison is qualitative). Day's mechanism (sweep dynamics) is right for linked loci; for unlinked loci F2 gives a = 1.00 in its tested range. Credit to Day: sublinearity is real. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / accurate. N2d: 'not bottlenecked' is stronger than a sublinear positive response (a = 0.47-0.61); Tenaillon 96.5% verified Charitable reading tried: tried 'not solely supply-limited' (would hold): the quoted conclusion is 'not bottlenecked'; kept.
 
 ## Simulator variables implied
 - Fixation rate vs supply curve for asexual vs recombining populations (output of A-sim).

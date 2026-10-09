@@ -10,7 +10,7 @@ sourcing: firsthand
 status: extracted
 verdicts:
   internal: pending
-  fidelity: pending
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was pending): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: pending
 ---
 
@@ -31,7 +31,7 @@ Source: same post, para 36 (KR-04). Context: the withdrawal is explained as the 
 Neutral fixation time conditional on fixation from intermediate frequency is of order 4Ne generations. With Ne = 1e4 (parameters.yaml `population.Ne_modern_human`, unverified textbook value) and 240 generations in the window:
 - 4Ne = 40,000 generations; at 25 y/gen = 1.0M y; 240/40,000 = 0.6% of the way (keruru: "six-tenths of one percent"); derived: holds.
 - Drift SD at p = 0.5 over t generations = sqrt(p q t/(2Ne)) = sqrt(0.25 x 240/20,000) = 0.0548 (keruru: "about 0.05"); derived: holds.
-- Fixation within 240 generations from p = 0.5 (keruru: "around 4 x 10^-35"). derived (R2, Brownian approximation in the arcsine coordinate y = arccos(1-2p), variance 1/(2Ne) per generation, distance pi/2, absorbing at pi): z = 14.34, tail = 1.2e-46. The two values differ by 11 orders; both are negligible. The exact absorbing-chain value is not computed in the repo (B2a computes the same chain only for short-time asymptotics from p = 1/(2N)).
+- Fixation within 240 generations from p = 0.5 (keruru: "around 4 x 10^-35"). derived (R2, Brownian approximation in the arcsine coordinate y = arccos(1-2p), variance 1/(2Ne) per generation, distance pi/2, absorbing at pi): z = 14.34, tail = 1.2e-46. **Corrected 2026-10-09 (R4 X1):** that Brownian figure is wrong: the exact Wright-Fisher chain at 2N = 20,000 over 240 generations gives 5.1e-45 from p = 0.5 (the repo's 1.2e-46 is 41x low), and the diffusion limit (Kimura spectral series) gives 1.8e-45 (14x low). keruru's 4e-35 is about 10 orders above the exact value at Ne = 1e4; both his published values reproduce by diffusion at 2N = 15,364 and 16,278 (= 2 x 8,139, his own C5b temporal Ne), but his method is unretrieved and the output is steep, so under rule R1c the node is `pending` / `unverifiable`. Both figures are negligible either way, and the conclusion follows for starts below 0.9 (expected 2.6e-4 per 1e6 loci). Sources: `research/checks/results/R4-X1-critic-arithmetic.md`, `R4-X1-verdict-rule.md` section 8 item 11.
 - Day's own expression exp(-pi^2 Ne/T) at Ne = 1e4, T = 240 = 10^-178.6 (derived) is for a full path from a single copy (p near 0), so it is not comparable to keruru's p = 0.5 start.
 
 ## Assumptions
@@ -56,6 +56,8 @@ Neutral fixation time conditional on fixation from intermediate frequency is of 
 
 ## Check
 Script: `research/checks/c_adna_neutral_expectation.py` (planned, shared with C). Report expected completions by start band at Ne in {1e3, 5e3, 1e4}, with and without a 10% admixture pulse. · Result: not run · Review: pending
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is pending / unverifiable. R1c (revised) does not rescue a steep output (elasticity -92 in 2N: +-25% moves it by 10^9) and the method is unretrieved, so pending; both values reproduce by diffusion at 2N = 15,364 and 16,278; the conclusion follows for starts below 0.9 (2.6e-4 per 1e6 loci) Charitable reading tried: tried Ne 7.7-8.1k (both published values reproduce by diffusion); output is steep, so no rescue.
 
 ## Simulator variables implied
 Ne, window length, start-frequency spectrum, admixture pulse.

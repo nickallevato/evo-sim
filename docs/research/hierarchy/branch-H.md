@@ -9,7 +9,7 @@ flowchart TD
   n_H -->|depends-on| n_C2
   n_H -->|depends-on| n_H9
   n_H -.->|attacks| n_G2
-  n_H1["H1: 2026-05-07 retraction: Term 3 (Haldane cost limit) was misus<br/><small>day · int:holds · fid:n/a · ext:supported</small>"]
+  n_H1["H1: 2026-05-07 retraction: Term 3 (Haldane cost limit) was misus<br/><small>day · int:holds · fid:partial · ext:supported</small>"]
   style n_H1 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_H1 --> n_H
   n_H1 ==>|revises| n_H8
@@ -23,6 +23,10 @@ flowchart TD
   n_H2 --> n_H
   n_H2 -.->|attacks| n_H
   n_H2 -->|supports| n_H
+  n_H2a["H2a: Hancock: Haldane's cost of selection applies only to hard (v<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  style n_H2a fill:#dbeafe,stroke:#1d4ed8
+  n_H2a --> n_H
+  n_H2a -.->|attacks| n_H
   n_H3["H3: Dawkins's 11,739 (dominant) / 321,444 (recessive) generation<br/><small>day · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_H3 fill:#fde2c8,stroke:#b45309
   n_H3 --> n_H

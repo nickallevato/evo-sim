@@ -9,8 +9,8 @@ load_bearing: false  # Earlier (Feb 2026) aDNA paper whose counts differ from th
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: arithmetic-error
-  fidelity: n/a
+  internal: non-sequitur   # R4 X1 rule rev 2 (was arithmetic-error): N3 on his own basis: 630 is for 1.5e8 genome-wide sites, 21 is among 1,233,013 panel SNPs; scaling by his own panel size gives 5.2, which flips the comparison (>25%): not an arithmetic-error but a conclusion that ...
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contradicted   # as stated, under his described method on real AADR genotypes (C1d): 3.6-5k post-6000 events vs 21; 132 configurations plus his documented two-period pipeline, which reproduces sample and SNP count but not counts, 3.6x. Best Day reading: underspecified (no damage/quality/coverage rule); damage is not the missing piece (library test). Reopens as contested if he documents a pipeline
 ---
 
@@ -66,6 +66,10 @@ R4 C1c + C1d (research/checks/results/R4-C1c.md; research/checks/results/R4-C1d.
 
 R4 C1 + C1b (research/checks/results/R4-B3b-C1.md, research/checks/results/R4-C1b.md, `c1b_day_binned_statistic.py`, 20 reps x 13 configs x 16 readings): the 630 arithmetic (150M x 1.2e-8 x 350) is correct, but the denominator is wrong for a polymorphism-ascertained panel (neither 630 nor the uniform rescaling 5.2 is the right comparator). C1b simulated Day's binned first-passage statistic literally: every reading gives 1.2e3-1.7e4 post-7000 BP events for both neutral (Ne 7e3-2e4) and Day's d = 0.45 model, against 21 observed; but the model also misses Day's own bin profile (7000-8000 BP ~1,350 vs 4,497; pre-7000 share 38-60% vs 99.86%). Verdict: not reproducible from the published procedure; cannot adjudicate. Neither "neutral predicts ~0" (Day side) nor "does not rescue Day" / "deficit vs neutral" (earlier audit wording) is supported. (Superseded by C1c: measured mean depth is 49 / 62 / 282 chromosomes per site in the three oldest bins, so sparse calls are not the cause, and ancestry replacement widens rather than closes the gap.) Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: shared with C1 (`research/checks/c1_ascertainment_sim.py`, planned). · Result: not run · Review: pending
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / unverifiable. N3 on his own basis: 630 is for 1.5e8 genome-wide sites, 21 is among 1,233,013 panel SNPs; scaling by his own panel size gives 5.2, which flips the comparison (>25%): not an arithmetic-error but a conclusion that does not follow. Abstract's 99.8% in one window vs 53.6% (it is 99.86% over three bins: charity) -> ledger. 1.5e8 sites uncited (F) Charitable reading tried: tried 99.8% as the pre-7,000 BP share over three bins: 99.86% reproduces (abstract slip -> ledger); the 630 vs 21 denominator has no charitable reading.
+
+R4 RG-01 retrieval (docs/research/sources/holocene-ne.md, 2026-10-09): under the flatter published trajectories (Gazave, Coventry, Gravel, temporal F) C1c's model gives about 900-3,900 neutral events against Day's 21; under a Nelson-type trajectory about 32-35. The literature does not decide between them; C1e (the C1c model on each published trajectory) is queued. C6's external verdict (contradicted as stated, on C1d) does not depend on this.
 
 ## Simulator variables implied
 Number of neutral sites, panel fraction, window length, sample-size per bin, definition of fixation (sample versus population).

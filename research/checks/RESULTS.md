@@ -533,3 +533,29 @@ The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a differen
 **For Day.** Exact-outcome λ ~1; GB1 95% nonfunctional, 67–158 SNV-level local maxima, 30–51% reach of the best variant; "reduce or destroy" passes as worded (61% of datasets); a short locus cannot drift its way to a one-step route (36–80 neutral steps needed vs 0.03–0.06 available). **For the critics.** 71% of singles keep half of WT-like function; "destroy" alone is a minority (majority in 2% of datasets); GB1 is one connected component and 98.5% of functional variants have an uphill SNV neighbour; RNA neutral networks ~1e33. **Untouched:** per-sequence prevalence (D10–D12), cross-family connectivity, regulatory waiting times (D15).
 
 **Verdicts.** D1d external **supported** (existence part); D2h contested (partial support as worded); others unchanged with comments; G3b's open item replaced by measured numbers. Reviews: `results/REVIEW-R4-D1-*.md`; `REVIEW.md` review #11.
+
+## X1 — Arithmetic and internal-validity audit of every numeric critic and ally claim; one verdict rule for both sides · `x1_critic_arithmetic.py` (pre-registered fa0bc9b), post hoc `x1_posthoc_wf_convergence.py`, `x1_posthoc_missing_rows.py`, `x1_fix_posthoc.py` (77b9790), `x1_rescore.py` (11744e6, 32e2a75, f9e8291, 6eea84e, 849ec9c), `x1_rule2_posthoc.py` (4318f16) · all critic and ally numeric claims, and every Day node with an error or n/a-fidelity verdict · write-ups `results/R4-X1-critic-arithmetic.md`, `R4-X1-verdict-rule.md` (rev 2), `R4-X1-rescore.md`
+
+**Why.** The R5 draft's balance audit found 22 of 112 Day nodes with internal error verdicts against 0 of 51 critic nodes, and only one check aimed at a critic claim. PLAN item 10 (arithmetic audit of both sides) had never been run for the critics.
+
+**What it did.** Recomputed all 45 numeric critic and ally claims from their own stated inputs (34 clean, 9 with a flagged basis or input, 2 not reproduced in the first pass); wrote one verdict rule (materiality R1 with a symmetric slip test on the author's own stated conclusion and a 25% line; R1c no input-looseness rescue for steep outputs; scope S; self-correction SC; non-sequitur N; fidelity F; unidentified authors U; charity C); re-scored both sides under it. A blind audit of the rule's application agreed on 90% of Day calls and 100% of critic error / no-error calls, found clauses that bit one side harder, and led to rev 2.
+
+**Result (rev 2).** Error verdicts, Day vs critics: 13/81 vs 1/20 (numeric by the author's quoted text, p = 0.29); 16/82 vs 1/31 (formal-statement numeric, p = 0.038); 18/114 vs 1/51 (all files, p = 0.008). Per 10k quoted words: 22.7 vs 10.0. Sensitivity: with the three critic tie-breaks (C5, A3d, B5f) flipped, 16/82 vs 4/31, p = 0.58; at a 10% materiality line 18/82 vs 2/31, p = 0.059. **Reading:** Day's errors are robust to reading (most fail against his own table, equation or text); the audit cannot claim critics err less per argument (critic claims are shorter, and the critic zero or near-zero rests on tie-break clauses).
+
+**For Day.** Three earlier error verdicts withdrawn under one rule: A3a (charity: 35M + 1,140 + 2 x 187M = 409.0M, 0.24% from 410M), G (label slip; the stated 107 survives at 106.5), F (it double-counted F1a's step); A5e and G1a move to the slip ledger. Critic slips recorded: Hancock's 38M match does not follow on his own event basis (B5c, +46%); keruru's 4e-35 is about 10 orders above the exact value at his stated Nₑ; Hancock's E. coli rate is 8.9x below the measured rate; McCarthy mixes 25 y and 20 y generations (ledger).
+
+**For the critics.** The exact identities (k = μ; P_fix = 1/(2N) using the census count) and Mansfield's "1 per generation", McCarthy's 22.5M, Matev's variance figures and a Reddit commenter's 3,840 correction all reproduce; keruru's values reproduce at his own measured Nₑ; Day's s6.4 38,400 slip gets its own Day node (A5h, arithmetic-error). The audit's own C5 figure (1.2e-46) was 41x low and is corrected.
+
+**Verdicts.** See `R4-X1-rescore.md` (both sides, one row per node). Reviews: `results/REVIEW-R4-X1-{correctness,steelman-day,steelman-critic,rule-audit}.md` (review #12).
+
+## GAP-07c — Share of human–chimp divergent sites still polymorphic in humans · `gap07c_polymorphic_share.py` (pre-registered 078850b), post hoc `gap07c_posthoc_toplevel.py`, `gap07c_posthoc_review.py` (ae42a91); runs on na-workhorse · claims A3, A3b, A3c, A3x · full write-up `results/R4-GAP07c.md`
+
+**What it measures.** At GAP-07b's divergent sites, whether the chimp-matching allele is still segregating in humans (1000 Genomes phase 3 on GRCh38; NYGC 30x cross-check on chr21+22, same people, independent pipeline).
+
+**Result.** 15.6% of human-derived divergent SNVs are polymorphic at >= 1% (14.8–16.7% per chromosome), consistent with the human half of CSAC's 14–22%. Human-lineage indels 7.4–8.7% (9.5–10.5% in mask); SVs >= 50 bp 6.8% net (n = 450; short-read, lower bound). The chimp side is not measured. Fixed events per lineage: 17.2–17.9M, so Day's 205M is 10.6–12.6x fixed events (human lineage alone 11.9); combined with GAP-07b, about **8–13x**.
+
+**For Day.** 84.4% of human-derived differences are fixed; large variants are mostly fixed (consistent with his post-divergence remark, Q100); his own remarks on ancestral polymorphism (Q37; 04-28 ¶24) are now credited.
+
+**For the critics.** Polymorphism is real and of CSAC's size; the unit mismatch (about 10x) is untouched. Day's 17.5M, like for like, is 9.8% above the measured fixed SNVs and 2.2% below all fixed events (two offsetting errors); his SNV-only shortfall falls about 9%.
+
+**Verdicts.** A3 contested, A3b supported, A3c supported (status reviewed), A3x supported; comments updated. Reviews: `results/REVIEW-R4-GAP07c-{correctness,steelman}.md` (review #13).

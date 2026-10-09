@@ -9,8 +9,8 @@ load_bearing: false  # null-model comparison; its haploid/diploid basis halves t
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: holds
-  fidelity: n/a
+  internal: non-sequitur   # R4 X1 rule rev 2 (was holds): SC: 76.8 corrected in the same video -> ledger. N3 (revised): his stated conclusion is the match, on his own event basis (76 = 152/2); adding the omitted ancestral term gives 58.6M (+46% vs 40M, +39% vs 42.07M ...
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: "contradicted"   # as an SNV match (double count; correct split ~19M post-split + ~15M ancestral); event-basis reading untested
 ---
 
@@ -61,6 +61,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 Script: none (arithmetic computed with python3 -I). Related: B5.
 
 R4 B4a (research/checks/results/R4-B1c-B4a.md; REVIEW-R4-steelman-critic): on an SNV basis the 38M agreement double-counts. Haploid SNV supply is 38.4 per generation per lineage, so 2 x 252,000 x 38.4 = 19.4M, which is B4a's 2muT (0.605%). The observed ~35M SNVs are then ~19M from post-split mutation plus ~15M remainder attributable to ancestral polymorphism (B4a: theta_anc = 0.63% x 3.2e9 = 20M at Yoo HCG Ne; at the relevant HCB node Ne 1.98e5 theta_anc is ~0.95% = ~30M, overshooting the remainder, as in B4a's 25% overshoot). The retained 76 is an SV-inclusive event count (152/2), whose comparator is the ~40M event total, so the event-basis reading is not contradicted. Hancock's "38M matches 35-40M SNVs" lands on the observed value for the wrong reason. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / unverifiable. SC: 76.8 corrected in the same video -> ledger. N3 (revised): his stated conclusion is the match, on his own event basis (76 = 152/2); adding the omitted ancestral term gives 58.6M (+46% vs 40M, +39% vs 42.07M measured; 68.7M at HCB), over 25%, so the match does not follow. On an SNV basis it would survive (39.6M vs 35-37.8M). 98-206 source garbled (F); 205M unit is A3d Charitable reading tried: tried the haploid-correction and the 152/2 event reading (both reproduce 38.3M); tested on his own event basis.
 
 ## Simulator variables implied
 - haploid vs diploid genome basis

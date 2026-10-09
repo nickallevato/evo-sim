@@ -8,7 +8,7 @@
 **An open, numerical audit of Vox Day's *Probability Zero* / MITTENS argument and of his critics, as the groundwork for a simulator you can tune yourself.**
 
 ![phase](https://img.shields.io/badge/phase-research%20(R4%20of%205)-orange)
-![claims](https://img.shields.io/badge/claims%20mapped-194-blue)
+![claims](https://img.shields.io/badge/claims%20mapped-217-blue)
 ![checks](https://img.shields.io/badge/reviewed%20checks-17-success)
 ![sides](https://img.shields.io/badge/scrutiny-both%20sides-blueviolet)
 ![python](https://img.shields.io/badge/python-numpy%20·%20msprime%20·%20fwdpy11-3776AB?logo=python&logoColor=white)
@@ -38,7 +38,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 ## Scorecard so far
 
-<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 204 claims" width="760"></p>
+<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 217 claims" width="760"></p>
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
@@ -48,16 +48,16 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 | LTEE $G_f \approx 1{,}300$ gens/fixation is a real **throughput** measurement and reproduces (A2) | Recombination removes the clonal-interference ceiling in the tested regime (F2) |
 | Balloux–Lehmann fluctuation effect is real (B3b) | Divergence includes ancestral polymorphism: $d = 2\mu T + \theta_{anc}$ (B4a) |
 | Soft selection does **not** make the cost of selection disappear (H) | The cap is $\ln R / D$, not a flat 10% (H2). The $0.743\mu$ figure is a window artefact (B3c) |
-| Haldane arithmetic (300, 487) holds. Critics' "38M matches 35M SNVs" double-counts (B5c) | 205M "required fixations" counts base pairs, not mutation events. The cited $s=0.001$ is *negative* selection (A3, Zeng 2021) |
+| Haldane arithmetic (300, 487) holds. Critics' "38M matches 35M SNVs" double-counts, and on Hancock's own event basis the match does not follow (B5c, X1) | 205M "required fixations" counts base pairs, not mutation events. The cited $s=0.001$ is *negative* selection (A3, Zeng 2021) |
 | The founder hazard's size (~2.3% per event) and the relictation chain reproduce (E, E4) | $0.02^{2\times10^7}$ prices one pre-specified list. No cap near 230 sweeps under multiplicative fitness (G3, Gc) |
 | Parallel sweeps share **one** reproductive budget, so concurrency cannot raise the selected total beyond it. At Haldane's assumed $R\approx1.1$ the long-run rate is *below* 1/300 (H3) | The budget is $\ln R$, not 10%: a coding-only adaptive count is payable at $R\approx1.2$–3 (hard adaptive selection, soft load) (H3) |
-| Day's SNV-only 17.5M is 83% of the directly counted events and brackets the polymorphism-corrected count; his base-pair total is the right order for non-aligned sequence (GAP-07b) | By direct count from the human–chimp alignment, 205M is 9.7× the mutation events per lineage (bracket ~7–14×, non-T2T assemblies); the critics' observation-based estimates land within 7–19% (GAP-07b) |
+| Day's SNV-only 17.5M is 83% of the directly counted events and brackets the polymorphism-corrected count; his base-pair total is the right order for non-aligned sequence (GAP-07b) | By direct count from the human–chimp alignment, 205M is 9.7× the mutation events per lineage; with the measured polymorphic share (15.6% on the human side) it is 10.6–12.6× the *fixed* events, about 8–13× combined (non-T2T assemblies); the critics' observation-based estimates land within 7–19% (GAP-07b, GAP-07c) |
 | On the real ancient-DNA genotypes his start-frequency table reproduces to 0.4 points, and his "completions of near-fixed alleles" reading is right in kind (C1d) | His "21" does not reproduce from his stated method on the real genotypes (thousands; his own documented pipeline is 3.6× off). keruru's measured $N_e$ replicates within 4%, and Day's $N_e \approx 2$ is excluded (C1d) |
 | Exact-outcome alternatives are about 1 per needed change; the GB1 landscape is rugged at single-nucleotide steps; "reduce or destroy" holds as worded for deep mutational scans (D1) | 71% of single substitutions keep at least half of function and "destroy" alone is rare; GB1's functional variants form one connected network; within genes the beneficial fraction exceeds G1's requirement for up to ~$2\times10^5$ changes (D1) |
 
 **Still open:**
 - Cost of selection at human scale (H3) is decided only conditionally. It flips at an adaptive non-coding share of ~0.01–0.6%, below what any α estimate resolves; $R$ is unsourced; soft selection, absolute-fitness gain and epistasis are untested at human scale.
-- Ancient DNA: Day's "21" is contradicted as stated on the real genotypes (C1d), but what it means turns on the Holocene $N_e$ (unsourced; retrieval in progress), and a neutral comparison for the damage-resistant transversion class (36–44 events) is open.
+- Ancient DNA: Day's "21" is contradicted as stated on the real genotypes (C1d), but what it means turns on the Holocene $N_e$. The published estimates ([retrieval](docs/research/sources/holocene-ne.md)) agree on recent growth of 100× or more but disagree on its timing, so the literature does not decide it; C1e will run the model on each published trajectory. A neutral comparison for the damage-resistant transversion class (36–44 events) is also open.
 - The ancestral $N_e$ needed to fit the divergence.
 - Branch D (sequence space). D1 measured G1's open number: about 1–6 routes per needed change per locus (below the flip of ~7–17), while a gene's shared pool of beneficial mutations clears it for about ten needed changes but not 25 or more. Per-sequence prevalence (Axe, Taylor) and cross-family connectivity are untouched.
 - What fraction of the differences needed selection at all ([GAP-01](docs/arguments/README.md#4-what-everyone-missed)). It cuts Day's requirement by 20×–6,000×, yet the adaptive count still exceeds Haldane's rate.
@@ -201,6 +201,16 @@ The flip sits below what any α estimate can resolve, and no sourced net hominid
 ```
 At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give 8,480 generations, against 19,807 from his approximation. That approximation is standard but deterministic. It overstates the conditional fixation time by 2.3× (`beneficial_fix_time.py`).
 
+**Fairness audit (X1).** The R5 draft found 22 of 112 Day claims with an "arithmetic error" or "doesn't follow" verdict against 0 of 51 critic claims. The audit then wrote [one verdict rule](research/checks/results/R4-X1-verdict-rule.md) for both sides, re-scored every numeric claim, and had the rule's application checked blind:
+
+| Error verdicts under one rule | Day | Critics | Fisher p |
+|---|---|---|---|
+| claims with a number in the author's quoted words (primary) | 13/81 | 1/20 | 0.29 |
+| claims with a number in the formal statement | 16/82 | 1/31 | 0.038 |
+| all claims | 18/114 | 1/51 | 0.008 |
+
+Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls went the other way, the gap disappears (16/82 vs 4/31, p = 0.58). **Day's errors are robust to reading; the audit cannot claim critics err less per argument.**
+
 ---
 
 ## Roadmap
@@ -208,9 +218,9 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
-  R1 --> R2["R2<br/>204 claims<br/>verbatim + sourced"]:::done
+  R1 --> R2["R2<br/>217 claims<br/>verbatim + sourced"]:::done
   R2 --> R3["R3<br/>Argument tree<br/>31 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>27 checks reviewed"]:::active
+  R3 --> R4["R4<br/>Math resolution<br/>29 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo
@@ -228,7 +238,11 @@ flowchart LR
 - [x] **GAP-07b:** direct event count from the human–chimp alignment (9.7×, bracket ~7–14×; follow-ups GAP-07c and a T2T re-run)
 - [x] **C1c / C1d:** Day's aDNA 21-count with real call depth and ancestry replacement (model), then on the real AADR genotypes (contradicted as stated; keruru's $N_e$ replicates)
 - [x] **D1:** sequence-space spike (RNA folding, deep mutational scans, GB1): alternatives per needed change against G1's flip
-- [ ] **In progress:** X1 (critic arithmetic and one verdict rule for both sides), GAP-07c (polymorphic share), XT (cross-tool replication), D15 (regulatory waiting time), Holocene $N_e$ retrieval, mapping of the remaining critic/ally arguments
+- [x] **X1:** arithmetic of every critic and ally claim, and one verdict rule applied to both sides (blind-audited)
+- [x] **GAP-07c:** polymorphic share of the divergent sites (15.6% human side; 205M is 10.6–12.6× fixed events)
+- [x] **Mapping:** every critic and ally argument attached to the map (12 new claims from the Hancock video, pending review); Holocene $N_e$ literature retrieved
+- [ ] **In progress:** XT (cross-tool replication), D15 (regulatory waiting time)
+- [ ] **Queued:** C1e (the C1c model on published Holocene trajectories), Mansfield's supply argument, latency vs throughput, Hancock's standing-variation prediction
 - [ ] **D follow-ups:** per-sequence prevalence (Axe, Taylor, Keefe–Szostak), multi-mutant decay, a noise null for the beneficial proxy
 - [ ] **C follow-ups:** a transversion-matched neutral model; what the transition excess is
 - [ ] **H follow-ups:** soft-selection rate limit and epistasis at human $R$; a sourced beneficial DFE and $M$; CIs on T50

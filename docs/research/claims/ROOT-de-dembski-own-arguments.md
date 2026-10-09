@@ -14,6 +14,9 @@ verdicts:
   external: untestable      # a statement of position
 ---
 
+> **Mapping (2026-10-09): no attack warranted.** This node is mapped under the ratified definition (argmap/NOTES.md judgement call 12) with no defeater row, because it is a position statement plus a question (DE-02) that Day answers (x:day-dembski-scaling, d129); no derivation or number to attack.
+
+
 ## Statement (verbatim)
 > "As an intelligent design proponent, I have my own arguments for thinking that evolutionary mechanisms face serious explanatory shortfalls."
 

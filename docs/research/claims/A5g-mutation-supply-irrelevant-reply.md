@@ -10,7 +10,7 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: pending
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: pending
 ---
 
@@ -47,6 +47,8 @@ Not run. Prediction (Day): the response of fixation rate to supply is small. Pre
 
 ## Check
 No script. Review: pending.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is pending / unverifiable. F: 'no mammalian fixation faster than 1,600' uncited Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 - Supply–rate relation as a user-chosen function (see A5b).

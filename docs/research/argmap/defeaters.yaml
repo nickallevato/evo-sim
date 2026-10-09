@@ -199,7 +199,7 @@
   locator: https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶60
   audit_status: not_upheld
   audit_basis: B5 holds/accurate/contested; Day accepts k = μ at steady state (HL 2026-08-27; B3g)
-  counter: []
+  counter: [d323]
   note: '''neutral theory ... is flat-out wrong''.'
   hierarchy_edge: true
 - id: d018
@@ -212,7 +212,7 @@
   locator: https://zenodo.org/records/22903977 §3 The Empty Pipe
   audit_status: not_upheld
   audit_basis: B6 supported; B1c external contradicted; Day conceded a full pipe at the split (B1d, 2026-10-01)
-  counter: []
+  counter: [d323]
   note: Via the empty-pipe route (B1).
   hierarchy_edge: true
 - id: d019
@@ -225,7 +225,7 @@
   locator: https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶29
   audit_status: not_upheld
   audit_basis: RESULTS B3 (P_fix = 1/M for every Nₑ); B3a contradicted; conceded B3g
-  counter: []
+  counter: [d323]
   note: 'Via the N/Nₑ route (B3a: P_fix = 1/(2Nₑ)).'
   hierarchy_edge: true
 - id: d020
@@ -397,7 +397,7 @@
   locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:51:04–01:56:15
   audit_status: partly
   audit_basis: B5c holds/n/a/contradicted (as an SNV match, double count, R4 B4a); event-basis comparison not contradicted
-  counter: [d146, d218]
+  counter: [d146, d218, d331]
   note: ~76 per generation × 2 × 252,000 ≈ 38M.
   hierarchy_edge: true
 - id: d033
@@ -410,7 +410,7 @@
   locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:48:19
   audit_status: upheld
   audit_basis: B3a contradicted (RESULTS B3; B3g)
-  counter: [d146, d218]
+  counter: [d146, d218, d331]
   note: Neutral substitution rate equals the mutation rate.
   hierarchy_edge: true
 - id: d034
@@ -423,7 +423,7 @@
   locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:56:15–02:01:44
   audit_status: partly
   audit_basis: B5c external contradicted as an SNV match (R4 B4a double count); A external contested
-  counter: [d146, d218]
+  counter: [d146, d218, d331]
   note: A model with no selection accounts for the required differences.
   hierarchy_edge: true
 - id: d035
@@ -727,7 +727,7 @@
   locator: https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 14
   audit_status: upheld
   audit_basis: 'R4 C1 verdict: C: the test does not discriminate (Nₑ-sensitivity noted)'
-  counter: [d053, d058, d060, d154]
+  counter: [d053, d058, d060, d154, d333]
   note: Zero fixations from intermediate frequency in 240 generations is the neutral expectation (~10⁻²⁹).
   quote: Finding zero is not a coin landing on its edge. Finding one would have been the falsification.
   hierarchy_edge: true
@@ -1264,8 +1264,8 @@
   by: [Brian Mansfield, Dennis McCarthy]
   first_date: 2026-09-17
   locator: https://dennismccarthy.substack.com/p/vox-day-responds para 22; https://www.youtube.com/watch?v=jDxFtCOGZ3A comment ...AbR9n0iZNuQ
-  audit_status: upheld
-  audit_basis: F internal non-sequitur (as a throughput bound); RESULTS F1
+  audit_status: partly
+  audit_basis: 'R4 X1 rule rev 2 (2026-10-09): F internal holds under S1 (the quoted chain is consistent); the window/latency step this attack targets is F1a''s, which stays non-sequitur, so scoring it on F counted it twice; the attack is upheld against F1a'
   counter: [d021, d103, d221]
   note: The time to fix one allele is not the time between fixations.
   quote: The time it takes for one allele to get fixed is not important, it is the time BETWEEN successive fixations that is important.
@@ -1304,8 +1304,8 @@
   by: [Dennis McCarthy]
   first_date: 2026-09-17
   locator: https://dennismccarthy.substack.com/p/vox-day-responds para 22
-  audit_status: upheld
-  audit_basis: F internal non-sequitur; RESULTS F1
+  audit_status: partly
+  audit_basis: 'R4 X1 rule rev 2 (2026-10-09): F internal holds under S1 (the quoted chain is consistent); the window/latency step this attack targets is F1a''s, which stays non-sequitur, so scoring it on F counted it twice; the attack is upheld against F1a'
   counter: []
   note: Mutations do not rise in frequency one at a time.
   hierarchy_edge: true
@@ -1477,7 +1477,7 @@
   locator: https://zenodo.org/records/18168236 §2.3
   audit_status: untested
   audit_basis: 'no check on this reply; R4 H2-hard: the hard-selection cap is ln R / D (10% is not a general bound); R4 H: soft selection did not remove the cost'
-  counter: [d119, d121, d122, d190, d191, d259]
+  counter: [d119, d121, d122, d190, d191, d259, d322]
   note: 'The 10% budget is shared by all loci, so parallel fixation is costly. A pre-emptive reply (2026-01-05) to the generic parallel-fixation objection. Retargeted 2026-10-08 from G1 (Day''s own claim) to G2.'
   hierarchy_edge: true
   edge_flag: 'judgement call 2026-10-08: Z18168236 §2.3 answers an unnamed ''most common objection''; G2 is the corpus''s main critic statement of it'
@@ -1675,7 +1675,7 @@
   locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:51:04–01:56:15; https://discourse.peacefulscience.org/t/18094
   audit_status: partly
   audit_basis: 'R4 B4a: the twofold pedigree/divergence gap is accounted for by θ_anc at Nₑ,anc ≈ 1.3×10⁵ (claims/B4g)'
-  counter: [d146, d218]
+  counter: [d146, d218, d331]
   note: A pedigree-μ neutral count reaches the observed order within ~2×, not 32×.
   hierarchy_edge: false
 - id: d135
@@ -1792,7 +1792,7 @@
   locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶6
   audit_status: not_upheld
   audit_basis: F internal non-sequitur; B1c contradicted
-  counter: [d101, d104, d105, d202]
+  counter: [d101, d104, d105, d202, d327]
   note: Mansfield should have used Kimura's fixation-time equation.
   hierarchy_edge: false
 - id: d144
@@ -1961,8 +1961,8 @@
   by: [audit]
   first_date: 2026-10-07
   locator: docs/research/claims/C6-molecular-clock-stopped.md (derived)
-  audit_status: upheld
-  audit_basis: C6 internal arithmetic-error
+  audit_status: partly
+  audit_basis: 'R4 X1 rule rev 2 (2026-10-09): C6 internal non-sequitur (omitted panel scaling: on his own basis 630 is for 1.5e8 sites and 21 is among 1,233,013 panel SNPs; scaled, 5.2), not arithmetic-error; the abstract''s 99.8% is a ledger slip'
   counter: []
   note: 630 is for 150M genome-wide sites (panel-scaled 5.2); '99.8% in one window' is 53.6% by the paper's own bins.
   hierarchy_edge: false
@@ -2238,8 +2238,8 @@
   by: [audit]
   first_date: 2026-10-07
   locator: docs/research/claims/G-bernoulli-barrier.md; research/checks/results/REVIEW-R4-steelman-day.md
-  audit_status: upheld
-  audit_basis: 'G internal arithmetic-error ((1.01)^1474 ≈ 14.7× false as written); R4 G1 withdrew the audit''s mixed-scales framing'
+  audit_status: partly
+  audit_basis: 'R4 X1 rule rev 2 (2026-10-09): G internal holds + ledger: ''(1.01)^1474 = 14.7'' is a label slip (2.34e6), but ln 14.67 / additive 14.74 give 106.5 vs printed 107 (0.5%), so the stated conclusion survives; R4 G1 withdrew the mixed-scales framing'
   counter: []
   note: '(1.01)^1474 is not 14.7. R4 G1: 14.7 reproduces as 14.74 (additive) or 14.67 (log), and 107 is valid as a log ratio, so the earlier ''additive numbers labelled multiplicative'' reading is withdrawn. The audit''s own reading of the s3 criterion gives 13.8 loci, not 230.'
   hierarchy_edge: false
@@ -2329,8 +2329,8 @@
   by: [audit]
   first_date: 2026-10-07
   locator: 'docs/research/ledgers/balance.md (Critics: Hancock)'
-  audit_status: upheld
-  audit_basis: balance ledger
+  audit_status: partly
+  audit_basis: 'R4 X1 rule rev 2 (2026-10-09): A5c holds / unverifiable: the spoken ''4e-5'' is a 13% caption slip (ledger, S2); the 1e-11 E. coli rate is uncited and 8.9x below the measured 8.9e-11 (fidelity unverifiable)'
   counter: []
   note: Hancock's bacterial μ (1e-11) is below the measured 8.9e-11 (≈2,500 gens/fixation at the measured rate).
   hierarchy_edge: false
@@ -2370,7 +2370,7 @@
   locator: https://zenodo.org/records/23003785 p.12 (§7.3)
   audit_status: upheld
   audit_basis: 'A3b holds/partial; R4 GAP-07: the event count corroborates the 17.5M SNV-only magnitude; s7.3 wording ambiguous on bp vs events'
-  counter: []
+  counter: [d335]
   note: 'Self-concession: counting structural variants per base is ''a legitimate methodological concern''.'
   quote: This is a legitimate methodological concern.
   hierarchy_edge: false
@@ -2566,8 +2566,8 @@
   by: [audit]
   first_date: 2026-10-07
   locator: research/checks/RESULTS.md §F1
-  audit_status: upheld
-  audit_basis: F internal non-sequitur
+  audit_status: partly
+  audit_basis: 'R4 X1 rule rev 2 (2026-10-09): F internal holds under S1 (the quoted chain is consistent); the window/latency step this attack targets is F1a''s, which stays non-sequitur, so scoring it on F counted it twice; the attack is upheld against F1a'
   counter: [d228]
   note: Rate = 2N·U_b·u(s) independent of latency (3 vs 847 generations).
   hierarchy_edge: false
@@ -3439,7 +3439,7 @@
   first_date: 2026-09-17
   locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/338963242 (RF-1)
   audit_status: upheld
-  audit_basis: 'G5 internal holds; G internal arithmetic-error, and G''s own derivation records absolute variance n/4 rising with n; R4 G1: no ~230 cap under multiplicative fitness'
+  audit_basis: 'G5 internal holds; G internal holds + ledger since R4 X1 (2026-10-09); G''s own derivation records absolute variance n/4 rising with n while the CV falls, so the attack on the inference stands'
   counter: []
   note: 'The coefficient of variation of the beneficial-allele count falls as loci are added, but its variance rises; selection responds to variance in (log) fitness, not to the CV.'
   hierarchy_edge: true
@@ -3453,7 +3453,7 @@
   locator: research/checks/results/R4-GAP07b-alignment.md §0, §6, §11
   audit_status: upheld
   audit_basis: 'A3a arithmetic-error / misread / contested (contradicted if read as an event count; Day''s weighting reading untested); reviewed (review #8)'
-  counter: [d276, d277, d278]
+  counter: [d276, d277, d278, d336]
   note: 'A direct count from the hg38–panTro6 alignment (non-T2T; both lineages plus polymorphism) gives 42.1M events, 21.05M per lineage; 205M is 9.7× raw, bracket about 7–14×. As a weight, 205M needs ~3,250 SNV-equivalents per event above 50 bp, against Day''s own event-counting G_f. Bases outside aligned blocks are 201–261 Mb, so the bp magnitude is real but not a fixation count (credit to Day).'
   hierarchy_edge: false
 - id: d271
@@ -3466,7 +3466,7 @@
   locator: research/checks/results/R4-GAP07b-alignment.md §11 (critics graded against the measurement)
   audit_status: partly
   audit_basis: 'measured 17.3M human-derived SNVs and 21.05M events per lineage; the k = μ rate route gives 9.7M (−44% / −54%); the tension is the clock question (B4a / GAP-06), not resolved here'
-  counter: [d276, d277, d278]
+  counter: [d276, d277, d278, d336]
   note: 'The critics'' rate-based 9.7M per lineage is about 2× below the measured divergence, while their observation-based estimates (McCarthy 22.5M, Mansfield 25M, Nesslig20 and Hancock ~38M total) land within 7–19% (credit to Day on the rate route).'
   hierarchy_edge: false
 - id: d272
@@ -3479,7 +3479,7 @@
   locator: research/checks/results/R4-GAP07b-alignment.md §11 (attribution of errors)
   audit_status: partly
   audit_basis: 'A3x fidelity partial; external supported (the 40M is met by the measured 42.1M within 5%, with SNV +8% and indels −14% offsetting)'
-  counter: [d276, d277, d278]
+  counter: [d276, d277, d278, d336]
   note: 'A3x adds Yoo''s six-ape curated count of 1,140 inversions to a human–chimp total (the human–chimp net has 453 nested inversion fills >= 10 kb); the effect on the 40M is nil, and the 40M itself is confirmed.'
   hierarchy_edge: false
 - id: d273
@@ -3492,7 +3492,7 @@
   locator: research/checks/results/R4-GAP07b-alignment.md §11 (attribution of errors), §13
   audit_status: upheld
   audit_basis: 'CSAC 5M measured as a two-lineage total (4.30M); the 22.5M per-lineage upper bound retired; the rate-based "9–11×" range corrected (that route gives ~20×)'
-  counter: [d276, d277, d278]
+  counter: [d276, d277, d278, d336]
   note: 'The audit''s own GAP-07 used a per-species reading of CSAC''s 5M for a 22.5M upper bound and folded the k = μ route into a "9–11×" range; the direct count retires the bound and separates the routes.'
   hierarchy_edge: false
 - id: d274
@@ -3845,4 +3845,538 @@
   audit_basis: 'applied in the fix pass (research/checks/results/R4-D1-spike.md Review resolution)'
   counter: []
   note: 'Exact-structure-per-locus is Day''s horn by construction; the pre-registered P10 comparison (beneficial fraction vs G1''s requirement) was never reported; the s-sweep only went down; critic-favourable facts were kept out of §0; the critics'' ''strong form'' was unsourced.'
+  hierarchy_edge: false
+- id: d301
+  attacker: A4e
+  target: A4g
+  target_part: P1
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:51:35–00:54:02 (claims/A4e)'
+  audit_status: untested
+  counter: [d330]
+  note: 'Kimura''s diffusion is a continuous-time smoothing of Wright–Fisher, not a revision of it, and the Moran model is the standard overlapping-generations model, so "the two standard models" misdescribes the theory.'
+  hierarchy_edge: true
+- id: d302
+  attacker: A4e
+  target: A4g
+  target_part: P2
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:48:29, t=01:00:59 (claims/A4e)'
+  audit_status: partly
+  audit_basis: 'R4 C2 (claims/A4 Check): g_eff = d*g is standard theory with generation length T/d, so the field carries the correction; whether Nₑ rescales the sweep time (not only drift) is untested'
+  counter: [d330]
+  note: 'Effective population size absorbs overlap in Wright–Fisher formulas, so complete replacement is not an assumption of the standard results.'
+  hierarchy_edge: false
+- id: d303
+  attacker: A4e
+  target: A4
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:43:38–00:48:29 (claims/A4e)'
+  audit_status: partly
+  audit_basis: 'R4 C2: d*s exact for hazard-scale s, factor 1 for per-generation s (claims/A4 Check); Hancock addresses the Duffy/book version, MITTENS 3.0 dropped d (A4d)'
+  counter: [d330]
+  note: 'Grants that overlap slows change per nominal generation; denies that a new coefficient is needed because Nₑ and the Moran model already carry it. Nₑ (drift) and d (selection time-scale) are different quantities; not shown interchangeable.'
+  hierarchy_edge: false
+- id: d304
+  attacker: A4f
+  target: A4
+  target_part: P2
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:20:50–01:23:35 (claims/A4f)'
+  audit_status: partly
+  audit_basis: 'A4 internal holds for hazard-scale s (R4 C2); the "d undefined" point was retracted by Camestros (A4b); Hancock critiques the concept as presented on Duffy''s slide'
+  counter: []
+  note: 'd has no population-genetic counterpart and, as defined (fraction replaced per time unit), is demographic turnover rather than a selection coefficient.'
+  hierarchy_edge: true
+- id: d305
+  attacker: A4e
+  target: A4c
+  target_part: P1
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:14:23–01:15:45 (claims/A4e)'
+  audit_status: untested
+  counter: [d330]
+  note: 'The 20-generation baseline "assuming complete replacement" is not what the standard models use for overlapping populations; Nₑ and the Moran model exist.'
+  hierarchy_edge: false
+- id: d306
+  attacker: chk:R2-arith
+  target: A4c
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:14:23 and t=01:14:43 (Duffy''s slide as read by the host)'
+  audit_status: partly
+  audit_basis: 'arithmetic only: 20 generations / 0.8 = 25 reproduces the slide; 1/0.45 = 2.22 is not 1/0.8 = 1.25, so the example is not reconciled with d = 0.45 (it may be illustrative)'
+  counter: []
+  note: 'Resolves the units left open in claims/A4c (baseline 20 generations from Kimura''s formula, divided by 80% efficiency) and shows the example uses a different correction from d.'
+  hierarchy_edge: false
+- id: d307
+  attacker: A1a
+  target: B4e
+  target_part: P1
+  type: undermining
+  by: [Langergraber et al. 2012 (applied by the audit)]
+  first_date: 2012
+  locator: 'claims/A1a (Langergraber 2012 abstract); claims/B4d analysis'
+  audit_status: partly
+  audit_basis: 'A1a fidelity partial, external supported; claims/B4d: a pedigree-μ date is independent of fossil calibration but still assumes k = μ per generation'
+  counter: []
+  note: 'Not every divergence date rests on Kimura''s result: Langergraber dates the split without fossil calibration, using pedigree μ and wild-chimp generation times.'
+  hierarchy_edge: false
+- id: d308
+  attacker: A1a
+  target: B4f
+  target_part: P1
+  type: undermining
+  by: [Langergraber et al. 2012 (applied by the audit)]
+  first_date: 2012
+  locator: 'claims/A1a (Langergraber 2012 abstract); claims/B4d analysis'
+  audit_status: partly
+  audit_basis: 'as d307; Hössjer and McCarthy (B4e) make the same dependence point from opposite sides'
+  counter: []
+  note: 'Same as d307 against Hössjer''s statement that the neutral theory is used in the first place to date the divergence.'
+  hierarchy_edge: false
+- id: d309
+  attacker: D12
+  target: D8
+  target_part: P1
+  type: undermining
+  by: [Keefe & Szostak 2001 (applied by the audit)]
+  first_date: 2001
+  locator: 'claims/D12 (Nature 410:715-718, abstract)'
+  audit_status: partly
+  audit_basis: 'D12 external contested (binding is not catalysis), fidelity unverifiable (abstract only); claims/D8 Responses'
+  counter: []
+  note: 'Four ATP-binding proteins were found in a library of 6×10^12 random 80-mers, so function is not at the 10^-65 scale; D8 states no length or function.'
+  hierarchy_edge: false
+- id: d310
+  attacker: D11
+  target: D8
+  target_part: P1
+  type: undermining
+  by: [Taylor et al. 2001 (applied by the audit)]
+  first_date: 2001
+  locator: 'claims/D11 (PNAS 98:10596-10601)'
+  audit_status: partly
+  audit_basis: 'D11 internal holds, fidelity accurate, external contested (different protein and function)'
+  counter: []
+  note: 'Taylor et al. estimate a fully randomised library of about 10^24 members for chorismate mutases, far from 10^65.'
+  hierarchy_edge: false
+- id: d311
+  attacker: x:eden-p9-caveat
+  target: D14
+  target_part: P1
+  type: undermining
+  by: [Murray Eden (applied by the audit)]
+  first_date: 1966-04
+  locator: 'Eden, Wistar Monograph No. 5, p.9 (claims/D14 Responses)'
+  audit_status: partly
+  audit_basis: 'D14 internal holds, fidelity accurate, external contested: Eden calls it a "very rough estimate" built on unsourced probabilities'
+  counter: []
+  note: 'Eden''s own caveat; Davis relays the 10^36 without it.'
+  quote: 'a discovery of a new transposition mechanism can make such speculations an exercise in futility'
+  hierarchy_edge: false
+- id: d312
+  attacker: F1c
+  target: D15
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2024-03-06
+  locator: 'https://www.youtube.com/watch?v=KLPZxAU9nAM t=00:00:20 (TH-1, claims/F1c)'
+  audit_status: untested
+  note: 'Waiting-time models of the Behe–Snoke family are argued to rely on unrealistic assumptions; the 2024 video does not mention Hössjer, Bechly and Gauger, so the transfer is by analogy.'
+  counter: []
+  hierarchy_edge: false
+- id: d313
+  attacker: ROOT-EP
+  target: ROOT-H
+  target_part: P4
+  type: undermining
+  by: [Zach Hancock, Gutsick Gibbon]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=03:04:26–03:05:30 (claims/ROOT-EP)'
+  audit_status: untested
+  counter: []
+  note: 'An argument from credentials: a statistician''s agreement is not evidence about population-genetic assumptions. Hössjer''s byline is professor of mathematical statistics (HO-09); his population-genetics record was not examined; FP-01 notes a degree count is not a rebuttal.'
+  hierarchy_edge: true
+- id: d314
+  attacker: ROOT-EP
+  target: ROOT-T
+  target_part: P2
+  type: undermining
+  by: [Zach Hancock, Gutsick Gibbon]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:30:54–00:32:16 and t=03:04:26 (claims/ROOT-EP)'
+  audit_status: untested
+  counter: []
+  note: 'Tipler is a Discovery Institute associate with a physics background; the foreword and appendix are not accessible, so the rigor claim cannot be checked either way.'
+  hierarchy_edge: true
+- id: d315
+  attacker: A5a
+  target: ROOT-H
+  target_part: inference
+  type: undercutting
+  by: [Ola Hössjer]
+  first_date: 2026-09-14
+  locator: 'Hössjer PDF p.3 (HO-02 against HO-06); claims/ROOT-H Weaknesses'
+  audit_status: partly
+  audit_basis: 'ROOT-H internal pending; balance ledger and NOTES item 2: his rescaled gaps are 1.94× (eq. 2.4) and 2.63× (eq. 3.1); without d, 22.9M (above 20M) and 16.9M (1.19× short); the cost step is asserted (H5)'
+  counter: [d131, d185]
+  note: 'His own rescaled bound is below the required count only by about 2×, so "I agree with this conclusion" rests on the uncomputed Haldane step.'
+  hierarchy_edge: false
+- id: d316
+  attacker: A3x
+  target: ROOT-K
+  target_part: P1
+  type: undermining
+  by: [Dennis McCarthy, audit (R4 GAP-07b)]
+  first_date: 2026-09-17
+  locator: 'https://dennismccarthy.substack.com/p/vox-day-responds para 26 (MC-11)'
+  audit_status: upheld
+  audit_basis: 'as d006: A3x holds/accurate/supported; GAP-07 and GAP-07b: events per lineage 18–22.5M, so the 205M behind the 1,075,000× shortfall is a unit mismatch'
+  counter: [d272]
+  note: 'Keen''s 491 universe-ages is 6.3 My × the 205M-based shortfall; with an events count the multiplier falls by about 10×.'
+  hierarchy_edge: false
+- id: d317
+  attacker: A5
+  target: ROOT-K
+  target_part: P2
+  type: undermining
+  by: [Dennis McCarthy]
+  first_date: 2026-01-26
+  locator: 'https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 60-62 (MC-05, MC-07)'
+  audit_status: partly
+  audit_basis: 'A5 holds/n/a/contested; R4 A-sim: scaling factor 1.5–172× is an extrapolation; GAP-04 asymptotes'
+  counter: [d016, d129]
+  note: 'The shortfall is a time multiplier only if the bacterial per-fixation rate is a ceiling for humans, which per-genome supply differences contest.'
+  hierarchy_edge: false
+- id: d318
+  attacker: A2d
+  target: G2b
+  target_part: P2
+  type: undermining
+  by: [Camestros Felapton]
+  first_date: 2026-01-29
+  locator: 'https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-5/ para 9 (CA-11)'
+  audit_status: upheld
+  audit_basis: 'A2d holds/accurate/supported; claims/G2b: LTEE point-mutator populations run faster (43–183 gens/fixation)'
+  counter: [d127]
+  note: '1,400 is an average, so it is not "the fastest rate of mutational fixation ever observed".'
+  hierarchy_edge: false
+- id: d319
+  attacker: A3d
+  target: G2b
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:37:07 (GG-02)'
+  audit_status: partly
+  audit_basis: 'A3d holds/partial/n/a; claims/A3d: nobody disputes the factor of two in principle; MITTENS counts per lineage'
+  counter: []
+  note: 'Fixation occurs on both lineages, so the arithmetic is at least 360 rather than 180 on Hancock''s reading; the requirement is also per lineage in Day''s accounting.'
+  hierarchy_edge: false
+- id: d320
+  attacker: G3b
+  target: G3a
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: 'https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶28'
+  audit_status: partly
+  audit_basis: 'as d116: R4 G1: G3b is an incomplete dilemma (internal non-sequitur), the neutral-is-not-functional half is valid; the middle case exists'
+  counter: [d176, d241, d288]
+  note: 'Disputes that the evolutionary outcome space resembles a lottery with many winning numbers.'
+  hierarchy_edge: false
+- id: d321
+  attacker: G2h
+  target: A
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:36:03–01:36:24, t=01:41:38 (claims/G2h)'
+  audit_status: untested
+  counter: []
+  note: 'F_max has no mutation-supply or selection term, so it cannot discriminate selection from drift; Day''s reply is that G_f is a measured total (G1).'
+  hierarchy_edge: true
+- id: d322
+  attacker: H2a
+  target: H
+  target_part: P2
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=02:06:13–02:13:12 (claims/H2a)'
+  audit_status: partly
+  audit_basis: 'R4 H, H2-hard and H3: the 10% is not a general bound; the cap is ln R / D under hard selection; the human-scale result is conditional on hard adaptive selection with a soft deleterious load; Nunney 2003 (H2)'
+  counter: [d329]
+  note: 'The cost of selection exists only under hard (viability) selection; under soft selection or from standing variation it is largely absent.'
+  hierarchy_edge: true
+- id: d323
+  attacker: B5j
+  target: B
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=02:13:32–02:20:46 (claims/B5j)'
+  audit_status: untested
+  counter: [d328]
+  note: 'Whether neutral theory counts as "Darwinism" has no bearing on whether neutral fixation supplies the observed differences. Definitional; no numeric content.'
+  hierarchy_edge: true
+- id: d324
+  attacker: ROOT-PG
+  target: ROOT
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock, Gutsick Gibbon]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:22:54–00:27:44, t=02:24:30 (claims/ROOT-PG)'
+  audit_status: untested
+  counter: []
+  note: 'Inductive: a theory with a record of confirmed quantitative predictions should not be overturned by a model with none. Day''s aDNA prediction (C) has been tested (R4 C1b: counts at or mildly above neutral expectation).'
+  hierarchy_edge: true
+- id: d325
+  attacker: ROOT-COV
+  target: ROOT
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:29:09–00:29:49 (claims/ROOT-COV)'
+  audit_status: untested
+  counter: []
+  note: 'A covariance cannot be "statistically impossible"; a wording point that does not engage the time-budget calculation (Hancock concedes the live question at t=00:29:29).'
+  hierarchy_edge: true
+- id: d326
+  attacker: D2k
+  target: D2l
+  target_part: P1
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:13:19–00:19:47 (claims/D2k)'
+  audit_status: untested
+  counter: []
+  note: 'Pearson, Fisher, Wright, Haldane and Kingman were mathematicians or statisticians; the narrow reading of D2l (nobody computed Day''s specific budget) is not touched.'
+  hierarchy_edge: true
+- id: d327
+  attacker: F1c
+  target: F
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:50:34–00:50:54 (claims/F1c)'
+  audit_status: untested
+  counter: []
+  note: 'F is a waiting-time argument of the type the 2024 video criticises for unrealistic assumptions; transfer to MITTENS is by analogy (TH-1 not analysed).'
+  hierarchy_edge: true
+- id: d328
+  attacker: B7b
+  target: B5j
+  target_part: P1
+  type: undermining
+  by: [audit (mapping 2026-10-09)]
+  first_date: 2026-10-09
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=02:16:39 (claims/B5j); Kimura and Ohta 1969 (claims/B7b)'
+  audit_status: untested
+  counter: []
+  note: 'Possible critic-side slip, not verified: Hancock says Day made "a factor of two error" in the 4Nₑ line ("using the formula for a hloid"); Kimura and Ohta 1969 give about 4Nₑ for a neutral allele that fixes (B7b), so the charge looks wrong or unexplained. Recorded as untested, not as a verdict.'
+  hierarchy_edge: false
+- id: d329
+  attacker: H2
+  target: H2a
+  target_part: P2
+  type: undermining
+  by: [audit (mapping 2026-10-09)]
+  first_date: 2026-10-09
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=02:08:20 (claims/H2a); claims/H2 (Nunney M = 2Ku)'
+  audit_status: untested
+  counter: [d192]
+  note: 'Possible critic-side gap, not verified: Hancock says the cost of selection matters "in populations that are really small". That is consistent with Nunney''s dependence on M = 2Ku (H2), but he does not derive it. Recorded as untested.'
+  hierarchy_edge: false
+- id: d330
+  attacker: B3
+  target: A4e
+  target_part: P2
+  type: undermining
+  by: [audit (mapping 2026-10-09)]
+  first_date: 2026-10-09
+  locator: 'https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:48:29 (claims/A4e); claims/B3 (Nₑ with overlapping generations)'
+  audit_status: untested
+  counter: []
+  note: 'Possible critic-side slip, not verified: the effective-size formula for overlapping generations (25 against 75-80 years) is stated from memory, with no source. Recorded as untested.'
+  hierarchy_edge: false
+- id: d331
+  attacker: chk:X1
+  target: B5c
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-X1-verdict-rule.md N (test table), R4-X1-rescore.md row B5c
+  audit_status: upheld
+  audit_basis: 'B5c internal non-sequitur under rule R1/N3: on Hancock''s own event basis (76 = 152/2) the omitted ancestral term gives a null of 58.6M (+46% over his 40M, +39% over the 42.07M measured events; 68.7M at the HCB node), so the stated match does not follow'
+  counter: [d337, d338, d339, d340]
+  note: 'The 38M "match" is tested on the author''s own basis. On an SNV basis it would survive (39.6M vs 35-37.8M); on the event basis he states, it overshoots by more than 25%.'
+  hierarchy_edge: false
+- id: d332
+  attacker: A2h
+  target: A5h
+  target_part: P1
+  type: undermining
+  by: [Dumb-and-Dumber, audit]
+  first_date: 2026-09-28
+  locator: 'https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-02); research/checks/results/R4-X1-rescore.md row A5h'
+  audit_status: upheld
+  audit_basis: 'A2h holds / accurate; A5h arithmetic-error (R1(ii), S3): 3.2e9 x 1.2e-8 x 100 = 3,840, not 38,400; the downstream fitnesses move from 0.02 to 0.68 and from 1e-17 to 0.021'
+  counter: []
+  quote: 'Section 6.4 also makes a tenfold arithmetic mistake: 3.2 billion × 1.2 × 10⁻⁸ × 100 is 3,840 mutations per haploid genome, not 38,400.'
+  note: 'The slip was caught by a critic on 2026-09-28; before R4 X1 it had no Day-side node (rule S3 now gives it one, A5h).'
+  hierarchy_edge: false
+- id: d333
+  attacker: chk:X1
+  target: C5
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-X1-critic-arithmetic.md; R4-X1-verdict-rule.md section 8 item 11
+  audit_status: partly
+  audit_basis: 'C5 internal pending / fidelity unverifiable (rule R1c): keruru''s 4e-35 is about 10 orders above the exact WF value (5.1e-45) at the stated Ne = 1e4, but both his published values reproduce by diffusion at 2N of about 16k (2 x 8,139, his own C5b Ne); his method is unretrieved and the output is steep; the conclusion (zero expected) follows for starts below 0.9'
+  counter: [d337, d338, d339, d340]
+  note: 'The same check found the repo''s own figure (1.2e-46) 41x low; corrected in claims/C5 and with dated notes in R4-C1c.md and its critic review.'
+  hierarchy_edge: false
+- id: d334
+  attacker: chk:GAP07c
+  target: A3a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07c.md §0, §5
+  audit_status: upheld
+  audit_basis: 'A3x supported: with the human-side polymorphic share measured (15.6%; chimp side assumed), fixed events per lineage are 17.2-17.9M, so 205M is 10.6-12.6x fixed events; combined with GAP-07b the bracket is about 8-13x'
+  counter: [d341, d342]
+  note: 'Read as a count of fixed mutation events, 205M is about an order of magnitude too high. A3a''s weighting reading (Q99-Q103) is untested and unaffected.'
+  hierarchy_edge: false
+- id: d335
+  attacker: chk:GAP07c
+  target: A3b
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07c.md §5
+  audit_status: partly
+  audit_basis: 'A3b external stays supported, with a correction: like for like, 17.5M is 9.8% above the measured fixed SNVs (15.94M) and 2.2% below all fixed events (17.89M); the near-match is two offsetting errors, and the SNV-only shortfall falls about 9%'
+  counter: [d341, d342]
+  note: 'Qualifies, does not overturn, the SNV-only concession.'
+  hierarchy_edge: false
+- id: d336
+  attacker: chk:GAP07c
+  target: chk:GAP07b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-GAP07c.md §0
+  audit_status: upheld
+  audit_basis: 'GAP-07b assumed CSAC''s 14-22% polymorphic share and gave 9.7x raw; GAP-07c measures the human half (15.6%) and moves the fixed-event ratio to 10.6-12.6x; combined bracket about 8-13x'
+  counter: [d341, d342]
+  note: 'The audit''s own GAP-07b headline (9.7x raw) is replaced for fixed events, not withdrawn as a raw count.'
+  hierarchy_edge: false
+- id: d337
+  attacker: rev:R4-X1-correctness
+  target: chk:X1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #12)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-X1-correctness.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (R4-X1-critic-arithmetic.md Review resolution; R4-X1-verdict-rule.md rev 1)'
+  counter: []
+  note: 'C5 fragile (keruru reproduces at Ne about 8k); the Hancock event-basis rescue asserted, not computed; no stated tolerance between holds and arithmetic-error.'
+  hierarchy_edge: false
+- id: d338
+  attacker: rev:R4-X1-steelman-day
+  target: chk:X1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #12)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-X1-steelman-day.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (R4-X1-verdict-rule.md rev 1 and rev 2)'
+  counter: []
+  note: 'The strict standard was applied to two critic slips only; the non-sequitur test was never run on critics; some credit overstated; the fidelity-not-arithmetic framing partly reflects the filing rule.'
+  hierarchy_edge: false
+- id: d339
+  attacker: rev:R4-X1-steelman-critic
+  target: chk:X1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #12)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-X1-steelman-critic.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (R4-X1-verdict-rule.md rev 1 and rev 2)'
+  counter: []
+  note: 'B5a scored from a comment; C5 scored on an unretrieved, steep method; tolerance not uniform; Hancock judged against the wrong text; uncited inputs marked down for critics but not for Day.'
+  hierarchy_edge: false
+- id: d340
+  attacker: rev:R4-X1-rule-audit
+  target: chk:X1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #12)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-X1-rule-audit.md sections 3-6
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (R4-X1-verdict-rule.md rev 2 section 9)'
+  counter: []
+  note: 'Blind scoring agreed 90% (Day) and 100% (critic error / no-error); found clauses that bite one side harder (N3 vs R1a, R1c on steep outputs, N2b exposure, the denominator regex) and the A3a charity reading.'
+  hierarchy_edge: false
+- id: d341
+  attacker: rev:R4-GAP07c-correctness
+  target: chk:GAP07c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #13)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-GAP07c-correctness.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (R4-GAP07c.md Review resolution)'
+  counter: []
+  note: 'Indel lineage split used GAP-07b''s withdrawn polarization rule; the SV share pooled both lineages (like-for-like human-lineage share 6.9%, not 1.7%).'
+  hierarchy_edge: false
+- id: d342
+  attacker: rev:R4-GAP07c-steelman
+  target: chk:GAP07c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #13)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-GAP07c-steelman.md MAJOR findings
+  audit_status: upheld
+  audit_basis: 'applied in the fix pass (R4-GAP07c.md Review resolution)'
+  counter: []
+  note: 'Single central ratio instead of a bracket; the 17.5M ''within 2%'' compared unlike counts; Day''s own remarks on ancestral polymorphism (Q37, 04-28 ¶24) not credited; ''supports Q100'' overstated.'
   hierarchy_edge: false

@@ -4,7 +4,7 @@ title: "Hancock / Gutsick Gibbon: Day's named endorsers (Dembski, Hossjer, Tiple
 side: critic
 branch: ROOT
 parent: ROOT
-edges: []  # PROPOSED: [{type: attacks, target: ROOT-H}, {type: attacks, target: ROOT-T}]; left empty until defeaters dNEW-13..14 in argmap/mapping-proposals-2026-10-09.md are pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: ROOT-H}, {type: attacks, target: ROOT-T}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # argument from credentials; the project's own rule is that a credential count is not a rebuttal (FP-01)
 sourcing: firsthand
 status: extracted

@@ -9,7 +9,7 @@ load_bearing: true  # F is the conceptual bridge from per-allele fixation time t
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: "non-sequitur"   # as a throughput bound (F1, F2); interference binds only with linkage
+  internal: holds   # R4 X1 rule rev 2 (was non-sequitur): S1: the quoted chain is consistent (k = mu once running, 4Ne startup, 1/2N says nothing about when); quote 2 states 'rate x (window - startup)'. The 'window / latency' step is F1a's and is already non-sequitur there: ...
   fidelity: partial
   external: contested
 ---
@@ -56,6 +56,8 @@ Written **before** the check runs.
 See F1 (done), F2 (proposed), F3 (done: `research/checks/beneficial_fix_time.py` (seed 7)).
 
 R4 F2 (research/checks/results/R4-F2-A.md) extends F1: latency does not bound throughput; interference bounds it only with linkage (clonal R_int 0.09-0.65; free recombination 0.975 at 272 active loci, soft selection, N = 1000). F1's strawman caveat (the serial reading must be tied to a quote) still applies. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / partial. S1: the quoted chain is consistent (k = mu once running, 4Ne startup, 1/2N says nothing about when); quote 2 states 'rate x (window - startup)'. The 'window / latency' step is F1a's and is already non-sequitur there: scoring it on F counted it twice Charitable reading tried: tried F's chain without F1a's 'window / latency' step: consistent.
 
 ## Simulator variables implied
 - latency model per allele

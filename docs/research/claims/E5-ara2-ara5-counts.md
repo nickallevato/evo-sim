@@ -9,7 +9,7 @@ load_bearing: true  # The 1,322 generations/fixation figure (A2) averages Ara+5'
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
+  internal: holds   # R4 X1 rule rev 2 (was pending): arithmetic reproduces; artefact-vs-biology is external
   fidelity: accurate
   external: pending
 ---
@@ -61,6 +61,8 @@ derived (R2 recompute):
 
 ## Check
 Script: none yet (spec: re-implement the Z23003785 clone-pair correction on the published clone genomes; print per-population values; compare with Z23105291 Table 1). · Result: not run · Review: pending
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / accurate. arithmetic reproduces; artefact-vs-biology is external Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 Counting rule (snapshot, first crossing, strict whole-population), sampling endpoint per population, lineage structure, clone sample size.

@@ -9,8 +9,8 @@ load_bearing: false  # comment-level argument; not in the papers
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: non-sequitur   # same comment: '1/2Nₑ ... is not a general fixation probability that applies to all mutations' (Q105), so harmful mutations do not drift to fixation at the neutral rate on Day's own premise; and 'within centuries' conflicts with his '~one million years apiece' per neutral fixation in the same comment
-  fidelity: n/a
+  internal: non-sequitur   # N2a in the same comment: 'within centuries' conflicts with his '~one million years apiece' per neutral fixation. (R4 X1 rule rev 2: the earlier Q105 basis is dropped, since premise 1 makes harmful mutations effectively neutral)
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: pending   # the fixation of slightly deleterious mutations (|N_e s| ~ 1) is the open GAP-05 question
 ---
 
@@ -41,6 +41,8 @@ Not run. A check would compute expected harmful fixations over 252,000 generatio
 
 ## Check
 None. Internal verdict from Day's own premises in the same comment. From the 2026-10-09 corpus refresh (D-5b).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / unverifiable. N2a in the same comment: 'extinct within centuries' vs 'about one million years apiece' per neutral fixation. The Q105 basis is dropped (premise 1 makes harmful mutations effectively neutral). F: '3x excess harmful mutations' uncited Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 Deleterious DFE including the nearly neutral class; N_e.

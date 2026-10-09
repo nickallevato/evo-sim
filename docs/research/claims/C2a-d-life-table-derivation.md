@@ -9,7 +9,7 @@ load_bearing: true  # Supplies the theoretical grounding for d = 0.45; the empir
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: "holds"   # derivation correct for hazard-scale s
+  internal: "holds"   # derivation correct for hazard-scale s; R4 X1 (2026-10-09): the 'd = 1 for discrete generations fails on own formula' remark moved here from C2; the rev-2 re-score keeps this node holds
   fidelity: "unverifiable"   # Coale-Demeny West tables not retrieved; Hill/Charlesworth not retrieved
   external: "contested"   # a unit conversion, not a separate correction to the speed of selection
 ---

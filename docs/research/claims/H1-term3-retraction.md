@@ -10,7 +10,7 @@ sourcing: firsthand
 status: reviewed
 verdicts:
   internal: "holds"   # arithmetic; same-basis ratio 17.1
-  fidelity: n/a
+  fidelity: partial   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: "supported"   # cost bounds selected substitutions only; neutral k = U (B0.5). R4 H3: scope is Term 3 (Z19984826) only; H has its own section 5.1 reply; Day calls neutral fixations "the great majority" here
 ---
 
@@ -68,6 +68,8 @@ R4 H (research/checks/results/R4-H-C2.md): Term 3 arithmetic 0.45/(2 ln 6600) = 
 Earlier note: Script: none (document tracking; version ledger row exists). · Result: not run · Review: pending
 
 R4 H3 (research/checks/results/R4-H3-human.md): the scope concession is about Term 3 of Z19984826 only. Z18168236 has its own scope reply (§5.1, 'First, neutral mutations do not explain adaptation...'), yet still compares 487 with 20M (§4.4), so its intent is ambiguous. In this post Day says observed substitutions are mostly 'neutral fixations (which are the great majority)'. H3 shows that no cost-of-selection model pays 17.5M-205M selected fixations. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / partial. SC: retraction corrects a slip in a later source; holds. F: Bergeron cited, 40-fold accurate, the 25x comparison is Day's own and not in the paper (own table) Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 Adaptive versus total substitution rate; fraction of differences that are adaptive.

@@ -19,7 +19,7 @@ flowchart TD
   style n_A1b fill:#e5e7eb,stroke:#374151
   n_A1b --> n_A1
   n_A1b -->|supports| n_A1
-  n_A1c["A1c: Day later places the CHLCA at 250 kya–1.3 Mya, while MITTENS<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_A1c["A1c: Day later places the CHLCA at 250 kya–1.3 Mya, while MITTENS<br/><small>day · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_A1c fill:#fde2c8,stroke:#b45309
   n_A1c --> n_A1
   n_A1c ==>|revises| n_A1
@@ -52,7 +52,7 @@ flowchart TD
   n_A2e --> n_A
   n_A2e -->|supports| n_A
   n_A2e -->|depends-on| n_A2
-  n_A2f["A2f: Natural-selection-only LTEE rates: 4,615 (blog) vs ~1,408 (Z<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_A2f["A2f: Natural-selection-only LTEE rates: 4,615 (blog) vs ~1,408 (Z<br/><small>day · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_A2f fill:#fde2c8,stroke:#b45309
   n_A2f --> n_A2
   n_A2f ==>|revises| n_A2
@@ -78,7 +78,7 @@ flowchart TD
   n_A3 --> n_A
   n_A3 -->|supports| n_A
   n_A3 -->|depends-on| n_A3c
-  n_A3a["A3a: Required fixations rise to 205M: 410M genomic differences fr<br/><small>day · int:arithmetic-error · fid:misread · ext:contested</small>"]
+  n_A3a["A3a: Required fixations rise to 205M: 410M genomic differences fr<br/><small>day · int:holds · fid:misread · ext:contested</small>"]
   style n_A3a fill:#fde2c8,stroke:#b45309
   n_A3a --> n_A3
   n_A3a ==>|supersedes| n_A3
@@ -91,7 +91,7 @@ flowchart TD
   style n_A3c fill:#e5e7eb,stroke:#374151
   n_A3c --> n_A3
   n_A3c ==>|revises| n_A3
-  n_A3d["A3d: Hancock: the achievable count should be doubled, since fixat<br/><small>critic · int:holds · fid:partial · ext:n/a</small>"]
+  n_A3d["A3d: Hancock: the achievable count should be doubled, since fixat<br/><small>critic · int:holds · fid:unverifiable · ext:n/a</small>"]
   style n_A3d fill:#dbeafe,stroke:#1d4ed8
   n_A3d --> n_A3
   n_A3d -.->|attacks| n_A3
@@ -125,6 +125,18 @@ flowchart TD
   n_A4d --> n_A4
   n_A4d ==>|revises| n_A4
   n_A4d ==>|supersedes| n_A
+  n_A4e["A4e: Hancock: overlapping generations are handled by effective si<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  style n_A4e fill:#dbeafe,stroke:#1d4ed8
+  n_A4e --> n_A4
+  n_A4e -.->|attacks| n_A4g
+  n_A4f["A4f: Hancock: Day's selective turnover coefficient d has no count<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  style n_A4f fill:#dbeafe,stroke:#1d4ed8
+  n_A4f --> n_A4
+  n_A4f -.->|attacks| n_A4
+  n_A4g["A4g: Day: standard fixation models (Wright-Fisher and Kimura's re<br/><small>day · int:pending · fid:pending · ext:pending</small>"]
+  style n_A4g fill:#fde2c8,stroke:#b45309
+  n_A4g --> n_A4
+  n_A4g -->|supports| n_A4
   n_A5["A5: The LTEE rate does not transfer to humans: the human genome <br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
   style n_A5 fill:#dbeafe,stroke:#1d4ed8
   n_A5 --> n_A2
@@ -139,15 +151,15 @@ flowchart TD
   n_A5b --> n_A5
   n_A5b -.->|attacks| n_A2e
   n_A5b -.->|attacks| n_A3a
-  n_A5c["A5c: Hancock: on neutral supply alone E. coli expects ~4e-5 fixat<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_A5c["A5c: Hancock: on neutral supply alone E. coli expects ~4e-5 fixat<br/><small>critic · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_A5c fill:#dbeafe,stroke:#1d4ed8
   n_A5c --> n_A5
   n_A5c -.->|attacks| n_A2e
-  n_A5d["A5d: Hypermutators: a 100x mutation rate gives only 8.5x–17x fast<br/><small>day · int:non-sequitur · fid:n/a · ext:contested</small>"]
+  n_A5d["A5d: Hypermutators: a 100x mutation rate gives only 8.5x–17x fast<br/><small>day · int:non-sequitur · fid:accurate · ext:contested</small>"]
   style n_A5d fill:#fde2c8,stroke:#b45309
   n_A5d --> n_A5
   n_A5d -.->|attacks| n_A5b
-  n_A5e["A5e: A rate derived from human parameters alone gives one fixatio<br/><small>day · int:arithmetic-error · fid:unverifiable · ext:pending</small>"]
+  n_A5e["A5e: A rate derived from human parameters alone gives one fixatio<br/><small>day · int:holds · fid:unverifiable · ext:pending</small>"]
   style n_A5e fill:#fde2c8,stroke:#b45309
   n_A5e --> n_A5
   n_A5e -.->|attacks| n_A5b
@@ -156,15 +168,19 @@ flowchart TD
   style n_A5f fill:#dbeafe,stroke:#1d4ed8
   n_A5f --> n_A5
   n_A5f -.->|attacks| n_A2e
-  n_A5g["A5g: Day: the E. coli study is cited for its fixation rate, not i<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_A5g["A5g: Day: the E. coli study is cited for its fixation rate, not i<br/><small>day · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_A5g fill:#fde2c8,stroke:#b45309
   n_A5g --> n_A5
   n_A5g -.->|attacks| n_A5
+  n_A5h["A5h: A 100-fold mutator gives about 38,400 new mutations per indi<br/><small>day · int:arithmetic-error · fid:n/a · ext:pending</small>"]
+  style n_A5h fill:#fde2c8,stroke:#b45309
+  n_A5h --> n_A5d
+  n_A5h -->|supports| n_A5d
   n_A6["A6: Sweep signatures are absent: 3,200+ sweeps over 325,000 gene<br/><small>day · int:pending · fid:partial · ext:contested</small>"]
   style n_A6 fill:#fde2c8,stroke:#b45309
   n_A6 --> n_A
   n_A6 -->|supports| n_A
-  n_A6a["A6a: Bonobos: if 326,000 loci fixed by selection in 930,000 years<br/><small>day · int:holds · fid:n/a · ext:supported</small>"]
+  n_A6a["A6a: Bonobos: if 326,000 loci fixed by selection in 930,000 years<br/><small>day · int:holds · fid:unverifiable · ext:supported</small>"]
   style n_A6a fill:#fde2c8,stroke:#b45309
   n_A6a --> n_A6
   n_A6a -->|supports| n_A6

@@ -10,7 +10,7 @@ sourcing: firsthand
 status: extracted
 verdicts:
   internal: pending
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: pending
 ---
 
@@ -57,6 +57,8 @@ Parameter link: this is a G_f estimate for humans, to compare with `ltee.gens_pe
 
 ## Check
 Script: none (outside the first-wave checks). If run: deterministic logistic with a pulse of selection of stated length. · Result: not run · Review: pending
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is pending / unverifiable. F: CCR5 selection history uncited in both posts Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 s as a function of time (pulse), p(t), generation length, geographic partitioning (European fraction of species).

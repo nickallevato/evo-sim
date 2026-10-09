@@ -10,7 +10,7 @@ sourcing: firsthand
 status: extracted
 verdicts:
   internal: holds
-  fidelity: n/a
+  fidelity: accurate   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contested
 ---
 
@@ -54,6 +54,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none (arithmetic). See B5 for the identity check.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / accurate. S2: the 35M slip (75%) is in comment 340149310, not a Statement -> ledger, no node effect; the 25 y/20 y mix (2.4-25%, inputs ambiguous) -> ledger; Day's inputs quoted correctly Charitable reading tried: tried the 20 y reading of the time-adjusted 20M: 2.4% -> ledger.
 
 ## Simulator variables implied
 - new mutations per newborn

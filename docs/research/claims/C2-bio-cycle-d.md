@@ -9,7 +9,7 @@ load_bearing: true  # d = 0.45 multiplies the available generations in MITTENS 2
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: "non-sequitur"   # d fit not identifiable apart from s (C2d); 'd = 1 for discrete generations' fails on own formula; d*s exact for hazard-scale s (V1)
+  internal: "non-sequitur"   # N2d (R4 X1 rule rev 2): 'independently converge on d = 0.45' is stronger than the premises support; d is not identifiable apart from s (C2d; own sensitivity paragraph: d moves as 1/s). The 'd = 1 for discrete generations' point belongs to C2a. d*s exact for hazard-scale s (V1)
   fidelity: "unverifiable"   # Coale-Demeny tables not retrieved; Table 1 not reproduced with a Siler stand-in
   external: "contested"   # which s scale the cited papers use is unretrieved; published s are per-generation slopes (d = 1)
 ---
@@ -79,6 +79,8 @@ Written before any check runs.
 ## Check
 R4 C2 (research/checks/results/R4-H-C2.md): d*s is exact for hazard-scale s (V1, within 1.5%; Day-side point), and the factor is 1 for per-generation s (V3/V4/V5 ratios 1.000). Day's own formula gives d = -ln L for a semelparous annual (d = 1 only at L = 1/e), so "d = 1 for discrete generations" and "0 to 1" fail on his own terms. d is not identifiable apart from s, onset time, T and dominance (C2d). Table 1 d values not reproduced (Siler stand-in 0.79/0.93 vs 0.53 at e0 = 32): an open fidelity gap because the Coale-Demeny tables were not retrieved. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: none yet (spec: `research/checks/c2_overlap_vs_standard.py`, planned). Spec: an age-structured Wright-Fisher with explicit l(x), b(x), selection on viability (s on survival at each age) and separately on fecundity; measure Delta-p per T years where T = mean age of parents; compare with (i) d x s p q using Day's d formula (Z18166234 eq. 3.3) from the same l(x), b(x); (ii) s p q (standard). Include a Coale-Demeny-like life table with e0 = 32 and T = 27.7 (Z18166234 Table 1), and a discrete-generation control that must return d = 1. · Result: not run · Review: pending
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / unverifiable. N2d: 'independently converge on d = 0.45' is stronger than the premises support: d is not identified apart from s (own sensitivity paragraph: d moves as 1/s). The 'd = 1 for discrete generations fails on own formula' basis belongs to C2a, not C2 Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 d (or the life table l(x), b(x) that generates it), s per locus, generation length T, p0, number of nominal generations, dominance h, selection start time.

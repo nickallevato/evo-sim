@@ -1,5 +1,19 @@
 # R5 synthesis: first draft (sensitivity table, simulator variable list, exit-criteria status, balance audit)
 
+> **Update 2026-10-09 (after the X1 / GAP-07c / mapping integration; the body below is unchanged and predates it).**
+> - **Balance audit (section 4), fairness result.** X1 recomputed every numeric critic and ally claim and re-scored both sides under [one verdict rule](../../research/checks/results/R4-X1-verdict-rule.md), checked by a blind audit:
+>
+>   | Measure | Day | Critics | Fisher p |
+>   |---|---|---|---|
+>   | quoted-text numeric (primary) | 13/81 | 1/20 | 0.29 |
+>   | formal-statement numeric | 16/82 | 1/31 | 0.038 |
+>   | all files | 18/114 | 1/51 | 0.008 |
+>
+>   Per 10,000 words of quoted Statement text: Day 22.7, critics 10.0, allies 0.0. Sensitivity: with the three critic tie-breaks (C5, A3d, B5f) flipped, 16/82 vs 4/31, p = 0.58; at a 10% materiality line, 18/82 vs 2/31, p = 0.059. **Reading: Day's errors are robust to reading; the audit cannot claim critics err less per argument.** The "22 of 112 vs 0 of 51" figure in section 4 is superseded by this table.
+> - **Exit criterion 2 (every critic and ally argument mapped): met** under the definition ratified in `argmap/NOTES.md` (judgement call 12): attached in `hierarchy.yaml` and either in a defeater row or carrying a "no attack warranted" note (G1b, G1c, ROOT-DE). The 12 new claims from the Hancock video are mapped but `pending` review.
+> - **GAP-07c:** 205M is 10.6–12.6x fixed events per lineage (about 8–13x combined with GAP-07b), so the counting-rule bracket in section 1 narrows.
+> - **Holocene Nₑ (RG-01):** retrieved; the literature does not decide C1c's flip; C1e (the model on each published trajectory) is queued.
+
 > **PROVISIONAL DRAFT, dated 2026-10-09.** Pending D1 (sequence-space spike: raw outputs exist, no write-up or review), C1c (three reviews written, fix pass and integration not done), C1d (not started) and GAP-07c (not started). Nothing here changes a claim, a verdict or a check result. Every number is taken from `research/checks/RESULTS.md`, `research/checks/results/R4-*.md`, the claim files, `parameters.yaml` or the ledgers, and the source file is named. A number marked *derived here* is my own arithmetic on those inputs, with the formula given. Where a node has no established flip point the entry says "none established". This file is a working draft for the R5 stage in [`PLAN.md`](PLAN.md); it is not a verdict document.
 
 **Reading guide.** Verdicts are written I / F / E for internal validity / model fidelity / external validity, using the vocabulary in `AGENTS.md`. "Direction" says which side a change in the parameter favours *for that node's conclusion*; it does not say who wins ROOT. File names without a path are in `docs/research/claims/` (claim files), `research/checks/results/` (R4 write-ups) or `research/checks/RESULTS.md` (early checks B0 to F1, B1b, B2a). "Day-side" and "critic-side" follow the `side` field in `hierarchy.yaml` (day, critic, ally, literature).

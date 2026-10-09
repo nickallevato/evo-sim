@@ -9,7 +9,7 @@ load_bearing: false  # Affects how G_f (A2) is read (all-cause versus beneficial
 sourcing: secondhand  # UNSOURCED as a critic claim: no verbatim critic statement found (raw critic corpus searched for 'hitchhik', 2026-10-08); the 'Taylor' attribution is carried only in PLAN.md. 'unsourced' is not an allowed sourcing value in lint_research.py, so 'secondhand' is used
 status: draft
 verdicts:
-  internal: pending
+  internal: pending   # R4 X1 (2026-10-09): excluded from every numeric denominator in the fairness counts (no verbatim critic quotation)
   fidelity: pending
   external: pending
 ---

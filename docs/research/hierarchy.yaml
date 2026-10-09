@@ -81,7 +81,7 @@ nodes:
   status: checked
   verdicts:
     internal: pending
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/A1c-chlca-revision-vs-63my.md
 - id: A2
@@ -201,7 +201,7 @@ nodes:
   status: checked
   verdicts:
     internal: pending
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/A2f-ns-only-variants-4615-1408-24500.md
 - id: A2g
@@ -304,7 +304,7 @@ nodes:
   sourcing: firsthand
   status: checked
   verdicts:
-    internal: arithmetic-error
+    internal: holds
     fidelity: misread
     external: contested
   claim_file: docs/research/claims/A3a-205m-headline.md
@@ -334,7 +334,7 @@ nodes:
     target: A3
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: n/a
     fidelity: partial
@@ -353,7 +353,7 @@ nodes:
   status: checked
   verdicts:
     internal: holds
-    fidelity: partial
+    fidelity: unverifiable
     external: n/a
   claim_file: docs/research/claims/A3d-factor-of-two-both-lineages.md
 - id: A3x
@@ -472,6 +472,57 @@ nodes:
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/A4d-d-dropped-in-mittens-3.md
+- id: A4e
+  title: 'Hancock: overlapping generations are handled by effective size and the Moran model; Kimura did not ''revise'' Wright-Fisher; a century
+    of theory covers it'
+  side: critic
+  branch: A
+  parent: A4
+  edges:
+  - type: attacks
+    target: A4g
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/A4e-hancock-overlap-is-handled-by-ne-and-moran.md
+- id: A4f
+  title: 'Hancock: Day''s selective turnover coefficient d has no counterpart in population genetics, is not a selection coefficient, and would
+    cancel if it were a generation count'
+  side: critic
+  branch: A
+  parent: A4
+  edges:
+  - type: attacks
+    target: A4
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/A4f-hancock-d-not-a-selection-coefficient.md
+- id: A4g
+  title: 'Day: standard fixation models (Wright-Fisher and Kimura''s revision) treat a generation as the whole population replaced; real populations
+    overlap'
+  side: day
+  branch: A
+  parent: A4
+  edges:
+  - type: supports
+    target: A4
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/A4g-day-standard-models-assume-complete-replacement.md
 - id: A5
   title: 'The LTEE rate does not transfer to humans: the human genome is ~690x larger and has far more new mutations per generation'
   side: critic
@@ -537,7 +588,7 @@ nodes:
   status: checked
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/A5c-neutral-supply-ecoli-vs-human.md
 - id: A5d
@@ -553,7 +604,7 @@ nodes:
   status: reviewed
   verdicts:
     internal: non-sequitur
-    fidelity: n/a
+    fidelity: accurate
     external: contested
   claim_file: docs/research/claims/A5d-supermutation-sublinear.md
 - id: A5e
@@ -570,7 +621,7 @@ nodes:
   sourcing: firsthand
   status: checked
   verdicts:
-    internal: arithmetic-error
+    internal: holds
     fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/A5e-human-derived-rate-27600.md
@@ -604,9 +655,25 @@ nodes:
   status: checked
   verdicts:
     internal: pending
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/A5g-mutation-supply-irrelevant-reply.md
+- id: A5h
+  title: A 100-fold mutator gives about 38,400 new mutations per individual per generation, so its carriers are 'functionally dead' (s6.4)
+  side: day
+  branch: A
+  parent: A5d
+  edges:
+  - type: supports
+    target: A5d
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: arithmetic-error
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/A5h-supermutator-38400-slip.md
 - id: A6
   title: 'Sweep signatures are absent: 3,200+ sweeps over 325,000 generations would saturate selection scans, which find only dozens to hundreds
     of candidate regions'
@@ -637,7 +704,7 @@ nodes:
   status: checked
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: unverifiable
     external: supported
   claim_file: docs/research/claims/A6a-bonobo-sweep-mosaic.md
 - id: B
@@ -759,7 +826,7 @@ nodes:
   status: reviewed
   verdicts:
     internal: pending
-    fidelity: n/a
+    fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/B1d-full-but-short-pipe-revision.md
 - id: B1e
@@ -1135,7 +1202,7 @@ nodes:
   status: extracted
   verdicts:
     internal: pending
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/B4c-chlca-250-kya-to-1-3-mya.md
 - id: B4d
@@ -1198,7 +1265,7 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/B4g-keruru-pedigree-vs-fossil-calibrated-twice.md
@@ -1237,7 +1304,7 @@ nodes:
   status: extracted
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: accurate
     external: contested
   claim_file: docs/research/claims/B5a-mccarthy-22-5-million.md
 - id: B5b
@@ -1274,8 +1341,8 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: holds
-    fidelity: n/a
+    internal: non-sequitur
+    fidelity: unverifiable
     external: contradicted
   claim_file: docs/research/claims/B5c-hancock-76-8-per-generation.md
 - id: B5d
@@ -1292,8 +1359,8 @@ nodes:
   sourcing: secondhand
   status: extracted
   verdicts:
-    internal: holds
-    fidelity: n/a
+    internal: n/a
+    fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/B5d-relayed-7-2-million.md
 - id: B5e
@@ -1311,7 +1378,7 @@ nodes:
   status: reviewed
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/B5e-nesslig20-37-8-million.md
 - id: B5f
@@ -1329,7 +1396,7 @@ nodes:
   status: extracted
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: accurate
     external: contested
   claim_file: docs/research/claims/B5f-reddit-9-7-million-haploid.md
 - id: B5g
@@ -1368,6 +1435,23 @@ nodes:
     fidelity: accurate
     external: contested
   claim_file: docs/research/claims/B5h-hossjer-neutral-d-mu-7-6-million.md
+- id: B5j
+  title: 'Hancock: neutral theory is not a post-hoc retreat; drift dominates at the molecular level while selection dominates phenotypes, so ''removing
+    selection removes Darwin'' is beside the point'
+  side: critic
+  branch: B
+  parent: B
+  edges:
+  - type: attacks
+    target: B
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/B5j-hancock-neutral-theory-is-not-a-retreat.md
 - id: B6
   title: 'Mansfield: the ancestral pipeline was full at the split; expected divergence ≈ 2 mu T + theta_anc'
   side: critic
@@ -1432,7 +1516,7 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/B6c-hancock-no-standing-variation-prediction.md
@@ -1524,7 +1608,7 @@ nodes:
   status: extracted
   verdicts:
     internal: non-sequitur
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/B9-drift-would-cause-extinction-within-centuries.md
 - id: C
@@ -1645,7 +1729,7 @@ nodes:
   status: extracted
   verdicts:
     internal: non-sequitur
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/C2b-d-k-regression.md
 - id: C2c
@@ -1696,7 +1780,7 @@ nodes:
   status: extracted
   verdicts:
     internal: pending
-    fidelity: n/a
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/C3-ccr5-fixation-rate.md
 - id: C4
@@ -1734,7 +1818,7 @@ nodes:
   status: extracted
   verdicts:
     internal: pending
-    fidelity: pending
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/C5-keruru-neutral-zero.md
 - id: C5a
@@ -1790,8 +1874,8 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: arithmetic-error
-    fidelity: n/a
+    internal: non-sequitur
+    fidelity: unverifiable
     external: contradicted
   claim_file: docs/research/claims/C6-molecular-clock-stopped.md
 - id: C7
@@ -2221,6 +2305,40 @@ nodes:
     fidelity: misread
     external: contested
   claim_file: docs/research/claims/D2j-day-eden-apologises-for-vagueness-ch6.md
+- id: D2k
+  title: 'Hancock: mathematicians and statisticians (Pearson, Fisher, Wright, Haldane, Kingman) built population genetics and the modern synthesis;
+    the history Day gives is wrong'
+  side: critic
+  branch: D
+  parent: D2g
+  edges:
+  - type: attacks
+    target: D2l
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/D2k-hancock-mathematicians-built-the-synthesis.md
+- id: D2l
+  title: 'Day (as presented by Duffy): the modern synthesis was built by naturalists and geneticists, not mathematicians, who never worked out
+    the probability calculations'
+  side: day
+  branch: D
+  parent: D2g
+  edges:
+  - type: supports
+    target: D2g
+  load_bearing: false
+  sourcing: secondhand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/D2l-day-synthesis-founders-skipped-the-math.md
 - id: D3
   title: 'Eden: there are about 20^250 = 10^325 polypeptide chains of length 250 versus about 10^52 protein molecules that could ever have existed'
   side: literature
@@ -2578,7 +2696,7 @@ nodes:
   status: extracted
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/E3-cmmrd-simulation.md
 - id: E4
@@ -2615,7 +2733,7 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: accurate
     external: pending
   claim_file: docs/research/claims/E5-ara2-ara5-counts.md
@@ -2710,7 +2828,7 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: non-sequitur
+    internal: holds
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/F-kimura-fixation-time-limits-fixations.md
@@ -2766,6 +2884,23 @@ nodes:
     fidelity: n/a
     external: contested
   claim_file: docs/research/claims/F1b-mccarthy-parallel-not-one-at-a-time.md
+- id: F1c
+  title: 'Hancock: Day''s argument is a version of the waiting-time problem (Behe-Snoke lineage); that literature has been answered and relies
+    on unrealistic assumptions'
+  side: critic
+  branch: F
+  parent: F1
+  edges:
+  - type: attacks
+    target: F
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/F1c-hancock-waiting-time-lineage.md
 - id: F2
   title: 'Feasibility of pipelining: multi-locus sweeps under linkage, interference and cost (proposed check)'
   side: day
@@ -2903,7 +3038,7 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: arithmetic-error
+    internal: holds
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/G-bernoulli-barrier.md
@@ -2937,8 +3072,8 @@ nodes:
   sourcing: firsthand
   status: checked
   verdicts:
-    internal: arithmetic-error
-    fidelity: n/a
+    internal: holds
+    fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/G1a-ara-plus-2-no-parallel.md
 - id: G1b
@@ -3036,8 +3171,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: n/a
+    internal: holds
+    fidelity: partial
     external: pending
   claim_file: docs/research/claims/G2c-hancock-no-variation-prediction.md
 - id: G2d
@@ -3105,6 +3240,22 @@ nodes:
     fidelity: n/a
     external: contested
   claim_file: docs/research/claims/G2g-appendix-a-fixation-must-be-sequential.md
+- id: G2h
+  title: 'Hancock: MITTENS''s F_max contains no mutation input and no selection coefficient, so it is not a test of selection'
+  side: critic
+  branch: G
+  parent: G2
+  edges:
+  - type: attacks
+    target: A
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/G2h-hancock-fmax-has-no-mutation-or-selection-term.md
 - id: G3
   title: 'Specific-vs-any: the product of per-site probabilities prices a pre-specified list of 20 million mutations; evolution requires only
     that some 20 million out of an enormous candidate pool fix'
@@ -3326,7 +3477,7 @@ nodes:
   status: reviewed
   verdicts:
     internal: holds
-    fidelity: n/a
+    fidelity: partial
     external: supported
   claim_file: docs/research/claims/H1-term3-retraction.md
 - id: H10
@@ -3365,6 +3516,23 @@ nodes:
     fidelity: accurate
     external: contested
   claim_file: docs/research/claims/H2-nunney-2003.md
+- id: H2a
+  title: 'Hancock: Haldane''s cost of selection applies only to hard (viability) selection; under soft selection it largely disappears, and the
+    allele need not start rare'
+  side: critic
+  branch: H
+  parent: H
+  edges:
+  - type: attacks
+    target: H
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/H2a-hancock-cost-of-selection-hard-selection-only.md
 - id: H3
   title: Dawkins's 11,739 (dominant) / 321,444 (recessive) generations to reach half frequency, doubled to 642,888, are 87,916,307 times too slow
     for 20 million sites
@@ -3544,6 +3712,22 @@ nodes:
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/ROOT-b-book-blurb-absolutely-impossible.md
+- id: ROOT-COV
+  title: 'Hancock: natural selection is a covariance between trait and offspring number, so ''statistically impossible'' is a category error'
+  side: critic
+  branch: ROOT
+  parent: ROOT
+  edges:
+  - type: attacks
+    target: ROOT
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: untestable
+  claim_file: docs/research/claims/ROOT-cov-hancock-selection-is-a-covariance.md
 - id: ROOT-DE
   title: 'Bill Dembski: has independent arguments that evolutionary mechanisms face serious explanatory shortfalls; presses Day on k=mu and scaling'
   side: ally
@@ -3562,6 +3746,25 @@ nodes:
     fidelity: n/a
     external: untestable
   claim_file: docs/research/claims/ROOT-de-dembski-own-arguments.md
+- id: ROOT-EP
+  title: 'Hancock / Gutsick Gibbon: Day''s named endorsers (Dembski, Hossjer, Tipler) are Discovery Institute associates with statistics, physics
+    or mathematics backgrounds and no population-genetics training; the equations'' assumptions matter as much as the equations'
+  side: critic
+  branch: ROOT
+  parent: ROOT
+  edges:
+  - type: attacks
+    target: ROOT-H
+  - type: attacks
+    target: ROOT-T
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: untestable
+  claim_file: docs/research/claims/ROOT-ep-hancock-endorsers-lack-popgen-background.md
 - id: ROOT-H
   title: 'Ola Hossjer: agrees with Day''s conclusion after rescaling, but advocates ''uncommon descent'' and limits the endorsement to the main
     argument'
@@ -3615,6 +3818,23 @@ nodes:
     fidelity: n/a
     external: pending
   claim_file: docs/research/claims/ROOT-excluded-mechanisms.md
+- id: ROOT-PG
+  title: 'Hancock / Gutsick Gibbon: population genetics has a record of quantitative predictions that Day''s model lacks; a challenger must survive
+    that record'
+  side: critic
+  branch: ROOT
+  parent: ROOT
+  edges:
+  - type: attacks
+    target: ROOT
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/ROOT-pg-hancock-popgen-track-record.md
 - id: ROOT-T
   title: 'Frank Tipler: Probability Zero is the most rigorous mathematical challenge to Neo-Darwinian theory ever published'
   side: ally

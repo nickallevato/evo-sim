@@ -4,7 +4,7 @@ title: "Hancock: Day's selective turnover coefficient d has no counterpart in po
 side: critic
 branch: A
 parent: A4
-edges: []  # PROPOSED: [{type: attacks, target: A4}]; left empty until defeater dNEW-04 is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: A4}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # MITTENS 3.0 dropped d (A4d); applies to the book and 2.x versions
 sourcing: firsthand
 status: extracted

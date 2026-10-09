@@ -9,8 +9,8 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: arithmetic-error
-  fidelity: n/a
+  internal: holds   # R4 X1 rule rev 2 (was arithmetic-error): R1b, charitable reading (5.3 fixations per event): 74 vs 66 is 12% -> ledger; 5.3 basis unstated (F)
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contested
 ---
 
@@ -48,6 +48,8 @@ Not run. Prediction (Day): recounting Ara+2 from the Good 2017 trajectories give
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Raw trajectories not in repo. Review: pending.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. R1b, charitable reading (5.3 fixations per event): 74 vs 66 is 12% -> ledger; 5.3 basis unstated (F) Charitable reading tried: tried 5.3 fixations per event (not hitchhikers): 74 vs 66 = 12% -> ledger.
 
 ## Simulator variables implied
 - Counting of overlapping sweeps vs fixation-time gaps in the LTEE preset.

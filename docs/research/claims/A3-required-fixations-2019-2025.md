@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds   # 35e6 + 5e6 = 40e6, /2 = 20e6
   fidelity: partial   # CSAC verified-partial (one genome per species, includes polymorphism; A3c); 40M called 'single-nucleotide variants' though 5M are indel events; CSAC's 5M indel events are a two-lineage total (abstract; p.73 '5M vs 35M'), consistent with the 40M reading (R4 GAP-07)
-  external: contested   # polymorphism share (A3c); R4 GAP-07: the event count (~20M per lineage, calibrated / CSAC-observed) corroborates the 20M magnitude; R4 GAP-07b direct count (hg38 vs panTro6, non-T2T): 21.05M events per lineage raw, 16.4-18.1M with the CSAC fixed share; polymorphism share of indels/SVs and the T2T question remain open
+  external: contested   # polymorphism share (A3c); R4 GAP-07: the event count (~20M per lineage, calibrated / CSAC-observed) corroborates the 20M magnitude; R4 GAP-07b direct count (hg38 vs panTro6, non-T2T): 21.05M events per lineage raw, 16.4-18.1M with the CSAC fixed share; polymorphism share of indels/SVs and the T2T question remain open; R4 GAP-07c: fixed events per lineage 17.2-17.9M against 21.05M raw (polymorphism measured on the human side, chimp side assumed)
 ---
 
 ## Statement (verbatim)
@@ -51,6 +51,8 @@ Arithmetic audit (python3 -I, scratch). Review: pending.
 R4 GAP-07 (research/checks/results/R4-GAPS-04-07-02.md): CSAC's abstract ('five million insertion/deletion events') and p.73 ('~5 million compared with ~35 million') read as two-lineage totals; the p.73 'in each species' sentence concerns insertions of 1 bp-15 kb relative to the other genome, and the per-species reading gives indel:SNV 0.29 against germline 0.04-0.12. Events per lineage 18-22.5M (calibrated / observed) corroborate the 20M (2025) magnitude. Review: `research/checks/REVIEW.md` (review #6, 2026-10-08).
 
 R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): the 20M (2025) magnitude is corroborated by a direct alignment count: 42.10M events in total (37.77M SNVs, 4.30M indel events), 21.05M per lineage (19.7-21.1M across lineage and filter choices; 16.4-18.1M fixed after the CSAC polymorphism share, post hoc). CSAC's '5 million indel events' resolves as a two-lineage total (4.30M measured). The 40M = 35M + 5M agreement with the measured 42.1M combines SNVs +8% and indels -14%. Open: polymorphism share measured from population frequencies (GAP-07c) and a T2T re-run (CHM13 vs mPanTro3). Review: `research/checks/REVIEW.md` (review #8, 2026-10-09).
+
+R4 GAP-07c (research/checks/results/R4-GAP07c.md; reviews REVIEW-R4-GAP07c-{correctness,steelman}.md; review #13, 2026-10-09): fixed events per lineage are 17.2-17.9M (human lineage alone 17.22M; symmetric 17.89M) against 21.05M raw. The polymorphism share is measured on the human side; the chimp side is assumed. Open items: a chimp population panel, a T2T re-run (CHM13 vs mPanTro3), a long-read SV set.
 
 ## Simulator variables implied
 - `required_fixations` per lineage with a polymorphism-correction toggle (fixed fraction 0.78–0.86).

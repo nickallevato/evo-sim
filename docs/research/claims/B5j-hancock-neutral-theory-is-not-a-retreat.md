@@ -4,7 +4,7 @@ title: "Hancock: neutral theory is not a post-hoc retreat; drift dominates at th
 side: critic
 branch: B
 parent: B
-edges: []  # PROPOSED: [{type: attacks, target: B}]; left empty until defeater dNEW-25 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage). Id B5i is reserved by refresh-2026-10-09 (D-5f)
+edges: [{type: attacks, target: B}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # definitional/rhetorical; numeric content is in B5c and the latency discussion (F1)
 sourcing: firsthand
 status: extracted

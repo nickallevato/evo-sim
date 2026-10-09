@@ -4,7 +4,7 @@ title: "Hancock: Day's argument is a version of the waiting-time problem (Behe-S
 side: critic
 branch: F
 parent: F1
-edges: []  # PROPOSED: [{type: attacks, target: F}]; left empty until defeater dNEW-29 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: F}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # a classification plus a pointer to a 2024 critic video that has not been analysed
 sourcing: firsthand
 status: extracted

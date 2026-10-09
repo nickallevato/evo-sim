@@ -10,7 +10,7 @@ sourcing: firsthand
 status: reviewed
 verdicts:
   internal: "holds"   # arithmetic 2 x 75 x 252,000 = 37.8M
-  fidelity: n/a
+  fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: "contested"   # basis unstated; on a haploid SNV basis 18.9M + ancestral ~15M
 ---
 
@@ -51,6 +51,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 Script: none (arithmetic computed with python3 -I).
 
 R4 B4a (research/checks/results/R4-B1c-B4a.md; REVIEW-R4-steelman-critic): if mu_G = 75 is a zygote-level count, the haploid value gives 18.9M (= 2muT, B4a), and the observed ~35M is ~19M post-split plus ~15M ancestral polymorphism, so the 37.8M match would be a double count (same issue as B5c). The post does not state the basis. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. N3 (revised): stated conclusion 'close to 31-62M'; with the ancestral term 58.1M (HCG, inside) or 68.2M (HCB, +10% over the top, under 25%): survives; 75 non-standard and uncited (F) Charitable reading tried: tried the haploid-events reading of 75 (stated per haploid genome).
 
 ## Simulator variables implied
 - haploid vs diploid basis

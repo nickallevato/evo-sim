@@ -9,7 +9,7 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: arithmetic-error
+  internal: holds   # R4 X1 rule rev 2 (was arithmetic-error): R1b: 9.13 vs 8 is 12%, 205M shortfall moves 12%, conclusion unchanged -> ledger
   fidelity: unverifiable
   external: pending
 ---
@@ -44,6 +44,8 @@ Linked result: F1 (research/checks/RESULTS.md): steady-state rate = 2N·U_b·u(s
 
 ## Check
 Link: `research/checks/RESULTS.md` F1, B0.4. Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / unverifiable. R1b: 9.13 vs 8 is 12%, 205M shortfall moves 12%, conclusion unchanged -> ledger Charitable reading tried: tried t_div = 5.5 My: reproduces '8' only at another input; 12% -> ledger.
 
 ## Simulator variables implied
 - Selectable rate model: aggregate throughput vs 1/t_fix; Bio-Cycle toggle.

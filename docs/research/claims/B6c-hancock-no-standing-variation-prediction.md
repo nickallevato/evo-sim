@@ -9,7 +9,7 @@ load_bearing: false  # an empirical-consequence argument; not quantified on scre
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
+  internal: holds   # R4 X1 rule rev 2 (was pending): conditional prediction is correct; applicability to Day is G2/F1a
   fidelity: n/a
   external: pending
 ---
@@ -48,6 +48,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none.
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / n/a. conditional prediction is correct; applicability to Day is G2/F1a Charitable reading tried: tried the conditional reading.
 
 ## Simulator variables implied
 - standing variation display

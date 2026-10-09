@@ -14,6 +14,9 @@ verdicts:
   external: n/a
 ---
 
+> **Mapping (2026-10-09): no attack warranted.** This node is mapped under the ratified definition (argmap/NOTES.md judgement call 12) with no defeater row, because it is an accounting identity both sides accept (the total separating species includes every fixation, however ordered); its weakness (an average required rate is not an upper bound on the achievable rate) is carried by A2e/A5 rows d003 and d008.
+
+
 ## Statement (verbatim)
 > The total number of mutations separating species includes all of them. Parallel, sequential, or however else. Hence the word “total”.
 

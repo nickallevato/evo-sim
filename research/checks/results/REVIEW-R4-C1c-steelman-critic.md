@@ -1,5 +1,8 @@
 # Review of R4-C1c: steelman from the critics' side
 
+> **Correction (2026-10-09, R4 X1):** the repo figure 1.2e-46 quoted below was wrong. The exact Wright-Fisher chain gives 5.1e-45 at p = 0.5 (2N = 20,000, 240 generations), and the diffusion limit gives 1.8e-45; the old value was 41x low against the exact chain and 14x low against the diffusion limit. keruru's 4e-35 is about 10 orders above the exact value at Ne = 1e4 (it reproduces at 2N of about 16k). C5 is now internal `pending`, fidelity `unverifiable` (rule R1c). See `R4-X1-verdict-rule.md` section 8 item 11.
+
+
 Reviewer stance: the most capable honest defender of the critics' position (keruru, McCarthy, Camestros, Mansfield, the r/DebateEvolution and Peaceful Science commenters). I was asked to argue for them as strongly as honestly possible and then say whether the check gives them their due.
 
 Scope read: `results/R4-C1c.md` (cited as "the note", with line numbers), the script `research/checks/c1c_call_depth_replacement.py` (docstring and code), `results/raw/c1c_analysis.txt`, `c1c_posthoc_variant_gate.txt`, `c1c_posthoc_mindepth.out`, claims `C-adna-zero-fixations`, `C1`, `C1a`, `C4`, `C5`, `C5a`, `C5b`, `C6`, `C7`, `B2e`, the critic quotes in `sources/quotes-critics.md` (KR-01..09, MC-01..13, RF-1..16) and `opponents/keruru.md`, `results/R4-C1b.md`, `results/R4-B3b-C1.md`. I also read keruru's Zenodo draft (`sources/raw/refresh-2026-10-09/zenodo-22184713/x/adna-temporal-ne/adna-draft-1.md`, sha256 prefix 3a115d6a) read-only as text; nothing from `sources/raw` was executed. I edited no other file and did not commit.

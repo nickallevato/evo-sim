@@ -1,6 +1,8 @@
 # Milestone 9: Day's 21 on real genomes, and how many routes a mutation has
 *2026-10-09 · stage: R4 (in progress)*
 
+> **Update (later 2026-10-09):** the in-progress items below are reported in [milestone 10](2026-10-09-10-fairness-audit.md): X1 (one verdict rule for both sides; the Day-vs-critic error gap is not robust), GAP-07c (205M is 10.6–12.6× fixed events), the mapping round and the Holocene Nₑ retrieval.
+
 This milestone covers three checks:
 - **C1c:** what Day's ancient-DNA "21 fixations" would mean, in a model with the real sequencing depth of the ancient samples and the known ancestry turnovers in Europe;
 - **C1d:** the same statistic computed directly on the real public genotypes (AADR), plus an independent replication of keruru's measured population size;

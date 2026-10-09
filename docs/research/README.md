@@ -15,6 +15,14 @@ This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Prob
    - Forward simulations decide disputes about equilibrium. The coalescent (msprime) is used only for baselines.
    - Scaling (shrinking N and raising μ with θ held fixed) is validated before it is relied on.
 7. **No full texts in git.** `sources/raw/` is gitignored. The repo commits links, archive URLs, short quotes and sha256 hashes.
+8. **One verdict rule, applied to Day, critics and allies alike** (R4 X1, 2026-10-09; full text and test cases in [`R4-X1-verdict-rule.md`](../../research/checks/results/R4-X1-verdict-rule.md)):
+- **R1 materiality:** a printed-number slip and an omitted-term slip are judged the same way; each is an error only if the correction moves the author's stated conclusion (on the author's own basis) or a downstream number in the same source by more than 25%, or flips it. Otherwise it goes to a slip ledger. R1c: no input-looseness rescue for steep outputs (tail probabilities, exponentials).
+- **S scope:** only a claim's verbatim Statement quotes and its derivation are scored; slips in comments, replies, asides and captions go to the ledger on every side, unless the number carries an argument no node holds (then it gets its own node).
+- **SC self-correction:** corrected in the same source = ledger; corrected in a later source = the quoted version is scored, with a note.
+- **N non-sequitur:** the conclusion fails against the author's own table, equation or text, is circular, or overreaches; a contested premise is external, not internal (N1).
+- **F fidelity:** an uncited non-standard input is `unverifiable` (never `partial`); standard values are exempt; human Nₑ ≈ 1e4 is contested-standard and flagged.
+- **U unidentified authors:** relays and unidentified authors are not scored internal.
+- **C charity:** the most charitable reading of an ambiguous referent is tried, and recorded, on every node.
 
 ## Layout
 | Path | Contents |

@@ -9,7 +9,7 @@ load_bearing: false  # feeds the molecular-clock direction claim (dates older) t
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: "non-sequitur"   # arithmetic holds; fixation probability taken as 1/(2N_t), simulation gives 1/N at birth
+  internal: "non-sequitur"   # N2a (R4 X1 rule rev 2): 0.743 is a property of the 4-cohort window; extending it moves k/mu across 0.60-0.87 on the paper's own growth ratio. Arithmetic holds. The 1/(2N_t) vs 1/N-at-birth mechanism is external (N1); the 'contradicts the companion paper' basis is cross-document and not used
   fidelity: "misread"   # B&L sign opposite
   external: "contradicted"   # 0.743 is a window artefact (0.60-0.87, limit 0.598)
 ---
@@ -59,6 +59,8 @@ Written **before** the check runs.
 Script: proposed `research/checks/b3b_overlap_fluctuation.py`; arithmetic audit above computed with python3 -I. Related done check: B1b (growth gives a transient deficit that recovers).
 
 R4 B3c (research/checks/results/R4-B3b-C1.md): arithmetic 0.7428 reproduces, but the value depends on the window (2 cohorts 0.868 ... 20+ cohorts 0.598). Mechanism test: a mutant born in cohort i fixes with probability 1/N_i (P_fix*M_i = 0.973-1.018; with overlap 1.034 +/- 0.026) against the 1/(2N_t) the derivation needs (0.305). Day's "RRME confirms B&L" has the opposite sign (B&L realistic growth: +38%; RRME: -26%). The 1/(2N_t) step is the audit's reconstruction of eq. 1 and 3, to be confirmed. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is non-sequitur / misread. N2a: 0.743 is a property of the 4-cohort window (extending it moves k/mu across 0.60-0.87 on the paper's own growth ratio). The 'contradicts the companion paper' basis is cross-document and is not used (N2b scope); the 1/N-at-birth mechanism is external (N1) Charitable reading tried: attempted: no ambiguous referent.
 
 ## Simulator variables implied
 - cohort N series

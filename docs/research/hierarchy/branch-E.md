@@ -17,7 +17,7 @@ flowchart TD
   n_E2 --> n_E
   n_E2 -->|supports| n_E
   n_E2 -->|depends-on| n_F
-  n_E3["E3: A Wright-Fisher simulation of 50,000 founder events validate<br/><small>day · int:holds · fid:n/a · ext:contested</small>"]
+  n_E3["E3: A Wright-Fisher simulation of 50,000 founder events validate<br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_E3 fill:#fde2c8,stroke:#b45309
   n_E3 --> n_E
   n_E3 -->|supports| n_E
@@ -26,7 +26,7 @@ flowchart TD
   n_E4 --> n_E
   n_E4 -->|depends-on| n_B3
   n_E4 -->|depends-on| n_F
-  n_E5["E5: MITTENS 3.0's own tables give -906 'true fixations' in Ara-2<br/><small>critic · int:pending · fid:accurate · ext:pending</small>"]
+  n_E5["E5: MITTENS 3.0's own tables give -906 'true fixations' in Ara-2<br/><small>critic · int:holds · fid:accurate · ext:pending</small>"]
   style n_E5 fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px
   n_E5 --> n_A2
   n_E5 -.->|attacks| n_A2

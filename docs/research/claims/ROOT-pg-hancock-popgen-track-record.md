@@ -4,7 +4,7 @@ title: "Hancock / Gutsick Gibbon: population genetics has a record of quantitati
 side: critic
 branch: ROOT
 parent: ROOT
-edges: []  # PROPOSED: [{type: attacks, target: ROOT}]; left empty until defeater dNEW-26 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: ROOT}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # inductive burden-of-proof argument; no number
 sourcing: firsthand
 status: extracted

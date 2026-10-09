@@ -17,11 +17,20 @@ flowchart TD
   style n_ROOT_B fill:#fde2c8,stroke:#b45309
   n_ROOT_B --> n_ROOT
   n_ROOT_B -->|supports| n_ROOT
+  n_ROOT_COV["ROOT-COV: Hancock: natural selection is a covariance between trait and<br/><small>critic · int:pending · fid:pending · ext:untestable</small>"]
+  style n_ROOT_COV fill:#dbeafe,stroke:#1d4ed8
+  n_ROOT_COV --> n_ROOT
+  n_ROOT_COV -.->|attacks| n_ROOT
   n_ROOT_DE["ROOT-DE: Bill Dembski: has independent arguments that evolutionary me<br/><small>ally · int:n/a · fid:n/a · ext:untestable</small>"]
   style n_ROOT_DE fill:#fef3c7,stroke:#a16207
   n_ROOT_DE --> n_ROOT
   n_ROOT_DE -->|supports| n_ROOT
   n_ROOT_DE -->|depends-on| n_B5
+  n_ROOT_EP["ROOT-EP: Hancock / Gutsick Gibbon: Day's named endorsers (Dembski, Ho<br/><small>critic · int:pending · fid:pending · ext:untestable</small>"]
+  style n_ROOT_EP fill:#dbeafe,stroke:#1d4ed8
+  n_ROOT_EP --> n_ROOT
+  n_ROOT_EP -.->|attacks| n_ROOT_H
+  n_ROOT_EP -.->|attacks| n_ROOT_T
   n_ROOT_H["ROOT-H: Ola Hossjer: agrees with Day's conclusion after rescaling, b<br/><small>ally · int:pending · fid:n/a · ext:contested</small>"]
   style n_ROOT_H fill:#fef3c7,stroke:#a16207
   n_ROOT_H --> n_ROOT
@@ -36,6 +45,10 @@ flowchart TD
   n_ROOT_M --> n_ROOT
   n_ROOT_M -->|depends-on| n_ROOT
   n_ROOT_M -->|supports| n_ROOT
+  n_ROOT_PG["ROOT-PG: Hancock / Gutsick Gibbon: population genetics has a record o<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  style n_ROOT_PG fill:#dbeafe,stroke:#1d4ed8
+  n_ROOT_PG --> n_ROOT
+  n_ROOT_PG -.->|attacks| n_ROOT
   n_ROOT_T["ROOT-T: Frank Tipler: Probability Zero is the most rigorous mathemat<br/><small>ally · int:n/a · fid:unverifiable · ext:untestable</small>"]
   style n_ROOT_T fill:#fef3c7,stroke:#a16207
   n_ROOT_T --> n_ROOT

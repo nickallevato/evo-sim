@@ -423,6 +423,102 @@ Date: 2026-10-03
 - **GG-16** | t=01:58:18 | branch epistemic | Hancock
   > "or back of the napkin sort of way"
   - note: Self-described precision of the null-model calculation (no CI).
+- **GG-17** | t=00:43:38 | branch A4e | Hancock
+  > "And the Moran model is the model of overlapping generations."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-18** | t=00:48:29 | branch A4e | Hancock
+  > "And you just scale that effective population size by the slowdown of drift due to overlapping generations."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-19** | t=00:51:57 | branch A4e | Hancock
+  > "That's not what Kamura did."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned. Answers the previous caption line, which ends "Kamura" and continues "doesn't have a subsequent revision of the right fisher model".
+- **GG-20** | t=01:00:59 | branch A4e | Hancock
+  > "it's a correction factor that enables you to take the census population size and correct it for the observed rate of genetic drift"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-21** | t=01:20:50 | branch A4f | Hancock
+  > "I don't know what D is like there is no equivalent term in population genetics."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-22** | t=01:21:10 | branch A4f | Hancock
+  > "if you plugged in 25 there then you also have 25 in the denominator and cancel"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned. Continues on the next caption line.
+- **GG-23** | t=01:23:35 | branch A4f | Gutsick Gibbon (host)
+  > "In population genetics, selection coefficients tend to describe fitness differences between genotypes, whereas day selection coefficient seems to just be a summation of background demographies within populations."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-24** | t=01:41:38 | branch G2h | Hancock
+  > "Notice that his model had no mutation rate, right?"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-25** | t=01:36:03 | branch G2h | Hancock
+  > "this is not even necessarily a measure of selection"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-26** | t=02:07:18 | branch H2a | Hancock
+  > "the cost of selection is only applicable for hard selection models where selection's effect is independent of the genotypes"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-27** | t=02:12:32 | branch H2a | Hancock
+  > "the frequency doesn't have to be very low. It could have been a neutral alil and so it could have been at intermediate frequencies, right?"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-28** | t=02:08:20 | branch H2a | Hancock
+  > "that's important in populations that are really small in size and most of the issues come from uh being poorly adapted to your environment."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned. Subject on the previous caption line (02:08:00).
+- **GG-29** | t=02:18:21 | branch B5j | Hancock
+  > "So like drift can still dominate at the molecular level and selection is dominating at the phenotypic level."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-30** | t=02:20:03 | branch B5j | Hancock
+  > "Um the these models existed long before Vox day um and exist completely independently of him."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-31** | t=02:16:59 | branch B5j | Hancock
+  > "we are not here to like save Darwin as a human"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-32** | t=00:27:23 | branch ROOT-PG | Hancock
+  > "any new idea must run the gauntlet and be able to survive the theoretical edifice of population genetics"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-33** | t=00:23:55 | branch ROOT-PG | Hancock
+  > "And what this shows us is that this math is not arbitrary."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-34** | t=00:26:41 | branch ROOT-PG | Gutsick Gibbon (host)
+  > "The blunt fact of the matter is Vox Day's math can't do any of this."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-35** | t=00:29:09 | branch ROOT-COV | Hancock
+  > "natural selection is a statistical co-variance between a trait value and how many offspring you leave, right?"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-36** | t=00:29:29 | branch ROOT-COV | Hancock
+  > "So to say it's a statistically impossible is like to misunderstand the basics of like what a covariance is."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-37** | t=03:04:48 | branch ROOT-EP | Gutsick Gibbon (host)
+  > "Generally, none of them have a particularly prevalent biology or population genetics background"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-38** | t=03:05:09 | branch ROOT-EP | Gutsick Gibbon (host)
+  > "And in fact, Hosture has made blunders very similar"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned. Continues on the next caption line (03:05:30).
+- **GG-39** | t=00:31:35 | branch ROOT-EP | Gutsick Gibbon (host)
+  > "I think if you're going to include Tipler's quote in your rebuttal here, you probably should Google him and see that he's an ID proponent."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-40** | t=00:14:00 | branch D2k | Hancock
+  > "And so like to say that he is not a mathematician or that like there were no mathematicians involved in the modern synthesis is just like wild to me."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-41** | t=00:14:21 | branch D2k | Hancock
+  > "coallescent theory was invented by JFC Kingman who is like a pure mathematician"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-42** | t=00:17:44 | branch D2k | Hancock
+  > "Carl Pearson being trained as a pure mathematician was one of the first to start this."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-43** | t=00:50:34 | branch F1c | Gutsick Gibbon (host)
+  > "Now my understanding is that this is just the waiting time problem."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-44** | t=00:50:54 | branch F1c | Hancock
+  > "It is it is in definitely in the lineage of waiting time problems."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-45** | t=00:41:55 | branch A4g | Duffy (slide, read by the host) `secondhand`
+  > "the generational models including the right fisher model that underlies most fixation theory assumes that the entire parental generation is completely replaced by the offspring generation."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-46** | t=00:59:16 | branch A4g | Duffy (slide, read by the host) `secondhand`
+  > "In standard fixation models, a generation represents the entire population"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
+- **GG-47** | t=01:14:43 | branch A4c/A4g | Duffy (slide, read by the host) `secondhand`
+  > "fixation time in a population where selection operates at 80% efficiency will take approximately 25 generations"
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned. Preceded on the previous line by "If Kamura's formula gives a fixation time of 20 generations assuming complete replacement each generation, the actual".
+- **GG-48** | t=00:13:19 | branch D2l | Duffy (slide, read by the host) `secondhand`
+  > "The neodyarwinian synthesis had been constructed by naturalists and geneticists, not by mathematicians."
+  - note: Added 2026-10-09 (mapping proposals; verified verbatim against sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt at integration); auto-caption, spelling as captioned.
 
 ## YT-6jXiwrcC5PQ: Gutsick Gibbon, Will Duffy livestream, Human Evolution #2 (auto-captions)
 URL: https://www.youtube.com/live/6jXiwrcC5PQ  
@@ -524,6 +620,18 @@ Date: 2026-09-28
   > "It follows largely nonrecombining bacteria descended from one clone, repeatedly transferred into the same glucose-limited environment."
 - **RE-13** | comment pcovtvf by DarwinZDF42 score 27 | branch B5 | DarwinZDF42
   > "ignores that neutral mutations fix at approximately the mutation rate"
+- **RE-16** | comment pcug1j0 by justatest90 (2026-09-29) | branch B5, B5f, B1 | justatest90
+  > "It needs the elapsed time to be long compared with the fixation time."
+  - local copy: `sources/raw/critics/arctic-tree-1wss2wj.json` (comment id pcug1j0); verified verbatim 2026-10-09
+  - note: Added in the R4 X1 integration (rule rev 2, section 8). This sentence was previously attributed to the OP, Dumb-and-Dumber (in B5f, B5 and B1). It belongs to justatest90's comment. RE-06 (9.7M, "an illustration") stays the OP's.
+- **RE-17** | comment pcug1j0 by justatest90 (2026-09-29) | branch B5f | justatest90
+  > "The gap is under a factor of two (much of which is solved with the CHLCA point above), not a factor of 91,600."
+  - local copy: `sources/raw/critics/arctic-tree-1wss2wj.json` (comment id pcug1j0); verified verbatim 2026-10-09
+  - note: The "gap under a factor of two" conclusion (B5f). The commenter's own premise is a full ancestral pipe (RE-18), which is why it `holds` under rule N1.
+- **RE-18** | comment pcug1j0 by justatest90 (2026-09-29) | branch B5f, B1 | justatest90
+  > "Further, at the point of divergence from CHLCA, the ancestral population was already in process of fixing or eliminating mutations."
+  - local copy: `sources/raw/critics/arctic-tree-1wss2wj.json` (comment id pcug1j0); verified verbatim 2026-10-09
+  - note: The "CHLCA point" premise (full pipe at the split). Day's empty-pipe lag is his premise (N1).
 
 ## RE-1wxgsjm: r/DebateEvolution, Sparky_6_4, "KITTENS: rebuttal to Vox Day's MITTENS 3.0 by Clauwd Meowgorithm"
 URL: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/  

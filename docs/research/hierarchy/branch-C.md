@@ -31,7 +31,7 @@ flowchart TD
   n_C2a --> n_C2
   n_C2a -->|supports| n_C2
   n_C2a -->|depends-on| n_A4
-  n_C2b["C2b: Across six countries 1950-2023, d and k are linearly related<br/><small>day · int:non-sequitur · fid:n/a · ext:pending</small>"]
+  n_C2b["C2b: Across six countries 1950-2023, d and k are linearly related<br/><small>day · int:non-sequitur · fid:unverifiable · ext:pending</small>"]
   style n_C2b fill:#fde2c8,stroke:#b45309
   n_C2b --> n_C2
   n_C2b -->|supports| n_C2
@@ -44,7 +44,7 @@ flowchart TD
   style n_C2d fill:#fde2c8,stroke:#b45309
   n_C2d --> n_C2
   n_C2d -->|supports| n_C2
-  n_C3["C3: CCR5-delta32 under the strongest observed selection implies <br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_C3["C3: CCR5-delta32 under the strongest observed selection implies <br/><small>day · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_C3 fill:#fde2c8,stroke:#b45309
   n_C3 --> n_C
   n_C3 -->|supports| n_A2
@@ -54,7 +54,7 @@ flowchart TD
   n_C4 --> n_C
   n_C4 -->|supports| n_C
   n_C4 -.->|attacks| n_C5
-  n_C5["C5: Zero fixations in 240 generations is the neutral prediction <br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_C5["C5: Zero fixations in 240 generations is the neutral prediction <br/><small>critic · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_C5 fill:#dbeafe,stroke:#1d4ed8
   n_C5 --> n_C
   n_C5 -.->|attacks| n_C
@@ -69,7 +69,7 @@ flowchart TD
   n_C5b --> n_C5
   n_C5b -.->|attacks| n_C5a
   n_C5b -.->|attacks| n_C4
-  n_C6["C6: Ancient DNA falsifies the constant-rate clock: 99.8% of fixa<br/><small>day · int:arithmetic-error · fid:n/a · ext:contradicted</small>"]
+  n_C6["C6: Ancient DNA falsifies the constant-rate clock: 99.8% of fixa<br/><small>day · int:non-sequitur · fid:unverifiable · ext:contradicted</small>"]
   style n_C6 fill:#fde2c8,stroke:#b45309
   n_C6 --> n_C
   n_C6 -->|supports| n_C

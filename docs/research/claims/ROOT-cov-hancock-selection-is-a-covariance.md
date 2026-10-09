@@ -4,7 +4,7 @@ title: "Hancock: natural selection is a covariance between trait and offspring n
 side: critic
 branch: ROOT
 parent: ROOT
-edges: []  # PROPOSED: [{type: attacks, target: ROOT}]; left empty until defeater dNEW-27 in argmap/mapping-proposals-2026-10-09.md is pasted (argmap_check edge coverage)
+edges: [{type: attacks, target: ROOT}]   # flipped 2026-10-09 at integration (mapping proposals)
 load_bearing: false  # a wording point; does not engage the calculation
 sourcing: firsthand
 status: extracted

@@ -3261,3 +3261,115 @@
   fate: alive
   fate_date:
   fate_locator: "Review #11: axis of readings and s-sweep; RNA/DMS stand-ins; per-sequence prevalence (D10-D12) untouched"
+- id: L-day-complete-replacement-2025
+  label: "Day: discrete-generation equations implicitly assume the whole gene pool is replaced each generation"
+  side: day
+  kind: argument
+  date: 2025-12-24
+  claim_ids: [A4g]
+  locator: "https://zenodo.org/records/18166234 abstract (raw zenodo-18166234.txt l.15)"
+  quote: "implicitly assuming that the entire gene pool is replaced each generation"
+  parents:
+    - {id: L-d-intro-2025, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-28
+  fate_locator: "claims/A4d: d dropped from the MITTENS 3.0 formula; the premise itself was not withdrawn"
+
+- id: L-hancock-overlap-2026
+  label: "Hancock: the Moran model and effective size already handle overlapping generations"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [A4e]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=00:43:38"
+  quote: "And the Moran model is the model of overlapping generations."
+  parents:
+    - {id: L-day-complete-replacement-2025, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Answers the Duffy/book version of d; MITTENS 3.0 dropped d (claims/A4d)"
+
+- id: L-hancock-d-2026
+  label: "Hancock: d has no equivalent term in population genetics"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [A4f]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:20:50"
+  quote: "I don't know what D is like there is no equivalent term in population genetics."
+  parents:
+    - {id: L-d-intro-2025, relation: responds-to}
+    - {id: L-camestros-d-undefined-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Camestros made a 'd is undefined' point in January and withdrew it; Hancock does not cite him and objects to the concept, not the missing definition"
+  fate: alive
+  fate_date:
+  fate_locator: "Answers Duffy's slide; the definition is on p.153 of the book per a relayed message (claims/A4f)"
+
+- id: L-hancock-fmax-no-mu-2026
+  label: "Hancock: MITTENS's model has no mutation rate"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [G2h]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:41:38"
+  quote: "Notice that his model had no mutation rate, right?"
+  parents:
+    - {id: L-mittens-formula-blog-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Answers the Duffy version; Day's reply is that G_f is a measured total (claims/G1)"
+
+- id: L-hancock-hard-soft-2026
+  label: "Hancock: the cost of selection applies only to hard selection"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [H2a]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=02:07:18"
+  quote: "the cost of selection is only applicable for hard selection models where selection's effect is independent of the genotypes"
+  parents:
+    - {id: L-haldane-d-487-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 H, H2-hard, H3: the result is conditional on hard adaptive selection with a soft deleterious load"
+- id: L-audit-x1-2026
+  label: "Audit X1: one verdict rule for both sides; Day's error rate is higher in every denominator, but the gap is not robust"
+  side: audit
+  kind: revision
+  date: 2026-10-09
+  claim_ids: [B5c, C5, A3a, G, F, C6, A5h]
+  locator: "research/checks/results/R4-X1-verdict-rule.md section 1 (rev 2)"
+  quote: "Day's rate is higher than the critics' in every row, but the gap is not robust"
+  parents:
+    - {id: L-hancock-38m-2026, relation: responds-to}
+    - {id: L-keruru-adna-zero-2026, relation: responds-to}
+    - {id: L-reddit-slip-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #12 (three reviews and a blind rule audit); rule rev 2"
+- id: L-audit-gap07c-2026
+  label: "Audit GAP-07c: 15.6% of human-derived divergent SNVs still polymorphic; 205M is 10.6-12.6x fixed events (about 8-13x combined)"
+  side: audit
+  kind: revision
+  date: 2026-10-09
+  claim_ids: [A3x, A3b, A3c, A3]
+  locator: "research/checks/results/R4-GAP07c.md §6"
+  quote: "Polymorphism is a 10-20% correction; the unit mismatch is the 10x."
+  parents:
+    - {id: L-audit-gap07b-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #13; chimp side assumed; T2T and long-read SV re-runs open"

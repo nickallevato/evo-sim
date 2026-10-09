@@ -33,7 +33,7 @@ flowchart TD
   n_B1c --> n_B1
   n_B1c -->|depends-on| n_B1
   n_B1c -.->|attacks| n_B1a
-  n_B1d["B1d: Day (blog 2026-10-01): the pipeline was full but short (228,<br/><small>day · int:pending · fid:n/a · ext:contested</small>"]
+  n_B1d["B1d: Day (blog 2026-10-01): the pipeline was full but short (228,<br/><small>day · int:pending · fid:unverifiable · ext:contested</small>"]
   style n_B1d fill:#fde2c8,stroke:#b45309
   n_B1d --> n_B1
   n_B1d ==>|revises| n_B1
@@ -137,7 +137,7 @@ flowchart TD
   style n_B4b fill:#fde2c8,stroke:#b45309
   n_B4b --> n_B4
   n_B4b ==>|revises| n_B4
-  n_B4c["B4c: Day (2026-05-07): CHLCA falls in 250 kya to 1.3 Mya, not 68-<br/><small>day · int:pending · fid:n/a · ext:pending</small>"]
+  n_B4c["B4c: Day (2026-05-07): CHLCA falls in 250 kya to 1.3 Mya, not 68-<br/><small>day · int:pending · fid:unverifiable · ext:pending</small>"]
   style n_B4c fill:#fde2c8,stroke:#b45309
   n_B4c --> n_B4
   n_B4c ==>|supersedes| n_B4b
@@ -154,7 +154,7 @@ flowchart TD
   style n_B4f fill:#fef3c7,stroke:#a16207
   n_B4f --> n_B4
   n_B4f -->|supports| n_B4d
-  n_B4g["B4g: keruru: fossil-calibrated rate is about twice the pedigree r<br/><small>critic · int:pending · fid:unverifiable · ext:contested</small>"]
+  n_B4g["B4g: keruru: fossil-calibrated rate is about twice the pedigree r<br/><small>critic · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_B4g fill:#dbeafe,stroke:#1d4ed8
   n_B4g --> n_B4
   n_B4g -->|supports| n_B4d
@@ -164,7 +164,7 @@ flowchart TD
   n_B5 -.->|attacks| n_B1
   n_B5 -.->|attacks| n_B2
   n_B5 -.->|attacks| n_B3a
-  n_B5a["B5a: McCarthy: 100 mutations/newborn × N = 10,000 over 9 My gives<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_B5a["B5a: McCarthy: 100 mutations/newborn × N = 10,000 over 9 My gives<br/><small>critic · int:holds · fid:accurate · ext:contested</small>"]
   style n_B5a fill:#dbeafe,stroke:#1d4ed8
   n_B5a --> n_B5
   n_B5a -.->|attacks| n_B1
@@ -174,23 +174,23 @@ flowchart TD
   n_B5b --> n_B5
   n_B5b -.->|attacks| n_B1
   n_B5b -.->|attacks| n_B3a
-  n_B5c["B5c: Hancock: ~76.8 new mutations fixed per generation, ~38 milli<br/><small>critic · int:holds · fid:n/a · ext:contradicted</small>"]
+  n_B5c["B5c: Hancock: ~76.8 new mutations fixed per generation, ~38 milli<br/><small>critic · int:non-sequitur · fid:unverifiable · ext:contradicted</small>"]
   style n_B5c fill:#dbeafe,stroke:#1d4ed8
   n_B5c --> n_B5
   n_B5c -.->|attacks| n_B1
   n_B5c -.->|attacks| n_B3a
   n_B5c -.->|attacks| n_A
-  n_B5d["B5d: Relayed population geneticist: 6 My / 25 y × 30 mutations pe<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_B5d["B5d: Relayed population geneticist: 6 My / 25 y × 30 mutations pe<br/><small>critic · int:n/a · fid:unverifiable · ext:contested</small>"]
   style n_B5d fill:#dbeafe,stroke:#1d4ed8
   n_B5d --> n_B5
   n_B5d -.->|attacks| n_B1
   n_B5d -.->|attacks| n_B3a
-  n_B5e["B5e: Nesslig20: mu_G = 75 per generation, k = 75, 2 × 75 × 252,00<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_B5e["B5e: Nesslig20: mu_G = 75 per generation, k = 75, 2 × 75 × 252,00<br/><small>critic · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_B5e fill:#dbeafe,stroke:#1d4ed8
   n_B5e --> n_B5
   n_B5e -.->|attacks| n_B1
   n_B5e -.->|attacks| n_B3a
-  n_B5f["B5f: r/DebateEvolution: 38.4 × 252,000 = ~9.7 million expected ne<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_B5f["B5f: r/DebateEvolution: 38.4 × 252,000 = ~9.7 million expected ne<br/><small>critic · int:holds · fid:accurate · ext:contested</small>"]
   style n_B5f fill:#dbeafe,stroke:#1d4ed8
   n_B5f --> n_B5
   n_B5f -.->|attacks| n_B1
@@ -205,6 +205,10 @@ flowchart TD
   n_B5h --> n_B5
   n_B5h -->|supports| n_B5
   n_B5h -.->|attacks| n_B3a
+  n_B5j["B5j: Hancock: neutral theory is not a post-hoc retreat; drift dom<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  style n_B5j fill:#dbeafe,stroke:#1d4ed8
+  n_B5j --> n_B
+  n_B5j -.->|attacks| n_B
   n_B6["B6: Mansfield: the ancestral pipeline was full at the split; exp<br/><small>critic · int:holds · fid:n/a · ext:supported</small>"]
   style n_B6 fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px
   n_B6 --> n_B1
@@ -218,7 +222,7 @@ flowchart TD
   style n_B6b fill:#dbeafe,stroke:#1d4ed8
   n_B6b --> n_B6
   n_B6b -.->|attacks| n_B6a
-  n_B6c["B6c: Hancock: a serial one-at-a-time model predicts no genetic va<br/><small>critic · int:pending · fid:n/a · ext:pending</small>"]
+  n_B6c["B6c: Hancock: a serial one-at-a-time model predicts no genetic va<br/><small>critic · int:holds · fid:n/a · ext:pending</small>"]
   style n_B6c fill:#dbeafe,stroke:#1d4ed8
   n_B6c --> n_B6
   n_B6c -.->|attacks| n_B1
@@ -243,7 +247,7 @@ flowchart TD
   n_B7c --> n_B7
   n_B7c -.->|attacks| n_B3a
   n_B7c -->|supports| n_B7
-  n_B9["B9: Day: if drift could change the genome, the 3x excess of harm<br/><small>day · int:non-sequitur · fid:n/a · ext:pending</small>"]
+  n_B9["B9: Day: if drift could change the genome, the 3x excess of harm<br/><small>day · int:non-sequitur · fid:unverifiable · ext:pending</small>"]
   style n_B9 fill:#fde2c8,stroke:#b45309
   n_B9 --> n_B
   n_B9 -->|supports| n_B

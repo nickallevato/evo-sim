@@ -37,6 +37,15 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 | Milestone posts | `docs/YYYY-MM-DD-N-slug.md` |
 | Plain-language explainers | `docs/explain/` (revise after R5) |
 
+**One verdict rule, applied to Day, critics and allies alike** (R4 X1, 2026-10-09; full text and test cases in [`R4-X1-verdict-rule.md`](research/checks/results/R4-X1-verdict-rule.md)):
+- **R1 materiality:** a printed-number slip and an omitted-term slip are judged the same way; each is an error only if the correction moves the author's stated conclusion (on the author's own basis) or a downstream number in the same source by more than 25%, or flips it. Otherwise it goes to a slip ledger. R1c: no input-looseness rescue for steep outputs (tail probabilities, exponentials).
+- **S scope:** only a claim's verbatim Statement quotes and its derivation are scored; slips in comments, replies, asides and captions go to the ledger on every side, unless the number carries an argument no node holds (then it gets its own node).
+- **SC self-correction:** corrected in the same source = ledger; corrected in a later source = the quoted version is scored, with a note.
+- **N non-sequitur:** the conclusion fails against the author's own table, equation or text, is circular, or overreaches; a contested premise is external, not internal (N1).
+- **F fidelity:** an uncited non-standard input is `unverifiable` (never `partial`); standard values are exempt; human Nₑ ≈ 1e4 is contested-standard and flagged.
+- **U unidentified authors:** relays and unidentified authors are not scored internal.
+- **C charity:** the most charitable reading of an ambiguous referent is tried, and recorded, on every node.
+
 **Verdict vocabulary** (claim files; a `# comment` may follow each value):
 - internal: `holds | arithmetic-error | non-sequitur | pending | n/a`
 - fidelity: `accurate | partial | misread | unverifiable | pending | n/a`
@@ -94,8 +103,9 @@ The latest refresh, with its proposals and inaccessible list, is [`docs/research
 - the "Still open" list in `docs/HANDOFF.md`;
 - the latest milestone post.
 
-As of 2026-10-09 (after review #11), R4 is in progress:
-- reviewed and integrated: H3, GAP-04/07/02, GAP-07b, the 2026-10-09 corpus refresh, C1c and C1d (Day's aDNA 21: model, then real AADR genotypes; keruru's temporal N_e replicated) and D1 (sequence-space spike); A3 is now load-bearing (31 nodes incl. ROOT);
-- fix pass done, awaiting integration: X1 (critic arithmetic) with the single both-sides verdict rule (`research/checks/results/R4-X1-verdict-rule.md`, re-score in `R4-X1-rescore.md`; a blind audit of its application is running); GAP-07c (polymorphic share; reviews running);
-- running: XT (cross-tool replication), D15 (Hössjer waiting time), Holocene N_e retrieval (`docs/research/sources/holocene-ne.md`; RG-01 in `ledgers/gaps.md`), mapping cleanup (`argmap/mapping-proposals-2026-10-09.md`);
-- then: the remaining load-bearing checks listed in the R5 draft (`docs/research/R5-draft.md`), and R5 synthesis.
+As of 2026-10-09 (after review #13), R4 is in progress:
+- reviewed and integrated: H3, GAP-04/07/02, GAP-07b, GAP-07c, the 2026-10-09 corpus refresh, C1c, C1d, D1, and X1 (critic arithmetic plus one verdict rule for both sides, blind-audited; both sides re-scored); A3 is load-bearing (31 nodes incl. ROOT);
+- mapping done: every critic and ally argument is attached ("mapped" ratified in `docs/research/argmap/NOTES.md`, judgement call 12); the 12 new claims from the Hancock video are `pending` review;
+- Holocene Nₑ retrieved (`docs/research/sources/holocene-ne.md`; RG-01): the literature does not decide C1c's reading;
+- running (one subagent at a time, compute on na-workhorse only): XT (cross-tool replication), D15 (Hössjer waiting time);
+- queued: C1e (the C1c model on each published Holocene trajectory), Mansfield's supply argument (B5b), latency vs throughput (F1/F1b), Hancock's standing-variation prediction (G2c/B6c), review of the 12 mapping claims, then the remaining load-bearing checks in the R5 draft (`docs/research/R5-draft.md`) and R5 synthesis.
