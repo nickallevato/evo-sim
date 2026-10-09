@@ -973,17 +973,20 @@ def part_summarize():
             by["ALL"].append(v)
             if v["assay"] != "Stability":
                 by["NON-STABILITY"].append(v)
+                if v["coverage"] >= 0.5:  # POST HOC (added after first look at output): drop sparse sets, which give NaN site stats
+                    by["NONSTAB_cov>=0.5 (post hoc)"].append(v)
         keys = ["frac_func_0.5", "frac_nearWT_0.8", "frac_reduced_lt0.8", "frac_destroyed_lt0.2", "frac_ben_proxy_1.2",
                 "site_intolerant_le0.1", "site_tolerant_ge0.9", "m_aa_mean_func_0.5", "m_snv_site_mean_func_0.5",
                 "m_snv_total_per_site", "frac_snv_func_func_0.5", "m_gene_snv_func_0.5", "m_gene_snv_nearWT_0.8", "m_gene_snv_ben_proxy_1.2",
                 "m_snv_site_mean_ben_proxy_1.2", "coverage", "n_sites"]
-        for g in ["NON-STABILITY", "Stability", "ALL", "OrganismalFitness", "Activity", "Binding", "Expression"]:
+        for g in ["NONSTAB_cov>=0.5 (post hoc)", "NON-STABILITY", "Stability", "ALL", "OrganismalFitness", "Activity", "Binding", "Expression"]:
             vs = by.get(g, [])
             if not vs:
                 continue
             P(f"-- group {g} (n={len(vs)}): median [q25, q75] (min..max)")
             for kk in keys:
                 a = np.array([x[kk] for x in vs if x.get(kk) is not None], float)
+                a = a[np.isfinite(a)]  # POST HOC: ignore NaN site stats of sparse sets
                 if a.size:
                     P(f"   {kk}: {np.median(a):.3g} [{np.percentile(a,25):.3g}, {np.percentile(a,75):.3g}] ({a.min():.3g}..{a.max():.3g})")
             P("   majority-reduced(<0.8) datasets: " + f"{np.mean([x['frac_reduced_lt0.8']>0.5 for x in vs]):.2f}" +
