@@ -106,3 +106,51 @@ Run date 2026-10-09. Last prior harvest 2026-10-07. All fetches were read-only G
 4. Cambridge TOC for Rosenhouse chapters 7-8: not retried.
 5. Peaceful Science: retry when DNS resolves (Nesslig20 Part III).
 6. keruru's k = mu exact-Markov-chain deposit: not identified.
+
+## Refresh 2026-10-09b (second pass, same day; critics, allies and social media)
+Run 2026-10-09 evening. Raw files `sources/raw/refresh-2026-10-09b/` (gitignored). Nothing posted, liked, followed, archived or contacted. No logins.
+
+### Bottom line
+Thin window. No new critic or ally argument. One new relayed ally quote (RF-18, via Day's blog). Dembski-thread comment counts: interview 75 (+1, "Chuckles" 2026-10-09, no content for the audit), Hossjer review 18 (0), McCarthy "Why" 37 (0) and "Vox Day Responds" 75 (0). Dembski's 2026-10-07 "Art of Academic Disinvitation" has 17 comments (not previously pulled; off topic: Kreeft/ID/demarcation; no MITTENS content) and the 2026-10-05 "Darwinism: Scientific Inference or Philosophical Preference?" has 2 (off topic).
+
+### Checked
+| Source | Result |
+|---|---|
+| McCarthy Substack archive API (`dennismccarthy.substack.com/api/v1/archive`) | unchanged: newest 2026-10-08 (paid, swordfish), 10-05, 10-03 (AI), none on Probability Zero; "Steven Pinker, Scott Alexander..." thread (10 comments) fetched but not read for content (title off topic) |
+| keruru Substack archive; Zenodo creators "Keruru" (24 records) | unchanged on the topic: newest items 2026-09-26/27 "Forty-Seven", "Nobody in the Room" and Zenodo 23050530 (2026-09-30, "The saint that did not turn thirty", not on topic). 22184713 md5 `00d4750a68f6afdbc2739658ce027e89` identical to the local zip |
+| Camestros Felapton WordPress feed | unchanged: newest items 2026-10-06 (none about Day); Bluesky @camestrosf last Day posts 2026-02 |
+| Pharyngula feed (freethoughtblogs) | newest 2026-10-09 15:28 UTC; none of the latest 6 items mentions Day, Dembski or MITTENS |
+| Gutsick Gibbon channel (yt-dlp flat list) | no new video after `_Vu0ZVVjwHc` (2026-10-03); roundtable not published |
+| Hancock / talkpopgen channel | no new video since the previous pass (list head: "Evolutionary Genetics Course Coming Spring 2027") |
+| Dembski, Tree of Woe, Kurgan, Uncle John's Band, American Hypnotist, Keen archives | no new item on the topic. Tree of Woe newest 2026-09-28 (non-topic) |
+| Peaceful Science (discourse.peacefulscience.org) | DNS still does not resolve (curl code 000; `getent hosts` empty). Nesslig20 Part III unchecked |
+| Mansfield | no independent publication found (unchanged) |
+| Matheson / Matev | no new items |
+| r/DebateEvolution | Arctic Shift returns 522 (origin down); PullPush index stops at 2026-10-04 (cannot see newer items); reddit.com `.json`/`.rss` return 403 (blocked, not bypassed). Reddit coverage for 10-05..09 is therefore NOT verified |
+
+### Social media (read-only attempts; per user scope addition)
+| Platform / target | Method tried | Result |
+|---|---|---|
+| X/Twitter @voxday | `curl https://x.com/voxday` | HTTP 200 but a 40 KB JS shell with no post text |
+| X | `WebFetch https://x.com/voxday` | HTTP 402; refused |
+| X | `syndication.twitter.com/srv/timeline-profile/...` | connection failed (000) |
+| X | `cdn.syndication.twimg.com/timeline/profile?screen_name=voxday` | HTTP 200, empty body |
+| X | Nitter mirrors: `nitter.net`, `nitter.poast.org`, `nitter.privacydev.net`, `rss.bird.makeup` | no connection (000) |
+| X | `xcancel.com` | HTTP 451, "XCancel service is suspended" |
+| X | `nitter.tiekoetter.com` | HTTP 200 but a proof-of-work bot check ("Making sure you're not a bot!"); not solved or bypassed |
+| X | `api.fxtwitter.com/voxday` | HTTP 404 |
+| X | web-search snippets (`site:x.com voxday MITTENS`, two WebSearch queries) | no x.com post surfaced; nothing to quote |
+| Gab (`gab.com/voxday`) | curl | HTTP 200, a JS single-page shell (SEO block only "Vox Day (@voxday) - Gab Social"); `gab.com/api/v1/accounts/lookup?acct=voxday` returned 404 "Record not found" |
+| Telegram (`t.me/voxday`, `t.me/s/voxday`) | curl | contact page only ("Contact @voxday"); no public channel preview feed |
+| Rumble (`rumble.com/user/VoxDay`) | curl | HTTP 404 |
+| Locals (`voxday.locals.com`) | curl | HTTP 302, empty |
+| YouTube (Day banned per his own statements) | not attempted | -- |
+| SocialGalactic | not retried (TLS chain not verifiable on 2026-10-09 morning) | inaccessible |
+| Bluesky | `public.api.bsky.app` returned 403; `api.bsky.app/xrpc/app.bsky.feed.searchPosts` (unauthenticated, read-only) worked. Queries: "Vox Day" evolution (8 hits); "Probability Zero" Vox (5); "Vox Day" Gutsick (2); MITTENS Vox Day (0); "Vox Day" Hancock population genetics (0) | Hits are commentary, no math: 2026-10-03/04 posts reacting to the Gutsick Gibbon video (@keliratelian.bsky.social, @poyson.bsky.social, @rhetoricalreader.bsky.social), a 2026-10-06 Fandom Pulse link (@dennisjkoch.bsky.social; Fandom Pulse already in corpus), and @camestrosf.bsky.social's January-February posts. None new after 2026-10-06. Not quoted (opinion/sentiment); listed in the bib as context |
+| Mastodon (mastodon.social search API) | unauthenticated search | empty result (the instance does not index full text for anonymous users) |
+
+Not attempted: logging in anywhere, X search pages (login wall), Telegram web app.
+
+### Inaccessible (carried forward and new)
+- Peaceful Science (DNS), Reddit (403 / Arctic Shift 522 / PullPush lag), X and Nitter mirrors, SocialGalactic (TLS), Gab and Telegram (JS only), McCarthy paid posts, *Probability Zero* 2nd edition (paid).
+- Open items from earlier: Bowers' original review, Dembski's attached "Mittens 3" PDF, Cambridge TOC for Rosenhouse chapters 7-8, keruru's k = mu exact-Markov-chain deposit (not identified).

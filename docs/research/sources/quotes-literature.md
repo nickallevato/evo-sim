@@ -513,3 +513,64 @@ Retrieved for the C1c Holocene-Ne gap; synthesis in `holocene-ne.md`. Every quot
 > - locator: Results (Figure 5); role: CRIT; params: new:population.Ne_holocene_europe; note: figure-only values
 > "A generation time of 29 years was used to convert the coalescent scaling to calendar time."
 > - locator: Results (Figure 5 caption); role: N; params: new:population.Ne_holocene_europe
+
+# Refresh 2026-10-09b quotes (foundational and tool literature)
+Each quote machine-checked as a substring (whitespace and quote-mark normalised) of the local text. Abstract-only items are quoted from the abstract only. Superscripts are lost in the extracted text where noted.
+
+### DurrettSchmidt2007 (sha256 f18748cc…db9466)
+> "given a 1000 nucleotide region in our genome, how long does it take for a specified six to nine letter word to appear in that region in some individual?"
+> - locator: abstract/introduction (arXiv:math/0702883v1, p.1); role: BOTH; params: D15 inputs; note: the probability question the paper answers
+> "for words of length 6, the average waiting time is 100,000 years"
+> - locator: abstract (p.1); role: CRIT; note: their own model; Stone and Wray had computed 5,950 years
+> "If we model this by saying that a 7 out of 8 letter match is good enough, the mean reduces to about 60,000 years."
+> - locator: abstract (p.1); role: CRIT; note: relaxing perfect-match requirements changes the answer by orders of magnitude (the same sentence block gives 650 million years for length 8 without a 7/8 match)
+### DurrettSchmidt2008 (sha256 e699e598…07d6f1)
+> "for humans with a much smaller effective population size, this type of change would take >100 million years"
+> - locator: abstract; role: DAY; note: critics' own paper gives a waiting time longer than the time since the human-chimp split for this specific two-step regulatory change
+> "we use these results to expose flaws in some of Michael Behe's arguments concerning mathematical limits to Darwinian evolution"
+> - locator: abstract; role: CRIT
+### BeheSnoke2004 (sha256 89ac5071…b7d854)
+> "We conclude that, in general, to be fixed in 10 8 generations, the production of novel protein features that require the participation of two or more amino acid residues simply by multiple point mutations in duplicated genes would entail population sizes of no less than 10 9 ."
+> - locator: abstract; role: DAY; note: superscripts lost in extraction (10^8 generations, 10^9 individuals)
+### Lynch2010 (sha256 b4d2ff1d…095b58)
+> "The issue explored here is the procurement of novel traits that specifically require multiple mutations to achieve a fitness advantage."
+> - locator: abstract; role: BOTH; note: states the scope; the abstract has no numbers
+### HermissonPennings2005 (sha256 31cebc85…fee027)
+> "find a large increase in the fixation probability for weak substitutions, if alleles originate from the standing genetic variation"
+> - locator: abstract; role: CRIT; params: G2c, A6
+> "Adaptations from the standing genetic variation are favored if either the selective advantage is weak or the selection coefficient and the mutation rate are both high."
+> - locator: abstract; role: BOTH; note: the conditions are parameter-dependent, so Hancock's prediction needs a stated s and mutation rate to be tested
+### MesserPetrov2013 (sha256 123323fb…74ae3b)
+> "We argue that soft sweeps might be the dominant mode of adaptation in many species."
+> - locator: abstract; role: CRIT; note: "might be", "many species" (not a human-specific claim)
+> "Hard sweeps are expected when adaptive alleles are not present in the population at the onset of selective pressure and when the waiting time for adaptive mutations is long."
+> - locator: main text, section on when sweeps are hard or soft; role: DAY; note: conditions favouring Day's picture of waiting for new mutations
+### DesaiFisher2007 (sha256 ad91a673…54ea4e)
+> "sets the rate at which the population accumulates beneficial mutations, which thus also grows only logarithmically with population size and mutation rate"
+> - locator: abstract; role: BOTH; note: asexual populations only; bears on LTEE as a ceiling (A2e) and on mutator results (E7)
+### Lesecque2012 (sha256 ed1f8991…fe0bca)
+> "at least 88% of individuals should fail to reproduce and that each female would need to have more than 16 offspring to maintain population size"
+> - locator: abstract; role: BOTH; note: the "paradox" under an absolute-fitness load
+> "a species could tolerate 10’s or even 100’s of new deleterious mutations per genome each generation"
+> - locator: abstract; role: CRIT; params: H, H10; note: under relative-fitness (competition) selection
+### Lynch2016 (sha256 c6b66c57…106c8b)
+> "The long-term consequence of such effects is an expected genetic deterioration in the baseline human condition, potentially measurable on the timescale of a few generations in westernized societies"
+> - locator: abstract; role: DAY; params: H10; note: mainstream author predicts deterioration under relaxed selection; the abstract gives no size, and "relaxed selection against mildly deleterious mutations" is not drift fixing harmful alleles at 3x the neutral rate
+> "the rate is not exceptional once the effective genome size and effective population size are taken into consideration"
+> - locator: abstract; role: CRIT; note: on the human germline mutation rate
+### Moorjani2016 (sha256 b70133ca…fdb435)
+> "We find that there is substantial variation in the molecular clock between apes and monkeys and that rates even differ within hominines."
+> - locator: Significance statement; role: BOTH; params: B4, A1
+### Haller2023 (sha256 bbf4f3d6…9f5330)
+> "The SLiM software framework for genetically explicit forward simulation has been widely used in population genetics."
+> - locator: abstract; role: N
+### Baumdicker2022 (sha256 0cb4064c…523866)
+> "Stochastic simulation is a key tool in population genetics, since the models involved are often analytically intractable and simulation is usually the only way of obtaining ground-truth data to evaluate inferences."
+> - locator: abstract; role: N
+### GitHub API descriptions (fetched 2026-10-09; sha256 in bib / below)
+> "Forward-time simulation in Python using fwdpp"
+> - locator: molpopgen/fwdpy11 `description` (sha256 d8e355ba…210b8); role: N
+> "SLiM is a genetically explicit forward simulation software package for population genetics and evolutionary biology."
+> - locator: MesserLab/SLiM `description` (sha256 667c00a6…555560); role: N
+> "Simulate ARGs and genomic sequence data using population genetic models"
+> - locator: tskit-dev/msprime `description` (sha256 b821b198…bb0ce); role: N

@@ -32,3 +32,27 @@ PMC article pages and PDFs (`pmc.ncbi.nlm.nih.gov`, `europepmc.org/backend/ptpmc
 - Two-column PDFs were re-extracted without `-layout` to restore reading order before quoting.
 - All 75 quotes in `quotes-literature.md` were machine-verified as substrings of the normalised extracted text; known extraction artefacts are noted per quote (lost superscripts in the Wistar OCR, "~" rendered as "," in CSAC, a control character replacing the s-hat symbol in Zeng).
 - One discrepancy in a source recorded, not resolved: Yoo SI Note III text "(0.15-0.16%)" vs Table III.14 value 0.0146 for human-chimp autosome SNV divergence.
+
+## Refresh 2026-10-09b (foundational and tool literature, second pass)
+Run 2026-10-09 evening. Rules as above: legal open copies only, 1 s spacing, nothing created on third-party services, no bypass. Raw files `sources/raw/refresh-2026-10-09b/lit/` (gitignored).
+
+### Method
+1. Europe PMC REST search (`/europepmc/webservices/rest/search?query=TITLE:"..."`) to resolve titles to PMCIDs and DOIs, then `resultType=core` to check journal, volume, pages.
+2. Full text: Europe PMC `fullTextXML` works only for OA-subset articles (Lynch 2016, Baumdicker 2022, Kong 2012); the other PMCIDs returned HTTP 500 (150-byte body; deleted, not kept). NCBI `efetch.fcgi?db=pmc&id=NNN&retmode=xml` returned the full text only for NIH author manuscripts (Messer & Petrov 2013; SLiM 4) and metadata plus abstract for the rest.
+3. arXiv: the arXiv API search by title failed for most titles; `all:Durrett AND all:regulatory AND all:waiting` found math/0702883, downloaded as PDF and converted with `pdftotext`.
+4. Tool metadata: GitHub REST API repo descriptions (SLiM, msprime, fwdpy11).
+5. Every quote machine-checked as a substring of the extracted text.
+
+### Obtained
+Full text: Durrett & Schmidt 2007 (arXiv), Messer & Petrov 2013, Lynch 2016, SLiM 4 (Haller & Messer 2023), msprime 1.0 (Baumdicker 2022). Abstract only: Durrett & Schmidt 2008, Behe & Snoke 2004, Lynch 2010, Hermisson & Pennings 2005, Desai & Fisher 2007, Lesecque 2012, Moorjani 2016, Razeto-Barry 2012. Record only: Jonsson 2017, Charlesworth 2009 and 2013, Kondrashov 1995, Hossjer et al 2021, Kimura & Maruyama 1969.
+
+### Not obtained
+- bioRxiv full text (Moorjani preprint): HTTP 429.
+- fwdpy11 documentation: `fwdpy11.readthedocs.io` "Project not found"; only the GitHub description was read. (Try `molpopgen.github.io/fwdpy11` next time.)
+- Hermisson & Pennings 2005, Behe & Snoke 2004, Durrett & Schmidt 2008, Lynch 2010, Desai & Fisher 2007: full text exists on PMC but is behind the PMC bot challenge; Europe PMC returned 500. A user-downloaded copy (as for Kimura 1962) would let these be quoted beyond the abstract.
+- Haldane 1957, Kimura 1983, Felsenstein 1971/1972, Ewens 1970: no OA text found (see PA-01, PA-07, PA-08).
+- Muller's ratchet: no primary source added (searches by title returned no open full text; candidates for a later pass are Haigh 1978 and Lynch & Gabriel 1990, citations not verified here).
+
+### Findings that affect existing ledgers
+- D15: the Durrett & Schmidt 2007 abstract gives 100,000 years (6-letter word) and 60,000 years (7/8 match) per their model; their 2008 abstract gives >100 million years for a particular two-step human regulatory change. Both are Day-side-usable and critic-side-usable depending on the question; D15 should cite them as baselines, not verdicts.
+- H10: Lynch 2016 supports the direction of Day's "selection ended" claim; Lesecque 2012 supports the critics' point that a large deleterious load per genome is tolerable under relative-fitness selection. Neither addresses the "3x drift-fixed" figure.

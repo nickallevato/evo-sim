@@ -286,3 +286,42 @@ Run date 2026-10-09. Last prior harvest 2026-10-07 (latest dated item then: blog
 ### Findings that affect existing ledgers
 - `ledgers/versions.md`: three rows added (2nd-edition numbers 180 / 1,400 / 1,139,000-fold; Day's own adoption of 1,587; "selection ceased ~1800" claim; Darwillion status in comments).
 - Day's 2026-10-07 "An Epic Test" (already in the corpus) announces a new unpublished disproof and an unpublished "epic data analysis"; Q84 records "Reverse-MITTENS", a term not defined in any harvested text. Nothing to check until it is published.
+
+## Refresh 2026-10-09b (second pass, same day; Day slice plus social media)
+Run 2026-10-09 evening (about 19:55 UTC and later), after the 2026-10-09 morning pass. Raw files: `sources/raw/refresh-2026-10-09b/` (gitignored). Requests serial, 1 s spacing. Nothing posted, archived, or sent.
+
+### Counts
+| item | count |
+|---|---|
+| New Day blog posts since the previous pass (dated 2026-10-09) | 4: "The Irrelevance of EES" (kept), "Mailvox: Invoking the Triveritas" (kept), "The Scholars' Revolt Spreads" (excluded, Belgian riots), "RIP Mike Ditka" (excluded, not fetched) |
+| Day blog posts 2026-10-06 not previously fetched | "No Reconciliation" was already in bib-day (2026-10-07 pass); re-read, no change |
+| New Zenodo records by "Day, Vox" | 0 (API total 39; newest 23188201 created 2026-10-06, modified 2026-10-07) |
+| Zenodo files with changed checksums | 0 (all file checksums in the 39 records identical to the 2026-10-09 morning listing; no download needed because the API returns md5 per file) |
+| Newsletter posts (Sigma Game / AI Central) dated after the previous pass | Sigma Game 10-07 "The Predatory Parents", 10-08 "The Boomer Contract", 10-09 "Abandoning the Ethics of Consent": titles only, not evolution (not fetched). AI Central 10-09 "Drop the Sample, Get the Sound": not evolution (not fetched) |
+| Backfill found | Sigma Game 2026-01-09 "We Knew How This Would Go" (not in bib before): two quotes, Q125-Q126 |
+| New quotes | 9 (Q118-Q126) |
+
+### Method
+1. Zenodo: `curl "https://zenodo.org/api/records?q=creators.name:%22Day,%20Vox%22&size=25&page=N&sort=newest"` (pages 1 and 2). **Pitfall:** with a browser `User-Agent` header Zenodo returned `403 Forbidden` ("unusual traffic"); plain `curl` with the default agent worked. Compared record ids, `modified` dates and per-file `checksum` fields with `refresh-2026-10-09/zenodo-list/list1.json` and `list2.json` in a ten-line script.
+2. voxday.net: `/feed/` (RSS, newest 10 posts) and `/tag/evolution/`; extracted all 2026/10 links and compared with `bib-day.md`. Fetched the four unseen 2026-10-09 URLs with `curl -A 'Mozilla/5.0'`.
+3. Substack archive API (`/api/v1/archive?sort=new&limit=8`) for sigmagame, substack.aicentral.blog; comment APIs are in the critics log.
+4. Social media: see the critics log (X, Gab, Telegram, Bluesky, Mastodon, Rumble, Locals).
+
+### Kept posts
+| Post | Why kept |
+|---|---|
+| 2026-10-09 "The Irrelevance of EES" (tags evolution, science, technology, UATV) | Day's answer to Hilbert's EES argument: calls EES irrelevant, claims "natural selection is empirically irrelevant" and announces the 96-core simulation resource (Q122-Q124). Reposts three Hilbert comments from the Dembski thread (RF-18; relay) |
+| 2026-10-09 "Mailvox: Invoking the Triveritas" | New numeric argument: the Yoo 2025 total (410 Mb) "can't possibly be correct" (7e9 x 0.0857 = 599.9e6), the CSAC 8.57 percent size claim, and Day's explanation for halving (Q118-Q121) |
+
+### Excluded
+- "The Scholars' Revolt Spreads" (2026-10-09): Belgian student riots, off topic.
+- "RIP Mike Ditka" (2026-10-09): off topic, not fetched.
+
+### Not fetched or not read
+- X/Twitter (@voxday): see the critics log "Social media" table (JS shell only).
+- The UATV broadcast of 2026-10-09 evening (where Day says he will discuss the simulation resource): not available yet; check on the next refresh.
+- Day's Darkstream / Rumble / Locals: Rumble `/user/VoxDay` returned 404; `voxday.locals.com` redirects (302, no content).
+
+### Findings that affect existing ledgers
+- `ledgers/versions.md`: 2 rows added (Yoo 410 Mb handling restated with the 8.57 percent argument; "40 million fixations" in 2026-01).
+- New unpublished-result pointer: Q123 "natural selection is empirically irrelevant", Q124 hardware; no data yet.

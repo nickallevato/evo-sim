@@ -93,9 +93,10 @@ research/.venv/bin/python -I research/checks/<check>.py [stage] [workers]
 | Critics: McCarthy, keruru (Substack + Zenodo 22184713), Camestros, Mansfield, Hancock / Gutsick Gibbon (roundtable pending), Nesslig20 / Matheson, Matev (McCarthy comments), r/DebateEvolution, Peaceful Science | New rebuttals, and critic errors (record both) | `quotes-critics.md`, `opponents/`, argmap defeaters |
 | Allies: Hössjer, Dembski, Tree of Woe and others | Endorsements are tied to edition numbers | `opponents/`, balance ledger |
 | *Probability Zero* 2nd edition (paid; not bought) | Book-only claims stay `secondhand` | the claims tagged `secondhand` |
+| Social media: Day on X (@voxday), Gab, Telegram, SocialGalactic, Rumble/Locals and UATV/Darkstream streams; critics and allies on Bluesky, Mastodon and YouTube | Announcements (e.g. the 96-core "data analysis" teased for UATV, 10-09) often appear here first. X, Gab, Telegram, Rumble and Locals were not readable without login on 2026-10-09; Bluesky search and YouTube (yt-dlp) work | as above. Record what can't be read as inaccessible; flag quotes taken from a mirror or snippet |
 | Inaccessible items list | Retry periodically | the latest `sources/refresh-*.md` |
 
-The latest refresh, with its proposals and inaccessible list, is [`docs/research/sources/refresh-2026-10-09.md`](docs/research/sources/refresh-2026-10-09.md). Run a refresh before each milestone post.
+The latest refresh, with its proposals and inaccessible list, is [`docs/research/sources/refresh-2026-10-09b.md`](docs/research/sources/refresh-2026-10-09b.md). **How to run a refresh** (endpoints, walk order, numbering, pitfalls): [`docs/research/sources/HOWTO-refresh.md`](docs/research/sources/HOWTO-refresh.md). Run a refresh before each milestone post.
 
 ## Current state
 **Do not duplicate it here.** Read:

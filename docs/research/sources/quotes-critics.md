@@ -776,3 +776,12 @@ Harvested 2026-10-09. Sources are Substack comment threads (McCarthy, Dembski), 
   - source: Dembski-interview-comments; https://billdembski.substack.com/p/vox-day-interview-on-evolutionary/comment/354585408
   - local copy: `sources/raw/refresh-2026-10-09/dembski-interview/comments.json`
   - note: Hilbert (EES commenter), 2026-10-06. Claims speed (Day's subject) is among the smaller problems and function is the larger one. Third-party support for branch D's premise (sequence space / function) from outside Day's camp; not an argument with numbers.
+
+## RF2: Refresh 2026-10-09b (second pass)
+Harvested 2026-10-09 evening. One new item; machine-checked as a substring of the local raw copy (whitespace and quote-mark normalised).
+
+- **RF-18** | Day blog post 2026-10-09 "The Irrelevance of EES", reposting a Hilbert comment from the Dembski thread | branch ROOT-excluded-mechanisms | Hilbert (EES commenter), relayed by Day
+  > "Bill is at least trying to understand EES. He knows it’s the leading theory of evolution."
+  - source: B2026-10-09-the-irrelevance-of-ees; https://voxday.net/2026/10/09/the-irrelevance-of-ees/
+  - local copy: `sources/raw/refresh-2026-10-09b/day-post-2026-10-09-the-irrelevance-of-ees/page.html`
+  - note: RELAY: the text is Hilbert's, as reposted by Day (rule U: relays and unidentified authors are not scored internal). Hilbert's claim that EES is "the leading theory of evolution" is an assertion, not a model. The same repost has Hilbert ending the exchange with "Damn, you’re really just a crank." and calling both Day and McCarthy cranks; Day's answer is Q122 (EES is irrelevant because it addresses the "adaptive space", at most 2 percent). Neither side supplies a quantitative EES model. Symmetric record: the EES advocate also gives no number, as in RF-8/RF-17.

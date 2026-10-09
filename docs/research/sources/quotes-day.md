@@ -805,3 +805,79 @@ Verified as exact substrings (whitespace and quote-mark normalised) of the local
 - branch: C
 - quote: "Data was distributed in TGENO format and converted to PACKEDANCESTRYMAP format via PLINK 2 for analysis."
 - note: Said of v66.p1. For v62.0 the same section says the data were "distributed in PACKEDANCESTRYMAP format". The v62.0.p1 file retrieved in 2026-10-09 is TGENO.
+
+
+## Refresh 2026-10-09b quotes (Q118-Q126; added 2026-10-09 evening, second pass)
+All quotes machine-checked as substrings (whitespace and quote-mark normalised) of the local raw copy under `sources/raw/refresh-2026-10-09b/` (gitignored).
+
+### Q118 Mailvox: "7 billion x 0.0857 is not 410,000,000 but 599,900,000" (added 2026-10-09b)
+- source: `B2026-10-09-mailvox-invoking-the-triveritas`; URL: https://voxday.net/2026/10/09/mailvox-invoking-the-triveritas/
+- locator: post body, final third (published 2026-10-09T15:32 UTC)
+- local copy: `sources/raw/refresh-2026-10-09b/day-post-2026-10-09-mailvox-invoking-the-triveritas/page.html`
+- branch: A3, A3x, F
+- quote: "at which point we realize that Yoo et al can’t possibly be correct because 7 billion x 0.0857 is not 410,000,000 but 599,900,000."
+- note: Day's new objection to the Yoo 2025 total (410 Mb). Harvester arithmetic: 7e9 x 0.0857 = 599.9e6 (the product is right). What 7 billion denotes is not stated (the ape haplotype assemblies in Yoo 2025 Table 1 are 3.0-3.6 Gb each, so a sum of two haplotypes is about 6-7 Gb; "7 billion" is at best a rounded two-genome total; this reading is the harvester's, not in the post). The 8.57 percent is Day's own figure (Q119); the string "8.57" does not occur in the extracted text of CSAC 2005 or Yoo 2025 (grep, 0 hits each).
+
+### Q119 Mailvox: CSAC partial genomes "at least 8.57 percent different based on size alone" (added 2026-10-09b)
+- source: `B2026-10-09-mailvox-invoking-the-triveritas`; URL: https://voxday.net/2026/10/09/mailvox-invoking-the-triveritas/
+- locator: post body, paragraph on the 2005 Nature paper
+- local copy: as Q118
+- branch: A3, F
+- quote: "But those partial genomes were at least 8.57 percent different based on size alone!"
+- note: Day on CSAC 2005 (1.06 percent fixed divergence from "two partial genomes"). Not located in the CSAC text: CSAC reports 1.23 percent substitution divergence (1.06 percent or less fixed) over about 2.4 Gb of aligned high-quality sequence and about 90 Mb of indel differences (about 3 percent). How the 8.57 percent is computed is not given in the post. Bears on the GAP-07 / A3x unit question (substitutions vs indel base pairs vs events).
+
+### Q120 Mailvox: "Yoo reported a total genomic difference of 410 million base pairs" (added 2026-10-09b)
+- source: `B2026-10-09-mailvox-invoking-the-triveritas`; URL: https://voxday.net/2026/10/09/mailvox-invoking-the-triveritas/
+- locator: post body
+- local copy: as Q118
+- branch: A3, A3x
+- quote: "Yoo reported a total genomic difference of 410 million base pairs."
+- note: Day states that the 410 million is in base pairs, and (Q121) that he halves it to get the 205 million used as "fixations". This is the unit mismatch of A3x/GAP-07 in Day's own words (base pairs divided by two = "fixations"). The searched Yoo 2025 text/SI never contained a "410" (see harvest-log-literature "Not found").
+
+### Q121 Mailvox: "I therefore divided that difference in two" (added 2026-10-09b)
+- source: `B2026-10-09-mailvox-invoking-the-triveritas`; URL: https://voxday.net/2026/10/09/mailvox-invoking-the-triveritas/
+- locator: post body, same paragraph as Q120
+- local copy: as Q118
+- branch: A3, A3d
+- quote: "I therefore divided that difference in two"
+- note: Day's explanation of the halving; he adds that the direction (chimp vs human side) "doesn't matter in the slightest to my mathematical disproof". Compare Hancock's "2n" point and justatest90's defence (RF-11, claim A3d1).
+
+### Q122 The Irrelevance of EES: adaptive space "at most 2 percent of the average genome" (added 2026-10-09b)
+- source: `B2026-10-09-the-irrelevance-of-ees`; URL: https://voxday.net/2026/10/09/the-irrelevance-of-ees/
+- locator: post body, paragraph beginning "The reason that it took me less than 30 seconds" (published 2026-10-09T09:13 UTC)
+- local copy: `sources/raw/refresh-2026-10-09b/day-post-2026-10-09-the-irrelevance-of-ees/page.html`
+- branch: ROOT-excluded-mechanisms, E, H
+- quote: "all of the ESS arguments are focused on the adaptive space that natural selection can effect, which a) are at most 2 percent of the average genome and b) don’t even begin to address the same fixation problem that eliminates the possibility of natural selection as a significant generative force."
+- note: Day writes "ESS" where the surrounding text means EES (the post's own heading and the quoted Hilbert text use EES; he separately defines ESS as Evolutionary Stable Strategy). Two checkable points: (a) "at most 2 percent" adaptive fraction (compare CSAC/Keightley-type constrained-fraction estimates in PA-19; Day's earlier use of 2 percent); (b) the "same fixation problem" is the claim under audit, so the sentence is circular as a response to EES. Q82 earlier: "totally unfamiliar" with EES.
+
+### Q123 The Irrelevance of EES: "natural selection is empirically irrelevant" (added 2026-10-09b)
+- source: `B2026-10-09-the-irrelevance-of-ees`; URL: https://voxday.net/2026/10/09/the-irrelevance-of-ees/
+- locator: post body, final paragraphs
+- local copy: as Q122
+- branch: ROOT, ROOT-newdisproof-pending
+- quote: "But now I have conclusively proven one more thing: natural selection is empirically irrelevant as an evolutionary mechanism."
+- note: Third announced result after "evolution by natural selection is mathematically impossible" and "evolution by neutral drift is both mathematically and empirically" impossible (same paragraph; the sentence is cut by the page, read the post). No paper, data or code is cited. This is the "epic data analysis" teased on 2026-10-07 (Q84), now asserted as proven. Nothing to check until it is published; pre-register the check when it appears.
+
+### Q124 The Irrelevance of EES: the simulation resource (added 2026-10-09b)
+- source: `B2026-10-09-the-irrelevance-of-ees`; URL: https://voxday.net/2026/10/09/the-irrelevance-of-ees/
+- locator: post body, last paragraph
+- local copy: as Q122
+- branch: ROOT, simulator
+- quote: "there is one thing game designers have that no scientists do. And that is unlimited 24-7 access to 96 cores with 512GB RAM and a multicore monster GPU with 96GB RAM"
+- note: Indicates the unpublished analysis is a simulation or data run on Day's own hardware, to be discussed on UATV "tonight" (2026-10-09). Relevant to the planned simulator project: a likely target for replication once code or parameters appear. Resources are a statement, not a method.
+
+### Q125 Sigma Game 2026-01-09 "We Knew How This Would Go": parallel fixation "INCLUDED" (added 2026-10-09b; backfill)
+- source: `SG-2026-01-09-we-knew-how-this-would-go`; URL: https://sigmagame.substack.com/p/we-knew-how-this-would-go
+- locator: Day's reply ("VD:") to a commenter, point 1
+- local copy: `sources/raw/refresh-2026-10-09b/substack/sg-wkhtwg/post.json`
+- branch: B5, G, A2
+- quote: "The 1,600 generations per fixation rate INCLUDES parallel fixation."
+- note: Early statement (2026-01-09, 1,600 gens/fixation) that the LTEE-derived rate already includes parallel fixation. The later versions (1,400; 1,322; 1,587) are the same rate under different counting rules (A2b); the claim that parallel fixation is "included" is the premise defended against the "parallel drift" objection (Q95, B5).
+
+### Q126 Sigma Game 2026-01-09: "Those 40 million fixations" (added 2026-10-09b; backfill)
+- source: `SG-2026-01-09-we-knew-how-this-would-go`; URL: https://sigmagame.substack.com/p/we-knew-how-this-would-go
+- locator: Day's reply, point 2
+- local copy: as Q125
+- branch: A3, A3x
+- quote: "Those 40 million fixations must be accounted for."
+- note: Version datum: "40 million fixations" (2026-01-09) vs 205 million (second-edition abstract, Q91) for the human-chimp comparison; earlier-edition figures are in the existing Q-series. Also ties "both the human and chimp genomes have been mapped" to the count. Added to `ledgers/versions.md`.
