@@ -1,0 +1,6 @@
+B5d  6e6/25 = 240000 gens; x 30 = 7.20M; with 6.3 My: 7.56M; vs SNV-only 17.5M: 2.43x short; Day's '7.2 < 410' = 1.8%
+B5d  30 per generation vs pedigree haploid 38.4: 0.78; 38.4 x 240,000 = 9.22M
+B6   Ne_anc 1e+04: 2muT = 0.605%, theta_anc = 0.048%, E[d] = 0.65% (observed CSAC 1.23%)  -> 20.9M SNVs
+B6   Ne_anc 1.32e+05: 2muT = 0.605%, theta_anc = 0.634%, E[d] = 1.24% (observed CSAC 1.23%)  -> 39.6M SNVs
+B6   Ne_anc 1.98e+05: 2muT = 0.605%, theta_anc = 0.950%, E[d] = 1.56% (observed CSAC 1.23%)  -> 49.8M SNVs
+B6   Mansfield 'X generations': full pipe needs >= 4 Ne_anc = 4e+04, 5.28e+05, 7.92e+05 generations before the split
