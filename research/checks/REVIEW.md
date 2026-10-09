@@ -296,4 +296,5 @@ Next:
 10. **Load-bearing claims without a reviewed check** (R5 draft): A2e, B, B2, B3, H5, H8, B2b, B3g (bookkeeping), E5, E6, F1a, F3a (small checks), ROOT, ROOT-M (roll-up).
 11. **Review of the 12 new mapping claims** (A4e, A4f, A4g, B5j, D2k, D2l, F1c, G2h, H2a, ROOT-COV, ROOT-EP, ROOT-PG) with the usual two-sided steelman.
 12. **E leftovers, GAP-03.**
+13. **RH pass (rule RH, 2026-10-09):** tag the Statement quotes of existing nodes `dialectic` or `rhetoric` on every side, starting with the Darwillion lines (G3/G4) and the critics' "crank" lines. A node whose support turns out to be only rhetoric is marked, not re-scored as an error.
 

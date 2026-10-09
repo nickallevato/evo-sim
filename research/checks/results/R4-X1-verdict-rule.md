@@ -167,3 +167,22 @@ Status: applied, partly applied, or declined with a reason. Audit sections in br
 | 23 | [6.10] bookkeeping: F vs F1a; G's withdrawn framing; C2's d = 1 basis | applied | section 8 items 5, 7, 8 |
 | 24 | [1b] B5f attributed to Dumb-and-Dumber | applied | verified in the raw thread: the 9.7M sentence is in the OP; "elapsed time ..." and "gap under a factor of two" are in pcug1j0 |
 | 25 | [4] headline: robust Day errors vs a critic zero resting on four tie-breaks | applied | section 1: counts under three denominators, Fisher p, sensitivity, and the sentence that the gap is not robust |
+
+## RH. Rhetoric (added 2026-10-09 by user directive; an addition after the X1 reviews, not yet applied to existing nodes)
+
+Day knows the classical distinction between rhetoric and dialectic and uses it on purpose. He has a Voxiversity episode called "Rhetoric and Dialectic", and he has called the Darwillion equation "a rhetorical device" (`ledgers/versions.md`). The audit uses the same distinction, on every side.
+
+- **RH1. Classify before scoring.** Each quoted statement is tagged `dialectic` or `rhetoric` before any other clause of this rule is applied, and the tag is recorded:
+  - `dialectic`: a truth claim offered as an argument, such as a number, a derivation, or an empirical assertion that carries a conclusion.
+  - `rhetoric`: persuasion aimed at an audience, such as a boast, hyperbole, a taunt, an in-group/out-group frame, irony, or a status claim.
+  - Rule C applies: try the most charitable reading of which kind of statement it is.
+- **RH2. Rhetoric is handled rhetorically.** A rhetorical statement is not literal-fact-checked as though it were an argument, since that misreads its genre. It is analysed on its own terms, with four entries:
+  - device;
+  - intended audience;
+  - function (what it is meant to make the audience believe or feel);
+  - any dialectical core it signals.
+
+  It changes no node verdict and goes to the ledger (`ledgers/slips.md`, section "Rhetoric"). Where the audit's public writing answers it, the answer is rhetorical in kind (it names the move), not a pedantic correction.
+- **RH3. Mixed statements.** The dialectical core is extracted and scored under R1–U. The rhetorical wrapper is handled under RH2. A node whose only support is rhetoric is marked "no dialectical support offered". It is not marked an error.
+- **RH4. Relabelling.** If an author later calls a statement rhetorical after it was challenged, that is recorded in `ledgers/versions.md`. The statement is classified by how it worked in its source at the time, like rule SC. For example, a book line that says "The probability is absolute zero" was presented as dialectic.
+- **RH5. Symmetry.** Critics' and allies' rhetoric (for example "cranks" and sneers) is handled the same way. A critic who literal-fact-checks Day's rhetoric and presents it as a refutation gets an N entry for overreach. So does Day, when he does the same to a critic.
