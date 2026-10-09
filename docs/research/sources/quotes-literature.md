@@ -354,3 +354,162 @@ These are computed by the harvest agent from the xlsx rows (Python/openpyxl, no 
 > "the remaining minority (fraction 1/2N) spread over the entire population (i.e. reach fixation) taking a very large number of generations."
 > - locator: p.769; role: critics (B7)
 > Note: "recombination" occurs 0 times; no SD/2.15 figure present (first moment only).
+
+
+# Holocene Ne retrieval (2026-10-09)
+
+Retrieved for the C1c Holocene-Ne gap; synthesis in `holocene-ne.md`. Every quote below was machine-checked as a substring of the saved text (Unicode-normalised; table rows use ' | ' as the column separator; superscript-lost exponents may differ from print). Full texts are in `sources/raw/holocene-ne-2026-10-09/` (gitignored). **Role codes here:** DAY = bears for the flat or low-Ne (about 1e4 or below) reading of the Holocene; CRIT = bears for the growth reading; N = context or method caveat. These codes are my own for this section; they are not the S/C/K codes of the pass-2 quotes above. "Params" = `new:population.Ne_holocene_europe` (proposed; `parameters.yaml` not edited).
+
+### Allentoft2024 (sha256 0ad1b076…89ca42)
+> "This pattern is consistent with a scenario of increasing effective population sizes during this period"
+> - locator: Results, Sociocultural insights (IBD sharing over time); role: CRIT; params: new:population.Ne_holocene_europe
+### Ariano2022 (sha256 64095a60…92b304)
+> "the Late Neolithic Maltese sample giving a 30-generation average of only 382 individuals"
+> - locator: Results and discussion (IBDNe); role: N; params: new:population.Ne_holocene_europe; note: island isolate, not pan-European
+### Batini2017 (sha256 4e8d1b06…4bd5e7)
+> "All other populations show a signature of Paleolithic expansion, between 13 and 20 KYA."
+> - locator: Results (Bayesian Skyline Plots); role: N; params: new:population.Ne_holocene_europe; note: mtDNA (maternal), female effective size; not autosomal
+### Browning2015 (sha256 b11fefd3…d803e0)
+> "We estimate the effective population size of European-ancestry individuals in the UK four generations ago to be eight million and the effective population size of Finland four generations ago to be 0.7 million."
+> - locator: Abstract; role: N; params: new:population.Ne_holocene_europe
+> "inferred segments of IBD contain information about effective population size from around 4 generations to around 50 generations ago for SNP array data and to over 200 generations ago for sequence data."
+> - locator: Abstract; role: N; params: new:population.Ne_holocene_europe; note: window of the method
+> "The estimated effective size for the g = 0 generation (for individuals born in or around 1958) is 27 million (95% confidence interval = 21–34 million). Because of extrapolation in a population with slowing growth rates, this estimate might be too high."
+> - locator: Results, Effective Population Size of the UK (WTCCC2); role: CRIT; params: new:population.Ne_holocene_europe
+> "the effective size was greater than 4 million more than 3,900 years (130 generations) ago, dropped to 75,000 by 2,250 years (75 generations) ago, increased to over 4 million 1,380 years (46 generations) ago"
+> - locator: Results, UK (comparison with Ralph and Coop's estimates); role: N; params: new:population.Ne_holocene_europe; note: the authors' conversion of Ralph & Coop's curve; they call it 'significantly more oscillatory than our estimates'
+> "a recent analysis of the site frequency spectrum (SFS) from sequence data on over 10,000 European-American individuals gave a current estimated effective population size of 1.1 million"
+> - locator: Introduction; role: N; params: new:population.Ne_holocene_europe
+> "In human populations that we examined, the estimates of effective size were approximately one-third of the census size."
+> - locator: Abstract; role: N; params: new:population.Ne_holocene_europe
+### Browning2018 (sha256 c471df5e…5f8512)
+> "With the development of agriculture, human populations have grown super-exponentially during the past few thousand years"
+> - locator: Introduction; role: N; params: new:population.Ne_holocene_europe; note: context sentence by IBDNe authors
+### Cai2023 (sha256 c9cf06db…e35a7a)
+> "The effective population size had a high rate of growth in the most recent 20 generations and reached a current population size of 169 million (95% confidence interval = 139–221 million)."
+> - locator: Results, UK Biobank data; role: N; params: new:population.Ne_holocene_europe; note: exceeds census: see next quote
+> "went through a period of moderate growth between 50 and 100 generations ago. Between 20 and 50 generations ago, the effective population size was fairly constant."
+> - locator: Results, UK Biobank data; role: N; params: new:population.Ne_holocene_europe
+> "IBDNe estimates the most recent generations by extrapolating the growth rate of earlier generations and does not account for a possible recent decrease in the population growth rate; hence, the Ne for generation 0 may be overestimated"
+> - locator: Results, UK Biobank data; role: N; params: new:population.Ne_holocene_europe
+### Childebayeva2022 (sha256 a318b392…236208)
+> "we estimated the effective population size to have been ∼5,000 individuals (3,688–6,778 95% CI) for all LBK sites from Germany"
+> - locator: Results and Discussion (LBK population structure); role: DAY; params: new:population.Ne_holocene_europe; note: early Neolithic Germany, ROH maximum likelihood
+### Coventry2010 (sha256 bd733c50…811997)
+> "giving a mean posterior growth rate of 1.094 (that is, an increase of 9.4%) per generation"
+> - locator: Results; role: CRIT; params: new:population.Ne_holocene_europe
+### Davy2023 (sha256 ee43caa6…aa90cd)
+> "an Ne of 10,000, which we take to be a fair assumption of Mid- to Late Neolithic effective population size"
+> - locator: STAR Methods (ancestry HMM); role: N; params: new:population.Ne_holocene_europe; note: an assumption, not an estimate
+### Fournier2023 (sha256 9506884e…8aefed)
+> "an accurate method for inferring effective population size variation during the past ~2000 years in both modern and ancient DNA data"
+> - locator: Abstract; role: N; params: new:population.Ne_holocene_europe; note: window of the method
+> "IBD-based inference consistently resulted in larger inferred effective population sizes compared to LD-based inference."
+> - locator: Results, 1000 Genomes; role: N; params: new:population.Ne_holocene_europe; note: method dependence
+> "The recent effective population size inferred for individuals in the South of England was compatible with population size estimates obtained for modern UK Biobank individuals"
+> - locator: Results, aDNA (Arras / South England); role: N; params: new:population.Ne_holocene_europe
+> "both trajectories show a significant expansion during the iron age (−500 to 800 CE)"
+> - locator: Results, aDNA (Vikings); role: CRIT; params: new:population.Ne_holocene_europe
+### Fu2013 (sha256 2e65091a…cfe454)
+> "accelerated population growth began 5,115 years ago with a per generation growth rate of 1.95% and 1.66% for EAs and AAs, respectively"
+> - locator: Results; role: CRIT; params: new:population.Ne_holocene_europe; note: taken from Tennessen et al. 2012
+### GaoKeinan2016 (sha256 9d8f07aa…7fd522)
+> "They estimated population size for each generation during the last 50 generations (~1250 years) and showed that the UK population had grown from ~0.1 million to 27 (21–34) million individuals during this time."
+> - locator: Review text, section on other inference methods; role: CRIT; params: new:population.Ne_holocene_europe; note: review of Browning & Browning 2015; secondary
+> "(1) | Nelson et al. (2012) [9] | 14,002 | 202 Genes | 9.3 | 1.7 (1.2, 2.3)"
+> - locator: Table 2 (review table of European recent-growth estimates); role: N; params: new:population.Ne_holocene_europe; note: columns: ancient model, study, sample size, variants, growth start (kya), growth rate (%/generation); secondary source for the 9.3 kya start
+> "(2)c | Chen et al. (2015) [19] | 4,298 | Whole Exome | 7.3 (6.95, 7.55) | 1.49 (1.11, 1.87)"
+> - locator: Table 2; role: N; params: new:population.Ne_holocene_europe; note: Chen et al. 2015 not retrieved here; secondhand via this review
+> "(2) | Gazave et al. (2014) [12] | 500 | Neutral variants (216 kb) | 3.5 | 3.4"
+> - locator: Table 2; role: N; params: new:population.Ne_holocene_europe
+> "(2) | Gao and Keinan (2016) [22] | 4,300 | Whole Exome | Exponential | 4.95 (4.88, 5.05) | 2.2 (2.15, 2.26)"
+> - locator: Table 2; role: N; params: new:population.Ne_holocene_europe
+### Gazave2014 (sha256 bebd6e0f…d2fbe3)
+> "It estimates the ancestral Ne before the growth to be 5,633 (CI of 4,400–7,100), markedly lower than the fixed value of 10,000 in model I (Table 1). It estimates growth starting 141 (117–165) generations ago"
+> - locator: Results, model II; role: DAY; params: new:population.Ne_holocene_europe
+> "with a less rapid growth rate of 3.4% (2.4–5.1%) per generation, which culminates in an extant Ne of 0.65 (0.3–2.87) million individuals"
+> - locator: Results, model II; role: CRIT; params: new:population.Ne_holocene_europe
+> "They all estimate the second, more recent epoch of growth to be practically identical to the one estimated in model II and the earlier epoch of growth to be equivalent to an epoch of constant population size"
+> - locator: Results (two-epoch models); role: DAY; params: new:population.Ne_holocene_europe
+> "another potential explanation is that effective population size increases extremely slowly with the census population size, at least initially."
+> - locator: Discussion; role: DAY; params: new:population.Ne_holocene_europe
+> "estimated to have started ∼3,500 y ago (assuming 25 y per generation)"
+> - locator: Results; role: N; params: new:population.Ne_holocene_europe
+### Gravel2011 (sha256 a2217c8a…31261c)
+> "NEUO | 1,000 | 500–1,900 | 1,032 | 677–1,290"
+> - locator: Table 2 (Low-coverage + exons); role: N; params: new:population.Ne_holocene_europe; note: row: NEUO (European size at the start of growth), columns NIEHS / low-cov+exons / exons
+> "rEU (%) | 0.40 | 0.15–0.66 | 0.38 | 0.28–0.59"
+> - locator: Table 2 (Low-coverage + exons); role: N; params: new:population.Ne_holocene_europe
+> "TEU − AS (kya) | 21.2 | 17.2–26.5 | 23 | 21–27"
+> - locator: Table 2 (Low-coverage + exons); role: N; params: new:population.Ne_holocene_europe
+> "the current population sizes inferred from our model (15,500, 35,900, and 49,000 for YRI, CEU, and CHB, respectively) are still significantly lower than census sizes"
+> - locator: Discussion; role: DAY; params: new:population.Ne_holocene_europe; note: present-day CEU 35,900
+> "using a 25 y generation time"
+> - locator: Results; role: N; params: new:population.Ne_holocene_europe
+### HarrisNielsen2013 (sha256 3899591c…15e422)
+> "The out-of-Africa bottleneck period, where the European effective population size is only 1,530, lasts until 5.9 kya."
+> - locator: Results (inferred history of Europeans and Yorubans); role: DAY; params: new:population.Ne_holocene_europe; note: IBS-tract method, 1000 Genomes CEU trio parents; instantaneous-step model; Table 2 symbols lost in extraction
+### Huang2025 (sha256 ed18f3ac…d47f08)
+> "we inferred a ∼3-fold population expansion in a ∼1,000 year period starting ∼5,500 BP"
+> - locator: Results, Corded Ware; role: CRIT; params: new:population.Ne_holocene_europe
+> "the estimated Ne beyond 50 generations likely does not reflect the true Ne but is the result of regularization."
+> - locator: Results, Corded Ware; role: N; params: new:population.Ne_holocene_europe; note: window limit
+> "the inferred effective population size of the British Isles is an order of magnitude larger than that of Corded Ware"
+> - locator: Discussion; role: CRIT; params: new:population.Ne_holocene_europe
+### KGP2015 (sha256 4c635f9f…af836b)
+> "European, Asian and American populations shared strong and sustained bottlenecks, all with Ne < 1,500, between 15,000 to 20,000 years ago."
+> - locator: Results (population history, PSMC); role: N; params: new:population.Ne_holocene_europe; note: PSMC; ends before the Holocene
+> "These bottlenecks were followed by extremely rapid inferred population growth in non-African populations, with notable exceptions including the PEL, MXL and FIN."
+> - locator: Results (population history, PSMC); role: CRIT; params: new:population.Ne_holocene_europe; note: no numeric Ne in the text for the Holocene
+### Keinan2012 (sha256 2222f5a7…79a386)
+> "Coventry et al. (18) | 10,422 | 1400 (900–2800) | 7700# | 9.4 (4.5–14.5)"
+> - locator: Table 1 (review of European growth estimates); role: N; params: new:population.Ne_holocene_europe; note: columns: sample size, growth start (years ago), initial Ne, growth per generation (%)
+> "The present effective population size of Europeans as estimated by the model is 1.1 million (95% CI, 0.3 to 1.9 million) (18), compared to the present effective population size of only a few tens of thousands estimated by previous models that incorporated recent exponential growth"
+> - locator: Main text; role: CRIT; params: new:population.Ne_holocene_europe; note: Coventry 2010 vs earlier
+> "Time of growth was assumed in these studies to coincide with the split of the ancestors of Europeans and East Asians, hence the split and growth were estimated as a single parameter."
+> - locator: Table 1 footnote; role: N; params: new:population.Ne_holocene_europe; note: caveat on Gravel/Gutenkunst timing
+### MathiesonTerhorst2022 (sha256 8412ea26…93dcb8)
+> "an effective population size of N = 104"
+> - locator: Results (selection scan); role: N; params: new:population.Ne_holocene_europe; note: exponent lost in text extraction (N = 10^4); an input assumed for the scan, not an estimate
+### Nelson2012 (sha256 aaffb6eb…918840)
+> "we obtained a maximum-likelihood estimate for a recent growth rate of 1.7% (95% confidence interval [CI]=1.2%–2.3%), and a recent European effective population size of 4.0 million (95% CI=2.5–5.0 million; Fig. 1C)"
+> - locator: Results; role: CRIT; params: new:population.Ne_holocene_europe
+> "These patterns are at odds with notions that human genetic diversity can be summarized by use of an effective population size (Ne) of 10,000 individuals"
+> - locator: Results; role: CRIT; params: new:population.Ne_holocene_europe
+> "An Ne of 10,000 individuals is predictive of the average pairwise differences between human sequences"
+> - locator: Results; role: DAY; params: new:population.Ne_holocene_europe; note: the same paragraph concedes what 1e4 does fit
+### Ringbauer2021 (sha256 d60136ce…0fafa1)
+> "Assuming that individual mobility is comparable between groups, sROH[4,8] proxies for local population size"
+> - locator: Results, Human background relatedness decreased over time; role: N; params: new:population.Ne_holocene_europe
+> "median sROH[4,8] values drop from 13 to 66 cM per foraging group to 0–9 cM per early farming group"
+> - locator: Results, Human background relatedness decreased over time; role: CRIT; params: new:population.Ne_holocene_europe; note: short-ROH fall = rising local mating pool; no Ne value
+### Schaffner2005 (sha256 77f20fbb…2e575a)
+> "Ne (post-agriculture) | 100,000"
+> - locator: Table 1 (fixed parameters); role: N; params: new:population.Ne_holocene_europe; note: fixed, not fitted
+> "T (European agriculture) (gens) | 350"
+> - locator: Table 1 (fixed parameters); role: N; params: new:population.Ne_holocene_europe; note: fixed, not fitted
+> "Late expansion to a large size, roughly coincident with the advent of agriculture, was included for the sampled populations in all calibrated models, but had little effect on results"
+> - locator: Methods; role: N; params: new:population.Ne_holocene_europe
+> "The resulting parameters, however, represent a mechanism for producing realistic-looking data, not an inference about the actual history of human populations"
+> - locator: Results; role: N; params: new:population.Ne_holocene_europe
+### Schiffels2014 (sha256 f0201d22…c20ae8)
+> "In Europe, Northern European ancestors (CEU) experience a relatively constant effective population size between 2kya and 10kya, only increasing rapidly since 2kya"
+> - locator: Results (Figure 3b); role: DAY; params: new:population.Ne_holocene_europe
+> "Between 30kya and 10kya we see similar expansions in population size for the CEU, TSI, GIH, and CHB populations."
+> - locator: Results (Figure 3a); role: N; params: new:population.Ne_holocene_europe
+### Speidel2021 (sha256 74be2d01…83088f)
+> "At shorter distances we observe a clear trend for smaller coalescence rates (larger effective population sizes) toward the present, suggesting strongly increasing local population sizes."
+> - locator: Results, Effective Population Sizes Increased from Mesolithic Europe to the Present; role: CRIT; params: new:population.Ne_holocene_europe; note: Relate on aDNA + SGDP; figure-only values
+### Tenesa2007 (sha256 ec5ea2de…2eb61c)
+> "Effective population size has increased dramatically in the last ∼1000 generations (20,000 yr), from a fairly constant ancestral size of ∼2500 (CEU)"
+> - locator: Figure 3 legend; role: DAY; params: new:population.Ne_holocene_europe; note: LD-based, HapMap CEU; ancestral size refers to the bottleneck period before 20 kya
+### Tennessen2012 (sha256 9308e185…2e5f13)
+> "followed by explosive growth of 1.95% (SD ±0.03%) over the past 5115 years."
+> - locator: Results (demographic model); role: CRIT; params: new:population.Ne_holocene_europe
+> "The final population sizes in this model are lower than current census sizes"
+> - locator: Results (demographic model); role: N; params: new:population.Ne_holocene_europe
+### Terhorst2017 (sha256 8616f2d8…2761c8)
+> "The European populations (Supplementary Figure 4) experience a similar bottleneck as Asians ending around 50 kya, followed by a period of rapid growth starting 10–15 kya."
+> - locator: Results (Figure 5); role: CRIT; params: new:population.Ne_holocene_europe; note: figure-only values
+> "A generation time of 29 years was used to convert the coalescent scaling to calendar time."
+> - locator: Results (Figure 5 caption); role: N; params: new:population.Ne_holocene_europe
