@@ -1,4 +1,4 @@
-"""C1d figure from the committed result JSONs (no genotypes).  research/.venv/bin/python -I research/checks/c1d_figure.py"""
+"""C1d figure from the committed result JSONs (no genotypes).  POST HOC revision (review fix pass): adds panel C, S21 per eligible allele by substitution class against C1c's neutral R0 reference rates.  research/.venv/bin/python -I research/checks/c1d_figure.py"""
 import json, os
 import numpy as np
 import matplotlib
@@ -18,7 +18,7 @@ def row(g, **kw):
 all_ = row(day["grid"], sample="day1", elig_rule="E1", date_rule="T2", m=1, tracked_rule="all11", snpset="all")["profile"]
 tv = ph["by_substitution_class"]["transversions_autosomes"]["profile"]
 C = dict(day="#2a78d6", all="#eb6834", tv="#1baf7a", ink="#0b0b0b", sub="#52514e", grid="#e3e2dc")
-fig, ax = plt.subplots(1, 2, figsize=(13, 5.2), gridspec_kw=dict(width_ratios=[1.25, 1]))
+fig, ax = plt.subplots(1, 3, figsize=(18, 5.2), gridspec_kw=dict(width_ratios=[1.25, 1, 0.9]))
 a = ax[0]
 x = np.arange(11); w = 0.27
 for i, (lab, d, c) in enumerate((("Day's table (Z18525185)", dayprof, C["day"]), ("Real AADR v62, E1/T2, all SNPs", all_, C["all"]), ("Real AADR v62, transversions on autosomes", tv, C["tv"]))):
@@ -42,6 +42,23 @@ b.set_yticks(y); b.set_yticklabels([lab[p] for p in pairs], fontsize=9)
 b.set_xscale("log"); b.set_xlim(500, 20000); b.set_xlabel("temporal N_e (log scale); Wright 4N/(V_k+2) at N=1e7 would be 5.7e6")
 b.set_title("Temporal N_e by window", fontsize=10, loc="left"); b.legend(frameon=False, fontsize=8, loc="lower left"); b.grid(axis="x", color=C["grid"], lw=0.6); b.set_axisbelow(True)
 for s in ("top", "right"): b.spines[s].set_visible(False)
+c = ax[2]
+ph2 = json.load(open(os.path.join(RAW, "c1d_v62_ph2.json")))
+spl = ph2["V1_split"]
+bars = [("Day's table\n(21 / 22,428)", 21 / 22428, C["day"]), ("real v62\nall SNPs", spl["all"]["per_eligible"], C["all"]),
+        ("transitions\n(autosomes)", spl["transitions_auto"]["per_eligible"], C["all"]), ("transversions\n(autosomes)", spl["transversions_auto"]["per_eligible"], C["tv"])]
+for i, (lab, v, col) in enumerate(bars):
+    c.bar(i, v, 0.7, color=col)
+    c.text(i, v * 1.15, "%.2g" % v, ha="center", fontsize=8, color=C["ink"])
+refs = [("C1c neutral, closed, N_e 1e4", 3925 / 15200), ("N_e 1e5", 32 / 1700), ("N_e 1e6", 3.6 / 700)]
+for lab, v in refs:
+    c.axhline(v, color=C["sub"], lw=0.8, ls="--")
+    c.text(-0.45, v * 1.08, lab, ha="left", fontsize=7, color=C["sub"])
+c.set_yscale("log"); c.set_ylim(3e-4, 1)
+c.set_xticks(range(4)); c.set_xticklabels([b[0] for b in bars], fontsize=8)
+c.set_ylabel("S21 per eligible allele (log)"); c.set_title("Rate per eligible allele (model lines: C1c R0, flat SFS)", fontsize=10, loc="left")
+c.grid(axis="y", color=C["grid"], lw=0.6); c.set_axisbelow(True)
+for sp in ("top", "right"): c.spines[sp].set_visible(False)
 fig.suptitle("C1d: Day's statistic and keruru's N_e on the real AADR genotypes", fontsize=12, x=0.01, ha="left")
 fig.tight_layout(rect=(0, 0, 1, 0.95))
 out = os.path.join(HERE, "results", "R4-C1d-real-vs-day.png")
