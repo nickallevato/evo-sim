@@ -1,0 +1,20 @@
+SNV F0 37767396 ; records <2% divergence 33765842 ; unmasked 16722020 ; F3 15557169
+indel events 4301652 ; nested fills 32045 ; outside-fill unaligned segments (human, chimp placed, chimp unplaced) 7452
+human: non-N 2937659104, aligned-block bp 2803182896, unaligned non-N 134476208 (0.0458); nested fills ali bp 131336810
+chimp placed: non-N 2803621121, unaligned non-N 88576196 (0.0316); unplaced scaffolds unaligned non-N 187035005
+Yoo-like non-1:1 analogue: human 265813018 (0.0905 of non-N), chimp placed 219913006 (0.0784)
+coincidence check: human unaligned + chimp placed unaligned + chimp unplaced unaligned = 410087409
+events total F0 = 42108545 ; per lineage ~ 21054272 ; 205M / per lineage = 9.74 ; 410M / total = 9.74
+events total, SNV in <2% records only = 38106991 ; per lineage 19053496 ; 205M / per lineage = 10.76
+bp ladder (both genomes; placed chimp only):
+  SNV only                                                           37767396  bp/event (F0 events 42108545) = 0.90 ; 410M/this = 10.856
+  SNV + unaligned non-N (human + chimp placed)                      260819800  bp/event (F0 events 42108545) = 6.19 ; 410M/this = 1.572
+  SNV + unaligned + non-colinear nested aligned (Yoo-like)          523493420  bp/event (F0 events 42108545) = 12.43 ; 410M/this = 0.783
+  strict + chimp unplaced scaffolds unaligned                       447854805  bp/event (F0 events 42108545) = 10.64 ; 410M/this = 0.915
+clean gap bp (not N, not aligned elsewhere) 192419515 ; raw 596660231
+  human_only events 2171852 raw_bp 51997544 clean_bp 37549870
+  chimp_only events 2094662 raw_bp 96688755 clean_bp 59790566
+  both events 35138 raw_bp 447973932 clean_bp 95079079
+fixed fraction of SNVs (CSAC 0.78-0.86): 29458568 - 32479960 on F0; 26337356 - 29038624 on <2% records
+fixed-only events per lineage at 0.78: SNV 14729284 + indel 1677644 = 16406929 ; 205M/that = 12.49
+fixed-only events per lineage at 0.86: SNV 16239980 + indel 1849710 = 18089691 ; 205M/that = 11.33

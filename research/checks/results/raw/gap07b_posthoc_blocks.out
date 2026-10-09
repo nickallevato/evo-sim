@@ -1,0 +1,52 @@
+{"events": 4301652, "human": {"length": 3088269832, "N": 150610728, "aligned": 2803182896, "unaligned_nonN": 134476208}, "chimp_placed": {"length": 2832615260, "N": 28994139, "aligned": 2715044925, "unaligned_nonN": 88576196}, "chimp_unplaced": {"length": 217782822, "N": 2810953, "aligned": 27936864, "unaligned_nonN": 187035005}}
+{
+ "1": {
+  "events": 1754185,
+  "raw_bp": 1754258,
+  "N_bp": 0,
+  "aligned_elsewhere_bp": 40384,
+  "clean_bp": 1713874,
+  "events_mostly_N_or_elsewhere": 40367,
+  "raw_bp_of_those": 40369
+ },
+ "2-10": {
+  "events": 2080225,
+  "raw_bp": 8175269,
+  "N_bp": 0,
+  "aligned_elsewhere_bp": 175753,
+  "clean_bp": 7999516,
+  "events_mostly_N_or_elsewhere": 44989,
+  "raw_bp_of_those": 173900
+ },
+ "11-50": {
+  "events": 353949,
+  "raw_bp": 7069234,
+  "N_bp": 307,
+  "aligned_elsewhere_bp": 205675,
+  "clean_bp": 6863252,
+  "events_mostly_N_or_elsewhere": 8509,
+  "raw_bp_of_those": 201756
+ },
+ "51-1000": {
+  "events": 90044,
+  "raw_bp": 22937758,
+  "N_bp": 17304,
+  "aligned_elsewhere_bp": 2848086,
+  "clean_bp": 20072368,
+  "events_mostly_N_or_elsewhere": 9551,
+  "raw_bp_of_those": 2980400
+ },
+ ">1000": {
+  "events": 23249,
+  "raw_bp": 556723712,
+  "N_bp": 44936518,
+  "aligned_elsewhere_bp": 356016689,
+  "clean_bp": 155770505,
+  "events_mostly_N_or_elsewhere": 4570,
+  "raw_bp_of_those": 419813204
+ }
+}
+{"human_only": {"events": 2171852, "raw_bp": 51997544, "clean_bp": 37549870}, "chimp_only": {"events": 2094662, "raw_bp": 96688755, "clean_bp": 59790566}, "both": {"events": 35138, "raw_bp": 447973932, "clean_bp": 95079079}}
+{"1000-10000": {"events": 20928, "raw_bp": 68491025, "clean_bp": 57016083}, "10000-100000": {"events": 1905, "raw_bp": 67134316, "clean_bp": 32301554}, "100000-1000000": {"events": 359, "raw_bp": 120447790, "clean_bp": 28608079}, "1000000-1000000000": {"events": 71, "raw_bp": 300665562, "clean_bp": 37858666}}
+[{"size": 25227594, "kind": 2, "raw": 27933135, "N": 293, "elsewhere": 27453442, "clean": 479400}, {"size": 24222291, "kind": 2, "raw": 26171362, "N": 572706, "elsewhere": 24556764, "clean": 1041892}, {"size": 12786690, "kind": 2, "raw": 21582820, "N": 200, "elsewhere": 20909615, "clean": 673005}, {"size": 12523669, "kind": 2, "raw": 12523696, "N": 224213, "elsewhere": 8617156, "clean": 3682327}, {"size": 7972394, "kind": 2, "raw": 8157059, "N": 199474, "elsewhere": 7849450, "clean": 108135}, {"size": 7817709, "kind": 2, "raw": 7828730, "N": 951287, "elsewhere": 6668208, "clean": 209235}, {"size": 7294134, "kind": 2, "raw": 7993592, "N": 74842, "elsewhere": 7751813, "clean": 166937}, {"size": 7196338, "kind": 2, "raw": 7329787, "N": 550062, "elsewhere": 2147641, "clean": 4632084}, {"size": 6456517, "kind": 1, "raw": 6456517, "N": 550052, "elsewhere": 1395954, "clean": 4510511}, {"size": 6174631, "kind": 1, "raw": 6174631, "N": 161596, "elsewhere": 5493480, "clean": 519555}, {"size": 5610289, "kind": 1, "raw": 5610289, "N": 550052, "elsewhere": 1157799, "clean": 3902438}, {"size": 5447979, "kind": 2, "raw": 5659366, "N": 107119, "elsewhere": 5281690, "clean": 270557}, {"size": 5208943, "kind": 2, "raw": 5210008, "N": 604755, "elsewhere": 4360999, "clean": 244254}, {"size": 4989029, "kind": 2, "raw": 5238996, "N": 66613, "elsewhere": 4963880, "clean": 208503}, {"size": 4791915, "kind": 2, "raw": 4806981, "N": 66613, "elsewhere": 4534213, "clean": 206155}]
+exit 0

@@ -1,0 +1,36 @@
+chr1
+chr2
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr20
+chr21
+chr22
+chrX
+chrY
+w=2: human 1464707 chimp 2412499 unpol 389308; human share of polarized 0.378; polarizable 0.909
+   human_only human share by size: [0.321, 0.297, 0.397, 0.175, 0.0]
+   chimp_only human share by size: [0.448, 0.47, 0.376, 0.092, 0.0]
+w=5: human 1643801 chimp 2239974 unpol 382739; human share of polarized 0.423; polarizable 0.910
+   human_only human share by size: [0.353, 0.321, 0.421, 0.177, 0.0]
+   chimp_only human share by size: [0.497, 0.549, 0.441, 0.106, 0.0]
+w=10: human 1844037 chimp 2046189 unpol 376288; human share of polarized 0.474; polarizable 0.912
+   human_only human share by size: [0.413, 0.366, 0.462, 0.181, 0.0]
+   chimp_only human share by size: [0.545, 0.602, 0.501, 0.12, 0.0]
+w=20: human 2013745 chimp 1886328 unpol 366441; human share of polarized 0.516; polarizable 0.914
+   human_only human share by size: [0.439, 0.42, 0.514, 0.188, 0.0]
+   chimp_only human share by size: [0.569, 0.658, 0.585, 0.139, 0.0]
