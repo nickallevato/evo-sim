@@ -8,6 +8,9 @@ These scripts produced the committed research files. They were written during th
 | `harvest/data/` | URL lists, crawl classification, sha256 hashes, blog/Zenodo index tables (metadata only, no full texts) |
 | `claims/` | R2 claim-file generators (`p1`–`p7`, `gen_*`, and the `s/` package that writes `docs/research/claims/`) |
 | `board/` | Scripts that patch `docs/research/status.html` (the status Artifact) node by node |
+| `argmap_check.py` | Checks `docs/research/argmap/` (verbatim lineage quotes, registered ids, dates, standard-form targets, mechanical `counter` lists, coverage of hierarchy attack edges) |
+| `argmap_render.py` | Draws `docs/img/argmap/genealogy.svg` and writes `docs/arguments/defeaters.md` (objection graph per branch, grounded semantics read three ways) |
+| `readme_figs.py`, `eli_figs.py` | README and explainer figures, from committed check outputs only |
 
 Ad hoc arithmetic checks are in `research/checks/adhoc/`. Raw run outputs are in `research/checks/results/raw/`.
 

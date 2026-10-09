@@ -10,8 +10,8 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: holds
-  fidelity: accurate
-  external: contested
+  fidelity: accurate   # rendering of the Darwillion is secondhand
+  external: contested   # P_any indistinguishable from 1 at McCarthy's inputs only under neutral k = mu; the threshold applies to the adaptive subset only
 ---
 
 ## Statement (verbatim)
@@ -46,6 +46,8 @@ Not run in this branch. Prediction (critics): under a neutral model with k = μ 
 
 ## Check
 Link: `research/checks/RESULTS.md` B0.5 (neutral k = U). Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 G1 (research/checks/results/R4-G1.md, `research/checks/g1_specific_vs_any.py`): flip table and genome bound added. The middle case (k of M interchangeable alternatives) flips at lambda_50 = 12.3-17.2 alternatives per needed change, for the adaptive subset only. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - Event definition: specific list / any k of M / any k of M functional.

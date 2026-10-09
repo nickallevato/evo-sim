@@ -4,7 +4,7 @@ title: "Eden calculated that hemoglobin alpha-to-beta conversion takes a time th
 side: day
 branch: D
 parent: D3
-edges: [{type: attacks, target: D2g},{type: depends-on, target: D3b}]
+edges: [{type: supports, target: D2g},{type: depends-on, target: D3b}]  # D3c -> D2g was typed attacks; Day's account of Eden backs D2g. Eden's own 'not implausible' is recorded as the fidelity verdict, not as an edge (fixed 2026-10-08)
 load_bearing: false  # D is not required for ROOT
 sourcing: firsthand
 status: extracted

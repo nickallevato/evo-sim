@@ -8,7 +8,7 @@
 **An open, numerical audit of Vox Day's *Probability Zero* / MITTENS argument and of his critics, as the groundwork for a simulator you can tune yourself.**
 
 ![phase](https://img.shields.io/badge/phase-research%20(R4%20of%205)-orange)
-![claims](https://img.shields.io/badge/claims%20mapped-193-blue)
+![claims](https://img.shields.io/badge/claims%20mapped-194-blue)
 ![checks](https://img.shields.io/badge/reviewed%20checks-17-success)
 ![sides](https://img.shields.io/badge/scrutiny-both%20sides-blueviolet)
 ![python](https://img.shields.io/badge/python-numpy%20·%20msprime%20·%20fwdpy11-3776AB?logo=python&logoColor=white)
@@ -38,7 +38,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 ## Scorecard so far
 
-<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 193 claims" width="760"></p>
+<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 194 claims" width="760"></p>
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
@@ -49,12 +49,14 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 | Balloux–Lehmann fluctuation effect is real (B3b) | Divergence includes ancestral polymorphism: $d = 2\mu T + \theta_{anc}$ (B4a) |
 | Soft selection does **not** make the cost of selection disappear (H) | The cap is $\ln R / D$, not a flat 10% (H2). The $0.743\mu$ figure is a window artefact (B3c) |
 | Haldane arithmetic (300, 487) holds. Critics' "38M matches 35M SNVs" double-counts (B5c) | 205M "required fixations" counts base pairs, not mutation events. The cited $s=0.001$ is *negative* selection (A3, Zeng 2021) |
+| The founder hazard's size (~2.3% per event) and the relictation chain reproduce (E, E4) | $0.02^{2\times10^7}$ prices one pre-specified list. No cap near 230 sweeps under multiplicative fitness (G3, Gc) |
 
 **Still open:**
 - Cost of selection at real human fecundity and hard-selected load.
 - Day's ancient-DNA "21 fixations" statistic, which is not reproducible from the published method.
 - The ancestral $N_e$ needed to fit the divergence.
-- Branches D (sequence space), E (LTEE founders) and G (the 0.02^(2×10⁷) "Bernoulli barrier").
+- Branch D (sequence space). G1 reduced the specific-vs-any dispute to one number D has to supply: how many interchangeable routes exist per needed change (the "any" reading wins above about 12–17).
+- What fraction of the differences needed selection at all ([GAP-01](docs/arguments/README.md#4-what-everyone-missed)). It cuts Day's requirement by 20×–6,000×, yet the adaptive count still exceeds Haldane's rate.
 
 ---
 
@@ -68,9 +70,9 @@ flowchart LR
   B["<b>B · Neutral theory insufficient</b><br/>k = μN/Nₑ, empty pipe, Hard Limits<br/><i>k = μ confirmed; pipe was full</i>"]:::critic
   C["<b>C · Ancient DNA: zero fixations</b><br/>1240k panel, turnover d<br/><i>test does not discriminate</i>"]:::open
   D["<b>D · Sequence space</b><br/>10³²⁵ vs 10⁵² (Wistar 1966)<br/><i>checks pending</i>"]:::todo
-  E["<b>E · LTEE / punctuated</b><br/>mutator hazard, relictation<br/><i>checks pending</i>"]:::todo
+  E["<b>E · LTEE / punctuated</b><br/>mutator hazard, relictation<br/><i>numbers reproduce; consequence untested</i>"]:::mixed
   F["<b>F · Kimura irrelevance</b><br/>fixation time vs fixation rate<br/><i>latency ≠ throughput</i>"]:::critic
-  G["<b>G · Bernoulli barrier</b><br/>0.02^(2×10⁷), ~230 parallel sweeps<br/><i>cap not reproduced; G1 pending</i>"]:::open
+  G["<b>G · Bernoulli barrier</b><br/>0.02^(2×10⁷), ~230 parallel sweeps<br/><i>prices a specific list; no 230 cap</i>"]:::critic
   H["<b>H · Cost of selection</b><br/>Haldane 1/300<br/><i>arithmetic holds; human regime open</i>"]:::open
 
   ROOT --> A & B & C & D & E & F & G & H
@@ -82,6 +84,8 @@ flowchart LR
   classDef todo fill:#e5e7eb,stroke:#6b7280,color:#111,stroke-dasharray:4 3
 ```
 <sub>🟧 Day's root · 🟦 resolved mostly for the critics · 🟪 mixed · 🟨 open · ⬜ not yet checked. Each branch is drawn in full, claim by claim, in [`docs/research/hierarchy/`](docs/research/hierarchy/README.md).</sub>
+
+**The same arguments, read as a philosopher would:** [`docs/arguments/`](docs/arguments/README.md) gives the root argument in standard form, every objection typed as undermining, undercutting or rebutting, a dated family tree showing how each argument changed on both sides since 1966, and seven gaps neither side has closed.
 
 ---
 
@@ -192,9 +196,9 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
-  R1 --> R2["R2<br/>193 claims<br/>verbatim + sourced"]:::done
+  R1 --> R2["R2<br/>194 claims<br/>verbatim + sourced"]:::done
   R2 --> R3["R3<br/>Argument tree<br/>30 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>17 checks reviewed"]:::active
+  R3 --> R4["R4<br/>Math resolution<br/>19 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo
@@ -205,8 +209,9 @@ flowchart LR
 ```
 
 **R4 remaining**
-- [ ] **E:** hypermutator hazard per founder; exact chains for relictation (Cannings)
-- [ ] **G1:** what $0.02^{2\times10^7}$ prices: a *specific* outcome or *any* outcome
+- [x] **E:** hypermutator hazard per founder; exact chains for relictation (Cannings)
+- [x] **G1:** what $0.02^{2\times10^7}$ prices: a *specific* outcome or *any* outcome
+- [ ] **Gaps:** finite-map cap fit (GAP-04), indel/SV event counts (GAP-07), sweep-scan windows (GAP-02)
 - [ ] **D:** sequence-space simulations (Wistar, Ulam, Weasel)
 - [ ] **C1b:** the aDNA 21-count with realistic per-site call depth and ancestry structure
 - [ ] **H:** realistic human $R$ and hard-selected load, with confidence intervals on T50
@@ -228,6 +233,7 @@ flowchart LR
 | Path | What |
 |---|---|
 | [`docs/research/`](docs/research/README.md) | The audit: rules, glossary, `parameters.yaml`, claim files, argument tree and ledgers (fidelity, balance, contradictions, versions) |
+| [`docs/arguments/`](docs/arguments/README.md) | Argument map: standard forms, typed objections, genealogy, gaps and prior art |
 | [`docs/research/claims/`](docs/research/claims) | One file per claim, with a verbatim quote, formal statement, pre-registered prediction and three verdicts |
 | [`research/checks/`](research/checks) | Reviewed verification scripts, with [`RESULTS.md`](research/checks/RESULTS.md) and [`REVIEW.md`](research/checks/REVIEW.md) |
 | `research/checks/results/` | Write-ups, reviews and raw outputs |

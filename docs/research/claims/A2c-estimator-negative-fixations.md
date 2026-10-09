@@ -4,7 +4,7 @@ title: "The paper's own correction gives −906 fixations for Ara-2 and Ara+5 fa
 side: critic
 branch: A
 parent: A2
-edges: [{type: attacks, target: A2b}, {type: attacks, target: A2}]
+edges: [{type: attacks, target: A2}]  # A2c -> A2b attack removed 2026-10-08: A2b (Day, 10-02) abandons the estimator A2c criticises; no source has A2c answering A2b
 load_bearing: false
 sourcing: firsthand
 status: checked

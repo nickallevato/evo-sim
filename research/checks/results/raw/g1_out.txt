@@ -1,0 +1,94 @@
+== A. headline arithmetic (mpmath, 50 digits)
+  Ga_log10_0.02^2e7                  -33979400.08672038
+  Gb_log10_0.5^157000                -47261.70931924505
+  Gb_universes_exp                   47182
+  G4_darwillion_log10                -86020599.91327962
+  G4_both_lineages_log10             -172041199.82655925
+  Ga_rel_err_vs_34e6                 0.0006058798023418469
+  sd                                 198.11612756158948
+  cv                                 0.0025237723256253436
+  z_quantile                         3.7190164854556804
+  z_expected_max                     3.851615817066675
+  diff_quantile                      1473.5942888723835
+  diff_expected                      1526.134421064434
+  mult_1.01^1474                     2342636.769625353
+  add_1474*0.01                      14.74
+  required_add                       1570.0
+  required_mult_log10                678.4556838748841
+  shortfall_additive                 106.51289009497964
+  shortfall_paper                    106.80272108843538
+  shortfall_mult_log10               672.085978919269
+  t_transit                          439.4449154672439
+  Gc_product_440                     156818.18181818182
+  Gc_cap_from_target_440             230.26666666666668
+  Gc_cap_from_target_exact           229.97617242785762
+  Gc_paper_s3_criterion_z2           13.831083619091121
+  Gc_additive_halving_n_at_p0.5      200.0
+  Gc_reproductive_ceiling_loci       [100.0, 200.0]
+  Gd_input                           11500.0
+  Gd_total                           7840909.090909091
+  Gd_equals_n_over_p                 7850000.0
+  book_required_rate_1_in            22500.0
+  mccarthy_expected                  22500000.0
+== B. specific vs any
+  P_specific Ga 0.02^2e7                          log10 = -33979400.1
+  P_specific G4 (1/2e4)^2e7                       log10 = -86020599.9
+  P_specific Gb 0.5^157000                        log10 = -47261.7
+  P_specific p=0.02, n=157000                     log10 = -266738.3
+  P_specific p=0.02, n=2e5 (Day's 1% scenario)    log10 = -339794.0
+  any-n-of-M: M_50 (P_any = 0.5), M_05 / M_95 (P_any = 0.05 / 0.95), relative half-width
+   n=    1e+03 p=0.02    M50=5e+04  +-5.202%  exact P_any at (lo,50,hi)=(0.046,0.504,0.950)
+   n=    1e+03 p=0.002   M50=5e+05  +-5.202%  exact P_any at (lo,50,hi)=(0.048,0.504,0.948)
+   n=    1e+03 p=5e-05   M50=2e+07  +-5.202%  exact P_any at (lo,50,hi)=(0.048,0.504,0.948)
+   n= 1.57e+05 p=0.02    M50=7.85e+06  +-0.415%  exact P_any at (lo,50,hi)=(0.048,0.500,0.952)
+   n= 1.57e+05 p=0.002   M50=7.85e+07  +-0.415%  exact P_any at (lo,50,hi)=(0.050,0.500,0.950)
+   n= 1.57e+05 p=5e-05   M50=3.14e+09  +-0.415%  exact P_any at (lo,50,hi)=(0.050,0.500,0.950)
+   n=    2e+05 p=0.02    M50=1e+07  +-0.368%  exact P_any at (lo,50,hi)=(0.048,0.500,0.952)
+   n=    2e+05 p=0.002   M50=1e+08  +-0.368%  exact P_any at (lo,50,hi)=(0.050,0.500,0.950)
+   n=    2e+05 p=5e-05   M50=4e+09  +-0.368%  exact P_any at (lo,50,hi)=(0.050,0.500,0.950)
+   n=    2e+07 p=0.02    M50=1e+09  +-0.037%  exact P_any at (lo,50,hi)=(0.048,0.500,0.952)
+   n=    2e+07 p=0.002   M50=1e+10  +-0.037%  exact P_any at (lo,50,hi)=(0.050,0.500,0.950)
+   n=    2e+07 p=5e-05   M50=4e+11  +-0.037%  exact P_any at (lo,50,hi)=(0.050,0.500,0.950)
+  McCarthy: mean 2.25e+07, z = -527.0, log10 P(K<2e7) <= -62689
+  beneficial fraction of all new mutations needed for M_50 = n/p (supply 4.5e11): {'n=157000,p=0.02': '1.74e-05', 'n=157000,p=0.002': '0.000174', 'n=200000,p=0.02': '2.22e-05', 'n=200000,p=0.002': '0.000222', 'n=2e+07,p=0.02': '0.00222', 'n=2e+07,p=0.002': '0.0222'}
+  HORN: P_all = (1-(1-q)^m)^n_f; lambda = -m ln(1-q) (= m q for small q)
+   n_f=    1e+03  lambda_05=5.812 lambda_50=7.275 lambda_95=9.878  width=4.066
+   n_f= 1.57e+05  lambda_05=10.867 lambda_50=12.331 lambda_95=14.934  width=4.067
+   n_f=    2e+05  lambda_05=11.109 lambda_50=12.573 lambda_95=15.176  width=4.067
+   n_f=    2e+07  lambda_05=15.714 lambda_50=17.178 lambda_95=19.781  width=4.067
+   q=0.02 (one arising, s=0.01 (q=2s)); per-alt lambda 0.0202; m* (P=0.05/0.5/0.95): n_f=1000: 288/361/489; n_f=157000: 538/611/740; n_f=200000: 550/623/752; n_f=2e+07: 778/851/980; specific log10 (n=2e7) -3.398e+07
+   q=0.002 (one arising, s=0.001 (q=2s)); per-alt lambda 0.002002; m* (P=0.05/0.5/0.95): n_f=1000: 2904/3634/4935; n_f=157000: 5428/6160/7460; n_f=200000: 5549/6281/7581; n_f=2e+07: 7850/8581/9881; specific log10 (n=2e7) -5.398e+07
+   q=0.3812 (specific nucleotide, recurrent, s=0.01, T=3e5); per-alt lambda 0.48; m* (P=0.05/0.5/0.95): n_f=1000: 13/16/21; n_f=157000: 23/26/32; n_f=200000: 24/27/32; n_f=2e+07: 33/36/42; specific log10 (n=2e7) -8.377e+06
+   q=0.04687 (specific nucleotide, recurrent, s=0.001, T=3e5); per-alt lambda 0.048; m* (P=0.05/0.5/0.95): n_f=1000: 122/152/206; n_f=157000: 227/257/312; n_f=200000: 232/262/317; n_f=2e+07: 328/358/413; specific log10 (n=2e7) -2.658e+07
+   q=0.3318 (specific nucleotide, recurrent, s=0.01, T=2.52e5); per-alt lambda 0.4032; m* (P=0.05/0.5/0.95): n_f=1000: 15/19/25; n_f=157000: 27/31/38; n_f=200000: 28/32/38; n_f=2e+07: 39/43/50; specific log10 (n=2e7) -9.582e+06
+== C. independence of co-segregating fixations (N=1000 haploid, s=0.01, L=50 new mutations at t=0)
+  free    P_fix=0.02018+-0.00031 (Kimura 0.01980, ratio 1.019); K mean 1.009 var 1.018 dispersion 1.029; P(pair)/p^2 = 1.029+-0.022; P(triple)/p^3 = 1.039+-0.084; max K 7
+  linked  P_fix=0.01985+-0.00031 (Kimura 0.01980, ratio 1.002); K mean 0.993 var 0.987 dispersion 1.015; P(pair)/p^2 = 1.015+-0.022; P(triple)/p^3 = 1.013+-0.068; max K 5
+  clonal  P_fix=0.01276+-0.00025 (Kimura 0.01980, ratio 0.644); K mean 0.638 var 0.231 dispersion 0.367; P(pair)/p^2 = 0.000+-0.000; P(triple)/p^3 = 0.000+-0.000; max K 1
+  (334 s)
+== D. simultaneous sweeps from p0 = 0.1 (N=1000 haploid, s=0.01, free recombination)
+  mult L=    1 loci= 2000 P_fix=0.8640+-0.0077 (single-locus u 0.8647, ratio 0.999); mean t_fix 604+-5; max # in 0.1<p<0.9: 1
+  mult L=   14 loci= 2100 P_fix=0.8643+-0.0075 (single-locus u 0.8647, ratio 1.000); mean t_fix 606+-5; max # in 0.1<p<0.9: 14
+  mult L=  230 loci= 2760 P_fix=0.8667+-0.0065 (single-locus u 0.8647, ratio 1.002); mean t_fix 604+-4; max # in 0.1<p<0.9: 199
+  mult L= 1000 loci= 4000 P_fix=0.8462+-0.0057 (single-locus u 0.8647, ratio 0.979); mean t_fix 599+-3; max # in 0.1<p<0.9: 814
+  add  L=    1 loci= 2000 P_fix=0.8640+-0.0077 (single-locus u 0.8647, ratio 0.999); mean t_fix 603+-5; max # in 0.1<p<0.9: 1
+  add  L=   14 loci= 2100 P_fix=0.8524+-0.0077 (single-locus u 0.8647, ratio 0.986); mean t_fix 640+-5; max # in 0.1<p<0.9: 14
+  add  L=  230 loci= 2760 P_fix=0.7112+-0.0086 (single-locus u 0.8647, ratio 0.823); mean t_fix 993+-11; max # in 0.1<p<0.9: 181
+  add  L= 1000 loci= 4000 P_fix=0.4627+-0.0079 (single-locus u 0.8647, ratio 0.535); mean t_fix 1430+-19; max # in 0.1<p<0.9: 599
+  (97 s)
+== E. one-generation response at Day's configuration (N=10,000, all n loci at p=0.5, s=0.01)
+  n=     1 mult reps= 400 mean dp/locus=0.00248733+-1.8e-08 (expected 0.00248733); N_eff parents 9999.8; best/mean w 1.005; count sd 0.5 (CV 0.9999)
+  n=     1 add  reps= 400 mean dp/locus=0.00248733+-1.8e-08 (expected 0.00248733); N_eff parents 9999.8; best/mean w 1.005; count sd 0.5 (CV 0.9999)
+  n=    14 mult reps= 400 mean dp/locus=0.00248546+-1.6e-06 (expected 0.00248732); N_eff parents 9996.5; best/mean w 1.066; count sd 1.9 (CV 0.2671)
+  n=    14 add  reps= 400 mean dp/locus=0.00233443+-1.5e-06 (expected 0.00233621); N_eff parents 9996.9; best/mean w 1.061; count sd 1.9 (CV 0.2671)
+  n=   230 mult reps= 400 mean dp/locus=0.00248721+-1.8e-06 (expected 0.00248731); N_eff parents 9943.2; best/mean w 1.332; count sd 7.6 (CV 0.0659)
+  n=   230 add  reps= 400 mean dp/locus=0.00116273+-8.2e-07 (expected 0.00116271); N_eff parents 9987.6; best/mean w 1.135; count sd 7.6 (CV 0.0659)
+  n=  2300 mult reps=  87 mean dp/locus=0.0024888+-4e-06 (expected 0.00248731); N_eff parents 9446.4; best/mean w 2.453; count sd 24.0 (CV 0.0209)
+  n=  2300 add  reps=  87 mean dp/locus=0.000200106+-3.2e-07 (expected 0.000199979); N_eff parents 9996.3; best/mean w 1.074; count sd 24.0 (CV 0.0209)
+  n= 23000 mult reps=   9 mean dp/locus=0.00246309+-6.6e-06 (expected 0.00248731); N_eff parents 5715.3; best/mean w 12.76; count sd 75.6 (CV 0.0066)
+  n= 23000 add  reps=   9 mean dp/locus=2.14214e-05+-8.6e-08 (expected 2.15497e-05); N_eff parents 9999.6; best/mean w 1.024; count sd 75.6 (CV 0.0066)
+  n=157000 mult reps=   3 mean dp/locus=0.00241728+-2.1e-05 (expected 0.00248731); N_eff parents 431.6; best/mean w 217.2; count sd 197.6 (CV 0.0025)
+  n=157000 add  reps=   3 mean dp/locus=3.16428e-06+-1.8e-08 (expected 3.18038e-06); N_eff parents 9999.9; best/mean w 1.009; count sd 197.6 (CV 0.0025)
+  (70 s)
+  figure -> /home/na/projects/evo-sim/research/checks/results/raw/g1_flip.svg
+total 502 s

@@ -9,7 +9,7 @@ load_bearing: false
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: non-sequitur
+  internal: non-sequitur   # no derivation given; 230 equals 157,000 x t_transit/T, so the 'match' is circular if fitted; near-candidates: additive halving 200, s6.1 ceiling 100-200
   fidelity: n/a
   external: "contested"   # falsifier not met in tested regime; ~230 concurrent sweeps persist under hard selection for R >= 5; human scale untested
 ---
@@ -50,6 +50,8 @@ See G (G-sim). Prediction specific to this claim: the simulated fixation rate as
 Arithmetic audit (python3 -I, scratch). Review: pending.
 
 R4 F2 + H2 (research/checks/results/R4-F2-A.md, research/checks/results/R4-H2-hard.md): the Gc falsifier (P_fix < 50% of 2s at ~230 active loci, soft, free recombination) is not met in the tested regime (R_int 0.975 at 272). Under hard selection with free recombination, ~255 simultaneous open loci persist at R >= 10 (s = 0.01); at R = 2, 90 persisted and 167 did not, so ~230 concurrent sweeps persist for R >= 5. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 G1 (research/checks/results/R4-G1.md): multiplicative fitness, soft selection, free recombination, N = 1000: no cap at 230. Additive-exclusive convention: 0.85x at 230 concurrent. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - Pipeline capacity C as a measured output of G-sim; t_transit.

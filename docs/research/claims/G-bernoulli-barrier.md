@@ -56,5 +56,7 @@ Arithmetic audit (python3 -I, scratch): the 14.7× formula does not reproduce as
 
 R4 F2 (research/checks/results/R4-F2-A.md): no saturation of throughput at n_mid = 272 with r = 1/2 (rate linear in supply, R_int 0.975); throughput falls only with tight linkage. Per-locus P_fix was not measured directly (R_int is its average). Under independence the joint success probability multiplies, which is the specific-vs-any distinction (G3), not a barrier. Untested at human scale and with hard selection plus linkage. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
+R4 G1 (research/checks/results/R4-G1.md): "(1.01)^1474 = 14.7x" is still false as written, but 14.7 is recoverable (14.74 additive, 14.67 log) and 107 is valid as a log ratio, so the audit's earlier "mixed scales / 10^672" framing is withdrawn. The open issue is the best/worst vs all/none criterion. Multiplicative fitness: expected per-locus response unchanged to 0.6% at n = 157,000; per-locus P_fix about -14% when var(ln w) ~ 3.6 (scaled); reproductive excess ~340x in the s3 configuration (1.3x at 230). Additive dilution is convention-dependent. All results soft selection. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+
 ## Simulator variables implied
 - n_active loci, s per locus, N, fitness model (additive/multiplicative), hard vs soft selection, recombination. Outputs: per-locus P_fix, sweep time, throughput.

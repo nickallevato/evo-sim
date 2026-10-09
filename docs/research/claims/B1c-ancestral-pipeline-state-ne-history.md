@@ -1,7 +1,7 @@
 ---
 id: B1c
 title: "Was the ancestral pipeline empty or full at the split? (sourced Ne history)"
-side: day
+side: literature  # audit question node: Day's two statements frame it; the answer is the audit's check B1c. 'audit' is not an allowed side in lint_research.py, so audit nodes use 'literature'. Was 'day' until 2026-10-08.
 branch: B
 parent: B1
 edges: [{type: depends-on, target: B1}, {type: attacks, target: B1a}]
@@ -33,7 +33,7 @@ Derived context (python3 -I): 4Nₑ_anc = 5.3e5–7.9e5 generations, i.e. 2.1–
 - Implicit: Nₑ history is the same on both lineages; PSMC and coalescent Nₑ(t) scale with the assumed μ and generation time (the circularity Day raises in B3h), so they are treated as inputs to compare under both values of μ, not as ground truth.
 
 ## Responses
-- Against: "Vox’s response was basically an assumption that at the time of split between humans and chimps the ‘pipeline’ as he calls it was empty." ([Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07, quoted inside Day's post (UPDATE)) [secondhand: Mansfield, as pasted into Day's post of 2026-10-01]
+- Against: "Vox’s response was basically an assumption that at the time of split between humans and chimps the ‘pipeline’ as he calls it was empty." ([Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07; terminus ante quem 2026-10-01: Day quotes this comment in "The Education of a Population Geneticist", ¶30 (added 2026-10-08), quoted inside Day's post (UPDATE)) [secondhand: Mansfield, as pasted into Day's post of 2026-10-01]
 - In support: Day: ancient-DNA data show "absolutely no advancement" of allele frequencies (branch C; not assessed here). RESULTS B1 caveat: an empty start contradicts observed diversity.
 - Weaknesses in the responses: Day's evidence for emptiness is the aDNA analysis (branch C) whose panel is ascertained on present-day variable sites (Mathieson 2015; C1 queued) and which uses Nₑ ≈ 10⁴ that Day himself calls circular (B3h). Mansfield offers no sourced demography.
 

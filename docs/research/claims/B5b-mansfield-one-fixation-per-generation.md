@@ -17,11 +17,11 @@ verdicts:
 ## Statement (verbatim)
 > If even just 2 of these 100 are neutral - which is certainly way under the actual proportion - then in a population of size N there are about 2*N new neutral alleles introduced each generation.
 
-Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07, comment UgyhNduYke46IStQ5pd4AaABAg (Mansfield)
+Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07; terminus ante quem 2026-10-01: Day quotes this comment in "The Education of a Population Geneticist", ¶12 (added 2026-10-08), comment UgyhNduYke46IStQ5pd4AaABAg (Mansfield)
 
 > So, the expectation is that there will be on average 1 neutral fixation every generation if just 2% of new mutations are neutral.
 
-Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07, same comment
+Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07; terminus ante quem 2026-10-01: Day quotes this comment in "The Education of a Population Geneticist", ¶12 (added 2026-10-08), same comment
 
 ## Formal statement
 2 neutral per zygote × N zygotes = 2N neutral alleles; × 1/(2N) = 1 fixation per generation ✓ (derived). Over 450,000 generations 450,000 fixations, over 252,000 generations 252,000; against 20M that is 44.4× short, against 17.5M (SNV) 69.4× short (derived). With a neutral fraction f of 100 mutations: 50 f per generation; 20M in 450,000 generations needs f = 0.89; 17.5M in 252,000 needs f = 1.39 (>1: impossible at 100 per zygote).

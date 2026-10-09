@@ -4,7 +4,7 @@ title: "Worden's O(1) bits per generation is exactly the Haldane-scale limit, an
 side: day
 branch: H
 parent: H
-edges: [{type: supports, target: H}, {type: attacks, target: G1}]
+edges: [{type: supports, target: H}]  # H4 -> G1 removed 2026-10-08: G1 is Day's own claim; H4 answers commenter 'Eugine' at Tree of Woe (sqrt(N) argument), who has no node (argmap registry x:eugine-sqrtN)
 load_bearing: false  # A short reply to a commenter; the quantitative claim ("exactly the same") is asserted, not derived. Only relevant if parallel fixation is used to escape H.
 sourcing: firsthand
 status: extracted
@@ -17,7 +17,7 @@ verdicts:
 ## Statement (verbatim)
 > "Worden’s O(1) bits per generation. Yudkowsky doesn’t refute it. And O(1) bits per generation is exactly the the same as the Haldane-scale limit."
 
-Source: Day, [A First Challenge](https://voxday.net/2026/01/10/a-first-challenge/), B2026-01-10-a-first-challenge, posted 2026-01-10, para 9 (the "the the" is in the source). Day is answering a commenter (Tree of Woe) who cited a LessWrong summary ("Speed limit and complexity bound for evolution").
+Source: Day, [A First Challenge](https://voxday.net/2026/01/10/a-first-challenge/), B2026-01-10-a-first-challenge, posted 2026-01-10, para 9 (the "the the" is in the source). Day is answering a commenter, "Eugine", at Tree of Woe ("An atheist named Eugine at Tree of Woe", ¶2) who cited a LessWrong summary ("Speed limit and complexity bound for evolution").
 
 > "Haldane’s limit isn’t about purging bad mutations, it is about the cost of substituting good ones. Each beneficial fixation still requires selective deaths to drive it to fixation."
 

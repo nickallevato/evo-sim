@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
+  internal: holds   # against the Dec 2025 abstract / Appendix A serial chain only, within this model (soft, multiplicative, free recombination); not applicable to G_f arithmetic (G1)
   fidelity: partial
-  external: pending
+  external: contested
 ---
 
 ## Statement (verbatim)
@@ -43,6 +43,8 @@ No prediction.
 
 ## Check
 No script.
+
+R4 G1 (research/checks/results/R4-G1.md): p^n is timing-independent, so a serial reading adds nothing to the Bernoulli arithmetic; the critique lands on the Appendix A chain (G2g), not on G_f (G1). Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - None.

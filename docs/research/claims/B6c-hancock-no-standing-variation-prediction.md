@@ -4,7 +4,7 @@ title: "Hancock: a serial one-at-a-time model predicts no genetic variation amon
 side: critic
 branch: B
 parent: B6
-edges: [{type: attacks, target: B1}, {type: attacks, target: G1}]
+edges: [{type: attacks, target: B1}, {type: attacks, target: G2g}]  # judgement (2026-10-08): Hancock attacks a strictly serial model; G2g is Day's 'fixation must be sequential' (Appendix A); G1 (Day) denies seriality, so the old B6c -> G1 target was mis-aimed
 load_bearing: false  # an empirical-consequence argument; not quantified on screen
 sourcing: firsthand
 status: extracted

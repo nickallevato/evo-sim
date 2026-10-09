@@ -1,7 +1,7 @@
 ---
 id: B4g
 title: "keruru: fossil-calibrated rate is about twice the pedigree rate (unreconciled)"
-side: ally
+side: critic  # keruru rule (opponents/keruru.md): statement is in the 2026-08-26 retraction post. Was 'ally' until 2026-10-08.
 branch: B
 parent: B4
 edges: [{type: supports, target: B4d}]

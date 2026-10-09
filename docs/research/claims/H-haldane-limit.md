@@ -4,7 +4,7 @@ title: "Haldane's cost of selection caps mammals at about one beneficial substit
 side: day
 branch: H
 parent: ROOT
-edges: [{type: supports, target: ROOT}, {type: depends-on, target: C2}, {type: depends-on, target: H9}, {type: attacks, target: G1}]
+edges: [{type: supports, target: ROOT}, {type: depends-on, target: C2}, {type: depends-on, target: H9}, {type: attacks, target: G2}]  # was attacks G1 (Day's own claim). Z18168236 s2.3 answers the generic parallel-fixation objection; judgement (2026-10-08): G2 is the corpus's main critic statement of it
 load_bearing: true  # This is the only argument in the corpus that does not rely on the LTEE rate: it bounds *selected* substitutions from first principles. If it fails, ROOT rests on A (LTEE scaling) and B. It was narrowed by the 2026-05-07 retraction (H1) and Hössjer (ally) leans on it (H5) to keep a conclusion after conceding most of A5.
 sourcing: firsthand
 status: reviewed

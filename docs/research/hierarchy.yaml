@@ -145,8 +145,6 @@ nodes:
   parent: A2
   edges:
   - type: attacks
-    target: A2b
-  - type: attacks
     target: A2
   load_bearing: false
   sourcing: firsthand
@@ -446,8 +444,6 @@ nodes:
   edges:
   - type: attacks
     target: A2e
-  - type: attacks
-    target: A2
   load_bearing: false
   sourcing: firsthand
   status: checked
@@ -661,7 +657,7 @@ nodes:
   claim_file: docs/research/claims/B1b-size-change-transient.md
 - id: B1c
   title: Was the ancestral pipeline empty or full at the split? (sourced Ne history)
-  side: day
+  side: literature
   branch: B
   parent: B1
   edges:
@@ -1089,7 +1085,7 @@ nodes:
   claim_file: docs/research/claims/B4f-hossjer-neutral-theory-dates-divergence.md
 - id: B4g
   title: 'keruru: fossil-calibrated rate is about twice the pedigree rate (unreconciled)'
-  side: ally
+  side: critic
   branch: B
   parent: B4
   edges:
@@ -1241,7 +1237,7 @@ nodes:
   edges:
   - type: attacks
     target: B3a
-  - type: attacks
+  - type: supports
     target: F1
   load_bearing: false
   sourcing: firsthand
@@ -1328,7 +1324,7 @@ nodes:
   - type: attacks
     target: B1
   - type: attacks
-    target: G1
+    target: G2g
   load_bearing: false
   sourcing: firsthand
   status: extracted
@@ -1393,7 +1389,7 @@ nodes:
   claim_file: docs/research/claims/B7b-kimura-ohta-1969-4ne-and-fraction-1-over-2n.md
 - id: B7c
   title: 'keruru (former ally): supply is 2N mu with census N; fixation probability is exactly 1/(2N_census); claim withdrawn'
-  side: ally
+  side: critic
   branch: B
   parent: B7
   edges:
@@ -1435,7 +1431,7 @@ nodes:
 - id: C1
   title: The 1240k capture panel is ascertained on present-day variable sites, so near-zero fixations (and zero new-mutation substitutions) are
     expected by design
-  side: critic
+  side: literature
   branch: C
   parent: C
   edges:
@@ -1482,7 +1478,7 @@ nodes:
     target: A4
   - type: depends-on
     target: C2a
-  - type: attacks
+  - type: depends-on
     target: C2c
   load_bearing: true
   sourcing: firsthand
@@ -1803,6 +1799,23 @@ nodes:
     fidelity: accurate
     external: contested
   claim_file: docs/research/claims/D14-davis-relays-eden-1e36-genetic-transfers.md
+- id: D15
+  title: 'Hössjer (prediction): the waiting time for several genes to change expression through coordinated regulatory mutations ''far exceeds
+    9 million years''; for an orphan gene, ''many orders of magnitude larger'''
+  side: ally
+  branch: D
+  parent: D
+  edges:
+  - type: supports
+    target: D
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/D15-hossjer-regulatory-waiting-time-9-my.md
 - id: D1a
   title: 'Rosenhouse p.124: molecular biologists learned the geometry of protein space and it makes Eden''s combinatorial calculations look hopelessly
     naive'
@@ -2130,7 +2143,7 @@ nodes:
   branch: D
   parent: D3
   edges:
-  - type: attacks
+  - type: supports
     target: D2g
   - type: depends-on
     target: D3b
@@ -2326,7 +2339,7 @@ nodes:
   edges:
   - type: depends-on
     target: D2i
-  - type: attacks
+  - type: supports
     target: D
   load_bearing: false
   sourcing: firsthand
@@ -2344,7 +2357,7 @@ nodes:
   edges:
   - type: depends-on
     target: D9
-  - type: attacks
+  - type: supports
     target: D
   load_bearing: false
   sourcing: firsthand
@@ -2371,8 +2384,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
+    internal: holds
+    fidelity: accurate
     external: pending
   claim_file: docs/research/claims/E-hypermutation-hazard.md
 - id: E1
@@ -2385,7 +2398,7 @@ nodes:
   - type: attacks
     target: A2
   load_bearing: false
-  sourcing: firsthand
+  sourcing: secondhand
   status: draft
   verdicts:
     internal: pending
@@ -2424,9 +2437,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/E3-cmmrd-simulation.md
 - id: E4
   title: 'Relictation: when one family replaces more than ~10% of a population, t̄ = 4Ne breaks (up to +7% to +25% at 2N = 20-50); fixation probability
@@ -2443,9 +2456,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: accurate
+    external: contested
   claim_file: docs/research/claims/E4-relictation.md
 - id: E5
   title: MITTENS 3.0's own tables give -906 'true fixations' in Ara-2 and take Ara+5 from 38 to 0; a count cannot be negative, so the estimator
@@ -2835,7 +2848,7 @@ nodes:
   sourcing: firsthand
   status: checked
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/G2-serial-critique-hancock.md
@@ -2877,7 +2890,7 @@ nodes:
   branch: G
   parent: G2
   edges:
-  - type: attacks
+  - type: supports
     target: G2
   load_bearing: false
   sourcing: firsthand
@@ -2915,9 +2928,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
-    external: pending
+    external: contested
   claim_file: docs/research/claims/G2e-myers-massively-parallel.md
 - id: G2f
   title: 'Bowers (as reposted by Day): treating evolution like a serial lottery is a category error'
@@ -2926,14 +2939,14 @@ nodes:
   parent: G2
   edges:
   - type: attacks
-    target: G3
+    target: Ga
   load_bearing: false
   sourcing: secondhand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: n/a
-    external: pending
+    external: contested
   claim_file: docs/research/claims/G2f-bowers-serial-lottery.md
 - id: G2g
   title: 'Day (Appendix A, quoted in his blog): the Bernoulli Barrier rules out parallel fixation, therefore fixation must be sequential, and
@@ -2999,7 +3012,7 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: non-sequitur
     fidelity: n/a
     external: contested
   claim_file: docs/research/claims/G3b-day-either-specific-or-interchangeable.md
@@ -3131,7 +3144,7 @@ nodes:
   - type: depends-on
     target: H9
   - type: attacks
-    target: G1
+    target: G2
   load_bearing: true
   sourcing: firsthand
   status: reviewed
@@ -3206,8 +3219,6 @@ nodes:
   edges:
   - type: supports
     target: H
-  - type: attacks
-    target: G1
   load_bearing: false
   sourcing: firsthand
   status: extracted
@@ -3302,7 +3313,7 @@ nodes:
   - type: supports
     target: H
   - type: attacks
-    target: G1
+    target: A5f
   load_bearing: false
   sourcing: firsthand
   status: extracted

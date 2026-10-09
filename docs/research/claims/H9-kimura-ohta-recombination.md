@@ -4,7 +4,7 @@ title: "Kimura and Ohta (1969) established that the expected time to fixation do
 side: day
 branch: H
 parent: H
-edges: [{type: supports, target: H}, {type: attacks, target: G1}]
+edges: [{type: supports, target: H}, {type: attacks, target: A5f}]  # was attacks G1 (Day's own claim). H9 dismisses the recombination objection, which is A5f (Gariepy 2019; Bowers point 3) (fixed 2026-10-08)
 load_bearing: false  # Used to dismiss the recombination objection in the Haldane and Bernoulli papers. The conclusion (recombination does not speed fixation of a single allele) may stand on other grounds; this file concerns the citation.
 sourcing: firsthand
 status: extracted

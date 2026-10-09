@@ -22,7 +22,7 @@ Source: [A Retraction and a Revision](https://voxday.net/2026/05/07/a-retraction
 ## Formal statement
 t_CHLCA ∈ [2.5e5, 1.3e6] y (2026-05-07)  versus  t_div = 6.3e6 y (Z23003785, 2026-09-28).
 
-`derived:` generations at 25 y: 250 kya/25 = 10,000; 1.3 My/25 = 52,000; 6.3 My/25 = 252,000. At G_f = 1,322 the achievable count is 7.6 to 39 fixations (10,000/1,322 to 52,000/1,322) under the May dating, versus 191 under the Sept dating. The version drift ledger records the chain 6.3–9 My → 200–580 kya → 68 kya → 250 kya–1.3 Mya.
+`derived:` generations at 25 y: 250 kya/25 = 10,000; 1.3 My/25 = 52,000; 6.3 My/25 = 252,000. At G_f = 1,322 the achievable count is 7.6 to 39 fixations (10,000/1,322 to 52,000/1,322) under the May dating, versus 191 under the Sept dating. The version drift ledger records the chain 9 My (2019) → 6–7 My (2025) → 200–580 kya → 68 kya → 68–330 kya → 250 kya–1.3 Mya (2026-05-07) → 6.3 My (MITTENS 3.0, 2026-09-28) (chain corrected 2026-10-08; it previously began "6.3–9 My" and stopped at 2026-05-07).
 
 ## Assumptions
 - Stated: the statement is about the CHLCA date in the framework of the k ≠ μ claim (B3, B4).

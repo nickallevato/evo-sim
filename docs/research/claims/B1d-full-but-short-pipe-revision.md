@@ -41,7 +41,7 @@ Day now grants a full pipe at the split, with transit 4Nₑ = 228,000 at census 
 - Implicit: Nₑ/N ≈ 0.57 (Wright, Vₖ = 5); the lengthening post-expansion pipe is relevant to divergence accumulated before the expansion (it is not: the 8-billion era is a few hundred generations of 252,000).
 
 ## Responses
-- Against: "The ‘pipeline’ would have been full from the X generations preceding that point in time." ([Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07, comment UgyhNduYke46IStQ5pd4AaABAg.AbQefbrLxzSAbRHJx-mRP2 (Mansfield)) (this post concedes the point at the split)
+- Against: "The ‘pipeline’ would have been full from the X generations preceding that point in time." ([Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07; terminus ante quem 2026-10-01: Day quotes this comment in "The Education of a Population Geneticist", ¶30 (added 2026-10-08), comment UgyhNduYke46IStQ5pd4AaABAg.AbQefbrLxzSAbRHJx-mRP2 (Mansfield)) (this post concedes the point at the split)
 - In support: Day: "Only a relatively small number of fixations have taken place in 280 generations because those mutations were already in most of the modern European population from their common ancestors." (aDNA, branch C).
 - Weaknesses in the responses: Conceding a full pipe at the split removes the IR deficit for the divergence window; the post does not recompute 7.56M with a full pipe. Critics have not quantified post-expansion drainage either (B1b: saturating deficit after large expansions).
 

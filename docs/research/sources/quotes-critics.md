@@ -211,6 +211,12 @@ Date: 2026-09-14
 - **HO-11** | PDF p6 | branch H | Hossjer
   > "so that the overall fitness of the population declines over time and the population eventually (and quite rapidly) dies."
   - note: Genetic-entropy-style claim about slightly deleterious fixations; no calculation in the text.
+- **HO-12** | PDF p8 | branch D | Hossjer
+  > "Although this mathematical model has not yet been applied to humans and chimps, my prediction is that the waiting time for several genes to change expression (so that their expressions match that of humans rather than chimps) far exceeds 9 million years."
+  - note: Added 2026-10-08 (claim D15; flagged unmapped by the gap hunt). The model is Hössjer, Bechly & Gauger 2021 (J. Theor. Biol. 524:110657), described on p.7. No numbers are given.
+- **HO-13** | PDF p8 | branch D | Hossjer
+  > "the waiting time for evolution (guided or not) to produce an orphan gene is most likely many orders of magnitude larger than 9 million years."
+  - note: Added 2026-10-08 (claim D15). "guided or not" also covers Day's guided-evolution view.
 
 ## DEM-HO: Dembski Substack, "A Review of Vox Day's Main Argument in PROBABILITY ZERO" (Hossjer guest post, abridged)
 URL: https://billdembski.substack.com/p/a-review-of-vox-days-main-argument  

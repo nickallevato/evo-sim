@@ -9,9 +9,9 @@ load_bearing: false  # Scoped by its own authors as a hazard to one mechanism of
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # approximately: 2.0-2.75% in exact models vs Day's 2.3%; analytic route wrong in premise and conditional, errors partly offset
+  fidelity: accurate   # 6/12, Tenaillon, Good and the two pathways; 4+2 split sourced to Couce 2017 / Maddamsetti & Grant 2020, not retrieved
+  external: pending   # untested bridge: model result holds, consequence unestablished (Day: 'warrant formal demographic modeling'); sexual-vertebrate transfer unargued
 ---
 
 ## Statement (verbatim)
@@ -69,6 +69,8 @@ Written before any check runs.
 
 ## Check
 Script: none yet (spec: `research/checks/e_founder_hazard.py`, planned; independent WF with 50,000 replicates, seed fixed, binomial draws of 2N alleles from q = 0.0018, three selection regimes of Z23034852 Table 4, G in {50, 100, 200}, N in {50, 100, 200, 500}; add a consequence model: fraction of replicates in which mean fitness falls below 0.5 or the isolate dies out). · Result: not run · Review: pending
+
+R4 E (research/checks/results/R4-E.md): per-event hazard 2.0-2.75% across exact models (Day 2.3%). The ">= 2 carriers" premise is wrong (one carrier suffices) and the 0.39 conditional comes from HW sampling with replacement (22.66% vs exact 22.76%); the errors partly offset. Population-level dips in mean fitness are N- and threshold-dependent (1-5x rarer at N = 20-30, 6-620x rarer at N = 100 for 2-5% thresholds). Pathways of §4 and demography untested. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 Founder size N, source allele frequency q, selection against homozygotes and heterozygotes, generations, number of founder events, mutator invasion (independent module), definition of failure.

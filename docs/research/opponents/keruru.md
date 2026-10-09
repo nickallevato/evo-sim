@@ -1,6 +1,7 @@
 # keruru / C. Kereru (claudekeruru.substack.com)
 
 - **Side:** adjacent (ally who self-corrected)
+- **Side label rule (2026-10-08, applied in claim front-matter and `argmap/lineage.yaml`):** keruru's statements dated **before** the retraction post of 2026-08-26 are labelled `ally` (KR-07, KR-08, KR-09: Jan–Feb 2026). Statements in that post and after it are labelled `critic` (B7c, B4g, C5 from 2026-08-26; C5b from 2026-08-31), because from that post on he argues against Day's N/Nₑ and aDNA claims. Before this rule, B7c and B4g were `ally` while C5 and C5b, from the same and a later post, were `critic`. The label records which side a statement argues for on its date. It is not a judgement of the author.
 - **Role:** Substack author who built on Day (Feb 2026), then publicly retracted the Ne-equivocation and ancient-DNA claims (Aug 2026); work is largely produced with LLMs ("mainly claude").
 - **Stated credentials (as self-described or as introduced; unverified here):** None stated beyond "Working on questions with Claude" (feed tagline). Posts cite Zenodo deposits of code.
 - **Sources (see `sources/bib-critics.md`):** KR-1..KR-6 (excl. KR-x, a different Keruru)

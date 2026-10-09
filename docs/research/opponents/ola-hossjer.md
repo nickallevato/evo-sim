@@ -17,9 +17,10 @@
 | B4 | Neutral theory cannot test common descent since it is used to date divergence | HO-05 |
 | A | Agrees with Day's conclusion after adjustment | HO-06 |
 | H (near-neutral) | Slightly deleterious fixations erode fitness (genetic entropy) | HO-11 |
+| D (D15) | Prediction from his 2021 coordinated-mutation model (not applied to humans/chimps): the waiting time for several genes to change expression "far exceeds 9 million years"; for an orphan gene, "many orders of magnitude larger" ("guided or not") | HO-12, HO-13 |
 
 ## Weaknesses noted (own math / inputs / reading of Day)
-- Derived: his neutral figure without the turnover factor is 3e9 x 1.25e-8 x 450,000 = 16.9M, versus 20M required (ratio 0.85). The factor d = 0.45 in the neutral rate (F = L d mu t) alone produces the 2.2x gap he reports; k = mu per generation is not usually multiplied by d. This is an input choice, not a result.
+- Derived: his neutral figure without the turnover factor is 3e9 x 1.25e-8 x 450,000 = 16.9M, versus 20M required (ratio 0.85). The factor d = 0.45 in the neutral rate (F = L d mu t) contributes a factor 1/0.45 = 2.22; k = mu per generation is not usually multiplied by d. This is an input choice, not a result. Correction 2026-10-08: this line said d "alone produces the 2.2x gap he reports". Hössjer reports no 2.2× gap. His neutral gap is 20M/7.59M = 2.63 (eq. 3.1), and his quoted "factor of 2" is the rate scaling, 20M/10.30M = 1.94 (eq. 2.4). Without d these become 16.9M (1.19× short) and 22.9M (above 20M).
 - Eq. 2.4 assumes fixations scale linearly with genome length; the Haldane step that is meant to undo this scaling (HO-03) is asserted, with no cost calculation, and Haldane's limit is not applied to the neutral share he himself computes.
 - The circularity point (HO-05) ignores pedigree mutation rates, which he notes are independent of divergence data; he does not show that using them with independent dates fails.
 - Genetic-entropy sentence (HO-11) has no calculation in the review. Sanford is cited, not Day.

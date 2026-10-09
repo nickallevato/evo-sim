@@ -25,6 +25,7 @@ Locators: PDF = page number of the PDF; docx/odt/blog = `¶n` is the n-th non-em
 | 15 | k = 0.743 mu | 0.743 | Confirmed (Z18525262 eq. 3: 6.091/8.2). Also k ~ 0.5 mu in blog 2026-02-09 (six-country d vs k data) | Q40-Q42 |
 | 16 | t ~ (2/s) ln(2Ne), s=0.001, "~19,800" | Q&A | Q&A gives parameters (Ne=10,000; T=22 y; L=51 y; s=0.001 "Zeng et al 2021") and t ~ 19,800 but does NOT print the formula; the formula appears in blog 2026-10-01 and, with s_eff, in Z18166426 | Q44-Q46 |
 | 17 | 2026-05-07 retraction | partial retraction of cost-of-selection bound | The retraction is of the use of Term 3 (Haldane cost limit) as a bound on total substitution rate in Z19984826; CHLCA range revised from 68-330 kya to 250 kya-1.3 Mya | Q65-Q69 |
+| 18 | Fixation probability 1/(2N) after the 2026-08-27 concession | (not in PLAN.md) | Blog 2026-08-27 concedes "the fixation probability of a new copy is 1/(2N)" (and in ¶3 objects that keruru's chains set genotype–breeding covariance to zero). Blog 2026-09-21 ("Where the Errors Hide"): Day says Chalub's result "IS FUCKING WRONG"; the Athos text he posts calls P(fix) = x₀ "false for any real population". Z23188201 (2026-10-06): 1/(2N) "holds exactly regardless of offspring distribution". No text reconciles the three | Q76-Q78 |
 
 ### Q01 MITTENS 2019: bacteria row
 - source: `B2019-02-07-maximal-mutations` (blog post dated 2019-02-07); URL: https://voxday.net/2019/02/07/maximal-mutations/
@@ -468,3 +469,21 @@ Locators: PDF = page number of the PDF; docx/odt/blog = `¶n` is the n-th non-em
 - locator: ¶4 of extracted text
 - quote: "All of the mathematics that I utilized in the first edition of this book were based on the observed divergence of 40 million base pairs between the two lineages published in the 2005 paper."
 
+### Q76 Errors Hide: Day says Chalub's fixation result is wrong (added 2026-10-08)
+- source: `B2026-09-21-where-the-errors-hide` (blog post dated 2026-09-21); URL: https://voxday.net/2026/09/21/where-the-errors-hide/
+- locator: ¶8 of extracted text
+- quote: "I don’t give one flying fragment of a rat’s ass if the math is technically correct but the end result is off because various necessary inputs were left out. THE RESULT IS FUCKING WRONG!"
+- note: Day's own words, addressed to his AI assistant Athos about Chalub's P(fix) = x₀. 25 days after the 2026-08-27 concession (claim B3g).
+- **DISCREPANCY/FLAG:** in tension with the 2026-08-27 concession ("the fixation probability of a new copy is 1/(2N)"); see versions.md "N vs Nₑ in k"
+
+### Q77 Errors Hide: Athos (posted by Day) on P(fix) = x₀ (added 2026-10-08)
+- source: `B2026-09-21-where-the-errors-hide` (blog post dated 2026-09-21); URL: https://voxday.net/2026/09/21/where-the-errors-hide/
+- locator: ¶10 of extracted text
+- quote: "He left out reproductive covariance, so he wrote the wrong equation, so P(fix) = x₀ is a wrong answer to the real question."
+- note: AI-produced text (Athos) that Day posts as "useful". The same post, ¶4, has Athos saying "For a neutral allele the chance of fixation is just its starting frequency, x₀ — for a new mutation, 1/(2N). That’s the standard result".
+
+### Q78 Errors Hide: "false for any real population" (added 2026-10-08)
+- source: `B2026-09-21-where-the-errors-hide` (blog post dated 2026-09-21); URL: https://voxday.net/2026/09/21/where-the-errors-hide/
+- locator: ¶12 of extracted text
+- quote: "the number he got out — fixation equals starting frequency — is false for any real population because it’s the answer to the frictionless-coin problem, not the breeding one."
+- note: Athos text posted by Day. Z23188201 (2026-10-06) later states p = 1/(2N) "holds exactly regardless of offspring distribution" (claim E4).

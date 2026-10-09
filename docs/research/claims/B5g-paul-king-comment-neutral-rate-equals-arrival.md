@@ -4,7 +4,7 @@ title: "Camestros Felapton commenter Paul King: neutral mutations reach fixation
 side: critic
 branch: B
 parent: B5
-edges: [{type: attacks, target: B3a}, {type: attacks, target: F1}]
+edges: [{type: attacks, target: B3a}, {type: supports, target: F1}]  # B5g -> F1 was typed attacks; the comment (parallel neutral fixation at the arrival rate) supports F1 (fixed 2026-10-08)
 load_bearing: false  # one-line comment; the "CS commenter" cited in the hierarchy
 sourcing: firsthand
 status: extracted

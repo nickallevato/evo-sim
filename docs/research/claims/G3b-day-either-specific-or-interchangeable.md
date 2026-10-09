@@ -9,7 +9,7 @@ load_bearing: false
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
+  internal: non-sequitur   # incomplete dilemma: the middle case (several interchangeable routes per needed change) is unaddressed; flip at lambda_50 = 12.3-17.2; the 'neutral is not functional' half is valid
   fidelity: n/a
   external: contested
 ---
@@ -39,6 +39,8 @@ No prediction.
 
 ## Check
 No script.
+
+R4 G1 (research/checks/results/R4-G1.md): the dilemma omits the middle case. Assumptions favour the interchangeable case; per-site m is not established (branch D prevalences are per sequence and not convertible). Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - Functional fraction f of divergence as an input.

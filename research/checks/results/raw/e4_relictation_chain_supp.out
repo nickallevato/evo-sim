@@ -1,0 +1,27 @@
+=== S1 exact threshold f* (smallest integer m with ratio/WF >= 1.05; bisection on the rising branch) ===
+2N=200: m*=9, f*=0.0450
+2N=400: m*=15, f*=0.0375
+2N=800: m*=24, f*=0.0300
+2N=1600: m*=40, f*=0.0250
+=== S2 Day's literal example: 20 individuals (2N = 40), family of 6 (F = 0.30) ===
+parents_die=False: diploid ratio 0.9910 (excess vs WF +0.0290; pfix err 1e-14)
+parents_die=True: diploid ratio 0.9904 (excess vs WF +0.0284; pfix err 2e-14)
+WF 2N=40 0.9631; haploid chain f=0.30 (m=12): 1.1301 (+0.1735)
+=== S3 parents-die variant across F (2N = 30, 50) ===
+2N=30 K=3 F=0.20: parents survive +0.0214; parents die +0.0194 (excess vs WF)
+2N=30 K=4 F=0.27: parents survive +0.0231; parents die +0.0234 (excess vs WF)
+2N=30 K=6 F=0.40: parents survive +0.0212; parents die +0.0269 (excess vs WF)
+2N=30 K=8 F=0.53: parents survive +0.0111; parents die +0.0239 (excess vs WF)
+2N=30 K=9 F=0.60: parents survive +0.0022; parents die +0.0196 (excess vs WF)
+2N=30 K=12 F=0.80: parents survive -0.0543; parents die -0.0087 (excess vs WF)
+2N=50 K=5 F=0.20: parents survive +0.0278; parents die +0.0240 (excess vs WF)
+2N=50 K=8 F=0.32: parents survive +0.0344; parents die +0.0331 (excess vs WF)
+2N=50 K=10 F=0.40: parents survive +0.0353; parents die +0.0363 (excess vs WF)
+2N=50 K=12 F=0.48: parents survive +0.0331; parents die +0.0368 (excess vs WF)
+2N=50 K=15 F=0.60: parents survive +0.0229; parents die +0.0318 (excess vs WF)
+2N=50 K=20 F=0.80: parents survive -0.0210; parents die +0.0023 (excess vs WF)
+=== S4 spread of the conditional fixation time (SD/mean), pj = 0.1 ===
+2N=20: WF mean 37.27 SD 20.91 (CV 0.561) | f=0.1: mean 1225.96 SD 686.95 (CV 0.560) | f=0.5: mean 73.99 SD 41.41 (CV 0.560)
+2N=30: WF mean 57.14 SD 31.68 (CV 0.554) | f=0.1: mean 1448.88 SD 788.84 (CV 0.544) | f=0.5: mean 83.08 SD 44.05 (CV 0.530)
+2N=50: WF mean 96.97 SD 53.22 (CV 0.549) | f=0.1: mean 1687.83 SD 890.81 (CV 0.528) | f=0.5: mean 93.38 SD 46.52 (CV 0.498)
+wall time 47.3 s

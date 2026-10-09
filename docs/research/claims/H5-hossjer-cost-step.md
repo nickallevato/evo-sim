@@ -33,7 +33,7 @@ Hössjer's chain (p.2-3): F_max = (t_div x d)/(g_len x G_f) = 9e6 x 0.45/(20 x 1
 derived (R2 recompute):
 - 9e6 x 0.45/(20 x 1,600) = 126.6 (holds); 127 x 125 = 15,875 (his 15,800; holds within rounding); 15,800 x 3e9/4.6e6 = 10.3 million (holds). His neutral count with d in the rate: 3e9 x 0.45 x 1.25e-8 x 450,000 = 7.59 million (holds; HO-04). Without d the same expression is 3e9 x 1.25e-8 x 450,000 = 16.9 million (balance ledger: "16.9M vs 20M").
 - His cost step is not computed. The Haldane limit applied to the same window gives 450,000/300 = 1,500 selected fixations (675 with d = 0.45; Z18168236's 487 uses 325,000 generations). His "perhaps more in line with equation (3)" figure, 15,800, is 10.5 times Haldane's own number (1,500), so it sits above both cost-based figures in Day's corpus (487 from Haldane + d, H; about 6,690 from Term 3, H1) and has no derivation.
-- The 2.2x gap (balance ledger) arises from d inside the neutral rate: 7.6M from eq. 3.1 versus 20M.
+- Gaps (corrected 2026-10-08; this line earlier read "The 2.2x gap ... arises from d inside the neutral rate"). Neutral, eq. 3.1: 20M/7.59M = 2.63. Rate scaling, eq. 2.4 (his "only by a factor of 2"): 20M/10.30M = 1.94. Neither is 2.2. The 2.2 is d's factor (1/0.45 = 2.22). Without d the neutral count is 16.9M (1.19× short) and the scaled bound is 22.9M (1.14× above 20M).
 
 ## Assumptions
 - Stated: parallel fixation between loci in both calculations; independence of loci; "Haldane's cost restrictions for parallel fixations" apply only to selected fixations (his footnote 7); a cost argument "is an instance of Haldane's dilemma".

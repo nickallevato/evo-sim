@@ -4,7 +4,7 @@ title: "Hancock: a strictly serial model predicts almost no genetic variation am
 side: critic
 branch: G
 parent: G2
-edges: [{type: attacks, target: G2}]
+edges: [{type: supports, target: G2}]  # G2c -> G2 was typed attacks; both are Hancock's serial critique and G2c supports G2 (fixed 2026-10-08)
 load_bearing: false
 sourcing: firsthand
 status: extracted

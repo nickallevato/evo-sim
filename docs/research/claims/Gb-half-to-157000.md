@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds
   fidelity: n/a
-  external: contested
+  external: contested   # arithmetic holds; the event priced is not required (Day's s7.10)
 ---
 
 ## Statement (verbatim)
@@ -40,6 +40,8 @@ Arithmetic only.
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 G1 (research/checks/results/R4-G1.md): arithmetic holds; see G3 for which event is required. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - None directly.

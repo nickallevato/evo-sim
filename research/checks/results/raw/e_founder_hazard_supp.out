@@ -1,0 +1,20 @@
+=== S1 Day's Tables 2, 3, 5, 8 under mode 'hwe' (selection on HW-expected genotypes), gens 0..G ===
+T2 N=50: P(hom) 1.536% (Day 1.6%); P(hom|>=2) 18.784%
+T2 N=100: P(hom) 2.383% (Day 2.3%); P(hom|>=2) 14.828%
+T2 N=200: P(hom) 3.600% (Day 3.5%); P(hom|>=2) 11.785%
+T2 N=500: P(hom) 5.981% (Day 6.0%); P(hom|>=2) 9.454%
+T3 N=100: 2.383% / 2.384% / 2.384%  (Day (2.33, 2.37, 2.48))
+T3 N=500: 5.981% / 6.011% / 6.011%  (Day (5.95, 5.68, 5.96))
+T5 carrier 1/1000: 0.651% (Day 0.63%)
+T5 carrier 1/500: 1.311% (Day 1.42%)
+T5 carrier 1/280: 2.365% (Day 2.27%)
+T5 carrier 1/200: 3.339% (Day 3.23%)
+T5 carrier 1/100: 6.857% (Day 6.87%)
+T5 carrier 1/50: 14.276% (Day 14.2%)
+T8 f_m=0.001: 0.85% / 1.31% / 1.97% / 3.22%  (Day (1.2, 1.6, 2.4, 3.5))
+T8 f_m=0.01: 8.96% / 14.28% / 22.39% / 39.50%  (Day (10.8, 16.4, 24.3, 42.1))
+T8 f_m=0.05: 47.11% / 68.82% / 88.63% / 99.39%  (Day (50.8, 71.8, 89.6, 99.4))
+=== S2 second-seed MC, literal model (mode real), full selection, N=100, G=50, 200,000 reps, key (100,) ===
+MC real full: 2.7500% +/- 0.0366%  (exact chain 2.7516%)
+MC hwe  full: 2.3700% +/- 0.0340%  (exact chain 2.3834%)
+wall time 21.6 s

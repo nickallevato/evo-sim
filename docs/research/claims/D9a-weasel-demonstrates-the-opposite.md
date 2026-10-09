@@ -4,7 +4,7 @@ title: "Dawkins's Weasel actually demonstrates the opposite of its purpose, sinc
 side: day
 branch: D
 parent: D9
-edges: [{type: depends-on, target: D9},{type: attacks, target: D}]
+edges: [{type: depends-on, target: D9},{type: supports, target: D}]  # D9a -> D was typed attacks; as D9 (target = Dawkins's Weasel, no node). Judgement: read as support for D (2026-10-08)
 load_bearing: false  # illustrative
 sourcing: firsthand
 status: extracted

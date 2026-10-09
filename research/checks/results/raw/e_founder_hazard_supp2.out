@@ -1,0 +1,23 @@
+=== R1 consequence threshold sweep (mode real, full selection, pooled q, G = 50, gens 0..50) ===
+N= 20: P(>=1 aa) 1.0694%; E[aa births] 0.0266; E[aa | hit] 2.49; 1 aa lowers wbar by 0.0475 | <0.99: 1.219e-02 (0.878x) | <0.98: 1.071e-02 (0.998x) | <0.97: 1.069e-02 (1x) | <0.95: 7.944e-03 (1.35x) | <0.9: 1.898e-03 (5.64x) | <0.5: 5.999e-10 (1.78e+07x)
+N= 30: P(>=1 aa) 1.3666%; E[aa births] 0.0346; E[aa | hit] 2.53; 1 aa lowers wbar by 0.0317 | <0.99: 1.436e-02 (0.951x) | <0.98: 1.367e-02 (1x) | <0.97: 1.367e-02 (1x) | <0.95: 2.803e-03 (4.87x) | <0.9: 5.693e-04 (24x) | <0.5: 2.570e-13 (5.32e+10x)
+N= 50: P(>=1 aa) 1.8497%; E[aa births] 0.0470; E[aa | hit] 2.54; 1 aa lowers wbar by 0.0190 | <0.99: 1.863e-02 (0.993x) | <0.98: 1.532e-02 (1.21x) | <0.97: 3.878e-03 (4.77x) | <0.95: 1.012e-03 (18.3x) | <0.9: 3.384e-05 (547x) | <0.5: 0.000e+00 (1.85e+298x)
+N=100: P(>=1 aa) 2.7516%; E[aa births] 0.0675; E[aa | hit] 2.45; 1 aa lowers wbar by 0.0095 | <0.99: 2.401e-02 (1.15x) | <0.98: 4.299e-03 (6.4x) | <0.97: 8.827e-04 (31.2x) | <0.95: 4.446e-05 (619x) | <0.9: 2.805e-08 (9.81e+05x) | <0.5: 0.000e+00 (2.75e+298x)
+N=200: P(>=1 aa) 4.0212%; E[aa births] 0.0908; E[aa | hit] 2.26; 1 aa lowers wbar by 0.0047 | <0.99: 5.609e-03 (7.17x) | <0.98: 3.092e-04 (130x) | <0.97: 1.635e-05 (2.46e+03x) | <0.95: 4.412e-08 (9.11e+05x) | <0.9: 0.000e+00 (4.02e+298x) | <0.5: 0.000e+00 (4.02e+298x)
+[hwe-mode chain, N=100] P(>=1 aa) 2.3834%; <0.99: 2.075e-02 <0.98: 3.374e-03 <0.97: 5.957e-04 <0.95: 2.013e-05
+
+=== R2 two founder copies: expected aa births vs Day's Poisson mean 0.5 (N=100, G=50) ===
+[drift] P(>=1 aa | 2 copies) 0.2276; E[aa births | 2 copies] 6.111 (Day: mean 0.5, P 0.393)
+[full] P(>=1 aa | 2 copies) 0.1592; E[aa births | 2 copies] 0.389 (Day: mean 0.5, P 0.393)
+HW with replacement: N q^2 = 0.0100/gen; random pairing of 2 copies: 1/(2N-1) = 0.00503/gen; 1-(1-1/199)^51 = 0.2266; 1-exp(-50*0.01) = 0.3935
+
+=== R3 isolate growth (literal model, full selection, N0 = 100, N_t = min(N0 g^t, cap)) ===
+validation g=1: 2.7516% (Chain 2.7516%)
+g=1.00 cap=1000: G=50 2.752%  G=200 2.752%
+g=1.02 cap=1000: G=50 3.032%  G=200 3.034%
+g=1.05 cap=1000: G=50 3.528%  G=200 3.537%
+g=1.10 cap=1000: G=50 4.460%  G=200 4.478%
+g=1.20 cap=1000: G=50 6.000%  G=200 6.030%
+g=1.50 cap=1000: G=50 8.045%  G=200 8.091%
+g=2.00 cap=1000: G=50 9.015%  G=200 9.072%
+wall time 246.8 s

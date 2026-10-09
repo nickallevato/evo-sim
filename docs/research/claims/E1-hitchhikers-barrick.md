@@ -6,7 +6,7 @@ branch: E
 parent: A2
 edges: [{type: attacks, target: A2}]
 load_bearing: false  # Affects how G_f (A2) is read (all-cause versus beneficial-only); Day already reports an "all-cause" and a "beneficial-only" figure, so ROOT is not changed by the wording alone.
-sourcing: firsthand
+sourcing: secondhand  # UNSOURCED as a critic claim: no verbatim critic statement found (raw critic corpus searched for 'hitchhik', 2026-10-08); the 'Taylor' attribution is carried only in PLAN.md. 'unsourced' is not an allowed sourcing value in lint_research.py, so 'secondhand' is used
 status: draft
 verdicts:
   internal: pending
@@ -15,7 +15,7 @@ verdicts:
 ---
 
 ## Statement (verbatim)
-Attribution gap: the hierarchy (v1, pass 1) lists this under a critic called "Taylor", with "Barrick 2009 45 muts/20k". No critic quotation under that name exists in `sources/quotes-critics.md` or the R1 critic corpus, and Taylor 2001 in `bib-literature.md` is a protein-design paper. No verbatim critic statement has been located; the unsourced attribution is carried in `PLAN.md` only. What the repository does hold are the literature statement and Day's own wording:
+Attribution gap: the hierarchy (v1, pass 1) lists this under a critic called "Taylor", with "Barrick 2009 45 muts/20k". No critic quotation under that name exists in `sources/quotes-critics.md` or the R1 critic corpus, and Taylor 2001 in `bib-literature.md` is a protein-design paper. No verbatim critic statement has been located; the unsourced attribution is carried in `PLAN.md` only. Search of 2026-10-08 (raw critic corpus, "hitchhik"): the nearest critic text is KITTENS (Sparky_6_4, AI-assisted, r/DebateEvolution 1wxgsjm, 2026-10-04, §4): "With Ne near 3×10^7, the paper itself notes that fixation by drift would take about 10^8 generations, so over 60,000 generations drift fixes nothing in the LTEE. Neutral variants rise only by hitchhiking." (markdown escapes in the exponents removed) That passage argues that the LTEE cannot measure drift (an A2e/A5c point), not that G_f mixes hitchhikers into a beneficial rate, so it is not attributed to E1. Dumb-and-Dumber (1wss2wj, 2026-09-28) quotes Day's own §4.3 hitchhiker formula to make the 9.7M point (B5f). E1 therefore stays unsourced (frontmatter `sourcing` comment). What the repository does hold are the literature statement and Day's own wording:
 
 > "Such clock-like regularity is usually viewed as the signature of neutral evolution, but several lines of evidence indicate that almost all of these mutations were beneficial."
 

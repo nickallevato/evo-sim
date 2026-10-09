@@ -1,7 +1,7 @@
 ---
 id: C1
 title: "The 1240k capture panel is ascertained on present-day variable sites, so near-zero fixations (and zero new-mutation substitutions) are expected by design"
-side: critic
+side: literature  # audit-raised (no published critic made this point). 'audit' is not an allowed side in lint_research.py, so audit-raised nodes use 'literature' (premises are literature statements). Was 'critic' until 2026-10-08.
 branch: C
 parent: C
 edges: [{type: attacks, target: C}, {type: attacks, target: C6}]

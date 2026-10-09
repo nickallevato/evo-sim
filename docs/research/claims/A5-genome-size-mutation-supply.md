@@ -4,7 +4,7 @@ title: "The LTEE rate does not transfer to humans: the human genome is ~690x lar
 side: critic
 branch: A
 parent: A2
-edges: [{type: attacks, target: A2e}, {type: attacks, target: A2}]
+edges: [{type: attacks, target: A2e}]  # A5 -> A2 removed 2026-10-08: A5 grants the LTEE measurement and attacks its transfer to humans, which is A2e
 load_bearing: false
 sourcing: firsthand
 status: checked

@@ -34,7 +34,7 @@ Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.
 | 30.3 / 15.2 (human), 9.1–30.3 (chimp) | Z18525547 (2026-02-08) | N = 50–100k, Nₑ = 3,300; chimp N = 300k–1M, Nₑ = 33,000 | k > μ | B4 |
 | 800,000 | blog 2026-04-30 (Grok exchange) | N = 8e9, Nₑ = 1e4 | k > μ | B3f |
 | 0.743 | Z18525262 (2026-02-08) | census 1950–2025, four cohorts | k < μ (dates too young) | B3c |
-| ≈0.5 or less | blog 2026-02-09 | six-country d vs k data (per harvest note) | k < μ | not verified (blog only) |
+| ≈0.5 or less | blog 2026-02-09, ¶9 (Q42: "k in humans has been approximately 0.5μ or less throughout the entire modern period") | six-country d vs k figure | k < μ | quote verified (Q42, exact match); no claim file; the figure's derivation is not given in the post and is not re-derived here (corrected 2026-10-08 from "not verified (blog only)") |
 | 32.3 | blog 2026-10-01 | Bergeron pedigree μ vs Yoo required rate; no derivation | k > μ | B3d |
 | 1 (Nₑ never enters) | blog 2026-08-27 | Day's own concession | k = μ | B3g |
 | median 25 over 55 vertebrates | blog 2026-05-07 | pedigree μ vs phylogenetic k; source not cited | k > μ | B3d |

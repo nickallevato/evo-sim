@@ -21,7 +21,7 @@ Source: [Gutsick Gibbon + Zach Hancock, "No, Vox Day's AI-Generated Books Did No
 
 > Genetic drift happens in every population and his claim otherwise is mystifying. Population size only affects which alleles are effectively neutral.
 
-Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07, comment UgyhNduYke46IStQ5pd4AaABAg (Mansfield)
+Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07; terminus ante quem 2026-10-01: Day quotes this comment in "The Education of a Population Geneticist", ¶8 (added 2026-10-08), comment UgyhNduYke46IStQ5pd4AaABAg (Mansfield)
 
 > ignores that neutral mutations fix at approximately the mutation rate
 

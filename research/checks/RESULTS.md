@@ -296,3 +296,72 @@ Full write-ups (post-review numbers) are in `results/R4-*.md`; review #4 is summ
 - A5f: direction supported.
 - A5b: linear only under free recombination.
 - A5d: sublinear (asexual) confirmed.
+
+## E — Founder hypermutation hazard; relictation · `e_founder_hazard.py`, `e4_relictation_chain.py` (exact chains; MC `SeedSequence([20261008, cfg])`) · claims E, E3, E4 · full write-up `results/R4-E.md`
+**E / E3, founder hazard (N = 100, G = 50 unless stated):**
+- The headline size reproduces; the route to it does not:
+  - Day's P(≥2 carriers) is 0.0509, not 0.06, so his own product gives 2.00%.
+  - 68% of the hazard comes from founders carrying a single copy.
+  - His 39% conditional is a with-replacement Hardy–Weinberg artefact: exact 22.8% under drift, 15.9% with selection.
+- **Day's model as written in the text** (selection on realized genotypes): 2.75% (second-seed MC 2.750 ± 0.037%), outside the claim file's pre-registered 2.33 ± 0.15% band. This is the falsifier firing.
+- **With selection on HW-expected genotypes** (a textbook mean-field formulation): reproduces his Tables 2–5 within MC error. Exceptions: Table 2 N=500 at −4.2 SE and Table 3 N=500 at −3.1 SE. Table 8 is reproduced by neither formulation.
+- **Population-level effect** (post hoc): depends on N and on the threshold. At N = 100, a mean-fitness dip below 0.99 / 0.98 / 0.97 / 0.95 is 1.15× / 6.4× / 31× / 619× rarer than ≥1 affected birth. At N = 20–30 the gap is 1–5×, because one affected birth is itself a 3–5% dip. Each hit averages about 2.5 affected births.
+- **Isolate growth** (post hoc) raises the hazard from 2.75% to 9.0%.
+- **6/12 LTEE mutators** confirmed in Tenaillon 2016 and Good 2017. Tenaillon reports a 7th, transposon-driven mutator.
+
+**E4, relictation:** Day's mathematics reproduces exactly.
+- His table matches to ≤ 0.0004; P_fix = 1/(2N) to 1e-13; large-N values 1.363 / 1.737 / 1.179 match.
+- Growth with N needs family size ∝ N (the sweepstakes regime). For a fixed family size the excess shrinks (1.0445 → 1.0045).
+- E4 changes the fixation time, never P_fix or k. It is the known multiple-merger result.
+- The 10% threshold depends on N: 15% at 2N = 20, 2.5% at 2N = 1,600.
+- One diploid two-parent construction (biased low) gives +2.9% where Day's one-copy chain gives +17.4%.
+- keruru built the same chain on 2026-08-26.
+
+**Predictions:** E P2, P5 and P6-split failed, as did E4 P8 equivalence and the claim file's opposing 1.2–1.3 convergence. The rest held.
+
+**Reviews:** correctness, Day-side and critic-side steelman (`results/REVIEW-R4-E-*.md`); every MAJOR resolved in the fix pass.
+
+**Verdict:**
+- E: holds approximately; fidelity accurate; the bridge from per-event risk to a speciation hazard is untested, and Day defers it himself.
+- E3: reproduces only under the mean-field formulation; "independently sufficient" and "minefields" overreach.
+- E4: holds / accurate / external contested.
+
+## G1 — Bernoulli Barrier: specific vs any outcome · `g1_specific_vs_any.py` (SeedSequence), post hoc `g1b_review_runs.py` · claims G, Ga, Gb, Gc, Gd, G1, G2*, G3*, G4* · full write-up `results/R4-G1.md`
+**Arithmetic.** Every power reproduces: 0.02^(2×10⁷) = 10^−33,979,400; 0.5^157,000 = 10^−47,262; Darwillion 10^−86,020,600.
+- 14.7 is 14.74 (additive) or 14.67 (log-fitness). Under the log reading, 107 is a valid ratio. The label "(1.01)^1474 ≈ 14.7×" is false as written (that power is 2.34×10⁶).
+- ~230 sweeps is numerically identical to 157,000 × t_transit / T. No derivation is given.
+
+**What each number prices.**
+- 0.02^n (Ga) and the Darwillion price a *pre-specified list* of arisings. 0.5^157,000 (Gb) prices one genotype, which Day's own s7.10 says is not needed.
+- p^n doesn't depend on timing, so it cannot force sequential fixation.
+- Day's Gd (157,000 / 0.02 = 7.85M arisings) is itself an "any n of M" calculation.
+- On the "specific" reading Day is right, even allowing recurrent mutation.
+
+**The middle case:** functional but interchangeable, with n_f required changes each met by any of m alternatives.
+- P(all achieved) jumps from ~0 to ~1 as λ = −m·ln(1−q) crosses 12.3–17.2. The 5–95% band is 4.07 wide.
+- It applies only to the adaptive subset; neutral differences have no required function.
+- m and the adaptive n_f are not established in the corpus. Branch D's estimates don't convert to per-site m.
+- At n_f = 2×10⁷ and s = 0.001, the genome cannot supply enough alternatives for the flip (Day-favourable bound).
+
+**Simulations** (soft selection; post-hoc parts labelled):
+- **Free recombination:** joint fixation = 1.03 ± 0.02 × p², and the count is Poisson-like.
+- **Linkage:** 0.84 at 0.05 M and 0.65 at 0.005 M (the pre-registered 1 M map was too loose to show it). Clonal: 0.
+- **Multiplicative fitness** (Day's stated model): no cap near 230; 814 concurrent sweeps at 98% of the single-locus rate.
+- **Additive fitness:** the dilution depends on an unstated convention.
+  - If fixed alleles count: driven by total alleles carried, so a sequential chain is diluted more (0.40× vs 0.54× at 1,000).
+  - If only segregating alleles count: concurrency-specific (0.85× at 230, 0.60× at 1,000).
+  - Normalised effects: no dilution.
+- **Reproductive excess:** best/mean ≈ 340 (N_eff ≈ 333) with 157,000 loci all at p = 0.5. It is ≈ 1.3 at Day's own 230-locus standing crop and 2.1 at s = 0.001.
+- **Per-locus P_fix:** falls ~14% when var(ln w) is O(1).
+
+**Predictions:** two failed. Linked-map interference did not show at 1 M, and effective parents came out at 355–432 against a predicted ~205. P6 failed as pre-registered and holds only in the post-hoc E2 run.
+
+**Scope:** this does not test Day's current throughput argument (2026-09-30 / 10-01: parallel fixation is already inside G_f; the Barrier is moot in MITTENS 3.0).
+
+**Reviews:** correctness, Day-side and critic-side steelman (`results/REVIEW-R4-G1-*.md`). The two steelmen's conflicts (additive dilution, reproductive excess) were settled by post-hoc runs.
+
+**Verdict:**
+- Ga and Gb: the arithmetic holds, but the event priced is not the one required. "Forces sequential" is a non-sequitur.
+- G3b is an incomplete dilemma: the middle case is missing. Its "neutral ≠ functional" half is valid.
+- Gc: no derivation.
+- G2 / G2e / G2f hold against the serial p^n chain only, not against arithmetic built on the LTEE rate (G1).

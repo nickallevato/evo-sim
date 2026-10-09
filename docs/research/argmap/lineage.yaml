@@ -1,0 +1,2956 @@
+# Argument genealogy (diagram B): dated versions of arguments and key numbers.
+# Draft 2026-10-08. Schema and conventions: docs/research/argmap/NOTES.md.
+# Every quote is verbatim (<= 30 words) and is checked by research/tools/argmap_check.py
+# against the claim files, sources/quotes-*.md, the audit's own write-ups, or sources/raw/.
+# Dates come from the sources. `date_note` explains any date that is a bound, a
+# publication-announcement date, or month-only.
+# Relations: descends | revises | borrows | responds-to | cites | resembles.
+# `inferred: true` (on the node or on one parent link) marks a link no source states; `why` says why.
+
+# ---------------------------------------------------------------- literature ancestors (cited by corpus sources)
+- id: L-haldane-1957
+  label: "Haldane 1957: cost of selection, ~1 substitution per 300 generations"
+  side: literature
+  kind: value
+  date: 1957
+  date_note: "Year as cited in the corpus (H2 table, PLAN.md); the primary paper was not retrieved. The quote is Nunney 2003's report of Haldane."
+  claim_ids: [H, H2]
+  locator: "Nunney 2003, Ann. Zool. Fennici 40:185, Abstract (http://www.sekj.org/PDF/anz40-free/anz40-185.pdf)"
+  quote: "Based on mutation-selection balance and 10% selective mortality, he suggested that the limit to adaptive evolution was about one allelic substitution per 300 generations."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 H: arithmetic 300 = 30/0.10 holds; H2-hard: cap is ln R / D, Haldane's own regime untested"
+
+- id: L-kimura-1962
+  label: "Kimura 1962: neutral fixation probability U = 1/2N"
+  side: literature
+  kind: value
+  date: 1962-06
+  claim_ids: [B7a]
+  locator: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1210364/ p.716"
+  quote: "if we let s → 0 in (10), we obtain U = 1/2N, the result known for a neutral gene."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-kimura-1968
+  label: "Kimura 1968: substitution rate implies many neutral mutations"
+  side: literature
+  kind: argument
+  date: 1968
+  date_note: "Year as cited (Hössjer PDF footnote 4; H5, H6 tables). Abstract only in the repo."
+  claim_ids: [H6]
+  locator: "Kimura 1968, Nature (abstract), as quoted in claims/H6 primary-literature table"
+  quote: "Calculating the rate of evolution in terms of nucleotide substitutions seems to give a value so high that many of the mutations involved must be neutral ones."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-kimura-ohta-1969
+  label: "Kimura & Ohta 1969: neutral fixation takes ~4Nₑ generations; fraction 1/2N fixes"
+  side: literature
+  kind: value
+  date: 1969-03
+  claim_ids: [B7b]
+  locator: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1212239/ Summary p.770; p.769"
+  quote: "a single mutant gene, if it is selectively neutral, takes about 4Ne generations until fixation in a population of effective size Ne."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-wistar-eden-1966
+  label: "Eden at Wistar: 20^250 ≈ 10^325 sequences vs ~10^52 protein molecules"
+  side: literature
+  kind: argument
+  date: 1966-04
+  date_note: "Symposium 25-26 April 1966 (proceedings 1967), as stated in the claim files."
+  claim_ids: [D3]
+  locator: "Moorhead & Kaplan (eds) 1967, Wistar Monograph 5, p.7 (local OCR of 1985 reprint)"
+  quote: "We may think of words which are 250 letters long, constructed from an alphabet of 20 different letters."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Eden's own hemoglobin estimate is 'a little large but not implausible' (L-eden-not-implausible-1966)"
+
+- id: L-eden-not-implausible-1966
+  label: "Eden: hemoglobin α→β ~2.7 million generations, 'not implausible'"
+  side: literature
+  kind: value
+  date: 1966-04
+  date_note: "Symposium 25-26 April 1966."
+  claim_ids: [D3c]
+  locator: "Moorhead & Kaplan 1967, p.8"
+  quote: "This is a little large but not implausible."
+  parents:
+    - {id: L-wistar-eden-1966, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-wistar-ulam-1966
+  label: "Ulam at Wistar: 10^6 successive improvements need ~10^13 generations"
+  side: literature
+  kind: argument
+  date: 1966-04
+  date_note: "Symposium 25-26 April 1966."
+  claim_ids: [D4]
+  locator: "Moorhead & Kaplan 1967, p.24"
+  quote: "Now, remember that we want not just one improvement but, say, 106 in succession. So we need about, say, 10 13 generations and not much more."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-wistar-mayr-1966
+  label: "Mayr to Ulam: 'Couldn't they all go on simultaneously?' (earliest parallelism objection in the corpus)"
+  side: literature
+  kind: reply
+  date: 1966-04
+  date_note: "Symposium 25-26 April 1966."
+  claim_ids: [D4b]
+  locator: "Moorhead & Kaplan 1967, p.24"
+  quote: "DR. MAYR: Couldn't they all go on simultaneously? DR. ULAM: This is extremely unlikely."
+  parents:
+    - {id: L-wistar-ulam-1966, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-wistar-wright-1966
+  label: "Wright at Wistar: fewer than 1,250 'twenty questions' steps"
+  side: literature
+  kind: reply
+  date: 1966-04
+  date_note: "Symposium 25-26 April 1966."
+  claim_ids: [D6]
+  locator: "Moorhead & Kaplan 1967, p.117"
+  quote: "it would require less than 1250 questions to arrive at a specified one of these proteins."
+  parents:
+    - {id: L-wistar-eden-1966, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Eden p.8: 'Of course, he is correct, but I believe he has misunderstood my argument.'"
+
+- id: L-milton-1992
+  label: "Milton 1992 (via Day 2025): single protein by chance 1 in 10^65"
+  side: literature
+  kind: value
+  date: 1992
+  date_note: "Year of Milton's book as stated in the quoted blockquote; the quote is the unattributed summary Day posted (secondhand)."
+  claim_ids: [D8]
+  locator: "https://voxday.net/2025/10/02/the-foundation-of-sand/ (blockquote)"
+  quote: "When he examines the probability calculations for even a single protein forming by chance (1 in 10^65)"
+  parents: []
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2025-10-02
+  fate_locator: "Not restated in later Day texts in the corpus"
+
+- id: L-csac-2005
+  label: "CSAC 2005: 1.23% divergence; polymorphism 14–22% of it"
+  side: literature
+  kind: value
+  date: 2005
+  claim_ids: [A3c, B4a]
+  locator: "https://www.nature.com/articles/nature04072 'Genome-wide rates'"
+  quote: "we estimate that polymorphism accounts for 14-22% of the observed divergence rate"
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B4a: config B poly-but-diff 22-25% matches"
+
+- id: L-barrick-2009
+  label: "Barrick et al. 2009 (LTEE): genomic evolution nearly constant"
+  side: literature
+  kind: value
+  date: 2009
+  claim_ids: [A2g]
+  locator: "Barrick et al. 2009, Nature 461:1243, Abstract"
+  quote: "Although adaptation decelerated sharply, genomic evolution was nearly constant for 20,000 generations."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-balloux-lehmann-2012
+  label: "Balloux & Lehmann 2012: neutral substitution rate depends on N under overlap + fluctuation"
+  side: literature
+  kind: argument
+  date: 2012
+  claim_ids: [B3b]
+  locator: "https://serval.unil.ch/notice/serval:BIB_2B87D605B70D Abstract"
+  quote: "we show that the substitution rate at neutral genes does depend on population size fluctuations in the presence of overlapping generations"
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B3b: eq. 3 reproduced (9 scenarios)"
+
+- id: L-langergraber-2012
+  label: "Langergraber 2012: human–chimp split at least 7–8 My"
+  side: literature
+  kind: value
+  date: 2012
+  claim_ids: [A1a]
+  locator: "Langergraber et al. 2012, Abstract"
+  quote: "We date the human-chimpanzee split to at least 7-8 million years"
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-tenaillon-2016
+  label: "Tenaillon 2016: non-mutators fit a model where neutral mutations accumulate at a constant rate"
+  side: literature
+  kind: value
+  date: 2016
+  claim_ids: [A2g, E8]
+  locator: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4988878/ Abstract"
+  quote: "neutral mutations accumulate at a constant rate"
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-good-2017
+  label: "Good et al. 2017 (LTEE 60K): not periodic selection; clades coexist"
+  side: literature
+  kind: argument
+  date: 2017
+  claim_ids: [E9, A2g]
+  locator: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5788700/ Results"
+  quote: "We find that the trajectories in Fig. 1 are inconsistent with a \"periodic selection\" model in which individual driver mutations fix in a sequence of discrete selective sweeps."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-zeng-2021
+  label: "Zeng et al. 2021: mean s ≈ 0.001 for negative selection"
+  side: literature
+  kind: value
+  date: 2021
+  claim_ids: [F3a]
+  locator: "https://www.nature.com/articles/s41467-021-21446-3 Results"
+  quote: "We detect widespread signatures of negative selection in the genetic architecture across 155 complex traits with a predicted mean selection coefficient of ~0.001"
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-yoo-2025
+  label: "Yoo et al. 2025: 327 Mb SDR per ape lineage; split 5.5–6.3 My"
+  side: literature
+  kind: value
+  date: 2025
+  claim_ids: [A3x1, A1a]
+  locator: "Yoo et al. 2025, main text 'Divergence and selection'"
+  quote: "Our analyses dated the human-chimpanzee split between 5.5 and 6.3 million years ago"
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+# ---------------------------------------------------------------- MITTENS v1 (2019) and first replies
+- id: L-mittens-2019
+  label: "MITTENS v1 (blog): 450,000 generations at 1,600 gens/fixation allow 562; 30M required"
+  side: day
+  kind: argument
+  date: 2019-02-07
+  claim_ids: [A, A3]
+  locator: "https://voxday.net/2019/02/07/maximal-mutations/ ¶28"
+  quote: "that would permit 562 total fixed mutations in that time frame. Which is only 29,999,438 short of the approximate number observed."
+  parents:
+    - {id: L-barrick-2009, relation: cites}
+    - {id: L-wistar-ulam-1966, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: same serial structure (time ÷ time-per-improvement); claims/D4 calls Ulam's model 'the ancestor of MITTENS', an audit observation, not a citation in the 2019 post"
+  fate: revised
+  fate_date: 2025-12-28
+  fate_locator: "Z18165980 (MITTENS 2025)"
+
+- id: L-gf-1600-2019
+  label: "G_f = 1,600 generations per fixation (25 fixed in 40,000 LTEE generations)"
+  side: day
+  kind: value
+  date: 2019-02-07
+  claim_ids: [A2a]
+  locator: "https://voxday.net/2019/02/07/maximal-mutations/ ¶9"
+  quote: "Source: Sequencing of 19 whole genomes detected 25 mutations that were fixed in the 40,000 generations of the experiment. NATURE, 2009"
+  parents:
+    - {id: L-barrick-2009, relation: cites}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-09-28
+  fate_locator: "Z23003785 p.5 (1,600 → 1,400 → 1,322)"
+
+- id: L-req-30m-2019
+  label: "Required fixations: 15M + 15M (2019)"
+  side: day
+  kind: value
+  date: 2019-02-07
+  claim_ids: [A3]
+  locator: "https://voxday.net/2019/02/07/maximal-mutations/ ¶26"
+  quote: "it requires a minimum of 15,000,000 mutations to become fixed in the human population, and another 15,000,000 mutations to become fixed in the chimpanzee population"
+  parents: []
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2025-12-28
+  fate_locator: "Z18165980 ¶34 (20M on the human lineage)"
+
+- id: L-chlca-9my-2019
+  label: "CHLCA in MITTENS v1: 9,000,000 years at 20 y per generation"
+  side: day
+  kind: value
+  date: 2019-02-07
+  claim_ids: [A1]
+  locator: "https://voxday.net/2019/02/07/maximal-mutations/ ¶19 (Q03)"
+  quote: "CHLCA Years: 9,000,000 Years per generation: 20 Generations per fixed mutation: 1600"
+  parents: []
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2025-12-28
+  fate_locator: "Z18165980 ¶34 (6–7 My)"
+
+- id: L-chlca-6-7my-2025
+  label: "MITTENS 2025: 6–7 My at 20 y = 300,000–350,000 generations"
+  side: day
+  kind: value
+  date: 2025-12-28
+  claim_ids: [A1, A3]
+  locator: "https://zenodo.org/records/18165980 ¶34"
+  quote: "Time available: 6–7 million years at 20 years/generation = 300,000–350,000 nominal generations."
+  parents:
+    - {id: L-chlca-9my-2019, relation: revises}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-09-28
+  fate_locator: "Z23003785 p.11 (6.3 My at 25 y)"
+
+- id: L-gariepy-2019
+  label: "Gariépy (debate, via Day): bacterial fixation rate ≠ mammalian (sex, population-size variability)"
+  side: critic
+  kind: reply
+  date: 2019-02-11
+  date_note: "Date of Day's post that transcribes Gariépy (secondhand)."
+  claim_ids: [A5f]
+  locator: "https://voxday.net/2019/02/11/whopping-the-floor/ ¶4"
+  quote: "Fixation rate in single cell organism is not equal to fixation rate in mammal. And there is two reasons for it. One is sexual reproduction."
+  parents:
+    - {id: L-mittens-2019, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2019-02-11
+  fate_locator: "No later Gariépy text in the corpus; the point recurs in L-reddit-nonrecombining-2026"
+
+- id: L-day-whopping-2019
+  label: "Day's 2019 reply: bottleneck model cuts propagation time 1,600 → 15.7"
+  side: day
+  kind: reply
+  date: 2019-02-11
+  claim_ids: [A]
+  locator: "https://voxday.net/2019/02/11/whopping-the-floor/ ¶10 (GA-02 in quotes-critics.md)"
+  quote: "This rate reduced the average fixed mutation propagation time from 1,600 to 15.7 generations"
+  parents:
+    - {id: L-gariepy-2019, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2019-02-11
+  fate_locator: "Not restated in the 2025-2026 corpus"
+
+# ---------------------------------------------------------------- Haldane line (Day)
+- id: L-haldane-table-2025
+  label: "Haldane table (blog): 300 gens per fixed mutation, 1,200 maximum"
+  side: day
+  kind: value
+  date: 2025-05-28
+  claim_ids: [H]
+  locator: "https://voxday.net/2025/05/28/haldane-vs-kimura/ ¶6"
+  quote: "HALDANE Years: 9,000,000 Years per generation: 25 Generations per fixed mutation: 300 Years per fixed mutation: 7,500 Maximum fixed mutations: 1,200"
+  parents:
+    - {id: L-haldane-1957, relation: cites}
+    - {id: L-mittens-2019, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-01-05
+  fate_locator: "Z18168236 (Haldane + d = 487)"
+
+# ---------------------------------------------------------------- d (turnover coefficient)
+- id: L-d-intro-2025
+  label: "d introduced: ratio of actual to discrete-generation allele-frequency change"
+  side: day
+  kind: argument
+  date: 2025-12-24
+  claim_ids: [A4, C2a]
+  locator: "https://zenodo.org/records/18166234 ¶33 (§2.3)"
+  quote: "d = (Actual allele frequency change per generation) / (Change predicted by discrete-generation model)"
+  parents: []
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-28
+  fate_locator: "Dropped from MITTENS 3.0 (Z23003785, no d term); still invoked in its §8.6 'Bio-Cycle correction' and in Z19984826 Term 3"
+
+- id: L-d-loci-slc45a2-2025
+  label: "d ≈ 0.45 from LCT, SLC45A2, TYR"
+  side: day
+  kind: value
+  date: 2025-12-24
+  claim_ids: [A4a, C2]
+  locator: "https://zenodo.org/records/18166234 ¶5"
+  quote: "Day and Athos (2025a) estimated d empirically from ancient DNA time series, finding d ≈ 0.45 from three independent loci (LCT, SLC45A2, TYR)."
+  parents:
+    - {id: L-d-intro-2025, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-28
+  fate_locator: "Not used in MITTENS 3.0"
+
+- id: L-d-loci-herc2-2025
+  label: "d = 0.45 ± 0.08 from LCT, SLC24A5, HERC2 (different locus list, same value)"
+  side: day
+  kind: value
+  date: 2025-12-28
+  claim_ids: [A4a]
+  locator: "https://zenodo.org/records/18165980 ¶69 (Methods)"
+  quote: "Three independent loci (LCT, SLC24A5, HERC2) yielded d = 0.45 ± 0.08^2."
+  parents:
+    - {id: L-d-loci-slc45a2-2025, relation: descends, inferred: true}
+  inferred: true
+  why: "Same value and author four days later with a different locus list; neither paper states that one revises the other (versions ledger: loci differ)"
+  fate: superseded
+  fate_date: 2026-09-28
+  fate_locator: "MITTENS 3.0 drops d"
+
+- id: L-mittens-2025
+  label: "MITTENS 2025: 146,250 effective generations / 1,600 = 91 fixations; 219,780× short"
+  side: day
+  kind: revision
+  date: 2025-12-28
+  claim_ids: [A, A4]
+  locator: "https://zenodo.org/records/18165980 ¶6 (abstract)"
+  quote: "we calculate that natural selection can accomplish only 91 fixations given 146,250 effective generations"
+  parents:
+    - {id: L-mittens-2019, relation: revises}
+    - {id: L-d-loci-herc2-2025, relation: descends}
+    - {id: L-gf-1600-2019, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-09-28
+  fate_locator: "Z23003785 (MITTENS 3.0)"
+
+- id: L-req-20m-2025
+  label: "Required fixations: ~20M on the human lineage (from ~40M SNVs)"
+  side: day
+  kind: value
+  date: 2025-12-28
+  claim_ids: [A3]
+  locator: "https://zenodo.org/records/18165980 ¶34"
+  quote: "Genetic divergence: ~40 million single-nucleotide variants; ~20 million fixations required on human lineage."
+  parents:
+    - {id: L-req-30m-2019, relation: revises}
+    - {id: L-csac-2005, relation: cites, inferred: true}
+  inferred: true
+  why: "cites: the 2nd-edition post (Q75) says the first-edition maths used 'the 2005 paper'; Z18165980's own citation for 40M was not checked"
+  fate: revised
+  fate_date: 2026-09-28
+  fate_locator: "Z23003785 §7.1 (205M)"
+
+- id: L-bb-mittens-2025
+  label: "Darwillion-style product: 0.02^20,000,000 ≈ 10^−34,000,000"
+  side: day
+  kind: value
+  date: 2025-12-28
+  claim_ids: [Ga]
+  locator: "https://zenodo.org/records/18165980 ¶24"
+  quote: "For n = 20,000,000 fixations (human-chimp divergence, human lineage) and p = 0.02: P(all) ≈ 0.02^20,000,000 ≈ 10^−34,000,000"
+  parents:
+    - {id: L-spetner-2024, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: same p^n product over a specified chain as the Spetner chain Day endorsed in 2024; Z18165980 does not cite it"
+  fate: dormant
+  fate_date: 2026-10-01
+  fate_locator: "Omitted from MITTENS 3.0 but 'remain entirely correct' (Ge, blog 2026-10-01 ¶26)"
+
+- id: L-spetner-2024
+  label: "Spetner chain (posted by Day): 3.6 × 10^2738 to 1 against"
+  side: day
+  kind: argument
+  date: 2024-04-25
+  date_note: "Day's post; the argument is Spetner's via darwinsmaths.com (secondhand)."
+  claim_ids: [D7a]
+  locator: "https://voxday.net/2024/04/25/every-critique-is-correct/ ¶3"
+  quote: "This needs to happen 500 times in a row (the number of steps required to arrive at a new species)."
+  parents:
+    - {id: L-wistar-ulam-1966, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Ulam opened his talk with the same 'probability raised to a millionth power' chain (p.21) and called it naive; Day's post does not cite Ulam"
+  fate: dormant
+  fate_date: 2024-04-25
+  fate_locator: "Day: 'All of them can be safely assumed to be valid.' Not reused verbatim later"
+
+# ---------------------------------------------------------------- Bernoulli Barrier
+- id: L-bb-paper-2026
+  label: "Bernoulli Barrier paper: 14.7× available vs 1,570× required fitness differential"
+  side: day
+  kind: argument
+  date: 2026-01-04
+  claim_ids: [G]
+  locator: "https://zenodo.org/records/18167588 ¶6 (abstract)"
+  quote: "the fitness differential between the \"best\" and \"worst\" genotypes in a population of 10,000 is only 14.7×—while the required differential is 1,570×, a shortfall exceeding 100-fold."
+  parents:
+    - {id: L-bb-mittens-2025, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-10-01
+  fate_locator: "Ge: omitted from 3.0, maintained as correct"
+
+- id: L-bb-230-2026
+  label: "~230 simultaneous sweeps; (300,000/440) × 230 ≈ 157,000 'appears to match'"
+  side: day
+  kind: value
+  date: 2026-01-04
+  claim_ids: [Gc]
+  locator: "https://zenodo.org/records/18167588 ¶63 (§7.8)"
+  quote: "Maximum fixations ≈ (300,000 / 440) × 230 ≈ 157,000 This appears to match the requirement for human-chimpanzee divergence."
+  parents:
+    - {id: L-bb-paper-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-10-01
+  fate_locator: "Ge"
+
+- id: L-bb-omitted-2026
+  label: "Day: 3.0 omits the Bernoulli Barrier, which 'remains entirely correct'"
+  side: day
+  kind: revision
+  date: 2026-10-01
+  claim_ids: [Ge]
+  locator: "https://voxday.net/2026/10/01/they-never-stop-lying/ ¶26"
+  quote: "I omitted both the Bernoulli Barrier and the Averaging Problem, even though both of them remain entirely correct."
+  parents:
+    - {id: L-bb-paper-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-bb-cap-2026
+  label: "Audit (F2, H2-hard): no saturation near 230 sweeps in the tested regime"
+  side: audit
+  kind: reply
+  date: 2026-10-08
+  claim_ids: [Gc, F2]
+  locator: "research/checks/results/R4-H2-hard.md result 1"
+  quote: "Nothing saturates near 1/300 or near 230 concurrent sweeps."
+  parents:
+    - {id: L-bb-230-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Scope: free recombination, R ≥ 1.3, ≤ ~270 loci; human scale untested"
+
+# ---------------------------------------------------------------- Probability Zero 1st edition and Jan 2026 critics
+- id: L-pz1-2026
+  label: "Probability Zero 1st ed.: F_max = (t_div × d)/(g_len × G_f)"
+  side: day
+  kind: argument
+  date: 2026-01-06
+  date_note: "Blog announcement date of the 1st edition (bib-day K-PZ-1e). Book not purchased; the quote is Camestros's transcription (2026-01-24/25), secondhand."
+  claim_ids: [A]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 20 (CA-01)"
+  quote: "Fmax = (tdiv × d) ÷ (glen × Gf)"
+  parents:
+    - {id: L-mittens-2025, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-05-23
+  fate_locator: "2nd edition (410M bp)"
+
+- id: L-samson-total-2026
+  label: "Samson (ally): total divided by time is an average whatever the overlap"
+  side: ally
+  kind: argument
+  date: 2026-01-24
+  claim_ids: [G1b]
+  locator: "https://unclejohnsband.substack.com/p/not-a-chance para 20"
+  quote: "The total number of mutations separating species includes all of them. Parallel, sequential, or however else."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-camestros-reads-serial-2026
+  label: "Camestros: 'Generations per fixation' reads as one at a time"
+  side: critic
+  kind: reply
+  date: 2026-01-25
+  date_note: "Post dated 2026-01-24/25."
+  claim_ids: [G2d]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 28"
+  quote: "It will cause him problems though because “Generations per fixation” reads as if he means each fixation must occur one at a time."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+    - {id: L-wistar-mayr-1966, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: same objection (simultaneous vs one-at-a-time) as Mayr 1966; Camestros does not cite Wistar here"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-camestros-all-post-split-2026
+  label: "Camestros: Day treats all differences as post-split mutations (ancestral polymorphism)"
+  side: critic
+  kind: reply
+  date: 2026-01-25
+  date_note: "Post dated 2026-01-24/25; reviews the 1st edition."
+  claim_ids: [B6b]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 46"
+  quote: "So Day is treating ALL the genetic differences between chimps and humans as mutations that initially only occurred after the point of divergence of the two species."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+    - {id: L-csac-2005, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: CSAC 2005 makes the same polymorphism point; Camestros does not cite it in this paragraph"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B4a: d − 2μT = θ_anc in forward simulation"
+
+- id: L-camestros-d-undefined-2026
+  label: "Camestros: d is not defined (later corrected by the author: defined in Ch.13 / App. A)"
+  side: critic
+  kind: reply
+  date: 2026-01-25
+  claim_ids: [A4b]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 32 (CA-03)"
+  quote: "Day does not say in the introduction, nor does he say what it is in Chapter 1 or indeed any of the actual chapters."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-01-25
+  fate_locator: "Same post, ETA: d is defined in Ch.13 and App. A (claims/A4b)"
+
+- id: L-camestros-arith-2026
+  label: "Camestros: 'the arithmetic itself isn't wrong' (concession on the 1st-ed arithmetic)"
+  side: critic
+  kind: concession
+  date: 2026-01-25
+  claim_ids: [A]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 43 (CA-02)"
+  quote: "Aside from whatever d is, the arithmetic itself isn’t wrong and Day appears to have taken care to pick numbers that would disadvantage his position."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-camestros-429-2026
+  label: "Camestros: 35 fixed by 15,000 gens → ~429 gens/fixation (printed '1500', typo)"
+  side: critic
+  kind: value
+  date: 2026-01-28
+  date_note: "Post dated 2026-01-27/28."
+  claim_ids: [A2a]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/28/reading-vox-day-so-you-dont-have-to-2026-3/ para 28 (CA-06)"
+  quote: "35 mutations in at 15,000 generation are present in all the subsequent generations i.e. fixed by 15,000. 1500÷35≈429 generations per fixed mutation as an average?"
+  parents:
+    - {id: L-gf-1600-2019, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-01-28
+  fate_locator: "Posed as a question; not pursued"
+
+- id: L-camestros-average-2026
+  label: "Camestros concedes: G_f was calculated as an average"
+  side: critic
+  kind: concession
+  date: 2026-01-29
+  claim_ids: [G1c]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-5/ para 9"
+  quote: "He is correct that when he calculated the number it was an average. It isn’t intended to be a time for an individual chromosome."
+  parents:
+    - {id: L-camestros-reads-serial-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-camestros-d-changes-2026
+  label: "Camestros: d would have changed over human history"
+  side: critic
+  kind: reply
+  date: 2026-01-29
+  claim_ids: [A4b]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-5/ para 25 (CA-12)"
+  quote: "As this figure would clearly have changed during human evolution (and indeed demonstrably changed during human history), it doesn’t make a lot of sense."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Untested (balance ledger: CA-12 untested); moot for 3.0, which drops d"
+
+- id: L-camestros-lottery-2026
+  label: "Camestros: some lottery number is almost certainly drawn"
+  side: critic
+  kind: reply
+  date: 2026-01-29
+  date_note: "Post dated 2026-01-28/29."
+  claim_ids: [G3a]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-4/ para 10"
+  quote: "However, the probability that SOME number is picked is close to 1"
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+# ---------------------------------------------------------------- McCarthy and the neutral-rate exchange (Jan–Feb 2026)
+- id: L-mccarthy-22m-2026
+  label: "McCarthy: 450 billion × 1/20,000 = 22.5M neutral fixations (N = Nₑ)"
+  side: critic
+  kind: argument
+  date: 2026-01-26
+  date_note: "Original paid post 2026-01-26; free repost 2026-09-11 is the harvested copy."
+  claim_ids: [B5a]
+  locator: "https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 52"
+  quote: "450 billion x 1/20,000 = 22.5 million fixed mutations."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+    - {id: L-kimura-1962, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: uses the 1/2N fixation probability of Kimura 1962 without citing it in the quoted passage"
+  fate: alive
+  fate_date:
+  fate_locator: "Balance ledger: assumes N = Nₑ and all-neutral"
+
+- id: L-mccarthy-specific-any-2026
+  label: "McCarthy: the Darwillion prices a pre-specified list, evolution needs any 20M"
+  side: critic
+  kind: reply
+  date: 2026-01-26
+  claim_ids: [G3]
+  locator: "https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 48"
+  quote: "our evolutionary history does not require that an exact group of 20 million mutations become fixed—only that some 20 million out of an enormous pool of candidate mutations become fixed."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-mccarthy-690-2026
+  label: "McCarthy: human genome ~690× E. coli; the rate depends on genome size and μ"
+  side: critic
+  kind: argument
+  date: 2026-01-26
+  claim_ids: [A5]
+  locator: "https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 60, 62"
+  quote: "the expected rate of fixed mutations has to be determined according to the particular circumstances of the population in question—its genome size, mutation rate, etc."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+    - {id: L-gariepy-2019, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: the 2019 Gariépy objection (bacteria ≠ mammals) in a supply-based form; McCarthy does not cite Gariépy"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-fixation-rate-reply-2026
+  label: "Day: E. coli was cited for its fixation rate, not its mutation rate"
+  side: day
+  kind: reply
+  date: 2026-01-27
+  claim_ids: [A5g]
+  locator: "https://voxday.net/2026/01/27/an-inspiring-critique/ ¶22"
+  quote: "I didn’t cite the E. coli study for its mutation rate but for its fixation rate"
+  parents:
+    - {id: L-mccarthy-690-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Restated 2026-09-28 to Dembski: 'The scaling element doesn’t apply at all'"
+
+- id: L-day-25x-2026
+  label: "Day: McCarthy's 40,000-generation figure raises the Darwillion 25×"
+  side: day
+  kind: reply
+  date: 2026-01-27
+  claim_ids: [G4b]
+  locator: "https://voxday.net/2026/01/27/an-inspiring-critique/ ¶15"
+  quote: "In other words, he actually INCREASED the size of the Darwillion by a factor of 25."
+  parents:
+    - {id: L-mccarthy-specific-any-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-17
+  fate_locator: "Day later calls the Darwillion 'nothing more than a rhetorical absurdity' (G4)"
+
+- id: L-keruru-endorse-2026
+  label: "keruru (ally, LLM-assisted): confirms the central thesis"
+  side: ally
+  kind: argument
+  date: 2026-01-29
+  claim_ids: [A]
+  locator: "https://claudekeruru.substack.com/p/probability-zero-a-review-too-late para 5 (KR-09)"
+  quote: "I can confirm his central thesis is mathematically sound—and he may have actually underestimated the severity of the problem."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-08-26
+  fate_locator: "https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 36"
+
+- id: L-nne-2026-01
+  label: "N ≠ Nₑ: census exceeds diversity Nₑ 19–46× in mammals (start of the k = μN/Nₑ line)"
+  side: day
+  kind: argument
+  date: 2026-01-29
+  claim_ids: [B3, B3a]
+  locator: "https://zenodo.org/records/18429937 ¶6 (abstract)"
+  quote: "In mammals, census populations exceed diversity-derived N_{e} by 19- to 46-fold."
+  parents:
+    - {id: L-mccarthy-22m-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: three days after McCarthy's N = Nₑ calculation; the paper's text was not checked for a citation to McCarthy"
+  fate: conceded
+  fate_date: 2026-08-27
+  fate_locator: "https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶2"
+
+- id: L-day-k-nne-blog-2026
+  label: "Day (reply to McCarthy): k = 2Nμ × 1/(2Nₑ) = μ(N/Nₑ)"
+  side: day
+  kind: reply
+  date: 2026-02-04
+  claim_ids: [B3a]
+  locator: "https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶29"
+  quote: "k = 2Nμ × 1/(2Nₑ) = μ(N/Nₑ)"
+  parents:
+    - {id: L-nne-2026-01, relation: descends}
+    - {id: L-mccarthy-22m-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: conceded
+  fate_date: 2026-08-27
+  fate_locator: "B3g"
+
+- id: L-day-8.25-2026
+  label: "Day: McCarthy's model 'corrected' to N/Nₑ gives 8.25 fixations, 2,424,242× short"
+  side: day
+  kind: reply
+  date: 2026-02-04
+  claim_ids: [B3e]
+  locator: "https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶58-59"
+  quote: "Thus the shortfall increases from 133x to 2,424,242x when we go from the theoretical to the actual."
+  parents:
+    - {id: L-day-k-nne-blog-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: conceded
+  fate_date: 2026-08-27
+  fate_locator: "Rests on the withdrawn N/Nₑ step (B3g)"
+
+- id: L-mittens-formula-blog-2026
+  label: "MITTENS formula stated on the blog: F_max = (t_div × d) / (g_len × G_f)"
+  side: day
+  kind: argument
+  date: 2026-02-04
+  claim_ids: [A]
+  locator: "https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶10"
+  quote: "F_max = (t_div × d) / (g_len × G_f)"
+  parents:
+    - {id: L-pz1-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-09-28
+  fate_locator: "3.0 drops d"
+
+- id: L-keruru-nne-2026
+  label: "keruru (ally, 'mainly claude'): restates k = (N/Nₑ)μ"
+  side: ally
+  kind: argument
+  date: 2026-02-04
+  claim_ids: [B7c]
+  locator: "https://claudekeruru.substack.com/p/the-broken-evolutionary-math para 28 (KR-07)"
+  quote: "k = 2Nμ × 1/(2Ne) = (N/Ne)μ"
+  parents:
+    - {id: L-nne-2026-01, relation: cites}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-08-26
+  fate_locator: "https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 36"
+
+- id: L-rrme-0743-2026
+  label: "RRME: k = 0.743μ from four census cohorts, 'confirming' Balloux & Lehmann"
+  side: day
+  kind: value
+  date: 2026-02-07
+  date_note: "v1 Z18517618 2026-02-07; v2 Z18525262 2026-02-08 is byte-identical."
+  claim_ids: [B3c]
+  locator: "https://zenodo.org/records/18525262 ¶58, eq. 3"
+  quote: "k = μ × 6.091/8.2 = 0.743μ (3)"
+  parents:
+    - {id: L-balloux-lehmann-2012, relation: cites}
+    - {id: L-nne-2026-01, relation: descends, inferred: true}
+  inferred: true
+  why: "descends: same N-in-fixation-probability move (1/(2N_t)), opposite sign to N/Nₑ; the papers do not reconcile the two (versions ledger)"
+  fate: dormant
+  fate_date: 2026-10-08
+  fate_locator: "Not revised on Zenodo; R4 B3b: mechanism falsified, window artefact"
+
+- id: L-recal-200-580-2026
+  label: "Clock recalibration: CHLCA 6–7 Mya collapses to 200–580 kya"
+  side: day
+  kind: argument
+  date: 2026-02-08
+  claim_ids: [B4]
+  locator: "https://zenodo.org/records/18525547 ¶4 (abstract)"
+  quote: "The consensus molecular clock estimate of 6–7 Mya collapses to 200–580 kya, with the most plausible demographic parameters yielding 200–360 kya."
+  parents:
+    - {id: L-nne-2026-01, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-05-07
+  fate_locator: "https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶7"
+
+- id: L-adna-zero-2026
+  label: "aDNA v1 (blog): zero fixations from <10% to >90% in 7,000 years"
+  side: day
+  kind: argument
+  date: 2026-01-14
+  claim_ids: [C]
+  locator: "https://voxday.net/2026/01/14/empirically-impossible/ ¶5"
+  quote: "The observed fixation count was zero. Not a single allele in 1.2 million crossed from rare (<10% frequency) to fixed (>90% frequency) in seven thousand years."
+  parents: []
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-09-29
+  fate_locator: "Z23046531 (1 and 3 completions from >10%)"
+
+- id: L-adna-630-21-2026
+  label: "aDNA v2 (clock paper): clock predicts ~630, 21 observed; 99.8% before 7,000 BP"
+  side: day
+  kind: revision
+  date: 2026-02-08
+  claim_ids: [C6]
+  locator: "https://zenodo.org/records/18525185 §9 (line 263 of text extraction)"
+  quote: "The clock predicts ~630 fixations per 350 generations. We observe 21."
+  parents:
+    - {id: L-adna-zero-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-29
+  fate_locator: "Z23046531 uses a different statistic; R4 C1b: 21 not reproducible from the stated procedure"
+
+- id: L-day-ascertainment-2026
+  label: "Day pre-empts ascertainment: the bias would favour detecting fixations"
+  side: day
+  kind: reply
+  date: 2026-02-08
+  claim_ids: [C1a]
+  locator: "https://zenodo.org/records/18525185 §9.4"
+  quote: "such bias would favor detecting recent fixations, not obscure them."
+  parents:
+    - {id: L-adna-630-21-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 C1: right in sign for 10-90% bands, wrong for ≥90%; immaterial"
+
+- id: L-dk-0.5-2026
+  label: "Six-country d–k regression: k ≈ 0.5μ or less"
+  side: day
+  kind: value
+  date: 2026-02-09
+  claim_ids: [C2b]
+  locator: "https://voxday.net/2026/02/09/the-significance-of-d-and-k/ ¶9"
+  quote: "The data show that k in humans has been approximately 0.5μ or less throughout the entire modern period for which we have reliable demographic data"
+  parents:
+    - {id: L-rrme-0743-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-02-09
+  fate_locator: "Blog only; not restated"
+
+- id: L-chlca-68kya-2026
+  label: "End of Deep Time: CHLCA 6.5 Mya → 68 kya"
+  side: day
+  kind: revision
+  date: 2026-02-14
+  claim_ids: [B4b]
+  locator: "https://zenodo.org/records/18637333 ¶6 (abstract)"
+  quote: "recalibrates the CHLCA from 6.5 Mya to 68 kya"
+  parents:
+    - {id: L-recal-200-580-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-05-07
+  fate_locator: "https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶7 ('cannot be as recent as the lower end of the 68 kya to 330 kya range')"
+
+- id: L-bowers-2s-2026
+  label: "Bowers (reposted by Day): beneficial P_fix ≈ 2s, not 1/N"
+  side: critic
+  kind: reply
+  date: 2026-03-04
+  date_note: "Date of Day's repost; Bowers's original was not found (secondhand)."
+  claim_ids: [F4]
+  locator: "https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ para 3"
+  quote: "The correct approximation for a beneficial mutation is roughly 2s (in diploids under weak selection), not 1/N."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+    - {id: L-kimura-1962, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Kimura 1962's '≈ 2s' result; the reposted text cites no source"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-prob-vs-rate-2026
+  label: "Day: the reviewer confused fixation probability with fixation rate"
+  side: day
+  kind: reply
+  date: 2026-03-04
+  claim_ids: [F4a]
+  locator: "https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ para 11"
+  quote: "The reviewer has confused fixation probability with fixation rate. These are two different things."
+  parents:
+    - {id: L-bowers-2s-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-grok-800000-2026
+  label: "Day–Grok exchange: k = 800,000μ (N = 8e9, Nₑ = 1e4)"
+  side: day
+  kind: value
+  date: 2026-04-30
+  date_note: "Text produced by Grok from Day's stipulated premises, posted by Day (secondhand)."
+  claim_ids: [B3f]
+  locator: "https://voxday.net/2026/04/30/conceding-the-math/ ¶36"
+  quote: "This equals 800,000 μ, not μ."
+  parents:
+    - {id: L-nne-2026-01, relation: descends}
+  inferred: false
+  why: ""
+  fate: conceded
+  fate_date: 2026-08-27
+  fate_locator: "B3g"
+
+# ---------------------------------------------------------------- Haldane/Term 3 line (2026)
+- id: L-haldane-d-487-2026
+  label: "Independent Confirmation of Haldane's Limit: Haldane + d = 487"
+  side: day
+  kind: revision
+  date: 2026-01-05
+  claim_ids: [H]
+  locator: "https://zenodo.org/records/18168236 §4.2"
+  quote: "Achievable fixations (Haldane + d) = 146,250 / 300 = 487 fixations"
+  parents:
+    - {id: L-haldane-table-2025, relation: revises}
+    - {id: L-d-loci-herc2-2025, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Not mentioned by the 2026-05-07 retraction (H1); R4 H: scope of H1 applies to the 20M comparison"
+
+- id: L-ko-recombination-2026
+  label: "Day cites Kimura & Ohta 1969 for 'fixation time does not depend on recombination'"
+  side: day
+  kind: argument
+  date: 2026-01-05
+  claim_ids: [H9]
+  locator: "https://zenodo.org/records/18168236 §5.2 (also Z18167588 §7.3)"
+  quote: "More fundamentally, Kimura and Ohta (1969) established that the expected time to fixation does not depend on recombination rate."
+  parents:
+    - {id: L-kimura-ohta-1969, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Fidelity ledger: misattribution (the word 'recombination' does not occur in the paper); repeated in the Bowers reply 2026-03-04"
+
+- id: L-dawkins-88m-2026
+  label: "Day on Dawkins's Haldane figures: off by 87,916,307×"
+  side: day
+  kind: reply
+  date: 2026-01-08
+  claim_ids: [H3]
+  locator: "https://voxday.net/2026/01/08/88-million-x/ ¶6"
+  quote: "He’s off by a mere factor of 4.4 x 20 million, or 87,916,307x."
+  parents:
+    - {id: L-haldane-1957, relation: cites}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-01-08
+  fate_locator: "Not engaged by critics; not restated"
+
+- id: L-worden-2026
+  label: "Day: Worden's O(1) bits/generation equals the Haldane-scale limit"
+  side: day
+  kind: reply
+  date: 2026-01-10
+  claim_ids: [H4]
+  locator: "https://voxday.net/2026/01/10/a-first-challenge/ para 7"
+  quote: "Haldane’s limit isn’t about purging bad mutations, it is about the cost of substituting good ones."
+  parents:
+    - {id: L-haldane-d-487-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-01-10
+  fate_locator: ""
+
+- id: L-term3-2026
+  label: "Kimura's Fixation Calculator: Term 3 k_sel = s_max d / [2L ln(2Nₑ)] ≈ 8.3e-12"
+  side: day
+  kind: argument
+  date: 2026-05-02
+  claim_ids: [H8]
+  locator: "https://zenodo.org/records/19984826 §3.3"
+  quote: "Selection cannot operate without reproductive differential, and the differential available to any individual is bounded by what the organism can physically achieve."
+  parents:
+    - {id: L-haldane-d-487-2026, relation: descends}
+    - {id: L-nne-2026-01, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-05-07
+  fate_locator: "https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶3-4"
+
+- id: L-term3-retraction-2026
+  label: "Retraction: Term 3 was misused as a bound on total k (adaptive only)"
+  side: day
+  kind: retraction
+  date: 2026-05-07
+  claim_ids: [H1]
+  locator: "https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶4"
+  quote: "my error was in interpreting its output as a constraint on total k."
+  parents:
+    - {id: L-term3-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "No revised Zenodo version of Z19984826 seen"
+
+- id: L-factor25-2026
+  label: "Same post: k = μ 'still falsified' — median factor 25 across 55 vertebrates"
+  side: day
+  kind: value
+  date: 2026-05-07
+  claim_ids: [B3d, H1]
+  locator: "https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶5"
+  quote: "pedigree μ and phylogenetic k disagree by a median factor of 25 across 55 vertebrates"
+  parents:
+    - {id: L-term3-retraction-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-10-01
+  fate_locator: "Education post: 32.3μ"
+
+- id: L-chlca-250k-2026
+  label: "CHLCA revised to 250 kya–1.3 Mya (not 68–330 kya)"
+  side: day
+  kind: revision
+  date: 2026-05-07
+  claim_ids: [B4c, A1c]
+  locator: "https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶7"
+  quote: "the CHLCA event falls somewhere in the 250 kya to 1.3 Mya range rather than the 6.3 Mya presently assumed."
+  parents:
+    - {id: L-chlca-68kya-2026, relation: revises}
+    - {id: L-term3-retraction-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-28
+  fate_locator: "MITTENS 3.0 uses 6.3 My; no text reconciles the two (A1c)"
+
+- id: L-pz2-410m-2026
+  label: "Probability Zero 2nd ed.: 14.9%, 410M base pairs (1st ed. used 40M bp from 2005)"
+  side: day
+  kind: revision
+  date: 2026-05-23
+  claim_ids: [A3a]
+  locator: "https://voxday.net/2026/05/23/probability-zero-2nd-edition/ ¶6"
+  quote: "the genetic difference between chimps and humans turned out to be 14.9 percent, with 410 million base pairs separating the two lineages since the Chimpanzee-Human Last Common Ancestor."
+  parents:
+    - {id: L-req-20m-2025, relation: revises}
+    - {id: L-yoo-2025, relation: cites, inferred: true}
+  inferred: true
+  why: "cites: the post does not name the source of 410M here; Z23003785 §7.1 attributes the components to Yoo 2025 (fidelity ledger: 410 and 187 Mb not found in Yoo)"
+  fate: revised
+  fate_date: 2026-09-28
+  fate_locator: "Z23003785 §7.1 (halved to 205M)"
+
+# ---------------------------------------------------------------- k = μ concession sequence (Aug 2026)
+- id: L-chalub-2026
+  label: "Day on Chalub 2022: 1/(2N) is an assumption imported from Wright–Fisher"
+  side: day
+  kind: argument
+  date: 2026-08-23
+  claim_ids: [B1e]
+  locator: "https://voxday.net/2026/08/23/chalub-and-the-kimura-cancellation/ ¶5"
+  quote: "Chalub shows that the 1/(2N) is an assumption imported from the Wright-Fisher model. It is not a result produced by the mathematics."
+  parents:
+    - {id: L-day-k-nne-blog-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-08-27
+  fate_locator: "B3g (P_fix = 1/(2N) accepted four days later)"
+
+- id: L-keruru-chains-2026
+  label: "keruru: exact chains give P_fix = 1/(2N_census) to 15 decimals"
+  side: critic  # keruru rule (opponents/keruru.md): from the 2026-08-26 post on
+  kind: argument
+  date: 2026-08-26
+  claim_ids: [B7c]
+  locator: "https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 9"
+  quote: "The fixation probability of a single new mutant in both chains: exactly 1/(2N_census), to fifteen decimal places."
+  parents:
+    - {id: L-keruru-nne-2026, relation: revises}
+    - {id: L-kimura-1962, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: reproduces Kimura 1962's 1/2N; the quoted paragraph does not cite Kimura"
+  fate: alive
+  fate_date:
+  fate_locator: "Chains/code not retrieved"
+
+- id: L-keruru-retraction-2026
+  label: "keruru retracts his substitution-rate and aDNA claims (the day before Day's concession)"
+  side: critic  # keruru rule (opponents/keruru.md): from the 2026-08-26 post on
+  kind: retraction
+  date: 2026-08-26
+  claim_ids: [B7c, C5]
+  locator: "https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 36"
+  quote: "The claim about the substitution rate is withdrawn. The claim about the ancient-DNA finding is withdrawn."
+  parents:
+    - {id: L-keruru-chains-2026, relation: descends}
+    - {id: L-keruru-endorse-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-keruru-adna-zero-2026
+  label: "keruru: zero fixations in the aDNA window is the neutral prediction (~10^-29)"
+  side: critic  # keruru rule (opponents/keruru.md): from the 2026-08-26 post on
+  kind: argument
+  date: 2026-08-26
+  claim_ids: [C5]
+  locator: "https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 14"
+  quote: "Integrated across a million loci starting from intermediate frequencies, the expected number of fixations is somewhere near 10⁻²⁹."
+  parents:
+    - {id: L-adna-zero-2026, relation: responds-to}
+    - {id: L-kimura-ohta-1969, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: the 4Nₑ timescale argument of Kimura & Ohta 1969; not cited in the quoted paragraph"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 C1: observed 1 and 3 completions exceed expectation at Nₑ = 1e4"
+
+- id: L-hard-limits-2026
+  label: "Hard Limits: census ceiling X = (Vₖ+2)G/16; the domain of k = μ is empty for large vertebrates"
+  side: day
+  kind: argument
+  date: 2026-08-27
+  claim_ids: [B2, B2b, B2a]
+  locator: "https://zenodo.org/records/22129121 p.1 (abstract)"
+  quote: "The domain of k = μ is confined to demographic conditions that no non-endangered species is capable of meeting."
+  parents:
+    - {id: L-kimura-ohta-1969, relation: cites}
+    - {id: L-chalub-2026, relation: descends, inferred: true}
+  inferred: true
+  why: "descends: same transit-time ('no time variable') line as the Chalub post four days earlier; the paper does not cite the post"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B2a: exponent holds; relevance as throughput bound contested"
+
+- id: L-hl-uses-1-over-2n-2026
+  label: "Hard Limits itself uses 1/(2N) as the start frequency (same day as the concession)"
+  side: day
+  kind: argument
+  date: 2026-08-27
+  claim_ids: [B7]
+  locator: "https://zenodo.org/records/22129121 §The Transit Time"
+  quote: "Every neutral mutation begins as a single copy in a single individual, at a frequency of 1/(2N)."
+  parents:
+    - {id: L-hard-limits-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-concession-2026-08-27
+  label: "Day concedes: Kimura's identity never needed Nₑ; a 3rd edition is needed"
+  side: day
+  kind: concession
+  date: 2026-08-27
+  claim_ids: [B3g]
+  locator: "https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶2"
+  quote: "the derivation of Kimura’s substitution identity never needed Nₑ on either side of the algebraic equation."
+  parents:
+    - {id: L-keruru-retraction-2026, relation: responds-to}
+    - {id: L-day-k-nne-blog-2026, relation: revises}
+    - {id: L-keruru-chains-2026, relation: borrows}
+  inferred: false
+  why: "borrows (stated): the post is titled as a response to keruru's retraction and adopts its census-N cancellation; keruru wrote as a former ally adopting the critics' position"
+  fate: alive
+  fate_date:
+  fate_locator: "Zenodo records Z18429937, Z18525547, Z18637333 not revised (B3g)"
+
+- id: L-day-ne-circular-2026
+  label: "Day: keruru's Nₑ ≈ 10⁴ presupposes k = μ; rs35619459 gives drift-variance Nₑ near 2"
+  side: day
+  kind: reply
+  date: 2026-08-27
+  claim_ids: [C5a, B3h]
+  locator: "https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶3"
+  quote: "He has retracted an empirical falsification of the clock by feeding in a parameter that the clock manufactures"
+  parents:
+    - {id: L-keruru-adna-zero-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-holocene-ne-2026
+  label: "Holocene drift variance varied 3.3–4.6-fold (Day & Athos)"
+  side: day
+  kind: value
+  date: 2026-01-10
+  claim_ids: [C4]
+  locator: "https://zenodo.org/records/18320599 Conclusion"
+  quote: "Effective population size varied by at least 3.3-fold, and likely more than 4-fold, across the European Holocene."
+  parents: []
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-keruru-temporal-ne-2026
+  label: "keruru: temporal-method Nₑ 8,139 / 9,835 with no μ, no coalescent"
+  side: critic
+  kind: reply
+  date: 2026-08-31
+  claim_ids: [C5b]
+  locator: "https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'"
+  quote: "The temporal method takes allele frequencies from two dated ancient samples, the sample sizes, and the generations between them. No mutation rate. No coalescent. No substitution identity."
+  parents:
+    - {id: L-day-ne-circular-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Code not retrieved; closed-population caveat (C5a responses)"
+
+# ---------------------------------------------------------------- September 2026: allies, IR, MITTENS 3.0
+- id: L-hossjer-2x-2026
+  label: "Hössjer (ally): rescaling MITTENS for μ and genome length leaves only ~2×"
+  side: ally
+  kind: argument
+  date: 2026-09-14
+  claim_ids: [A5a, H5]
+  locator: "https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf p.3"
+  quote: "which still is less than 20 million, but only by a factor of 2."
+  parents:
+    - {id: L-hossjer-127-2026, relation: descends}
+    - {id: L-mccarthy-690-2026, relation: borrows, inferred: true}
+  inferred: true
+  why: "borrows: the genome-length and mutation-rate scaling is the critics' objection (A5); Hössjer does not cite McCarthy"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-hossjer-cost-2026
+  label: "Hössjer: Haldane's cost of parallel selected fixations keeps the conclusion"
+  side: ally
+  kind: argument
+  date: 2026-09-14
+  claim_ids: [H5]
+  locator: "https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf p.3 (§2)"
+  quote: "the number of fixations with a selective advantage along the supposed human lineage is far less than what equation (4) predicts, perhaps more in line with equation (3)."
+  parents:
+    - {id: L-hossjer-2x-2026, relation: descends}
+    - {id: L-haldane-d-487-2026, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 H: 15,800 is 10.5× Haldane's own 1,500 (non-sequitur)"
+
+- id: L-hossjer-circularity-2026
+  label: "Hössjer: neutral theory dates the divergence, so it cannot explain it"
+  side: ally
+  kind: argument
+  date: 2026-09-14
+  claim_ids: [B4f]
+  locator: "https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf p.5"
+  quote: "since the neutral theory is used in the first place to date the assumed time of divergence."
+  parents:
+    - {id: L-recal-200-580-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Day's circularity point; Hössjer notes it 'is not addressed in Vox Day's book' and gives no citation"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-mccarthy-dates-kimura-2026
+  label: "McCarthy: the human–chimp dates use Kimura's neutral result"
+  side: critic
+  kind: argument
+  date: 2026-09-17
+  claim_ids: [B4e]
+  locator: "https://dennismccarthy.substack.com/p/vox-day-responds para 27"
+  quote: "population geneticists actually use Kimura’s neutral-theory result to date the human–chimpanzee divergence."
+  parents:
+    - {id: L-hossjer-circularity-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: same dependence as Hössjer (three days earlier) and Day's circularity; McCarthy cites neither"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-mccarthy-parallel-2026
+  label: "McCarthy: mutations need not rise in frequency one at a time"
+  side: critic
+  kind: reply
+  date: 2026-09-17
+  claim_ids: [F1b, B2d]
+  locator: "https://dennismccarthy.substack.com/p/vox-day-responds para 22"
+  quote: "Obviously, mutations, whether neutral or not, do not have to increase in frequency throughout a population one at a time."
+  parents:
+    - {id: L-wistar-mayr-1966, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Mayr's 1966 'all go on simultaneously'; McCarthy does not cite Wistar"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-mccarthy-bp-events-2026
+  label: "McCarthy: 410M bp is structural variation; one event, many bp"
+  side: critic
+  kind: reply
+  date: 2026-09-17
+  claim_ids: [A3x]
+  locator: "https://dennismccarthy.substack.com/p/vox-day-responds para 26"
+  quote: "a single mutational event can cause hundreds, thousands, or even millions of base-pair differences."
+  parents:
+    - {id: L-pz2-410m-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Conceded in substance by Day in 3.0 §7.3 (L-snv-only-2026)"
+
+- id: L-mccarthy-time-adjusted-2026
+  label: "McCarthy (time-adjusted): 400 billion × 1/20,000 = 20M"
+  side: critic
+  kind: revision
+  date: 2026-09-17
+  claim_ids: [B5a]
+  locator: "https://dennismccarthy.substack.com/p/vox-day-responds para 21"
+  quote: "400 billion x 1/20,000 =20 million fixations. So when we apply the time available to the numbers we land on the exact correct result."
+  parents:
+    - {id: L-mccarthy-22m-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-darwillion-rhetorical-2026
+  label: "Day: the Darwillion is 'nothing more than a rhetorical absurdity'"
+  side: day
+  kind: concession
+  date: 2026-09-17
+  claim_ids: [G4]
+  locator: "https://voxday.net/2026/09/17/the-math-is-too-hard/ ¶8"
+  quote: "the Darwillion is nothing more than a rhetorical absurdity to demonstrate how far off the biologists are from the mathematical realities of the situation."
+  parents:
+    - {id: L-mccarthy-specific-any-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: the post answers McCarthy's critique series; the paragraph is read here as conceding the specific-list reading, not the numbers (claims/G4)"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-ir-empty-2026
+  label: "Intrinsic Irrelevance: the pipeline is empty at generation zero; E[F] ≈ μL(T − 4Nₑ)"
+  side: day
+  kind: argument
+  date: 2026-09-22
+  claim_ids: [B1, B1a]
+  locator: "https://zenodo.org/records/22903977 §3 The Empty Pipe"
+  quote: "At generation zero, the subsitution pipeline is empty."
+  parents:
+    - {id: L-hard-limits-2026, relation: descends}
+    - {id: L-kimura-ohta-1969, relation: cites}
+    - {id: L-balloux-lehmann-2012, relation: cites}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-10-01
+  fate_locator: "https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶31"
+
+- id: L-ir-rounding-2026
+  label: "IR: ancestral polymorphism is 'a rounding error' (Nₑ = 10⁴: 1.44M)"
+  side: day
+  kind: reply
+  date: 2026-09-22
+  claim_ids: [B6a]
+  locator: "https://zenodo.org/records/22903977 p.3 (§3)"
+  quote: "The ancestral polymorphism objection is not merely trivial. It is a rounding error."
+  parents:
+    - {id: L-camestros-all-post-split-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: answers 'the ancestral polymorphism objection' without naming who raised it; Camestros (2026-01-25) is the earliest dated source of it in the corpus"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B4a: holds only at Nₑ,anc = 1e4 (B6a arithmetic-error)"
+
+- id: L-ir-circularity-2026
+  label: "IR: dating by k = μ is circular"
+  side: day
+  kind: argument
+  date: 2026-09-22
+  claim_ids: [B4d]
+  locator: "https://zenodo.org/records/22903977 §5 The Circularity"
+  quote: "The identity is its own evidence. At no point does an independent measurement enter the loop."
+  parents:
+    - {id: L-recal-200-580-2026, relation: descends}
+    - {id: L-hossjer-circularity-2026, relation: cites, inferred: true}
+  inferred: true
+  why: "cites: claims/B4f records that IR gives Hössjer as a corroborating reviewer; the exact IR wording citing him was not quoted"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-errors-hide-2026
+  label: "Where the Errors Hide (Day–Athos, posted by Day): P(fix) = x₀ called wrong for real populations"
+  side: day
+  kind: argument
+  date: 2026-09-21
+  date_note: "The quoted sentence is Athos's (Day's AI co-author) as posted by Day after Day's instruction; secondhand. No claim file covers this post."
+  claim_ids: [B1e]
+  locator: "sources/raw/day/blog-2026-09-21-where-the-errors-hide.txt ¶11 (https://voxday.net/2026/09/21/where-the-errors-hide/, URL per bib-day)"
+  quote: "He left out reproductive covariance, so he wrote the wrong equation, so P(fix) = x₀ is a wrong answer to the real question."
+  parents:
+    - {id: L-chalub-2026, relation: descends}
+    - {id: L-day-concession-2026-08-27, relation: revises, inferred: true}
+  inferred: true
+  why: "revises: the post does not mention the 08-27 concession; it is recorded as a revision because it rejects P(fix) = 1/(2N) for 'any real population' 25 days after accepting it"
+  fate: dormant
+  fate_date: 2026-10-06
+  fate_locator: "Z23188201 abstract: p = 1/(2N) 'holds exactly regardless of offspring distribution'"
+
+- id: L-duffy-180-2026
+  label: "Duffy (presenting Day): 252,000/1,400 = 180 fixations"
+  side: ally
+  kind: value
+  date: 2026-09-22
+  claim_ids: [G2b]
+  locator: "https://www.youtube.com/live/6jXiwrcC5PQ t=00:29:42"
+  quote: "180 total fixed mutations is all there's time for using the fastest rate of mutational fixation ever observed in any organism"
+  parents:
+    - {id: L-pz1-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: superseded
+  fate_date: 2026-09-28
+  fate_locator: "Z23003785 (1,322; 191)"
+
+- id: L-relayed-7.2m-2026
+  label: "Relayed population geneticist: 7.2M neutral differences, no selection"
+  side: critic
+  kind: reply
+  date: 2026-09-22
+  claim_ids: [B5d]
+  locator: "https://www.youtube.com/live/6jXiwrcC5PQ t=00:48:18 (secondhand, read by the host)"
+  quote: "Under neutrality, 6 million years divided by 25 generations um or 25 year generation times 30 mutations per generation is equal to 7.2 million differences."
+  parents:
+    - {id: L-duffy-180-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-clue-2026
+  label: "Day: 'confused mutations with fixations'"
+  side: day
+  kind: reply
+  date: 2026-09-22
+  claim_ids: [B5d]
+  locator: "https://voxday.net/2026/09/22/zero-probability-zero-clue/ ¶17"
+  quote: "The population geneticist on call confused mutations with fixations. 30 mutations cannot fixate per generation."
+  parents:
+    - {id: L-relayed-7.2m-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Day's own IR (09-22, same day) uses μL = 30 × 252,000 as the steady-state count"
+
+- id: L-mittens-3-2026
+  label: "MITTENS 3.0: 252,000 generations / 1,322 = 191; no d"
+  side: day
+  kind: revision
+  date: 2026-09-28
+  date_note: "Created 2026-09-28; record modified 2026-10-04 (content drift not diffed)."
+  claim_ids: [A, A1, A4d]
+  locator: "https://zenodo.org/records/23003785 p.11 (§7.1)"
+  quote: "The divergence time is 6.3 million years. At 25 years per human generation, this provides 252,000 generations."
+  parents:
+    - {id: L-mittens-2025, relation: revises}
+    - {id: L-mittens-formula-blog-2026, relation: revises}
+    - {id: L-chlca-6-7my-2025, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-gf-1400-book-2026
+  label: "3.0 explains the book's 1,400 (Good et al. summary) → own re-analysis 1,322"
+  side: day
+  kind: revision
+  date: 2026-09-28
+  claim_ids: [A2]
+  locator: "https://zenodo.org/records/23003785 p.5 (§3.3)"
+  quote: "The book Probability Zero used 1,400 gen/fix, taken from Good et al.’s published summary. Our independent re-analysis of the raw data produces 1,322"
+  parents:
+    - {id: L-gf-1600-2019, relation: revises}
+    - {id: L-good-2017, relation: cites}
+    - {id: L-duffy-180-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-10-02
+  fate_locator: "Z23105291 (strict counts)"
+
+- id: L-gf-1322-2026
+  label: "G_f = 1,322 (non-mutators, ≥95% snapshot rule)"
+  side: day
+  kind: value
+  date: 2026-09-28
+  claim_ids: [A2, E6]
+  locator: "https://zenodo.org/records/23003785 p.6 (§4.1)"
+  quote: "The average across all five non-mutator populations at 60,000 generations is 45.4 fixations, yielding a cumulative rate of 1,322 generations per fixation."
+  parents:
+    - {id: L-gf-1400-book-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: superseded
+  fate_date: 2026-10-02
+  fate_locator: "Z23105291: the ≥95% rule overcounts; 1,322 not restated"
+
+- id: L-req-205m-2026
+  label: "Required fixations: 410M differences halved → 205M"
+  side: day
+  kind: revision
+  date: 2026-09-28
+  claim_ids: [A3a]
+  locator: "https://zenodo.org/records/23003785 p.11 (§7.1)"
+  quote: "for a total of approximately 410 million genomic differences. Apportioned symmetrically to the human lineage this yields approximately 205 million required fixations."
+  parents:
+    - {id: L-pz2-410m-2026, relation: descends}
+    - {id: L-yoo-2025, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Kept as the headline alongside the SNV-only variant"
+
+- id: L-snv-only-2026
+  label: "3.0 §7.3: 'a legitimate methodological concern' — SNV-only 17.5M, 91,600×"
+  side: day
+  kind: concession
+  date: 2026-09-28
+  date_note: "In Z23003785 (created 2026-09-28, modified 2026-10-04); whether §7.3 was present on 09-28 was not diffed."
+  claim_ids: [A3b]
+  locator: "https://zenodo.org/records/23003785 p.12 (§7.3)"
+  quote: "This is a legitimate methodological concern."
+  parents:
+    - {id: L-req-205m-2026, relation: revises}
+    - {id: L-mccarthy-bp-events-2026, relation: borrows, inferred: true}
+  inferred: true
+  why: "borrows: McCarthy made the bp-vs-events point on 2026-09-17; §7.3 names no critic"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-sublinear-2026
+  label: "3.0: supermutation does not scale linearly (100× → 8.5–17×)"
+  side: day
+  kind: argument
+  date: 2026-09-28
+  claim_ids: [A5d, E7]
+  locator: "https://zenodo.org/records/23003785 p.8 (§5.1)"
+  quote: "Supermutation does not scale linearly with mutation rate. It cannot, because fixation is not bottlenecked by mutation supply."
+  parents:
+    - {id: L-day-fixation-rate-reply-2026, relation: descends}
+    - {id: L-tenaillon-2016, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 A-sim: asexual exponent a = 0.23–0.34 per 100× (sublinear confirmed)"
+
+- id: L-3-0-parallel-2026
+  label: "3.0 §8.1: the 45.4 fixations were fixed in parallel"
+  side: day
+  kind: argument
+  date: 2026-09-28
+  claim_ids: [G1, G1a]
+  locator: "https://zenodo.org/records/23003785 §8.1 (as quoted in claims/G1a)"
+  quote: "They were fixed in parallel, with multiple sweeps competing and completing simultaneously."
+  parents:
+    - {id: L-gf-1322-2026, relation: descends}
+    - {id: L-samson-total-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: the 'average includes parallelism' point Samson made in January; 3.0 does not cite him"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-polythesis-2026
+  label: "3.0: the 'post-Darwinian polythesis' fails comprehensively"
+  side: day
+  kind: argument
+  date: 2026-09-28
+  claim_ids: [ROOT, ROOT-M]
+  locator: "https://zenodo.org/records/23003785 Abstract p.1"
+  quote: "The post-Darwinian polythesis fails comprehensively under the most favorable experimental conditions ever constructed."
+  parents:
+    - {id: L-mittens-3-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-reddit-906-2026
+  label: "r/DebateEvolution: 3.0's correction gives −906 'true fixations' in Ara−2"
+  side: critic
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [A2c, E5]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-03)"
+  quote: "Their correction formula then produces minus 906 “true fixations” in Ara−2."
+  parents:
+    - {id: L-gf-1322-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-reddit-slip-2026
+  label: "r/DebateEvolution: 3.0 §6.4 tenfold slip (3,840, not 38,400)"
+  side: critic
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [A2h]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-02)"
+  quote: "Section 6.4 also makes a tenfold arithmetic mistake: 3.2 billion × 1.2 × 10⁻⁸ × 100 is 3,840 mutations per haploid genome, not 38,400."
+  parents:
+    - {id: L-mittens-3-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Arithmetic verified (claims/A2h); not answered by Day in the corpus"
+
+- id: L-reddit-nonrecombining-2026
+  label: "r/DebateEvolution: the LTEE is nonrecombining, one clone, one environment"
+  side: critic
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [A5f]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-07)"
+  quote: "It follows largely nonrecombining bacteria descended from one clone, repeatedly transferred into the same glucose-limited environment."
+  parents:
+    - {id: L-mittens-3-2026, relation: responds-to}
+    - {id: L-gariepy-2019, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Gariépy's 2019 'sexual reproduction' point; the post does not cite him"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 F2: free recombination R_int 0.975 at 272 loci (direction supported)"
+
+- id: L-reddit-bp-2026
+  label: "r/DebateEvolution: bases affected by a rearrangement are not separate events"
+  side: critic
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [A3x]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-05)"
+  quote: "bases affected by a rearrangement are not separate mutation events: one structural change can affect millions of bases."
+  parents:
+    - {id: L-req-205m-2026, relation: responds-to}
+    - {id: L-mccarthy-bp-events-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: McCarthy's point of 2026-09-17; not cited in the post"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-reddit-9.7m-2026
+  label: "r/DebateEvolution: ~9.7M neutral substitutions over 252,000 generations (haploid)"
+  side: critic
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [B5f]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (Dumb-and-Dumber)"
+  quote: "or about 9.7 million over its proposed 252,000 generations."
+  parents:
+    - {id: L-mittens-3-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-ghijselen-marathon-2026
+  label: "Ghijselen: marathon analogy — runners run in parallel, so do fixations"
+  side: critic
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [G2a]
+  locator: "https://www.youtube.com/watch?v=nTVRiEcswI8 t=00:03:52"
+  quote: "Of course you say that's not possible, they run parallel. Well, the same goes with mutation and fixation."
+  parents:
+    - {id: L-duffy-180-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-dembski-scaling-reply-2026
+  label: "Day to Dembski: 'The scaling element doesn’t apply at all'"
+  side: day
+  kind: reply
+  date: 2026-09-28
+  claim_ids: [A5g]
+  locator: "https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (answer to DE-01, para 65 ff.)"
+  quote: "The scaling element doesn’t apply at all, it is entirely irrelevant, because sexual reproductive capacity is the real limit on humans and other non-bacteria."
+  parents:
+    - {id: L-day-fixation-rate-reply-2026, relation: descends}
+    - {id: L-hossjer-2x-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: Dembski's question restates the scaling objection two weeks after publishing Hössjer's rescaling; Day's answer does not name Hössjer"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-adna-1-3-2026
+  label: "aDNA v3 (Zenodo): 1 (v62) and 3 (v66) completions from >10%"
+  side: day
+  kind: revision
+  date: 2026-09-29
+  claim_ids: [C]
+  locator: "https://zenodo.org/records/23046531 p.1 (abstract)"
+  quote: "of 1,143,671 autosomal SNPs analyzed, one changed from above 10% starting frequency to fixation or loss. In the replication (AADR v66.p1, analyzed September 29, 2026), three did."
+  parents:
+    - {id: L-adna-zero-2026, relation: revises}
+    - {id: L-keruru-adna-zero-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: published after keruru's 'finding one would have been the falsification'; the abstract does not mention keruru"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 C1: the test does not discriminate"
+
+- id: L-day-math-teacher-2026
+  label: "Day: parallel fixation is 'clearly and specifically included' (reply to the marathon)"
+  side: day
+  kind: reply
+  date: 2026-09-30
+  claim_ids: [G2a, G1]
+  locator: "https://voxday.net/2026/09/30/math-teacher-cant-math/ ¶7 (as quoted in claims/G2a)"
+  quote: "The math is not wrong because parallel fixation is clearly and specifically included in the calculation."
+  parents:
+    - {id: L-ghijselen-marathon-2026, relation: responds-to}
+    - {id: L-3-0-parallel-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-gf-4615-24500-2026
+  label: "Blog-only NS rates: 4,615 per beneficial fixation; 'SERIAL' ~24,500"
+  side: day
+  kind: value
+  date: 2026-09-27
+  claim_ids: [A2f]
+  locator: "https://voxday.net/2026/09/27/the-temperature-rises/ ¶13"
+  quote: "4,615 generations per beneficial fixation (natural selection) 1,322 generations per all-cause fixation (natural selection + neutral theory + everything else)"
+  parents:
+    - {id: L-gf-1600-2019, relation: revises}
+  inferred: false
+  why: ""
+  fate: dormant
+  fate_date: 2026-09-30
+  fate_locator: "https://voxday.net/2026/09/30/math-teacher-cant-math/ ¶23 (~24,500 'SERIAL'); neither number is in Z23003785"
+
+# ---------------------------------------------------------------- October 2026
+- id: L-mansfield-full-2026
+  label: "Mansfield: the pipeline would have been full at the split"
+  side: critic
+  kind: reply
+  date: 2026-10-01
+  date_note: "Terminus ante quem: Day quotes and answers Mansfield's comments in his post of 2026-10-01; the YouTube comment itself is undated (retrieved 2026-10-07; video posted 2026-09-23)."
+  claim_ids: [B6]
+  locator: "https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg.AbQefbrLxzSAbRHJx-mRP2"
+  quote: "The ‘pipeline’ would have been full from the X generations preceding that point in time."
+  parents:
+    - {id: L-ir-empty-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Conceded by Day for the split (B1d)"
+
+- id: L-mansfield-latency-2026
+  label: "Mansfield: the time BETWEEN fixations matters, not the time to fix one"
+  side: critic
+  kind: reply
+  date: 2026-10-01
+  date_note: "Terminus ante quem: answered in Day's post of 2026-10-01 (claims/F, F1a); comment undated, retrieved 2026-10-07."
+  claim_ids: [F1]
+  locator: "https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg.AbQefbrLxzSAbR9n0iZNuQ"
+  quote: "The time it takes for one allele to get fixed is not important, it is the time BETWEEN successive fixations that is important."
+  parents:
+    - {id: L-mccarthy-parallel-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: McCarthy's 2026-09-17 point in throughput terms; Mansfield does not cite him"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 F1: rate independent of latency; F2: holds with free recombination in tested regime"
+
+- id: L-edu-empty-2026
+  label: "Education post, first answer: the pipeline is 'functionally nonexistent'"
+  side: day
+  kind: reply
+  date: 2026-10-01
+  claim_ids: [B1c]
+  locator: "https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶22"
+  quote: "The pipeline isn’t partially empty. It’s functionally nonexistent and empirically confirmed to be empty."
+  parents:
+    - {id: L-mansfield-full-2026, relation: responds-to}
+    - {id: L-ir-empty-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: revised
+  fate_date: 2026-10-01
+  fate_locator: "Same post, UPDATE ¶31"
+
+- id: L-edu-full-short-2026
+  label: "Education post, UPDATE: 'The pipeline was full, but it was much shorter' (228,000 gens)"
+  side: day
+  kind: concession
+  date: 2026-10-01
+  claim_ids: [B1d]
+  locator: "https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶31"
+  quote: "That’s absolutely wrong. The pipeline was full, but it was much shorter."
+  parents:
+    - {id: L-edu-empty-2026, relation: revises}
+    - {id: L-mansfield-full-2026, relation: borrows}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "7.56M not recomputed with a full pipe (claims/B1d)"
+
+- id: L-edu-not-serial-2026
+  label: "Day: MITTENS does not assume sequential fixation; 1,322 is total throughput"
+  side: day
+  kind: reply
+  date: 2026-10-01
+  claim_ids: [F1a]
+  locator: "https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶17"
+  quote: "The MITTENS calculation does not assume sequential fixation. The LTEE rate of 1,322 gen/fix is a total throughput measurement"
+  parents:
+    - {id: L-mansfield-latency-2026, relation: responds-to}
+    - {id: L-3-0-parallel-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-qa-19800-2026
+  label: "Q&A: t ≈ 19,800 generations per fixation (s = 0.001, Zeng 2021)"
+  side: day
+  kind: value
+  date: 2026-01-19
+  date_note: "Q&A page dated 2026-01-19; page updated 2026-02-14 per blog."
+  claim_ids: [F1a, F3a]
+  locator: "https://voxday.net/2026/01/19/probability-zero-qa/ ¶5"
+  quote: "s = 0.001 (selection coefficient, Zeng et al 2021) t ≈ 19,800 generations per fixation"
+  parents:
+    - {id: L-zeng-2021, relation: cites}
+    - {id: L-kimura-ohta-1969, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: the formula (2/s)ln(2Nₑ) is later attributed to Kimura (Education post); the Q&A prints no formula and Z19984826 cites Charlesworth 1994"
+  fate: alive
+  fate_date:
+  fate_locator: "Education post ¶24: 'The six-fixation figure ... comes from the beneficial fixation time at s = 0.001'"
+
+- id: L-edu-32.3-2026
+  label: "Education post: k = 32.3μ (Bergeron vs Yoo), no derivation"
+  side: day
+  kind: value
+  date: 2026-10-01
+  claim_ids: [B3d]
+  locator: "https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶7"
+  quote: "comparing Bergeron’s (2023) pedigree-measured mammalian mutation rate against the required substitution rate from Yoo et al. (2025) gives k = 32.3μ, not k = μ."
+  parents:
+    - {id: L-factor25-2026, relation: revises}
+    - {id: L-yoo-2025, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B3b: cannot come from Balloux–Lehmann at human-like parameters"
+
+- id: L-appendixA-sequential-2026
+  label: "Day quotes Appendix A: 'Therefore fixation must be sequential' (180 vs 205M)"
+  side: day
+  kind: argument
+  date: 2026-10-01
+  date_note: "Date of the blog that quotes the book appendix; the appendix text itself was not checked."
+  claim_ids: [G2g]
+  locator: "https://voxday.net/2026/10/01/they-never-stop-lying/ ¶24"
+  quote: "Therefore fixation must be sequential. And sequential fixation is empirically falsified"
+  parents:
+    - {id: L-bb-paper-2026, relation: descends}
+    - {id: L-duffy-180-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: same 252,000/1,400 = 180 arithmetic Duffy presented on 2026-09-22"
+  fate: revised
+  fate_date: 2026-10-01
+  fate_locator: "Same post ¶25: 'perhaps I could have worded it better'"
+
+- id: L-worded-better-2026
+  label: "Day: 'perhaps I could have worded it better' (all-cause rate faster than sequential)"
+  side: day
+  kind: concession
+  date: 2026-10-01
+  claim_ids: [G2g]
+  locator: "https://voxday.net/2026/10/01/they-never-stop-lying/ ¶25"
+  quote: "Now, perhaps I could have worded it better, but the statement is nevertheless correct because the all-cause rate is obviously faster than a sequential rate."
+  parents:
+    - {id: L-appendixA-sequential-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-ara2-sequential-2026
+  label: "Snikker-Snak: Ara+2's 14 fixation events were all sequential"
+  side: day
+  kind: argument
+  date: 2026-10-01
+  claim_ids: [G1a]
+  locator: "https://voxday.net/2026/10/01/snikker-snak/ ¶12"
+  quote: "There were 14 fixation events and every single one of them was sequential."
+  parents:
+    - {id: L-3-0-parallel-2026, relation: descends, inferred: true}
+  inferred: true
+  why: "descends: same author and dataset three days later; it describes the same LTEE fixations as sequential where §8.1 said parallel, and the two are not reconciled in any source (claims/G1a)"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-dilemma-2026
+  label: "Day: either the specific fixations matter (Darwillion) or they are neutral noise"
+  side: day
+  kind: reply
+  date: 2026-10-01
+  claim_ids: [G3b]
+  locator: "https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶28"
+  quote: "Either the specific fixations matter — in which case the Darwillion applies — or they’re interchangeable — in which case they’re neutral noise that can’t explain the observed functional divergence."
+  parents:
+    - {id: L-mccarthy-specific-any-2026, relation: responds-to}
+    - {id: L-darwillion-rhetorical-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-myers-parallel-2026
+  label: "Myers: evolution is massively parallel"
+  side: critic
+  kind: reply
+  date: 2026-10-02
+  claim_ids: [G2e]
+  locator: "https://freethoughtblogs.com/pharyngula/2026/10/02/vox-days-amazing-ego-and-bill-dembski-dont-care/ para 5"
+  quote: "Evolution is a property of populations and involves massively parallel action on multiple traits and individuals at once."
+  parents:
+    - {id: L-mittens-3-2026, relation: responds-to}
+    - {id: L-wistar-mayr-1966, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Mayr's 1966 simultaneous-sweeps objection; Myers does not cite Wistar"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-strict-counts-2026
+  label: "Fixation in the LTEE: strict 5,496 vs naive 8,679 ('including an earlier draft of our own')"
+  side: day
+  kind: revision
+  date: 2026-10-02
+  claim_ids: [A2b, E6]
+  locator: "https://zenodo.org/records/23105291 p.1 (abstract)"
+  quote: "the method of most quick analyses, including an earlier draft of our own — returns 8,679."
+  parents:
+    - {id: L-gf-1322-2026, relation: revises}
+    - {id: L-good-2017, relation: cites}
+    - {id: L-reddit-906-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: four days after the −906 / 38→0 critique; the paper does not cite it, and Day's own reason given is the counting rule"
+  fate: alive
+  fate_date:
+  fate_locator: "Non-mutator strict rate 1,587 gen/fix (derived, claims/E6)"
+
+- id: L-hancock-serial-2026
+  label: "Hancock: the formula assumes each mutation fixes before the next arises"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [G2]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:31:58"
+  quote: "it assumes that each mutation has to both arise and go to fixation before the next mutation can occur."
+  parents:
+    - {id: L-duffy-180-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Answers the Duffy version, not MITTENS 3.0 (balance ledger)"
+
+- id: L-hancock-factor2-2026
+  label: "Hancock: the 180 should be at least 360 (both lineages)"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [A3d]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:37:07"
+  quote: "this basic math is off by a factor of two"
+  parents:
+    - {id: L-duffy-180-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-hancock-76.8-2026
+  label: "Hancock: ~76.8 neutral fixations per generation (diploid basis)"
+  side: critic
+  kind: argument
+  date: 2026-10-03
+  claim_ids: [B5c]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:51:04"
+  quote: "that's about 76.8 uh new mutations that are fixed in the population every single generation."
+  parents:
+    - {id: L-kimura-1962, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: the k = μ derivation (Taylor expansion of Kimura's fixation probability, per the caption context); no on-screen citation captured"
+  fate: revised
+  fate_date: 2026-10-03
+  fate_locator: "Same video t=01:52:27 (in-video correction to haploid)"
+
+- id: L-hancock-correction-2026
+  label: "Hancock corrects on screen: use the haploid 3.2e9, not 6.4e9; keeps 76 via SV-inclusive count"
+  side: critic
+  kind: revision
+  date: 2026-10-03
+  claim_ids: [B5c]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:52:27 (GG-05)"
+  quote: "This is the diploid genome size for the fixation rate because you fix on a hloid genome. So, it should be 3.2 e to the 9."
+  parents:
+    - {id: L-hancock-76.8-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-hancock-38m-2026
+  label: "Hancock: ~38M neutral differences over two lineages"
+  side: critic
+  kind: value
+  date: 2026-10-03
+  claim_ids: [B5c]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:56:15"
+  quote: "we'll say about 38 million."
+  parents:
+    - {id: L-hancock-correction-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B4a: as an SNV match it double-counts (≈19M post-split + ≈15M ancestral)"
+
+- id: L-hancock-407-2026
+  label: "Hancock: 205M needs ~407 per generation"
+  side: critic
+  kind: reply
+  date: 2026-10-03
+  claim_ids: [A3x]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=02:00:20"
+  quote: "when you divide this out over 200 205 million you get something like 407"
+  parents:
+    - {id: L-req-205m-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Balance ledger: halves an already per-lineage figure"
+
+- id: L-hancock-ecoli-neutral-2026
+  label: "Hancock: neutral supply alone predicts ~22,000 gens/fixation in E. coli (μ ≈ 1e-11)"
+  side: critic
+  kind: argument
+  date: 2026-10-03
+  claim_ids: [A5c]
+  locator: "https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:54:12"
+  quote: "under neutrality, it should take like 22,000 generations to fix one mutation."
+  parents:
+    - {id: L-gf-1322-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Balance ledger: 1e-11 is below the measured 8.9e-11 (≈2,500 gens at the measured rate)"
+
+- id: L-kittens-2026
+  label: "KITTENS: 1.1M shortfall = 94,000 (supply) × 11.7 (bp vs events)"
+  side: critic
+  kind: argument
+  date: 2026-10-04
+  claim_ids: [A5b]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ s3"
+  quote: "The claimed shortfall is 94,000 × 11.7, or about 1.1 million."
+  parents:
+    - {id: L-mittens-3-2026, relation: responds-to}
+    - {id: L-mccarthy-690-2026, relation: descends, inferred: true}
+    - {id: L-snv-only-2026, relation: borrows}
+  inferred: true
+  why: "descends: the supply-scaling argument McCarthy and Hössjer made earlier; KITTENS (AI-assisted, cites from memory) does not cite them"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 A-sim: linear only under free recombination"
+
+- id: L-kittens-linear-caveat-2026
+  label: "KITTENS concedes: an illustration, not a proof of linear scaling"
+  side: critic
+  kind: concession
+  date: 2026-10-04
+  claim_ids: [A5b]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ (RE-09)"
+  quote: "I present this as an illustration, not as a proof that adaptive fixations scale linearly with mutation rate."
+  parents:
+    - {id: L-kittens-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-kittens-interval-2026
+  label: "KITTENS §11: 3.0's §8.2 and Appendix D revert to the interval form"
+  side: critic
+  kind: reply
+  date: 2026-10-04
+  claim_ids: [A5b, A5e, G2]
+  locator: "https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ §11"
+  quote: "§8.2 and Appendix D revert to the interval form for drift."
+  parents:
+    - {id: L-edu-not-serial-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: three days after Day's 'does not assume sequential fixation'; the post addresses the 3.0 text, not the blog"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-myers-serial-again-2026
+  label: "Myers after Day's reply: 'he thinks evolution is a simple serial process'"
+  side: critic
+  kind: reply
+  date: 2026-10-04
+  claim_ids: [G2e]
+  locator: "https://freethoughtblogs.com/pharyngula/2026/10/04/vox-day-responds-to-my-criticism-of-his-refutation-of-evolution/ para 2"
+  quote: "My criticism was that his math was invalid and that he thinks evolution is a simple serial process (the same thing Zach Hancock pointed out)"
+  parents:
+    - {id: L-myers-parallel-2026, relation: descends}
+    - {id: L-hancock-serial-2026, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-nesslig-37.8m-2026
+  label: "Nesslig20: μ_G = 75 → ~37.8M neutral fixed differences"
+  side: critic
+  kind: argument
+  date: 2026-10-05
+  claim_ids: [B5e]
+  locator: "https://discourse.peacefulscience.org/t/18094 post 1 §2.2"
+  quote: "So, the expected number of fixed neutral mutations that separates humans and chimps is ~37.8 million based on this rough calculation."
+  parents:
+    - {id: L-duffy-180-2026, relation: responds-to}
+    - {id: L-hancock-38m-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Hancock's ~38M two days earlier; Nesslig20's post does not cite the video in the quoted section"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B4a: double-count on an SNV basis; basis of 75 unstated (contested)"
+
+- id: L-nesslig-cost-drift-2026
+  label: "Nesslig20: Haldane's cost limit does not apply to drift"
+  side: critic
+  kind: reply
+  date: 2026-10-05
+  claim_ids: [H6]
+  locator: "https://discourse.peacefulscience.org/t/18094 post 1 §2.1"
+  quote: "Haldane’s reproductive cost limit does not apply to drift, but can it account for most of the genomic differences between humans and chimps?"
+  parents:
+    - {id: L-haldane-1957, relation: cites}
+    - {id: L-term3-retraction-2026, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Day's own 2026-05-07 scope retraction makes the same selection-only point; Nesslig20 does not cite it"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-best-theyve-got-2026
+  label: "Best They've Got I: 'No one calculated a smaller space' (Wistar)"
+  side: day
+  kind: argument
+  date: 2026-10-05
+  claim_ids: [D, D2g]
+  locator: "https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 26"
+  quote: "Eden calculated the size of sequence space. No one calculated a smaller space. Ulam calculated a rate. No one calculated a faster rate."
+  parents:
+    - {id: L-wistar-eden-1966, relation: cites}
+    - {id: L-wistar-ulam-1966, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Wright p.117 gives a calculation (1,250), which Eden accepted p.8 (claims/D2g)"
+
+- id: L-relictation-2026
+  label: "Relictation: p = 1/(2N) 'holds exactly regardless of offspring distribution'"
+  side: day
+  kind: argument
+  date: 2026-10-06
+  claim_ids: [E4]
+  locator: "https://zenodo.org/records/23188201 Abstract"
+  quote: "The fixation probability p = 1/(2N) is protected by the martingale property and holds exactly regardless of offspring distribution."
+  parents:
+    - {id: L-day-concession-2026-08-27, relation: descends}
+    - {id: L-errors-hide-2026, relation: revises, inferred: true}
+    - {id: L-keruru-chains-2026, relation: borrows, inferred: true}
+  inferred: true
+  why: "revises/borrows: states the martingale result (the critics' and keruru's position) 15 days after the Errors-Hide post rejected P(fix) = x₀; the paper cites the multiple-merger literature, not keruru"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+# ---------------------------------------------------------------- the audit's own checks and corrections
+- id: L-audit-b3-2026
+  label: "Audit B3: P_fix = 1/(2N) for every Nₑ; Nₑ sets the timescale"
+  side: audit
+  kind: argument
+  date: 2026-10-07
+  claim_ids: [B3a, B7]
+  locator: "research/checks/RESULTS.md §B3"
+  quote: "Day is right on time: Nₑ sets the timescale of fixation."
+  parents:
+    - {id: L-kimura-1962, relation: cites}
+    - {id: L-day-k-nne-blog-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #2: a theorem in this model class; provisional until B3b"
+
+- id: L-audit-b1-2026
+  label: "Audit B1: Day's formula exact for an empty start; equilibrium start gives U·T"
+  side: audit
+  kind: argument
+  date: 2026-10-07
+  claim_ids: [B1, B6]
+  locator: "research/checks/RESULTS.md §B1"
+  quote: "For an empty starting population his formula is exact."
+  parents:
+    - {id: L-ir-empty-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-f1-2026
+  label: "Audit F1: without interference many fixations are in flight at once"
+  side: audit
+  kind: argument
+  date: 2026-10-07
+  claim_ids: [F1, F]
+  locator: "research/checks/RESULTS.md §F1"
+  quote: "Without interference, many fixations are in flight at once, which is the critics' pipelining point."
+  parents:
+    - {id: L-mansfield-latency-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #3: possible, not shown feasible (F2)"
+
+- id: L-audit-7.7-2026
+  label: "Audit R2 note: Term 3 allows ~7.7× more than Haldane + d"
+  side: audit
+  kind: value
+  date: 2026-10-07
+  quote_source: "git:ad44c23:docs/research/claims/H8-kimura-calculator-term3.md"
+  claim_ids: [H8, H1]
+  locator: "git ad44c23 (2026-10-07) docs/research/claims/H8-kimura-calculator-term3.md line 41"
+  quote: "Term 3 therefore allows about 7.7 times (300/39) more adaptive substitutions per generation than Haldane + d at the same d."
+  parents:
+    - {id: L-term3-2026, relation: responds-to}
+    - {id: L-haldane-d-487-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-08
+  fate_locator: "claims/H8 line 41; research/checks/results/R4-H-C2.md 'Correction to R2/H8'"
+
+- id: L-audit-17.1-2026
+  label: "Audit R4: same-basis ratio is 17.1 (7.7 mixed bases, withdrawn)"
+  side: audit
+  kind: revision
+  date: 2026-10-08
+  claim_ids: [H8, H1]
+  locator: "docs/research/claims/H8-kimura-calculator-term3.md (derived, line 41)"
+  quote: "The earlier 7.7 (300/39) mixed bases (Term 3 with d over Haldane without d) and is withdrawn"
+  parents:
+    - {id: L-audit-7.7-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-1-300-falsified-2026
+  label: "Audit H2-hard first draft: 'literal 1/300 falsified'"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  date_note: "Wording in the pre-review draft, recorded in the review of the same day; never committed in that form."
+  claim_ids: [H, H2]
+  locator: "research/checks/results/REVIEW-R4-new.md (MAJOR, framing)"
+  quote: "\"Literal 1/300 falsified\" holds only for R>=1.3 with D~7, imposed lam and free recombination (the critic-favourable choices)."
+  parents:
+    - {id: L-haldane-d-487-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-08
+  fate_locator: "research/checks/REVIEW.md review #4 'New-checks review'"
+
+- id: L-audit-ln-r-d-2026
+  label: "Audit H2-hard (reviewed): 10% is not a general bound; cap is ln R / D; Haldane's regime untested"
+  side: audit
+  kind: revision
+  date: 2026-10-08
+  claim_ids: [H, H2]
+  locator: "research/checks/results/R4-H2-hard.md (conclusion)"
+  quote: "10% is not a general bound: under hard selection the cap on the substitution rate is ln R / D."
+  parents:
+    - {id: L-audit-1-300-falsified-2026, relation: revises}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-soft-cost-2026
+  label: "Audit H: soft selection did not remove the cost (against the critics' stock reply)"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [H, H2]
+  locator: "research/checks/RESULTS.md §H"
+  quote: "Soft T50 exceeds hard T50 at equal supply in both models, so \"soft selection removes the cost\" is not reproduced."
+  parents:
+    - {id: L-haldane-d-487-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "EXPLORATORY reconstruction (Nunney model adjusted twice)"
+
+- id: L-audit-soft15-2026
+  label: "Audit H (pre-review): 'soft within 15% of hard' — withdrawn"
+  side: audit
+  kind: retraction
+  date: 2026-10-08
+  claim_ids: [H2]
+  locator: "research/checks/results/R4-H-C2.md (M-scan)"
+  quote: "The earlier statement \"soft is within about 15% of hard\" is withdrawn"
+  parents:
+    - {id: L-audit-soft-cost-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-08
+  fate_locator: "research/checks/REVIEW.md review #4 correctness MAJOR 1"
+
+- id: L-audit-b1c-2026
+  label: "Audit B1c: empty-start premise contradicted (and withdrawn by Day)"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [B1c, B1d]
+  locator: "research/checks/RESULTS.md §B1c"
+  quote: "the empty-start premise is contradicted, and Day withdrew it (B1d). Day's post-split formula is confirmed for new mutations."
+  parents:
+    - {id: L-edu-full-short-2026, relation: cites}
+    - {id: L-audit-b1-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-b4a-2026
+  label: "Audit B4a: d − 2μT = θ_anc; at Nₑ,anc = 1e4 d is half the observed (Day-side point)"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [B4a, B6a]
+  locator: "research/checks/RESULTS.md §B4a"
+  quote: "Nₑ,anc = 1e4: d = 0.65%, about half the observed value (Day-side point)."
+  parents:
+    - {id: L-csac-2005, relation: cites}
+    - {id: L-ir-rounding-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "3-parameter fit; Yoo's μ unrecorded"
+
+- id: L-audit-b4a-tension-2026
+  label: "Audit B4a draft: CSAC 14–22% 'tension' (compared with θ_anc/d) — deleted"
+  side: audit
+  kind: retraction
+  date: 2026-10-08
+  claim_ids: [B4a, A3c]
+  locator: "research/checks/results/REVIEW-R4-correctness.md (B4a MAJOR)"
+  quote: "Fix: delete \"Tension, not resolved here\", state that the comparable observable is poly-but-diff"
+  parents:
+    - {id: L-audit-b4a-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-08
+  fate_locator: "research/checks/REVIEW.md review #4 correctness MAJOR 3"
+
+- id: L-audit-double-count-2026
+  label: "Audit B4a: Hancock 38M / Nesslig20 37.8M double-count on an SNV basis"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [B5c, B5e]
+  locator: "research/checks/RESULTS.md §B4a (critic-side correction)"
+  quote: "So the observed ~35M ≈ 19M post-split + ~15M ancestral, and the \"38M matches 35–40M\" claims double-count."
+  parents:
+    - {id: L-hancock-38m-2026, relation: responds-to}
+    - {id: L-nesslig-37.8m-2026, relation: responds-to}
+    - {id: L-audit-b4a-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-b3b-2026
+  label: "Audit B3b/B3c: B&L effect real; RRME 0.743 a window artefact"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [B3b, B3c]
+  locator: "research/checks/RESULTS.md §B3b/B3c"
+  quote: "RRME's 0.743 depends on the window (0.868 at 2 cohorts → limit 0.598)."
+  parents:
+    - {id: L-rrme-0743-2026, relation: responds-to}
+    - {id: L-balloux-lehmann-2012, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-c1-2026
+  label: "Audit C1: the aDNA test does not discriminate"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [C, C1]
+  locator: "research/checks/RESULTS.md §C1 (verdict)"
+  quote: "C: the test does not discriminate."
+  parents:
+    - {id: L-adna-1-3-2026, relation: responds-to}
+    - {id: L-keruru-adna-zero-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-rescue-withdrawn-2026
+  label: "Audit C6: 'this does not rescue Day' withdrawn as unsupported"
+  side: audit
+  kind: retraction
+  date: 2026-10-08
+  claim_ids: [C6]
+  locator: "research/checks/results/R4-B3b-C1.md (C6 denominator)"
+  quote: "The earlier sentence \"this does not rescue Day\" is withdrawn as unsupported"
+  parents:
+    - {id: L-adna-630-21-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: retracted
+  fate_date: 2026-10-08
+  fate_locator: "research/checks/REVIEW.md review #4 correctness MAJOR 8"
+
+- id: L-audit-c1b-2026
+  label: "Audit C1b: the 21-count is not reproducible from the published procedure"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [C6]
+  locator: "research/checks/RESULTS.md §C1b"
+  quote: "not reproducible from the published procedure; cannot adjudicate."
+  parents:
+    - {id: L-audit-rescue-withdrawn-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "'massive deficit vs neutral' wording removed in review (REVIEW.md review #4)"
+
+- id: L-audit-asim-2026
+  label: "Audit A-sim: G_f ≈ 1,300 reproducible; asexual response sublinear; recombination factor extrapolated"
+  side: audit
+  kind: argument
+  date: 2026-10-08
+  claim_ids: [A2, A5d, A5b]
+  locator: "research/checks/RESULTS.md §F2/A-sim"
+  quote: "The asexual supply exponent is a = 0.23–0.34 per 100×."
+  parents:
+    - {id: L-sublinear-2026, relation: responds-to}
+    - {id: L-kittens-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-f2-2026
+  label: "Audit F2: free recombination R_int 0.975 at 272 loci (first draft said 'contradicted at r = 1/2')"
+  side: audit
+  kind: revision
+  date: 2026-10-08
+  claim_ids: [F2, Gc]
+  locator: "research/checks/REVIEW.md review #4 correctness MAJOR 6"
+  quote: "\"Contradicted at r = 1/2\" softened to \"not reproduced in the tested regime\"."
+  parents:
+    - {id: L-audit-f1-2026, relation: descends}
+    - {id: L-bb-230-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+# ---------------------------------------------------------------- additions: clock, Hössjer chain, Wistar reception
+- id: L-keruru-twice-2026
+  label: "keruru: fossil-calibrated rate ~2× the pedigree rate (unreconciled)"
+  side: ally
+  kind: value
+  date: 2026-08-26
+  claim_ids: [B4g]
+  locator: "https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 21"
+  quote: "Calibrating against the fossil-dated human–chimpanzee split gives something closer to twice that."
+  parents:
+    - {id: L-recal-200-580-2026, relation: responds-to, inferred: true}
+  inferred: true
+  why: "responds-to: the paragraph discusses the clock calibration Day recalibrated; it does not quote Z18525547"
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B4a: the ancestral term can account for ×2 at Nₑ,anc ≈ 1.3×10⁵ (claims/B4g)"
+
+- id: L-hossjer-127-2026
+  label: "Hössjer: MITTENS with 2019 inputs and d gives 127; ×125 for μ gives 15,800"
+  side: ally
+  kind: value
+  date: 2026-09-14
+  claim_ids: [A5a]
+  locator: "https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf p.3 (HO-01)"
+  quote: "This is a lot larger than the previous upper bound 127 of 𝐹 , but still more than three orders of magnitude smaller than 20 million fixations."
+  parents:
+    - {id: L-mittens-2019, relation: cites}
+    - {id: L-mittens-2025, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R2 arithmetic: the residual ~2× depends on d inside 127 (balance ledger)"
+
+- id: L-day-wright-dice-2024
+  label: "Day on Wright's twenty questions: dice have no cumulative result"
+  side: day
+  kind: reply
+  date: 2024-07-13
+  claim_ids: [D6]
+  locator: "https://voxday.net/2024/07/13/evolutionists-are-retarded/ para 9"
+  quote: "The previous die has no effect on the subsequent one and there is no cumulative result."
+  parents:
+    - {id: L-wistar-wright-1966, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-rosenhouse-2022
+  label: "Rosenhouse 2022 ch.4 (via Felsenstein): the Wistar critiques were refuted"
+  side: critic
+  kind: reply
+  date: 2022-05-18
+  date_note: "Date of Felsenstein's annotated table of contents (secondhand); book published by Cambridge UP in 2022, not accessed."
+  claim_ids: [D1]
+  locator: "https://pandasthumb.org/archives/2022/05/rosenhouse-on-mathematical-anti-evolutionism.html para 1 (RO-01)"
+  quote: "explains why their critiques were refuted, and how present-day creationists misrepresent what was said at that conference."
+  parents:
+    - {id: L-wistar-eden-1966, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Ch.6 not accessed; Day's promised third post not found (claims/D1c)"
+
+- id: L-dembski-whoppers-2022
+  label: "Dembski (ally) on Rosenhouse: 'objectively bad'; the Weasel's fitness function supplies the information"
+  side: ally
+  kind: reply
+  date: 2022-08-26
+  claim_ids: [D13]
+  locator: "https://billdembski.com/intelligent-design/jason-rosenhouses-whoppers/ §3"
+  quote: "Rosenhouse’s book is objectively bad."
+  parents:
+    - {id: L-rosenhouse-2022, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reposted by Day 2026-10-05 (claims/D13)"
+
+- id: L-camestros-1966-2026
+  label: "Camestros: a serious treatment would discuss developments since 1966"
+  side: critic
+  kind: reply
+  date: 2026-01-29
+  date_note: "Post dated 2026-01-28/29; reviews the 1st edition."
+  claim_ids: [D1d]
+  locator: "https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-4/ (chapter 6 paragraph)"
+  quote: "if he was making a serious attempt to discuss maths and evolution he’d talk about what developments happened since 1966. He doesn’t."
+  parents:
+    - {id: L-pz1-2026, relation: responds-to}
+    - {id: L-rosenhouse-2022, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: Rosenhouse's 'results ... not kind to' Eden and Schützenberger point; Camestros does not cite Rosenhouse here"
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-ch6-2026
+  label: "Probability Zero 2nd ed. ch.6 (posted on Dembski's Substack): 'The biologists did not answer the mathematicians'"
+  side: day
+  kind: argument
+  date: 2026-09-28
+  date_note: "Date of the Dembski Substack post carrying the chapter; the 2nd edition was announced 2026-05-23."
+  claim_ids: [D]
+  locator: "https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (appended chapter 6)"
+  quote: "The biologists did not answer the mathematicians. They could not."
+  parents:
+    - {id: L-wistar-eden-1966, relation: cites}
+    - {id: L-wistar-ulam-1966, relation: cites}
+    - {id: L-pz1-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-ulam-quote-2026
+  label: "Best They've Got I: Ulam 'will come to Eden's conclusions'"
+  side: day
+  kind: reply
+  date: 2026-10-05
+  claim_ids: [D2a]
+  locator: "https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 9"
+  quote: "Ulam explicitly states: “What I am going to do will come to Eden’s conclusions.”"
+  parents:
+    - {id: L-rosenhouse-2022, relation: responds-to}
+    - {id: L-wistar-ulam-1966, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-audit-ulam-quote-2026
+  label: "Audit fidelity: the sentence attributed to Ulam is not in the volume's OCR text"
+  side: audit
+  kind: reply
+  date: 2026-10-07
+  date_note: "Claim file D2a added in commit ad44c23 (2026-10-07)."
+  claim_ids: [D2a]
+  locator: "docs/research/claims/D2a-day-ulam-sides-with-eden.md (Responses)"
+  quote: "the verbatim sentence Day attributes to Ulam is not in the OCR text of the volume"
+  parents:
+    - {id: L-day-ulam-quote-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "OCR error 'cannot be excluded'; the physical copy would settle it (claims/D2a)"
+
+- id: L-day-best-ii-2026
+  label: "Best They've Got II: Rosenhouse ch.4 has no quantitative refutation"
+  side: day
+  kind: reply
+  date: 2026-10-06
+  claim_ids: [D2]
+  locator: "https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 9"
+  quote: "Eden’s sequence-space calculation stands unchallenged by any number Rosenhouse provides."
+  parents:
+    - {id: L-rosenhouse-2022, relation: responds-to}
+    - {id: L-best-theyve-got-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Day's own DMS counter-claim (same post) carries no citation (claims/D2h)"
+
+- id: L-day-weasel-2026
+  label: "Probability Weasel: 540,000 generations; the Weasel 'demonstrates the precise opposite'"
+  side: day
+  kind: argument
+  date: 2026-09-12
+  claim_ids: [D9, D9a]
+  locator: "https://voxday.net/2026/09/12/probability-weasel/ para 12"
+  quote: "since his estimate of 50 generations was off by four orders of magnitude, or about 11,000x."
+  parents:
+    - {id: L-wistar-ulam-1966, relation: resembles, inferred: true}
+  inferred: true
+  why: "resembles: per-letter sweeps added in sequence, Ulam's serial structure; the post does not cite Ulam"
+  fate: alive
+  fate_date:
+  fate_locator: "Exploratory runs (claims/D9): parallel completion ~13,100 generations, not pre-registered"

@@ -43,5 +43,7 @@ Arithmetic only; supply fraction computed above. Prediction (critics): the benef
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
 
+R4 G1 (research/checks/results/R4-G1.md): this is the "any n of M" calculation; supply fraction 3.4e-5 on Gd's 2.3e11 basis (1.7e-5 on 4.5e11). Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+
 ## Simulator variables implied
 - Beneficial-mutation fraction and s distribution as inputs.

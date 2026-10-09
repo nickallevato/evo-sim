@@ -1,0 +1,3132 @@
+# Defeaters (diagram A): every attack in the argument map, typed by the same standard on both sides.
+# Draft 2026-10-08. Generated from a table; conventions, typing rules and the id registry are in NOTES.md.
+# type: undermining (attacks a premise) | undercutting (grants the premises, attacks the inference) | rebutting (argues for the negation of C).
+# target_part refers to standard-forms.md (full forms and mini-forms).
+# counter = every defeater whose target is this defeater's attacker (mechanical rule, see NOTES.md).
+# hierarchy_edge: true = this row represents an `attacks` edge of hierarchy.yaml; edge_flag notes edges that look mis-typed or mis-targeted.
+# 2026-10-08: integration fixes (edges retyped/retargeted, placeholder rows deleted, counters recomputed); see NOTES.md "Errors and inconsistencies".
+- id: d002
+  attacker: A2c
+  target: A2
+  target_part: P2
+  type: undermining
+  by: [Dumb-and-Dumber (r/DebateEvolution), Sparky_6_4 (KITTENS)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-03, RE-04)
+  audit_status: partly
+  audit_basis: 'A2c internal holds; E5 fidelity accurate; Day''s own Z23105291 says the ≥95% rule overcounts (E6); A-sim: G_f ≈ 1,300 reproducible'
+  counter: []
+  note: −906 and 38→0 show the snapshot/correction estimator is not a count; the critics have not shown the non-mutator headline moves much.
+  hierarchy_edge: true
+- id: d003
+  attacker: A2d
+  target: A2e
+  target_part: inference
+  type: undercutting
+  by: [Camestros Felapton]
+  first_date: 2026-01-29
+  locator: https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-5/ para 9 (CA-11)
+  audit_status: upheld
+  audit_basis: A2d holds/accurate/supported; A2e internal non-sequitur
+  counter: [d127]
+  note: An average includes faster fixations, so being 'the fastest rate' is not shown; the a fortiori step to a ceiling is not licensed.
+  hierarchy_edge: true
+- id: d004
+  attacker: A2h
+  target: A5d
+  target_part: inference
+  type: undercutting
+  by: [Dumb-and-Dumber (r/DebateEvolution)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-02)
+  audit_status: partly
+  audit_basis: 'A2h arithmetic verified (3,840 not 38,400); claims/A2h: the §6.4 conclusion survives at 384 deleterious mutations'
+  counter: []
+  note: Tenfold slip in 3.0 §6.4 (the mutator-in-sexual-organism argument that backs A5d); the corrected figure leaves that conclusion intact.
+  hierarchy_edge: true
+- id: d005
+  attacker: A3d
+  target: A3
+  target_part: P3
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:37:07
+  audit_status: partly
+  audit_basis: 'A3d holds/partial/n/a; claims/A3d: nobody disputes the factor of two in principle; MITTENS counts per lineage'
+  counter: []
+  note: Fixation happens on both lineages, so the achievable count should double; the attack lands on Duffy's 180 comparison more than on Day's per-lineage accounting.
+  hierarchy_edge: true
+- id: d006
+  attacker: A3x
+  target: A3a
+  target_part: P2
+  type: undermining
+  by: [Dennis McCarthy, Dumb-and-Dumber (r/DebateEvolution), Zach Hancock, Sparky_6_4 (KITTENS)]
+  first_date: 2026-09-17
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds para 26 (MC-11)
+  audit_status: upheld
+  audit_basis: A3x holds/accurate/supported; A3a arithmetic-error/misread/contested; Day concedes the concern in 3.0 §7.3 (A3b)
+  counter: []
+  note: Base pairs inside structural variants are not separate fixation events.
+  quote: a single mutational event can cause hundreds, thousands, or even millions of base-pair differences.
+  hierarchy_edge: true
+- id: d007
+  attacker: A4b
+  target: A4
+  target_part: P2
+  type: undermining
+  by: [Camestros Felapton]
+  first_date: 2026-01-25
+  locator: https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 32 (CA-03); https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-5/ para 25 (CA-12)
+  audit_status: untested
+  audit_basis: 'A4b pending/partial/pending; balance ledger: CA-12 (time variation) untested'
+  counter: []
+  note: 'CA-03 (''d is not defined'') was withdrawn by the author in the same post; CA-12 (2026-01-29: d would have changed over human history) stands. Moot for MITTENS 3.0, which drops d.'
+  hierarchy_edge: true
+- id: d008
+  attacker: A5
+  target: A2e
+  target_part: P4
+  type: undermining
+  by: [Dennis McCarthy]
+  first_date: 2026-01-26
+  locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 60-62 (MC-05, MC-07)
+  audit_status: partly
+  audit_basis: 'A5 holds/n/a/contested; R4 A-sim: asexual response sublinear (a = 0.23–0.34), free-recombination factor 1.5–172× is an extrapolation'
+  counter: [d016, d129]
+  note: Per-genome mutation supply and genome size differ by orders of magnitude, so the bacterial rate is not a ceiling without scaling.
+  hierarchy_edge: true
+- id: d010
+  attacker: A5b
+  target: A2e
+  target_part: P4
+  type: undermining
+  by: ['Sparky_6_4 (KITTENS, AI-assisted)']
+  first_date: 2026-10-04
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ s3
+  audit_status: partly
+  audit_basis: 'A5b holds/accurate/contested; R4 A-sim: linear only under free recombination; KITTENS calls it an illustration (RE-09)'
+  counter: [d013, d014, d182, d223]
+  note: After scaling for per-genome supply and counting SNV events, achievable ≈ required.
+  hierarchy_edge: true
+- id: d011
+  attacker: A5b
+  target: A3a
+  target_part: P2
+  type: undermining
+  by: ['Sparky_6_4 (KITTENS, AI-assisted)']
+  first_date: 2026-10-04
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ s3
+  audit_status: upheld
+  audit_basis: A3x supported; A3a arithmetic-error/misread
+  counter: [d013, d014, d182, d223]
+  note: The 11.7 factor is bases counted as events.
+  hierarchy_edge: true
+- id: d012
+  attacker: A5c
+  target: A2e
+  target_part: P1
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:53:50, 01:54:12
+  audit_status: partly
+  audit_basis: 'A5c holds/n/a/contested; balance ledger: Hancock''s μ = 1e-11 is below the measured 8.9e-11; A2e formal statement: LTEE supply 4.1e-4 vs human 38.4 per genome per generation'
+  counter: [d184]
+  note: The LTEE's neutral supply is small, so 'effectively unlimited mutation supply' does not hold.
+  hierarchy_edge: true
+- id: d013
+  attacker: A5d
+  target: A5b
+  target_part: P3
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://zenodo.org/records/23003785 p.8 (§5.1)
+  audit_status: partly
+  audit_basis: 'A5d non-sequitur/n/a/contested; R4 A-sim: asexual sublinearity confirmed, free recombination linear'
+  counter: [d004, d183]
+  note: Supermutation gives 8.5–17× for 100×, so linear supply scaling overstates; pre-emptive (dated before KITTENS).
+  hierarchy_edge: true
+- id: d014
+  attacker: A5e
+  target: A5b
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://zenodo.org/records/23003785 p.15 (§8.6)
+  audit_status: untested
+  audit_basis: A5e arithmetic-error/unverifiable/pending; Appendix D not retrieved
+  counter: [d130]
+  note: A human-parameter rate gives one fixation per 27,600 effective generations (8 achievable), against KITTENS's parity.
+  hierarchy_edge: true
+- id: d015
+  attacker: A5f
+  target: A2e
+  target_part: P1
+  type: undermining
+  by: [Jean-François Gariépy (secondhand via Day), Dumb-and-Dumber (r/DebateEvolution)]
+  first_date: 2019-02-11
+  locator: https://voxday.net/2019/02/11/whopping-the-floor/ ¶4 (GA-01); https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-07)
+  audit_status: upheld
+  audit_basis: 'A5f holds/partial/supported; R4 F2: free recombination R_int 0.975 vs clonal 0.09–0.65 (direction supported)'
+  counter: [d128]
+  note: No recombination is a handicap (clonal interference), not an advantage; sex and population-size variation change fixation rates.
+  hierarchy_edge: true
+- id: d016
+  attacker: A5g
+  target: A5
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-01-27
+  locator: https://voxday.net/2026/01/27/an-inspiring-critique/ ¶22-23
+  audit_status: not_upheld
+  audit_basis: 'A5g pending/n/a/pending; A5d''s own data: 100× supply gives 8.5–17×; R4 A-sim exponent a = 0.23–0.34 > 0'
+  counter: []
+  note: The E. coli figure was cited for its fixation rate, not its mutation rate.
+  quote: I didn’t cite the E. coli study for its mutation rate but for its fixation rate
+  hierarchy_edge: true
+- id: d017
+  attacker: B
+  target: B5
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-02-04
+  locator: https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶60
+  audit_status: not_upheld
+  audit_basis: B5 holds/accurate/contested; Day accepts k = μ at steady state (HL 2026-08-27; B3g)
+  counter: []
+  note: '''neutral theory ... is flat-out wrong''.'
+  hierarchy_edge: true
+- id: d018
+  attacker: B
+  target: B6
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-09-22
+  locator: https://zenodo.org/records/22903977 §3 The Empty Pipe
+  audit_status: not_upheld
+  audit_basis: B6 supported; B1c external contradicted; Day conceded a full pipe at the split (B1d, 2026-10-01)
+  counter: []
+  note: Via the empty-pipe route (B1).
+  hierarchy_edge: true
+- id: d019
+  attacker: B
+  target: B7
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-02-04
+  locator: https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶29
+  audit_status: not_upheld
+  audit_basis: RESULTS B3 (P_fix = 1/M for every Nₑ); B3a contradicted; conceded B3g
+  counter: []
+  note: 'Via the N/Nₑ route (B3a: P_fix = 1/(2Nₑ)).'
+  hierarchy_edge: true
+- id: d020
+  attacker: B1c
+  target: B1a
+  target_part: P3
+  type: undermining
+  by: [audit (check B1c), Vox Day (B1d revision)]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶31; research/checks/RESULTS.md §B1c
+  audit_status: upheld
+  audit_basis: B1c external contradicted (empty start); Day withdrew it (B1d)
+  counter: []
+  note: 'B1c is the audit''s start-state question node (side relabelled literature/audit 2026-10-08); its answer (full pipe; excess under sourced histories) and Day''s own B1d revision remove B1a''s empty-start premise.'
+  hierarchy_edge: true
+- id: d021
+  attacker: B2d
+  target: F1
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://zenodo.org/records/22129121 §The Second Objection
+  audit_status: partly
+  audit_basis: 'B2d holds/n/a/pending; B1c: ancestral pipe full under sourced histories; Day conceded full-but-short (B1d)'
+  counter: [d102, d133]
+  note: Grants that steady-state flux is μ, then says the pipeline cannot fill, so the steady state F1 relies on is never reached. Pre-emptive (dated before Mansfield/McCarthy).
+  hierarchy_edge: true
+- id: d022
+  attacker: B3e
+  target: B5a
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-02-04
+  locator: https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/ ¶58-59
+  audit_status: not_upheld
+  audit_basis: B3e non-sequitur/n/a/contradicted; rests on N/Nₑ (conceded B3g)
+  counter: [d135]
+  note: McCarthy's model 'corrected' to census supply and 1/(2Nₑ) gives 8.25 fixations.
+  hierarchy_edge: true
+- id: d023
+  attacker: B3h
+  target: B7c
+  target_part: P3
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶3
+  audit_status: partly
+  audit_basis: 'B3h pending/n/a/contested; R4 C1: zero-tail is extremely Nₑ-sensitive and Nₑ = 1e4 unverified; C5b temporal Nₑ 8,139–9,835 without θ (closed-population caveat)'
+  counter: [d138, d139]
+  note: keruru's aDNA withdrawal rests on Nₑ ≈ 10⁴, which comes from θ = 4Nₑμ and so presupposes k = μ.
+  quote: He has retracted an empirical falsification of the clock by feeding in a parameter that the clock manufactures
+  hierarchy_edge: true
+- id: d024
+  attacker: B4a
+  target: B1a
+  target_part: inference
+  type: undercutting
+  by: [audit (check B4a), CSAC 2005 (decomposition)]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B4a
+  audit_status: upheld
+  audit_basis: B4a holds/accurate/contested; d − 2μT = θ_anc within ~0.3% (forward sim and msprime)
+  counter: []
+  note: Grants the empty-start formula for fixed substitutions; the observed quantity is pairwise divergence, which the empty-pipe term does not reduce.
+  hierarchy_edge: true
+- id: d025
+  attacker: B5
+  target: B1
+  target_part: P3
+  type: undermining
+  by: [Zach Hancock, Brian Mansfield, DarwinZDF42 (r/DebateEvolution)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ comment pcovtvf; https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:48:19
+  audit_status: partly
+  audit_basis: 'B5 holds/accurate/contested; R4 B1c: sourced histories give an excess, not a deficit; R4 note: the critics'' totals assume stationarity'
+  counter: [d017, d140, d141, d204, d205]
+  note: k = μ applies over the window because the process is at steady state.
+  hierarchy_edge: true
+- id: d026
+  attacker: B5
+  target: B2
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock, Brian Mansfield, DarwinZDF42 (r/DebateEvolution)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ comment pcovtvf; https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg
+  audit_status: partly
+  audit_basis: 'B2 pending/unverifiable/contested; RESULTS B2a: exponent holds but is a per-allele latency tail, not a throughput bound'
+  counter: [d017, d140, d141, d204, d205]
+  note: Drift happens in every population; neutral mutations fix at the mutation rate.
+  hierarchy_edge: true
+- id: d027
+  attacker: B5
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock, Brian Mansfield]
+  first_date: 2026-09-28
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:48:19
+  audit_status: upheld
+  audit_basis: B3a external contradicted (RESULTS B3); conceded by Day (B3g)
+  counter: [d017, d140, d141, d204, d205]
+  note: k = μ independent of N.
+  hierarchy_edge: true
+- id: d028
+  attacker: B5a
+  target: B1
+  target_part: C
+  type: rebutting
+  by: [Dennis McCarthy]
+  first_date: 2026-01-26
+  locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 50-52
+  audit_status: partly
+  audit_basis: B5a holds/n/a/contested (N = Nₑ, all mutations treated as neutral); RESULTS B1/B1c
+  counter: [d022, d142, d217]
+  note: 22.5M neutral fixations over 9 My (time-adjusted 20M on 2026-09-17).
+  hierarchy_edge: true
+- id: d029
+  attacker: B5a
+  target: B3a
+  target_part: P2
+  type: undermining
+  by: [Dennis McCarthy]
+  first_date: 2026-01-26
+  locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 52
+  audit_status: partly
+  audit_basis: B3a contradicted; but B5a uses N = Nₑ, so it does not itself separate census from effective size (claims/B3a)
+  counter: [d022, d142, d217]
+  note: Fixation probability 1/20,000 = 1/(2N).
+  hierarchy_edge: true
+- id: d030
+  attacker: B5b
+  target: B1
+  target_part: C
+  type: rebutting
+  by: [Brian Mansfield]
+  first_date: 2026-10-01
+  date_note: Mansfield's YouTube comment is undated; 2026-10-01 is the terminus ante quem (answered in Day's post of that date).
+  locator: https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg
+  audit_status: partly
+  audit_basis: 'B5b holds/n/a/contested; balance ledger: the 2% illustration is ~44× short of 20M'
+  counter: [d143, d144]
+  note: About one neutral fixation per generation.
+  hierarchy_edge: true
+- id: d031
+  attacker: B5b
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Brian Mansfield]
+  first_date: 2026-10-01
+  date_note: Mansfield's YouTube comment is undated; 2026-10-01 is the terminus ante quem (answered in Day's post of that date).
+  locator: https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg
+  audit_status: upheld
+  audit_basis: B3a contradicted (RESULTS B3; B3g)
+  counter: [d143, d144]
+  note: 2N new neutral alleles × 1/(2N).
+  hierarchy_edge: true
+- id: d032
+  attacker: B5c
+  target: B1
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:51:04–01:56:15
+  audit_status: partly
+  audit_basis: B5c holds/n/a/contradicted (as an SNV match, double count, R4 B4a); event-basis comparison not contradicted
+  counter: [d146, d218]
+  note: ~76 per generation × 2 × 252,000 ≈ 38M.
+  hierarchy_edge: true
+- id: d033
+  attacker: B5c
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:48:19
+  audit_status: upheld
+  audit_basis: B3a contradicted (RESULTS B3; B3g)
+  counter: [d146, d218]
+  note: Neutral substitution rate equals the mutation rate.
+  hierarchy_edge: true
+- id: d034
+  attacker: B5c
+  target: A
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:56:15–02:01:44
+  audit_status: partly
+  audit_basis: B5c external contradicted as an SNV match (R4 B4a double count); A external contested
+  counter: [d146, d218]
+  note: A model with no selection accounts for the required differences.
+  hierarchy_edge: true
+- id: d035
+  attacker: B5d
+  target: B1
+  target_part: C
+  type: rebutting
+  by: [unnamed population geneticist (relayed by Gutsick Gibbon)]
+  first_date: 2026-09-22
+  locator: https://www.youtube.com/live/6jXiwrcC5PQ t=00:48:18
+  audit_status: partly
+  audit_basis: 'B5d holds/n/a/contested; RESULTS B0.5/B1: equilibrium-start count = U·T'
+  counter: [d145]
+  note: 7.2M neutral differences with no selection (secondhand, truncated).
+  hierarchy_edge: true
+- id: d036
+  attacker: B5d
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [unnamed population geneticist (relayed by Gutsick Gibbon)]
+  first_date: 2026-09-22
+  locator: https://www.youtube.com/live/6jXiwrcC5PQ t=00:48:18
+  audit_status: upheld
+  audit_basis: B3a contradicted (RESULTS B3; B3g)
+  counter: [d145]
+  note: Uses k = μ_G with no N/Nₑ factor.
+  hierarchy_edge: true
+- id: d037
+  attacker: B5e
+  target: B1
+  target_part: C
+  type: rebutting
+  by: [Nesslig20]
+  first_date: 2026-10-05
+  locator: https://discourse.peacefulscience.org/t/18094 post 1 §2.2
+  audit_status: partly
+  audit_basis: 'B5e holds/n/a/contested; R4 B4a: on an SNV basis 37.8M double-counts; basis of μ_G = 75 unstated'
+  counter: [d147, d216]
+  note: k = 75; ~37.8M neutral fixed differences.
+  hierarchy_edge: true
+- id: d038
+  attacker: B5e
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Nesslig20]
+  first_date: 2026-10-05
+  locator: https://discourse.peacefulscience.org/t/18094 post 1 §2.2
+  audit_status: upheld
+  audit_basis: B3a contradicted (RESULTS B3; B3g)
+  counter: [d147, d216]
+  note: k = μ_G.
+  hierarchy_edge: true
+- id: d039
+  attacker: B5f
+  target: B1
+  target_part: C
+  type: rebutting
+  by: [Dumb-and-Dumber (r/DebateEvolution)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/
+  audit_status: partly
+  audit_basis: B5f holds/n/a/contested; the 17.5M comparator includes polymorphism (claims/B5f)
+  counter: [d219]
+  note: ~9.7M over 252,000 generations; the window is long compared with fixation time.
+  hierarchy_edge: true
+- id: d040
+  attacker: B5f
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Dumb-and-Dumber (r/DebateEvolution)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/
+  audit_status: upheld
+  audit_basis: B3a contradicted (RESULTS B3; B3g)
+  counter: [d219]
+  note: 38.4 per generation = μ_G.
+  hierarchy_edge: true
+- id: d041
+  attacker: B5g
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Paul King (commenter on Camestros)]
+  first_date: 2026-01-25
+  locator: https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ comment 2026-01-25 7:56 pm
+  audit_status: upheld
+  audit_basis: B3a contradicted (RESULTS B3; B3g)
+  counter: []
+  note: Neutral mutations reach fixation at the rate they arrive.
+  hierarchy_edge: true
+- id: d043
+  attacker: B5h
+  target: B3a
+  target_part: C
+  type: rebutting
+  by: [Ola Hössjer (ally)]
+  first_date: 2026-09-14
+  locator: https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf p.5
+  audit_status: upheld
+  audit_basis: 'B3a contradicted (RESULTS B3; B3g); claims/B3a: Hössjer uses 2Nμ × 1/(2N)'
+  counter: []
+  note: An ally's neutral count uses census N in both terms.
+  hierarchy_edge: true
+- id: d044
+  attacker: B6
+  target: B1
+  target_part: P3
+  type: undermining
+  by: [Brian Mansfield]
+  first_date: 2026-10-01
+  date_note: Mansfield's YouTube comment is undated; 2026-10-01 is the terminus ante quem (answered in Day's post of that date).
+  locator: https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg.AbQefbrLxzSAbRHJx-mRP2
+  audit_status: upheld
+  audit_basis: B6 holds/n/a/supported; B1c contradicted; Day conceded (B1d)
+  counter: [d018, d046, d148]
+  note: The pipeline would have been full at the split.
+  quote: The ‘pipeline’ would have been full from the X generations preceding that point in time.
+  hierarchy_edge: true
+- id: d045
+  attacker: B6
+  target: B1a
+  target_part: P3
+  type: undermining
+  by: [Brian Mansfield]
+  first_date: 2026-10-01
+  date_note: Mansfield's YouTube comment is undated; 2026-10-01 is the terminus ante quem (answered in Day's post of that date).
+  locator: https://www.youtube.com/watch?v=jDxFtCOGZ3A comment UgyhNduYke46IStQ5pd4AaABAg.AbQefbrLxzSAbRHJx-mRP2
+  audit_status: upheld
+  audit_basis: as B6 → B1
+  counter: [d018, d046, d148]
+  note: Same, against the numerical application.
+  hierarchy_edge: true
+- id: d046
+  attacker: B6a
+  target: B6
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-09-22
+  locator: https://zenodo.org/records/22903977 p.3 (§3)
+  audit_status: not_upheld
+  audit_basis: 'B6a arithmetic-error/n/a/contradicted; R4 B4a: ''rounding error'' holds only at Nₑ,anc = 1e4'
+  counter: [d047, d149]
+  note: Ancestral polymorphism (1.44M) is smaller than the empty-pipe deficit (2.4M), so the net count still falls.
+  quote: The ancestral polymorphism objection is not merely trivial. It is a rounding error.
+  hierarchy_edge: true
+- id: d047
+  attacker: B6b
+  target: B6a
+  target_part: P1
+  type: undermining
+  by: [Camestros Felapton]
+  first_date: 2026-01-25
+  locator: https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 46 (CA-04)
+  audit_status: upheld
+  audit_basis: 'B6b holds/accurate/supported; R4 B4a: θ_anc is first-order at Yoo''s Nₑ,anc'
+  counter: []
+  note: Day treats all differences as post-split mutations. Dated before B6a (an anticipating objection).
+  hierarchy_edge: true
+- id: d048
+  attacker: B6c
+  target: B1
+  target_part: P3
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:33:59
+  audit_status: partly
+  audit_basis: 'B6c pending/n/a/pending; RESULTS B1 caveat: an empty pipe means zero standing heterozygosity, contradicting observed diversity'
+  counter: [d150]
+  note: A model with no standing variation predicts none is observed; it is observed.
+  hierarchy_edge: true
+- id: d049
+  attacker: B6c
+  target: G2g
+  target_part: inference
+  type: undercutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:31:58–01:37:07
+  audit_status: partly
+  audit_basis: 'G2g internal non-sequitur (Day''s own ''must be sequential''); G2c/B6c prediction not computed in the repo; Day denies his models are strictly serial (G1, Gc)'
+  counter: [d150]
+  note: 'A strictly serial model predicts almost no standing variation. Retargeted 2026-10-08 from G1 (Day''s claim that the average includes parallel fixation, which disowns the serial reading) to G2g (Appendix A: fixation must be sequential).'
+  hierarchy_edge: true
+- id: d050
+  attacker: B7
+  target: B3a
+  target_part: P2
+  type: undermining
+  by: [Day's own Hard Limits text, keruru, Zach Hancock]
+  first_date: 2026-08-27
+  locator: https://zenodo.org/records/22129121 §The Transit Time
+  audit_status: upheld
+  audit_basis: B7 holds/accurate/supported; RESULTS B3
+  counter: [d019, d151]
+  note: A new neutral mutation starts at 1/(2N) and its frequency is a martingale.
+  hierarchy_edge: true
+- id: d051
+  attacker: B7a
+  target: B3a
+  target_part: P2
+  type: undermining
+  by: [Kimura 1962 (literature), audit (fidelity ledger)]
+  first_date: 1962-06
+  locator: https://pmc.ncbi.nlm.nih.gov/articles/PMC1210364/ p.715-716
+  audit_status: upheld
+  audit_basis: 'fidelity ledger: verified-misread for 1/(2Nₑ); RESULTS B3'
+  counter: []
+  note: The source Day cites gives U = 1/2N for a neutral gene. Literature dated before the target; deployed against it by the audit.
+  hierarchy_edge: true
+- id: d052
+  attacker: B7c
+  target: B3a
+  target_part: P2
+  type: undermining
+  by: [keruru]
+  first_date: 2026-08-26
+  locator: https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 6-9
+  audit_status: upheld
+  audit_basis: B7c holds/accurate/supported; Day conceded the next day (B3g)
+  counter: [d023]
+  note: 'Exact chains: P_fix = 1/(2N_census). A former ally''s self-retraction.'
+  quote: 'The fixation probability of a single new mutant in both chains: exactly 1/(2N_census), to fifteen decimal places.'
+  hierarchy_edge: true
+- id: d053
+  attacker: C
+  target: C5
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-01-14
+  locator: https://voxday.net/2026/01/14/empirically-impossible/ ¶4-5
+  audit_status: not_upheld
+  audit_basis: 'C internal non-sequitur; R4 C1: the test does not discriminate'
+  counter: [d054, d059, d152]
+  note: Zero fixations is a falsification, not the prediction. Dated before C5 (C5 answers it).
+  hierarchy_edge: true
+- id: d054
+  attacker: C1
+  target: C
+  target_part: inference
+  type: undercutting
+  by: [audit (R1 sources agent; no published critic)]
+  first_date: 2026-10-07
+  locator: docs/research/claims/C1-1240k-ascertainment.md (Mathieson 2015; Mallick 2024)
+  audit_status: upheld
+  audit_basis: C1 holds/accurate/supported; R4 C1
+  counter: [d056]
+  note: The panel is ascertained on present-day variable sites, so near-zero fixations are expected regardless.
+  hierarchy_edge: true
+- id: d055
+  attacker: C1
+  target: C6
+  target_part: P3
+  type: undermining
+  by: [audit (R1 sources agent; no published critic)]
+  first_date: 2026-10-07
+  locator: docs/research/claims/C1-1240k-ascertainment.md
+  audit_status: upheld
+  audit_basis: C1 supported; C6 external untestable; R4 C1b
+  counter: [d056]
+  note: New substitutions cannot register on a panel built from present-day polymorphism.
+  hierarchy_edge: true
+- id: d056
+  attacker: C1a
+  target: C1
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-02-08
+  locator: https://zenodo.org/records/18525185 §9.4
+  audit_status: partly
+  audit_basis: 'C1a holds/n/a/contested; R4 C1: right in sign for 10–90% bands (1.2–3.4×), wrong for ≥90% (5–30× suppression); immaterial'
+  counter: [d153]
+  note: The bias would favour detecting recent fixations. Pre-emptive.
+  hierarchy_edge: true
+- id: d058
+  attacker: C4
+  target: C5
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-01-10
+  locator: https://zenodo.org/records/18320599 Abstract
+  audit_status: partly
+  audit_basis: 'C4 pending; C5b: temporal Nₑ 8,139–9,835, direction agrees with C4'
+  counter: [d062]
+  note: Nₑ varied 3.3–4.6-fold across the Holocene, so a constant Nₑ ~ 10⁴ is not given. Dated before C5.
+  hierarchy_edge: true
+- id: d059
+  attacker: C5
+  target: C
+  target_part: inference
+  type: undercutting
+  by: [keruru]
+  first_date: 2026-08-26
+  locator: https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere para 14
+  audit_status: upheld
+  audit_basis: 'R4 C1 verdict: C: the test does not discriminate (Nₑ-sensitivity noted)'
+  counter: [d053, d058, d060, d154]
+  note: Zero fixations from intermediate frequency in 240 generations is the neutral expectation (~10⁻²⁹).
+  quote: Finding zero is not a coin landing on its edge. Finding one would have been the falsification.
+  hierarchy_edge: true
+- id: d060
+  attacker: C5a
+  target: C5
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶3-4
+  audit_status: partly
+  audit_basis: 'C5a pending; C5b answers without θ (closed-population caveat); R4 C1: tail extremely Nₑ-sensitive'
+  counter: [d061]
+  note: Nₑ ≈ 10⁴ comes from θ = 4Nₑμ; rs35619459 implies a drift-variance Nₑ near 2.
+  hierarchy_edge: true
+- id: d061
+  attacker: C5b
+  target: C5a
+  target_part: P1
+  type: undermining
+  by: [keruru]
+  first_date: 2026-08-31
+  locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'
+  audit_status: partly
+  audit_basis: 'C5b pending; claims/C5a: closed-population assumption across a replacement window'
+  counter: []
+  note: Temporal-method Nₑ (8,139; 9,835) uses no μ, no coalescent, no substitution identity.
+  hierarchy_edge: true
+- id: d062
+  attacker: C5b
+  target: C4
+  target_part: inference
+  type: undercutting
+  by: [keruru]
+  first_date: 2026-08-31
+  locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'
+  audit_status: partly
+  audit_basis: C4 and C5b agree in direction (Nₑ rising); they disagree on magnitude
+  counter: []
+  note: Contests reading the drift-variance numbers as Nₑ near 2 rather than C4's fold-change.
+  hierarchy_edge: true
+  edge_flag: 'judgement call, kept 2026-10-08: C5b agrees with C4''s direction (Nₑ rising); its window averages answer C4''s use against C5; main target is C5a'
+- id: d063
+  attacker: D
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (appended ch.6)
+  audit_status: partly
+  audit_basis: 'D2–D2j fidelity mixed (accurate: D2c, D2e; partial: D2a, D2d, D2f, D2g; misread: D2b, D2j)'
+  counter: [d064, d066, d069, d071, d072, d086, d090, d094]
+  note: The biologists did not answer the mathematicians.
+  hierarchy_edge: true
+- id: d064
+  attacker: D1
+  target: D
+  target_part: C
+  type: rebutting
+  by: [Jason Rosenhouse (via Felsenstein)]
+  first_date: 2022-05-18
+  locator: https://pandasthumb.org/archives/2022/05/rosenhouse-on-mathematical-anti-evolutionism.html (RO-01)
+  audit_status: untested
+  audit_basis: D1 pending/unverifiable; book not accessed (secondhand)
+  counter: [d063, d067, d073, d077, d078, d079, d080, d081, d082, d085]
+  note: The Wistar critiques were refuted. Predates Probability Zero; addresses Wistar, not MITTENS.
+  hierarchy_edge: true
+- id: d065
+  attacker: D11
+  target: D10
+  target_part: C
+  type: rebutting
+  by: [audit (comparing Taylor 2001 with Axe 2004)]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D11-taylor-2001-1-in-5e23.md
+  audit_status: partly
+  audit_basis: D11 holds/accurate/contested; different functions and lengths (AroQ mutase vs β-lactamase fold)
+  counter: []
+  note: A measured frequency (~1 in 5×10²³) far above Axe's 1 in 10⁷⁷. Taylor 2001 predates Axe; the comparison is the audit's.
+  hierarchy_edge: true
+- id: d066
+  attacker: D12
+  target: D
+  target_part: P2
+  type: undermining
+  by: [audit (citing Keefe & Szostak 2001)]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D12-keefe-szostak-2001-atp-binding.md
+  audit_status: partly
+  audit_basis: D12 n/a/unverifiable/contested; binding is not catalysis (Taylor 2001)
+  counter: []
+  note: Functional (ATP-binding) proteins recovered from 6×10¹² random 80-mers.
+  hierarchy_edge: true
+- id: d067
+  attacker: D13
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Bill Dembski (ally)]
+  first_date: 2022-08-26
+  locator: https://billdembski.com/intelligent-design/jason-rosenhouses-whoppers/ §3
+  audit_status: untested
+  audit_basis: 'D13 pending/accurate/contested; claims/D13: the post does not discuss Wistar'
+  counter: []
+  note: Rosenhouse's book is 'objectively bad'.
+  hierarchy_edge: true
+- id: d068
+  attacker: D1a
+  target: D3
+  target_part: inference
+  type: undercutting
+  by: [Jason Rosenhouse (via Day's transcription)]
+  first_date: '2022'
+  date_note: Book year 2022 (Cambridge UP); quote known via Day's 2026-10-06 transcription.
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 3 (Rosenhouse p.124)
+  audit_status: untested
+  audit_basis: D1a pending/unverifiable; no citations in the paragraph; ch.6 not read
+  counter: [d074, d083]
+  note: Protein-space geometry makes Eden's combinatorics 'hopelessly naive'.
+  hierarchy_edge: true
+- id: d069
+  attacker: D1a
+  target: D
+  target_part: inference
+  type: undercutting
+  by: [Jason Rosenhouse (via Day's transcription)]
+  first_date: '2022'
+  date_note: Book year 2022.
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 3
+  audit_status: untested
+  audit_basis: as D1a → D3
+  counter: [d074, d083]
+  note: Same, against Day's use of Eden.
+  hierarchy_edge: true
+- id: d070
+  attacker: D1b
+  target: D5
+  target_part: inference
+  type: undercutting
+  by: [Jason Rosenhouse (via Day's transcription)]
+  first_date: '2022'
+  date_note: Book year 2022.
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 6
+  audit_status: untested
+  audit_basis: D1b pending/unverifiable
+  counter: [d075, d084, d092]
+  note: Simulations of evolution are commonplace, so Schützenberger's argument has not held up.
+  hierarchy_edge: true
+- id: d071
+  attacker: D1c
+  target: D
+  target_part: C
+  type: rebutting
+  by: [Jason Rosenhouse (via Felsenstein)]
+  first_date: 2022-05-18
+  locator: https://pandasthumb.org/archives/2022/05/rosenhouse-on-mathematical-anti-evolutionism.html (RO-02)
+  audit_status: untested
+  audit_basis: ch.6 not accessed
+  counter: []
+  note: Ch.6 (protein space, Weasel, No Free Lunch) answers the Wistar challenges.
+  hierarchy_edge: true
+- id: d072
+  attacker: D1d
+  target: D
+  target_part: P4
+  type: undermining
+  by: [Camestros Felapton]
+  first_date: 2026-01-29
+  locator: https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-4/ (chapter 6 paragraph)
+  audit_status: partly
+  audit_basis: D1d n/a/n/a/pending; corpus has no Day citation of Axe/Taylor/Keefe; Wright p.117 gave a calculation (D2g)
+  counter: []
+  note: A serious treatment would discuss developments since 1966.
+  hierarchy_edge: true
+- id: d073
+  attacker: D2
+  target: D1
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-06
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ paras 4, 9
+  audit_status: untested
+  audit_basis: D2 pending/unverifiable/pending; evidence is Day's transcription of one paragraph
+  counter: []
+  note: Rosenhouse ch.4 gives no quantitative refutation and no citations.
+  hierarchy_edge: true
+- id: d074
+  attacker: D2
+  target: D1a
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-06
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 4
+  audit_status: partly
+  audit_basis: 'claims/D2h: Day''s counter-claim carries no citation either (symmetric defect)'
+  counter: []
+  note: No citations, no studies named.
+  hierarchy_edge: true
+- id: d075
+  attacker: D2
+  target: D1b
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-06
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 7
+  audit_status: partly
+  audit_basis: D2i holds; valid against an existence-proof reading only (claims/D1b)
+  counter: []
+  note: Evolutionary algorithms have designed fitness functions.
+  hierarchy_edge: true
+- id: d076
+  attacker: D2a
+  target: D4a
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 9
+  audit_status: partly
+  audit_basis: 'D2a fidelity partial: the quoted sentence is not in the OCR text; pp.24-25 support the substance'
+  counter: [d160]
+  note: Ulam sided with Eden, so his 'not the problem' remark is not a rebuttal.
+  hierarchy_edge: true
+- id: d077
+  attacker: D2b
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ paras 19-20
+  audit_status: not_upheld
+  audit_basis: 'D2b fidelity misread: exchange not in the volume; ''product of evolution'' is Levins''s'
+  counter: [d161]
+  note: Lewontin admitted he could not justify continuity.
+  hierarchy_edge: true
+- id: d078
+  attacker: D2c
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 22
+  audit_status: partly
+  audit_basis: D2c fidelity accurate; Wald's point concerns long substitution runs (claims/D2c)
+  counter: []
+  note: 'Wald: hard put to find a change that does not markedly change properties.'
+  hierarchy_edge: true
+- id: d079
+  attacker: D2d
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 24
+  audit_status: partly
+  audit_basis: D2d fidelity partial
+  counter: []
+  note: Crosby supported Eden on viable intermediates.
+  hierarchy_edge: true
+- id: d080
+  attacker: D2e
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 31
+  audit_status: partly
+  audit_basis: D2e holds/partial; Day omits Waddington's 'minute fraction' concession
+  counter: []
+  note: Waddington's summary is an assertion without data.
+  hierarchy_edge: true
+- id: d081
+  attacker: D2f
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 32
+  audit_status: partly
+  audit_basis: D2f fidelity partial (ch.6 wording not in the volume; blog wording accurate)
+  counter: [d162]
+  note: Mayr retreated to an argument from existence.
+  hierarchy_edge: true
+- id: d082
+  attacker: D2g
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-05
+  locator: https://voxday.net/2026/10/05/the-best-theyve-got-i/ para 26
+  audit_status: not_upheld
+  audit_basis: 'claims/D2g: Wright p.117 gave a calculation that Eden accepted (p.8)'
+  counter: [d165]
+  note: No biologist produced a calculation contradicting the mathematicians.
+  hierarchy_edge: true
+- id: d083
+  attacker: D2h
+  target: D1a
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-06
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 5
+  audit_status: untested
+  audit_basis: D2h pending/unverifiable; no DMS source in the corpus
+  counter: [d166]
+  note: Deep mutational scanning shows rugged landscapes.
+  hierarchy_edge: true
+- id: d084
+  attacker: D2i
+  target: D1b
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-06
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 7
+  audit_status: partly
+  audit_basis: D2i holds/n/a/contested
+  counter: []
+  note: Every evolutionary algorithm has a programmer-designed fitness function.
+  hierarchy_edge: true
+- id: d085
+  attacker: D2j
+  target: D1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (appended ch.6)
+  audit_status: not_upheld
+  audit_basis: 'D2j fidelity misread: the speaker was Bossert (p.40)'
+  counter: [d163]
+  note: Eden demanded the math and Waddington could not supply it.
+  hierarchy_edge: true
+- id: d086
+  attacker: D3a
+  target: D
+  target_part: P2
+  type: undermining
+  by: [audit (reading Eden p.7)]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D3a-eden-molecules-not-functional-proteins.md
+  audit_status: partly
+  audit_basis: D3a holds/partial; Eden p.7 says the 10⁵² set 'contains within it all the useful proteins'
+  counter: []
+  note: 10⁵² counts protein molecules, not distinct functional proteins.
+  hierarchy_edge: true
+- id: d087
+  attacker: D3b
+  target: D6
+  target_part: inference
+  type: undercutting
+  by: [Murray Eden]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.8
+  audit_status: partly
+  audit_basis: D3b pending/accurate; Eden's own hemoglobin estimate is 'not implausible' (D3c)
+  counter: []
+  note: 'Wright is correct but misunderstood the argument: path length, not search size, is the issue.'
+  hierarchy_edge: true
+- id: d089
+  attacker: D4a
+  target: D3
+  target_part: inference
+  type: undercutting
+  by: [Stanislaw Ulam]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.21
+  audit_status: partly
+  audit_basis: D4a holds/accurate/contested
+  counter: [d076]
+  note: Random construction of molecules 'is not the problem at all'; selection sieves.
+  hierarchy_edge: true
+- id: d090
+  attacker: D4a
+  target: D
+  target_part: inference
+  type: undercutting
+  by: [Stanislaw Ulam]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.21
+  audit_status: partly
+  audit_basis: as D4a → D3; Day's D2a reads Ulam as agreeing with Eden's broader point
+  counter: [d076]
+  note: Same, against Day's use.
+  hierarchy_edge: true
+- id: d091
+  attacker: D4b
+  target: D4
+  target_part: P1
+  type: undermining
+  by: [Ernst Mayr, George Wald]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.24
+  audit_status: partly
+  audit_basis: D4b n/a/n/a/contested; both γ values are assertions
+  counter: []
+  note: γ = 10⁻⁶ is unreasonable; improvements could go on simultaneously.
+  hierarchy_edge: true
+- id: d092
+  attacker: D5
+  target: D1b
+  target_part: inference
+  type: undercutting
+  by: [Marcel-Paul Schützenberger]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.75
+  audit_status: partly
+  audit_basis: 'D5 pending/partial; D1b/D2i: both sides agree simulations need a fitness mapping'
+  counter: [d070]
+  note: Without built-in matching nothing interesting occurs in simulations.
+  hierarchy_edge: true
+- id: d093
+  attacker: D6
+  target: D3
+  target_part: inference
+  type: undercutting
+  by: [Sewall Wright]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.117
+  audit_status: partly
+  audit_basis: D6 holds/n/a/contested; Eden accepted the arithmetic and re-based on path length (D3b)
+  counter: [d087]
+  note: By twenty questions, < 1,250 steps reach a specified protein.
+  hierarchy_edge: true
+- id: d094
+  attacker: D6
+  target: D
+  target_part: inference
+  type: undercutting
+  by: [Sewall Wright]
+  first_date: 1966-04
+  locator: Moorhead & Kaplan (eds) 1967, Wistar Monograph 5 (local OCR) p.117
+  audit_status: partly
+  audit_basis: as D6 → D3
+  counter: [d087]
+  note: Same, against Day's use of Eden's 10³²⁵.
+  hierarchy_edge: true
+- id: d095
+  attacker: D9
+  target: x:dawkins-weasel
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-09-12
+  locator: https://voxday.net/2026/09/12/probability-weasel/
+  audit_status: partly
+  audit_basis: 'D9 internal holds (arithmetic), external contested; chk:D9-exploratory: serial sum 230,000 and parallel maximum ~13,100, not 540,000 (not pre-registered)'
+  counter: [d167]
+  note: 'Dawkins''s Weasel uses a 5% mutation probability, not a selection advantage; at s = 0.001 in a population of 10,000 the phrase takes 540,000 generations, not ~50. Retargeted 2026-10-08 from D (Day''s own claim) to Dawkins''s Weasel (registry x:dawkins-weasel).'
+  hierarchy_edge: false
+- id: d096
+  attacker: D9a
+  target: x:dawkins-weasel
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-09-12
+  locator: https://voxday.net/2026/09/12/probability-weasel/
+  audit_status: partly
+  audit_basis: 'D9a internal non-sequitur (the Weasel is a truncation-selection algorithm; its ~50 is right for that algorithm, exploratory mean 78); chk:D9-exploratory not pre-registered'
+  counter: [d168]
+  note: 'The Weasel ''actually demonstrates the precise opposite'' of its purpose, being off by about 11,000×. Retargeted 2026-10-08 from D (Day''s own claim) to Dawkins''s Weasel (registry x:dawkins-weasel).'
+  hierarchy_edge: false
+- id: d097
+  attacker: E1
+  target: A2
+  target_part: P2
+  type: undermining
+  by: ["unattributed (no verbatim critic statement in the corpus; searched 2026-10-08; 'Taylor' appears only in PLAN.md)"]
+  first_date: 2026-09-27
+  locator: https://voxday.net/2026/09/27/the-temperature-rises/ ¶13 (Day's own beneficial vs all-cause split)
+  audit_status: untested
+  audit_basis: 'E1 draft; claims/E1: attribution gap'
+  counter: []
+  note: LTEE counts include hitchhikers, so G_f is not a beneficial rate. Day himself separates 4,615 (beneficial) from 1,322 (all-cause).
+  hierarchy_edge: true
+  edge_flag: 'judgement call, kept 2026-10-08: the content attacks A2''s reading, but the attacker is unsourced (claims/E1 sourcing comment)'
+- id: d098
+  attacker: E5
+  target: A2
+  target_part: P2
+  type: undermining
+  by: [Dumb-and-Dumber (r/DebateEvolution), Sparky_6_4 (KITTENS)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-03, RE-04)
+  audit_status: partly
+  audit_basis: E5 fidelity accurate, internal/external pending; Day's Z23105291 replaces the snapshot rule (E6)
+  counter: [d125]
+  note: The estimator yields −906 and 38→0.
+  hierarchy_edge: true
+- id: d099
+  attacker: E5
+  target: E7
+  target_part: P1
+  type: undermining
+  by: [Dumb-and-Dumber (r/DebateEvolution), Sparky_6_4 (KITTENS)]
+  first_date: 2026-09-28
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/ (RE-03)
+  audit_status: partly
+  audit_basis: 'claims/E5 derived: excluding Ara−2 the mutator rate is 70.6 gen/fix and 8.5× becomes 12.6×; sublinearity remains'
+  counter: [d125]
+  note: −906 in the mutator average distorts the 8.5× ratio.
+  hierarchy_edge: true
+- id: d100
+  attacker: E9
+  target: A2
+  target_part: P2
+  type: undermining
+  by: [Good et al. 2017 (literature)]
+  first_date: '2017'
+  locator: https://pmc.ncbi.nlm.nih.gov/articles/PMC5788700/ Results
+  audit_status: partly
+  audit_basis: E9 n/a/unverifiable/contested; Day's own Z23105291 adopts lineage-aware states (E6)
+  counter: []
+  note: Clades coexist and trajectories are not periodic selection, so pooled snapshot counts overcount.
+  hierarchy_edge: true
+- id: d101
+  attacker: F1
+  target: F
+  target_part: inference
+  type: undercutting
+  by: [Brian Mansfield, Dennis McCarthy]
+  first_date: 2026-09-17
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds para 22; https://www.youtube.com/watch?v=jDxFtCOGZ3A comment ...AbR9n0iZNuQ
+  audit_status: upheld
+  audit_basis: F internal non-sequitur (as a throughput bound); RESULTS F1
+  counter: [d021, d103, d221]
+  note: The time to fix one allele is not the time between fixations.
+  quote: The time it takes for one allele to get fixed is not important, it is the time BETWEEN successive fixations that is important.
+  hierarchy_edge: true
+- id: d102
+  attacker: F1
+  target: B2d
+  target_part: P2
+  type: undermining
+  by: [Brian Mansfield, Dennis McCarthy]
+  first_date: 2026-09-17
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds para 22
+  audit_status: partly
+  audit_basis: 'B2d pending; claims/B2d: the critics'' replies predate and do not engage ''cannot fill'''
+  counter: [d021, d103, d221]
+  note: Many alleles in transit at once.
+  hierarchy_edge: true
+- id: d103
+  attacker: F1a
+  target: F1
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶17-18
+  audit_status: partly
+  audit_basis: F1a non-sequitur (the 19,800 and six/seven figures divide by a latency); G1 holds as accounting for 1,322
+  counter: [d174, d175, d201]
+  note: MITTENS uses a measured throughput, so F1 does not apply to it.
+  hierarchy_edge: true
+- id: d104
+  attacker: F1b
+  target: F
+  target_part: inference
+  type: undercutting
+  by: [Dennis McCarthy]
+  first_date: 2026-09-17
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds para 22
+  audit_status: upheld
+  audit_basis: F internal non-sequitur; RESULTS F1
+  counter: []
+  note: Mutations do not rise in frequency one at a time.
+  hierarchy_edge: true
+- id: d105
+  attacker: F4
+  target: F
+  target_part: inference
+  type: undercutting
+  by: [Joe Bowers (via Day's repost)]
+  first_date: 2026-03-04
+  locator: https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ para 3
+  audit_status: untested
+  audit_basis: F4 holds/accurate/supported as a statement (Kimura 1962); which Day text uses 1/N is not identified
+  counter: [d106]
+  note: Beneficial fixation probability ≈ 2s, not 1/N.
+  hierarchy_edge: true
+  edge_flag: 'judgement call, kept 2026-10-08: the reposted review names no Day equation; F is where Day uses 1/(2N) and fixation times'
+- id: d106
+  attacker: F4a
+  target: F4
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-03-04
+  locator: https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ para 11
+  audit_status: untested
+  audit_basis: F4a holds/n/a/pending; no equation
+  counter: []
+  note: The reviewer confused fixation probability with fixation rate.
+  hierarchy_edge: true
+- id: d107
+  attacker: G2
+  target: A
+  target_part: P1
+  type: undermining
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:31:58
+  audit_status: partly
+  audit_basis: G1 holds as accounting; F1a non-sequitur for latency-based figures; Hancock answers the Duffy version (balance ledger)
+  counter: [d118, d171, d172, d220]
+  note: The formula assumes each mutation fixes before the next arises.
+  hierarchy_edge: true
+- id: d108
+  attacker: G2
+  target: G1
+  target_part: C
+  type: rebutting
+  by: [Zach Hancock]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:31:58
+  audit_status: partly
+  audit_basis: as G2 → A
+  counter: [d118, d171, d172, d220]
+  note: The rate is serial, so a parallelism divisor is needed.
+  hierarchy_edge: true
+- id: d109
+  attacker: G2a
+  target: G2g
+  target_part: C
+  type: rebutting
+  by: [Jan Ghijselen (DeDzjang)]
+  first_date: 2026-09-28
+  locator: https://www.youtube.com/watch?v=nTVRiEcswI8 t=00:03:52
+  audit_status: upheld
+  audit_basis: G2g internal non-sequitur; RESULTS F1; R4 F2
+  counter: [d173]
+  note: 'Marathon: runners run in parallel, so do fixations. Dated before Day quoted Appendix A (book text earlier).'
+  hierarchy_edge: true
+- id: d111
+  attacker: G2d
+  target: G1
+  target_part: P2
+  type: undermining
+  by: [Camestros Felapton]
+  first_date: 2026-01-25
+  locator: https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/ para 28 (CA-05)
+  audit_status: partly
+  audit_basis: 'G2d holds/accurate; Camestros concedes the average (G1c); claims/G2d: terminology does not decide the maths'
+  counter: []
+  note: '''Generations per fixation'' reads as one at a time.'
+  hierarchy_edge: true
+- id: d112
+  attacker: G2e
+  target: G2g
+  target_part: C
+  type: rebutting
+  by: [PZ Myers]
+  first_date: 2026-10-02
+  locator: https://freethoughtblogs.com/pharyngula/2026/10/02/vox-days-amazing-ego-and-bill-dembski-dont-care/ para 5
+  audit_status: upheld
+  audit_basis: G2g non-sequitur; R4 F2
+  counter: []
+  note: Evolution is massively parallel.
+  hierarchy_edge: true
+- id: d113
+  attacker: G2f
+  target: Ga
+  target_part: inference
+  type: undercutting
+  by: [Joe Bowers (via Day's repost)]
+  first_date: 2026-03-04
+  locator: https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ para 4
+  audit_status: partly
+  audit_basis: 'R4 G1: p^n is timing-independent, so the serial reading is not what makes the product small; it prices pre-specified arisings (Ga external contested). G2f holds against the Appendix A chain only'
+  counter: []
+  note: 'Multiplying per-event probabilities treats evolution as a serial lottery, a category error. Retargeted 2026-10-08 from G3 (a critic node making the same point) to Ga (Day''s product p^n).'
+  hierarchy_edge: true
+- id: d114
+  attacker: G3
+  target: Ga
+  target_part: inference
+  type: undercutting
+  by: [Dennis McCarthy]
+  first_date: 2026-01-26
+  locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 47-48
+  audit_status: upheld
+  audit_basis: G3 holds/accurate/contested; Day calls the Darwillion 'a rhetorical absurdity' (G4)
+  counter: [d116, d117, d222]
+  note: p^n prices a pre-specified list; evolution needs some 20M of a large pool.
+  quote: only that some 20 million out of an enormous pool of candidate mutations become fixed.
+  hierarchy_edge: true
+- id: d115
+  attacker: G3
+  target: G4
+  target_part: inference
+  type: undercutting
+  by: [Dennis McCarthy]
+  first_date: 2026-01-26
+  locator: https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1 para 47-48
+  audit_status: upheld
+  audit_basis: as G3 → Ga
+  counter: [d116, d117, d222]
+  note: Same, against the Darwillion.
+  hierarchy_edge: true
+- id: d116
+  attacker: G3b
+  target: G3
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶28
+  audit_status: partly
+  audit_basis: 'R4 G1: G3b is an incomplete dilemma (internal non-sequitur); the neutral-is-not-functional half is valid; the neutral horn relies on B2/B3, whose N/Nₑ leg Day withdrew (B3g)'
+  counter: [d176, d241]
+  note: If the fixations are interchangeable they are neutral noise that cannot explain function.
+  hierarchy_edge: true
+- id: d117
+  attacker: G4b
+  target: G3
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-01-27
+  locator: https://voxday.net/2026/01/27/an-inspiring-critique/ ¶15
+  audit_status: untested
+  audit_basis: G4b pending; unclear what is multiplied by 25 (claims/G4b)
+  counter: [d214]
+  note: McCarthy's 40,000-generation figure increases the Darwillion 25×.
+  hierarchy_edge: true
+- id: d118
+  attacker: H
+  target: G2
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-01-05
+  locator: https://zenodo.org/records/18168236 §2.3
+  audit_status: untested
+  audit_basis: 'no check on this reply; R4 H2-hard: the hard-selection cap is ln R / D (10% is not a general bound); R4 H: soft selection did not remove the cost'
+  counter: [d119, d121, d122, d190, d191]
+  note: 'The 10% budget is shared by all loci, so parallel fixation is costly. A pre-emptive reply (2026-01-05) to the generic parallel-fixation objection. Retargeted 2026-10-08 from G1 (Day''s own claim) to G2.'
+  hierarchy_edge: true
+  edge_flag: 'judgement call 2026-10-08: Z18168236 §2.3 answers an unnamed ''most common objection''; G2 is the corpus''s main critic statement of it'
+- id: d119
+  attacker: H2
+  target: H
+  target_part: P2
+  type: undermining
+  by: ['Nunney 2003 (literature, applied by the audit)']
+  first_date: '2003'
+  locator: http://www.sekj.org/PDF/anz40-free/anz40-185.pdf Abstract
+  audit_status: partly
+  audit_basis: 'H2 n/a/accurate/contested; R4 H2-hard: cap ln R / D (10% not general); R4 H: soft selection did not remove the cost'
+  counter: [d192]
+  note: The cost depends on M and on hard vs soft selection. No critic in the corpus cites Nunney (balance ledger).
+  hierarchy_edge: true
+- id: d120
+  attacker: H4
+  target: x:eugine-sqrtN
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-01-10
+  locator: 'https://voxday.net/2026/01/10/a-first-challenge/ ¶2–¶9 (commenter quoted at ¶3)'
+  audit_status: untested
+  audit_basis: intra-Day; no check
+  counter: []
+  note: 'The square-root argument helps load, not adaptation. Retargeted 2026-10-08 from G1 (Day''s own claim) to the commenter Day answers (registry x:eugine-sqrtN).'
+  hierarchy_edge: false
+- id: d121
+  attacker: H6
+  target: H
+  target_part: P5
+  type: undermining
+  by: [Nesslig20]
+  first_date: 2026-10-05
+  locator: https://discourse.peacefulscience.org/t/18094 post 1 §2.1
+  audit_status: upheld
+  audit_basis: H6 holds/partial/supported; Day's own H1 scope retraction (2026-05-07)
+  counter: []
+  note: Haldane's limit applies to selection, not drift.
+  hierarchy_edge: true
+- id: d122
+  attacker: H7
+  target: H
+  target_part: P2
+  type: undermining
+  by: ['Keightley 2012 (literature, applied by the audit)']
+  first_date: '2012'
+  locator: https://pmc.ncbi.nlm.nih.gov/articles/PMC3276617/ Abstract
+  audit_status: partly
+  audit_basis: 'H7 supported; R4 H: hard selection at U = 2.2 needs ≈18 offspring per female; soft persists; ''soft removes cost'' not reproduced'
+  counter: []
+  note: A deleterious rate of 2.2 is intolerable under hard selection.
+  hierarchy_edge: true
+- id: d123
+  attacker: H7
+  target: H5
+  target_part: P3
+  type: undermining
+  by: ['Keightley 2012 (literature, applied by the audit)']
+  first_date: '2012'
+  locator: https://pmc.ncbi.nlm.nih.gov/articles/PMC3276617/ Abstract
+  audit_status: partly
+  audit_basis: as H7 → H
+  counter: []
+  note: Same, against Hössjer's cost step.
+  hierarchy_edge: true
+- id: d125
+  attacker: x:Z23003785-s5.2
+  target: E5
+  target_part: P3
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://zenodo.org/records/23003785 §5.2
+  audit_status: untested
+  audit_basis: 'claims/A2c: Day''s interpretation untested'
+  counter: []
+  note: 'A negative net count is read as biology: hypermutation fragments the population.'
+  hierarchy_edge: false
+- id: d126
+  attacker: x:CA-06
+  target: A2a
+  target_part: P1
+  type: undermining
+  by: [Camestros Felapton]
+  first_date: 2026-01-28
+  locator: https://camestrosfelapton.wordpress.com/2026/01/28/reading-vox-day-so-you-dont-have-to-2026-3/ para 28
+  audit_status: untested
+  audit_basis: Barrick 2009 abstract only in the repo; the post has a typo (1500 for 15,000)
+  counter: []
+  note: 35 fixed by 15,000 generations gives ~429, not 1,600 (posed as a question).
+  hierarchy_edge: false
+- id: d127
+  attacker: G1
+  target: A2d
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://zenodo.org/records/23003785 p.13 (§8.1)
+  audit_status: partly
+  audit_basis: G1 holds/n/a/contested
+  counter: [d108, d111, d169]
+  note: An average throughput is the right quantity to multiply by time.
+  hierarchy_edge: false
+- id: d128
+  attacker: H9
+  target: A5f
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-01-05
+  locator: https://zenodo.org/records/18168236 §5.2; repeated https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ (Point 3) and https://voxday.net/2026/10/01/they-never-stop-lying/ ¶6
+  audit_status: not_upheld
+  audit_basis: 'H9 fidelity misread (misattribution); R4 F2: free recombination raises the rate (A5f direction supported)'
+  counter: [d198]
+  note: 'Recombination does not change fixation time (cited to Kimura & Ohta 1969). Represents the hierarchy edge H9 -> A5f since 2026-10-08 (formerly H9 -> G1, d124).'
+  hierarchy_edge: true
+- id: d129
+  attacker: x:day-dembski-scaling
+  target: A5
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (answer to DE-01)
+  audit_status: partly
+  audit_basis: R4 A-sim (asexual sublinear but positive); the 'reproductive capacity' limit is branch H (contested)
+  counter: []
+  note: Scaling is irrelevant because sexual reproductive capacity is the real limit.
+  quote: The scaling element doesn’t apply at all, it is entirely irrelevant, because sexual reproductive capacity is the real limit on humans and other non-bacteria.
+  hierarchy_edge: false
+- id: d130
+  attacker: A5b
+  target: A5e
+  target_part: inference
+  type: undercutting
+  by: [Sparky_6_4 (KITTENS)]
+  first_date: 2026-10-04
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ §11
+  audit_status: partly
+  audit_basis: RESULTS F1 (latency is not throughput); Appendix D not retrieved
+  counter: [d013, d014, d182, d223]
+  note: §8.2 and Appendix D revert to the interval form.
+  hierarchy_edge: false
+- id: d131
+  attacker: A5d
+  target: A5a
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://zenodo.org/records/23003785 p.8 (§5.1)
+  audit_status: partly
+  audit_basis: 'R4 A-sim: sublinear for asexual genomes; linear under free recombination'
+  counter: [d004, d183]
+  note: Supply scaling is sublinear, so Hössjer's linear ×125 overstates.
+  hierarchy_edge: false
+- id: d132
+  attacker: B1d
+  target: B1
+  target_part: P3
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶31, ¶36
+  audit_status: upheld
+  audit_basis: B1c external contradicted; B1d is Day's own revision
+  counter: []
+  note: 'Self-revision: ''The pipeline was full, but it was much shorter.'''
+  quote: That’s absolutely wrong. The pipeline was full, but it was much shorter.
+  hierarchy_edge: false
+- id: d133
+  attacker: F1b
+  target: B2d
+  target_part: P2
+  type: undermining
+  by: [Dennis McCarthy]
+  first_date: 2026-09-17
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds para 22
+  audit_status: partly
+  audit_basis: as F1 → B2d
+  counter: []
+  note: Mutations do not rise one at a time.
+  hierarchy_edge: false
+- id: d134
+  attacker: B5c
+  target: B3d
+  target_part: P2
+  type: undermining
+  by: [Zach Hancock, Nesslig20]
+  first_date: 2026-10-03
+  locator: https://www.youtube.com/watch?v=_Vu0ZVVjwHc t=01:51:04–01:56:15; https://discourse.peacefulscience.org/t/18094
+  audit_status: partly
+  audit_basis: 'R4 B4a: the twofold pedigree/divergence gap is accounted for by θ_anc at Nₑ,anc ≈ 1.3×10⁵ (claims/B4g)'
+  counter: [d146, d218]
+  note: A pedigree-μ neutral count reaches the observed order within ~2×, not 32×.
+  hierarchy_edge: false
+- id: d135
+  attacker: B3g
+  target: B3e
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶2
+  audit_status: upheld
+  audit_basis: B3g holds/accurate/supported
+  counter: []
+  note: Self-concession removes the N/Nₑ input of the 8.25 calculation.
+  hierarchy_edge: false
+- id: d136
+  attacker: B3g
+  target: B3f
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶2
+  audit_status: upheld
+  audit_basis: B3g holds/accurate/supported
+  counter: []
+  note: Self-concession removes k = μN/Nₑ behind 800,000μ.
+  hierarchy_edge: false
+- id: d137
+  attacker: B3g
+  target: B4
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://voxday.net/2026/08/27/the-response-to-the-retraction/ ¶2
+  audit_status: upheld
+  audit_basis: B3g revises B4 (hierarchy edge 'revises')
+  counter: []
+  note: Self-concession removes the N/Nₑ factor behind the 200–580 kya recalibration (Zenodo record not revised).
+  hierarchy_edge: false
+- id: d138
+  attacker: H7
+  target: B3h
+  target_part: P2
+  type: undermining
+  by: [audit (citing Keightley 2012)]
+  first_date: 2026-10-07
+  locator: docs/research/claims/B3h-ne-10000-presupposes-k-mu.md (Responses)
+  audit_status: untested
+  audit_basis: 'no check; R4 C1: Nₑ = 1e4 unverified'
+  counter: []
+  note: Pedigree μ is measured directly, so θ/(4μ_pedigree) does not presuppose k = μ.
+  hierarchy_edge: false
+- id: d139
+  attacker: C5b
+  target: B3h
+  target_part: P1
+  type: undermining
+  by: [keruru]
+  first_date: 2026-08-31
+  locator: https://claudekeruru.substack.com/p/kimura-and-the-red-flock 'What we found'
+  audit_status: partly
+  audit_basis: closed-population caveat (claims/C5a)
+  counter: []
+  note: A temporal-method Nₑ of ~10⁴ needs no θ.
+  hierarchy_edge: false
+- id: d140
+  attacker: B1
+  target: B5
+  target_part: P3
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-09-22
+  locator: https://zenodo.org/records/22903977 §1, §3
+  audit_status: partly
+  audit_basis: 'RESULTS B1: Day''s formula exact for an empty start; R4 B1c: sourced histories give an excess; Day conceded a full pipe (B1d)'
+  counter: [d025, d028, d030, d032, d035, d037, d039, d044, d048, d132, d203]
+  note: k = μ is a steady-state rate; from an empty start the finite-window count is smaller.
+  hierarchy_edge: false
+- id: d141
+  attacker: B2
+  target: B5
+  target_part: P3
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-08-27
+  locator: https://zenodo.org/records/22129121 p.1
+  audit_status: partly
+  audit_basis: B2 contested; RESULTS B2a
+  counter: [d026, d209]
+  note: For large vertebrates the pipeline cannot fill within the window.
+  hierarchy_edge: false
+- id: d142
+  attacker: B1a
+  target: B5a
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-09-22
+  locator: https://zenodo.org/records/22903977 p.2-3
+  audit_status: partly
+  audit_basis: 'claims/B5a: subtracting 4Nₑ is a ~9% effect at McCarthy''s inputs; empty-start premise contradicted (B1c)'
+  counter: [d020, d024, d045]
+  note: Subtract the mean fixation time from the window. (McCarthy's own 2026-09-17 version already subtracts it.)
+  hierarchy_edge: false
+- id: d143
+  attacker: F
+  target: B5b
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶6
+  audit_status: not_upheld
+  audit_basis: F internal non-sequitur; B1c contradicted
+  counter: [d101, d104, d105, d202]
+  note: Mansfield should have used Kimura's fixation-time equation.
+  hierarchy_edge: false
+- id: d144
+  attacker: chk:R2-arith
+  target: B5b
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Critics: Mansfield)'
+  audit_status: upheld
+  audit_basis: 'arithmetic: 20e6/450,000 = 44 per generation vs ~1 (claims/G3 Responses)'
+  counter: []
+  note: Mansfield's 2% illustration comes out ~44× short.
+  hierarchy_edge: false
+- id: d145
+  attacker: x:day-clue
+  target: B5d
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-09-22
+  locator: https://voxday.net/2026/09/22/zero-probability-zero-clue/ ¶17
+  audit_status: not_upheld
+  audit_basis: 'RESULTS B0.5/B1: equilibrium-start neutral count = U·T; Day''s own IR uses μL × T as the steady-state count'
+  counter: []
+  note: '''confused mutations with fixations''.'
+  hierarchy_edge: false
+- id: d146
+  attacker: chk:B4a
+  target: B5c
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B4a (critic-side correction)
+  audit_status: upheld
+  audit_basis: B5c external contradicted as an SNV match
+  counter: [d231]
+  note: On an SNV basis 2μT ≈ 19.4M; the observed ~35M ≈ 19M + ~15M ancestral, so '38M matches' double-counts.
+  quote: So the observed ~35M ≈ 19M post-split + ~15M ancestral, and the "38M matches 35–40M" claims double-count.
+  hierarchy_edge: false
+- id: d147
+  attacker: chk:B4a
+  target: B5e
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B4a
+  audit_status: partly
+  audit_basis: B5e contested (basis of μ_G = 75 unstated)
+  counter: [d231]
+  note: Same double count if μ_G = 75 is an SNV rate.
+  hierarchy_edge: false
+- id: d148
+  attacker: B1c
+  target: B6
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶22
+  audit_status: not_upheld
+  audit_basis: B6 supported; withdrawn by Day in the same post (¶31)
+  counter: []
+  note: The pipeline is 'functionally nonexistent and empirically confirmed to be empty'.
+  hierarchy_edge: false
+- id: d149
+  attacker: chk:B4a
+  target: B6a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B4a
+  audit_status: upheld
+  audit_basis: B6a arithmetic-error/contradicted
+  counter: [d231]
+  note: θ_anc is first-order at Yoo's Nₑ,anc; the 1.44M holds only at Nₑ,anc = 1e4 (where d is half the observed).
+  hierarchy_edge: false
+- id: d150
+  attacker: F1a
+  target: B6c
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶17
+  audit_status: partly
+  audit_basis: G1 holds as accounting; F1a non-sequitur for latency uses
+  counter: [d174, d175, d201]
+  note: G_f is throughput that already includes parallelism, so the serial-model prediction is not about MITTENS.
+  hierarchy_edge: false
+- id: d151
+  attacker: x:errors-hide
+  target: B7
+  target_part: P2
+  type: undermining
+  by: ['Vox Day (Athos text, as posted)']
+  first_date: 2026-09-21
+  locator: https://voxday.net/2026/09/21/where-the-errors-hide/ ¶11-12
+  audit_status: not_upheld
+  audit_basis: 'RESULTS B3 (exchangeable: P_fix = 1/M) and R4 B3b (overlap: 1/N_i); a model with breeding–allele covariance was not run'
+  counter: []
+  note: P(fix) = x₀ assumes zero covariance between who breeds and what they carry, so it is wrong for real populations. Posted 25 days after Day's concession; Day's 2026-10-06 paper restates 1/(2N) 'regardless of offspring distribution'.
+  quote: He left out reproductive covariance, so he wrote the wrong equation, so P(fix) = x₀ is a wrong answer to the real question.
+  hierarchy_edge: false
+- id: d152
+  attacker: chk:C1
+  target: C
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C1
+  audit_status: upheld
+  audit_basis: R4 C1 verdict
+  counter: [d233]
+  note: The test does not discriminate between the models.
+  hierarchy_edge: false
+- id: d153
+  attacker: chk:C1
+  target: C1a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C1
+  audit_status: partly
+  audit_basis: 'R4 C1: right in sign for 10–90%, wrong for ≥90%'
+  counter: [d233]
+  note: The ascertainment effect is band-dependent.
+  hierarchy_edge: false
+- id: d154
+  attacker: chk:C1
+  target: C5
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C1
+  audit_status: partly
+  audit_basis: 'R4 C1: observed 1 and 3 completions exceed expectation at Nₑ = 1e4 (P = 2e-4), match at Nₑ ≈ 7k'
+  counter: [d233]
+  note: 'Against the critic: ''finding one would have been the falsification'', and one and three were found.'
+  hierarchy_edge: false
+- id: d155
+  attacker: chk:C1b
+  target: C6
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C1b
+  audit_status: upheld
+  audit_basis: 'R4 C1b verdict: not reproducible; cannot adjudicate'
+  counter: [d236]
+  note: The 21-count cannot be reproduced from the published procedure.
+  hierarchy_edge: false
+- id: d156
+  attacker: chk:R2-arith
+  target: C6
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/C6-molecular-clock-stopped.md (derived)
+  audit_status: upheld
+  audit_basis: C6 internal arithmetic-error
+  counter: []
+  note: 630 is for 150M genome-wide sites (panel-scaled 5.2); '99.8% in one window' is 53.6% by the paper's own bins.
+  hierarchy_edge: false
+- id: d157
+  attacker: chk:C2
+  target: C2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C2
+  audit_status: upheld
+  audit_basis: C2 internal non-sequitur (fitted-d inference)
+  counter: [d237]
+  note: d is not identifiable apart from s (Day's own s priors give d ∈ [0.481, 0.568]).
+  hierarchy_edge: false
+- id: d158
+  attacker: chk:C2
+  target: C2c
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C2
+  audit_status: upheld
+  audit_basis: C2c external contradicted
+  counter: [d237]
+  note: The ratio is invariant for random locus pairs (an identity), so it cannot detect an artefact.
+  hierarchy_edge: false
+- id: d159
+  attacker: chk:C2
+  target: C2d
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §C2
+  audit_status: partly
+  audit_basis: 'R4 C2: Day''s formula gives d = −ln L for discrete generations (d = 1 only at L = 1/e)'
+  counter: [d237]
+  note: '''d = 1 for discrete generations'' fails on Day''s own formula.'
+  hierarchy_edge: false
+- id: d160
+  attacker: chk:R2-fidelity
+  target: D2a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D2a-day-ulam-sides-with-eden.md
+  audit_status: partly
+  audit_basis: D2a fidelity partial
+  counter: []
+  note: The sentence attributed to Ulam is not in the OCR text; pp.24-25 support the substance.
+  hierarchy_edge: false
+- id: d161
+  attacker: chk:R2-fidelity
+  target: D2b
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D2b-day-lewontin-cannot-justify-continuity.md
+  audit_status: upheld
+  audit_basis: D2b fidelity misread
+  counter: []
+  note: The exchange is not in the volume; the 'product of evolution' remark is Levins's.
+  hierarchy_edge: false
+- id: d162
+  attacker: chk:R2-fidelity
+  target: D2f
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D2f-day-mayr-argument-from-existence.md
+  audit_status: partly
+  audit_basis: D2f fidelity partial
+  counter: []
+  note: The ch.6 wording is not in the volume; the blog wording is.
+  hierarchy_edge: false
+- id: d163
+  attacker: chk:R2-fidelity
+  target: D2j
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D2j-day-eden-apologises-for-vagueness-ch6.md
+  audit_status: upheld
+  audit_basis: D2j fidelity misread
+  counter: []
+  note: The apology is Bossert's (p.40), not Eden's.
+  hierarchy_edge: false
+- id: d164
+  attacker: chk:R2-fidelity
+  target: D3c
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D3c-eden-hemoglobin-2.7-million-generations.md
+  audit_status: upheld
+  audit_basis: D3c fidelity misread
+  counter: []
+  note: Eden's computed result is 'a little large but not implausible'.
+  hierarchy_edge: false
+- id: d165
+  attacker: chk:R2-fidelity
+  target: D2g
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D2g-day-no-biologist-produced-a-calculation.md
+  audit_status: upheld
+  audit_basis: claims/D2g; Eden p.8 accepts Wright's arithmetic
+  counter: []
+  note: Wright p.117 gives a calculation (< 1,250 steps).
+  hierarchy_edge: false
+- id: d166
+  attacker: D1a
+  target: D2h
+  target_part: C
+  type: rebutting
+  by: [Jason Rosenhouse (via Day's transcription)]
+  first_date: '2022'
+  date_note: Book year 2022.
+  locator: https://voxday.net/2026/10/06/the-best-theyve-got-ii/ para 3
+  audit_status: untested
+  audit_basis: both sides uncited (claims/D2h)
+  counter: [d074, d083]
+  note: Protein-space results do not support Eden. Predates D2h.
+  hierarchy_edge: false
+- id: d167
+  attacker: chk:D9-exploratory
+  target: D9
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D9-weasel-540000-generations.md (Responses)
+  audit_status: partly
+  audit_basis: exploratory, not pre-registered
+  counter: []
+  note: Independent letters complete in parallel (~13,100 generations, not 540,000); per-letter time overstated 2.3×.
+  hierarchy_edge: false
+- id: d168
+  attacker: chk:D9-exploratory
+  target: D9a
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/D9a-weasel-demonstrates-the-opposite.md (Responses)
+  audit_status: partly
+  audit_basis: exploratory, not pre-registered
+  counter: []
+  note: With Day's own 12 offspring the algorithm takes 1,300–1,800 generations, not 540,000.
+  hierarchy_edge: false
+- id: d169
+  attacker: G1a
+  target: G1
+  target_part: P1
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/snikker-snak/ ¶12
+  audit_status: untested
+  audit_basis: 'claims/G1a: not reconciled with §8.1; repo lacks the slice data; G1a internal arithmetic-error'
+  counter: [d170]
+  note: 'Intra-Day: Ara+2''s 14 fixation events were all sequential (vs §8.1 ''fixed in parallel'').'
+  quote: There were 14 fixation events and every single one of them was sequential.
+  hierarchy_edge: false
+- id: d170
+  attacker: E9
+  target: G1a
+  target_part: C
+  type: rebutting
+  by: [Good et al. 2017 (literature)]
+  first_date: '2017'
+  locator: https://pmc.ncbi.nlm.nih.gov/articles/PMC5788700/ Abstract
+  audit_status: partly
+  audit_basis: no recount of Ara+2 in the repo
+  counter: []
+  note: Multiple beneficial variants compete simultaneously in each population.
+  hierarchy_edge: false
+- id: d171
+  attacker: x:day-TNSL
+  target: G2
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/they-never-stop-lying/ ¶4
+  audit_status: partly
+  audit_basis: 'G1 holds as accounting; F1a/G2g: latency-based figures read serially'
+  counter: []
+  note: '''none of my math assumes serial fixation''. Pre-emptive (dated before Hancock''s video).'
+  quote: No, literally none of my math assumes serial fixation.
+  hierarchy_edge: false
+- id: d172
+  attacker: F1a
+  target: G2
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-01
+  locator: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/ ¶17-18
+  audit_status: partly
+  audit_basis: as x:day-TNSL → G2
+  counter: [d174, d175, d201]
+  note: MITTENS does not assume sequential fixation.
+  hierarchy_edge: false
+- id: d173
+  attacker: x:day-math-teacher
+  target: G2a
+  target_part: inference
+  type: undercutting
+  by: [Vox Day]
+  first_date: 2026-09-30
+  locator: https://voxday.net/2026/09/30/math-teacher-cant-math/ ¶7
+  audit_status: partly
+  audit_basis: G1 holds/contested
+  counter: []
+  note: Parallel fixation is 'clearly and specifically included' in the rate.
+  hierarchy_edge: false
+- id: d174
+  attacker: G2e
+  target: F1a
+  target_part: C
+  type: rebutting
+  by: [PZ Myers]
+  first_date: 2026-10-04
+  locator: https://freethoughtblogs.com/pharyngula/2026/10/04/vox-day-responds-to-my-criticism-of-his-refutation-of-evolution/ para 2
+  audit_status: partly
+  audit_basis: F1a non-sequitur (19,800); G1 holds as accounting
+  counter: []
+  note: 'After Day''s reply: he still ''thinks evolution is a simple serial process''.'
+  hierarchy_edge: false
+- id: d175
+  attacker: A5b
+  target: F1a
+  target_part: P2
+  type: undermining
+  by: [Sparky_6_4 (KITTENS)]
+  first_date: 2026-10-04
+  locator: https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/ §11
+  audit_status: partly
+  audit_basis: claims/G2 support list (s8.2, s8.6 interval form); F1a non-sequitur
+  counter: [d013, d014, d182, d223]
+  note: 3.0 §8.2 and Appendix D divide time by fixation time.
+  hierarchy_edge: false
+- id: d176
+  attacker: x:BO-paths
+  target: G3b
+  target_part: P1
+  type: undermining
+  by: [Joe Bowers (via Day's repost)]
+  first_date: 2026-03-04
+  locator: https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/ (Point 1)
+  audit_status: upheld
+  audit_basis: 'R4 G1: the middle case exists and flips at λ₅₀ = 12.3–17.2 alternatives per needed change (adaptive subset); G3b internal non-sequitur'
+  counter: []
+  note: '''Multiple mutational paths can lead to similar phenotypes'': functional and interchangeable is a third option. Dated before G3b.'
+  quote: Multiple mutational paths can lead to similar phenotypes.
+  hierarchy_edge: false
+- id: d177
+  attacker: chk:R2-arith
+  target: G
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/G-bernoulli-barrier.md; research/checks/results/REVIEW-R4-steelman-day.md
+  audit_status: upheld
+  audit_basis: 'G internal arithmetic-error ((1.01)^1474 ≈ 14.7× false as written); R4 G1 withdrew the audit''s mixed-scales framing'
+  counter: []
+  note: '(1.01)^1474 is not 14.7. R4 G1: 14.7 reproduces as 14.74 (additive) or 14.67 (log), and 107 is valid as a log ratio, so the earlier ''additive numbers labelled multiplicative'' reading is withdrawn. The audit''s own reading of the s3 criterion gives 13.8 loci, not 230.'
+  hierarchy_edge: false
+- id: d178
+  attacker: chk:F2
+  target: Gc
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §F2
+  audit_status: partly
+  audit_basis: F2/G/Gc external contested; tested regime only
+  counter: [d232, d238]
+  note: No collapse to 272 active loci with free recombination (R_int 0.975).
+  hierarchy_edge: false
+- id: d179
+  attacker: chk:H2-hard
+  target: Gc
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-H2-hard.md result 3
+  audit_status: partly
+  audit_basis: tested regime R ≥ 1.3, free recombination
+  counter: [d235]
+  note: Under hard selection ~230 concurrent sweeps persist for R ≥ 5, not for R = 2.
+  hierarchy_edge: false
+- id: d180
+  attacker: chk:F2
+  target: F2
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §F2
+  audit_status: partly
+  audit_basis: F2 external contested
+  counter: [d232, d238]
+  note: Day's cap is not reproduced in the tested regime; interference is real under tight linkage (credit to Day).
+  hierarchy_edge: false
+- id: d181
+  attacker: chk:F2
+  target: A2e
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §F2/A-sim
+  audit_status: partly
+  audit_basis: A2e external contested; recombination factor 1.5–172× is an extrapolation
+  counter: [d232, d238]
+  note: Clonal interference makes 'no recombination overhead' a handicap.
+  hierarchy_edge: false
+- id: d182
+  attacker: chk:A-sim
+  target: A5b
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §F2/A-sim
+  audit_status: partly
+  audit_basis: A5b external contested
+  counter: [d239]
+  note: Linear scaling holds only under free recombination; asexual response is sublinear.
+  hierarchy_edge: false
+- id: d183
+  attacker: chk:R2-arith
+  target: A5d
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/A5d-supermutation-sublinear.md (Responses)
+  audit_status: upheld
+  audit_basis: A5d internal non-sequitur
+  counter: []
+  note: A positive (8.5–17×) response does not show fixation is 'not bottlenecked by mutation supply'.
+  hierarchy_edge: false
+- id: d184
+  attacker: chk:R2-arith
+  target: A5c
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Critics: Hancock)'
+  audit_status: upheld
+  audit_basis: balance ledger
+  counter: []
+  note: Hancock's bacterial μ (1e-11) is below the measured 8.9e-11 (≈2,500 gens/fixation at the measured rate).
+  hierarchy_edge: false
+- id: d185
+  attacker: chk:R2-arith
+  target: A5a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Allies: Hössjer)'
+  audit_status: upheld
+  audit_basis: 'balance ledger: without d, 16.9M vs 20M'
+  counter: []
+  note: The residual ~2× gap comes from d = 0.45, which MITTENS 3.0 dropped.
+  hierarchy_edge: false
+- id: d186
+  attacker: chk:R2-fidelity
+  target: A3a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/A3x1-yoo-2025-fidelity.md; ledgers/fidelity.md
+  audit_status: upheld
+  audit_basis: A3x1 misread; A3a fidelity misread
+  counter: []
+  note: Yoo 2025 reports 327 Mb SDR per lineage; 410 and 187 Mb are not in it.
+  hierarchy_edge: false
+- id: d187
+  attacker: A3b
+  target: A3a
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-09-28
+  locator: https://zenodo.org/records/23003785 p.12 (§7.3)
+  audit_status: upheld
+  audit_basis: A3b holds/partial
+  counter: []
+  note: 'Self-concession: counting structural variants per base is ''a legitimate methodological concern''.'
+  quote: This is a legitimate methodological concern.
+  hierarchy_edge: false
+- id: d188
+  attacker: A1c
+  target: A1
+  target_part: C
+  type: rebutting
+  by: [Vox Day]
+  first_date: 2026-05-07
+  locator: https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶7
+  audit_status: untested
+  audit_basis: A1c pending; no text reconciles the dates
+  counter: []
+  note: 'Intra-Day: the CHLCA lies at 250 kya–1.3 Mya, not 6.3 My.'
+  hierarchy_edge: false
+- id: d189
+  attacker: E6
+  target: A2
+  target_part: P2
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-02
+  locator: https://zenodo.org/records/23105291 p.1
+  audit_status: partly
+  audit_basis: E6 holds/unverifiable/pending
+  counter: []
+  note: 'Self-revision: the ≥95% rule overcounts; strict counts give ~1,587 gen/fix (derived).'
+  hierarchy_edge: false
+- id: d190
+  attacker: chk:H2-hard
+  target: H
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-H2-hard.md (conclusion)
+  audit_status: partly
+  audit_basis: H external contested; Haldane's own regime (R ≈ 1.1, D ≈ 20–30) untested
+  counter: [d235]
+  note: 10% is not a general bound; the cap is ln R / D.
+  hierarchy_edge: false
+- id: d191
+  attacker: H1
+  target: H
+  target_part: P5
+  type: undermining
+  by: [Vox Day (retraction text), audit (application to H)]
+  first_date: 2026-05-07
+  locator: https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶3-4
+  audit_status: upheld
+  audit_basis: 'H1 external supported; R4 H: the scope concession applies to H''s comparison with the 20M total (Day does not say so)'
+  counter: []
+  note: A cost bound limits selected substitutions only.
+  hierarchy_edge: false
+- id: d192
+  attacker: chk:H
+  target: H2
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §H
+  audit_status: partly
+  audit_basis: EXPLORATORY reconstruction (adjusted twice after seeing results)
+  counter: [d229]
+  note: Soft selection did not reduce the cost at equal supply in either model. Against the critics' stock reply as much as Nunney.
+  quote: Soft T50 exceeds hard T50 at equal supply in both models
+  hierarchy_edge: false
+- id: d193
+  attacker: chk:H
+  target: H5
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §H
+  audit_status: upheld
+  audit_basis: H5 internal non-sequitur
+  counter: [d229]
+  note: 15,800 is 10.5× Haldane's own 1,500; it is a rate scaling, not a cost computation.
+  hierarchy_edge: false
+- id: d194
+  attacker: H1
+  target: H8
+  target_part: P4
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-05-07
+  locator: https://voxday.net/2026/05/07/a-retraction-and-a-revision/ ¶3-4
+  audit_status: upheld
+  audit_basis: H1 holds/n/a/supported
+  counter: []
+  note: 'Self-retraction: Term 3 does not cap total k.'
+  quote: my error was in interpreting its output as a constraint on total k.
+  hierarchy_edge: false
+- id: d195
+  attacker: H2
+  target: H8
+  target_part: P1
+  type: undermining
+  by: ['Nunney 2003 (literature, applied by the audit)']
+  first_date: '2003'
+  locator: http://www.sekj.org/PDF/anz40-free/anz40-185.pdf Abstract, Discussion
+  audit_status: partly
+  audit_basis: H8 external contested; Day's §3.3.1 does not cite Nunney
+  counter: [d192]
+  note: The cost depends on M and on soft vs hard selection, not on a fixed s_max.
+  hierarchy_edge: false
+- id: d196
+  attacker: chk:H2-hard
+  target: H8
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-H-C2.md; R4-H2-hard.md
+  audit_status: partly
+  audit_basis: H8 external contested
+  counter: [d235]
+  note: s_max = 1 corresponds to ln R = 1 (R ≈ 2.7), not Haldane's 10%.
+  hierarchy_edge: false
+- id: d197
+  attacker: chk:R2-term3-ratio
+  target: H8
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: git ad44c23 docs/research/claims/H8-kimura-calculator-term3.md line 41; corrected in claims/H8 (R4, 2026-10-08)
+  audit_status: partly
+  audit_basis: H8 external contested; corrected same-basis ratio 17.1 (research/checks/results/R4-H-C2.md)
+  counter: [d230]
+  note: Day's corpus has two unreconciled cost figures (one adaptive substitution per 39 vs per 300 generations). R2 put the gap at 7.7×; R4 corrected it to 17.1× on the same basis.
+  hierarchy_edge: false
+- id: d198
+  attacker: chk:R2-fidelity
+  target: H9
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/ledgers/fidelity.md
+  audit_status: upheld
+  audit_basis: H9 fidelity misread
+  counter: []
+  note: Kimura & Ohta 1969 is single-locus and never mentions recombination.
+  hierarchy_edge: false
+- id: d199
+  attacker: chk:R2-fidelity
+  target: F3a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/ledgers/fidelity.md; claims/F3a
+  audit_status: upheld
+  audit_basis: F3a fidelity misread
+  counter: []
+  note: Zeng 2021's ~0.001 is for negative selection.
+  hierarchy_edge: false
+- id: d200
+  attacker: chk:B0.4
+  target: F3
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: research/checks/RESULTS.md §B0.4
+  audit_status: partly
+  audit_basis: F3 holds/partial/contested
+  counter: [d225]
+  note: (2/s)ln(2N) overstates the conditional mean fixation time ~2.3× at Day's parameters; the attribution to Kimura is not supported by Kimura & Ohta 1969.
+  hierarchy_edge: false
+- id: d201
+  attacker: chk:R2-arith
+  target: F1a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/F1a-day-reply-throughput-and-serial-use-19800.md
+  audit_status: upheld
+  audit_basis: F1a internal non-sequitur
+  counter: []
+  note: The 19,800 is a sweep latency used as a spacing between fixations.
+  hierarchy_edge: false
+- id: d202
+  attacker: chk:F1
+  target: F
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: research/checks/RESULTS.md §F1
+  audit_status: upheld
+  audit_basis: F internal non-sequitur
+  counter: [d228]
+  note: Rate = 2N·U_b·u(s) independent of latency (3 vs 847 generations).
+  hierarchy_edge: false
+- id: d203
+  attacker: chk:B1c
+  target: B1
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B1c
+  audit_status: upheld
+  audit_basis: B1c external contradicted
+  counter: [d234]
+  note: Sourced Nₑ histories give an excess (K/UT 1.9–4.0), not a deficit.
+  hierarchy_edge: false
+- id: d204
+  attacker: chk:B1c
+  target: B5
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B1c; ledgers/balance.md R4
+  audit_status: partly
+  audit_basis: B5 external contested
+  counter: [d234]
+  note: 'Against the critics: their stated totals assume stationarity; after a contraction the per-lineage count is not μT.'
+  hierarchy_edge: false
+- id: d205
+  attacker: chk:B3b
+  target: B5
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B3b/B3c
+  audit_status: partly
+  audit_basis: B3b holds/partial/supported
+  counter: []
+  note: 'Against the critics'' blanket k = μ: with overlap and fluctuation k ≠ μ (small, −2% to +38%).'
+  hierarchy_edge: false
+- id: d206
+  attacker: chk:B3b
+  target: B3c
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B3b/B3c
+  audit_status: upheld
+  audit_basis: B3c contradicted (mechanism falsified)
+  counter: []
+  note: A mutant born in cohort i fixes with probability 1/N_i, not 1/(2N_t); 0.743 is a window artefact.
+  hierarchy_edge: false
+- id: d207
+  attacker: chk:B3b
+  target: B3d
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B3b/B3c
+  audit_status: partly
+  audit_basis: B3d contested; no derivation given
+  counter: []
+  note: 32.3 cannot come from Balloux–Lehmann at human-like parameters.
+  hierarchy_edge: false
+- id: d208
+  attacker: chk:B3
+  target: B3a
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: research/checks/RESULTS.md §B3
+  audit_status: upheld
+  audit_basis: B3a external contradicted
+  counter: [d227]
+  note: P_fix = 1/M for every Nₑ in an exchangeable model.
+  hierarchy_edge: false
+- id: d209
+  attacker: chk:B2a
+  target: B2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: research/checks/RESULTS.md §B2a
+  audit_status: partly
+  audit_basis: B2 contested; B2a exponent holds
+  counter: []
+  note: The exponent is a per-allele latency tail, not a throughput bound.
+  hierarchy_edge: false
+- id: d210
+  attacker: chk:B2a
+  target: B2c
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: research/checks/RESULTS.md §B2a; claims/B2c
+  audit_status: partly
+  audit_basis: 'claims/B2c: two Nₑ conventions in one headline'
+  counter: []
+  note: Same, against the 1-in-10^78,000,000 headline.
+  hierarchy_edge: false
+- id: d211
+  attacker: chk:B4a
+  target: B4g
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B4a; claims/B4g
+  audit_status: partly
+  audit_basis: derived one-point reconciliation; depends on Nₑ,anc, μ, T
+  counter: [d231]
+  note: Ancestral coalescence can account for the ×2 at Nₑ,anc ≈ 1.3×10⁵.
+  hierarchy_edge: false
+- id: d212
+  attacker: chk:ROOT-M-survey
+  target: ROOT-M
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/ROOT-excluded-mechanisms.md (table)
+  audit_status: partly
+  audit_basis: ROOT-M pending; keyword search over harvested texts; paywalled books not searched
+  counter: []
+  note: Five named mechanisms (rows 5, 8, 12, 13, 14) are asserted, not computed.
+  hierarchy_edge: false
+- id: d213
+  attacker: E4
+  target: ROOT
+  target_part: P4
+  type: undermining
+  by: [Vox Day]
+  first_date: 2026-10-06
+  locator: https://zenodo.org/records/23188201 Abstract
+  audit_status: partly
+  audit_basis: 'R4 E4: the chain reproduces exactly, but relictation changes mean fixation time only, never P_fix = 1/(2N) or k; it bears on latency (F), not on the neutral rate'
+  counter: []
+  note: 'Intra-Day: relictation is presented as a ''third evolutionary mechanism'' that Day does not exclude.'
+  hierarchy_edge: false
+- id: d214
+  attacker: chk:R2-arith
+  target: G4b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/G4b-darwillion-25x-reply.md
+  audit_status: partly
+  audit_basis: G4b pending
+  counter: []
+  note: Unclear what is multiplied by 25; compares a throughput inverse (1,600) with a latency (40,000).
+  hierarchy_edge: false
+- id: d215
+  attacker: chk:R2-arith
+  target: B2b
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/B2b-ceiling-x-vk-g-over-16.md (arithmetic audit)
+  audit_status: partly
+  audit_basis: B2b holds/unverifiable/contested
+  counter: []
+  note: The abstract's 'about ten thousand' is 3.5–11× below the paper's own human ceilings (35,000–114,000).
+  hierarchy_edge: false
+- id: d216
+  attacker: chk:R2-arith
+  target: B5e
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Critics: Nesslig20); claims/B5e'
+  audit_status: partly
+  audit_basis: B5e contested; basis of μ_G = 75 unstated (per-diploid-offspring count stated as a rate)
+  counter: []
+  note: The 75 is a de novo count per diploid offspring stated as a per-genome fixation rate; the factor-of-two basis is unsettled.
+  hierarchy_edge: false
+- id: d217
+  attacker: chk:R2-arith
+  target: B5a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Critics: McCarthy); claims/B5a'
+  audit_status: partly
+  audit_basis: B5a contested
+  counter: []
+  note: Uses N = Nₑ = 10,000 for the supply and treats all mutations as neutral; the 60–100 range is uncited.
+  hierarchy_edge: false
+- id: d218
+  attacker: chk:R2-arith
+  target: B5c
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Critics: Hancock); claims/B5c'
+  audit_status: partly
+  audit_basis: 'B5c: first pass used diploid 6.4e9 (corrected on screen); retained 76 is an SV-inclusive event count'
+  counter: []
+  note: The 76.8 used the diploid genome; the retained 76 counts structural-variant events, so the 38M is not an SNV-basis figure.
+  hierarchy_edge: false
+- id: d219
+  attacker: chk:B4a
+  target: B5f
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §B4a; claims/B5f
+  audit_status: partly
+  audit_basis: B5f contested
+  counter: [d231]
+  note: The 17.5M comparator includes polymorphism; the ancestral term is ignored.
+  hierarchy_edge: false
+- id: d220
+  attacker: chk:R2-arith
+  target: G2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-07
+  locator: 'docs/research/ledgers/balance.md (Critics: Hancock); claims/G2'
+  audit_status: partly
+  audit_basis: 'balance ledger: the video answers the Duffy version (2026-09-22), not MITTENS 3.0'
+  counter: []
+  note: The serial reading is tied to Duffy's 180 presentation; MITTENS 3.0 presents 1,322 as an aggregate throughput.
+  hierarchy_edge: false
+- id: d221
+  attacker: chk:F2
+  target: F1
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/RESULTS.md §F2; research/checks/results/R4-H2-hard.md
+  audit_status: partly
+  audit_basis: 'F1 external contested; RESULTS F1 caveat: possible, not shown feasible at realistic parameters'
+  counter: [d232, d238]
+  note: Independent-locus pipelining holds with free recombination in the tested regime; under linkage interference cuts the rate (R_int 0.09–0.65), and under hard selection the rate is bounded by ln R / D.
+  hierarchy_edge: false
+- id: d222
+  attacker: chk:R2-arith
+  target: G3
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/G3-specific-vs-any.md (Weaknesses)
+  audit_status: partly
+  audit_basis: G3 holds/accurate/contested
+  counter: []
+  note: The size of the candidate pool for selected changes is not quantified; McCarthy's 22.5M is a neutral count and does not reproduce selection.
+  hierarchy_edge: false
+- id: d223
+  attacker: chk:R2-arith
+  target: A5b
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-07
+  locator: docs/research/claims/A5b-kittens-94000x11p7.md (Weaknesses)
+  audit_status: partly
+  audit_basis: A5b contested
+  counter: []
+  note: The 94,000 treats LTEE and human per-genome supply as the same kind of quantity; with Day's own sublinear exponent the gap reopens to 81–445× (SNV-only).
+  hierarchy_edge: false
+- id: d224
+  attacker: rev:review-2
+  target: chk:B0
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #2)']
+  first_date: 2026-10-07
+  locator: 'research/checks/REVIEW.md §2026-10-07 Correctness review #2'
+  audit_status: upheld
+  audit_basis: applied (RESULTS B0 notes)
+  counter: []
+  note: B0.2 target corrected from a flat 4N to the diffusion value at p = 1/(2N).
+  hierarchy_edge: false
+- id: d225
+  attacker: rev:review-2
+  target: chk:B0.4
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #2)']
+  first_date: 2026-10-07
+  locator: 'research/checks/REVIEW.md §review #2'
+  audit_status: upheld
+  audit_basis: applied (RESULTS B0.4 correction)
+  counter: []
+  note: Stochastic asymptote is (2/s)(ln(4Ns)+γ), not ln(2Ns).
+  hierarchy_edge: false
+- id: d226
+  attacker: rev:review-2
+  target: chk:B1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #2)']
+  first_date: 2026-10-07
+  locator: 'research/checks/REVIEW.md §review #2'
+  audit_status: upheld
+  audit_basis: applied (RESULTS B1 note)
+  counter: []
+  note: The empty-start simulation is Poisson thinning and matches Day's formula by construction.
+  hierarchy_edge: false
+- id: d227
+  attacker: rev:review-2
+  target: chk:B3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #2)']
+  first_date: 2026-10-07
+  locator: 'research/checks/REVIEW.md §review #2'
+  audit_status: upheld
+  audit_basis: applied (RESULTS B3 note)
+  counter: []
+  note: P_fix = 1/M is a theorem in this model class; the run verifies code, and the verdict stays provisional until B3b.
+  hierarchy_edge: false
+- id: d228
+  attacker: rev:review-3
+  target: chk:F1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #3)']
+  first_date: 2026-10-07
+  locator: 'research/checks/REVIEW.md §review #3'
+  audit_status: upheld
+  audit_basis: applied (RESULTS F1 caveats)
+  counter: []
+  note: 'Unrealistic regime: pipelining is shown possible, not feasible; the serial reading must be tied to a quote.'
+  hierarchy_edge: false
+- id: d229
+  attacker: rev:R4-correctness
+  target: chk:H
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, correctness)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-correctness.md
+  audit_status: upheld
+  audit_basis: 'applied (REVIEW.md review #4 MAJORs 1-2)'
+  counter: []
+  note: Mutation-supply confound; 'soft within 15% of hard' withdrawn; post-hoc tuning labelled exploratory.
+  hierarchy_edge: false
+- id: d230
+  attacker: rev:R4-correctness
+  target: chk:R2-term3-ratio
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, correctness)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-correctness.md
+  audit_status: upheld
+  audit_basis: applied (claims/H1, H8 corrected)
+  counter: []
+  note: The R2 '7.7×' divided a rate with d by one without d; same-basis ratio 17.1.
+  hierarchy_edge: false
+- id: d231
+  attacker: rev:R4-correctness
+  target: chk:B4a
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, correctness)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-correctness.md
+  audit_status: upheld
+  audit_basis: applied (REVIEW.md MAJORs 3-4)
+  counter: []
+  note: Spurious CSAC 'tension' and wrong ancestral node; fixed to poly-but-diff and HCB.
+  hierarchy_edge: false
+- id: d232
+  attacker: rev:R4-correctness
+  target: chk:F2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, correctness)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-correctness.md
+  audit_status: upheld
+  audit_basis: applied (REVIEW.md MAJOR 6)
+  counter: []
+  note: Extrapolations stated as simulations; 'contradicted at r = 1/2' softened to 'not reproduced in the tested regime'.
+  hierarchy_edge: false
+- id: d233
+  attacker: rev:R4-correctness
+  target: chk:C1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, correctness)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-correctness.md
+  audit_status: upheld
+  audit_basis: applied (REVIEW.md MAJOR 8)
+  counter: []
+  note: '''does not rescue Day'' compared against a count the model does not simulate; withdrawn.'
+  hierarchy_edge: false
+- id: d234
+  attacker: rev:R4-correctness
+  target: chk:B1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, correctness)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-correctness.md
+  audit_status: upheld
+  audit_basis: applied (REVIEW.md MAJOR 5)
+  counter: []
+  note: '''every sourced history gives an excess'' holds by construction (telescoping identity).'
+  hierarchy_edge: false
+- id: d235
+  attacker: rev:R4-new
+  target: chk:H2-hard
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, new checks)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-new.md
+  audit_status: upheld
+  audit_basis: applied (R4-H2-hard.md wording)
+  counter: []
+  note: '''literal 1/300 falsified'' overreached; Haldane''s regime untested.'
+  hierarchy_edge: false
+- id: d236
+  attacker: rev:R4-new
+  target: chk:C1b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, new checks)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-new.md
+  audit_status: upheld
+  audit_basis: applied (verdict 'not reproducible; cannot adjudicate')
+  counter: []
+  note: '''massive deficit vs neutral'' wording removed.'
+  hierarchy_edge: false
+- id: d237
+  attacker: rev:R4-steelman-day
+  target: chk:C2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, Day-side steelman)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-steelman-day.md
+  audit_status: upheld
+  audit_basis: applied (A4/C2a 'holds for hazard-scale s')
+  counter: []
+  note: d·s is exact for hazard-scale s; 'fails as stated' overreached.
+  hierarchy_edge: false
+- id: d238
+  attacker: rev:R4-steelman-day
+  target: chk:F2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, Day-side steelman)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-steelman-day.md
+  audit_status: upheld
+  audit_basis: applied (F2/G/Gc external 'contested')
+  counter: []
+  note: Soft selection only; human-scale active loci untested; 'contradicted' changed to 'contested'.
+  hierarchy_edge: false
+- id: d239
+  attacker: rev:R4-steelman-critic
+  target: chk:A-sim
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #4, critic-side steelman)']
+  first_date: 2026-10-08
+  locator: research/checks/results/REVIEW-R4-steelman-critic.md
+  audit_status: upheld
+  audit_basis: applied (credit narrowed in A2e, A5d)
+  counter: []
+  note: Asexual saturation was predicted by the critics too, so it is not Day-specific credit.
+  hierarchy_edge: false
+- id: d240
+  attacker: chk:G1
+  target: Gc
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-G1.md §5 and §9 (Gc)
+  audit_status: partly
+  audit_basis: 'multiplicative, soft selection, free recombination, N = 1000 only; additive-exclusive convention gives 0.85× at 230'
+  counter: []
+  note: 'No cap near 230 concurrent sweeps under multiplicative fitness; 230 equals 157,000 × t_transit/T, so the match is circular if fitted.'
+  hierarchy_edge: false
+- id: d241
+  attacker: chk:G1
+  target: G3b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-G1.md §3
+  audit_status: upheld
+  audit_basis: 'G3b internal non-sequitur (incomplete dilemma)'
+  counter: []
+  note: 'The middle case (several interchangeable routes per needed change) is neither horn; the specific-vs-any probability flips at λ₅₀ = 12.3–17.2 for the adaptive subset.'
+  hierarchy_edge: false
+- id: d242
+  attacker: chk:G1
+  target: G
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-G1.md §5
+  audit_status: partly
+  audit_basis: 'soft selection only; G external contested; human-scale active loci untested'
+  counter: []
+  note: 'Under multiplicative fitness the expected per-locus response is unchanged to 0.6% at n = 157,000, and per-locus P_fix falls about 14% when var(ln w) ≈ 3.6; reproductive excess about 340× in the s3 configuration, 1.3× at 230. Additive dilution depends on the convention.'
+  hierarchy_edge: false
+- id: d243
+  attacker: chk:G1
+  target: G2g
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-G1.md §7 item 3
+  audit_status: upheld
+  audit_basis: 'G2g internal non-sequitur'
+  counter: []
+  note: 'p^n prices pre-specified outcomes and does not depend on timing, so it cannot force sequential fixation.'
+  hierarchy_edge: false
+- id: d244
+  attacker: chk:E
+  target: E
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-E.md
+  audit_status: partly
+  audit_basis: 'E internal holds approximately (2.0–2.75% in exact models); the route is wrong, the size survives'
+  counter: []
+  note: 'One carrier suffices (the ''≥2 carriers'' premise is wrong) and the 0.39 conditional comes from HW sampling with replacement; the errors partly offset.'
+  hierarchy_edge: false
+- id: d245
+  attacker: chk:E
+  target: E3
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-08
+  locator: research/checks/results/R4-E.md
+  audit_status: partly
+  audit_basis: 'E3 holds only under an inferred mean-field formulation; external contested (overreach)'
+  counter: []
+  note: 'The literal §3.1 reading gives 2.75%, outside the pre-registered band; population-level fitness dips are 1–5× rarer at N = 20–30 and 6–620× rarer at N = 100, so ''independently sufficient'' and ''minefields'' overreach.'
+  hierarchy_edge: false

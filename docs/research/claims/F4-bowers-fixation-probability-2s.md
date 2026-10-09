@@ -4,7 +4,7 @@ title: "Bowers (via Day's repost): the correct approximation for a beneficial mu
 side: critic
 branch: F
 parent: F
-edges: [{type: attacks, target: F}]
+edges: [{type: attacks, target: F}]  # judgement (kept): the reposted review names no Day equation; F is the node where Day uses 1/(2N) and fixation times
 load_bearing: false  # correct textbook statement; no calculation in the review, and Day's use is of rates (F4a)
 sourcing: secondhand
 status: extracted

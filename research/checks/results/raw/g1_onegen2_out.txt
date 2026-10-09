@@ -1,0 +1,14 @@
+== E2 (post-hoc). count-level one-generation response, 400 reps (identity: mean dp = (weighted mean count - mean count)/n)
+  N= 10000 n=  2300 mult dp/locus=0.00248703+-2e-06 expected 0.00248756 ratio 0.9998; N_eff 9447 (infinite-pop formula 9447); best/mean w 2.44
+  N= 10000 n=  2300 add  dp/locus=0.000199958+-1e-07 expected 0.0002 ratio 0.9998
+  N= 10000 n= 23000 mult dp/locus=0.0024864+-2e-06 expected 0.00248756 ratio 0.9995; N_eff 5661 (infinite-pop formula 5659); best/mean w 14.3
+  N= 10000 n= 23000 add  dp/locus=2.15482e-05+-2e-08 expected 2.15517e-05 ratio 0.9998
+  N= 10000 n=157000 mult dp/locus=0.00247214+-8e-06 expected 0.00248756 ratio 0.9938; N_eff 355 (infinite-pop formula 205); best/mean w 335
+  N= 10000 n=157000 add  dp/locus=3.17984e-06+-2e-09 expected 3.18066e-06 ratio 0.9997
+  N=100000 n=  2300 mult dp/locus=0.00248695+-5e-07 expected 0.00248756 ratio 0.9998; N_eff 94467 (infinite-pop formula 94466); best/mean w 2.76
+  N=100000 n=  2300 add  dp/locus=0.000199931+-4e-08 expected 0.0002 ratio 0.9997
+  N=100000 n= 23000 mult dp/locus=0.00248804+-7e-07 expected 0.00248756 ratio 1.0002; N_eff 56557 (infinite-pop formula 56592); best/mean w 21.2
+  N=100000 n= 23000 add  dp/locus=2.15437e-05+-5e-09 expected 2.15517e-05 ratio 0.9996
+  N=100000 n=157000 mult dp/locus=0.00248439+-3e-06 expected 0.00248756 ratio 0.9987; N_eff 2612 (infinite-pop formula 2053); best/mean w 929
+  N=100000 n=157000 add  dp/locus=3.18068e-06+-8e-10 expected 3.18066e-06 ratio 1.0000
+total 6 s

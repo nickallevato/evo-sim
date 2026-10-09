@@ -1,7 +1,7 @@
 ---
 id: B7c
 title: "keruru (former ally): supply is 2N mu with census N; fixation probability is exactly 1/(2N_census); claim withdrawn"
-side: ally
+side: critic  # keruru rule (opponents/keruru.md): ally before the 2026-08-26 retraction, critic from that post on. Was 'ally' until 2026-10-08.
 branch: B
 parent: B7
 edges: [{type: attacks, target: B3a}, {type: supports, target: B7}]

@@ -1,10 +1,10 @@
 ---
 id: C5b
 title: "A temporal-method Ne from ancient genomes (8,139 over 102 generations; 9,835 over 250) agrees with the canonical ~10,000 without presupposing the clock"
-side: critic
+side: critic  # keruru rule (opponents/keruru.md): 2026-08-31 post
 branch: C
 parent: C5
-edges: [{type: attacks, target: C5a}, {type: attacks, target: C4}]
+edges: [{type: attacks, target: C5a}, {type: attacks, target: C4}]  # judgement (kept): C5b agrees N_e changed (it 'roughly doubles') but its window averages (8,139; 9,835) answer C4's use against C5; main target is C5a
 load_bearing: false  # Answers the circularity objection to C5; ROOT unaffected.
 sourcing: firsthand
 status: extracted

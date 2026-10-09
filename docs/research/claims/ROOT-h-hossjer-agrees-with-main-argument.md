@@ -36,7 +36,7 @@ Hossjer's chain: `F_max(127) -> x(1.25e-8/1e-10) = 15,800 -> x(3e9/4.6e6) = ~1.0
 
 ## Assumptions
 - Stated: he agrees with Day's conclusion about natural selection; both calcs assume parallel fixation between loci; common descent is not needed for his view (uncommon descent).
-- Implicit: d = 0.45 applies inside the neutral rate (an input choice that creates the 2.2x gap); the cost step reduces adaptive fixations (HO-03).
+- Implicit: d = 0.45 applies inside both of his rates. The input contributes a factor 1/0.45 = 2.22; his gaps are 1.94× (eq. 2.4) and 2.63× (eq. 3.1), and without d they become 22.9M (above 20M) and 16.9M (1.19× short); corrected 2026-10-08 from "creates the 2.2x gap"; the cost step reduces adaptive fixations (HO-03).
 
 ## Responses
 - Against: the Day-side numbers collapse from ~10^6 to ~2 after rescaling, per Hossjer himself (concedes most of A5; balance ledger).

@@ -46,7 +46,7 @@ Discrepancies: (i) the abstract's "about ten thousand" is 3.5–11× below the t
 - Implicit: Panmictic, constant size over G; mean time is the criterion (the tail is handled in B2a); Wright's formula applies with a single Vₖ for the species.
 
 ## Responses
-- Against: "Genetic drift happens in every population and his claim otherwise is mystifying. Population size only affects which alleles are effectively neutral." ([Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07, comment UgyhNduYke46IStQ5pd4AaABAg (Mansfield))
+- Against: "Genetic drift happens in every population and his claim otherwise is mystifying. Population size only affects which alleles are effectively neutral." ([Mansfield (@brianmansfield6912), YouTube comments under Examining Origins video jDxFtCOGZ3A](https://www.youtube.com/watch?v=jDxFtCOGZ3A), comments retrieved 2026-10-07; terminus ante quem 2026-10-01: Day quotes this comment in "The Education of a Population Geneticist", ¶8 (added 2026-10-08), comment UgyhNduYke46IStQ5pd4AaABAg (Mansfield))
 - In support: HL pre-empts three objections (window, parallelism, demes) in the text; Maruyama's invariance is cited for demes.
 - Weaknesses in the responses: Mansfield addresses Day's earlier blog sentence, not this derivation. Neither side has checked the Vₖ = 5 value for humans against Hill (1972) or the demographic literature (not retrieved).
 

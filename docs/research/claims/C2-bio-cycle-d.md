@@ -4,7 +4,7 @@ title: "Bio-Cycle model: a generation-overlap factor d = 0.45, fitted to three a
 side: day
 branch: C
 parent: C
-edges: [{type: supports, target: C}, {type: supports, target: A4}, {type: depends-on, target: C2a}, {type: attacks, target: C2c}]
+edges: [{type: supports, target: C}, {type: supports, target: A4}, {type: depends-on, target: C2a}, {type: depends-on, target: C2c}]  # C2 -> C2c was typed attacks; C2c (the ratio cross-validation) supports C2 (fixed 2026-10-08)
 load_bearing: true  # d = 0.45 multiplies the available generations in MITTENS 2025 (146,250 = 325,000 x 0.45), in Haldane+d (487) and in the aDNA prediction (158 of 350). MITTENS 3.0 (Z23003785) drops d, so ROOT survives without it, but the 2025 headline figures (91 fixations, 219,780-fold) do not.
 sourcing: firsthand
 status: reviewed

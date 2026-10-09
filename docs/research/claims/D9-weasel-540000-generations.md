@@ -4,7 +4,7 @@ title: "Under N = 10,000 weasels, 12 offspring and s = 0.001, each Weasel letter
 side: day
 branch: D
 parent: D
-edges: [{type: depends-on, target: D2i},{type: attacks, target: D}]
+edges: [{type: depends-on, target: D2i},{type: supports, target: D}]  # D9 -> D was typed attacks; Day's target is Dawkins's Weasel, which has no node (argmap registry x:dawkins-weasel). Judgement: D9 read as support for D's 'time insufficient' premise (2026-10-08)
 load_bearing: false  # illustrative; ROOT does not depend on the Weasel recomputation
 sourcing: firsthand
 status: extracted

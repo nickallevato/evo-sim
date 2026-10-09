@@ -9,7 +9,7 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: non-sequitur
+  internal: non-sequitur   # the premise fails: p^n is timing-independent. Day's ¶25 concedes the all-cause rate is faster than a sequential rate
   fidelity: n/a
   external: contested
 ---
@@ -44,6 +44,8 @@ No prediction; consistency analysis only.
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 G1 (research/checks/results/R4-G1.md): p^n prices pre-specified outcomes whatever their timing, so it cannot force sequential fixation. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - Mode switch in the simulator: "parallel allowed" vs "forced sequential".

@@ -1,7 +1,7 @@
 ---
 id: B4a
 title: "Pairwise divergence = 2 mu T + theta_anc: two-lineage forward simulation with incomplete lineage sorting"
-side: literature
+side: literature  # audit check (two-lineage simulation on CSAC 2005 / Day's IR §3 formulas); 'audit' is not an allowed side in lint_research.py
 branch: B
 parent: B4
 edges: [{type: depends-on, target: B6}, {type: depends-on, target: B1b}, {type: attacks, target: B1a}]

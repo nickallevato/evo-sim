@@ -1,0 +1,102 @@
+=== E1 arithmetic (Day's analytic route, Z23020792 s5.1) ===
+P(>=2 carriers | Bin(100, 0.0036)) = 0.05087 (exact rational)
+P(>=2 defect COPIES | Bin(200, 0.0018)) = 0.05102;  P(>=1 copy) = 0.30255
+1 - e^-0.5 = 0.39347;  0.0509 x it = 2.0016%;  0.06 x 0.39 = 2.3400%
+CMMRD incidence implied: pooled one-locus q^2 = 3.240e-06 (1 in 308,642); equal 4-gene split 4(q/4)^2 = 8.100e-07 (1 in 1,234,568); Win-memory split = 1.022e-06 (1 in 977,999); Day s4.1: 1 in 1,000,000
+Win-memory carriers sum = 1/279
+  cumulative over 10 events at h=2.33%: 0.2100
+  cumulative over 50 events at h=2.33%: 0.6923
+  cumulative over 100 events at h=2.33%: 0.9054
+  cumulative over 500 events at h=2.33%: 1.0000
+
+=== E2 baselines / cross-implementation (N=100, G=50, q=0.0018) ===
+mode=real full    : P(>=1 aa, gens 0..50) = 2.7516%   (gens 1..50) = 2.7203%
+mode=real s_het=0 : P(>=1 aa, gens 0..50) = 4.0767%   (gens 1..50) = 4.0460%
+mode=real drift   : P(>=1 aa, gens 0..50) = 4.0767%   (gens 1..50) = 4.0528%
+mode=hwe  full    : P(>=1 aa, gens 0..50) = 2.3834%   (gens 1..50) = 2.3562%
+mode=hwe  s_het=0 : P(>=1 aa, gens 0..50) = 3.5610%   (gens 1..50) = 3.5360%
+mode=hwe  drift   : P(>=1 aa, gens 0..50) = 4.0767%   (gens 1..50) = 4.0528%
+no-hit-kernel implementation (real, s_het=0.05): 2.7516%
+no-hit-kernel implementation (real, s_het=0.0): 4.0767%
+
+=== E3 seeded MC of the literal s3.1 model (50,000 reps; SeedSequence([20261008, cfg])) ===
+MC mode=real full    : 2.6100% +/- 0.0713%
+MC mode=real s_het=0 : 4.0480% +/- 0.0881%
+MC mode=real drift   : 4.0180% +/- 0.0878%
+MC mode=hwe full    : 2.2860% +/- 0.0668%
+MC mode=hwe s_het=0 : 3.5720% +/- 0.0830%
+Day Table 4: full 2.33%, s_het=0 3.62%, drift 3.94%
+
+=== E4 decomposition by founder copy count (N=100, G=50, gens 0..50) ===
+[full] total 2.7516%
+   founder copies 0: P(c) = 0.6975, P(hom | c) = 0.0000, contribution 0.0000% (0.0% of total)
+   founder copies 1: P(c) = 0.2515, P(hom | c) = 0.0748, contribution 1.8818% (68.4% of total)
+   founder copies 2: P(c) = 0.0451, P(hom | c) = 0.1592, contribution 0.7183% (26.1% of total)
+   founder copies 3: P(c) = 0.0054, P(hom | c) = 0.2488, contribution 0.1337% (4.9% of total)
+   founder copies 4: P(c) = 0.0005, P(hom | c) = 0.3400, contribution 0.0162% (0.6% of total)
+   founder copies 5: P(c) = 0.0000, P(hom | c) = 0.4294, contribution 0.0014% (0.1% of total)
+   >=2 copies: P = 0.0510, P(hom | >=2) = 0.1705, contribution 0.8698% (31.6%)
+[drift] total 4.0767%
+   founder copies 0: P(c) = 0.6975, P(hom | c) = 0.0000, contribution 0.0000% (0.0% of total)
+   founder copies 1: P(c) = 0.2515, P(hom | c) = 0.1131, contribution 2.8444% (69.8% of total)
+   founder copies 2: P(c) = 0.0451, P(hom | c) = 0.2276, contribution 1.0272% (25.2% of total)
+   founder copies 3: P(c) = 0.0054, P(hom | c) = 0.3390, contribution 0.1821% (4.5% of total)
+   founder copies 4: P(c) = 0.0005, P(hom | c) = 0.4437, contribution 0.0212% (0.5% of total)
+   founder copies 5: P(c) = 0.0000, P(hom | c) = 0.5394, contribution 0.0018% (0.0% of total)
+   >=2 copies: P = 0.0510, P(hom | >=2) = 0.2416, contribution 1.2323% (30.2%)
+
+=== E5 Day's Tables 2, 3, 5, 8 (mode real, full selection, gens 0..G) ===
+N=  50: P(hom) 1.850% (Day 1.6%), P(>=2 copies) 1.427% (Day 1.4%), P(hom|>=2) 22.423% (Day 20.6%)
+N= 100: P(hom) 2.752% (Day 2.3%), P(>=2 copies) 5.102% (Day 5.1%), P(hom|>=2) 17.049% (Day 14.7%)
+N= 200: P(hom) 4.021% (Day 3.5%), P(>=2 copies) 16.270% (Day 16.1%), P(hom|>=2) 13.143% (Day 12.0%)
+N= 500: P(hom) 6.462% (Day 6.0%), P(>=2 copies) 53.738% (Day 52.8%), P(hom|>=2) 10.211% (Day 9.4%)
+Table 3 (G):
+  N=100: G=50/100/200: 2.752% / 2.752% / 2.752%   (Day (2.33, 2.37, 2.48))
+  N=500: G=50/100/200: 6.462% / 6.496% / 6.496%   (Day (5.95, 5.68, 5.96))
+Table 5 (N=100, G=100, carrier frequency c, q = c/2):
+  carrier 1/1000: 0.753% (Day 0.63%)
+  carrier 1/500: 1.515% (Day 1.42%)
+  carrier 1/280: 2.730% (Day 2.27%)
+  carrier 1/200: 3.851% (Day 3.23%)
+  carrier 1/100: 7.890% (Day 6.87%)
+  carrier 1/50: 16.338% (Day 14.2%)
+Table 8 (G=200, f_m read as allele frequency):
+  f_m=0.001: 1.02% / 1.51% / 2.20% / 3.48%   (Day (1.2, 1.6, 2.4, 3.5))
+  f_m=0.005: 5.23% / 7.89% / 11.80% / 19.98%   (Day (5.2, 8.3, 12.1, 20.5))
+  f_m=0.01: 10.70% / 16.34% / 24.79% / 42.26%   (Day (10.8, 16.4, 24.3, 42.1))
+  f_m=0.02: 21.99% / 33.59% / 49.99% / 76.81%   (Day (21.8, 33.2, 48.7, 74.6))
+  f_m=0.05: 53.71% / 74.54% / 91.82% / 99.70%   (Day (50.8, 71.8, 89.6, 99.4))
+
+=== E6 sweep over sourced ranges (mode real, gens 0..G) ===
+[full] pooled q=0.0018:  rows N, cols G=(50, 200, 1000, 10000)
+  N=   50: 1.850%  1.850%  1.850%  1.850%
+  N=  100: 2.752%  2.752%  2.752%  2.752%
+  N=  200: 4.021%  4.025%  4.025%  4.025%
+  N=  500: 6.462%  6.496%  6.496%  6.496%
+  N= 1000: 9.127%  9.240%  9.240%  9.240%
+[drift] pooled q=0.0018:  rows N, cols G=(50, 200, 1000, 10000)
+  N=   50: 2.519%  2.519%  2.519%  2.519%
+  N=  100: 4.077%  4.078%  4.078%  4.078%
+  N=  200: 6.571%  6.582%  6.582%  6.582%
+  N=  500: 12.190%  12.309%  12.309%  12.309%
+  N= 1000: 19.080%  19.594%  19.594%  19.594%
+
+=== E7 per-gene treatment (CMMRD = biallelic in the SAME gene) N=100 ===
+[full] G=50: pooled 2.752%; equal 4-gene split 2.681% (0.97x); Win-memory split 2.677% (0.97x)
+[full] G=200: pooled 2.752%; equal 4-gene split 2.682% (0.97x); Win-memory split 2.677% (0.97x)
+[drift] G=50: pooled 4.077%; equal 4-gene split 4.011% (0.98x); Win-memory split 4.001% (0.98x)
+[drift] G=200: pooled 4.078%; equal 4-gene split 4.012% (0.98x); Win-memory split 4.002% (0.98x)
+[full] N=50 G=50: pooled 1.850%; equal split 1.821% (0.98x)
+[full] N=200 G=50: pooled 4.021%; equal split 3.848% (0.96x)
+[full] N=500 G=50: pooled 6.462%; equal split 5.914% (0.92x)
+
+=== E8 consequences (mode real, full selection, pooled q, gens 0..G) ===
+N= 50 G= 50: P(>=1 aa) 1.850% | E[aa births] 0.0470 of 2550 (1.84e-05/birth) | E[genetic deaths, s-weighted] 0.150 (5.87e-05/birth) | P(q>=10% ever) 0.652% | P(wbar<0.95 ever) 0.1012% | P(wbar<0.5 ever) -9.55e-15
+N= 50 G=200: P(>=1 aa) 1.850% | E[aa births] 0.0474 of 10050 (4.71e-06/birth) | E[genetic deaths, s-weighted] 0.151 (1.50e-05/birth) | P(q>=10% ever) 0.652% | P(wbar<0.95 ever) 0.1019% | P(wbar<0.5 ever) -7.55e-15
+N=100 G= 50: P(>=1 aa) 2.752% | E[aa births] 0.0675 of 5100 (1.32e-05/birth) | E[genetic deaths, s-weighted] 0.309 (6.07e-05/birth) | P(q>=10% ever) 0.183% | P(wbar<0.95 ever) 0.0044% | P(wbar<0.5 ever) -5.66e-14
+N=100 G=200: P(>=1 aa) 2.752% | E[aa births] 0.0690 of 20100 (3.43e-06/birth) | E[genetic deaths, s-weighted] 0.314 (1.56e-05/birth) | P(q>=10% ever) 0.186% | P(wbar<0.95 ever) 0.0046% | P(wbar<0.5 ever) -5.51e-14
+N=200 G= 50: P(>=1 aa) 4.021% | E[aa births] 0.0908 of 10200 (8.90e-06/birth) | E[genetic deaths, s-weighted] 0.636 (6.24e-05/birth) | P(q>=10% ever) 0.009% | P(wbar<0.95 ever) 0.0000% | P(wbar<0.5 ever) -4.95e-14
+N=200 G=200: P(>=1 aa) 4.025% | E[aa births] 0.0947 of 40200 (2.36e-06/birth) | E[genetic deaths, s-weighted] 0.654 (1.63e-05/birth) | P(q>=10% ever) 0.009% | P(wbar<0.95 ever) 0.0000% | P(wbar<0.5 ever) -5.06e-14
+Over 100 independent events (N=100, G=50): P(>=1 aa) 0.939; P(any wbar<0.95) 0.0044; P(any wbar<0.5) -5.66e-12
+
+wall time 436.6 s

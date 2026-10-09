@@ -108,20 +108,51 @@ Not done:
 - **C1b, MAJOR:** the "massive deficit vs neutral" and "sign stands" wording was REMOVED. The verdict is "not reproducible; cannot adjudicate". The reviewer's per-site call-depth hypothesis was added, with its 1-replicate numbers labelled direction only.
 - **Code:** no bug found in either script.
 
-## Queue (after review #4)
-1. **E checks:** hitchhikers, strong-selection zones, CMMRD, relictation, mutator counts, Tenaillon, Good 2017.
-2. **G1 / G3:** specific-vs-any outcome; the average rate includes parallelism.
-3. **D sims:** sequence-space / Wistar claims.
-4. **C1b follow-up:** a per-site, per-bin call-depth model with real AADR coverage, plus an ancestry-replacement model.
-5. **H with realistic human parameters:**
+## 2026-10-08 — Review #5 (Sonnet): correctness + Day-side and critic-side steelman of E and G1; fact-check of the gap ledger
+Files: `results/REVIEW-R4-E-{correctness,steelman-day,steelman-critic}.md`, `results/REVIEW-R4-G1-{correctness,steelman-day,steelman-critic}.md`, `docs/research/ledgers/gaps-review.md`. Each write-up ends with a "Review resolution" table that maps every item to its change.
+
+**E**
+- **Correctness:** no bugs. Every number re-derived independently (founder chain against brute force to 1e-15; second MC sampler).
+- **MAJORs:**
+  - The population-level "600×" rested on one threshold. It is now a threshold sweep, and the conclusion is conditional and N-dependent.
+  - The E3 falsifier fired under the literal model (2.75%). This is now stated, and the mean-field formulation is described as a model choice, not an artefact.
+- **Day-side:** "non-sequitur" was aimed at a step paper E explicitly leaves to future modelling. The verdict is split: E is an untested bridge, and the overreach is in E3's wording.
+- **Critic-side:** keruru's 2026-08-26 chain had been missed ("none located" was wrong). "Keeps growing with N" needs family size ∝ N. E4 changes t̄, never P_fix or k.
+
+**G1**
+- **Correctness:** reproduced bit-for-bit. 14.7 is also 1474·ln 1.01, so the "mixed scales" framing was withdrawn. λ = −m·ln(1−q). The "reverse-engineered 230" wording dropped its claim about intent.
+- **Steelman conflict:** the two sides disagreed on additive dilution and on the 335× reproductive excess. Post-hoc runs settled both:
+  - Dilution depends on an unstated fitness convention.
+  - The excess is ≈ 340× only with all 157,000 loci at p = 0.5, and ≈ 1.3× at Day's own 230-locus crop.
+- Scope box added: this check does not test Day's current G_f throughput argument.
+- Missing critic credits added (Nesslig20, Bowers, a Reddit commenter, KITTENS, Camestros).
+
+**Gap ledger**
+- No BLOCKERs.
+- Nunney 2003 was restated to the K values actually simulated.
+- Murphy 2023 was cut back to what its abstract supports.
+- GAP-01 now brackets the unmeasured noncoding adaptive share instead of letting a coding-only α stand for the genome.
+- Matheson 2025's own caveat was added.
+
+**Process note:** the check scripts were uncommitted at run time, so pre-registration can't be proven from git. From now on, commit the script with its predictions before the main run.
+
+## Queue (after review #5)
+1. **H with realistic human parameters** (largest open item):
    - R ≈ 1.1–3 with age structure, diploid D ≈ 20–30, and a hard-selected deleterious load.
    - Human M from a sourced beneficial DFE.
    - Hard selection combined with linkage.
-6. **Binomial CIs on H T50**, plus N/K in the success criterion.
-7. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface fitting 1.23% d and ≤1.06% fixed.
-8. **Also open:**
-   - PM2013 Table S5 / PSMC numeric curve.
-   - Lehmann 2014 normalisation.
-   - LTEE Nₑ source.
-   - Coale-Demeny tables and the s definitions in the aDNA papers.
-   - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.
+   - Now bounded by GAP-01: the adaptive count is about 10³–10⁴ (coding) up to ~10⁶ (if 5% of noncoding changes were adaptive). Also use the published Nei/Felsenstein −ln p₀/ln k spacing (prior-art.md) as an analytic cross-check of H2-hard.
+2. **GAP-04:** fit the Weissman–Barton map-length cap to the F2 grid, then evaluate it at 35–38 M.
+3. **GAP-07:** arithmetic for indel/SV event counts from published rates (sharpens A3x).
+4. **GAP-02:** expected detectable sweeps per side within scan windows.
+5. **D sims:** sequence-space / Wistar claims. The G1 middle case (λ threshold) needs a per-site m, which branch D's per-sequence estimates don't supply.
+6. **C1b follow-up:** a per-site, per-bin call-depth model with real AADR coverage, plus an ancestry-replacement model.
+7. **Binomial CIs on H T50**, plus N/K in the success criterion.
+8. **Yoo 2025 μ and generation time:** rescale Nₑ,anc to the pedigree μ, then report the joint (T, μ, Nₑ,anc) surface, now with GAP-06 (consistent μ × g, a BGS-aware Nₑ,anc).
+9. **E leftovers:** E7 mutator sublinearity; E1/E2/E5/E6/E9; heterozygote-load and meltdown pathways (E3 §4); mutator fertility.
+10. **Also open:**
+    - PM2013 Table S5 / PSMC numeric curve.
+    - Lehmann 2014 normalisation.
+    - LTEE Nₑ source.
+    - Coale-Demeny tables and the s definitions in the aDNA papers.
+    - F2 at N = 1e4 and 2N·U_b ≥ 100 with a DFE.

@@ -1,0 +1,124 @@
+=== P1 baselines ===
+WF 2N=   20: t/4N = 0.9318 (Ne_var 10.000-10.000 vs N=10); diffusion t/4N 0.9746; |u - i/2N| max 2.8e-15
+WF 2N=   30: t/4N = 0.9523 (Ne_var 15.000-15.000 vs N=15); diffusion t/4N 0.9831; |u - i/2N| max 2.2e-15
+WF 2N=   50: t/4N = 0.9697 (Ne_var 25.000-25.000 vs N=25); diffusion t/4N 0.9899; |u - i/2N| max 5.9e-15
+WF 2N=   60: t/4N = 0.9743 (Ne_var 30.000-30.000 vs N=30); diffusion t/4N 0.9916; |u - i/2N| max 6.6e-15
+WF 2N=  100: t/4N = 0.9837 (Ne_var 50.000-50.000 vs N=50); diffusion t/4N 0.9950; |u - i/2N| max 3.1e-15
+WF 2N= 3200: t/4N = 0.9993 (Ne_var 1600.000-1600.000 vs N=1600); diffusion t/4N 0.9998; |u - i/2N| max 5.7e-13
+Moran 2N=20: t/4Ne = 0.95000 (1-1/2N = 0.95000); Ne_var (per step) const? 100.0000-100.0000; pfix err 1.1e-15
+Moran 2N=30: t/4Ne = 0.96667 (1-1/2N = 0.96667); Ne_var (per step) const? 225.0000-225.0000; pfix err 1.1e-15
+Moran 2N=50: t/4Ne = 0.98000 (1-1/2N = 0.98000); Ne_var (per step) const? 625.0000-625.0000; pfix err 3.3e-15
+
+=== P2 Day's table (pj = 0.1), two rounding conventions ===
+f=0.05:  [py] m= 1:0.950 m= 2:0.983 m= 2:0.993  [hu] m= 1:0.950 m= 2:0.983 m= 3:1.006   Day (0.95, 0.983, 0.993)
+f=0.10:  [py] m= 2:0.968 m= 3:0.999 m= 5:1.033  [hu] m= 2:0.968 m= 3:0.999 m= 5:1.033   Day (0.968, 0.999, 1.033)
+f=0.20:  [py] m= 4:1.003 m= 6:1.048 m=10:1.100  [hu] m= 4:1.003 m= 6:1.048 m=10:1.100   Day (1.003, 1.048, 1.1)
+f=0.30:  [py] m= 6:1.035 m= 9:1.091 m=15:1.160  [hu] m= 6:1.035 m= 9:1.091 m=15:1.160   Day (1.035, 1.091, 1.16)
+f=0.50:  [py] m=10:1.071 m=15:1.146 m=25:1.239  [hu] m=10:1.071 m=15:1.146 m=25:1.239   Day (1.071, 1.146, 1.239)
+f=0.60:  [py] m=12:1.068 m=18:1.148 m=30:1.249  [hu] m=12:1.068 m=18:1.148 m=30:1.249   Day (1.068, 1.148, 1.249)
+f=0.80:  [py] m=16:0.976 m=24:1.060 m=40:1.173  [hu] m=16:0.976 m=24:1.060 m=40:1.173   Day (0.976, 1.06, 1.173)
+f=0.90:  [py] m=18:0.950 m=27:0.966 m=45:1.023  [hu] m=18:0.950 m=27:0.966 m=45:1.023   Day (0.95, 0.966, 1.023)
+f=0.98:  [py] m=19:0.500 m=29:0.500 m=49:0.500  [hu] m=19:0.500 m=29:0.500 m=49:0.500   Day (0.5, 0.5, 0.5)
+max |dev| vs Day: python-round 0.0004; half-up 0.0132
+max pfix error over the table: 1.2e-13
+excess over WF chain at same 2N (ratio/WF - 1), python-round:
+  f=0.05: +0.020  +0.032  +0.024
+  f=0.10: +0.039  +0.049  +0.066
+  f=0.20: +0.077  +0.100  +0.134
+  f=0.30: +0.111  +0.146  +0.196
+  f=0.50: +0.149  +0.203  +0.277
+  f=0.60: +0.146  +0.206  +0.288
+  f=0.80: +0.047  +0.113  +0.209
+  f=0.90: +0.020  +0.014  +0.055
+  f=0.98: -0.463  -0.475  -0.484
+pj=0.01: 2N=30 f=0.5 ratio 1.145902
+pj=0.33: 2N=30 f=0.5 ratio 1.145902
+pj=1.0: 2N=30 f=0.5 ratio 1.145902
+
+=== P3 Ne vs c and vs N (pj = 0.1) ===
+f=0.1 2N=   20 m=   2: Ne_var 316.6667-316.6667; 1/(2c) = 316.6667; 1/(2 pj f^2) = 500.00; census N = 10
+f=0.1 2N=   50 m=   5: Ne_var 408.3333-408.3333; 1/(2c) = 408.3333; 1/(2 pj f^2) = 500.00; census N = 25
+f=0.1 2N=  200 m=  20: Ne_var 473.8095-473.8095; 1/(2c) = 473.8095; 1/(2 pj f^2) = 500.00; census N = 100
+f=0.1 2N=  800 m=  80: Ne_var 493.2099-493.2099; 1/(2c) = 493.2099; 1/(2 pj f^2) = 500.00; census N = 400
+f=0.1 2N= 3200 m= 320: Ne_var 498.2866-498.2866; 1/(2c) = 498.2866; 1/(2 pj f^2) = 500.00; census N = 1600
+f=0.5 2N=   20 m=  10: Ne_var 17.2727-17.2727; 1/(2c) = 17.2727; 1/(2 pj f^2) = 20.00; census N = 10
+f=0.5 2N=   50 m=  25: Ne_var 18.8462-18.8462; 1/(2c) = 18.8462; 1/(2 pj f^2) = 20.00; census N = 25
+f=0.5 2N=  200 m= 100: Ne_var 19.7030-19.7030; 1/(2c) = 19.7030; 1/(2 pj f^2) = 20.00; census N = 100
+f=0.5 2N=  800 m= 400: Ne_var 19.9252-19.9252; 1/(2c) = 19.9252; 1/(2 pj f^2) = 20.00; census N = 400
+f=0.5 2N= 3200 m=1600: Ne_var 19.9813-19.9813; 1/(2c) = 19.9813; 1/(2 pj f^2) = 20.00; census N = 1600
+
+=== P4 growth with 2N at fixed f ===
+f=0.05: 50:0.993 100:1.026 200:1.048 400:1.068 800:1.086 1600:1.103 3200:1.120
+        per-doubling increments 0.0333 0.0220 0.0195 0.0182 0.0175 0.0172   heuristic 0.0169
+        vs WF chain: 1.024 1.043 1.057 1.073 1.088 1.105 1.121
+f=0.10: 50:1.033 100:1.074 200:1.110 400:1.145 800:1.179 1600:1.212 3200:1.245
+        per-doubling increments 0.0404 0.0366 0.0347 0.0338 0.0333 0.0331   heuristic 0.0329
+        vs WF chain: 1.066 1.092 1.120 1.150 1.182 1.214 1.246
+f=0.20: 50:1.100 100:1.167 200:1.231 400:1.294 800:1.356 1600:1.419 3200:1.481
+        per-doubling increments 0.0666 0.0641 0.0630 0.0625 0.0623 0.0622   heuristic 0.0621
+        vs WF chain: 1.134 1.186 1.242 1.300 1.360 1.420 1.482
+f=0.50: 50:1.239 100:1.363 200:1.488 400:1.612 800:1.737 1600:1.862 3200:1.987
+        per-doubling increments 0.1248 0.1244 0.1245 0.1246 0.1247 0.1248   heuristic 0.1250
+        vs WF chain: 1.277 1.386 1.501 1.620 1.741 1.864 1.988
+Day: f=0.5 1.36 @100, 1.74 @800; f=0.1 1.179 @800
+
+=== P5 fixed family size (m = 6 replaced copies) ===
+2N=   20 (f=0.3000): ratio 1.0348; WF 0.9318
+2N=   30 (f=0.2000): ratio 1.0480; WF 0.9523
+2N=   60 (f=0.1000): ratio 1.0445; WF 0.9743
+2N=  120 (f=0.0500): ratio 1.0323; WF 0.9862
+2N=  240 (f=0.0250): ratio 1.0211; WF 0.9926
+2N=  480 (f=0.0125): ratio 1.0130; WF 0.9961
+2N=  960 (f=0.0063): ratio 1.0077; WF 0.9979
+2N= 1920 (f=0.0031): ratio 1.0045; WF 0.9989
+Day: 1.045 @60, 1.013 @480
+
+=== P6 threshold f* where ratio/WF >= 1.05 and where ratio >= 1.05 (scan over integer m) ===
+2N=   20: f*(+5% over WF chain) = 0.15; f*(ratio >= 1.05) = 0.4
+2N=   30: f*(+5% over WF chain) = 0.13333333333333333; f*(ratio >= 1.05) = 0.23333333333333334
+2N=   50: f*(+5% over WF chain) = 0.08; f*(ratio >= 1.05) = 0.14
+2N=  100: f*(+5% over WF chain) = 0.06; f*(ratio >= 1.05) = 0.08
+2N=  200: f*(+5% over WF chain) = 0.045; f*(ratio >= 1.05) = 0.055
+2N=  400: f*(+5% over WF chain) = 0.0375; f*(ratio >= 1.05) = 0.0425
+2N=  800: f*(+5% over WF chain) = 0.03; f*(ratio >= 1.05) = 0.03375
+2N= 1600: f*(+5% over WF chain) = 0.026875; f*(ratio >= 1.05) = 0.026875
+
+=== P7 eigen decay rates (2N = 30, pj = 0.1) ===
+jackpot f=0.5 : leading rate 0.027586; ratios 1.00 : 2.00 : 2.72 : 3.17 : 3.41 : 3.53
+jackpot f=0.1 : leading rate 0.001379; ratios 1.00 : 2.86 : 5.44 : 8.61 : 12.26 : 16.28
+WF            : leading rate 0.033333; ratios 1.00 : 2.93 : 5.64 : 8.89 : 12.41 : 15.93
+c(f=0.5, 2N=30) = 0.027586; WF 1/(2N) = 0.033333
+
+=== P8 diploid pair-family model vs haploid chain at the same family share ===
+2N=20 (N=10 individuals); WF ratio 0.932
+   K= 1 (F=0.10): diploid ratio 0.9461 (excess vs WF +0.015, Ne 475.00, pfix err 3e-14) | haploid f=F: 0.9679 (+0.039) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 2 (F=0.20): diploid ratio 0.9481 (excess vs WF +0.017, Ne 190.00, pfix err 1e-14) | haploid f=F: 1.0034 (+0.077) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 3 (F=0.30): diploid ratio 0.9468 (excess vs WF +0.016, Ne 105.56, pfix err 9e-15) | haploid f=F: 1.0348 (+0.111) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 4 (F=0.40): diploid ratio 0.9419 (excess vs WF +0.011, Ne 67.86, pfix err 3e-15) | haploid f=F: 1.0585 (+0.136) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 5 (F=0.50): diploid ratio 0.9328 (excess vs WF +0.001, Ne 47.50, pfix err 7e-16) | haploid f=F: 1.0709 (+0.149) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 6 (F=0.60): diploid ratio 0.9181 (excess vs WF -0.015, Ne 35.19, pfix err 1e-15) | haploid f=F: 1.0682 (+0.146) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 7 (F=0.70): diploid ratio 0.8938 (excess vs WF -0.041, Ne 27.14, pfix err 6e-16) | haploid f=F: 1.0413 (+0.118) | haploid f with same ratio (rising branch) ~ 0.05
+   K= 8 (F=0.80): diploid ratio 0.8416 (excess vs WF -0.097, Ne 21.59, pfix err 1e-15) | haploid f=F: 0.9759 (+0.047) | haploid f with same ratio (rising branch) ~ 0.05
+2N=30 (N=15 individuals); WF ratio 0.952
+   K= 2 (F=0.13): diploid ratio 0.9695 (excess vs WF +0.018, Ne 435.00, pfix err 2e-14) | haploid f=F: 1.0158 (+0.067) | haploid f with same ratio (rising branch) ~ 0.06666666666666667
+   K= 3 (F=0.20): diploid ratio 0.9727 (excess vs WF +0.021, Ne 241.67, pfix err 2e-14) | haploid f=F: 1.0480 (+0.100) | haploid f with same ratio (rising branch) ~ 0.06666666666666667
+   K= 4 (F=0.27): diploid ratio 0.9743 (excess vs WF +0.023, Ne 155.36, pfix err 6e-15) | haploid f=F: 1.0778 (+0.132) | haploid f with same ratio (rising branch) ~ 0.06666666666666667
+   K= 6 (F=0.40): diploid ratio 0.9725 (excess vs WF +0.021, Ne 80.56, pfix err 1e-15) | haploid f=F: 1.1253 (+0.182) | haploid f with same ratio (rising branch) ~ 0.06666666666666667
+   K= 8 (F=0.53): diploid ratio 0.9629 (excess vs WF +0.011, Ne 49.43, pfix err 7e-16) | haploid f=F: 1.1490 (+0.207) | haploid f with same ratio (rising branch) ~ 0.03333333333333333
+   K= 9 (F=0.60): diploid ratio 0.9544 (excess vs WF +0.002, Ne 40.28, pfix err 3e-15) | haploid f=F: 1.1483 (+0.206) | haploid f with same ratio (rising branch) ~ 0.03333333333333333
+   K=10 (F=0.67): diploid ratio 0.9428 (excess vs WF -0.010, Ne 33.46, pfix err 1e-15) | haploid f=F: 1.1376 (+0.195) | haploid f with same ratio (rising branch) ~ 0.03333333333333333
+   K=12 (F=0.80): diploid ratio 0.9006 (excess vs WF -0.054, Ne 24.17, pfix err 2e-15) | haploid f=F: 1.0597 (+0.113) | haploid f with same ratio (rising branch) ~ 0.03333333333333333
+2N=50 (N=25 individuals); WF ratio 0.970
+   K= 2 (F=0.08): diploid ratio 0.9846 (excess vs WF +0.015, Ne 1225.00, pfix err 1e-13) | haploid f=F: 1.0197 (+0.052) | haploid f with same ratio (rising branch) ~ 0.04
+   K= 5 (F=0.20): diploid ratio 0.9967 (excess vs WF +0.028, Ne 306.25, pfix err 1e-14) | haploid f=F: 1.1001 (+0.134) | haploid f with same ratio (rising branch) ~ 0.06
+   K= 8 (F=0.32): diploid ratio 1.0030 (excess vs WF +0.034, Ne 139.20, pfix err 6e-15) | haploid f=F: 1.1703 (+0.207) | haploid f with same ratio (rising branch) ~ 0.06
+   K=10 (F=0.40): diploid ratio 1.0039 (excess vs WF +0.035, Ne 94.23, pfix err 5e-15) | haploid f=F: 1.2073 (+0.245) | haploid f with same ratio (rising branch) ~ 0.06
+   K=12 (F=0.48): diploid ratio 1.0018 (excess vs WF +0.033, Ne 68.06, pfix err 7e-15) | haploid f=F: 1.2340 (+0.273) | haploid f with same ratio (rising branch) ~ 0.06
+   K=15 (F=0.60): diploid ratio 0.9919 (excess vs WF +0.023, Ne 45.37, pfix err 7e-15) | haploid f=F: 1.2490 (+0.288) | haploid f with same ratio (rising branch) ~ 0.04
+   K=18 (F=0.72): diploid ratio 0.9714 (excess vs WF +0.002, Ne 32.41, pfix err 2e-15) | haploid f=F: 1.2225 (+0.261) | haploid f with same ratio (rising branch) ~ 0.02
+   K=20 (F=0.80): diploid ratio 0.9493 (excess vs WF -0.021, Ne 26.63, pfix err 2e-15) | haploid f=F: 1.1726 (+0.209) | haploid f with same ratio (rising branch) ~ 0.02
+
+=== MC cross-check of the matrix (copy-level simulation; SeedSequence([20261008, 1])) ===
+2N=30 f=0.5 pj=0.1: MC P_fix 0.03363 (1/30 = 0.03333); MC t|fix 82.46 +/- 0.53 (n=6726); exact 83.08
+
+wall time 618.4 s

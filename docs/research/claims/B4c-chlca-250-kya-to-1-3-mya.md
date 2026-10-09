@@ -24,7 +24,7 @@ Source: [Day, "A Retraction and a Revision" (blog)](https://voxday.net/2026/05/0
 Source: [Day, "A Retraction and a Revision" (blog)](https://voxday.net/2026/05/07/a-retraction-and-a-revision/), 2026-05-07, ¶4 of extracted text
 
 ## Formal statement
-Version chain (versions ledger, "CHLCA"): 6.3–9 My → 200–580 kya (Z18525547, 2026-02-08) → 68 kya (Z18637333, 2026-02-14) → 68–330 kya (Z19984826 Kimura calculator, per retraction text) → 250 kya–1.3 Mya (2026-05-07). The retraction is of Term 3 (Haldane cost limit as a bound on total k) in Z19984826; the CHLCA range moves because of it. The harvested post gives no computation for 250 kya–1.3 Mya. The N/Nₑ mechanism behind the Feb 2026 values was withdrawn later (B3g, 2026-08-27).
+Version chain (versions ledger, "CHLCA", corrected 2026-10-08): 9 My (2019) → 6–7 My (Z18165980, 2025) → 200–580 kya (Z18525547, 2026-02-08) → 68 kya (Z18637333, 2026-02-14) → 68–330 kya (Z19984826 Kimura calculator, per retraction text) → 250 kya–1.3 Mya (2026-05-07) → 6.3 My again in MITTENS 3.0 (Z23003785, 2026-09-28; A1c). The retraction is of Term 3 (Haldane cost limit as a bound on total k) in Z19984826; the CHLCA range moves because of it. The harvested post gives no computation for 250 kya–1.3 Mya. The N/Nₑ mechanism behind the Feb 2026 values was withdrawn later (B3g, 2026-08-27).
 
 ## Assumptions
 - Stated: A three-term minimum: input flux, polymorphism throughput ceiling, selection-cost limit.

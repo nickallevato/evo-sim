@@ -9,9 +9,9 @@ load_bearing: false  # Numerical support for E's headline hazard figure; ROOT do
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
+  internal: holds   # only under an inferred mean-field (HW-expected) selection formulation; the literal §3.1 reading gives 2.75%, outside the pre-registered 2.33 +/- 0.15% band (falsifier fired). Table 8 not reproduced by either
   fidelity: n/a
-  external: pending
+  external: contested   # overreach: 'independently sufficient' and 'minefields' not supported on the direct-viability endpoint; withdrawal of the hitchhiking pathway credited
 ---
 
 ## Statement (verbatim)
@@ -62,6 +62,8 @@ Written before any check runs.
 
 ## Check
 Script: `research/checks/e_founder_hazard.py` (planned, shared with E). Add output: P(hom) split by founder copy count 0 / 1 / >= 2 and time of first homozygote. · Result: not run · Review: pending
+
+R4 E (research/checks/results/R4-E.md): see E. Literal reading 2.75% (+18%), s_hom inert for this metric; mean-field formulation reproduces 2.33%. Cumulative and G-insensitivity results hold. Growth variant raises the hazard (2.75 -> 9.0%). Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 Founder size, q, s_hom, s_het, replicates, generations, event count, copy-number breakdown.

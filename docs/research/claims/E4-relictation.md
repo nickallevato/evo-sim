@@ -9,9 +9,9 @@ load_bearing: false  # Narrow, self-bounded regime (macroscopic family replaceme
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # every table entry reproduces (exact chain, 2N = 20/30/50, extended to 400)
+  fidelity: accurate   # Lambda-coalescent framing is Day's own; body discloses N-dependent thresholds; the abstract's unqualified 'Below 10%' is flagged
+  external: contested   # growth with N needs family size proportional to N (sweepstakes); fixed family size shrinks the excess; diploid mapping and wolf case untested
 ---
 
 ## Statement (verbatim)
@@ -44,7 +44,7 @@ Link to repo checks: B3 (RESULTS.md) found P_fix = 1/M and t_fix/Ne of 3.95-4.07
 - Implicit: that the trend "keeps growing with population size" (abstract) extrapolates from 2N = 20-50 to larger N at constant replacement fraction f; that realistic vertebrate bottlenecks have f above 10% in several consecutive generations; that the Scandinavian wolf (Viluma 2022) haplotype loss "consistent with relictation dynamics" is not equally explained by ordinary drift at tiny N.
 
 ## Responses
-- Against: none located. The paper itself places the mechanism in the multiple-merger literature (Möhle & Sagitov 2001; Eldon & Wakeley 2006; Donnelly & Kurtz 1999; Pitman 1999; Schweinsberg 2000), so a critic would say the content is established theory applied to a regime; the paper agrees ("not a claim to have discovered a new force of nature").
+- Against: keruru, 2026-08-26 retraction post: works the same chain to the same end (P_fix = 1/(2N), Ne reduced, k unchanged), so the critic side reached Day's own invariance result before this paper. Otherwise none located. The paper itself places the mechanism in the multiple-merger literature (Möhle & Sagitov 2001; Eldon & Wakeley 2006; Donnelly & Kurtz 1999; Pitman 1999; Schweinsberg 2000), so a critic would say the content is established theory applied to a regime; the paper agrees ("not a claim to have discovered a new force of nature").
 - In support: the paper's own exact chain; the repo's B3 result on 1/(2N).
 - Weaknesses in the responses: not engaged. Note for B3/B7: this paper states (as Day's own position, 2026-10-06) that p = 1/(2N) "holds exactly regardless of offspring distribution", which is the position the critics took against k = mu N/Ne (B7).
 
@@ -64,6 +64,8 @@ Written before any check runs.
 
 ## Check
 Script: none yet (spec: `research/checks/e4_relictation_chain.py`, planned; reproduce the table at 2N = 20 / 30 / 50 first, then extend to 2N = 100-400; seedless, exact). · Result: not run · Review: pending
+
+R4 E4 (`research/checks/e4_relictation_chain.py`, research/checks/results/R4-E.md): reproduces exactly. It is the known multiple-merger result: it changes mean fixation time, never P_fix = 1/(2N) or k. Variance, coalescent and eigen Ne coincide, so the deviation is multiple-merger, not a mis-specified Ne. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 Replacement fraction f, jackpot probability, population size 2N, Ne from frequency-change variance, haplotype-block structure.

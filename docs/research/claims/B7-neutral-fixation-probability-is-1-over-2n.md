@@ -36,7 +36,7 @@ Day's three statements of 1/(2N) in 2026 (above) sit alongside the 1/(2Nₑ) in 
 - Implicit: Single-copy start; exchangeable offspring distribution (B3 check; non-exchangeable settings pending B3b).
 
 ## Responses
-- Against: Day's earlier position (B3a); Day (RESP) contests keruru's chains as setting covariance between who breeds and what they carry to zero (B3g discussion).
+- Against: Day's earlier position (B3a); Day ("The Response to the Retraction", 2026-08-27, ¶3; locator fixed 2026-10-08, previously "RESP") contests keruru's chains as setting covariance between who breeds and what they carry to zero (B3g discussion).
 - In support: B3 check; keruru's exact chains (B7c); Kimura 1962/1969 (B7a, B7b).
 - Weaknesses in the responses: The Hard Limits paper still defines X using Nₑ ≈ 0.57 N while assuming 1/(2N) (B2b); the critics have not tested a non-exchangeable reproduction law (B3b).
 

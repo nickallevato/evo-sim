@@ -36,6 +36,7 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Cost of selection.** In the audit's reconstruction, soft selection does not make the cost disappear.
 - **Haldane's arithmetic** (300 and 487) holds.
 - **A critic's double count.** The critics' claim that "38M matches 35M SNVs" counts the same differences twice.
+- **LTEE founders.** The founder hazard's size (2.0–2.75% per event against Day's 2.3%) and the relictation chain both reproduce. The route to the 2.3% is wrong, and its consequence for real populations is untested.
 
 **Points where the critics' maths holds up:**
 - **Neutral rate.** The neutral substitution rate is k = μ for any Nₑ, because fixation probability is set by the census size 1/2N, not by 1/2Nₑ. Day conceded this on 2026-08-27, but a figure of k = 32.3μ reappeared on 2026-10-01 without a derivation. The earlier Zenodo papers that give k = μN/Nₑ were not revised.
@@ -46,20 +47,22 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 - **Hard-selection cap.** The cap is ln R / D, not a flat 1/300.
 - **Required fixations.** The "205M required fixations" figure counts base pairs rather than mutation events.
 - **A misread citation.** A selection coefficient Day cites (s = 0.001, from Zeng 2021) is for negative selection, not beneficial.
+- **Bernoulli barrier.** 0.02^(2×10⁷) prices one pre-specified list of outcomes, and its value doesn't depend on timing. No cap near 230 concurrent sweeps appears under multiplicative fitness. One earlier audit objection to Day's 14.7× was itself withdrawn.
 
 **Still open:**
 - **Cost of selection** at real human fecundity and hard-selected load. This regime is untested.
 - **Ancient DNA.** Day's "21 fixations" statistic, which could not be reproduced from its published method.
 - **Ancestral Nₑ.** The value needed to fit the observed divergence has three free parameters, so no side gets a clean fit.
-- **Branches with no checks yet:** sequence space (D), the LTEE founders (E), and the 0.02^(2×10⁷) "Bernoulli barrier" (G).
+- **Sequence space (D)** has no check yet. It now has a precise question from G1: how many interchangeable routes exist per needed change. Above about 12–17, the "any outcome" reading wins.
+- **Adaptive fraction.** How many differences needed selection at all. Nobody on either side has put this in the argument ([gaps](arguments/README.md#4-what-everyone-missed)).
 
 **Overall verdict counts** (all sides combined, n/a omitted):
 
 | Verdict | Counts |
 |---|---|
-| Internal | 89 hold, 14 non-sequitur, 6 arithmetic error, 61 pending |
-| Fidelity | 35 accurate, 31 partial, 9 misread, 35 unverifiable |
-| External | 21 supported, 97 contested, 9 contradicted, 5 untestable, 50 pending |
+| Internal | 95 hold, 15 non-sequitur, 6 arithmetic error, 55 pending |
+| Fidelity | 37 accurate, 31 partial, 9 misread, 35 unverifiable, 9 pending |
+| External | 21 supported, 101 contested, 9 contradicted, 5 untestable, 47 pending |
 
 Note that the largest external category is *contested*.
 
@@ -79,7 +82,7 @@ These are the limits of the project itself, not of either side:
 - **Branding.** The project icon combines a double helix with a Christian cross. That was the maintainer's choice. Readers may weigh it as they see fit when judging the claim of neutrality.
 
 ## How to check it yourself
-- **Start here:** `README.md` (scorecard, maths and figures), then `docs/research/ledgers/balance.md` (strongest and weakest points per side), then `research/checks/RESULTS.md` and `REVIEW.md`.
+- **Start here:** `README.md` (scorecard, maths and figures), then `docs/research/ledgers/balance.md` (strongest and weakest points per side), then `research/checks/RESULTS.md` and `REVIEW.md`. For the structure of the debate, see [`docs/arguments/`](arguments/README.md): standard forms, typed objections, a genealogy and the gaps.
 - **Spot-check a claim:** open any file in `docs/research/claims/`, follow its source locator, and compare the quote with the original.
 - **Re-run a check:** every check runs with a fixed seed using `research/.venv/bin/python -I research/checks/<file>.py`. The textbook baselines (`baseline_textbook.py`) must pass first.
 - **Questions worth asking:**
@@ -96,6 +99,7 @@ These dated posts tell the story in order:
 4. [2026-10-07: 193 claims, one tree](2026-10-07-4-claims-and-tree.md)
 5. [2026-10-08: R4 round two, the load-bearing checks](2026-10-08-5-r4-round-two.md)
 6. [2026-10-08: Making it inspectable](2026-10-08-6-going-public.md)
+7. [2026-10-08: Founders, the Bernoulli barrier, and a map of the argument](2026-10-08-7-argument-map.md)
 
 ## Not yet decided
 - The final verdicts and the sensitivity table (R5).

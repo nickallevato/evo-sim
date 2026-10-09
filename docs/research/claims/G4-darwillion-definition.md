@@ -46,5 +46,7 @@ No prediction.
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
 
+R4 G1 (research/checks/results/R4-G1.md): the book's own preceding step (secondhand) is an "any" comparison: 1 in 22,727 required against 1 in 20,000. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+
 ## Simulator variables implied
 - None.

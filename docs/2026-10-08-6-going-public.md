@@ -64,3 +64,5 @@ R4 still needs these branches:
 | H | Cost of selection at human parameters |
 
 After that comes R5: final verdicts, a sensitivity table, and the variable list for the simulator.
+
+*Update: E and G1 were completed later the same day; see [milestone 7](2026-10-08-7-argument-map.md).*

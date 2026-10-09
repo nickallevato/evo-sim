@@ -1,7 +1,7 @@
 ---
 id: C5
 title: "Zero fixations in 240 generations is the neutral prediction (expected count ~1e-29 across a million intermediate-frequency loci), so the aDNA window cannot discriminate"
-side: critic
+side: critic  # keruru rule (opponents/keruru.md): 2026-08-26 post
 branch: C
 parent: C
 edges: [{type: attacks, target: C}, {type: depends-on, target: C5b}]

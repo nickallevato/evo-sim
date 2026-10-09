@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds
   fidelity: n/a
-  external: contested
+  external: contested   # supports 'rate, not product'; clonal vs free recombination suggests the LTEE G_f is plausibly a lower bound for recombining populations at this concurrency (A5f)
 ---
 
 ## Statement (verbatim)
@@ -49,6 +49,8 @@ Linked result: F1 (research/checks/RESULTS.md, seed 31, N = 1000, s = 0.01, U_b 
 
 ## Check
 Link: `research/checks/RESULTS.md` F1. Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 G1 (research/checks/results/R4-G1.md): K is Poisson-like with free recombination, so an average rate is the right summary. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - Output separation: per-generation fixation rate (throughput) vs per-allele fixation time (latency); in-transit count measured directly (TODO in F1).

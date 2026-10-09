@@ -43,7 +43,7 @@ Credit goes to whoever made the argument. Results that come from the audit's own
 - R4: RRME 0.743 rests on a falsified 1/(2N_t) step (B3c). The empty-start premise is contradicted for sourced histories (B1c). "d = 1 for discrete generations" fails on his own formula (C2). The aDNA 21-count is not reproducible from the stated procedure (C1b). The Term 3 vs Haldane comparison mixed bases (17.1, not 7.7).
 
 **Allies**
-- Hössjer's 2.2× gap comes entirely from d = 0.45 inside the neutral rate; without d, 16.9M vs 20M.
+- Hössjer's gaps (corrected 2026-10-08; this line earlier said a single "2.2× gap" came entirely from d). His quoted "only by a factor of 2" is the rate scaling, eq. 2.4: 20M/10.30M = 1.94. His neutral count, eq. 3.1, is 7.59M: 20M/7.59M = 2.63. The 2.2 is d's own factor, 1/0.45 = 2.22, which is in both. Without d: eq. 3.1 gives 16.9M (1.19× short) and eq. 2.4 gives 22.9M (above 20M) (claims A5a, H5).
 - Hössjer's cost step is asserted, not computed. R4: his 15,800 comes from rate scaling and is 10.5× Haldane's own 1,500 (H5).
 - Keen gives no equations; Dembski gives no calculation.
 

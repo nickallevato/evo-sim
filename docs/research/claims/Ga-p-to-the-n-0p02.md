@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds
   fidelity: accurate
-  external: contested
+  external: contested   # arithmetic holds, but it prices pre-specified arisings, not the event required; 'forces sequential fixation' (Dec 2025 abstract) is a non-sequitur
 ---
 
 ## Statement (verbatim)
@@ -43,6 +43,8 @@ Covered in G3 (specific-vs-any) and G-sim. Result recorded above.
 
 ## Check
 Arithmetic audit (python3 -I, scratch). Review: pending.
+
+R4 G1 (research/checks/results/R4-G1.md): independence holds with free recombination (joint/product 1.03 +/- 0.02); joint < product when linked (0.84 / 0.65) or clonal (0), Day's stated direction. p^n is timing-independent. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
 
 ## Simulator variables implied
 - None directly.
