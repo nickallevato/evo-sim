@@ -881,3 +881,32 @@ All quotes machine-checked as substrings (whitespace and quote-mark normalised) 
 - branch: A3, A3x
 - quote: "Those 40 million fixations must be accounted for."
 - note: Version datum: "40 million fixations" (2026-01-09) vs 205 million (second-edition abstract, Q91) for the human-chimp comparison; earlier-edition figures are in the existing Q-series. Also ties "both the human and chimp genomes have been mapped" to the count. Added to `ledgers/versions.md`.
+
+## Refresh 2026-10-09c quotes (Q127-Q129; added 2026-10-09 evening, third pass; the three lines flagged in `prereg-2026-10-09-day-uatv-analysis.md` as having no Q-id)
+
+### Q127 An Epic Test: "an epic data analysis" (added 2026-10-09c)
+- source: `B2026-10-07-an-epic-test`; URL: https://voxday.net/2026/10/07/an-epic-test/
+- locator: post body, para 2, same paragraph as Q84 (Q84's quote stops before it)
+- local copy: `sources/raw/refresh-2026-10-09c/post-an-epic-test/p.html` (sha256 a2678a50394ae6b4...; verified verbatim by normalised substring test, 2026-10-09 19:05 MDT)
+- branch: ROOT
+- tag (rule RH): rhetoric (teaser) with a dialectical core: a *data* analysis, not only a model, was running on 2026-10-07
+- quote: "we’re currently running an epic data analysis that is going to break new ground and might even reveal a few surprises"
+- note: Same paragraph: "I'm not going to say anything more about it at the moment". Unpublished as of 2026-10-09 19:05 MDT.
+
+### Q128 The Irrelevance of EES: "UATV tonight" (added 2026-10-09c)
+- source: `B2026-10-09-the-irrelevance-of-ees`; URL: https://voxday.net/2026/10/09/the-irrelevance-of-ees/
+- locator: post body, last paragraph, sentence after Q124
+- local copy: `sources/raw/refresh-2026-10-09c/post-the-irrelevance-of-ees/p.html` (sha256 eb95a166533bfa6d..., identical to the 09b copy; verified verbatim)
+- branch: ROOT, simulator
+- tag (rule RH): dialectic-adjacent announcement (logistics); not scored
+- quote: "as well as the knowledge of how to effectively make use of that kind of computing power. Which is something we’ll be discussing with the people who made it possible on UATV tonight."
+- note: The discussion is promised for the evening of 2026-10-09 with "the people who made it possible" (collaborators or sponsors). The post tags are evolution, science, technology, UATV.
+
+### Q129 No Reconciliation: "my most recent work" (added 2026-10-09c; 2026-10-06 post, first pass 09b)
+- source: `B2026-10-06-no-reconciliation`; URL: https://voxday.net/2026/10/06/no-reconciliation/
+- locator: post body, Day's reply after the quoted critic line
+- local copy: `sources/raw/refresh-2026-10-09b/day-post-2026-10-06-no-reconciliation/page.html` (verified verbatim, 2026-10-09 19:05 MDT)
+- branch: ROOT
+- tag (rule RH): rhetoric (prophecy about critics' eventual agreement); core: "most recent work" existed by 2026-10-06
+- quote: "Actually, based on my most recent work, I genuinely believe they will all eventually come around to my way of thinking with regards to evolution and population genetics."
+- note: Not a result; a forecast. Scored as nothing until the work is public.

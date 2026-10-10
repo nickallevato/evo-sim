@@ -325,3 +325,6 @@ Run 2026-10-09 evening (about 19:55 UTC and later), after the 2026-10-09 morning
 ### Findings that affect existing ledgers
 - `ledgers/versions.md`: 2 rows added (Yoo 410 Mb handling restated with the 8.57 percent argument; "40 million fixations" in 2026-01).
 - New unpublished-result pointer: Q123 "natural selection is empirically irrelevant", Q124 hardware; no data yet.
+
+## Refresh 2026-10-09c (third pass, checked 2026-10-09 19:01-19:07 MDT)
+Focus: anything on Day's "epic data analysis" / 96-core result since about 14:00 MDT. Fetched into `sources/raw/refresh-2026-10-09c/` (day-feed, day-front, day-month, zenodo, substack, post-*). Result: nothing new on evolution. voxday.net feed newest is "RIP Mike Ditka" (2026-10-09 17:47 UTC = 11:47 MDT, before the cut), then "Mailvox: Invoking the Triveritas" (15:32 UTC), "The Scholars Revolt Spreads" (14:34 UTC), "The Irrelevance of EES" (modified 10:55 UTC, sha256 unchanged from the 09b copy). Zenodo: 39 records, newest modified 2026-10-07 (23188201). Sigma Game newest 2026-10-09 17:37 UTC "Abandoning the Ethics of Consent"; AI Central newest "Drop the Sample, Get the Sound" (08:02 UTC): neither on topic. YouTube: no Day/UATV upload findable (the @UATV handle is a different channel); Bluesky search: no post after 2026-10-06. Q127-Q129 added.
