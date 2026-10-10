@@ -1,0 +1,14 @@
+host: na-workhorse.allevato.io
+commit: 6aa9bb6 (pre-registration, post hoc after re-review 43dca91; committed 2026-10-10T17:04:53-06:00)
+launched: calib 2026-10-10T17:05:00-06:00; lt, mapc, maph 2026-10-10T17:05:25-06:00 (4 processes)
+fd062326098843f265669a9f889cd240  research/checks/fm_fix2.py
+88be54003c79ab9656a1f698ad990cf1  research/checks/fm_mirror.py (imported unchanged)
+53f9985339b11515496b8519a76c4693  research/checks/fm_mesa_replication.py (imported unchanged)
+inputs: results/raw/fm_bins.npz, results/raw/fm_mirror_bins.npz (workhorse only); sources/raw/fm-maf-2026-10-10/hs1.maf.gz; sources/raw/fm-mirror-2026-10-10/pantro.maf.gz
+annotation (fetched 2026-10-10 from s3-us-west-2.amazonaws.com/human-pangenomics/T2T/CHM13/assemblies/annotation/, each in its own sources/raw/fm-annot-2026-10-10-<name>/; md5 = S3 ETag; sha256):
+  chm13v2.0_censat_v2.1.bed md5 9838d9f172e34930425d7582243d4041 sha256 2fecb4bddba9c643c259fc8d2136a59ef070a77c2a76c84ee8645c96da562946
+  chm13v2.0_chrXY_sequence_class_v1.bed md5 867b9217f61f8d65ef88c04621a603fd sha256 6833faa928b9205ac7993146208f57381ede6fb57d7c6deff66295d914467455
+  chm13v2.0_cytobands_allchrs.bed md5 1db3de2e0d386c289e90b9cb1a36fbfd sha256 09c7fa3ca3e222ebaabbecedc3086aa2543999824c0966f96b0c3f31c1126ea2
+  chm13v2.0_composite-repeats_2022DEC.bed md5 f1e53a7d18a9ef3012b80ccf609c6b3c sha256 c45ef31c633f229479fd9dd6e3448a610dd0eb4dde818ee8b54bcd3fa613f888
+  chm13v2.0_new-satellites_2022DEC.bed md5 db535eda8ca4167fe77cea457c915399 sha256 b358ef8bdee5d70bf4cfe78fff404f017ba4dd58c825cb064f2691b3ea0f116c
+outputs: raw/fm_fix2_{calib,lt,mapc,maph}.{out,json}
