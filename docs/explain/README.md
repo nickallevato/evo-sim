@@ -25,7 +25,7 @@ All five follow the same seven steps, so you can move up a level without getting
 These are drafts written before the final verdicts (stage R5), so the numbers may still change.
 
 ## Interactive version: the math and the sims
-[`eli-series/index.html`](eli-series/index.html) is a single page with a level switcher (deep links `#eli5`, `#eli8`, `#eli10`, `#eli12`, `#eli18`). It explains the math in the dispute and how the audit's simulations work: Play it in the browser via [`play.html`](https://raw.githack.com/nickallevato/evo-sim/master/docs/explain/eli-series/play.html) (generated from `index.html` by `research/tools/eli_readme_svgs.py`).
+[`eli-series/index.html`](eli-series/index.html) is a single page with a level switcher (deep links `#eli5`, `#eli8`, `#eli10`, `#eli12`, `#eli18`). It explains the math in the dispute and how the audit's simulations work: Play it in the browser via [`play.html`](https://nickallevato.github.io/evo-sim/explain/eli-series/play.html) (generated from `index.html` by `research/tools/eli_readme_svgs.py`).
 - drift and the 1/(2N) chance;
 - k = μ, and the empty start versus equilibrium;
 - selection and Kimura's formula;
