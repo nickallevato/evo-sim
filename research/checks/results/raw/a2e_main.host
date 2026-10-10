@@ -1,0 +1,5 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-09T22:24:25-06:00
+cmd: research/.venv/bin/python -I research/checks/a2e_ltee_transfer.py main
+commit: 7593be2
+c9f2c48d2fbc367e3e502ac4a5618cbb  research/checks/a2e_ltee_transfer.py
