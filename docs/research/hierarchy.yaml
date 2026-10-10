@@ -485,8 +485,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
+    internal: holds
+    fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/A4e-hancock-overlap-is-handled-by-ne-and-moran.md
 - id: A4f
@@ -502,9 +502,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: partial
+    external: contested
   claim_file: docs/research/claims/A4f-hancock-d-not-a-selection-coefficient.md
 - id: A4g
   title: 'Day: standard fixation models (Wright-Fisher and Kimura''s revision) treat a generation as the whole population replaced; real populations
@@ -519,9 +519,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: unverifiable
+    external: contested
   claim_file: docs/research/claims/A4g-day-standard-models-assume-complete-replacement.md
 - id: A5
   title: 'The LTEE rate does not transfer to humans: the human genome is ~690x larger and has far more new mutations per generation'
@@ -1464,8 +1464,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
+    internal: holds
+    fidelity: n/a
     external: pending
   claim_file: docs/research/claims/B5j-hancock-neutral-theory-is-not-a-retreat.md
 - id: B6
@@ -2334,9 +2334,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: n/a
+    external: supported
   claim_file: docs/research/claims/D2k-hancock-mathematicians-built-the-synthesis.md
 - id: D2l
   title: 'Day (as presented by Duffy): the modern synthesis was built by naturalists and geneticists, not mathematicians, who never worked out
@@ -2351,9 +2351,9 @@ nodes:
   sourcing: secondhand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: unverifiable
+    external: contested
   claim_file: docs/research/claims/D2l-day-synthesis-founders-skipped-the-math.md
 - id: D3
   title: 'Eden: there are about 20^250 = 10^325 polypeptide chains of length 250 versus about 10^52 protein molecules that could ever have existed'
@@ -2913,8 +2913,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
+    internal: holds
+    fidelity: partial
     external: pending
   claim_file: docs/research/claims/F1c-hancock-waiting-time-lineage.md
 - id: F2
@@ -3374,9 +3374,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: accurate
+    external: contested
   claim_file: docs/research/claims/G2h-hancock-fmax-has-no-mutation-or-selection-term.md
 - id: G3
   title: 'Specific-vs-any: the product of per-site probabilities prices a pre-specified list of 20 million mutations; evolution requires only
@@ -3651,9 +3651,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: accurate
+    external: contested
   claim_file: docs/research/claims/H2a-hancock-cost-of-selection-hard-selection-only.md
 - id: H3
   title: Dawkins's 11,739 (dominant) / 321,444 (recessive) generations to reach half frequency, doubled to 642,888, are 87,916,307 times too slow
@@ -3846,8 +3846,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
+    internal: holds
+    fidelity: n/a
     external: untestable
   claim_file: docs/research/claims/ROOT-cov-hancock-selection-is-a-covariance.md
 - id: ROOT-DE
@@ -3883,8 +3883,8 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
+    internal: holds
+    fidelity: unverifiable
     external: untestable
   claim_file: docs/research/claims/ROOT-ep-hancock-endorsers-lack-popgen-background.md
 - id: ROOT-FM
@@ -3970,9 +3970,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
-    fidelity: pending
-    external: pending
+    internal: holds
+    fidelity: n/a
+    external: contested
   claim_file: docs/research/claims/ROOT-pg-hancock-popgen-track-record.md
 - id: ROOT-T
   title: 'Frank Tipler: Probability Zero is the most rigorous mathematical challenge to Neo-Darwinian theory ever published'

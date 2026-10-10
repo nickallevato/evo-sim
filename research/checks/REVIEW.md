@@ -384,5 +384,8 @@ File: `results/REVIEW-R4-B3m-combined.md` (at b30137d). 0 BLOCKER, 2 MAJOR, 4 MI
 ## 2026-10-10 - Review #49 (combined, low-stakes tier): H8 kscale64 (post hoc, K = 64,000)
 File: `results/REVIEW-R4-H8-kscale64-combined.md` (at b30137d). 0 BLOCKER, 2 MAJOR, 6 MINOR. MAJOR-1: "gains some support" overstated a K trend (no trend is established; the horizon matters as much as K); MAJOR-2 horizon dependence (348 at 10k vs 490 at 20k on the same runs; the indeterminate call rests on a 2% edge, 294 vs 300). Accepted; fix pass 4442c99.
 
+## 2026-10-10 - Review #50 (combined, low-stakes tier): the 12 mapping claims
+File: `results/REVIEW-mapping-12-combined.md`. 0 BLOCKER, 0 MAJOR, 2 MINOR (A4e/A4g rest on the speaker's recalled citations; B5j "factor of two" remark unchecked). All quotes found in the auto-caption transcript. Verdicts applied to claim files; no external verdict is set where the literature is unretrieved.
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).
