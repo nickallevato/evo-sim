@@ -1,0 +1,36 @@
+## P1 quotes
+| Q-B3g-1 | day/blog-2026-08-27-the-response-to-the-retraction.txt | exact | sha256:035030d45c827267 |
+| Q-B3g-2 | day/blog-2026-08-27-the-response-to-the-retraction.txt | exact | sha256:035030d45c827267 |
+| Q-B3a-Z | day/zenodo-18525547.txt | exact | sha256:9592ffac6d96199c |
+| Q-B3a-blog | day/blog-2026-02-04-response-to-dennis-mccarthy-round-2.txt | exact | sha256:913cfb4e80c9baf2 |
+| Q-B4 | day/zenodo-18525547.txt | exact | sha256:9592ffac6d96199c |
+| Q-B3f | day/blog-2026-04-30-conceding-the-math.txt | exact | sha256:c6d78f5dd444d792 |
+| Q-B3-1 | day/zenodo-18429937.txt | exact | sha256:54d965d043d80a14 |
+| Q-B3-2 | day/zenodo-18525262.txt | exact | sha256:c8ad7a5b8a84fa5b |
+| Q-B3-3 | day/blog-2026-10-01-the-education-of-a-population-geneticist.txt | exact | sha256:4601506d0a5542f0 |
+| Q105 | refresh-2026-10-09/mccarthy-comments-why/comments.json | exact | sha256:cba6b15b13d3cd04 |
+| E4 | day/zenodo-23188201.txt | normalised | sha256:4b9eb3f1ca3c0fb5 |
+
+## P2 identity (symbolic check over a grid of N, N_e)
+2N mu/(2N) = mu at all N: True; withdrawn (N/N_e) form: N=100000, Ne=3300 -> 30.3; N=8e+09, Ne=10000 -> 8e+05
+
+## P3 N/N_e family
+| human high (Z18525547) | N/N_e = 30.3 | Day 30.3 | within 1%: True | under concession: 1 (factor 30.3x) |
+| human low | N/N_e = 15.15 | Day 15.2 | within 1%: True | under concession: 1 (factor 15.2x) |
+| chimp low | N/N_e = 9.091 | Day 9.1 | within 1%: True | under concession: 1 (factor 9.1x) |
+| chimp high | N/N_e = 30.3 | Day 30.3 | within 1%: True | under concession: 1 (factor 30.3x) |
+| B3f Grok | N/N_e = 8e+05 | Day 800000 | within 1%: True | under concession: 1 (factor 800000x) |
+B4 eq.(7) corners: 198 kya (Day 200) and 576 kya (Day 580); match: True. Under the concession the ratios are 1 -> t_actual = t_clock = 6-7 My (factor 30.3-12.1x).
+
+## P4 values not of N/N_e form
+0.743 (Z18525262): census-history B&L ratio over four cohorts 1950-2025 (B3c); k < mu, opposite sign to N/N_e >= 1.
+32.3 (blog 2026-10-01): Bergeron pedigree mu vs Yoo required rate; no derivation given (B3d); not an N/N_e ratio.
+Not removed by the concession: True (classification from the stated bases; both keep their own B3c/B3d status).
+
+## P5 Day's census-supply arithmetic
+haploid genome mu = 37.2; 2 x 1e4 x 37.2 = 7.44e+05 (Day 740,000; within 1%: True); 2.5e11 / 7.4e5 = 3.378e+05 (Day 330,000; within 3%: True); implied census genomes per generation = 3.36e+09
+
+## P6 post-concession tension
+Q105 (2026-09-15) neutral P(fix) = 1/(2N_e); E4 (2026-10-06) p = 1/(2N): equal only if N = N_e. Q105's comment derives no k/mu value from it -> versions ledger, not scored (R1).
+
+ALL MECHANICAL PREDICTIONS (P1-P3, P5) MET: True
