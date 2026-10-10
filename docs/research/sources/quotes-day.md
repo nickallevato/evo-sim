@@ -910,3 +910,95 @@ All quotes machine-checked as substrings (whitespace and quote-mark normalised) 
 - tag (rule RH): rhetoric (prophecy about critics' eventual agreement); core: "most recent work" existed by 2026-10-06
 - quote: "Actually, based on my most recent work, I genuinely believe they will all eventually come around to my way of thinking with regards to evolution and population genetics."
 - note: Not a result; a forecast. Scored as nothing until the work is public.
+
+## R4 A2e integration quotes (Q130-Q139; added 2026-10-10)
+
+### Q130 MITTENS 3.0 s2: "unattainable ceiling ... Formula One car"
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s2, PDF p.4
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 4; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e
+- tag (rule RH): split (rule RH): "an unattainable ceiling, the absolute best-case scenario" is dialectic (scored in A2e); the Formula One / horse-drawn cart analogy is rhetoric (ledger RH-4)
+- quote: "It is an unattainable ceiling, the absolute best-case scenario, the performance of a Formula One car used to benchmark a horse-drawn cart."
+- note: Added at R4 A2e integration.
+
+### Q131 MITTENS 3.0 s1/abstract: "the empirical ceiling on what evolution can accomplish"
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: abstract, PDF p.2
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 2; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e
+- tag (rule RH): dialectic
+- quote: "Whatever number the LTEE produces, it is the empirical ceiling on what evolution can accomplish when every tool in its kit is deployed simultaneously under ideal conditions."
+- note: The A2e statement; the same passage names "an effectively unlimited mutation supply".
+
+### Q132 MITTENS 3.0 s4.3: 4.1e-4 neutral hitchhikers and 1,408 per beneficial fixation
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s4.3, PDF p.7
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 7; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e, ltee.gens_per_fixation
+- tag (rule RH): dialectic
+- quote: "neutral hitchhikers ≈ 4.1 × 10⁻⁴ × 50,000 = 20.5. Subtracting from the clone-pair total of 56.0 fixations yields approximately 35.5 beneficial fixations, or 1,408 generations per beneficial fixation."
+- note: Day's own adaptive-only reading (G = 1,408); source of the 4.1e-4 per genome per generation used in kappa.
+
+### Q133 MITTENS 3.0 s4.3: "MITTENS measures total throughput"
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s4.3, PDF p.7
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 7; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e, A5c
+- tag (rule RH): dialectic
+- quote: "This distinction matters for the standard model, not for MITTENS. MITTENS measures total throughput — every fixation, regardless of mechanism."
+- note: Basis of the total-throughput route in R4-A2e (F = 50,765 per generation).
+
+### Q134 MITTENS 3.0 s4.2: "the remaining beneficial mutations have smaller effects"
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s4.2, PDF p.7
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 7; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e
+- tag (rule RH): dialectic
+- quote: "As those are exhausted, the remaining beneficial mutations have smaller effects, take longer to sweep, and are more easily displaced by competing variants."
+- note: Day-side reason the human beneficial-effect ratio could be below the LTEE's (decoupled-s rows PH2).
+
+### Q135 MITTENS 3.0 s6.4: 38,400 mutations at 100-fold (3.2e9 x 1.2e-8 x 100)
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s6.4, PDF p.11
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 11; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e, A5h
+- tag (rule RH): dialectic
+- quote: "A 100-fold increase in mutation rate in the human genome would produce approximately 38,400 mutations per individual per generation (3.2 × 10⁹ bp × 1.2 × 10⁻⁸ × 100)."
+- note: Source of the 38.4 per haploid human genome (without the x100) used in kappa = 38.4 / 4.1e-4 = 93,659; Day does not himself form this ratio.
+
+### Q136 MITTENS 3.0 s8.2: LTEE Ne ≈ 3 × 10⁷
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s8.2, PDF p.14
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 14; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e, ltee.Ne_effective
+- tag (rule RH): dialectic
+- quote: "In the LTEE, with Ne ≈ 3 × 10⁷, the expected time for a single neutral mutation to fix by drift alone is approximately 2Ne = 6 × 10⁷ generations — 30 million generations."
+- note: Day-stated LTEE N_e (also in the s2 mechanism list, p.4); no primary-literature source yet.
+
+### Q137 MITTENS 3.0 s8.2: human Ne 10,000–33,000
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s8.2, PDF p.14
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 14; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e
+- tag (rule RH): dialectic
+- quote: "The human Ne of 10,000–33,000 yields a neutral drift fixation time of 20,000–66,000 generations"
+- note: Day's in-paper human N_e range (the A2e sweep used 3,300, 1e4 textbook, and post hoc 3.3e4, 1e5).
+
+### Q138 MITTENS 3.0 s8.6: "faster per generation than bacteria"
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s8.6, PDF p.15
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 15; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e, A2i
+- tag (rule RH): dialectic
+- quote: "The objection implicitly claims that humans can fix mutations faster per generation than bacteria under ideal conditions."
+- note: Day states the comparison per generation; this is why the per-year reading is out of scope under rule S.
+
+### Q139 MITTENS 3.0 s7.3: "At 1,322 gen/fix (non-mutator): 191 achievable."
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s7.3, PDF p.13
+- local copy: `sources/raw/day/zenodo-23003785.txt` (page 13; verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: A2e, A
+- tag (rule RH): dialectic
+- quote: "At 1,322 gen/fix (non-mutator): 191 achievable."
+- note: Day's own 191; the A2e flip is equivalent to "the human lineage fixed at most about 191 adaptive substitutions" (PH8).

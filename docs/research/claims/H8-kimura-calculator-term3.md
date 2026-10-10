@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"   # arithmetic
   fidelity: pending
-  external: "contested"   # 17.1x Haldane + d on the same basis. R4 H3: the R = 2 form matched in a 10k window (if R = 2 is intended; s_max*d = ln R is the audit mapping), overshoots the long-run cap over 252k; R-independence not claimed by Day
+  external: "contested"   # R4 H8 (conditional on the model and on K = 1000 where marked): Term 3 reproduced within R1 at R = e under the audit mapping (lam50 12-18% below 0.0658, bracket 3-20%); the step 's_max ~ 1 bounds sum s_i' is contradicted in-model under soft selection (purely relative fitness assumed) and holds under hard selection only through the death budget; rule-N non-sequitur awaits the verbatim s3.3 premise locator (rule S). Earlier: 17.1x Haldane + d on the same basis. R4 H3: the R = 2 form matched in a 10k window (if R = 2 is intended; s_max*d = ln R is the audit mapping), overshoots the long-run cap over 252k; R-independence not claimed by Day
 ---
 
 ## Statement (verbatim)
@@ -71,5 +71,6 @@ Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned, H). · 
 
 R4 H3 (research/checks/results/R4-H3-human.md): Term 3's 0.0296 per generation at R = 2 matched the pre-registered form in a 10k window (lambda50 = 0.0345 [0.0330, 0.0368]) if R = 2 is the intended value; at the R implied by the audit's s_max*d = ln R mapping (1.57) it fails (lambda50 ~ 0.020). Over 252k it is above the long-run cap (phi_252k = 0.59 at R = 2). The R-independence tested as D2 was not claimed by Day; it holds only if s_max = 1 is read as a constant. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
+R4 H8 (research/checks/results/R4-H8.md; pre-registered acd3a9e, post hoc grid extension af09e77, fix pass 6d1359e; three Opus reviews #29-#31): hard K = 1000, 726 jobs, plus Kscale and two soft arms. At the audit's mapping s_max = ln R (s_max = 1 means R = e) the measured sustainable rate is 12-18% below Term 3's 0.0658 (bracket 3-20%), inside R1's 25%: Term 3 holds as structure and its shortfall is in the direction of Day's conclusion. Day's premise sum s_i <= s_max (the source of n_max = s_max / s_bar concurrent sweeps) is contradicted in-model under soft selection (softWF lam = 0.2: about 249 open loci, sum s_i about 2.5-5 with the fittest individual at 1.22x the mean; softJ at R = 1.05, lam = 0.1: about 692 loci), conditional on purely relative fitness; under hard selection sum s_i at the cap is 0.4-1.3, close to ln R, so the bound holds through the death budget, not the differential. Whether that is a rule-N non-sequitur against the Statement chain awaits the premise's verbatim section 3.3 locator, so the internal verdict stays `holds` and the external stays `contested`. Day's section 3.3.1 statement that no mechanism raises s_max above order unity holds in every soft cell. A Kscale run at K = 16,000 is proposed and awaits the user's approval (not launched); every "slower than 1/300" statement is conditional on K = 1000. Tags (rule RH): the scored Day quotes are dialectic.
 ## Simulator variables implied
 s_max (or R), d, Ne, L, concurrent-sweep count, hard/soft switch.

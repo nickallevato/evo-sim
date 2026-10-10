@@ -24,21 +24,28 @@ generation_time_years:
   day_2019: {value: 20, source: B2019-02-07, verified: false}
   day_2026: {value: 25, source: Z23003785, verified: false}
   day_alt: {value: 32.5, source: B2025-01-18, verified: false}
+  a2e_per_year_range: {value: [20, 29], note: "range used for the per-year context rows of R4 A2e (not a test of A2e)", source: R4-A2e, verified: false}
 generations_available:
   day_2019: {value: 450000, source: B2019-02-07, verified: false}
   day_2025_effective: {value: 146250, derived: "325000*0.45", source: Z18165980, verified: false}
   day_2026: {value: 252000, source: Z23003785, verified: false}
 ltee:
-  Ne_effective: {value: 3.3e7, note: "UNSOURCED ASSUMPTION used by R4 A-sim (~N0 x log2(100) = 5e6 x 6.64, harmonic-mean size over the daily dilution cycle); needs a retrieved source (e.g. Lenski et al. 1991, Wiser et al. 2013). G_f depends on it only logarithmically (7,306 at 1e6 to 1,159 at 1e8 at fixed U_b)", source: none, verified: false}
+  Ne_effective: {value: 3.3e7, note: "R4 A-sim used 3.3e7 (~N0 x log2(100) = 5e6 x 6.64). DAY STATES Ne ~ 3e7 for the LTEE (Z23003785 s8.2 p.14, Q136; also the s2 list, p.4) with no primary-literature source; R4 A2e swept 3.3e6-1e8 (moves the central F by about one decade). Still needs a retrieved source (e.g. Lenski et al. 1991, Wiser et al. 2013). G_f depends on it only logarithmically (7,306 at 1e6 to 1,159 at 1e8 at fixed U_b)", source: Z23003785, verified: false}
   gens_per_fixation:
     day_2019: {value: 1600, source: B2019-02-07, verified: false}
     day_mittens3_nonmutator: {value: 1322, note: "≥95% read-frequency rule", source: Z23003785, verified: true}
     day_ara_plus2: {value: 909, derived: "60000/66", note: "23105291 Table 1 uses 60,500 gens -> 917", source: B2026-10-01-snikker-snak, verified: true}
     day_23105291_strict_nonmutator: {value: 1587, derived: "from strict (lineage-aware) counts; strict count 37% lower than ≥95%-rule count (≥95% rule +58%)", source: Z23105291, verified: true}
+    day_beneficial_only_clone_pair: {value: 1408, derived: "50000 / 35.5 beneficial fixations (56.0 clone-pair total minus 20.5 hitchhikers)", note: "Day's own adaptive-only reading; Q132", source: Z23003785, verified: true}
+    audit_cross_estimator_2887: {value: 2887, derived: "1 / (1/1322 - 4.1e-4)", note: "AUDIT construction (Day's neutral expectation subtracted from the metagenomic total), not Day's number; the 2,890 of the R4 A2e pre-registration", source: R4-A2e, verified: false}
     day_ns_only_parallel_max: {value: 4615, note: "blog only; Zenodo 23003785 gives ~1,408 per beneficial fixation (clone-pair)", source: B2026-09-30, verified: true}
+  mu_genome_ancestral: {value: 4.1e-4, units: per genome per generation, source: Z23003785, note: "s4.3 p.7, Q132; the LTEE side of kappa", verified: true}
+  generations_per_day: {value: 6.64, source: standard (log2 of the 100-fold daily dilution), note: "also stated in Z23003785 p.4", verified: false}
   whole_pop_fixations_lineage_aware:
     day_23105291: {value: 5496, units: "fixations over 723000 population-generations", source: Z23105291, verified: false}
 mutation:
+  new_mutations_per_haploid_genome: {value: 38.4, derived: "3.2e9 bp x 1.2e-8", note: "Day s6.4 p.11 (Q135) uses the same product with an extra x100 for a mutator; 38.4 is the audit's haploid reading (rule C)", source: Z23003785, verified: false}
+  supply_ratio_kappa: {value: 93659, derived: "38.4 / 4.1e-4", note: "DERIVED from Day's stated factors, the ratio KITTENS uses; Day does not apply supply scaling (R4 A2e fix pass C-M3). Sweep set: 1, 125 (Hossjer mu-only), 93,659", source: R4-A2e, verified: false}
   mu_per_site_per_gen:
     pedigree_human: {value: 1.2e-8, range: [1.1e-8, 1.5e-8], source: Kong2012, verified: false}
     keightley_2012: {value: 1.1e-8, note: "abstract only; ~70 new mutations per genome", source: Keightley2012, verified: partial}
@@ -85,3 +92,5 @@ rates:
 shortfall:
   mittens3_full: {value: 1075000, source: Z23003785, verified: true}
   mittens3_snv_only: {value: 91600, note: "pass-1 said ~94,000", source: Z23003785, verified: true}
+genetic_map_morgans:
+  human_w_b_regime: {value: 36.8, note: "map length (Morgans) used by R4 A2e/F2 for the Weissman-Barton recombination model (R = 35-38 M)", source: R4-F2-A, verified: false}

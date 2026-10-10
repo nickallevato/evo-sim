@@ -15,7 +15,7 @@ evo-sim has two stages.
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
 2. **Claims.** 217 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-one nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09).
-4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Twenty-nine checks have been reviewed so far.
+4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Forty-one checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
@@ -57,6 +57,9 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 
 **Still open:**
 - **Cost of selection** at human scale is decided only conditionally. The answer flips at an adaptive non-coding share of about 0.01–0.6%, below what any estimate resolves. R is unsourced. Soft selection, absolute-fitness gain and epistasis are untested at human scale.
+- **Haldane's regime (H8 / H5).** In Haldane's own regime (R about 1.1, D rescaled to 30) 1/300 is confirmed and no critic contested it; the budget's size is ln R, so the answer moves with R. "Slower than 1/300" is shown only at K = 1000 (a K = 16,000 run is proposed, awaiting approval). Soft selection sustains far higher rates only if fitness is purely relative. Day's premise that the summed selective differential is bounded by s_max is contradicted in-model under soft selection.
+- **LTEE-to-human transfer (A2e).** Per generation, with an adaptive-only supply-limited model, the human rate exceeds the LTEE's by about 2-7x even under Day's cost caps, but the flip depends on a beneficial-fraction times effect-size ratio nobody has measured; on Day's own total-throughput basis the factor is about 50,000 and stands or falls with the human neutral rate k = mu. Not yet contradicted. The human adaptive-substitution literature is unread (gaps RG-03).
+- **Regulatory waiting time (D15).** Hössjer's "far exceeds 9 My" holds in every cell inside his own stated premises (specific site, several genes, non-beneficial intermediates) and flips under beneficial intermediates, redundant sites or a non-specific gene set. No critic engages it; the literature leads are unread (gaps RG-02). External verdict provisional.
 - **Ancient DNA.** Day's "21" is contradicted as stated, but what it means turns on the Holocene Nₑ. The published estimates are now retrieved (`research/sources/holocene-ne.md`): they agree on recent growth of 100× or more but disagree on its timing, so the literature does not decide it; C1e will run the model on each published trajectory. The neutral comparison for the damage-resistant transversion class is also open.
 - **Ancestral Nₑ.** The value needed to fit the observed divergence has three free parameters, so no side gets a clean fit.
 - **Sequence space (D).** D1 found about 1–6 routes per needed change per locus (below G1's flip of ~7–17); a gene's shared pool of beneficial mutations clears the flip for about ten needed changes, not 25 or more. Per-sequence prevalence (Axe, Taylor) and cross-family connectivity are untouched.
@@ -76,9 +79,9 @@ Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls
 
 | Verdict | Counts |
 |---|---|
-| Internal | 109 hold, 18 non-sequitur, 2 arithmetic error, 64 pending |
-| Fidelity | 39 accurate, 34 partial, 9 misread, 53 unverifiable, 22 pending |
-| External | 26 supported, 103 contested, 11 contradicted, 6 untestable, 59 pending |
+| Internal | 110 hold, 18 non-sequitur, 2 arithmetic error, 63 pending |
+| Fidelity | 40 accurate, 34 partial, 9 misread, 53 unverifiable, 21 pending |
+| External | 29 supported, 103 contested, 11 contradicted, 6 untestable, 56 pending |
 
 Note that the largest external category is *contested*.
 

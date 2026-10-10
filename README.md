@@ -231,7 +231,7 @@ flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
   R1 --> R2["R2<br/>217 claims<br/>verbatim + sourced"]:::done
   R2 --> R3["R3<br/>Argument tree<br/>31 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>29 checks reviewed"]:::active
+  R3 --> R4["R4<br/>Math resolution<br/>41 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo

@@ -5,13 +5,13 @@ side: ally
 branch: D
 parent: D
 edges: [{type: supports, target: D}]  # judgement: D holds the corpus's target-search / waiting-time arguments. Hössjer's conclusion is uncommon descent (HO-10), not Day's guided common descent
-load_bearing: false  # a stated prediction with no numbers; ROOT does not depend on it
+load_bearing: false  # ROOT does not depend on it; R5-draft lists 30 load-bearing nodes and D15 is not among them (its one ally node is H5). R4-D15 was reviewed at the three-review tier by choice, which does not change this flag (reconciled at integration 2026-10-10)
 sourcing: firsthand
-status: extracted
+status: reviewed
 verdicts:
-  internal: pending      # no calculation is given; the cited model "has not yet been applied to humans and chimps"
-  fidelity: pending      # Hössjer, Bechly & Gauger 2021 (J. Theor. Biol. 524:110657) not retrieved
-  external: pending      # no parameters stated (number of genes, binding-site length, N, mu)
+  internal: holds        # computed by this audit (R4-D15), not by the author, on his own 2021 model: for a specific target (d_max = 0, new site) with non-beneficial intermediates, 96/96 in-scope cells give p9 = 0 and p90 <= 0.017. Rule basis R4-X1 s0 + C + N1. Alternative recorded (critic m3): n/a under a strict S1 reading (Statement plus derivation only; no derivation is given), with the sweep moved to external; same evidence either way. N2d answered: his Table 5 d_max = 1 rows are sites already present; from an absent start they give 114-172 My
+  fidelity: accurate     # his p.7 description of his own 2021 model checked against the paper (local PDF); he does not attribute the 'far exceeds' figure to the paper. Critic alternative: partial (the paper's d_max = 1 rows give ~1 My and are not mentioned); a scope point carried in the internal comment and external column. Reviewers may prefer partial; disagreement recorded
+  external: contested    # PROVISIONAL. Supported under the claimant's stated premises (specific target, non-beneficial intermediates); contested because those premises are unsourced on both sides and the answer flips under beneficial intermediates (S2/S3), redundant sites (kmult >= 10) or a non-specific gene set (any m of M >= ~1,000). A sensitivity of this audit's grid, not a sourced rebuttal: no critic in the corpus engages HO-12. N_e = 1e5 cells carry the R4-X1 F contested-standard flag. Day-steelman option (a) supported (conditional) not adopted (premises unsourced). Literature leads in gaps RG-02 could move it
 ---
 
 ## Statement (verbatim)
@@ -50,7 +50,7 @@ No check is specified. A check would need the 2021 model's parameters, applied t
 - Result that would change a verdict: a computed E[T_wait] from the 2021 model with human parameters.
 
 ## Check
-None.
+R4 D15 (research/checks/results/R4-D15.md; script `research/checks/d15_waiting_time.py` pre-registered b74b6d6 (post hoc f=3 amendment 639b94b); 714-cell sweep on na-workhorse, 2026-10-09/10; three Opus reviews #26-#28, no BLOCKER; fix pass 3b88bbb adds the post hoc analysis `d15_posthoc.py`): Hössjer's 2021 model is reproduced against his tables (about 0.3%). **In scope** (his stated premises: several genes m >= 2, a specific site kmult <= 1, neutral or valley intermediates; 96 cells, both N_e, both rho): 96 of 96 exceed 9 My (p9 = 0), 96 of 96 far exceed it (p90 <= 0.017), at 20 y and at 25 y per generation. **Outside that scope the answer flips**: +1% per-step intermediates (S2) reach 9 My in 57-77% of replicates at kmult = 1, N_e = 1e4 (100% at kmult >= 3 and at N_e = 1e5); redundant sites (kmult >= 10, a non-specific site class); a non-specific gene set (any m of M, closed form PH-F, matters from M of order 1,000); and his own Table 5 d_max = 1 rows (sub-9-My) describe sites already present (from an absent start they give 114-172 My). At N_e = 1e5 neutral cells carry an omitted fixation sojourn of about 4N_e generations (about 10 My); the chain-vs-simulation excess is that sojourn, not an f = 10 artefact. The three inputs that decide it, none supplied by any source in the corpus: equivalent sites (kmult / d_max), whether intermediates were beneficial, and which genes. Tag (rule RH): HO-12 is dialectic. Literature leads (Stone & Wray 2001; MacArthur & Brookfield 2004; Durrett & Schmidt 2007; Khaitovich et al. 2004; Schmidt et al. 2010) are unverified titles from a reviewer's memory, recorded in `ledgers/gaps.md` RG-02, not relied on. Not stored: per-replicate times (other windows cannot be computed without a rerun). Optional runs proposed, not launched. Reviews: `results/REVIEW-R4-D15-{correctness,steelman-day,steelman-critic}.md`.
 
 ## Simulator variables implied
 Number of target genes; binding-site length and number of acceptable motifs; N; μ; fitness of intermediates (neutral vs deleterious); recombination.

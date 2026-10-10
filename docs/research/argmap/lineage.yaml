@@ -3404,7 +3404,7 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "Review combined (#15-#18); follow-ups queued"
+  fate_locator: "Review combined (#15-#18); A_long (L1-L3 met) restored the external verdict to supported (conditional); linked-site hitchhiking untested"
 
 - id: L-audit-f1b-2026
   label: "Audit F1b: in-transit alleles measured at 333, 17, 1.0; weak form violated"
@@ -3485,3 +3485,67 @@
   fate: alive
   fate_date:
   fate_locator: "Review combined (#19-#21); follow-ups queued"
+
+- id: L-audit-d15-2026
+  label: "Audit D15: Hössjer's 'far exceeds 9 My' holds for a specific target with non-beneficial intermediates (96/96 cells) and flips outside those premises"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [D15]
+  locator: "research/checks/results/R4-D15.md"
+  quote: "96 of 96 in-scope cells give p9 = 0 and p90 ≤ 0.017"
+  parents:
+    - {id: L-hossjer-127-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #26-#28; fix pass 3b88bbb; external provisional pending gaps RG-02"
+
+- id: L-audit-h8-2026
+  label: "Audit H8/H5: Haldane's 1/300 confirmed in his regime; budget size is ln R; Term 3 within R1 at R = e; sum s_i <= s_max contradicted under soft selection"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [H, H5, H8]
+  locator: "research/checks/results/R4-H8.md"
+  quote: "Haldane's figure is confirmed in his regime; no critic contested it."
+  parents:
+    - {id: L-audit-h3-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #29-#31; fix pass 6d1359e; slower-than-1/300 conditional on K = 1000, K = 16,000 run proposed"
+
+- id: L-audit-a2e-2026
+  label: "Audit A2e: LTEE-to-human transfer is a threshold on supply x beneficial fraction x effect size; capped F 1.98-7.1; total throughput F = 50,765"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [A2e, A2i]
+  locator: "research/checks/results/R4-A2e.md"
+  quote: "Day states the comparison per generation"
+  parents:
+    - {id: L-audit-f2-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #32-#34; fix pass 63e82f2; not yet contradicted (A5c / B5g), literature test gaps RG-03"
+
+- id: L-audit-xt-2026
+  label: "Audit XT: fwdpy11 replicates the qualitative k-vs-mu and fixation-time results; numeric k/U rows show an unlocalised U-dependent deficit"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [B1, B3, B3c, B2a]
+  locator: "research/checks/results/R4-XT.md"
+  quote: "every k/U-type count is low in fwdpy11"
+  parents:
+    - {id: L-audit-b3b-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#22); U-scaling rerun or SLiM queued"

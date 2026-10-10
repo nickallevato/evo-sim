@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "non-sequitur"   # the 15,800 is a rate scaling, not a cost computation (10.5x Haldane's 1,500)
   fidelity: pending
-  external: "contested"   # depends on H. R4 H3: the conditional is mechanically supported (shared budget); 15,800/450k payable at R ~2-3 under hard adaptive + soft load; cost step still uncomputed by Hössjer
+  external: "contested"   # R4 H8: Hossjer's conditional is confirmed (0.0351 per generation payable under hard selection from R about 2-2.7 at in-model D; under soft selection at every R, conditional on purely relative fitness); human-lineage R unsourced (R5 draft V17). Earlier: depends on H. R4 H3: the conditional is mechanically supported (shared budget); 15,800/450k payable at R ~2-3 under hard adaptive + soft load; cost step still uncomputed by Hössjer
 ---
 
 ## Statement (verbatim)
@@ -62,5 +62,6 @@ Earlier note: Script: `research/checks/h_cost_of_selection.py` (planned, H). · 
 
 R4 H3 (research/checks/results/R4-H3-human.md): Hössjer's conditional (if many fixations were selected, a parallel reproductive cost applies) is mechanically confirmed: concurrent sweeps share one budget (D1a). His 15,800 over 450,000 generations (0.035 per generation) is payable at R ~ 2-3 (D = 20; R ~ 3 with long-run phi) under hard adaptive selection with a soft load. It is close to GAP-01's coding-only maximum (1.2e4), so it is compatible with a coding-only reading. 'Perhaps' is a hedge, not a target, and the cost step remains asserted rather than computed. Review: `research/checks/REVIEW.md` (review #7, 2026-10-09).
 
+R4 H8 (research/checks/results/R4-H8.md; fix pass 6d1359e; reviews #29-#31): the conditional behind Hössjer's "far less than what equation (4) predicts" is confirmed in Haldane's own regime. Hard selection sustains 0.0351 per generation from R between 2 and 2.7 at the in-model D (the same R found by R4 H3), with the whole excess spent on adaptive substitution; soft selection sustains it at every R tested, provided fitness is purely relative. The run confirms the conditional; it does not refute it. The cost step is still uncomputed by Hössjer (internal `non-sequitur` unchanged), and whether the human lineage had that R is unsourced on both sides (external `contested` unchanged). The K = 16,000 run proposed in R4-H8 section 8.2 awaits approval.
 ## Simulator variables implied
 Fraction of lineage fixations that are selected, selective mortality budget, d, L, mu ratio.

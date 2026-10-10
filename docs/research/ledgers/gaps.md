@@ -530,6 +530,20 @@ These are not gaps in the sense defined above (a consideration nobody raised); t
 - **What is needed.** IBD-based (IBDNe, Palamara), ARG/coalescent (Relate, tsdate, SMC++, MSMC2) and aDNA-based (hapROH, ancIBD) estimates of European or West Eurasian N_e over the last ~10,000 years, with locators and access status, recorded two-sidedly.
 - **Status.** Retrieved; decision pending C1e (rerun the C1c model on published trajectories). The retrieval (`docs/research/sources/holocene-ne.md`, commit e746eb7; 37 open-access full texts, 63 verified quotes) finds no estimate supporting a constant ~1e4 to the present: every method that sees recent times shows growth of 100x or more. For most of the window fitted values cluster at about 1.5k-12k (IBS tracts, ROH, SFS, temporal F); the timing of growth differs by model (Ne crosses 1e5 about 0.7-1.4 kya in Coventry and Gazave, about 5.4 kya under Nelson's central trajectory). The 3-7 kya interval, where C1c's events accumulate, is the least constrained. Derived harmonic-mean Ne over 0-7 kya: Gazave 9.4k, Coventry 9.2k, Gravel 20k, Nelson 160k. Under the flatter models C1c gives about 900-3,900 events (a 40-190x deficit for Day's 21); under a Nelson-type trajectory about 32-35 (no deficit). The literature does not decide between them; C1e will run the C1c model on each published trajectory.
 
+
+### RG-02: Regulatory-evolution waiting-time literature for Hössjer's HO-12 (recorded 2026-10-10; not retrieved)
+**Nodes:** D15 (and G3 / G3b for the gene-set question).
+- **Why it matters.** R4 D15 finds Hössjer's prediction holds for a specific target with non-beneficial intermediates (96 of 96 in-scope cells) and flips under beneficial intermediates, redundant sites or a non-specific gene set. All three decisive inputs are unsourced in the corpus; no critic engages HO-12.
+- **Leads (titles from a reviewer's memory, NOT retrieved; no numbers taken; the D15 external verdict is provisional until read):** Stone & Wray 2001 (*Mol. Biol. Evol.*, rapid evolution of cis-regulatory sequences via local point mutations); MacArthur & Brookfield 2004 (*Mol. Biol. Evol.*, expected rates of binding-site gain); Durrett & Schmidt 2007 (*Ann. Appl. Probab.*, "Waiting for regulatory sequences to appear"); Khaitovich et al. 2004 (*PLoS Biol.*, a neutral model of transcriptome evolution); Schmidt et al. 2010 (*Science*, TF-binding divergence across vertebrates).
+- **What is needed.** Retrieval through the source pipeline (verbatim quotes with locators, access status), read two-sidedly: a sourced per-step coefficient for regulatory intermediates, the number of equivalent sites per TF, and how many gene sets would produce the observed expression differences.
+- **Status.** Open. Could move D15 external toward `contradicted` (non-specific reading) or leave it `contested`.
+
+### RG-03: Adaptive substitutions in the human lineage (McDonald-Kreitman / alpha), for the A2e flip (recorded 2026-10-10; not retrieved)
+**Nodes:** A2e (and A5e, which carries Day's human-derived rate).
+- **Why it matters.** R4 A2e shows the per-generation, adaptive-only verdict turns on an unmeasured beneficial-fraction x effect-size ratio. At the flip the human adaptive rate equals 1/1,322 per generation, i.e. about 191 adaptive substitutions per lineage over 252,000 generations (Day's own 191, s7.3 p.13). The U_b,human threshold (PH8) is a testable count.
+- **What is needed.** McDonald-Kreitman / alpha and DFE-inference estimates of adaptive substitutions on the human lineage since the CHLCA, fetched through the source pipeline (refresh, verbatim quotes, locators), compared with the ~191 equivalent; recorded for both sides. No numbers are stated here because nothing was fetched.
+- **Status.** Open. A calibrated G = 1,408 run is optional (one combo, about 2.5 min on na-workhorse).
+
 ---
 
 ## Candidates rejected (considered, but already addressed or immaterial)
