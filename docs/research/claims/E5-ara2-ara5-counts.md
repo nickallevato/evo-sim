@@ -64,5 +64,7 @@ Script: none yet (spec: re-implement the Z23003785 clone-pair correction on the 
 
 R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / accurate. arithmetic reproduces; artefact-vs-biology is external Charitable reading tried: attempted: no ambiguous referent.
 
+R4 E5/E6 (research/checks/results/R4-E5E6.md; review #19, 2026-10-09): recount from the papers' own tables. Ara+5 reads 0 under the 60K snapshot but 14 (strict), 63 (first crossing) and 119 (strict plus within-lineage) elsewhere, and Ara-2 is 94 (strict), never negative; so the zero is specific to the snapshot construction, as the critics said. The clone-pair formula behind -906 is not in the extracted text and was not recomputed; the artefact-vs-biology verdict stays pending. Verdicts unchanged. Charitable reading tried: attempted: no ambiguous referent.
+
 ## Simulator variables implied
 Counting rule (snapshot, first crossing, strict whole-population), sampling endpoint per population, lineage structure, clone sample size.

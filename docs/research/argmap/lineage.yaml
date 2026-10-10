@@ -3437,3 +3437,51 @@
   fate: alive
   fate_date:
   fate_locator: "Review combined (#15-#18); follow-ups queued"
+
+- id: L-audit-e5e6-2026
+  label: "Audit E5/E6: LTEE G_f is 824 / 1,322 / 1,587 / 523 under four counting rules"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [E5, E6, A2]
+  locator: "research/checks/results/R4-E5E6.md"
+  quote: "G_f moves from 1,322 (snapshot) to 1,587 under the strict rule"
+  parents:
+    - {id: L-audit-gap07c-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#19-#21); follow-ups queued"
+
+- id: L-audit-f1a-2026
+  label: "Audit F1a: fixations 7.1 / 71.9 / 702 at 1x / 10x / 100x serial supply"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [F1a, F1]
+  locator: "research/checks/results/R4-F1a.md"
+  quote: "right only at the boundary supply"
+  parents:
+    - {id: L-audit-f1b-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#19-#21); follow-ups queued"
+
+- id: L-audit-b2b-2026
+  label: "Audit B2b: simulated N_e matches Wright (4N-2)/(V_k+2) within 2.2%"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [B2b, B2]
+  locator: "research/checks/results/R4-B2b.md"
+  quote: "Wright's formula, as printed, is right for iid offspring variance"
+  parents:
+    - {id: L-audit-gap07c-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#19-#21); follow-ups queued"

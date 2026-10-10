@@ -575,3 +575,11 @@ Pre-registered 2c245ec; na-workhorse, 3 replicates. P1-P4, P5 central, P6 met; P
 ## G2c / B6c: standing neutral variation under parallel sweep models (2026-10-09)
 Pre-registered 1ffd053; na-workhorse. Hn ratio to control 0.97-1.03 at sweep rate 1/1,322 and 1.00-1.01 at about 146 concurrent sweeps; falsifier (< 0.10) did not fire. Missed: A rep1 concurrency (0.5), B concurrency 146 vs [150, 300] (realised fixation rate 1.55x intended, unexplained). Review #17: 1 MAJOR (that account), 5 MINOR. G2c and B6c external pending -> supported as a conditional. `results/R4-G2c.md`.
 
+## E5 / E6: LTEE fixation counts under each rule (2026-10-09)
+Pre-registered 49323fd; arithmetic on the two Day papers' tables (no Good 2017 data in the repo; "-906" formula not in text, not recomputed). Non-mutator G_f: snapshot 1,322; first crossing (naive 95%) 824; strict 1,587 (+20.1%); strict plus within-lineage 523; spread 3.04x. Table 1 sums reproduce (5,496 / 7,166 / 8,679 / 723,000). Ara+5's 0 is specific to the snapshot rule (14 / 63 / 119 elsewhere). Review #19: 0 MAJOR. No verdict changes. `results/R4-E5E6.md`.
+
+## F1a: serial use of the latency-derived 19,800 (2026-10-09)
+Pre-registered 385df94; na-workhorse. Day's s and N_e scaled (4Ns = 40), W = 7 x latency. Fixations 7.10, 71.9, 702 at supply k = 1, 10, 100 times the serial rate (parallel prediction 7, 70, 700; serial reading 7 throughout). All predictions met. Dividing by the latency is right only at the serial boundary supply; understates by k elsewhere. Does not clear the non-sequitur, and does not test interference or human supply. Review #20. No verdict changes. `results/R4-F1a.md`.
+
+## B2b: ceiling X = (V_k+2) G/16 against simulated offspring variance (2026-10-09)
+Pre-registered 25f14f7 (post hoc fix of an N_e/N slip). na-workhorse. Simulated N_e / Wright (4N-2)/(V_k+2) = 0.998, 1.002, 1.006, 1.022 at V_k = 1, 2, 5, 10; N_e/N 1.33, 1.00, 0.57, 0.34. The formula and the algebra for X are right; "about ten thousand" is reached only at V_k = 0 with the species window; N_e/N = 1e-3 needs V_k = 3,998. Review #21: 1 MAJOR (slip, fixed). No verdict changes. `results/R4-B2b.md`.

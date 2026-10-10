@@ -1,0 +1,23 @@
+transcription matches raw Z23105291 Table 1 (12 rows)
+Table sums: strict 5496 within 7166 first 8679 inflation 3183 gens 723000 (paper 5496/7166/8679/3183/723000)
+naive/strict - 1 = 57.9%; share removed = 36.7%
+
+Per-population non-mutators (60K snapshot | first-crossing | strict | strict+within):
+ Ara+2   64 |  66 |  66 |  66
+ Ara+4   68 |  80 |  73 |  73
+ Ara+5    0 |  63 |  14 | 119
+ Ara-5   60 |  96 |   9 | 182
+ Ara-6   35 |  59 |  27 | 134
+
+rule                               sum    mean  G_f nom.   G_f own
+(a) snapshot 60K                   227    45.4      1322      1315
+(b) first crossing (naive 95%)     364    72.8       824       820
+(c) strict whole-pop               189    37.8      1587      1579
+(d) strict + within-lineage        574   114.8       523       520
+snapshot excluding Ara+5 zero: mean 56.75 -> 1057
+strict vs snapshot: +20.1%; first-crossing vs snapshot: -37.7%; spread max/min = 3.04x
+snapshot timepoint means 10K..60K: [12.6, 21.4, 33.4, 29.6, 36.8, 45.4] -> G_f [794, 935, 898, 1351, 1359, 1322]
+Ara+5 snapshot series [16, 13, 38, 34, 14, 0] ; Ara+5 last sample 57,500 (Z23105291), so the 60K cell is beyond its last sample
+
+Mutators strict: 5307 over 424500 gens = 0.0125/gen -> 80 gen/fix; first-crossing 8315 -> 51 gen/fix
+Ara-2 snapshot-style negative (-906) is not recomputed: clone-pair formula not in extracted text. Strict Ara-2 = 94 (>=0).

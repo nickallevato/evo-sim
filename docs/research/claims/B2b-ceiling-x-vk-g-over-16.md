@@ -65,6 +65,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 ## Check
 Script: none specific (arithmetic only). Audit computed with python3 -I in this session. Related: B3a (Nₑ vs N).
 
+R4 B2b (research/checks/results/R4-B2b.md; review #21, 2026-10-09): simulated N_e (Cannings, Mendelian segregation, iid offspring variance) matches Wright's (4N-2)/(V_k+2) to within 2.2% at V_k = 1, 2, 5, 10, so X = (V_k+2)G/16 is correct algebra. The abstract's "about ten thousand" is reached only at V_k = 0 with the 2-My window; N_e/N = 1e-3 would need V_k about 4,000. Inputs (human V_k, G window) not tested. Verdicts unchanged.
+
 ## Simulator variables implied
 - Vₖ
 - generation time

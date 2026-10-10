@@ -1,0 +1,9 @@
+N=100 reps=200000; Wright N_e = (4N-2)/(Vk+2)
+Vk nominal  1.0: realised mean 2.000 var 1.000; N_e sim  132.47  Wright(realised)  132.67  ratio 0.998  N_e/N 1.325
+Vk nominal  2.0: realised mean 2.000 var 2.000; N_e sim   99.73  Wright(realised)   99.51  ratio 1.002  N_e/N 0.997
+Vk nominal  5.0: realised mean 2.001 var 5.002; N_e sim   57.18  Wright(realised)   56.84  ratio 1.006  N_e/N 0.572
+Vk nominal 10.0: realised mean 2.000 var 9.999; N_e sim   33.88  Wright(realised)   33.17  ratio 1.022  N_e/N 0.339
+Ceiling X = (Vk+2) G/16 at Day G values (algebra):
+  human lineage  G=260000: Vk=1: 48,750  Vk=2: 65,000  Vk=5: 113,750  Vk=10: 195,000
+  human species  G=80000: Vk=1: 15,000  Vk=2: 20,000  Vk=5: 35,000  Vk=10: 60,000
+Vk needed for Ne/N = 1e-3 (Wright, Ne/N = 4/(Vk+2)): 3998 ; for 0.1: 38

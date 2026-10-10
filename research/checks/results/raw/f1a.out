@@ -1,0 +1,4 @@
+N=1000 s=0.01 4Ns=40 Day-latency L_sim=1520 W=7L=10641 Kimura u=0.01980; real-scale Day latency 19807
+k=1   Ub=1.661e-05 predicted    7  observed    7.10 +- 0.36  var/mean 0.89  observed/serial(7) = 1.01  in-transit ~ rate x ~850 = 0.56
+k=10  Ub=1.661e-04 predicted   70  observed   71.88 +- 1.16  var/mean 0.90  observed/serial(7) = 10.27  in-transit ~ rate x ~850 = 5.59
+k=100 Ub=1.661e-03 predicted  700  observed  702.06 +- 4.73  var/mean 1.53  observed/serial(7) = 100.29  in-transit ~ rate x ~850 = 55.91

@@ -1,0 +1,7 @@
+na-workhorse.allevato.io
+2026-10-09T22:19:45-06:00
+073c4ad191d96c68c6fa4c920e19d341  f1a_serial_vs_parallel.py
+1317583b8c86ef2c2ee1fa08888a9487  g2c_standing_variation.py
+80e70b89fbecfde639a3ce3af3638eb5  b2b_ceiling_vk.py
+g2c rerunA main PID 4156633 launched ~17:5x -06:00, 2 workers
+f1a ran standalone, b2b ran in foreground 13s

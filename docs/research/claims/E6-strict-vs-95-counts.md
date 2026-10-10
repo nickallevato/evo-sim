@@ -66,5 +66,7 @@ derived (R2 recompute, python3):
 ## Check
 Script: none yet (spec: `research/checks/e6_ltee_counts.py`, planned; read `LTEE-metagenomic` data_files, apply state 2 and ≥95% rules, compare with Table 1). · Result: not run (the Table 1 sums above are arithmetic on the paper's own table) · Review: pending
 
+R4 E5/E6 (research/checks/results/R4-E5E6.md; review #19, 2026-10-09): Table 1 sums and all derived figures reproduce from the raw text. Non-mutator G_f is 1,322 (snapshot), 824 (first crossing), 1,587 (strict, +20.1% on 1,322) and 523 (strict plus within-lineage); a 3.04x spread, which bears out the abstract's own statement that counts are rule-dependent. No Good 2017 files in the repo, so the state calls are not re-derived (fidelity stays unverifiable; external pending). Verdicts unchanged.
+
 ## Simulator variables implied
 Counting rule, endpoints per population, lineage structure, mutator classification.

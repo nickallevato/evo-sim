@@ -68,6 +68,8 @@ Script: none (arithmetic computed with python3 -I). Related: `research/checks/f1
 
 R4 F1b (research/checks/results/R4-F1b.md; review #16, 2026-10-09): supports the first half (a throughput count already includes parallelism; direct measurement shows overlap), but does not clear the non-sequitur: dividing by a latency-derived 19,800 as if it were an inter-fixation time is not tested by F1b. Verdicts unchanged.
 
+R4 F1a (research/checks/results/R4-F1a.md; review #20, 2026-10-09): at Day's 4Ns = 40 (scaled) and a window of 7 latencies, fixations are 7.1, 71.9 and 702 at supply 1x, 10x and 100x the serial rate; the serial reading (7) is right only at the boundary supply, and the count is set by supply, not by the 19,800-type latency. Supports the first half (throughput contains parallelism); the non-sequitur (dividing by a latency as a spacing) stands; interference and human supply untested. Verdicts unchanged.
+
 ## Simulator variables implied
 - G_f as latency or as spacing (explicit toggle)
 - parallel width

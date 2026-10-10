@@ -4510,3 +4510,55 @@
   counter: []
   note: 'caveat applied in R4-B5b.md Review resolution'
   hierarchy_edge: false
+- id: d353
+  attacker: chk:E5E6
+  target: A2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-E5E6.md Results
+  audit_status: upheld
+  audit_basis: 'G_f for the five non-mutators is 1,322 (snapshot), 824 (first crossing), 1,587 (strict), 523 (strict plus within-lineage): a 3.04x spread from one data set'
+  counter: []
+  note: 'Day-side note: Day''s own abstract states the rule dependence; the strict figure is 20% slower than 1,322, in the direction of his shortfall.'
+  hierarchy_edge: false
+- id: d354
+  attacker: chk:E5E6
+  target: E5
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-E5E6.md Results
+  audit_status: partly
+  audit_basis: 'Ara+5''s zero is specific to the 60K snapshot (14 strict, 63 first crossing); Ara-2 is 94 strict; but the clone-pair formula giving -906 is not in the text and was not recomputed'
+  counter: []
+  note: 'Critic-side node: supports the artefact reading for the zero, not for the negative value.'
+  hierarchy_edge: false
+- id: d355
+  attacker: chk:F1a
+  target: F1a
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-F1a.md Results
+  audit_status: upheld
+  audit_basis: 'Fixations are 7.1 / 71.9 / 702 at 1x / 10x / 100x the serial supply; dividing a window by the 19,807-type latency gives the right count only at the boundary supply'
+  counter: []
+  note: 'Does not touch the throughput half of F1a; interference and human supply are untested.'
+  hierarchy_edge: false
+- id: d356
+  attacker: chk:B2b
+  target: B2b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-B2b.md Results
+  audit_status: upheld
+  audit_basis: 'Wright''s N_e reproduces within 2.2% in simulation, but the abstract''s ''about ten thousand'' is reached only at V_k = 0 with the 2-My window; the table gives 35,000-113,750 at V_k = 5'
+  counter: []
+  note: 'Day-side note: the formula and X algebra are right; the discrepancy is the abstract against the table, not the N_e model.'
+  hierarchy_edge: false

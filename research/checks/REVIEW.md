@@ -294,5 +294,14 @@ File: `results/REVIEW-R4-G2c-combined.md`. Write-up `results/R4-G2c.md`. ADDENDU
 ## 2026-10-09 - Review #18 (combined, low-stakes tier): C1e (Holocene trajectories)
 File: `results/REVIEW-R4-C1e-combined.md`. Write-up `results/R4-C1e.md`. ADDENDUM (post hoc, 2026-10-09): MAJOR-1 answered by a measured rerun at 25 y (6 replicates): R0 S21 Gravel 710, Gazave 3,387, Coventry 3,279, Nelson 31; all predictions met; no verdict change. Pre-registration 2c245ec. 1 MAJOR (trajectories are 25 y per generation, engine steps 20 y: S21 high by 1.4-1.7x; bracket applied, not rerun), 5 MINOR. Pre-registered misses disclosed (P5 sensitivities, P7). No verdict change (C4 pending, C6 contradicted, C unchanged); d343, d344, d349; chk:C1e. Follow-up: corrected-clock rerun (post hoc).
 
+## 2026-10-09 - Review #19 (combined, low-stakes tier): E5/E6 (LTEE counts under each rule)
+File: `results/REVIEW-R4-E5E6-combined.md`. Write-up `results/R4-E5E6.md`. Pre-registration 49323fd. 0 MAJOR, 4 MINOR (predictions made after reading the tables; docstring (d) 521 vs 523; "-906" not recomputable; Day's correction not to be read as an indictment). Same-agent review. Integrated: E5 and E6 Check paragraphs, d353, d354, chk:E5E6. No verdict change.
+
+## 2026-10-09 - Review #20 (combined, low-stakes tier): F1a (serial use of 19,800 vs parallel sweeps)
+File: `results/REVIEW-R4-F1a-combined.md`. Write-up `results/R4-F1a.md`. Pre-registration 385df94. 0 MAJOR, 4 MINOR (near-duplicate of F1b design; in-transit column approximate; six/seven width factor not testable; supply above the boundary not shown for humans). Integrated: F1a Check paragraph, d355, chk:F1a. No verdict change.
+
+## 2026-10-09 - Review #21 (combined, low-stakes tier): B2b (ceiling x V_k x G / 16)
+File: `results/REVIEW-R4-B2b-combined.md`. Write-up `results/R4-B2b.md`. Pre-registration 25f14f7. 1 MAJOR (N_e/N = 2/(V_k+2) slip in the docstring expectations and the V_k threshold printout; fixed in a labelled post hoc commit, rerun identical), 4 MINOR. Integrated: B2b Check paragraph, d356, chk:B2b. No verdict change.
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).

@@ -140,6 +140,9 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:G2c | audit | forward simulation of unlinked neutral diversity under sweep-rate and 230-sweep models (G2c/B6c) | RESULTS §G2c; results/R4-G2c.md (added 2026-10-09) |
 | chk:F1b | audit | in-transit fixation count measured directly (latency vs throughput) | RESULTS §F1b; results/R4-F1b.md (added 2026-10-09) |
 | chk:B5b | audit | Mansfield's supply argument with a sourced neutral fraction (Rands 2014) | RESULTS §B5b; results/R4-B5b.md (added 2026-10-09) |
+| chk:E5E6 | audit | LTEE fixation counts recounted under snapshot, first-crossing, strict and strict-plus-within rules | RESULTS §E5 / E6; results/R4-E5E6.md (added 2026-10-09) |
+| chk:F1a | audit | serial use of the latency-derived 19,800 against parallel sweeps at Day's s and N_e | RESULTS §F1a; results/R4-F1a.md (added 2026-10-09) |
+| chk:B2b | audit | Hard Limits ceiling and Wright N_e formula against simulated offspring variance | RESULTS §B2b; results/R4-B2b.md (added 2026-10-09) |
 | chk:ROOT-M-survey | audit | keyword survey of computed vs asserted exclusions | claims/ROOT-excluded-mechanisms.md |
 | chk:D9-exploratory | audit | exploratory Weasel runs (not pre-registered) | claims/D9, D9a Responses |
 | rev:review-2 | audit | correctness review #2 | research/checks/REVIEW.md (2026-10-07) |
@@ -177,6 +180,9 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-G2c-combined | audit | combined review (correctness, Day-side and critic-side steelman) of G2c; low-stakes tier | results/REVIEW-R4-G2c-combined.md (2026-10-09) |
 | rev:R4-F1b-combined | audit | combined review (correctness, Day-side and critic-side steelman) of F1b; low-stakes tier | results/REVIEW-R4-F1b-combined.md (2026-10-09) |
 | rev:R4-B5b-combined | audit | combined review (correctness, Day-side and critic-side steelman) of B5b; low-stakes tier | results/REVIEW-R4-B5b-combined.md (2026-10-09) |
+| rev:R4-E5E6-combined | audit | combined review (correctness, Day-side and critic-side steelman) of E5/E6; low-stakes tier | results/REVIEW-R4-E5E6-combined.md (2026-10-09) |
+| rev:R4-F1a-combined | audit | combined review (correctness, Day-side and critic-side steelman) of F1a; low-stakes tier | results/REVIEW-R4-F1a-combined.md (2026-10-09) |
+| rev:R4-B2b-combined | audit | combined review (correctness, Day-side and critic-side steelman) of B2b; low-stakes tier | results/REVIEW-R4-B2b-combined.md (2026-10-09) |
 
 ## Judgement calls
 
