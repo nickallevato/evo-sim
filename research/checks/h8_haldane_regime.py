@@ -301,6 +301,17 @@ def build(stage):
                 c.append(("softJ", 1000, lam, R, lab, "softJ", 3, 30000, 10000, 1500))
         for lam, lab in ((1 / 300, "1/300"), (HOSSJER, "H5"), (0.1, "lam=0.1"), (0.2, "lam=0.2")):
             c.append(("softWF", 1000, lam, float("nan"), lab, "softWF", 3, 30000, 10000, 1500))
+        # POST HOC grid extension (2026-10-09, after the first 19 main rows): K = 4000, R = 1.111 went extinct at
+        # x = 0.6-0.8 within 20k generations (load fluctuations over ~1,400-generation sweeps), so lam50 at low R
+        # would be unbracketed below x = 0.4.  Lower x values are APPENDED (existing cell indices and seeds are
+        # unchanged).  No prediction is changed.
+        for R in RS:
+            for x in (0.1, 0.2, 0.3):
+                c.append(("hard", 1000, x * math.log(R) / Dref(1000), R, f"x={x}", "hard", 6, 40000, 3000, 1500))
+        for K in (500, 4000):
+            for R in (1 / 0.9, 2.0):
+                for x in (0.2, 0.3, 0.45):
+                    c.append(("Kscale", K, x * math.log(R) / Dref(K), R, f"x={x}", "hard", 4, 20000, 3000, 1500))
         return c
     raise SystemExit("unknown stage " + stage)
 
