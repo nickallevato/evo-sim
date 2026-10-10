@@ -56,6 +56,22 @@ WHAT EACH SIDE'S MODEL PREDICTS.
   RESULT THAT WOULD CHANGE A VERDICT: Hn ratio < 0.10 in A (then G2c's falsifier fires), or Hn(B)/Hn(ctrl) < 0.9.
 
 Raw output: research/checks/results/raw/g2c_<model>_rep<r>.json.
+
+POST HOC ADDENDUM (review MAJOR-1; commit labelled "post hoc (review MAJOR)").  DIAGNOSIS by reading the code and the committed log
+(raw/g2c.out), no new run: the "fixed" counter (fixed_cnt) is CUMULATIVE over all 6,000 generations; the write-up divided it by the
+3,000-generation window (539/3000 = 0.18, "1.55x intended").  From the log (B rep0): fixed = 195 at g=3000 and 539 at g=6000, so the
+WINDOW rate is 344/3000 = 0.115 per generation = 0.99x the intended 0.116.  The fixation rate was correct; there was no excess.
+The real shortfall is concurrency: counted sweeps (>= 50 copies to fixation) last about 146/0.115 = 1,270 generations, not the
+1,980 assumed (the count starts at 50 copies and a sweep that fixes runs faster than the unconditional mean), so the realised counted
+concurrency was 146 (< floor 150).  FIX: new model B2 = B with arrival rate x 230/146, aiming the counted concurrency at 230, and
+fixed_win (fixations inside the window) recorded.  RERUN (post hoc): B2 reps 0-2, A reps 2-5, ctrl reps 2-5 (reps 0-1 of ctrl/A
+are the original runs, unchanged code path).  PRE-REGISTERED (before the rerun):
+  R1  B2 counted concurrency mean in [190, 280] (floor 150 met); fixed_win/3000 in [0.15, 0.22] per generation (= 0.115 x 1.575 +- 20%).
+  R2  B2 Hn ratio to the rep-matched ctrl in [0.95, 1.04] each rep; drift ratio in [1.000, 1.03]; zero dropped arrivals.
+  R3  A over 6 reps: mean counted concurrency in [0.8, 2.5]; mean Hn ratio in [0.96, 1.04].
+  R4  ctrl over 6 reps: per-rep Hn drift within 4% of its start in at least 5 of 6.
+  Verdict rule: external stays pending unless R1, R2 and R3 are met; if any fails, it stays pending and the result is written up.
+Run: ... g2c_standing_variation.py main 3 rerun   (one invocation = 11 jobs; launch as 2 invocations of the job list if needed)
 """
 import os
 import sys
@@ -72,6 +88,10 @@ U = 2.5e-5
 SEED = 20261013
 MODELS = {"ctrl": 0.0, "A": (1.0 / 1322.0) / 0.02, "B": (230.0 / 1980.0) / 0.02}
 SLOTS = {"ctrl": 0, "A": 40, "B": 450}
+# POST HOC (review MAJOR-1): model B2 = B with the arrival rate scaled by 230/146 = 1.575 (B's measured counted concurrency was 146),
+# aiming the COUNTED concurrency (>= 50 copies, not fixed) at Day's 230.  Slots raised so arrivals are not dropped.
+MODELS["B2"] = MODELS["B"] * 230.0 / 146.0
+SLOTS["B2"] = 800
 
 
 def run(model, rep, N=10_000, K=500, T=6000, win=(3000, 6000), rec_every=20, seed_extra=0):
@@ -145,7 +165,8 @@ def run(model, rep, N=10_000, K=500, T=6000, win=(3000, 6000), rec_every=20, see
     out = dict(model=model, rep=rep, N=N, K=K, T=T, Hn_start=float((2 * pk * (1 - pk)).mean()),
                Hn_win=float(np.mean([r["Hn"] for r in full])), conc_win=float(np.mean([r["conc"] for r in full])),
                drift_ratio=float(sum(r["dp2"] for r in allw) / sum(r["exp_dp2"] for r in allw)),
-               fixed=fixed_cnt, dropped=dropped, secs=time.time() - t0,
+               fixed=fixed_cnt, fixed_win=(lambda f: (f[-1]["fixed"] - f[0]["fixed"], f[-1]["g"] - f[0]["g"]))(full),
+               dropped=dropped, secs=time.time() - t0,
                Hn_series=[(r["g"], r["Hn"]) for r in rec if "Hn" in r and r["g"] % 200 == 0])
     return out
 
@@ -166,10 +187,15 @@ def analyse(rawdir):
         r = json.load(open(f))
         R.setdefault(r["model"], []).append(r)
     ctrl = np.mean([r["Hn_win"] for r in R.get("ctrl", [])]) if "ctrl" in R else float("nan")
-    for m in ("ctrl", "A", "B"):
+    for m in ("ctrl", "A", "B", "B2"):
         for r in R.get(m, []):
-            print("%-4s rep%d: Hn_start=%.4f Hn_win=%.4f ratio_to_ctrl=%.3f drift_ratio(N/Ne)=%.4f conc=%.1f fixed=%d dropped=%d (%.0fs)" % (
-                m, r["rep"], r["Hn_start"], r["Hn_win"], r["Hn_win"] / ctrl, r["drift_ratio"], r["conc_win"], r["fixed"], r["dropped"], r["secs"]))
+            print("%-4s rep%d: Hn_start=%.4f Hn_win=%.4f ratio_to_ctrl=%.3f drift_ratio(N/Ne)=%.4f conc=%.1f fixed_total=%d fixed_win=%s dropped=%d (%.0fs)" % (
+                m, r["rep"], r["Hn_start"], r["Hn_win"], r["Hn_win"] / ctrl, r["drift_ratio"], r["conc_win"], r["fixed"], r.get("fixed_win"), r["dropped"], r["secs"]))
+    for m in ("ctrl", "A", "B", "B2"):
+        if R.get(m):
+            print("MEAN %-4s n=%d Hn ratio %.3f (per-rep ctrl-matched: %s) conc %.1f drift %.4f" % (m, len(R[m]), np.mean([r["Hn_win"] for r in R[m]]) / ctrl,
+                  [round(r["Hn_win"] / np.mean([c["Hn_win"] for c in R["ctrl"] if c["rep"] == r["rep"]]), 3) for r in R[m] if any(c["rep"] == r["rep"] for c in R["ctrl"])],
+                  np.mean([r["conc_win"] for r in R[m]]), np.mean([r["drift_ratio"] for r in R[m]])))
 
 
 if __name__ == "__main__":
@@ -182,6 +208,8 @@ if __name__ == "__main__":
         import multiprocessing as mp
         w = int(sys.argv[2]) if len(sys.argv) > 2 else 3
         jobs = [(m, r) for m in ("B", "A", "ctrl") for r in (0, 1)]
+        if len(sys.argv) > 3 and sys.argv[3] == "rerun":      # POST HOC (review MAJOR-1): see docstring addendum
+            jobs = [("B2", r) for r in (0, 1, 2)] + [(m, r) for r in (2, 3, 4, 5) for m in ("A", "ctrl")]
         with mp.get_context("spawn").Pool(w) as pool:
             for r in pool.imap_unordered(_job, jobs):
                 print("done", r["model"], r["rep"], flush=True)
