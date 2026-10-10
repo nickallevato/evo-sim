@@ -1,0 +1,103 @@
+# A2e post hoc (after reviews 2935b8f). Analysis only; no simulation.
+
+## PH1 sanity: coupled kappa* (map36.8) and closed form (M_L/2N_h) R_int (u_L/u_h)
+  s 0.003 N_h 3300: kappa* map36.8 29.18, free 29.17, closed form 30.18
+  s 0.003 N_h 10000: kappa* map36.8 9.628, free 9.627, closed form 9.959
+  s 0.01 N_h 3300: kappa* map36.8 658, free 658, closed form 667.6
+  s 0.01 N_h 10000: kappa* map36.8 217.1, free 217.1, closed form 220.3
+  s 0.03 N_h 3300: kappa* map36.8 3354, free 3354, closed form 3234
+  s 0.03 N_h 10000: kappa* map36.8 1107, free 1107, closed form 1067
+
+## PH2 decoupled effect size (s_L = LTEE calibration, s_h = human beneficial effect); map36.8
+Central calibration N_e,L 3.3e7, G 1,322:
+| s_L | s_h | kappa* N_h 3300 | kappa* N_h 10000 | kappa* N_h 33000 | kappa* N_h 100000 |
+|---|---|---|---|---|---|
+| 0.003 | 0.001 | 87.35 | 28.83 | 8.735 | 2.883 |
+| 0.003 | 0.003 | 29.18 | 9.628 | 2.918 | 0.9628 |
+| 0.01 | 0.001 | 6521 | 2152 | 652.1 | 215.2 |
+| 0.01 | 0.003 | 2178 | 718.7 | 217.8 | 71.87 |
+| 0.01 | 0.01 | 658 | 217.1 | 65.8 | 21.71 |
+| 0.03 | 0.001 | 9.774e+04 | 3.226e+04 | 9774 | 3226 |
+| 0.03 | 0.003 | 3.265e+04 | 1.077e+04 | 3265 | 1077 |
+| 0.03 | 0.01 | 9863 | 3255 | 986.3 | 325.5 |
+| 0.03 | 0.03 | 3354 | 1107 | 335.4 | 110.7 |
+Reviewer grid (4 N_e,L x 3 s_L x 2 G x s_h {0.001, 0.003} x N_h {3300, 1e4} = 96 cells): 6 with kappa* > 93659:
+  N_e,L 3.3e+07 s_L 0.03 G 1322 s_h 0.001 N_h 3300: kappa* 9.774e+04
+  N_e,L 3.3e+07 s_L 0.03 G 2890 s_h 0.001 N_h 3300: kappa* 1.114e+05
+  N_e,L 1e+08 s_L 0.03 G 1322 s_h 0.001 N_h 3300: kappa* 2.513e+05
+  N_e,L 1e+08 s_L 0.03 G 2890 s_h 0.001 N_h 3300: kappa* 3.803e+05
+  N_e,L 1e+08 s_L 0.03 G 2890 s_h 0.001 N_h 10000: kappa* 1.255e+05
+  N_e,L 1e+08 s_L 0.03 G 2890 s_h 0.003 N_h 3300: kappa* 1.27e+05
+Wider grid, G 1,322 only, s_h <= s_L, N_h in (3300, 10000.0, 33000.0, 100000.0): 2/144 cells with kappa* > 93659
+Wider grid, G 1,322 and 1,408 (interp.), s_h <= s_L, N_h in (3300, 10000.0, 33000.0, 100000.0): 4/288 cells with kappa* > 93659
+
+## PH3 human N_e 3.3e4 and 1e5 (coupled s, map36.8)
+  N_h 3300: s 0.003: kappa* 29.18, F(125) 4.28, F(93659) 2774; s 0.01: kappa* 658, F(125) 0.19, F(93659) 140.9; s 0.03: kappa* 3354, F(125) 0.0373, F(93659) 27.83  | all calibrations kappa* 11.7-1.305e+04
+  N_h 10000: s 0.003: kappa* 9.628, F(125) 13, F(93659) 6653; s 0.01: kappa* 217.1, F(125) 0.576, F(93659) 418.6; s 0.03: kappa* 1107, F(125) 0.113, F(93659) 83.71  | all calibrations kappa* 3.86-4306
+  N_h 33000: s 0.003: kappa* 2.918, F(125) 42.8, F(93659) 1.312e+04; s 0.01: kappa* 65.8, F(125) 1.9, F(93659) 1296; s 0.03: kappa* 335.4, F(125) 0.373, F(93659) 269.5  | all calibrations kappa* 1.17-1305
+  N_h 100000: s 0.003: kappa* 0.9628, F(125) 129, F(93659) 1.876e+04; s 0.01: kappa* 21.71, F(125) 5.75, F(93659) 3359; s 0.03: kappa* 110.7, F(125) 1.13, F(93659) 764.8  | all calibrations kappa* 0.386-430.6
+
+## PH4 G_f = 1,408 (Day's adaptive-only figure) by log-log interpolation of U_b
+  validation at central (3.3e7, 0.01): interpolated U_b(1587) 5.257e-09 vs calibrated 4.401e-09 (ratio 1.195); kappa* interp 302.7 vs calibrated 361.6
+  s 0.003: kappa* at G 1,408 (N_e,L 3.3e7): N_h 3300: 34.68, N_h 10000: 11.44, N_h 33000: 3.468, N_h 100000: 1.144; F(93659, N_h 1e4) 5981
+  s 0.01: kappa* at G 1,408 (N_e,L 3.3e7): N_h 3300: 737.9, N_h 10000: 243.5, N_h 33000: 73.79, N_h 100000: 24.35; F(93659, N_h 1e4) 375.1
+  s 0.03: kappa* at G 1,408 (N_e,L 3.3e7): N_h 3300: 3389, N_h 10000: 1118, N_h 33000: 338.9, N_h 100000: 111.8; F(93659, N_h 1e4) 82.89
+  central s 0.01, piecewise log-log between the calibrated 1,322 and 1,587 points: U_b 6.928e-09, kappa* N_h 1e4 258.9 (the 1,322-2,890 interpolation above under-reads the 1,587 check by ~16%, so the 1,408 values are approximate; both lie between 217 and 362)
+
+## PH5 coupled kappa* range (map36.8) with labelled corners
+  all stored targets incl. audit-derived 2,887, N_h (3300, 10000.0): kappa* 3.86 (N_e,L 3.3e+06, s 0.003, G 1322, N_h 10000) - 1.305e+04 (N_e,L 1e+08, s 0.03, G 2890, N_h 3300); margin to 93,659: 7.18x - 2.42e+04x
+  all stored targets incl. audit-derived 2,887, N_h (3300, 10000.0, 33000.0, 100000.0): kappa* 0.386 (N_e,L 3.3e+06, s 0.003, G 1322, N_h 100000) - 1.305e+04 (N_e,L 1e+08, s 0.03, G 2890, N_h 3300); margin to 93,659: 7.18x - 2.42e+05x
+  Day's targets 1,322 / 1,587 only, N_h (3300, 10000.0): kappa* 3.86 (N_e,L 3.3e+06, s 0.003, G 1322, N_h 10000) - 8624 (N_e,L 1e+08, s 0.03, G 1322, N_h 3300); margin to 93,659: 10.9x - 2.42e+04x
+  Day's targets 1,322 / 1,587 only, N_h (3300, 10000.0, 33000.0, 100000.0): kappa* 0.386 (N_e,L 3.3e+06, s 0.003, G 1322, N_h 100000) - 8624 (N_e,L 1e+08, s 0.03, G 1322, N_h 3300); margin to 93,659: 10.9x - 2.42e+05x
+  1,322 / 1,408 / 1,587, N_h (3300, 10000.0): kappa* 3.86 (N_e,L 3.3e+06, s 0.003, G 1322, N_h 10000) - 8916 (N_e,L 1e+08, s 0.03, G 1408, N_h 3300); margin to 93,659: 10.5x - 2.42e+04x
+  1,322 / 1,408 / 1,587, N_h (3300, 10000.0, 33000.0, 100000.0): kappa* 0.386 (N_e,L 3.3e+06, s 0.003, G 1322, N_h 100000) - 8916 (N_e,L 1e+08, s 0.03, G 1408, N_h 3300); margin to 93,659: 10.5x - 2.42e+05x
+
+## PH6 capped F per generation at kappa 93,659 (coupled s, N_e,L 3.3e7, G 1,322)
+  N_h 3300 s 0.003: uncapped 2774; Haldane 1/300 4.41; Haldane + d 1/667 1.98; Term 3 1/39 33.9; mean-field R_h 1.111 (D 19.6) 7.11
+  N_h 3300 s 0.01: uncapped 140.9; Haldane 1/300 4.41; Haldane + d 1/667 1.98; Term 3 1/39 33.9; mean-field R_h 1.111 (D 19.6) 7.11
+  N_h 3300 s 0.03: uncapped 27.83; Haldane 1/300 4.41; Haldane + d 1/667 1.98; Term 3 1/39 27.8; mean-field R_h 1.111 (D 19.6) 7.11
+  N_h 10000 s 0.003: uncapped 6653; Haldane 1/300 4.41; Haldane + d 1/667 1.98; Term 3 1/39 33.9; mean-field R_h 1.111 (D 21.8) 6.39
+  N_h 10000 s 0.01: uncapped 418.6; Haldane 1/300 4.41; Haldane + d 1/667 1.98; Term 3 1/39 33.9; mean-field R_h 1.111 (D 21.8) 6.39
+  N_h 10000 s 0.03: uncapped 83.71; Haldane 1/300 4.41; Haldane + d 1/667 1.98; Term 3 1/39 33.9; mean-field R_h 1.111 (D 21.8) 6.39
+  caps are all > 1/1,322, so they never move kappa*; capped F > 1 wherever uncapped F exceeds the cap.
+  capped F by G target (Haldane+d / Haldane / Term 3): G 1322: 1.98 / 4.41 / 33.9; G 1408: 2.11 / 4.69 / 36.1; G 1587: 2.38 / 5.29 / 40.7
+
+## PH7 total-substitution (neutral-inclusive) F: human k = mu = 38.4 per haploid genome per generation
+  G 1322 (MITTENS 3.0 total): F per generation 50,765; per year 20 y 1.047, 25 y 0.837, 29 y 0.722
+  G 1587 (2nd ed. total): F per generation 60,941; per year 20 y 1.256, 25 y 1.005, 29 y 0.866
+  (1,408 and 2,887 are adaptive-only and not the like-for-like denominator for a total rate.)
+  sensitivity: F = 1 per generation would need a human total substitution rate <= 1/1,322 = 7.56e-04 per haploid genome per generation, i.e. a neutral rate 50,765x below mu.
+
+## PH8 absolute thresholds at the flip (coupled s, N_e,L 3.3e7, G 1,322, map36.8)
+  s 0.003: U_b,LTEE 6.57e-07; U_b,human at flip: N_h 3300: 1.92e-05, N_h 10000: 6.32e-06, N_h 33000: 1.92e-06, N_h 100000: 6.32e-07
+  s 0.01: U_b,LTEE 8.8e-09; U_b,human at flip: N_h 3300: 5.79e-06, N_h 10000: 1.91e-06, N_h 33000: 5.79e-07, N_h 100000: 1.91e-07
+  s 0.03: U_b,LTEE 5.87e-10; U_b,human at flip: N_h 3300: 1.97e-06, N_h 10000: 6.5e-07, N_h 33000: 1.97e-07, N_h 100000: 6.5e-08
+  F = 1 over 252,000 generations = 190.6 adaptive substitutions per lineage (Day s7.3: 191).
+
+## PH9 population mutation supply per generation (38.4 per haploid human genome; 4.1e-4 per LTEE genome)
+  humans N_h 3300: 253,440; vs LTEE N_e,L 3.3e+06: 1,353 (187x), N_e,L 1e+07: 4,100 (61.8x), N_e,L 3.3e+07: 13,530 (18.7x), N_e,L 1e+08: 41,000 (6.18x)
+  humans N_h 10000: 768,000; vs LTEE N_e,L 3.3e+06: 1,353 (568x), N_e,L 1e+07: 4,100 (187x), N_e,L 3.3e+07: 13,530 (56.8x), N_e,L 1e+08: 41,000 (18.7x)
+  humans N_h 33000: 2,534,400; vs LTEE N_e,L 3.3e+06: 1,353 (1.87e+03x), N_e,L 1e+07: 4,100 (618x), N_e,L 3.3e+07: 13,530 (187x), N_e,L 1e+08: 41,000 (61.8x)
+  humans N_h 100000: 7,680,000; vs LTEE N_e,L 3.3e+06: 1,353 (5.68e+03x), N_e,L 1e+07: 4,100 (1.87e+03x), N_e,L 3.3e+07: 13,530 (568x), N_e,L 1e+08: 41,000 (187x)
+
+## PH10 clonal human cells: events = k x 3 reps x 60,000 gen (floor 1/180,000 = 5.56e-6 per gen)
+  N_h 3300 s 0.003 kappa 1: k 5.071e-05 (~9.1 events), F 0.067, indep ceiling F 0.0343  ABOVE indep ceiling
+  N_h 3300 s 0.01 kappa 1: k 0 (~0.0 events), F 0, indep ceiling F 0.00152 NOISE (<= 5 events)
+  N_h 3300 s 0.01 kappa 10: k 1.667e-05 (~3.0 events), F 0.022, indep ceiling F 0.0152 NOISE (<= 5 events) ABOVE indep ceiling
+  N_h 3300 s 0.01 kappa 125: k 0.0001556 (~28.0 events), F 0.206, indep ceiling F 0.19  ABOVE indep ceiling
+  N_h 3300 s 0.03 kappa 1: k 0 (~0.0 events), F 0, indep ceiling F 0.000298 NOISE (<= 5 events)
+  N_h 3300 s 0.03 kappa 10: k 0 (~0.0 events), F 0, indep ceiling F 0.00298 NOISE (<= 5 events)
+  N_h 3300 s 0.03 kappa 125: k 2.778e-05 (~5.0 events), F 0.0367, indep ceiling F 0.0373 NOISE (<= 5 events)
+  N_h 10000 s 0.01 kappa 1: k 1.111e-05 (~2.0 events), F 0.0147, indep ceiling F 0.00461 NOISE (<= 5 events) ABOVE indep ceiling
+  N_h 10000 s 0.01 kappa 10: k 4.439e-05 (~8.0 events), F 0.0587, indep ceiling F 0.0461  ABOVE indep ceiling
+  N_h 10000 s 0.03 kappa 1: k 0 (~0.0 events), F 0, indep ceiling F 0.000904 NOISE (<= 5 events)
+  N_h 10000 s 0.03 kappa 10: k 2.222e-05 (~4.0 events), F 0.0294, indep ceiling F 0.00904 NOISE (<= 5 events) ABOVE indep ceiling
+  N_h 10000 s 0.03 kappa 125: k 0.0001 (~18.0 events), F 0.132, indep ceiling F 0.113  ABOVE indep ceiling
+
+## PH11 thresholds at the central calibration (N_e,L 3.3e7, G 1,322), coupled s
+  s 0.003 N_h 3300: map36.8 kappa* 29.18 [k125: 4.28, k652: 22.3, k10000: 337]; clonal [k125: 1.42, k652: 4.36, k10000: 28, k93659: 156]
+  s 0.003 N_h 10000: map36.8 kappa* 9.628 [k125: 13, k652: 67.5, k10000: 988]; clonal [k125: 1.94, k652: 5.15, k10000: 31.6, k93659: 167]
+  s 0.01 N_h 3300: map36.8 kappa* 658 [k125: 0.19, k652: 0.991, k10000: 15.2]; clonal [k125: 0.206, k652: 0.744, k10000: 3.71, k93659: 13]
+  s 0.01 N_h 10000: map36.8 kappa* 217.1 [k125: 0.576, k652: 3, k10000: 45.9]; clonal [k125: 0.443, k652: 1.39, k10000: 5.03, k93659: 15.5]
+  s 0.03 N_h 3300: map36.8 kappa* 3354 [k125: 0.0373, k652: 0.194, k10000: 2.98]; clonal [k125: 0.0367, k652: 0.184, k10000: 2.13, k93659: 7.28]
+  s 0.03 N_h 10000: map36.8 kappa* 1107 [k125: 0.113, k652: 0.589, k10000: 9.03]; clonal [k125: 0.132, k652: 0.542, k10000: 3.87, k93659: 9.6]
