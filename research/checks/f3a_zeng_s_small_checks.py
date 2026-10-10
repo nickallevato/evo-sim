@@ -79,7 +79,13 @@ ZQ = {
 }
 
 
+POSTHOC = "--posthoc" in sys.argv  # POST HOC (after the first run): strip C0 control characters left by PDF
+# extraction (Zeng2021.txt has "mean \x02s of" for the italic s); the first run's output is kept as raw/f3a.out.
+
+
 def norm(s):
+    if POSTHOC:
+        s = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", s)
     s = unicodedata.normalize("NFKC", s)  # also expands the "fi" ligature
     s = s.replace("’", "'").replace("‘", "'")
     return re.sub(r"\s+", " ", s).strip()
