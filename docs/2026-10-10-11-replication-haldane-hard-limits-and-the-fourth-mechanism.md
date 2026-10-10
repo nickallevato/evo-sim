@@ -15,6 +15,8 @@ This milestone covers everything since [milestone 10](2026-10-09-10-fairness-aud
 
 Each check had its script and predictions committed before the main run, and the load-bearing ones (D15, H8/H5, A2e, B2/B, B3) went through three reviews (correctness, Day-side steelman, critic-side steelman) and a fix pass. Low-stakes checks (XT, B3g, F3a) had one combined review. Reviews #22 to #42 are logged in `research/checks/REVIEW.md`. Nothing here has been peer-reviewed.
 
+> **[Update 2026-10-10, see [milestone 12](2026-10-10-12-mesas-replicated-median-25-and-k-to-64000.md): the mesa replication, the median-25 recomputation and the K = 64,000 run named as pending or queued below are done. FM replicated Day's description but not a human-specific mechanism (external contested, leaning critic); median 25 reproduces exactly from Bergeron 2023 but the terminal-branch and lineage-average readings differ by about 1.9 times; no K trend to 64,000.]**
+
 ## XT: does a second simulator agree?
 The plan required the core results to be re-run in an independent tool (fwdpy11 0.24.7; SLiM was not available).
 - **Replicated:** Kimura's fixation probability within 2%; fixation probability 1/(2N) and fixation time scaling with N<sub>e</sub> (not N/N<sub>e</sub>); the exact-chain conditional fixation fraction; the excess under sourced human N<sub>e</sub> histories (3.8 to 3.9).
@@ -73,7 +75,7 @@ Refresh `48021bd`. The post appeared at 07:37 MDT; the pre-registration (`9c97fc
 - **Score against the pre-registration.** Form A (T2T comparative genomics) partial hit. The expected adaptive-share headline, total re-size, assembly-size trap and forward simulations were not reported (misses). The predicted failure mode, concluding "selection and drift not viable" without a winning branch-B argument, is a hit pending the data. The note's "conclusively proven" prediction was too harsh: Day hedges the sigillation claim. The note's form list lacked a distribution-of-substitutions variant (a gap in the note, credit to neither side).
 - **For Day:** the claim is testable on public data, hedged, and revises his own relictation mechanism downward ("not the whole story"). A lineage-asymmetric excess in contiguous blocks is a pattern shape that uniform-rate neutral theory does not predict.
 - **For the critics:** overdispersion is the standard signature of mutation-rate heterogeneity (CpG, replication timing), alignment error and incomplete lineage sorting; neutral theory predicts k = μ locally, so only a human-specific excess discriminates, and no per-lineage numbers are given. Units (SNV against base pair) are not stated.
-- **Status:** new claim ROOT-FM, `pending / pending / pending`. A replication on the public alignment against a heterogeneous-μ neutral null is queued (load-bearing tier, pre-register first). No critic or ally reaction was found yet.
+- **Status:** new claim ROOT-FM, `pending / pending / pending`. A replication on the public alignment against a heterogeneous-μ neutral null is queued (load-bearing tier, pre-register first). No critic or ally reaction was found yet. *Update: replicated; see milestone 12.*
 
 ## Verdict changes
 | Claim | Before | After |
@@ -109,14 +111,14 @@ Reading across the table: on four claims (B3d, B2, F3a, D15) Day's own arithmeti
 
 ## What stays uncertain
 - XT's unexplained deficit.
-- Whether "slower than 1/300" survives at human K (tested only to 16,000).
+- Whether "slower than 1/300" survives at human K (tested only to 16,000). *Update: now tested to 64,000; no K trend, horizon matters (milestone 12).*
 - The RH tag on the Hard Limits peroration (B internal).
-- The median-25 recomputation.
+- The median-25 recomputation. *Done (milestone 12).*
 - Everything about mesas until a replication is run; the Fourth Mechanism claim is untested.
 
 ## Next
-- **FM replication:** per-lineage mesa density against a heterogeneous-μ neutral null (pre-register first).
-- **Bergeron 2023** open data: recompute the "median 25 across 55 vertebrates".
+- **FM replication:** per-lineage mesa density against a heterogeneous-μ neutral null (pre-register first). *Done: milestone 12.*
+- **Bergeron 2023** open data: recompute the "median 25 across 55 vertebrates". *Done: milestone 12.*
 - **Queued:** review of the 12 new mapping claims; RH pass; E leftovers; C1d, D and GAP-07 follow-ups.
 - **Stage R5** begins when the load-bearing claims without a reviewed check are resolved.
 
