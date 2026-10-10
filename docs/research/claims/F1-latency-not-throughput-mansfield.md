@@ -50,6 +50,8 @@ Pre-registered prediction (copied from RESULTS F1; the check has run).
 ## Check
 Script: `research/checks/f1_throughput.py` (seed 31) · Result: rate confirmed (0.3972 ± 0.0018 vs 0.3960); spacing vs latency 3 vs 847 generations; in-transit count is Little's law, not measured. Verdict: as logic, dividing elapsed time by latency is not a throughput bound; feasibility is untested (F2). Review #3 caveats (unrealistic regime; serial reading must be tied to a quote → F1a). Review: `research/checks/REVIEW.md#2026-10-07--review-3-sonnet-correctness--two-sided-steelman-of-b1b-b2a-f1`
 
+R4 F1b (research/checks/results/R4-F1b.md; review #16, combined, 2026-10-09): the open item is closed. In-transit count measured directly (infinite-sites WF, N = 1000, s = 0.01, independent loci): 333.3 +- 0.9, 17.07 +- 0.18, 0.984 +- 0.022 against theory 335.5, 16.8, 1.01; Poisson dispersion (variance/mean 0.95-1.00); the weak form (count <= window / latency) is violated 333x and 17x in the first two regimes and is an equality at the serial boundary. Feasibility (interference, cost, human supply) is untouched, so verdicts stay holds / n/a / contested.
+
 ## Simulator variables implied
 - number of independent loci
 - U_b

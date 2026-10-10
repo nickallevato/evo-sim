@@ -1518,7 +1518,7 @@ nodes:
   verdicts:
     internal: holds
     fidelity: n/a
-    external: pending
+    external: supported
   claim_file: docs/research/claims/B6c-hancock-no-standing-variation-prediction.md
 - id: B7
   title: Neutral fixation probability is 1/(2N), the starting frequency, not 1/(2Ne); Day's own Hard Limits paper says so
@@ -2882,7 +2882,7 @@ nodes:
   verdicts:
     internal: holds
     fidelity: n/a
-    external: contested
+    external: supported
   claim_file: docs/research/claims/F1b-mccarthy-parallel-not-one-at-a-time.md
 - id: F1c
   title: 'Hancock: Day''s argument is a version of the waiting-time problem (Behe-Snoke lineage); that literature has been answered and relies
@@ -3173,7 +3173,7 @@ nodes:
   verdicts:
     internal: holds
     fidelity: partial
-    external: pending
+    external: supported
   claim_file: docs/research/claims/G2c-hancock-no-variation-prediction.md
 - id: G2d
   title: 'Camestros: "Generations per fixation" reads as if each fixation must occur one at a time'

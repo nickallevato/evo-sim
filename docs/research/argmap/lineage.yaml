@@ -3373,3 +3373,67 @@
   fate: alive
   fate_date:
   fate_locator: "Review #13; chimp side assumed; T2T and long-read SV re-runs open"
+
+- id: L-audit-c1e-2026
+  label: "Audit C1e: C1c model on published Holocene N_e trajectories; Gravel/Gazave/Coventry 35-246x above 21, Nelson 2.0x"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [C4, C6, C5b, B2e]
+  locator: "research/checks/results/R4-C1e.md"
+  quote: "only the Nelson-type fast growth (reaching 1e5 by about 5 kya) gets within 2.4x"
+  parents:
+    - {id: L-audit-c1d-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#15-#18); follow-ups queued"
+
+- id: L-audit-g2c-2026
+  label: "Audit G2c: unlinked diversity at sweep rate 1/1,322 and about 146 concurrent sweeps stays at theta"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [G2c, B6c, G2g]
+  locator: "research/checks/results/R4-G2c.md"
+  quote: "unlinked neutral diversity stays at theta"
+  parents:
+    - {id: L-pan-sweeps-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#15-#18); follow-ups queued"
+
+- id: L-audit-f1b-2026
+  label: "Audit F1b: in-transit alleles measured at 333, 17, 1.0; weak form violated"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [F, F1, F1a, F1b]
+  locator: "research/checks/results/R4-F1b.md"
+  quote: "violated by a factor of 333 (A) and 17 (B) by direct counts"
+  parents:
+    - {id: L-audit-gap04-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#15-#18); follow-ups queued"
+
+- id: L-audit-b5b-2026
+  label: "Audit B5b: Mansfield's supply with a sourced neutral share covers 20M at 450k but 0.66x of 17.5M at 252k"
+  side: audit
+  kind: reply
+  date: 2026-10-09
+  claim_ids: [B5b, B5a]
+  locator: "research/checks/results/R4-B5b.md"
+  quote: "Mansfield's arithmetic is right as an identity"
+  parents:
+    - {id: L-audit-gap07c-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review combined (#15-#18); follow-ups queued"

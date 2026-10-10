@@ -49,6 +49,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 ## Check
 Script: none (arithmetic). See B5.
 
+R4 B5b (research/checks/results/R4-B5b.md; review #15, combined, 2026-10-09): the identity (1 neutral fixation per generation at 2 neutral per zygote) is exact; at 2% it is 44x (450k generations) to 69x (252k) short of 20M / 17.5M. With the sourced complement of Rands 2014 (f = 0.918, an upper bound on the neutral share) and 100 mutations per zygote, supply is 20.7M over 450,000 generations (covers the 2019 count by 3%) but 11.6M over 252,000 (0.66x of 17.5M); with Kong's 76.8 per zygote it is 15.9M and 8.9M (0.79x, 0.51x) even at f = 0.918. Needed f: 0.889 (20M) and 1.389 (17.5M). Verdicts unchanged: holds / n/a / contested.
+
 ## Simulator variables implied
 - neutral fraction
 - new mutations per zygote

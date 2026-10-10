@@ -66,6 +66,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 ## Check
 Script: none (arithmetic computed with python3 -I). Related: `research/checks/f1_throughput.py`.
 
+R4 F1b (research/checks/results/R4-F1b.md; review #16, 2026-10-09): supports the first half (a throughput count already includes parallelism; direct measurement shows overlap), but does not clear the non-sequitur: dividing by a latency-derived 19,800 as if it were an inter-fixation time is not tested by F1b. Verdicts unchanged.
+
 ## Simulator variables implied
 - G_f as latency or as spacing (explicit toggle)
 - parallel width

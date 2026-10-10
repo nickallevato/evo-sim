@@ -4380,3 +4380,133 @@
   counter: []
   note: 'Single central ratio instead of a bracket; the 17.5M ''within 2%'' compared unlike counts; Day''s own remarks on ancestral polymorphism (Q37, 04-28 ¶24) not credited; ''supports Q100'' overstated.'
   hierarchy_edge: false
+- id: d343
+  attacker: chk:C1e
+  target: C6
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1e.md Results
+  audit_status: upheld
+  audit_basis: 'Of four published Holocene N_e trajectories, three (Gravel, Gazave, Coventry) leave 21 a 35-246x deficit; Nelson 2012 (1.7%/gen) gives S21 = 42 (R0) / 51 (R2), 2.0-2.4x of 21 (about 1.2-1.4x after the clock-mismatch bracket)'
+  counter: [d349]
+  note: 'Qualifies, does not overturn, C6''s external verdict: as stated, on the real AADR genotypes, 21 is still contradicted (C1d); the model-side reading of 21 as neutral needs Nelson-type growth, which also removes 92% of Day''s tracked total.'
+  hierarchy_edge: false
+- id: d344
+  attacker: chk:C1e
+  target: C4
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-C1e.md Results
+  audit_status: partly
+  audit_basis: 'C4''s variation in Holocene N_e can absorb 21 only for fast Nelson-type growth; the three flatter fits (Gravel, Gazave, Coventry) leave a 35-246x deficit'
+  counter: [d349]
+  note: 'Day-side node: shows the flat fits favour Day on the size of the deficit; no trajectory reproduces his tracked total together with S21 near 21 (P6).'
+  hierarchy_edge: false
+- id: d345
+  attacker: chk:G2c
+  target: B6c
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-G2c.md Results
+  audit_status: upheld
+  audit_basis: 'Hancock''s conditional is correct but a tautology for a strictly serial model; at the sweep rate 1/1,322 (Hn 0.97-1.03 of control) and about 146 concurrent sweeps (1.00-1.01) unlinked diversity stays at theta'
+  counter: [d350]
+  note: 'Neither model Day states is serial, so the objection does not apply to them; linked sites (hitchhiking) untested.'
+  hierarchy_edge: false
+- id: d346
+  attacker: chk:G2c
+  target: G2g
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-G2c.md What this settles
+  audit_status: partly
+  audit_basis: 'If Day''s Appendix A seriality were his model, observed polymorphism contradicts it (the conditional holds); his other statements (Gc, G1) are parallel and keep diversity'
+  counter: [d350]
+  note: 'Qualifies G2g: the simulation does not test whether sequential fixation is needed, only what a serial model predicts for variation.'
+  hierarchy_edge: false
+- id: d347
+  attacker: chk:F1b
+  target: F
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-F1b.md Results
+  audit_status: partly
+  audit_basis: 'In-transit count measured at 333, 17 and 1.0 alleles (infinite sites WF, independent loci); count <= window / latency is violated 333x and 17x and is an equality only at the serial boundary'
+  counter: [d351]
+  note: 'Feasibility with interference, cost and human-scale supply is untouched, so Day''s F survives as a statement about that regime; the serial reading is what fails without interference.'
+  hierarchy_edge: false
+- id: d348
+  attacker: chk:B5b
+  target: B5b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-09
+  locator: research/checks/results/R4-B5b.md Results
+  audit_status: upheld
+  audit_basis: 'At the 2% illustration the supply is 44x (450k generations) to 69x (252k) short; with the sourced upper bound f = 0.918 it covers 20M at 450k by 3% but 17.5M at 252k only 0.66x (0.51x with 76.8 per zygote)'
+  counter: [d352]
+  note: 'The identity is exact; the magnitude depends on f, and the residual at the current generation count is a clock or ancestral term, not the neutral fraction.'
+  hierarchy_edge: false
+- id: d349
+  attacker: rev:R4-C1e-combined
+  target: chk:C1e
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-C1e-combined.md
+  audit_status: upheld
+  audit_basis: 'MAJOR-1: trajectories are for 25 y per generation but the engine steps 20 y (drift 1.25x too fast, S21 biased high 1.4-1.7x)'
+  counter: []
+  note: 'bracket applied in R4-C1e.md Review resolution; no conclusion changes, Nelson gap narrows to 1.2-1.4x; not rerun'
+  hierarchy_edge: false
+- id: d350
+  attacker: rev:R4-G2c-combined
+  target: chk:G2c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-G2c-combined.md
+  audit_status: upheld
+  audit_basis: 'MAJOR-1: realised sweep rate in B is 1.55x the intended and unexplained; concurrency 146 not 230'
+  counter: []
+  note: 'account corrected in R4-G2c.md Review resolution; B is not a test at 230; Hn result unaffected at 3% noise'
+  hierarchy_edge: false
+- id: d351
+  attacker: rev:R4-F1b-combined
+  target: chk:F1b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-F1b-combined.md
+  audit_status: upheld
+  audit_basis: 'MAJOR-1: Little''s law on the same sample is an identity, so L = lambda x W to 0.1% is not a test'
+  counter: []
+  note: 'wording corrected in R4-F1b.md Review resolution; informative tests are theory agreement (0.7-2.6%) and Poisson dispersion'
+  hierarchy_edge: false
+- id: d352
+  attacker: rev:R4-B5b-combined
+  target: chk:B5b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-09
+  locator: research/checks/results/REVIEW-R4-B5b-combined.md
+  audit_status: upheld
+  audit_basis: 'MINOR-1: f = 0.918 is an upper bound on the neutral share, with uniform mutability'
+  counter: []
+  note: 'caveat applied in R4-B5b.md Review resolution'
+  hierarchy_edge: false

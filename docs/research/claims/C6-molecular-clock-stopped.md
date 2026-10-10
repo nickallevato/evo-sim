@@ -71,5 +71,7 @@ R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4
 
 R4 RG-01 retrieval (docs/research/sources/holocene-ne.md, 2026-10-09): under the flatter published trajectories (Gazave, Coventry, Gravel, temporal F) C1c's model gives about 900-3,900 neutral events against Day's 21; under a Nelson-type trajectory about 32-35. The literature does not decide between them; C1e (the C1c model on each published trajectory) is queued. C6's external verdict (contradicted as stated, on C1d) does not depend on this.
 
+R4 C1e (research/checks/results/R4-C1e.md; review #18, 2026-10-09): model-side, three of four published Holocene N_e fits (Gravel, Gazave, Coventry) leave 21 a 35-246x deficit versus the neutral expectation; the Nelson 2012 trajectory (1.7%/gen) reaches S21 = 42 (R0) / 51 (R2), 2.0-2.4x of 21, but its tracked total (1.3k) is 8% of Day's 16.3k. External stays contradicted (as stated, on the real AADR genotypes, C1d); C1c's reading that 21 is neutral-compatible needs a Nelson-type growth.
+
 ## Simulator variables implied
 Number of neutral sites, panel fraction, window length, sample-size per bin, definition of fixation (sample versus population).

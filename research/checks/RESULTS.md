@@ -562,3 +562,16 @@ The first pass's "gaps.md 4–16% should read 4–19%" was retracted (a differen
 
 ## P1: machine-checked derivations (2026-10-09)
 Pre-registered c17b44a; run on na-workhorse (34 s). All 17 identity groups (k = mu, P_fix = i/M, exchangeable low-N_e P_fix = 1/M, empty-start deficit mu E[tau], Kimura/Moran, diffusion and exact fixation times, Haldane's D) and 33 Day-arithmetic rows came out as pre-registered; Q03 (table 125 vs 281.25), Q19 (8 vs 9.13) and Q30 (printed-input rounding) are slips/discrepancies. **For Day:** 30/33 rows hold, the empty-start formula and the -pi^2 N_e/G exponent are exact at the level proved. **For the critics:** k = mu and P_fix = 1/(2N) are exact and independent of N_e (exchangeable models); D is not a constant. **Verdicts:** none changed (re-confirmation); scope limits in the Review resolution. Review: `results/REVIEW-R4-P1-combined.md` (0 MAJOR, 5 MINOR, 6 NOTE).
+
+## B5b: Mansfield's supply with a sourced neutral fraction (2026-10-09)
+Pre-registered b707415; arithmetic, na-workhorse. All predictions met. The identity is exact; at 2% the supply is 44x (450k generations) to 69x (252k) short; with f = 0.918 (Rands 2014 complement, an upper bound) and 100 per zygote it is 20.7M over 450,000 generations (20M covered by 3%) but 11.6M over 252,000 (0.66x of 17.5M); with 76.8 per zygote 0.79x and 0.51x. Combined review #15: 0 MAJOR, 5 MINOR. No verdict change. `results/R4-B5b.md`.
+
+## F1b: in-transit fixation count measured (2026-10-09)
+Pre-registered fb6aac2; na-workhorse. All predictions met (cell A not fully blind). In transit: 333.3, 17.07, 0.984 against theory 335.5, 16.8, 1.01; Poisson dispersion 0.95-1.00; weak form violated 333x and 17x, an equality at the serial boundary. Review #16: 1 MAJOR (Little's law on the same sample is an identity; wording), 1 MINOR header. F1 open item closed; verdicts unchanged; F1b external -> supported (independent loci). `results/R4-F1b.md`.
+
+## C1e: C1c model on published Holocene N_e trajectories (2026-10-09)
+Pre-registered 2c245ec; na-workhorse, 3 replicates. P1-P4, P5 central, P6 met; P5 sensitivity clauses (1.2%, 2.3%) and P7 (R2 within 2x of R0) missed. R0 S21 (Day 21): Gravel 1,127; Gazave 5,164; Coventry 5,102; Nelson 42 (R2 51); controls reproduce C1c. Review #18: 1 MAJOR (25 y vs 20 y generation mismatch, S21 high by 1.4-1.7x; bracketed, not rerun), 5 MINOR. No verdict change. `results/R4-C1e.md`.
+
+## G2c / B6c: standing neutral variation under parallel sweep models (2026-10-09)
+Pre-registered 1ffd053; na-workhorse. Hn ratio to control 0.97-1.03 at sweep rate 1/1,322 and 1.00-1.01 at about 146 concurrent sweeps; falsifier (< 0.10) did not fire. Missed: A rep1 concurrency (0.5), B concurrency 146 vs [150, 300] (realised fixation rate 1.55x intended, unexplained). Review #17: 1 MAJOR (that account), 5 MINOR. G2c and B6c external pending -> supported as a conditional. `results/R4-G2c.md`.
+

@@ -282,5 +282,17 @@ Files: `results/REVIEW-R4-GAP07c-{correctness,steelman}.md` (346520c, 0301f12). 
 ## 2026-10-09 - Review #14 (Sonnet, combined, low-stakes tier): P1 (machine-checked derivations)
 File: `results/REVIEW-R4-P1-combined.md`. Write-up `results/R4-P1.md` ("Review resolution"). Pre-registration c17b44a. 0 MAJOR, 5 MINOR (Q03 labelling, Q33 2% tolerance, textbook Haldane definition, A3 exchangeable scope, critic-column wording), 6 NOTE. All fixed in wording; no new run. Integrated: Check paragraphs in B2a, B7, B3a, H, A5e; no verdict changed; registry ids chk:P1, rev:R4-P1-combined; no defeaters (no new attack warranted: a re-confirmation). Milestone post and board patch deferred to the next milestone.
 
+## 2026-10-09 - Review #15 (combined, low-stakes tier): B5b (Mansfield supply, sourced neutral fraction)
+File: `results/REVIEW-R4-B5b-combined.md`. Write-up `results/R4-B5b.md` ("Review resolution"). Pre-registration b707415. 0 MAJOR, 5 MINOR (f = 0.918 is an upper bound; uniform mutability; 450k match is the 2019 count; per-lineage basis; Mansfield's 2% was an illustration). Wording fixes only. Integrated: B5b Check paragraph, no verdict change; d348, d352; chk:B5b, L-audit-b5b-2026.
+
+## 2026-10-09 - Review #16 (combined, low-stakes tier): F1b (in-transit count measured)
+File: `results/REVIEW-R4-F1b-combined.md`. Write-up `results/R4-F1b.md`. Pre-registration fb6aac2. 1 MAJOR (Little's law on the same sample is an identity, so the 0.1% agreement is not a test; the tests are theory agreement 0.7-2.6% and Poisson dispersion), 4 MINOR. Escalation checked: F1 and F1a are load-bearing but no verdict moves, so no three-review tier. Integrated: F1 open item closed; F1b external contested -> supported (independent loci, no interference); F1a note (non-sequitur untouched); d347, d351; chk:F1b.
+
+## 2026-10-09 - Review #17 (combined, low-stakes tier): G2c / B6c (standing variation)
+File: `results/REVIEW-R4-G2c-combined.md`. Write-up `results/R4-G2c.md`. Pre-registration 1ffd053. 1 MAJOR (the realised sweep rate in B is 1.55x the intended and unexplained; concurrency 146, not 230), 5 MINOR. Integrated: G2c and B6c external pending -> supported as a conditional; d345, d346, d350; chk:G2c.
+
+## 2026-10-09 - Review #18 (combined, low-stakes tier): C1e (Holocene trajectories)
+File: `results/REVIEW-R4-C1e-combined.md`. Write-up `results/R4-C1e.md`. Pre-registration 2c245ec. 1 MAJOR (trajectories are 25 y per generation, engine steps 20 y: S21 high by 1.4-1.7x; bracket applied, not rerun), 5 MINOR. Pre-registered misses disclosed (P5 sensitivities, P7). No verdict change (C4 pending, C6 contradicted, C unchanged); d343, d344, d349; chk:C1e. Follow-up: corrected-clock rerun (post hoc).
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).

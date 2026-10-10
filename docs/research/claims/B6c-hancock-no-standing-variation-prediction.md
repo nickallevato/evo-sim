@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds   # R4 X1 rule rev 2 (was pending): conditional prediction is correct; applicability to Day is G2/F1a
   fidelity: n/a
-  external: pending
+  external: supported   # R4 G2c: as a conditional (serial => no variation; polymorphism observed). Sweep-rate and 230-sweep models keep Hn about theta at unlinked sites (0.97-1.03), so applicability to Day stays with G2 / F1a; linked sites untested
 ---
 
 ## Statement (verbatim)
@@ -50,6 +50,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 Script: none.
 
 R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / n/a. conditional prediction is correct; applicability to Day is G2/F1a Charitable reading tried: tried the conditional reading.
+
+R4 G2c / B6c (research/checks/results/R4-G2c.md; review #17, combined, 2026-10-09): forward simulation (N = 1e4, s = 0.01, free recombination, 500 neutral loci). Sweep rate 1/1,322 per generation: unlinked neutral heterozygosity 0.97-1.03 of the no-sweep control (Hancock's falsifier is < 0.10). About 146 concurrent sweeps (0.64x of Day's 230; realised rate 0.18 fixations per generation): 1.00-1.01 of control, offspring-variance inflation 0.2-0.35%. So the conditional is correct for a strictly serial model (a tautology) and neither stated model of the sweep rate or 230 sweeps is serial; linked sites (hitchhiking) are not covered. External pending -> supported as a conditional.
 
 ## Simulator variables implied
 - standing variation display

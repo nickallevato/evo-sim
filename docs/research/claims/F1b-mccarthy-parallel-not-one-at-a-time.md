@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds
   fidelity: n/a
-  external: contested
+  external: supported   # R4 F1b: in-transit overlap measured (independent loci, no interference; beneficial s = 0.01 only); feasibility at human scale untouched (F2, H)
 ---
 
 ## Statement (verbatim)
@@ -44,6 +44,8 @@ Written **before** the check runs.
 
 ## Check
 Script: `research/checks/f1_throughput.py`.
+
+R4 F1b (research/checks/results/R4-F1b.md; review #16, combined, 2026-10-09): measured overlap in three regimes (333, 17 and 1.0 alleles in transit; overlap in 26% of generations even at the serial boundary). External contested -> supported for independent loci with no interference or cost, genic beneficial alleles only; neutral alleles are argued, not simulated.
 
 ## Simulator variables implied
 - parallel width
