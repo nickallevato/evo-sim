@@ -11,10 +11,12 @@ Poisson -> 2; NegBin mean 2 -> 5, 10. Realised Vk is measured. Then the ceiling 
 
 Pre-registered predictions (2026-10-09):
   Day/Wright side: sim N_e within 5% of (4N-2)/(Vk_realised+2) at each Vk. X = (Vk+2)G/16 is then exact algebra.
-  Critic side: the formula holds for iid Vk, but a Vk giving N_e/N ~ 1e-3 needs Vk ~ 2,000, so human Vk = 5 gives
+  Critic side: the formula holds for iid Vk, but a Vk giving N_e/N ~ 1e-3 needs Vk ~ 4,000, so human Vk = 5 gives
   N_e/N ~ 0.57 (not 1e-4) and the abstract's 'about ten thousand' does not follow from Wright's formula; the ceiling table
   (35,000-114,000) is consistent with it only by treating census N_e ~ 0.57 N.
   Expected: ratios sim/Wright in [0.95, 1.05]; N_e/N: ~0.67 (Vk=1), 0.50 (2), 0.29 (5), 0.17 (10) (Wright, nominal).
+  POST HOC (b2b, same day): those N_e/N values were a slip (I used 2/(Vk+2); Wright gives 4/(Vk+2): 1.33, 1.00, 0.57, 0.33) and the printed
+  Vk for N_e/N = 1e-3 used the same slip (1,998 -> 3,998; for 0.1: 18 -> 38). Ratio predictions (sim/Wright) were the pre-registered test and are unaffected.
   Not tested: sourced human Vk, N_e(t), demes, overlapping generations, mean fixation time.
 """
 import os, json
@@ -54,5 +56,5 @@ for Vk in (1.0, 2.0, 5.0, 10.0):
 print('Ceiling X = (Vk+2) G/16 at Day G values (algebra):')
 for name, G in (('human lineage', 260000), ('human species', 80000)):
     print('  %-14s G=%d: ' % (name, G) + '  '.join(f'Vk={v:g}: {(v+2)*G/16:,.0f}' for v in (1, 2, 5, 10)))
-print('Vk needed for Ne/N = 1e-3 (Wright): %.0f ; for 0.1: %.0f' % (2/1e-3 - 2, 2/0.1 - 2))
+print('Vk needed for Ne/N = 1e-3 (Wright, Ne/N = 4/(Vk+2)): %.0f ; for 0.1: %.0f' % (4/1e-3 - 2, 4/0.1 - 2))
 json.dump(res, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results', 'raw', 'b2b.json'), 'w'), default=float)
