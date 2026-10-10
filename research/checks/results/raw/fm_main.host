@@ -1,0 +1,7 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-10T14:16:40-06:00 (extract, then analyse; wrapper ~/fm_run.sh)
+pid: 689221 (extract, 1 process)
+cmd: research/.venv/bin/python -I research/checks/fm_mesa_replication.py extract sources/raw/fm-maf-2026-10-10/hs1.maf.gz research/checks/results/raw/fm_bins.npz && ... analyse research/checks/results/raw/fm_bins.npz research/checks/results/raw/fm_analyse.json
+commit: d723064 (pre-registration)
+53f9985339b11515496b8519a76c4693  research/checks/fm_mesa_replication.py
+input: sources/raw/fm-maf-2026-10-10/hs1.maf.gz (8-t2t-apes-2023v2.hs1.maf.gz, 3.38 GB), md5 df51e5c3b842e3be4b81f3dd6486e53b = published .md5
