@@ -1,0 +1,37 @@
+## P1 quotes
+| Day para 15 | exact | sha256:4601506d0a5542f0 |
+| Z1 | normalised | sha256:28a4ded9596c25a2 |
+| Z2 | normalised | sha256:28a4ded9596c25a2 |
+| Z3 | normalised | sha256:28a4ded9596c25a2 |
+| Z4 | normalised | sha256:28a4ded9596c25a2 |
+
+## P2 Zeng sentences with a numeric mean selection coefficient
+- neg=False pos=False: We estimate that, on average across traits, about 1% of human genome sequence are mutational targets with a mean selection coefficient of ~0.001.
+- neg=True pos=False: We detect widespread signatures of negative selection in the genetic architecture across 155 complex traits with a predicted mean selection coefficient of ~0.001 and a predicted mean proportion of human genome sequence being mutat
+- neg=False pos=False: Regarding to the different distributions of selection coefficients, the true values of S were not highly correlated (Supplementary Fig. 18; r = 0.628), suggesting the distribution of selection coefficient plays a role in determini
+- neg=False pos=False: Common diseases had a mean s of 0.0010, which was significantly higher than that of 0.0005 for physical measures (median P value = 0.015 among the four groups of estimation methods and pleiotropic models).
+- neg=True pos=False: The median value of ^S was −0.540, ranging from −0.739 (s.e.m. = NATURE COMMUNICATIONS | (2021)12:1164 | https://doi.org/10.1038/s41467-021-21446-3 | www.nature.com/naturecommunications NATURE COMMUNICATIONS | https://doi.org/10.1
+- neg=False pos=False: By extrapolating our results based on HapMap3 common SNPs, we estimate that, on average, ~1% of human genome sequence are mutational targets for a complex trait with an average selection coefficient of 0.0007, giving rise to addit
+sentences: 6; positive-only with a number: 0
+P2 (no numeric beneficial mean from data): True
+
+## P3 Day's latency
+(2/s) ln(2Ne), s=0.001, Ne=1e4: 19807 (Day ~19,800): True
+
+## P4 'faster than the neutral 4Ne'
+crossover Ne* = 4559 (pred [4000, 5000]): True
+  Ne=3300: beneficial 17590 vs 4Ne 13200 -> faster: False
+  Ne=10000: beneficial 19807 vs 4Ne 40000 -> faster: True
+  Ne=100000: beneficial 24412 vs 4Ne 400000 -> faster: True
+
+## P5 B0.4 re-confirmation
+(2/s)(ln 4Ns + gamma) = 8532; overstatement 2.32 (pred [2.2, 2.4]): True
+
+## P6 R1 sensitivity
+window keeping latency within 25%: s in [0.00080, 0.00133]
+  Zeng category s=0.0005: latency 39614; ratio to 4Ne(1e4) = 0.990
+  Zeng category s=0.0007: latency 28296; ratio to 4Ne(1e4) = 0.707
+  Zeng category s=0.001: latency 19807; ratio to 4Ne(1e4) = 0.495
+at s=0.0005 ratio in [0.95, 1.0]: True
+
+ALL MECHANICAL PREDICTIONS (P1-P5) MET: True
