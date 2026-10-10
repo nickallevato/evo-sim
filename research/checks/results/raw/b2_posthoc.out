@@ -1,0 +1,9 @@
+| input | T/N_e | F(T) flux | (1/T) int F delivered |
+| H8 census 1e5, V_k 5, 2 My | 1.40 | 0.0255 | 0.0034 |
+| H8 census 1e5, V_k 5, 6.5 My (HL l.252) | 4.55 | 0.6970 | 0.2556 |
+| at ceiling X (T = 4N_e) | 4.00 | 0.6063 | 0.2009 |
+| field N_e 1e4, 2 My [external] | 8.00 | 0.9451 | 0.5137 |
+| field N_e 2.5e4, 6.5 My [external] | 10.40 | 0.9835 | 0.6186 |
+| field N_e 1e4, 6.5 My [external] | 26.00 | 1.0000 | 0.8462 |
+exact/exp at T/N_e = 1.0: 47.4
+exact/exp at T/N_e = 2.0: 17.8
