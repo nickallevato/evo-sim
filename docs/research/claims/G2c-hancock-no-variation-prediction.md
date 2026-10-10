@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds   # R4 X1 rule rev 2 (was pending): conditional correct; applies a serial reading that Day's Appendix A (G2g) asserts but his 1-22 denies
   fidelity: partial   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
-  external: supported   # R4 G2c: as a conditional (serial => no variation; polymorphism observed). Sweep-rate and 230-sweep models keep Hn about theta at unlinked sites (0.97-1.03), so applicability to Day stays with G2 / F1a; linked sites untested
+  external: pending   # reverted from supported (post hoc, review MAJOR): R4 G2c condition B fixed at 1.55x its intended rate and concurrency 146 < pre-registered floor 150; pending a rerun with the cause fixed
 ---
 
 ## Statement (verbatim)
