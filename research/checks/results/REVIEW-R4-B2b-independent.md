@@ -1,0 +1,14 @@
+# Independent re-review of R4 B2b
+Date 2026-10-09. Reviewer: a fresh Sonnet agent, not the author of B2b or its self-review. Method: read `R4-B2b.md`, `b2b_ceiling_vk.py`, `raw/b2b.out`, and the quoted source (`sources/raw/day/zenodo-22129121.txt`); hand checks; no run.
+## 1. Correctness
+Confirmed against the source: line 11 "X = (Vk + 2)·G/16"; line 123 "Ne = (4N - 2) / (Vk + 2)"; line 14 "about ten thousand"; lines 222-223 "thirty-five thousand as a species, a hundred thousand as a lineage ... twenty-eight thousand". Arithmetic reproduces: Wright N_e at N=100 for realised Vk 1.000 / 2.000 / 5.002 / 9.999 = 132.7 / 99.5 / 56.8 / 33.2; ceilings 48,750 / 65,000 / 113,750 / 195,000 (G = 260,000) and 15,000 / 20,000 / 35,000 / 60,000 (G = 80,000); Vk = 3,998 for N_e/N = 1e-3 and 38 for 0.1; 2 x 80,000 / 16 = 10,000.
+- **MINOR-1.** The sim/Wright ratio rises monotonically with Vk (0.998, 1.002, 1.006, 1.022). The self-review attributes the +2.2% at Vk = 10 to heavy-tail sampling error. With 2e5 replicates and p' a sum over 100 parents (near normal), the relative SE of a variance estimate is about sqrt(2/2e5) = 0.3%, so +2.2% is several SE, and the monotone trend points to a systematic term: the sim lets the total offspring sum k vary (p' = sum t / sum k), while Wright's formula assumes a fixed total of 2N offspring. A term of order Vk/N is expected from that. This is inside the 5% tolerance and does not touch the conclusion; the explanation in the review should be corrected, and a rerun at N = 1000 would show whether the gap shrinks (not run here).
+- **MINOR-2.** The test checks one-generation drift variance only, not the 4N_e < G criterion or any fixation time. The write-up says "X is exact algebra from 4N_e < G", which is true as algebra but is not what was simulated. Stated in the original review.
+- **MINOR-3.** The expected N_e/N slip (2/(Vk+2) rather than 4/(Vk+2)) was fixed in a labelled post hoc change; the ratio test was unaffected. Agreed. It should have been labelled MINOR rather than MAJOR (no result moved), but the disclosure is correct.
+- **NOTE-1.** The write-up's remark that the same Vk with a census of 8.2e9 gives N_e = 4.7e9 is arithmetic (0.571 x 8.2e9 = 4.68e9) and assumes constant size.
+## 2. Day-side steelman
+- **MINOR-4.** The formula is Day's quoted textbook one and reproduces; the write-up does not call it wrong. The "about ten thousand" mismatch is correctly assigned to the abstract against the table, not to N_e.
+## 3. Critic-side steelman
+- **MINOR-5.** "Vk would have to be thousands" concerns variance N_e only; critics should not extend it to demographic N_e, as the write-up notes. Also the ceiling's force lives in G and in the sourcing of Vk = 5, neither tested.
+## Verdict
+Quotes, formula and algebra independently confirmed; one corrected explanation (MINOR-1). No MAJOR, no verdict change (B2b holds / unverifiable / contested).

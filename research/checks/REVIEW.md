@@ -303,5 +303,14 @@ File: `results/REVIEW-R4-F1a-combined.md`. Write-up `results/R4-F1a.md`. Pre-reg
 ## 2026-10-09 - Review #21 (combined, low-stakes tier): B2b (ceiling x V_k x G / 16)
 File: `results/REVIEW-R4-B2b-combined.md`. Write-up `results/R4-B2b.md`. Pre-registration 25f14f7. 1 MAJOR (N_e/N = 2/(V_k+2) slip in the docstring expectations and the V_k threshold printout; fixed in a labelled post hoc commit, rerun identical), 4 MINOR. Integrated: B2b Check paragraph, d356, chk:B2b. No verdict change.
 
+## 2026-10-09 - Review #22 (combined, low-stakes tier): XT (cross-tool replication, fwdpy11)
+File: `results/REVIEW-R4-XT-combined.md`. Write-up `results/R4-XT.md`. Pre-registration da1c178 (post hoc size edit before the run). 1 MAJOR (many pre-registered clauses fail; scored as misses, not rescued), 4 MINOR. Qualitative results replicate (1/2N, Ne sets time, B1c excess, Kimura u, t_fix); numeric k/U-type rows show a U-dependent deficit (0.7% to 36%), unlocalised. Integrated: Check paragraphs in B1, B3, B3c, B2a. No verdict change. Argmap registry/defeaters deferred to the daytime session.
+
+## 2026-10-09 - Addendum to review #17: G2c A_long (post hoc, pre-registered L1-L3)
+All of L1 (concurrency 0.7, 1.2), L2 (Hn ratio 0.988), L3 (drift 1.0004-1.0015, 0 dropped) met; G2c/B6c external restored to supported (as a conditional). Claim comments updated. See `results/R4-G2c.md`.
+
+## 2026-10-09 - Independent re-reviews #23-#25: E5/E6, F1a, B2b
+Files: `results/REVIEW-R4-{E5E6,F1a,B2b}-independent.md` (fresh Sonnet agent; the originals #19-#21 were self-reviews). E5/E6: transcription and arithmetic confirmed against the raw text; 5 MINOR (the "no negative Ara-2" comparison is not like for like; rules b-d come from the correcting paper; Ara+5 zero has two explanations). F1a: numbers confirmed; **1 MAJOR** (design near-circular: supply set from Kimura's rate, so "predictions met" is by construction; engine check, not a test of Day's reading), 1 dispersion MINOR (1.53 is ~2.5 SE above 1). B2b: quotes and algebra confirmed; MINOR that the Vk=10 +2.2% is systematic (variable total offspring, monotone in Vk), not heavy-tail noise. No verdict changes.
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).

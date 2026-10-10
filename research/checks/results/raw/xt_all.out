@@ -1,0 +1,147 @@
+XT cross-tool {"python": "3.14.4", "numpy": "2.5.3", "scipy": "1.18.1", "fwdpy11": "0.24.7", "demes": "0.2.3", "tskit": "1.0.3", "host": "na-workhorse.allevato.io", "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.43", "slim": "not available (no binary on workstation or na-workhorse; not built)"}
+  [b0n] 10/36 done, 630s
+  [b0n] 20/36 done, 1255s
+  [b0n] 30/36 done, 1626s
+  [b0n] 36/36 done, 1746s
+=== stage b0n (1747s) ===
+--- B0 neutral, N=50 (U=0.05, 12 chunks x 250000 arrival gens; exact chain mean 3.9348 N, SD 2.1412 N; chain mass 1.00000)
+B0.1 P_fix (n_fix=145590, unresolved=1)                0.009706 +- 2.3e-05   target 0.01       z=-12.77 CI95 [0.0096553, 0.0097567] numpy 0.009893 z_cross=-1.18
+B0.2 mean t_fix/N                                        3.9107 +- 0.00736   target 3.9348     z=-3.28 bootCI95 [3.8949, 3.9234] numpy 3.908 z_cross=+0.08
+B0.2 SD t_fix/N                                          2.1324 +- 0.00875   target 2.1412     z=-1.01 (diffusion 2.15)
+B0.5 k/U at equilibrium (window >20N)                   0.97074 +- 0.00241   target 1          z=-12.12 CI95 [0.9654, 0.9761]
+   B2a G/N=0.5  F_cond sim k=0/145590  CP95 [0,2.53e-05]  exact 1.43e-06 (expected count 0.21)  Day 2.68e-09
+   B2a G/N=1    F_cond sim 0.003901 [0.00357,0.004233] (k=568/145590)  exact 0.003716  z=+1.23  | r ln F: sim -5.546 exact -5.595 (Day exponent -9.870)  Day exp(-pi^2/r)=5.17e-05
+   B2a G/N=1.5  F_cond sim 0.04587 [0.04447,0.04727] (k=6678/145590)  exact 0.04483  z=+1.64  | r ln F: sim -4.623 exact -4.657 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00139
+   B2a G/N=2    F_cond sim 0.1456 [0.1432,0.148] (k=21200/145590)  exact 0.143  z=+2.38  | r ln F: sim -3.854 exact -3.889 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00719
+   B2a G/N=3    F_cond sim 0.4084 [0.4058,0.4111] (k=59463/145590)  exact 0.4031  z=+4.41  | r ln F: sim -2.686 exact -2.726 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0373
+   B2a G/N=4    F_cond sim 0.6238 [0.6208,0.6267] (k=90813/145590)  exact 0.6203  z=+2.56  | r ln F: sim -1.888 exact -1.910 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0848
+--- B0 neutral, N=100 (U=0.025, 12 chunks x 400000 arrival gens; exact chain mean 3.9651 N, SD 2.1474 N; chain mass 1.00000)
+B0.1 P_fix (n_fix=118000, unresolved=0)               0.0049167 +- 1.81e-05  target 0.005      z=-4.61 CI95 [0.0048769, 0.0049564]
+B0.2 mean t_fix/N                                        3.9529 +- 0.00563   target 3.9651     z=-2.18 bootCI95 [3.9422, 3.9645]
+B0.2 SD t_fix/N                                          2.1377 +- 0.0111    target 2.1474     z=-0.87 (diffusion 2.15)
+B0.5 k/U at equilibrium (window >20N)                   0.98337 +- 0.00354   target 1          z=-4.70 CI95 [0.9756, 0.9912]
+   B2a G/N=0.5  F_cond sim k=0/118000  CP95 [0,3.13e-05]  exact 7.799e-07 (expected count 0.09)  Day 2.68e-09
+   B2a G/N=1    F_cond sim 0.003093 [0.002824,0.003363] (k=365/118000)  exact 0.003089  z=+0.04  | r ln F: sim -5.779 exact -5.780 (Day exponent -9.870)  Day exp(-pi^2/r)=5.17e-05
+   B2a G/N=1.5  F_cond sim 0.04075 [0.04002,0.04147] (k=4808/118000)  exact 0.04109  z=-1.03  | r ln F: sim -4.801 exact -4.788 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00139
+   B2a G/N=2    F_cond sim 0.1365 [0.1346,0.1383] (k=16102/118000)  exact 0.1361  z=+0.38  | r ln F: sim -3.983 exact -3.988 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00719
+   B2a G/N=3    F_cond sim 0.3959 [0.3932,0.3986] (k=46716/118000)  exact 0.3948  z=+0.93  | r ln F: sim -2.780 exact -2.788 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0373
+   B2a G/N=4    F_cond sim 0.6161 [0.6133,0.6189] (k=72701/118000)  exact 0.6138  z=+1.81  | r ln F: sim -1.937 exact -1.953 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0848
+--- B0 neutral, N=200 (U=0.0125, 12 chunks x 200000 arrival gens; exact chain mean 3.9814 N, SD 2.1505 N; chain mass 1.00000)
+B0.1 P_fix (n_fix=29798, unresolved=0)                0.0024832 +- 1.31e-05  target 0.0025     z=-1.28 CI95 [0.0024543, 0.002512] numpy 0.00246 z_cross=+0.29
+B0.2 mean t_fix/N                                        3.9698 +- 0.00988   target 3.9814     z=-1.18 bootCI95 [3.9495, 3.9879] numpy 4.006 z_cross=-0.52
+B0.2 SD t_fix/N                                          2.1143 +- 0.016     target 2.1505     z=-2.26 (diffusion 2.15)
+B0.5 k/U at equilibrium (window >20N)                   0.99337 +- 0.00482   target 1          z=-1.38 CI95 [0.9827, 1.0040]
+   B2a G/N=0.5  F_cond sim k=0/29798  CP95 [0,0.000124]  exact 5.463e-07 (expected count 0.02)  Day 2.68e-09
+   B2a G/N=1    F_cond sim 0.002718 [0.001972,0.003465] (k=81/29798)  exact 0.002782  z=-0.19  | r ln F: sim -5.908 exact -5.884 (Day exponent -9.870)  Day exp(-pi^2/r)=5.17e-05
+   B2a G/N=1.5  F_cond sim 0.03819 [0.03643,0.03995] (k=1138/29798)  exact 0.03915  z=-1.20  | r ln F: sim -4.898 exact -4.861 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00139
+   B2a G/N=2    F_cond sim 0.1322 [0.1277,0.1367] (k=3940/29798)  exact 0.1325  z=-0.13  | r ln F: sim -4.047 exact -4.043 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00719
+   B2a G/N=3    F_cond sim 0.3914 [0.3865,0.3963] (k=11664/29798)  exact 0.3903  z=+0.50  | r ln F: sim -2.814 exact -2.822 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0373
+   B2a G/N=4    F_cond sim 0.6106 [0.6047,0.6166] (k=18196/29798)  exact 0.6103  z=+0.13  | r ln F: sim -1.973 exact -1.975 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0848
+  [b0s] 10/46 done, 7319s
+  [b0s] 20/46 done, 11453s
+  [b0s] 30/46 done, 13439s
+  [b0s] 40/46 done, 14587s
+  [b0s] 46/46 done, 14967s
+=== stage b0s (14967s) ===
+--- B0.3/B0.4 selected N=100 s=0.01 (per-copy), 12 chunks, U=0.0025
+B0.3 u(s,N) (n_fix=17931, unresolved=0)                0.019923 +- 0.000175  target 0.020171   z=-1.41 rel -1.23% PASS CI95 [0.019537, 0.02031] numpy 0.019995 z_cross=-0.20
+B0.4 mean t_fix                                          333.02 +- 0.89      target 333.87     z=-0.95 bootCI95 [331, 335] rel -0.3%; Day (2/s)ln2N=1060 (ratio Day/sim 3.18); (2/s)(ln4Ns+g)=393
+--- B0.3/B0.4 selected N=500 s=0.01 (per-copy), 12 chunks, U=0.0005
+B0.3 u(s,N) (n_fix=9377, unresolved=0)                 0.019535 +- 0.000204  target 0.019801   z=-1.30 rel -1.34% PASS CI95 [0.019086, 0.019984] numpy 0.019745 z_cross=-0.56
+B0.4 mean t_fix                                          710.38 +- 1.41      target 703.03     z=+5.21 bootCI95 [708, 713] rel +1.0%; Day (2/s)ln2N=1382 (ratio Day/sim 1.94); (2/s)(ln4Ns+g)=715 numpy 698+-3 z_cross=+3.73
+--- B0.3/B0.4 selected N=1000 s=0.005 (per-copy), 16 chunks, U=0.00025
+B0.3 u(s,N) (n_fix=3122, unresolved=0)                0.0097562 +- 0.000168  target 0.0099502  z=-1.15 rel -1.95% PASS CI95 [0.0093974, 0.010115] numpy 0.010225 z_cross=-1.67
+B0.4 mean t_fix                                          1417.9 +- 6.44      target 1407.1     z=+1.68 bootCI95 [1406, 1431] rel +0.8%; Day (2/s)ln2N=3040 (ratio Day/sim 2.14); (2/s)(ln4Ns+g)=1429 numpy 1405+-9 z_cross=+1.16
+--- B0.3/B0.4 selected N=10000 s=0.001 (per-copy), 6 chunks, U=5e-05
+B0.3 u(s,N) (n_fix=57, unresolved=0)                     0.0019 +- 0.000368  target 0.001998   z=-0.27 rel -4.90% PASS CI95 [0.00095434, 0.0028457]
+B0.4 mean t_fix                                          8416.8 +- 111       target 8479.9     z=-0.57 bootCI95 [8199, 8623] rel -0.7%; Day (2/s)ln2N=19807 (ratio Day/sim 2.35); (2/s)(ln4Ns+g)=8532
+  [b3] 10/48 done, 159s
+  [b3] 20/48 done, 303s
+  [b3] 30/48 done, 430s
+  [b3] 40/48 done, 539s
+  [b3] 48/48 done, 617s
+=== stage b3 (617s) ===
+--- B3 offspring variance, N=100, noise a=0: CV^2=0.000, Ne(CV)=100.0, Vk(MC)=1.986, Ne(Vk)=99.9 (Ne/N=0.999)
+P_fix*2N (martingale: 1; Day N/Ne = 1.001) n_fix=29538     0.9846 +- 0.00759   target 1          z=-2.03 CI95 [0.9679, 1.0013]; z vs Day: -2.2
+mean t_fix / (4 Ne(Vk))                                  0.9836 +- 0.00404   target 1          z=-4.06 t_fix/N=3.929; Day-cens (t=4N) would be 1/(Ne/N)=1.00
+k/U at equilibrium (Day: N/Ne=1.00)                     0.98295 +- 0.00771   target 1          z=-2.21 CI95 [0.9660, 0.9999]
+--- B3 offspring variance, N=100, noise a=3: CV^2=0.512, Ne(CV)=66.1, Vk(MC)=4.038, Ne(Vk)=65.9 (Ne/N=0.659)
+P_fix*2N (martingale: 1; Day N/Ne = 1.517) n_fix=29233    0.97443 +- 0.00545   target 1          z=-4.69 CI95 [0.9624, 0.9864]; z vs Day: -99.6
+mean t_fix / (4 Ne(Vk))                                 0.99532 +- 0.00361   target 1          z=-1.30 t_fix/N=2.624; Day-cens (t=4N) would be 1/(Ne/N)=1.52
+k/U at equilibrium (Day: N/Ne=1.52)                     0.97474 +- 0.00568   target 1          z=-4.45 CI95 [0.9622, 0.9872]
+--- B3 offspring variance, N=100, noise a=15: CV^2=1.874, Ne(CV)=34.8, Vk(MC)=9.589, Ne(Vk)=34.3 (Ne/N=0.343)
+P_fix*2N (martingale: 1; Day N/Ne = 2.912) n_fix=29440    0.98133 +- 0.00538   target 1          z=-3.47 CI95 [0.9695, 0.9932]; z vs Day: -359.1
+mean t_fix / (4 Ne(Vk))                                 0.98276 +- 0.00219   target 1          z=-7.87 t_fix/N=1.350; Day-cens (t=4N) would be 1/(Ne/N)=2.91
+k/U at equilibrium (Day: N/Ne=2.91)                     0.98104 +- 0.00533   target 1          z=-3.55 CI95 [0.9693, 0.9928]
+--- B3 offspring variance, N=100, noise a=100: CV^2=6.124, Ne(CV)=14.0, Vk(MC)=27.456, Ne(Vk)=13.5 (Ne/N=0.135)
+P_fix*2N (martingale: 1; Day N/Ne = 7.401) n_fix=29853     0.9951 +- 0.00727   target 1          z=-0.67 CI95 [0.9791, 1.0111]; z vs Day: -881.6
+mean t_fix / (4 Ne(Vk))                                 0.98094 +- 0.00318   target 1          z=-5.99 t_fix/N=0.530; Day-cens (t=4N) would be 1/(Ne/N)=7.40
+k/U at equilibrium (Day: N/Ne=7.40)                     0.99457 +- 0.00699   target 1          z=-0.78 CI95 [0.9792, 1.0099]
+  [b1] 10/80 done, 26s
+  [b1] 20/80 done, 50s
+  [b1] 30/80 done, 75s
+  [b1] 40/80 done, 100s
+  [b1] 50/80 done, 125s
+  [b1] 60/80 done, 151s
+  [b1] 70/80 done, 175s
+  [b1] 80/80 done, 201s
+=== stage b1 (201s) ===
+--- B1 N=100 U=0.5 reps=80 (burn 2000 = 20N for the equilibrium window)
+T= 200 empty:     2.75 +- 0.22  CI95[2.3,3.2]  Day U*intF(fwd conv.)=2.53 z=+1.01 (numpy-conv. 2.60; numpy sim 2.8 z_cross=-0.17; UT-4NU=0.0)
+        equil:    79.00 +- 1.38  CI95[76.3,81.7]  U*T=100.0 z=-15.20 (numpy sim 99.3 z_cross=-9.95); deficit vs UT: 21.0%
+T= 400 empty:    37.08 +- 0.77  CI95[35.5,38.6]  Day U*intF(fwd conv.)=41.13 z=-5.27 (numpy-conv. 41.44; numpy sim 41.3 z_cross=-3.81; UT-4NU=0.0)
+        equil:   157.62 +- 1.69  CI95[154.3,161.0]  U*T=200.0 z=-25.11 (numpy sim 198.5 z_cross=-15.62); deficit vs UT: 21.2%
+T=1000 empty:   249.00 +- 1.90  CI95[245.2,252.8]  Day U*intF(fwd conv.)=303.71 z=-28.76 (numpy-conv. 304.20; numpy sim 304.4 z_cross=-21.15; UT-4NU=300.0)
+        equil:   392.77 +- 2.33  CI95[388.1,397.4]  U*T=500.0 z=-45.93 (numpy sim 501.0 z_cross=-26.77); deficit vs UT: 21.4%
+T=2000 empty:   638.88 +- 2.43  CI95[634.0,643.7]  Day U*intF(fwd conv.)=801.76 z=-66.94 (numpy-conv. 802.26; numpy sim 802.5 z_cross=-39.13; UT-4NU=800.0)
+        equil:   789.10 +- 3.04  CI95[783.1,795.1]  U*T=1000.0 z=-69.47 (numpy sim 1005.1 z_cross=-41.04); deficit vs UT: 21.1%
+  [b1b] 10/96 done, 176s
+  [b1b] 20/96 done, 350s
+  [b1b] 30/96 done, 525s
+  [b1b] 40/96 done, 700s
+  [b1b] 50/96 done, 873s
+  [b1b] 60/96 done, 1046s
+  [b1b] 70/96 done, 1220s
+  [b1b] 80/96 done, 1391s
+  [b1b] 90/96 done, 1565s
+  [b1b] 96/96 done, 1669s
+=== stage b1b (1669s) ===
+--- B1b N0=500 U=0.04 T=6000 reps=48
+constant cum K/(UT)                                     0.97882 +- 0.0106    target 1          z=-1.99 CI95 [0.957, 1.000]; numpy 0.996 (z_cross, no numpy SE: -1.62 using this SE only)
+contraction N0->N0/5 cum K/(UT)                          1.2543 +- 0.0111    target 1.2667     z=-1.12 CI95 [1.232, 1.277]; numpy 1.259 (z_cross, no numpy SE: -0.43 using this SE only)
+expansion N0/5->N0 cum K/(UT)                           0.69905 +- 0.00715   target 0.73333    z=-4.80 CI95 [0.685, 0.713]; numpy 0.733 (z_cross, no numpy SE: -4.75 using this SE only)
+  [b1c] 10/80 done, 164s
+  [b1c] 20/80 done, 330s
+  [b1c] 30/80 done, 495s
+  [b1c] 40/80 done, 661s
+  [b1c] 50/80 done, 825s
+  [b1c] 60/80 done, 990s
+  [b1c] 70/80 done, 1157s
+  [b1c] 80/80 done, 1319s
+=== stage b1c (1319s) ===
+--- B1c (anc 1.98e5 -> N_anc_sim=500, f=396, U=0.04) reps=80
+H0 const at ancestral K/UT                              0.96158 +- 0.0225    target 1          z=-1.71 CI95 [0.917, 1.006]; anc 0.960 new 0.002; numpy 1.000+-0.005 z_cross=-1.67
+H1 step to 1.0e4 K/UT                                    3.8846 +- 0.0487    target 3.9841     z=-2.04 CI95 [3.788, 3.982]; anc 3.098 new 0.786; numpy 3.986+-0.012 z_cross=-2.02
+H2 step to 1.5e4 K/UT                                    3.7657 +- 0.0421    target 3.9048     z=-3.30 CI95 [3.682, 3.850]; anc 3.019 new 0.746; numpy 3.904+-0.011 z_cross=-3.18
+H3 1e5 first half then 1e4 K/UT                          3.8576 +- 0.043     target 3.9841     z=-2.94 CI95 [3.772, 3.943]; anc 2.999 new 0.859; numpy 3.975+-0.011 z_cross=-2.65
+  [fluct] 10/72 done, 19s
+  [fluct] 20/72 done, 37s
+  [fluct] 30/72 done, 63s
+  [fluct] 40/72 done, 95s
+  [fluct] 50/72 done, 130s
+  [fluct] 60/72 done, 176s
+  [fluct] 70/72 done, 228s
+  [fluct] 72/72 done, 243s
+=== stage fluct (243s) ===
+B3b NON-overlap const100 k/U (reps=24, meanN=100.0)     0.96146 +- 0.00743   target 1          z=-5.19 CI95 [0.9461, 0.9768]; numpy 1.0016+-0.0049 z_cross=-4.51
+B3b NON-overlap random2 k/U (reps=24, meanN=100.0)      0.95465 +- 0.009     target 1          z=-5.04 CI95 [0.9360, 0.9733]; numpy 1.0006+-0.0061 z_cross=-4.23
+B3b NON-overlap cycle5 k/U (reps=24, meanN=97.0)        0.94826 +- 0.00684   target 1          z=-7.56 CI95 [0.9341, 0.9624]; numpy 1.0092+-0.0067 z_cross=-6.36
+  [cohort] 10/30 done, 730s
+  [cohort] 20/30 done, 1581s
+  [cohort] 30/30 done, 2437s
+=== stage cohort (2437s) ===
+--- B3c(e) cohorts (non-overlap): P_fix*M_i, reps=6000
+cohort 0 (M=50) P_fix*M_i  [Day M_i/164 = 0.305]        0.63917 +- 0.0063    target 1          z=-57.26 CI95 [0.626, 0.652]; numpy 0.989+-0.011 z_cross=-27.59; unresolved total 0
+cohort 1 (M=80) P_fix*M_i  [Day M_i/164 = 0.488]        0.62917 +- 0.00699   target 1          z=-53.02 CI95 [0.615, 0.643]; numpy 0.973+-0.014 z_cross=-21.97; unresolved total 0
+cohort 2 (M=122) P_fix*M_i  [Day M_i/164 = 0.744]       0.63667 +- 0.0048    target 1          z=-75.75 CI95 [0.627, 0.646]; numpy 1.018+-0.014 z_cross=-25.77; unresolved total 0
+cohort 3 (M=164) P_fix*M_i  [Day M_i/164 = 1.000]         0.639 +- 0.00642   target 1          z=-56.22 CI95 [0.626, 0.652]; numpy 0.986+-0.020 z_cross=-16.52; unresolved total 0

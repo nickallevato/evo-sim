@@ -1,0 +1,58 @@
+XT cross-tool {"python": "3.14.4", "numpy": "2.5.3", "scipy": "1.18.1", "fwdpy11": "0.24.7", "demes": "0.2.3", "tskit": "1.0.3", "host": "na-workhorse.allevato.io", "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.43", "slim": "not available (no binary on workstation or na-workhorse; not built)"}
+  [b0n] 10/36 done, 9s
+  [b0n] 20/36 done, 16s
+  [b0n] 30/36 done, 20s
+  [b0n] 36/36 done, 21s
+=== stage b0n (22s) ===
+--- B0 neutral, N=50 (U=0.05, 12 chunks x 8000 arrival gens; exact chain mean 3.9348 N, SD 2.1412 N; chain mass 1.00000)
+B0.1 P_fix (n_fix=4652, unresolved=0)                 0.0096917 +- 0.000167  target 0.01       z=-1.84 CI95 [0.0093232, 0.01006] numpy 0.009893 z_cross=-0.88
+B0.2 mean t_fix/N                                        3.8668 +- 0.044     target 3.9348     z=-1.55 CI95 [3.7686, 3.9624] numpy 3.908 z_cross=-0.75
+B0.2 SD t_fix/N                                          2.1123 +- 0.0528    target 2.1412     z=-0.55 (diffusion 2.15)
+B0.5 k/U at equilibrium (window >20N)                    0.9671 +- 0.014     target 1          z=-2.36 CI95 [0.9363, 0.9978]
+   B2a G/N=0.5  F_cond sim k=0/4652  CP95 [0,0.000793]  exact 1.43e-06 (expected count 0.01)  Day 2.68e-09
+   B2a G/N=1    F_cond sim k=20/4652  CP95 [0.00263,0.00663]  exact 0.003716 (expected count 17.29)  Day 5.17e-05
+   B2a G/N=1.5  F_cond sim 0.04966 [0.04227,0.05704] (k=231/4652)  exact 0.04483  z=+1.44  | r ln F: sim -4.504 exact -4.657 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00139
+   B2a G/N=2    F_cond sim 0.1483 [0.1362,0.1604] (k=690/4652)  exact 0.143  z=+0.96  | r ln F: sim -3.817 exact -3.889 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00719
+   B2a G/N=3    F_cond sim 0.4138 [0.4003,0.4273] (k=1925/4652)  exact 0.4031  z=+1.75  | r ln F: sim -2.647 exact -2.726 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0373
+   B2a G/N=4    F_cond sim 0.6442 [0.6251,0.6634] (k=2997/4652)  exact 0.6203  z=+2.75  | r ln F: sim -1.759 exact -1.910 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0848
+--- B0 neutral, N=100 (U=0.025, 12 chunks x 12000 arrival gens; exact chain mean 3.9651 N, SD 2.1474 N; chain mass 1.00000)
+B0.1 P_fix (n_fix=3535, unresolved=1)                 0.0049097 +- 7.69e-05  target 0.005      z=-1.17 CI95 [0.0047405, 0.0050789]
+B0.2 mean t_fix/N                                        3.9355 +- 0.0363    target 3.9651     z=-0.82 CI95 [3.8565, 4.0161]
+B0.2 SD t_fix/N                                          2.1703 +- 0.046     target 2.1474     z=+0.50 (diffusion 2.15)
+B0.5 k/U at equilibrium (window >20N)                      0.98 +- 0.0147    target 1          z=-1.36 CI95 [0.9477, 1.0123]
+   B2a G/N=0.5  F_cond sim k=0/3535  CP95 [0,0.00104]  exact 7.799e-07 (expected count 0.00)  Day 2.68e-09
+   B2a G/N=1    F_cond sim k=10/3535  CP95 [0.00136,0.0052]  exact 0.003089 (expected count 10.92)  Day 5.17e-05
+   B2a G/N=1.5  F_cond sim 0.04272 [0.03814,0.04729] (k=151/3535)  exact 0.04109  z=+0.78  | r ln F: sim -4.730 exact -4.788 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00139
+   B2a G/N=2    F_cond sim 0.1417 [0.1288,0.1546] (k=501/3535)  exact 0.1361  z=+0.95  | r ln F: sim -3.908 exact -3.988 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00719
+   B2a G/N=3    F_cond sim 0.4 [0.3842,0.4158] (k=1414/3535)  exact 0.3948  z=+0.73  | r ln F: sim -2.749 exact -2.788 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0373
+   B2a G/N=4    F_cond sim 0.6246 [0.6039,0.6453] (k=2208/3535)  exact 0.6138  z=+1.15  | r ln F: sim -1.883 exact -1.953 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0848
+--- B0 neutral, N=200 (U=0.0125, 12 chunks x 6000 arrival gens; exact chain mean 3.9814 N, SD 2.1505 N; chain mass 1.00000)
+B0.1 P_fix (n_fix=899, unresolved=0)                  0.0024972 +- 7.93e-05  target 0.0025     z=-0.04 CI95 [0.0023227, 0.0026717] numpy 0.00246 z_cross=+0.33
+B0.2 mean t_fix/N                                        3.9924 +- 0.0876    target 3.9814     z=+0.13 CI95 [3.8182, 4.2037] numpy 4.006 z_cross=-0.12
+B0.2 SD t_fix/N                                          2.1817 +- 0.0884    target 2.1505     z=+0.35 (diffusion 2.15)
+B0.5 k/U at equilibrium (window >20N)                      1.04 +- 0.039     target 1          z=+1.02 CI95 [0.9541, 1.1259]
+   B2a G/N=0.5  F_cond sim k=0/899  CP95 [0,0.00409]  exact 5.463e-07 (expected count 0.00)  Day 2.68e-09
+   B2a G/N=1    F_cond sim k=1/899  CP95 [2.82e-05,0.00618]  exact 0.002782 (expected count 2.50)  Day 5.17e-05
+   B2a G/N=1.5  F_cond sim 0.03671 [0.02279,0.05062] (k=33/899)  exact 0.03915  z=-0.39  | r ln F: sim -4.957 exact -4.861 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00139
+   B2a G/N=2    F_cond sim 0.1324 [0.1128,0.1519] (k=119/899)  exact 0.1325  z=-0.01  | r ln F: sim -4.044 exact -4.043 (Day exponent -9.870)  Day exp(-pi^2/r)=0.00719
+   B2a G/N=3    F_cond sim 0.386 [0.339,0.433] (k=347/899)  exact 0.3903  z=-0.20  | r ln F: sim -2.856 exact -2.822 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0373
+   B2a G/N=4    F_cond sim 0.6096 [0.5629,0.6562] (k=548/899)  exact 0.6103  z=-0.03  | r ln F: sim -1.980 exact -1.975 (Day exponent -9.870)  Day exp(-pi^2/r)=0.0848
+  [b0s] 10/48 done, 278s
+  [b0s] 20/48 done, 314s
+  [b0s] 30/48 done, 337s
+  [b0s] 40/48 done, 347s
+  [b0s] 48/48 done, 351s
+Traceback (most recent call last):
+  File "/home/na/projects/evo-sim/research/checks/xt_cross_tool.py", line 669, in <module>
+    main()
+    ~~~~^^
+  File "/home/na/projects/evo-sim/research/checks/xt_cross_tool.py", line 650, in main
+    ANALYZERS[st](res, lines, smoke)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/na/projects/evo-sim/research/checks/xt_cross_tool.py", line 498, in analyze_b0s
+    tm, tse, tsd, _ = pooled_tstats(ch)
+                      ~~~~~~~~~~~~~^^^^
+  File "/home/na/projects/evo-sim/research/checks/xt_cross_tool.py", line 413, in pooled_tstats
+    tm = np.array([c["tsum"] / c["nfix"] for c in ch])
+                   ~~~~~~~~~~^~~~~~~~~~~
+ZeroDivisionError: division by zero

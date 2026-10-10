@@ -66,3 +66,5 @@ R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4
 - cohort N series
 - window length
 - calendar generations vs average-generation-time units
+
+R4 XT (research/checks/results/R4-XT.md; combined review, 2026-10-09): independent-engine replication in fwdpy11 0.24.7. Reproduced: Kimura u(s,N) within 2%, beneficial t_fix 0.7-1% from the diffusion integral and 2-3x below (2/s)ln2N, exact-chain F_cond within 1.5%, P_fix = 1/2N and time scaling with Ne (not Day N/Ne), the B1c excess 3.8-3.9. NOT reproduced numerically, not localised: B1 counts (21% equilibrium deficit), B1b expansion (0.699 vs 0.733), B3b non-overlapping k/U (0.95-0.96), B3c(e) cohort (0.64, constant in cohort size). The deficit tracks per-gamete U in the runs (hypothesis, untested). Numpy numbers neither overturned nor independently confirmed at the failing rows; no verdict change.

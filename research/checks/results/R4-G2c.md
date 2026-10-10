@@ -51,3 +51,18 @@
 - **MAJOR-1:** the unexplained 1.55x excess of realised over intended fixation rate in B is now stated as unexplained (above). B is "about 146 concurrent sweeps at 0.18 fixations per generation", 0.64x of Day's 230, not a test at 230; the Hn result (1.004-1.012) is not sensitive to this at the 3% noise level, but extrapolating to 230 is not done.
 - MINOR-1: Hn ratios carry +-3% noise (ctrl 0.983-1.017). MINOR-2: 2 replicates, A's concurrency is Poisson-limited. MINOR-4: free recombination and no cost are the best case for the parallel reading; feasibility of 230 sweeps is not tested. MINOR-5: "supports F1/F1b" is toned down to "consistent with": standing variation is an output, not the supply of beneficial variants.
 - (Superseded by the post hoc section above: MAJOR-1 is now diagnosed, an accounting error, and the verdict was reverted to pending.) Original text: No new run. Verdicts: G2c and B6c external pending -> supported as a conditional (a strictly serial model predicts no variation and observed polymorphism exists); applicability to Day stays with G2 / F1a; the sweep-rate and 230-sweep models predict Hn about theta at unlinked sites.
+
+## Post hoc: A_long result (pre-registered L1-L3, commit 19f91ff)
+Run on na-workhorse 2026-10-09 (`main 2 rerunA`, reps 6-7, T = 18,000, window 6,000-17,999; host `raw/f1a_b2b_g2c_rerunA.host`, log `raw/g2c_rerunA.out`, data `raw/g2c_A_long_rep{6,7}.json`). Analysis rerun on na-workhorse (`analyse`).
+
+| Clause | Pre-registered | Result | Verdict |
+|---|---|---|---|
+| L1 counted concurrency | mean in [0.8, 2.5], each in [0.3, 3.0] | 0.7 and 1.2, mean 0.95 | met |
+| L2 Hn ratio to 6-rep ctrl mean | mean in [0.96, 1.04] | 0.989 and 0.986, mean 0.988 | met |
+| L3 drift N/Ne, dropped | [0.99, 1.01], zero dropped | 1.0004, 1.0015; 0 dropped | met |
+
+Fixations in window: 6 and 12 over 12,000 generations (about 0.0005 and 0.001 per generation, near the expected 0.00076). **All of L1-L3 pass, so by the pre-registered rule the G2c/B6c external verdict is restored: `supported`, as a conditional** (a strictly serial model predicts no standing variation; at 1 or at 228 concurrent sweeps in this unlinked, free-recombination, no-cost model Hn stays at 0.97-1.02 of control). The A-concurrency miss is closed. Caveats unchanged: Hn ratios carry about +-3% noise; B2's three ratios (0.97-0.98) sit slightly below 1 and are not read as exactly zero; linked-site hitchhiking and feasibility of 230 sweeps remain untested.
+
+## Who this helps (A_long addendum)
+- **Day:** the parallel models keep their variation in a longer window too, so polymorphism alone does not refute them.
+- **Hancock / critics:** the conditional is tested with a long window and it holds; the objection stands where a serial reading is used, and the open item (linked sites) is theirs to press.

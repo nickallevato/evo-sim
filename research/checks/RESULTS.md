@@ -583,3 +583,9 @@ Pre-registered 385df94; na-workhorse. Day's s and N_e scaled (4Ns = 40), W = 7 x
 
 ## B2b: ceiling X = (V_k+2) G/16 against simulated offspring variance (2026-10-09)
 Pre-registered 25f14f7 (post hoc fix of an N_e/N slip). na-workhorse. Simulated N_e / Wright (4N-2)/(V_k+2) = 0.998, 1.002, 1.006, 1.022 at V_k = 1, 2, 5, 10; N_e/N 1.33, 1.00, 0.57, 0.34. The formula and the algebra for X are right; "about ten thousand" is reached only at V_k = 0 with the species window; N_e/N = 1e-3 needs V_k = 3,998. Review #21: 1 MAJOR (slip, fixed). No verdict changes. `results/R4-B2b.md`.
+
+## XT: cross-tool replication in fwdpy11 (2026-10-09)
+Pre-registered da1c178; na-workhorse; fwdpy11 0.24.7 (no SLiM). Replicated: Kimura u within 2%, beneficial t_fix 2-3x below Day's (2/s)ln2N, exact-chain F_cond, P_fix = 1/2N and t_fix scaling with Ne (not N/Ne), B1c excess 3.8-3.9. Not replicated and not localised: B1 counts (21% equilibrium deficit), B1b expansion 0.699 vs 0.733, B3b non-overlap k/U 0.95-0.96, B3c(e) cohort 0.64 (constant). The deficit rises with per-gamete U (hypothesis). No verdict change.
+
+## G2c A_long (post hoc, 2026-10-09)
+Pre-registered 19f91ff. Two 12,000-generation replicates of condition A: concurrency 0.7 and 1.2, Hn ratio 0.988, drift 1.001, zero dropped. L1-L3 met; G2c/B6c external restored to supported (conditional).
