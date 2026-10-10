@@ -27,7 +27,12 @@ Next:
 7. **GAP-07 follow-up:** T2T re-run (CHM13/hs1 vs mPanTro3); chimp-population polymorphism; a long-read SV set.
 8. **H follow-ups:** soft-selection rate limit at human R; truncation/synergistic epistasis; a sourced human beneficial DFE and M; binomial CIs on H T50; GAP-05.
 9. **Yoo 2025 μ and generation time / GAP-06.**
-10. **Load-bearing claims without a reviewed check** (R5 draft): A2e, B, B2, B3, H5, H8, B3g (bookkeeping), F3a (small checks); DONE 2026-10-09: B2b, E5, E6, F1a (reviews #19-#21, no verdict change; independent re-reviews #23-#25 done: `REVIEW-R4-{E5E6,F1a,B2b}-independent.md`), ROOT, ROOT-M (roll-up).
+10. **Load-bearing claims without a reviewed check** (R5 draft). Checks written 2026-10-10, all run locally (trivial), NOT reviewed, NOT integrated:
+    - **B3g** (low-stakes, one combined review): pre-registered ef6e8aa, `results/R4-B3g.md`; all mechanical predictions met. AWAITING COMBINED REVIEW.
+    - **F3a** (low-stakes, one combined review): pre-registered f9c8ed9, post hoc e9d2284 (PDF control-char strip; P1 failed as pre-registered on Z4), `results/R4-F3a.md`. AWAITING COMBINED REVIEW.
+    - **B2 + B (rule N)** (load-bearing, three reviews): pre-registered 3d07343, `results/R4-B2.md`; P6 failed in Day's favour (best-case fill 3%); B internal proposed non-sequitur (provisional, reading-dependent). AWAITING THREE REVIEWS.
+    - **B3** (load-bearing, three reviews): pre-registered 04f96bd, `results/R4-B3.md`; P1-P4 met; 32.3 reconstructs only from bp totals. AWAITING THREE REVIEWS.
+    Earlier list: A2e, B, B2, B3, H5, H8, B3g (bookkeeping), F3a (small checks); DONE 2026-10-09: B2b, E5, E6, F1a (reviews #19-#21, no verdict change; independent re-reviews #23-#25 done: `REVIEW-R4-{E5E6,F1a,B2b}-independent.md`), ROOT, ROOT-M (roll-up).
 11. **Review of the 12 new mapping claims** (A4e, A4f, A4g, B5j, D2k, D2l, F1c, G2h, H2a, ROOT-COV, ROOT-EP, ROOT-PG) with the usual two-sided steelman.
 12. **E leftovers, GAP-03.**
 13. **RH pass (rule RH, 2026-10-09):** tag the Statement quotes of existing nodes `dialectic` or `rhetoric` on every side, starting with the Darwillion lines (G3/G4) and the critics' "crank" lines. A node whose support turns out to be only rhetoric is marked, not re-scored as an error.

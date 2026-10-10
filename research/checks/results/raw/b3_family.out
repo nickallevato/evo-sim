@@ -1,0 +1,39 @@
+## P1 quotes
+| B3-1 | zenodo-18429937.txt | exact |
+| B3-2 | zenodo-18525262.txt | exact |
+| B3-3 | blog-2026-10-01-the-education-of-a-population-geneticist.txt | exact |
+| B3d-2 | blog-2026-05-07-a-retraction-and-a-revision.txt | exact |
+
+## P2 reconstruction of 32.3
+natural set: 32.93 (within 2% of 32.3: True)
+  hit: count 2.05e+08, T 252000, mu 7.97e-09, L 3.1e+09 -> 32.93
+  hit: count 2.05e+08, T 252000, mu 7.97e-09, L 3.2e+09 -> 31.90
+  hit: count 2.05e+08, T 260000, mu 7.97e-09, L 3.1e+09 -> 31.91
+  hit: count 4.1e+08 /2, T 252000, mu 7.97e-09, L 3.1e+09 -> 32.93
+  hit: count 4.1e+08 /2, T 252000, mu 7.97e-09, L 3.2e+09 -> 31.90
+  hit: count 4.1e+08 /2, T 260000, mu 7.97e-09, L 3.1e+09 -> 31.91
+  hit: count 4.1e+08, T 325000, mu 1.2e-08, L 3.2e+09 -> 32.85
+  hit: count 4.1e+08, T 325000, mu 1.25e-08, L 3.1e+09 -> 32.56
+grid size 480; hits 8; all hits use a bp total: True
+
+## P3 R1: count unit, Day's other inputs held
+| events (GAP-07b) | 3.38 | pred [3.2, 3.5] | True | 32.3 / this = 9.6x |
+| fixed events (GAP-07c) | 2.86 | pred [2.7, 3.0] | True | 32.3 / this = 11.3x |
+| events, human mu | 2.25 | pred [1.9, 2.3] | True | 32.3 / this = 14.4x |
+| fixed, human mu | 1.90 | pred [1.6, 2.0] | True | 32.3 / this = 17.0x |
+
+## P4 ancestral polymorphism and residual
+N_anc 10000: neutral expectation 1.08; events, human mu: residual 2.08 (x1.16 at 29 y: 2.42)
+N_anc 10000: neutral expectation 1.08; fixed, human mu: residual 1.76 (x1.16 at 29 y: 2.04)
+N_anc 57000: neutral expectation 1.45; events, human mu: residual 1.55 (x1.16 at 29 y: 1.80)
+N_anc 57000: neutral expectation 1.45; fixed, human mu: residual 1.31 (x1.16 at 29 y: 1.52)
+N_anc 132000: neutral expectation 2.05; events, human mu: residual 1.10 (x1.16 at 29 y: 1.27)
+N_anc 132000: neutral expectation 2.05; fixed, human mu: residual 0.93 (x1.16 at 29 y: 1.08)
+P4 residuals in [0.9, 2.2]: True
+
+## P5 family span
+0.743 (k<mu) to 32.3 (k>mu): span 43.5x, opposite signs; plus k = mu (B3g). Versions ledger, rule C.
+
+## P6: 'median factor of 25 across 55 vertebrates' -- no source cited; rule F, not computed.
+
+ALL MECHANICAL PREDICTIONS (P1-P4) MET: True
