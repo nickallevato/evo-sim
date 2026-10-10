@@ -1,0 +1,11 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-10T16:25:40-06:00 (wrapper ~/fm_mirror_run.sh: wait for downloads, md5 check, then stage B `extra` and stage A `extract` + `mirror` in parallel; 2 processes)
+pids: 786268 (wrapper), 787234 (extra), 787235 (extract)
+commit: 737648e (pre-registration, post hoc after reviews 1796620)
+88be54003c79ab9656a1f698ad990cf1  research/checks/fm_mirror.py
+53f9985339b11515496b8519a76c4693  research/checks/fm_mesa_replication.py (imported unchanged)
+input: sources/raw/fm-mirror-2026-10-10/pantro.maf.gz (8-t2t-apes-2023v2.GCA_028858775.2.maf.gz, 3,598,180,725 bytes), md5 bc332f336d3e6466e810b53be5b546a8 = published .md5 (raw/fm_mirror_maf.md5)
+input: sources/raw/fm-sd-2026-10-10/chm13v2.0_SD.bed sha256 11485f980b87220023442390242a43f61253acd5be93afac67168bf497230938
+input: sources/raw/fm-pantro-report-2026-10-10/report.txt sha256 f8ead51d2385990b52ed2204df59e5c2538bbcea38053942c02286ecf67dffd1
+input: results/raw/fm_bins.npz (R4-FM extract, workhorse only)
+outputs: raw/fm_mirror.out, raw/fm_mirror_analyse.json, raw/fm_extra.out, raw/fm_extra.json; fm_mirror_bins.npz stays on workhorse
