@@ -1,0 +1,32 @@
+Table 9 rows: 68
+  non-missing UCE: 68
+  non-missing MultiZ: 68
+  non-missing mu_yearly: 68
+  non-missing mu_yearly_mod: 55
+  non-missing mu_gen_mod: 55
+  non-missing gen_time: 68
+  domestic-flagged: Canis_lupus_familiaris, Capra_hircus, Felis_catus, Gallus_gallus, Monodelphis_domestica, Mus_musculus, Sus_scrofa, Tursiops_truncatus, Vicugna_pacos
+
+## set all
+| basis | n | median k/mu | median mu/k | q25-q75 k/mu | median |log10| | by group (median k/mu, n) |
+|---|---|---|---|---|---|---|
+| B1 kUCE/mu_yr_mod | 55 | 25.4 | 0.0394 | 13.3-62.6 | 1.4 | Bird 25.9 (15); Fish 82.4 (6); Mammal 19.6 (32); Reptile 15.3 (2) |
+| B2 kUCE/mu_yr_obs | 68 | 28.3 | 0.0353 | 12.6-83.9 | 1.45 | Bird 27 (18); Fish 99.9 (8); Mammal 20.4 (36); Reptile 49.1 (6) |
+| B3 kWGA/mu_yr_mod | 55 | 23.8 | 0.042 | 13.5-51.4 | 1.38 | Bird 19.6 (15); Fish 26.2 (6); Mammal 26.1 (32); Reptile 8.34 (2) |
+| B4 kUCE*gt/mu_gen_mod | 55 | 25.4 | 0.0394 | 13.3-62.6 | 1.4 | Bird 25.9 (15); Fish 82.4 (6); Mammal 19.6 (32); Reptile 15.3 (2) |
+| B5a kUCE(yr)/mu_gen_mod | 55 | 5.97 | 0.167 | 2.03-16.9 | 0.776 | Bird 7.45 (15); Fish 47.5 (6); Mammal 2.77 (32); Reptile 17.3 (2) |
+| B5b kWGA(yr)/mu_gen_mod | 55 | 5.81 | 0.172 | 2.56-11.2 | 0.764 | Bird 6.44 (15); Fish 14.8 (6); Mammal 3.09 (32); Reptile 9.81 (2) |
+
+## set non-domestic
+| basis | n | median k/mu | median mu/k | q25-q75 k/mu | median |log10| | by group (median k/mu, n) |
+|---|---|---|---|---|---|---|
+| B1 kUCE/mu_yr_mod | 46 | 25.7 | 0.039 | 13.2-62.9 | 1.41 | Bird 25.6 (14); Fish 82.4 (6); Mammal 19.9 (24); Reptile 15.3 (2) |
+| B2 kUCE/mu_yr_obs | 59 | 32.6 | 0.0307 | 15-89.8 | 1.51 | Bird 27.7 (17); Fish 99.9 (8); Mammal 22.5 (28); Reptile 49.1 (6) |
+| B3 kWGA/mu_yr_mod | 46 | 23.7 | 0.0422 | 13.2-54.5 | 1.37 | Bird 18.8 (14); Fish 26.2 (6); Mammal 26.2 (24); Reptile 8.34 (2) |
+| B4 kUCE*gt/mu_gen_mod | 46 | 25.7 | 0.039 | 13.2-62.9 | 1.41 | Bird 25.6 (14); Fish 82.4 (6); Mammal 19.9 (24); Reptile 15.3 (2) |
+| B5a kUCE(yr)/mu_gen_mod | 46 | 5.63 | 0.178 | 2.01-14.5 | 0.75 | Bird 7.42 (14); Fish 47.5 (6); Mammal 2.54 (24); Reptile 17.3 (2) |
+| B5b kWGA(yr)/mu_gen_mod | 46 | 5.2 | 0.192 | 2.49-10.2 | 0.714 | Bird 5.56 (14); Fish 14.8 (6); Mammal 2.91 (24); Reptile 9.81 (2) |
+
+## U: IQ-TREE root-to-tip (subs/site): n 74, median 0.886, range 0.797-1.53
+crude per-Myr rate (median root-to-tip / 416 Myr): 0.00213; table UCE column median 0.043; ratio column/crude 20.2
+crude per-year k / median mu_yearly_mod: 1.9 (A5: scale making the B1 median 1 = 1e-6 / median B1 ratio, see table)
