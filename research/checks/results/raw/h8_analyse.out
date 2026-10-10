@@ -1,0 +1,214 @@
+rows 745; D_det(1/2K): K=500 13.81, K=1000 15.20, K=4000 17.97; 2 ln(2K): 13.82, 15.20, 17.97
+
+## hard K=1000
+| R | ln R | D_obs | T | lam50 | bracket | phi | lam50*D/30 -> interval at D=30 | at D=20 | x 1/300 (in-model) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1.050 | 0.049 | 16.09 | 10000 | 0.001873 | [0.001702, 0.002269] | 0.62 | 995 | 663 | 0.6 |
+| 1.050 | 0.049 | 16.09 | 20000 | 0.001135 | [0.001135, 0.001702] | 0.37 | 1643 | 1095 | 0.3 |
+| 1.050 | 0.049 | 16.09 | 40000 | 0.0009547 | [0.0008509, 0.001135] | 0.31 | 1953 | 1302 | 0.3 |
+| 1.111 | 0.105 | 16.85 | 10000 | 0.003675 | [0.003675, 0.0049] | 0.59 | 484 | 323 | 1.1 |
+| 1.111 | 0.105 | 16.85 | 20000 | 0.0035 | [0.003333, 0.003675] | 0.56 | 509 | 339 | 1.0 |
+| 1.111 | 0.105 | 16.85 | 40000 | 0.002646 | [0.00245, 0.003333] | 0.42 | 673 | 449 | 0.8 |
+| 1.200 | 0.182 | 15.91 | 10000 | 0.007343 | [0.006359, 0.008479] | 0.64 | 257 | 171 | 2.2 |
+| 1.200 | 0.182 | 15.91 | 20000 | 0.006834 | [0.006359, 0.008479] | 0.60 | 276 | 184 | 2.1 |
+| 1.200 | 0.182 | 15.91 | 40000 | 0.005746 | [0.00424, 0.006359] | 0.50 | 328 | 219 | 1.7 |
+| 1.300 | 0.262 | 16.13 | 10000 | 0.008269 | [0.006101, 0.009151] | 0.51 | 225 | 150 | 2.5 |
+| 1.300 | 0.262 | 16.13 | 20000 | 0.007781 | [0.006101, 0.009151] | 0.48 | 239 | 159 | 2.3 |
+| 1.300 | 0.262 | 16.13 | 40000 | 0.007781 | [0.006101, 0.009151] | 0.48 | 239 | 159 | 2.3 |
+| 1.500 | 0.405 | 16.08 | 10000 | 0.01886 | [0.01886, 0.02121] | 0.75 | 99 | 66 | 5.7 |
+| 1.500 | 0.405 | 16.08 | 20000 | 0.01681 | [0.01414, 0.01886] | 0.67 | 111 | 74 | 5.0 |
+| 1.500 | 0.405 | 16.08 | 40000 | 0.01681 | [0.01414, 0.01886] | 0.67 | 111 | 74 | 5.0 |
+| 2.000 | 0.693 | 15.77 | 10000 | 0.03627 | [0.03627, 0.0403] | 0.83 | 52 | 35 | 10.9 |
+| 2.000 | 0.693 | 15.77 | 20000 | 0.03 | [0.02418, 0.03224] | 0.68 | 63 | 42 | 9.0 |
+| 2.000 | 0.693 | 15.77 | 40000 | 0.02873 | [0.02418, 0.03224] | 0.65 | 66 | 44 | 8.6 |
+| 2.718 | 1.000 | 15.80 | 10000 | 0.05813 | [0.05813, 0.06395] | 0.92 | 33 | 22 | 17.4 |
+| 2.718 | 1.000 | 15.80 | 20000 | 0.05457 | [0.05232, 0.05813] | 0.86 | 35 | 23 | 16.4 |
+| 2.718 | 1.000 | 15.80 | 40000 | 0.05372 | [0.05232, 0.05813] | 0.85 | 35 | 24 | 16.1 |
+| 3.000 | 1.099 | 15.74 | 10000 | 0.06059 | [0.05748, 0.06387] | 0.87 | 31 | 21 | 18.2 |
+| 3.000 | 1.099 | 15.74 | 20000 | 0.05581 | [0.05109, 0.05748] | 0.80 | 34 | 23 | 16.7 |
+| 3.000 | 1.099 | 15.74 | 40000 | 0.05483 | [0.05109, 0.05748] | 0.79 | 35 | 23 | 16.5 |
+
+cells (survival 10k/20k/40k with Wilson CI on 40k; mean k/lam, D, N/K, nopen over persisting reps):
+  R=1.050  x=0.1 lam=0.0002836: surv 6/6 / 6/6 / 6/6; k/lam=1.10 D=14.74 N/K=0.99 nopen=0 I=5.69e-06 maxrel=1.003
+  R=1.050  x=0.2 lam=0.0005673: surv 6/6 / 6/6 / 6/6; k/lam=0.86 D=17.29 N/K=0.99 nopen=1 I=9.49e-06 maxrel=1.005
+  R=1.050  x=0.3 lam=0.0008509: surv 6/6 / 5/6 / 5/6; k/lam=0.97 D=17.12 N/K=0.97 nopen=1 I=1.60e-05 maxrel=1.008
+  R=1.050  x=0.4 lam=0.001135: surv 4/6 / 3/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  x=0.6 lam=0.001702: surv 4/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  x=0.8 lam=0.002269: surv 1/6 / 1/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  x=0.9 lam=0.002553: surv 1/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  x=1.0 lam=0.002836: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  x=1.1 lam=0.00312: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  1/300 lam=0.003333: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050 x=1.25 lam=0.003545: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.050  x=1.5 lam=0.004255: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=0.1 lam=0.0006125: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=16.73 N/K=0.99 nopen=1 I=1.21e-05 maxrel=1.006
+  R=1.111  x=0.2 lam=0.001225: surv 6/6 / 6/6 / 6/6; k/lam=0.96 D=18.04 N/K=0.98 nopen=2 I=2.32e-05 maxrel=1.011
+  R=1.111  x=0.3 lam=0.001837: surv 6/6 / 6/6 / 5/6; k/lam=0.92 D=16.64 N/K=0.97 nopen=2 I=3.29e-05 maxrel=1.015
+  R=1.111  x=0.4 lam=0.00245: surv 6/6 / 5/6 / 4/6; k/lam=1.00 D=16.76 N/K=0.96 nopen=3 I=4.85e-05 maxrel=1.019
+  R=1.111  1/300 lam=0.003333: surv 5/6 / 4/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=0.6 lam=0.003675: surv 3/6 / 2/6 / 1/6; k/lam=0.96 D=15.05 N/K=0.93 nopen=4 I=6.69e-05 maxrel=1.023
+  R=1.111  x=0.8 lam=0.0049: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=0.9 lam=0.005512: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=1.0 lam=0.006125: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=1.1 lam=0.006737: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111 x=1.25 lam=0.007656: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=1.5 lam=0.009187: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.200  x=0.1 lam=0.00106: surv 6/6 / 6/6 / 6/6; k/lam=0.92 D=16.07 N/K=0.98 nopen=1 I=1.88e-05 maxrel=1.009
+  R=1.200  x=0.2 lam=0.00212: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=16.12 N/K=0.97 nopen=3 I=4.05e-05 maxrel=1.017
+  R=1.200  x=0.3 lam=0.00318: surv 6/6 / 6/6 / 6/6; k/lam=0.96 D=15.72 N/K=0.95 nopen=4 I=5.83e-05 maxrel=1.021
+  R=1.200  1/300 lam=0.003333: surv 6/6 / 6/6 / 6/6; k/lam=1.02 D=15.81 N/K=0.95 nopen=4 I=6.64e-05 maxrel=1.023
+  R=1.200  x=0.4 lam=0.00424: surv 6/6 / 6/6 / 6/6; k/lam=1.04 D=16.05 N/K=0.93 nopen=5 I=8.37e-05 maxrel=1.027
+  R=1.200  x=0.6 lam=0.006359: surv 4/6 / 4/6 / 2/6; k/lam=0.99 D=16.01 N/K=0.89 nopen=8 I=1.21e-04 maxrel=1.034
+  R=1.200  x=0.8 lam=0.008479: surv 2/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.200  x=0.9 lam=0.009539: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.200  x=1.0 lam=0.0106: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.200  x=1.1 lam=0.01166: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.200 x=1.25 lam=0.01325: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.200  x=1.5 lam=0.0159: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.300  x=0.1 lam=0.001525: surv 6/6 / 6/6 / 6/6; k/lam=0.96 D=16.48 N/K=0.98 nopen=2 I=2.81e-05 maxrel=1.013
+  R=1.300  x=0.2 lam=0.00305: surv 6/6 / 6/6 / 6/6; k/lam=1.06 D=16.34 N/K=0.95 nopen=4 I=6.27e-05 maxrel=1.023
+  R=1.300  1/300 lam=0.003333: surv 6/6 / 6/6 / 6/6; k/lam=0.94 D=16.08 N/K=0.95 nopen=4 I=6.09e-05 maxrel=1.022
+  R=1.300  x=0.3 lam=0.004576: surv 6/6 / 6/6 / 6/6; k/lam=1.00 D=16.79 N/K=0.93 nopen=6 I=8.86e-05 maxrel=1.028
+  R=1.300  x=0.4 lam=0.006101: surv 6/6 / 6/6 / 6/6; k/lam=1.02 D=15.85 N/K=0.91 nopen=8 I=1.19e-04 maxrel=1.033
+  R=1.300  x=0.6 lam=0.009151: surv 2/6 / 1/6 / 1/6; k/lam=0.94 D=15.38 N/K=0.88 nopen=10 I=1.64e-04 maxrel=1.040
+  R=1.300  x=0.8 lam=0.0122: surv 1/6 / 1/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.300  x=0.9 lam=0.01373: surv 1/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.300  x=1.0 lam=0.01525: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.300  x=1.1 lam=0.01678: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.300 x=1.25 lam=0.01907: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.300  x=1.5 lam=0.02288: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.500  x=0.1 lam=0.002357: surv 6/6 / 6/6 / 6/6; k/lam=0.94 D=15.70 N/K=0.97 nopen=3 I=4.26e-05 maxrel=1.017
+  R=1.500  1/300 lam=0.003333: surv 6/6 / 6/6 / 6/6; k/lam=1.03 D=16.14 N/K=0.95 nopen=4 I=6.71e-05 maxrel=1.024
+  R=1.500  x=0.2 lam=0.004714: surv 6/6 / 6/6 / 6/6; k/lam=1.01 D=16.10 N/K=0.93 nopen=6 I=9.23e-05 maxrel=1.029
+  R=1.500  x=0.3 lam=0.007071: surv 6/6 / 6/6 / 6/6; k/lam=1.02 D=16.34 N/K=0.89 nopen=9 I=1.42e-04 maxrel=1.037
+  R=1.500  x=0.4 lam=0.009428: surv 6/6 / 6/6 / 6/6; k/lam=0.97 D=16.01 N/K=0.87 nopen=11 I=1.75e-04 maxrel=1.042
+  R=1.500  x=0.6 lam=0.01414: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=16.01 N/K=0.80 nopen=17 I=2.70e-04 maxrel=1.053
+  R=1.500  x=0.8 lam=0.01886: surv 3/6 / 1/6 / 1/6; k/lam=0.98 D=15.39 N/K=0.74 nopen=22 I=3.59e-04 maxrel=1.062
+  R=1.500  x=0.9 lam=0.02121: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.500  x=1.0 lam=0.02357: surv 1/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.500  x=1.1 lam=0.02593: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.500 x=1.25 lam=0.02946: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.500  x=1.5 lam=0.03536: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  1/300 lam=0.003333: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=16.30 N/K=0.95 nopen=4 I=6.46e-05 maxrel=1.023
+  R=2.000  x=0.1 lam=0.00403: surv 6/6 / 6/6 / 6/6; k/lam=1.04 D=15.66 N/K=0.94 nopen=5 I=8.08e-05 maxrel=1.026
+  R=2.000  x=0.2 lam=0.008059: surv 6/6 / 6/6 / 6/6; k/lam=0.98 D=16.58 N/K=0.88 nopen=10 I=1.53e-04 maxrel=1.039
+  R=2.000  x=0.3 lam=0.01209: surv 6/6 / 6/6 / 6/6; k/lam=0.95 D=15.85 N/K=0.84 nopen=14 I=2.20e-04 maxrel=1.047
+  R=2.000  x=0.4 lam=0.01612: surv 6/6 / 6/6 / 6/6; k/lam=1.03 D=15.54 N/K=0.77 nopen=20 I=3.19e-04 maxrel=1.058
+  R=2.000  x=0.6 lam=0.02418: surv 6/6 / 6/6 / 6/6; k/lam=0.98 D=15.74 N/K=0.69 nopen=28 I=4.55e-04 maxrel=1.070
+  R=2.000  x=0.8 lam=0.03224: surv 3/6 / 2/6 / 1/6; k/lam=1.01 D=15.22 N/K=0.61 nopen=37 I=6.22e-04 maxrel=1.083
+  R=2.000  x=0.9 lam=0.03627: surv 3/6 / 2/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  x=1.0 lam=0.0403: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  x=1.1 lam=0.04432: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000 x=1.25 lam=0.05037: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  x=1.5 lam=0.06044: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.718  1/300 lam=0.003333: surv 6/6 / 6/6 / 6/6; k/lam=0.97 D=16.83 N/K=0.95 nopen=4 I=6.32e-05 maxrel=1.023
+  R=2.718  x=0.1 lam=0.005813: surv 6/6 / 6/6 / 6/6; k/lam=1.00 D=16.33 N/K=0.91 nopen=7 I=1.13e-04 maxrel=1.033
+  R=2.718  x=0.2 lam=0.01163: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=16.29 N/K=0.83 nopen=14 I=2.25e-04 maxrel=1.048
+  R=2.718  x=0.3 lam=0.01744: surv 6/6 / 6/6 / 6/6; k/lam=1.01 D=15.85 N/K=0.76 nopen=21 I=3.42e-04 maxrel=1.060
+  R=2.718  x=0.4 lam=0.02325: surv 6/6 / 6/6 / 6/6; k/lam=1.00 D=15.46 N/K=0.70 nopen=27 I=4.43e-04 maxrel=1.069
+  R=2.718  x=0.6 lam=0.03488: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=15.47 N/K=0.59 nopen=40 I=6.64e-04 maxrel=1.086
+  R=2.718  x=0.8 lam=0.04651: surv 6/6 / 6/6 / 6/6; k/lam=0.99 D=14.96 N/K=0.50 nopen=51 I=8.76e-04 maxrel=1.100
+  R=2.718  x=0.9 lam=0.05232: surv 6/6 / 5/6 / 4/6; k/lam=0.99 D=14.74 N/K=0.47 nopen=56 I=9.72e-04 maxrel=1.105
+  R=2.718  x=1.0 lam=0.05813: surv 3/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.718  x=1.1 lam=0.06395: surv 1/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.718 x=1.25 lam=0.07267: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.718  x=1.5 lam=0.0872: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=3.000  1/300 lam=0.003333: surv 6/6 / 6/6 / 6/6; k/lam=0.97 D=16.19 N/K=0.95 nopen=4 I=6.39e-05 maxrel=1.023
+  R=3.000  x=0.1 lam=0.006387: surv 6/6 / 6/6 / 6/6; k/lam=1.02 D=16.56 N/K=0.90 nopen=8 I=1.28e-04 maxrel=1.035
+  R=3.000  x=0.2 lam=0.01277: surv 6/6 / 6/6 / 6/6; k/lam=0.98 D=16.12 N/K=0.82 nopen=15 I=2.45e-04 maxrel=1.050
+  R=3.000  x=0.3 lam=0.01916: surv 6/6 / 6/6 / 6/6; k/lam=0.97 D=15.82 N/K=0.75 nopen=22 I=3.62e-04 maxrel=1.062
+  R=3.000  x=0.4 lam=0.02555: surv 6/6 / 6/6 / 6/6; k/lam=0.98 D=15.55 N/K=0.68 nopen=29 I=4.83e-04 maxrel=1.073
+  R=3.000  x=0.6 lam=0.03832: surv 6/6 / 6/6 / 6/6; k/lam=1.01 D=15.05 N/K=0.56 nopen=43 I=7.35e-04 maxrel=1.091
+  R=3.000  x=0.8 lam=0.05109: surv 6/6 / 6/6 / 6/6; k/lam=1.00 D=14.94 N/K=0.47 nopen=56 I=9.72e-04 maxrel=1.105
+  R=3.000  x=0.9 lam=0.05748: surv 5/6 / 2/6 / 1/6; k/lam=0.97 D=14.42 N/K=0.45 nopen=59 I=1.04e-03 maxrel=1.109
+  R=3.000  x=1.0 lam=0.06387: surv 1/6 / 1/6 / 1/6; k/lam=0.96 D=14.50 N/K=0.41 nopen=65 I=1.15e-03 maxrel=1.115
+  R=3.000  x=1.1 lam=0.07025: surv 2/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=3.000 x=1.25 lam=0.07983: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=3.000  x=1.5 lam=0.0958: surv 0/6 / 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+
+## Kscale K=500
+| R | ln R | D_obs | T | lam50 | bracket | phi | lam50*D/30 -> interval at D=30 | at D=20 | x 1/300 (in-model) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1.111 | 0.105 | 13.37 | 10000 | 0.003997 | [0.003997, 0.005329] | 0.51 | 561 | 374 | 1.2 |
+| 1.111 | 0.105 | 13.37 | 20000 | 0.002288 | [0.001999, 0.002998] | 0.29 | 981 | 654 | 0.7 |
+| 2.000 | 0.693 | 14.49 | 10000 | 0.03777 | [0.03506, 0.04383] | 0.79 | 55 | 37 | 11.3 |
+| 2.000 | 0.693 | 14.49 | 20000 | 0.03186 | [0.0263, 0.03506] | 0.67 | 65 | 43 | 9.6 |
+
+cells (survival 10k/20k/40k with Wilson CI on 40k; mean k/lam, D, N/K, nopen over persisting reps):
+  R=1.111  x=0.2 lam=0.001332: surv 4/4 / 4/4; k/lam=1.03 D=15.19 N/K=0.98 nopen=2 I=2.65e-05 maxrel=1.011
+  R=1.111  x=0.3 lam=0.001999: surv 4/4 / 3/4; k/lam=1.11 D=13.43 N/K=0.97 nopen=2 I=3.86e-05 maxrel=1.015
+  R=1.111 x=0.45 lam=0.002998: surv 2/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=0.6 lam=0.003997: surv 2/4 / 2/4; k/lam=0.83 D=13.06 N/K=0.96 nopen=3 I=6.04e-05 maxrel=1.020
+  R=1.111  x=0.8 lam=0.005329: surv 1/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=1.0 lam=0.006662: surv 1/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111 x=1.25 lam=0.008327: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  x=0.2 lam=0.008765: surv 4/4 / 4/4; k/lam=0.91 D=15.07 N/K=0.89 nopen=9 I=1.51e-04 maxrel=1.036
+  R=2.000  x=0.3 lam=0.01315: surv 4/4 / 4/4; k/lam=1.01 D=14.00 N/K=0.83 nopen=14 I=2.43e-04 maxrel=1.047
+  R=2.000 x=0.45 lam=0.01972: surv 4/4 / 4/4; k/lam=0.99 D=14.38 N/K=0.76 nopen=20 I=3.63e-04 maxrel=1.059
+  R=2.000  x=0.6 lam=0.0263: surv 4/4 / 4/4; k/lam=0.96 D=14.65 N/K=0.69 nopen=26 I=4.70e-04 maxrel=1.067
+  R=2.000  x=0.8 lam=0.03506: surv 3/4 / 1/4; k/lam=0.97 D=13.49 N/K=0.63 nopen=33 I=6.08e-04 maxrel=1.077
+  R=2.000  x=1.0 lam=0.04383: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000 x=1.25 lam=0.05478: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+
+## Kscale K=4000
+| R | ln R | D_obs | T | lam50 | bracket | phi | lam50*D/30 -> interval at D=30 | at D=20 | x 1/300 (in-model) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1.111 | 0.105 | 19.61 | 10000 | 0.003483 | [0.003165, 0.00422] | 0.65 | 439 | 293 | 1.0 |
+| 1.111 | 0.105 | 19.61 | 20000 | 0.003165 | [0.003165, 0.00422] | 0.59 | 483 | 322 | 0.9 |
+| 2.000 | 0.693 | 18.89 | 10000 | 0.03104 | [0.02776, 0.0347] | 0.85 | 51 | 34 | 9.3 |
+| 2.000 | 0.693 | 18.89 | 20000 | 0.02776 | [0.02776, 0.0347] | 0.76 | 57 | 38 | 8.3 |
+
+cells (survival 10k/20k/40k with Wilson CI on 40k; mean k/lam, D, N/K, nopen over persisting reps):
+  R=1.111  x=0.2 lam=0.001055: surv 4/4 / 4/4; k/lam=0.84 D=17.91 N/K=0.98 nopen=1 I=1.72e-05 maxrel=1.009
+  R=1.111  x=0.3 lam=0.001582: surv 4/4 / 4/4; k/lam=1.06 D=20.05 N/K=0.97 nopen=3 I=3.44e-05 maxrel=1.017
+  R=1.111 x=0.45 lam=0.002374: surv 3/4 / 3/4; k/lam=1.04 D=18.84 N/K=0.93 nopen=4 I=4.71e-05 maxrel=1.021
+  R=1.111  x=0.6 lam=0.003165: surv 3/4 / 2/4; k/lam=0.99 D=18.91 N/K=0.91 nopen=5 I=6.17e-05 maxrel=1.025
+  R=1.111  x=0.8 lam=0.00422: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=1.0 lam=0.005275: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111 x=1.25 lam=0.006593: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  x=0.2 lam=0.00694: surv 4/4 / 4/4; k/lam=1.01 D=18.67 N/K=0.88 nopen=10 I=1.39e-04 maxrel=1.041
+  R=2.000  x=0.3 lam=0.01041: surv 4/4 / 4/4; k/lam=1.02 D=19.16 N/K=0.82 nopen=16 I=2.11e-04 maxrel=1.052
+  R=2.000 x=0.45 lam=0.01562: surv 4/4 / 4/4; k/lam=1.03 D=18.89 N/K=0.74 nopen=24 I=3.21e-04 maxrel=1.065
+  R=2.000  x=0.6 lam=0.02082: surv 4/4 / 4/4; k/lam=0.99 D=18.73 N/K=0.68 nopen=30 I=4.07e-04 maxrel=1.074
+  R=2.000  x=0.8 lam=0.02776: surv 4/4 / 2/4; k/lam=1.00 D=17.87 N/K=0.61 nopen=39 I=5.47e-04 maxrel=1.087
+  R=2.000  x=1.0 lam=0.0347: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000 x=1.25 lam=0.04338: surv 0/4 / 0/4; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+
+## softJ
+| R | lam | label | fails | k/lam | nopen q1 -> q4 | D_obs | I | maxrel | q99 | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1.05 | 0.003333 | 1/300 | 0/3 | 0.91 | 20 -> 25 | 112.95 | 3.36e-04 | 1.062 | 1.043 | not steady |
+| 1.05 | 0.03511 | H5 | 0/3 | 0.99 | 237 -> 246 | 109.73 | 3.93e-03 | 1.226 | 1.154 | sustained |
+| 1.05 | 0.1 | lam=0.1 | 0/3 | 0.98 | 663 -> 695 | 109.13 | 1.11e-02 | 1.402 | 1.268 | sustained |
+| 1.111111 | 0.003333 | 1/300 | 0/3 | 1.06 | 16 -> 14 | 61.34 | 2.46e-04 | 1.052 | 1.036 | sustained |
+| 1.111111 | 0.03511 | H5 | 0/3 | 1.01 | 152 -> 164 | 63.70 | 2.53e-03 | 1.178 | 1.122 | sustained |
+| 1.111111 | 0.1 | lam=0.1 | 0/3 | 0.97 | 425 -> 437 | 65.50 | 6.96e-03 | 1.310 | 1.208 | sustained |
+| 1.5 | 0.003333 | 1/300 | 0/3 | 0.98 | 8 -> 7 | 30.35 | 1.14e-04 | 1.034 | 1.023 | sustained |
+| 1.5 | 0.03511 | H5 | 0/3 | 0.98 | 74 -> 73 | 29.56 | 1.20e-03 | 1.122 | 1.083 | sustained |
+| 1.5 | 0.1 | lam=0.1 | 0/3 | 1.00 | 213 -> 211 | 30.02 | 3.48e-03 | 1.217 | 1.144 | sustained |
+| 2.0 | 0.003333 | 1/300 | 0/3 | 1.00 | 6 -> 6 | 25.09 | 9.52e-05 | 1.032 | 1.021 | sustained |
+| 2.0 | 0.03511 | H5 | 0/3 | 0.95 | 55 -> 61 | 24.31 | 9.42e-04 | 1.110 | 1.073 | sustained |
+| 2.0 | 0.1 | lam=0.1 | 0/3 | 1.01 | 173 -> 178 | 24.03 | 2.82e-03 | 1.198 | 1.129 | sustained |
+| 3.0 | 0.003333 | 1/300 | 0/3 | 1.05 | 5 -> 5 | 20.11 | 8.27e-05 | 1.030 | 1.019 | sustained |
+| 3.0 | 0.03511 | H5 | 0/3 | 1.01 | 55 -> 55 | 20.51 | 8.48e-04 | 1.108 | 1.069 | sustained |
+| 3.0 | 0.1 | lam=0.1 | 0/3 | 0.99 | 147 -> 156 | 20.41 | 2.39e-03 | 1.187 | 1.118 | sustained |
+
+## softWF
+| R | lam | label | fails | k/lam | nopen q1 -> q4 | D_obs | I | maxrel | q99 | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|
+| None | 0.003333 | 1/300 | 0/3 | 1.11 | 5 -> 4 | 16.11 | 7.10e-05 | 1.024 | 1.017 | sustained |
+| None | 0.03511 | H5 | 0/3 | 1.01 | 45 -> 45 | 16.43 | 6.89e-04 | 1.088 | 1.061 | sustained |
+| None | 0.1 | lam=0.1 | 0/3 | 1.00 | 124 -> 122 | 16.44 | 1.94e-03 | 1.152 | 1.106 | sustained |
+| None | 0.2 | lam=0.2 | 0/3 | 1.00 | 256 -> 247 | 16.50 | 3.89e-03 | 1.221 | 1.152 | sustained |
+
+## prediction checks
+T=10000: R=1.111 interval at D=30 = 484 (PD1 [150,600]; P3 [250,400]); lam50(3)/lam50(1.111) = 16.49 (P4 [7,12]); lam50(R=2) = 0.03627 (P4 0.035-0.04; Term 3 literal 0.0658; with d=0.45 0.0296; Hossjer 0.0351)
+T=20000: R=1.111 interval at D=30 = 509 (PD1 [150,600]; P3 [250,400]); lam50(3)/lam50(1.111) = 15.95 (P4 [7,12]); lam50(R=2) = 0.03 (P4 0.035-0.04; Term 3 literal 0.0658; with d=0.45 0.0296; Hossjer 0.0351)
+T=40000: R=1.111 interval at D=30 = 673 (PD1 [150,600]; P3 [250,400]); lam50(3)/lam50(1.111) = 20.72 (P4 [7,12]); lam50(R=2) = 0.02873 (P4 0.035-0.04; Term 3 literal 0.0658; with d=0.45 0.0296; Hossjer 0.0351)
+T=10000: smallest grid R with lam50 >= Hossjer 0.0351 (in-model D~17): 2.0
+T=20000: smallest grid R with lam50 >= Hossjer 0.0351 (in-model D~17): 2.718282
+T=40000: smallest grid R with lam50 >= Hossjer 0.0351 (in-model D~17): 2.718282
+D-invariance R=1.111 T=10000: K=500: D=13.37 lam50=0.003997 lam50*D=0.0534; K=1000: D=16.85 lam50=0.003675 lam50*D=0.0619; K=4000: D=19.61 lam50=0.003483 lam50*D=0.0683
+D-invariance R=1.111 T=20000: K=500: D=13.37 lam50=0.002288 lam50*D=0.0306; K=1000: D=16.85 lam50=0.0035 lam50*D=0.0590; K=4000: D=19.61 lam50=0.003165 lam50*D=0.0621
+D-invariance R=2.000 T=10000: K=500: D=14.49 lam50=0.03777 lam50*D=0.5473; K=1000: D=15.77 lam50=0.03627 lam50*D=0.5721; K=4000: D=18.89 lam50=0.03104 lam50*D=0.5862
+D-invariance R=2.000 T=20000: K=500: D=14.49 lam50=0.03186 lam50*D=0.4616; K=1000: D=15.77 lam50=0.03 lam50*D=0.4732; K=4000: D=18.89 lam50=0.02776 lam50*D=0.5243

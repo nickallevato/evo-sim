@@ -1,0 +1,43 @@
+stage main: 107 cells, 553 jobs to run (0 already done), workers 3
+[      4s] 1/553 Kscale K=4000 R=1.111 x=0.6 rep2 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=3 sec/gen=1.09e-03
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-j691d55o', '/mp-lvulx0hk', '/mp-gq0n7h0k', '/mp-8gpb9qmd', '/mp-c2oh35yt', '/mp-98e2dohh'}
+  warnings.warn(
+stage main: 143 cells, 726 jobs to run (19 already done), workers 3
+[    123s] 1/726 Kscale K=4000 R=2.000 x=0.6 rep3 fail=None k=0.02035 D=18.6 nopen=29 maxrel=1.07 sec=123 sec/gen=6.14e-03
+[    369s] 21/726 Kscale K=4000 R=1.111 x=0.3 rep3 fail=None k=0.001706 D=16.6 nopen=2 maxrel=1.02 sec=23 sec/gen=1.15e-03
+[   1126s] 41/726 softJ K=1000 R=1.050 H5 rep1 fail=None k=0.03335 D=110 nopen=236 maxrel=1.22 sec=365 sec/gen=1.22e-02
+[   3133s] 61/726 softJ K=1000 R=1.500 H5 rep2 fail=None k=0.03375 D=30.8 nopen=74 maxrel=1.12 sec=132 sec/gen=4.41e-03
+[   4777s] 81/726 softWF K=1000 R=nan 1/300 rep0 fail=None k=0.0039 D=16.6 nopen=5 maxrel=1.03 sec=25 sec/gen=8.32e-04
+[   5555s] 101/726 hard K=1000 R=1.050 x=0.4 rep5 fail=extinct k=0.0009982 D=17.9 nopen=1 maxrel=1.01 sec=10 sec/gen=2.96e-04
+[   5567s] 121/726 hard K=1000 R=1.050 x=1.0 rep1 fail=extinct k=0.003693 D=11.4 nopen=3 maxrel=1.02 sec=1 sec/gen=2.25e-04
+[   5569s] 141/726 hard K=1000 R=1.050 1/300 rep0 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=0 sec/gen=4.15e-05
+[   5609s] 161/726 hard K=1000 R=1.111 x=0.8 rep2 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=0 sec/gen=8.56e-05
+[   5616s] 181/726 hard K=1000 R=1.111 x=1.1 rep3 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=0 sec/gen=7.26e-05
+[   5639s] 201/726 hard K=1000 R=1.111 1/300 rep4 fail=extinct k=0.002968 D=15.3 nopen=3 maxrel=1.02 sec=12 sec/gen=4.09e-04
+[   5712s] 221/726 hard K=1000 R=1.200 x=0.8 rep5 fail=extinct k=0.0101 D=14.6 nopen=11 maxrel=1.04 sec=7 sec/gen=5.82e-04
+[   5718s] 241/726 hard K=1000 R=1.200 x=1.25 rep4 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=0 sec/gen=8.35e-05
+[   5801s] 261/726 hard K=1000 R=1.300 x=0.6 rep0 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=0 sec/gen=9.79e-05
+[   5843s] 281/726 hard K=1000 R=1.300 x=0.9 rep4 fail=extinct k=0.01151 D=13.5 nopen=12 maxrel=1.04 sec=5 sec/gen=6.34e-04
+[   5850s] 301/726 hard K=1000 R=1.300 x=1.5 rep4 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=0 sec/gen=1.11e-04
+[   6013s] 321/726 hard K=1000 R=1.500 x=0.6 rep4 fail=None k=0.01403 D=16.4 nopen=17 maxrel=1.05 sec=37 sec/gen=9.25e-04
+[   6063s] 341/726 hard K=1000 R=1.500 x=1.1 rep2 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=1 sec/gen=4.44e-04
+[   6088s] 361/726 hard K=1000 R=1.500 1/300 rep1 fail=None k=0.003351 D=17.1 nopen=4 maxrel=1.02 sec=17 sec/gen=4.34e-04
+[   6335s] 381/726 hard K=1000 R=2.000 x=0.8 rep5 fail=extinct k=0.03424 D=16.1 nopen=40 maxrel=1.09 sec=8 sec/gen=1.35e-03
+[   6405s] 401/726 hard K=1000 R=2.000 x=1.1 rep4 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=4 sec/gen=1.31e-03
+[   6498s] 421/726 hard K=1000 R=2.718 x=0.4 rep2 fail=None k=0.02346 D=15.1 nopen=27 maxrel=1.07 sec=51 sec/gen=1.27e-03
+[   6994s] 441/726 hard K=1000 R=2.718 x=1.0 rep0 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=3 sec/gen=1.16e-03
+[   7085s] 461/726 hard K=1000 R=2.718 x=1.5 rep2 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=1 sec/gen=3.43e-04
+[   7310s] 481/726 hard K=1000 R=3.000 x=0.6 rep2 fail=None k=0.0387 D=15.2 nopen=43 maxrel=1.09 sec=76 sec/gen=1.91e-03
+[   7698s] 501/726 hard K=1000 R=3.000 x=1.0 rep5 fail=extinct k=0.06222 D=16.3 nopen=67 maxrel=1.11 sec=8 sec/gen=2.09e-03
+[   7786s] 521/726 hard K=1000 R=3.000 1/300 rep2 fail=None k=0.00273 D=17 nopen=3 maxrel=1.02 sec=17 sec/gen=4.28e-04
+[   7856s] 541/726 hard K=1000 R=1.050 x=0.3 rep2 fail=None k=0.0008919 D=17.6 nopen=1 maxrel=1.01 sec=12 sec/gen=2.94e-04
+[   7937s] 561/726 hard K=1000 R=1.111 x=0.3 rep4 fail=extinct k=0.001764 D=17.1 nopen=2 maxrel=1.01 sec=11 sec/gen=3.53e-04
+[   8037s] 581/726 hard K=1000 R=1.300 x=0.1 rep0 fail=None k=0.001541 D=17.1 nopen=2 maxrel=1.01 sec=15 sec/gen=3.65e-04
+[   8152s] 601/726 hard K=1000 R=1.500 x=0.1 rep2 fail=None k=0.002432 D=15.9 nopen=3 maxrel=1.02 sec=16 sec/gen=4.09e-04
+[   8287s] 621/726 hard K=1000 R=2.000 x=0.1 rep4 fail=None k=0.004189 D=16.5 nopen=5 maxrel=1.03 sec=20 sec/gen=4.88e-04
+[   8475s] 641/726 hard K=1000 R=2.718 x=0.2 rep0 fail=None k=0.01149 D=16.2 nopen=14 maxrel=1.05 sec=32 sec/gen=7.98e-04
+[   8693s] 661/726 hard K=1000 R=3.000 x=0.2 rep2 fail=None k=0.01224 D=16.5 nopen=15 maxrel=1.05 sec=35 sec/gen=8.69e-04
+[   8815s] 681/726 Kscale K=500 R=1.111 x=1.0 rep2 fail=extinct k=0.004622 D=16.5 nopen=5 maxrel=1.03 sec=1 sec/gen=2.31e-04
+[   8862s] 701/726 Kscale K=500 R=2.000 x=1.25 rep3 fail=extinct k=0 D=nan nopen=0 maxrel=0 sec=1 sec/gen=4.21e-04
+[   8904s] 721/726 Kscale K=500 R=2.000 x=0.3 rep2 fail=None k=0.01318 D=14.2 nopen=14 maxrel=1.05 sec=10 sec/gen=4.83e-04
+stage main done in 8921 s

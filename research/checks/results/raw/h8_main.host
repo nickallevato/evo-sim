@@ -1,0 +1,8 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-09T22:21:46-06:00
+cmd: research/.venv/bin/python -I research/checks/h8_haldane_regime.py main 3
+commit: acd3a9e
+daf6fa720e345cd1ab53912a84064c2f  research/checks/h8_haldane_regime.py
+relaunched (post hoc grid extension, resume): 2026-10-09T22:25:21-06:00
+commit: af09e77 (post hoc)
+6696abdfba93831b6b07a273697d9901  research/checks/h8_haldane_regime.py
