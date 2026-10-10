@@ -123,6 +123,25 @@ PRE-REGISTERED PREDICTIONS
   and the open question is R (H external stays contested, with the flip R stated).  PD2 holding (lam50 flat in R)
   would support Day's budget reading.  PD3 holding (softJ capped at the hard cap) would rebut the critics' soft-
   selection reply in this model.  Failure of P2's D-invariance (Kscale) would void the D = 30 rescaling.
+POST HOC STAGE kscale16 (after reviews 2935b8f; approved 2026-10-10; R4-H8 section 8.2; Corr 3, Critic 1)
+  Purpose: does "slower than 1/300 at D = 30" (R = 1.111) survive at larger K, or was it a finite-K effect?
+  Cells: hard, K = 16,000, R in {1.111, 2}, x in {0.3, 0.45, 0.6, 0.8, 1.0}, lam = x ln R / Dref(16000)
+  (Dref = 22.7); 6 reps; 20,000 generations (burn 3,000); max_open 1500.  10 cells, 60 jobs.  Stage code 2,
+  output raw/h8_kscale16.jsonl.  Engine and estimators unchanged; `analyse kscale16` prints the table.
+  Predictions (fixed before launch; quantity = lam50(T) x D_obs, interval at D = 30 = 30 / (lam50 x D_obs)):
+    K1  If the ln-K trend (K = 500/1000/4000: 0.053/0.062/0.068) continues: R = 1.111, T = 10k,
+        lam50 x D in [0.072, 0.078] (D = 30 interval about 385-415).
+    K2  Decision rule for the "slower than 1/300" statement (R = 1.111, T = 10k, point estimate):
+          interval <= 300  -> REMOVE: the K = 1000 slowdown was a finite-size effect (critic-favourable);
+          interval >= 480  -> KEEP as K-stable (Day-favourable: 1/300 is conservative at large K);
+          300 < interval < 480 -> keep only as "conditional on K", with the K trend stated (neither side).
+        A bracket straddling a boundary is scored indeterminate.  Day's verbatim upper bound ("no more than
+        approximately one ... per 300") is unaffected unless the interval is < 300 by more than R1's 25%
+        (i.e. < 225), which no prediction expects.
+    K3  R = 2, T = 10k: lam50 x D in [0.59, 0.61] (phi about 0.87 of ln 2 = 0.693).
+    K4  D_obs (median, x <= 0.8, persisting reps) within 2 ln(32000) + c, c in [0.5, 4]: [21.2, 24.7].
+  If K1-K3 are ambiguous (K2 indeterminate), an optional K = 64,000 stage with the same cells may be proposed;
+  it is NOT pre-approved here.
 =====================================================================================================
 """
 import json
@@ -313,6 +332,11 @@ def build(stage):
                 for x in (0.2, 0.3, 0.45):
                     c.append(("Kscale", K, x * math.log(R) / Dref(K), R, f"x={x}", "hard", 4, 20000, 3000, 1500))
         return c
+    if stage == "kscale16":  # POST HOC (after reviews 2935b8f); see docstring
+        for R in (1 / 0.9, 2.0):
+            for x in (0.3, 0.45, 0.6, 0.8, 1.0):
+                c.append(("Kscale", 16000, x * math.log(R) / Dref(16000), R, f"x={x}", "hard", 6, 20000, 3000, 1500))
+        return c
     raise SystemExit("unknown stage " + stage)
 
 
@@ -329,7 +353,7 @@ def job(a):
 
 def run_stage(stage, workers):
     cells = build(stage)
-    code = {"smoke": 0, "main": 1}[stage]
+    code = {"smoke": 0, "main": 1, "kscale16": 2}[stage]
     jobs = [(code, ci, cell, rep) for ci, cell in enumerate(cells) for rep in range(cell[6])]
     jobs.sort(key=lambda j: -(j[2][7] * (j[2][1] / 1000) * (2.0 if j[2][5] != "hard" else 1.0)))  # long first
     os.makedirs(RAW, exist_ok=True)
@@ -379,8 +403,8 @@ def lam50(pts):
     return float("nan"), f"> {pts[-1][0]:.4g}"
 
 
-def analyse():
-    rows = [json.loads(l) for l in open(os.path.join(RAW, "h8_main.jsonl"))]
+def analyse(stage="main"):
+    rows = [json.loads(l) for l in open(os.path.join(RAW, f"h8_{stage}.jsonl"))]
     import collections
     g = collections.defaultdict(list)
     for r in rows:
@@ -388,7 +412,8 @@ def analyse():
     print(f"rows {len(rows)}; D_det(1/2K): K=500 {D_det(1/1000):.2f}, K=1000 {D_det(1/2000):.2f}, "
           f"K=4000 {D_det(1/8000):.2f}; 2 ln(2K): {2*math.log(1000):.2f}, {2*math.log(2000):.2f}, {2*math.log(8000):.2f}")
     out = {}
-    for arm, K in (("hard", 1000), ("Kscale", 500), ("Kscale", 4000)):
+    arms = (("Kscale", 16000),) if stage == "kscale16" else (("hard", 1000), ("Kscale", 500), ("Kscale", 4000))
+    for arm, K in arms:
         Rs = sorted({k[3] for k in g if k[0] == arm and k[1] == K})
         print(f"\n## {arm} K={K}")
         print("| R | ln R | D_obs | T | lam50 | bracket | phi | lam50*D/30 -> interval at D=30 | at D=20 | x 1/300 (in-model) |")
@@ -422,6 +447,15 @@ def analyse():
             sv = " / ".join(f"{sum(a)}/{len(a)}" for a in al.values() if a)
             print(f"  R={k[3]:.3f} {k[4]:>6} lam={k[2]:.4g}: surv {sv}; k/lam={m('k') / k[2]:.2f} D={m('D'):.2f} "
                   f"N/K={m('nfrac'):.2f} nopen={m('nopen'):.0f} I={m('I'):.2e} maxrel={m('maxrel'):.3f}")
+    if stage == "kscale16":
+        for R in (round(1 / 0.9, 6), 2.0):
+            for T in (10000, 20000):
+                d = out.get(("Kscale", 16000, R, T))
+                if d:
+                    print(f"kscale16 R={R:.3f} T={T}: D_obs={d['D']:.2f} (K4 [21.2, 24.7]) lam50*D={d['lam50'] * d['D']:.4f} "
+                          f"(K1 R=1.111 10k [0.072, 0.078]; K3 R=2 10k [0.59, 0.61]); D=30 interval "
+                          f"{30 / (d['lam50'] * d['D']):.0f} (K2: <=300 remove, >=480 keep)")
+        return
     for arm in ("softJ", "softWF"):
         print(f"\n## {arm}")
         print("| R | lam | label | fails | k/lam | nopen q1 -> q4 | D_obs | I | maxrel | q99 | verdict |")
@@ -464,6 +498,6 @@ if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "smoke"
     workers = int(sys.argv[2]) if len(sys.argv) > 2 else 3
     if which == "analyse":
-        analyse()
+        analyse(sys.argv[2] if len(sys.argv) > 2 else "main")
     else:
         run_stage(which, workers)
