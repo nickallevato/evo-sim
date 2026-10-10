@@ -60,6 +60,8 @@ Pre-registered predictions (copied from RESULTS B3): P1 P_fix = 1/M for every N�
 ## Check
 Script: `research/checks/b3_N_vs_Ne.py` (seed 13) · Result: both predictions confirmed. M = 400, 10⁶ replicates. Nₑ = 200/160/100/40/19: P_fix = 0.00250/0.00252/0.00257/0.00248/0.00257 vs 1/(2N) = 0.00250; Day 1/(2Nₑ) = 0.00249/0.00312/0.00498/0.01235/0.02676; t_fix/Nₑ ≈ 3.95–4.07. Review #2: P_fix = 1/M is a theorem in this class (frequency is a martingale), so the run verifies the code; the verdict is provisional until B3b. Review: `research/checks/REVIEW.md#2026-10-07--correctness-review-2-sonnet-on-b0b3`
 
+R4 B3g (2026-10-10): the N/N_e family built on this formula is withdrawn by Day (B3g); verdicts unchanged (internal holds as algebra, fidelity misread, external contradicted). The unrevised Zenodo copies (fetched 2026-10-07) still carry the values (versions ledger).
+
 ## Simulator variables implied
 - Nₑ/N via offspring variance
 - exchangeable vs non-exchangeable reproduction

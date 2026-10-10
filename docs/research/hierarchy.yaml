@@ -865,7 +865,7 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: unverifiable
     external: contested
   claim_file: docs/research/claims/B2-hard-limits-domain-of-k-mu.md
@@ -1040,11 +1040,11 @@ nodes:
     target: B3
   load_bearing: false
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
-    internal: pending
-    fidelity: unverifiable
-    external: contested
+    internal: holds
+    fidelity: misread
+    external: contradicted
   claim_file: docs/research/claims/B3d-k-32-3-mu-and-factor-25.md
 - id: B3e
   title: 'Day (2026-02-04): "corrected" McCarthy calculation gives 8.25 fixations, shortfall 2,424,242x'
@@ -2949,7 +2949,7 @@ nodes:
   sourcing: firsthand
   status: reviewed
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: misread
     external: contested
   claim_file: docs/research/claims/F3a-s-0-001-zeng-2021-misread.md
@@ -3765,6 +3765,23 @@ nodes:
     fidelity: pending
     external: untestable
   claim_file: docs/research/claims/ROOT-ep-hancock-endorsers-lack-popgen-background.md
+- id: ROOT-FM
+  title: 'Day, ''The Fourth Mechanism'': substitution density along the T2T ape genomes is overdispersed and clusters into ''mesas''; sigillation
+    (deliberate genomic modification) as a possible further mechanism; neither selection nor drift ''can still be considered viable'''
+  side: day
+  branch: ROOT
+  parent: ROOT
+  edges:
+  - type: supports
+    target: ROOT
+  load_bearing: true
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/ROOT-fm-day-mesas-sigillation.md
 - id: ROOT-H
   title: 'Ola Hossjer: agrees with Day''s conclusion after rescaling, but advocates ''uncommon descent'' and limits the endorsement to the main
     argument'

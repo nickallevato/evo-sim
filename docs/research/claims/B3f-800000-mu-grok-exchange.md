@@ -49,5 +49,7 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 ## Check
 Script: none. Arithmetic computed in python3 -I.
 
+R4 B3g (2026-10-10): the 800,000 reproduces as plain N/N_e (8e9 / 1e4) within 1% and is removed by the concession (each k/mu factor falls to 1); the Grok text was posted by Day (relay, rule U). Verdicts unchanged.
+
 ## Simulator variables implied
 - N/Nₑ ratio

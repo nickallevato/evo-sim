@@ -9,9 +9,9 @@ load_bearing: true  # the input that sets the 19,800 latency; halving or doublin
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: pending
-  fidelity: misread
-  external: contested
+  internal: holds   # R4 F3a: (2/s) ln(2N_e) = 19,807 at s = 0.001, N_e = 1e4; "faster than 4N_e" holds for N_e >= 4,559. At Day's human N_e = 3,300 (Z18525547) it would be slower, but that input is not used in this passage (two texts mixed): noted, not carried into the verdict
+  fidelity: misread   # re-confirmed from the raw text: Zeng's ~0.001 is a mean |s| for trait variants under negative selection (Z3); no measured beneficial mean. Fidelity concerns the label; whether the magnitude is a fair stand-in is the R1 question (undetermined)
+  external: contested   # R1 materiality undetermined: latency moves > 25% for s outside 0.0008-0.00133, but no sourced human beneficial mean s is in the repo (R4 F3a). The steady-state rate does not depend on latency (F1)
 ---
 
 ## Statement (verbatim)
@@ -48,7 +48,9 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 - Result that would change a verdict: A sourced human beneficial-s distribution.
 
 ## Check
-Script: none. Related: B0.4 in F3.
+Script: `research/checks/f3a_zeng_s_small_checks.py` (R4 F3a; pre-registered f9c8ed9). Related: B0.4 in F3.
+
+R4 F3a (`research/checks/results/R4-F3a.md`; pre-registered f9c8ed9, post hoc e9d2284 control-character strip; combined review #36, 0 MAJOR 6 MINOR; fix pass 30bc620): P1 failed as pre-registered on a PDF extraction artefact (a \x02 before the italic s in Zeng's sentence Z4; the quote is verbatim once stripped; the strip is global and Day's text matched exactly in both runs). P2-P6 hold: six Zeng sentences give a numeric s, none a beneficial mean (only two carry an explicit negative-selection flag in the sentence; the rest rely on the paper's framing; the scan has a `pos and not neg` blind spot, and the review's grep of eight positive/beneficial mentions found none with a measured value; a full read of Methods and Supplement remains open). The B0.4 asymptote is 8,532 and Day overstates it 2.32x. Critic side: the attribution is a misread and the sign matters (|s| under purifying selection); at Day's own N_e = 3,300 the formula is slower than 4N_e. Day side: the arithmetic is exact, 0.001 is a defensible order-of-magnitude scale for trait-affecting variants, and even the category means (0.0005-0.0010) keep the 'faster' sentence true, marginally at 0.0005. The misread does not touch MITTENS's throughput figure. Verdicts: internal pending -> holds; fidelity misread and external contested confirmed.
 
 ## Simulator variables implied
 - s (distribution)

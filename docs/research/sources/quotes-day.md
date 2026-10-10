@@ -1002,3 +1002,291 @@ All quotes machine-checked as substrings (whitespace and quote-mark normalised) 
 - tag (rule RH): dialectic
 - quote: "At 1,322 gen/fix (non-mutator): 191 achievable."
 - note: Day's own 191; the A2e flip is equivalent to "the human lineage fixed at most about 191 adaptive substitutions" (PH8).
+
+### Q140 Hard Limits abstract: current-size populations show only residual drainage
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.23-25 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B
+- tag (rule RH): dialectic
+- quote: "What substitution these abundant populations show is not produced at their current size; it is residual drainage from the smaller populations they descend from."
+- note: Abstract (R4-B2 cites it as l.22-24; the sentence starts on l.23 of the local text). The current-size confinement of B2 and the ancestral-fill concession used by R4-B2 (rule N).
+
+### Q141 Hard Limits: 10,000 is "the size the field's own methods assign"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.54-56 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B1c
+- tag (rule RH): dialectic
+- quote: "It is also, not by accident, the size the field’s own methods assign to the ancestral human population."
+- note: H9 in R4-B2. Mentions the field's 1e4; it is not HL's input (HL uses the variance N_e, Q142).
+
+### Q142 Hard Limits: the coalescent N_e is rejected as circular
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.110-112 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2e, B1c
+- tag (rule RH): dialectic
+- quote: "But this is circular reasoning: the coalescent Nₑ is estimated from gene-tree depth, and gene-tree depth is itself on the order of 4Nₑ generations, which is on the order of the species’ own duration."
+- note: Section "Which Effective Size" (l.101-118). Followed by "We therefore use the variance Nₑ, which is the drift rate, and which no one estimates by assuming the conclusion."
+
+### Q143 Hard Limits: no census is both viable and small enough to fix by drift (H10)
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.207-209 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B
+- tag (rule RH): dialectic
+- quote: "There is no census at which a large vertebrate is simultaneously large enough to be a viable species and small enough to fix a neutral allele by drift."
+- note: H10 in R4-B2. In tension with the drainage thesis (needs viable, small ancestors); stands under rule C as said of the species window (slips ledger).
+
+### Q144 Hard Limits: "The window is not narrow. It is empty."
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.209 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2
+- tag (rule RH): rhetoric
+- quote: "The window is not narrow. It is empty."
+- note: Figure of speech (rule RH); dialectical core is the current-size claim of Q143/Q140. Ledger RH-8.
+
+### Q145 Hard Limits: the lineage-window objection is valid, the ceiling triples
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.252-253 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2b
+- tag (rule RH): dialectic
+- quote: "The objection is valid, the correction triples the ceiling, and the conclusion is not changed."
+- note: Accepts the 6.5 My lineage window (Table 1); human ceiling 35,000 to about 114,000.
+
+### Q146 Hard Limits: steady-state flux is mu regardless of transit time
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.267-268 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2a, B1
+- tag (rule RH): dialectic
+- quote: "At steady state the total flux out is μ per site regardless of how long any individual site took to traverse."
+- note: The throughput concession; the dispute moves to the fill state.
+
+### Q147 Hard Limits: definition k(T) = mu F(T), F = P(tau <= T | fixation)
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.287 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2a
+- tag (rule RH): dialectic
+- quote: "k(T) = μ · F(T), F(T) = P(τ ≤ T | fixation)"
+- note: H2 in R4-B2. Settles the conditional-on-fixation reading.
+
+### Q148 Hard Limits: the prefactor is "an order-one detail" that "could be wrong by two orders of magnitude"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.303-305 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2a
+- tag (rule RH): dialectic
+- quote: "the constant out front is an order- one detail that could be wrong by two orders of magnitude in either direction without shifting the conclusion at all."
+- note: R4-B2 P3: the exact-to-asymptotic ratio is 17.8-47x at T = 2N_e to N_e and grows as a power of N_e/T; about 11 decimal orders at H5; R1-immaterial against 7.8e7 (slips ledger). Note: the extraction breaks the line after "order-"; the hyphen is the line-break hyphen of the PDF text.
+
+### Q149 Hard Limits: six of about 3,000 simulated fixations within a quarter of the mean
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.311-312 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2a
+- tag (rule RH): dialectic
+- quote: "Not one of the three thousand fixes in under nineteen percent of the mean."
+- note: H4 in R4-B2 (the demonstration: 391 generations against 4Nₑ of 400; six of ~750 expected under the linear guess). Reproduced by the exact chain.
+
+### Q150 Hard Limits: human exponent, exp(−π² · 1.8 × 10⁷)
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.330-331 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B2a
+- tag (rule RH): dialectic
+- quote: "so the probability that a neutral mutation arising now fixes within that era is of order exp(−π² · 1.8 × 10⁷)"
+- note: H5 in R4-B2 (7.8e7 decimal orders, reproduced).
+
+### Q151 Hard Limits: the small number of fixations observed are drainage (H7)
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.354-356 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B
+- tag (rule RH): dialectic
+- quote: "The small number of fixations we observe are just drainage: the completions of mutations that entered the pipe long ago, when the populations were small and their pipes short enough to fill."
+- note: H7 in R4-B2. An ancestral fill is conceded in the text.
+
+### Q152 Hard Limits: near X "the pipe substantially fills"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.362-363 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B
+- tag (rule RH): dialectic
+- quote: "When Nₑ is of the same order as T — when a lineage sits near its own X — the exponent is order one: the pipe substantially fills, and Kimura’s rate is approached."
+- note: R4-B2: at T = N_e the exact flux is 0.3%; fill is substantial near T = 4N_e (0.61). Concedes more than HL's own law gives (slips ledger).
+
+### Q153 Hard Limits: a census near 100,000 held static for 2 My, linear bound about 35% (H8)
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.364-366 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B1d
+- tag (rule RH): dialectic
+- quote: "a census near a hundred thousand held static for the full two million years, and even the generous linear bound T/4Nₑ stands at about thirty- five percent"
+- note: H8 in R4-B2. Pairs a lineage-ceiling census (about 114,000) with the species window (2 My): an internal window mismatch (slips ledger). The extraction breaks the line after "thirty-"; the hyphen is the line-break hyphen.
+
+### Q154 Hard Limits: constant size is "the generous case"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.375-376 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2
+- tag (rule RH): dialectic
+- quote: "This means the constant-size X is the generous case."
+- note: l.371-377. Basis of the charitable reading of "best case" in R4-B2 (rule C).
+
+### Q155 Hard Limits: "This hard limit ... does not kill neutral theory"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.427-428 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B, B2
+- tag (rule RH): dialectic
+- quote: "Drift does fix neutral alleles, although only in populations small enough and stable enough to permit"
+- note: l.425-428; a later softening of the 2026-02-04 blog "flat-out wrong" (versions ledger: revised in HL, rule SC).
+
+### Q156 Hard Limits: a rate "loaded, at least partially" in the Holocene
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.440-441 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B2, B
+- tag (rule RH): dialectic
+- quote: "rate that was loaded, at least partially, under population conditions that ended in the Holocene."
+- note: l.440. Partial ancestral load conceded.
+
+### Q157 Hard Limits peroration: both channels "shut inside the same lineage duration"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.453-456 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B
+- tag (rule RH): unresolved (dialectic vs rhetoric; both readings recorded in R4-B2 "Rule N")
+- quote: "And now the neutral channel closes on the same window for an entirely independent reason. The adaptive substitutions cannot be paid for; the neutral substitutions cannot be finished, because the pipe that would finish them never fills. Both the priced channel and the free channel shut inside the same lineage duration."
+- note: Candidate B Statement (R4-B2, review K2 / D3). Dialectic reading: non-sequitur against HL's own ancestral-fill text (Q140, Q151, Q152, Q156). Rhetoric reading: figurative closing, core = B2, B holds. Not decided at integration; B internal stays pending.
+
+### Q158 Hard Limits: "the pipe was nearly empty"
+- source: `Z22129121` (Zenodo pub. 2026-08-27, record modified 2026-08-27); URL: https://zenodo.org/records/22129121
+- locator: l.467 of the local text
+- local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B
+- tag (rule RH): unresolved (as Q157; same passage family)
+- quote: "the pipe was nearly empty."
+- note: l.464-467: "The pipe is exactly as long as Kimura said it was. It was always that long. The field simply never turned around to look at the near end and observe that, for every large animal it had ever dated, the pipe was nearly empty."
+
+### Q159 Education of a Population Geneticist: "Brian doesn't know the related literature"
+- source: blog; URL: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/; 2026-10-01
+- locator: ¶7 of the extracted text
+- local copy: `sources/raw/day/blog-2026-10-01-the-education-of-a-population-geneticist.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B3d
+- tag (rule RH): rhetoric
+- quote: "Brian doesn’t know the related literature and he hasn’t done the relevant math."
+- note: Wrapper sentence after the k = 32.3μ claim (B3-3 in R4-B3). Ledger RH-5. The preceding sentence (B3d-1, the 32.3 claim) is dialectic.
+
+### Q160 Education of a Population Geneticist: the ancestral pipeline "was full and 228,000 generations long"
+- source: blog; URL: https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/; 2026-10-01
+- locator: ¶36 of the extracted text
+- local copy: `sources/raw/day/blog-2026-10-01-the-education-of-a-population-geneticist.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B1d, B2
+- tag (rule RH): dialectic
+- quote: "At the time of the CHLCA split, we can assume that it was full and 228,000 generations long"
+- note: B1d. 228,000 = 4 x 57,143 (the census of Hard Limits H8). Day grants a full pipe at the split (R4-B2).
+
+### Q161 A Retraction and a Revision: Bergeron (2023), 55 vertebrate species
+- source: blog; URL: https://voxday.net/2026/05/07/a-retraction-and-a-revision/; 2026-05-07
+- locator: ¶3 of the extracted text
+- local copy: `sources/raw/day/blog-2026-05-07-a-retraction-and-a-revision.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
+- branch: B3d
+- tag (rule RH): dialectic
+- quote: "The new validation work which uses Bergeron et al. (2023) on pedigree mutation rates and fossil-calibrated substitution rates for 55 vertebrate species"
+- note: The source of the "median factor of 25 across 55 vertebrates" (R4-B3 C10: the figure is cited, not unsourced).
+
+### Q162 The Fourth Mechanism (FM1), ¶3
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶3 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (method statement)
+- quote: "I looked into that by utilizing Unauthorized's twin 96-core 512GB RAM beasts to analyze all six complete ape genomes provided by the T2T Primate Consortium."
+- note: Refresh 2026-10-10 (docs/research/sources/refresh-2026-10-10.md), id FM1.
+
+### Q163 The Fourth Mechanism (FM2), ¶3
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶3 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (hedged)
+- quote: "Analysis of the fine-grained distribution of substitutions across the human genome now suggests that relictation cannot be the whole story and may not be the only discrete mechanism at work."
+- note: Day revises his own earlier mechanism downward.
+
+### Q164 The Fourth Mechanism (FM3), ¶4
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶4 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (number; statistic undefined)
+- quote: "The substitution density across the genome is massively overdispersed, more than 80 times more variable than a uniform-rate process predicts."
+- note: Dispersion statistic and null not defined in the post.
+
+### Q165 The Fourth Mechanism (FM4), ¶4
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶4 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic
+- quote: "Dense regions cluster next to other dense regions, forming contiguous blocks of elevated substitution with sharp boundaries in a pattern we call mesas."
+- note: Defines "mesas"; no coordinates or window size released.
+
+### Q166 The Fourth Mechanism (FM5), ¶4
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶4 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (number absent)
+- quote: "A single mesa on a single chromosome shows an excess of human-lineage substitutions that exceeds both the MITTENS fixation ceiling and the maximum that natural selection can theoretically fix across the entire genome according to Haldane."
+- note: Units (SNV vs bp, event vs base) not stated; fidelity of the "Haldane" figure unverifiable.
+
+### Q167 The Fourth Mechanism (FM6), ¶5
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶5 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): rhetoric (rhetorical question)
+- quote: "is there too much structured divergence for multiple bottleneck events to credibly account for?"
+- note: Dialectical core: mesas may exceed what bottlenecks supply. Slips ledger RH-6.
+
+### Q168 The Fourth Mechanism (FM7), ¶6
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶6 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (hypothesis, explicitly open)
+- quote: "I propose the term sigillation for the hypothesis that some of these mesa regions represent deliberate genomic modification: discrete engineering events that wrote contiguous blocks of change into one dominate lineage."
+- note: Typo "dominate" quoted as is.
+
+### Q169 The Fourth Mechanism (FM8), ¶7
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶7 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): mixed: (a) dialectic; (b) and (c) dialectic claims with "beyond any dispute" as rhetorical intensifier
+- quote: "what the data establish beyond any dispute is that a) the mesa signature exists, b) that it is the dominant source of genomic divergence between humans and the great apes, and, c) no account of speciation is complete without it."
+- note: Slips ledger RH-7. (b) is stated without a fraction.
+
+### Q170 The Fourth Mechanism (FM9), ¶8
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶8 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (hedge; credit to Day)
+- quote: "Sigillation is no more proof of IGM than relictation is. But it may be initial evidence of IGM."
+- note: A concession and a hedge on the sigillation claim.
+
+### Q171 The Fourth Mechanism (FM10), ¶8
+- source: voxday.net, "The Fourth Mechanism"; URL: https://voxday.net/2026/10/10/the-fourth-mechanism/ ; published 2026-10-10 13:37:48 UTC (modified 15:46:51 UTC)
+- locator: ¶8 of the entry content
+- local copy: `sources/raw/refresh-2026-10-10/post/fm.html` (sha256 fc618dcc…65647; verified verbatim as a substring of the saved page text with curly apostrophes normalised, 2026-10-10)
+- branch: FM1 (mesas / sigillation), ROOT
+- tag (rule RH): dialectic (ROOT-level conclusion) plus an invitation to replicate (valid point for Day)
+- quote: "What we do know is that neither natural selection nor neutral diffusive drift can still be considered viable candidates. And there is no need to take my word for anything with regards to this, all of the data has been provided by the T2T Primate Consortium (Yoo et al. 2025) aligned with Progressive Cactus (Armstrong et al. 2020)."
+- note: Verified against the raw page 2026-10-10: the original reads "can still be considered viable candidates"; there is no bracketed "[not]". Read in context the sentence means "can no longer be considered"; the audit does not edit it.

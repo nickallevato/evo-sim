@@ -3549,3 +3549,86 @@
   fate: alive
   fate_date:
   fate_locator: "Review combined (#22); U-scaling rerun or SLiM queued"
+
+- id: L-audit-b3-family-2026
+  label: "Audit B3 family: 32.3 reconstructs only from base-pair totals; internal holds on Day's basis, external contradicted per-site; residual 0.87-1.65 after the ancestral term"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [B3d, B3]
+  locator: "research/checks/results/R4-B3.md"
+  quote: "No harvested text gives its derivation, but every input of the reconstruction is Day's own"
+  parents:
+    - {id: L-edu-32.3-2026, relation: responds-to}
+    - {id: L-factor25-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #40-#42; fix pass fd9d2de; median-25 recomputation from Bergeron 2023 proposed (QUEUE)"
+
+- id: L-audit-b3g-2026
+  label: "Audit B3g: the concession removes every N/N_e value in the family and B4's 200-580 kya; 0.743 and 32.3 are not removed"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [B3g, B3a, B3f, B4]
+  locator: "research/checks/results/R4-B3g.md"
+  quote: "an author correcting his own load-bearing formula in public within a day of the critique"
+  parents:
+    - {id: L-day-concession-2026-08-27, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #35 (combined); fix pass a8f10ab"
+
+- id: L-audit-b2-hl-2026
+  label: "Audit B2: Hard Limits holds on its own text at current size; HL concedes flux, drainage and partial ancestral load; delivered fraction on HL's 6.5 My window 0.26"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [B2, B]
+  locator: "research/checks/results/R4-B2.md"
+  quote: "The current-size reading of B2 is Day's own text (abstract l.22-24), not audit charity."
+  parents:
+    - {id: L-hard-limits-2026, relation: responds-to}
+    - {id: L-audit-b2b-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #37-#39; fix pass 45edb6f; B internal pending on the RH tag of Q157"
+
+- id: L-audit-f3a-2026
+  label: "Audit F3a: Zeng's 0.001 is a mean |s| under negative selection, not a beneficial mean; Day's latency arithmetic is exact"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [F3a]
+  locator: "research/checks/results/R4-F3a.md"
+  quote: "Zeng's ~0.001 is a mean |s| for trait variants under negative selection."
+  parents:
+    - {id: L-zeng-2021, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #36 (combined); fix pass 30bc620; R1 materiality undetermined"
+
+- id: L-day-fourth-mechanism-2026
+  label: "Day, The Fourth Mechanism: mesas in the T2T ape genomes; relictation not the whole story; sigillation as a possible fourth mechanism"
+  side: day
+  kind: argument
+  date: 2026-10-10
+  claim_ids: [ROOT-FM]
+  locator: "https://voxday.net/2026/10/10/the-fourth-mechanism/ ¶3 (Q163, FM2)"
+  quote: "relictation cannot be the whole story and may not be the only discrete mechanism at work."
+  parents:
+    - {id: L-relictation-2026, relation: revises}
+    - {id: L-yoo-2025, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "No code, coordinates or statistic released; replication queued (pre-register first)"

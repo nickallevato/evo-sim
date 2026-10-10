@@ -9,8 +9,8 @@ load_bearing: true  # with B1 it is the other route by which the neutral escape 
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: pending
-  fidelity: unverifiable
+  internal: holds   # R4 B2: the HL abstract confines the claim to current size (l.23-25, Q140: "not produced at their current size; it is residual drainage from the smaller populations they descend from"), so "The domain of k = mu is confined to demographic conditions that no non-endangered species is capable of meeting" holds on HL's own text; rule C not needed. Definition k(T) = mu F(T), F = P(tau <= T | fixation) (Q147); abstract and l.329-331 unconditional wording is rule C, 1/(2N) gap R1-immaterial
+  fidelity: unverifiable   # R4 B2: unchanged (uncited inputs, rule F).
   external: contested
 ---
 
@@ -52,6 +52,8 @@ Written **before** the check runs.
 
 ## Check
 See child claims. Script: `research/checks/b2a_hard_limits_chain.py`, `research/checks/b2a_scaling.py` · Result: see B2a. Review: `research/checks/REVIEW.md#2026-10-07--review-3-sonnet-correctness--two-sided-steelman-of-b1b-b2a-f1`
+
+R4 B2 (`research/checks/results/R4-B2.md`; pre-registered 3d07343; three load-bearing reviews #37-#39 at f55e1ca; fix pass 45edb6f; post hoc `b2_posthoc.py`): P1 holds (definition found, Reading 1); P2 holds (the exact 2N = 200 chain reproduces Day's WF demonstration: conditional mean 396.5 vs 391, 1.4 SE; 9.3 of 3,000 expected by t = 100, Day's six inside the Poisson range); P3 holds (the asymptotic law understates the exact F by a power-law prefactor, 17.8-47x at T = 2N_e to N_e, not an order-one constant; Day's 'two orders' is slip S-B2-1, about 11 decimal orders at H5, R1-immaterial); P4 holds (7.8e7 decimal orders); P5 holds. P6 failed on two sub-parts (exact F 0.029 vs the 0.05-0.30 range, ratio 33 vs 50): Day's linear bound was 'generous', as he said (0.029 vs 0.35). P7's numeric part failed (F = 0.95 at 1e4, 2 My). Flux and delivered fraction (1/T)int F: H8 census 1e5 over 2 My 0.026 / 0.003; over HL's own accepted 6.5 My window 0.70 / 0.26; field N_e 1e4 over 2 My 0.95 / 0.51. Day side: definition, exponent, X algebra and the 600,000-run demonstration all hold; HL argues its variance N_e (l.101-118, Q142), so the field's 1e4 is not HL's input. Critic side: HL concedes the steady-state flux (Q146), the drainage (Q140), a partial ancestral load (Q156) and 'pipe substantially fills' (Q152); the critics' latency-not-throughput reply (B2a) was right on the mechanics; on HL's own 6.5 My window the H8 input fills to 0.70, and Day's later reply (B1d, Q160) grants a full pipe at the split. Slips S-B2-1..4 and RH-8 in the ledger. Verdict change: internal pending -> holds.
 
 ## Simulator variables implied
 - Vₖ

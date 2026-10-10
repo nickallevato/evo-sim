@@ -339,5 +339,29 @@ File: `results/REVIEW-R4-A2e-steelman-day.md`. 0 BLOCKER, 3 MAJOR, 4 MINOR, 2 NO
 ## 2026-10-10 - Review #34 (steelman-critic, load-bearing tier): A2e (LTEE-to-human transfer sensitivity)
 File: `results/REVIEW-R4-A2e-steelman-critic.md`. 0 BLOCKER, 3 MAJOR, 5 MINOR, 2 NOTE. C1: on Day's own total-throughput basis the per-generation comparison is F = 50,765 (60,941 at 1,587), reported only per year before; added to the verdict, dependent on A5c / B5g. C2: per-year "support" credited Day with a claim he does not make; dropped. C3: the beneficial-fraction flag is two-directional and convertible to a count (about 191 adaptive substitutions per lineage); literature test deferred to gaps RG-03. Calling A2e `contradicted` now: not accepted (waits on A5c).
 
+## 2026-10-10 - Review #35 (combined, low-stakes tier): B3g (Day's 2026-08-27 concession)
+File: `results/REVIEW-R4-B3g-combined.md` (at 2c48e3d). Write-up `results/R4-B3g.md`. 0 BLOCKER, 0 MAJOR, 6 MINOR, 5 NOTE. Wording fixes: the docstring's "15x" low end was wrong (chimp-low gives 9.1x); the census/N_e claim itself is untouched, only its use as a k/mu factor is removed; P4 stays a classification; "unrevised" dated to the local copies (fetched 2026-10-07); the B4 reversal is the audit's inference from eq. (7). All accepted (fix pass a8f10ab). No verdict change (B3g holds / accurate / supported).
+
+## 2026-10-10 - Review #36 (combined, low-stakes tier): F3a (Zeng 2021 s = 0.001)
+File: `results/REVIEW-R4-F3a-combined.md` (at 2c48e3d). Write-up `results/R4-F3a.md`. 0 BLOCKER, 0 MAJOR, 6 MINOR, 4 NOTE. The post hoc control-character strip is global and disclosed; the P2 scan has a `pos and not neg` blind spot (the review's grep of eight positive/beneficial mentions found none with a measured value); label versus number kept apart; the N_e = 3,300 failure mixes two Day texts and is not carried into the verdict; sign first in the critic bullet. All accepted (fix pass 30bc620). Verdicts: internal pending -> holds, fidelity misread, external contested.
+
+## 2026-10-10 - Review #37 (correctness, load-bearing tier): B2 / B (Hard Limits internal check, rule N)
+File: `results/REVIEW-R4-B2-correctness.md` (at f55e1ca). Write-up `results/R4-B2.md`. 0 BLOCKER, 3 MAJOR, 7 MINOR, 1 NOTE (counts from the file's headers). MAJOR 1: the provisional non-sequitur for B scored a paraphrase, not a verbatim Statement (rule S1). MAJOR 2: the "fill" numbers are the end-of-window flux F(T), not the delivered count (1/T)int F that "rescue the shortfall" needs. MAJOR 3: HL's own accepted 6.5 My lineage window was missing and with it the "H7 vs H8" conflict goes away. Fix pass 45edb6f; post hoc `b2_posthoc.py`.
+
+## 2026-10-10 - Review #38 (steelman-day, load-bearing tier): B2 / B
+File: `results/REVIEW-R4-B2-steelman-day.md` (at f55e1ca). 0 BLOCKER, 2 MAJOR, 5 MINOR. D1: HL's verbatim B sentence holds and the Feb quote is not answerable to HL (N2b); D2: "the N_e HL itself cites (1e4)" misattributes an endorsement, since HL rejects the coalescent N_e by name (l.101-118). Also the charitable reading of "best case" (static, full span). All accepted.
+
+## 2026-10-10 - Review #39 (steelman-critic, load-bearing tier): B2 / B
+File: `results/REVIEW-R4-B2-steelman-critic.md` (at f55e1ca). 0 BLOCKER, 2 MAJOR, 5 MINOR. F1: "best-case fill 3%" rests on two premises Day abandons (the 2 My window, the empty start; B1d grants a full pipe). F2: rule N should be retargeted to a verbatim HL sentence (l.453-457). Accepted; the RH tag of that sentence is left open at integration with both readings recorded, so B internal stays `pending`.
+
+## 2026-10-10 - Review #40 (correctness, load-bearing tier): B3 family (32.3 reconstruction)
+File: `results/REVIEW-R4-B3-correctness.md` (at 33e190a). Write-up `results/R4-B3.md`. 0 BLOCKER, 4 MAJOR, 8 MINOR, 1 NOTE (counts from the file's headers). MAJOR 1: "arithmetic-error (conditional)" applied R1 on the scorer's basis, not the author's. MAJOR 2: the ancestral residual did not use the mandated N_anc (1.32e5 / 1.98e5). MAJOR 3: the fixed-events row double-corrected for polymorphism. MAJOR 10: P6's "no source" is wrong, since Day cites Bergeron 2023 for the 55 species in the same post. Fix pass fd9d2de; post hoc `b3_posthoc.py`.
+
+## 2026-10-10 - Review #41 (steelman-day, load-bearing tier): B3 family
+File: `results/REVIEW-R4-B3-steelman-day.md` (at 33e190a). 0 BLOCKER, 2 MAJOR, 4 MINOR, 1 NOTE. D1: every input is Day's own, so 32.3 is scored on his basis (internal holds; the unit dispute is external); D2: the "median 25" has a cited source. Bergeron-mu column added throughout. All accepted.
+
+## 2026-10-10 - Review #42 (steelman-critic, load-bearing tier): B3 family
+File: `results/REVIEW-R4-B3-steelman-critic.md` (at 33e190a). 0 BLOCKER, 2 MAJOR, 5 MINOR, 1 NOTE. K1: a like-for-like base-pair row (205 M over 9.4 M + 357-517 M = 0.39-0.56) was missing. K2: Langergraber 2012 (7-8 My, verified in parameters.yaml) moves the residual to 0.97-1.04. Rhetoric: the wrapper "Brian doesn't know the related literature..." gets ledger entry RH-5. All accepted.
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).

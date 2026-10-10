@@ -9,9 +9,9 @@ load_bearing: true  # with B1/B2, one route to closing the neutral escape; but i
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: pending
+  internal: pending   # R4 B3: components differ (N/N_e leg withdrawn; 0.743 non-sequitur; 32.3 holds), no single value; stays pending.
   fidelity: partial
-  external: "contradicted"   # for the listed values (N/Ne, 0.743, 32.3, 800,000); the qualitative B&L effect is real but small (B3b)
+  external: "contradicted"   # R4 B3 / B3g (2026-10-10): N/N_e leg withdrawn by its author (B3g, error-level by R1, no longer in force); 0.743 as scored in B3c; 32.3 external `contradicted`, internal `holds` (B3d); "median 25" pending. Verdict unchanged. Earlier: for the listed values (N/Ne, 0.743, 32.3, 800,000); the qualitative B&L effect is real but small (B3b)
 ---
 
 ## Statement (verbatim)
@@ -66,6 +66,8 @@ Written **before** the check runs.
 Script: `research/checks/b3_N_vs_Ne.py` (seed 13) · see B3a. Review: `research/checks/REVIEW.md#2026-10-07--correctness-review-2-sonnet-on-b0b3`
 
 R4 B3b/B3c (research/checks/results/R4-B3b-C1.md): k != mu under overlapping generations plus fluctuating N is real (B&L eq. 3 reproduced, all |z| < 1.6), but at human-like parameters it is -2% to +38% (sign upward for realistic growth). 0.743 is a window artefact whose mechanism (fixation probability 1/(2N_t)) is falsified by simulation; 32.3 has no derivation and cannot come from B&L. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+
+R4 B3 and R4 B3g (2026-10-10): the N/N_e leg (19-46, 15.2-30.3, 9.1-30.3, 800,000) is withdrawn by Day's own concession (B3g) and each k/mu factor falls to 1 (a 9.1x to 800,000x change). 0.743 stays window-dependent (B3c, R4 B3b-C1). 32.3 is Day's arithmetic on a base-pair numerator (B3d: internal holds, external contradicted per-site; residual 0.87-1.65 after the ancestral term). In force: 0.743 and 32.3 point in opposite directions but measure different windows (rule C, not scored). Day-side credit: public self-correction within a day. Critic-side credit: the unrevised Zenodo copies (fetched 2026-10-07) still carry the withdrawn values.
 
 ## Simulator variables implied
 - mutation-supply N (census | reproducing | user)

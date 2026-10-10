@@ -89,18 +89,18 @@ Following Pollock's classification:
 
 | Attacker | Undermining | Undercutting | Rebutting | Upheld | Partly | Not upheld | Untested |
 |---|---|---|---|---|---|---|---|
-| Day (65) | 30 | 19 | 16 | 7 | 34 | 14 | 10 |
+| Day (66) | 30 | 20 | 16 | 7 | 34 | 14 | 11 |
 | Critics (94) | 46 | 23 | 25 | 29 | 46 | 0 | 19 |
 | Allies (3) | 0 | 1 | 2 | 1 | 1 | 0 | 1 |
 | Literature (31; includes the audit-raised nodes B1c, B4a and C1, which the lint files under `literature`) | 19 | 9 | 3 | 6 | 21 | 1 | 3 |
-| This audit (142 at X1 / GAP-07c; 152 after 2026-10-09 C1e, G2c, F1b, B5b, rows not recounted) | 62 | 72 | 8 | 75 | 67 | 0 | 0 |
+| This audit (192; recounted 2026-10-10 from `defeaters.yaml`) | 69 | 115 | 8 | 108 | 78 | 0 | 6 |
 
 **What the counts do and don't mean**
-- More attacks land on Day than on the critics. His is the positive argument with most of the load-bearing numbers: 115 of 217 claims.
-- 11 of Day's 65 are Day against Day: self-revisions and statements that don't agree with each other. (Before the 2026-10-08 edge fixes this read 19 of 67. Eight of those were mis-typed or mis-aimed edges.)
+- More attacks land on Day than on the critics. His is the positive argument with most of the load-bearing numbers: 116 of 218 claims.
+- 11 of Day's 66 are Day against Day: self-revisions and statements that don't agree with each other. (Before the 2026-10-08 edge fixes this read 19 of 67. Eight of those were mis-typed or mis-aimed edges.)
 - Most of Day's 14 not-upheld objections rest on premises he later withdrew himself, such as N/Nₑ and the empty pipeline.
 - The critics' count rose from 74 to 94 when the mapping round (2026-10-09) attached the remaining critic and ally arguments, mostly from Hancock's video; 19 of their attacks are still `untested`.
-- The audit's 173 attacks fall on Day (75), the critics (30), its own earlier checks (60: reviews, plus GAP-07b retiring GAP-07's upper bound, C1c refuting C1b's call-depth explanation, C1d undercutting C1c's error-term reading, and GAP-07c replacing GAP-07b's raw ratio for fixed events), allies (6), literature (1) and one registry-only id (the Darwin/ZDF42 hitchhiking line, 1). (Recounted 2026-10-10 from `defeaters.yaml` by attacker prefix `chk:` / `rev:` and the side of the target claim, after the D15, H8/H5, A2e and XT integration: d357-d373 added 17 audit rows, 7 on claim nodes (D15, H, H5, H8, A2e, B1, B3) and 10 review rows on the audit's own checks. Earlier checks E5/E6, F1a and B2b added d353-d356.)
+- The audit's 192 attacks fall on Day (86), the critics (30), its own earlier checks (68: reviews, plus GAP-07b retiring GAP-07's upper bound, C1c refuting C1b's call-depth explanation, C1d undercutting C1c's error-term reading, and GAP-07c replacing GAP-07b's raw ratio for fixed events), allies (6), literature (1) and one registry-only id (the Darwin/ZDF42 hitchhiking line, 1). (Recounted 2026-10-10 from `defeaters.yaml` by attacker prefix `chk:` / `rev:` and the side of the target claim, after the D15, H8/H5, A2e and XT integration (a further 19 audit rows, d374-d392, were added on 2026-10-10 for B3, B2/B, B3g, F3a and ROOT-FM: 11 on Day's claims, 8 review rows on the audit's own checks): d357-d373 added 17 audit rows, 7 on claim nodes (D15, H, H5, H8, A2e, B1, B3) and 10 review rows on the audit's own checks. Earlier checks E5/E6, F1a and B2b added d353-d356.)
 - **One verdict rule for both sides.** Since 2026-10-09 the internal and fidelity verdicts that feed `audit_status` follow [one rule](../../research/checks/results/R4-X1-verdict-rule.md), applied to Day, critics and allies alike and checked by a blind audit. Under it Day's error rate is higher in every denominator, but the gap is not robust (13/81 vs 1/20 on the primary denominator, p = 0.29; see the [HANDOFF](../HANDOFF.md)).
 
 The [objection graph](defeaters.md) draws every attack, branch by branch, and computes which arguments survive their objections (grounded semantics, Dung 1995), read three ways. Read its caveats: the computation is all-or-nothing, and it doesn't model support between claims.

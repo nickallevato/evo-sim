@@ -55,6 +55,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 ## Check
 Script: none (arithmetic audit above, python3 -I). Direct simulation of two-lineage divergence: B4a (proposed).
 
+R4 B3g (2026-10-10): the 200-580 kya corners reproduce (198 and 576 kya). With the N/N_e ratios set to 1 (the concession) eq. (7) returns t_clock = 6-7 My (a 12-30x change): the audit's inference from eq. (7), not stated by Day in the quotes checked. Verdicts unchanged here; the dependent claims stay under B4a.
+
 ## Simulator variables implied
 - t_clock
 - census N per lineage

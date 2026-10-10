@@ -49,6 +49,7 @@ mutation:
   mu_per_site_per_gen:
     pedigree_human: {value: 1.2e-8, range: [1.1e-8, 1.5e-8], source: Kong2012, verified: false}
     keightley_2012: {value: 1.1e-8, note: "abstract only; ~70 new mutations per genome", source: Keightley2012, verified: partial}
+    bergeron_2023_mammal_mean: {value: 7.97e-9, ci95_of_mean: [7.04e-9, 8.90e-9], note: "mammalian mean of per-generation pedigree rates (Results, first paragraph on rates; quote: 'than in mammals (average of all species 7.97 × 10−9, 95% CI of the mean = 7.04 × 10−9 to 8.90 × 10−9)'); the human-specific value is in SI Table 8, not retrieved. Day's k = 32.3 mu input (R4-B3); about 1.5x below the human pedigree rate 1.2e-8. Verified against the local raw text of the article (sources/raw), 2026-10-10", source: Bergeron2023, verified: true}
   new_mutations_per_genome:
     common_citation: {value: [60, 100], source: "Kong2012; critics", verified: false}
 population:

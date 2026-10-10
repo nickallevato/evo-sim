@@ -12,7 +12,7 @@
 
 ---
 
-## Full standard forms: ROOT and the other 30 load-bearing nodes (31 forms)
+## Full standard forms: ROOT and the other 31 load-bearing nodes (32 forms)
 
 ### ROOT — No evolutionary mechanism can produce the human–chimp divergence in the available time (Day)
 Steelman source: [ROOT](../claims/ROOT-no-mechanism-suffices.md) (Best They've Got I, 2026-10-05; MITTENS 3.0, 2026-09-28; Z18452504, 2026-02-02).
@@ -104,7 +104,7 @@ Steelman source: [B2](../claims/B2-hard-limits-domain-of-k-mu.md), [B2a](../clai
 - P5. [implicit] The pipeline cannot fill within the window, so steady-state throughput is never reached ([B2d](../claims/B2d-parallel-fixation-second-objection.md)).
 - Inference: deductive (asymptotic analysis) plus arithmetic.
 - C. Above X = (Vₖ + 2)G/16 drift cannot complete fixations; the domain of k = μ excludes every non-endangered large vertebrate.
-- Audit: pending / unverifiable / contested ([B2](../claims/B2-hard-limits-domain-of-k-mu.md)).
+- Audit: holds / unverifiable / contested ([B2](../claims/B2-hard-limits-domain-of-k-mu.md)); R4 B2 (2026-10-10).
 
 ### B2b — Census ceiling X = (Vₖ + 2)G/16 (Day)
 Steelman source: [B2b](../claims/B2b-ceiling-x-vk-g-over-16.md).
@@ -306,6 +306,17 @@ Steelman source: [H8](../claims/H8-kimura-calculator-term3.md) (Z19984826).
 - C. k_sel ≈ 8.3 × 10⁻¹² per site per generation for humans, which caps k (scope later narrowed to adaptive substitutions, [H1](../claims/H1-term3-retraction.md)).
 - Audit: holds / pending / contested ([H8](../claims/H8-kimura-calculator-term3.md)).
 
+### ROOT-FM — Mesas and sigillation: neither selection nor drift "can still be considered viable" (Day, 2026-10-10)
+Steelman source: [ROOT-FM](../claims/ROOT-fm-day-mesas-sigillation.md) (voxday.net "The Fourth Mechanism", 2026-10-10; Q162-Q171).
+- P1. Substitution density across the genome is massively overdispersed, "more than 80 times more variable than a uniform-rate process predicts" ([ROOT-FM](../claims/ROOT-fm-day-mesas-sigillation.md), Q164).
+- P2. Dense regions cluster into contiguous blocks with sharp boundaries ("mesas") that carry a human-lineage excess ([ROOT-FM](../claims/ROOT-fm-day-mesas-sigillation.md), Q165).
+- P3. A single mesa's human-lineage excess exceeds both the MITTENS fixation ceiling and the maximum selection can fix genome-wide "according to Haldane" ([ROOT-FM](../claims/ROOT-fm-day-mesas-sigillation.md), Q166).
+- P4. [implicit] Neutral processes with realistic mutation-rate variation, incomplete lineage sorting and alignment error cannot produce P1-P2 on the human branch.
+- P5. [implicit] The comparison of one mesa with a genome-wide Haldane maximum is like-for-like (units and selected-versus-neutral status settled).
+- Inference: abductive, with an elimination step (rule out selection and drift, leave deliberate modification as a hypothesis that "may be initial evidence").
+- C. Neither natural selection nor neutral diffusive drift can still be considered viable candidates; sigillation (IGM) is a candidate fourth mechanism (hedged: "no more proof of IGM than relictation is").
+- Audit: pending / pending / pending ([ROOT-FM](../claims/ROOT-fm-day-mesas-sigillation.md)); no code, coordinates, window size or statistic released.
+
 ---
 
 ## Mini-forms: attacked claims that are not load-bearing
@@ -422,3 +433,4 @@ These are reduced to the premise(s) a defeater actually targets. Same convention
 | H2a | P1: Haldane's cost applies only to hard (viability) selection; P2: [asserted] the cost matters in very small populations; P3: the allele need not start rare (it could have been neutral at intermediate frequency) ([H2a](../claims/H2a-hancock-cost-of-selection-hard-selection-only.md)) | the cost of selection does not bind as Day applies it [critic] | deductive |
 | B5j | P1: Day made "a factor of two error" in the 4Nₑ fixation-time line (asserted, t=02:16:39); P2: drift dominates at the molecular level and selection at the phenotypic level ([B5j](../claims/B5j-hancock-neutral-theory-is-not-a-retreat.md)) | neutral theory is not a retreat from Darwin [critic] | deductive |
 | A5h | P1: a 100-fold mutator gives about 38,400 new mutations per individual per generation (3.2e9 bp × 1.2e-8 × 100); P2: 10% deleterious, multiplicative fitness, s = 0.001 or 0.01 ([A5h](../claims/A5h-supermutator-38400-slip.md)) | carriers are functionally dead; the supermutator escape is closed for sexual organisms [day] | arithmetic |
+| F3a | P1: Zeng et al. 2021's mean s of about 0.001 is an empirical mean for beneficial mutations; P2: the latency (2/s) ln(2Nₑ) is then 19,807 at Nₑ = 1e4, faster than 4Nₑ ([F3a](../claims/F3a-s-0-001-zeng-2021-misread.md)) | s = 0.001 "from Zeng et al. 2021" gives a latency faster than the neutral time [day] | arithmetic |

@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: holds
   fidelity: accurate
-  external: supported
+  external: supported   # R4 B3g (2026-10-10, combined review at 2c48e3d, fix pass a8f10ab): verdicts unchanged.
 ---
 
 ## Statement (verbatim)
@@ -72,6 +72,8 @@ No simulation check applies to this claim. The arithmetic audit was computed in 
 
 ## Check
 Script: none. Related: B3a check.
+
+R4 B3g (`research/checks/results/R4-B3g.md`; pre-registered ef6e8aa; combined review #35, 0 MAJOR 6 MINOR; fix pass a8f10ab): all 11 quotes found; 2N mu x 1/(2N) = mu for every N; the withdrawn N/N_e family reproduces (30.3, 15.15, 9.09, 30.3, 800,000) and is removed as k/mu factors (9.1x to 800,000x); B4's 200-580 kya returns to 6-7 My (the audit's inference from eq. (7), not Day's statement). Not removed: 0.743 (B3c), 32.3 (B3d, scored in R4 B3), k = mu at steady state, B1/B2. 'Not removed' is not 'survives'. Day's census-supply arithmetic reproduces (7.44e5, 3.38e5). Zenodo copies unrevised as of the local fetch (2026-10-07). Credit: public self-correction. Verdicts unchanged: holds / accurate / supported.
 
 ## Simulator variables implied
 - —

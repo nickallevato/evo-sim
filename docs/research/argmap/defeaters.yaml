@@ -4783,3 +4783,283 @@
   counter: []
   note: 'applied in R4-XT.md; U-scaling rerun or SLiM is the open follow-up; no verdict change'
   hierarchy_edge: false
+
+- id: d374
+  attacker: chk:B3-family
+  target: B3d
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B3.md Results, What this means for B3
+  audit_status: upheld
+  audit_basis: '32.3 reconstructs only from base-pair totals (8 of 480 grid cells, all using 205e6 or 410e6); with measured events 3.38 (Bergeron mu) / 2.25 (human mu); like-for-like bp 0.39-0.56; after the ancestral term at the mandated N_anc 0.87-1.10 (human mu), 1.31-1.65 (Bergeron mu)'
+  counter: [d381, d382, d383]
+  note: 'Day-side: the arithmetic is Day''s own on Day''s own inputs and holds (32.93, 1.95% off; internal holds); a residual of 1.3-1.65 remains at his mammalian mu, in the direction he claims; the attack is external (unit, N1). Critic-side: 205 M is SDR base pairs plus SNVs over a point-mutation rate; Yoo has no 187 or 205 Mb figure (A3x1, fidelity misread); the twofold is the calibration gap Keightley and keruru (KR-05) place in the clock.'
+  hierarchy_edge: false
+
+- id: d375
+  attacker: chk:B3-family
+  target: B3
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B3.md Results, Review resolution
+  audit_status: upheld
+  audit_basis: 'N/N_e leg withdrawn by its author (B3g); 0.743 window artefact (B3c); 32.3 internal holds, external contradicted per-site; "median 25" pending (cited: Bergeron 2023)'
+  counter: [d381, d382, d383]
+  note: 'Day-side: public self-correction; 32.3 is not a slip; Bergeron source for the 55 species is cited in the same post (P6 withdrawn). Critic-side: the in-force values 0.743 and 32.3 point in opposite directions and measure different windows (rule C, not scored).'
+  hierarchy_edge: false
+
+- id: d376
+  attacker: chk:B2
+  target: B
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B2.md Rule N, Review resolution K2/D1
+  audit_status: untested
+  audit_basis: 'B''s scored Statement (HL abstract sentence) holds as B2; the candidate sentence (Q157, l.453-457) needs an RH tag: dialectic -> non-sequitur against HL''s own ancestral-fill text; rhetoric -> holds'
+  counter: [d384, d385, d386]
+  note: 'Day-side: figurative closing, core = B2 (holds); the Feb blog line predates HL and is not answerable to it (N2b). Critic-side: if dialectic, ''the pipe never fills'' contradicts HL abstract l.23-25, l.354-356, l.362-363, l.440. Not decided at integration; B internal stays pending.'
+  hierarchy_edge: false
+
+- id: d377
+  attacker: chk:B2
+  target: B2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B2.md Rule N, Flux and delivered fraction
+  audit_status: partly
+  audit_basis: 'HL''s definition, exponent (7.8e7 decimal orders), X algebra and WF demonstration hold; the asymptotic prefactor is a power law in N_e/T (17.8-47x), not order one (S-B2-1, R1-immaterial); HL concedes the steady-state flux, drainage and a partial ancestral load; on HL''s own 6.5 My window the H8 input fills to 0.70 (delivered 0.26)'
+  counter: [d384, d385, d386]
+  note: 'Day-side: B2 holds on HL''s abstract (current size); his linear bound was generous (0.029 vs 0.35). Critic-side: the dispute moves to the ancestral fill state (B1c, B4a); the critics'' latency-not-throughput reply (B2a) was right on the mechanics.'
+  hierarchy_edge: false
+
+- id: d378
+  attacker: chk:B3g
+  target: B3a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B3g.md Results, What the concession removes
+  audit_status: upheld
+  audit_basis: 'the withdrawn k = mu N/N_e family reproduces as plain N/N_e (30.3, 15.15, 9.09, 30.3, 800,000 within 1%) and each k/mu factor falls to 1 under the concession (9.1x to 800,000x); the census/N_e claim itself is untouched'
+  counter: [d387]
+  note: 'Day-side credit: an author correcting his own load-bearing formula in public within a day of the critique; the concession is narrower than ''k != mu is withdrawn''. Critic-side: the unrevised Zenodo copies (fetched 2026-10-07) still carry the values; Q105 restates 1/(2N_e) nineteen days later.'
+  hierarchy_edge: false
+
+- id: d379
+  attacker: chk:B3g
+  target: B4
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B3g.md Results P3, Review resolution MINOR-5
+  audit_status: partly
+  audit_basis: 'B4''s 200-580 kya corners reproduce (198 and 576 kya); with the ratios set to 1, eq. (7) returns t_clock = 6-7 My (12-30x); this is the audit''s inference from eq. (7), not stated by Day'
+  counter: [d387]
+  note: 'Day-side: 0.743 and 32.3 are untouched by the concession. Critic-side: the recalibration loses its basis; keruru''s pedigree-versus-fossil point (B4g) stands on its own.'
+  hierarchy_edge: false
+
+- id: d380
+  attacker: chk:F3a
+  target: F3a
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-F3a.md Results P2, Proposed verdicts
+  audit_status: upheld
+  audit_basis: 'Zeng''s ~0.001 is a mean |s| for trait variants under negative selection (Z3); six numeric-s sentences, none a measured beneficial mean (two carry an explicit negative flag in the sentence); fidelity misread'
+  counter: [d388]
+  note: 'Day-side: the arithmetic is exact (19,807), 0.001 is a defensible order-of-magnitude scale for trait-affecting variants, and the category means (0.0005-0.0010) keep the ''faster'' sentence true (marginally at 0.0005); R1 materiality undetermined (no sourced beneficial s). Critic-side: the sign matters (|s| under purifying selection); at Day''s own N_e = 3,300 the formula is slower than 4N_e; the latency does not cap the rate (F1).'
+  hierarchy_edge: false
+
+- id: d381
+  attacker: rev:R4-B3-correctness
+  target: chk:B3-family
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B3-correctness.md MAJOR 1-3, 10
+  audit_status: upheld
+  audit_basis: 'proposed label arithmetic-error (conditional) applied R1 on the scorer''s basis; the residual did not use the mandated N_anc; the fixed-events row double-corrected for polymorphism; P6 "no source" wrong (Bergeron cited)'
+  counter: []
+  note: 'applied (internal holds; headline at N_anc 1.32e5 / 1.98e5; fixed row dropped; P6 withdrawn)'
+  hierarchy_edge: false
+
+- id: d382
+  attacker: rev:R4-B3-steelman-day
+  target: chk:B3-family
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B3-steelman-day.md MAJOR 1-2
+  audit_status: upheld
+  audit_basis: 'every input of the reconstruction is Day''s own, so the statement is scored on his basis (R4-X1 section 0); the 55-vertebrate figure cites Bergeron 2023 in the same post'
+  counter: []
+  note: 'applied (internal holds; fidelity pending for the median 25)'
+  hierarchy_edge: false
+
+- id: d383
+  attacker: rev:R4-B3-steelman-critic
+  target: chk:B3-family
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B3-steelman-critic.md MAJOR 1-2
+  audit_status: upheld
+  audit_basis: 'like-for-like base-pair row (0.39-0.56) missing; Langergraber 2012 (7-8 My) already in the repo moves the residual to 0.97-1.04'
+  counter: []
+  note: 'applied (both rows added)'
+  hierarchy_edge: false
+
+- id: d384
+  attacker: rev:R4-B2-correctness
+  target: chk:B2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B2-correctness.md MAJOR 1-3
+  audit_status: upheld
+  audit_basis: 'the rule-N verdict scored a paraphrase (S1); fill numbers were end-of-window flux, not the delivered count; HL''s accepted 6.5 My window was missing'
+  counter: []
+  note: 'applied (B internal pending; delivered-fraction column; 6.5 My row)'
+  hierarchy_edge: false
+
+- id: d385
+  attacker: rev:R4-B2-steelman-day
+  target: chk:B2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B2-steelman-day.md D1-D2
+  audit_status: upheld
+  audit_basis: 'HL''s verbatim B sentence holds and the Feb quote is not answerable to HL; "the N_e HL itself cites (1e4)" misattributes an endorsement (HL rejects the coalescent N_e)'
+  counter: []
+  note: 'applied (1e4 rows relabelled external)'
+  hierarchy_edge: false
+
+- id: d386
+  attacker: rev:R4-B2-steelman-critic
+  target: chk:B2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B2-steelman-critic.md F1-F2
+  audit_status: upheld
+  audit_basis: '"best-case fill 3%" rests on two premises Day abandons (2 My window, empty start); rule N should be retargeted to a verbatim HL sentence'
+  counter: []
+  note: 'applied (candidate sentence Q157 recorded; RH tag left open)'
+  hierarchy_edge: false
+
+- id: d387
+  attacker: rev:R4-B3g-combined
+  target: chk:B3g
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B3g-combined.md MINOR-1..6
+  audit_status: upheld
+  audit_basis: '0 MAJOR; wording fixes: 9.1x low end, ratio-use versus ratio claim, B4 reversal labelled inference, "unrevised" dated'
+  counter: []
+  note: 'applied; no verdict change'
+  hierarchy_edge: false
+
+- id: d388
+  attacker: rev:R4-F3a-combined
+  target: chk:F3a
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-F3a-combined.md MINOR-1..6
+  audit_status: upheld
+  audit_basis: '0 MAJOR; global control-character strip disclosed, scan blind spot, label versus number, sign first, N_e = 3,300 not carried into the verdict'
+  counter: []
+  note: 'applied; no verdict change'
+  hierarchy_edge: false
+
+- id: d389
+  attacker: x:fm-steelman-critic
+  target: ROOT-FM
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: docs/research/sources/refresh-2026-10-10.md Critic-side steelman (1)
+  audit_status: untested
+  audit_basis: 'overdispersion of substitution density is the standard result of mutation-rate heterogeneity (CpG, replication timing, recombination-associated), alignment error in repeats and segmental duplications, and ILS; "80 times more variable than a uniform-rate process" compares against a null no one uses'
+  counter: []
+  note: 'Marked inference: no critic has replied. Day-side: the claim is testable once the statistic is defined, and the data are public. Needs the dispersion statistic and a heterogeneous-mu neutral null.'
+  hierarchy_edge: false
+
+- id: d390
+  attacker: x:fm-steelman-critic
+  target: ROOT-FM
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: docs/research/sources/refresh-2026-10-10.md Critic-side steelman (2)-(3)
+  audit_status: untested
+  audit_basis: '"human-lineage" assignment needs an outgroup; ancestral polymorphism and ILS can place differences on the human branch; under k = mu a high-mu mesa gives excess substitutions on every lineage, so only a human-specific excess discriminates and the post gives no per-lineage numbers'
+  counter: []
+  note: 'Marked inference. Day-side: contiguous lineage-asymmetric blocks are a pattern shape that uniform-rate neutral theory does not predict; the per-lineage comparison is exactly the check to run.'
+  hierarchy_edge: false
+
+- id: d391
+  attacker: x:fm-steelman-critic
+  target: ROOT-FM
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: docs/research/sources/refresh-2026-10-10.md Critic-side steelman (4)-(5)
+  audit_status: untested
+  audit_basis: 'Haldane''s cost applies to selected substitutions, so comparing one mesa with a genome-wide Haldane maximum presupposes the mesa is selected; units (SNV vs bp, event vs base) are not stated; ''dominant source of divergence'' (FM8 b) has no fraction'
+  counter: []
+  note: 'Marked inference. Day-side: the number may be defined in the broadcast or a later write-up (the UATV stream is unread); the ''MITTENS ceiling'' is Day''s own published figure, so he can state the units.'
+  hierarchy_edge: false
+
+- id: d392
+  attacker: x:fm-steelman-critic
+  target: ROOT-FM
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: docs/research/sources/refresh-2026-10-10.md Critic-side steelman (6)
+  audit_status: untested
+  audit_basis: '''neither selection nor drift is viable'' does not follow from a pattern both can contain; sigillation is introduced after the data, so the data do not test it; the test run is against no neutral baseline'
+  counter: []
+  note: 'Marked inference. Day-side credit: FM9 hedges (''no more proof of IGM than relictation is ... may be initial evidence'') and FM10 invites replication on public data; the audit''s pre-registered failure mode (5a bullet 2) was predicted for this step.'
+  hierarchy_edge: false
+
+- id: d393
+  attacker: ROOT-FM
+  target: B5
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: docs/research/sources/refresh-2026-10-10.md Day-side steelman (4)
+  audit_status: untested
+  audit_basis: 'the critics'' k = mu cancellation assumes a uniform mutation rate; a lineage-asymmetric excess confined to contiguous blocks is a pattern uniform-rate neutral theory does not predict'
+  counter: [d389, d390, d391, d392]
+  note: 'Day-side reading, marked inference. Critic-side: k = mu holds locally for every mutation rate (neutral substitution rate equals local mu), so heterogeneity moves the null; it does not by itself contradict k = mu.'
+  hierarchy_edge: false

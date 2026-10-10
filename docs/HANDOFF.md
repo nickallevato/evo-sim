@@ -14,8 +14,8 @@ evo-sim has two stages.
 ## How the audit works
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
 2. **Claims.** 217 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
-3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-one nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09).
-4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Forty-one checks have been reviewed so far.
+3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-two nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09; ROOT-FM, Day's mesa claim, on 2026-10-10).
+4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Forty-five checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
@@ -57,9 +57,11 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 
 **Still open:**
 - **Cost of selection** at human scale is decided only conditionally. The answer flips at an adaptive non-coding share of about 0.01–0.6%, below what any estimate resolves. R is unsourced. Soft selection, absolute-fitness gain and epistasis are untested at human scale.
-- **Haldane's regime (H8 / H5).** In Haldane's own regime (R about 1.1, D rescaled to 30) 1/300 is confirmed and no critic contested it; the budget's size is ln R, so the answer moves with R. "Slower than 1/300" is shown only at K = 1000 (a K = 16,000 run is proposed, awaiting approval). Soft selection sustains far higher rates only if fitness is purely relative. Day's premise that the summed selective differential is bounded by s_max is contradicted in-model under soft selection.
+- **Haldane's regime (H8 / H5).** In Haldane's own regime (R about 1.1, D rescaled to 30) 1/300 is confirmed and no critic contested it; the budget's size is ln R, so the answer moves with R. "Slower than 1/300" is shown only conditional on K (tested to 16,000: at K = 16,000 the D = 30 interval is 473-631, indeterminate against the pre-registered 480 line, and the finite-size explanation is not supported). Soft selection sustains far higher rates only if fitness is purely relative. Day's premise that the summed selective differential is bounded by s_max is contradicted in-model under soft selection.
 - **LTEE-to-human transfer (A2e).** Per generation, with an adaptive-only supply-limited model, the human rate exceeds the LTEE's by about 2-7x even under Day's cost caps, but the flip depends on a beneficial-fraction times effect-size ratio nobody has measured; on Day's own total-throughput basis the factor is about 50,000 and stands or falls with the human neutral rate k = mu. Not yet contradicted. The human adaptive-substitution literature is unread (gaps RG-03).
 - **Regulatory waiting time (D15).** Hössjer's "far exceeds 9 My" holds in every cell inside his own stated premises (specific site, several genes, non-beneficial intermediates) and flips under beneficial intermediates, redundant sites or a non-specific gene set. No critic engages it; the literature leads are unread (gaps RG-02). External verdict provisional.
+- **The 32.3 and the Hard Limits internal check (B3d, B2, B).** Day's k = 32.3 mu is his own arithmetic on his own inputs and holds on his basis (32.93); it appears only when SDR base pairs are divided by a point-mutation rate (events give 2.3-3.4, base pairs like for like 0.4-0.6, and after the ancestral term the residual is about 0.9-1.65, the "about twofold" calibration gap Keightley describes). Its "median 25 across 55 vertebrates" cites Bergeron 2023 and is not yet recomputed. Hard Limits' definition, exponent and 600,000-run demonstration all reproduce; its asymptotic prefactor is a power law, not "order one"; and it concedes the steady-state flux and a partial ancestral load, so whether the closing line "the neutral channel closes" follows turns on whether that sentence is dialectic or rhetoric (undecided; B stays pending). Day's concession that N/N_e never enters k removes the whole N/N_e family and B4's 200-580 kya (the latter an audit inference). Zeng 2021's "0.001" is a mean |s| under negative selection, not a beneficial mean, though Day's latency arithmetic is exact and its materiality is undetermined.
+- **Day's "The Fourth Mechanism" (2026-10-10, ROOT-FM).** Day reports that substitution density across the six T2T ape genomes is "massively overdispersed", clusters into "mesas" with a human-lineage excess, and proposes sigillation (deliberate modification) as a possible fourth mechanism; he says neither selection nor drift "can still be considered viable". No code, coordinates, window size or statistic is released, so every verdict is pending; the data are public, which makes a replication possible. A pre-registered per-lineage replication against a neutral null with variable mutation rate is queued. No critic has replied yet.
 - **Ancient DNA.** Day's "21" is contradicted as stated, but what it means turns on the Holocene Nₑ. The published estimates are now retrieved (`research/sources/holocene-ne.md`): they agree on recent growth of 100× or more but disagree on its timing, so the literature does not decide it; C1e will run the model on each published trajectory. The neutral comparison for the damage-resistant transversion class is also open.
 - **Ancestral Nₑ.** The value needed to fit the observed divergence has three free parameters, so no side gets a clean fit.
 - **Sequence space (D).** D1 found about 1–6 routes per needed change per locus (below G1's flip of ~7–17); a gene's shared pool of beneficial mutations clears the flip for about ten needed changes, not 25 or more. Per-sequence prevalence (Axe, Taylor) and cross-family connectivity are untouched.
@@ -79,9 +81,9 @@ Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls
 
 | Verdict | Counts |
 |---|---|
-| Internal | 110 hold, 18 non-sequitur, 2 arithmetic error, 63 pending |
-| Fidelity | 40 accurate, 34 partial, 9 misread, 53 unverifiable, 21 pending |
-| External | 29 supported, 103 contested, 11 contradicted, 6 untestable, 56 pending |
+| Internal | 113 hold, 18 non-sequitur, 2 arithmetic error, 61 pending |
+| Fidelity | 40 accurate, 34 partial, 10 misread, 52 unverifiable, 22 pending |
+| External | 29 supported, 102 contested, 12 contradicted, 6 untestable, 57 pending |
 
 Note that the largest external category is *contested*.
 
