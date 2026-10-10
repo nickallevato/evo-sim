@@ -1,0 +1,29 @@
+## A residual (T = 252,000)
+N_anc 1.32e+05: events human 1.10 Bergeron 1.65 | SNV/aligned human 1.09 Bergeron 1.63
+N_anc 1.98e+05: events human 0.87 Bergeron 1.31 | SNV/aligned human 0.86 Bergeron 1.30
+N_anc 5.7e+04: events human 1.55 Bergeron 2.33 | SNV/aligned human 1.53 Bergeron 2.30
+N_anc 1e+04: events human 2.08 Bergeron 3.13 | SNV/aligned human 2.06 Bergeron 3.10
+## B split time (events, 25 y)
+6.3 My: no anc human 2.25; 1.32e5 human 1.10 Bergeron 1.65; 1.98e5 human 0.87 Bergeron 1.31
+7.0 My: no anc human 2.02; 1.32e5 human 1.04 Bergeron 1.57; 1.98e5 human 0.84 Bergeron 1.26
+7.5 My: no anc human 1.89; 1.32e5 human 1.00 Bergeron 1.51; 1.98e5 human 0.81 Bergeron 1.22
+8.0 My: no anc human 1.77; 1.32e5 human 0.97 Bergeron 1.46; 1.98e5 human 0.79 Bergeron 1.19
+## C 29 y (T = 217,000), events human
+N_anc 1e+04: 2.39
+N_anc 5.7e+04: 1.71
+N_anc 1.32e+05: 1.18
+N_anc 1.98e+05: 0.92
+## D materiality
+unit only (Bergeron mu): 32.93 / events 3.38 = 9.7x
+unit only (Bergeron mu): 32.93 / fixed 2.86 = 11.5x
+mu only: 205e6 at human mu = 21.9
+SNV floor 17.5e6: Bergeron 2.81 human 1.87
+## E Yoo / exact match
+Yoo 327e6 + 17.5e6: 55.3; 327e6 alone 52.5
+exact 32.3 needs T = 256881, or L = 3.16e+09, or count = 2.011e+08
+## F Day basis, ancestral term on SNV part
+N_anc 1.32e+05: subtract 6.5M -> 31.88
+N_anc 1.98e+05: subtract 9.8M -> 31.35
+## G bp like for like
+SV bp 357M: 0.56
+SV bp 517M: 0.39
