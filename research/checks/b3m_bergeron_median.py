@@ -199,5 +199,41 @@ def main(xlsx, nwk):
           f"(A5: scale making the B1 median 1 = 1e-6 / median B1 ratio, see table)")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv) == 3:
     main(sys.argv[1], sys.argv[2])
+
+
+# ------------------------------------------------------------------------------------------- POST HOC (after 5ca5f2e)
+def posthoc(xlsx, nwk):
+    """POST HOC (after the main run of 5ca5f2e; not pre-registered).  U showed the table's UCE column is ~20x the
+    crude per-Myr rate.  Two diagnostics:
+      PH1  per species, implied depth = root-to-tip (subs/site) / column rate; if the column were a lineage-average
+           per-Myr rate this would be ~416 Myr (the root calibration) for every tip.
+      PH2  B6: lineage-average k_i = root-to-tip_i / 416 Myr (x 1e-6 per year) over mu_yearly_modeled, per species.
+    Caveats: root-to-tip from an ML tree saturates at deep nodes (underestimates k); the root position and the
+    fish/tetrapod probe sets differ; 416 is the Actinopterygii/Sarcopterygii age, the deepest calibration."""
+    hdr, rows = table9(xlsx)
+    tips = root_to_tip(nwk)
+    c_uce, c_mym, c_grp = col(hdr, "UCE substitution"), col(hdr, "Modeled rate per year (m_yearly_modeled)"), \
+        col(hdr, "Taxonomic group")
+    depth, b6, grp = [], [], {}
+    for r in rows:
+        sp = str(r[hdr[0]])
+        if sp not in tips or not num(r[c_uce]):
+            continue
+        depth.append(tips[sp] / num(r[c_uce]))
+        if num(r[c_mym]):
+            x = tips[sp] / 416.0 * 1e-6 / num(r[c_mym])
+            b6.append(x)
+            grp.setdefault(r[c_grp], []).append(x)
+    depth.sort(); b6.sort()
+    print(f"\n## POST HOC PH1: implied depth (Myr) = root-to-tip / column: n {len(depth)}, median {med(depth):.3g}, "
+          f"q25-q75 {st.quantiles(depth, n=4)[0]:.3g}-{st.quantiles(depth, n=4)[2]:.3g} (416 if lineage-average per Myr)")
+    print(f"## POST HOC PH2 B6 lineage-average k/mu_yr_mod: n {len(b6)}, median {med(b6):.3g}, q25-q75 "
+          f"{st.quantiles(b6, n=4)[0]:.3g}-{st.quantiles(b6, n=4)[2]:.3g}; by group " +
+          "; ".join(f"{k} {med(sorted(v)):.3g} ({len(v)})" for k, v in sorted(grp.items())))
+    print(f"   species names matched to the tree: {len(depth)} of {len(rows)}")
+
+
+if __name__ == "__main__" and len(sys.argv) > 3 and sys.argv[3] == "posthoc":
+    posthoc(sys.argv[1], sys.argv[2])
