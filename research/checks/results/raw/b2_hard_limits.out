@@ -1,0 +1,43 @@
+## P1 definition
+H2 found (whitespace-normalised): True
+  quote found: True | F(T) ∼ exp( − π² Nₑ / T ), T ≪ 4Nₑ
+  quote found: True | 391 generations against a predicted 4Nₑ of 400
+  quote found: True | The small number of fixations we observe are just drainage
+  quote found: True | the generous linear bound T/4Nₑ stands at about thirty- five percent
+  quote found: True | A population of 10,000 is roughly where drift permanently stops for an
+  quote found: True | There is no census at which a large vertebrate is simultaneously large
+
+## P2 Day's WF demonstration (2N = 200)
+tail mass left at t=6000: 2.31e-13
+exact conditional mean = 396.5 (pred [395, 400]; Day sim 391, diff 1.4%)
+expected fixations by t=100 of 3000: 9.27 (pred [2, 20]); Poisson 95% ~[3.3, 15.2]; Day 6 inside: True
+expected by t=74: 0.530 (pred < 3; Day 'not one')
+P2: True
+
+## P3 asymptotic law vs exact
+T/Ne=0.25: exact F=3.471e-14; exp(-pi^2 Ne/T)=7.157e-18; ratio 4.85e+03
+T/Ne=0.50: exact F=7.799e-07; exp(-pi^2 Ne/T)=2.675e-09; ratio 292
+T/Ne=1.00: exact F=3.089e-03; exp(-pi^2 Ne/T)=5.172e-05; ratio 59.7
+T/Ne=2.00: exact F=1.361e-01; exp(-pi^2 Ne/T)=7.192e-03; ratio 18.9
+P3 ratio at T=Ne in [3, 1000]: True; grows as T/Ne falls: True
+
+## P4 human exponent
+Ne/T = 1.825e+07; decimal orders = 7.823e+07 (Day 7.8e7): True
+
+## P5 X algebra
+Vk=5, G=260000: N* = 113750.5; 4Ne(N*) = 260000.0 (= G: True); X = 113750.0
+Vk=2, G=80000: N* = 20000.5; 4Ne(N*) = 80000.0 (= G: True); X = 20000.0
+
+## P6 Day's best-case hominid (census 1e5, Vk 5, 2 My, 25 y)
+Ne = 57143; G = 80000; T/4Ne = 0.350 (Day 'about thirty-five percent'); T/Ne = 1.400
+exact conditional F at T/Ne = 1.40 (chain T=140): 0.0287 (pred [0.05, 0.30]); below linear 0.350: True; exp law 8.68e-04; exact/exp = 33 (pred >= 50)
+P6: False
+
+## P7 rule N (B): see write-up; inputs printed above (H7 drainage, H8 best case, H9 ancestral 1e4)
+  ancestral Ne=10000 over 2 My at 25 y: T/Ne = 8.0; exact F = 0.9465
+  ancestral Ne=10000 over 6.5 My at 25 y: T/Ne = 26.0; exact F = 1.0000
+  ancestral Ne=25000 over 6.5 My at 25 y: T/Ne = 10.4; exact F = 0.9839
+
+ALL MECHANICAL PREDICTIONS (P1-P6) MET: False
+Command exited with non-zero status 1
+0.80 s 101704 KB
