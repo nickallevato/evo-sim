@@ -1,6 +1,8 @@
 # Milestone 7: Founders, the Bernoulli barrier, and a map of the argument
 *2026-10-08 · stage: R4 (in progress)*
 
+> **Update (2026-10-10):** the new claim for Hössjer's prediction (D15) has now been checked ([milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)): inside his stated premises it holds in all 96 cells (internal `holds`, fidelity `accurate`); outside them it flips (beneficial intermediates, redundant sites, a non-specific gene set). External `contested`, provisional. The 32.3 and Hard Limits items on the map were checked too (B3, B2).
+
 This milestone covers four pieces of work:
 - **two R4 checks:** E (LTEE founders and relictation) and G1 (what 0.02^(2×10⁷) actually prices);
 - **an argument map:** the debate written out the way a philosopher would lay it out;

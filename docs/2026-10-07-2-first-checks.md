@@ -1,6 +1,8 @@
 # Milestone 2: First checks and three rounds of review
 *2026-10-07 · stage: R4 begins · commits `3d888e9`, `36a7ff9`, `c8aaed3`, `63ac339`*
 
+> **Update (2026-10-10):** later checks changed or sharpened two statements here. B2/B ([milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)) found the conditional definition Hard Limits needs, confirmed the exponent and the X algebra, and showed the asymptotic law understates the exact F by a power-law prefactor of 17.8 to 47 times (B2 internal now `holds`). The XT cross-check re-ran the k = μ and 1/(2N) results in fwdpy11 and replicated them.
+
 These checks ran *before* the corpus harvest finished, so their framing relied on quotes from the pass-1 survey. Milestone 3 shows how the verbatim text later changed that framing. This post states each check as it was reviewed at the time and notes where later material bears on it.
 
 ## Textbook baselines (B0): all pass

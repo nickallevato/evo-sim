@@ -1,6 +1,8 @@
 # Milestone 3: Reading everything, from both sides
 *2026-10-07 · stage: R1 pass 2 (complete) · commits `2c63b68`, `dea3da5`, `5d44e18`, `b0da28e`*
 
+> **Update (2026-10-10):** later checks bear on four statements here ([milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)). **Zeng 2021** (F3a): re-confirmed as negative selection; Day's latency arithmetic with s = 0.001 is exact (internal `holds`, fidelity `misread`). **32.3** (B3): it reproduces from Day's own inputs (32.93) only when SDR base pairs are divided by a point-mutation rate; with events it is 2.3 to 3.4 (internal `holds` on his basis, fidelity `misread`, external `contradicted`). **k = μN/N<sub>e</sub>:** B3g confirmed the 2026-08-27 concession removes the whole N/N<sub>e</sub> family. **Hard Limits:** B2 `holds` on its abstract's scope (current size).
+
 Pass 1 was a survey through summarizing fetches. Pass 2 replaced it with raw local copies, a bibliography entry for each source, and quotes machine-checked as exact matches against the extracted text. Three agents worked in parallel, each writing only to its own folder.
 
 ## What was collected

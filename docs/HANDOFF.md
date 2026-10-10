@@ -124,6 +124,7 @@ These dated posts tell the story in order:
 8. [2026-10-09: The cost of selection at human scale, and three gaps closed](2026-10-09-8-cost-of-selection-and-gaps.md)
 9. [2026-10-09: Day's 21 on real genomes, and how many routes a mutation has](2026-10-09-9-ancient-dna-and-sequence-space.md)
 10. [2026-10-09: Auditing the audit: one rule for both sides](2026-10-09-10-fairness-audit.md)
+11. [2026-10-10: A second simulator, Haldane's regime, 32.3 and Hard Limits, and Day's "Fourth Mechanism"](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)
 
 ## Not yet decided
 - The final verdicts and the sensitivity table (R5).

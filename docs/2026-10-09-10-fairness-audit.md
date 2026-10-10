@@ -1,6 +1,8 @@
 # Milestone 10: Auditing the audit: one rule for both sides
 *2026-10-09 · stage: R4 (in progress)*
 
+> **Update (2026-10-10):** the in-progress items are reported in [milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md): XT (qualitative replication in fwdpy11; an unexplained numeric deficit) and D15 (Hössjer's prediction holds inside his premises, flips outside them). C1e, B5b and F1b are done.
+
 This milestone covers four pieces of work:
 - **X1:** an arithmetic audit of every number the critics and allies use, and one written verdict rule applied to Day and the critics alike;
 - **GAP-07c:** how many of the human–chimp differences are still variable within humans;
