@@ -8,7 +8,7 @@
 **An open, numerical audit of Vox Day's *Probability Zero* / MITTENS argument and of his critics, as the groundwork for a simulator you can tune yourself.**
 
 ![phase](https://img.shields.io/badge/phase-research%20(R4%20of%205)-orange)
-![claims](https://img.shields.io/badge/claims%20mapped-217-blue)
+![claims](https://img.shields.io/badge/claims%20mapped-225-blue)
 ![checks](https://img.shields.io/badge/reviewed%20checks-17-success)
 ![sides](https://img.shields.io/badge/scrutiny-both%20sides-blueviolet)
 ![python](https://img.shields.io/badge/python-numpy%20·%20msprime%20·%20fwdpy11-3776AB?logo=python&logoColor=white)
@@ -49,7 +49,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 ## Scorecard so far
 
-<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 218 claims" width="760"></p>
+<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 225 claims" width="760"></p>
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
@@ -229,9 +229,9 @@ Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
-  R1 --> R2["R2<br/>218 claims<br/>verbatim + sourced"]:::done
-  R2 --> R3["R3<br/>Argument tree<br/>32 load-bearing nodes"]:::done
-  R3 --> R4["R4<br/>Math resolution<br/>45 checks reviewed"]:::active
+  R1 --> R2["R2<br/>225 claims<br/>verbatim + sourced"]:::done
+  R2 --> R3["R3<br/>Argument tree<br/>33 load-bearing nodes"]:::done
+  R3 --> R4["R4<br/>Math resolution<br/>47 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo
   R5 --> S1["Simulator<br/>spec → plan"]:::todo
   S1 --> S2["evo-sim<br/>user-controllable<br/>forward sim"]:::todo

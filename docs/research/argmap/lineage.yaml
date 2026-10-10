@@ -3632,3 +3632,51 @@
   fate: alive
   fate_date:
   fate_locator: "No code, coordinates or statistic released; replication queued (pre-register first)"
+
+- id: L-audit-fm-2026
+  label: "Audit FM: Day's mesas replicated on the T2T alignment; the pattern is shared across lineages, the F0 human excess follows the reference, chrX F1 is one window"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [ROOT-FM, FM3, FM4, FM5, FM7, FM8b, FM10]
+  locator: "research/checks/results/R4-FM.md"
+  quote: "A single mesa on a single chromosome shows an excess of human-lineage substitutions"
+  parents:
+    - {id: L-day-fourth-mechanism-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #43-#47; fix passes 1 and 2; FM10 internal pending (rule-N grep: N2b not triggered, N2d unresolved)"
+
+- id: L-audit-b3m-2026
+  label: "Audit B3m: Day's median 25 over 55 vertebrates reproduces (25.4); the tabulated terminal-edge rates are not a lineage-average k"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [B3m, B3d]
+  locator: "research/checks/results/R4-B3m.md"
+  quote: "The new validation work which uses Bergeron et al. (2023) on pedigree mutation rates and fossil-calibrated substitution rates for 55 vertebrate species"
+  parents:
+    - {id: L-audit-b3-family-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #48 (combined); fix pass 4442c99"
+
+- id: L-audit-h8-kscale64-2026
+  label: "Audit H8 kscale64: at K = 64,000 the 1/300 reading stays conditional on K and the survival horizon"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [H8, H, H5]
+  locator: "research/checks/results/R4-H8.md section 10"
+  quote: "no more than approximately one"
+  parents:
+    - {id: L-audit-b3g-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #49 (combined); fix pass 4442c99"

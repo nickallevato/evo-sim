@@ -363,5 +363,26 @@ File: `results/REVIEW-R4-B3-steelman-day.md` (at 33e190a). 0 BLOCKER, 2 MAJOR, 4
 ## 2026-10-10 - Review #42 (steelman-critic, load-bearing tier): B3 family
 File: `results/REVIEW-R4-B3-steelman-critic.md` (at 33e190a). 0 BLOCKER, 2 MAJOR, 5 MINOR, 1 NOTE. K1: a like-for-like base-pair row (205 M over 9.4 M + 357-517 M = 0.39-0.56) was missing. K2: Langergraber 2012 (7-8 My, verified in parameters.yaml) moves the residual to 0.97-1.04. Rhetoric: the wrapper "Brian doesn't know the related literature..." gets ledger entry RH-5. All accepted.
 
+## 2026-10-10 - Review #43 (correctness, load-bearing tier): FM mesa replication
+File: `results/REVIEW-R4-FM-correctness.md` (at 87ace0b). Write-up `results/R4-FM.md`. 0 BLOCKER, 2 MAJOR, 9 MINOR, 3 NOTE. MAJOR 1: the hs1 reference projection is asymmetric and predicts the human-heavy F0 pattern (answered by the chimp-referenced mirror test, M1); MAJOR 2: the chrX F0 and F1 rows were omitted although chrX F1 100 kb crosses Day's P3 threshold (added; mirror M3 and fix pass 2 T2-T4). Both accepted.
+
+## 2026-10-10 - Review #44 (steelman-day, load-bearing tier): FM mesa replication
+File: `results/REVIEW-R4-FM-steelman-day.md` (at 87ace0b). 0 BLOCKER, 4 MAJOR, 3 MINOR, 2 NOTE. D1: rule S, FM5's sentence contains no inference, so FM5 is `holds` (literal) and the non-sequitur moves to FM10; D4: the shared-rate null is descriptive and leaves a residual; Day-favourable cells added; the invitation to replicate credited. All accepted.
+
+## 2026-10-10 - Review #45 (steelman-critic, load-bearing tier): FM mesa replication
+File: `results/REVIEW-R4-FM-steelman-critic.md` (at 87ace0b). 0 BLOCKER, 2 MAJOR, 5 MINOR, 2 NOTE. K3: phi_res 2.3-2.7 is an upper bound under a better-specified null; K7: the rule-N route for FM10 (N2b vs N2d by a Day-corpus grep, done at integration: N2b not triggered, N2d unresolved, internal stays pending). Accepted.
+
+## 2026-10-10 - Review #46 (combined re-review (correctness + both steelmen), load-bearing tier): FM fix pass, post hoc follow-ups and mirror test
+File: `results/REVIEW-R4-FM-mirror-combined.md` (at 5f05791). 0 BLOCKER, 2 MAJOR, 11 MINOR, 6 NOTE. D-1: E1 does not measure absolute sharpness (calibration against a perfect step); D-2: FM10 "autosomal route contradicted" reopened D4. Answered by fix pass 2 (post hoc `fm_fix2.py`, pre-registered 6aa9bb6): FM4 "sharp boundaries" `pending`, FM10 wording replaced, "soft at 100 kb" withdrawn.
+
+## 2026-10-10 - Review #47 (light review, low-stakes tier): FM fix pass 2 (`fm_fix2.py`)
+File: `results/REVIEW-R4-FM-fix2-light.md` (at 393a1fd). 0 BLOCKER, 0 MAJOR, 2 MINOR, 2 NOTE. Pre-registration precedes the run (17:04:53 vs 17:05:00), numbers match `raw/fm_fix2_*`, scoring follows the docstring, post hoc labels present. MINORs: q is meaningless in the unresolved 100-kb cells; the T4 satellite overlap says what the region is, not the cause. Answered at integration.
+
+## 2026-10-10 - Review #48 (combined, low-stakes tier): B3m (Day's "median 25", Bergeron 2023)
+File: `results/REVIEW-R4-B3m-combined.md` (at b30137d). 0 BLOCKER, 2 MAJOR, 4 MINOR. MAJOR-1: the A5 rescaling factor was promised and not reported (now 1/25.4); MAJOR-2: "leaning against falsified" rests on PH2 (k/mu about 1.9), a lower bound from saturating root-to-tip distances, not an estimate. Accepted; fix pass 4442c99. Fidelity `accurate`, external `contested` stand.
+
+## 2026-10-10 - Review #49 (combined, low-stakes tier): H8 kscale64 (post hoc, K = 64,000)
+File: `results/REVIEW-R4-H8-kscale64-combined.md` (at b30137d). 0 BLOCKER, 2 MAJOR, 6 MINOR. MAJOR-1: "gains some support" overstated a K trend (no trend is established; the horizon matters as much as K); MAJOR-2 horizon dependence (348 at 10k vs 490 at 20k on the same runs; the indeterminate call rests on a 2% edge, 294 vs 300). Accepted; fix pass 4442c99.
+
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).

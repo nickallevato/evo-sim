@@ -1133,6 +1133,22 @@ nodes:
     fidelity: n/a
     external: supported
   claim_file: docs/research/claims/B3i-matev-sum-over-alleles-exceeds-one.md
+- id: B3m
+  title: 'Day: ''a median factor of 25 across 55 vertebrates'' (Bergeron et al. 2023, k/mu); recomputed from Bergeron''s Table 9'
+  side: day
+  branch: B
+  parent: B3d
+  edges:
+  - type: supports
+    target: B3d
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: n/a
+    fidelity: accurate
+    external: contested
+  claim_file: docs/research/claims/B3m-median-25-bergeron-55-vertebrates.md
 - id: B4
   title: 'Molecular clock recalibration: CHLCA collapses from 6-7 Mya to 200-580 kya via N/Ne'
   side: day
@@ -3017,6 +3033,112 @@ nodes:
     fidelity: unverifiable
     external: pending
   claim_file: docs/research/claims/F6-relictation-ten-percent-replacement.md
+- id: FM10
+  title: 'Day, ''The Fourth Mechanism'' FM10: ''neither natural selection nor neutral diffusive drift can still be considered viable candidates'''
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  - type: depends-on
+    target: FM3
+  - type: depends-on
+    target: FM4
+  - type: depends-on
+    target: FM5
+  load_bearing: true
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: pending
+    fidelity: n/a
+    external: contested
+  claim_file: docs/research/claims/FM10-neither-selection-nor-drift-viable.md
+- id: FM3
+  title: 'Day, ''The Fourth Mechanism'' FM3: substitution density across the genome is ''more than 80 times more variable than a uniform-rate
+    process predicts'''
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: holds
+    fidelity: unverifiable
+    external: supported
+  claim_file: docs/research/claims/FM3-overdispersion-more-than-80-times.md
+- id: FM4
+  title: 'Day, ''The Fourth Mechanism'' FM4: dense windows cluster into contiguous blocks with ''sharp boundaries'' (''mesas'')'
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: n/a
+    fidelity: n/a
+    external: supported
+  claim_file: docs/research/claims/FM4-mesas-clustering-sharp-boundaries.md
+- id: FM5
+  title: 'Day, ''The Fourth Mechanism'' FM5: a single mesa shows a human-lineage excess exceeding both the MITTENS fixation ceiling and Haldane''s
+    genome-wide maximum'
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: holds
+    fidelity: unverifiable
+    external: supported
+  claim_file: docs/research/claims/FM5-one-mesa-exceeds-mittens-and-haldane.md
+- id: FM7
+  title: 'Day, ''The Fourth Mechanism'' FM7: sigillation, the hypothesis that some mesa regions are deliberate modification writing contiguous
+    blocks into one lineage'
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: n/a
+    fidelity: n/a
+    external: contested
+  claim_file: docs/research/claims/FM7-sigillation-lineage-specific-mesas.md
+- id: FM8b
+  title: 'Day, ''The Fourth Mechanism'' FM8(b): the mesa signature is ''the dominant source of genomic divergence between humans and the great
+    apes'''
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  load_bearing: false
+  sourcing: firsthand
+  status: reviewed
+  verdicts:
+    internal: n/a
+    fidelity: n/a
+    external: contradicted
+  claim_file: docs/research/claims/FM8b-mesas-dominant-source-of-divergence.md
 - id: G
   title: 'Bernoulli Barrier: parallel fixation of many loci is limited because the Law of Large Numbers compresses fitness variance (14.7x available
     vs 1,570x required)'
@@ -3780,7 +3902,7 @@ nodes:
   verdicts:
     internal: pending
     fidelity: pending
-    external: pending
+    external: contested
   claim_file: docs/research/claims/ROOT-fm-day-mesas-sigillation.md
 - id: ROOT-H
   title: 'Ola Hossjer: agrees with Day''s conclusion after rescaling, but advocates ''uncommon descent'' and limits the endorsement to the main

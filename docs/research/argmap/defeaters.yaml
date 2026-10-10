@@ -5063,3 +5063,213 @@
   counter: [d389, d390, d391, d392]
   note: 'Day-side reading, marked inference. Critic-side: k = mu holds locally for every mutation rate (neutral substitution rate equals local mu), so heterogeneity moves the null; it does not by itself contradict k = mu.'
   hierarchy_edge: false
+
+- id: d394
+  attacker: chk:FM
+  target: ROOT-FM
+  target_part: P1
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-FM.md Reading FM3
+  audit_status: partly
+  audit_basis: 'overdispersion above 80 is reachable only at W >= 1 Mb (>= 100 kb for DHC) for every lineage; phi grows roughly linearly with W (3.3 to 136 from 1 kb to 1 Mb) so the same data give 3x or 800x; against a shared-rate null it shrinks to about 2-6'
+  counter: [d398]
+  note: 'Day-side: the statement is true on the public data for every lineage and is testable; fidelity is unverifiable only because the window and statistic are unreleased. Critic-side: the comparison null is one no one uses.'
+  hierarchy_edge: false
+
+- id: d395
+  attacker: chk:FM
+  target: ROOT-FM
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-FM.md Reading FM4, FM7; fm_fix2 T1
+  audit_status: upheld
+  audit_basis: 'clustering is real and shared (32-53% of human-mesa windows inside chimp mesas vs 0.56-1.0% background; shared-rate null reproduces 64-69% of human mesas at 100 kb); lineage-specific mesas exist on both branches and are larger on chimp; "sharp boundaries" pending after calibration (edges about 90% of a perfect step at 10 kb, q 0.76 / 0.63; 100 kb unresolved)'
+  counter: [d398]
+  note: 'Day-side: the registered E2 prediction was a hit and the edges are not shown to be soft. Critic-side: E2 is non-discriminating (chimp-specific excess is larger).'
+  hierarchy_edge: false
+
+- id: d396
+  attacker: chk:FM
+  target: ROOT-FM
+  target_part: P3
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-FM.md Reading FM5, FM8b
+  audit_status: partly
+  audit_basis: 'FM5 is literally true and non-discriminating (32 H, 29 C, 31 B, 19 G mesas exceed 840 at F0 100 kb; "human-lineage" is not "human-specific"); FM8(b) is contradicted for single-nucleotide divergence on alignable sequence (human mesas hold 1.25-2.5% of human-chimp differences)'
+  counter: [d398]
+  note: 'Day-side: structural, indel and SD divergence (Yoo 2025 SDRs, 327 Mb per lineage) are not measured, so FM8(b) on total divergence is untested. Critic-side: 1.25-2.5% is not dominant.'
+  hierarchy_edge: false
+
+- id: d397
+  attacker: chk:FM
+  target: ROOT-FM
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-FM.md Reading FM10, Mirror test, Fix pass 2
+  audit_status: upheld
+  audit_basis: 'every pre-registered discriminating cell (P3, P4, P5, P7) falls on the critics'' side; the unmasked F0 human excess follows the reference (R 1.97 on hs1, 0.25 chimp-referenced); chrX F1 100 kb is one orthologous centromeric-transition window (R 3.76 / 3.39 to 1.16 / 1.11 without it); proposed FM10 external contested, leaning critic'
+  counter: [d398]
+  note: 'Day-side: the shared-rate null is descriptive and borrows other lineages'' variation; the residual phi_res 2.3-2.7 is unattributed; real human-specific SD divergence is not excluded. Rule-N grep (integration): no Day text states the premise "drift implies a uniform rate"; N2b not triggered, N2d unresolved, internal pending.'
+  hierarchy_edge: false
+
+- id: d398
+  attacker: ROOT-FM
+  target: chk:FM
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-FM.md Who this helps (Day), Reading FM10
+  audit_status: partly
+  audit_basis: 'the shared-rate null is descriptive, not a mechanistic neutral model (it borrows what the other lineages show: mu, ancestral coalescence depth, alignability); phi_res 2.3-2.7 remains in every lineage; the registered E2 hit; the chrX window is Day''s best object and its cause (real change or satellite assembly difference) is untested'
+  counter: [d397]
+  note: 'Critic-side: the residual is an upper bound under a better-specified null; the chimp-specific excess is larger than the human one; the F0 excess is a projection effect; without the one chrX window the cell is symmetric (R 1.11-1.16).'
+  hierarchy_edge: false
+
+- id: d399
+  attacker: rev:R4-FM-correctness
+  target: chk:FM
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-FM-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR, 9 MINOR, 3 NOTE: scoring of P1, window and reference bias, null fitted on the data it tests; all answered in Review resolution'
+  counter: []
+  note: 'applied; no verdict change beyond the proposed table'
+  hierarchy_edge: false
+
+- id: d400
+  attacker: rev:R4-FM-steelman-day
+  target: chk:FM
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-FM-steelman-day.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 4 MAJOR, 3 MINOR, 2 NOTE: rule S on FM5 (no inference in the sentence), Day-favourable cells omitted, shared-rate null descriptive; accepted'
+  counter: []
+  note: 'applied; no verdict change beyond the proposed table'
+  hierarchy_edge: false
+
+- id: d401
+  attacker: rev:R4-FM-steelman-critic
+  target: chk:FM
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-FM-steelman-critic.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR, 5 MINOR, 2 NOTE: residual an upper bound, rule-N route for FM10 (grep at integration); accepted'
+  counter: []
+  note: 'applied; no verdict change beyond the proposed table'
+  hierarchy_edge: false
+
+- id: d402
+  attacker: rev:R4-FM-mirror-combined
+  target: chk:FM
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-FM-mirror-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (D-1 edge-sharpness calibration, D-2 FM10 wording), 11 MINOR, 6 NOTE; answered by fix pass 2 (fm_fix2, 6aa9bb6)'
+  counter: []
+  note: 'applied; no verdict change beyond the proposed table'
+  hierarchy_edge: false
+
+- id: d403
+  attacker: rev:R4-FM-fix2-light
+  target: chk:FM
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-FM-fix2-light.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 0 MAJOR, 2 MINOR, 2 NOTE: provenance, numbers and scoring of fix pass 2 pass; no verdict change'
+  counter: []
+  note: 'applied; no verdict change beyond the proposed table'
+  hierarchy_edge: false
+
+- id: d404
+  attacker: chk:B3m
+  target: B3d
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B3m.md Reading, PH1, PH2
+  audit_status: partly
+  audit_basis: 'Day''s median 25 (n = 55) reproduces exactly (25.4) from Bergeron''s Table 9, but the tabulated terminal-edge (chronos lambda = 0) rates cover about 21 Myr of a 416 Myr root depth; a lineage-average k from the same tree is at least about 2x mu (PH2, a lower bound); the 2-vs-25 gap is unexplained'
+  counter: [d406]
+  note: 'Critic-side: the column is not a lineage-average rate. Day-side: the number and count are exact and the lineage-average estimate is itself above mu.'
+  hierarchy_edge: false
+
+- id: d405
+  attacker: rev:R4-B3m-combined
+  target: chk:B3m
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-B3m-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (A5 rescaling not reported; "leaning against falsified" rests on a saturating lower bound), 4 MINOR'
+  counter: []
+  note: 'applied in fix pass 4442c99; fidelity accurate, external contested stand'
+  hierarchy_edge: false
+
+- id: d406
+  attacker: B3d
+  target: chk:B3m
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-B3m.md Who this helps (Day)
+  audit_status: partly
+  audit_basis: 'the published table is the plain source Day cites; the median and count are exact (fidelity accurate); a lineage-average k is itself at least 2x mu, so k > mu holds under either reading'
+  counter: [d404]
+  note: 'Critic-side: k > mu of about 2 is a different magnitude from 25; the gap is unexplained, not shown to be an artefact.'
+  hierarchy_edge: false
+
+- id: d407
+  attacker: chk:H8
+  target: H
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-H8.md sections 10, 10.1
+  audit_status: partly
+  audit_basis: 'kscale64 (K = 64,000): K1'' miss (0.0863), K2'' indeterminate (D = 30 interval 348 at 10k, bracket 294-368; 490 at 20k), K3'' hit, K4'' hit / marginal miss; no K trend; "slower than 1/300" stays conditional on K (to 64,000) and the horizon; R = 2 about 5.7x faster than 1/300'
+  counter: []
+  note: 'Day-side: his upper bound is unaffected under R1 (every point above 225). Critic-side: the finite-size reading predicts the low 10k point; 20k gives 490.'
+  hierarchy_edge: false
+
+- id: d408
+  attacker: rev:R4-H8-kscale64-combined
+  target: chk:H8
+  target_part: inference
+  type: undercutting
+  by: [audit (review)]
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-H8-kscale64-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR ("gains some support" overstated a K trend; horizon dependence), 6 MINOR'
+  counter: []
+  note: 'applied in fix pass 4442c99 (R4-H8 10.1)'
+  hierarchy_edge: false
