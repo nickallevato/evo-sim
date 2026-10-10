@@ -1,6 +1,6 @@
 # R4 B5b: Mansfield's supply argument with a sourced neutral fraction
 
-**Status: run, written up; reviews and integration pending (low-stakes tier: one combined review).** Everything here is dialectic (rule RH): arithmetic on stated inputs.
+**Status: run, written up, reviewed (combined, `REVIEW-R4-B5b-combined.md`), fix pass done.** Everything here is dialectic (rule RH): arithmetic on stated inputs.
 
 ## Files
 - Script: `research/checks/b5b_mansfield_supply.py`, pre-registered at **b707415** (before the run, unedited since; md5 in `raw/b5b.host`).
@@ -35,3 +35,7 @@ P1 (identity) met. P2 (44.4x, 69.4x, needed f 0.889 and 1.389) met exactly. P3 (
 ## Who this helps
 - **Critics (Mansfield):** the "way under the actual proportion" remark is vindicated in direction and size: a sourced neutral share of about 0.9 is 45x his illustrative 0.02, and with it his supply identity covers 20M at the 2019 generation count. Day's §6.4 line that no independent neutral-fraction estimate exists is again contradicted (ledger gaps.md), here with a number.
 - **Day:** the cover is thin and depends on the larger of two mutation counts. With Kong's measured-scale 76.8 per zygote (and Hancock's own haploid 38.4) the neutral supply falls short of 20M even at f = 1, and at his current 252,000 generations it covers about half of 17.5M, so the critics' supply route does not by itself dispose of the requirement; the residual is a clock or ancestral term (B4a), which his own k = mu route undershoots by about 2x (GAP-07b). The sourced fraction is an upper bound, not a measurement of neutrality.
+
+## Review resolution
+- MINOR-1, MINOR-2: every use of f = 0.918 is an **upper bound** on the neutral share (positively selected and nearly neutral sites are inside it) with uniform mutability assumed (CpG hypermutability, concentrated in constrained regions, is not modelled; sign unknown). MINOR-3: the 450,000-generation match (20M covered by 3%) is the 2019 count and is not to be quoted without the 252,000 row (0.66x). MINOR-4: requirements are read per lineage (20M and 17.5M are one lineage's differences), as in GAP-07b/c. MINOR-5: Mansfield's 2% was an illustration; the vindication of "way under" is by an estimate he did not cite.
+- No new run; no verdict change (B5b internal holds, external contested).

@@ -1,0 +1,7 @@
+ssh:5: command not found: _lion_remote_term
+ctrl rep0: Hn_start=0.3389 Hn_win=0.3382 ratio_to_ctrl=1.017 drift_ratio(N/Ne)=1.0006 conc=0.0 fixed=0 dropped=0 (562s)
+ctrl rep1: Hn_start=0.3152 Hn_win=0.3266 ratio_to_ctrl=0.983 drift_ratio(N/Ne)=0.9994 conc=0.0 fixed=0 dropped=0 (505s)
+A    rep0: Hn_start=0.3389 Hn_win=0.3425 ratio_to_ctrl=1.030 drift_ratio(N/Ne)=1.0004 conc=0.9 fixed=3 dropped=0 (667s)
+A    rep1: Hn_start=0.3152 Hn_win=0.3219 ratio_to_ctrl=0.968 drift_ratio(N/Ne)=0.9992 conc=0.5 fixed=2 dropped=0 (705s)
+B    rep0: Hn_start=0.3389 Hn_win=0.3364 ratio_to_ctrl=1.012 drift_ratio(N/Ne)=1.0035 conc=146.1 fixed=539 dropped=0 (1496s)
+B    rep1: Hn_start=0.3152 Hn_win=0.3339 ratio_to_ctrl=1.004 drift_ratio(N/Ne)=1.0017 conc=146.7 fixed=538 dropped=0 (1447s)
