@@ -8,8 +8,8 @@ In flight (2026-10-09; one subagent at a time from now on, per the user; compute
 - **D15 (Hössjer regulatory waiting time):** load-bearing tier (three reviews).
   - D15 progress at 2026-10-09 16:45: 17 of 714 cells in `results/raw/d15_sweep.jsonl`. The `sweep` stage was launched 2026-10-09 15:44 -06:00 (3 workers, PID 3860703; record `results/raw/d15_sweep.host`) after the post hoc f=3 amendment for the N_e=1e5 S2/S3/Fin2/Fin3 cells (639b94b). Then: write-up, reviews.
 - **Async launch 2026-10-09 17:47 (-06:00), pre-registered scripts, host records `results/raw/<id>.host` on na-workhorse** (items 1-4 below; collect with `rsync -a 'na-workhorse:projects/evo-sim/research/checks/results/raw/<id>*' research/checks/results/raw/`, then `<script> analyse`):
-  - **C1e: DONE** (review #18, integrated; write-up `results/R4-C1e.md`). Follow-up: rerun with the 25 y generation clock (post hoc).
-  - **G2c/B6c: DONE** (review #17, integrated; write-up `results/R4-G2c.md`). Follow-up: explain the 1.55x fixation-rate excess in B; linked-site hitchhiking.
+  - **C1e: DONE** (review #18, integrated; write-up `results/R4-C1e.md`). Post hoc rerun at the matched 25 y clock DONE (c07c64f); MAJOR-1 closed.
+  - **G2c/B6c: external PENDING** (review #17; MAJOR-1 diagnosed as an accounting error and rerun post hoc, see `results/R4-G2c.md`). Open: the pre-registered A-concurrency clause missed (0.6 vs [0.8, 2.5]); next, a reviewer decision or a longer-window A rerun (pre-registered) before restoring `supported`. Linked-site hitchhiking still untested.
   - **F1b: DONE** (review #16, integrated).
   - **B5b: DONE** (review #15, integrated).
 - **P1: DONE** (combined review #14 and integration 2026-10-09; milestone post and board patch deferred to the next milestone). Pre-registered c17b44a; run 2026-10-09 on na-workhorse; write-up `results/R4-P1.md`. All 17 identity groups and 33 Day-arithmetic rows came out as predicted (no failures). Low-stakes tier (re-confirmation): one combined review, then integration.
@@ -18,7 +18,7 @@ Next:
 1. ~~C1e~~ DONE: the C1c model run on each published Holocene trajectory (Gravel, Gazave, Coventry, Nelson; `sources/holocene-ne.md`), pre-registered.
 2. ~~B5b~~ DONE: a sourced neutral fraction against the GAP-07b/07c event counts (as written it needs 89% neutral for 20M, or an impossible 139% for 17.5M).
 3. ~~F1b~~ DONE: the in-transit count is Little's law, not measured; F1b has no inbound attack.
-4. ~~G2c/B6c~~ DONE: specified, never simulated.
+4. G2c/B6c: simulated; external pending (see above).
 5. **C1d follow-ups:** a transversion-restricted, SFS-matched neutral model; what the transition excess is.
 6. **D follow-ups:** ProteinGym multi-mutant decay; a noise null for the beneficial proxy; per-sequence prevalence (D10–D12).
 7. **GAP-07 follow-up:** T2T re-run (CHM13/hs1 vs mPanTro3); chimp-population polymorphism; a long-read SV set.

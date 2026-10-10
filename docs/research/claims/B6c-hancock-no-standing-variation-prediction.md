@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: holds   # R4 X1 rule rev 2 (was pending): conditional prediction is correct; applicability to Day is G2/F1a
   fidelity: n/a
-  external: pending   # reverted from supported (post hoc, review MAJOR): R4 G2c condition B fixed at 1.55x its intended rate and concurrency 146 < pre-registered floor 150; pending a rerun with the cause fixed
+  external: pending   # history: pending -> supported (review #17) -> pending again (review MAJOR). Cause of the MAJOR diagnosed: B's '1.55x fixation-rate excess' was an accounting error (cumulative counter / window); the real rate was 0.99x. Rerun (B2 at 228 concurrent sweeps, 6 ctrl/A reps): Hn ratio 0.97-1.02, R1/R2/R4 met, but the pre-registered A-concurrency clause (mean 0.6 vs [0.8, 2.5]) missed, so the pre-registered rule keeps this pending
 ---
 
 ## Statement (verbatim)
@@ -56,3 +56,5 @@ R4 G2c / B6c (research/checks/results/R4-G2c.md; review #17, combined, 2026-10-0
 ## Simulator variables implied
 - standing variation display
 - serial vs parallel throughput mode
+
+R4 G2c post hoc (research/checks/results/R4-G2c.md, 2026-10-09): the 'unexplained 1.55x' fixation-rate excess in condition B was an accounting error (a whole-run fixation counter divided by the 3,000-generation window; true window rate 0.115/gen = 0.99x intended). Concurrency was short of the 150 floor because the counted phase lasts about 1,270 generations, not 1,980. Rerun with model B2 (228 concurrent sweeps): unlinked Hn 0.97-0.98 of control, offspring-variance inflation 0.3-0.6%; A (6 reps): Hn 0.993 of control but mean concurrency 0.6 below the pre-registered [0.8, 2.5]. External stays pending under the pre-registered rule; the content points the same way as the earlier 'supported as a conditional' reading, but that verdict is not restored.
