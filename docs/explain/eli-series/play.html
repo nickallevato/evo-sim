@@ -186,8 +186,11 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 <li>The other side was right that many changes can travel at once, and that some were counted letter by letter.</li>
 <li>The other side made some small counting slips too, and one pair of numbers only matched because something was counted twice.</li>
 </ul></div>
-<div class="pending"><b class="t">Still being checked</b>
-<p>A puzzle about changes that only help when several happen together, like a lock that needs every number right. The computers are still working on it. A second, different computer program is also checking our first one.</p></div>
+<div class="audit"><b class="t">Two more checks are done</b>
+<ul>
+<li>The lock puzzle (changes that only help when several happen together): one friend of Vox Day said it would take far, far longer than the time there was. The computers say he is right if every try is a plain guess. But if each little step helps even a tiny bit, the lock opens much faster.<a class="src" href="#s33">S33</a></li>
+<li>A second, different computer program played the bead game too. It got the same answers for the big things, but not for a few of the small numbers, and we do not yet know why.<a class="src" href="#s34">S34</a></li>
+</ul></div>
 <p>Try the bead jar on the <a href="#bench">lab bench</a> below. Press Play and watch the green beads.</p>
 </section>
 
@@ -220,7 +223,13 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 <li>The critics were right that many changes can float at once, and that the 205 million counts letters inside big chunks, not separate changes.<a class="src" href="#s17">S17</a><a class="src" href="#s19">S19</a></li>
 <li>The critics made slips too. Two of them got about 38 million, which looks like a perfect match, but the match came from counting one part twice.<a class="src" href="#s20">S20</a></li>
 </ul></div>
-<div class="pending"><b class="t">Not finished</b><p>The "lock" puzzle (changes that only help together) and a second computer program checking the first are still running.<a class="src" href="#s24">S24</a><a class="src" href="#s25">S25</a></p></div>
+<div class="audit"><b class="t">Newly finished</b>
+<ul>
+<li><b>The lock puzzle.</b> A friend of Vox Day said a lock of several changes would take far longer than the 9 million years there was. When the lock is picked by plain guessing, the computers agree with him. If every step helps a little, the lock opens much faster. So it depends on what the real lock is like.<a class="src" href="#s33">S33</a></li>
+<li><b>A second computer program</b> played the bead game too. The big results matched (the river rule, how long a change takes). A few small numbers came out lower and we have not found out why.<a class="src" href="#s34">S34</a></li>
+<li><b>Haldane's "one change every 300 generations"</b> limit came out right for his case, and it grows when many more babies are born than needed. Whether it is slower than that for a big town is still only checked up to 16,000 people.<a class="src" href="#s35">S35</a></li>
+<li><b>The number 32.3.</b> Vox Day got it by adding up letters and dividing by a rate for single changes. His sum is right, but it counts letters, not changes. Counting changes the answer is about 2 to 3.<a class="src" href="#s36">S36</a></li>
+</ul></div>
 </section>
 
 <!-- ================= ELI10 ================= -->
@@ -255,7 +264,14 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 <li><span class="tag c">Critics credited</span> Neutral substitutions run at the mutation rate whatever the population size. Many sweeps run at once. The real ancestral population was not empty.<a class="src" href="#s16">S16</a><a class="src" href="#s17">S17</a> 205 million is a letter count, not an event count.<a class="src" href="#s19">S19</a></li>
 <li><span class="tag c">Critics' slips</span> Several small number slips, and a 38-million "match" that double-counts. Counting single letters, their conclusion still survives. Counting events, Hancock's version does not: the audit scores it a non-sequitur.<a class="src" href="#s20">S20</a></li>
 </ul></div>
-<div class="pending"><b class="t">Pending</b><p>D15, the "combination lock" question raised by Day's ally Ola Hössjer, is still running (17 of 714 settings were done at the last check). XT, the second-referee replication, is still running too.<a class="src" href="#s24">S24</a><a class="src" href="#s25">S25</a></p></div>
+<div class="audit"><b class="t">Newly finished</b>
+<ul>
+<li><span class="tag p">ally</span> <b>The combination lock (D15).</b> Ola Hössjer said the wait for several linked changes "far exceeds 9 million years." The audit tried 714 settings. Inside the rules he set (a particular target, steps that do not help on their own), he is right in all 96 settings. Change the rules (each step helps by 1%, the lock has spare keys, or any of many genes will do) and the wait can drop under 9 million years.<a class="src" href="#s33">S33</a></li>
+<li><b>The second referee (XT).</b> A different simulator agreed that 1/(2N) is the chance of a lucky change and that population size sets the <i>time</i>. It did not match a few smaller numbers, and the audit does not yet know why.<a class="src" href="#s34">S34</a></li>
+<li><b>Haldane's limit (H8).</b> His "one change per 300 generations" holds for his case. The limit gets looser fast when more babies are born than needed. Whether bigger towns go slower than 1/300 is tested only up to 16,000 people.<a class="src" href="#s35">S35</a></li>
+<li><b>The LTEE comparison (A2e).</b> Whether the germ experiment's speed limit carries over to humans depends mostly on how many new changes humans get and how helpful they are. The audit calls this "contested" on both sides.<a class="src" href="#s37">S37</a></li>
+<li><b>The 32.3 (B3).</b> Vox Day's math is right on his own numbers. But it divides a count of letters by a rate for single changes. Counting changes the number is about 2 to 3.<a class="src" href="#s36">S36</a></li>
+</ul></div>
 </section>
 
 <!-- ================= ELI12 ================= -->
@@ -297,18 +313,23 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 
 <h3>8. Waiting for several changes at once</h3>
 <p>Some features may need several mutations before they help. If each step helps a little (<b>stepping stones</b>), selection keeps each step and the wait grows roughly with the number of steps. If nothing helps until all are in place (a <b>valley</b>), the wait grows roughly like (chance per step) multiplied by itself once per step. That is much slower. The <a href="#sim-lock">combination lock</a> toy shows the difference.</p>
-<div class="pending"><b class="t">Pending (D15)</b><p>Ola Hössjer, an ally of Day's case, predicts that the wait for several human gene-expression changes "far exceeds 9 million years." The audit reproduced his published tables, and its main sweep is still running. The two sides agree on the arithmetic; they differ on whether the real target is a valley or a path of stepping stones.<a class="src" href="#s24">S24</a></p></div>
+<div class="audit"><b class="t">Result (D15)</b><p>Ola Hössjer, an ally of Day's case, predicts that the wait for several human gene-expression changes "far exceeds 9 million years." The audit reproduced his published tables and ran 714 settings. Under his own rules (a particular target, steps that are neutral or harmful) the prediction holds in all 96 settings. If each step helps by even 1%, the 9 million years are reached in about 57 to 77% of runs at N<sub>e</sub> = 10,000 and in every run at 100,000. The same happens with spare target sites or when any of many genes will do. So the two sides agree on the arithmetic and differ on whether the real target is a valley or a path of stepping stones. Verdict: holds / accurate / contested (provisional).<a class="src" href="#s33">S33</a></p></div>
+<div class="audit"><b class="t">Other results</b><ul>
+<li><b>Haldane (H8).</b> His 1/300 comes back at R = 1.111 with D = 30. The budget is ln R, so it grows 16 to 21 times from R = 1.111 to 3. "Slower than 1/300" depends on population size and is tested to 16,000.<a class="src" href="#s35">S35</a></li>
+<li><b>32.3 (B3).</b> It comes from dividing about 205 million letters by a single-change rate. Counting events gives about 2 to 3.<a class="src" href="#s36">S36</a></li>
+<li><b>The LTEE transfer (A2e).</b> Whether a human can do more per generation than the germs depends on supply, how many changes help, and their size. The audit leaves it contested.<a class="src" href="#s37">S37</a></li>
+</ul></div>
 </section>
 
 <!-- ================= ELI18 ================= -->
 <section class="level" id="eli18-text" role="tabpanel" aria-labelledby="tab-eli18">
 <h2>For an eighteen-year-old: the real formulas and the audit's numbers</h2>
-<p class="note">Claim ids (A2, B3, H …) point to <code>docs/research/claims/</code>. Verdicts are listed as internal / fidelity / external, from the claim files as of 2026-10-09. These are R4 results; the R5 synthesis is not written yet.</p>
+<p class="note">Claim ids (A2, B3, H …) point to <code>docs/research/claims/</code>. Verdicts are listed as internal / fidelity / external, from the claim files as of 2026-10-10. These are R4 results; the R5 synthesis is not written yet.</p>
 
 <h3>Neutral fixation and the substitution rate</h3>
 <p>In any exchangeable neutral model with constant size 2N, a single copy's frequency is a martingale, so P<sub>fix</sub> = 1/(2N) regardless of offspring variance. With supply 2Nμ per site per generation:</p>
 <div class="eq">k = 2Nμ · 1/(2N) = μ        (steady state, discrete generations)</div>
-<p>The audit's B3 check measured P<sub>fix</sub> ≈ 0.0025 = 1/(2N) at offspring variance σ² from 1 to 10.7, where N<sub>e</sub> fell from 200 to 19. The reading "1/(2N<sub>e</sub>)" predicts 0.00249 to 0.0268. Fixation time t<sub>fix</sub>/N<sub>e</sub> stayed at 3.95 to 4.07.<a class="src" href="#s15">S15</a> So Day is right on time and wrong on probability. B3 (Day's k ≠ μ values) stands at <span class="mono">pending / partial / contradicted</span>.<a class="src" href="#s29">S29</a> One credit to Day's direction: with overlapping generations <i>and</i> fluctuating N (Balloux–Lehmann), k ≠ μ, but symmetric cycles give only −0.3% to −2%. Day's 0.743μ depends on the averaging window.<a class="src" href="#s26">S26</a></p>
+<p>The audit's B3 check measured P<sub>fix</sub> ≈ 0.0025 = 1/(2N) at offspring variance σ² from 1 to 10.7, where N<sub>e</sub> fell from 200 to 19. The reading "1/(2N<sub>e</sub>)" predicts 0.00249 to 0.0268. Fixation time t<sub>fix</sub>/N<sub>e</sub> stayed at 3.95 to 4.07.<a class="src" href="#s15">S15</a> So Day is right on time and wrong on probability. B3 (Day's k ≠ μ values) stands at <span class="mono">pending / partial / contradicted</span> as an umbrella.<a class="src" href="#s29">S29</a> The 32.3 (B3d) reproduces from his own inputs as 32.93 (205 M ÷ 252,000 over Bergeron's 7.97×10<sup>−9</sup> × 3.1 Gb), but only because SDR base pairs are divided by a point-mutation rate. Measured events give 2.25 to 3.38; like-for-like base pairs 0.39 to 0.56. B3d is <span class="mono">holds / misread / contradicted</span> (holds on Day's basis; the Yoo attribution is misread; contradicted as a per-site k/μ).<a class="src" href="#s36">S36</a> One credit to Day's direction: with overlapping generations <i>and</i> fluctuating N (Balloux–Lehmann), k ≠ μ, but symmetric cycles give only −0.3% to −2%. Day's 0.743μ depends on the averaging window.<a class="src" href="#s26">S26</a></p>
 
 <h3>Start state</h3>
 <p>From an empty start, E[F(T)] = μL∫<sub>0</sub><sup>T</sup> F<sub>X</sub>(t) dt, where F<sub>X</sub> is the distribution of the time to fixation; roughly μL(T − 4N<sub>e</sub>). B1 (exact for an empty start) is <span class="mono">holds / n/a / contested</span>. B1c, the audit question of whether the ancestral pipe was empty, came out <span class="mono">holds / n/a / contradicted</span> for the empty premise: every sourced step history of N<sub>e</sub> gives an excess K/UT = 1.9 to 4.0.<a class="src" href="#s16">S16</a></p>
@@ -326,11 +347,16 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 <p>G<sub>f</sub> = 1,322 comes from the LTEE ("45.4 fixations, yielding a cumulative rate of 1,322 generations per fixation"). The book used 1,400 and a 2026-10-03 post 1,587; that drift is logged.<a class="src" href="#s2">S2</a><a class="src" href="#s3">S3</a> A2 is <span class="mono">holds / unverifiable / contested</span>: the order of magnitude reproduces, but the calibration is underdetermined.<a class="src" href="#s28">S28</a> The 1,075,000× factors into ≈ 11.7× (letters versus events; A3x <span class="mono">holds / partial / supported</span>, GAP-07b counts 42.1M events, 9.7× raw) and Day's own SNV-only 91,600×.<a class="src" href="#s10">S10</a><a class="src" href="#s19">S19</a> The rest is the transfer from an asexual LTEE to a recombining mammal. In F2, clonal interference cut throughput to R<sub>int</sub> = 0.088 at 32 loci, while free recombination kept 0.975 at 272 loci. F1 measured 0.397 substitutions per generation while one sweep took 847 generations (latency is not throughput). F1 and F2 are both <span class="mono">holds / n/a / contested</span>.<a class="src" href="#s17">S17</a></p>
 
 <h3>Cost of selection</h3>
-<p>Under hard selection with reproductive excess R and per-substitution cost D (≈ ln(2N) + 1, doubled for diploid additive selection), the rate cap is λD &lt; ln R. For R ≥ 1.3 the tested cap lay 9 to 100× above 1/300. Day's 1/300 is recovered in Haldane's regime (R ≈ 1.1, diploid D ≈ 20 to 30), which is not yet simulated. Soft selection did <b>not</b> remove the cost: at equal supply it ran within about 15% of hard, and slightly slower. H is <span class="mono">holds / partial / contested</span>.<a class="src" href="#s18">S18</a> Day's "at most 2 percent of the average genome" for the adaptive share is near what neutral theory also assumes. If the rest is neutral, the weight of the argument moves to branch B (the neutral clock) rather than being settled there.<a class="src" href="#s8">S8</a></p>
+<p>Under hard selection with reproductive excess R and per-substitution cost D (≈ ln(2N) + 1, doubled for diploid additive selection), the rate cap is λD &lt; ln R. For R ≥ 1.3 the tested cap lay 9 to 100× above 1/300. Day's 1/300 is recovered in Haldane's regime (R ≈ 1.1, diploid D ≈ 20 to 30): H8 confirms it at R = 1.111 with D rescaled to 30 (K = 1,000, interval 484 to 673 generations per substitution), and the budget scales as ln R (16 to 21× from R = 1.111 to 3).<a class="src" href="#s35">S35</a> "Slower than 1/300" is conditional on K; a K = 16,000 run scored two misses, one indeterminate and one hit, so the finite-size explanation is not supported. Soft selection did <b>not</b> remove the cost: at equal supply it ran within about 15% of hard, and slightly slower. H is <span class="mono">holds / partial / contested</span>.<a class="src" href="#s18">S18</a> Day's "at most 2 percent of the average genome" for the adaptive share is near what neutral theory also assumes. If the rest is neutral, the weight of the argument moves to branch B (the neutral clock) rather than being settled there.<a class="src" href="#s8">S8</a></p>
 
 <h3>Multi-step waiting times (D15)</h3>
 <p>Hössjer, Bechly &amp; Gauger 2021 use a haploid Moran model, with binding sites of width W = 6 to 10, at μ = 10⁻⁸ and N = 10⁴. The audit reproduces their Tables 4, 5 and 9 (worst deviation 0.3%) and Durrett &amp; Schmidt 2008 (8.70×10⁶ generations for a human pair).<a class="src" href="#s24">S24</a> If the intermediate steps are neutral or harmful (a valley), the wait grows steeply with the number of steps; if each step helps (stepping stones), the waits roughly add. The audit's reading of the status file: both sides agree on Hössjer's arithmetic and differ on what the target is.</p>
-<div class="pending"><b class="t">Pending</b><p><b>D15</b> (claim <span class="mono">pending / pending / pending</span>): main sweep of 714 cells running on the compute host; 17 of 714 cells were done at the last queue update. <b>XT</b>: replication of B0, B1–B1c, B2a and B3–B3c in fwdpy11 0.24.7, main run in progress. <b>ROOT</b> stays <span class="mono">pending / n/a / pending</span> until branches A to H are resolved.<a class="src" href="#s24">S24</a><a class="src" href="#s25">S25</a><a class="src" href="#s29">S29</a></p></div>
+<div class="audit"><b class="t">Results (D15, XT, A2e)</b><ul>
+<li><b>D15</b> (<span class="mono">holds / accurate / contested</span>, provisional): 714 cells. Within Hössjer's stated premises (m ≥ 2, specific site, neutral or valley intermediates; 96 cells) P(done within 9 My) = 0 and p90 ≤ 0.017. Outside them it flips: +1% per-step intermediates reach 9 My in 57 to 77% of replicates at N<sub>e</sub> = 10⁴ and 100% at 10⁵; redundant sites (k<sub>mult</sub> ≥ 10), a non-specific gene set (any m of M, mattering from M of order 1,000) and his own Table 5 d<sub>max</sub> = 1 rows also flip it. The N<sub>e</sub> = 10⁵ neutral excess is the omitted fixation sojourn of about 4N<sub>e</sub>.<a class="src" href="#s33">S33</a></li>
+<li><b>XT</b> (fwdpy11 0.24.7; no verdict change): replicated Kimura u within 2%, P<sub>fix</sub> = 1/(2N), t<sub>fix</sub> scaling with N<sub>e</sub>, the exact-chain F<sub>cond</sub> and the B1c excess (3.8 to 3.9). Not replicated and not localised: the B1 equilibrium deficit (21%), B1b expansion (0.699 vs 0.733), B3b non-overlap k/U (0.95 to 0.96) and B3c(e) cohort (0.64). The deficit rises with per-gamete U (a hypothesis).<a class="src" href="#s34">S34</a></li>
+<li><b>A2e</b> (<span class="mono">non-sequitur / n/a / contested</span>): per generation, supply-limited, F ≤ 0.104 at κ = 1. At κ = 93,659 (derived from Day's stated factors) capped F is 1.98 to 7.1. The flip point κ* is 3.9 to 13,050 (central 217), a threshold on supply × beneficial fraction × effect size the check cannot set. On Day's total-throughput basis F = 50,765, conditional on k = μ.<a class="src" href="#s37">S37</a></li>
+<li><b>ROOT</b> stays <span class="mono">pending / n/a / pending</span> until branches A to H are resolved.<a class="src" href="#s29">S29</a></li>
+</ul></div>
 
 <h3>One verdict rule for everyone</h3>
 <p>X1 applies one rule to Day, critics and allies. A slip is an error only if fixing it moves the author's own conclusion by more than 25% or flips it. Only verbatim statements and their derivations are scored. Rhetoric (boasts, taunts, framing) is tagged and not fact-checked. Under that rule Day's C6 (ancient DNA) became a non-sequitur rather than an arithmetic error. The critics' slips are ledgered: McCarthy's 400 billion × 1/20,000 printed as 35M (it is 20M; a comment, so it goes to the ledger), Mansfield's "about 10 times", KITTENS' 94,000 for 91,600, and Hössjer's 15,800 for 125 × 127, among others.<a class="src" href="#s30">S30</a><a class="src" href="#s20">S20</a><a class="src" href="#s27">S27</a></p>
@@ -347,10 +373,11 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 <tr><td>G1 rate includes parallelism</td><td><span class="tag d">Day</span></td><td class="mono">holds / n/a / contested</td></tr>
 <tr><td>H Haldane 1/300</td><td><span class="tag d">Day</span></td><td class="mono">holds / partial / contested</td></tr>
 <tr><td>C6 ancient-DNA clock</td><td><span class="tag d">Day</span></td><td class="mono">non-sequitur / unverifiable / contradicted</td></tr>
-<tr><td>D15 Hössjer waiting time</td><td><span class="tag p">ally</span></td><td class="mono">pending / pending / pending</td></tr>
+<tr><td>B3d 32.3 and "factor 25"</td><td><span class="tag d">Day</span></td><td class="mono">holds / misread / contradicted</td></tr>
+<tr><td>D15 Hössjer waiting time</td><td><span class="tag p">ally</span></td><td class="mono">holds / accurate / contested</td></tr>
 <tr><td>ROOT no mechanism suffices</td><td><span class="tag d">Day</span></td><td class="mono">pending / n/a / pending</td></tr>
 </tbody></table></div>
-<p class="note">Sources for this table: S29.</p>
+<p class="note">Sources for this table: S29, S33, S36.</p>
 </section>
 
 <!-- ================= LAB BENCH ================= -->
@@ -484,7 +511,7 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
   <button class="b ghost" id="lock-reset" type="button">Reset</button>
 </div>
 <div class="stats" id="lock-stats" aria-live="polite"></div>
-<div class="pending"><b class="t">D15 status</b><p>The real check is pending (main sweep running). Neither side's answer is implied by this toy.<a class="src" href="#s24">S24</a></p></div>
+<div class="pending"><b class="t">D15 status</b><p>The real check is finished (714 cells; see the ELI12 and ELI18 sections). Neither side's answer is implied by this toy.<a class="src" href="#s24">S24</a></p></div>
 </div>
 
 <h2>How the audit's simulations work</h2>
@@ -523,12 +550,17 @@ details.sources code { font-size: 0.8rem; word-break: break-word; }
 <li id="s21"><code>CL/A3x-bp-vs-events.md:46</code>: CSAC 2005, ~35 million substitution events, ~5 million indel events (both lineages; <code>CL/A3-required-fixations-2019-2025.md:13</code>).</li>
 <li id="s22"><code>docs/research/parameters.yaml:42–43</code> (μ 1.2e-8 pedigree), <code>:48</code> (human N<sub>e</sub> 1e4), Yoo 2025 N<sub>e,anc</sub> 1.32e5 (HCG), 1.98e5 (HCB).</li>
 <li id="s23"><code>CL/D9-weasel-540000-generations.md:40</code> (8,525 ± 39 simulated; diffusion 8,480; overstated 2.3×); <code>QD:289</code> Q44 (19,807).</li>
-<li id="s24"><code>CL/D15-hossjer-regulatory-waiting-time-9-my.md</code> (side ally; verdicts pending); <code>QC:215</code> HO-12; <code>RC/results/R4-D15-status.md:1–20</code>; <code>RC/QUEUE.md</code> (17 of 714 cells at 2026-10-09 16:45).</li>
-<li id="s25"><code>RC/xt_cross_tool.py</code> docstring (targets B0, B1–B1c, B2a, B3–B3c; fwdpy11 0.24.7); <code>RC/QUEUE.md</code> (main run in progress).</li>
+<li id="s24"><code>CL/D15-hossjer-regulatory-waiting-time-9-my.md</code> (side ally; verdicts now holds / accurate / contested, provisional); <code>QC:215</code> HO-12.</li>
+<li id="s25"><code>RC/xt_cross_tool.py</code> docstring (targets B0, B1–B1c, B2a, B3–B3c; fwdpy11 0.24.7); result: <code>RC/results/R4-XT.md</code>.</li>
 <li id="s26"><code>RC/RESULTS.md:196–204</code> (B3b, Balloux–Lehmann: symmetric cycles −0.3% to −2%; 0.743 window-dependent).</li>
 <li id="s27"><code>CL/C6-molecular-clock-stopped.md</code> verdict lines (non-sequitur / unverifiable / contradicted, rule rev 2).</li>
 <li id="s28"><code>CL/A2-ltee-gf.md</code> verdict lines (holds / unverifiable / contested).</li>
 <li id="s29">Verdict lines (lines ~12–14) of <code>CL/ROOT-no-mechanism-suffices.md</code>, <code>A2-ltee-gf.md</code>, <code>A3x-bp-vs-events.md</code>, <code>B1-…</code>, <code>B1c-…</code>, <code>B3-k-neq-mu-values-umbrella.md</code>, <code>F1-…</code>, <code>F2-…</code>, <code>G1-…</code>, <code>H-haldane-limit.md</code>, <code>C6-…</code>, <code>D15-…</code>.</li>
+<li id="s33"><code>RC/results/R4-D15.md</code> and <code>RC/RESULTS.md</code> "D15" paragraph (714 cells; in-scope 96 cells; post hoc fix pass 3b88bbb).</li>
+<li id="s34"><code>RC/results/R4-XT.md</code>, <code>RC/RESULTS.md</code> "XT" paragraph (fwdpy11 0.24.7; no verdict change).</li>
+<li id="s35"><code>RC/results/R4-H8.md</code>, <code>RC/RESULTS.md</code> "H8 / H5" paragraph (incl. post hoc kscale16, 409378f).</li>
+<li id="s36"><code>RC/results/R4-B3.md</code>, <code>R4-B3g.md</code>, <code>RC/RESULTS.md</code> "B3 family" paragraph (32.93 reconstruction; events 2.25 to 3.38).</li>
+<li id="s37"><code>RC/results/R4-A2e.md</code>, <code>RC/RESULTS.md</code> "A2e" paragraph (κ* 3.9 to 13,050; F = 50,765 on the total-throughput basis).</li>
 <li id="s30"><code>RC/results/R4-X1-verdict-rule.md</code> (one rule for all sides; R1 25% materiality; rule RH).</li>
 <li id="s31"><code>QD:93</code> Q11, Zenodo 18165980 ¶24 (0.02^20,000,000).</li>
 <li id="s32"><code>QD:295</code> Q45 (4N<sub>e</sub> neutral; (2/s) ln(2N<sub>e</sub>) beneficial).</li>
