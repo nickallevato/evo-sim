@@ -72,6 +72,18 @@ are the original runs, unchanged code path).  PRE-REGISTERED (before the rerun):
   R4  ctrl over 6 reps: per-rep Hn drift within 4% of its start in at least 5 of 6.
   Verdict rule: external stays pending unless R1, R2 and R3 are met; if any fails, it stays pending and the result is written up.
 Run: ... g2c_standing_variation.py main 3 rerun   (one invocation = 11 jobs; launch as 2 invocations of the job list if needed)
+POST HOC (review MAJOR follow-up), 2026-10-09; pre-registered before the run, commit labelled "post hoc (review MAJOR follow-up)".
+Why: condition A's counted concurrency (6 reps, T = 6,000, window 3,000) averaged 0.6, below the pre-registered [0.8, 2.5]; expected
+about 1.0 (0.00076 fixations/gen x ~1,270 counted duration), and with 1-3 sweeps per window the mean is Poisson-limited.  Fix:
+model A_long = A (same parameters, same code path) with T = 18,000 and window 6,000-17,999 (12,000 generations, about 9 sweeps per
+rep), reps 6, 7.  Run: g2c_standing_variation.py main 2 rerunA   (2 jobs, 2 workers, about 35 min each on na-workhorse).  No new ctrl
+runs: the Hn ratio is against the mean Hn_win of the six existing ctrl reps (P1 shows ctrl Hn is stationary within 4%).
+  L1  A_long mean counted concurrency over the 2 reps in [0.8, 2.5]; each rep in [0.3, 3.0].
+  L2  A_long mean Hn ratio to the 6-rep ctrl mean in [0.96, 1.04].
+  L3  A_long drift ratio (N/Ne) in [0.99, 1.01].  Zero dropped arrivals.
+  Verdict rule (fixed now): restore the G2c/B6c external verdict ("supported", as a conditional, per review #17) only if L1, L2 and
+  L3 all pass; R1 and R2 already passed in the first post hoc rerun.  If any fails, external stays pending and the result is written up.
+  If Hn ratio were < 0.10 the Hancock falsifier would fire (not expected).
 """
 import os
 import sys
@@ -92,6 +104,8 @@ SLOTS = {"ctrl": 0, "A": 40, "B": 450}
 # aiming the COUNTED concurrency (>= 50 copies, not fixed) at Day's 230.  Slots raised so arrivals are not dropped.
 MODELS["B2"] = MODELS["B"] * 230.0 / 146.0
 SLOTS["B2"] = 800
+MODELS["A_long"] = MODELS["A"]    # POST HOC (review MAJOR follow-up): A with a long window; see docstring
+SLOTS["A_long"] = SLOTS["A"]
 
 
 def run(model, rep, N=10_000, K=500, T=6000, win=(3000, 6000), rec_every=20, seed_extra=0):
@@ -173,7 +187,7 @@ def run(model, rep, N=10_000, K=500, T=6000, win=(3000, 6000), rec_every=20, see
 
 def _job(a):
     model, rep = a
-    r = run(model, rep)
+    r = run(model, rep, T=18000, win=(6000, 18000)) if model == "A_long" else run(model, rep)
     od = os.path.join(HERE, "results", "raw")
     with open(os.path.join(od, "g2c_%s_rep%d.json" % (model, rep)), "w") as fh:
         json.dump(r, fh)
@@ -187,11 +201,11 @@ def analyse(rawdir):
         r = json.load(open(f))
         R.setdefault(r["model"], []).append(r)
     ctrl = np.mean([r["Hn_win"] for r in R.get("ctrl", [])]) if "ctrl" in R else float("nan")
-    for m in ("ctrl", "A", "B", "B2"):
+    for m in ("ctrl", "A", "B", "B2", "A_long"):
         for r in R.get(m, []):
             print("%-4s rep%d: Hn_start=%.4f Hn_win=%.4f ratio_to_ctrl=%.3f drift_ratio(N/Ne)=%.4f conc=%.1f fixed_total=%d fixed_win=%s dropped=%d (%.0fs)" % (
                 m, r["rep"], r["Hn_start"], r["Hn_win"], r["Hn_win"] / ctrl, r["drift_ratio"], r["conc_win"], r["fixed"], r.get("fixed_win"), r["dropped"], r["secs"]))
-    for m in ("ctrl", "A", "B", "B2"):
+    for m in ("ctrl", "A", "B", "B2", "A_long"):
         if R.get(m):
             print("MEAN %-4s n=%d Hn ratio %.3f (per-rep ctrl-matched: %s) conc %.1f drift %.4f" % (m, len(R[m]), np.mean([r["Hn_win"] for r in R[m]]) / ctrl,
                   [round(r["Hn_win"] / np.mean([c["Hn_win"] for c in R["ctrl"] if c["rep"] == r["rep"]]), 3) for r in R[m] if any(c["rep"] == r["rep"] for c in R["ctrl"])],
@@ -210,6 +224,8 @@ if __name__ == "__main__":
         jobs = [(m, r) for m in ("B", "A", "ctrl") for r in (0, 1)]
         if len(sys.argv) > 3 and sys.argv[3] == "rerun":      # POST HOC (review MAJOR-1): see docstring addendum
             jobs = [("B2", r) for r in (0, 1, 2)] + [(m, r) for r in (2, 3, 4, 5) for m in ("A", "ctrl")]
+        if len(sys.argv) > 3 and sys.argv[3] == "rerunA":     # POST HOC (review MAJOR follow-up): see docstring addendum
+            jobs = [("A_long", r) for r in (6, 7)]
         with mp.get_context("spawn").Pool(w) as pool:
             for r in pool.imap_unordered(_job, jobs):
                 print("done", r["model"], r["rep"], flush=True)
