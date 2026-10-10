@@ -1,0 +1,7 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-10T13:58:47-06:00
+pid: 675198 (main; 10 pool workers; bash wrapper 675196)
+cmd: research/.venv/bin/python -I research/checks/h8_haldane_regime.py kscale64 10
+commit: 15e4941 (post hoc, after 409378f)
+695a95f2ca728c3af06d1fed70551b53  research/checks/h8_haldane_regime.py
+expected: ~1.5-3 h (per-job cost ~4x kscale16; kscale16 took 1574 s on 8 workers)
