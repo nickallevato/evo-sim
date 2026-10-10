@@ -9,9 +9,9 @@ load_bearing: false  # premise behind the correction d (A4) and Duffy's 20 -> 25
 sourcing: firsthand  # Zenodo text is Day's own; the book wording (two standard models) is secondhand via the Gutsick Gibbon video
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # internal: premise of A4. fidelity: Zenodo abstract quote accurate; book/slide wording secondhand. external: WF as classically defined is discrete and non-overlapping (Hancock concedes), but Moran/Ne treatments exist, so 'no standard treatment' fails if implied; the sweep time-scale question is untested. R4 mapping review
+  fidelity: unverifiable
+  external: contested
 ---
 
 ## Statement (verbatim)

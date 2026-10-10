@@ -9,9 +9,9 @@ load_bearing: false  # structural point; the supply side is argued numerically i
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # internal: F_max has no mu or s term (literal). fidelity accurate for the Duffy-version formula. external contested: Day says G_f is a measured total including supply and selection; the transfer is the question and A5/A5c supply scaling (~690x) favours the critic; the point restates the supply objection. R4 mapping review
+  fidelity: accurate
+  external: contested
 ---
 
 ## Statement (verbatim)

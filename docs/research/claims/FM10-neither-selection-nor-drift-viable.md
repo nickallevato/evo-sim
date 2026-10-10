@@ -9,7 +9,7 @@ load_bearing: true  # the ROOT-level conclusion of the post
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: pending   # R4 FM: no derivation from FM3-FM5 is stated. Rule-N grep of Day's corpus at integration (2026-10-10): no text states or defends 'drift implies a uniform rate'; N2b not triggered (see R4 FM paragraph); the N2d reading ('stronger than its premises') is available but needs a deliberate call. Left pending
+  internal: pending   # R4 FM: no derivation from FM3-FM5 is stated. Rule-N grep of Day's corpus at integration (2026-10-10): no text states or defends 'drift implies a uniform rate'; N2b not triggered (see R4 FM paragraph); the N2d reading ('stronger than its premises') is available but needs a deliberate call. Left pending. Owner decision 2026-10-10: stays pending until Day releases his method/window/statistic; rule N2d open, revisit on release
   fidelity: n/a
   external: contested   # R4 FM: every pre-registered discriminating cell (P3, P4, P5, P7) falls on the critics' side; mirror test M1 and fix pass 2 leave one orthologous chrX window; leaning critic. A human-specific autosomal mesa signal is contradicted on alignable sequence (a premise, not a verdict on FM10)
 ---

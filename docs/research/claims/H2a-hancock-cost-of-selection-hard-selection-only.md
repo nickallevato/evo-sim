@@ -9,9 +9,9 @@ load_bearing: false  # restates H2 (Nunney 2003) and H3 in a critic's words; Day
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # internal: holds. fidelity accurate vs H2 (Nunney 2003). external contested leaning critic: the cost is not a general bound (R4 H, H2-hard, H3), but Nunney limits soft-selection relief to intraspecific competition, no human hard/soft split is given, and standing variation lowers the first sweep's cost only. R4 mapping review
+  fidelity: accurate
+  external: contested
 ---
 
 ## Statement (verbatim)

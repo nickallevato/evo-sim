@@ -9,8 +9,8 @@ load_bearing: false  # definitional/rhetorical; numeric content is in B5c and th
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
+  internal: holds   # internal: molecular drift / phenotypic selection is consistent with B5 (k = mu). external pending: the claim about Kimura's motive is unsourced and the 'factor of two' remark is unchecked (possible critic error recorded). 'We are not here to save Darwin' is rhetoric (RH). R4 mapping review
+  fidelity: n/a
   external: pending
 ---
 

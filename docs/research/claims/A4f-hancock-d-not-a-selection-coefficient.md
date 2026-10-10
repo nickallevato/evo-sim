@@ -9,9 +9,9 @@ load_bearing: false  # MITTENS 3.0 dropped d (A4d); applies to the book and 2.x 
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # internal: the cancellation holds as a conditional (d = 25 would cancel g_len) but is not Day's dimensionless d = 0.45. fidelity: definition relayed secondhand via a text message; 'no equivalent term' concerns the concept and survives the A4b retraction. external: whether d is a legitimate rescaling is the A4/C2 question (d*s exact for hazard-scale s). R4 mapping review
+  fidelity: partial
+  external: contested
 ---
 
 ## Statement (verbatim)

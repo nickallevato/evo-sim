@@ -9,8 +9,8 @@ load_bearing: false  # a wording point; does not engage the calculation
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
+  internal: holds   # internal: a covariance is a descriptive statistic, so the wording point holds; she concedes the live question in the next sentence. Does not engage the numbers. R4 mapping review
+  fidelity: n/a
   external: untestable
 ---
 

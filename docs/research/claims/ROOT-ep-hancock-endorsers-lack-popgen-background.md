@@ -9,8 +9,8 @@ load_bearing: false  # argument from credentials; the project's own rule is that
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
+  internal: holds   # internal: holds only in the weak form (credentials bear on weight of endorsement, not on arithmetic; FP-01). fidelity unverifiable: 'similar blunders' names no paper (rule F). R4 mapping review
+  fidelity: unverifiable
   external: untestable
 ---
 

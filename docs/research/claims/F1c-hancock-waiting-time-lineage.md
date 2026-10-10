@@ -9,8 +9,8 @@ load_bearing: false  # a classification plus a pointer to a 2024 critic video th
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
+  internal: holds   # internal: Hancock's classification as 'in the lineage of waiting-time problems' is a family resemblance, conceded as such. fidelity: partial, TH-1 does not mention MITTENS/Hossjer (keyword 0); transfer by analogy. external pending: TH-1 not analysed. R4 mapping review
+  fidelity: partial
   external: pending
 ---
 

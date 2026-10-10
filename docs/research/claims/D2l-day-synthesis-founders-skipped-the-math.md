@@ -9,9 +9,9 @@ load_bearing: false  # historical premise behind D2g and the ROOT framing "no bi
 sourcing: secondhand  # book text read aloud from Duffy's slide; the book was not accessed and the sentence is not in the harvested Day corpus
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # internal: holds on the narrow reading (no one computed Day's fixation-count budget before). fidelity: slide read aloud, book context unavailable. external: the broad reading ('not by mathematicians') is contradicted by D2k; the narrow reading is untested. R4 mapping review
+  fidelity: unverifiable
+  external: contested
 ---
 
 ## Statement (verbatim)

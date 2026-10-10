@@ -9,9 +9,9 @@ load_bearing: false  # historical fidelity point; not a numeric claim
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # external supported on the broad reading (Fisher, Wright, Haldane, Pearson, Kingman were mathematically trained; documented history, citation lookup pending). Does not touch the narrow reading of D2l. R4 mapping review
+  fidelity: n/a
+  external: supported
 ---
 
 ## Statement (verbatim)

@@ -9,9 +9,9 @@ load_bearing: false  # inductive burden-of-proof argument; no number
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending
-  fidelity: pending
-  external: pending
+  internal: holds   # internal: weak inductive burden argument. external contested: Day does make a testable prediction (zero completions, C) that the audit tested, and the record is microevolutionary scale; the same standard applies to the critic-side models (GAP-07b). 'Day's math can't do any of this' is rhetoric (RH). R4 mapping review
+  fidelity: n/a
+  external: contested
 ---
 
 ## Statement (verbatim)
