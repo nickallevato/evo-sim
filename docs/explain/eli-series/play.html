@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- GENERATED from index.html by research/tools/eli_readme_svgs.py; edit index.html, not this file -->
+<title>Is There Enough Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Design: a population-genetics bench notebook. Pale bench-green paper, ink text, teal beads for the tracked allele.
+   Day's side and the critics' side get two equally weighted hues (amber, blue). Layout: one 880px column; a sticky level
+   switcher; level text first, then a shared "lab bench" of five sims; a source list at the end. */
+:root {
+  --bg: #eef2ef; --surface: #fbfcfa; --plot-bg: #fbfcfa; --ink: #18272b; --fg: #18272b; --muted: #5b6d70; --grid: #d5dedb; --rule: #c4d0cc;
+  --allele-a: #0d7a70; --allele-b: #c3cdca; --water: #dce9ec;
+  --side-d: #9a5a00; --side-c: #2b5ca6; --side-d-bg: #f6ecdc; --side-c-bg: #e3ebf7; --pend: #6b6b6b; --pend-bg: #ececea;
+  --focus: #c2410c;
+  --text: "Atkinson Hyperlegible", "Verdana", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", "DejaVu Sans Mono", "Menlo", "Consolas", monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1719; --surface: #162124; --plot-bg: #162124; --ink: #e2ebe8; --fg: #e2ebe8; --muted: #93a6a8; --grid: #2a3a3d; --rule: #31464a;
+    --allele-a: #3fc4b1; --allele-b: #3d4f52; --water: #1b3138;
+    --side-d: #e3a64f; --side-c: #7fa9ee; --side-d-bg: #2a2214; --side-c-bg: #17233a; --pend: #a8a8a8; --pend-bg: #24292a;
+    --focus: #fb923c; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1719; --surface: #162124; --plot-bg: #162124; --ink: #e2ebe8; --fg: #e2ebe8; --muted: #93a6a8; --grid: #2a3a3d; --rule: #31464a;
+  --allele-a: #3fc4b1; --allele-b: #3d4f52; --water: #1b3138;
+  --side-d: #e3a64f; --side-c: #7fa9ee; --side-d-bg: #2a2214; --side-c-bg: #17233a; --pend: #a8a8a8; --pend-bg: #24292a;
+  --focus: #fb923c; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--text); }
+.wrap { max-width: 880px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 60px; }
+h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.15; margin: 0.2em 0 0.3em; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin: 2.2em 0 0.5em; padding-top: 0.6em; border-top: 2px solid var(--rule); }
+h3 { font-size: 1.12rem; margin: 1.6em 0 0.4em; }
+p, li { max-width: 68ch; }
+a { color: var(--side-c); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+code, .num, .mono { font-family: var(--mono); font-size: 0.9em; }
+.lede { color: var(--muted); font-size: 1.05rem; }
+.kicker { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+header.top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+header.top > div { min-width: 0; }
+#theme { font: 13px var(--mono); background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
+/* level switcher */
+nav.levels { position: sticky; top: 0; z-index: 5; background: var(--bg); padding-block: 8px; border-bottom: 1px solid var(--rule); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+nav.levels span { font: 13px var(--mono); color: var(--muted); margin-right: 4px; }
+nav.levels button { font: 600 14px var(--mono); padding: 7px 12px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink); border-radius: 4px; cursor: pointer; }
+nav.levels button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+section.level { display: none; }
+body[data-level="eli5"] #eli5-text, body[data-level="eli8"] #eli8-text, body[data-level="eli10"] #eli10-text, body[data-level="eli12"] #eli12-text, body[data-level="eli18"] #eli18-text { display: block; }
+/* level-specific captions inside shared sims */
+.lv { display: none; }
+body[data-level="eli5"] .lv.l5, body[data-level="eli8"] .lv.l8, body[data-level="eli10"] .lv.l10, body[data-level="eli12"] .lv.l12, body[data-level="eli18"] .lv.l18 { display: block; }
+/* side boxes */
+.sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
+.sides > div { min-width: 0; padding: 12px 14px; border-radius: 4px; border-top: 4px solid; }
+.sides .d { background: var(--side-d-bg); border-color: var(--side-d); }
+.sides .c { background: var(--side-c-bg); border-color: var(--side-c); }
+.sides h4 { margin: 0 0 6px; font-size: 0.95rem; }
+.sides .d h4 { color: var(--side-d); } .sides .c h4 { color: var(--side-c); }
+.sides p, .sides li { font-size: 0.95rem; }
+.sides ul { padding-left: 1.1em; margin: 0.3em 0; }
+.audit { border-left: 4px solid var(--allele-a); background: var(--surface); padding: 10px 14px; margin: 14px 0; }
+.audit b.t { color: var(--allele-a); font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; display: block; }
+.pending { border-left: 4px dashed var(--pend); background: var(--pend-bg); padding: 10px 14px; margin: 14px 0; }
+.pending b.t { color: var(--pend); font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; display: block; }
+blockquote { margin: 10px 0; padding: 6px 12px; border-left: 3px solid var(--rule); font-style: italic; }
+blockquote cite { display: block; font-style: normal; font-size: 0.82rem; color: var(--muted); font-family: var(--mono); margin-top: 4px; }
+.eq { font-family: var(--mono); background: var(--surface); border: 1px solid var(--rule); padding: 10px 12px; margin: 10px 0; overflow-x: auto; font-size: 0.92rem; white-space: nowrap; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 10px 0; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+.tablewrap { overflow-x: auto; }
+a.src { font: 600 0.68rem var(--mono); text-decoration: none; vertical-align: super; padding: 0 2px; color: var(--muted); }
+a.src:hover { color: var(--side-c); }
+.tag { font: 600 0.72rem var(--mono); padding: 1px 6px; border-radius: 3px; white-space: nowrap; }
+.tag.d { background: var(--side-d-bg); color: var(--side-d); } .tag.c { background: var(--side-c-bg); color: var(--side-c); } .tag.p { background: var(--pend-bg); color: var(--pend); }
+/* sims */
+.sim { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px; margin: 18px 0 26px; }
+.sim h3 { margin-top: 0; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.sim h3 .n { font: 600 0.8rem var(--mono); color: var(--bg); background: var(--ink); padding: 1px 7px; border-radius: 3px; }
+.illus { font: 600 0.72rem var(--mono); color: var(--pend); border: 1px dashed var(--pend); padding: 1px 6px; border-radius: 3px; }
+.canvas-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; }
+.canvas-row > div, .cbox { min-width: 0; }
+canvas { display: block; border-radius: 4px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 12px 0 8px; }
+.controls label { font-size: 0.88rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; min-width: 0; }
+.controls output { font: 600 0.85rem var(--mono); min-width: 4ch; }
+.controls input[type="range"] { width: 150px; accent-color: var(--allele-a); }
+.controls fieldset { border: 1px solid var(--rule); border-radius: 4px; padding: 4px 10px; margin: 0; font-size: 0.86rem; display: flex; gap: 12px; flex-wrap: wrap; }
+.controls legend { font: 0.75rem var(--mono); color: var(--muted); padding: 0 4px; }
+button.b { font: 600 13px var(--mono); padding: 7px 12px; border-radius: 4px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); cursor: pointer; }
+button.b.ghost { background: transparent; color: var(--ink); }
+button.b:disabled { opacity: 0.5; cursor: wait; }
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 14px; margin-top: 8px; }
+.stats div { display: flex; flex-direction: column; border-bottom: 1px dotted var(--rule); padding-bottom: 3px; min-width: 0; }
+.stats span { font-size: 0.74rem; color: var(--muted); }
+.stats b { font: 600 0.98rem var(--mono); }
+.c-a { color: var(--allele-a); } .c-c { color: var(--side-c); }
+.note { font-size: 0.86rem; color: var(--muted); }
+/* budget board */
+.ledger { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+.ledger > div { min-width: 0; border: 1px solid var(--rule); border-radius: 4px; padding: 10px 12px; }
+.ledger .big { font: 600 1.6rem var(--mono); display: block; }
+.ledger .lab { font-size: 0.78rem; color: var(--muted); }
+.bars { margin: 8px 0; }
+.bars .row { display: grid; grid-template-columns: 70px 1fr; gap: 8px; align-items: center; font: 0.78rem var(--mono); margin: 4px 0; }
+.bars .track { height: 14px; background: var(--water); border-radius: 2px; position: relative; overflow: hidden; }
+.bars .fill { height: 100%; }
+#bud-bar-need { background: var(--side-d); } #bud-bar-cap { background: var(--allele-a); }
+#bud-ratio { font: 600 1.05rem var(--mono); }
+.presets { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+#bud-src { font-size: 0.85rem; background: var(--bg); padding: 8px 10px; border-radius: 4px; }
+details.sources { margin-top: 30px; border-top: 2px solid var(--rule); padding-top: 10px; }
+details.sources summary { cursor: pointer; font-weight: 700; }
+details.sources ol { font-size: 0.84rem; padding-left: 2.6em; }
+details.sources li { margin: 4px 0; }
+details.sources code { font-size: 0.8rem; word-break: break-word; }
+.foot { font-size: 0.85rem; color: var(--muted); margin-top: 24px; }
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .sides, .ledger, .canvas-row { grid-template-columns: 1fr; }
+  .controls input[type="range"] { width: 120px; }
+  nav.levels button { padding: 6px 9px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="kicker">evo-sim audit · explainer series · draft before R5</div>
+    <h1>Is there enough time?</h1>
+    <p class="lede">The math in the dispute over Vox Day's case against evolution, and the simulations used to check it. Same story at five depths. Pick a level; the lab bench below works at every level.</p>
+  </div>
+  <button id="theme" type="button" aria-label="Switch colour theme">theme: auto</button>
+</header>
+
+<nav class="levels" role="tablist" aria-label="Reading level">
+  <span>Explain like I'm</span>
+  <button role="tab" id="tab-eli5" data-level="eli5" aria-controls="eli5-text">5</button>
+  <button role="tab" id="tab-eli8" data-level="eli8" aria-controls="eli8-text">8</button>
+  <button role="tab" id="tab-eli10" data-level="eli10" aria-controls="eli10-text">10</button>
+  <button role="tab" id="tab-eli12" data-level="eli12" aria-controls="eli12-text">12</button>
+  <button role="tab" id="tab-eli18" data-level="eli18" aria-controls="eli18-text">18</button>
+</nav>
+
+<!-- ================= ELI5 ================= -->
+<section class="level" id="eli5-text" role="tabpanel" aria-labelledby="tab-eli5">
+<h2>For a five-year-old</h2>
+<h3>The bead jar</h3>
+<p>Imagine a big jar of beads. Almost all of them are white, but one is green. Each day you make a <b>new jar</b>: you reach into the old jar without looking, take out one bead, put a copy of it in the new jar, drop it back, and do that again and again until the new jar is full.</p>
+<p>Some days you pick the green bead a lot, and some days you miss it. Most of the time the green bead just disappears. But once in a while, by luck, the jar turns <b>all green</b>. Scientists call that a change "sticking."</p>
+<p>Living things are like that. Every baby gets its body's instructions copied from mom and dad, with a few tiny changes. Most changes disappear. A few stick.</p>
+
+<h3>The big question</h3>
+<p>Long, long ago, people and chimpanzees had the same great-great-great (keep going!) grandparents. Since then, millions of tiny changes have stuck. Some people asked: <b>was there enough time for that many changes to stick?</b></p>
+
+<div class="sides">
+  <div class="d"><h4>One side says: not enough time</h4>
+  <p>A writer named Vox Day did a big counting problem. In a science lab, germs took a long time for each change to stick. If people were that slow, he says, you would need about <b>a million times</b> more time than there was.<a class="src" href="#s1">S1</a></p></div>
+  <div class="c"><h4>The other side says: the counting is off</h4>
+  <p>Other scientists said: lots of changes can be on their way <b>at the same time</b>, like many boats on a river. Some differences were <b>there from the start</b>. And some were counted letter by letter when they were really one change.</p></div>
+</div>
+
+<h3>So we checked everybody's homework</h3>
+<p>We did not pick a side first. Before each test we wrote down what each side expected to happen, sealed it, and then let a computer play the bead game over and over.</p>
+<div class="audit"><b class="t">What we found</b>
+<ul>
+<li>A lot of Vox Day's adding and multiplying was <b>right</b>.</li>
+<li>One of his ideas was right too: there is a real limit on how fast <b>helpful</b> changes can spread when life is hard.</li>
+<li>He also changed his mind on one point when people showed him a mistake. That is a good thing to do.</li>
+<li>The other side was right that many changes can travel at once, and that some were counted letter by letter.</li>
+<li>The other side made some small counting slips too, and one pair of numbers only matched because something was counted twice.</li>
+</ul></div>
+<div class="pending"><b class="t">Still being checked</b>
+<p>A puzzle about changes that only help when several happen together, like a lock that needs every number right. The computers are still working on it. A second, different computer program is also checking our first one.</p></div>
+<p>Try the bead jar on the <a href="#bench">lab bench</a> below. Press Play and watch the green beads.</p>
+</section>
+
+<!-- ================= ELI8 ================= -->
+<section class="level" id="eli8-text" role="tabpanel" aria-labelledby="tab-eli8">
+<h2>For an eight-year-old</h2>
+<h3>Game 1: the copying jar</h3>
+<p>A population is a jar of beads. Each bead is one copy of a gene. Every generation the jar is refilled by picking beads from the old jar <b>at random</b>, with copying. Nobody chooses. That luck is called <b>drift</b>.</p>
+<p>Start with one green bead in a jar of 100. Its chance of taking over the whole jar is <b>1 in 100</b>, the same as its share of the jar. Bigger jar, smaller chance. Try it with the <a href="#sim-jar">drift jar</a>: press "Run 1,000 trials" and count.</p>
+
+<h3>Game 2: the river of new changes</h3>
+<p>New changes keep arriving every generation, like paper boats dropped into a river. Most sink near the start. A few float all the way across. Here is the surprising part: in a <b>big</b> population more boats are dropped, but each one is less likely to make it, and the two effects cancel out. The number reaching the far bank each generation ends up the same as the copying-mistake rate, whatever the size of the population. Scientists write that as <b>k = μ</b> (say "k equals mew").</p>
+
+<h3>Game 3: the budget</h3>
+<p>Think of time as pocket money. People and chimps split about <b>6.3 million years</b> ago. At 25 years per generation, that is about <b>252,000 generations</b>.<a class="src" href="#s4">S4</a></p>
+<div class="sides">
+  <div class="d"><h4>Vox Day's budget</h4>
+  <p>In a long lab experiment with germs, one change stuck about every <b>1,322</b> generations.<a class="src" href="#s2">S2</a> 252,000 ÷ 1,322 is about <b>190</b> changes. But he counts <b>205 million</b> changes needed on the human side. So he says the budget is short about a million times.<a class="src" href="#s1">S1</a></p></div>
+  <div class="c"><h4>The critics' budget</h4>
+  <p>They say changes don't wait in line one at a time: many boats float at once. Using the river rule, about <b>19 million</b> single-letter changes are expected after the split, and about <b>15 to 20 million</b> more differences were already in the ancestors. Together that is close to the roughly <b>35 million</b> single-letter differences that were measured.<a class="src" href="#s20">S20</a><a class="src" href="#s21">S21</a></p></div>
+</div>
+<p>Both budgets are on the <a href="#sim-budget">budget board</a>. Press each side's button and see which inputs change.</p>
+
+<h3>What the checkers found</h3>
+<div class="audit"><b class="t">Fair score</b>
+<ul>
+<li>Vox Day's sums mostly add up: <b>30 of 33</b> checked calculations hold, and two of the other three are small slips.<a class="src" href="#s14">S14</a></li>
+<li>He is right that, when life is hard and only the fittest leave babies, there is a real limit on how many <b>helpful</b> changes can spread at once.<a class="src" href="#s18">S18</a></li>
+<li>He agreed in public that the river rule k = μ is right. Changing your mind when shown a mistake earns credit.<a class="src" href="#s5">S5</a></li>
+<li>The critics were right that many changes can float at once, and that the 205 million counts letters inside big chunks, not separate changes.<a class="src" href="#s17">S17</a><a class="src" href="#s19">S19</a></li>
+<li>The critics made slips too. Two of them got about 38 million, which looks like a perfect match, but the match came from counting one part twice.<a class="src" href="#s20">S20</a></li>
+</ul></div>
+<div class="pending"><b class="t">Not finished</b><p>The "lock" puzzle (changes that only help together) and a second computer program checking the first are still running.<a class="src" href="#s24">S24</a><a class="src" href="#s25">S25</a></p></div>
+</section>
+
+<!-- ================= ELI10 ================= -->
+<section class="level" id="eli10-text" role="tabpanel" aria-labelledby="tab-eli10">
+<h2>For a ten-year-old</h2>
+<p>Your DNA is a book of about 3.2 billion letters (A, C, G, T).<a class="src" href="#s20">S20</a> When it is copied for a baby, a few letters come out wrong. That is a <b>mutation</b>. If every member of a species eventually carries the new letter, it has become <b>fixed</b>. A fixed difference between two species is a <b>substitution</b>.</p>
+
+<h3>The raffle</h3>
+<p>Imagine a raffle where every gene copy in the population holds one ticket. Each generation, the next generation's copies are drawn from the tickets. A brand-new mutation starts with <b>one ticket out of 2N</b> (N people, two copies each). If it is neither helpful nor harmful (<b>neutral</b>), its chance of winning the whole raffle in the end is exactly its share: <b>1 in 2N</b>.</p>
+<p>A <b>helpful</b> mutation gets a few bonus tickets each draw. Its chance rises to about <b>2s</b>, where <i>s</i> is the size of the bonus. A 1% edge gives roughly a 2% chance. Most helpful mutations are still lost by bad luck early on. Try it in the <a href="#sim-sel">selection race</a>.</p>
+
+<h3>Who says what</h3>
+<div class="sides">
+  <div class="d"><h4>Vox Day (<i>Probability Zero</i>, MITTENS, papers on Zenodo)</h4>
+  <p>MITTENS divides the generations available by the generations each fixation took in Richard Lenski's long-running <i>E. coli</i> experiment (about 1,322).<a class="src" href="#s2">S2</a> In his 2026 version:</p>
+  <blockquote>"205 million required fixations on the human lineage across 252,000 available generations), the shortfall is 1,075,000-fold for non-mutators"<cite>Day, Zenodo 23003785 p.1, 2026-09-28 (Q14)</cite></blockquote>
+  <p>He also cites J.B.S. Haldane: a cost paid in deaths limits helpful changes to about one per 300 generations.<a class="src" href="#s7">S7</a></p></div>
+  <div class="c"><h4>Critics (McCarthy, Mansfield, Hancock, keruru, Nesslig20 and others)</h4>
+  <blockquote>"a neutral substitution rate that's equal to the mutation rate"<cite>Zach Hancock, Gutsick Gibbon video, 2026-10-03, 01:48:19 (GG-03)</cite></blockquote>
+  <blockquote>"The time it takes for one allele to get fixed is not important, it is the time BETWEEN successive fixations that is important."<cite>Mansfield (@brianmansfield6912), YouTube comment, retrieved 2026-10-07 (MF-04)</cite></blockquote>
+  <p>They add that 205 million counts letters inside big inserted or flipped chunks, which are far fewer events.</p></div>
+</div>
+
+<h3>How the checking works</h3>
+<p>A <b>simulation</b> is a pretend population inside a computer. It follows the raffle rules exactly, generation after generation, so you can count what happens instead of arguing about it.</p>
+<p><b>Pre-registration</b> is like writing your guess on paper and sealing it in an envelope before the game starts. The audit writes down what each side's math predicts, saves it publicly, and only then runs the simulation. Nobody can quietly change their guess afterward.</p>
+<p><b>Cross-tool replication</b> is like asking a second referee with a different stopwatch to time the same race. If two independently written programs agree, a bug in one of them is unlikely to be the cause.</p>
+
+<div class="audit"><b class="t">What the audit found so far</b>
+<ul>
+<li><span class="tag d">Day credited</span> His arithmetic mostly holds (30 of 33 rows).<a class="src" href="#s14">S14</a> His "empty start" formula is exact for a population that begins with no mutations in flight.<a class="src" href="#s9">S9</a> In a population with fewer real parents than members (smaller N<sub>e</sub>), changes take longer to fix, as he says.<a class="src" href="#s15">S15</a> Haldane's cost is a real limit under hard selection.<a class="src" href="#s18">S18</a> He accepted k = μ when shown it, on 2026-08-27.<a class="src" href="#s5">S5</a></li>
+<li><span class="tag c">Critics credited</span> Neutral substitutions run at the mutation rate whatever the population size. Many sweeps run at once. The real ancestral population was not empty.<a class="src" href="#s16">S16</a><a class="src" href="#s17">S17</a> 205 million is a letter count, not an event count.<a class="src" href="#s19">S19</a></li>
+<li><span class="tag c">Critics' slips</span> Several small number slips, and a 38-million "match" that double-counts. Counting single letters, their conclusion still survives. Counting events, Hancock's version does not: the audit scores it a non-sequitur.<a class="src" href="#s20">S20</a></li>
+</ul></div>
+<div class="pending"><b class="t">Pending</b><p>D15, the "combination lock" question raised by Day's ally Ola Hössjer, is still running (17 of 714 settings were done at the last check). XT, the second-referee replication, is still running too.<a class="src" href="#s24">S24</a><a class="src" href="#s25">S25</a></p></div>
+</section>
+
+<!-- ================= ELI12 ================= -->
+<section class="level" id="eli12-text" role="tabpanel" aria-labelledby="tab-eli12">
+<h2>For a twelve-year-old: the simple formulas</h2>
+
+<h3>1. Drift and the fixation chance</h3>
+<p>A population of N diploid individuals carries 2N copies of each gene. Each generation is a random sample of 2N copies from the last one (a <b>Wright–Fisher</b> population). A neutral new mutation starts as 1 copy out of 2N, so:</p>
+<div class="eq">P(fix, neutral) = 1 / (2N)</div>
+
+<h3>2. Why population size cancels: k = μ</h3>
+<p>Let μ be the mutation rate per letter per generation. Each generation, a population makes <b>2Nμ</b> new mutations at a given letter. Each one fixes with chance <b>1/(2N)</b>. Multiply:</p>
+<div class="eq">k = (2N μ) × (1 / 2N) = μ</div>
+<p>The N cancels. This is the substitution rate once the population is in its long-run steady state. Day accepted this cancellation on 2026-08-27:<a class="src" href="#s5">S5</a></p>
+<blockquote>"Supply is 2Nμ in the census N, the fixation probability of a new copy is 1/(2N) in the same N, the two correctly cancel"<cite>Day, "The Response to the Retraction", 2026-08-27, ¶2 (claim B3g)</cite></blockquote>
+<p>Later he gave other values, such as k = 32.3μ, which the audit scored as contradicted.<a class="src" href="#s6">S6</a><a class="src" href="#s29">S29</a></p>
+
+<h3>3. Start state: an empty pipe or a full one</h3>
+<p>A neutral fixation takes about <b>4N<sub>e</sub></b> generations to finish. If the population starts with <b>no mutations in flight</b> (an empty pipe), nothing fixes at first, and the count lags behind μ × T. If it starts at <b>equilibrium</b> (a full pipe), fixations come out at rate μ from day one. The <a href="#sim-river">mutation river</a> lets you switch between the two.</p>
+<div class="sides">
+  <div class="d"><h4>Day</h4><p>His September paper started with an empty pipe ("At generation zero, the subsitution pipeline is empty," typo in the original). On 2026-10-01 he revised that: "The pipeline was full, but it was much shorter."<a class="src" href="#s9">S9</a></p></div>
+  <div class="c"><h4>Critics</h4><p>The common ancestors were a real population with old variation, so the pipe was full. Mansfield: "The 'pipeline' would have been full from the X generations preceding that point in time."<a class="src" href="#s9">S9</a></p></div>
+</div>
+<p class="audit"><b class="t">Audit</b>The empty-start math is exact. But with sourced histories of the ancestral population size, the count comes out <b>1.9 to 4.0 times</b> more than μ × T, not less.<a class="src" href="#s16">S16</a></p>
+
+<h3>4. Selection</h3>
+<p>A mutation with advantage <i>s</i> fixes with chance about <b>2s</b> when 4Ns is large. The exact version is Kimura's formula (in the ELI18 view and the <a href="#sim-sel">selection race</a>). Both sides use it; the dispute is about time and numbers, not this formula.</p>
+
+<h3>5. The cost of selection (Haldane)</h3>
+<p>When a helpful gene replaces an old one, the carriers of the old one must leave fewer offspring. If the population can only spare so many extra deaths, only so many helpful changes can be paid for at once. Haldane's figure is about <b>1 per 300 generations</b>, which Day quotes.<a class="src" href="#s7">S7</a></p>
+<p class="audit"><b class="t">Audit</b>Under hard selection the limit is real. Its size depends on how many extra offspring a population produces (R). For R of 1.3 or more, the tested cap was 9 to 100 times faster than 1 per 300. Haldane's own setting (R around 1.1) gives about his number and has not been simulated yet.<a class="src" href="#s18">S18</a></p>
+
+<h3>6. The MITTENS budget</h3>
+<div class="eq">fixations possible = generations ÷ (generations per fixation) = 252,000 ÷ 1,322 ≈ 190</div>
+<p>Required, per Day: 205 million, so the shortfall is about 1,075,000×.<a class="src" href="#s1">S1</a> The critics change three inputs: what is counted (events, not letters), the rate model (k = μ in parallel, not one at a time), and the ancestral share. Play with them on the <a href="#sim-budget">budget board</a>.</p>
+
+<h3>7. N<sub>e</sub> versus N</h3>
+<p><b>N</b> is the head count. <b>N<sub>e</sub></b>, the effective size, is the size of an ideal population that drifts as fast as the real one. Uneven family sizes and population crashes make N<sub>e</sub> smaller than N. N<sub>e</sub> sets <b>how long</b> fixation takes. For a neutral mutation, N<sub>e</sub> does not change the long-run <b>rate</b> k. The audit checked both: across offspring variances it found P(fix) = 1/(2N) and fixation time ≈ 4N<sub>e</sub>.<a class="src" href="#s15">S15</a></p>
+
+<h3>8. Waiting for several changes at once</h3>
+<p>Some features may need several mutations before they help. If each step helps a little (<b>stepping stones</b>), selection keeps each step and the wait grows roughly with the number of steps. If nothing helps until all are in place (a <b>valley</b>), the wait grows roughly like (chance per step) multiplied by itself once per step. That is much slower. The <a href="#sim-lock">combination lock</a> toy shows the difference.</p>
+<div class="pending"><b class="t">Pending (D15)</b><p>Ola Hössjer, an ally of Day's case, predicts that the wait for several human gene-expression changes "far exceeds 9 million years." The audit reproduced his published tables, and its main sweep is still running. The two sides agree on the arithmetic; they differ on whether the real target is a valley or a path of stepping stones.<a class="src" href="#s24">S24</a></p></div>
+</section>
+
+<!-- ================= ELI18 ================= -->
+<section class="level" id="eli18-text" role="tabpanel" aria-labelledby="tab-eli18">
+<h2>For an eighteen-year-old: the real formulas and the audit's numbers</h2>
+<p class="note">Claim ids (A2, B3, H …) point to <code>docs/research/claims/</code>. Verdicts are listed as internal / fidelity / external, from the claim files as of 2026-10-09. These are R4 results; the R5 synthesis is not written yet.</p>
+
+<h3>Neutral fixation and the substitution rate</h3>
+<p>In any exchangeable neutral model with constant size 2N, a single copy's frequency is a martingale, so P<sub>fix</sub> = 1/(2N) regardless of offspring variance. With supply 2Nμ per site per generation:</p>
+<div class="eq">k = 2Nμ · 1/(2N) = μ        (steady state, discrete generations)</div>
+<p>The audit's B3 check measured P<sub>fix</sub> ≈ 0.0025 = 1/(2N) at offspring variance σ² from 1 to 10.7, where N<sub>e</sub> fell from 200 to 19. The reading "1/(2N<sub>e</sub>)" predicts 0.00249 to 0.0268. Fixation time t<sub>fix</sub>/N<sub>e</sub> stayed at 3.95 to 4.07.<a class="src" href="#s15">S15</a> So Day is right on time and wrong on probability. B3 (Day's k ≠ μ values) stands at <span class="mono">pending / partial / contradicted</span>.<a class="src" href="#s29">S29</a> One credit to Day's direction: with overlapping generations <i>and</i> fluctuating N (Balloux–Lehmann), k ≠ μ, but symmetric cycles give only −0.3% to −2%. Day's 0.743μ depends on the averaging window.<a class="src" href="#s26">S26</a></p>
+
+<h3>Start state</h3>
+<p>From an empty start, E[F(T)] = μL∫<sub>0</sub><sup>T</sup> F<sub>X</sub>(t) dt, where F<sub>X</sub> is the distribution of the time to fixation; roughly μL(T − 4N<sub>e</sub>). B1 (exact for an empty start) is <span class="mono">holds / n/a / contested</span>. B1c, the audit question of whether the ancestral pipe was empty, came out <span class="mono">holds / n/a / contradicted</span> for the empty premise: every sourced step history of N<sub>e</sub> gives an excess K/UT = 1.9 to 4.0.<a class="src" href="#s16">S16</a></p>
+
+<h3>Divergence with ancestral polymorphism</h3>
+<div class="eq">E[d] = 2μT + 4N<sub>e,anc</sub>μ      (per site; × L for the genome)</div>
+<p>With μ = 1.2×10⁻⁸, L = 3.2×10⁹, T = 252,000: 2μLT = <b>19.35M</b>. The ancestral share is 15.6 to 20.3M (residuals against CSAC's ~35M and GAP-07b's 37.77M SNVs, or θ<sub>anc</sub>L at Yoo's N<sub>e,anc</sub> = 1.32×10⁵), giving a null of 35 to 39.6M SNVs.<a class="src" href="#s20">S20</a><a class="src" href="#s22">S22</a> The critics' "38M matches" (Hancock: "about 38 million"; Nesslig20: "~37.8 million") reach that number as a post-split count with a per-generation rate of 76.8 or 75, about twice the 38.4 haploid value. That equals the true post-split 19.35M plus the ancestral term, so the match is a coincidence of two terms. On an SNV basis the critics' conclusion survives (X1 rule N3). On Hancock's own event basis it does not: adding the omitted ancestral term gives an event null of at least 58.6M against 42.07M measured, so his B5c is scored <span class="mono">non-sequitur / unverifiable</span>. Nesslig20's arithmetic holds, and his 75 is uncited (<span class="mono">holds / unverifiable</span>).<a class="src" href="#s20">S20</a></p>
+
+<h3>Selection: Kimura</h3>
+<div class="eq">u(p) = (1 − e<sup>−4N<sub>e</sub>sp</sup>) / (1 − e<sup>−4N<sub>e</sub>s</sup>),   p = 1/(2N)  ⇒  u ≈ 2s(N<sub>e</sub>/N)  for 4N<sub>e</sub>s ≫ 1</div>
+<p>Conditional sweep time ≈ (2/s)ln(2N<sub>e</sub>) is Day's form (Q45).<a class="src" href="#s32">S32</a> Day's (2/s)ln(2N) gives 19,807 generations at N = 10⁴, s = 0.001. Simulation gives 8,525 ± 39 and the diffusion value is 8,480, so that use overstates by 2.3× (D9).<a class="src" href="#s23">S23</a></p>
+
+<h3>MITTENS</h3>
+<div class="eq">F<sub>max</sub> = (t<sub>div</sub> · d) / (g<sub>len</sub> · G<sub>f</sub>);   3.0: 252,000 / 1,322 ≈ 191  vs  205×10⁶  ⇒  1,075,000×</div>
+<p>G<sub>f</sub> = 1,322 comes from the LTEE ("45.4 fixations, yielding a cumulative rate of 1,322 generations per fixation"). The book used 1,400 and a 2026-10-03 post 1,587; that drift is logged.<a class="src" href="#s2">S2</a><a class="src" href="#s3">S3</a> A2 is <span class="mono">holds / unverifiable / contested</span>: the order of magnitude reproduces, but the calibration is underdetermined.<a class="src" href="#s28">S28</a> The 1,075,000× factors into ≈ 11.7× (letters versus events; A3x <span class="mono">holds / partial / supported</span>, GAP-07b counts 42.1M events, 9.7× raw) and Day's own SNV-only 91,600×.<a class="src" href="#s10">S10</a><a class="src" href="#s19">S19</a> The rest is the transfer from an asexual LTEE to a recombining mammal. In F2, clonal interference cut throughput to R<sub>int</sub> = 0.088 at 32 loci, while free recombination kept 0.975 at 272 loci. F1 measured 0.397 substitutions per generation while one sweep took 847 generations (latency is not throughput). F1 and F2 are both <span class="mono">holds / n/a / contested</span>.<a class="src" href="#s17">S17</a></p>
+
+<h3>Cost of selection</h3>
+<p>Under hard selection with reproductive excess R and per-substitution cost D (≈ ln(2N) + 1, doubled for diploid additive selection), the rate cap is λD &lt; ln R. For R ≥ 1.3 the tested cap lay 9 to 100× above 1/300. Day's 1/300 is recovered in Haldane's regime (R ≈ 1.1, diploid D ≈ 20 to 30), which is not yet simulated. Soft selection did <b>not</b> remove the cost: at equal supply it ran within about 15% of hard, and slightly slower. H is <span class="mono">holds / partial / contested</span>.<a class="src" href="#s18">S18</a> Day's "at most 2 percent of the average genome" for the adaptive share is near what neutral theory also assumes. If the rest is neutral, the weight of the argument moves to branch B (the neutral clock) rather than being settled there.<a class="src" href="#s8">S8</a></p>
+
+<h3>Multi-step waiting times (D15)</h3>
+<p>Hössjer, Bechly &amp; Gauger 2021 use a haploid Moran model, with binding sites of width W = 6 to 10, at μ = 10⁻⁸ and N = 10⁴. The audit reproduces their Tables 4, 5 and 9 (worst deviation 0.3%) and Durrett &amp; Schmidt 2008 (8.70×10⁶ generations for a human pair).<a class="src" href="#s24">S24</a> If the intermediate steps are neutral or harmful (a valley), the wait grows steeply with the number of steps; if each step helps (stepping stones), the waits roughly add. The audit's reading of the status file: both sides agree on Hössjer's arithmetic and differ on what the target is.</p>
+<div class="pending"><b class="t">Pending</b><p><b>D15</b> (claim <span class="mono">pending / pending / pending</span>): main sweep of 714 cells running on the compute host; 17 of 714 cells were done at the last queue update. <b>XT</b>: replication of B0, B1–B1c, B2a and B3–B3c in fwdpy11 0.24.7, main run in progress. <b>ROOT</b> stays <span class="mono">pending / n/a / pending</span> until branches A to H are resolved.<a class="src" href="#s24">S24</a><a class="src" href="#s25">S25</a><a class="src" href="#s29">S29</a></p></div>
+
+<h3>One verdict rule for everyone</h3>
+<p>X1 applies one rule to Day, critics and allies. A slip is an error only if fixing it moves the author's own conclusion by more than 25% or flips it. Only verbatim statements and their derivations are scored. Rhetoric (boasts, taunts, framing) is tagged and not fact-checked. Under that rule Day's C6 (ancient DNA) became a non-sequitur rather than an arithmetic error. The critics' slips are ledgered: McCarthy's 400 billion × 1/20,000 printed as 35M (it is 20M; a comment, so it goes to the ledger), Mansfield's "about 10 times", KITTENS' 94,000 for 91,600, and Hössjer's 15,800 for 125 × 127, among others.<a class="src" href="#s30">S30</a><a class="src" href="#s20">S20</a><a class="src" href="#s27">S27</a></p>
+
+<div class="tablewrap"><table>
+<thead><tr><th>Claim</th><th>Side</th><th>internal / fidelity / external</th></tr></thead>
+<tbody>
+<tr><td>A2 G<sub>f</sub> from LTEE</td><td><span class="tag d">Day</span></td><td class="mono">holds / unverifiable / contested</td></tr>
+<tr><td>A3x 205M counts bp</td><td><span class="tag c">critic</span></td><td class="mono">holds / partial / supported</td></tr>
+<tr><td>B1 empty-start formula</td><td><span class="tag d">Day</span></td><td class="mono">holds / n/a / contested</td></tr>
+<tr><td>B1c pipe empty at split?</td><td><span class="tag p">audit question</span></td><td class="mono">holds / n/a / contradicted</td></tr>
+<tr><td>B3 k ≠ μ values</td><td><span class="tag d">Day</span></td><td class="mono">pending / partial / contradicted</td></tr>
+<tr><td>F1 latency ≠ throughput</td><td><span class="tag c">critic</span></td><td class="mono">holds / n/a / contested</td></tr>
+<tr><td>G1 rate includes parallelism</td><td><span class="tag d">Day</span></td><td class="mono">holds / n/a / contested</td></tr>
+<tr><td>H Haldane 1/300</td><td><span class="tag d">Day</span></td><td class="mono">holds / partial / contested</td></tr>
+<tr><td>C6 ancient-DNA clock</td><td><span class="tag d">Day</span></td><td class="mono">non-sequitur / unverifiable / contradicted</td></tr>
+<tr><td>D15 Hössjer waiting time</td><td><span class="tag p">ally</span></td><td class="mono">pending / pending / pending</td></tr>
+<tr><td>ROOT no mechanism suffices</td><td><span class="tag d">Day</span></td><td class="mono">pending / n/a / pending</td></tr>
+</tbody></table></div>
+<p class="note">Sources for this table: S29.</p>
+</section>
+
+<!-- ================= LAB BENCH ================= -->
+<h2 id="bench">The lab bench</h2>
+<p>These are small, honest versions of the real thing: Wright–Fisher populations with true binomial sampling, kept small so they run in your browser. The audit's own checks use the same rules at larger sizes, with predictions committed before each run. These toys are for intuition and are not the audit's results.</p>
+
+<!-- 1 drift jar -->
+<div class="sim" id="sim-jar">
+<h3><span class="n">1</span> Drift jar</h3>
+<p class="lv l5">Green beads are the new change. Each generation the jar is refilled by blind picking. Watch the line: most green runs fall to the bottom and die out, and a few climb to the top.</p>
+<p class="lv l8 l10">Every bead is one gene copy; the jar holds 2N of them. Press "Run 1,000 trials." The share that took over lands near 1 in 2N. A bigger jar makes that smaller.</p>
+<p class="lv l12 l18">Each generation draws Binomial(2N, p). Starting at p = 1/(2N), the fraction of runs that fix converges on 1/(2N); losses are fast, while fixations take about 4N generations. Try "half and half" to see the chance equal the starting share.</p>
+<div class="canvas-row"><div><canvas id="jar-canvas" aria-label="Jar of beads; green beads carry the new allele"></canvas></div><div><canvas id="jar-trace" aria-label="Share of green beads over generations, current and recent runs"></canvas></div></div>
+<div class="controls">
+  <label for="jar-n">N (individuals) <input type="range" id="jar-n" min="10" max="500" step="5" value="50"><output id="jar-n-out"></output></label>
+  <label for="jar-speed">speed <input type="range" id="jar-speed" min="1" max="120" value="20"><output id="jar-speed-out"></output></label>
+  <fieldset><legend>start</legend>
+    <label><input type="radio" name="jar-start" id="jar-start-one" value="one" checked> one new bead</label>
+    <label><input type="radio" name="jar-start" id="jar-start-half" value="half"> half and half</label></fieldset>
+  <button class="b" id="jar-play" type="button">Play</button>
+  <button class="b ghost" id="jar-step" type="button">Step</button>
+  <button class="b ghost" id="jar-batch" type="button">Run 1,000 trials</button>
+  <button class="b ghost" id="jar-reset" type="button">Reset</button>
+</div>
+<div class="stats" id="jar-stats" aria-live="polite"></div>
+</div>
+
+<!-- 2 river -->
+<div class="sim" id="sim-river">
+<h3><span class="n">2</span> Mutation river (substitution counter)</h3>
+<p class="lv l5">Little boats (new changes) are dropped in on the left. Most sink. The ones that reach the right bank have "stuck." Count how many arrive.</p>
+<p class="lv l8 l10">Each dot is one mutation; left means rare, right means everyone has it. Switch N up and down: the arrival rate stays near μ. Then compare "empty river" with "already flowing": the empty one starts slow.</p>
+<p class="lv l12 l18">Infinite-sites, unlinked neutral WF: Poisson(2Nμ) new mutations each generation, and each segregating count is redrawn as Binomial(2N, c/2N). The equilibrium start draws the neutral spectrum, Poisson(θ/i) sites with i copies, θ = 4Nμ. Here μ is per gene copy per generation (a toy region, not one site). Watch the cumulative count against the dashed μt line: the slope matches k = μ at every N, and the empty start falls short by roughly μ × 4N.</p>
+<canvas id="riv-canvas" aria-label="Segregating mutations by frequency, new on the left and fixed on the right"></canvas>
+<div class="cbox" style="margin-top:8px"><canvas id="riv-cum" aria-label="Cumulative substitutions versus the line mu times t"></canvas></div>
+<div class="controls">
+  <label for="riv-n">N <input type="range" id="riv-n" min="10" max="200" step="5" value="50"><output id="riv-n-out"></output></label>
+  <label for="riv-u">μ per copy <input type="range" id="riv-u" min="2" max="20" value="10"><output id="riv-u-out"></output></label>
+  <label for="riv-speed">speed <input type="range" id="riv-speed" min="1" max="100" value="30"><output id="riv-speed-out"></output></label>
+  <fieldset><legend>start</legend>
+    <label><input type="radio" name="riv-start" id="riv-start-empty" value="empty" checked> empty river</label>
+    <label><input type="radio" name="riv-start" id="riv-start-eq" value="eq"> already flowing (equilibrium)</label></fieldset>
+  <button class="b" id="riv-play" type="button">Play</button>
+  <button class="b ghost" id="riv-step" type="button">Step</button>
+  <button class="b ghost" id="riv-jump" type="button">Jump to next 4N</button>
+  <button class="b ghost" id="riv-reset" type="button">Reset</button>
+</div>
+<div class="stats" id="riv-stats" aria-live="polite"></div>
+<div class="sides">
+  <div class="d"><h4>Day's reading (branch B)</h4><p>The empty start is the right model at the split, so fixations lag by about 4N<sub>e</sub>. N<sub>e</sub> sets the time scale. He later revised this to a pipe that was "full, but much shorter."<a class="src" href="#s9">S9</a></p></div>
+  <div class="c"><h4>Critics' reading</h4><p>The ancestors were already a running river, so substitutions flow at μ from the start, and N cancels.<a class="src" href="#s11">S11</a><a class="src" href="#s12">S12</a></p></div>
+</div>
+<p class="note">Audit: the empty-start formula is exact (B1 internal holds); sourced N<sub>e</sub> histories give an excess, not a deficit (B1c).<a class="src" href="#s16">S16</a></p>
+</div>
+
+<!-- 3 selection race -->
+<div class="sim" id="sim-sel">
+<h3><span class="n">3</span> Selection race</h3>
+<p class="lv l5">Now the green bead gets a tiny head start each round. It still usually loses, but it wins more often than a plain bead.</p>
+<p class="lv l8 l10">s is the head start: 0.010 means 1% more copies on average. Even helpful changes are mostly lost early. Compare the simulated bar with the "2s" rule.</p>
+<p class="lv l12 l18">Genic selection p' = p(1+s)/(1+ps), then Binomial(2N, p'). Kimura (here N<sub>e</sub> = N): u = (1 − e<sup>−2s</sup>)/(1 − e<sup>−4Ns</sup>). When 4Ns is small, the chance collapses toward 1/(2N); when 4Ns ≫ 1 it approaches 2s. The error bar is ±2 SE.</p>
+<div class="canvas-row"><div><canvas id="sel-bars" aria-label="Simulated fixation chance compared with Kimura, 2s and 1/(2N)"></canvas></div><div><canvas id="sel-canvas" aria-label="Sample trajectories"></canvas></div></div>
+<div class="controls">
+  <label for="sel-n">N <input type="range" id="sel-n" min="10" max="500" step="10" value="100"><output id="sel-n-out"></output></label>
+  <label for="sel-s">s <input type="range" id="sel-s" min="0" max="100" value="20"><output id="sel-s-out"></output></label>
+  <button class="b" id="sel-more" type="button">Run 3,000 more</button>
+</div>
+<div class="stats" id="sel-stats" aria-live="polite"></div>
+<p class="note">Sliders take effect when released; each change restarts the tally with 1,500 trials.</p>
+</div>
+
+<!-- 4 budget -->
+<div class="sim" id="sim-budget">
+<h3><span class="n">4</span> MITTENS budget board</h3>
+<p class="lv l5">One pile is the changes needed. The other is how many the time allows. Press the two sides' buttons and see how differently they count.</p>
+<p class="lv l8 l10">Pick a side's inputs. The bars are on a "times ten" scale: each step to the right is ten times bigger. Then change one input at a time to see which one matters most.</p>
+<p class="lv l12 l18">Bars are log₁₀ from 1 to 10⁹. The models are: sequential (T/G<sub>f</sub>, MITTENS without the d term), Haldane (T/300), and neutral (2μLT + 4N<sub>anc</sub>μL, both lineages). The two presets count different things (human-lineage fixations against two-genome SNV differences); the ledger says which.</p>
+<div class="presets">
+  <button class="b" type="button" id="pre-day" data-preset="day">Day's inputs (MITTENS 3.0)</button>
+  <button class="b ghost" type="button" id="pre-daysnv" data-preset="daysnv">Day, SNV-only</button>
+  <button class="b ghost" type="button" id="pre-events" data-preset="events">Day's rate, audit's event count</button>
+  <button class="b" type="button" id="pre-crit" data-preset="crit" style="background:var(--side-c);border-color:var(--side-c)">Critics' inputs (neutral)</button>
+</div>
+<p id="bud-src"></p>
+<div class="controls" id="bud-board">
+  <fieldset><legend>rate model</legend>
+    <label><input type="radio" name="bud-model" id="bud-m-gf" value="gf"> one at a time (G<sub>f</sub>)</label>
+    <label><input type="radio" name="bud-model" id="bud-m-hal" value="hal"> Haldane 1/300</label>
+    <label><input type="radio" name="bud-model" id="bud-m-neu" value="neu"> neutral k = μ</label></fieldset>
+  <label for="bud-t">generations available <input type="range" id="bud-t" min="4" max="6" step="0.005" value="5.4"><output id="bud-t-out"></output></label>
+  <label for="bud-f">needed <input type="range" id="bud-f" min="5" max="9" step="0.005" value="8.3"><output id="bud-f-out"></output></label>
+  <label for="bud-g" class="bud-only-gf">generations per fixation G<sub>f</sub> <input type="range" id="bud-g" min="100" max="2000" step="1" value="1322"><output id="bud-g-out"></output></label>
+  <label for="bud-mu" class="bud-only-neutral">μ per site <input type="range" id="bud-mu" min="5" max="20" step="0.5" value="12"><output id="bud-mu-out"></output></label>
+  <label for="bud-l" class="bud-only-neutral">genome length L <input type="range" id="bud-l" min="2.5" max="3.5" step="0.1" value="3.2"><output id="bud-l-out"></output></label>
+  <label for="bud-na" class="bud-only-neutral">ancestral N<sub>e</sub> <input type="range" id="bud-na" min="0" max="200" step="1" value="0"><output id="bud-na-out"></output></label>
+</div>
+<div class="ledger">
+  <div><span class="lab">needed: <span id="bud-unit"></span></span><span class="big" id="bud-need" style="color:var(--side-d)"></span></div>
+  <div><span class="lab">budget: <span id="bud-how"></span></span><span class="big" id="bud-cap" style="color:var(--allele-a)"></span></div>
+</div>
+<div class="bars" aria-hidden="true">
+  <div class="row"><span>needed</span><div class="track"><div class="fill" id="bud-bar-need"></div></div></div>
+  <div class="row"><span>budget</span><div class="track"><div class="fill" id="bud-bar-cap"></div></div></div>
+</div>
+<p id="bud-ratio" aria-live="polite"></p>
+<div class="sides">
+  <div class="d"><h4>Where Day's inputs come from</h4><ul>
+  <li>G<sub>f</sub> = 1,322 from the LTEE (Q58); 1,400 in the book, 1,587 on 2026-10-03.<a class="src" href="#s2">S2</a><a class="src" href="#s3">S3</a></li>
+  <li>205M per human lineage; 252,000 generations (6.3 My at 25 y).<a class="src" href="#s1">S1</a><a class="src" href="#s4">S4</a></li>
+  <li>Haldane: 1 per 300 generations (Q47).<a class="src" href="#s7">S7</a></li></ul></div>
+  <div class="c"><h4>Where the critics' inputs come from</h4><ul>
+  <li>k = μ, N cancels (Hancock GG-03, keruru KR-01).<a class="src" href="#s11">S11</a><a class="src" href="#s12">S12</a></li>
+  <li>μ = 1.2×10⁻⁸, L = 3.2×10⁹, ~35M SNVs (CSAC 2005), ancestral N<sub>e</sub> 1.32×10⁵ (Yoo 2025), as computed in X1.<a class="src" href="#s20">S20</a><a class="src" href="#s21">S21</a><a class="src" href="#s22">S22</a></li>
+  <li>Count events, not letters (A3x).<a class="src" href="#s19">S19</a></li></ul></div>
+</div>
+<p class="note">Audit: both columns' arithmetic holds as computed. The disagreement is over inputs and models: what is counted, whether fixations queue or run in parallel, and whether an asexual bacterium's rate transfers to a recombining mammal (A2, F2 external: contested).<a class="src" href="#s28">S28</a><a class="src" href="#s17">S17</a></p>
+</div>
+
+<!-- 5 lock -->
+<div class="sim" id="sim-lock">
+<h3><span class="n">5</span> Combination lock <span class="illus">illustrative · not the D15 result</span></h3>
+<p class="lv l5">Two locks need the same secret letters. On the left, every right letter clicks and stays. On the right, nothing clicks until all letters are right at once. Which opens first?</p>
+<p class="lv l8 l10">Each try changes one random dial to a random letter. "Stepping stones" keeps any dial that is already right, the way selection keeps a helpful step. "Valley" has no partial credit. Add dials and watch the valley's wait explode.</p>
+<p class="lv l12 l18">Stepping stones: the expected tries grow about like K·ln K. Valley: a random walk on 4<sup>K</sup> states, so the wait grows roughly like 4<sup>K</sup>. Real waiting-time models (Hössjer et al.; Durrett &amp; Schmidt) add population size, drift, tunnelling and selection strength. This toy shows only why "valley versus stepping stones" is the crux.</p>
+<canvas id="lock-canvas" aria-label="Two combination locks: stepping stones and valley"></canvas>
+<div class="controls">
+  <label for="lock-k">dials K <input type="range" id="lock-k" min="2" max="6" value="3"><output id="lock-k-out"></output></label>
+  <label for="lock-speed">speed <input type="range" id="lock-speed" min="1" max="400" value="20"><output id="lock-speed-out"></output></label>
+  <button class="b" id="lock-play" type="button">Play</button>
+  <button class="b ghost" id="lock-fast" type="button">Open 200 of each, fast</button>
+  <button class="b ghost" id="lock-reset" type="button">Reset</button>
+</div>
+<div class="stats" id="lock-stats" aria-live="polite"></div>
+<div class="pending"><b class="t">D15 status</b><p>The real check is pending (main sweep running). Neither side's answer is implied by this toy.<a class="src" href="#s24">S24</a></p></div>
+</div>
+
+<h2>How the audit's simulations work</h2>
+<ul>
+<li><b>Exact models first.</b> Each check uses an exact Markov chain or a forward Wright–Fisher, Cannings or individual-based simulation. Textbook baselines must reproduce before any disputed number is tested. The coalescent is used only for baselines, because it assumes the equilibrium that is in dispute.</li>
+<li><b>Pre-registration.</b> Each script is committed with both sides' predictions in its docstring before the main run. Anything changed afterwards is committed separately and labelled "post hoc".</li>
+<li><b>Reviews.</b> Load-bearing checks get three reviews: correctness, a steelman for Day and a steelman for the critics.</li>
+<li><b>Cross-tool replication (XT).</b> Core results are re-run in an independently written simulator (fwdpy11). Agreement means a bug in one code base is unlikely to explain the result. XT is in progress.<a class="src" href="#s25">S25</a></li>
+</ul>
+<p class="foot">Caveats: this audit was done almost entirely by AI agents (Anthropic's Claude) directed by one person, and it is not peer-reviewed. The paid book was not bought, so book-only claims are second-hand. Rhetoric on every side is tagged, not fact-checked. Corrections from either side are welcome, with a locator.</p>
+
+<details class="sources" id="sources">
+<summary>Sources (file path and id for every number on this page)</summary>
+<p class="note">Paths are relative to the repository root. QD = <code>docs/research/sources/quotes-day.md</code>; QC = <code>docs/research/sources/quotes-critics.md</code>; CL = <code>docs/research/claims/</code>; RC = <code>research/checks/</code>.</p>
+<ol>
+<li id="s1"><code>QD:111</code> Q14, Day, Zenodo 23003785 p.1 (2026-09-28): 205 million required fixations on the human lineage, 252,000 generations, 1,075,000-fold. Achievable 191 = 252,000/1,322 (<code>QD:112</code>, Q16 <code>QD:130</code>).</li>
+<li id="s2"><code>QD:373</code> Q58: "45.4 fixations, yielding a cumulative rate of 1,322 generations per fixation".</li>
+<li id="s3"><code>QD:402</code> Q63 (book used 1,400 gen/fix); <code>QD:549</code> Q85, AI Central 2026-10-03 (1,587); drift ledger <code>docs/research/ledgers/versions.md</code>.</li>
+<li id="s4"><code>QD:137</code> Q18, Zenodo 23003785 p.11: 6.3 My, 25 years per generation, 252,000 generations.</li>
+<li id="s5"><code>CL/B3g-day-concession-no-ne-in-kimura-identity.md:18</code>, Day blog "The Response to the Retraction", 2026-08-27, ¶2.</li>
+<li id="s6"><code>QD:282</code> Q43, blog 2026-10-01 ¶7 (k = 32.3μ); <code>QD:265</code> Q40, Zenodo 18525262 eq. 3 (0.743μ).</li>
+<li id="s7"><code>QD:306</code> Q47, Zenodo 18168236 ¶8 (one beneficial substitution per 300 generations); <code>QD:311</code> Q48 (487).</li>
+<li id="s8"><code>QD:850</code> Q122, blog 2026-10-09 ("at most 2 percent of the average genome").</li>
+<li id="s9"><code>CL/B1-intrinsic-irrelevance-steady-state.md:26</code> (Zenodo 22903977 §3, 2026-09-22, empty pipeline) and <code>:44</code> (Mansfield, full pipeline); <code>CL/B1c-ancestral-pipeline-state-ne-history.md:22</code> (blog 2026-10-01 ¶22, "full, but much shorter"); <code>CL/B1d-full-but-short-pipe-revision.md</code>.</li>
+<li id="s10"><code>QD:124</code>, <code>QD:130</code> Q15–Q16: 17.5 million SNV-only, shortfall 91,600× (non-mutator).</li>
+<li id="s11"><code>QC:385</code> GG-03, Hancock in the Gutsick Gibbon video, 2026-10-03, 01:48:19.</li>
+<li id="s12"><code>QC:149</code> KR-01 and <code>QC:151</code> KR-02, keruru, 2026-08-26.</li>
+<li id="s13"><code>QC:584</code> MF-04, Mansfield comment, retrieved 2026-10-07.</li>
+<li id="s14"><code>RC/results/R4-P1.md:37,89</code>: 33 Day arithmetic rows, 30 hold, Q19 and Q30 slips, Q03 discrepancy.</li>
+<li id="s15"><code>RC/RESULTS.md:76–85</code> (B3): P<sub>fix</sub> ≈ 0.0025 for σ² 1 to 10.7 (N<sub>e</sub> 200 to 19); 1/(2N<sub>e</sub>) predicts 0.00249 to 0.0268; t<sub>fix</sub>/N<sub>e</sub> 3.95 to 4.07.</li>
+<li id="s16"><code>RC/RESULTS.md:177</code> (B1c): K/UT = 1.9 to 4.0; B1c verdict line in <code>CL/B1c-…</code>.</li>
+<li id="s17"><code>CL/F1-latency-not-throughput-mansfield.md:28</code> (0.3972 ± 0.0018 per generation simulated, 0.3960 predicted; t<sub>fix</sub> 847); <code>RC/results/R4-F2-A.md:19,30</code> (R<sub>int</sub> 0.975 at 272 loci; clonal 0.088 at 32).</li>
+<li id="s18"><code>RC/results/R4-H2-hard.md:33,35</code> (cap ln R / D; 9 to 100× above 1/300 for R ≥ 1.3; soft within ~15%, slightly slower); <code>CL/H-haldane-limit.md:12–14</code>.</li>
+<li id="s19"><code>CL/A3x-bp-vs-events.md</code> verdict lines (GAP-07b 42.1M events, 21.05M per lineage, 205M is 9.7× raw) and <code>:29</code>; 11.7× in <code>CL/A5b-kittens-94000x11p7.md:18,32</code>.</li>
+<li id="s20"><code>RC/results/R4-X1-critic-arithmetic.md:59,61,108,111</code> (19.35M = 2μLT, 38.4 per haploid generation; ancestral 15.6 to 20.3M; null 35 to 39.6M; the 38M match double-counts, SNV-basis conclusion survives; B5c Hancock non-sequitur / unverifiable, event null ≥ 58.6M vs 42.07M; B5e Nesslig20 holds / unverifiable) and §6–7 (lines 100–150, critic slips). Hancock "about 38 million" GG-09 and Nesslig20 "~37.8 million" PS-02 in QC.</li>
+<li id="s21"><code>CL/A3x-bp-vs-events.md:46</code>: CSAC 2005, ~35 million substitution events, ~5 million indel events (both lineages; <code>CL/A3-required-fixations-2019-2025.md:13</code>).</li>
+<li id="s22"><code>docs/research/parameters.yaml:42–43</code> (μ 1.2e-8 pedigree), <code>:48</code> (human N<sub>e</sub> 1e4), Yoo 2025 N<sub>e,anc</sub> 1.32e5 (HCG), 1.98e5 (HCB).</li>
+<li id="s23"><code>CL/D9-weasel-540000-generations.md:40</code> (8,525 ± 39 simulated; diffusion 8,480; overstated 2.3×); <code>QD:289</code> Q44 (19,807).</li>
+<li id="s24"><code>CL/D15-hossjer-regulatory-waiting-time-9-my.md</code> (side ally; verdicts pending); <code>QC:215</code> HO-12; <code>RC/results/R4-D15-status.md:1–20</code>; <code>RC/QUEUE.md</code> (17 of 714 cells at 2026-10-09 16:45).</li>
+<li id="s25"><code>RC/xt_cross_tool.py</code> docstring (targets B0, B1–B1c, B2a, B3–B3c; fwdpy11 0.24.7); <code>RC/QUEUE.md</code> (main run in progress).</li>
+<li id="s26"><code>RC/RESULTS.md:196–204</code> (B3b, Balloux–Lehmann: symmetric cycles −0.3% to −2%; 0.743 window-dependent).</li>
+<li id="s27"><code>CL/C6-molecular-clock-stopped.md</code> verdict lines (non-sequitur / unverifiable / contradicted, rule rev 2).</li>
+<li id="s28"><code>CL/A2-ltee-gf.md</code> verdict lines (holds / unverifiable / contested).</li>
+<li id="s29">Verdict lines (lines ~12–14) of <code>CL/ROOT-no-mechanism-suffices.md</code>, <code>A2-ltee-gf.md</code>, <code>A3x-bp-vs-events.md</code>, <code>B1-…</code>, <code>B1c-…</code>, <code>B3-k-neq-mu-values-umbrella.md</code>, <code>F1-…</code>, <code>F2-…</code>, <code>G1-…</code>, <code>H-haldane-limit.md</code>, <code>C6-…</code>, <code>D15-…</code>.</li>
+<li id="s30"><code>RC/results/R4-X1-verdict-rule.md</code> (one rule for all sides; R1 25% materiality; rule RH).</li>
+<li id="s31"><code>QD:93</code> Q11, Zenodo 18165980 ¶24 (0.02^20,000,000).</li>
+<li id="s32"><code>QD:295</code> Q45 (4N<sub>e</sub> neutral; (2/s) ln(2N<sub>e</sub>) beneficial).</li>
+</ol>
+</details>
+</div>
+
+<script>
+window.ELI_PRESETS = {
+  day:    { t: 252000, f: 205e6, gf: 1322, mu: 12, l: 3.2, na: 0, model: 'gf', src: '<b>Day, MITTENS 3.0</b>: 205M fixations on the human lineage, 252,000 generations, G<sub>f</sub> 1,322. Printed shortfall 1,075,000-fold (Q14, Q58). Sources S1, S2.' },
+  daysnv: { t: 252000, f: 17.5e6, gf: 1322, mu: 12, l: 3.2, na: 0, model: 'gf', src: '<b>Day, SNV-only</b>: 17.5M required, 191 achievable, printed shortfall 91,600× (Q15–Q16). Source S10.' },
+  events: { t: 252000, f: 21.05e6, gf: 1322, mu: 12, l: 3.2, na: 0, model: 'gf', src: '<b>Day\'s sequential rate with the audit\'s event count</b>: GAP-07b counts 42.1M events across both lineages, 21.05M per lineage (A3x). Counting events alone leaves a large shortfall under this rate model; the rate model is the bigger lever. Source S19.' },
+  crit:   { t: 252000, f: 35e6, gf: 1322, mu: 12, l: 3.2, na: 132, model: 'neu', src: '<b>Critics\' neutral reading</b>, as computed in the audit\'s X1: about 35M SNV differences between the genomes (CSAC 2005), 2μLT = 19.35M after the split, plus the ancestral term at Yoo\'s N<sub>e,anc</sub> = 1.32×10⁵ (20.3M). X1 finds this null within 5 to 13% of the observed count. Sources S20 to S22.' }
+};
+(function () {
+  var levels = ['eli5', 'eli8', 'eli10', 'eli12', 'eli18'];
+  function setLevel(l, push) {
+    if (levels.indexOf(l) < 0) l = 'eli10';
+    document.body.setAttribute('data-level', l);
+    levels.forEach(function (x) { var b = document.getElementById('tab-' + x); b.setAttribute('aria-selected', x === l ? 'true' : 'false'); b.tabIndex = x === l ? 0 : -1; });
+    if (push) { try { history.replaceState(null, '', '#' + l); } catch (e) { location.hash = l; } }
+    try { localStorage.setItem('eli-level', l); } catch (e) {}
+  }
+  var h = location.hash.slice(1), saved = null;
+  try { saved = localStorage.getItem('eli-level'); } catch (e) {}
+  setLevel(levels.indexOf(h) >= 0 ? h : (saved || 'eli10'), false);
+  document.querySelectorAll('nav.levels button').forEach(function (b, i, all) {
+    b.addEventListener('click', function () { setLevel(b.getAttribute('data-level'), true); });
+    b.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!k) return;
+      var n = all[(i + k + all.length) % all.length]; n.focus(); n.click();
+    });
+  });
+  window.addEventListener('hashchange', function () { var x = location.hash.slice(1); if (levels.indexOf(x) >= 0) setLevel(x, false); });
+  document.querySelectorAll('a.src').forEach(function (a) { a.addEventListener('click', function () { document.getElementById('sources').open = true; }); });
+  /* theme: auto / light / dark */
+  var modes = ['auto', 'light', 'dark'], btn = document.getElementById('theme'), m = 'auto';
+  try { m = localStorage.getItem('eli-theme') || 'auto'; } catch (e) {}
+  function applyTheme() { if (m === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', m); btn.textContent = 'theme: ' + m; }
+  btn.addEventListener('click', function () { m = modes[(modes.indexOf(m) + 1) % 3]; try { localStorage.setItem('eli-theme', m); } catch (e) {} applyTheme(); });
+  applyTheme();
+})();
+</script>
+<script>
+(function () {
+'use strict';
+/* ---------- shared helpers ---------- */
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function tok(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+function $(id) { return document.getElementById(id); }
+function fmt(x, d) { return Number(x).toLocaleString('en-US', { maximumFractionDigits: d == null ? 0 : d, minimumFractionDigits: d == null ? 0 : d }); }
+function sig(x, d) { if (!isFinite(x)) return '∞'; if (x === 0) return '0'; var a = Math.abs(x); if (a >= 1e4 || a < 1e-3) return x.toExponential(d == null ? 2 : d).replace('e+', 'e'); return Number(x.toPrecision(d == null ? 3 : d + 1)).toLocaleString('en-US'); }
+/* exact binomial draw by geometric skipping: cost O(n*min(p,1-p)) */
+function binom(n, p) {
+  if (p <= 0) return 0; if (p >= 1) return n;
+  if (p > 0.5) return n - binom(n, 1 - p);
+  var lq = Math.log(1 - p), x = 0, i = 0;
+  for (;;) { i += Math.floor(Math.log(1 - Math.random()) / lq) + 1; if (i > n) return x; x++; }
+}
+function poisson(l) {
+  if (l > 40) { var h = l / 2; return poisson(h) + poisson(h); }
+  var L = Math.exp(-l), k = 0, p = 1;
+  do { k++; p *= Math.random(); } while (p > L);
+  return k - 1;
+}
+var redrawers = [];
+function onTheme() { redrawers.forEach(function (f) { f(); }); }
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', onTheme);
+new MutationObserver(onTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+/* canvas sized to its box, devicePixelRatio aware */
+function surface(canvas, h, draw) {
+  var s = { c: canvas, ctx: canvas.getContext('2d'), w: 0, h: h };
+  function fit() {
+    var w = canvas.parentElement.clientWidth, dpr = window.devicePixelRatio || 1;
+    s.w = w; canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    s.ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw();
+  }
+  new ResizeObserver(fit).observe(canvas.parentElement);
+  redrawers.push(draw); s.fit = fit; return s;
+}
+function clear(s) { s.ctx.clearRect(0, 0, s.w, s.h); s.ctx.fillStyle = tok('--plot-bg'); s.ctx.fillRect(0, 0, s.w, s.h); }
+function axes(s, pad, xlab, ylab, yticks) {
+  var g = s.ctx; g.strokeStyle = tok('--grid'); g.lineWidth = 1; g.fillStyle = tok('--muted'); g.font = '11px ' + tok('--mono');
+  (yticks || []).forEach(function (t) { var y = t[0]; g.beginPath(); g.moveTo(pad.l, y); g.lineTo(s.w - pad.r, y); g.stroke(); g.textAlign = 'right'; g.fillText(t[1], pad.l - 4, y + 4); });
+  g.textAlign = 'left'; if (xlab) g.fillText(xlab, pad.l, s.h - 4);
+  if (ylab) { g.save(); g.translate(11, pad.t + 4); g.fillText(ylab, 0, 0); g.restore(); }
+}
+function loop(stepFn, rateFn) {
+  var on = false, acc = 0, last = 0, raf = 0;
+  function frame(t) {
+    if (!on) return; var dt = last ? Math.min(0.1, (t - last) / 1000) : 0; last = t;
+    acc += dt * rateFn(); var n = Math.floor(acc); acc -= n; if (n > 0) stepFn(n);
+    raf = requestAnimationFrame(frame);
+  }
+  return {
+    play: function () { if (on) return; on = true; last = 0; raf = requestAnimationFrame(frame); },
+    pause: function () { on = false; cancelAnimationFrame(raf); },
+    get on() { return on; }
+  };
+}
+function playBtn(btn, lp) {
+  function lab() { btn.textContent = lp.on ? 'Pause' : 'Play'; btn.setAttribute('aria-pressed', lp.on ? 'true' : 'false'); }
+  btn.addEventListener('click', function () { lp.on ? lp.pause() : lp.play(); lab(); });
+  return lab;
+}
+function bindRange(id, outId, f) {
+  var el = $(id), out = $(outId);
+  function up() { var v = +el.value; if (out) out.textContent = f ? f(v) : v; return v; }
+  up(); return { el: el, get: up };
+}
+
+/* ---------- 1. drift jar ---------- */
+(function () {
+  if (!$('jar-canvas')) return;
+  var N = 50, M = 100, cnt = 1, gen = 0, start = 'one', hist = [], ghosts = [], fix = 0, lost = 0, perm = [];
+  var rN = bindRange('jar-n', 'jar-n-out'), rS = bindRange('jar-speed', 'jar-speed-out', function (v) { return v + ' gen/s'; });
+  var jar = surface($('jar-canvas'), 190, drawJar), tr = surface($('jar-trace'), 190, drawTrace);
+  function shuffle() { perm = []; for (var i = 0; i < M; i++) perm.push(i); for (i = M - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = perm[i]; perm[i] = perm[j]; perm[j] = t; } }
+  function newRun() { cnt = start === 'one' ? 1 : M / 2; gen = 0; hist = [cnt / M]; shuffle(); }
+  function resetAll() { $('jar-batch').textContent = start === 'one' ? 'Run 1,000 trials' : 'Run 100 trials'; N = rN.get(); M = 2 * N; fix = 0; lost = 0; ghosts = []; newRun(); stats(); drawJar(); drawTrace(); }
+  function gen1() {
+    cnt = binom(M, cnt / M); gen++; hist.push(cnt / M);
+    if (cnt === 0 || cnt === M) {
+      if (cnt === M) fix++; else lost++;
+      ghosts.push({ h: hist, f: cnt === M }); if (ghosts.length > 14) ghosts.shift();
+      return true;
+    }
+    return false;
+  }
+  function step(n) { for (var i = 0; i < n; i++) { if (gen1()) { stats(); drawTrace(); newRun(); } } shuffle(); stats(); drawJar(); drawTrace(); }
+  function stats() {
+    var runs = fix + lost, exp = start === 'one' ? 1 / M : 0.5, obs = runs ? fix / runs : 0, se = runs ? Math.sqrt(exp * (1 - exp) / runs) : 0;
+    $('jar-stats').innerHTML =
+      '<div><span>generation</span><b>' + fmt(gen) + '</b></div>' +
+      '<div><span>this run</span><b>' + cnt + ' of ' + M + '</b></div>' +
+      '<div><span>runs finished</span><b>' + fmt(runs) + '</b></div>' +
+      '<div><span>took over</span><b class="c-a">' + fmt(fix) + '</b></div>' +
+      '<div><span>died out</span><b>' + fmt(lost) + '</b></div>' +
+      '<div><span>share that took over</span><b>' + (runs ? sig(obs, 3) : '–') + '</b></div>' +
+      '<div><span>' + (start === 'one' ? '1/(2N) predicts' : 'start share predicts') + '</span><b class="c-a">' + sig(exp, 3) + '</b></div>' +
+      '<div><span>expected scatter (±2 SE)</span><b>' + (runs ? '±' + sig(2 * se, 2) : '–') + '</b></div>';
+  }
+  function drawJar() {
+    var s = jar, g = s.ctx; clear(s);
+    var W = s.w, H = s.h, jx = 14, jw = W - 28, jy = 18, jh = H - 26;
+    g.strokeStyle = tok('--ink'); g.lineWidth = 2; g.beginPath();
+    g.moveTo(jx + 10, jy - 8); g.lineTo(jx + 10, jy); g.quadraticCurveTo(jx, jy + 6, jx, jy + 24); g.lineTo(jx, jy + jh - 10); g.quadraticCurveTo(jx, jy + jh, jx + 12, jy + jh);
+    g.lineTo(jx + jw - 12, jy + jh); g.quadraticCurveTo(jx + jw, jy + jh, jx + jw, jy + jh - 10); g.lineTo(jx + jw, jy + 24); g.quadraticCurveTo(jx + jw, jy + 6, jx + jw - 10, jy); g.lineTo(jx + jw - 10, jy - 8); g.stroke();
+    var iw = jw - 12, ih = jh - 30, cols = Math.max(1, Math.ceil(Math.sqrt(M * iw / ih))), rows = Math.ceil(M / cols), cw = iw / cols, rh = ih / rows, r = Math.max(1.2, Math.min(cw, rh) * 0.42);
+    var ca = tok('--allele-a'), cb = tok('--allele-b');
+    for (var k = 0; k < M; k++) {
+      var p = perm[k], cx = jx + 6 + (p % cols + 0.5) * cw, cy = jy + jh - 4 - (Math.floor(p / cols) + 0.5) * rh;
+      g.fillStyle = k < cnt ? ca : cb; g.beginPath(); g.arc(cx, cy, r, 0, 6.2832); g.fill();
+    }
+  }
+  function drawTrace() {
+    var s = tr, g = s.ctx; clear(s); var pad = { l: 34, r: 8, t: 10, b: 18 }, pw = s.w - pad.l - pad.r, ph = s.h - pad.t - pad.b;
+    var maxG = Math.max(40, hist.length); ghosts.forEach(function (o) { maxG = Math.max(maxG, o.h.length); }); maxG = Math.min(maxG, 6 * M);
+    function X(i) { return pad.l + pw * Math.min(i, maxG) / maxG; } function Y(f) { return pad.t + ph * (1 - f); }
+    axes(s, pad, 'generations →  (0 to ' + fmt(maxG) + ')', '', [[Y(0), '0'], [Y(0.5), '½'], [Y(1), 'all']]);
+    function line(h, col, w) { g.strokeStyle = col; g.lineWidth = w; g.beginPath(); for (var i = 0; i < h.length && i <= maxG; i++) { i ? g.lineTo(X(i), Y(h[i])) : g.moveTo(X(i), Y(h[i])); } g.stroke(); }
+    ghosts.forEach(function (o) { g.globalAlpha = 0.45; line(o.h, o.f ? tok('--allele-a') : tok('--muted'), 1.2); }); g.globalAlpha = 1;
+    line(hist, tok('--allele-a'), 2.2);
+  }
+  var lp = loop(step, function () { return rS.get(); });
+  var lab = playBtn($('jar-play'), lp);
+  $('jar-step').addEventListener('click', function () { step(1); });
+  $('jar-reset').addEventListener('click', resetAll);
+  rN.el.addEventListener('input', resetAll);
+  rS.el.addEventListener('input', rS.get);
+  document.querySelectorAll('input[name="jar-start"]').forEach(function (r) { r.addEventListener('change', function () { start = r.value; resetAll(); }); });
+  $('jar-batch').addEventListener('click', function () {
+    var b = this, left = start === 'one' ? 1000 : 100; b.disabled = true;
+    (function chunk() { var t0 = performance.now(); while (left > 0 && performance.now() - t0 < 30) { while (!gen1()) {} newRun(); left--; } stats(); drawTrace(); if (left > 0) setTimeout(chunk, 0); else { b.disabled = false; drawJar(); } })();
+  });
+  resetAll(); if (!RM) { lp.play(); lab(); }
+})();
+
+/* ---------- 2. mutation river ---------- */
+(function () {
+  if (!$('riv-canvas')) return;
+  var N, M, u, muts = [], gen = 0, subs = 0, start = 'empty', series = [];
+  var rN = bindRange('riv-n', 'riv-n-out'), rU = bindRange('riv-u', 'riv-u-out', function (v) { return (v / 100).toFixed(2); }), rS = bindRange('riv-speed', 'riv-speed-out', function (v) { return v + ' gen/s'; });
+  var riv = surface($('riv-canvas'), 170, drawRiver), cum = surface($('riv-cum'), 190, drawCum);
+  function reset() {
+    N = rN.get(); M = 2 * N; u = rU.get() / 100; muts = []; gen = 0; subs = 0; series = [[0, 0]];
+    if (start === 'eq') { /* neutral equilibrium spectrum: E[# with i copies] = theta/i, theta = 4Nu */
+      var th = 4 * N * u; for (var i = 1; i < M; i++) { var n = poisson(th / i); while (n--) muts.push({ c: i, y: Math.random() }); }
+    }
+    stats(); drawRiver(); drawCum();
+  }
+  function gen1() {
+    var out = [];
+    for (var j = 0; j < muts.length; j++) { var m = muts[j]; m.c = binom(M, m.c / M); if (m.c === M) subs++; else if (m.c > 0) out.push(m); }
+    var nn = poisson(M * u); while (nn--) out.push({ c: 1, y: Math.random() });
+    muts = out; gen++; series.push([gen, subs]);
+    if (series.length > 4000) { var s2 = []; for (var k = 0; k < series.length; k += 2) s2.push(series[k]); series = s2; }
+  }
+  function step(n) { for (var i = 0; i < n; i++) gen1(); stats(); drawRiver(); drawCum(); }
+  function stats() {
+    var exp = u * gen, ratio = exp ? subs / exp : 0, w = Math.max(1, Math.min(gen, 4 * N)), back = series.filter(function (p) { return p[0] >= gen - w; })[0] || [0, 0];
+    $('riv-stats').innerHTML =
+      '<div><span>generation</span><b>' + fmt(gen) + '</b></div>' +
+      '<div><span>mutations in the river</span><b>' + fmt(muts.length) + '</b></div>' +
+      '<div><span>substitutions (reached the far bank)</span><b class="c-a">' + fmt(subs) + '</b></div>' +
+      '<div><span>μ × generations</span><b>' + sig(exp, 3) + '</b></div>' +
+      '<div><span>substitutions ÷ (μ × gens)</span><b>' + (gen ? sig(ratio, 2) : '–') + '</b></div>' +
+      '<div><span>recent rate k (last 4N gens)</span><b class="c-a">' + (gen ? sig((subs - back[1]) / Math.max(1, gen - back[0]), 2) : '–') + '</b></div>' +
+      '<div><span>μ (what k = μ predicts)</span><b>' + sig(u, 2) + '</b></div>' +
+      '<div><span>4N (the lag scale)</span><b>' + fmt(4 * N) + ' gens</b></div>';
+  }
+  function drawRiver() {
+    var s = riv, g = s.ctx; clear(s); var l = 30, r = s.w - 30, t = 14, b = s.h - 18;
+    g.fillStyle = tok('--water'); g.fillRect(l, t, r - l, b - t);
+    g.fillStyle = tok('--muted'); g.font = '11px ' + tok('--mono'); g.textAlign = 'left'; g.fillText('new', 2, b + 14); g.textAlign = 'right'; g.fillText('fixed', s.w - 2, b + 14);
+    g.textAlign = 'center'; g.fillText('← share of the population carrying each mutation →', s.w / 2, b + 14);
+    g.fillStyle = tok('--allele-a');
+    for (var i = 0; i < muts.length; i++) { var m = muts[i]; g.fillRect(l + (r - l) * m.c / M - 1.5, t + 3 + (b - t - 6) * m.y - 1.5, 3, 3); }
+    g.fillStyle = tok('--ink'); g.fillRect(r, t, 3, b - t); g.fillRect(l - 3, t, 3, b - t);
+  }
+  function drawCum() {
+    var s = cum, g = s.ctx; clear(s); var pad = { l: 40, r: 10, t: 12, b: 18 }, pw = s.w - pad.l - pad.r, ph = s.h - pad.t - pad.b;
+    var maxG = Math.max(gen, 8 * N, 50), maxY = Math.max(u * maxG, subs, 1) * 1.08;
+    function X(x) { return pad.l + pw * x / maxG; } function Y(y) { return pad.t + ph * (1 - y / maxY); }
+    axes(s, pad, 'generations (0 to ' + fmt(maxG) + ')', '', [[Y(0), '0'], [Y(maxY / 2), sig(maxY / 2, 1)], [Y(maxY), sig(maxY, 1)]]);
+    g.setLineDash([5, 4]); g.strokeStyle = tok('--side-c'); g.lineWidth = 1.5; g.beginPath(); g.moveTo(X(0), Y(0)); g.lineTo(X(maxG), Y(u * maxG)); g.stroke(); g.setLineDash([]);
+    g.strokeStyle = tok('--grid'); g.beginPath(); g.moveTo(X(4 * N), pad.t); g.lineTo(X(4 * N), s.h - pad.b); g.stroke();
+    g.fillStyle = tok('--muted'); g.font = '11px ' + tok('--mono'); g.textAlign = 'left'; g.fillText('4N', X(4 * N) + 3, pad.t + 10);
+    g.fillStyle = tok('--side-c'); g.fillText('μ × t (k = μ line)', pad.l + 4, pad.t + 10);
+    g.strokeStyle = tok('--allele-a'); g.lineWidth = 2.2; g.beginPath(); series.forEach(function (p, i) { i ? g.lineTo(X(p[0]), Y(p[1])) : g.moveTo(X(p[0]), Y(p[1])); }); g.stroke();
+  }
+  var lp = loop(step, function () { return rS.get(); }), lab = playBtn($('riv-play'), lp);
+  $('riv-step').addEventListener('click', function () { step(1); });
+  $('riv-jump').addEventListener('click', function () { step(Math.max(1, 4 * N - (gen % (4 * N)))); });
+  $('riv-reset').addEventListener('click', reset);
+  [rN.el, rU.el].forEach(function (e) { e.addEventListener('input', reset); }); rS.el.addEventListener('input', rS.get);
+  document.querySelectorAll('input[name="riv-start"]').forEach(function (r) { r.addEventListener('change', function () { start = r.value; reset(); }); });
+  reset(); if (!RM) { lp.play(); lab(); }
+})();
+
+/* ---------- 3. selection race ---------- */
+(function () {
+  if (!$('sel-canvas')) return;
+  var N, M, s, runs = 0, fix = 0, traces = [], busy = 0;
+  var rN = bindRange('sel-n', 'sel-n-out'), rS = bindRange('sel-s', 'sel-s-out', function (v) { return (v / 1000).toFixed(3); });
+  var plot = surface($('sel-canvas'), 170, drawTr), bars = surface($('sel-bars'), 150, drawBars);
+  function kimura() { if (s === 0) return 1 / M; var a = 4 * N * s; return a > 700 ? 1 - Math.exp(-2 * s) : (1 - Math.exp(-2 * s)) / (1 - Math.exp(-a)); }
+  function one(keep) { /* one new copy, genic selection: p' = p(1+s)/(1+ps), then binomial sampling of 2N copies */
+    var c = 1, h = keep ? [1 / M] : null;
+    while (c > 0 && c < M) { var p = c / M, q = p * (1 + s) / (1 + p * s); c = binom(M, q); if (h) h.push(c / M); }
+    runs++; if (c === M) fix++; if (h) { traces.push({ h: h, f: c === M }); if (traces.length > 24) traces.shift(); }
+  }
+  function reset() { N = rN.get(); M = 2 * N; s = rS.get() / 1000; runs = 0; fix = 0; traces = []; busy++; batch(1500, busy); }
+  function batch(n, token) {
+    $('sel-more').disabled = true;
+    (function chunk() { if (token !== busy) return; var t0 = performance.now(); while (n > 0 && performance.now() - t0 < 25) { one(n % 25 === 0); n--; } stats(); drawTr(); drawBars(); if (n > 0) setTimeout(chunk, 0); else $('sel-more').disabled = false; })();
+  }
+  function ci() { var p = runs ? fix / runs : 0, se = Math.sqrt(Math.max(p * (1 - p), 1e-12) / Math.max(runs, 1)); return [p, se]; }
+  function stats() {
+    var c = ci();
+    $('sel-stats').innerHTML =
+      '<div><span>trials</span><b>' + fmt(runs) + '</b></div>' +
+      '<div><span>took over</span><b>' + fmt(fix) + '</b></div>' +
+      '<div><span>simulated chance</span><b class="c-a">' + sig(c[0], 3) + ' ± ' + sig(2 * c[1], 2) + '</b></div>' +
+      '<div><span>Kimura’s formula</span><b class="c-c">' + sig(kimura(), 3) + '</b></div>' +
+      '<div><span>rule of thumb 2s</span><b>' + sig(2 * s, 3) + '</b></div>' +
+      '<div><span>neutral 1/(2N)</span><b>' + sig(1 / M, 3) + '</b></div>' +
+      '<div><span>4Ns</span><b>' + sig(4 * N * s, 3) + '</b></div>';
+  }
+  function drawTr() {
+    var S = plot, g = S.ctx; clear(S); var pad = { l: 34, r: 8, t: 10, b: 18 }, pw = S.w - pad.l - pad.r, ph = S.h - pad.t - pad.b, maxG = 30;
+    traces.forEach(function (o) { maxG = Math.max(maxG, o.h.length); });
+    function X(i) { return pad.l + pw * i / maxG; } function Y(f) { return pad.t + ph * (1 - f); }
+    axes(S, pad, 'generations (0 to ' + fmt(maxG) + '), sample of trials', '', [[Y(0), '0'], [Y(0.5), '½'], [Y(1), 'all']]);
+    traces.forEach(function (o) { g.strokeStyle = o.f ? tok('--allele-a') : tok('--muted'); g.globalAlpha = o.f ? 0.9 : 0.4; g.lineWidth = o.f ? 1.8 : 1; g.beginPath(); o.h.forEach(function (f, i) { i ? g.lineTo(X(i), Y(f)) : g.moveTo(X(i), Y(f)); }); g.stroke(); });
+    g.globalAlpha = 1;
+  }
+  function drawBars() {
+    var S = bars, g = S.ctx; clear(S); var c = ci(), items = [['simulated', c[0], '--allele-a', c[1]], ['Kimura', kimura(), '--side-c'], ['2s', 2 * s, '--side-d'], ['1/(2N)', 1 / M, '--muted']];
+    var mx = Math.max.apply(null, items.map(function (i) { return i[1] + 2 * (i[3] || 0); })) * 1.15 || 1, lw = 76, bw = S.w - lw - 70, rh = (S.h - 10) / items.length;
+    g.font = '12px ' + tok('--mono');
+    items.forEach(function (it, k) {
+      var y = 5 + k * rh, w = bw * it[1] / mx; g.fillStyle = tok('--ink'); g.textAlign = 'right'; g.fillText(it[0], lw - 6, y + rh / 2 + 4);
+      g.fillStyle = tok(it[2]); g.fillRect(lw, y + rh * 0.2, Math.max(1, w), rh * 0.6);
+      if (it[3]) { g.strokeStyle = tok('--ink'); g.lineWidth = 1.5; var a = lw + bw * Math.max(0, it[1] - 2 * it[3]) / mx, b = lw + bw * (it[1] + 2 * it[3]) / mx; g.beginPath(); g.moveTo(a, y + rh / 2); g.lineTo(b, y + rh / 2); g.moveTo(a, y + rh * 0.3); g.lineTo(a, y + rh * 0.7); g.moveTo(b, y + rh * 0.3); g.lineTo(b, y + rh * 0.7); g.stroke(); }
+      g.fillStyle = tok('--ink'); g.textAlign = 'left'; g.fillText(sig(it[1], 2), lw + Math.max(w, it[3] ? bw * (it[1] + 2 * it[3]) / mx : 0) + 6, y + rh / 2 + 4);
+    });
+  }
+  $('sel-more').addEventListener('click', function () { batch(3000, busy); });
+  [rN.el, rS.el].forEach(function (e) { e.addEventListener('change', reset); e.addEventListener('input', function () { rN.get(); rS.get(); }); });
+  reset();
+})();
+
+/* ---------- 4. MITTENS budget board ---------- */
+(function () {
+  if (!$('bud-board')) return;
+  var P = window.ELI_PRESETS || {};
+  var T = $('bud-t'), F = $('bud-f'), G = $('bud-g'), MU = $('bud-mu'), L = $('bud-l'), NA = $('bud-na'), model = 'gf';
+  var tv = 252000, fv = 205e6;
+  function hum(x) { var a = Math.abs(x); if (a >= 1e6) return (x / 1e6).toPrecision(3) + ' million'; if (a >= 100) return fmt(Number(x.toPrecision(3))); return sig(x, 2); }
+  function setlog(el, v) { el.value = Math.log10(v); }
+  function draw() {
+    var t = tv, f = fv, gf = +G.value, mu = +MU.value * 1e-9, l = +L.value * 1e9, na = +NA.value * 1000, cap, how;
+    $('bud-t-out').textContent = hum(t); $('bud-f-out').textContent = hum(f); $('bud-g-out').textContent = fmt(gf); $('bud-mu-out').textContent = (mu * 1e9).toFixed(1) + '×10⁻⁹'; $('bud-l-out').textContent = (+L.value).toFixed(1) + ' billion'; $('bud-na-out').textContent = fmt(na);
+    if (model === 'gf') { cap = t / gf; how = 'generations ÷ ' + fmt(gf) + ' per fixation, one after another'; }
+    else if (model === 'hal') { cap = t / 300; how = 'generations ÷ 300 (Haldane’s figure for hard selection)'; }
+    else { var post = 2 * mu * l * t, anc = 4 * na * mu * l; cap = post + anc; how = 'after the split 2μLT = ' + hum(post) + ', plus already different before it 4·N_anc·μ·L = ' + hum(anc); }
+    var ratio = f / cap;
+    $('bud-need').textContent = hum(f); $('bud-unit').textContent = model === 'neu' ? 'single-letter differences between the two genomes (both lineages)' : 'fixations on the human lineage'; $('bud-cap').textContent = hum(cap); $('bud-how').textContent = how;
+    $('bud-ratio').textContent = ratio >= 1 ? 'needed is ' + hum(ratio) + ' × the budget' : 'budget is ' + hum(1 / ratio) + ' × what is needed';
+    var lo = 0, hi = 9, wN = (Math.log10(Math.max(f, 1)) - lo) / (hi - lo) * 100, wC = (Math.log10(Math.max(cap, 1)) - lo) / (hi - lo) * 100;
+    $('bud-bar-need').style.width = Math.min(100, Math.max(1, wN)) + '%'; $('bud-bar-cap').style.width = Math.min(100, Math.max(1, wC)) + '%';
+    document.querySelectorAll('.bud-only-neutral').forEach(function (e) { e.hidden = model !== 'neu'; });
+    document.querySelectorAll('.bud-only-gf').forEach(function (e) { e.hidden = model !== 'gf'; });
+  }
+  function preset(k) {
+    var p = P[k]; if (!p) return; tv = p.t; fv = p.f; setlog(T, p.t); setlog(F, p.f); G.value = p.gf; MU.value = p.mu; L.value = p.l; NA.value = p.na; model = p.model;
+    document.querySelectorAll('input[name="bud-model"]').forEach(function (r) { r.checked = r.value === model; });
+    $('bud-src').innerHTML = p.src; draw();
+  }
+  [T, F, G, MU, L, NA].forEach(function (e) { e.addEventListener('input', function () { if (e === T) tv = Math.pow(10, +T.value); if (e === F) fv = Math.pow(10, +F.value); $('bud-src').textContent = 'Custom inputs.'; draw(); }); });
+  document.querySelectorAll('input[name="bud-model"]').forEach(function (r) { r.addEventListener('change', function () { model = r.value; draw(); }); });
+  document.querySelectorAll('[data-preset]').forEach(function (b) { b.addEventListener('click', function () { preset(b.getAttribute('data-preset')); }); });
+  preset('day');
+})();
+
+/* ---------- 5. combination lock (illustrative) ---------- */
+(function () {
+  if (!$('lock-canvas')) return;
+  var A = 'ACGT', K, target, locks, totals = { step: [], valley: [] };
+  var rK = bindRange('lock-k', 'lock-k-out'), rS = bindRange('lock-speed', 'lock-speed-out', function (v) { return v + ' tries/s'; });
+  var surf = surface($('lock-canvas'), 150, draw);
+  function rnd() { return A[Math.floor(Math.random() * 4)]; }
+  function mk(mode) { var d = []; for (var i = 0; i < K; i++) { var c; do { c = rnd(); } while (c === target[i]); d.push(c); } return { mode: mode, d: d, tries: 0 }; }
+  function reset() { K = rK.get(); target = []; for (var i = 0; i < K; i++) target.push(rnd()); locks = [mk('step'), mk('valley')]; totals = { step: [], valley: [] }; draw(); stats(); }
+  function open(l) { for (var i = 0; i < K; i++) if (l.d[i] !== target[i]) return false; return true; }
+  function tryOnce(l) { /* one random single-dial change; stepping stones keep correct dials (selection), the valley accepts every change (no partial credit) */
+    var i = Math.floor(Math.random() * K), c = rnd(); l.tries++;
+    if (l.mode === 'step' && l.d[i] === target[i]) return; l.d[i] = c;
+  }
+  function tick(n) {
+    for (var j = 0; j < n; j++) locks.forEach(function (l, k) { if (open(l)) return; tryOnce(l); if (open(l)) { totals[l.mode].push(l.tries); setTimeout(function () { locks[k] = mk(l.mode); draw(); }, RM ? 0 : 500); } });
+    draw(); stats();
+  }
+  function avg(a) { return a.length ? a.reduce(function (x, y) { return x + y; }, 0) / a.length : NaN; }
+  function stats() {
+    $('lock-stats').innerHTML =
+      '<div><span>stepping stones: opens</span><b>' + totals.step.length + '</b></div><div><span>average tries</span><b class="c-a">' + (totals.step.length ? sig(avg(totals.step), 3) : '–') + '</b></div>' +
+      '<div><span>valley: opens</span><b>' + totals.valley.length + '</b></div><div><span>average tries</span><b class="c-c">' + (totals.valley.length ? sig(avg(totals.valley), 3) : '–') + '</b></div>' +
+      '<div><span>possible combinations 4<sup>K</sup></span><b>' + fmt(Math.pow(4, K)) + '</b></div>';
+  }
+  function draw() {
+    var S = surf, g = S.ctx; clear(S); if (!locks) return; var half = S.w / 2, cw = Math.min(40, (half - 24) / K);
+    g.font = '600 ' + Math.round(cw * 0.55) + 'px ' + tok('--mono'); g.textAlign = 'center';
+    locks.forEach(function (l, k) {
+      var x0 = k * half + (half - cw * K) / 2, y0 = 44; g.fillStyle = tok('--ink'); g.font = '12px ' + tok('--mono'); g.fillText(l.mode === 'step' ? 'stepping stones' : 'valley (all at once)', k * half + half / 2, 20);
+      g.font = '600 ' + Math.round(cw * 0.55) + 'px ' + tok('--mono');
+      for (var i = 0; i < K; i++) { var ok = l.d[i] === target[i]; g.fillStyle = ok ? tok('--allele-a') : tok('--water'); g.fillRect(x0 + i * cw + 2, y0, cw - 4, cw * 1.3); g.fillStyle = ok ? tok('--plot-bg') : tok('--ink'); g.fillText(l.d[i], x0 + i * cw + cw / 2, y0 + cw * 0.85); }
+      g.fillStyle = tok('--muted'); g.font = '12px ' + tok('--mono'); g.fillText((open(l) ? 'OPEN after ' : 'tries: ') + fmt(l.tries), k * half + half / 2, y0 + cw * 1.3 + 22);
+    });
+    g.fillStyle = tok('--muted'); g.fillText('target: ' + target.join(''), S.w / 2, S.h - 8);
+  }
+  var lp = loop(tick, function () { return rS.get(); }), lab = playBtn($('lock-play'), lp);
+  $('lock-reset').addEventListener('click', reset); rK.el.addEventListener('input', reset); rS.el.addEventListener('input', rS.get);
+  $('lock-fast').addEventListener('click', function () { /* 200 quick opens of each, off-screen */
+    for (var m = 0; m < 2; m++) { var mode = m ? 'valley' : 'step'; for (var r = 0; r < 200; r++) { var l = mk(mode); while (!open(l)) tryOnce(l); totals[mode].push(l.tries); } } stats();
+  });
+  reset(); if (!RM) { lp.play(); lab(); }
+})();
+})();
+</script>
+
+</body>
+</html>

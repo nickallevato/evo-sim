@@ -19,6 +19,17 @@
 
 > **New here?** Read the whole story at your level: **[ELI5](docs/explain/eli5/README.md)** · **[ELI8](docs/explain/eli8/README.md)** · **[ELI10](docs/explain/eli10/README.md)** · **[ELI12](docs/explain/eli12/README.md)** · **[ELI18](docs/explain/eli18/README.md)**
 
+## Play with it
+**[Is There Enough Time](https://raw.githack.com/nickallevato/evo-sim/master/docs/explain/eli-series/play.html)** is an interactive explainer of the math and the sims at five levels (ELI5 to ELI18). It has five small simulations you can run in the browser: a drift jar, a mutation river, a selection race, the MITTENS budget board, and a combination lock. ([source](docs/explain/eli-series/index.html))
+
+<p align="center"><a href="https://raw.githack.com/nickallevato/evo-sim/master/docs/explain/eli-series/play.html#eli10"><img src="docs/img/mutation-river.svg" alt="Mutation river: neutral mutations drift across the river; most are lost, a few reach the far bank and fix" width="720"></a></p>
+
+**Mutation river.** Each dot is one neutral mutation, and its position is the share of the population that carries it. Most dots sink. The few that reach the far bank are substitutions. A bigger population drops in more mutations, but each one is less likely to cross, and the two effects cancel: substitutions arrive at the mutation rate, **k = μ**. This is a real seeded Wright–Fisher run with 2N = 80, μ = 0.02 per copy and an equilibrium start. It gives 9 substitutions in 600 generations against μ × 600 = 12 expected, which is Poisson scatter for a run this short.
+
+<p align="center"><a href="https://raw.githack.com/nickallevato/evo-sim/master/docs/explain/eli-series/play.html#eli12"><img src="docs/img/combination-lock.svg" alt="Combination lock: stepping stones open in a few dozen tries, the valley takes hundreds" width="720"></a></p>
+
+**Combination lock.** Some features may need several mutations before they help. If each right step is kept (**stepping stones**), the lock opens quickly. If nothing helps until every dial is right at once (a **valley**), the wait grows with the number of combinations. This is an illustrative toy, not the audit's D15 result. D15 tests Hössjer's multi-step waiting time and is still running. Both previews are drawn by [`research/tools/eli_readme_svgs.py`](research/tools/eli_readme_svgs.py).
+
 ## Why this exists
 Vox Day argues, in *Probability Zero* (2025), the MITTENS papers on Zenodo and many blog posts, that population genetics *mathematically* rules out natural selection explaining the human–chimp divergence. His critics (McCarthy, Mansfield, Hancock, Camestros Felapton, Bowers and others) say his maths is wrong. Both sides mostly trade assertions.
 
