@@ -36,7 +36,25 @@
 - **Day:** under the three flatter fits (the coalescent and SFS estimates closest to textbook N_e of 1e4) his 21 is 35x to 246x below the neutral expectation, so the "something stopped" reading is not removed by plausible Holocene demography unless fast Nelson-type growth is assumed. Nelson, the one rescue, also removes 92% of his tracked total.
 - **Critics (McCarthy, keruru, Hancock):** the demographic route does work: a published trajectory (Nelson 2012, 1.7% per generation) gives S21 = 42 (R0) or 51 (R2), within 2.4x of 21 with no clock failure, and the 1.2-2.3% CI gives 5 to 600 (R0) and 34 to 107 (R2). The data do not force a constant 1e4. The critic reading is then conditional on a growth model, not on special pleading about the call set.
 
+## Post hoc rerun with the generation clock matched (review MAJOR-1; supersedes the table above)
+Script `c1e_gen25_post_hoc.py` (committed 1c7e463 with its predictions, before the run; "post hoc (review MAJOR)"). Source check: Gravel, Gazave and Coventry are published at 25 y per generation, Nelson's start date at the same clock (`holocene-ne.md`), so all four use gy = 25 (T = 420 steps). Run on na-workhorse 2026-10-09, 6 replicates (panels 0-5; the first 3 are the original panels), 2 sampling draws, 12 draws per cell; md5s in `raw/c1e25.host`, outputs `raw/c1e25_rep*.json`, `raw/c1e25_analysis.txt`. Controls also run at gy = 20 and reproduce the original.
+
+| Trajectory | R0 S21 (20 y, first run) | **R0 S21 (25 y)** | R0 / 21 | R2 S21 (25 y) | R2 / 21 | R0 tracked total | R0 pre-7000 |
+|---|---|---|---|---|---|---|---|
+| control 1e4, gy 20 | 3,897 | 3,876 | 185 | 2,272 | 108 | 15,166 | 0.69 |
+| control 1e4, gy 25 | | 2,484 | 118 | 1,574 | 75 | 12,037 | 0.75 |
+| control 1.4e5, gy 20 | 16.5 | 18.9 | 0.9 | 69.8 | 3.3 | 1,347 | 0.98 |
+| control 1.4e5, gy 25 | | 14.1 | 0.7 | 57.2 | 2.7 | 1,180 | 0.98 |
+| Gravel | 1,127 | **710** | 34 | 521 | 25 | 6,002 | 0.82 |
+| Gazave | 5,164 | **3,387** | 161 | 1,322 | 63 | 13,682 | 0.66 |
+| Coventry | 5,102 | **3,279** | 156 | 1,745 | 83 | 13,776 | 0.70 |
+| Nelson 1.7% | 42.0 | **31.2** | 1.5 | 49.8 | 2.4 | 1,132 | 0.93 |
+| Nelson 1.2% | 5.3 | **5.9** | 0.3 | 25.8 | 1.2 | 768 | 0.99 |
+| Nelson 2.3% | 602 | **435** | 20.7 | 95.4 | 4.5 | 3,366 | 0.54 |
+
+Pre-registered predictions: all met. Non-control cells fall to 0.63-0.74x of the first run (predicted 0.6-0.8x; the bracket x 0.6-0.7 was slightly too low at the upper end); Gravel R0 710 in [500, 900]; Nelson central 31 in [15, 40]; no flat fit within 3x of 21 (closest Gravel R2, 25x); ordering unchanged; no cell has tracked total in range, S21 in [7, 63] and pre-7000 share >= 90% (P6 survives); gy 20 controls reproduce the first run. Panel-to-panel spread (MINOR-3) is small for the flat fits (Gravel R0 687-739 across 6 panels) and larger for Nelson central (23-40). Replicates 0-2 alone give the same picture (Gravel 701, Nelson 32.7, `raw/c1e25_analysis.txt`). Conclusions unchanged: three flat fits leave 21 a 25-161x deficit; only Nelson-type growth approaches it (1.5x R0, 2.4x R2), at the price of 7% of Day's tracked total.
+
 ## Review resolution
-- **MAJOR-1 (generation-time mismatch).** The trajectories are for 25 y per generation, the engine steps 20 y, so drift per calendar year is 1.25x too large (equivalent to N_e x 0.8). C1c measured that 25 y per generation lowers S21 to 0.6-0.7x. Bracket, **not rerun**: multiply the S21 columns by 0.6-0.7: Gravel R0 about 680-790 (32-38x), Gazave about 3,100-3,600 (150-170x), Coventry about 3,100-3,600 (150-170x), Nelson central about 25-29 (1.2-1.4x), Nelson 2.3% about 360-420. No conclusion changes; the Nelson gap narrows. A corrected-clock rerun is queued as a follow-up (it would be post hoc).
+- **MAJOR-1 (generation-time mismatch).** The trajectories are for 25 y per generation, the engine steps 20 y, so drift per calendar year is 1.25x too large (equivalent to N_e x 0.8). C1c measured that 25 y per generation lowers S21 to 0.6-0.7x. Originally bracketed; **now rerun and measured (section above)**: the bracket was: multiply the S21 columns by 0.6-0.7: Gravel R0 about 680-790 (32-38x), Gazave about 3,100-3,600 (150-170x), Coventry about 3,100-3,600 (150-170x), Nelson central about 25-29 (1.2-1.4x), Nelson 2.3% about 360-420. No conclusion changes; the Nelson gap narrows. The rerun (post hoc, 1c7e463) gave factors 0.63-0.74, so the upper end of the bracket was slightly low.
 - MINOR-1: P5 sensitivity and P7 misses disclosed above. MINOR-2: Nelson's 4.0M is a growth-model size, not a coalescent size, and its start date is secondhand. MINOR-3: panel-to-panel spread is not reported (the draws pool 3 panels). MINOR-4: C1d shows 3.6-5k events on the real genotypes under Day's described method, so both the data side and the model side exceed his 21; the 35-246x compares the model with his number. MINOR-5: the three flat fits are SFS-dominated by recent rare variants; IBD and short-ROH sharing point to growth from the Mesolithic (holocene-ne.md), so the Nelson-type earlier growth is a published, not ad hoc, alternative.
 - No verdict changes.
