@@ -1,0 +1,25 @@
+rows 60; D_det(1/2K): K=500 13.81, K=1000 15.20, K=4000 17.97; 2 ln(2K): 13.82, 15.20, 17.97
+
+## Kscale K=16000
+| R | ln R | D_obs | T | lam50 | bracket | phi | lam50*D/30 -> interval at D=30 | at D=20 | x 1/300 (in-model) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1.111 | 0.105 | 22.81 | 10000 | 0.002407 | [0.002084, 0.002779] | 0.52 | 546 | 364 | 0.7 |
+| 1.111 | 0.105 | 22.81 | 20000 | 0.002084 | [0.002084, 0.002779] | 0.45 | 631 | 421 | 0.6 |
+| 2.000 | 0.693 | 21.41 | 10000 | 0.02665 | [0.02438, 0.03047] | 0.82 | 53 | 35 | 8.0 |
+| 2.000 | 0.693 | 21.41 | 20000 | 0.02665 | [0.02438, 0.03047] | 0.82 | 53 | 35 | 8.0 |
+
+cells (survival 10k/20k/40k with Wilson CI on 40k; mean k/lam, D, N/K, nopen over persisting reps):
+  R=1.111  x=0.3 lam=0.00139: surv 6/6 / 6/6; k/lam=1.00 D=24.12 N/K=0.97 nopen=3 I=2.87e-05 maxrel=1.017
+  R=1.111 x=0.45 lam=0.002084: surv 4/6 / 3/6; k/lam=1.11 D=21.93 N/K=0.93 nopen=4 I=4.45e-05 maxrel=1.023
+  R=1.111  x=0.6 lam=0.002779: surv 2/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=0.8 lam=0.003705: surv 2/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=1.111  x=1.0 lam=0.004632: surv 1/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+  R=2.000  x=0.3 lam=0.009142: surv 6/6 / 6/6; k/lam=1.02 D=21.51 N/K=0.82 nopen=16 I=1.83e-04 maxrel=1.053
+  R=2.000 x=0.45 lam=0.01371: surv 6/6 / 6/6; k/lam=0.97 D=21.74 N/K=0.75 nopen=23 I=2.61e-04 maxrel=1.064
+  R=2.000  x=0.6 lam=0.01828: surv 6/6 / 6/6; k/lam=0.98 D=21.21 N/K=0.69 nopen=31 I=3.53e-04 maxrel=1.075
+  R=2.000  x=0.8 lam=0.02438: surv 5/6 / 5/6; k/lam=1.00 D=20.96 N/K=0.59 nopen=41 I=4.86e-04 maxrel=1.089
+  R=2.000  x=1.0 lam=0.03047: surv 0/6 / 0/6; k/lam=nan D=nan N/K=nan nopen=nan I=nan maxrel=nan
+kscale16 R=1.111 T=10000: D_obs=22.81 (K4 [21.2, 24.7]) lam50*D=0.0549 (K1 R=1.111 10k [0.072, 0.078]; K3 R=2 10k [0.59, 0.61]); D=30 interval 546 (K2: <=300 remove, >=480 keep)
+kscale16 R=1.111 T=20000: D_obs=22.81 (K4 [21.2, 24.7]) lam50*D=0.0476 (K1 R=1.111 10k [0.072, 0.078]; K3 R=2 10k [0.59, 0.61]); D=30 interval 631 (K2: <=300 remove, >=480 keep)
+kscale16 R=2.000 T=10000: D_obs=21.41 (K4 [21.2, 24.7]) lam50*D=0.5707 (K1 R=1.111 10k [0.072, 0.078]; K3 R=2 10k [0.59, 0.61]); D=30 interval 53 (K2: <=300 remove, >=480 keep)
+kscale16 R=2.000 T=20000: D_obs=21.41 (K4 [21.2, 24.7]) lam50*D=0.5707 (K1 R=1.111 10k [0.072, 0.078]; K3 R=2 10k [0.59, 0.61]); D=30 interval 53 (K2: <=300 remove, >=480 keep)

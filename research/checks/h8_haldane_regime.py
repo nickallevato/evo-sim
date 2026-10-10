@@ -496,8 +496,8 @@ def analyse(stage="main"):
 
 if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "smoke"
-    workers = int(sys.argv[2]) if len(sys.argv) > 2 else 3
     if which == "analyse":
         analyse(sys.argv[2] if len(sys.argv) > 2 else "main")
     else:
+        workers = int(sys.argv[2]) if len(sys.argv) > 2 else 3
         run_stage(which, workers)

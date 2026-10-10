@@ -1,0 +1,5 @@
+stage kscale16: 10 cells, 60 jobs to run (0 already done), workers 8
+[     55s] 1/60 Kscale K=16000 R=1.111 x=0.3 rep5 fail=None k=0.001059 D=22.6 nopen=2 maxrel=1.01 sec=55 sec/gen=2.75e-03
+[    159s] 21/60 Kscale K=16000 R=1.111 x=1.0 rep1 fail=extinct k=0.003544 D=22.9 nopen=6 maxrel=1.03 sec=24 sec/gen=4.15e-03
+[    826s] 41/60 Kscale K=16000 R=2.000 x=0.45 rep5 fail=None k=0.01224 D=22.3 nopen=22 maxrel=1.06 sec=353 sec/gen=1.77e-02
+stage kscale16 done in 1574 s

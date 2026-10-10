@@ -1,0 +1,6 @@
+host: na-workhorse.allevato.io
+launched: 2026-10-10T12:27:03-06:00
+pid: 606918 (main; 8 pool workers)
+cmd: research/.venv/bin/python -I research/checks/h8_haldane_regime.py kscale16 8
+commit: b29740f (post hoc, after reviews 2935b8f)
+6590a40585838c631437ba177b4bb4ea  research/checks/h8_haldane_regime.py
