@@ -19,6 +19,8 @@ verdicts:
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.11 (s7.1).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 N_gen = t_div_years / generation_time_years = 6.3e6 / 25 = 252,000   (`divergence.t_div_years.day_2026_mittens3`, `generation_time_years.day_2026`, `generations_available.day_2026`)
 

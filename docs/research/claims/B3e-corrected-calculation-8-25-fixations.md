@@ -23,6 +23,8 @@ Source: [Day, "Response to Dennis McCarthy, Round 2" (blog)](https://voxday.net/
 
 Source: [Day, "Response to Dennis McCarthy, Round 2" (blog)](https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/), 2026-02-04, ¶59 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Inputs in the post: Nₑ = 3,300 ("actual ancient effective population size"), N = 8×10⁹, 100 mutations per individual, 400,000 generations, P_fix = 1/2N = 1/(1.6×10¹⁰).
 

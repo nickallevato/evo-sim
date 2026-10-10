@@ -27,6 +27,8 @@ Source: same, Abstract.
 
 Source: same, Abstract (Europe PMC copy; quote in `sources/quotes-literature.md`).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Kondrashov-Crow method: U = (mutational target sites) x mu x (mean selective constraint per site); abstract: "estimates are U ≈ 2.2 for the whole diploid genome per generation and 0.35 for mutations that change an amino acid of a protein-coding gene" (the extracted text drops the "≈"). Under hard selection ("one deleterious mutation, one genetic death"), mean fitness relative to a mutation-free genotype W̄ = e^(-U).
 derived (R2): e^-2.2 = 0.1108 (paper 0.11; holds); e^-0.35 = 0.7047 (paper 0.7; holds); with 20 offspring per female, 20 x (1 - 0.1108) = 17.8 selective deaths (paper "18"; holds).

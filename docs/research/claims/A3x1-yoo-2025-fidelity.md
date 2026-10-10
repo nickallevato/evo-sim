@@ -27,6 +27,8 @@ Source: same.
 
 Source: same, "Structural variation".
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 `divergence.structurally_divergent_Mb_per_lineage.yoo_2025` = 327. `derived:` 327 x 2 = 654 Mb (both lineages, if additive); 410/327 = 1.25. Brute-force search over SDR totals (Table V.24: human h1/h2 147.8/183.6 Mb; chimp h1/h2 288.9/308.2 Mb) found no combination giving 187 or 410 (closest 412.1 = HSA h2 + PAB h1, flagged as coincidence). 1,140 inversions is across six apes versus the human reference. Ledger status: **not-found** (the figures are absent from main text, SI text and tables). Classified here as `misread` for the fidelity verdict on Day's citation because Yoo supplies a different, specific, sourced figure (327 Mb); the ledger label remains not-found.
 

@@ -27,6 +27,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3)
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 E[d] = 2μT + 4Nₑ,anc μ per site (T in generations; coalescence in the ancestor at mean 2Nₑ,anc generations), where d is the difference between one haplotype from each species (includes polymorphism); fixed differences are the subset fixed in both.
 

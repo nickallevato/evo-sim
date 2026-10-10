@@ -27,6 +27,8 @@ Source: [Every Critique is Correct](https://voxday.net/2024/04/25/every-critique
 
 Source: same post, paras 4, 1, 9.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Model: a specific path of n = 500 steps; at each step a specific nucleotide change must (i) occur, with probability a = 1/600, and (ii) fix, with probability b = 1/500 (2s, D7). Per-step success p1 = a*b = 1/300,000. All steps independent. P(path) = p1^n = (1/300000)^500. Recomputed: log10 = -500*log10(3e5) = -2738.56, so P = 2.75e-2739 and odds against = 3.64e2738 to 1 (Day: 3.6 x 10^2738 'to 1' and 2.7 x 10^-2739; the 2.7 vs 2.75 is a rounding/truncation difference of 2%). Reconciles.
 

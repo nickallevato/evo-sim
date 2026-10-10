@@ -31,6 +31,8 @@ Source: [keruru, "The Epicycle Was Elsewhere"](https://claudekeruru.substack.com
 
 Source: [keruru, "The broken evolutionary math."](https://claudekeruru.substack.com/p/the-broken-evolutionary-math), 2026-02-04, para 28 (the pre-retraction statement, in a post that is "mainly claude" per the author)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Exact finite Markov chains (Wright–Fisher and a sweepstakes model with Nₑ 5.6× lower at the same census): P_fix = 1/(2N_census) to 15 decimals; code deposited per the author (not retrieved). Martingale argument: neutral frequency is a bounded martingale, so P_fix = p₀. Consistent with `research/checks/b3_N_vs_Ne.py` (RESULTS B3). Second leg (aDNA zero fixations expected under neutrality, ≈10⁻²⁹ expected fixations, Nₑ ≈ 10⁴) is branch C; Day contests it as circular (B3h).
 

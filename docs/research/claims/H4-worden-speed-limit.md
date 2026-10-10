@@ -27,6 +27,8 @@ Source: same post, para 7.
 
 Source: same post, para 8.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Worden 1995 (as paraphrased by Day; the text was not retrieved): the information gain from selection is bounded by O(1) bits per generation. Day's equivalence: Haldane's limit (one substitution per 300 generations) equals O(1) bits/generation. The sqrt(N) argument (Yudkowsky/LessWrong summary, via the commenter): with truncation selection on total mutational load, the population can purge of order sqrt(N) mutations per generation; Day: this concerns deleterious load, not beneficial fixation.
 

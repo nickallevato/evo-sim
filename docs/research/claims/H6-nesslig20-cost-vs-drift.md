@@ -27,6 +27,8 @@ Source: same post, §2.1.
 
 Source: same post, §2.1 (PS-04 in `sources/quotes-critics.md`).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Nesslig20 restates Haldane: cost of fixation 30 N_e deaths; 10% of the population can be culled per generation; 30 N_e/(0.1 N_e) = 30/0.1 = 300 generations per beneficial mutation. He then argues the limit does not apply to neutral fixations and computes the neutral count separately (PS-01, PS-02: "[ μ_G = 75 ]" per generation, "~37.8 million", 2 x 75 x 6.3e6/25; the balance ledger notes the factor-of-2 and diploid/haploid slip).
 derived: 30/0.1 = 300 (holds). The same ratio results with N or N_e because the factor cancels; Haldane's cost in Nunney's reading is 30N, with N the population size, so the use of N_e is a notational departure with no numerical effect on the 300 (fidelity: partial).

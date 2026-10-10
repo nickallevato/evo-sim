@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Gutsick Gibbon and Zach Hancock video](https://www.youtube.com/watch?v=_Vu0ZVVjwHc), 2026-10-03, t=01:37:07 (GG-02; auto-caption). In the same passage: "So at at least this should be two times this ... So this really should be at least 360".
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Hancock's point: the achievable count (180 on Duffy's slide = 252,000/1,400) should be 2x180 = 360 because fixation accrues in both lineages.
 

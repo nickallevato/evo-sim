@@ -19,6 +19,8 @@ verdicts:
 
 Source: Rosenhouse 2022, p.124 (Assertion 2), via [The Best They've Got II](https://voxday.net/2026/10/06/the-best-theyve-got-ii/), 2026-10-06, voxday.net, para 6. `secondhand`.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Existence of working evolutionary computations is offered as evidence against the 'gap' between program space and function space (D5).
 

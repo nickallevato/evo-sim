@@ -23,6 +23,8 @@ Source: [Nesslig20, "Response to Will Duffy | PART I - Population Genetics" (Pea
 
 Source: [Nesslig20, "Response to Will Duffy | PART I - Population Genetics" (Peaceful Science)](https://discourse.peacefulscience.org/t/18094), 2026-10-05, post 1 by Nesslig20, §2.2
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):** 2 × 75 × (6.3e6/25 = 252,000) = 37.8M ✓. The post defines μ_G via "the neutral mutation rate per haploid genome per generation" (§2.1) and then writes: "Estimates vary from 100 to 200 per generation. Let’s assume a conservative neutral mutation rate of [ μ_G = 75 ]." The basis of 75 is not stated: if it is a zygote-level count, the haploid value is 37.5 and 2 × 37.5 × 252,000 = 18.9M (derived), about 0.54 of the 35M SNV total (the balance ledger flags this factor of 2); if it is a halved 100–200 range, the product stands as written. The harvest note read it as the first case; the text does not settle it. The post uses P_fix = 1/(2Nₑ) and supply 2Nₑ μ_G in the same expression, so the cancellation is internally consistent.
 Reference-genome note (Nesslig20): "since they use one (or a few) reference genomes, not all of the differences they identified between genomes are actually fixed" — the same polymorphism caveat as CSAC (14–22%).

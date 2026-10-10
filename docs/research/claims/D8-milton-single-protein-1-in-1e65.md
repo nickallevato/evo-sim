@@ -23,6 +23,8 @@ Source: voxday.net, [The Foundation of Sand](https://voxday.net/2025/10/02/the-f
 
 > "It was obvious from the time of the 1967 symposium held by the Wistar Institute that evolution was not a real science."
 
+
+RH tag (2026-10-10 pass): rhetoric for the lottery comparison, the 'stone through the stained glass window' line and Day's closing sentence (ledger RH-12); the dialectic core is the relayed '1 in 10^65' figure (secondhand, Milton 1992, unchecked). Support is only rhetoric plus an unverified relayed number.
 ## Formal statement
 Single stated number: P(single protein by chance) = 10^-65, no length, function or fold stated. Candidate reconstruction (this file; not in the source): a specific 50-residue sequence has probability 20^-50 = 10^-65.05 (50*log10(20) = 65.05), so the figure is consistent with a specific 50-mer; no source says this.
 

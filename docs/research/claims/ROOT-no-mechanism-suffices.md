@@ -31,6 +31,8 @@ Source: [MITTENS 3.0: The Mathematical Impossibility of the Post-Darwinian Polyt
 
 Source: [Every Critique is Correct](https://voxday.net/2024/04/25/every-critique-is-correct/), 2024-04-25, para 10 (earlier, stronger-worded form: 'never happened' as well as 'never possible').
 
+
+RH tag (2026-10-10 pass): UNCLEAR, owner to decide. Reading A (dialectic): 'mathematical impossibility' means the time budget F_max < F_req (the repo's operational form). Reading B (rhetoric): 'impossibility' is an intensifier. Treated as dialectic by rule C for scoring; the other reading is recorded, not chosen.
 ## Formal statement
 ROOT as an implication:
 - For every mechanism M in a set S = {natural selection (hard and soft sweeps), parallel fixation, neutral drift, neutral sweeps, hitchhiking, ILS, biased gene conversion, relictation-type bottleneck drift, recombination, hypermutation, ... and "every other imagined mechanism"}:

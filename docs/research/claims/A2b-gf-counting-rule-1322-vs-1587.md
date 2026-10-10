@@ -23,6 +23,8 @@ Source: [LTEE fixation data paper, Zenodo 23105291](https://zenodo.org/records/2
 
 Source: [LTEE fixation data paper, Zenodo 23105291](https://zenodo.org/records/23105291) (key Z23105291), 2026-10-02, p.1.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Whole-population fixations over 12 populations: strict 5,496 vs naive (≥95%) 8,679 (`ltee.whole_pop_fixations_lineage_aware.day_23105291`).
 

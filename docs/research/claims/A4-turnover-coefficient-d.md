@@ -23,6 +23,8 @@ Source: [Zenodo 18166234](https://zenodo.org/records/18166234) (key Z18166234), 
 
 Source: [Zenodo 18166234](https://zenodo.org/records/18166234) (key Z18166234), pub. 2025-12-24 (modified 2026-01-06), ¶51 (s3.3). μ(x) = −d[ln l(x)]/dx is the mortality force.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 effective generations = N_gen x d, with d = `selection.turnover_d` = 0.45.   F_max = (t_div x d)/(g_len x G_f).
 `derived:` 325,000 x 0.45 = 146,250; 450,000 x 0.45 = 202,500 (the "202,500 generations" Tree of Woe interview figure, TW-01); T x mean mortality force is dimensionless (T in years, μ in 1/y), so the integral form is dimensionally consistent. Day (Q&A 2026-01-19, ¶16): "If l(x) and v(x) were constants, they'd cancel and you'd get d = T × ∫μ(x)dx. But they're not constants, they're age-dependent functions".

@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Gutsick Gibbon and Zach Hancock, "No, Vox Day's AI-Generated Books Did Not Debunk Evolution"](https://www.youtube.com/watch?v=_Vu0ZVVjwHc), 2026-10-03, t=01:33:59 (GG-13; auto-caption). Same passage (t=01:37:07): the model "makes a specific prediction about levels of polymorphism in the natural world, about the shape of the site frequency spectrum" which "doesn't bear out".
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Prediction of a strictly serial sweep model for segregating variation, as stated by Hancock. Not formalised. A formulation would require the sweep rate r (per generation per genome), sweep duration, and recombination: under free recombination, neutral diversity at unlinked sites is set by mutation-drift balance θ = 4Neμ and is reduced by sweeps only at linked sites. That expectation is a standard-theory statement, not tested in the repo.
 

@@ -23,6 +23,8 @@ verdicts:
 
 Source: discussion following Ulam, in Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwinian Interpretation of Evolution*, Wistar Institute Monograph No. 5 (1967; symposium 25-26 Apr 1966), local copy = 1985 Liss reprint scan, OCR text; page = printed folio (page numbers from the PDF text layer headers; OCR garbles noted in place), p.24 (Mayr, Ulam, Wald).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Mayr: gamma ~ 0.3 (not 1e-6); with Ulam's M = 1e11 and p0 = 1e-10, t_sweep = ln(1e10)/0.3 = 77 generations (recomputed 76.8), so 10^6 serial improvements need 7.7e7 generations (7.7e7 < 3.65e11 available one-day generations). Simultaneity: if improvements at different loci proceed in parallel, T ~ t_sweep (+ waiting), independent of n up to interference limits.
 

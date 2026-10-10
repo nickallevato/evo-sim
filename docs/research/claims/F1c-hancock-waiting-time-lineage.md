@@ -23,6 +23,8 @@ Source: [Gutsick Gibbon + Zach Hancock, No, Vox Day's AI-Generated Books Did Not
 
 Source: Hancock, [Waiting-time? No Problem.](https://www.youtube.com/watch?v=KLPZxAU9nAM), 2024-03-06, t=00:00:20 (auto-caption; spelling as captioned; TH-1, downloaded 2026-10-07, not analysed beyond a keyword search). It reviews Behe & Snoke 2004, Lynch's 2005 reply and a 2015 paper by Sanford and coauthors.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No equation. The claim: F_max = t / (g x G_f) is a waiting-time argument (time per fixation against time available) of the type criticised for specifying a target and ignoring parallel paths and neutral intermediates. Connects to F1 (latency is not throughput) and D15 (Hossjer's waiting-time prediction).
 

@@ -23,6 +23,8 @@ Source: [Gutsick Gibbon + Zach Hancock, "No, Vox Day's AI-Generated Books Did No
 
 Source: [Gutsick Gibbon + Zach Hancock, "No, Vox Day's AI-Generated Books Did Not Debunk Evolution" (auto-captions)](https://www.youtube.com/watch?v=_Vu0ZVVjwHc), 2026-10-03, t=01:31:58 (continues "mutation can occur." in the 01:32:18 chunk; Hancock responds to the 180-interval, 252,000/1,400 presentation; the attribution to Day's own equation is tested in F1a)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Under strictly serial fixation (one allele at a time), heterozygosity would be ≈ 0 except at the single segregating site. Observed neutral diversity: θ = 4Nₑμ ≈ 4.8×10⁻⁴ per site at Nₑ = 10⁴, μ = 1.2×10⁻⁸ (derived), i.e. ≈ 1.5×10⁶ segregating differences per genome pair at 3.2×10⁹ sites. Day does not claim a serial model for neutral fixation (B2d: "Fixations run in parallel" is conceded), so the prediction applies to the reading in F1, not to Day's stated position.
 

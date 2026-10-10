@@ -23,6 +23,8 @@ Source: [The Temperature Rises](https://voxday.net/2026/09/27/the-temperature-ri
 
 Source: [Math Teacher Can't Math](https://voxday.net/2026/09/30/math-teacher-cant-math/) (key B2026-09-30), blog, 2026-09-30, ¶23.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Three different "natural-selection-only" numbers in the Day corpus:
 - 4,615 gens/beneficial fixation (blogs 2026-09-27, 09-28, 09-30): `derived:` 60,000/4,615 = 13.0 beneficial fixations per 60,000 generations.

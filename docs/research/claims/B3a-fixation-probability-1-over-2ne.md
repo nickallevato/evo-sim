@@ -27,6 +27,8 @@ Source: [Z18525547, The N/N_e Distinction and the Recalibration of the Human-Chi
 
 Source: [Day, "Response to Dennis McCarthy, Round 2" (blog)](https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/), 2026-02-04, ¶29 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day: k = (2Nμ)·P_fix with P_fix = 1/(2Nₑ) ⇒ k/μ = N/Nₑ.
 Critics/literature: P_fix = p₀ = 1/(2N) (initial frequency; martingale property) ⇒ k/μ = 1 for any N, Nₑ.

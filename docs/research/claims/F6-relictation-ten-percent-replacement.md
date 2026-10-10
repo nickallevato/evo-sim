@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Z23188201, Relictation: A Third Evolutionary Mechanism (Day & Athos)](https://zenodo.org/records/23188201), Zenodo 2026-10-06 (v1; record modified 2026-10-07), p.1 (abstract)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 The corpus contains the abstract-level claim only; the Zenodo record was modified 2026-10-07 (versions ledger note: check for changes before quoting). No equation is extracted here.
 

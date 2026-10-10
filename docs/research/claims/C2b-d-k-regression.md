@@ -35,6 +35,8 @@ Source: same post, ¶9 (Q42).
 
 Source: same post, ¶9 of extracted text (added 2026-10-09 under R4 X1 rule S1: this is the sentence the internal verdict rests on). The regression itself was run by an unidentified "doctor" (¶2); under rule U only Day's interpretation is scored.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Regression: d = a k + b with a = -2.242, b = 1.229 (k in units of mu: "k converges toward half the mutation rate", ¶5). d from life-table/TFR schedules per country-year (C2a); k from the Z18525262 formula applied to census data (parameters.yaml `rates.day_k_over_mu_0_743` is the 1950-2025 four-generation case).
 

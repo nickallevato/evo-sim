@@ -35,6 +35,8 @@ Source: [Day, "Probability Zero Q&A" (blog page)](https://voxday.net/2026/01/19/
 
 Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01, ¶24 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):** (2/0.001) × ln(2 × 10,000) = 2000 × 9.9035 = 19,807 ✓ (19,800). This is a *latency* (deterministic sweep time of one allele, F3). The Q&A calls it "generations per fixation", i.e. G_f = 19,807, a throughput of 1/19,807 = 5.05×10⁻⁵ per generation — the serial reading.
 Day confirms in the Education post that the six-fixations-over-9-My figure (Mansfield quotes it) comes from this latency (quote 3). Reconstruction (derived; Day does not print the inputs): 9×10⁶ y / 32.5 y × 0.45 / 19,807 = 6.3; and 146,250 / 19,807 = 7.4 ("now seven at updated parameters"). Neither contains a parallel-width factor, so the figure is window × d ÷ latency. Other readings of the same divisor: 252,000/19,807 = 12.7; 252,000 × 0.45/19,807 = 5.7.

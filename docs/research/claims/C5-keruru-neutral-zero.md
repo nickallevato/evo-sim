@@ -27,6 +27,8 @@ Source: same post, section "Zero fixations was the prediction".
 
 Source: same post, para 36 (KR-04). Context: the withdrawal is explained as the author's own prior adoption of an invalid objection, not as concession to this C5 argument; Day's reply (C5a) says the C5 number was circular.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Neutral fixation time conditional on fixation from intermediate frequency is of order 4Ne generations. With Ne = 1e4 (parameters.yaml `population.Ne_modern_human`, unverified textbook value) and 240 generations in the window:
 - 4Ne = 40,000 generations; at 25 y/gen = 1.0M y; 240/40,000 = 0.6% of the way (keruru: "six-tenths of one percent"); derived: holds.

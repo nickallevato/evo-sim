@@ -29,6 +29,8 @@ For comparison, Day on MITTENS (different claim): > "The MITTENS calculation doe
 
 Source: [The Education of a Population Geneticist](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Parameters (Day's stated): N = 10,000 weasels; offspring 12 (not used in the formulas given); selection coefficient s = 0.05 (Dawkins 'advantage') or 0.001; L = 27 letters to be fixed. Per-letter time t_letter = (2/s)*ln(2N) (the deterministic logistic sweep time; this reproduces Day's figures: s = 0.05: 396 ~ '400'; s = 0.001: 19,807 ~ '20,000'). Total T = 27*t_letter serial: s = 0.05: 10,696 (Day '11,000'; 27*400 = 10,800); s = 0.001: 534,788 (Day '540,000' = 27*20,000). Ratio to Dawkins's 50 generations: 540,000/50 = 10,800 = 10^4.03 (Day: 'about 11,000x', 'four orders of magnitude'). All Day figures reconcile with these formulas. B0.4 shows (2/s)ln(2N) overshoots the mean time of an allele conditioned on fixing by ~2.3x at N = 1e4, s = 1e-3 (8,480 diffusion; 8,532 stochastic approximation).
 

@@ -23,6 +23,8 @@ Source: [Day, "The Response to the Retraction" (blog)](https://voxday.net/2026/0
 
 Source: [Z18525547, The N/N_e Distinction and the Recalibration of the Human-Chimpanzee Divergence (Day & Athos)](https://zenodo.org/records/18525547), Zenodo 2026-02-08 (v1)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Nₑ(coalescent) = π/(4μ) from observed diversity π and a per-generation μ. Whether this "presupposes k = μ" depends on how μ was obtained: a pedigree μ (Kong 2012, Keightley 2012) is measured directly; a phylogenetic μ (divergence ÷ dated split) does use k = μ. IR §5 itself says μ "was initially estimated phylogenetically" and was later replaced by the pedigree estimate.
 **Internal tension:** Z22129121 states "The equilibrium heterozygosity relation θ = 4Nₑμ is untouched." (same author, 2026-08-27).

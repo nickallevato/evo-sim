@@ -19,6 +19,8 @@ verdicts:
 
 Source: [keruru, "The Epicycle Was Elsewhere"](https://claudekeruru.substack.com/p/the-epicycle-was-elsewhere), 2026-08-26, para 21 (context: pedigree rate ~1.2e-8; author calls this unreconciled)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Pedigree μ ≈ 1.2e-8 (Kong 2012) vs a fossil-calibrated phylogenetic rate ≈ 2× (keruru; Keightley 2012 reports the same twofold). With 6.3 My and 25 y/generation, the observed 1.23% difference gives a rate of 1.23%/(2 × 252,000) = 2.4e-8 per generation (derived, includes polymorphism and ancestral coalescence), i.e. 2× the pedigree rate. Subtracting the ancestral term θ_anc = 6.3e-3 (Nₑ = 1.32e5, B4a) leaves 5.97e-3/(2 × 252,000) = 1.2e-8, equal to pedigree μ (derived, one-point illustration).
 

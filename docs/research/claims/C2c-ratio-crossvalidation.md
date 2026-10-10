@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Bio-Cycle Fixation Model](https://zenodo.org/records/18203514), Z18203514, 2026-01-09, §3.3 (Table 3 follows), ¶102 of the docx text extraction. The same claim is in the v1 abstract (Z18202768): "confirming that the correction reflects genuine population dynamics rather than a fitting artifact."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Table 3 (paper): required s for the observed frequencies at d = 0.40, 0.50, 0.60, 1.00: SLC45A2 0.058, 0.047, 0.038, 0.023; TYR 0.028, 0.023, 0.019, 0.011; ratio 0.48, 0.49, 0.49, 0.49.
 

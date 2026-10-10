@@ -23,6 +23,8 @@ Source: [Z18637333, The End of Evolutionary Deep Time (Day & Athos)](https://zen
 
 Source: [Z18637333, The End of Evolutionary Deep Time (Day & Athos)](https://zenodo.org/records/18637333), Zenodo 2026-02-14 (v1), ¶105 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Same Eq. (7) with N_h = 600,000 (Biraben 2003), N_c = 300,000, Nₑ,h = 3,300, Nₑ,c = 33,000: N_h/Nₑ,h = 181.8, N_c/Nₑ,c = 9.1; t = 2 × 6.5 My / 190.9 = 68.1 kya ✓ (derived). Alternate census 100–300k: 330–130 kya ✓ (paper "130–330 kya").
 Differences from Z18525547 (one week earlier): human census 600,000 vs 50–100k; clock date 6.5 vs 6–7 (9); outputs 68 kya vs 198–741 kya.

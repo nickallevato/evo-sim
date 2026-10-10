@@ -23,6 +23,8 @@ Source: [PZ Myers, "Vox Day’s amazing ego, and Bill Dembski don't care"](https
 
 Source: [PZ Myers, "Vox Day responds to my criticism…"](https://freethoughtblogs.com/pharyngula/2026/10/04/vox-day-responds-to-my-criticism-of-his-refutation-of-evolution/), 2026-10-04, para 2 (PZ-05).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No numbers given. Qualitative statement of the parallel-action premise.
 

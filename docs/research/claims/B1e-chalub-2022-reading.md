@@ -23,6 +23,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Day, "Chalub and the Kimura Cancellation" (blog)](https://voxday.net/2026/08/23/chalub-and-the-kimura-cancellation/), 2026-08-23, ¶5 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Chalub 2022: PDE for a two-allele neutral population "without mutation or selection", classical solution decays; two point masses at the boundaries plus integral constraints (probability conservation, conservation of mean frequency) fix the split between fixation and loss. Day's reading: the 1/(2N) is imported, not derived.
 

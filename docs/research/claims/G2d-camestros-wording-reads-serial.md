@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Camestros Felapton, Reading Vox Day 2026 [2]](https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/), 2026-01-24/25, para 28 (CA-05).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Interpretive point about terminology (`glossary.md`: G_f read as a latency is the named confusion).
 

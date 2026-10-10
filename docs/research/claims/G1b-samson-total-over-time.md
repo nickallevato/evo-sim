@@ -26,6 +26,8 @@ Source: [Uncle John’s Band, "Not a Chance"](https://unclejohnsband.substack.co
 
 Source: same post, para 20 (UJ-02).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Observed divergence D over time T gives an average realised rate D/T regardless of how events overlapped. `derived:` 205e6/252,000 = 813 per generation (both lineages combined 1,627); 17.5e6/252,000 = 69.4 per generation per lineage. These are the average rates that the evolutionary process must have realised, whatever the pipeline structure.
 

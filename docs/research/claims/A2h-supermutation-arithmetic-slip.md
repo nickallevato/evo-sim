@@ -23,6 +23,8 @@ Source: [r/DebateEvolution, Dumb-and-Dumber](https://www.reddit.com/r/DebateEvol
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.11 (s6.4). Locator: line "increase in mutation rate in the human genome would produce approximately 38,400 mutations per individual per generation".
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 3.2e9 x 1.2e-8 = 38.4; x 100 = 3,840. `derived:` the paper's 38,400 is 10x too large. Its next step, "10% deleterious fraction … 3,840 deleterious mutations", is 10% of the erroneous 38,400; the correct figure is 384. Its fitness figure (0.999)^3,840 ≈ 0.02 becomes (0.999)^384 ≈ 0.68; (0.99)^3,840 ≈ 1e-17 becomes (0.99)^384 ≈ 0.021 (recomputed: 0.999^384 = 0.681, 0.99^384 = 0.0211). The same product at 1x gives 38.4 mutations per haploid genome per generation, the number used in A5b.
 

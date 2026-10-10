@@ -37,6 +37,8 @@ Source: Eden, Preliminary Working Paper, p.110.
 
 Source: same, p.109-110 (the sentence is in the paper's conclusion).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Eden's dichotomy: H1 = functional proteins are common; H2 = the topology provides 'strong regularities for finding useful paths'. Eden considers H1 'against' the evidence (the chi-square observation that the great bulk of known proteins are samples from the same amino-acid distribution, p.7). His reply to Wright (p.8): the relevant quantity is the length of paths between functional points, limited by the number of generations; he states he has 'no estimate to offer' of the typical path length on a random fitness surface beyond 'many powers of 10 greater than the minimal distance of 120'.
 

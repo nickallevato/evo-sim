@@ -31,6 +31,8 @@ Source: [Kimura 1962, On the probability of fixation of mutant genes in a popula
 
 Source: [Kimura 1962, On the probability of fixation of mutant genes in a population, Genetics 47:713-719 (user-downloaded PDF, sha256 24baddd6...f85e1)](https://pmc.ncbi.nlm.nih.gov/articles/PMC1210364/), 1962-06, p.716 (HALDANE 1927)
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Kimura 1962, genic selection: u(p) = (1 − e^{−4Nsp})/(1 − e^{−4Ns}) (Eq. 8); at p = 1/(2N): U = (1 − e^{−2s})/(1 − e^{−4Ns}) (Eq. 10); for small |s|: U = 2s/(1 − e^{−4Ns}) (Eq. 11); U → 1/2N as s → 0; U ≈ 2s for large positive Ns (equations reconstructed from the OCR text layer, which shows only fragments).
 **Fidelity note (new, from reading the paper):** the 1962 model has a single N, the number of reproducing individuals, which enters both the variance V = x(1−x)/(2N) (Eq. 7) and the starting frequency p = 1/(2N). The paper therefore does not itself distinguish census from variance-effective size; its introduction recalls that Kimura (1957) expressed U in terms of the initial frequency p, the selection coefficients and the effective population number. The fidelity ledger's gloss that N is the census number is therefore stronger than the paper. The critics' reading (B7) rests on P_fix = initial frequency (a martingale property, independent of this paper) and on Day's own 1/(2N) statements (B7); this paper supports 1/2N rather than 1/2Nₑ only in the sense that the formula is written with the starting-frequency N and the model has no separate Nₑ.

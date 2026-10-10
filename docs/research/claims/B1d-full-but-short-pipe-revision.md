@@ -27,6 +27,8 @@ Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.
 
 Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01, ¶31 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day now grants a full pipe at the split, with transit 4Nₑ = 228,000 at census ~100,000, scaling with census thereafter.
 

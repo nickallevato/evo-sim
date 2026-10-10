@@ -27,6 +27,8 @@ Source: [Z18525262, The Real Rate of Molecular Evolution (Day & Athos)](https://
 
 Source: [Z18525262, The Real Rate of Molecular Evolution (Day & Athos)](https://zenodo.org/records/18525262), Zenodo 2026-02-08 (v2; v1 Z18517618 2026-02-07 is byte-identical), ¶59 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 k_t = (μ/N_t) · ΣN_i²/ΣN_i over contributing cohorts i; cohorts 1950–2025 at 25-year spacing: N = 2.5, 4.0, 6.1, 8.2 (billions); μ = 1.2e-8 (Kong 2012; `mutation.mu_per_site_per_gen.pedigree_human`).
 

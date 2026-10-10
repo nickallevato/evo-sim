@@ -27,6 +27,8 @@ Source: same, t=02:12:32 (Hancock; the sentence begins "Um, another really key a
 
 Source: same, t=02:08:20 (Hancock on when the cost matters; the sentence begins on the previous caption line, t=02:08:00: "I think that like holding's cost is one of those things").
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No equation. Haldane's cost: about 30N selective deaths per substitution; at most ~10% of mortality selective gives ~1 substitution per 300 generations (H). Hancock's two replies: (1) the budget exists only if selection is hard viability selection; (2) the cost is smaller if the favoured allele starts at intermediate frequency (standing variation).
 

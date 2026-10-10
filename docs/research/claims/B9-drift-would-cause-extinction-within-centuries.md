@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Vox Day, comment on McCarthy, "Why Probability Zero is Wrong About Evolution"](https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874), 2026-09-15, comment id 337302874, last paragraph (Q104). Premises in the same comment: "1. For neutral substitution to work to fixation at its maximum speed, natural selection cannot be operating." "2. There are 3x more harmful substitutions than neutral substitutions."
 
+
+RH tag (2026-10-10 pass): UNCLEAR, owner to decide. Reading A (dialectic): a literal reductio, 'drift could change the genome only at a lethal cost'. Reading B (rhetoric): 'within centuries' is hyperbole for the cost of 3x more harmful than neutral substitutions. Both readings recorded; not scored as rhetoric or as literal.
 ## Formal statement
 Premise A: drift fixes neutral mutations only if selection is not operating. Premise B: harmful mutations outnumber neutral 3:1. Conclusion: drift would fix harmful mutations, causing extinction within centuries. Standard theory: fixation probability of a new mutation with selection coefficient s < 0 is u(s) = (1 - e^(-2s)) / (1 - e^(-4N_e s)) (Kimura 1962, N = N_e, initial frequency 1/(2N)), which for s < 0 and N_e|s| >> 1 is about 2|s| e^(-4N_e|s|), far below 1/(2N). `derived:` (python3 -I) N_e = 1e4, s = -0.001: 4N_e s = -40, u = 8.5e-21 against 1/(2N) = 5e-5. Only the nearly neutral class (|N_e s| < ~1) fixes at near-neutral rates (Ohta).
 

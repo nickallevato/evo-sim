@@ -25,6 +25,8 @@ Source: same, t=00:29:29. The next sentences concede the live question: "Now, yo
 
 Day's text being answered (Duffy's slide, read by the host, `secondhand`): "it is statistically impossible due to the way it's directly contradicted by relevant genetic evidence." (t=00:29:09).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No equation. Price/Robertson: selection response is Cov(w, z); a covariance is a descriptive statistic, not an event with a probability. The argument is about the wording of ROOT, not its arithmetic.
 

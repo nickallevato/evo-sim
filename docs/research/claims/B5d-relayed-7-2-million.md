@@ -23,6 +23,8 @@ Source: [Gutsick Gibbon + Will Duffy livestream, Human Evolution #2 (auto-captio
 
 Source: [Day, "Zero Probability Zero Clue" (blog; relays a Gutsick Gibbon on-air message)](https://voxday.net/2026/09/22/zero-probability-zero-clue/), 2026-09-22, ¶17 of extracted text. Day's reply
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):** 6×10⁶/25 = 240,000 generations; × 30 = 7.2M ✓ (with 6.3 My: 252,000 × 30 = 7.56M, equal to IR's steady-state figure in B1a). Comparators: 7.2M vs SNV-only 17.5M per lineage (Z23003785) = 2.4× short; vs 205M = 28.5× short; vs Day's own IR figure 7.56M (the same quantity). Day's reply "7.2 million is significantly smaller than 410 million" is arithmetically correct (7.2/410 = 1.8%).
 "30 mutations cannot fixate per generation" is a statement against the steady-state identity (k = μ means 30 neutral substitutions per generation at equilibrium); Day's own IR uses the same μL ≈ 30 as the steady-state count, so the disagreement is the fill state (B1c), not the arithmetic.

@@ -21,6 +21,8 @@ Source: [Jan Ghijselen, "Will Duffy's math on Gutsick Gibbon's channel."](https:
 
 Day's transcription of the argument: [Math Teacher Can’t Math](https://voxday.net/2026/09/30/math-teacher-cant-math/) (blog, 2026-09-30), ¶6: "It would mean that if you have the Marathon of New York with 60,000 participants and an average length of 4 hours per marathon. If you would follow this reasoning, it would take on average 240,000 hours for the marathon to end."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 60,000 x 4 h = 240,000 h = 10,000 days = 27.4 years (python3 -I; DeDzjang says "27 years"). Reconciles. The serial division is wrong for parallel events; the analogy applies to any calculation of the form (time)/(latency).
 

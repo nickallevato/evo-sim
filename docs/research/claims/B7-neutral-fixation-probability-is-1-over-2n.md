@@ -27,6 +27,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01, ¶6 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 P_fix(neutral) = p₀ = 1/(2N) where p₀ is the starting frequency of the new copy (martingale/optional stopping: E[Δp] = 0 and absorption ⇒ P(fix) = p₀). Nₑ sets the timescale (4Nₑ), not the probability. This is the glossary's pinned definition.
 Day's three statements of 1/(2N) in 2026 (above) sit alongside the 1/(2Nₑ) in Z18429937, Z18525547, Z18637333 and the 2026-02-04 post (B3a). Day withdrew the latter on 2026-08-27 (B3g).

@@ -23,6 +23,8 @@ Source: [Maximal Mutations](https://voxday.net/2019/02/07/maximal-mutations/) (k
 
 Source: [Zenodo 18168236](https://zenodo.org/records/18168236) (key Z18168236), 2026-01-05, ¶29. This paper cites Good et al. 2017.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 G_f = 40,000 / 25 = 1,600  (`ltee.gens_per_fixation.day_2019`). `derived:` 40,000/25 = 1,600 exactly.
 

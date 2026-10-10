@@ -21,6 +21,8 @@ Source: Langergraber et al. 2012 (key Langergraber2012), Results (chimpanzee gen
 
 Day, secondhand within his own Q&A, uses another figure: "T = 22 years (generation, Gurven & Kaplan 2007)" ([Probability Zero Q&A](https://voxday.net/2026/01/19/probability-zero-qa/), 2026-01-19, ¶5).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 `generation_time_years`: day_2019 = 20, day_2026 = 25, day_alt = 32.5, Q&A = 22; Langergraber: 24.3–24.9 (chimpanzee). `derived:` 6.3e6/24.9 = 253,012; 6.3e6/20 = 315,000; 6.3e6/32.5 = 193,846.
 

@@ -27,6 +27,8 @@ Source: [Kimura & Ohta 1969, The average number of generations until fixation of
 
 Source: [Kimura & Ohta 1969, The average number of generations until fixation of a mutant gene in a finite population, Genetics 61:763-771 (user-downloaded PDF, sha256 80694ab2...299fc5)](https://pmc.ncbi.nlm.nih.gov/articles/PMC1212239/), 1969-03, p.769. OCR text layer of a scanned PDF: mathematical symbols and some spacing are repaired in this quote (fragments checked verbatim against the raw extraction; full sentence as in quotes-literature.md)
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 t̄(0) = 4Nₑ (Eq. 15), conditional on fixation, for the variance effective number Nₑ; first moment only. The paper keeps N and Nₑ distinct (for man it takes Nₑ/N ≈ 0.8), uses Nₑ for the time and N for the fraction that fix (1/2N). Not in this paper (ledger): SD ≈ 2.15Nₑ (our B0.2 simulation: ≈2.1N); any statement about recombination (the word occurs 0 times).
 

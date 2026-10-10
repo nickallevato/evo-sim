@@ -23,6 +23,8 @@ Source: [Z18525547, The N/N_e Distinction and the Recalibration of the Human-Chi
 
 Source: [Z18525547, The N/N_e Distinction and the Recalibration of the Human-Chimpanzee Divergence (Day & Athos)](https://zenodo.org/records/18525547), Zenodo 2026-02-08 (v1), ¶141 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 D = μ t [(N_h/N_e,h) + (N_c/N_e,c)] (Eq. 6) set equal to the clock's D = 2μ t_clock ⇒ Eq. (7). Inputs: Nₑ,h = 3,300 (aDNA drift variance, branch C), Nₑ,c = 33,000 (F_ST across chimp subspecies), census N_h ∈ {50k, 100k}, N_c ∈ {300k, 1M}.
 

@@ -19,6 +19,8 @@ verdicts:
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.1 (abstract). The 3.0 text has no d term (searched "turnover" and "d =").
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 F_max(3.0) = 252,000 / 1,322 = 190.6, with no d. `derived:` had d = 0.45 been applied: 252,000 x 0.45 = 113,400; /1,322 = 85.8; shortfall 205e6/85.8 = 2.39e6 (2.2x larger than 1.075e6). Dropping d is therefore conservative with respect to the claim. The versions ledger notes d = 0.45 in both Zenodo papers of Dec 2025 computed on different loci (A4a).
 

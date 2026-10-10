@@ -23,6 +23,8 @@ Source: Ulam, in Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Da
 
 Day's account of this passage (The Best They've Got I, 2026-10-05 — in Best They've Got I): 'But the transcript shows Ulam was agreeing with Eden's broader point while noting that the first five minutes of Eden's talk addressed a preliminary issue that was not the central problem.'
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Ulam's logical position: (i) the product-of-probabilities chain argument ('probability raised to a millionth power ... practically nonexistent') is naive (his word); (ii) the random-construction framing of Eden's opening is 'not the problem'; (iii) a mathematical treatment must include the mechanism of advantage and selection; (iv) his own rate calculation (D4) then shows a time problem. In notation: Ulam rejects `P(random assembly) = A^-L` and the multiplicative chain `p^n` as models, and replaces them with a rate model T = n * t_sweep.
 

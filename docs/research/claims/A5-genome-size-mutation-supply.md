@@ -23,6 +23,8 @@ Source: [Dennis McCarthy, Why Probability Zero is Wrong About Evolution (free re
 
 Source: same post, para 62 (MC-07).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 supply_ratio = (μ_human · L_human) / (μ_E · L_E).
 `derived:` (python3 -I) 3.1e9/4.6e6 = 674 (McCarthy states "roughly 690"; 690 follows from a 4.5 Mb E. coli genome, 3.1e9/4.5e6 = 689; a 2% discrepancy with his own stated inputs). Per-site rate ratio 1.2e-8/8.9e-11 = 135 (8.9e-11 is the Wielgoss 2011 figure via McCarthy; not in the quote files). Per-genome ratio 38.4/4.1e-4 = 93,659 using the numbers in MITTENS 3.0 (4.1e-4 from s4.3; 38.4 = 3.2e9 x 1.2e-8 from the s6.4 product, where the paper prints only the 100x value 38,400). Neutral expectation for supply scaling alone: E. coli 4.1e-4 per generation vs human 38.4 per haploid genome per generation.

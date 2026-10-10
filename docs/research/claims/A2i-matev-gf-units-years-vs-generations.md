@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Matev, comment on McCarthy, "Vox Day Responds"](https://dennismccarthy.substack.com/p/vox-day-responds/comment/340270022), 2026-09-18, comment id 340270022 (RF-4). Matev is a commenter (Substack @ns670106) with no publication of his own found.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Years per fixation X = A x B, with A = generations per fixation and B = years per generation (subscript 1 = E. coli LTEE, 2 = humans). The LTEE's high fixation rate per year (1/X1) comes from its short generation time (B1 of hours), not from a low A1. Using A1 (1,322-1,587 generations per fixation) for A2 is "generous" only if A2 >= A1 is shown; the per-year speed of bacteria does not show it.
 

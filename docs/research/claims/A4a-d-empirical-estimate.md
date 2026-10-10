@@ -23,6 +23,8 @@ Source: [Zenodo 18165980](https://zenodo.org/records/18165980) (key Z18165980), 
 
 Source: [Zenodo 18166234](https://zenodo.org/records/18166234) (key Z18166234), pub. 2025-12-24 (modified 2026-01-06), ¶5.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 d = 0.45 ± 0.08 (`selection.turnover_d`). Two papers published four days apart give the same value from different locus sets: {LCT, SLC24A5, HERC2} (Z18165980) and {LCT, SLC45A2, TYR} (Z18166234). The record cannot say whether one is a typo or whether both sets give 0.45 (versions ledger).
 

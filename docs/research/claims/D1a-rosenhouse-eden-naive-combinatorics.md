@@ -19,6 +19,8 @@ verdicts:
 
 Source: Rosenhouse, *The Failures of Mathematical Anti-Evolutionism*, Cambridge UP 2022, p.124, as transcribed by Day in [The Best They've Got II](https://voxday.net/2026/10/06/the-best-theyve-got-ii/), 2026-10-06, voxday.net, para 3. `secondhand` (Day's transcription, with 'ﬁ' ligatures as printed). Not independently verified against the book.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 A is-a claim: 'the geometrical structure of protein space (known since 1966) makes Eden's 20^250-vs-10^52 comparison irrelevant'. Equivalent to asserting that the topological hypothesis (Eden's second horn, D3b) is true.
 

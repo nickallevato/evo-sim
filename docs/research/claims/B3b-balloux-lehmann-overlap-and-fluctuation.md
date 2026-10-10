@@ -27,6 +27,8 @@ Source: [Balloux & Lehmann 2012, Substitution rates at neutral genes depend on p
 
 Source: [Balloux & Lehmann 2012, Substitution rates at neutral genes depend on population size under fluctuating demography and overlapping generations, Evolution 66:605-611](https://serval.unil.ch/notice/serval:BIB_2B87D605B70D), 2012, Results, "Overlapping generations without fluctuating demography"
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Literature: B&L give k = μ(1 − s) for constant survival s (overlap alone, per time step; see quote below) and N-dependence only when overlap and fluctuation co-occur. Neither "0.743" nor "32.3" appears in the text.
 Parameters: none in parameters.yaml; propose `new: demography.survival_s`, `new: demography.N_cycle`.

@@ -23,6 +23,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§4 The Numbers)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 E[F(T)] ≈ μL (T − 4Nₑ), valid for T ≫ E[X] = 4Nₑ.
 

@@ -23,6 +23,8 @@ Source: [keruru (C. Kereru), Zenodo 22184713](https://zenodo.org/records/2218471
 
 Source: same, line 696 (RF-13).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day's ceiling (B2b): 4N_e < G with N_e = 4N/(V_k+2) gives N < X = (V_k+2)G/16. keruru: for Bronze Age Europe at census N ~ 1e7, Wright's formula with Day's V_k gives N_e/N ~ 0.57 (4/7, V_k = 5); measured temporal N_e = 6,933 (Bronze Age) or 8,139 (Bronze Age to Medieval), i.e. N_e/N ~ 7e-4 to 8e-4. `derived:` 0.57/8.1e-4 = 700; 0.57/6.9e-4 = 820. With N_e ~ 1e4, 4N_e = 4e4 generations is 1.4-15.1% of a ~260,000-generation lineage across his four bins (keruru's table; RF-13 note).
 

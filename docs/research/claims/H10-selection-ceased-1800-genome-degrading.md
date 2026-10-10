@@ -23,6 +23,8 @@ Source: [Vox Day, comment on McCarthy, "Why Probability Zero is Wrong About Evol
 
 Source: [Vox Day, comment on Dembski's Substack, "A Review of Vox Day's Main Argument"](https://billdembski.substack.com/p/a-review-of-vox-days-main-argument/comment/339689335), 2026-09-18, comment id 339689335 (Q94).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 None given. A testable version would need: the deleterious mutation rate U (H7: Keightley 2012, U = 2.2), the distribution of s, the change in the opportunity for selection after ~1800 (mortality and fertility variance), and the expected fitness decline per generation.
 

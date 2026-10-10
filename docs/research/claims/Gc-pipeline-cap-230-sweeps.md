@@ -27,6 +27,8 @@ Source: [The Bernoulli Barrier, Zenodo 18167588](https://zenodo.org/records/1816
 
 Source: [The Bernoulli Barrier, Zenodo 18167588](https://zenodo.org/records/18167588) (key Z18167588), pub. 2026-01-04 (modified 2026-01-07), ¶63 (s7.8).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 t_transit = (2/s)·ln 9 = 200 x 2.197 = 439.4 ≈ 440 generations (s = 0.01, 0.1 < p < 0.9); fixations ≤ (T/t_transit)·C with C = 230, T = 300,000.
 `derived:` (python3 -I) 300,000/440 = 681.8; x 230 = 156,818 ≈ 157,000 (reconciles). The cap C is not derived: "working backward from the constraint" gives "200–300"; the cap that makes the product equal the paper's own n = 157,000 is 230, which is the same number that is then said to "appear to match the requirement". The requirement used elsewhere in the corpus is 20M (Z18165980) or 205M (Z23003785): 20e6/157,000 = 127; 205e6/157,000 = 1,306. The paper's own criterion (available additive differential 2z·√(n/4)·s ≥ required n·s, with z = 3.72 for N = 10,000) gives n ≤ z² = 13.8, not 230 (derived by this audit; applies the paper's s3 comparison to n loci). The paper's separate "reproductive ceiling" (s6.1: Σs ≤ 1.0–2.0) gives 100–200 loci at s = 0.01, which is closer to 230 but is a different constraint (branch H).

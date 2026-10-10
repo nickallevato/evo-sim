@@ -23,6 +23,8 @@ Source: [Snikker-Snak](https://voxday.net/2026/10/01/snikker-snak/) (key B2026-1
 
 Source: [Snikker-Snak](https://voxday.net/2026/10/01/snikker-snak/) (key B2026-10-01-snikker-snak), blog, 2026-10-01, ¶13.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Ara+2: 66 fixations (Z23105291 Table 1: 66 in 60,500 gens; blog: 66 in 60,000, 909 gens/fixation); 14 sweep events; claimed 5.3 hitchhikers per event.
 `derived:` (python3 -I) 66/14 = 4.71 fixations per event, i.e. (66 − 14)/14 = 3.71 hitchhikers per event; 5.3 x 14 = 74, not 66; 66/5.3 = 12.5 events. The claim of 5.3 neutral mutations per selective fixation does not reconcile with 66 and 14 (unless 5.3 is an average over all populations, which the sentence does not say). 60,000/14 = 4,286 gens per sweep event in Ara+2; compare 909 per fixation (all-cause) and the blog's "SERIAL natural selection rate … ~24,500" (A2f) and 4,615 (A2f).

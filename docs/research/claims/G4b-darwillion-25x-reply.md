@@ -19,6 +19,8 @@ verdicts:
 
 Source: [An Inspiring Critique](https://voxday.net/2026/01/27/an-inspiring-critique/) (key B2026-01-27-an-inspiring-critique), blog, 2026-01-27, ¶15.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 40,000/1,600 = 25 (python3 -I). The Darwillion as rendered by McCarthy, (1/20,000)^(2e7), contains no time-to-fixation input; the formula connecting a fixation time to the Darwillion is not in the harvested text. If the Darwillion is multiplied by 25, log10 changes by 1.4 out of 86,020,600; if the exponent were multiplied by 25, log10 would change 25-fold. The text does not say which. Pending the book.
 

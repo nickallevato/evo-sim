@@ -25,6 +25,8 @@ Day's rebuttal (quoting Wright in the same post): > "The previous die has no eff
 
 Source: [Evolutionists are Retarded](https://voxday.net/2024/07/13/evolutionists-are-retarded/), 2024-07-13, para 9.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Information bound: identifying one of 20^250 sequences needs log2(20^250) = 250*log2(20) = 1080.5 bits, i.e. at most 1080.5 binary questions when each answer is an independent bit; Wright's 1250 = 250 residues x 5 questions per residue (5 > log2 20 = 4.32). Each question must be answered by an oracle that retains the result: in selection terms, a per-step fitness signal that keeps correct choices. Day's dice reply is correct for independent unretained trials; Wright's analogy is explicitly of retained answers.
 

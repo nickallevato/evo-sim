@@ -25,6 +25,8 @@ Source: Barrick et al. 2009, [Nature 461:1243](https://www.nature.com/articles/n
 
 Source: Day, [The Temperature Rises](https://voxday.net/2026/09/27/the-temperature-rises/), B2026-09-27-the-temperature-rises, 2026-09-27, ¶13 (quote Q61). Day's own text distinguishes beneficial-only from all-cause G_f.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 G_f(all-cause) = generations / (fixed mutations of any fitness effect); G_f(beneficial) = generations / (fixed beneficial). The MITTENS rate argument applies G_f to the number of differences to be explained, which includes neutral changes. Parameters: `ltee.gens_per_fixation.day_mittens3_nonmutator` = 1,322 (all-cause, >=95% snapshot rule); `ltee.gens_per_fixation.day_ns_only_parallel_max` = 4,615 (blog only; Z23003785 gives about 1,408 per beneficial fixation by clone pair).
 derived: 4,615/1,322 = 3.5; the implied beneficial share of all-cause fixations = 1,322/4,615 = 29% (if the two blog numbers share a time base; the sources do not state this).

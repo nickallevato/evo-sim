@@ -26,6 +26,8 @@ Source: Eden, 'Inadequacies of Neo-Darwinian Evolution as a Scientific Theory', 
 > "Now the space of all polypeptide sequences of length 250 or less contains about 10 350 members. Over the last billion years a very liberal estimate of the number of genetic couplings is about 1037 • In fact the number of protein molecules of such size that ever existed on earth can be estimated to be less than 10 55 •"
 — Eden, Preliminary Working Paper, p.110 ('10 350', '1037', '10 55' = 10^350, 10^37, 10^55).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 S = A^L with A = 20, L = 250: log10 S = 250*log10(20) = 325.257, i.e. S = 1.81e325 (recomputed; Eden: 'about 10^325'). N_ever = 10^52 (p.7; talk) or <10^55 (p.110; working paper). N_ever/S = 10^-273 (talk) or 10^-270 (working paper). The working paper's '10^350' for 'length 250 or less' is not reproduced: sum over lengths <=250 is 20^250*(1+1/20+...) = 1.05*20^250 = 10^325.3. Wright's discussion (p.117) quotes the working paper's 10^350 (D6).
 

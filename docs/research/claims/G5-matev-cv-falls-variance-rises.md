@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Matev, comment on McCarthy, "Why Probability Zero is Wrong About Evolution"](https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/338963242), 2026-09-17, comment id 338963242 (RF-1). Target: the Bernoulli Barrier paper (Z18167588), claim G.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 For n loci each carried with probability p, the count K ~ Binomial(n, p): E[K] = np, Var[K] = np(1-p), CV = sqrt((1-p)/(np)). `derived:` (python3 -I) n = 157,000, p = 0.5: Var = 39,250, SD = 198.1, CV = 198.1/78,500 = 0.252% (G's figures). Doubling n doubles Var and divides CV by sqrt(2). Under multiplicative fitness w = (1+s)^K, Var(ln w) = Var[K] (ln(1+s))^2, which also rises with n. Fisher's theorem relates the response to additive genetic variance in (log) fitness, not to the CV of the count.
 

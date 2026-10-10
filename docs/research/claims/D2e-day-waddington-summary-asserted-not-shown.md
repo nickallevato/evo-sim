@@ -26,6 +26,8 @@ Primary text (Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwi
 > "We are asserting that it is a large fraction of the total space which could be made from the nucleotides involved, but stiIl we are saying that the meaningful space is a minute fraction of the total nucleotide space."
 — The Chairman, C. H. Waddington, summing up on the Schützenberger question, p.93. Preceding sentence: > "Therefore, life has only explored a minute fraction of the total nucleotide space." (the OCR attributes the summary to 'the Chairman, DR. WADDINGTON'.)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Waddington's statement has two parts. (1) Life explored only 'a minute fraction of the total nucleotide space', exploring 'sequentially from the last position to some neighboring position'. (2) In the explored region, the meaningful section 'is quite large in comparison with all the things that could conceivably be made out of it in single steps' (a local-density claim), 'a much larger fraction than ... meaningful strings of English words'. Part (1) concedes Eden's premise; part (2) is the topology horn (D3b) in biologists' form. In notation: local functional fraction f_local >> global fraction f_global.
 

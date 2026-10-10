@@ -21,6 +21,8 @@ verdicts:
 
 Source: [Probability Weasel](https://voxday.net/2026/09/12/probability-weasel/), 2026-09-12, voxday.net, paras 12 and 7.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: T_Weasel(Dawkins parameters) = 50 generations; T_real(population-genetic model, s = 0.001) = 540,000; hence Weasel is 'off' by 10^4. The comparison treats the Weasel's per-generation selection (pick the best of N offspring; truncation selection, effective advantage of the best offspring over the mean is large) as an advantage s that applies to every individual of a standing population of 10,000. Those are different systems; the Weasel 'estimate' of 50 is a runtime of an algorithm, not an estimate of anything biological, and Dawkins's own description of the algorithm is the first quotation in Day's post.
 

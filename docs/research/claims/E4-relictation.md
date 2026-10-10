@@ -31,6 +31,8 @@ Source: Z23188201, Abstract.
 
 Source: Z23188201, §1.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Cannings jackpot model: each generation, with probability p_jackpot, one random individual survives and its offspring replace round(f x 2N) other gene copies; remaining copies reproduce deterministically. Exact (2N+1) x (2N+1) transition matrix; fixation probability from the linear system; conditional mean time from the Doob h-transform; Ne = variance effective size from the one-generation variance of frequency change.
 

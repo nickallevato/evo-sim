@@ -34,6 +34,8 @@ Day's stated prediction of the two models (blog version):
 
 Source: B2026-01-14-empirically-impossible, para 4 (the 15,500 figure is in the same paragraph).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Observable: n_fix = number of autosomal panel SNPs whose focal allele is below a start-frequency threshold in a Neolithic European sample (6000-8000 BP) and at 100% (Zenodo) or >90% (blog) in a present-day European sample. Window = 7,000 y = 350 generations at 20 y/gen (blog), g_eff = 350 x d (parameters.yaml: `selection.turnover_d` = 0.45).
 

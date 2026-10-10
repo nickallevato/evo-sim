@@ -27,6 +27,8 @@ Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origi
 
 Source: [r/DebateEvolution, Dumb-and-Dumber, "New anti-evolution paper today from Vox Day"](https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/), 2026-09-28, comment pcovtvf by DarwinZDF42 (score 27), reply under r/DebateEvolution post 1wss2wj
 
+
+RH tag (2026-10-10 pass): the Mansfield remark 'his claim otherwise is mystifying' is rhetoric (incredulity, ledger RH-18); the Hancock derivation and the Mansfield claim 'Population size only affects which alleles are effectively neutral' are dialectic.
 ## Formal statement
 k = (2Nμ_site-or-genome) × (1/2N) = μ per generation (diploid, census N, neutral). In genome terms k = μ_G = μ_site × L_haploid. Glossary sense: **throughput** at steady state; the identity says nothing about how long an individual fixation takes or whether the window is long enough (B1).
 Acceptance by Day's side: Z22129121 "this paper accepts it throughout"; blog 2026-08-27 (B3g).

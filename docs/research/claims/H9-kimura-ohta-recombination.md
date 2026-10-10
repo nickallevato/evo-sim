@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Independent Confirmation of Haldane's Limit](https://zenodo.org/records/18168236), Z18168236, 2026-01-05, §5.2 "The Recombination Objection", line 74 of the text extraction. The same passage appears in the Bernoulli Barrier paper (Z18167588, §7.3).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: T_fix (neutral or selected single-locus) is independent of the recombination rate r. Kimura & Ohta 1969 derive the mean fixation time for one locus in a diffusion model; their quoted result is t̄ about 4Ne for a neutral mutant ("a single mutant gene, if it is selectively neutral, takes about 4Ne generations until fixation in a population of effective size Ne"). Recombination requires at least two loci.
 derived (R2, searched): the word "recombin" occurs 0 times and "linkage" 0 times in the full text of Kimura & Ohta 1969 (`sources/raw/sources/manual/KimuraOhta1969.txt`).

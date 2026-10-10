@@ -40,6 +40,8 @@ Defence of the integral (blog, 2026-01-19):
 
 Source: [Probability Zero Q&A](https://voxday.net/2026/01/19/probability-zero-qa/), B2026-01-19-probability-zero-qa, ¶16 (Q23).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 l(x) survivorship, b(x) fecundity, v(x) = [1/l(x)] integral_{y>=x} l(y) b(y) dy (Fisher), mu(x) = -d ln l(x)/dx, T mean generation time. d = T x integral(mu l v) / integral(l v). Table 1 of the paper (Coale-Demeny West, natural fertility): Neolithic e0 = 32, T = 27.7, d = 0.53; Classical 37, 27.9, 0.44; Early Modern 42, 28.0, 0.35; Industrial 47, 28.1, 0.27; 1900 52, 28.2, 0.21; 1950 60, 28.4, 0.12; 2000 67, 28.5, 0.06; 2020 78, 30.7, 0.015.
 

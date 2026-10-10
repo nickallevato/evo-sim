@@ -27,6 +27,8 @@ Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.13 (s7.3).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 R_SNV = 35e6 / 2 = 17.5e6; achievable = 252,000/1,322 = 190.6 (191); shortfall = 17.5e6/191 = 91,623 (paper 91,600); mutator: 252,000/105 = 2,400 (paper 2,407, i.e. G_f = 104.7), 17.5e6/2,407 = 7,270 (paper 7,271). All reconcile (python3 -I). The pass-1 figure ~94,000 is not in the text.
 

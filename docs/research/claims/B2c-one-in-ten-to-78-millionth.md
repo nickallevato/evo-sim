@@ -23,6 +23,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Athos)](https://zenodo.org/records/22129121), Zenodo 2026-08-27 (v1), §The Second Objection
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):**
 - Nₑ = 7.3e9 (HL Table 3, "census scale"), T = 400: Nₑ/T = 1.825e7 (Day 1.8e7); π² × 1.825e7 = 1.80e8 nats = 7.82e7 decades, i.e. 10^−78,000,000 (matches).

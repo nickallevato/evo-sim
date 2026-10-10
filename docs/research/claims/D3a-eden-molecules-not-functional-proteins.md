@@ -27,6 +27,8 @@ Source: same, p.7 (the sentence that licenses reading the 10^52 as covering 'all
 
 Source: [Vox Day Interview on Evolutionary Theory](https://billdembski.substack.com/p/vox-day-interview-on-evolutionary) (Dembski Substack), 2026-09-28, appended chapter 'From Probability Zero (2nd ed.) on 1966 Wistar Symposium, Chapter 6: The 1966 Meeting of the Minds' (primary Day text, posted with Day's permission). Day's Best They've Got I (2026-10-05) says: 'the number of functional proteins that have ever existed is ~10^52' (see D).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Count: N_ever = (protein mass of biosphere / molecular mass) * (age / lifetime). Biosphere volume V = 4*pi*R^2 * 1 cm = 5.10e18 cm^3 (R = 6.371e8 cm); protein mass m = V * density(1 g/cm^3) * c; molecules alive = m*N_A/M; ever = alive * (1e10 yr = 3.156e17 s) / (1 s). With M = 27.5 kDa (250 residues x 110 Da):
 - Eden p.7 inputs (c = 0.30): m = 1.53e18 g; alive 3.35e37; ever **1.06e55** (log10 55.02). Matches Eden's working paper ('less than 10^55', p.110) and is 3 orders above the 10^52 he prints in the talk.

@@ -21,6 +21,8 @@ verdicts:
 
 Source: [The Best They've Got II](https://voxday.net/2026/10/06/the-best-theyve-got-ii/), 2026-10-06, voxday.net, para 7.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Evolutionary-algorithm success is conditional on a fitness mapping F: sequence -> reproductive success with exploitable gradient. Day: programmers supply F; biology must supply F too, so the algorithms show nothing about the origin of F. Dawkins's Weasel uses F = number of letters matching a fixed target (known endpoint), which Day also criticises in his Weasel post (D9: 'the target phrase is known from the start, which is not the case in the evolutionary context').
 

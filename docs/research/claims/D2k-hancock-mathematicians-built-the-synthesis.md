@@ -27,6 +27,8 @@ Source: same, t=00:14:21.
 
 Source: same, t=00:17:44 (preceded by the speaker's account of Pearson's "15 or 16" papers on the mathematical theory of evolution in the 1890s, t=00:17:24-00:17:44).
 
+
+RH tag (2026-10-10 pass): quote 1 ('just like wild to me') rhetoric, an expression of incredulity (ledger RH-17); quotes 2-3 dialectic (named mathematicians).
 ## Formal statement
 No equation. Hancock's chronology (t=00:18:05-00:19:47): biometricians (Weldon, Pearson) versus Mendelians to about 1915-16; Fisher, Wright and Haldane then derive the mathematics of selection, drift, gene flow and mutation in the late 1910s-1920s; Dobzhansky's 1937 book follows "in huge collaboration with Fischer, Wright and Haldane".
 

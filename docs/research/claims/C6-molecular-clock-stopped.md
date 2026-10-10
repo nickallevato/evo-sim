@@ -31,6 +31,8 @@ Source: same, §4.3.
 
 Source: same, Appendix A (with "For 150 million neutral sites: E[fixations per generation] = 1.2 × 10⁻⁸ × 1.5 × 10⁸ = 1.8").
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Observed (paper §1.3, §4.1): fixations from polymorphic states, 22,428 alleles total; timing tracked for 16,299; by bin: 10000+ BP 3,038 (18.6%); 8000-10000 BP 8,741 (53.6%); 7000-8000 BP 4,497 (27.6%); 6000-7000 BP 2; 5000-6000 BP 9; 4000-5000 BP 7; 3000-4000 BP 2; 2000-3000 BP 1; 1000-2000 BP 0; 500-1000 BP 0; 0-500 BP 2. Post-7000 BP total 21. Prediction: E = mu x G_sites x gens, with mu = 1.2e-8 (`mutation.mu_per_site_per_gen.pedigree_human`) and G_sites = 1.5e8 neutral sites.
 

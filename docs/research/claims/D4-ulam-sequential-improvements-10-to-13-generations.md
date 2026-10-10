@@ -25,6 +25,8 @@ Source: Ulam, 'How to Formulate Mathematically Problems of Rate of Evolution?', 
 
 Day's chapter 6 summary of Ulam: 'Suppose evolution requires a sequence of ten improvements ... Ulam worked through the arithmetic and showed that even under optimistic assumptions, the time required grows rapidly.' (see [Vox Day Interview on Evolutionary Theory](https://billdembski.substack.com/p/vox-day-interview-on-evolutionary) (Dembski Substack), 2026-09-28, appended chapter 'From Probability Zero (2nd ed.) on 1966 Wistar Symposium, Chapter 6: The 1966 Meeting of the Minds' (primary Day text, posted with Day's permission)).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Ulam's scheme (p.24): population M = 1e11, generation = 1 day; favourable-mutation probability alpha = 1e-10 per individual, so 10 carriers per generation (p0 = 1e-10); advantage gamma = 1e-6 (offspring 1 + gamma). Time for the improvement to spread: Ulam: ~10^6 generations to 'most', ~10^7 to 'almost all'; for n = 10^6 improvements in succession: ~10^13 generations. Recomputed (deterministic logistic): t(p0 -> 0.5) = ln(1e10)/gamma = **2.30e7** generations; t(p0 -> 0.99) = **2.76e7**; times 1e6 = **2.3-2.8e13**. Ulam's '10^6 to most' understates the logistic result by 23x; his '10^7 for almost all' understates by 2.8x; his total 10^13 is within a factor of 2-3. Time available in the scheme: 'one billion years' x 365.25 = 3.65e11 one-day generations; shortfall 10^13/3.65e11 = 27x (2.3e13: 63x).
 

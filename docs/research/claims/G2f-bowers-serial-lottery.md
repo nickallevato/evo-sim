@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Day repost of Bowers review, "A Critical Review of Probability Zero"](https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/), 2026-03-04, para 4 (BO-02). Bowers' words, secondhand through Day's repost.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Qualitative (no numbers). Day's point-by-point reply (same page): "Point 2 claims I model beneficial mutations as neutral drift events with fixation probability 1/N … The reviewer has confused fixation probability with fixation rate." and "Point 3 invokes recombination as a rescue. The Bernoulli Barrier paper addresses this directly and at length."
 

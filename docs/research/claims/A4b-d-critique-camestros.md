@@ -23,6 +23,8 @@ Source: [Camestros Felapton, Reading Vox Day 2026 [5]](https://camestrosfelapton
 
 Source: [Camestros Felapton, Reading Vox Day 2026 [2]](https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/), 2026-01-24/25, para 32 (CA-03). The author later corrected this: d is defined in Ch.13 and App. A.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Qualitative: d(t) not constant. If d varies between 0.3 and 1, N_gen x d varies by 3.3x; the shortfall moves by the same factor (derived).
 

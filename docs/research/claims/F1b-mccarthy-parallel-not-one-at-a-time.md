@@ -19,6 +19,8 @@ verdicts:
 
 Source: [McCarthy, "Vox Day Responds"](https://dennismccarthy.substack.com/p/vox-day-responds), 2026-09-17, para 22
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 McCarthy's time-adjusted count: (450,000 − 50,000) × 50 = 20M (B5a). Day's reply (R2) restates it and answers with the Bernoulli Barrier (branch G) and the N/Nₑ correction (B3e, retracted B3g).
 

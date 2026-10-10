@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Response to Dennis McCarthy, Round 2](https://voxday.net/2026/02/04/response-to-dennis-mccarthy-round-2/) (key B2026-02-04), blog, 2026-02-04, ¶10. Day introduces it as "the core equation that is integral to MITTENS". Zenodo texts (Z18441321, Z18452504) use the equivalent "Achievable = (Generations x d) / G_f". The 3.0 paper (Z23003785) uses 252,000 nominal generations / 1,322 with no d term (see A4d).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 F_max = (t_div_years · d) / (generation_time_years · G_f)
 

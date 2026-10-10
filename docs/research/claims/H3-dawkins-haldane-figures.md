@@ -29,6 +29,8 @@ Source: same post, ¶6 (Q51).
 
 Source: same post, ¶3.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Dawkins/Haldane: time to reach 50% for a new mutation with s about 0.001 (999 survive per 1,000): 11,739 generations (dominant) and 321,444 (recessive). Day: t_site = 2 x 321,444 = 642,888; compare with G_eff = 146,250; ratio 4.396; multiply by n = 20,000,000.
 

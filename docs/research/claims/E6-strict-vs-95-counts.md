@@ -31,6 +31,8 @@ Source: Z23105291, Abstract.
 
 Source: [MITTENS 3.0](https://zenodo.org/records/23003785), Z23003785, 2026-09-28 (modified 2026-10-04), §4.1, p.6 (Q58). This is the superseded figure; the later paper does not restate 1,322.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Counting rules: (i) strict whole-population: the authors' lineage-aware haplotype state 2 at the final time point (plus major-branch fixations in Ara+1 and Ara+3 dated from minor-branch extinction); (ii) naive first-crossing: first sample with pooled frequency ≥95%, no depth filter, no confirmation; (iii) Z23003785's snapshot count of mutations at ≥95% at each 10K timepoint.
 

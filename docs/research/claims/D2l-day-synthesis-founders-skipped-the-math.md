@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Gutsick Gibbon + Zach Hancock, No, Vox Day's AI-Generated Books Did Not Debunk Evolution](https://www.youtube.com/watch?v=_Vu0ZVVjwHc), 2026-10-03, t=00:13:19 (host reading Duffy's slide from *Probability Zero*; auto-caption; spelling as captioned). The sentence continues: "Its founders had not bothered to work out the probability calculations because they assumed reasonably enough that" (same caption line) "their logic was correct and therefore the numbers would eventually work out in support of their conclusion" (next line, t=00:13:39).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Historical premise, no equation. Related Day claims: D2g ("no biologist produced a calculation"), D2 (Rosenhouse gives no quantification).
 

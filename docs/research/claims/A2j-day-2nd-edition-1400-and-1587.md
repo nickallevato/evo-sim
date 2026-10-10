@@ -23,6 +23,8 @@ Source: [Vox Day, comment on McCarthy, "Vox Day Responds"](https://dennismccarth
 
 Source: [Vox Day, "An Intelligent Groove", AI Central](https://substack.aicentral.blog/p/an-intelligent-groove), 2026-10-03, para 16 (Q85).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 F_max = T / G_f with T = 252,000 generations. `derived:` (python3 -I) G_f = 1,400: 180 fixations, shortfall 205e6/180 = 1,138,889; G_f = 1,322: 190.6 (Day: 191), 1,075,000; G_f = 1,587: 158.8, 1.29e6. The 1,587 is the audit's derived strict-count value in A2b, now stated by Day. The same AI Central post reposts the Z23003785 abstract with 1,322 unchanged, so no paper was revised.
 

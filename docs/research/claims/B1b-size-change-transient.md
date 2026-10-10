@@ -23,6 +23,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Athos)](https://zenodo.org/records/22129121), Zenodo 2026-08-27 (v1), §The Transit Time
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 After a step change in size, the per-window substitution rate k_w/μ departs from 1 for ≈ 4N_new generations; the cumulative excess or deficit ≈ μL·4ΔN (expansion: deficit; contraction/bottleneck: excess), long-run mean = μ.
 

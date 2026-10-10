@@ -19,6 +19,8 @@ verdicts:
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.1 (abstract). PDF hyphenation "cross- validated" preserved.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 G_f = (generations in window) / (fixations in window) = 60,000 / 45.4 = 1,321.6   (`ltee.gens_per_fixation.day_mittens3_nonmutator`)
 

@@ -23,6 +23,8 @@ Source: [Z18167588, The Bernoulli Barrier (Day & Athos)](https://zenodo.org/reco
 
 Source: [Good et al. 2017, The dynamics of molecular evolution over 60,000 generations, Nature 551:45-50](https://pmc.ncbi.nlm.nih.gov/articles/PMC5788700/), 2017, Abstract
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: the number of simultaneous sweeps is bounded (230 in Z18167588; obtained by working backward from the constraint, no derivation shown) or capped by the cost of selection (branch H); critics: independent loci pipeline freely (F1). Good 2017 shows overlapping sweeps in the LTEE.
 **Proposed check F2 (not yet run; pre-registered here):** forward Wright–Fisher with L loci, Poisson beneficial-mutation supply U_b per genome per generation, selection coefficient s, soft selection (fixed N), recombination r ∈ {0.5 (free), 0.01, 0 (asexual)}; N ∈ {1,000, 10,000}; s ∈ {0.001, 0.01}; U_b ∈ {0.001, 0.01, 0.1}. Report R = (observed substitutions/generation)/(2N·U_b·u(s)), and the time-averaged number of sweeping loci n_sw.

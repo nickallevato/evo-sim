@@ -23,6 +23,8 @@ Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key
 
 Source: [Snikker-Snak](https://voxday.net/2026/10/01/snikker-snak/) (key B2026-10-01-snikker-snak), blog, 2026-10-01, ¶9. Day is defending a quoted commenter: "When dealing with average rates, it really doesn't matter if particular fixations happen parallel or in sequence."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 G_f = (generations in window)/(fixations in window) = T_obs / n_obs, an inverse throughput. F_max = T/(g_len·G_f) uses only the ratio; overlaps in time do not enter. This is true for any measured average rate over a window (`glossary.md`: G_f read as a latency is the confusion; G_f as throughput is the stated definition).
 

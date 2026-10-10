@@ -35,6 +35,8 @@ Source: same post, ¶5 (Q69).
 
 Source: same post, ¶7 (Q68). The earlier 68 kya to 330 kya range was based on "the erroneous calculator".
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Before: k_real = min(Term 1 = input flux, Term 2 = polymorphism throughput ceiling, Term 3 = selection-cost ceiling) with Term 3 = k_sel = s_max d / [2 L ln(2 Ne)] (H8). After: k_adaptive <= Term 3 (~1e-12 per site per generation); k_total = min(Term 1, Term 2), "in the 10⁻⁷ to 10⁻⁸ range".
 Version ledger (versions.md): the retraction does not change Zenodo 19984826 (the original text remains; no revised Zenodo version seen), and Zenodo 18168236 (H) was not mentioned.

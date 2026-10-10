@@ -23,6 +23,8 @@ Source: Tenaillon et al. 2016, [Tempo and mode of genome evolution in a 50,000-g
 
 Source: Tenaillon 2016, Abstract.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Mutator share: six populations, 96.5% of point mutations; the remaining 3.5% sits in the other populations (derived: 100 - 96.5; the number of populations sequenced is not in the quoted passage). Day's use: Z23020792 Abstract (six mutators: four mutS/mutL, two mutT); Z23003785 and Z23105291 count seven mutators (adding Ara+1, an IS-element mutator).
 Parameter link: proposed `ltee.mutator_populations` (6 per Tenaillon 2016 at 50,000 generations; 7 per Wielgoss 2013 / Consuegra 2021 used in Z23105291 for 60,000 generations).

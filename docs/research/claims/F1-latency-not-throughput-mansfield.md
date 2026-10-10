@@ -23,6 +23,8 @@ Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origi
 
 Source: [McCarthy, "Vox Day Responds"](https://dennismccarthy.substack.com/p/vox-day-responds), 2026-09-17, para 22 (McCarthy)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Little's law: in-flight count = arrival rate × latency; throughput = arrivals × P_fix independent of latency. For independent loci, rate = 2N·U_b·u(s) (Kimura 1962) and G_f = 1/rate.
 RESULTS F1 (N = 1000, s = 0.01, U_b = 0.01): predicted 0.3960 per generation; simulated 0.3972 ± 0.0018; t_fix = 847 generations but G_f = 3; in-transit ≈ 336 (computed as rate × latency, **not measured**).

@@ -23,6 +23,8 @@ Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.
 
 Source: [Day, "A Retraction and a Revision" (blog)](https://voxday.net/2026/05/07/a-retraction-and-a-revision/), 2026-05-07, ¶5 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No derivation appears in any harvested text (not in Zenodo; book not checked). Parameters: Bergeron 2023 mammal mean 7.97e-9 (`mutation.mu_per_site_per_gen.bergeron_2023_mammal_mean`, verified; Q-quote in the parameter note; human value in SI Table 8, not retrieved); required rate from Yoo 2025 (not found in Yoo: 410 Mb or 187 Mb, fidelity ledger).
 

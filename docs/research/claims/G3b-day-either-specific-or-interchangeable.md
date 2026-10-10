@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Education of a Population Geneticist](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/) (key B2026-10-01-the-education-of-a-population-geneticist), blog, 2026-10-01, ¶28. Replies to a quoted critic: "And his formula for the probability of 20 million changes is set up to calculate the probability of just one set of 20 million fixations, another colossal blunder on his part."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Dilemma: (specific) → P_specific = p^n; (interchangeable) → neutral, not adaptive. No formal statement. Day (2026-01-27 ¶13): "McCarthy’s calculation is correct for the number of mutations that enter the population … He has confused mutation with fixation."
 

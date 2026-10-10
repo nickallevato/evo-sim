@@ -23,6 +23,8 @@ Source: [The Math is Too Hard](https://voxday.net/2026/09/17/the-math-is-too-har
 
 Source: [Do Try to Keep Up, Dennis](https://voxday.net/2026/09/11/do-try-to-keep-up-dennis/) (key B2026-09-11), blog, 2026-09-11, ¶5. Secondhand: McCarthy's rendering of Day's book calculation, exponent flattened; Day's own formula is in the paywalled book and was not checked.
 
+
+RH tag (2026-10-10 pass): quote 1 rhetoric (Day's own label, 'a rhetorical absurdity': an absurd-magnitude figure used as a reductio frame; ledger RH-9); quote 2 dialectic (McCarthy's rendering of the specific-list calculation, secondhand). The node's dialectical support is G3/G3b (specific versus any set), not the size of the Darwillion.
 ## Formal statement
 Darwillion := 1/P, P = (1/20,000)^(20,000,000) per McCarthy's rendering (sourcing: secondhand). Day, firsthand (2026-01-27 ¶3): "my probability calculation about the likelihood of evolution by natural selection"; a reviewer quoted by Day (2026-01-12 ¶6, secondhand) calls it "the reciprocal of the non-existent odds of TENS accounting for the origins of just two species".
 `derived:` (python3 -I) log10 P = 2e7 x log10(1/20,000) = −86,020,600, so the Darwillion ≈ 10^86,020,600. For comparison Ga: 0.02^(2e7) = 10^−33,979,400. The Hard Limits abstract (Q30, branch B2) gives a third number, "about one in ten to the seventy-eight-millionth"; no corpus text derives the Darwillion from either.

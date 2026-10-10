@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Bernoulli Barrier, Zenodo 18167588](https://zenodo.org/records/18167588) (key Z18167588), pub. 2026-01-04 (modified 2026-01-07), ¶6 (abstract).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 n = 157,000 loci at p = 0.5, N = 10,000, s = 0.01 per locus (uniform).
 Count per individual ~ Binomial(n, 0.5): mean 78,500, SD √(n·p·(1−p)) = 198.1, CV = 0.252%  (paper: 198.1, 0.25%).

@@ -31,6 +31,8 @@ Source: Z23034852, §2.1.
 
 Source: Z23034852, §2.5.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 s_min = 2 K_new ln(2 Ne) / T, from K_new serial sweeps each of duration (2/s) ln(2 Ne); K_new = (1 - F_sv) K_total / P (standing-variation fraction F_sv = 0.2-0.7; parallelism factor P = 2-10; K_total = 20-200 from QTL counts). Table 1b parameters: T = 5,000, Ne = 500.
 

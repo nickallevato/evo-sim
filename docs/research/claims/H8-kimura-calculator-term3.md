@@ -31,6 +31,8 @@ Source: Z19984826, §3.3.1 (truncation selection, soft selection, composite fitn
 
 Source: Z19984826, §6.4 (reply to "most substitutions are neutral, so Term 3 does not apply").
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 n_max = s_max / s̄ concurrent sweeps (sum of s_i <= s_max); each sweep takes tau = (2/(s̄ d)) ln(2Ne) generations (Charlesworth 1994 for the diploid overlapping-generations form, per the paper); K_sel = n_max/tau = s_max d / [2 ln(2Ne)]; per site k_sel = K_sel / L. Human case (§4.3): N ~ 10^8, Ne = 3,300 (attributed to Day & Athos 2026a, the drift-variance paper, Z18320599), N/Ne about 3e4, d = 0.45, L = 3.1e9, s_max = 1. Z18320599 contains no absolute Ne of 3,300 (searched: 0 occurrences) and says its absolute Ne values (0.3 to 1.4) "are not interpretable as true effective population sizes" (C4). The source of 3,300 is therefore unlocated in the corpus.
 

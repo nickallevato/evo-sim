@@ -31,6 +31,8 @@ Source: [r/DebateEvolution, justatest90, comment pcug1j0 under "New anti-evoluti
 
 Source: [r/DebateEvolution, justatest90, comment pcug1j0 under "New anti-evolution paper today from Vox Day"](https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/new_antievolution_paper_today_from_vox_day/pcug1j0/), 2026-09-29 (RE-18; the commenter's full-pipe premise)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Derived: 3.2e9 × 1.2e-8 = 38.4 per generation; × 252,000 = 9.68M ✓ (single lineage). The OP (Dumb-and-Dumber) gives 9.7M as "an illustration, not a prediction"; justatest90's comment pcug1j0 states the SNV-only requirement of 17.5M and that "The gap is under a factor of two": 17.5/9.68 = 1.81 (derived). The comment also takes the neutral fixation time as 4Nₑ ("40,000–132,000 generations") and notes 252,000 is well above it — the B1a subtraction would give (252,000 − 40,000) × 38.4 = 8.14M or (252,000 − 132,000) × 38.4 = 4.6M (derived).
 

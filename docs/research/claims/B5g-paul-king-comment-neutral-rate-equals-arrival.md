@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Camestros Felapton, "Reading Vox Day So You Don't Have To 2026 [2]", comment by Paul King](https://camestrosfelapton.wordpress.com/2026/01/25/reading-vox-day-so-you-dont-have-to-2026-2/), comment dated 2026-01-25 7:56 pm, comment by Paul King, 2026-01-25 7:56 pm (new quote; not in quotes-critics.md)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Steady-state identity k = μ (see B5) with explicit mention that it involves parallel fixations (F1). Same comment adds that F_max must equal the number of mutations required, not DNA differences (A3x). Camestros's reply: "Neutral Theory is coming up. Day has done some homework" (not a rebuttal). Identification: PLAN.md's "CS commenter" is read as a commenter on Camestros Felapton's blog.
 

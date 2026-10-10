@@ -27,6 +27,8 @@ Source: [MITTENS 3.0](https://zenodo.org/records/23003785), Z23003785, 2026-09-2
 
 Source: Z23020792, §2.1.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Ratio R = G_f(non-mutator) / G_f(mutator). Clone-pair: 893 / 104.7 = 8.53 (50K). Metagenomic: 1,322 / 78 = 16.9 (60K). Mean of the two = 12.74 (paper 12.75; holds). "100-fold" is the mutation-rate ratio for the point-mutator populations; Ara+1 is an IS-element mutator "~5×" (Z23003785 §5.1 table).
 

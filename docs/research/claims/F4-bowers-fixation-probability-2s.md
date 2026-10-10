@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Bowers review as reposted by Day, "A Critical Review of Probability Zero"](https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/), 2026-03-04, para 3. **secondhand** (Bowers's seven-point review as reposted by Day; the original was not found)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 u ≈ 2s (Haldane 1927/Kimura 1962), so per-generation adaptive substitution rate k_ben = 2N·U_b·2s = 4N s U_b. B0.3 check: Kimura u at N=100, s=0.01: sim 0.019995 vs 0.020171 (z = −0.56); N=500: 0.019745 vs 0.019801; N=1000, s=0.005: 0.010225 vs 0.009950 (z = +1.22).
 

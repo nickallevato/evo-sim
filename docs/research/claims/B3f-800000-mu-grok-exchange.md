@@ -23,6 +23,8 @@ Source: [Day, "Conceding the Math" (blog; contains a Day-Grok exchange)](https:/
 
 Source: [Day, "Conceding the Math" (blog; contains a Day-Grok exchange)](https://voxday.net/2026/04/30/conceding-the-math/), 2026-04-30, ¶33 of extracted text. **secondhand** (Grok, as posted by Day)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 k = (2Nμ)/(2Nₑ) with N = 8×10⁹, Nₑ = 10⁴ ⇒ 8×10⁵ μ (derived: 8e9/1e4 = 800,000 ✓). The computation is conditional on two propositions: supply uses census N, and fixation probability uses Nₑ, which the same post says the AI conceded. Not independent evidence for either premise.
 

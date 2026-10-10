@@ -27,6 +27,8 @@ Source: same post, para 9 (CA-10; a concession to Day on G1).
 
 Source: [Gutsick Gibbon, Will Duffy livestream](https://www.youtube.com/live/6jXiwrcC5PQ), 2026-09-22, t=00:29:42 (DU-02; Duffy presenting MITTENS; auto-caption).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: G_f = 1,322 is a mean over populations and over mutations (fast and slow); Day (via Duffy) calls it "the fastest rate … ever observed in any organism".
 

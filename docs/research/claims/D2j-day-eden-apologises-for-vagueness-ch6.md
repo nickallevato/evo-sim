@@ -26,6 +26,8 @@ Primary text (Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwi
 > "DR. WADDINGTON: The variation is about 0.75 and you come to 0.001 away from the optimum in your earlier figure? DR. BOSSERT: I must apologize for having been so vague on the nature of R2 which appears in the figures. To explain it in detail requires a more complete definition of the abstract problem which led to the fitness function used. I had avoided doing this because it was of no biological interest except that it generated unimodal fitness functions over a character space such as the one shown in figure 2. I agree with you now, that it is important to complete the discussion of this point."
 — W. Bossert, p.40 (discussion of Bossert's paper). The sentence 'I must apologize for having been so vague on the nature of R2' continues 'which appears in the figures. To explain it in detail requires a more complete definition of the abstract problem which led to the fitness function used'; R2 is a distance measure in Bossert's simulation, and the abstract problem is the solution of simultaneous linear equations.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day's claim is a fact about the transcript: Eden, responding to Waddington's smooth-landscape point, deferred to a missing definition of fitness. The text shows a different speaker (Bossert), a different topic (a simulation's plotted axis) and a different context (the discussion of Bossert's paper, not Eden's).
 

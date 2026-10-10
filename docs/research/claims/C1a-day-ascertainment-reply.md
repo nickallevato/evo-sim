@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Recalibration of the Molecular Clock: Ancient DNA Falsifies the Constant-Rate Hypothesis](https://zenodo.org/records/18525185), Z18525185, 2026-02-08, §9.4 "Ascertainment bias in the SNP panel" (¶261 of the odt text extraction). This is the only place in the Day corpus where ascertainment is addressed; Z23046531 (Sep 2026) does not mention it.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: let P = panel; if P is enriched for sites polymorphic in modern Europeans, then P is enriched for sites with intermediate modern frequency, which are the only sites from which a completion to fixation can be observed. So an ascertainment effect increases the expected number of observed completions, and an observed count of ~0 is conservative.
 

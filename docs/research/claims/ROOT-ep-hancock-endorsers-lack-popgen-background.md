@@ -27,6 +27,8 @@ Source: same, t=03:05:09. The same caption line continues: "And in fact, Hosture
 
 Source: same, t=00:31:35 (the host, replying to Duffy's clip "I've never heard him mentioned by a single creationist"). The host adds (t=00:31:55): "I don't think that creationist necessarily means wrong, but I do think that those associations ought to be disclosed."
 
+
+RH tag (2026-10-10 pass): quote 2 ('Garbage in, garbage out') rhetoric (ledger RH-16); quotes 1 and 3 dialectic (credentials as weight of endorsement; disclosure of ID association).
 ## Formal statement
 No equation. Argument from (lack of) relevant expertise: P(endorsement carries evidential weight about population-genetic assumptions | endorser lacks pop-gen training) is low. It is aimed at ROOT-H (Hossjer), ROOT-T (Tipler) and ROOT-DE (Dembski) as appeals to authority, not at any calculation.
 

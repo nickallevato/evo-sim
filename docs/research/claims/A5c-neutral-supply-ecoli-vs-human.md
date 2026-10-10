@@ -23,6 +23,8 @@ Source: [Gutsick Gibbon and Zach Hancock video](https://www.youtube.com/watch?v=
 
 Source: same video, t=01:54:12 (GG-08).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 E. coli neutral rate = μ_E · L_E: with μ = 1e-11 per site (Hancock) and L = 4.6e6, 4.6e-5 per generation → 1/4.6e-5 = 21,739 generations per fixation (reproduces "22,000"). With the measured 8.9e-11 (McCarthy via Wielgoss 2011): 4.1e-4 per generation → 2,439 generations per fixation.
 `derived:` (python3 -I) The MITTENS 3.0 s4.3 text itself uses the neutral identity for the LTEE: "expected number of neutral hitchhikers is μ_genome × G" = 4.1e-4 x 50,000 = 20.5 (Z23003785 p.7). The same formula for humans: 38.4 x 252,000 = 9.68e6 neutral substitutions per lineage over 252,000 generations, the figure KITTENS also reports (9.7M). Against R_SNV = 17.5M: 0.55 (factor 1.8). Day contests k = μ for humans (B3, B5).

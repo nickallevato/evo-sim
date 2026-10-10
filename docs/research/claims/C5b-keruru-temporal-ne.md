@@ -27,6 +27,8 @@ Source: same post, same section.
 
 Source: same post, same section (second finding): "Anchoring every comparison on one early bin gives a trajectory rather than a point: effective size roughly doubles from the Neolithic to the present across the well-powered bins."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Temporal-method Ne from allele-frequency change F between two dated samples with sizes S0, St and t generations apart: Ne is approximately t/(2 [F - 1/(2 S0) - 1/(2 St)]) (Waples-type estimator; the post names the method but gives no formula, so this is the repo's reading, not a quote). Inputs: AADR v62-type data (about 17,000 ancient genomes), 1.1 million autosomal positions; 102 and 250 generations.
 

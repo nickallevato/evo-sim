@@ -23,6 +23,8 @@ Source: [Dennis McCarthy, Why Probability Zero is Wrong About Evolution (free re
 
 Source: same post, para 48 (MC-02).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 P_specific(n) = Π p_i = p^n for a pre-specified set; P_any(≥ k of M) = P(Binomial(M, p) ≥ k).
 `derived:` (python3 -I) With McCarthy's inputs (M = 4.5e11 new mutations in 9 My, p = 1/20,000 = 5e-5): mean M·p = 22.5e6, SD = √(M p (1−p)) = 4,743; k = 20e6 is 527σ below the mean, so P_any(≥ 20e6) ≈ 1 under that model, while P_specific = (5e-5)^(2e7) = 10^−86,020,600 (log10 = 2e7 x −4.30103). The two numbers answer different questions. McCarthy's M p = 22.5M is his neutral model (k = μ with all mutations neutral), which Day disputes (B3, B5); whether p = 1/20,000 is the fixation probability of a *new neutral* mutation (1/2N) or a beneficial one (2s) differs between Day's papers (Ga uses 0.02).

@@ -27,6 +27,8 @@ Source: same post (RE-04).
 
 Source: [r/DebateEvolution, Sparky_6_4 (AI-assisted)](https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/), 2026-10-04, post 1wxgsjm (RE-10).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 The −906 figure appears in Z23003785 s5.2 ("Ara-2 achieved negative net fixations at 50,000 generations: −906 by clone-pair analysis") and in the s5.1 table (Ara-2: −906). Check of the quoted claim against Day's text: the figure exists, so the critic's quotation is accurate (fidelity: accurate). Day's own interpretation is population fragmentation ("The evolutionary mechanism did not accelerate. It broke."), not an estimator artefact.
 

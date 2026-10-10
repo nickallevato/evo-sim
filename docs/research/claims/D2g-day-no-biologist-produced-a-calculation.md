@@ -34,6 +34,8 @@ Biologist numbers in the volume (Moorhead & Kaplan (eds), *Mathematical Challeng
 > "What is surprising is how fast rational information is produced by the machine within the meaning of the original context."
 — Alex Fraser, p.80, describing his computer experiments on a genetic system (qualitative statement of a simulation result; no numbers in this turn).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Universal over biologist contributions B at Wistar: for all b in B, not (b is a calculation and b contradicts C_Eden/C_Ulam/C_Schützenberger). Counter-examples need (i) a calculation, (ii) bearing on a conclusion. Candidates: Fraser's simulation result (p.80), Bossert's and Lewontin's computer models (Day concedes Lewontin's simulations are 'technically impressive' but 'missed the point', ch.6); Wright's 1250-question bound (bears on the 'typing at random' reading of Eden, which Eden said at p.8 was a misreading); Wright's mutation-supply figure (bears on Ulam's 'ten individuals per generation'); Mayr's gamma (30 percent, no source) vs Ulam's 1e-6.
 

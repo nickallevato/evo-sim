@@ -23,6 +23,8 @@ Source: [Gutsick Gibbon + Zach Hancock, No, Vox Day's AI-Generated Books Did Not
 
 Source: same, t=01:36:03. The next caption line continues: "Like there's no selection coefficient in any of this" (t=01:36:24: "So it's not even obvious that this is a test of selection").
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 F_max = (t_div x d)/(g_len x G_f) (A): a time divided by an empirical generations-per-fixation figure. Hancock's reading: the formula takes no mu, N or s, so it constrains an observed rate without saying which process produced it. Day's reading (A, G1): G_f is a measured total throughput of the LTEE, so mutation supply, selection and parallelism are inside the number; the transfer to humans is the question (A2e, A5).
 

@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Bernoulli Barrier, Zenodo 18167588](https://zenodo.org/records/18167588) (key Z18167588), pub. 2026-01-04 (modified 2026-01-07), ¶45 (s4.1). The apostrophes are the thousands separators in the source.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 log10(0.5^157,000) = 157,000 x (−0.30103) = −47,261.7 → 10^−47,262 (reconciles). N_required = 10^47,262 individuals (s4.2).
 Relevance: the probability that an individual carries all 157,000 beneficial alleles when each is at p = 0.5. The paper also says (s7.10) "Each locus … experiences its selection coefficient s and responds accordingly. The Bernoulli Barrier does not deny this." so the existence of an all-beneficial genotype is not needed for per-locus sweeps; the number illustrates the compression of variance (s4) rather than a requirement.

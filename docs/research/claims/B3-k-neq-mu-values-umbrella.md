@@ -27,6 +27,8 @@ Source: [Z18525262, The Real Rate of Molecular Evolution (Day & Athos)](https://
 
 Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01, ¶7 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 | k/μ | Where / when | Basis | Direction (clock) | Status in this repo |
 |---|---|---|---|---|

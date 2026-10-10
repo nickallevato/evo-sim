@@ -19,6 +19,8 @@ verdicts:
 
 Source: Probability Zero hardcover product page on the publisher's store (ndmexpress.com, `sources/raw/day/book/ndm-probability-zero.html`, bib-day K-PZ-hc; retrieved 2026-10-07; authorship of the blurb not stated on the page, so attribution to Day himself is unverified). Locator: product description, first paragraph block.
 
+
+RH tag (2026-10-10 pass): rhetoric (publisher blurb, hyperbole 'absolutely impossible', authorship unverified; ledger RH-11). Support for this node is only rhetoric; the dialectical core is ROOT.
 ## Formal statement
 Same logical form as ROOT: the Modern Synthesis (selection + drift + mutation + recombination + population structure) cannot generate observed divergence. 'Absolutely impossible' is stronger than ROOT's 'in the available time': it drops the time qualifier.
 

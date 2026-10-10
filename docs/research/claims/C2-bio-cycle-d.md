@@ -39,6 +39,8 @@ Source: Day, [Fixing Kimura](https://voxday.net/2025/12/20/fixing-kimura/), B202
 
 Source: Z18165980 (MITTENS, 2025-12-28), Methods, ¶69 (quote Q10). The loci differ from Z18166234's "(LCT, SLC45A2, TYR)" (Q22).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Per nominal generation, discrete selection recursion: p' = p + s p(1-p)/(1 + sp). The Bio-Cycle prediction after G nominal generations is p_G(d) = p after round(d x G) iterations. Inputs: parameters.yaml `selection.turnover_d` = 0.45. Table 1 inputs (Z18203514 §2.2-§3.1): LCT s = 0.05, p0 < 1% (we use 0.01), 6,000 BP; SLC45A2 s = 0.05, p0 = 0.43, 4,000 BP; TYR s = 0.03, p0 = 0.25, 5,000 BP; generation length not stated in the paper; 25 y/gen reproduces the table exactly.
 

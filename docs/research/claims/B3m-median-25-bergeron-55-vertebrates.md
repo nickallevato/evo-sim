@@ -19,6 +19,8 @@ verdicts:
 
 Source: Day, blog 2026-05-07 ¶3 (Q161; locator in `quotes-day.md` line 1201), with the "median factor of 25" figure as carried in B3d.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 k/mu per species = tabulated substitution rate over pedigree mutation rate; median over 55 species (matched per-year or per-generation).
 

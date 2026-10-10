@@ -23,6 +23,8 @@ verdicts:
 
 Source: [The Best They've Got II](https://voxday.net/2026/10/06/the-best-theyve-got-ii/), 2026-10-06, voxday.net, paras 9 and 4 of extracted text. (Day's text reads 'provided by the biologists'; context shows 'mathematicians' is meant; quoted as printed.)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim form: Q(R) = 0 for each of three Wistar arguments, where Q counts quantitative refutations in ch.4. Plus Day's conditional: if molecular biology had shown dense stepping-stone connectivity 'that result would have a name, a date, and a journal'.
 

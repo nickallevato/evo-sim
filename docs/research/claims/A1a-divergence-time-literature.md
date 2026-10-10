@@ -27,6 +27,8 @@ Source: Langergraber et al. 2012 (key Langergraber2012), Abstract.
 
 Source: Scally et al. 2012 (key Scally2012), Abstract.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Literature values for `divergence.t_div_years`: yoo_2025 [5.5e6, 6.3e6] (verified), langergraber_2012 ">=7e6-8e6" (verified), Scally ~6e6. Day 2026 uses 6.3e6 (the Yoo maximum); Day's earlier papers cite Langergraber for 6–7 My.
 

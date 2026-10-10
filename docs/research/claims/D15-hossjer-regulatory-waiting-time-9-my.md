@@ -25,6 +25,8 @@ Source: same PDF, p.8, §6 (HO-13).
 
 The model he refers to (p.7, the sentence continuing on p.8 after the footnotes): "In collaboration with the late Günter Bechly and Ann Gauger, in 2021 I developed a mathematical model for the time it would take for several genes to change expression through coordinated mutations, when new binding sites appear and transcription factors can recognize and attach to these new binding sites." His footnote 14 cites Hössjer, Bechly & Gauger (2021), "On the waiting time until coordinated mutations get fixed in regulatory sequences", *Journal of Theoretical Biology* 524, 110657.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Prediction: E[T_wait(coordinated binding-site changes at several genes)] ≫ 9 My (450,000 generations at 20 y, the 2019 / book figures Hössjer uses). No number of genes, binding-site length, population size, mutation rate or selection model is given in the review, so no value can be computed from the text. The 9 My is Day's "generous" book figure. Hössjer's footnote 1 gives 6–8 My as the common view, and MITTENS 3.0 uses 6.3 My (A1). A shorter window makes the prediction easier to satisfy.
 

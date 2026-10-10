@@ -19,6 +19,8 @@ verdicts:
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.8 (s5.1). The headline result is "a 100-fold increase in mutation rate produces only an approximately 8.5-fold increase in fixation throughput by clone-pair analysis at 50K (from 893 gen/fix to 104.7 gen/fix), or a 17-fold increase by metagenomics at 60K (from 1,322 gen/fix to 78 gen/fix)".
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 response f = G_f(non-mutator)/G_f(mutator): 893/104.7 = 8.53 (clone-pair); 1,322/78 = 16.95 (metagenomic); 1,322/105 = 12.6 (the 105 used in s7.3). Exponent a = ln f/ln 100 = 0.47 (clone-pair), 0.61 (metagenomic). `derived:` (python3 -I) a < 1 (sublinear) is supported by the paper's own table; a = 0 (no dependence on supply) is not: f > 8 for 100x supply. Also: Ara-2 (−906) is a failure mode (A2c); the mutator average row ("Average (all 7)": 477.6 fixations, 104.7 gen/fix) includes it.
 A related s5.3 table shows mutator advantage rising from 7.6x at 10K to ~20x at 40–50K and 16.9x at 60K (non-mutator: 794 → 1,322).

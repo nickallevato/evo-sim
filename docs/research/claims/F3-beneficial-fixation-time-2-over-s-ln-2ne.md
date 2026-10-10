@@ -23,6 +23,8 @@ Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.
 
 Source: [Z18166426 (Day & Athos)](https://zenodo.org/records/18166426), Zenodo 2025-12-25 (record modified 2026-01-06), ¶135 of extracted text
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Deterministic logistic sweep: time from p₀ to 1 − p₀ at selection s (per Day's parametrisation) is (2/s) ln((1−p₀)/p₀) ≈ (2/s) ln(2Nₑ) when p₀ = 1/(2Nₑ). The stochastic conditional mean time is (2/s)(ln(4Ns) + γ) (RESULTS review #2 correction). Derived (python3 -I) at N = 10⁴: s = 0.001: (2/s)ln(2N) = 19,807 vs (2/s)(ln 4Ns + γ) = 8,532; s = 0.01: 1,981 vs 1,314; s = 0.0005: 39,614 vs 14,292.
 Zenodo calculator Z19984826 writes the selected-sweep time as (2/(s̄·d)) ln(2Nₑ) and cites Charlesworth 1994 for it; the blog attributes the formula to Kimura.

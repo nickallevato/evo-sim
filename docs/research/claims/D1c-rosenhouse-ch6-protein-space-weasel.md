@@ -23,6 +23,8 @@ Source: Felsenstein, Panda's Thumb 2022-05-18, chapter 6 entry (quotes-critics R
 
 Source: Rosenhouse 2022, end of ch.4, as quoted in [The Best They've Got II](https://voxday.net/2026/10/06/the-best-theyve-got-ii/), 2026-10-06, voxday.net, para 8; `secondhand`.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Existence claim: ch.6 contains a quantitative treatment of protein-space geometry and of the Weasel program that answers Eden's and Schützenberger's challenges.
 

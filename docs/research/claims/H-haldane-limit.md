@@ -31,6 +31,8 @@ Source: Z18168236, §2.3 (the parallel-fixation reply).
 
 Source: Z18168236, §4.2.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Haldane: cost per substitution C = 30 N selective deaths (diploid, single new copy); sustainable selective mortality m = 0.10 N per generation; minimum interval = C/(m N) = 30/0.10 = 300 generations. Parallel loci share the budget: sum of s_i <= s_max (Z18168236 §2.3).
 Day's extension: effective generations G_eff = G x d = 325,000 x 0.45 = 146,250 (`generations_available.day_2025_effective`), achievable = G_eff/300.

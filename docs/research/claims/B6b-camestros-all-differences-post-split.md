@@ -23,6 +23,8 @@ Source: [Camestros Felapton, "Reading Vox Day So You Don't Have To 2026 [2]" (po
 
 Source: [Day, "Maximal Mutations" (blog)](https://voxday.net/2019/02/07/maximal-mutations/), 2019-02-07, ¶26 of extracted text. Day, first-edition basis (Q05 in the harvest)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day 2019 (second quote above) splits the whole 30M between lineages as post-split fixations. Quantification (derived): if polymorphism is 14–22% of observed SNV divergence (CSAC), the fixed fraction is 0.78–0.86; 35M × (0.78–0.86) = 27.3–30.1M fixed SNVs, 13.7–15.1M per lineage vs 17.5M used in Z23003785 (derived).
 

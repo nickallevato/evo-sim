@@ -27,6 +27,8 @@ Source: Z23034852, §3.8 (Table 7).
 
 Source: Z23034852, Abstract.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Model (§3.1): draw 2N alleles from q = 0.0018 (carrier frequency 1/280); pair into N diploids; then Wright-Fisher with genotype fitness AA = 1, Aa = 1 - s_het, aa = 1 - s_hom; s_hom = 0.95, s_het = 0.05; count aa each generation; replicate 50,000 times (per abstract). Table 2 (G = 50, full selection): N = 50: P(hom) 1.6%, P(>= 2 copies) 1.4%, P(hom | >= 2 copies) 20.6%; N = 100: 2.3%, 5.1%, 14.7%; N = 200: 3.5%, 16.1%, 12.0%; N = 500: 6.0%, 52.8%, 9.4%. Table 4 (N = 100, G = 50): full selection 2.33%; s_het = 0: 3.62%; pure drift 3.94%.
 

@@ -30,6 +30,8 @@ Primary text (Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwi
 > "you cannot really start with year Xo; it has to be ION, where N is 3, 4 or 5. That seems to me to place the whole of that calculation completely out of court."
 — Crosby, p.31.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No formal content. Interpretation of two speech acts: (p.17) intermediate stages must be viable; (p.31) Ulam's calculation is 'out of court' because it begins at an unrealistic starting time.
 

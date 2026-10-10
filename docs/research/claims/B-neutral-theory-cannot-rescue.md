@@ -27,6 +27,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: Z22129121 (Hard Limits), 2026-08-27, l.453-457 of the local text (Q157). **Candidate Statement; rule RH tag unresolved** (see R4 B2 paragraph).
 
+
+RH tag (2026-10-10 pass): quote 1 rhetoric (finality claim, ledger RH-10); quotes 2-3 dialectic (the k = mu domain condition and the two-channel claim, scored in B1/B2). Support for the node rests on the dialectic quotes.
 ## Formal statement
 Branch summary (verdicts as of this extraction; "pending" = no repo check yet):
 | Claim | Side | Internal | Fidelity | External | Check |

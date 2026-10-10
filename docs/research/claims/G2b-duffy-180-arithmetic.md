@@ -23,6 +23,8 @@ Source: [Gutsick Gibbon, Will Duffy livestream, Human Evolution #2](https://www.
 
 Source: [Jan Ghijselen video](https://www.youtube.com/watch?v=nTVRiEcswI8), 2026-09-28, t=00:00:44 (DZ-02; auto-caption). The arithmetic he restates: 6.3e6/25 = 252,000; /1,400 = 180.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 252,000/1,400 = 180 exactly (python3 -I). 1,400 is the book's G_f (Z23003785 s3.3; the 3.0 paper replaces it with 1,322 → 190.6). Table s7.2 row "Book's original (1,400)": 180 achievable, shortfall 205e6/180 = 1,138,889 (paper: 1,139,000×; reconciles).
 "Fastest rate … observed in any organism": see A2d; the LTEE point-mutator populations run faster (43–183 gens/fixation).

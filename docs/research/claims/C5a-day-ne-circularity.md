@@ -27,6 +27,8 @@ Source: same post, para 4.
 
 Source: same post, para 3 (same paragraph as the first quote). Also quoted by keruru in [Kimura and the Red Flock](https://claudekeruru.substack.com/p/kimura-and-the-red-flock), 2026-08-31, para 5 (KR-06, tagged `secondhand` there); the firsthand source is the blog post.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim 1 (circularity): Ne is estimated from heterozygosity theta = 4 Ne mu; the clock requires k = mu; therefore Ne from theta presupposes the clock. Formally, theta = 4 Ne mu uses the per-generation mutation rate mu, not the substitution rate. Whether the estimate presupposes k = mu depends on the source of mu:
 - pedigree mu (parameters.yaml `mutation.mu_per_site_per_gen.pedigree_human` = 1.2e-8, Kong 2012): a direct count of new mutations in trios, independent of k = mu;

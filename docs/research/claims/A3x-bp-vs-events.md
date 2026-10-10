@@ -23,6 +23,8 @@ Source: [Dennis McCarthy, Vox Day Responds](https://dennismccarthy.substack.com/
 
 Source: [r/DebateEvolution, Dumb-and-Dumber](https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/), 2026-09-28 (RE-05).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: fixations are events; R_events = (SNV + indel events + inversions + other SV events)/2 ≈ 20M per lineage, not 205M.
 

@@ -23,6 +23,8 @@ Source: [They Never Stop Lying](https://voxday.net/2026/10/01/they-never-stop-ly
 
 Source: [They Never Stop Lying](https://voxday.net/2026/10/01/they-never-stop-lying/) (key B2026-10-01-they-never-stop-lying), blog, 2026-10-01, ¶25.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Logical form quoted by Day: (Bernoulli Barrier: p^n ≈ 10^−34,000,000, so parallel fixation is impossible) ∧ (Averaging Problem: polygenic rescue impossible) ⟹ fixation sequential ⟹ N_fix = 252,000/1,400 = 180 versus 205e6. `derived:` 252,000/1,400 = 180 ✓ (the 1,400 is the book's G_f; 3.0 uses 1,322, i.e. 190.6). The p^n in the quoted passage is for n = 2e7 (Ga); the requirement in the same sentence is 205 million: different n.
 In ¶25 Day states the 180 is based on a rate (all-cause) that is "obviously faster than a sequential rate", i.e. the 180 is not a purely sequential calculation; ¶22: "MITTENS … specifically includes and incorporates parallel fixation, with my subsequent disproofs of parallel fixation." In ¶4: "serial fixation with sweeps and ancestral drift are about all that is left AFTER the math eliminates various mechanisms".

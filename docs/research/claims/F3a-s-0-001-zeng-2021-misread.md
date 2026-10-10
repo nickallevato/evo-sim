@@ -23,6 +23,8 @@ Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.
 
 Source: [Zeng et al. 2021, Widespread signatures of natural selection across human complex traits and functional genomic categories, Nat Commun 12:1164](https://www.nature.com/articles/s41467-021-21446-3), 2021, Results, evolutionary inference
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Parameter key: `selection.s_zeng_2021` = 0.001, sign negative, positive selection appears only as a simulation sensitivity scenario and Day uses the value as beneficial (parameters.yaml note, verified). Zeng: "Since we only detected signatures of negative selection in real traits, our evolutionary simulations focused on the models of negative selection." Latency scales as 1/s (F3): derived t(s = 0.01, N = 10⁴) = 1,981 vs 19,807 at s = 0.001 for the deterministic formula.
 

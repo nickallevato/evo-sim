@@ -19,6 +19,8 @@ verdicts:
 
 Source: [MITTENS 2025, Zenodo 18165980](https://zenodo.org/records/18165980) (key Z18165980), pub. 2025-12-28 (modified 2026-01-06), ¶24 (Results).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 P(all) = p^n with n = `divergence.required_fixations.day_2025` = 2.0e7 and p = 0.02.
 `derived:` log10(0.02^(2e7)) = 2e7 x (−1.69897) = −33,979,400 → 10^−33,979,400, which rounds to the stated 10^−34,000,000 (0.06% difference in the exponent). The value p = 0.02 = 2s for s = 0.01 (Kimura 1962, "approximately twice the selection coefficient"; used as P_escape in Z18167588 s7.9). Pass-1 attributed this number to Z18167588; it is in Z18165980. Z18167588 uses n = 157,000, p = 0.5 (Gb).

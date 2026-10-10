@@ -23,6 +23,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §5
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 T = D/(2μ) (IR §5). Claim: μ was phylogenetically calibrated, then replaced by pedigree μ with the date pushed back "to maintain consistency".
 Analysis (derived reasoning): a date from pedigree μ and generation time is independent of the fossil calibration but not of the *assumption* k = μ per generation; and the older direction is what Keightley 2012 reports (pedigree μ about twofold below divergence-based rates). Langergraber 2012 derives "at least 7-8 million years" without fossil calibration, using pedigree μ and wild-chimp generation times, so the loop is not closed by a measurement of the date.

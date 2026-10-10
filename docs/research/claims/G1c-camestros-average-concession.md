@@ -22,6 +22,8 @@ verdicts:
 
 Source: [Camestros Felapton, Reading Vox Day 2026 [5]](https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-5/), 2026-01-29, para 9 (CA-10).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Concession on definition: G_f = T/n (throughput), not a per-allele fixation time.
 

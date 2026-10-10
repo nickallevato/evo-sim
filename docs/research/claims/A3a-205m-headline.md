@@ -23,6 +23,8 @@ Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key
 
 Source: [Probability Zero 2nd edition](https://voxday.net/2026/05/23/probability-zero-2nd-edition/) (key B2026-05-23), blog, 2026-05-23, ¶6.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 R_2026 = 410e6 / 2 = 205e6 per lineage (`divergence.required_fixations.day_2026`, derived: 410e6 bp / 2).
 

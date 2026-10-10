@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Matev, comment on McCarthy, "Vox Day Responds"](https://dennismccarthy.substack.com/p/vox-day-responds/comment/345248135), 2026-09-25, comment id 345248135 (RF-2).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 At a neutral site with 2N gene copies, let u_i be the probability that copy i's descendants eventually fix. The events are mutually exclusive and exhaustive (with no further mutation), so sum_i u_i = 1, and by exchangeability u_i = 1/(2N). If u_i = 1/(2N_e) the sum is N/N_e, which exceeds 1 whenever N > N_e. `derived:` e.g. N = 1e6, N_e = 1e4: sum = 100.
 

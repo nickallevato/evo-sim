@@ -19,6 +19,8 @@ verdicts:
 
 Source: Keefe AD, Szostak JW (2001) Functional proteins from a random-sequence library, Nature 410:715-718, abstract (`sources/raw/sources/abs/KeefeSzostak2001.txt`; PubMed 11287961). Extraction: '1012' = 10^12.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Library size M = 6e12; selected functional (ATP-binding) clones = 4. Derived lower bound (this file): if all four were present in the starting library, the frequency of ATP binding among random 80-mers is >= 4/6e12 = 6.7e-13. The paper's own estimate of the frequency is not in the corpus: unsourced here. 20^80 = 1.2e104 sequences in the full 80-residue space (derived).
 

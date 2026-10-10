@@ -23,6 +23,8 @@ Source: [Hossjer, "MITTENS - Convincing Arguments Against Neo-Darwinism" (PDF at
 
 Source: [Hossjer, "MITTENS - Convincing Arguments Against Neo-Darwinism" (PDF attached to Dembski post)](https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf), 2026-09-14, PDF p3 (scope: the MITTENS selection argument, not the neutral calculation)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Hössjer's neutral calculation (his Eq. 3.1): F_hum = L·d·μ·t_div = 3e9 × 0.45 × 1.25e-8 × 450,000 = 7.6M (derived: 3e9 × 1.25e-8 = 37.5; × 0.45 = 16.9; × 450,000 = 7.59e6 ✓) per lineage, "very close to the second extended MITTENS equation". His E. coli check: 1/(L·μ) = 1/(4.6e6 × 1e-10) = 2,170 generations vs Day's 1,600 (derived ✓). He uses 2Nμd × 1/(2N) = dμ (census N), i.e. he does not adopt B3a.
 

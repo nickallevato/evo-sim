@@ -44,6 +44,8 @@ Source: [Day, "Where the Errors Hide" (blog)](https://voxday.net/2026/09/21/wher
 
 Two readings, neither settled by the corpus: (a) the 09-21 post withdraws the 08-27 "fixation probability of a new copy is 1/(2N)" for real populations; (b) the two posts agree: 1/(2N) holds inside the no-covariance model, and Day's covariance objection, already present in the 08-27 post (¶3 above), is that real populations violate that model. Day's later paper Z23188201 (2026-10-06) states that "The fixation probability p = 1/(2N) is protected by the martingale property and holds exactly regardless of offspring distribution" (E4). Whether that sentence covers covariance between genotype and reproduction is not stated.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Retraction of B3a by its author, 2026-08-27 (one day after keruru's post, 2026-08-26). It leaves in place: k = μ at steady state (HL "accepts it throughout"), the transit-time/fill-state argument (B1, B2), Balloux–Lehmann (B3b) and the 32.3 comparison (B3d, posted 2026-10-01).
 Not revised on the harvested Zenodo records: Z18429937, Z18525547, Z18637333 (no new version seen, 2026-10-07). Version-ledger entry proposed: B3 N/Nₑ leg, asserted 2026-01-29 to 2026-04-30, withdrawn 2026-08-27 (blog); Zenodo texts unchanged.

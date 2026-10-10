@@ -23,6 +23,8 @@ Source: Steve Keen, [Natura Facit Saltum](https://profstevekeen.substack.com/p/n
 
 Source: same, para 7 (KE-05). The sentence's subject is truncated in the extracted quote; the full sentence is in the source.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Keen's claim: `T_required >> T_universe`. Under MITTENS 3.0 numbers: `T_required = T_div * shortfall = 6.3e6 y * 1.075e6 = 6.77e12 y` (derived; parameters.yaml `divergence.t_div_years.day_2026_mittens3`, `shortfall.mittens3_full`); `6.77e12 / 1.38e10 = 491` universe-ages. Recomputed. 'Orders of magnitude greater' holds (2.7 orders) only if the shortfall is read as a time multiplier at a fixed per-fixation rate. For the older 220,000x shortfall: 6.3e6 * 2.2e5 = 1.4e12 y (100 universe-ages).
 

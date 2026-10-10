@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Bernoulli Barrier, Zenodo 18167588](https://zenodo.org/records/18167588) (key Z18167588), pub. 2026-01-04 (modified 2026-01-07), s7.9. The paper then computes "Total required input ≈ (300,000 / 440) × 11,500 ≈ 7.8 million beneficial mutations".
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 P_escape = 2s = 0.02 (Kimura 1962). Required input per transit period = C/P_escape = 230/0.02 = 11,500; total = (300,000/440) x 11,500 = 7.84e6 (reconciles).
 `derived:` population-level supply of new mutations (Day's N = 10,000; Kong rate 1.2e-8): 77 diploid per individual per generation x 10,000 = 7.7e5 per generation, 2.3e11 over 300,000 generations (McCarthy's version, MC-03: 50,000 per year x 9e6 y = 4.5e11 with Day's inputs). The 7.8e6 beneficial arisings needed would then be 3.4e-5 of all new mutations (python3 -I). Whether the beneficial fraction is that large is the open question, which the paper itself calls "an empirical question".

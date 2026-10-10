@@ -19,6 +19,8 @@ verdicts:
 
 Source: [A Retraction and a Revision](https://voxday.net/2026/05/07/a-retraction-and-a-revision/) (key B2026-05-07), blog, 2026-05-07, ¶7.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 t_CHLCA ∈ [2.5e5, 1.3e6] y (2026-05-07)  versus  t_div = 6.3e6 y (Z23003785, 2026-09-28).
 

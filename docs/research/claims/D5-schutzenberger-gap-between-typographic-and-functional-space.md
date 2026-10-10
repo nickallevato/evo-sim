@@ -33,6 +33,8 @@ Day's rendering:
 
 Source: The Best They've Got I, 2026-10-05, para 11 (the quotation marks enclose a paraphrase; the printed sentence is above).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Schützenberger's structure: three spaces (typographic/genotype, phenotype/function, parameter/epigenetic), with relations between them given only by assumptions (his words: 'a topology'); the claim is that no principle is known that matches typographic proximity to functional proximity; programs written by random typographic changes do not compute; artificial-intelligence experience says 'without some built-in matching, nothing interesting can occur'. The probabilistic figures (D5a) are illustrative.
 

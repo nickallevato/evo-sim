@@ -19,6 +19,8 @@ verdicts:
 
 Source: Camestros Felapton, [Reading Vox Day So You Don't Have To 2026 [4]](https://camestrosfelapton.wordpress.com/2026/01/29/reading-vox-day-so-you-dont-have-to-2026-4/), 2026-01-28/29, paragraph on chapter 6 of the first edition of Probability Zero (Wistar). The reviewer says Chapter 6 is a history of the 1966 conference.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No formal content. Coverage claim: the book's D chapter omits post-1966 work.
 

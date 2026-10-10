@@ -25,6 +25,8 @@ Primary text:
 
 Source: Eden, Wistar p.9 ('1036' = 10^36).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Eden's chain (p.9): a transposition of chromosomal material 'should occur in an unselected environment with a frequency of 10^-15 for each sequential pair of genetic transfers'; a specific transposition has probability 10^-21 (uniform chain segmenting); so a single ordered gene pair needs 1/(10^-15 * 10^-21) = 10^36 genetic transfers. E. coli: 10^12 two-hour periods since life began, 10^-6 of the population mating at any instant, so the required population is 10^36/(10^12 * 10^-6) = 10^30 cells (Eden: 'about 10^13 tons or a layer ... two centimeters thick'). All reproduce arithmetically.
 

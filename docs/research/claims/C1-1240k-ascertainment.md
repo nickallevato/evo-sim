@@ -36,6 +36,8 @@ Source: [Mallick et al. 2024, Sci Data 11:182](https://pmc.ncbi.nlm.nih.gov/arti
 Selection-scan filter in Mathieson 2015 (Methods, selection analysis):
 > "We removed SNPs that were monomorphic in all four of these modern populations"
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Let S be the panel (sites chosen because they were polymorphic in a discovery set D of present-day individuals or arrays: Yoruba/San single-individual heterozygotes, Human Origins, 610-Quad, plus functional SNPs). Two separate consequences:
 

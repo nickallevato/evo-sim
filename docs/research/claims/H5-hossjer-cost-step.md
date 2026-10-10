@@ -27,6 +27,8 @@ Source: same, p.3 (HO-03 in `sources/quotes-critics.md`).
 
 Source: same, p.3 (HO-06).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Hössjer's chain (p.2-3): F_max = (t_div x d)/(g_len x G_f) = 9e6 x 0.45/(20 x 1,600) = 127 (eq. 2.2); mutation-rate adjustment x (1.25e-8/1e-10) = 15,800 (eq. 2.3, his "equation (3)"); genome-length adjustment x (3e9/4.6e6) = 10 million (eq. 2.4, his "equation (4)"); then "the number of fixations with a selective advantage ... is far less than ... equation (4) predicts, perhaps more in line with equation (3)".
 

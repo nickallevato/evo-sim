@@ -27,6 +27,8 @@ Source: same, "Genome-wide rates".
 
 Source: same, Introduction findings.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 `divergence.snv_divergence_fraction.csac_2005_total` = 0.0123; `.csac_2005_fixed_max` = 0.0106; proposed key `divergence.fixed_fraction_of_observed` = 0.78–0.86.
 `derived:` 0.0106/0.0123 = 0.862; 35e6 x 0.78–0.86 = 27.3e6–30.2e6 fixed SNV differences; per lineage 13.7e6–15.1e6.

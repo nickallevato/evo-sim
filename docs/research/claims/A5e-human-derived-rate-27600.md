@@ -19,6 +19,8 @@ verdicts:
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.15 (s8.6). The derivation is in the book appendix, not harvested.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 G_f(human) = 27,600 effective generations per fixation; achievable = 252,000 / 27,600.
 `derived:` (python3 -I) 252,000/27,600 = 9.13, not 8 (8 x 27,600 = 220,800, which would correspond to t_div = 5.5 My at 25 y, 220,000 generations). A 12% discrepancy in the paper's own sentence; immaterial to the 205M shortfall, but the figure does not reconcile. For scale: Day's Q&A formula (2/s) ln(2Ne) with s = 0.001, Ne = 10,000 gives 19,807 (Q44-Q46); 27,600/19,807 = 1.39; the reason for the ratio is not stated in the paper.

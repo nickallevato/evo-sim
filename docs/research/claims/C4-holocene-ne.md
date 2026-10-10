@@ -33,6 +33,8 @@ Source: same, Conclusion.
 
 Day's later use (blog, 2026-08-27): "a drift-variance Nₑ near 2 rather than ten thousand" (see C5a).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 For adjacent 500-year bins, Var_drift = Var_obs - [p(1-p)/(2 n1) + p(1-p)/(2 n2)] (sampling correction; p the average frequency); the "Ne" proxy is inversely proportional to Var_drift. Pan-European: min 0.00150 (750-1250 BP), max 0.00495 (7250-7750 BP, n 442 to 153), ratio 3.30; recent bin 250-750 BP 0.00750 (5.01x min) flagged as an outlier from migration. Britain-Ireland: min 0.00330, max 0.01514 (n 14 to 15), ratio 4.59.
 

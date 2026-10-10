@@ -31,6 +31,8 @@ Source: Dembski Substack, [A Review of Vox Day's Main Argument in PROBABILITY ZE
 
 Source: same, para 34 (HO-07); text by Dembski, not Hossjer.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Hossjer's chain: `F_max(127) -> x(1.25e-8/1e-10) = 15,800 -> x(3e9/4.6e6) = ~1.0e7` vs 2.0e7 required; then the Haldane cost step (HO-03) is said to cut the adaptive share (asserted, not computed). Neutral version: `F = L*d*mu*t = 3e9*0.45*1.25e-8*450,000 = 7.6e6` (HO-04). Recomputed: 15,800*(3e9/4.6e6) = 1.03e7; 3e9*0.45*1.25e-8*4.5e5 = 7.59e6; without d: 1.69e7 (balance ledger).
 

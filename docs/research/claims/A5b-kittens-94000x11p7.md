@@ -27,6 +27,8 @@ Source: same post (RE-08).
 
 Source: same post (RE-09).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Shortfall = R/F with F = N_gen/G_f. KITTENS: S = (U_h/U_E) · (R_205/R_SNV) where U_h = 3.2e9 · 1.2e-8 = 38.4 (KITTENS cites s6.3–6.4; the paper prints the product only for the 100x case, 38,400), U_E = 4.1e-4 (s4.3), R_205 = 205e6, R_SNV = 17.5e6.
 `derived:` (python3 -I) U_h/U_E = 93,659; R_205/R_SNV = 11.714; product = 1,097,143 vs paper 1,075,000 (2.1% above, from rounding F = 190.6). 191 x 93,659 = 17.89e6 ("17.9 million", reproduces); 17.89/17.5 = 1.02. Table inputs found in Z23003785: 4.1e-4, 191, 17.5M, 205M, 1,075,000. The 38.4 is not printed in the paper; it is the 1x value of the product 3.2e9 x 1.2e-8 printed in s6.4 as 38,400 for 100x.

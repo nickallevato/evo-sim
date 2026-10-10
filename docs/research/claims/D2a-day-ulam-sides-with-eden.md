@@ -32,6 +32,8 @@ What the volume contains (Moorhead & Kaplan (eds), *Mathematical Challenges to t
 > "In contrast to the tone of the discussion I, personally, believe that the numbers I took are very optimistic rather than the opposite."
 — Ulam, p.25.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day's claim: Ulam's computation reaches Eden's conclusion. Ulam's text: his 'final probabilities, even if we assume some values from the present guesses, will not come to be as fantastically small as in Professor Eden's conclusions' (p.22-23), yet the calculation 'is illustrating something that I think Professor Eden had in mind' (p.24) and he 'personally' believes the numbers 'very optimistic rather than the opposite' (p.25). Ulam's own result is a rate, 10^13 generations (D4), not Eden's 10^-273.
 

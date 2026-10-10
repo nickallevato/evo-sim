@@ -24,6 +24,8 @@ Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key
 
 Source: [MITTENS 3.0, Zenodo 23003785](https://zenodo.org/records/23003785) (key Z23003785), 2026-09-28 (modified 2026-10-04), p.4.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: rate_human <= rate_LTEE = 1/G_f (per generation), with no scaling. Equivalent form: `ltee.gens_per_fixation` is a lower bound on human G_f.
 

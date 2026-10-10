@@ -33,6 +33,8 @@ Source for the three quotations above: [Vox Day Interview on Evolutionary Theory
 
 The primary source for the two numbers is Eden, Wistar p.7 (see D3).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Let L = 250, A = 20. Sequence space `S = A^L = 10^(250*log10 20) = 10^325.257`. Eden's upper bound on protein molecules that ever existed on Earth: `N_ever = 10^52` (Wistar p.7). Ratio `N_ever/S = 10^-273.3`.
 

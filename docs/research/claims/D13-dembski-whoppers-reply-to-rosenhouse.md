@@ -29,6 +29,8 @@ Day's use: > "Rosenhouse’s book is objectively bad. It purports to be a critiq
 
 Source: The Best They've Got I, 2026-10-05, para 4 (the paragraph is in italics in the HTML, with the preceding sentence linking to Dembski's post; Day then writes 'Dembke’s summary' and 'I'm not in a position to have an opinion one way or the other').
 
+
+RH tag (2026-10-10 pass): quote 1 rhetoric ('objectively bad', ledger RH-14); quotes 2-3 dialectic (the WEASEL fitness-function argument). Dialectic core: the misrepresentation claim against Rosenhouse, not scored here.
 ## Formal statement
 No formal content. Two points: (1) the book is bad (assertion); (2) in the Weasel, the choice of the target-based fitness function is the information source (conservation-of-information argument; technical work by Dembski and colleagues, not retrieved).
 

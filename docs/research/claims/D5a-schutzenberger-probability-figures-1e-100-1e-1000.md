@@ -23,6 +23,8 @@ Source: Schützenberger, in Moorhead & Kaplan (eds), *Mathematical Challenges to
 
 Source: same, p.76, discussion (column-interleaved in the OCR; the words 'I mean less than one out' and 'of 10100' are separated by another speaker's column).
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Two assertions: P(a random typographic change preserves 'meaningful' function) < 10^-100 (for programs/meaningfulness in his sense); P(the self-correcting mechanism appears spontaneously) < 10^-1000. Neither is derived in the text; on p.73 he says the cycle numbers are quoted from other speakers ('From their talks it is clear that even on the most schematic models the number of cycles involved is truly enormous').
 

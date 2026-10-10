@@ -23,6 +23,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Athos)](https://zenodo.org/records/22129121), Zenodo 2026-08-27 (v1), p.1 (abstract)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Summary (the pieces are B2a, B2b, B2c, B2d): 4Nₑ < G ⇒ N < X = (Vₖ+2)G/16; above X, P(τ ≤ G | fixation) ~ exp(−π²Nₑ/G).
 

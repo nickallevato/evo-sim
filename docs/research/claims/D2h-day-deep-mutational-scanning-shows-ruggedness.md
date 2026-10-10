@@ -19,6 +19,8 @@ verdicts:
 
 Source: [The Best They've Got II](https://voxday.net/2026/10/06/the-best-theyve-got-ii/), 2026-10-06, voxday.net, para 5. No citation in the post (Day uses the same standard against Rosenhouse in the previous paragraph).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: for typical proteins, the share of single-substitution mutants with reduced/destroyed function is large (the DFE is shifted toward deleterious) and the landscape (functional sequences) is non-connected. Parameters: `p_del` = fraction of single substitutions that substantially reduce function; `K` or a pair-correlation of effects. Day gives neither.
 

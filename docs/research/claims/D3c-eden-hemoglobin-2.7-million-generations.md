@@ -25,6 +25,8 @@ Primary text:
 
 Source: Eden, 'Inadequacies of Neo-Darwinian Evolution as a Scientific Theory', in Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwinian Interpretation of Evolution*, Wistar Institute Monograph No. 5 (1967; symposium 25-26 Apr 1966), local copy = 1985 Liss reprint scan, OCR text; page = printed folio (page numbers from the PDF text layer headers; OCR garbles noted in place), p.8. Eden's inputs: 120 point mutations between alpha and beta by a unique path; 420 nucleotides; mutation rate 10^-6; population 10^6; 8-9 amino acids reachable per step; 20 generations to convert the population under strongest selection. He then argues the path likely meandered and gives no estimate (D3b).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Eden's stated model: T = 120 * (t_wait + 20), t_wait unspecified. Tried reconstructions (this file): t_wait = 420 sites x 8.5 amino acids = 3,570 gen per step gives T = 4.3e5; with 3 nucleotide alternatives per site 1.3e6; Eden prints 2.7e6 (22,500 gen per step). The formula is not given, so the figure is not reproduced; the printed value is within a factor ~2-6 of simple reconstructions.
 

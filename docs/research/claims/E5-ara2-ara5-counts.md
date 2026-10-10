@@ -27,6 +27,8 @@ Source: same post (RE-04).
 
 Source: Sparky_6_4 (AI-assisted), [KITTENS](https://www.reddit.com/r/DebateEvolution/comments/1wxgsjm/), 2026-10-04, post 1wxgsjm (RE-10).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Checked against the targets (MITTENS 3.0, Z23003785, 2026-09-28, record modified 2026-10-04):
 - §5.1 table: Ara-2 "Point mutator (~100×)  −906  N/A"; §5.2: "Despite a 100-fold elevated mutation rate, Ara-2 achieved negative net fixations at 50,000 generations: −906 by clone-pair analysis. The sharing rate between its two clones at 50K was 4.2%".

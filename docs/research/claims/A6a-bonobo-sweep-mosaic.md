@@ -23,6 +23,8 @@ Source: [The Pan Paradox: MITTENS Applied to Chimpanzee Subspecies Divergence](h
 
 Source: same, l.119.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Required fixations (bonobo lineage) = 326,000 (10% of 3,263,686 private alleles, l.71); generations = 930,000 / 20 = 46,500 nominal, 40,000 effective with d = 0.86 (l.69). Prediction: if those fixations were selective sweeps, sweep signatures would cover the genome.
 

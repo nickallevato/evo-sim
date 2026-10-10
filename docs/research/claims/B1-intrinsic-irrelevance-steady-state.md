@@ -27,6 +27,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §3 The Empty Pipe (typo "subsitution" is in the source)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Glossary sense: **throughput k** = substitutions per generation at steady state; **latency** t_fix = generations for one allele to go from arising to fixation.
 

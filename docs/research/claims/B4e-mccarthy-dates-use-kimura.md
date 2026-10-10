@@ -19,6 +19,8 @@ verdicts:
 
 Source: [McCarthy, "Vox Day Responds"](https://dennismccarthy.substack.com/p/vox-day-responds), 2026-09-17, para 27
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Context (para 27): "of course those dates are going to be consistent with the mutation rate and observed number of mutations." No citation. Same logical content as B4d, offered by a critic to argue that Day's use of the dates is circular.
 

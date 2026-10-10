@@ -43,6 +43,8 @@ What the volume contains (Moorhead & Kaplan (eds), *Mathematical Challenges to t
 > "DR. SCHUTZENBERGER: That's a good question. I don't think I have time to answer it now."
 — Schützenberger, p.79 (answering Mayr's question 'why do molecules have such-and-such properties?'). This is the only 'good question ... time' exchange in the volume; the speaker is Schützenberger.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day's claim is a fact about the transcript: Lewontin answered a question of Schützenberger's about continuity ('small genetic changes produce small phenotypic changes') with 'I don't know'. Searched the OCR text and the PDF text layer for 'very good question', 'good question', 'quasi', 'continuity', 'continuous', and every Lewontin turn containing 'know'. 'quasi-continuity' does not occur anywhere in the volume ('quasi' occurs only in 'quasi equilibrium' and 'quasimathematical').
 

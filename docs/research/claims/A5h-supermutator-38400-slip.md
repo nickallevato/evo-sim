@@ -21,6 +21,8 @@ verdicts:
 
 Source: [MITTENS 3.0: The Mathematical Impossibility of the Post-Darwinian Polythesis](https://zenodo.org/records/23003785), Vox Day and Claude Athos, Zenodo 23003785 v1, 2026-09-28, s6.4 "The Breeding Reality Principle" (local text `sources/raw/day/zenodo-23003785.txt` lines 458-466; quoted verbatim, line breaks removed).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 `derived:` (R4 X1) 3.2e9 x 1.2e-8 x 100 = 3,840 mutations per haploid genome per generation, not 38,400 (a factor of 10; the printed formula and the printed product disagree). The 10% deleterious fraction is then 384, not 3,840. Day's exponentiation is right for the numbers he printed: 0.999^3,840 = e^-3.84 = 0.0215 and 0.99^3,840 = 1.7e-17. With the corrected count: 0.999^384 = 0.68 and 0.99^384 = 0.021. (A diploid reading, 6.4e9 bp, gives 7,680 and 768, still 5x below the printed 38,400 and 3,840.)
 

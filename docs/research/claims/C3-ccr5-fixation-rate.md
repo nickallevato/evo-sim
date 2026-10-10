@@ -31,6 +31,8 @@ Source: [An Inspiring Critique](https://voxday.net/2026/01/27/an-inspiring-criti
 
 Source: same post, ¶24.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Observation: CCR5-delta32 at about 10% in Europeans after 27-34 generations (Dec 2025 post). Linear extrapolation: 10% in 30 generations gives 100% at 300 generations (derived: 30 x 10 = 300; at 20 y/gen this is 6,000 y, matching "6,000-7,500 years"; holds). Global rescaling in the Dec 2025 post gives 840 generations (50M deaths, 35.7% European share) and 1,440 (25M deaths, 400M world); the Jan 2026 post gives 2,278. Each of the three rescalings is stated without its arithmetic (the post lists assumptions but no formula), so the repo does not reproduce 840, 1,440 or 2,278 (no verdict).
 

@@ -27,6 +27,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Athos)](https://zenodo.org/records/22129121), Zenodo 2026-08-27 (v1), p.6
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 4Nₑ < G with Nₑ = (4N−2)/(Vₖ+2) ≈ 4N/(Vₖ+2) ⇒ N < (Vₖ+2)G/16 = X. G = T_years / g_years.
 

@@ -23,6 +23,8 @@ Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origi
 
 Source: [Chimpanzee Sequencing and Analysis Consortium 2005, Nature 437:69-87](https://www.nature.com/articles/nature04072), 2005, Main text, "Nucleotide divergence"
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 E[d] = 2μT + θ_anc, θ_anc = 4Nₑ,anc μ per site (B4a). Equilibrium start: expected fixed substitutions = μLT (RESULTS B1, P2). The hierarchy attributes the formula to Mansfield and the sources agent; the verbatim Mansfield text is the full-pipe statement only.
 Derived illustration: see B4a (Nₑ,anc = 1.0e4 → 0.65%; 1.32e5 → 1.24%; 1.98e5 → 1.56% vs 1.23% observed, μ = 1.2e-8, T = 252,000).

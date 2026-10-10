@@ -23,6 +23,8 @@ Source: [Hossjer, "MITTENS - Convincing Arguments Against Neo-Darwinism" (PDF at
 
 Source: [Hossjer, "MITTENS - Convincing Arguments Against Neo-Darwinism" (PDF attached to Dembski post)](https://billdembski.substack.com/api/v1/file/f5a8533e-7b7c-407b-880b-1ecbd256784c.pdf), 2026-09-14, PDF p3 (Eq. 2.4, the genome-length scaling of MITTENS)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Hössjer (Eq. 3.1): F_hum = L·d·μ·t_div = 3×10⁹ × 0.45 × 1.25×10⁻⁸ × 450,000 = 7.6M (derived ✓ 7.59M); without d: 16.9M vs 20M (balance ledger). He writes 2Ndμ × 1/(2N) = dμ (overlapping generations with turnover d), so the N-independent neutral rate, not N/Nₑ. E. coli neutral check: 1/(4.6e6 × 1e-10) = 2,170 vs Day's 1,600 (derived ✓).
 

@@ -25,6 +25,8 @@ Primary check text:
 
 Source: Kimura, Genetics 47:713, 1962, p.716 (user-downloaded copy; `sources/raw/sources/manual/Kimura1962.txt`).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 P_fix = 2s for small s and large N (Haldane 1927, via Kimura 1962); Kimura's diffusion value: u(p) = (1 - e^(-4Nsp))/(1 - e^(-4Ns)) with p = 1/(2N). For s = 0.001: 2s = 0.002 = 1/500, i.e. odds 499 to 1 against. Recomputed: for N = 10,000, u = (1 - e^-0.002)/(1 - e^-40) = 0.001998 (from `research/checks/wf.py kimura_u`; a 1.2e6-replicate simulation gave 0.00201). Reconciles.
 

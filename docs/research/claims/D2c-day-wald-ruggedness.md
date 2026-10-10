@@ -26,6 +26,8 @@ Primary text (Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwi
 > "One is hard put to find a single instance in which a change in one amino acid in sequence does not change markedly the properties. The restrictions are enormous."
 — George Wald, p.19 (in discussion of Eden's paper; the surrounding passage says 'I want to add a further note which has a large bearing, I think, on Eden's discussion').
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Observation O: among known hemoglobin variants, a single amino-acid substitution that leaves function largely unchanged is rare (Wald's sample). Day's inference: O => the landscape is rugged (most single steps off a functional protein are not functional), so local search is unreliable. In parameter form: p_neutral-or-better(single substitution) is small. Wald's statement carries no number.
 

@@ -29,6 +29,8 @@ Source: same, t=02:16:59 (the sentence begins "Um, the other thing to point out 
 
 Day's text being answered (Duffy's slide, host reading, `secondhand`): "Remove selection from the equation and you have removed Darwin." (t=02:14:14) and "Neodyarwinists flee to neutral theory to explain or to escape the mathematical constraints on selection" (t=02:15:57).
 
+
+RH tag (2026-10-10 pass): quote 3 ('we are not here to like save Darwin as a human') rhetoric (ledger RH-19); quotes 1-2 dialectic.
 ## Formal statement
 No equation. The claim is that the label "Darwinism" is irrelevant to whether neutral fixation supplies the observed differences. Day's slide says Kimura proposed neutral theory "in 1968 as a direct response to Haldane's cost argument" (t=02:13:32); Hancock says no one was trying to save evolution (t=02:20:24-02:20:46). The repo has not checked Kimura's stated motive (the 1968 paper is a lineage node, L-kimura-1968).
 

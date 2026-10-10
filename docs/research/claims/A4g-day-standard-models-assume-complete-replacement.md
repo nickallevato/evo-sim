@@ -27,6 +27,8 @@ Source: Gutsick Gibbon + Zach Hancock video, [No, Vox Day's AI-Generated Books D
 
 Source: same video, t=00:59:16 (Duffy's slide as read by the host; `secondhand`). Duffy's slide, as the host reads it at t=00:51:35: "the two standard models the right fisher model and its subsequent revision by Kamura" (captions; the quotation continues "a generation represents the entire population").
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Premise of A4: Wright-Fisher (WF) and Kimura's diffusion treat generations as non-overlapping, so the per-generation response to selection is overstated in age-structured species by the factor d (A4). Not an equation of its own.
 

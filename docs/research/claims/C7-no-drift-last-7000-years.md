@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Vox Day, comment on McCarthy, "Why Probability Zero is Wrong About Evolution"](https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/335823489), 2026-09-13, comment id 335823489 (Q96).
 
+
+RH tag (2026-10-10 pass): UNCLEAR, owner to decide. Reading A (dialectic): a literal claim that no drift occurs over 7,000 years (scored against C, where the measured fixation count is zero but drift variance is nonzero, C4). Reading B (rhetoric): 'isn't happening at all' is an intensifier for 'no fixations observed'. Both readings recorded.
 ## Formal statement
 From "~0 fixations from intermediate frequency in ~7,000 years" (C) to "no drift". `derived:` neutral fixation time from frequency x is of order 4N_e x-weighted, i.e. tens of thousands of generations at N_e ~ 1e4, against ~280 generations in the window, so ~0 completions from <50% is the neutral expectation (C's internal verdict).
 

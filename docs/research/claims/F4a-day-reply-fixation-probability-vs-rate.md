@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Bowers review as reposted by Day, "A Critical Review of Probability Zero"](https://voxday.net/2026/03/04/a-critical-review-of-probability-zero/), 2026-03-04, para 11 (Day)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Fixation rate k = (input flux) × (fixation probability). Day's reply gives no equation. Both quantities are standard: k_neutral = 2Nμ/(2N) = μ; k_ben = 2N U_b · 2s. The reply is accurate as a distinction; whether it answers Bowers depends on which quantity the original review addressed (not retrieved).
 

@@ -23,6 +23,8 @@ Source: [r/DebateEvolution, Dumb-and-Dumber](https://www.reddit.com/r/DebateEvol
 
 Source: [Whopping the floor](https://voxday.net/2019/02/11/whopping-the-floor/), 2019-02-11, ¶4 (GA-01). Gariépy's words as transcribed and posted by Day: secondhand.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim: rate_human(recombining) ≠ rate_LTEE(asexual), direction unspecified by the quotes. The KITTENS text (A5b) argues the LTEE is where "interference is worst", so the LTEE rate is a lower bound for recombining genomes. Day's side (blog 2026-10-01): "recombination is a double-edged sword that also breaks linkage, imposes segregation costs, and exposes deleterious recessives".
 

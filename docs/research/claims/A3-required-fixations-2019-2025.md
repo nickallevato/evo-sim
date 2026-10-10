@@ -23,6 +23,8 @@ Source: [Maximal Mutations](https://voxday.net/2019/02/07/maximal-mutations/) (k
 
 Source: [MITTENS 2025, Zenodo 18165980](https://zenodo.org/records/18165980) (key Z18165980), pub. 2025-12-28 (modified 2026-01-06), ¶34.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 R_2019 = 15e6 per lineage (30e6 total); R_2025 = 40e6 / 2 = 20e6 per lineage   (`divergence.required_fixations.day_2019`, `.day_2025`)
 

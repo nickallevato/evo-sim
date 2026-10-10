@@ -23,6 +23,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):** 4 × 10⁴ × 1.2×10⁻⁸ × 3×10⁹ = 1.44×10⁶ ✓; 1.44M/410M = 0.351% ✓ ("0.35%"). The empty-pipe removal in IR's own table at Nₑ = 10⁴ is 30 × 40,000 = 1.2M (loss 15.9%), not 2.4M. 1.44M/1.2M = 1.2 (θ exceeds the removal); 1.44M/2.4M = 0.6, not "less than half". So on IR's own numbers the sign of "the net adjustment still reduces the expected count" reverses (+1.44M − 1.2M = +0.24M). If 2.4M is two lineages × 1.2M, the comparison should use the pairwise count 2μT·L (15.1M) plus θ, not the per-lineage figure.
 Comparator: 410M mixes events and bp (A3x); against SNV-only 35M the term is 4.1%. At Yoo ancestral Nₑ (1.32×10⁵ / 1.98×10⁵): θ·L (L = 3.2e9) = 20.3M / 30.4M, i.e. 58% / 87% of 35M (derived; B4a).

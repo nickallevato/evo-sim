@@ -31,6 +31,8 @@ Source: MITTENS 3.0 (Z23003785), Section 1 'The Post-Darwinian Polythesis', extr
 
 Source: [Math Teacher Can't Math](https://voxday.net/2026/09/30/math-teacher-cant-math/), 2026-09-30, para 6; the three are named later in the post as sexual recombination, incomplete lineage sorting and horizontal gene transfer.
 
+
+RH tag (2026-10-10 pass): UNCLEAR, owner to decide. Same wording as ROOT: reading A dialectic (time-budget impossibility), reading B rhetoric (intensifier). Recorded, not chosen.
 ## Formal statement
 Table of the mechanisms Day names as excluded. "Computed" means the corpus contains an equation, a worked number or a dataset-based count that targets that mechanism (whether or not it is right). "Asserted, not computed" means the only support found is a sentence of assertion. Searches were run over every Day blog post and Zenodo text in `sources/raw/day/` (keywords listed per row); a negative result means "not found in the harvested corpus" and excludes the paywalled books (Probability Zero 1st/2nd ed., The Frozen Gene, Hardcoded) which were not accessed.
 

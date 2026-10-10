@@ -27,6 +27,8 @@ Source: Barrick et al. 2009 (key Barrick2009), Abstract (Europe PMC; full text p
 
 Source: Good et al. 2017 (key Good2017), Results.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Descriptive. Relevant to `ltee.gens_per_fixation` (the rate is steady for non-mutators) and to the critics' use of k = μ for LTEE neutral accumulation.
 

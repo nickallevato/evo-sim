@@ -27,6 +27,8 @@ Source: [McCarthy, "Why Probability Zero is Wrong About Evolution" (free repost)
 
 Source: [McCarthy, "Vox Day Responds"](https://dennismccarthy.substack.com/p/vox-day-responds), 2026-09-17, para 21 (time-adjusted version: subtracts the last 50,000 generations)
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):** 100 × 10,000 / 20 y = 50,000 new mutations per year ✓; × 9×10⁶ y = 4.5×10¹¹ ✓; × 1/(2 × 10,000) = 22.5×10⁶ ✓. Per generation: 100 × 10⁴ = 10⁶; × 450,000 generations = 4.5×10¹¹ ✓; per lineage 50 fixed per generation × 450,000 = 22.5M ✓. Time-adjusted: (450,000 − 50,000) × 50 = 20.0M ✓ (as quoted by Day, 2026-02-04); using Day's own correction E[F] ∝ T − 4Nₑ with 4Nₑ = 40,000: (450,000 − 40,000) × 50 = 20.5M (derived).
 Sensitivity (derived): with a neutral fraction f, count = f × 22.5M; f = 0.89 is needed for 20M. With 70 SNV-type mutations per newborn (Keightley 2012 "~70") the ceiling at f = 1 is 35 × 450,000 = 15.75M < 20M.

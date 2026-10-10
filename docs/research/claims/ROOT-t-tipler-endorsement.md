@@ -23,6 +23,8 @@ Source: Tree of Woe interview, [Why is the Probability Zero?](https://treeofwoe.
 
 Source: Dembski, [Vox Day Interview on Evolutionary Theory](https://billdembski.substack.com/p/vox-day-interview-on-evolutionary), 2026-09-28, para 2 (TI-03; `secondhand` for the foreword content).
 
+
+RH tag (2026-10-10 pass): quote 1 rhetoric (superlative endorsement, ledger RH-13; adds no calculation); quote 2 dialectic (the factual claim that an endorsement and an appendix exist). The node's evidential content is the existence of the endorsement only.
 ## Formal statement
 No formal content. A ranking claim: rigor(PZ) > rigor(all other published mathematical challenges to neo-Darwinism).
 

@@ -31,6 +31,8 @@ Source: same, t=01:00:59 (describing effective population size).
 
 Source: same, t=00:51:57 (the sentence begins on the previous caption line: "Kamura doesn't have a subsequent revision of the right fisher model"). At t=00:54:02: "he takes the right fiser model which is a binomial ial sampling model. That is to say, it's a discrete time stairstep model. And he smooths it out and basically converts it to a continuous time model."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Hancock's formula (t=01:00:18-01:00:38, speaker-stated, not verified here): Nₑ = (age at reproduction / age at death) × N, with about 25 and 75-80 y for humans, so Nₑ/N is about 0.31-0.33 (`derived:` 25/80 = 0.3125; 25/75 = 0.3333). Day's d = 0.45 (A4) is the same order but a different quantity: d rescales the per-generation response to selection, Nₑ rescales the rate of drift. Neither is shown to substitute for the other in the repo.
 

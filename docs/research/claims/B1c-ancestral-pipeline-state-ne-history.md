@@ -23,6 +23,8 @@ Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.
 
 Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01, ¶31 of extracted text. Same post, later UPDATE answering Mansfield's rejoinder; see B1d
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Question: sign and size of ΔK = K_true − μL·T for the human lineage given a sourced Nₑ(t) with ancestral Nₑ = 1.98e5 (human–chimp–bonobo ancestor) or 1.32e5 (human–chimp–gorilla ancestor) (Yoo 2025; `population.Ne_ancestral_hc.yoo_2025_HCB`, `.yoo_2025_HCG`) and PSMC histories (Prado-Martinez 2013; extraction pending, fidelity ledger "still to do").
 

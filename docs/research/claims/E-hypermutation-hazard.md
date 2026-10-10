@@ -31,6 +31,8 @@ Source: Z23020792, §7 Conclusion.
 
 Source: Z23020792, §7.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 H_event = P(founder sample contains >= 2 defective copies) x P(at least one homozygote | >= 2 copies).
 Parameters in the paper: Lynch carrier frequency 1/280, p = 0.0036 per diploid; founder N = 100; "approximately 5-6%" for >= 2 carriers (binomial n = 100); q = 0.01 after conditioning on two carriers; 100 offspring/generation for 50 generations; Poisson 1 - e^(-0.5) = 39%. Hypermutation incidence 6/12 with "exact binomial 95% confidence interval ... approximately 21-79%".

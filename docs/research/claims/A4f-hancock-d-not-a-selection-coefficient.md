@@ -27,6 +27,8 @@ Source: same, t=01:21:10 (the sentence continues on the next caption line: "and 
 
 Source: same, t=01:23:35 (host, summarising). The definition itself was relayed in the same video by a friend reading the book: "D is defined as the fraction of the population replaced per time unit" (t=01:22:54) and "per year and he provides no citation for that" (t=01:23:14; the value, captioned "0225", is on the previous line). `secondhand` twice (a text message about page 153 of the book, as read by the host).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 F_max = (t_div x d)/(g_len x G_f) (A). Hancock's hypothetical: if d were a generation count (25) it would cancel g_len = 25 and leave t_div/G_f. Day's d is dimensionless, d = T x (mean mortality force) = 0.45 for humans (A4, ¶51 of Z18166234), so the hypothetical is not Day's d; the cancellation point does show that d and g_len are not independent if d is defined through T. `derived:` with g_len = 25, d = 0.45 gives 0.018/y of mean mortality force (0.45/25), consistent with a mean hazard of order 2% per year (not checked against a life table here).
 

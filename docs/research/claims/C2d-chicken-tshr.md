@@ -27,6 +27,8 @@ Source: same, §3.5 (after Table 4), ¶139.
 
 Source: same, §3.5, ¶111.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Inputs (from the paper): p0 = 0.44, observed 0.97, G = 900 generations, s = 0.0049 (Loog 2017, 95% CI 0.0029-0.0088), the TSHR derived allele is recessive ("involves a recessive allele").
 

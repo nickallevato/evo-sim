@@ -26,6 +26,8 @@ Source: Dembski Substack, [Vox Day Interview on Evolutionary Theory](https://bil
 
 Source: same, para 63 (DE-02), a question put to Day about k = mu (branch B5).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 None. A position statement plus a question.
 

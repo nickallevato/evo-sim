@@ -19,6 +19,8 @@ verdicts:
 
 Source: Joe Felsenstein, [Jason Rosenhouse's book on mathematical anti-evolutionism is available](https://pandasthumb.org/archives/2022/05/rosenhouse-on-mathematical-anti-evolutionism.html), Panda's Thumb, 2022-05-18, annotated table of contents, chapter 4 entry (quotes-critics RO-01). `secondhand`: Felsenstein describing Rosenhouse, *The Failures of Mathematical Anti-Evolutionism* (Cambridge UP, 2022). Felsenstein states he commented on the manuscript and wrote a blurb (opponents/jason-rosenhouse.md).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim form: for each Wistar mathematical challenge C in {Eden, Ulam, Schützenberger}, a biologist reply R exists at or after Wistar with R rebutting C. Plus a secondary claim about the modern creationist use of Wistar.
 

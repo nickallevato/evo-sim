@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Gutsick Gibbon and Zach Hancock, "No, Vox Day's AI-Generated Books Did Not Debunk Evolution"](https://www.youtube.com/watch?v=_Vu0ZVVjwHc), 2026-10-03, t=01:31:58 (GG-01; auto-caption).
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Serial reading: N_fix(T) = T / t_fix where t_fix is the time for one allele to fix. Aggregate reading: N_fix(T) = T/G_f, G_f = observed T/n. The two coincide only if fixations do not overlap.
 `derived:` (python3 -I) 252,000/1,400 = 180 (Duffy, DeDzjang); 252,000/66,000 = 3.8 and 252,000/20,000 = 12.6, the "4–13 neutral fixations" in Z23003785 s8.2 (a time/fixation-time division for drift); 252,000/27,600 = 9.1 (A5e).

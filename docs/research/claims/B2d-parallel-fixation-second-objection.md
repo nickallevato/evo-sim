@@ -27,6 +27,8 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Athos)](https://zenodo.org/records/22129121), Zenodo 2026-08-27 (v1), §The Second Objection
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Day's position, in glossary terms: **throughput** at steady state = μ; the claim is about **fill state** (transient), not about latency bounding throughput. This is the same logical point as Mansfield's time between successive fixations (F1), accepted in this paper and restated in the Education post as an analogy about a machine running multiple jobs simultaneously (F1a).
 

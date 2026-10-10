@@ -35,6 +35,8 @@ Source: Nunney 2003, Discussion (example with K = 10,000, u = 5 × 10⁻⁶ per 
 
 Source: Nunney 2003, Discussion.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 M = 2Ku: the number of new mutations per generation, with K carrying capacity and u mutation rate (Nunney's definition, "approximated by M = 2Ku"). Cost C = C_0(M) + n C_1(M) for n loci selected simultaneously (fixed cost plus per-locus cost); the fixed cost reflects genetic deaths during the stochastic phase when the beneficial allele is rare.
 Reported results (Discussion): M = 10 tolerates substitutions at 7 loci every 40 generations; M = 1 a single locus every 20 generations; K = 10,000, u = 5e-6 gives M = 0.1 and extinction when substitutions come faster than about every 300 generations; K = 5,000 about every 700 generations.

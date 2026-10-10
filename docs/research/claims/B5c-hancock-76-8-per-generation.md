@@ -31,6 +31,8 @@ Source: [Gutsick Gibbon + Zach Hancock, "No, Vox Day's AI-Generated Books Did No
 
 Source: [Gutsick Gibbon + Zach Hancock, "No, Vox Day's AI-Generated Books Did Not Debunk Evolution" (auto-captions)](https://www.youtube.com/watch?v=_Vu0ZVVjwHc), 2026-10-03, t=01:56:15
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 **Arithmetic audit (derived, python3 -I):** 6.4e9 × 1.2e-8 = 76.8 ✓ (diploid bases, the first-pass figure). Haploid: 3.2e9 × 1.2e-8 = 38.4 per generation per lineage. 2 lineages × 252,000 × 76.8 = 38.7M (the quoted "about 38 million"); with 38.4: 19.35M. The first-pass 76.8 used the diploid genome (self-corrected on screen at t=01:52:48). The retained 76 is a different quantity: a cited de novo count of 98–206 per generation (mean 152, including structural variants), halved to the haploid genome: 152/2 = 76 ✓ (derived), then 76 × 2 × 252,000 = 38.3M. That is a count of mutation *events* of all types, so the matching comparator is the CSAC event total (35M SNV + 5M indel events ≈ 40M, derived), not the SNV count alone.
 Comparators for the SNV-only haploid version (38.4 per generation): 19.35M vs the CSAC ~35M SNV total (includes polymorphism): ratio 0.55, i.e. 1.8× short (the repo's balance ledger records a ~1.8× doubling in Hancock's headline); vs fixed-only 0.78–0.86 × 35M = 27.3–30.1M: 1.4–1.6× short (derived). Including ancestral coalescence (B4a) with Nₑ,anc = 1.32×10⁵ adds 20.3M (θ = 6.3e-3 × 3.2e9), taking 19.35M to 39.6M.

@@ -29,6 +29,8 @@ Source: same, l.331.
 
 Context (same section, l.318): "The human genome of 3.2 Gb therefore contains 3,200–32,000 independent linkage blocks. If every sweep fixed all variants in its block, 3,200–32,000 independent sweeps would be required". Item (6), l.333 (not tested): "Fixed differences are distributed across the genome in patterns consistent with site-by-site accumulation, not block-wise replacement."
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Sweeps per generation = K / T = 3,200 / 325,000 ≈ 1 per 100 generations. Day's implicit prediction: the number of sweep signals visible to scans is of order K ("thousands"), so observed counts of "dozens to hundreds" refute K ≥ 3,200.
 

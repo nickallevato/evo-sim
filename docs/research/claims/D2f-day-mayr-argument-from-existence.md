@@ -33,6 +33,8 @@ Primary text (Moorhead & Kaplan (eds), *Mathematical Challenges to the Neo-Darwi
 > "Kappa somehow or other has to incorporate this. If a given gene is selected for because it does something good in the eye, what does this same gene do in all the other cells of the organism? That is a thing we have never taken into consideration and the evolutionist is very simple-minded about this."
 — same turn, p.30, on the parameter kappa.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 No formal content. Interpretive. Mayr's turn comments on each of Ulam's parameters (alpha, gamma, kappa) and says the evolutionist has 'so much variation' that the figures can be adjusted; he adds 'We are comforted by knowing that evolution has occurred'.
 

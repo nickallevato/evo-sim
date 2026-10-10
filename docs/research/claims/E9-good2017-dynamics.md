@@ -27,6 +27,8 @@ Source: same, Results.
 
 Source: same, Results.
 
+
+RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Qualitative: clade structure (two coexisting lineages in nine of twelve populations per Z23105291's reading of the same data) means pooled frequency ≥95% does not imply whole-population fixation. Relevant parameters: `ltee.whole_pop_fixations_lineage_aware` (5,496), `ltee.gens_per_fixation` (E6). The "≥95% rule" is not in the main text (fidelity ledger: "unverified" until the SI is read).
 

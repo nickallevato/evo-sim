@@ -19,6 +19,8 @@ verdicts:
 
 Source: [They Never Stop Lying](https://voxday.net/2026/10/01/they-never-stop-lying/) (key B2026-10-01-they-never-stop-lying), blog, 2026-10-01, ¶26.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Version note: MITTENS 2025 (Z18165980) included p^n = 0.02^(2e7); the 3.0 paper (Z23003785) contains "Bernoulli Barrier" only in a rhetorical sentence in s1 ("When the Bernoulli Barrier demonstrates that parallel fixation is probabilistically self-defeating, the defender invokes neutral drift"). In the same post (¶22) Day says: "neither the Bernoulli Barrier nor the Hard Limit on neutral drift apply to the LTEE experiment because a) the math is an average of 12 different populations and b) there is no time for neutral drift to have occured yet in the 85,000-generation time limit of the LTEE." and ¶24 quotes a passage (stated to be from Appendix A of the book) "Therefore fixation must be sequential." (see G2g).
 

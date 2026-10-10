@@ -19,6 +19,8 @@ verdicts:
 
 Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §3 The Empty Pipe
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 0.538 × 4 = 2.152, i.e. SD ≈ 2.15 Nₑ. Our simulation (RESULTS B0.2): SD of t_fix/N = 2.105 (N=50) and 2.108 (N=200) vs diffusion ≈ 2.15 (derived consistency). The figure is not in Kimura & Ohta 1969, which derives the first moment and says higher moments can be obtained step by step (fidelity ledger).
 

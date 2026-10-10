@@ -27,6 +27,8 @@ Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day
 
 Source: [Day, "The Education of a Population Geneticist" (blog)](https://voxday.net/2026/10/01/the-education-of-a-population-geneticist/), 2026-10-01, ¶6 of extracted text. on 1/2N
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Glossary sense: throughput k = substitutions per generation; latency t_fix = generations per allele. Day's position, in its strongest form (Education blog; IR §2): latency is the "startup cost" (fill time), and the count over a window is rate × (window − startup) (B1). Weaker form (Q&A, F1a): window ÷ latency bounds the count.
 Sub-claims: F1 (critic: latency ≠ throughput), F1a (Day's reply and his own serial use), F1b (McCarthy, parallel), F2 (interference/feasibility check), F3 (beneficial time formula), F3a (s = 0.001), F4/F4a (Bowers 2s and Day's reply), F5 (Kimura & Ohta SD), F6 (relictation).

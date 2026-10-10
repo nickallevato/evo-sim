@@ -27,6 +27,8 @@ Source: same, t=00:23:55 (after the examples at t=00:22:54: the speaker's accoun
 
 Source: same, t=00:26:41 (host, after listing papers shown on screen on Drosophila, blowflies, crickets, mosquitoes, finches and sticklebacks; titles are not in the captions).
 
+
+RH tag (2026-10-10 pass): quote 3 ('Day's math can't do any of this') rhetoric (ledger RH-15); quotes 1-2 dialectic (burden-of-proof and track-record argument).
 ## Formal statement
 Inductive: P(standard pop-gen predicts allele-frequency change and mutation-rate-scale quantities correctly | past record) is high; Day's F_max model makes no allele-frequency predictions; so a conflict between them is evidence against the model. Not formalised.
 

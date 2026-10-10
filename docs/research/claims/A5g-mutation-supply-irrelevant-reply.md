@@ -23,6 +23,8 @@ Source: [An Inspiring Critique](https://voxday.net/2026/01/27/an-inspiring-criti
 
 Source: [An Inspiring Critique](https://voxday.net/2026/01/27/an-inspiring-critique/) (key B2026-01-27-an-inspiring-critique), blog, 2026-01-27, ¶23.
 
+
+RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).
 ## Formal statement
 Claim (two parts): (i) G_f is an observed fixation rate and need not be scaled by μ; (ii) no mammalian fixation faster than 1,600 generations has been observed. Part (ii) is an observational-absence claim: 1,600 generations at 25 y is 40,000 years, longer than the observation window for any directly observed human allele-frequency change; `derived:` 1,600 x 25 = 40,000 y. It cannot distinguish a slow rate from lack of observation time.
 Day's example in the same post: CCR5-delta32 "the fastest we could get, in theory, is 2,278 generations" and a further 37,800 generations by drift (not checked here).
