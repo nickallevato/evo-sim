@@ -1,0 +1,13 @@
+sha256 7b6cb765ad5f3e58a464def105a439c795f74341720c9d1fce53619ccf46c3b9  OK
+G1 190.6  G2 158.8
+R0 S3 genes 9785  sum Dn 18936 (Methods: 18936)  sum Ds 34241 (Methods: 34241)
+   accelerated genes in S10: 198  in S3: 198
+   sum Dn over S10 (198 accelerated): 1262  mean 6.37; genome mean 1.94
+R0/R2 DAF>= 1%: all genes N 8019 alpha -0.361 | accelerated N 182 Dn 1199 Ds 845 Pn 536 Ps 604 alpha 0.375  A =    449.1  x 2.36 G1  critic (A2e flips) on G1; critic on G2
+R0/R2 DAF>=15%: all genes N 5859 alpha -0.142 | accelerated N 155 Dn 1060 Ds 777 Pn 232 Ps 264 alpha 0.356  A =    377.2  x 1.98 G1  critic (A2e flips) on G1; critic on G2
+R0/R2 DAF>=30%: all genes N 4744 alpha -0.059 | accelerated N 136 Dn 939 Ds 713 Pn 148 Ps 190 alpha 0.409  A =    383.6  x 2.01 G1  critic (A2e flips) on G1; critic on G2
+R0/R2 DAF>=60%: all genes N 2766 alpha 0.002 | accelerated N 75 Dn 564 Ds 424 Pn 57 Ps 72 alpha 0.405  A =    228.3  x 1.20 G1  critic (A2e flips) on G1; critic on G2
+R1 accelerated DAF>=60% N 75: A =    228.3  x 1.20 G1  critic (A2e flips) on G1; critic on G2  boot95 [112.3, 322.7]
+R3 alpha 0.405 x sum Dn(198) 1262 =    510.9  x 2.68 G1  critic (A2e flips) on G1; critic on G2
+R4 (0.405 - 0.163) x 564 =    136.4  x 0.72 G1  Day (A2e holds) on G1; Day on G2
+R5 R4 at lower boot bound: 112.3 x (0.405 - 0.163) / 0.405 =     67.1  x 0.35 G1  Day (A2e holds) on G1; Day on G2
