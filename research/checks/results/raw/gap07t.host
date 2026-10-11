@@ -4,3 +4,7 @@ waits for hf ci to finish, then extract hs1 then chimp (1 process at a time)
 f5ea38f47c7f54d0fe4490f477bfa1cf  research/checks/gap07t2t_event_counts.py
 df51e5c3b842e3be4b81f3dd6486e53b  ./8-t2t-apes-2023v2/8-t2t-apes-2023v2.hs1.maf.gz
 relaunched 2026-10-10T19:41:04-06:00 without the self-matching wait (ci finished at ~19:27)
+# post hoc addendum 2026-10-10 (fix pass, from workhorse md5sum and gap07t.out timestamps)
+bc332f336d3e6466e810b53be5b546a8  sources/raw/fm-mirror-2026-10-10/pantro.maf.gz  (chimp-referenced MAF, na-workhorse)
+chimp-pass extract: 2026-10-10T20:30:36-06:00 to 21:20:44-06:00 (3007 s, 5987942 blocks)
+NOTE: raw/gap07t_report.out lines 40-43 (chimp-referenced pass) print SNV human/chimp fields, human share and strict h/c SWAPPED; read as swapped.

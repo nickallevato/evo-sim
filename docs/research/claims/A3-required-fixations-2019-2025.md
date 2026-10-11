@@ -56,5 +56,7 @@ R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): the 20M (2025) magn
 
 R4 GAP-07c (research/checks/results/R4-GAP07c.md; reviews REVIEW-R4-GAP07c-{correctness,steelman}.md; review #13, 2026-10-09): fixed events per lineage are 17.2-17.9M (human lineage alone 17.22M; symmetric 17.89M) against 21.05M raw. The polymorphism share is measured on the human side; the chimp side is assumed. Open items: a chimp population panel, a T2T re-run (CHM13 vs mPanTro3), a long-read SV set.
 
+R4 GAP-07t / GAP-06 (review #51-#52, 2026-10-10): the T2T event count is 24.14M per lineage (+14.7% vs 21.05M; R1 not triggered), so Day's '~20 million fixations' sits at the low end and is re-confirmed as a magnitude. Yoo 2025's mu (1.25e-8, +4.2%) and generation times move the k = mu rate route 9.37M to 9.77M (per-year consistent); counted / rate route is 2.15-2.58, so the roughly 2x clock tension stays. No verdict change.
+
 ## Simulator variables implied
 - `required_fixations` per lineage with a polymorphism-correction toggle (fixed fraction 0.78–0.86).

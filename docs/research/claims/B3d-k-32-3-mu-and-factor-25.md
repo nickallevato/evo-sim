@@ -60,6 +60,8 @@ R4 B3 (`research/checks/results/R4-B3.md`; pre-registered 04f96bd; three load-be
 
 R4 B3m (`research/checks/results/R4-B3m.md`; pre-registered 5ca5f2e, post hoc 382b580, combined review #48 at b30137d, fix pass 4442c99): Day's "median factor of 25 across 55 vertebrates" reproduces from Bergeron 2023 Table 9 (25.4, n = 55, matched per-year and per-generation; sub-claim [B3m](B3m-median-25-bergeron-55-vertebrates.md): fidelity `accurate`, external `contested`). The 25 is a property of the tabulated terminal-edge rates (chronos lambda = 0), which cover about 21 Myr of a 416 Myr root depth (PH1); a lineage-average k from the same tree is at least about 2x mu (PH2, a lower bound). The 2-vs-25 gap is unexplained here. Day side: the number and the count are exact. Critic side: the column is not a lineage-average rate. The 32.3 verdicts above are unchanged.
 
+R4 GAP-06 (combined review #51, 2026-10-10): on Day's inputs B3d reproduces as 32.93; his printed 32.3 matches the 24.5 y (Yoo HCB) basis (32.27). Substituting Yoo's mu for Bergeron's gives 20.57 (-37.5%), a source swap not scored. No verdict change.
+
 ## Simulator variables implied
 - required-rate basis (SNV | events | bp)
 - μ source (pedigree | phylogenetic)

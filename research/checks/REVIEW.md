@@ -389,3 +389,9 @@ File: `results/REVIEW-mapping-12-combined.md`. 0 BLOCKER, 0 MAJOR, 2 MINOR (A4e/
 
 ## Queue
 Moved to [`QUEUE.md`](QUEUE.md) (2026-10-09).
+
+## 2026-10-10 - Review #51 (combined, low-stakes tier): GAP-06 (Yoo 2025 mu and generation times)
+File: `results/REVIEW-R4-GAP06-combined.md`. 0 BLOCKER, 0 MAJOR, 6 MINOR. Arithmetic reproduces; max move 19.7% < R1 25%. MINORs: B4a Ne column labels reversed (fixed), Day's printed 32.3 matches the 24.5 y basis not his 25 y (noted), per-year vs per-generation mu mixing in the k = mu route (recomputed: per-year-consistent move +4.2%), stale 21.05 M in G4 (now 24.14 M, ratio 2.15-2.58), Day-side and critic-side steelman additions (RE-06 9.7 M). All answered post hoc in the write-up's Review resolution. No verdict change.
+
+## 2026-10-10 - Review #52 (combined, low-stakes tier): GAP-07t (T2T event count)
+File: `results/REVIEW-R4-GAP07t-combined.md`. 0 BLOCKER, 0 MAJOR, 5 MINOR. 24.14 M per lineage, +14.7%, reproduces; R1 not triggered. MINORs: chimp-pass label swap also affects strict SNV figures and the raw report (disclosed, raw not edited), F1-vs-unfiltered comparison not like-for-like (reworded to "consistent with"), host record gaps (chimp MAF md5 bc332f33... and pass times added), Day-side and critic-side steelman additions (ratio range 8.49-10.9). All answered post hoc. No verdict change.

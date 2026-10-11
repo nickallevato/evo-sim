@@ -1,6 +1,6 @@
 # R4 GAP-06: Yoo 2025's mutation rate and generation times propagated through Day's numbers
 
-**Status: run, written up; awaiting review.** Low-stakes tier (re-confirmation and bookkeeping): one combined review (`REVIEW-R4-GAP06-combined.md`). Not integrated.
+**Status: reviewed, fix pass done, integrated.** Low-stakes tier (re-confirmation and bookkeeping): one combined review (`REVIEW-R4-GAP06-combined.md`). Integrated.
 
 ## Files
 - Script `research/checks/gap06_yoo_mu_g.py`, pre-registered at **49824e0**, run locally once after the commit (arithmetic only). Nothing post hoc.
@@ -52,3 +52,13 @@ The largest change on any Yoo basis is the k = mu route on the HCG node basis, +
 - L = 3.1e9 (Day's B3d input) is used for the k = mu route, against 3.2e9 elsewhere: a 3% difference, and the % changes are unaffected.
 - The Haldane + d count uses d = 0.45 as in H.
 - Yoo's mu is the value his TRAILS/MSMC runs assumed, not a new measurement. The supplement credits it to an earlier analysis ("same mutation rate of TRAILS analysis").
+
+## Review resolution (post hoc, 2026-10-10; answers `REVIEW-R4-GAP06-combined.md`; arithmetic only, no rerun, script and raw output untouched)
+- **MINOR-1 (B4a labels): fixed.** 1.98e5 / 1.32e5 are Yoo's own published Ne values, inferred at his mu = 1.25e-8. Rescaled to Day's 1.2e-8 they become 2.06e5 / 1.375e5 (x 1.042). The table row's column labels were the wrong way round: read it as "Yoo as published (mu 1.25e-8): 1.98e5 / 1.32e5; same Ne at Day's mu 1.2e-8: 2.06e5 / 1.375e5". The 1.042 factor is unchanged and is what `parameters.yaml` `yoo_2025_mu_rescaling` should take.
+- **MINOR-2 (Day's 32.3): noted.** Day's printed k = 32.3 mu (Q43) is not reproduced on his own 25 y basis (32.93, -1.9%). It matches the 24.5 y (Yoo HCB node) basis, 32.27. So Day's printed figure is consistent with a 24.5 y generation time (or an equivalent input difference); it is not a Yoo-induced change. Below R1 either way.
+- **MINOR-3 (per-year vs per-generation mu): disclosed and recomputed.** The k = mu route multiplies a per-generation mu by N_gen. With mu held per year (0.5e-9, Yoo's 1.25e-8 at 25 y) the route is independent of g: 0.5e-9 x 6.3e6 x 3.1e9 = 9.77 M on every Yoo basis (+4.2% vs Day's 9.37 M). So the +6.3% (HCB) and +19.7% (HCG) moves double-count (mu per generation scaled with g, and more generations). The per-year-consistent maximum move is +4.2%. The direction of error is toward overstating the move, so "nothing exceeds 25%" is conservative. Counted / route on the consistent basis: 24.14 / 9.77 = 2.47 (21.05 / 9.77 = 2.16 on the hg38 count).
+- **MINOR-4 (G4 stale count): updated.** With GAP-07t's T2T 24.14 M per lineage: Day 2.58, Yoo human 2.47, HCB 2.42, HCG 2.15, range **2.15-2.58**. G4 (>= 1.8) still holds; the gap is wider, not narrower. The table's 1.88-2.25 range is the hg38 count (GAP-07b).
+- **MINOR-5 (Day-side steelman): added.** Using Yoo's own generation times shrinks Day's 1,075,000-fold MITTENS shortfall by 2% (HCB) to 13% (HCG), so the headline is slightly overstated, not understated. Day's 25 y is Yoo's own human value ("Human: 25 years"), his mu is within 4% of Yoo's, and "Yoo human" (0% on N_gen, +4.2% on mu) is the like-for-like column; the HCG node includes gorilla and is not a human-lineage g.
+- **MINOR-6 (critic-side steelman): added.** A critic's number is already in the corpus: "or about 9.7 million over its proposed 252,000 generations." (`quotes-critics.md` RE-06; 38.4 x 252,000 = 9.68 M). It agrees with this check's 9.37-9.77 M within the L (3.2e9 vs 3.1e9) and mu choices. The roughly 2x counted-vs-rate tension is therefore the critics' own number, not only this audit's.
+- **NIT-1:** "moves by 2-6%" holds on the HCB basis; the HCG column moves up to 19.7% (and the per-year-consistent max is 4.2%). **NIT-5:** the B3d swap row (20.57, -37.5%) is the largest movement in the table; it comes from Bergeron 7.97e-9 vs Yoo 1.25e-8 (a 57% mu gap), the live dispute, not g handling. **NIT-2:** the Yoo SI Note VI lines have no Q-id; the script docstring and sha256 above are the locator (a Q-entry is a bookkeeping item for the next quote harvest). **NIT-3/4:** accepted as stated.
+- **Verdict:** unchanged. No R1 trigger (max 19.7% by the pre-registered method, 4.2% per-year-consistent). Status: reviewed, fix pass done, integrated.

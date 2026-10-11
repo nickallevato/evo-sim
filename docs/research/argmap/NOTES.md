@@ -141,6 +141,8 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:D1 | audit | sequence-space spike: alternatives per needed change from RNA neutral networks (ViennaRNA), ProteinGym DMS and the GB1 landscape, against G1's flip | RESULTS §D1; results/R4-D1-spike.md (added 2026-10-09) |
 | chk:X1 | audit | arithmetic and internal-validity audit of every numeric critic and ally claim, plus the single both-sides verdict rule (rev 2) and the re-score of both sides | RESULTS §X1; results/R4-X1-critic-arithmetic.md, R4-X1-verdict-rule.md, R4-X1-rescore.md (added 2026-10-09) |
 | chk:GAP07c | audit | share of human–chimp divergent sites still polymorphic in humans (1000 Genomes phase 3, NYGC cross-check); fixed events per lineage and the 205M / fixed-events bracket | RESULTS §GAP-07c; results/R4-GAP07c.md (added 2026-10-09) |
+| chk:GAP06 | audit | Yoo 2025's mu (1.25e-8) and node generation times propagated through Day's A1, MITTENS, A3 rate route, B3d and B4a | results/R4-GAP06.md (added 2026-10-10) |
+| chk:GAP07t | audit | divergence events recounted on the T2T ape alignment (hs1 vs mPanTro3, both reference directions): 24.14M events per lineage | results/R4-GAP07t.md (added 2026-10-10) |
 | chk:P1 | audit | machine-checked derivations (sympy/mpmath/exact chains) of the load-bearing identities and 33 Day-arithmetic rows | RESULTS §P1; results/R4-P1.md (added 2026-10-09) |
 | chk:C1e | audit | C1c model on each published Holocene N_e trajectory (Gravel, Gazave, Coventry, Nelson) | RESULTS §C1e; results/R4-C1e.md (added 2026-10-09) |
 | chk:G2c | audit | forward simulation of unlinked neutral diversity under sweep-rate and 230-sweep models (G2c/B6c) | RESULTS §G2c; results/R4-G2c.md (added 2026-10-09) |
@@ -224,6 +226,8 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-FM-mirror-combined | audit | combined re-review of the FM fix pass, post hoc follow-ups and mirror test | results/REVIEW-R4-FM-mirror-combined.md (2026-10-10) |
 | rev:R4-FM-fix2-light | audit | light review of FM fix pass 2 (fm_fix2.py); low-stakes tier | results/REVIEW-R4-FM-fix2-light.md (2026-10-10) |
 | rev:R4-B3m-combined | audit | combined review of B3m; low-stakes tier | results/REVIEW-R4-B3m-combined.md (2026-10-10) |
+| rev:R4-GAP06-combined | audit | review #51, combined (GAP-06); low-stakes tier | results/REVIEW-R4-GAP06-combined.md (2026-10-10) |
+| rev:R4-GAP07t-combined | audit | review #52, combined (GAP-07t); low-stakes tier | results/REVIEW-R4-GAP07t-combined.md (2026-10-10) |
 | rev:R4-H8-kscale64-combined | audit | combined review of H8 kscale64; low-stakes tier | results/REVIEW-R4-H8-kscale64-combined.md (2026-10-10) |
 
 ## Judgement calls

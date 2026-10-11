@@ -3680,3 +3680,19 @@
   fate: alive
   fate_date:
   fate_locator: "Review #49 (combined); fix pass 4442c99"
+
+- id: L-audit-gap07t-2026
+  label: "Audit GAP-07t: T2T ape alignment gives 24.14M events per lineage (+14.7% vs GAP-07b); 205M bp is 8.5x events"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [A3, A3x]
+  locator: "research/checks/results/R4-GAP07t.md"
+  quote: "Genetic divergence: ~40 million single-nucleotide variants; ~20 million fixations required on human lineage."
+  parents:
+    - {id: L-audit-gap07b-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Review #52 (combined); post hoc fix pass"

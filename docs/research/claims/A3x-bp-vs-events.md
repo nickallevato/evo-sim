@@ -60,5 +60,7 @@ R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): direct count from t
 
 R4 GAP-07c (research/checks/results/R4-GAP07c.md; reviews REVIEW-R4-GAP07c-{correctness,steelman}.md; review #13, 2026-10-09): with the human-side polymorphic share measured (chimp side assumed), fixed events per lineage are 17.2-17.9M, so 205M is 10.6-12.6x fixed events (human lineage alone 11.9; 11.1-12.1 across thresholds; numerator-corrected 10.5-12.3). Combined with GAP-07b's Day-favourable rows the bracket is about 8-13x. The measured SV (6.8%) and indel (7.4-10.5%) polymorphic shares are lower bounds (short-read calls).
 
+R4 GAP-07t (research/checks/results/R4-GAP07t.md; pre-registered 547bcd5; combined review REVIEW-R4-GAP07t-combined.md, review #52, 2026-10-10; fix pass post hoc): on the T2T ape alignment (hs1 vs mPanTro3) the primary count is 42.87M SNVs, 5.40M indel events, 24.14M events per lineage (+14.7% vs GAP-07b's 21.05M; R1 not triggered); 19.75M in single-copy N-free blocks, 18.8-22.2M polymorphism-corrected. 205M bp is 8.49x events raw (9.2-10.9x polymorphism-corrected, 10.4x single-copy). Chimp-referenced pass 24.03M (A5 holds); its SNV lineage labels are swapped in the raw report (disclosed). No verdict change: A3x stays holds / accurate / supported; the magnitude of A3's ~20M is re-confirmed, and the bp-versus-events point stands at 8.5-10.9x.
+
 ## Simulator variables implied
 - `required_fixations` unit selector: bp / events / SNV-only.

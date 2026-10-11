@@ -60,5 +60,7 @@ No check yet. The result is arithmetic and is already recorded above.
 ## Check
 Arithmetic audit (python3 -I, scratch): all rows reconcile. Review: pending.
 
+R4 GAP-06 (research/checks/results/R4-GAP06.md; pre-registered 49824e0; combined review #51, 2026-10-10): Yoo 2025's own generation times give 252,000 (human, 25 y, 0%), 257,143 (HCB node 24.5 y, +2.0%) and 289,655 (HCG node 21.75 y, +14.9%, not a human-lineage g) generations; Day's 25 y is Yoo's human value. R1 not triggered. No verdict change.
+
 ## Simulator variables implied
 - `t_div_years` (5.5e6 to 9e6), `generation_time_years` (20 to 32.5), derived `N_gen`.
