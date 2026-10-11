@@ -387,6 +387,9 @@ def run_stage(stage, workers):
     jobs = [j for j in jobs if (j[1], j[3]) not in done]
     if os.environ.get("HF_REVERSE") == "1":  # post hoc, orchestration only: a second host works from the cheap end
         jobs.reverse()
+    if os.environ.get("HF_ROTATE"):  # post hoc, orchestration only: a third host starts mid-list
+        k = int(len(jobs) * float(os.environ["HF_ROTATE"]))
+        jobs = jobs[k:] + jobs[:k]
     print(f"stage {stage}: {len(cells)} cells, {len(jobs)} jobs to run ({len(done)} done), workers {workers}", flush=True)
     t0 = time.time()
     with Pool(workers) as pool, open(path, "a") as fh:
