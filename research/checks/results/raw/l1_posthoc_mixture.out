@@ -1,0 +1,8 @@
+ALL   F1  : f = 0.812 -> pooled 0.800, single-diff nonsyn share 0.723, single-diff dN/dS 0.802, N/S 3.26, stop-free both 5072 of 23183
+ALL   F2  : f = 0.780 -> pooled 0.800, single-diff nonsyn share 0.718, single-diff dN/dS 0.791, N/S 3.21, stop-free both 5893 of 23183
+ALL   RCa : f = 0.842 -> pooled 0.800, single-diff nonsyn share 0.723, single-diff dN/dS 0.799, N/S 3.27, stop-free both 4878 of 23183
+ALL   RCm : max pooled 0.486 < 0.80 at f = 1
+O121  F1  : f = 0.803 -> pooled 0.800, single-diff nonsyn share 0.724, single-diff dN/dS 0.802, N/S 3.28, stop-free both 3318 of 16766
+O121  F2  : f = 0.785 -> pooled 0.800, single-diff nonsyn share 0.720, single-diff dN/dS 0.796, N/S 3.23, stop-free both 3665 of 16766
+O121  RCa : f = 0.835 -> pooled 0.800, single-diff nonsyn share 0.724, single-diff dN/dS 0.800, N/S 3.29, stop-free both 3142 of 16766
+O121  RCm : max pooled 0.440 < 0.80 at f = 1
