@@ -1,0 +1,28 @@
+MOESM1 sha256 979759beb0b7e54be8e407e6718c1071530695aa9025db1228d355936e03c70c
+  OK   mutation rate of 1.25×10-8 and the average generation time across the species for specific node:
+  OK   Homo-Chimp-Bonobo: 24.5 years.
+  OK   Homo-Chimp-Gorilla: 21.75 years.
+  OK   Human: 25 years
+
+| quantity | Day (1.2e-8, 25 y) | Yoo human (1.25e-8, 25 y) | Yoo HCB node (1.25e-8, 24.5 y) | Yoo HCG node (1.25e-8, 21.75 y) |
+|---|---|---|---|---|
+| N_gen | 2.52e+05 (+0.0%) | 2.52e+05 (+0.0%) | 2.571e+05 (+2.0%) | 2.897e+05 (+14.9%) |
+| F_max | 190.6 (+0.0%) | 190.6 (+0.0%) | 194.5 (+2.0%) | 219.1 (+14.9%) |
+| shortfall_205M | 1.075e+06 (+0.0%) | 1.075e+06 (+0.0%) | 1.054e+06 (-2.0%) | 9.356e+05 (-13.0%) |
+| shortfall_20M | 1.049e+05 (+0.0%) | 1.049e+05 (+0.0%) | 1.028e+05 (-2.0%) | 9.128e+04 (-13.0%) |
+| k_mu_route | 9.374e+06 (+0.0%) | 9.765e+06 (+4.2%) | 9.964e+06 (+6.3%) | 1.122e+07 (+19.7%) |
+| counted_over_route | 2.245 (+0.0%) | 2.156 (-4.0%) | 2.113 (-5.9%) | 1.875 (-16.5%) |
+| B3d_k_over_mu | 32.93 (+0.0%) | 32.93 (+0.0%) | 32.27 (-2.0%) | 28.65 (-13.0%) |
+| B3d_swap_Yoo_mu | 21.87 (+0.0%) | 20.99 (-4.0%) | 20.57 (-5.9%) | 18.26 (-16.5%) |
+| Haldane | 840 (+0.0%) | 840 (+0.0%) | 857.1 (+2.0%) | 965.5 (+14.9%) |
+| Haldane_d | 378 (+0.0%) | 378 (+0.0%) | 385.7 (+2.0%) | 434.5 (+14.9%) |
+| Term3 | 6451 (+0.0%) | 6451 (+0.0%) | 6583 (+2.0%) | 7415 (+14.9%) |
+| kappa | 9.366e+04 (+0.0%) | 9.756e+04 (+4.2%) | 9.756e+04 (+4.2%) | 9.756e+04 (+4.2%) |
+| U_total | 38.4 (+0.0%) | 40 (+4.2%) | 40 (+4.2%) | 40 (+4.2%) |
+| thr191 | 190.6 (+0.0%) | 190.6 (+0.0%) | 194.5 (+2.0%) | 219.1 (+14.9%) |
+| Ne_HCB | 1.98e+05 (+0.0%) | 2.062e+05 (+4.2%) | 2.062e+05 (+4.2%) | 2.062e+05 (+4.2%) |
+| Ne_HCG | 1.32e+05 (+0.0%) | 1.375e+05 (+4.2%) | 1.375e+05 (+4.2%) | 1.375e+05 (+4.2%) |
+
+B3d_swap_Yoo_mu is a source swap (Yoo mu for Bergeron's), not a correction of Day's input: 20.57 vs 32.93 (-37.5%)
+largest |change| over Yoo bases (excluding the swap row): k_mu_route 19.7%, counted_over_route 16.5%, N_gen 14.9%, F_max 14.9%, Haldane 14.9%, Haldane_d 14.9%
+R1 (> 25%) triggered by any propagated Day number: False

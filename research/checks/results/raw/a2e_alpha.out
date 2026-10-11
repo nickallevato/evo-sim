@@ -1,0 +1,62 @@
+## quote verification (substring of the local raw text, whitespace-normalised)
+  GV OK   Our overall estimate of the fraction of fixed adaptive substitutions (α) in the human line
+  GV OK   resulted in 9,785 genes with human branch specific substitution data
+  GV OK   The average number of Dn and Ds per gene in the human lineage was 2 and 3.5
+  GV OK   at least 40% of the non-synonymous substitutions in genes accelerated in the human branch
+  GV sha256 1594b61280c09cc6259fc6f97251af18d210e87cf0ff6232f900d24651800297  ft/PMC4124166/ft.txt
+  BO OK   we expect that 10–20% of human-chimp differences were fixed through positive selection
+  BO OK   (observed fixed differences = 22,180)
+  BO OK   is 9.3% less than what we observe (22,180
+  BO OK   17.8 Mb of genic sequence (approximately 61% of autosomal RefSeq gene bases)
+  BO sha256 30134693fa8e660714f246a3a25f8b0d27a05145d7b9f716c47b522014cba97a  ft/PMC2377339/ft.txt
+  EK OK   comparison to macaque sequences reveals little evidence for adaptive substitutions
+  EK OK   could be as high as 40%
+  EK sha256 c13565cf6c92828fffdd6228e8cc938aa13196db1589087515d7ec7382648421  epmc/ew09.json
+  UR OK   estimate α = 0.135 in human protein-coding sequences, 72% of which is contributed by weakl
+  UR sha256 45128b818210b7422eb6729b119ac7201b9dde376dbcd5ac7708af5bff882717  epmc/uric.json
+  GA OK   with the notable exception of primates
+  GA sha256 6572a7581cf596f1c828daad331875d37b77bb13d7b1134a93aca80a54449204  ft/PMC4709115/ft.txt
+all quotes verified: True
+
+## thresholds (adaptive substitutions per lineage) and alpha* = threshold / denominator
+| denominator | G1 (1,322) | G2 (1,587) | Day adaptive-only (1,408) | G1 at Yoo g 24.5 (257,143 gens) |
+|---|---|---|---|---|
+| N1 GV human branch 19,570 | 190.6 -> 0.97% | 158.8 -> 0.81% | 179.0 -> 0.91% | 194.5 -> 0.99% |
+| N1 low (Dn 1.5/gene) 14,678 | 190.6 -> 1.30% | 158.8 -> 1.08% | 179.0 -> 1.22% | 194.5 -> 1.33% |
+| N1 high (Dn 2.5/gene) 24,463 | 190.6 -> 0.78% | 158.8 -> 0.65% | 179.0 -> 0.73% | 194.5 -> 0.80% |
+| N2 Boyko per lineage 11,090 | 190.6 -> 1.72% | 158.8 -> 1.43% | 179.0 -> 1.61% | 194.5 -> 1.75% |
+| N3 Boyko scaled /0.61 18,180 | 190.6 -> 1.05% | 158.8 -> 0.87% | 179.0 -> 0.98% | 194.5 -> 1.07% |
+
+## mapped adaptive counts per lineage and side (threshold G1 190.6 / G2 158.8)
+| estimate | denominator | adaptive count | x G1 threshold | side (G1) | side (G2) |
+|---|---|---|---|---|---|
+| GV alpha 0.2% (human branch; full text) | N1 GV human branch 19,570 | 39-39 | 0.21-0.21 | Day (holds) | Day (holds) |
+| GV alpha 0.2% (human branch; full text) | N1 low (Dn 1.5/gene) 14,678 | 29-29 | 0.15-0.15 | Day (holds) | Day (holds) |
+| GV alpha 0.2% (human branch; full text) | N1 high (Dn 2.5/gene) 24,463 | 49-49 | 0.26-0.26 | Day (holds) | Day (holds) |
+| BO 10-20% (human-chimp divergence; full text) | N2 Boyko per lineage 11,090 | 1109-2218 | 5.82-11.64 | critic (flips) | critic (flips) |
+| BO 10-20% (human-chimp divergence; full text) | N3 Boyko scaled /0.61 18,180 | 1818-3636 | 9.54-19.07 | critic (flips) | critic (flips) |
+| BO 9.3% (gamma-model deficit, lower end; full text) | N2 Boyko per lineage 11,090 | 1031-1031 | 5.41-5.41 | critic (flips) | critic (flips) |
+| BO 9.3% (gamma-model deficit, lower end; full text) | N3 Boyko scaled /0.61 18,180 | 1691-1691 | 8.87-8.87 | critic (flips) | critic (flips) |
+| UR alpha 0.135 (ABSTRACT ONLY) | N1 GV human branch 19,570 | 2642-2642 | 13.86-13.86 | critic (flips) | critic (flips) |
+| UR alpha 0.135 (ABSTRACT ONLY) | N1 low (Dn 1.5/gene) 14,678 | 1982-1982 | 10.40-10.40 | critic (flips) | critic (flips) |
+| UR alpha 0.135 (ABSTRACT ONLY) | N1 high (Dn 2.5/gene) 24,463 | 3303-3303 | 17.33-17.33 | critic (flips) | critic (flips) |
+| UR alpha 0.135 (ABSTRACT ONLY) | N2 Boyko per lineage 11,090 | 1497-1497 | 7.85-7.85 | critic (flips) | critic (flips) |
+| UR alpha 0.135 (ABSTRACT ONLY) | N3 Boyko scaled /0.61 18,180 | 2454-2454 | 12.88-12.88 | critic (flips) | critic (flips) |
+| UR strong-only 0.135 x 0.28 = 0.038 (ABSTRACT ONLY; derived) | N1 GV human branch 19,570 | 740-740 | 3.88-3.88 | critic (flips) | critic (flips) |
+| UR strong-only 0.135 x 0.28 = 0.038 (ABSTRACT ONLY; derived) | N1 low (Dn 1.5/gene) 14,678 | 555-555 | 2.91-2.91 | critic (flips) | critic (flips) |
+| UR strong-only 0.135 x 0.28 = 0.038 (ABSTRACT ONLY; derived) | N1 high (Dn 2.5/gene) 24,463 | 925-925 | 4.85-4.85 | critic (flips) | critic (flips) |
+| UR strong-only 0.135 x 0.28 = 0.038 (ABSTRACT ONLY; derived) | N2 Boyko per lineage 11,090 | 419-419 | 2.20-2.20 | critic (flips) | critic (flips) |
+| UR strong-only 0.135 x 0.28 = 0.038 (ABSTRACT ONLY; derived) | N3 Boyko scaled /0.61 18,180 | 687-687 | 3.61-3.61 | critic (flips) | critic (flips) |
+| EK 'little evidence' read as 0-5% (ABSTRACT ONLY; audit reading) | N1 GV human branch 19,570 | 0-978 | 0.00-5.13 | straddles | straddles |
+| EK 'little evidence' read as 0-5% (ABSTRACT ONLY; audit reading) | N1 low (Dn 1.5/gene) 14,678 | 0-734 | 0.00-3.85 | straddles | straddles |
+| EK 'little evidence' read as 0-5% (ABSTRACT ONLY; audit reading) | N1 high (Dn 2.5/gene) 24,463 | 0-1223 | 0.00-6.42 | straddles | straddles |
+| EK 'little evidence' read as 0-5% (ABSTRACT ONLY; audit reading) | N2 Boyko per lineage 11,090 | 0-554 | 0.00-2.91 | straddles | straddles |
+| EK 'little evidence' read as 0-5% (ABSTRACT ONLY; audit reading) | N3 Boyko scaled /0.61 18,180 | 0-909 | 0.00-4.77 | straddles | straddles |
+| EK 'as high as 40%' (ABSTRACT ONLY; conditional upper bound) | N1 GV human branch 19,570 | 7828-7828 | 41.07-41.07 | critic (flips) | critic (flips) |
+| EK 'as high as 40%' (ABSTRACT ONLY; conditional upper bound) | N1 low (Dn 1.5/gene) 14,678 | 5871-5871 | 30.80-30.80 | critic (flips) | critic (flips) |
+| EK 'as high as 40%' (ABSTRACT ONLY; conditional upper bound) | N1 high (Dn 2.5/gene) 24,463 | 9785-9785 | 51.33-51.33 | critic (flips) | critic (flips) |
+| EK 'as high as 40%' (ABSTRACT ONLY; conditional upper bound) | N2 Boyko per lineage 11,090 | 4436-4436 | 23.27-23.27 | critic (flips) | critic (flips) |
+| EK 'as high as 40%' (ABSTRACT ONLY; conditional upper bound) | N3 Boyko scaled /0.61 18,180 | 7272-7272 | 38.15-38.15 | critic (flips) | critic (flips) |
+
+GV 'at least 40%' in accelerated genes: not mapped (Dn of that gene set not extracted); a lower bound only.
+Asymmetry: coding-only counts are lower bounds on all adaptive substitutions (non-coding not counted).
