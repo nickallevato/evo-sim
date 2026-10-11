@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: pending   # R4 L6 (awaiting review): on Day's own rule (>=95% snapshot count at 10K marks falls) 10 of 12 populations reproduce exactly, 28 of 29 of his tabulated cells match; proposed holds
-  fidelity: pending   # R4 L6: Good 2017's own HMM fixation counts never decline (0 of 12); 96% of the 'undone' cases dip back or hover above 0.5; proposed partial ('fixations' relabels a snapshot statistic; the A2c/E6 counting question)
-  external: pending   # proposed contested: near-fixed mutations do reverse (clade displacement, 4.6% of cases); fixed mutations in Good's sense do not
+  internal: pending   # R4 L6 fix pass (reviewed a183774; proposed for integration: holds): Day's sign-only rule (>=95% snapshot count falls between 10K marks) reproduces 10 of 12 exactly, 28 of 29 tabulated cells; threshold-sensitive: 7 of 12 at a net fall of >= 5, 6 of 12 at >= 10
+  fidelity: pending   # R4 L6 fix pass (proposed: partial): 'fixations' names a >=95% snapshot statistic; Good 2017's well-mixed fixed calls never fall because the fixed state is never left in the published output (0 exits in 34,118 paths), i.e. by definition
+  external: pending   # R4 L6 fix pass (proposed: contested, not contradicted): near-fixed mutations do reverse (34% dip and return, 62% hover 0.5-0.95, 4.6% lost by clade displacement); Good's well-mixed calls cannot fall by construction; clade-level states (FM/Fm) not read
 ---
 
 ## Statement (verbatim)
@@ -30,7 +30,7 @@ For population p and marks t = 10K..60K, F_p(t) = number of mutations at >= 95% 
 
 ## Responses
 - Against (critic, A2c): the snapshot estimator is not a count of fixations (Ara+5 38 -> 0; Ara-2 -906).
-- Against (audit, R4 L6, awaiting review): Good's HMM fixed counts never fall.
+- Against (audit, R4 L6, fix pass): Good's HMM fixed counts never fall, but by construction (the fixed state is never left), so this is a definitional point, not a measured absence of reversals.
 - In support (Day): the snapshot falls are real data features; clonal interference displaces near-fixed sweeps (Good 2017's coexistence).
 
 ## Primary literature
@@ -42,7 +42,7 @@ For population p and marks t = 10K..60K, F_p(t) = number of mutations at >= 95% 
 `research/checks/l6_ltee_undone.py` (0b478dd).
 
 ## Check
-R4 L6 (`research/checks/results/R4-L6.md`, awaiting review).
+R4 L6 (`research/checks/results/R4-L6.md`; combined review a183774; fix pass with post hoc `l6_posthoc_absorbing.py`, 10cfe1e).
 
 ## Simulator variables implied
 - fixation definition selector (snapshot threshold vs absorbing fixation)

@@ -4,3 +4,4 @@ run: launched 2026-10-11T12:44:13-06:00 (finished within ~1 min); script md5 9b9
 inputs: github.com/benjaminhgood/LTEE-metagenomic master data_files/{m1..m6,p1..p6}_{annotated,well_mixed_state}_timecourse.txt,
   fetched 2026-10-11 into builder:sources/raw/l6-good2017-data-2026-10-11/ (sha256 list in sources/raw/l6-good2017-data-2026-10-11.sha256 on builder; first: m1_annotated 6b08ec9f...6e4ddb)
   layout read from parse_file.py (fetched as text into sources/raw/l6-good2017-code-2026-10-11/, never executed)
+post hoc absorbing-state check (fix pass): launched 2026-10-11T15:22:39-04:00 on builder (1 process, seconds; HF run ph untouched); script md5 1bc847d6d72b69cb2376c123dc929d97 research/checks/l6_posthoc_absorbing.py (pre-registered post hoc 10cfe1e); output l6_posthoc_absorbing.out. Full data sha256 list: l6_data.sha256 (copied from builder sources/raw/l6-good2017-data-2026-10-11.sha256)

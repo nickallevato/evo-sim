@@ -1,0 +1,13 @@
+sheet14 head: ('SNV and gap divergence is computed for 1MB segments in wfmash pairwise alignment (alt. haplotype aligned to target haplotype); means and medians are reported', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None)
+sheet14 head: ('Haplotypes', None, 'Mean SNV Div.', None, None, 'Mean Gap Div.', None, None, 'Median SNV Div.', None, None, 'Median Gap Div.', None, None, None, None, None, None, None, None, None, None, None, None, None, None)
+sheet14 head: ('Target', 'Alternate', 'Autosomes (A)', 'X', 'Y', 'Autosomes (A)', 'X', 'Y', 'Autosomes (A)', 'X', 'Y', 'Autosomes (A)', 'X', 'Y', None, None, None, None, None, None, None, None, None, None, None, None)
+sheet14 head: ('hg002#M', 'hg002#P', 0.0016052, 'NA', 'NA', 0.03483113, 'NA', 'NA', 0.000888, 'NA', 'NA', 0.0008045, 'NA', 'NA', None, None, None, None, None, None, None, None, None, None, None, None)
+sheet14 head: ('mPanTro3#1', 'mPanTro3#2', 0.00273255, 'NA', 'NA', 0.08090541, 'NA', 'NA', 0.000919, 'NA', 'NA', 0.0008535, 'NA', 'NA', None, None, None, None, None, None, None, None, None, None, None, None)
+sheet14 head: ('mPanTro3#1/2', 'hg002#M/P', 0.01463283, 0.01099073, 0.06588082, 0.12473197, 0.04384782, 0.56608095, 0.012863, 0.0097755, 0.035068, 0.01547, 0.0159635, 0.669181, None, None, None, None, None, None, None, None, None, None, None, None)
+sheet14 human-chimp row: ('mPanTro3#1/2', 'hg002#M/P', 0.01463283, 0.01099073, 0.06588082, 0.12473197, 0.04384782, 0.56608095, 0.012863, 0.0097755, 0.035068, 0.01547, 0.0159635, 0.669181, None, None, None, None, None, None, None, None, None, None, None, None)
+Q1 primitive: pool 41 values, 11521 sums; within 1%: 410 M 143; random mean 109.7, 5-95% 79-139, max 155; ratio 1.30; percentile 0.97
+Q1 primitive: pool 41 values, 11521 sums; within 2%: 410 M 284; random mean 220.7, 5-95% 176-269, max 285; ratio 1.29; percentile 1.00
+Q1b primitive minus sheet-19 R2: pool 29 values, 4089 sums; within 1%: 410 M 52; random mean 33.8, 5-95% 15-55, max 70; ratio 1.54; percentile 0.92
+Q1b primitive minus sheet-19 R2: pool 29 values, 4089 sums; within 2%: 410 M 113; random mean 68.2, 5-95% 36-108, max 120; ratio 1.66; percentile 0.98
+R1 mean x A: 404.2 M
+Q3 Zenodo s7.1 components: 35e6 + 1140 + 187e6 = 222.0 M; / 410 M = 0.541

@@ -52,7 +52,7 @@ No prediction. Result recorded.
 ## Check
 Brute-force table search done in R1 (ledger). Review: pending.
 
-R4 L7 (research/checks/results/R4-L7.md; awaiting review, 2026-10-11): Day's new locator (Q179 post: 'pages 14, 19, and 24') points to Tables III.14, III.19 and V.24. Mean SNV + mean gap divergence (III.14, human-chimp, 13.94%) x hs1 autosome length (III.19) = 404.2 M bp (A+X 412.7 M), within 2% of 410 M; three routes land within 2% and the base rate at 410 M is 0.83 of random targets, so the route is unconfirmed. 14.9% is not reproduced on an hs1 denominator. Proposed after review: the 410 M label moves from not-found to 'reconstructible (bp), route unconfirmed'; 187 Mb stays not-found.
+R4 L7 (research/checks/results/R4-L7.md; awaiting review, 2026-10-11): Day's new locator (Q179 post: 'pages 14, 19, and 24') points to Tables III.14, III.19 and V.24. Mean SNV + mean gap divergence (III.14, human-chimp, 13.94%) x hs1 autosome length (III.19) = 404.2 M bp (A+X 412.7 M), within 2% of 410 M; three routes land within 2% and the base rate at 410 M is 0.83 of random targets, so the route is unconfirmed. 14.9% is not reproduced on an hs1 denominator. Proposed after review: the 410 M label moves from not-found to 'reconstructible (bp), route unconfirmed'; 187 Mb stays not-found. Fix pass (review a183774): the reconstruction needs the mean gap divergence (medians give 82 M); the pre-registered base-rate test was replaced post hoc by a primitive-pool test (410 M at the 92nd-100th percentile of random targets, ratio 1.3-1.7: matches are common, so a match does not identify a route); A3x1's verdicts unchanged.
 
 ## Simulator variables implied
 - None.

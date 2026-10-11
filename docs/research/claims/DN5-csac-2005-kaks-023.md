@@ -11,7 +11,7 @@ status: extracted
 verdicts:
   internal: n/a
   fidelity: pending   # CSAC 2005 text not read for this value; only Day's relay (rule U: relays are not scored internal)
-  external: pending   # R4 L1 (awaiting review): an independent pipeline gives 0.207 on Ensembl one2one genes (0.200 with CSAC-like quality filters); proposed after review: supported (in kind)
+  external: pending   # R4 L1 fix pass, proposed for integration: supported (in kind): an independent pipeline gives 0.207 on Ensembl one2one genes (release 116) and 0.200 with CSAC-like quality filters; fidelity waits for CSAC 2005 and an independent ML estimate to be fetched (critic-side review #3)
 ---
 
 ## Statement (verbatim)
@@ -38,7 +38,7 @@ Ka/Ks = 0.23 over 13,454 human-chimp 1:1 orthologs (CSAC 2005, per Day).
 L1 critic side: O121 in 0.20-0.30.
 
 ## Check
-R4 L1 (awaiting review).
+R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass).
 
 ## Simulator variables implied
 - none

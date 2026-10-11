@@ -1,0 +1,24 @@
+  4000 transcripts, 17 s
+  8000 transcripts, 32 s
+  12000 transcripts, 47 s
+  16000 transcripts, 63 s
+  20000 transcripts, 78 s
+genes 23183
+Q4 V0 sets: O121 n=16766 dnds=0.207 share=0.401; NON121m n=5935 dnds=0.452 share=0.576; UNMAPPED n=482 dnds=0.382 share=0.546; NON121 n=6417 dnds=0.447 share=0.574
+ALL V0   n=23183 dnds=0.271 share=0.458 stopfree_both=22331 term_stop_h=22021 Sprime_alone=861
+ALL F1   n=23183 dnds=1.116 share=0.789 stopfree_both=1067 term_stop_h=139 Sprime_alone=983
+ALL F2   n=23183 dnds=1.226 share=0.798 stopfree_both=1247 term_stop_h=155 Sprime_alone=1132
+ALL RCa  n=23183 dnds=1.043 share=0.776 stopfree_both=1607 term_stop_h=20 Sprime_alone=1602
+ALL W1   n=23183 dnds=0.515 share=0.622 stopfree_both=3018 term_stop_h=139 Sprime_alone=2975
+ALL W2   n=23183 dnds=0.845 share=0.727 stopfree_both=3015 term_stop_h=22021 Sprime_alone=386
+Q1 mix F1: f=0.812 min=0.236 (S+G+L+O) max=0.800 S alone n=5072 dnds=0.257; full n=2601 dnds=0.248
+Q1 mix F2: f=0.780 min=0.250 (S+G+O) max=0.801 S alone n=5893 dnds=0.270; full n=3045 dnds=0.263
+Q1 mix RCa: f=0.842 min=0.243 (S+G+L+O) max=0.800 S alone n=4878 dnds=0.276; full n=2253 dnds=0.256
+Q2 V0: term stop human 22021, chimp 21089; S' alone n=861 dnds=0.441; S' full n=258 dnds=0.415; grid with S' min=0.249 max=0.444
+Q2 mix F1: S' alone n=960 dnds=0.663; S' full n=70 dnds=0.463; min=0.427
+Q2 mix F2: S' alone n=1072 dnds=0.688; S' full n=78 dnds=0.463; min=0.436
+Q2 mix RCa: S' alone n=1485 dnds=1.038; S' full n=146 dnds=0.712; min=0.611
+Q3 W1: n=23183 dnds=0.515 share=0.622 stopfree_both=3018 min=0.270 (S+G+L+O) max=0.522 S alone n=3018 dnds=0.323; full n=938 dnds=0.293
+Q3 W2: n=23183 dnds=0.845 share=0.727 stopfree_both=3015 min=0.756 (S+L+O) max=0.851 S alone n=3015 dnds=0.760; full n=1736 dnds=0.761
+   mix f=0.244 min=0.284 (S+G+L+O) S alone n=17614 dnds=0.306; full n=10710 dnds=0.300
+seconds 138

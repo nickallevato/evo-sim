@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: holds     # on his own numbers 35/410 = 8.5% ('less than a tenth' holds); 'nearly 10x' understates 14.9/1.23 = 12.1 (slip, ledger, R1 not triggered)
-  fidelity: pending   # R4 L7 (awaiting review): 410 M reconstructs from sheet 14 (mean SNV + gap divergence 13.94%) x hs1 length (sheet 19) = 404-413 M bp; route unconfirmed (base rate 0.83); 14.9% not reproduced. Proposed partial
-  external: pending   # the bp-vs-events point (A3x) applies: 410 M bp vs 48.3 M T2T events (8.5x); proposed contested as for A3a
+  internal: holds     # on his own numbers 35/410 = 8.5% ('less than a tenth' holds); 'nearly 10x' understates 14.9/1.23 = 12.1 (slip, ledger, R1 not triggered); R4 L7 fix pass: the Zenodo s7.1 component list (35 M + 1,140 + 187 Mb = 222 M) is A3a's statement, scored there (rule C, ledger); this post calls the pieces non-additive, so that sum is not its derivation (rule S)
+  fidelity: pending   # R4 L7 fix pass (reviewed a183774; proposed for integration: partial): locator and 'no consolidated total' accurate; (mean SNV + mean gap divergence, sheet 14) x hs1 length (sheet 19) = 404-413 M bp, route unconfirmed (one clean route, computed before pre-registration; medians give 82 M; matches within 2% of 410 M are common, primitive-pool ratio 1.3-1.7); his printed components sum to 222 M; 14.9% reproduced only approximately (15.05%, at 436.5 M)
+  external: pending   # R4 L7 fix pass (proposed for integration: contested, as for A3a): 410 M is a base-pair measure; T2T events (GAP-07t, 48.3 M, both lineages) are 8.5x lower in a different unit
 ---
 
 ## Statement (verbatim)
@@ -40,7 +40,7 @@ D_total = 410e6 (bp) against CSAC's 35e6 SNVs; 35/410 = 0.085.
 `research/checks/l7_410m_accounting.py`.
 
 ## Check
-R4 L7 (`research/checks/results/R4-L7.md`, awaiting review).
+R4 L7 (`research/checks/results/R4-L7.md`; combined review a183774; fix pass with post hoc `l7_posthoc_baserate.py`, 42df167).
 
 ## Simulator variables implied
 - `required_fixations` unit selector (bp / events), as A3x

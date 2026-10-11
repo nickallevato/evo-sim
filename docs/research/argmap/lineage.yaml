@@ -3800,13 +3800,13 @@
   fate_locator: "R4 L7 (awaiting review)"
 
 - id: L-audit-l1-2026
-  label: "Audit L1: one pipeline on hg38/panTro5 gives 0.21 (one2one) and 0.27 (all genes); Day's 71.6% single-SNV share matches out-of-frame reading"
+  label: "Audit L1: one pipeline on hg38/panTro5 gives 0.21 (one2one) and 0.27 (all genes); Day's 71.6% single-SNV share points to an unidentified extraction/alignment problem"
   side: audit
   kind: reply
   date: 2026-10-11
   claim_ids: [DN1, DN2, DN3, DN5]
   locator: "research/checks/results/R4-L1.md"
-  quote: "The size of the effect is about 0.06, not 0.57."
+  quote: "Second, the effect is +0.06; 0.80 needs +0.57."
   parents:
     - {id: L-day-dnds-080-2026, relation: responds-to}
   inferred: false

@@ -8,3 +8,6 @@ inputs (sources/raw on builder, gitignored, fetched 2026-10-11, each in its own 
   6196fa5be6d66ff3025d67cdc953b04f2c7c6569e9ced896a8ec61c6b050970a  l1-ucsc-exonnuc-2026-10-11/knownCanonical.exonNuc.fa.gz
   f30b6ff5bcb682441c3138e9c40bffe454acdd676581925102e869f39797f0f9  l1-biomart-2026-10-11/orth_ptro.tsv (Ensembl BioMart current release, 2026-10-11)
   315811a73f4ca5bdfd3cec3d7d84190a586978bec5d661468f3f955b046e8aff  l1-biomart-2026-10-11/tx2gene.tsv
+post hoc per-gene (fix pass): launched 2026-10-11T15:08:32-04:00 on builder (1 process; HF run ph untouched, 8 ph processes; free RAM ~2.3 GB available before launch), 138 s; script md5 849d6bf8df4851846a578f7390f3010e research/checks/l1_posthoc_pergene.py (pre-registered post hoc c04a1f8; imports l1_dnds_genesets.py md5 fde848f7...); same inputs as above; outputs l1_posthoc_pergene.{out,json,tsv.gz} (tsv.gz md5 6cecaa20ae8c40ea919fbe1360f24146)
+exploratory: l1_posthoc_w2sprime.py (df43563, not pre-registered), local, seconds, reads l1_posthoc_pergene.tsv.gz only -> l1_posthoc_w2sprime.out
+Ensembl release (review correctness #6): rest.ensembl.org/info/data on 2026-10-11 -> {"releases":[116]}; info/assembly/pan_troglodytes -> assembly_accession GCA_000001515.5

@@ -1,0 +1,13 @@
+m1: T=122 mutations=4597 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=19; all transitions {(0, 3): 4616, (1, 0): 19, (3, 1): 2441, (3, 2): 269}
+m2: T=120 mutations=3488 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=498; all transitions {(0, 3): 3986, (1, 0): 498, (3, 1): 2965, (3, 2): 977}
+m3: T=122 mutations=3255 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=63; all transitions {(0, 3): 3318, (1, 0): 63, (3, 1): 2058, (3, 2): 796}
+m4: T=120 mutations=4872 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=55; all transitions {(0, 3): 4927, (1, 0): 55, (3, 1): 2876, (3, 2): 879}
+m5: T=122 mutations=406 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=39; all transitions {(0, 3): 445, (1, 0): 39, (3, 1): 297, (3, 2): 87}
+m6: T=121 mutations=221 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=3; all transitions {(0, 3): 224, (1, 0): 3, (3, 1): 93, (3, 2): 57}
+p1: T=117 mutations=466 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=42; all transitions {(0, 3): 508, (1, 0): 42, (3, 1): 384, (3, 2): 101}
+p2: T=121 mutations=174 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=4; all transitions {(0, 3): 178, (1, 0): 4, (3, 1): 96, (3, 2): 66}
+p3: T=120 mutations=6102 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=76; all transitions {(0, 3): 6178, (1, 0): 76, (3, 1): 4457, (3, 2): 1616}
+p4: T=121 mutations=201 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=3; all transitions {(0, 3): 204, (1, 0): 3, (3, 1): 125, (3, 2): 73}
+p5: T=114 mutations=202 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=3; all transitions {(0, 3): 205, (1, 0): 3, (3, 1): 80, (3, 2): 14}
+p6: T=128 mutations=10134 codes=[0, 1, 2, 3] matched={'unborn': 0, 'extinct': 1, 'fixed': 2, 'polymorphic': 3} transitions out of fixed=0, out of extinct=138; all transitions {(0, 3): 10272, (1, 0): 138, (3, 1): 6675, (3, 2): 1899}
+TOTAL mutations 34118; out of fixed 0; out of extinct 943
