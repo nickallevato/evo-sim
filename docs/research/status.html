@@ -107,17 +107,17 @@ footer{color:var(--muted);font-size:.82rem}
     <div class="stage"><b>R1 Harvest</b><div class="bar"><i style="width:100%"></i></div><span>Day, critics, literature</span></div>
     <div class="stage"><b>R2 Claims</b><div class="bar"><i style="width:100%"></i></div><span>204 claim files</span></div>
     <div class="stage"><b>R3 Hierarchy</b><div class="bar"><i style="width:100%"></i></div><span>31 load-bearing nodes</span></div>
-    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:98%"></i></div><span>~98%, 47 checks reviewed (FM mesa replication, B3m, H8 kscale64 added); next: XT follow-up, review of the 12 mapping claims, RH pass</span></div>
+    <div class="stage now"><b>R4 Math checks</b><div class="bar"><i style="width:98%"></i></div><span>~98%, 48 checks reviewed (A2e-alpha, GAP-06, GAP-07t, L1, L6, L7 added); HF post hoc run <code>ph</code> in progress (workhorse + builder, ~31 h); next: L1b T2T rerun, HF integration</span></div>
     <div class="stage"><b>R5 Synthesis</b><div class="bar"><i style="width:0%"></i></div><span>verdicts, simulator variables</span></div>
   </div>
   <div class="stats">
     <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
-    <span><b>225</b> claims (day 123 · critic 61 · ally 15 · lit 26)</span><span><b>401</b> typed objections</span><span><b>222</b> dated argument versions</span>
+    <span><b>232</b> claims</span><span><b>419</b> typed objections</span><span><b>232</b> dated argument versions</span>
   </div>
   <div class="stats">
-    <span>Verdicts so far, internal: <b>115</b> holds · <b>18</b> non-sequitur · <b>2</b> arithmetic error · <b>62</b> pending</span>
-    <span>External: <b>32</b> supported · <b>106</b> contested · <b>13</b> contradicted · <b>6</b> untestable · <b>56</b> pending</span>
-    <span>Citation fidelity: <b>41</b> accurate · <b>34</b> partial · <b>10</b> misread · <b>54</b> unverifiable · <b>22</b> pending</span>
+    <span>Verdicts so far, internal: <b>130</b> holds · <b>19</b> non-sequitur · <b>2</b> arithmetic error · <b>52</b> pending</span>
+    <span>External: <b>34</b> supported · <b>115</b> contested · <b>16</b> contradicted · <b>6</b> untestable · <b>49</b> pending</span>
+    <span>Citation fidelity: <b>43</b> accurate · <b>38</b> partial · <b>10</b> misread · <b>58</b> unverifiable · <b>12</b> pending</span>
   </div>
 </section>
 
@@ -150,6 +150,9 @@ footer{color:var(--muted);font-size:.82rem}
       <li><b>Done:</b> reviews #35-#42 (B3g, F3a, B2/B, B3): B3d internal holds on Day's basis (the arithmetic-error draft was challenged under the author-basis rule), fidelity misread, external contradicted; B2 internal holds; B stays pending (RH tag of the peroration open); F3a internal holds</li>
       <li><b>Done:</b> reviews #43-#47 (FM mesa replication; Opus, then a combined re-review and a light review): the description replicates but the pattern is shared across lineages; mirror test: the unmasked human excess follows the reference; chrX F1 hotspot is one window; 'sharp boundaries' indeterminate; FM10 external contested (leaning critic), internal pending</li>
       <li><b>Done:</b> reviews #48-#49 (B3m, H8 kscale64): 'median 25' reproduces exactly from Bergeron 2023 Table 9 (terminal-branch vs lineage-average about 1.9×, gap unexplained); 'slower than 1/300' shows no K trend to 64,000, the horizon matters</li>
+      <li><b>Done:</b> reviews #51-#55 (GAP-06, GAP-07t, A2e-alpha): T2T events 24.14 M per lineage (+14.7%, 205 M bp is 8.5x raw); Yoo mu and g move no number by 25%; bias-corrected alpha (Boyko, Eyre-Walker) all above the ~191 flip, so A2e external is contested, leaning contradicted; Gayà-Vidal 29-49 and the "100-fold disagreement" withdrawn</li>
+      <li><b>Done:</b> reviews #56-#60 (L1 load-bearing, L6, L7 combined): Day's dN/dS 0.80 not reproduced (Ensembl one2one 0.207, all genes 0.271, 32 filter stacks 0.23-0.28); "ten of twelve" and 410 M (as bp) reproduce; frame-error attribution, 0.70-0.91, the 0.83 base rate withdrawn as audit errors</li>
+      <li><b>In progress:</b> HF (H follow-ups): main run finished, three reviews done (0 BLOCKER, 10 MAJOR); post hoc run <code>ph</code> (410 jobs) on na-workhorse + builder, ~31 h. Findings provisional until scored.</li>
       <li><b>Done:</b> mapping: every critic and ally argument attached ("mapped" ratified); 12 new claims from the Hancock video (pending review); 27 objections and 3 untested Hancock-slip rows added; Holocene Nₑ literature retrieved (does not decide C1c)</li>
     </ul></div>
   </div>
@@ -315,6 +318,17 @@ footer{color:var(--muted);font-size:.82rem}
 </section>
 
 <section>
+  <h2>Day's dN/dS post (2026-10-11): checked</h2>
+  <p>"How Biologists Keep 'Proving' Selection" reports dN/dS 0.80 on 20,400 GENCODE v46 genes against the Consortium's 0.23 on 13,454, and adds LTEE and Yoo 2025 claims. Day's own test (Q176: same pipeline, two gene sets) is valid and discriminating; the audit ran its analogue. Milestone 13.</p>
+  <ol class="next">
+    <li><b>L1 (dN/dS, load-bearing):</b> Nei-Gojobori pooled 0.207 on Ensembl one2one genes, 0.271 on all genes (0.447 on the rest); 32 filter stacks give 0.23-0.28; 0.80 is not reproduced. A gene-set effect exists in Day's direction (+0.06, +31%, material). His single-SNV count (2.52 nonsynonymous per synonymous vs 0.85 on correct CDS) points to an unidentified extraction or alignment problem. DN1, DN2 contradicted; DN3 holds / pending / contradicted; DN4 non-sequitur (rule N); DN5 supported. Open: L1b T2T rerun.</li>
+    <li><b>L6 ("ten of twelve"):</b> reproduces on his rule, 10 of 12 populations; 28 of 29 cells match. Good's own fixed calls never fall, but the fixed state is never left. Of 972 exits, 34% return, 62% hover, 4.6% are lost. E10 holds / partial / contested.</li>
+    <li><b>L7 (410 M vs 35 M):</b> reproduces as base pairs (404.2-412.7 M, SI III.14 x III.19), about 8.5x the T2T event count; Day's locator is accurate. A3z holds / partial / contested.</li>
+    <li><b>Audit corrections:</b> the frame-error attribution, the 0.70-0.91 figure, the 0.83 base rate, the Gayà-Vidal 29-49 count and the "100-fold disagreement" are withdrawn.</li>
+  </ol>
+</section>
+
+<section>
   <h2>What everyone missed</h2>
   <p>Seven gaps no party (including this audit) had addressed, each backed by re-runnable search counts and fact-checked. Main beneficiary: two-sided 3 · critics 3 · Day 1.</p>
   <ol class="next">
@@ -332,8 +346,8 @@ footer{color:var(--muted);font-size:.82rem}
   <ol class="next">
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/explain/README.md">Explainers</a> at five levels: ELI5 · ELI8 · ELI10 · ELI12 · ELI18 (drafts, revised after R5).</li>
     <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/HANDOFF.md">Handoff briefing</a>: a neutral summary for outside teams, including the audit's own limitations.</li>
-    <li>Twelve dated milestone posts, linked from the handoff.</li>
-    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 401 objections typed undermining / undercutting / rebutting, a genealogy of 222 dated versions since 1966, and seven gaps nobody closed.</li>
+    <li>Thirteen dated milestone posts, linked from the handoff.</li>
+    <li><a href="https://github.com/nickallevato/evo-sim/blob/research/docs/arguments/README.md">Argument map</a>: standard forms, 419 objections typed undermining / undercutting / rebutting, a genealogy of 232 dated versions since 1966, and seven gaps nobody closed.</li>
     <li>A README with the math, figures and roadmap, plus the Wide Peel icon.</li>
   </ol>
 </section>
@@ -343,8 +357,8 @@ footer{color:var(--muted);font-size:.82rem}
   <ol class="next">
         <li><b>Open:</b> FM10 internal (rule N2d); cause of the chrX 57.3 Mb window; the B3m 2-vs-25 gap; the Hard Limits peroration RH tag (owner); XT follow-up (U-scaling rerun or SLiM).</li>
     <li><b>Queued:</b> reviews of the 12 new mapping claims; the RH pass (including the Hard Limits peroration tag); E leftovers, GAP-03.</li>
-    <li>Queued: a transversion-matched neutral model for Day's 21; a T2T re-run of the event count; the remaining load-bearing claims without a reviewed check (R5 draft).</li>
-    <li>H follow-ups: soft-selection rate limit and epistasis at human R; a sourced beneficial DFE; confidence intervals on T50. Then Yoo's μ / GAP-06.</li>
+    <li>Queued: <b>L1b</b> T2T rerun of the dN/dS check (after HF <code>ph</code>); fetch tasks (CSAC 2005 and an independent ML dN/dS; Good 2017 SI 5.2; Uricchio full text; Day's per-gene table); a transversion-matched neutral model for Day's 21; the remaining load-bearing claims without a reviewed check (R5 draft).</li>
+    <li><b>In flight:</b> HF post hoc run <code>ph</code> (long burn, cap release, mix boundary, noisy truncation) on workhorse + builder, ~31 h; then score, fix pass and integrate HF.</li>
     <li>R5: final verdicts, sensitivity table, simulator variable list.</li>
   </ol>
 </section>

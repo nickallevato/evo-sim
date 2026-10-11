@@ -1,6 +1,8 @@
 # Milestone 10: Auditing the audit: one rule for both sides
 *2026-10-09 · stage: R4 (in progress)*
 
+> **[Update 2026-10-11, see [milestone 13](2026-10-11-1-dnds-ten-of-twelve-410m-and-alpha.md): the "409M, within 0.24% of his 410M" reading below is not the route L7 found. 410 M reproduces as mean divergence (13.94%) times hs1 length, 404.2 to 412.7 M, in base pairs; the unit point (about 8.5 times the T2T event count of 24.14 M) stands.]**
+
 > **Update (2026-10-10):** the in-progress items are reported in [milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md): XT (qualitative replication in fwdpy11; an unexplained numeric deficit) and D15 (Hössjer's prediction holds inside his premises, flips outside them). C1e, B5b and F1b are done.
 
 This milestone covers four pieces of work:

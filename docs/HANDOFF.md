@@ -127,6 +127,7 @@ These dated posts tell the story in order:
 10. [2026-10-09: Auditing the audit: one rule for both sides](2026-10-09-10-fairness-audit.md)
 11. [2026-10-10: A second simulator, Haldane's regime, 32.3 and Hard Limits, and Day's "Fourth Mechanism"](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)
 12. [2026-10-10: Day's "mesas" replicated, the "median 25" recomputed, and Haldane's limit to K = 64,000](2026-10-10-12-mesas-replicated-median-25-and-k-to-64000.md)
+13. [2026-10-11: Day's dN/dS post checked, "ten of twelve" and 410 M recounted, and published alpha against the 191 flip](2026-10-11-1-dnds-ten-of-twelve-410m-and-alpha.md)
 
 ## Not yet decided
 - The final verdicts and the sensitivity table (R5).

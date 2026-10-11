@@ -1,6 +1,8 @@
 # Milestone 11: A second simulator, Haldane's regime, 32.3 and Hard Limits, and Day's "Fourth Mechanism"
 *2026-10-10 · stage: R4 (in progress) · commits `dfbcbc1`, `b8516fa`, `409378f`, `32df9cf`, refresh `48021bd`*
 
+> **[Update 2026-10-11, see [milestone 13](2026-10-11-1-dnds-ten-of-twelve-410m-and-alpha.md): A2e-alpha compared published alpha estimates with the roughly 191 threshold behind the A2e entry below. Bias-corrected estimates (Boyko, Eyre-Walker) all land above it; the lowest value is an uncorrected null, not a count. A2e external moves from contested to contested, leaning contradicted. Internal verdict unchanged.]**
+
 This milestone covers everything since [milestone 10](2026-10-09-10-fairness-audit.md):
 - **XT:** the core results re-run in a second simulator (fwdpy11);
 - **G2c:** the standing-variation check restored after a longer rerun;

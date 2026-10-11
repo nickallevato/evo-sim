@@ -1,6 +1,8 @@
 # Milestone 8: The cost of selection at human scale, and three gaps closed
 *2026-10-09 · stage: R4 (in progress)*
 
+> **[Update 2026-10-11, see [milestone 13](2026-10-11-1-dnds-ten-of-twelve-410m-and-alpha.md): the T2T re-run named as next (GAP-07t) is done: 24.14 M events per lineage (+14.7% on the 21.05M below), so Day's 205 M bp is 8.49 times that raw (9.2 to 10.9 polymorphism-corrected).]**
+
 > **Update (2026-10-10):** H8/H5 re-tested the numbers below in Haldane's regime ([milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)). Haldane's 1/300 is confirmed at R = 1.111 with D rescaled to 30 (K = 1,000); Hössjer's 15,800 is payable from R of about 2 to 2.7 under hard selection; a post hoc run at K = 16,000 did not support a finite-size explanation, so "slower than 1/300" stays conditional on K. The lineage-scale figures here (about 1/530 to 1/1,050) are not overturned. Verdicts unchanged.
 
 This milestone covers four checks:
