@@ -1,12 +1,12 @@
 # R4 GAP-07t: human-chimp divergence events re-counted on the T2T ape alignment (hs1 vs mPanTro3)
 
-**Status: hs1-referenced pass run and written up; chimp-referenced pass (A5) pending collection; awaiting review.** Tier: low-stakes re-confirmation of GAP-07b (one combined review, `REVIEW-R4-GAP07t-combined.md`), unless the reviewer judges that the A3 node moves. Not integrated.
+**Status: both passes run and written up; awaiting review.** Tier: low-stakes re-confirmation of GAP-07b (one combined review, `REVIEW-R4-GAP07t-combined.md`), unless the reviewer judges that the A3 node moves. Not integrated.
 
 ## Files
 - Script `research/checks/gap07t2t_event_counts.py`, pre-registered at **547bcd5**. Before the commit only the synthetic `selftest` was run, and it passed.
 - Run on na-workhorse, one process, `extract` hs1 2026-10-10 19:41-20:30 -06:00 (2,972 s, 5,366,631 blocks), then `extract` chimp, then `report`.
   - The first launch waited on a `pgrep` that matched its own command line. It was killed and relaunched without the wait (logged in `raw/gap07t.host`). Nothing else was changed.
-- Raw outputs:
+- Raw outputs (chimp pass: `raw/gap07t_chimp.json`):
   - `raw/gap07t_hs1.json`: per-chromosome-class totals.
   - `raw/gap07t_report_hs1.out`: hs1 report.
   - `raw/gap07t_report.out`: both passes, when collected.
@@ -53,10 +53,20 @@
 | A2 | indel events 3.5-6.0 M; median 1-2 bp; >= 40% 1 bp | 5.40 M; indeterminate; 39.7% | **Count holds; 1-bp share misses marginally** |
 | A3 | per lineage 21-26 M; ratio 7.9-9.8 | 24.14 M; 8.49 | **Holds** |
 | A4 | SNV human share (F1) 0.46-0.54; indel 0.40-0.60 | 0.494; 0.436 | **Holds** |
-| A5 | chimp-referenced pass within 10% | pending | pending |
+| A5 | chimp-referenced pass within 10% | 24.03 M vs 24.14 M (ratio 0.996); F1 19.77 vs 19.75 M | **Holds** |
 | A6 | polymorphism-corrected 17.5-22.5 M | 18.83-22.23 M | **Holds** |
 
 The pre-registered verdict clause said D1 + D2 together "would mean the T2T assemblies move the event count materially (> 25%, rule R1) toward Day's 205 M". D1 and D2 hold, but the move is +14.7%, below R1's 25%. **So the event count is not materially moved under R1.** The D1/D2 thresholds were set too close to GAP-07b to separate "some increase" from "a material increase". That is a design weakness in this audit's own predictions; it is not counted for or against either side.
+
+## Chimp-referenced pass (A5)
+`raw/gap07t_report.out`, second block. F0 primary:
+- 42.69 M SNV, 4.20 M in-block indels and 1.17 M inter-block indels: **24.03 M events per lineage** (ratio 8.53).
+- F1: 19.77 M per lineage. F2: 8.42 M per lineage.
+- Chimp bp in blocks with no human row: 242.3 M (against 80.3 M for hs1), the chimp-only sequence that the hs1 projection cannot see. It adds bp but not aligned events.
+- **Post hoc disclosure (labelling bug; the counts are unaffected):** in the chimp-referenced pass the script's SNV lineage fields are swapped. `snv_h` tests gorilla == other row, and in that pass the other row is human, so `snv_h` counts chimp-derived SNVs. The indel lineage code handles the swap correctly; the SNV code does not. Read correctly:
+  - F0: human-derived 18.64 M, chimp-derived 21.03 M (human share 0.470).
+  - F1: 16.48 / 16.93 M (human share 0.493).
+  - Both passes give the reference lineage the larger F0 share (hs1 pass: human 0.520; chimp pass: chimp 0.530). This is the reference-projection bias FM's mirror found. The F1 shares agree (0.494 and 0.493).
 
 ## Interpretation
 - **On the T2T assemblies, human-chimp divergence is 24.1 M events per lineage** (19.7 M in single-copy, N-free blocks; 18.8-22.2 M after polymorphism correction). GAP-07b's hg38/panTro6 count was 21.05 M. Day's "~20 million fixations required on human lineage" (A3) stays within R1 on every reading (-6% to +21%). A3 internal and its magnitude are re-confirmed on the newer assemblies.
