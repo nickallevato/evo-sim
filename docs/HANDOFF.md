@@ -13,7 +13,7 @@ evo-sim has two stages.
 
 ## How the audit works
 1. **Corpus.** Day's posts and papers from 2019 onward, the primary literature Day cites, and the critics' and allies' responses. In numbers: 154 posts, 32 Zenodo records, 37 papers and 48 critic or ally sources.
-2. **Claims.** 225 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
+2. **Claims.** 232 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-three nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09; ROOT-FM, Day's mesa claim, and its conclusion FM10 on 2026-10-10).
 4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Forty-seven checks have been reviewed so far.
 5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.

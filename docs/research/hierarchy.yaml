@@ -388,6 +388,23 @@ nodes:
     fidelity: misread
     external: supported
   claim_file: docs/research/claims/A3x1-yoo-2025-fidelity.md
+- id: A3z
+  title: 'Day 2026-10-11: Yoo 2025 implies 410 million total genomic differences, not 35 million; the SI''s divergence numbers sit on sheets 14,
+    19 and 24 and are not additive'
+  side: day
+  branch: A
+  parent: A3a
+  edges:
+  - type: supports
+    target: A3a
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: holds
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/A3z-410m-not-35m-restated.md
 - id: A4
   title: The Selective Turnover Coefficient d (about 0.45) reduces effective generations for selection
   side: day
@@ -2641,6 +2658,88 @@ nodes:
     fidelity: n/a
     external: contested
   claim_file: docs/research/claims/D9a-weasel-demonstrates-the-opposite.md
+- id: DN1
+  title: 'Day and Athos: genome-wide human-chimp dN/dS = 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment), not 0.23'
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: pending
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/DN1-dnds-080-on-20400-genes.md
+- id: DN2
+  title: 'Day: no combination of quality filters moves dN/dS below 0.65; the strictest stack gives 0.64 on 10 genes'
+  side: day
+  branch: ROOT
+  parent: DN1
+  edges:
+  - type: supports
+    target: DN1
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: pending
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/DN2-filters-cannot-move-below-065.md
+- id: DN3
+  title: 'Day: the Consortium''s 0.23 is an artefact of a curated 13,454-gene set; his proposed test is to rerun both gene sets on one pipeline'
+  side: day
+  branch: ROOT
+  parent: DN1
+  edges:
+  - type: attacks
+    target: DN5
+  - type: depends-on
+    target: DN1
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/DN3-consortium-gene-set-artefact.md
+- id: DN4
+  title: 'Day: at dN/dS = 0.80 natural selection is not the primary mechanism of adaptive evolution'
+  side: day
+  branch: ROOT
+  parent: ROOT-FM
+  edges:
+  - type: supports
+    target: ROOT-FM
+  - type: depends-on
+    target: DN1
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: n/a
+    external: pending
+  claim_file: docs/research/claims/DN4-selection-not-primary-at-080.md
+- id: DN5
+  title: 'CSAC 2005 (as relayed by Day): human-chimp Ka/Ks = 0.23 on 13,454 orthologous genes'
+  side: literature
+  branch: ROOT
+  parent: DN1
+  edges: []
+  load_bearing: false
+  sourcing: secondhand
+  status: extracted
+  verdicts:
+    internal: n/a
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/DN5-csac-2005-kaks-023.md
 - id: E
   title: 'Punctuated equilibrium''s peripatric mechanism sits where hypermutation is favoured: 6 of 12 LTEE populations became mutators and a
     founder event has a ~2.3% chance of producing a repair-deficient homozygote'
@@ -2679,6 +2778,24 @@ nodes:
     fidelity: pending
     external: pending
   claim_file: docs/research/claims/E1-hitchhikers-barrick.md
+- id: E10
+  title: 'Day: ten of the twelve LTEE populations show intervals where fixations are being undone faster than new ones complete'
+  side: day
+  branch: E
+  parent: A2
+  edges:
+  - type: supports
+    target: A2
+  - type: depends-on
+    target: E9
+  load_bearing: false
+  sourcing: firsthand
+  status: checked
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/E10-ltee-fixations-undone-ten-of-twelve.md
 - id: E2
   title: 'Punctuated equilibrium needs s in a SAFE (<0.01), DANGER (0.01-0.10) or IMPOSSIBLE (>0.10) zone: s_min = 2K ln(2Ne)/T leaves no parameter
     set that is both PE and safe'

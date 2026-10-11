@@ -3712,3 +3712,137 @@
   fate: alive
   fate_date:
   fate_locator: "Reviews #53-#55; fix pass e7ecda6; external contested leaning contradicted; Uricchio full text queued"
+
+- id: L-day-ten-of-twelve-2026
+  label: "MITTENS 3.0 s5.3: ten of twelve LTEE populations show an interval where >=95% snapshot fixations fall"
+  side: day
+  kind: argument
+  date: 2026-09-28
+  claim_ids: [E10]
+  locator: "https://zenodo.org/records/23003785 s5.3"
+  quote: "Ten of twelve populations — mutator and non-mutator alike — show at least one 10,000-generation interval where fixations are being undone faster than new ones complete."
+  parents:
+    - {id: L-good-2017, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Restated 2026-10-11 (Q178)"
+
+- id: L-day-ltee-undone-2026
+  label: "Day, How Biologists Keep 'Proving' Selection: ten of twelve LTEE populations undo fixations; Barrick 2009 reported one population"
+  side: day
+  kind: argument
+  date: 2026-10-11
+  claim_ids: [E10]
+  locator: "https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ ¶4 (Q178)"
+  quote: "In fact, ten of the twelve populations even show intervals where fixations are being undone faster than any new ones complete."
+  parents:
+    - {id: L-day-ten-of-twelve-2026, relation: descends}
+    - {id: L-barrick-2009, relation: cites}
+    - {id: L-good-2017, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 L6 (awaiting review)"
+
+- id: L-day-dnds-080-2026
+  label: "Day and Athos: dN/dS 0.80 on 20,400 GENCODE v46 genes vs the Consortium's 0.23 on 13,454; Q176 two-gene-set test proposed"
+  side: day
+  kind: argument
+  date: 2026-10-11
+  claim_ids: [DN1, DN2, DN3, DN5]
+  locator: "https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ ¶9, ¶13, ¶22 (Q173, Q174, Q176)"
+  quote: "Not 0.23. 0.80."
+  parents:
+    - {id: L-csac-2005, relation: responds-to}
+    - {id: L-day-fourth-mechanism-2026, relation: descends, inferred: true}
+  inferred: true
+  why: "The post does not name 'The Fourth Mechanism' (2026-10-10); the same UATV-funded T2T analysis programme and the next-day timing make it a continuation."
+  fate: alive
+  fate_date:
+  fate_locator: "Zenodo paper with per-gene table promised (Q176); R4 L1 (awaiting review)"
+
+- id: L-day-not-primary-2026
+  label: "Day: at dN/dS 0.80 natural selection is not the primary mechanism of adaptive evolution"
+  side: day
+  kind: argument
+  date: 2026-10-11
+  claim_ids: [DN4]
+  locator: "https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ ¶21 (Q177)"
+  quote: "At dN/dS = 0.80, natural selection is not the primary mechanism of adaptive evolution."
+  parents:
+    - {id: L-day-dnds-080-2026, relation: descends}
+    - {id: L-day-fourth-mechanism-2026, relation: descends, inferred: true}
+  inferred: true
+  why: "'We already have fairly good evidence showing that it is not the secondary mechanism either' alludes to earlier posts (FM10's 'neither natural selection nor neutral diffusive drift') without naming them."
+  fate: alive
+  fate_date:
+  fate_locator: ""
+
+- id: L-day-410m-restated-2026
+  label: "Day restates 410 million differences, not 35 million; names Yoo SI sheets 14, 19 and 24"
+  side: day
+  kind: argument
+  date: 2026-10-11
+  claim_ids: [A3z]
+  locator: "https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ ¶2, ¶19 (Q179)"
+  quote: "the real number turned out to involve an estimated 410 million total genomic differences, not 35 million"
+  parents:
+    - {id: L-pz2-410m-2026, relation: descends}
+    - {id: L-yoo-2025, relation: cites}
+    - {id: L-csac-2005, relation: cites}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 L7 (awaiting review)"
+
+- id: L-audit-l1-2026
+  label: "Audit L1: one pipeline on hg38/panTro5 gives 0.21 (one2one) and 0.27 (all genes); Day's 71.6% single-SNV share matches out-of-frame reading"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [DN1, DN2, DN3, DN5]
+  locator: "research/checks/results/R4-L1.md"
+  quote: "The size of the effect is about 0.06, not 0.57."
+  parents:
+    - {id: L-day-dnds-080-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Awaiting review; T2T rerun L1b queued"
+
+- id: L-audit-l6-2026
+  label: "Audit L6: Day's ten of twelve reproduces on his snapshot rule; Good 2017's HMM fixed counts never fall"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [E10]
+  locator: "research/checks/results/R4-L6.md"
+  quote: "Good's own fixation calls never decline: 0 of 12 populations, at any timepoint."
+  parents:
+    - {id: L-day-ltee-undone-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Awaiting review"
+
+- id: L-audit-l7-2026
+  label: "Audit L7: 410 M reconstructs as base pairs from Yoo SI sheets 14 x 19 (404-413 M); route unconfirmed; 8.5x the T2T event count"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [A3z, A3x1]
+  locator: "research/checks/results/R4-L7.md"
+  quote: "All reproducing readings are base pairs."
+  parents:
+    - {id: L-day-410m-restated-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Awaiting review"

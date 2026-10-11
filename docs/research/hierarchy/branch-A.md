@@ -103,6 +103,10 @@ flowchart TD
   style n_A3x1 fill:#e5e7eb,stroke:#374151
   n_A3x1 --> n_A3x
   n_A3x1 -->|supports| n_A3x
+  n_A3z["A3z: Day 2026-10-11: Yoo 2025 implies 410 million total genomic d<br/><small>day · int:holds · fid:pending · ext:pending</small>"]
+  style n_A3z fill:#fde2c8,stroke:#b45309
+  n_A3z --> n_A3a
+  n_A3z -->|supports| n_A3a
   n_A4["A4: The Selective Turnover Coefficient d (about 0.45) reduces ef<br/><small>day · int:holds for hazard-scale s · fid:n/a · ext:contested</small>"]
   style n_A4 fill:#fde2c8,stroke:#b45309
   n_A4 --> n_A
@@ -125,15 +129,15 @@ flowchart TD
   n_A4d --> n_A4
   n_A4d ==>|revises| n_A4
   n_A4d ==>|supersedes| n_A
-  n_A4e["A4e: Hancock: overlapping generations are handled by effective si<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_A4e["A4e: Hancock: overlapping generations are handled by effective si<br/><small>critic · int:holds · fid:unverifiable · ext:pending</small>"]
   style n_A4e fill:#dbeafe,stroke:#1d4ed8
   n_A4e --> n_A4
   n_A4e -.->|attacks| n_A4g
-  n_A4f["A4f: Hancock: Day's selective turnover coefficient d has no count<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_A4f["A4f: Hancock: Day's selective turnover coefficient d has no count<br/><small>critic · int:holds · fid:partial · ext:contested</small>"]
   style n_A4f fill:#dbeafe,stroke:#1d4ed8
   n_A4f --> n_A4
   n_A4f -.->|attacks| n_A4
-  n_A4g["A4g: Day: standard fixation models (Wright-Fisher and Kimura's re<br/><small>day · int:pending · fid:pending · ext:pending</small>"]
+  n_A4g["A4g: Day: standard fixation models (Wright-Fisher and Kimura's re<br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_A4g fill:#fde2c8,stroke:#b45309
   n_A4g --> n_A4
   n_A4g -->|supports| n_A4

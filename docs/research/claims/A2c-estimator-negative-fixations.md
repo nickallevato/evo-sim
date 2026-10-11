@@ -52,5 +52,7 @@ Not run. Prediction (critic): re-estimating Ara-2 and Ara+5 with a monotone fixa
 ## Check
 No script. Review: pending.
 
+R4 L6 (research/checks/results/R4-L6.md; awaiting review, 2026-10-11): Day's '>= 95% snapshot' rule reproduces his 'ten of twelve' populations with a falling count (E10, Q178) from Good 2017's public trajectories, while Good's HMM fixed counts never fall (0 of 12); of 972 mutations leaving the >= 95% set, 34% return, 62% hover, 4.6% are lost. Supports A2c's point that the snapshot estimator is not a fixation count.
+
 ## Simulator variables implied
 - None directly; informs the counting-rule toggle in A2b.

@@ -23,7 +23,7 @@ flowchart TD
   n_H2 --> n_H
   n_H2 -.->|attacks| n_H
   n_H2 -->|supports| n_H
-  n_H2a["H2a: Hancock: Haldane's cost of selection applies only to hard (v<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_H2a["H2a: Hancock: Haldane's cost of selection applies only to hard (v<br/><small>critic · int:holds · fid:accurate · ext:contested</small>"]
   style n_H2a fill:#dbeafe,stroke:#1d4ed8
   n_H2a --> n_H
   n_H2a -.->|attacks| n_H

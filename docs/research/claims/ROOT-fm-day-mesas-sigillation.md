@@ -69,6 +69,8 @@ R4 FM: the data Day names (T2T ape alignment against hg38/orangutan-alignable se
 
 Rule-N grep of Day's corpus (2026-10-10, `quotes-day.md`, the E4 claim file, B3d): FM10 needs the premise "neutral diffusive drift implies a uniform per-window rate". The only occurrence of "uniform-rate" is the FM3 sentence itself (Q164); no harvested Day text states, defends or uses that premise. His own material does carry time-varying drift (relictation, Z23188201, "technically a form of non-diffusive drift ... produced by a very different and much faster process") and cites among-species mutation-rate variation (Bergeron, B3d), but FM10's wording is "neutral diffusive drift", which excludes relictation; and MITTENS (Q06-Q14, Q132-Q139) uses per-generation counts, with no regional-rate statement. So N2b ("needs a premise the author's own text contradicts") is not triggered; the open question is N2d ("stronger than the premises support"), which needs a deliberate call because the post states no premise at all. Internal stays `pending`; the N2d option is flagged for the user.
 
+R4 L1 (awaiting review, 2026-10-11): Day's new dN/dS = 0.80 (DN1-DN4, 2026-10-11) is attached here as a Day-side data claim. On hg38/panTro5 all genes give 0.271 and Ensembl one2one 0.207; Day's 0.80 is not reproduced by any gene set; his single-SNV 71.6% nonsyn share matches out-of-frame reading. T2T rerun queued (L1b).
+
 ## Simulator variables implied
 - per-lineage, per-window substitution density
 - mutation-rate heterogeneity (CpG, replication timing)

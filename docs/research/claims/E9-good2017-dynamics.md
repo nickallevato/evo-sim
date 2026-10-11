@@ -54,5 +54,7 @@ Qualitative: clade structure (two coexisting lineages in nine of twelve populati
 ## Check
 Script: none (needs SI access). · Result: not run · Review: pending
 
+R4 L6 (awaiting review, 2026-10-11): from the public data files (github benjaminhgood/LTEE-metagenomic), Good's well-mixed HMM fixed counts never decline in any of 12 populations at any timepoint; the >= 95% snapshot count declines in 10 of 12 (Day's E10).
+
 ## Simulator variables implied
 Clade structure, minor-lineage frequency at end, counting rule.

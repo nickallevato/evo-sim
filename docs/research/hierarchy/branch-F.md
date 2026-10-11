@@ -18,11 +18,11 @@ flowchart TD
   n_F1a --> n_F1
   n_F1a -.->|attacks| n_F1
   n_F1a -->|depends-on| n_F3
-  n_F1b["F1b: McCarthy: mutations do not increase in frequency one at a ti<br/><small>critic · int:holds · fid:n/a · ext:contested</small>"]
+  n_F1b["F1b: McCarthy: mutations do not increase in frequency one at a ti<br/><small>critic · int:holds · fid:n/a · ext:supported</small>"]
   style n_F1b fill:#dbeafe,stroke:#1d4ed8
   n_F1b --> n_F1
   n_F1b -.->|attacks| n_F
-  n_F1c["F1c: Hancock: Day's argument is a version of the waiting-time pro<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_F1c["F1c: Hancock: Day's argument is a version of the waiting-time pro<br/><small>critic · int:holds · fid:partial · ext:pending</small>"]
   style n_F1c fill:#dbeafe,stroke:#1d4ed8
   n_F1c --> n_F1
   n_F1c -.->|attacks| n_F
@@ -36,7 +36,7 @@ flowchart TD
   n_F3 --> n_F
   n_F3 -->|supports| n_F
   n_F3 -->|depends-on| n_F3a
-  n_F3a["F3a: s = 0.001 'the empirical mean for beneficial mutations in hu<br/><small>day · int:pending · fid:misread · ext:contested</small>"]
+  n_F3a["F3a: s = 0.001 'the empirical mean for beneficial mutations in hu<br/><small>day · int:holds · fid:misread · ext:contested</small>"]
   style n_F3a fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_F3a --> n_F3
   n_F3a -->|supports| n_F3

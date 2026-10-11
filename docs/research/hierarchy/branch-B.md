@@ -44,7 +44,7 @@ flowchart TD
   n_B1e --> n_B1
   n_B1e -->|supports| n_B1
   n_B1e -->|supports| n_B7
-  n_B2["B2: Hard Limits: drift cannot complete fixations above a census <br/><small>day · int:pending · fid:unverifiable · ext:contested</small>"]
+  n_B2["B2: Hard Limits: drift cannot complete fixations above a census <br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_B2 fill:#fde2c8,stroke:#b45309,stroke-width:3px
   n_B2 --> n_B
   n_B2 -->|supports| n_B
@@ -95,7 +95,7 @@ flowchart TD
   n_B3c --> n_B3
   n_B3c -->|supports| n_B3
   n_B3c -->|depends-on| n_B3b
-  n_B3d["B3d: k = 32.3 mu (Bergeron pedigree rate vs Yoo required rate) an<br/><small>day · int:pending · fid:unverifiable · ext:contested</small>"]
+  n_B3d["B3d: k = 32.3 mu (Bergeron pedigree rate vs Yoo required rate) an<br/><small>day · int:holds · fid:misread · ext:contradicted</small>"]
   style n_B3d fill:#fde2c8,stroke:#b45309
   n_B3d --> n_B3
   n_B3d -->|supports| n_B3
@@ -122,6 +122,10 @@ flowchart TD
   style n_B3i fill:#dbeafe,stroke:#1d4ed8
   n_B3i --> n_B3a
   n_B3i -.->|attacks| n_B3a
+  n_B3m["B3m: Day: 'a median factor of 25 across 55 vertebrates' (Bergeron<br/><small>day · int:n/a · fid:accurate · ext:contested</small>"]
+  style n_B3m fill:#fde2c8,stroke:#b45309
+  n_B3m --> n_B3d
+  n_B3m -->|supports| n_B3d
   n_B4["B4: Molecular clock recalibration: CHLCA collapses from 6-7 Mya <br/><small>day · int:holds · fid:unverifiable · ext:contested</small>"]
   style n_B4 fill:#fde2c8,stroke:#b45309
   n_B4 --> n_B
@@ -205,7 +209,7 @@ flowchart TD
   n_B5h --> n_B5
   n_B5h -->|supports| n_B5
   n_B5h -.->|attacks| n_B3a
-  n_B5j["B5j: Hancock: neutral theory is not a post-hoc retreat; drift dom<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_B5j["B5j: Hancock: neutral theory is not a post-hoc retreat; drift dom<br/><small>critic · int:holds · fid:n/a · ext:pending</small>"]
   style n_B5j fill:#dbeafe,stroke:#1d4ed8
   n_B5j --> n_B
   n_B5j -.->|attacks| n_B
@@ -222,7 +226,7 @@ flowchart TD
   style n_B6b fill:#dbeafe,stroke:#1d4ed8
   n_B6b --> n_B6
   n_B6b -.->|attacks| n_B6a
-  n_B6c["B6c: Hancock: a serial one-at-a-time model predicts no genetic va<br/><small>critic · int:holds · fid:n/a · ext:pending</small>"]
+  n_B6c["B6c: Hancock: a serial one-at-a-time model predicts no genetic va<br/><small>critic · int:holds · fid:n/a · ext:supported</small>"]
   style n_B6c fill:#dbeafe,stroke:#1d4ed8
   n_B6c --> n_B6
   n_B6c -.->|attacks| n_B1

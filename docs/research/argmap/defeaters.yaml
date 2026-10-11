@@ -5329,3 +5329,116 @@
   counter: []
   note: 'applied in fix pass e7ecda6 (R4-A2e-alpha Review resolution): C1/C3 accepted, C2 done post hoc (228, 112-323; 67-136 corrected: straddles 191); leaning contradicted recorded, not adopted'
   hierarchy_edge: false
+
+- id: d413
+  attacker: chk:L1
+  target: DN1
+  target_part: P1
+  type: undermining
+  by: ['audit (check L1)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-L1.md
+  audit_status: partly
+  audit_basis: 'awaiting review; hg38/panTro5: pooled NG dN/dS 0.271 (all 23,183 knownCanonical genes), 0.207 (Ensembl one2one); single-difference nonsyn share 45.8% vs Day 71.6%; every filter stack 0.23-0.28; not T2T (L1b queued)'
+  counter: []
+  note: 'Critic-side: 0.80 is not reproduced by any gene set or filter on a correct frame; Day''s own single-SNV share matches out-of-frame reading (~80% of genes, post hoc mixture). Day-side: method unreleased; a T2T whole-genome extraction can differ (paralog projection untested); the near-empty strict stack is not reproduced by any tested candidate. Partly until review and L1b.'
+  hierarchy_edge: false
+
+- id: d414
+  attacker: chk:L1
+  target: DN3
+  target_part: C
+  type: rebutting
+  by: ['audit (check L1)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-L1.md
+  audit_status: partly
+  audit_basis: 'awaiting review; one pipeline: one2one 0.207, all genes 0.271 (+31%); non-one2one genes 0.447; for the total to reach 0.80 they would need pN/pS 2.42'
+  counter: []
+  note: 'Day''s Q176 test run by the audit on public data before his own run. Day-side credit: the design is valid, the Ensembl reconstruction holds, and a gene-set effect exists with his sign (about 0.06). Critic-side: the gene set cannot carry 0.23 to 0.80.'
+  hierarchy_edge: false
+
+- id: d415
+  attacker: DN3
+  target: DN5
+  target_part: inference
+  type: undercutting
+  by: [Vox Day, Athos]
+  first_date: 2026-10-11
+  locator: https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ ¶22 (Q176)
+  audit_status: partly
+  audit_basis: 'R4 L1 (awaiting review): excluding non-one2one genes lowers the genome-wide value (0.271 -> 0.207); it does not make 0.23 an artefact of a 0.80 genome'
+  counter: [d414]
+  note: 'Day-side attack on the literature value: a curated 1:1-ortholog set is not the whole coding genome. Upheld in direction, not in size.'
+  quote: the published number is an artificial artifact of cherry-picked genes, not an observed property of the human genome.
+  hierarchy_edge: true
+
+- id: d416
+  attacker: x:dnds-steelman-critic
+  target: DN4
+  target_part: inference
+  type: undercutting
+  by: ['audit (critic-side steelman)']
+  first_date: 2026-10-11
+  locator: docs/research/sources/test-methods-review-2026-10-11.md entry 5 (c)
+  audit_status: untested
+  counter: []
+  note: 'dN/dS averages purifying constraint over all nonsynonymous changes; even at 0.80 it says nothing about the adaptive fraction alpha (McDonald-Kreitman; A2e-alpha). No critic has replied (refresh-2026-10-11). Rule-N grep of Day''s own material pending.'
+  hierarchy_edge: false
+
+- id: d417
+  attacker: chk:L6
+  target: E10
+  target_part: inference
+  type: undercutting
+  by: ['audit (check L6)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-L6.md
+  audit_status: partly
+  audit_basis: 'awaiting review; Day''s >= 95% snapshot rule reproduces 10 of 12 (28 of 29 tabulated cells); Good 2017 HMM fixed counts decline in 0 of 12; of 972 exits from the >= 95% set, 34% return, 62% hover, 4.6% are lost'
+  counter: []
+  note: 'Day-side credit: his count is exact and near-fixed mutations do reverse (clade displacement). Critic-side: the count is of a snapshot statistic (A2c, E6), not of fixations; fixed calls are never undone.'
+  hierarchy_edge: false
+
+- id: d418
+  attacker: chk:L7
+  target: A3x1
+  target_part: P1
+  type: undermining
+  by: ['audit (check L7)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-L7.md
+  audit_status: partly
+  audit_basis: 'awaiting review; mean SNV + gap divergence (SI Table III.14) x hs1 length (III.19) = 404.2-412.7 M bp, within 2% of 410 M; two other routes also within 2%; base rate at 410 M = 0.83 of random targets'
+  counter: []
+  note: 'Day-side: 410 M is reconstructible from the SI sheets Day names, so not-found is too strong. Critic-side: the route is unconfirmed and every reproducing reading is base pairs; 187 Mb and 14.9% stay unreproduced.'
+  hierarchy_edge: false
+
+- id: d419
+  attacker: chk:L7
+  target: A3z
+  target_part: inference
+  type: undercutting
+  by: ['audit (check L7)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-L7.md
+  audit_status: partly
+  audit_basis: 'awaiting review; every reading that gives ~410 M counts base pairs (gap divergence counts bases in gaps); against T2T events (GAP-07t, 48.27 M, both lineages) 410 M is 8.5x; the 35 M it is contrasted with is a CSAC SNV event count'
+  counter: []
+  note: 'Day-side credit: his new locator (sheets 14, 19, 24; three tools, three bases, no consolidated total) is accurate.'
+  hierarchy_edge: false
+
+- id: d420
+  attacker: A3x
+  target: A3z
+  target_part: inference
+  type: undercutting
+  by: [Dennis McCarthy, Dumb-and-Dumber (r/DebateEvolution), Zach Hancock, Sparky_6_4 (KITTENS)]
+  first_date: 2026-09-17
+  date_note: 'pre-emptive: the critics answered the 410 M figure (A3a) before this 2026-10-11 restatement'
+  locator: https://dennismccarthy.substack.com/p/vox-day-responds para 26 (MC-11)
+  audit_status: partly
+  audit_basis: 'A3x holds/partial/supported; R4 L7 (awaiting review) confirms the reconstructed 410 M is base pairs'
+  counter: [d272]
+  note: 'The restatement repeats A3a''s unit; the critics'' bp-vs-events point applies unchanged.'
+  hierarchy_edge: false

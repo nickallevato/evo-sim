@@ -40,7 +40,7 @@ flowchart TD
   style n_G2b fill:#fef3c7,stroke:#a16207
   n_G2b --> n_A
   n_G2b -->|supports| n_A
-  n_G2c["G2c: Hancock: a strictly serial model predicts almost no genetic <br/><small>critic · int:holds · fid:partial · ext:pending</small>"]
+  n_G2c["G2c: Hancock: a strictly serial model predicts almost no genetic <br/><small>critic · int:holds · fid:partial · ext:supported</small>"]
   style n_G2c fill:#dbeafe,stroke:#1d4ed8
   n_G2c --> n_G2
   n_G2c -->|supports| n_G2
@@ -60,7 +60,7 @@ flowchart TD
   style n_G2g fill:#fde2c8,stroke:#b45309
   n_G2g --> n_G
   n_G2g -->|supports| n_A
-  n_G2h["G2h: Hancock: MITTENS's F_max contains no mutation input and no s<br/><small>critic · int:pending · fid:pending · ext:pending</small>"]
+  n_G2h["G2h: Hancock: MITTENS's F_max contains no mutation input and no s<br/><small>critic · int:holds · fid:accurate · ext:contested</small>"]
   style n_G2h fill:#dbeafe,stroke:#1d4ed8
   n_G2h --> n_G2
   n_G2h -.->|attacks| n_A

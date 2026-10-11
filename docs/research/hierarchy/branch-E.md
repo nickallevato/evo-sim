@@ -12,6 +12,11 @@ flowchart TD
   style n_E1 fill:#dbeafe,stroke:#1d4ed8
   n_E1 --> n_A2
   n_E1 -.->|attacks| n_A2
+  n_E10["E10: Day: ten of the twelve LTEE populations show intervals where<br/><small>day · int:pending · fid:pending · ext:pending</small>"]
+  style n_E10 fill:#fde2c8,stroke:#b45309
+  n_E10 --> n_A2
+  n_E10 -->|supports| n_A2
+  n_E10 -->|depends-on| n_E9
   n_E2["E2: Punctuated equilibrium needs s in a SAFE (<0.01), DANGER (0.<br/><small>day · int:pending · fid:pending · ext:pending</small>"]
   style n_E2 fill:#fde2c8,stroke:#b45309
   n_E2 --> n_E
