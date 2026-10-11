@@ -1,0 +1,30 @@
+
+## research/checks/results/raw/gap07t_hs1.json (reference hs1; 5366631 blocks)
+| filter | class | aligned cols | SNV | indel (in-block) | inter <=1k / 10k / 100k | events (SNV+indel+inter100k) | per lineage | 205M / per lineage | SNV share |
+|---|---|---|---|---|---|---|---|---|---|
+| F0 | auto | 2632.1 M | 39.99 M | 3.98 M | 1.027 / 1.052 / 1.071 M | 45.04 M | 22.52 M | 9.10 | 0.888 |
+| F0 | X | 146.3 M | 1.77 M | 0.18 M | 0.047 / 0.048 / 0.050 M | 2.01 M | 1.00 M | 204.40 | 0.884 |
+| F0 | Y | 19.9 M | 1.11 M | 0.10 M | 0.021 / 0.022 / 0.023 M | 1.23 M | 0.62 M | 332.81 | 0.901 |
+| F0 | primary | 2798.3 M | 42.87 M | 4.26 M | 1.095 / 1.122 / 1.144 M | 48.27 M | 24.14 M | 8.49 | 0.888 |
+| F1 | auto | 2497.4 M | 33.56 M | 3.09 M | 1.027 / 1.052 / 1.071 M | 37.72 M | 18.86 M | 10.87 | 0.890 |
+| F1 | X | 133.4 M | 1.40 M | 0.14 M | 0.047 / 0.048 / 0.050 M | 1.58 M | 0.79 M | 259.17 | 0.883 |
+| F1 | Y | 5.0 M | 0.16 M | 0.01 M | 0.021 / 0.022 / 0.023 M | 0.19 M | 0.10 M | 2125.57 | 0.825 |
+| F1 | primary | 2635.8 M | 35.11 M | 3.24 M | 1.095 / 1.122 / 1.144 M | 39.49 M | 19.75 M | 10.38 | 0.889 |
+| F2 | auto | 1206.7 M | 14.19 M | 1.02 M | 1.027 / 1.052 / 1.071 M | 16.28 M | 8.14 M | 25.18 | 0.871 |
+| F2 | X | 49.5 M | 0.41 M | 0.03 M | 0.047 / 0.048 / 0.050 M | 0.49 M | 0.25 M | 834.87 | 0.835 |
+| F2 | Y | 0.8 M | 0.01 M | 0.00 M | 0.021 / 0.022 / 0.023 M | 0.04 M | 0.02 M | 11118.04 | 0.351 |
+| F2 | primary | 1257.0 M | 14.61 M | 1.06 M | 1.095 / 1.122 / 1.144 M | 16.81 M | 8.41 M | 24.39 | 0.869 |
+
+lineage (primary): SNV human / chimp / third / unpolarised; strict h/c; indel h / c / unpol; size classes 1,2-10,11-50,51-1000,>1000; types ref-only/oth-only/both
+  F0: SNV 20.72 / 19.11 / 0.56 / 2.49 M (human share 0.520; strict 16.48 / 15.40 M); indel 1.90 / 2.21 / 0.15 M (human share 0.462); size [1690056, 2091671, 338584, 129756, 10015] (1 bp share 0.397); types [2636011, 1595138, 28933]; in-block indel bp 77.8 M
+  F1: SNV 16.46 / 16.89 / 0.40 / 1.36 M (human share 0.494; strict 13.76 / 14.16 M); indel 1.38 / 1.78 / 0.08 M (human share 0.436); size [1316498, 1617547, 245507, 51257, 5637] (1 bp share 0.407); types [2208616, 1012928, 14902]; in-block indel bp 42.8 M
+  F2: SNV 7.10 / 7.20 / 0.14 / 0.17 M (human share 0.497; strict 6.28 / 6.39 M); indel 0.44 / 0.61 / 0.01 M (human share 0.419); size [534745, 460378, 50084, 10277, 331] (1 bp share 0.506); types [757899, 296495, 1421]; in-block indel bp 9.3 M
+  reference bp in blocks without a chimp row: 80.3 M; discontinuities > 100 kb or non-collinear: 310288
+
+## polymorphism-corrected per lineage (hs1 pass, F0 primary)
+  GAP-07c human shares, chimp assumed equal: 20.52 M per lineage; 205 M / that = 9.99
+  GAP-07c pooled (human data only): 22.23 M per lineage; 205 M / that = 9.22
+  CSAC fixed 0.86 (all events): 20.76 M per lineage; 205 M / that = 9.88
+  CSAC fixed 0.78 (all events): 18.83 M per lineage; 205 M / that = 10.89
+
+GAP-07b reference: 37.77 M SNV, 4.30 M indel events, 21.05 M per lineage, 9.74.  hs1 F0 primary: SNV 42.87 M (1.135x), indel 5.40 M (1.257x), per lineage 24.14 M (1.147x)
