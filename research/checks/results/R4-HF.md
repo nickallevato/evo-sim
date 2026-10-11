@@ -61,7 +61,34 @@ Sanity check: the fitted gamma puts **28.0%** of mutations at |s| < 1e-4, which 
 
 ## HF-b: truncation and synergistic epistasis vs Term 3 (pending collection)
 
-## HF-c: intervals on H-C2 T50 and H8 lam50 (pending collection)
+## HF-c: intervals on H-C2 T50 and H8 lam50 (complete)
+**Method:**
+- The 96 H-C2 conditions were rerun with their original seeds (`ci` stage, 1 worker, 2,013 s).
+- At each grid point, p_T was drawn from Beta(k + 0.5, n - k + 0.5) (Jeffreys) and T50 was recomputed with the original first-crossing rule (10,000 draws). The 95% interval is the 2.5 and 97.5 percentiles.
+- The same was done for H8 lam50 per R. For the D = 30 interval, D_obs was also bootstrapped over persisting reps.
+- Raw: `raw/hf_ci.out`.
+
+**Results.**
+- **PC1 (reproduction): all 96 rerun T50 values equal the published values exactly** (60/60 treadmill, 36/36 Gaussian; matched against `raw/h_cost_of_selection.out`, `h_nunney_gauss.out`, `h_nunney_gauss_lowR.out`). **Holds.**
+- **PC2:** The median 95% interval is -13% / +13% around T50. The range is -55% to +97%, widest at grid edges and low M. **Soft T50 > hard T50 with non-overlapping intervals in 43 of 47 matched pairs.**
+  - The pre-registered width (+-20-40%) is **partly missed**: intervals are usually narrower, a few are wider.
+  - "Non-overlapping in at least half" **holds**.
+  - H-C2's "soft selection did not remove or reduce the cost (soft T50 > hard T50 throughout)" therefore stands at 95% in 43/47 pairs. The four overlapping pairs are the R = 10, M = 10 Gaussian pair (6.0 vs 6.5, grid floor), R-scan s = .03 at R = 3 and 5 (marginal), and one Gaussian low-M pair.
+- **PC3 (H8, the 1/300 question), R = 1.111, interval at D = 30, 10k window:**
+
+| K | point | 95% interval |
+|---|---|---|
+| 1,000 | 484 | **419-568** |
+| 500 | 561 | 396-990 |
+| 4,000 | 439 | 389-851 |
+| 16,000 | 546 | **342-720** |
+| 64,000 | 348 | **326-768** |
+
+  - 20k window: K = 1,000 509 (440-763); K = 16,000 631 (535-762); K = 64,000 490 (406-809).
+  - Every 95% interval lies wholly above 300. The prediction "lower end in [300, 420]" holds at K = 1,000 (419) and at K = 16,000 / 64,000 (342 / 326). Of the two sides: **"Day side: wholly >= 300" holds at every K tested**, and **"Critic side: reaches <= 300" fails** at every K.
+  - For R4-H8's rule K2/K2' (<= 300 remove, >= 480 keep, between = conditional on K): the K = 64,000 interval (326-768) excludes the remove zone at 95% but straddles 480. So "slower than 1/300" stays **conditional on K**, but "about equal to or faster than 1/300 at D = 30" is now excluded at 95% at every K tested (Day's verbatim upper bound is conservative there).
+  - R = 2: 52 (50-69) at K = 1,000 and 53 (50-61) at K = 64,000: about 4.3-6x Haldane's rate at every K.
+- **Caveat:** the Beta draws treat grid points as independent and ignore the fact that the grid was stopped early (H-C2 stops after two >= 87.5% points). A wider grid could add crossings that are currently censored (censored share <= 2% everywhere).
 
 ## Who this helps (GAP-05 part; the rest follows the runs)
 - **Day side:** The slow decline is real in a standard Kimura-flux model. At the upper-end deleterious input with an Ne decline it is 2.4 log units over 252,000 generations, which is more than R = 3 could absorb if nothing offsets it. No critic has answered this with numbers (GAP-05 S21), and the "equilibrium" answer needs the population to have been at its current-Ne equilibrium.
