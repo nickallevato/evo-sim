@@ -1,0 +1,6 @@
+host: builder.allevato.io (AMD Ryzen 7 3700X, 8 vCPU, 5 GB), launched 2026-10-11 ~12:04 builder time, 7 workers
+command: HF_REVERSE=1 research/.venv/bin/python -I research/checks/hf_followups.py main 7  (orchestration-only switch, commit 7632b57)
+script md5: 3e07efcbcbfaf2fa22afd0bf48c62e83; numpy 2.5.3 (pinned)
+seeded from workhorse hf_main.jsonl snapshot (316 rows); remaining jobs run cheapest-first while workhorse PID 895988 runs dearest-first
+pre-launch reproduction: 5 finished workhorse jobs (cells 89,93,119,33,10) rerun on builder, all fields except sec identical
+merge: concatenate both hf_main.jsonl files, drop duplicate (cell, rep) rows (identical by seed), before `analyse`
