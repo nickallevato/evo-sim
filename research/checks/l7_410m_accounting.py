@@ -101,7 +101,7 @@ def main():
         flag = " <== within 2% of 410 M" if abs(v / TARGET - 1) <= 0.02 else ""
         flag += " ; 14.9% +/- 0.3" if abs(100 * v / Ln - 14.9) <= 0.3 else ""
         print(f"{name:55s} {v / 1e6:8.1f} {100 * v / Ln:6.2f}% {v / TARGET:6.3f}{flag}")
-    print("14.9% denominators: 410 M / 0.149 = %.0f Mb; hs1 A = %.0f, A+X = %.0f, A+X+Y = %.0f Mb" % (
+    print("14.9%% denominators: 410 M / 0.149 = %.0f Mb; hs1 A = %.0f, A+X = %.0f, A+X+Y = %.0f Mb" % (
         TARGET / 0.149 / 1e6, L['A'] / 1e6, (L['A'] + L['X']) / 1e6, Ltot / 1e6))
     pool = [v for _, v, _ in out] + [35e6, 1140, 48.27e6, 42.87e6, 5.40e6] + list(sdr.values())
     pool = sorted(set(round(p) for p in pool))

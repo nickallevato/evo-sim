@@ -1,0 +1,40 @@
+MOESM4 sha256 865d4e868568b32dc0d233557c93d308b80b92168fe25d0196b0f5151c6671d1
+sheet 14 human-chimp mean SNV {'A': 0.01463283, 'X': 0.01099073, 'Y': 0.06588082} mean gap {'A': 0.12473197, 'X': 0.04384782, 'Y': 0.56608095}
+sheet 19 hs1 lengths {'A': 2900555906, 'X': 154259566, 'Y': 62460029} chimp rows {'A': {'aligned': 91.47, 'identical': 90.22, 'aligned11': 86.1, 'identical11': 84.95}, 'X': {'aligned': 95.41, 'identical': 94.37, 'aligned11': 86.48, 'identical11': 85.57}, 'Y': {'aligned': 33.93, 'identical': 32.97, 'aligned11': 8.01, 'identical11': 7.75}}
+sheet 24 SDR bp by (lineage, haplotype): {('GGO', 'h1'): 706.4, ('GGO', 'h2'): 686.0, ('HSA', 'h1'): 147.8, ('HSA', 'h2'): 183.6, ('PAB', 'h1'): 228.5, ('PAB', 'h2'): 234.5, ('PPA', 'h1'): 354.4, ('PPA', 'h2'): 355.5, ('PPY', 'h1'): 219.2, ('PPY', 'h2'): 219.0, ('PTR', 'h1'): 288.9, ('PTR', 'h2'): 308.2, ('Pan', 'h1'): 50.5, ('Pan', 'h2'): 62.0, ('Pongo', 'h1'): 275.0, ('Pongo', 'h2'): 309.4, ('SSY', 'h1'): 900.1, ('SSY', 'h2'): 894.8}
+lineages in sheet 24: ['GGO', 'HSA', 'PAB', 'PPA', 'PPY', 'PTR', 'Pan', 'Pongo', 'SSY'] human keys [('HSA', 'h1'), ('HSA', 'h2')] chimp keys [('PTR', 'h1'), ('PTR', 'h2')]
+
+reading | bp (M) | % of hs1 length used | vs 410 M
+R1 (SNV+gap) x L [A]                                       404.2  13.94%  0.986 <== within 2% of 410 M
+R2 (1-identical) x L [A]                                   283.7   9.78%  0.692
+R2 (1-identical11) x L [A]                                 436.5  15.05%  1.065 ; 14.9% +/- 0.3
+R2 (1-aligned) x L [A]                                     247.4   8.53%  0.603
+R2 (1-aligned11) x L [A]                                   403.2  13.90%  0.983 <== within 2% of 410 M
+R4a SNV x L [A]                                             42.4   1.46%  0.104
+R1 (SNV+gap) x L [A+X]                                     412.7  13.51%  1.007 <== within 2% of 410 M
+R2 (1-identical) x L [A+X]                                 292.4   9.57%  0.713
+R2 (1-identical11) x L [A+X]                               458.8  15.02%  1.119 ; 14.9% +/- 0.3
+R2 (1-aligned) x L [A+X]                                   254.5   8.33%  0.621
+R2 (1-aligned11) x L [A+X]                                 424.0  13.88%  1.034
+R4a SNV x L [A+X]                                           44.1   1.44%  0.108
+R1 (SNV+gap) x L [A+X+Y]                                   452.2  14.51%  1.103
+R2 (1-identical) x L [A+X+Y]                               334.2  10.72%  0.815
+R2 (1-identical11) x L [A+X+Y]                             516.4  16.57%  1.260
+R2 (1-aligned) x L [A+X+Y]                                 295.8   9.49%  0.721
+R2 (1-aligned11) x L [A+X+Y]                               481.5  15.45%  1.174
+R4a SNV x L [A+X+Y]                                         48.3   1.55%  0.118
+R3 35M + 2 x SDR('HSA', 'h1')                              330.5  10.60%  0.806
+R3 35M + 2 x SDR('HSA', 'h2')                              402.2  12.90%  0.981 <== within 2% of 410 M
+R3 35M + 2 x SDR(human mean of haplotypes)                 366.4  11.75%  0.894
+R3 35M + SDR('HSA', 'h1') + SDR('PTR', 'h1')               471.7  15.13%  1.150 ; 14.9% +/- 0.3
+R4 SNVxL[A+X+Y] + SDR('HSA', 'h1') + SDR('PTR', 'h1')      484.9  15.56%  1.183
+R3 35M + SDR('HSA', 'h1') + SDR('PTR', 'h2')               491.0  15.75%  1.198
+R4 SNVxL[A+X+Y] + SDR('HSA', 'h1') + SDR('PTR', 'h2')      504.3  16.18%  1.230
+R3 35M + SDR('HSA', 'h2') + SDR('PTR', 'h1')               507.5  16.28%  1.238
+R4 SNVxL[A+X+Y] + SDR('HSA', 'h2') + SDR('PTR', 'h1')      520.8  16.71%  1.270
+R3 35M + SDR('HSA', 'h2') + SDR('PTR', 'h2')               526.9  16.90%  1.285
+R4 SNVxL[A+X+Y] + SDR('HSA', 'h2') + SDR('PTR', 'h2')      540.1  17.33%  1.317
+14.9% denominators: 410 M / 0.149 = 2752 Mb; hs1 A = 2901, A+X = 3055, A+X+Y = 3117 Mb
+
+R5 base rate: pool 52 values; 1-3 element sums within 1% of 410 M: 55; random targets 300-520 M (200 draws): mean 66.1, max 143; ratio 0.83
+Ratios: 410/35 = 11.71; 410/48.27 (GAP-07t events, both lineages) = 8.49; 14.9/1.23 = 12.11
