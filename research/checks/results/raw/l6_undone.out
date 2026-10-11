@@ -1,0 +1,13 @@
+Ara-1: snapshot [11, 36, 253, 274, 265, 265] declines [(40000, 50000, -9)] | HMM fixed [13.0, 38.0, 258.0, 263.0, 268.0, 269.0] declines [] (any tp 0) | R3 {'dip': 2, 'lost': 1, 'hover': 15}
+Ara-2: snapshot [160, 76, 83, 198, 708, 730] declines [(10000, 20000, -84)] | HMM fixed [66.0, 71.0, 108.0, 618.0, 939.0, 977.0] declines [] (any tp 0) | R3 {'dip': 118, 'lost': 13, 'hover': 152}
+Ara-3: snapshot [15, 26, 30, 37, 377, 458] declines [] | HMM fixed [16.0, 27.0, 29.0, 47.0, 514.0, 747.0] declines [] (any tp 0) | R3 {'dip': 4, 'lost': 2, 'hover': 88}
+Ara-4: snapshot [167, 425, 664, 740, 885, 799] declines [(50000, 60000, -86)] | HMM fixed [165.0, 415.0, 691.0, 805.0, 863.0, 879.0] declines [] (any tp 0) | R3 {'dip': 59, 'lost': 11, 'hover': 162}
+Ara-5: snapshot [9, 16, 36, 7, 63, 60] declines [(30000, 40000, -29), (50000, 60000, -3)] | HMM fixed [1.0, 3.0, 5.0, 9.0, 77.0, 87.0] declines [] (any tp 0) | R3 {'dip': 34, 'lost': 1, 'hover': 18}
+Ara-6: snapshot [15, 22, 26, 24, 24, 35] declines [(30000, 40000, -2)] | HMM fixed [15.0, 24.0, 27.0, 28.0, 28.0, 57.0] declines [] (any tp 0) | R3 {'dip': 2, 'lost': 0, 'hover': 2}
+Ara+1: snapshot [11, 22, 43, 42, 73, 83] declines [(30000, 40000, -1)] | HMM fixed [9.0, 28.0, 52.0, 52.0, 72.0, 101.0] declines [] (any tp 0) | R3 {'dip': 1, 'lost': 0, 'hover': 5}
+Ara+2: snapshot [19, 25, 31, 45, 55, 64] declines [] | HMM fixed [17.0, 25.0, 31.0, 48.0, 57.0, 66.0] declines [] (any tp 0) | R3 {'dip': 1, 'lost': 0, 'hover': 2}
+Ara+3: snapshot [161, 531, 800, 1173, 1169, 1470] declines [(40000, 50000, -4)] | HMM fixed [146.0, 545.0, 801.0, 1229.0, 1247.0, 1616.0] declines [] (any tp 0) | R3 {'dip': 45, 'lost': 10, 'hover': 75}
+Ara+4: snapshot [4, 31, 36, 38, 0, 68] declines [(40000, 50000, -38)] | HMM fixed [4.0, 32.0, 37.0, 43.0, 53.0, 73.0] declines [] (any tp 0) | R3 {'dip': 41, 'lost': 0, 'hover': 1}
+Ara+5: snapshot [16, 13, 38, 34, 14, None] declines [(10000, 20000, -3), (30000, 40000, -4), (40000, 50000, -20)] | HMM fixed [12.0, 13.0, 13.0, 14.0, 14.0, None] declines [] (any tp 0) | R3 {'dip': 4, 'lost': 6, 'hover': 25}
+Ara+6: snapshot [149, 1059, 1531, 1583, 1592, 1553] declines [(50000, 60000, -39)] | HMM fixed [108.0, 1069.0, 1549.0, 1598.0, 1605.0, 1666.0] declines [] (any tp 0) | R3 {'dip': 16, 'lost': 1, 'hover': 55}
+summary {"pops_with_decline": 10, "pops_with_hmm_decline": 0, "pops_with_hmm_decline_any": 0, "day_cells_matched": 28, "day_cells": 29, "cases": {"dip": 327, "lost": 45, "hover": 600}}

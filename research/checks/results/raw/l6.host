@@ -1,0 +1,6 @@
+# L6 LTEE 'undone fixations' (R4-L6) -- host record
+host: builder.allevato.io (1 process, chained before the L1 post hoc exon run)
+run: launched 2026-10-11T12:44:13-06:00 (finished within ~1 min); script md5 9b923ad480d120e6ae1d31e33d1c5f69 research/checks/l6_ltee_undone.py (pre-registered 0b478dd)
+inputs: github.com/benjaminhgood/LTEE-metagenomic master data_files/{m1..m6,p1..p6}_{annotated,well_mixed_state}_timecourse.txt,
+  fetched 2026-10-11 into builder:sources/raw/l6-good2017-data-2026-10-11/ (sha256 list in sources/raw/l6-good2017-data-2026-10-11.sha256 on builder; first: m1_annotated 6b08ec9f...6e4ddb)
+  layout read from parse_file.py (fetched as text into sources/raw/l6-good2017-code-2026-10-11/, never executed)

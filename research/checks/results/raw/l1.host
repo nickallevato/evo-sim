@@ -1,0 +1,10 @@
+# L1 dN/dS gene sets (R4-L1) -- host record
+host: builder.allevato.io (1 process; HF run ph untouched: 7 workers there; free RAM ~2.3 GB before launch)
+main: launched 2026-10-11T12:38:53-06:00, 93 s; script md5 fde848f7b5600d17d73f320ccd4ec707 research/checks/l1_dnds_genesets.py (pre-registered 868bb60)
+post hoc exon: launched 2026-10-11T12:44:13-06:00 after l6 (chained, 1 process at a time); script md5 708a918867ab0ea60506ee2c7adee9a6 research/checks/l1_posthoc_exon.py (pre-registered post hoc 0f19eed)
+post hoc mixture: local (arithmetic on l1_dnds.json, < 1 s), research/checks/l1_posthoc_mixture.py (35e1755)
+inputs (sources/raw on builder, gitignored, fetched 2026-10-11, each in its own new dir):
+  70d3dc76eb463bd94262f6995794ff9346f7e3e7da404885a21b9797880aac02  l1-ucsc-protnuc-2026-10-11/knownCanonical.protNuc.fa.gz (UCSC hg38 multiz30way, file dated 2019-11-06)
+  6196fa5be6d66ff3025d67cdc953b04f2c7c6569e9ced896a8ec61c6b050970a  l1-ucsc-exonnuc-2026-10-11/knownCanonical.exonNuc.fa.gz
+  f30b6ff5bcb682441c3138e9c40bffe454acdd676581925102e869f39797f0f9  l1-biomart-2026-10-11/orth_ptro.tsv (Ensembl BioMart current release, 2026-10-11)
+  315811a73f4ca5bdfd3cec3d7d84190a586978bec5d661468f3f955b046e8aff  l1-biomart-2026-10-11/tx2gene.tsv

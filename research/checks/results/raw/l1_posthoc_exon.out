@@ -1,0 +1,4 @@
+X0: n 23183 pooled 0.271 raw 0.913 N/S 3.34 1diff share 0.458 1diff dnds 0.253 stopfree both 22331 (96.3%) filters min 0.234 max 0.281 full stack n 13610 dnds 0.247
+E1: n 23183 pooled 0.492 raw 1.616 N/S 3.27 1diff share 0.610 1diff dnds 0.478 stopfree both 4818 (20.8%) filters min 0.298 max 0.504 full stack n 1972 dnds 0.328
+E2: n 23183 pooled 0.390 raw 1.299 N/S 3.31 1diff share 0.553 1diff dnds 0.374 stopfree both 12826 (55.3%) filters min 0.233 max 0.401 full stack n 7511 dnds 0.246
+E3: n 23183 pooled 0.361 raw 1.201 N/S 3.31 1diff share 0.532 1diff dnds 0.343 stopfree both 13583 (58.6%) filters min 0.233 max 0.372 full stack n 7781 dnds 0.246
