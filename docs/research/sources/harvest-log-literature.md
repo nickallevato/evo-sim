@@ -56,3 +56,6 @@ Full text: Durrett & Schmidt 2007 (arXiv), Messer & Petrov 2013, Lynch 2016, SLi
 ### Findings that affect existing ledgers
 - D15: the Durrett & Schmidt 2007 abstract gives 100,000 years (6-letter word) and 60,000 years (7/8 match) per their model; their 2008 abstract gives >100 million years for a particular two-step human regulatory change. Both are Day-side-usable and critic-side-usable depending on the question; D15 should cite them as baselines, not verdicts.
 - H10: Lynch 2016 supports the direction of Day's "selection ended" claim; Lesecque 2012 supports the critics' point that a large deleterious load per genome is tolerable under relative-fitness selection. Neither addresses the "3x drift-fixed" figure.
+
+## Refresh 2026-10-10b
+Europe PMC REST (search + abstracts + `fullTextXML` for OA-subset papers), Crossref, NCBI efetch (stub only for author manuscripts), plain curl for the UCSC/CGL index and GitHub README. 8 OA full texts saved (Gayà-Vidal, Boyko, Galtier, Moutinho, Keightley 2005, Enard, Kim 2017, Tataru 2017), 12 abstracts, local Yoo SI re-read (MOESM1 lines 1456-1478). Failures: Uricchio 2019 and Hernandez 2011 return a 150-byte stub from `fullTextXML` (deleted); ENA portal API returned HTTP 500; arXiv API and Project Euclid returned empty. 31 quotes machine-checked, 0 failures. Pitfall: zsh treats `echo ==X` as an error (already in HOWTO).

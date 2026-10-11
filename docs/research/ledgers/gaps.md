@@ -423,6 +423,7 @@ See PA-22.
 
 ### GAP-06: Mutation-rate × generation-time consistency, and linked selection, in the divergence fit
 **Nodes:** B4a, B1c, B6, A (A1 generations), ROOT.
+- **Update 2026-10-10b (Yoo values).** Yoo 2025 SI Note VI: mu = 1.25e-8 per bp per generation; generation times 24.5 y (human-chimp-bonobo), 21.75 y (human-chimp-gorilla), human 25 y (MOESM1 lines 1456-1478; `refresh-2026-10-10b.md` s2). Against Day/A3's 1.2e-8 and 25 y: mu +4%, g -2%; Ne_anc rescaling x1.042 (derived). The k = mu route's 2x tension is not resolved by this.
 
 **What is missing.**
 - B4a uses μ = 1.2×10⁻⁸ per generation together with g = 25 years (T = 252,000). Kong 2012's 1.2×10⁻⁸ is "with an average father's age of 29.7".
@@ -536,13 +537,13 @@ These are not gaps in the sense defined above (a consideration nobody raised); t
 - **Why it matters.** R4 D15 finds Hössjer's prediction holds for a specific target with non-beneficial intermediates (96 of 96 in-scope cells) and flips under beneficial intermediates, redundant sites or a non-specific gene set. All three decisive inputs are unsourced in the corpus; no critic engages HO-12.
 - **Leads (titles from a reviewer's memory, NOT retrieved; no numbers taken; the D15 external verdict is provisional until read):** Stone & Wray 2001 (*Mol. Biol. Evol.*, rapid evolution of cis-regulatory sequences via local point mutations); MacArthur & Brookfield 2004 (*Mol. Biol. Evol.*, expected rates of binding-site gain); Durrett & Schmidt 2007 (*Ann. Appl. Probab.*, "Waiting for regulatory sequences to appear"); Khaitovich et al. 2004 (*PLoS Biol.*, a neutral model of transcriptome evolution); Schmidt et al. 2010 (*Science*, TF-binding divergence across vertebrates).
 - **What is needed.** Retrieval through the source pipeline (verbatim quotes with locators, access status), read two-sidedly: a sourced per-step coefficient for regulatory intermediates, the number of equivalent sites per TF, and how many gene sets would produce the observed expression differences.
-- **Status.** Open. Could move D15 external toward `contradicted` (non-specific reading) or leave it `contested`.
+- **Status.** Leads verified to exist 2026-10-10b (`refresh-2026-10-10b.md` s4; abstracts only, no per-step coefficient, site count or gene-set size read). Khaitovich 2004 and Schmidt 2010 abstracts bear on the non-specific reading; MacArthur-Brookfield 2004 (title differs from the note above) supplies the presite redundancy knob. Still open: full-text numbers. Could move D15 external toward `contradicted` (non-specific reading) or leave it `contested`.
 
 ### RG-03: Adaptive substitutions in the human lineage (McDonald-Kreitman / alpha), for the A2e flip (recorded 2026-10-10; not retrieved)
 **Nodes:** A2e (and A5e, which carries Day's human-derived rate).
 - **Why it matters.** R4 A2e shows the per-generation, adaptive-only verdict turns on an unmeasured beneficial-fraction x effect-size ratio. At the flip the human adaptive rate equals 1/1,322 per generation, i.e. about 191 adaptive substitutions per lineage over 252,000 generations (Day's own 191, s7.3 p.13). The U_b,human threshold (PH8) is a testable count.
 - **What is needed.** McDonald-Kreitman / alpha and DFE-inference estimates of adaptive substitutions on the human lineage since the CHLCA, fetched through the source pipeline (refresh, verbatim quotes, locators), compared with the ~191 equivalent; recorded for both sides. No numbers are stated here because nothing was fetched.
-- **Status.** Open. A calibrated G = 1,408 run is optional (one combo, about 2.5 min on na-workhorse).
+- **Status.** Retrieved 2026-10-10b (`sources/refresh-2026-10-10b.md` s1): coding-sequence alpha for the human lineage spans about 0.2% (Gayà-Vidal 2014) to 10-20% (Boyko 2008, 22,180 human-chimp nonsyn differences) and 13.5% (Uricchio 2019), with a conditional bound of 40% (Eyre-Walker and Keightley 2009); the ~191 threshold lies inside that range (about 1.7% of a per-lineage nonsyn count, derived). Mapping each estimate to the F = 1 side is open (A2e owner). Non-coding adaptive substitutions not quantified. A calibrated G = 1,408 run is optional (one combo, about 2.5 min on na-workhorse).
 
 ---
 

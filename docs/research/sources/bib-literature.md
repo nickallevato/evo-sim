@@ -107,3 +107,18 @@ Added 2026-10-09 evening. Volume, issue and page details of every row below were
 | Kondrashov1995 | Kondrashov AS. 1995. Contamination of the genome by very slightly deleterious mutations: why have we not died 100 times over? J Theor Biol 175(4):583-594. | 10.1006/jtbi.1995.0167 | none found | - | - | Record only | H | H, PA-17 | Origin of the "dead 100 times over" argument that Lesecque 2012 answers. |
 | Hossjer2021 | Hossjer O, Bechly G, Gauger A. 2021. On the waiting time until coordinated mutations get fixed in regulatory sequences. J Theor Biol 524:110657. | 10.1016/j.jtbi.2021.110657 | none found | - | - | Record only (paywalled; D15 uses the 2018 Springer text per the status note) | Day-side | D15, A5a | Index confirms the 2021 citation. |
 | KimuraMaruyama1969 | Kimura M, Maruyama T. 1969. The substitutional load in a finite population. Heredity 24:101-114. | 10.1038/hdy.1969.10 | none found | - | - | Record only | H | H, PA-06 | Index lists a Felsenstein 1972 paper of the same title (Heredity 29, 10.1038/hdy.1972.6); treat the pair as the finite-population load literature. |
+
+## Refresh 2026-10-10b (metadata only; full list and sha256 in `refresh-2026-10-10b.md`)
+| Key | Citation | DOI/PMID | Access | Note |
+|---|---|---|---|---|
+| GayaVidal2014 | Gayà-Vidal M, Albà MM. BMC Genomics 15:599 (2014) | PMID 25030307 | OA full text (PMC4124166) | RG-03; alpha ~0.2% |
+| Boyko2008 | Boyko AR et al. PLoS Genet 4:e1000083 (2008) | PMID 18516229 | OA full text (PMC2377339) | RG-03; 10-20% |
+| EyreWalkerKeightley2009 | Mol Biol Evol (2009) | 10.1093/molbev/msp119 | abstract only | RG-03 |
+| Uricchio2019 | Nat Ecol Evol (2019) | 10.1038/s41559-019-0890-6 | abstract only | RG-03, DFE |
+| Enard2016 | eLife 5:e12469 | PMC4869911 | OA | virus-driven adaptation |
+| Galtier2016 | PLoS Genet (2016) | PMC4709115 | OA | alpha across animals |
+| Kim2017 | Kim BY, Huber CD, Lohmueller KE. Genetics (2017) | PMC5419480 | OA | deleterious DFE only |
+| Tataru2017 | Genetics (2017) | PMC5676230 | OA retrieved; human numbers not read | DFE and alpha |
+| StoneWray2001, MacArthurBrookfield2004, Khaitovich2004, Schmidt2010, DurrettSchmidt2008 | see refresh file section 4 | PMIDs 11504856, 15014138, 15138501, 20378774, 18791261 | abstracts only (Khaitovich, Schmidt, Durrett2008 also OA but not read in full) | RG-02 |
+| Axe2004, KeefeSzostak2001, Taylor2001 | see refresh file section 5 | PMIDs 15321723, 11287961, 11535813 | abstracts only (paywalled / not in OA subset) | branch D |
+| PradoMartinez2013, deManuel2016 | Nature 499:471; Science 354:477 (data: SRP018689, ERP016782 etc.) | PMIDs 23823723, 27789843 | abstracts | data availability |
