@@ -3696,3 +3696,19 @@
   fate: alive
   fate_date:
   fate_locator: "Review #52 (combined); post hoc fix pass"
+
+- id: L-audit-a2e-alpha-2026
+  label: "Audit A2e-alpha: bias-corrected alpha estimates all map above the ~191 flip; Gayà-Vidal 0.2% is an MK null; GV accelerated genes straddle 191"
+  side: audit
+  kind: reply
+  date: 2026-10-10
+  claim_ids: [A2e]
+  locator: "research/checks/results/R4-A2e-alpha.md"
+  quote: "Whatever number the LTEE produces, it is the empirical ceiling on what evolution can accomplish when every tool in its kit is deployed simultaneously under ideal conditions."
+  parents:
+    - {id: L-audit-a2e-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviews #53-#55; fix pass e7ecda6; external contested leaning contradicted; Uricchio full text queued"

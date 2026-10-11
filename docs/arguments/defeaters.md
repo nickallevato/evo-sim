@@ -45,6 +45,7 @@ flowchart RL
   E9["E9: Good et al. 2017: LTEE trajectories are inconsistent with sw…"]:::literature
   G1["G1: An average rate is indifferent to parallel versus sequential…"]:::day
   chk_A2e["chk:A2e: transfer of the LTEE fixation rate to humans: supply-limited…"]:::audit
+  chk_A2e_alpha["chk:A2e-alpha: published alpha (adaptive fraction of coding differences) ma…"]:::audit
   chk_E5E6["chk:E5E6: LTEE fixation counts recounted under snapshot, first-crossin…"]:::audit
   chk_F2["chk:F2: multi-locus interference"]:::audit
   chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
@@ -67,6 +68,7 @@ flowchart RL
   chk_GAP04 -.->|"undermines · partly"| A2e
   A2i ==>|"undercuts · partly"| A2e
   chk_A2e ==>|"undercuts · partly"| A2e
+  chk_A2e_alpha ==>|"undercuts · partly"| A2e
   A3d -.->|"undermines · partly"| A3
   A4b -.->|"undermines · untested"| A4
   A4e ==>|"undercuts · partly"| A4
@@ -878,7 +880,7 @@ flowchart RL
 
 ## Other: objections to audit checks and unregistered items (part 1)
 
-Objections to chk:A-sim, chk:A2e, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B2, chk:B3, chk:B3-family, chk:B3g, chk:B3m, chk:B4a, chk:B5b, chk:C1, chk:C1b.
+Objections to chk:A-sim, chk:A2e, chk:A2e-alpha, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B2, chk:B3, chk:B3-family, chk:B3g, chk:B3m, chk:B4a, chk:B5b, chk:C1, chk:C1b.
 
 ```mermaid
 flowchart RL
@@ -890,6 +892,7 @@ flowchart RL
   B3d["B3d: k = 32.3 mu (Bergeron pedigree rate vs Yoo required rate) an…"]:::day
   chk_A_sim["chk:A-sim: LTEE scaling simulation"]:::audit
   chk_A2e["chk:A2e: transfer of the LTEE fixation rate to humans: supply-limited…"]:::audit
+  chk_A2e_alpha["chk:A2e-alpha: published alpha (adaptive fraction of coding differences) ma…"]:::audit
   chk_B0["chk:B0: textbook baselines"]:::audit
   chk_B0_4["chk:B0.4: beneficial fixation time"]:::audit
   chk_B1["chk:B1: empty vs full pipeline"]:::audit
@@ -904,6 +907,9 @@ flowchart RL
   chk_C1["chk:C1: 1240k ascertainment"]:::audit
   chk_C1b["chk:C1b: Day's binned 21-count"]:::audit
   chk_C1c["chk:C1c: Day's 11-bin aDNA statistic under real AADR call depth and a…"]:::audit
+  rev_R4_A2e_alpha_correctness["rev:R4-A2e-alpha-correctness: correctness review of A2e-alpha; load-bearing tier"]:::audit
+  rev_R4_A2e_alpha_steelman_critic["rev:R4-A2e-alpha-steelman-critic: critic-side steelman review of A2e-alpha; load-bearing tier"]:::audit
+  rev_R4_A2e_alpha_steelman_day["rev:R4-A2e-alpha-steelman-day: Day-side steelman review of A2e-alpha; load-bearing tier"]:::audit
   rev_R4_A2e_correctness["rev:R4-A2e-correctness: correctness review of LTEE-to-human transfer; load-bearing t…"]:::audit
   rev_R4_A2e_steelman_critic["rev:R4-A2e-steelman-critic: critic-side steelman review of LTEE-to-human transfer; load-…"]:::audit
   rev_R4_A2e_steelman_day["rev:R4-A2e-steelman-day: Day-side steelman review of LTEE-to-human transfer; load-bea…"]:::audit
@@ -924,6 +930,9 @@ flowchart RL
   rev_R4_A2e_correctness ==>|"undercuts · upheld"| chk_A2e
   rev_R4_A2e_steelman_day ==>|"undercuts · upheld"| chk_A2e
   rev_R4_A2e_steelman_critic ==>|"undercuts · upheld"| chk_A2e
+  rev_R4_A2e_alpha_correctness ==>|"undercuts · upheld"| chk_A2e_alpha
+  rev_R4_A2e_alpha_steelman_day ==>|"undercuts · upheld"| chk_A2e_alpha
+  rev_R4_A2e_alpha_steelman_critic ==>|"undercuts · upheld"| chk_A2e_alpha
   rev_review_2 ==>|"undercuts · upheld"| chk_B0
   rev_review_2 ==>|"undercuts · upheld"| chk_B0_4
   rev_review_2 ==>|"undercuts · upheld"| chk_B1
@@ -1137,7 +1146,7 @@ This uses grounded semantics (Dung 1995): an argument is *accepted* when every a
 | day (94) | 35 / 58 / 1 | 62 / 32 / 0 | 39 / 55 / 0 |
 | ally (13) | 2 / 11 / 0 | 10 / 3 / 0 | 5 / 8 / 0 |
 | critic (63) | 37 / 25 / 1 | 62 / 1 / 0 | 46 / 17 / 0 |
-| audit (110) | 71 / 39 / 0 | 71 / 39 / 0 | 71 / 39 / 0 |
+| audit (114) | 74 / 40 / 0 | 74 / 40 / 0 | 74 / 40 / 0 |
 
 **Support is not modelled by Dung's framework.** A claim can be *accepted* (no surviving direct objection) while claims it rests on are rejected. The last column lists those rejected supports (lenient reading), so read both together. ROOT, for instance, draws few direct objections; most objections target its supports.
 
@@ -1327,6 +1336,7 @@ Load-bearing claims are in **bold**.
 | ROOT-T | ally | rejected | accepted | accepted | – |
 | chk:A-sim | audit | rejected | rejected | rejected | – |
 | chk:A2e | audit | rejected | rejected | rejected | – |
+| chk:A2e-alpha | audit | rejected | rejected | rejected | – |
 | chk:B0 | audit | rejected | rejected | rejected | – |
 | chk:B0.4 | audit | rejected | rejected | rejected | – |
 | chk:B1 | audit | rejected | rejected | rejected | – |
@@ -1375,6 +1385,9 @@ Load-bearing claims are in **bold**.
 | chk:ROOT-M-survey | audit | accepted | accepted | accepted | – |
 | chk:X1 | audit | rejected | rejected | rejected | – |
 | chk:XT | audit | rejected | rejected | rejected | – |
+| rev:R4-A2e-alpha-correctness | audit | accepted | accepted | accepted | – |
+| rev:R4-A2e-alpha-steelman-critic | audit | accepted | accepted | accepted | – |
+| rev:R4-A2e-alpha-steelman-day | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-correctness | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-steelman-critic | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-steelman-day | audit | accepted | accepted | accepted | – |

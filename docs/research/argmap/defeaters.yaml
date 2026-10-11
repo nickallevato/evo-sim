@@ -5273,3 +5273,59 @@
   counter: []
   note: 'applied in fix pass 4442c99 (R4-H8 10.1)'
   hierarchy_edge: false
+
+- id: d409
+  attacker: chk:A2e-alpha
+  target: A2e
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-10
+  locator: research/checks/results/R4-A2e-alpha.md Results, Review resolution, Verdicts after fixes
+  audit_status: partly
+  audit_basis: 'Bias-corrected alpha estimates (Boyko full text 9.3%, Uricchio abstract only, Eyre-Walker conditional 40%) all map above the ~191 flip, lowest compounded Day-charitable row 299 (1.57x); Gayà-Vidal 0.2% is an uncorrected MK null, not a count; GV accelerated genes 228 (112-323), 67-136 corrected: at the threshold. All model inferences'
+  counter: []
+  note: 'Critic-side: every bias-corrected estimator is above Day''s ceiling; the only sub-1% value is a null its authors flag as biased low. Day-side: Boyko 9.3% is a model residual pooled over both lineages (A2e survives if ~36% of the compounded residual is artefact), no estimate observes human-lineage fixations, GV accelerated genes do not clear 191 under charitable assumptions. External stays contested, leaning contradicted; flips with a full-text Uricchio or a bias-corrected human-branch alpha > ~1%.'
+  hierarchy_edge: false
+
+- id: d410
+  attacker: rev:R4-A2e-alpha-correctness
+  target: chk:A2e-alpha
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-A2e-alpha-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 1 MAJOR (GV 0.2% is a null, not a count), 8 MINOR'
+  counter: []
+  note: 'applied in fix pass e7ecda6 (R4-A2e-alpha Review resolution): M1 accepted: 29-49 row and "Day side by 4-7x" withdrawn; Boyko 36,138 vs 22,180 stated; Boyko CL row added'
+  hierarchy_edge: false
+
+- id: d411
+  attacker: rev:R4-A2e-alpha-steelman-day
+  target: chk:A2e-alpha
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-A2e-alpha-steelman-day.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (Boyko is a ~9% model residual; pooled human-chimp alpha leans critic), 4 MINOR'
+  counter: []
+  note: 'applied in fix pass e7ecda6 (R4-A2e-alpha Review resolution): D1/D2 accepted as framing and sensitivity rows (compounded 299 / 491, all above 191); no side change'
+  hierarchy_edge: false
+
+- id: d412
+  attacker: rev:R4-A2e-alpha-steelman-critic
+  target: chk:A2e-alpha
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-10
+  locator: research/checks/results/REVIEW-R4-A2e-alpha-steelman-critic.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 3 MAJOR (GV is the biased MK null; GV accelerated genes; false balance), 4 MINOR'
+  counter: []
+  note: 'applied in fix pass e7ecda6 (R4-A2e-alpha Review resolution): C1/C3 accepted, C2 done post hoc (228, 112-323; 67-136 corrected: straddles 191); leaning contradicted recorded, not adopted'
+  hierarchy_edge: false

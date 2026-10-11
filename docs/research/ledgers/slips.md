@@ -10,6 +10,7 @@ Entries made under the one verdict rule (`research/checks/results/R4-X1-verdict-
 | S-B2-2 | Day (Hard Limits) | Q152, l.362-363: "When Nₑ is of the same order as T ... the pipe substantially fills" | At T = N_e the exact flux is 0.3%; fill is substantial near T = 4N_e (0.61). Concedes more fill than HL's own law gives (critics' favour) | R1 (does not move HL's conclusion) | No |
 | S-B2-3 | Day (Hard Limits) | Q153 (H8, l.364-366) against Q145 (l.252-253): a lineage-ceiling census (about 114,000) paired with the species window ("the full two million years") | Correcting the window moves H8's 35% (linear) to 114%; on HL's 6.5 My window the H8 input fills to 0.70 (flux) | S2 (an aside in the second objection, not a Statement quote) | No |
 | S-B2-4 | Day (Hard Limits) | Q143 (H10, l.207-209): "There is no census at which a large vertebrate is simultaneously large enough ... and small enough ..." | In tension with the drainage thesis (Q140, Q151), which needs ancestors both viable and small enough to load the pipe; stands under rule C as said of the species window and of non-endangered species. No verdict change (R4-B2) | C (charitable reading) | No |
+| S-A2e-1 | Literature (Gayà-Vidal & Albà 2014, BMC Genomics 15:599) | Table 1: N = 15 for the accelerated genes at DAF >= 15% | The supplementary sheets give 155 (typo in the printed table; R4-A2e-alpha, C2 section). Changes nothing: the alpha value 0.356 is unaffected | R1: no | No |
 
 ## Rhetoric (rule RH)
 
