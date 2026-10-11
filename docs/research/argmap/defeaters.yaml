@@ -5339,9 +5339,9 @@
   first_date: 2026-10-11
   locator: research/checks/results/R4-L1.md
   audit_status: partly
-  audit_basis: 'reviewed (a352991), fix pass; hg38/panTro5: pooled NG dN/dS 0.271 (all 23,183 knownCanonical genes), 0.207 (Ensembl one2one); Day''s single-SNV count ratio 2.52 vs 0.85 (estimator-free); every filter stack 0.23-0.28; not T2T (L1b queued)'
-  counter: []
-  note: 'Critic-side: 0.80 is not reproduced by any gene set, estimator or filter on a correct frame; Day''s own single-SNV counts point to an unidentified extraction/alignment problem in his codon pairs (a gene-level frame-error mixture is contradicted by his filter report and withdrawn; a within-gene chimp-side contamination fits, post hoc, mechanism unidentified). Day-side: method unreleased; ALL is syntenic-net aligned, so the alignment-level route and paralog projection are untested (L1b). Partly until integration and L1b; proposed DN1 external contradicted.'
+  audit_basis: 'reviewed (a352991), fix pass; integrated 2026-10-11; hg38/panTro5: pooled NG dN/dS 0.271 (all 23,183 knownCanonical genes), 0.207 (Ensembl one2one); Day''s single-SNV count ratio 2.52 vs 0.85 (estimator-free); every filter stack 0.23-0.28; DN1 external contradicted; not T2T (L1b queued)'
+  counter: [d421, d422, d423]
+  note: 'Critic-side: 0.80 is not reproduced by any gene set, estimator or filter on a correct frame; Day''s own single-SNV counts point to an unidentified extraction/alignment problem in his codon pairs (the gene-level frame-error attribution was contradicted by his own filter report and is withdrawn; a within-gene chimp-side contamination fits, post hoc and exploratory, mechanism unidentified). Day-side: method unreleased; ALL is syntenic-net aligned, so the alignment-level route and paralog projection are untested (L1b), which would overturn DN1 external only if a T2T extraction gives pooled >= 0.65 and single-SNV share >= 66% on genes passing a synteny/orthology check.'
   hierarchy_edge: false
 
 - id: d414
@@ -5353,8 +5353,8 @@
   first_date: 2026-10-11
   locator: research/checks/results/R4-L1.md
   audit_status: partly
-  audit_basis: 'reviewed (a352991), fix pass; one pipeline: one2one 0.207, all genes 0.271 (+31%, material by R1, pipeline-level upper bound); non-one2one genes 0.447; for the total to reach 0.80 they would need pN/pS 2.42'
-  counter: []
+  audit_basis: 'reviewed (a352991), fix pass; integrated 2026-10-11 (DN3 external contradicted for the gene-list version); one pipeline: one2one 0.207, all genes 0.271 (+31%, material by R1, pipeline-level upper bound); non-one2one genes 0.447; for the total to reach 0.80 they would need pN/pS 2.42'
+  counter: [d421, d422, d423]
   note: 'Day''s Q176 test (gene-list version) run by the audit on public data before his own run. Day-side credit: the design is valid, an Ensembl one2one analogue gives a Consortium-like value (reconstructing the 13,454 list untested), and a gene-set effect exists with his sign, material by R1 (+31%). Critic-side: the gene set cannot carry 0.23 to 0.80, and orthology filtering has a methodological rationale (paralogy). Alignment-level version untested (L1b).'
   hierarchy_edge: false
 
@@ -5383,7 +5383,7 @@
   locator: docs/research/sources/test-methods-review-2026-10-11.md entry 5 (c)
   audit_status: untested
   counter: []
-  note: 'dN/dS averages purifying constraint over all nonsynonymous changes; even at 0.80 it says nothing about the adaptive fraction alpha (McDonald-Kreitman; A2e-alpha). No critic has replied (refresh-2026-10-11). Rule N applied from Day''s own text in the R4 L1 fix pass (¶6, ¶20 purifying; ¶21 adaptive): proposed DN4 internal non-sequitur (N2d).'
+  note: 'dN/dS averages purifying constraint over all nonsynonymous changes; even at 0.80 it says nothing about the adaptive fraction alpha (McDonald-Kreitman; A2e-alpha). No critic has replied (refresh-2026-10-11). Rule N applied from Day''s own text in the R4 L1 fix pass (¶6, ¶20 purifying; ¶21 adaptive): DN4 internal non-sequitur (N2d), integrated 2026-10-11 (see d426).'
   hierarchy_edge: false
 
 - id: d417
@@ -5396,8 +5396,8 @@
   locator: research/checks/results/R4-L6.md
   audit_status: partly
   audit_basis: 'reviewed (a183774), fix pass; Day''s >= 95% snapshot rule reproduces 10 of 12 (28 of 29 tabulated cells; 7 of 12 at a net fall >= 5); Good 2017 well-mixed fixed calls decline in 0 of 12, by construction (the fixed state is never left: 0 exits in 34,118 paths); of 972 exits from the >= 95% set, 34% return, 62% hover, 4.6% are lost'
-  counter: []
-  note: 'Day-side credit: his count is exact on his sign-only rule and near-fixed mutations do reverse (clade displacement). Critic-side: the count is of a snapshot statistic (A2c, E6), not of fixations. Good''s fixed calls are never undone by construction, so this is definitional; proposed E10 external contested, not contradicted; clade-level states untested.'
+  counter: [d424]
+  note: 'Day-side credit: his count is exact on his sign-only rule and near-fixed mutations do reverse (clade displacement). Critic-side: the count is of a snapshot statistic (A2c, E6), not of fixations. Good''s fixed calls are never undone by construction, so this is definitional; E10 external contested, not contradicted (integrated 2026-10-11); clade-level states and Good SI 5.2 untested.'
   hierarchy_edge: false
 
 - id: d418
@@ -5410,7 +5410,7 @@
   locator: research/checks/results/R4-L7.md
   audit_status: partly
   audit_basis: 'reviewed (a183774), fix pass; mean SNV + gap divergence (SI Table III.14) x hs1 length (III.19) = 404.2-412.7 M bp (computed before pre-registration; medians give 82 M); one other route definitional, one haplotype-selected; primitive-pool base rate: 410 M at the 92nd-100th percentile of random targets (ratio 1.3-1.7), matches common'
-  counter: []
+  counter: [d425]
   note: 'Day-side: 410 M is reconstructible from the SI sheets Day names, so not-found is too strong. Critic-side: the route is unconfirmed and every reproducing reading is base pairs; 187 Mb and 14.9% stay unreproduced.'
   hierarchy_edge: false
 
@@ -5424,7 +5424,7 @@
   locator: research/checks/results/R4-L7.md
   audit_status: partly
   audit_basis: 'reviewed (a183774), fix pass; every reading that gives ~410 M counts base pairs (gap divergence counts bases in gaps); against T2T events (GAP-07t, 48.27 M, both lineages) 410 M is 8.5x, a ratio of different units; the 35 M it is contrasted with is a CSAC SNV event count; Day''s printed Zenodo s7.1 components sum to 222 M (scored at A3a)'
-  counter: []
+  counter: [d425]
   note: 'Day-side credit: his new locator (sheets 14, 19, 24; three tools, three bases, no consolidated total) is accurate.'
   hierarchy_edge: false
 
@@ -5441,4 +5441,88 @@
   audit_basis: 'A3x holds/partial/supported; R4 L7 (reviewed, fix pass) confirms the reconstructed 410 M is base pairs'
   counter: [d272]
   note: 'The restatement repeats A3a''s unit; the critics'' bp-vs-events point applies unchanged.'
+  hierarchy_edge: false
+
+- id: d421
+  attacker: rev:R4-L1-correctness
+  target: chk:L1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-L1-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 3 MAJOR (share not independent; Day''s Q175 contradicts a gene-level frame-error mixture; per-gene rerun), 5 MINOR, 4 NOTE'
+  counter: []
+  note: 'applied in fix pass 36c5b85 (R4-L1 Review resolution): the frame-error attribution and "independent" are withdrawn; replaced by "an unidentified extraction/alignment problem"; per-gene rerun done post hoc (c04a1f8); the per-gene mean/median record error (0.70-0.91 vs 0.15-0.44) resolved from the raw output'
+  hierarchy_edge: false
+
+- id: d422
+  attacker: rev:R4-L1-steelman-day
+  target: chk:L1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-L1-steelman-day.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 3 MAJOR (terminal-stop reading of "10 genes"; "all genes" already syntenic-net aligned; +31% is material), 3 MINOR, 2 NOTE'
+  counter: []
+  note: 'Day-side review, applied in fix pass 36c5b85: S'' tested (Day-side prediction missed: 258-861 genes on a correct extraction); DN3 external scoped to the gene-list version; the real +31% gene-set effect credited to Day; complete-extraction route stays open (L1b)'
+  hierarchy_edge: false
+
+- id: d423
+  attacker: rev:R4-L1-steelman-critic
+  target: chk:L1
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-L1-steelman-critic.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (the estimator-free single-SNV count is the decisive datum; DN4 scorable from Day''s own text), 3 MINOR, 2 NOTE'
+  counter: []
+  note: 'Critic-side review, applied in fix pass 36c5b85: K1 and K2 accepted (DN4 non-sequitur, not scored contradicted merely because DN1 is, a departure from two reviewers); K3 (CSAC 2005 and an independent ML estimate) queued, DN5 fidelity stays pending'
+  hierarchy_edge: false
+
+- id: d424
+  attacker: rev:R4-L6-combined
+  target: chk:L6
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-L6-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (the HMM "never falls" may hold by construction; threshold sensitivity of 10 of 12), 7 MINOR'
+  counter: []
+  note: 'applied in fix pass 36c5b85 with post hoc l6_posthoc_absorbing.py (10cfe1e): 0 exits from F in 34,118 paths, so the point is definitional; 10 of 12 is sign-only (7 at a net fall >= 5, 6 at >= 10); E10 external contested'
+  hierarchy_edge: false
+
+- id: d425
+  attacker: rev:R4-L7-combined
+  target: chk:L7
+  target_part: inference
+  type: undercutting
+  by: ['audit (review)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-L7-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 3 MAJOR (Zenodo s7.1 components sum to 222 M; hit counts overstated; base-rate pool contained the readings), 8 MINOR'
+  counter: []
+  note: 'applied in fix pass 36c5b85 with post hoc l7_posthoc_baserate.py (42df167): the pre-registered base-rate test is withdrawn and replaced (410 M at the 92nd-100th percentile of random targets, so matches are common); the 222 M sum is scored at A3a (rule C), not re-scored at A3z (rule S)'
+  hierarchy_edge: false
+
+- id: d426
+  attacker: chk:L1
+  target: DN4
+  target_part: inference
+  type: undercutting
+  by: ['audit (check L1, rule N)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-L1.md (Verdicts); Day post ¶6, ¶20, ¶21
+  audit_status: upheld
+  audit_basis: 'DN4 internal non-sequitur (N2d, own source): ¶6 and ¶20 define dN/dS as a measure of purifying removal, ¶21 concludes about adaptive evolution'
+  counter: [d421, d422, d423]
+  note: 'Critic-side. Day-side charitable reading (rule C): "most coding substitutions are not selection-driven", which follows from 0.80 but equally from 0.23 under neutral theory, so it does not carry the stated words. External stays contested, not contradicted: a false premise does not make the conclusion false.'
   hierarchy_edge: false

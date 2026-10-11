@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: pending   # R4 L6 fix pass (reviewed a183774; proposed for integration: holds): Day's sign-only rule (>=95% snapshot count falls between 10K marks) reproduces 10 of 12 exactly, 28 of 29 tabulated cells; threshold-sensitive: 7 of 12 at a net fall of >= 5, 6 of 12 at >= 10
-  fidelity: pending   # R4 L6 fix pass (proposed: partial): 'fixations' names a >=95% snapshot statistic; Good 2017's well-mixed fixed calls never fall because the fixed state is never left in the published output (0 exits in 34,118 paths), i.e. by definition
-  external: pending   # R4 L6 fix pass (proposed: contested, not contradicted): near-fixed mutations do reverse (34% dip and return, 62% hover 0.5-0.95, 4.6% lost by clade displacement); Good's well-mixed calls cannot fall by construction; clade-level states (FM/Fm) not read
+  internal: holds   # R4 L6 fix pass (reviewed a183774): Day's sign-only rule (>=95% snapshot count falls between 10K marks) reproduces 10 of 12 exactly, 28 of 29 tabulated cells; threshold-sensitive: 7 of 12 at a net fall of >= 5, 6 of 12 at >= 10
+  fidelity: partial   # R4 L6 fix pass: 'fixations' names a >=95% snapshot statistic; Good 2017's well-mixed fixed calls never fall because the fixed state is never left in the published output (0 exits in 34,118 paths), i.e. by definition
+  external: contested   # R4 L6 fix pass: near-fixed mutations do reverse (34% dip and return, 62% hover 0.5-0.95, 4.6% lost by clade displacement); Good's well-mixed calls cannot fall by construction; clade-level states (FM/Fm) not read
 ---
 
 ## Statement (verbatim)
@@ -42,7 +42,7 @@ For population p and marks t = 10K..60K, F_p(t) = number of mutations at >= 95% 
 `research/checks/l6_ltee_undone.py` (0b478dd).
 
 ## Check
-R4 L6 (`research/checks/results/R4-L6.md`; combined review a183774; fix pass with post hoc `l6_posthoc_absorbing.py`, 10cfe1e).
+R4 L6 (`research/checks/results/R4-L6.md`; combined review a183774; fix pass with post hoc `l6_posthoc_absorbing.py`, 10cfe1e). **Integrated 2026-10-11 (review #59):** internal holds, fidelity partial, external contested; open: Good 2017 SI 5.2 and the clade-level HMM states.
 
 ## Simulator variables implied
 - fixation definition selector (snapshot threshold vs absorbing fixation)

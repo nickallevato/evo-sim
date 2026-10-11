@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: pending   # R4 L1 fix pass, proposed for integration: holds (the conditional's test-design core is well formed; ¶15 arithmetic right: 20,400 - 13,454 = 6,946 = 34%, 20,400/13,454 = 1.516; ¶18 hedged). N2d note: even the antecedent would not show cherry-picking (a difference concentrated in non-one2one genes fits misaligned paralogs equally). 'Cherry-picked', 'artificial' are rhetoric (RH-22)
+  internal: holds   # R4 L1 fix pass; verdict set at integration: (the conditional's test-design core is well formed; ¶15 arithmetic right: 20,400 - 13,454 = 6,946 = 34%, 20,400/13,454 = 1.516; ¶18 hedged). N2d note: even the antecedent would not show cherry-picking (a difference concentrated in non-one2one genes fits misaligned paralogs equally). 'Cherry-picked', 'artificial' are rhetoric (RH-22)
   fidelity: pending   # the 13,454 count and the 'curation' description are not checked against CSAC 2005 (not read)
-  external: pending   # R4 L1 fix pass, proposed for integration: contradicted for the gene-list version: one2one 0.207 vs all genes 0.271 on one pipeline; credit: a real gene-set effect in Day's direction, material by R1 (+31%, a pipeline-level upper bound; orthology filtering has a methodological rationale), against +0.57 needed. Alignment-level version untested (L1b)
+  external: contradicted   # R4 L1 fix pass; verdict set at integration: for the gene-list version: one2one 0.207 vs all genes 0.271 on one pipeline; credit: a real gene-set effect in Day's direction, material by R1 (+31%, a pipeline-level upper bound; orthology filtering has a methodological rationale), against +0.57 needed. Alignment-level version untested (L1b)
 ---
 
 ## Statement (verbatim)
@@ -46,7 +46,7 @@ Test T: run one pipeline on gene sets G_C (13,454, reconstructed from Ensembl or
 L1 (868bb60): Day side ALL ~0.80; critic side ALL/O121 <= 1.3 and required NON121 > 1.5.
 
 ## Check
-R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass). Day's own run of T is pending (Zenodo paper promised).
+R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass). Day's own run of T is pending (Zenodo paper promised). **Integrated 2026-10-11:** internal holds (test design well formed), fidelity pending (CSAC 2005 unread), external contradicted for the gene-list version; the +31% gene-set effect is credited to Day.
 
 ## Simulator variables implied
 - none

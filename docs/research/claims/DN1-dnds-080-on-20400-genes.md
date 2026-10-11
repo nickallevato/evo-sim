@@ -10,8 +10,8 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: pending   # method unreleased (no code, gene list or per-gene table; Zenodo paper promised, Q176). R4 L1 fix pass (reviewed a352991): no correct-frame computation on any gene set, estimator or filter reproduces 0.80 (0.15-0.45); ¶12 'The code is correct. The data is complete. The number is real.' is an N2d candidate (the diagnostics test neither frame, strand nor orthology), limited by N1; slip S-DN1-1 (implied N/S 3.55 vs 3.34) ledgered
-  fidelity: n/a       # Day's own computation
-  external: pending   # R4 L1 fix pass, proposed for integration: contradicted. hg38/panTro5: all genes 0.271, one2one 0.207; Day's own single-SNV count ratio 2.52 vs 0.85 in correctly aligned CDS (estimator-free; no assembly change raises it); T2T cannot add genes (20,400 < 23,183). Open: the alignment-level route (ALL is syntenic-net aligned). L1b overturns only if a T2T CDS extraction vs mPanTro3 gives >= 0.65 and share >= 66% on genes passing a synteny/orthology check
+  fidelity: n/a   # Day's own computation
+  external: contradicted   # R4 L1 fix pass; verdict set at integration: hg38/panTro5: all genes 0.271, one2one 0.207; Day's own single-SNV count ratio 2.52 vs 0.85 in correctly aligned CDS (estimator-free; no assembly change raises it); T2T cannot add genes (20,400 < 23,183). Open: the alignment-level route (ALL is syntenic-net aligned). L1b overturns only if a T2T CDS extraction vs mPanTro3 gives >= 0.65 and share >= 66% on genes passing a synteny/orthology check
 ---
 
 ## Statement (verbatim)
@@ -48,7 +48,7 @@ dN/dS = (Nd/N)/(Sd/S) over 20,400 genes, Nei-Gojobori sites and differences; agg
 `research/checks/l1_dnds_genesets.py` (868bb60): Day side O121 ~0.23 and ALL ~0.80; critic side ALL <= 0.35.
 
 ## Check
-R4 L1 (`research/checks/results/R4-L1.md`; three reviews a352991; fix pass): pooled dN/dS 0.271 (all genes), 0.207 (one2one); single-difference nonsyn share 45.8% (Day 71.6%); every filter combination 0.23-0.28; per-gene mean 0.25-0.44 and median 0.15-0.31 on a correct frame. No gene-level frame-error mixture fits Day's filter report (it leaves 2,253-3,045 genes at 0.24-0.26 in the full stack; withdrawn). An unidentified extraction/alignment problem inside nearly every gene fits his numbers; the one tested instance is a chimp-only frame shift downstream of a random point (pooled 0.845, share 72.7%, no stack below 0.756; post hoc), not a finding about his code.
+R4 L1 (`research/checks/results/R4-L1.md`; three reviews a352991; fix pass): pooled dN/dS 0.271 (all genes), 0.207 (one2one); single-difference nonsyn share 45.8% (Day 71.6%); every filter combination 0.23-0.28; per-gene mean 0.25-0.44 and median 0.15-0.31 on a correct frame. No gene-level frame-error mixture fits Day's filter report (it leaves 2,253-3,045 genes at 0.24-0.26 in the full stack; withdrawn). An unidentified extraction/alignment problem inside nearly every gene fits his numbers; the one tested instance is a chimp-only frame shift downstream of a random point (pooled 0.845, share 72.7%, no stack below 0.756; post hoc), not a finding about his code. **Integrated 2026-10-11 (review #56-#58):** internal pending (method unreleased), fidelity n/a, external contradicted (gene-list and correct-frame versions; the alignment-level T2T route stays open, L1b).
 
 ## Simulator variables implied
 - none (an empirical summary statistic; the simulator would need per-site selection classes to predict it)

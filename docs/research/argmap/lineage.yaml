@@ -3745,7 +3745,7 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "R4 L6 (awaiting review)"
+  fate_locator: "R4 L6 reviewed and integrated 2026-10-11: 10 of 12 reproduces on the snapshot rule; E10 contested"
 
 - id: L-day-dnds-080-2026
   label: "Day and Athos: dN/dS 0.80 on 20,400 GENCODE v46 genes vs the Consortium's 0.23 on 13,454; Q176 two-gene-set test proposed"
@@ -3762,7 +3762,7 @@
   why: "The post does not name 'The Fourth Mechanism' (2026-10-10); the same UATV-funded T2T analysis programme and the next-day timing make it a continuation."
   fate: alive
   fate_date:
-  fate_locator: "Zenodo paper with per-gene table promised (Q176); R4 L1 (awaiting review)"
+  fate_locator: "Zenodo paper with per-gene table promised (Q176); R4 L1 reviewed and integrated 2026-10-11: 0.80 not reproduced (DN1 external contradicted)"
 
 - id: L-day-not-primary-2026
   label: "Day: at dN/dS 0.80 natural selection is not the primary mechanism of adaptive evolution"
@@ -3797,7 +3797,7 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "R4 L7 (awaiting review)"
+  fate_locator: "R4 L7 reviewed and integrated 2026-10-11: 404-413 M bp reconstructs, route unconfirmed; A3z contested"
 
 - id: L-audit-l1-2026
   label: "Audit L1: one pipeline on hg38/panTro5 gives 0.21 (one2one) and 0.27 (all genes); Day's 71.6% single-SNV share points to an unidentified extraction/alignment problem"
@@ -3813,7 +3813,7 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "Awaiting review; T2T rerun L1b queued"
+  fate_locator: "Reviewed (#56-#58) and integrated 2026-10-11; T2T rerun L1b queued"
 
 - id: L-audit-l6-2026
   label: "Audit L6: Day's ten of twelve reproduces on his snapshot rule; Good 2017's HMM fixed counts never fall"
@@ -3829,7 +3829,7 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "Awaiting review"
+  fate_locator: "Reviewed and integrated 2026-10-11"
 
 - id: L-audit-l7-2026
   label: "Audit L7: 410 M reconstructs as base pairs from Yoo SI sheets 14 x 19 (404-413 M); route unconfirmed; 8.5x the T2T event count"
@@ -3845,4 +3845,4 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "Awaiting review"
+  fate_locator: "Reviewed and integrated 2026-10-11"

@@ -10,8 +10,8 @@ sourcing: firsthand
 status: checked
 verdicts:
   internal: pending   # filter thresholds unstated. R4 L1 fix pass: 0.64 against 'below 0.65' in the same paragraph is a 1.5% slip (S-DN2-1); the 10-gene stack offered as robustness is ledgered (S-DN2-2, N2d candidate limited by N1)
-  fidelity: n/a
-  external: pending   # R4 L1 fix pass, proposed for integration: contradicted as a statement about human-chimp coding sequence: all 32 stacks give 0.23-0.28 on a correct extraction, and no correct extraction leaves a near-empty strict stack (13,610 genes; 258 with a terminal-stop convention). As a report of his pipeline it is plausible: a within-gene contaminated extraction is filter-robust (0.76-0.85, post hoc)
+  fidelity: n/a   
+  external: contradicted   # R4 L1 fix pass; verdict set at integration: as a statement about human-chimp coding sequence: all 32 stacks give 0.23-0.28 on a correct extraction, and no correct extraction leaves a near-empty strict stack (13,610 genes; 258 with a terminal-stop convention). As a report of his pipeline it is plausible: a within-gene contaminated extraction is filter-robust (0.76-0.85, post hoc)
 ---
 
 ## Statement (verbatim)
@@ -38,7 +38,7 @@ None cited.
 L1 D5 (868bb60): a correct frame leaves > 80% of genes stop-free and thousands after the full stack.
 
 ## Check
-R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass with the per-gene run c04a1f8).
+R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass with the per-gene run c04a1f8). **Integrated 2026-10-11:** internal pending (thresholds unstated; 0.64 vs "below 0.65" ledgered S-DN2-1), fidelity n/a, external contradicted for a correct extraction.
 
 ## Simulator variables implied
 - none

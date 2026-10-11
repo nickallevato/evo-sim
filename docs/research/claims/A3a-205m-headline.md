@@ -60,7 +60,7 @@ R4 GAP-07b (research/checks/results/R4-GAP07b-alignment.md): direct count from t
 
 R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / misread. charity (rule 3): 187 Mb read as SDRs per lineage, the pairwise total is 35M + 1,140 + 2 x 187M = 409.0M vs 410M (0.24%) and per lineage 204.5M vs 205M, so ledger (literal sum 222M, 46%/85%). Fidelity misread (187 and 410 not in Yoo) and external contested (bp vs events, A3x) are separate and unchanged Charitable reading tried: tried 187 Mb per lineage: pairwise 409.0M, per lineage 204.5M reproduce 410M/205M (0.24%) -> holds + ledger.
 
-R4 L7 (awaiting review, 2026-10-11): Day restates 410 M (A3z, Q179) and names SI sheets 14/19/24; (SNV + gap divergence) x hs1 length gives 404-413 M bp. Any reproducing reading is base pairs; against T2T events (GAP-07t, 48.3 M both lineages) it is 8.5x. No verdict change proposed for A3a.
+R4 L7 (reviewed #60, fix-passed, integrated 2026-10-11): Day restates 410 M (A3z, Q179) and names SI sheets 14/19/24; (SNV + gap divergence) x hs1 length gives 404-413 M bp. Any reproducing reading is base pairs; against T2T events (GAP-07t, 48.3 M both lineages) it is 8.5x. No verdict change for A3a (the 222 M component sum is scored here, rule C).
 
 ## Simulator variables implied
 - `required_fixations` presets: events (about 40M total, 20M per lineage), SNV only (17.5M), bp-affected (205M).

@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: pending   # R4 L1 fix pass (reviews a352991, correctness and critic-side), proposed for integration: non-sequitur (N2d, own source): ¶6 defines the ratio as purifying removal ('If natural selection is purifying and removes harmful mutation then Ka/Ks should be well below 1.0'), ¶20 reads 0.80 that way, ¶21 concludes about adaptive evolution. Charitable reading 'most coding substitutions are not selection-driven' follows from 0.80 but equally from 0.23 under neutral theory, so it does not carry the stated words
-  fidelity: n/a
-  external: pending   # R4 L1 fix pass, proposed for integration: contested (not contradicted merely because premise DN1 is): on the literal words, adaptive change is selection-driven and human alpha estimates (A2e-alpha, bias-corrected ~9-13%) show it occurs; on the charitable reading the same estimates agree most coding substitutions are not adaptive
+  internal: non-sequitur   # R4 L1 fix pass (reviews a352991, correctness and critic-side), (N2d, own source): ¶6 defines the ratio as purifying removal ('If natural selection is purifying and removes harmful mutation then Ka/Ks should be well below 1.0'), ¶20 reads 0.80 that way, ¶21 concludes about adaptive evolution. Charitable reading 'most coding substitutions are not selection-driven' follows from 0.80 but equally from 0.23 under neutral theory, so it does not carry the stated words
+  fidelity: n/a   
+  external: contested   # R4 L1 fix pass; verdict set at integration: (not contradicted merely because premise DN1 is): on the literal words, adaptive change is selection-driven and human alpha estimates (A2e-alpha, bias-corrected ~9-13%) show it occurs; on the charitable reading the same estimates agree most coding substitutions are not adaptive
 ---
 
 ## Statement (verbatim)
@@ -39,7 +39,7 @@ McDonald and Kreitman 1991; Messer and Petrov 2013 (abstract level, test-methods
 None (not computed).
 
 ## Check
-R4 L1 fix pass (`research/checks/results/R4-L1.md`, Verdicts section): rule N scored from Day's own ¶6, ¶20 and ¶21 of the same post; no computation. Day-side charitable reading recorded (steelman-day #7).
+R4 L1 fix pass (`research/checks/results/R4-L1.md`, Verdicts section): rule N scored from Day's own ¶6, ¶20 and ¶21 of the same post; no computation. Day-side charitable reading recorded (steelman-day #7). **Integrated 2026-10-11:** internal non-sequitur (N2d, own source), fidelity n/a, external contested (not scored contradicted merely because DN1 is).
 
 ## Simulator variables implied
 - per-site selection classes (neutral, purifying, adaptive) needed to separate dN/dS from alpha

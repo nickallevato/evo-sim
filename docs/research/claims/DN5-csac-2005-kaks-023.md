@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: secondhand
 status: extracted
 verdicts:
-  internal: n/a
+  internal: n/a   
   fidelity: pending   # CSAC 2005 text not read for this value; only Day's relay (rule U: relays are not scored internal)
-  external: pending   # R4 L1 fix pass, proposed for integration: supported (in kind): an independent pipeline gives 0.207 on Ensembl one2one genes (release 116) and 0.200 with CSAC-like quality filters; fidelity waits for CSAC 2005 and an independent ML estimate to be fetched (critic-side review #3)
+  external: supported   # R4 L1 fix pass; verdict set at integration: (in kind): an independent pipeline gives 0.207 on Ensembl one2one genes (release 116) and 0.200 with CSAC-like quality filters; fidelity waits for CSAC 2005 and an independent ML estimate to be fetched (critic-side review #3)
 ---
 
 ## Statement (verbatim)
@@ -38,7 +38,7 @@ Ka/Ks = 0.23 over 13,454 human-chimp 1:1 orthologs (CSAC 2005, per Day).
 L1 critic side: O121 in 0.20-0.30.
 
 ## Check
-R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass).
+R4 L1 (`research/checks/results/R4-L1.md`; reviews a352991; fix pass). **Integrated 2026-10-11:** internal n/a (relay, rule U), fidelity pending (CSAC 2005 and an independent ML estimate to be fetched), external supported in kind.
 
 ## Simulator variables implied
 - none
