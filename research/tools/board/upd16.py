@@ -2,7 +2,7 @@
 p = 'status.html'; s = open(p).read()
 R = [
  ('<span>~98%, 47 checks reviewed (FM mesa replication, B3m, H8 kscale64 added); next: XT follow-up, review of the 12 mapping claims, RH pass</span>',
-  '<span>~98%, 48 checks reviewed (A2e-alpha, GAP-06, GAP-07t, L1, L6, L7 added); HF post hoc run <code>ph</code> in progress (workhorse + builder, ~31 h); next: L1b T2T rerun, HF integration</span>'),
+  '<span>~98%, 53 checks reviewed (A2e-alpha, GAP-06, GAP-07t, L1, L6, L7 added); HF post hoc run <code>ph</code> in progress (workhorse + builder, ~31 h); next: L1b T2T rerun, HF integration</span>'),
  ('<span><b>225</b> claims (day 123 · critic 61 · ally 15 · lit 26)</span><span><b>401</b> typed objections</span><span><b>222</b> dated argument versions</span>',
   '<span><b>232</b> claims</span><span><b>419</b> typed objections</span><span><b>232</b> dated argument versions</span>'),
  ('<b>115</b> holds · <b>18</b> non-sequitur · <b>2</b> arithmetic error · <b>62</b> pending',
