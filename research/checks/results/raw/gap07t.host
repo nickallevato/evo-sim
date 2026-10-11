@@ -1,0 +1,5 @@
+na-workhorse.allevato.io
+2026-10-10T18:57:50-06:00
+waits for hf ci to finish, then extract hs1 then chimp (1 process at a time)
+f5ea38f47c7f54d0fe4490f477bfa1cf  research/checks/gap07t2t_event_counts.py
+df51e5c3b842e3be4b81f3dd6486e53b  ./8-t2t-apes-2023v2/8-t2t-apes-2023v2.hs1.maf.gz
