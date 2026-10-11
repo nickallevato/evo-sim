@@ -57,3 +57,13 @@ Next:
 12. **E leftovers, GAP-03.**
 13. **RH pass: DONE 2026-10-10** (all Statement quotes tagged in the claim files; rhetoric items RH-9..RH-20 and counters in `ledgers/slips.md`; four unclear tags (B9, C7, ROOT, ROOT-M) listed there for the owner; nodes with only-rhetoric support marked: ROOT-B, D8, ROOT-T quote 1). Open: Q157/Q158 tags (owner decision pending); FM10 internal stays pending until Day releases method (owner decision 2026-10-10).
 
+
+## Later queue (test-methods review, 2026-10-11; candidates only, nothing pre-registered or run)
+Source: `docs/research/sources/test-methods-review-2026-10-11.md`.
+- **L1. dN/dS two-gene-set replication** (Day's Q176 design, Q172-Q177): compute dN/dS on a 1:1-ortholog set versus all GENCODE genes from public T2T alignments; separate gene-set, estimator (Nei-Gojobori vs ML) and multiple-hit effects; then map to alpha. Medium priority; wait for Day's Zenodo release or do it first for a pre-registered prediction. Needs workhorse; data is the CC0 T2T alignments.
+- **L2. Hardness h in humans (HF follow-up)**: source h from public data: (a) density-dependence of survival/fertility in historical cohorts, (b) viability vs fertility decomposition of lifetime reproductive success (Stearns 2010; Byars 2010 designs). Output: an interval for h to place against the R4-HF thresholds (h about 0.1 to 0.3). High value: h is the key unsourced parameter.
+- **L3. alpha bound from MK with demographic correction** (RG-03 / A2e-alpha follow-up): reproduce a bias-corrected human-chimp alpha (asymptotic MK, Messer and Petrov 2013) on public polymorphism data; needs Uricchio 2019 full text (owner).
+- **L4. FM overdispersion with a proper null**: window-count variance versus a mutation-rate-heterogeneity-aware null (CpG, repeats, SV/gap masking); pending Day's code or window size (FM10).
+- **L5. aDNA zero-fixation power analysis**: simulate the 1240k ascertained panel to find how many fixations a selection-driven model would show (C1/C1a); both sides' predictions in advance.
+- **L6. LTEE "undone fixations" check** (Q178): count intervals with fixations undone in Good 2017 trajectories (needs the SI/data; check access).
+- **L7. Q179 accounting**: reconcile the 410M versus 35M claim with the Yoo SI sheets (bp vs events, A3x).

@@ -271,3 +271,9 @@ Harvested 2026-10-10 about 12:25-12:35 MDT (18:25-18:35 UTC). Read-only GETs. Lo
 |---|---|---|---|---|---|---|---|---|---|---|
 | B2026-10-10-the-fourth-mechanism | blog | 2026-10-10 | The Fourth Mechanism | https://voxday.net/2026/10/10/the-fourth-mechanism/ | published 2026-10-10 13:37:48 UTC; modified 15:46:51 UTC (re-check on the next pass) | post/fm.html | fc618dccbbfc010066d157c1378e5a204b4b88ee5c4bf49eec052733cbd65647 (page; changes with site chrome) | open, no paywall | ROOT-FM | Mesas / sigillation; T2T six ape genomes. Never mentions UATV in the body. No code, coordinates, window size or statistic released. Quotes Q162-Q171. |
 | DAY-FEED-2026-10-10 | rss | 2026-10-10 | voxday.net/feed/ (newest 10 posts) | https://voxday.net/feed/ | snapshot | feed/feed.xml | ba6e869465f536989b3a9b8efb28b140fc40df102161431f10e67d830c073ead | open | - | Used to find the post. |
+
+## Refresh 2026-10-11
+| key | type | date | title | URL | version | local path | sha256 | access | branch | notes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| B2026-10-11-how-biologists-keep-proving-selection | blog | 2026-10-11 | How Biologists Keep "Proving" Selection | https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ | published 2026-10-11 14:13:57 UTC; modified 16:35:43 UTC (re-check) | sources/raw/refresh-2026-10-11/post-how-biologists-keep-proving-selection/page.html | 585308fa16c617b320bd27116a9dbb74b28ddb5cca11bf58784a409bb4e73e1b (page) | open, no paywall | ROOT / selection strength | dN/dS 0.80 recomputation; Q172-Q179 |
+| DAY-FEED-2026-10-11 | rss | 2026-10-11 | voxday.net/feed/ | https://voxday.net/feed/ | snapshot | sources/raw/refresh-2026-10-11/feed/feed.xml | 3eb75b5b8f1cfd2337eb9dbdef60bea1f2d2c7ab75d724dcca6fdc6437863891 | open | - | Used to find the post. |

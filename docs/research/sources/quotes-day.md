@@ -1290,3 +1290,63 @@ All quotes machine-checked as substrings (whitespace and quote-mark normalised) 
 - tag (rule RH): dialectic (ROOT-level conclusion) plus an invitation to replicate (valid point for Day)
 - quote: "What we do know is that neither natural selection nor neutral diffusive drift can still be considered viable candidates. And there is no need to take my word for anything with regards to this, all of the data has been provided by the T2T Primate Consortium (Yoo et al. 2025) aligned with Progressive Cactus (Armstrong et al. 2020)."
 - note: Verified against the raw page 2026-10-10: the original reads "can still be considered viable candidates"; there is no bracketed "[not]". Read in context the sentence means "can no longer be considered"; the audit does not edit it.
+
+## Refresh 2026-10-11 quotes (Q172-Q179; added 2026-10-11)
+
+All from voxday.net, "How Biologists Keep "Proving" Selection", https://voxday.net/2026/10/11/how-biologists-keep-proving-selection/ ; published 2026-10-11 14:13:57 UTC, modified 16:35:43 UTC (re-check for edits); tags evolution, science; local copy `sources/raw/refresh-2026-10-11/post-how-biologists-keep-proving-selection/page.html` (extracted body.txt; page sha256 585308fa16c617b320bd27116a9dbb74b28ddb5cca11bf58784a409bb4e73e1b). Each quote machine-checked as a substring of body.txt (whitespace/curly quotes normalised).
+
+### Q172 Ka/Ks (dN/dS) re-computation headline (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶7 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "We used GENCODE v46 annotations, the same Nei-Gojobori method the original studies used, and the complete extraction of human-chimp aligned positions from the T2T-quality assemblies. And we got a result."
+- note: FM-adjacent / selection strength; NEW result claim, no code, gene list or per-gene table released. Tag: dialectic (a numeric claim). Day's own pre-release caveat is Q176.
+
+### Q173 dN/dS = 0.80 versus the Consortium's 0.23 (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶9 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "Not 0.23. 0.80."
+- note: Also quotes the Consortium value as 0.23; the audit has not checked that against the 2005 paper text (abstract/full text not in the repo for this value). Tag: dialectic.
+
+### Q174 Gene-set size: 20,400 versus 13,454 (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶13 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "We computed dN/dS on 20,400 protein-coding genes, which is every gene annotated in GENCODE v46 that has coding sequence data in the human-chimp alignment."
+- note: Day's own denominators: 20,400 (his) versus 13,454 (Consortium, next quote). A different gene set and different estimator inputs are exactly the confound a replication must separate.
+
+### Q175 Filter stack does not move dN/dS below 0.64-0.65 (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶17 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "No combination of quality filters moves the number below 0.65."
+- note: The same paragraph says the strictest stack 'still produced dN/dS = 0.64 on 10 remaining genes'. Ten genes is not a genome estimate; recorded as Day's own words. Tag: dialectic.
+
+### Q176 Day's pending test: reconstruct the 13,454-gene list (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶22 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "If the Consortium's curated subset gives ~0.23 and our complete set gives ~0.80, then the case is closed: the published number is an artificial artifact of cherry-picked genes, not an observed property of the human genome."
+- note: A self-proposed discriminating test (credit to Day): same pipeline, two gene sets. Input to test-methods-review-2026-10-11.md. Promised output: 'forthcoming paper on Zenodo' (not yet present, Zenodo count 39 unchanged 2026-10-11).
+
+### Q177 Interpretation: selection not primary (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶21 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "At dN/dS = 0.80, natural selection is not the primary mechanism of adaptive evolution."
+- note: Non-sequitur candidate (rule N) not scored here: dN/dS measures the average purifying/neutral balance of all nonsynonymous changes, not the adaptive fraction (alpha) or the rate of beneficial fixations. Proposed for a check, no verdict change. Tag: dialectic.
+
+### Q178 LTEE: 'ten of the twelve populations' show undoing intervals (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶4 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "In fact, ten of the twelve populations even show intervals where fixations are being undone faster than any new ones complete."
+- note: Bears on A2c (estimator, negative fixations), E9 (Good 2017 dynamics). Day gives no locator in Good et al. 2017; unverified against Good 2017 SI (not retrieved).
+
+### Q179 T2T divergence claim: 410 million differences, not 35 million (added 2026-10-11)
+- source: voxday.net, "How Biologists Keep 'Proving' Selection" (SG cross-post not seen)
+- locator: ¶2 of the non-empty paragraphs of the saved body text
+- branch: ROOT-FM / selection strength / LTEE / T2T
+- quote: "the real number turned out to involve an estimated 410 million total genomic differences, not 35 million"
+- note: Bears on A3x1 (Yoo 2025 fidelity), A3x (bp vs events). The 410M is a Day-side sum; Day's own post (¶ on supplementary sheets) says 'no total is either calculated or provided' by the paper, so 410M is Day's own aggregation across tools (his wording). Not checked here against Yoo SI.
