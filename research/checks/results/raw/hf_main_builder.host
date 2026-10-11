@@ -4,3 +4,5 @@ script md5: 3e07efcbcbfaf2fa22afd0bf48c62e83; numpy 2.5.3 (pinned)
 seeded from workhorse hf_main.jsonl snapshot (316 rows); remaining jobs run cheapest-first while workhorse PID 895988 runs dearest-first
 pre-launch reproduction: 5 finished workhorse jobs (cells 89,93,119,33,10) rerun on builder, all fields except sec identical
 merge: concatenate both hf_main.jsonl files, drop duplicate (cell, rep) rows (identical by seed), before `analyse`
+stopped 2026-10-11 ~11:10 -06:00 once the union covered all 1,720 jobs (1,396 of its 1,404 jobs written; last progress
+line [4026 s] 1376/1404); file collected locally as raw/hf_main_builder.jsonl / .out. Merge result in hf_main.host.

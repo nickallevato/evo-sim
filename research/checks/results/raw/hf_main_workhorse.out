@@ -1,0 +1,44 @@
+stage main: 260 cells, 1720 jobs to run (0 done), workers 10
+[   2060s] 1/1720 A-K4000 trunc h=0.0 K=4000 s=0.01 b=0.0 R=2.000 lam=1.6 rep2 fail=None k/lam=0.991 D=1.63 nopen=227 sec=2059
+[  17878s] 26/1720 A-soft trunc h=0.0 K=1000 s=0.01 b=0.0 R=2.000 lam=1.6 rep1 fail=None k/lam=1.005 D=1.42 nopen=197 sec=450
+[  28339s] 51/1720 A-K4000 trunc h=0.0 K=4000 s=0.01 b=0.0 R=1.111 lam=0.4 rep1 fail=None k/lam=0.994 D=5.88 nopen=187 sec=976
+[  33130s] 76/1720 A-K4000 mix h=0.0 K=4000 s=0.01 b=0.0 R=1.111 lam=0.4 rep2 fail=None k/lam=0.919 D=84.2 nopen=2197 sec=10016
+[  35756s] 101/1720 A-soft softWF h=0.0 K=1000 s=0.01 b=0.0 R=nan lam=1.6 rep2 fail=None k/lam=0.988 D=16.9 nopen=1992 sec=3121
+[  38525s] 126/1720 A-mix mix h=0.1 K=1000 s=0.01 b=0.0 R=2.000 lam=0.4 rep2 fail=extinct k/lam=0.000 D=nan nopen=0 sec=22
+[  43557s] 151/1720 A-soft trunc h=0.0 K=1000 s=0.01 b=0.0 R=1.050 lam=0.8 rep3 fail=None k/lam=0.986 D=29.4 nopen=1658 sec=1921
+[  44827s] 176/1720 A-mix mix h=0.1 K=1000 s=0.01 b=0.0 R=3.000 lam=0.2 rep2 fail=None k/lam=0.994 D=23.6 nopen=347 sec=1036
+[  47160s] 201/1720 A-soft mix h=0.0 K=1000 s=0.01 b=0.0 R=2.000 lam=0.2 rep2 fail=None k/lam=0.988 D=23.8 nopen=346 sec=760
+[  47791s] 226/1720 A-weak trunc h=0.0 K=1000 s=0.002 b=0.0 R=2.000 lam=0.2 rep2 fail=None k/lam=0.996 D=0.0574 nopen=5 sec=22
+[  51918s] 251/1720 A-mix mix h=0.1 K=1000 s=0.01 b=0.0 R=3.000 lam=0.1 rep1 fail=None k/lam=1.034 D=20.9 nopen=161 sec=482
+[  52843s] 276/1720 A-mix mix h=0.3 K=1000 s=0.01 b=0.0 R=2.000 lam=0.1 rep0 fail=extinct k/lam=0.000 D=nan nopen=0 sec=15
+[  53298s] 301/1720 A-mix mix h=0.3 K=1000 s=0.01 b=0.0 R=1.111 lam=0.2 rep1 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  54845s] 326/1720 A-soft trunc h=0.0 K=1000 s=0.01 b=0.0 R=3.000 lam=0.0351 rep1 fail=None k/lam=0.988 D=0.144 nopen=0 sec=9
+[  55832s] 351/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.0 R=3.000 lam=0.1597 rep3 fail=extinct k/lam=0.000 D=nan nopen=0 sec=1
+[  55839s] 376/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.001 R=3.000 lam=0.1597 rep7 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  55927s] 401/1720 A-weak hard h=1.0 K=1000 s=0.002 b=0.0 R=2.000 lam=0.05037 rep4 fail=extinct k/lam=1.097 D=12.1 nopen=213 sec=76
+[  56272s] 426/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.0 R=3.000 lam=0.1277 rep5 fail=extinct k/lam=0.000 D=nan nopen=0 sec=1
+[  56277s] 451/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.004 R=3.000 lam=0.1277 rep0 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  56549s] 476/1720 A-mix mix h=0.1 K=1000 s=0.01 b=0.0 R=2.000 lam=0.0351 rep0 fail=None k/lam=0.997 D=22.3 nopen=58 sec=135
+[  56955s] 501/1720 A-weak mix h=0.0 K=1000 s=0.002 b=0.0 R=2.000 lam=0.0351 rep0 fail=None k/lam=0.830 D=26 nopen=238 sec=443
+[  57521s] 526/1720 A-mix mix h=0.1 K=1000 s=0.01 b=0.0 R=3.000 lam=0.0037 rep2 fail=None k/lam=1.243 D=19.6 nopen=7 sec=37
+[  57671s] 551/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.00025 R=3.000 lam=0.1022 rep0 fail=extinct k/lam=0.000 D=nan nopen=0 sec=4
+[  57677s] 576/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.004 R=3.000 lam=0.1022 rep9 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  57682s] 601/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.001 R=2.000 lam=0.1007 rep3 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  57975s] 626/1720 A-valid mix h=1.0 K=1000 s=0.01 b=0.0 R=2.000 lam=0.02418 rep2 fail=None k/lam=0.963 D=15.9 nopen=28 sec=75
+[  58286s] 651/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.0 R=2.000 lam=0.08059 rep7 fail=extinct k/lam=0.000 D=nan nopen=0 sec=1
+[  58291s] 676/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.004 R=2.000 lam=0.08059 rep2 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  58319s] 701/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.00025 R=3.000 lam=0.07983 rep3 fail=extinct k/lam=0.962 D=9.75 nopen=31 sec=6
+[  58333s] 726/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.001 R=3.000 lam=0.07983 rep8 fail=extinct k/lam=0.952 D=8.84 nopen=18 sec=9
+[  58598s] 751/1720 A-weak hard h=1.0 K=1000 s=0.002 b=0.0 R=2.000 lam=0.01209 rep5 fail=None k/lam=0.976 D=15.4 nopen=60 sec=132
+[  58606s] 776/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.001 R=2.000 lam=0.06447 rep4 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  58661s] 801/1720 A-weak hard h=1.0 K=1000 s=0.002 b=0.0 R=1.111 lam=0.007656 rep5 fail=extinct k/lam=1.013 D=12.4 nopen=32 sec=65
+[  58700s] 826/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.00025 R=3.000 lam=0.06387 rep9 fail=extinct k/lam=0.991 D=10.5 nopen=28 sec=14
+[  58777s] 851/1720 A-weak hard h=1.0 K=1000 s=0.002 b=0.0 R=1.111 lam=0.0049 rep1 fail=None k/lam=1.055 D=14.7 nopen=25 sec=65
+[  58882s] 876/1720 A-weak hard h=1.0 K=1000 s=0.002 b=0.0 R=1.111 lam=0.001837 rep4 fail=None k/lam=0.933 D=16.2 nopen=9 sec=35
+[  58970s] 901/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.001 R=3.000 lam=0.05109 rep5 fail=extinct k/lam=1.021 D=9.48 nopen=15 sec=10
+[  58978s] 926/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.00025 R=2.000 lam=0.05037 rep6 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  58983s] 951/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.004 R=2.000 lam=0.05037 rep7 fail=extinct k/lam=0.000 D=nan nopen=0 sec=0
+[  59035s] 976/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.0 R=2.000 lam=0.0403 rep0 fail=extinct k/lam=1.150 D=12.8 nopen=44 sec=14
+[  59130s] 1001/1720 B-syn hard h=1.0 K=1000 s=0.01 b=0.001 R=2.000 lam=0.0403 rep7 fail=extinct k/lam=1.498 D=10.6 nopen=15 sec=3
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-025sopvo', '/mp-c8y08b82', '/mp-4yyhi0bh', '/mp-lqxwp28g', '/mp-3waxqfl0', '/mp-x6xtkn62'}
+  warnings.warn(

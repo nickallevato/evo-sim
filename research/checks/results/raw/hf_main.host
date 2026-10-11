@@ -2,3 +2,10 @@ na-workhorse.allevato.io
 2026-10-10T18:51:16-06:00
 PID 895988 (main python; forkserver 896001) workers 10 stage main
 a6718c7b9e1d3c7f2346463bcbe9930d  research/checks/hf_followups.py
+2026-10-11: split with builder (see hf_main_builder.host); this host ran dearest-first from launch; stopped ~11:15 -06:00
+once the union of both hosts covered all 1,720 jobs (last progress line [59130 s] 1001/1720; 1,020 rows written).
+Per-host output renamed raw/hf_main_workhorse.jsonl / .out (here and locally); raw/hf_main.jsonl is now the merged union
+(research/checks/hf_merge_hosts.py, post hoc orchestration): 1,720 unique (cell, rep); 696 jobs run independently on
+both hosts, all fields except sec identical (0 mismatches); 316 seed-copy rows byte-identical.
+analyse: 2026-10-11 ~11:20 -06:00 on na-workhorse.allevato.io, script md5 446323c4c82f821991d12ec0c2dd431e (da6f8ac;
+analysis code unchanged since 8bd9d29), merged hf_main.jsonl md5 94d525217849b23db9a4bd225c9bf3b0 -> raw/hf_analyse.out
