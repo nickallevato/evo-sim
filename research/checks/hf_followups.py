@@ -385,6 +385,8 @@ def run_stage(stage, workers):
             d = json.loads(line)
             done.add((d["cell"], d["rep"]))
     jobs = [j for j in jobs if (j[1], j[3]) not in done]
+    if os.environ.get("HF_REVERSE") == "1":  # post hoc, orchestration only: a second host works from the cheap end
+        jobs.reverse()
     print(f"stage {stage}: {len(cells)} cells, {len(jobs)} jobs to run ({len(done)} done), workers {workers}", flush=True)
     t0 = time.time()
     with Pool(workers) as pool, open(path, "a") as fh:
