@@ -1,0 +1,12 @@
+HF post hoc run `ph` (hf_posthoc.py, pre-registered post hoc at 5c30ed9; script md5 5f571634461d29ce0e60722cbc77da37;
+imports hf_followups.py md5 446323c4c82f821991d12ec0c2dd431e). numpy 2.5.3 on both hosts. 83 cells, 410 jobs, est. ~567 CPU-h.
+smoke (both hosts, 2026-10-11 ~11:42 -06:00, after the 5c30ed9 commit): ENGINE IDENTITY PASS on both (4 hf_main jobs rerun with
+  original seeds, every field but sec identical: cells 49, 60, 86, 107). Memory probe peak RSS 154 MB (workhorse) / 144 MB (builder)
+  at K = 4000, nopen ~2,100; extrapolated worst job ~550 MB (C K = 4000 lam 1.6, workhorse only), builder worst ~310 MB.
+  Logs: hf_ph_smoke_wh.out, hf_ph_smoke_bd.out (stay on the hosts; probe rows in hf_ph_smoke.jsonl).
+shard wh: host na-workhorse (AMD Ryzen 5 5500U, 12 threads, 14 GB), launched 2026-10-11 11:53 -06:00, 11 workers, 247 jobs (all K = 4000),
+  command: HF_SHARD=wh setsid -f nohup research/.venv/bin/python -I research/checks/hf_posthoc.py ph 11 > raw/hf_ph_wh.out
+shard bd: host builder (AMD Ryzen 7 3700X, 8 vCPU, ~3.9 GB RAM), launched 2026-10-11 11:53 -06:00, 7 workers, 163 jobs,
+  command: HF_SHARD=bd setsid -f nohup research/.venv/bin/python -I research/checks/hf_posthoc.py ph 7 > raw/hf_ph_bd.out
+estimated wall ~31 h per shard (rough cost model, est_cost); expected finish ~2026-10-12 evening to 10-13 morning (-06:00).
+Shards are a fixed split; seeds per (cell, rep), so the split cannot change any row.
