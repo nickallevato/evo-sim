@@ -65,4 +65,4 @@ research/.venv/bin/python -I research/checks/baseline_textbook.py   # baselines 
    - Commit with explicit paths; `git push origin research` and `git push origin research:master`.
 
 ## Current state
-Not duplicated here. Read `research/checks/QUEUE.md`, the "Still open" list in `docs/HANDOFF.md`, and the latest milestone post. One subagent at a time; compute on na-workhorse only.
+Not duplicated here. Read `research/checks/QUEUE.md`, the "Still open" list in `docs/HANDOFF.md`, and the latest milestone post. At most two subagents at a time (user, 2026-10-11), never two on the same shared file (QUEUE.md, claim files, ledgers, argmap); compute on na-workhorse, or builder within its limits.
