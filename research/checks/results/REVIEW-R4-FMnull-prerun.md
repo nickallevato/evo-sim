@@ -50,3 +50,31 @@ All would be labelled post hoc (pre-run, no data seen). PREREG stays as register
 
 ## Verdict
 No BLOCKER. The analytic core, the simulation check and the two-epoch and BGS algebra are correct. Before running: amendments 1, 2, 4 and 6 are needed for the table and the scoring rule to mean what the docstring says; 3, 5, 7, 8 and 9 are needed for the two sides to be scored on equal terms; 10 is wording and sourcing.
+
+## Pre-run review resolution (2026-10-12; post hoc, pre-run, no data seen)
+Fix pass on `fm_mesa_null.py`, docstring section "POST HOC AMENDMENT 2 2026-10-12" (items A1-A13). PREREG, SOURCED, P1-P8, the frozen rule and every registered output are unchanged and still computed; amendments sit beside them (set `AMENDED`, output key `amend2`, mode `post`). Only `selftest` was run (2.6 s, 135 MB, local); it now also exercises the amendment code paths with output discarded. `analytic`, `simulate`, `realdata`, `score`, `post` have not been run and `raw/fm_analyse.json` was not opened.
+
+| Item | Status | Resolution |
+|---|---|---|
+| MAJOR-1 | fixed | A1: M0 and M1 are a constraint envelope. For each (ell_M1, ell_M0) on a grid the sigmas are solved to match the Smith CV at 1 Mb and 10 Mb; band edge = min / max of V(W) over the feasible set. Selftest: targets reproduced, envelope wider than a corner at 100 kb. |
+| MAJOR-2 | fixed (as reading-dependent) | A2: three dataset variants (ALL3, NOWONG, FRANC) x persistence 1.0 / 0.5 for the lo edge, plus PREREG's 0.05, all printed side by side. An AMENDED class counts only if identical under all six variants, else CAL-DEPENDENT. No value chosen. |
+| MAJOR-3 | fixed (derived, labelled) | A1: the 10-Mb constraint uses CV(1 Mb) x 10^b (FML-S5; 10 Mb is in Smith's fitted range, FML-S4). Not imposed below 1 Mb; cells at W <= 30 kb or > 10 Mb flagged. Consequence stated: sigma_M0 rises to about 0.10-0.22. |
+| MAJOR-4 | fixed | A3: `score --exposure --d [--cvc]`; both edges use the stated inputs. P4/P5 re-scored with each cell's own exposure in mode `post` (the R4-FM json holds no exposure, so the realdata output is used); the bracket version stays in `analytic`. |
+| MAJOR-5 | fixed | A10: P4 and P5 labelled "informed, not predictive" in the docstring and in the output; no prediction credit to either side. |
+| MAJOR-6 | fixed | A4: `classify2`. CRITIC needs value <= max(N_hi / 3, N_c), the mirror of Day's 3x; MARGINAL-IN between that and N_hi; N_c printed. Registered classes still reported. |
+| MAJOR-7 | fixed | A5: ALN_part and its share in every row; unmasked values classified against both bands; a difference gives ALN-DEPENDENT, no verdict move for either side. |
+| MAJOR-8 | fixed | A7: `repro_gate`. DAY or CRITIC moves a verdict only if the realdata index at Day's W / reading / unit / masking is within 3x of his value (any measured W if W is unknown); else NOT-REPRODUCED or UNTESTED. Same gate both sides. P3 scored as registered with the gate beside it. |
+| MAJOR-9 | fixed; two inputs unsourced | A8: reading R1u (D - 1 = m[V(1 + CV_c^2) + CV_c^2]; CV_c bracket 0.2-0.5 unsourced until `realdata`, which now measures it and the unnormalised index) and unit U-BP (D_struct floors 61 and 100 derived from the GAP-07t summary counts; upper edge uses an unsourced tail factor 10). Both formulas checked against simulation in the selftest. |
+| MAJOR-10 | fixed (as reading-dependent) | A9: `phi_hc_bound` with lambda_M in {0, 0.25, 0.5} and lineage-specific ALN; S2 scores DAY only above 3x the bound at every lambda_M, critic only inside at lambda_M = 0. Cost stated: P8's block model is not > 3x the bound at lambda_M = 0.5. |
+| MINOR-1 | fixed | A11: Delta = 2.0 My quoted from the held Hobolth text ("approximately 2 Myr earlier ..."); `two_epoch` recomputes sigma (0.35 at the centre). |
+| MINOR-2 | fixed; partly unverified | A11: the two-locus formula (rho + 18)/(rho^2 + 13 rho + 18) was verified by an independent first-step derivation (linear system, selftest, agreement 1e-9) but not against a held source text; the Griffiths / Hudson attribution is from memory. AMENDED uses this kernel; wording corrected (ILS term grows with log W; the per-locus variance does average down with W). Not covered: two-epoch and three-lineage ancestry; r = 1e-8 unsourced. |
+| MINOR-3 | partly | A12: BGS hi uses the largest two-epoch mean fraction consistently. Elasticity kept at 1 (upper side). sd(B) still unsourced. |
+| MINOR-4 | answered | A12: no double counting in SOURCED / AMENDED (DNM-calibrated mutation terms, at 1 Mb and 10 Mb). Three places it could enter are named with a rule each: PREREG's unsourced brackets; the divergence-based NNLS fit in `realdata` (a total, never added to BGS / ILS / GBGC, never used to reset a bracket); M0 vs GBGC and technical DNM variance. |
+| MINOR-5 | partly | A13: tautological half of P7 reported, not scored. Not fixed: BGS simulation arm at ell 1 Mb; TREE branch lengths (only pairwise means of Yoo SI III.14 are held), cells flagged; the 8% overstatement at ell 100-200 bp (upper side). |
+| MINOR-6, MINOR-9 | fixed | A4: BELOW-NEAR / BELOW-FAR with two labels (NOT-HIGH, critic-side; bracket failure, Day-side); BELOW-FAR gives no FM10 defeater credit. |
+| MINOR-7 | fixed | A6: every score also against K_hi; FM10 moves only on DAY against K_hi. |
+| MINOR-8 | answered | A13: S3 declared not testable on 1-kb bins; covariate weakness scores for neither side (FML-S6). Not made operational: it would need sub-kb data. |
+| MINOR-10 | fixed | by A1. |
+| MINOR-11 | answered | A7: the asymmetry is rule RD and is stated; the gate bounds it. |
+
+**Not verified or left open.** (1) Source attribution of the two-locus formula. (2) Hobolth Table 2 tract lengths (not in the extracted text). (3) Unsourced inputs that remain: ALN sigma, sd(B), M2, M3, CPG, GBGC, LAMBDA, TREE, r, CV_c, the indel-length tail factor, the hs1 length used for d_bp (about 3.1 Gb). (4) Persistence 0.5 and lambda_M 0.5 are readings of FML-S8, not estimates. (5) The hand figures in the amendment are first-order arithmetic; no table has been produced. (6) The three post-run reviews (load-bearing tier) are still owed.
