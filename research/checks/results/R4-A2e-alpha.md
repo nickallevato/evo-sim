@@ -128,3 +128,50 @@ Predictions: P1 holds; P2 holds (ΣDn 1,262, inside 1,000-2,000); P3 holds (R1 2
   - It does not move to `contradicted` because: (a) the only full-text critic-side estimate is a model residual pooled over both lineages, and the compounded Day-charitable row needs only about 36% of it to be artefact for A2e to survive; (b) Uricchio is abstract only; (c) the C2 row, the critic review's named condition, clears 191 only at the uncorrected point estimate (228), not at its lower bootstrap bound (112) or after the ascertainment correction (67-136). Rule C and the instruction to move only on a clear clearance keep it at `contested`.
   - **What would move it to `contradicted`:** a full-text Uricchio (or another bias-corrected human-branch estimator, e.g. asymptotic MK or a DFE-alpha fit on human-branch divergence) confirming alpha above about 1% on the human lineage itself; or a human-branch-polarised bias-corrected count above 191 with an interval that excludes it; or a non-coding human-lineage adaptive count that alone exceeds ~191. **What would move it toward `supported`:** a bias-corrected human-branch alpha below ~1% with an interval excluding it, or evidence that Boyko's residual is mostly model artefact.
 - **R1:** no verdict moves in this check. The pre-review "named disagreement" (0.2% vs 9-20%) is replaced by "bias-corrected estimators above alpha\* ≈ 1%; the only sub-threshold value is an uncorrected null; GV's accelerated genes sit at the threshold".
+
+## Post hoc addendum: Uricchio 2019 full text
+**Post hoc** because the abstract value (0.135) was already mapped above. Script `research/checks/a2e_alpha_uricchio.py`, committed with its predictions at **7d68de9** before its run; raw `results/raw/a2e_alpha_uricchio.out`. Source: Uricchio, Petrov & Enard 2019, Nat Ecol Evol 3:977-984, PMC6693860 (OA author manuscript), fetched 2026-10-11 (refresh-2026-10-11b-lit s3), sha256 `3e7c44cb...b865977`. All 9 quotes below verified as substrings of the local text. Not integrated; no claim, QUEUE, argmap or ledger edits.
+
+**Is it human-branch?** Yes. Methods: "the number of human-specific fixed substitutions in coding sequences since divergence with chimpanzees", "identified by parsimony based on alignments of human (hg19 assembly), chimpanzee (panTro4 assembly) and orangutan (ponAbe2 assembly) coding sequences". Polymorphism: 1000 Genomes, "all 661 samples with African ancestry". This is the human lineage since the chimp split, the same interval as A2e's 191.
+
+**Is it bias-corrected?** Yes, on both axes the paper names. Intro: "Deleterious polymorphism effectively makes the test overly conservative" (the bias that depresses naive MK; the aMK baseline gives 0.076). ABC-MK further models weakly beneficial alleles and background selection: "our method nearly doubles the estimated human adaptation rate (to α = 0.135)". Table caption: "Values in parentheses represent the area of 95% highest posterior density".
+
+**Results** (G1 = 190.6, G2 = 158.8; denominators N1-N3 as in the main table; alpha\* 0.65-1.75%):
+| row | alpha | count range over N1-N3 | x G1 | side |
+|---|---|---|---|---|
+| point | 0.135 | 1,497-3,303 | 7.9-17.3 | critic (identical to the abstract-only row) |
+| lower 95% HPD | 0.096 | 1,065-2,348 | 5.6-12.3 | critic |
+| **lowest Day-charitable, any effect size:** lower HPD x 0.75 (linkage haircut; N2) | 0.072 | **798** (N2); 1,057-1,761 on the others | **4.19** (4.2-9.2) | critic |
+| strongly adaptive only, point (Day-charitable: weak variants near-neutral in pace) | 0.041 | 455-1,003 | 2.4-5.3 | critic at the point estimate |
+| strongly adaptive only, lower HPD | 0.0 | 0 | 0 | **not excluded** |
+| paper's own count, NS = 29,925 (not used for the verdict) | 0.135 / 0.096 | 4,040 / 2,873 | 21 / 15 | critic |
+| VIP subset alone (own count 6,249) | 0.224 / 0.17 | 1,400 / 1,062 | 7.3 / 5.6 | critic; VIP strong-only lower HPD (0.018) gives 112 (0.59x) |
+
+The lower HPD bound (9.6%) is 5.5 times alpha\*max (1.75%). The lowest any-effect-size row, 798, is 4.2 times 191 (5.0 times G2).
+
+## Scoring of the post hoc predictions
+| ID | Prediction | Result | Score |
+|---|---|---|---|
+| P1 | human-branch and bias-corrected; quotes verify | both hold, 9/9 quotes | holds |
+| P2 | lower HPD / alpha\*max >= 5; compounded lowest >= 3.5 x G1 | 5.5; 4.19 | holds |
+| P3 (Day) | strong-only at lower HPD is 0; strong-only point >= 450 on N2 | 0; 455 | holds: a strong-only reading is a point clearance, not an interval clearance |
+| P4 (Day) | the paper's NS = 29,925 exceeds N1-N3 and is unreconciled | 29,925 vs 11,090-24,463; GV counted 18,936 on 9,785 genes; the paper's gene set (Ensembl v73, human-chimp-orangutan reciprocal hits, Blat identity >= 60%) differs and the text read does not reconcile them | holds; own-count rows reported only |
+| P5 | move proposed, with limits | see below | holds |
+
+## Proposed verdict move
+The milestone-13 condition is met: a full-text, bias-corrected, human-lineage alpha, with a 95% HPD lower bound (9.6%) well above 1%. None of the four pre-registered blockers applies. **Proposed: A2e external `contested, leaning contradicted` to `contradicted`, for the coding-only, any-effect-size, per-generation reading.** Internal (`non-sequitur`) and fidelity (`n/a`) unchanged. The earlier reason for holding at `contested` was (a) Boyko being the only full-text estimate (a pooled residual) and (b) Uricchio being abstract only; both fall away. Reason (c), the GV accelerated-gene bound, was a different test and is untouched. Not asserted: that the strong-only reading fails, or that Day's other A2e arguments fail.
+
+## Who this helps
+- **Critic side:** a second, independent, human-lineage-specific, full-text estimator lands 4.2-17x above the flip after every adjustment applied here; unlike Boyko it is not pooled over both lineages, and its HPD excludes the threshold by a factor of 5.5. The VIP subset (6,249 fixations) clears 191 by itself even at its lower HPD.
+- **Day side:**
+  - Strong-only adaptation (4% alpha) clears 191 only at the point estimate; its HPD includes 0, and for VIPs the strong-only lower bound gives 112, below 191. Day's ceiling counts beneficial fixations of any size, but if the reader restricts to strong ones the flip is not interval-secure.
+  - 72% of Uricchio's alpha is weakly adaptive, which Day can argue is not what a rate ceiling on "beneficial fixations" meant.
+  - The estimate is a model inference (ABC-MK); no fixation is observed directly (D6 stands).
+  - The paper's own NS (29,925) is unreconciled with the other denominators, and Uricchio notes its estimate is "not directly comparable" with earlier ones because of the larger gene set.
+
+## Caveats
+- Whether 0.135 is net of the ~25% linkage reduction is not settled by the text read; the 0.75 haircut covers it either way.
+- The ABC-MK model inherits demographic and BGS model assumptions (the paper tests seven confounders in its own robustness section; not re-audited here).
+- Counts are coding-only lower bounds; denominators are the audit's (N1-N3), not the paper's.
+- The "Whole-egoism" row label in the saved copy is a source-copy artefact; read as the whole gene set.
+- Combined light review pending; integration (claims, argmap, ledgers) not done.
