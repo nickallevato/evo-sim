@@ -47,6 +47,23 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 ---
 
+## How the audit works
+
+<p align="center"><img src="docs/img/audit-systems.svg" alt="Systems diagram: sources, verbatim quotes, claims with three verdicts, argument map, checks, reviews, verdict rule, ledgers, synthesis and simulator spec, with the criticality layer drawn over all of it" width="900"></p>
+
+- **Sources to quotes to claims.** Day's papers and posts, his critics and the literature are reduced to verbatim, dated, located quotes, then to claims. Each claim gets three verdicts: internal, fidelity, external.
+- **Claims to the argument map.** Claims hang on eight branches (A-H) under Day's root claim, with typed objections (defeaters) and a dated lineage of each argument.
+- **Checks.** Each load-bearing equation gets a pre-registered check (exact chain or forward simulation), a write-up and a review: three reviews for load-bearing checks, one combined review for low-stakes ones.
+- **One verdict rule** (R1 materiality, S scope, N non-sequitur, F fidelity, U relays, C charity, RH rhetoric versus dialectic, RD reading-dependent verdicts) is applied to Day, critics and allies alike. A slip that does not move a conclusion by more than 25% goes to a ledger, not to a verdict. How one quoted statement flows through it is drawn in [`audit-verdict-logic.svg`](docs/img/audit-verdict-logic.svg).
+- **Then** ledgers, a synthesis (R5) with a sensitivity table, and the simulator spec.
+- **Who does it, plainly:** the audit is AI-run. Every check, review and method pass was done by Claude instances inside one project session under one owner. The three reviews are three prompts to the same model family, not blind and not independent; no outside human or non-Claude reviewer has yet been asked. Details and what the tallies can and cannot mean: [`METHODS-AND-LIMITATIONS.md`](docs/research/criticality/METHODS-AND-LIMITATIONS.md).
+
+## How the audit checks itself (criticality layer)
+
+A standing layer audits the method, not the sources: a third-party-style method audit (20 findings, MA-01 to MA-20, none yet closed by re-audit), a critique that applies Day's own Triveritas test (logic, mathematics and empirical anchoring must all hold, Q203) to the audit (11 findings, TV-01 to TV-11; by that test the audit's tallies do not yet merit assent, chiefly because every review is by the same model family), a per-check pre-registration status table, a methods-and-limitations page, an owner decisions log, and drafted (unsent) right-of-reply letters and outside-reviewer packets. Findings route to no-decision fixes, held-back proposals, or owner decisions, and rule changes follow a freeze procedure. Start at [`docs/research/criticality/README.md`](docs/research/criticality/README.md); everything outstanding is in [`docs/research/ROADMAP.md`](docs/research/ROADMAP.md).
+
+---
+
 ## Scorecard so far
 
 <p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 233 claims" width="760"></p>
@@ -228,6 +245,8 @@ Raw counts per side are shown, but rates are not comparable between sides: the t
 
 ## Roadmap
 
+Everything outstanding (compute and checks, criticality remediation, owner decisions, outside inputs, and the path to R5) is one table in [`docs/research/ROADMAP.md`](docs/research/ROADMAP.md). The research stages:
+
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
@@ -281,7 +300,7 @@ flowchart LR
 | [`docs/research/claims/`](docs/research/claims) | One file per claim, with a verbatim quote, formal statement, pre-registered prediction and three verdicts |
 | [`research/checks/`](research/checks) | Reviewed verification scripts, with [`RESULTS.md`](research/checks/RESULTS.md) and [`REVIEW.md`](research/checks/REVIEW.md) |
 | `research/checks/results/` | Write-ups, reviews and raw outputs |
-| [`research/tools/`](research/tools/README.md) | Harvest and claim-generation tooling, plus `readme_figs.py`, which draws the figures above, and `icon.py` / `icon_raster.py`, which draw the icon, favicon and social preview |
+| [`research/tools/`](research/tools/README.md) | Harvest and claim-generation tooling, plus `readme_figs.py`, which draws the figures above (including the audit systems, verdict-logic and roadmap diagrams), and `icon.py` / `icon_raster.py`, which draw the icon, favicon and social preview |
 
 ## Reproduce
 ```bash

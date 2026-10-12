@@ -26,6 +26,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 | What | Where |
 |---|---|
 | Plan, stages, exit criteria | `docs/research/PLAN.md` |
+| Everything outstanding (checks, remediation, owner decisions, outside inputs, path to R5) | `docs/research/ROADMAP.md` |
 | **Criticality layer** (the audit auditing itself: method audit MA-01..20 and status table, Triveritas critique, methods and limitations, held-back proposals; procedure for each pass) | `docs/research/criticality/README.md` (start here); `METHOD-AUDIT-2026-10-12.md`, `METHOD-AUDIT-proposals.md` (not applied), `METHODS-AND-LIMITATIONS.md` in the same folder; `docs/research/DECISIONS.md` (add new owner decisions verbatim, dated); `research/checks/PREREG-STATUS.md` |
 | Claims (one file each, three verdicts); claim tree | `docs/research/claims/` (`_TEMPLATE.md`); `hierarchy.yaml`, `hierarchy/*.md` (generated) |
 | Parameters (numeric provenance) | `docs/research/parameters.yaml` |

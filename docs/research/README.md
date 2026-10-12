@@ -2,6 +2,14 @@
 
 This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Probability Zero* / MITTENS corpus and in the critiques written against it. The output is a sourced map of every claim, a numerical check of each equation, and a list of variables for a user-controllable simulator to be built later.
 
+## How it fits together
+
+<p align="center"><img src="../img/audit-systems.svg" alt="Systems diagram of the audit with the criticality layer over it" width="900"></p>
+
+Sources become verbatim quotes, quotes become claims with three verdicts, claims form the argument tree, checks test the load-bearing nodes, reviews and one verdict rule decide the verdicts, ledgers record slips and balance, and R5 synthesises. The criticality layer (`criticality/`) audits the method itself and feeds fixes, proposals and owner decisions back in. How one statement flows through the verdict rule: [`audit-verdict-logic.svg`](../img/audit-verdict-logic.svg). Everything outstanding, in order: [`ROADMAP.md`](ROADMAP.md).
+
+<p align="center"><img src="../img/audit-verdict-logic.svg" alt="Verdict logic: tag, readings, three verdicts, materiality, slip ledger, with proposed changes dashed" width="900"></p>
+
 ## Rules
 1. **Three verdicts per claim:**
    - **(a) Internal validity:** does the conclusion follow from the author's own assumptions?
@@ -40,6 +48,7 @@ This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Prob
 | `criticality/METHODS-AND-LIMITATIONS.md` | How the audit was done and what that method can and cannot support: who performs it, same-model reviews, pre-registration by kind, basis of external verdicts, what the tallies mean, sources not read. Read this before quoting any count. |
 | `criticality/METHOD-AUDIT-2026-10-12.md` | Review of the method (findings MA-01 to MA-20) |
 | `criticality/METHOD-AUDIT-proposals.md` | Specs for the audit's rule and vocabulary changes. **Proposals only, not applied.** |
+| `ROADMAP.md` | Every outstanding item in one place: compute and checks, criticality remediation, owner decisions, outside inputs, path to R5 |
 | `DECISIONS.md` | Dated log of owner decisions, reconstructed from committed evidence, and the decisions still open |
 | `outreach/` | **Drafts only, nothing sent** (owner approval of text and channel required): right-of-reply letters (Day, critics), reviewer brief, non-Claude review packet, conflict-of-interest and licence draft |
 | `../../research/checks/PREREG-STATUS.md` | Per check: registration commit, first results commit, gap, and a label (blind, criterion-only, reproduction, single-commit, unknown) |
