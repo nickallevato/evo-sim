@@ -83,11 +83,11 @@ Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls
 
 | Verdict | Counts |
 |---|---|
-| Internal | 132 hold, 18 non-sequitur, 2 arithmetic error, 51 pending |
+| Internal | 131 hold, 19 non-sequitur, 2 arithmetic error, 51 pending |
 | Fidelity | 43 accurate, 38 partial, 10 misread, 58 unverifiable, 12 pending |
 | External | 34 supported, 114 contested, 18 contradicted, 6 untestable, 48 pending |
 
-Of these, **4 claims carry a reading-dependent verdict** (rule RD, owner 2026-10-11; the verdict field takes the reading most charitable to the speaker, the other readings are in the claim file's Readings table): B9 internal (holds on the mutation-load reading, non-sequitur on the literal fixation reading), C7 internal and external, B internal (holds scoped to B2 if the Hard Limits peroration is rhetoric, non-sequitur if dialectic) and A2e external (contradicted for the any-effect-size count, contested for strong-only and fitness-weighted). **3 further claims carry a reading-dependent RH tag with no verdict change** (Hancock RH-15 on ROOT-PG, Myers RH-20 on G2e, Mansfield RH-18 on B5).
+Of these, **3 claims carry a reading-dependent verdict** (6 reading-dependent verdicts in all with the 3 RH tags below; rule RD, owner 2026-10-11, consistency fix same day: the verdict field takes the reading under which the quoted statement is most defensible, not the reading best for the speaker; the other readings are in the claim file's Readings table): B9 internal (holds on the mutation-load reading, non-sequitur on the literal fixation reading), C7 internal and external, and B internal (field non-sequitur, where the Hard Limits peroration is read as dialectic; holds scoped to B2 if it is rhetoric, recorded alongside). A2e external is **SCOPED**, not reading-dependent (contradicted for the any-effect-size count, which is its formal statement; contested for strong-only and fitness-weighted). **3 further claims carry a reading-dependent RH tag with no verdict change** (Hancock RH-15 on ROOT-PG, Myers RH-20 on G2e, Mansfield RH-18 on B5).
 
 Note that the largest external category is *contested*.
 

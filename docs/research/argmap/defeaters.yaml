@@ -5673,9 +5673,9 @@
   first_date: 2026-10-11
   locator: research/checks/results/R4-RHclose.md (Part 2, MAJOR-3)
   audit_status: partly
-  audit_basis: 'B internal reading-dependent (RD): holds scoped to the B2 statement only on F over 6.5 My (rhetoric; lineage conclusion no dialectical support offered, RH3); non-sequitur (R4-B2 Rule N, N2b) on D, Takahata 1e5, S and 2 My'
+  audit_basis: 'B internal reading-dependent (RD); field non-sequitur (R4-B2 Rule N, N2b) on D, Takahata 1e5, S and 2 My, the readings under which the quoted statement is most defensible (owner-approved RD consistency fix 2026-10-11; changed from holds); holds scoped to the B2 statement only on F over 6.5 My (rhetoric; lineage conclusion no dialectical support offered, RH3) recorded alongside'
   counter: []
-  note: 'Critic-side on the dialectic readings, Day-side on F. B2 holds and C non-sequitur are unchanged. Quote tags Q157 and Q158 updated to reading-dependent.'
+  note: 'Critic-side on the dialectic readings (now the field value), Day-side on F (recorded alongside, no longer the field value). B2 holds and C non-sequitur are unchanged. Quote tags Q157 and Q158 updated to reading-dependent.'
   hierarchy_edge: false
 
 - id: d438

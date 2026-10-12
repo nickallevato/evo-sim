@@ -195,7 +195,7 @@ Day knows the classical distinction between rhetoric and dialectic and uses it o
 
 ## RD. Reading-dependent verdicts (owner decision, 2026-10-11)
 Where a verdict or an RH tag depends on how a quote is read, **do not pick one reading.** Record every plausible reading with its verdict. Convention:
-- The claim file's verdict field takes the value under the reading **most charitable to the speaker** (rule C, the same for Day, critics and allies). Its comment begins `reading-dependent:` and lists each reading -> verdict.
+- The claim file's verdict field takes the value under the **most charitable reading** (rule C, the same for Day, critics and allies), defined as the reading under which the speaker's *quoted statement* is most defensible (closest to literally true, best supported): the classical principle of charity. It is **not** the reading that yields the best verdict for the speaker. (Owner-approved consistency fix, 2026-10-11; this is how C7 and the critic quotes (Hancock, Myers, Mansfield) were already handled. Effect: B internal moves from `holds` to `non-sequitur`, the F-over-6.5-My rhetoric reading being recorded alongside.) A claim whose formal statement fixes the reading (A2e, a count) is `SCOPED`, not reading-dependent; other scopes are recorded as contested. Its comment begins `reading-dependent:` and lists each reading -> verdict.
 - The claim file's R4 paragraph carries a short "Readings" table (reading, tag, verdict).
 - The argmap gets a defeater for each reading where warranted, both sides, noting the reading dependence.
 - Counts of verdicts (HANDOFF, README, argmap README) report **reading-dependent verdicts separately** ("N verdicts reading-dependent").

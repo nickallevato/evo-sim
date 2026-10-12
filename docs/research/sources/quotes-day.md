@@ -1161,7 +1161,7 @@ All quotes machine-checked as substrings (whitespace and quote-mark normalised) 
 - locator: l.453-456 of the local text
 - local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
 - branch: B
-- tag (rule RH): reading-dependent (R4 RHclose, RD, 2026-10-11): rhetoric on F over 6.5 My (0.697; verdict-field reading, most charitable to Day); dialectic on D (0.256), Takahata 1e5 (0.281), S (current size) and 2 My (0.025)
+- tag (rule RH): reading-dependent (R4 RHclose, RD, 2026-10-11): rhetoric on F over 6.5 My (0.697; recorded alongside, B holds scoped to B2); dialectic on D (0.256), Takahata 1e5 (0.281), S (current size) and 2 My (0.025) (verdict-field reading: B non-sequitur; RD consistency fix 2026-10-11)
 - quote: "And now the neutral channel closes on the same window for an entirely independent reason. The adaptive substitutions cannot be paid for; the neutral substitutions cannot be finished, because the pipe that would finish them never fills. Both the priced channel and the free channel shut inside the same lineage duration."
 - note: Candidate B Statement (R4-B2, review K2 / D3). Dialectic reading: non-sequitur against HL's own ancestral-fill text (Q140, Q151, Q152, Q156). Rhetoric reading: figurative closing, core = B2, B holds. Integrated 2026-10-11 under RD: B internal `holds` scoped to B2 on the rhetoric reading, `non-sequitur` on the dialectic readings.
 

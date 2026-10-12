@@ -51,7 +51,7 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 <p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 232 claims" width="760"></p>
 
-*4 claims carry a reading-dependent verdict and 3 a reading-dependent rhetoric tag (rule RD, 2026-10-11); the tallies above show the value under the reading most charitable to the speaker, and the other readings are in each claim file.*
+*3 claims carry a reading-dependent verdict and 3 a reading-dependent rhetoric tag (6 reading-dependent verdicts in all; rule RD, 2026-10-11); the tallies above show the value under the reading in which the quoted statement is most defensible (not the reading best for the speaker), and the other readings are in each claim file.*
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|

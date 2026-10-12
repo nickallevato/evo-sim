@@ -750,7 +750,7 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: holds
+    internal: non-sequitur
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/B-neutral-theory-cannot-rescue.md
