@@ -53,3 +53,48 @@ All would be labelled post hoc (pre-run, no data seen) and committed before L1b'
 
 ## Verdict
 Do not launch as registered: BLOCKER-1 confounds the P family and the excluded-codon table, the observable both sides' predictions rest on. U0, UG, UT, the noise arms, the kappa arms and the estimator are sound. Amendments 1-4 and 9 are needed before the run; 5-8 are strongly advised and cheap; 10 is wording.
+
+## Pre-run review resolution
+Date 2026-10-12. Fix pass on `l1c_alignment_method.py`, labelled **post hoc (pre-run, no data seen; before L1b reported)**: no `l1b*` output exists on the workstation and na-workhorse was not queried. The registration 536b19b is kept whole and still computed (REGISTERED); amendments sit beside it (AMENDED) in a dated docstring section, each with the side it helps. Only the synthetic selftest was run (workstation, 16 s, 57 MB); it includes a 6-cell miniature of the transfer table, disclosed in the docstring as not blind. Same-agent-family fix pass (independence caveat).
+
+| Item | Status | What was done |
+|---|---|---|
+| BLOCKER-1 | fixed | Frame-aware arm PA (`cactus_frame`: clean codons as they are, in-frame indel runs translated as the chimp has them, frameshift runs as X, uncovered codons omitted), with PAG / PAF1 / PAF2. P, PG, PF1, PF2 and the registered band where it rests on PF1 are printed as **invalid as registered (BLOCKER-1)** and never scored alone. The run reports how many genes and clean codons the registered P reads out of frame. Selftest: a correctly placed 1-bp chimp indel fails the frame test on P and passes on PA, both strands; an uncovered 100-bp stretch likewise. |
+| MAJOR-1 | fixed | Aligner rewritten to rolled score rows and one traceback byte per cell (pairs asserted equal to the registered function on 450 random cases). Hard cap 2e7 cells (about 20 MB, 11 s measured). Over the cap: gene not aligned in that arm family, keeps the U0 pairing, counted per family and listed; set NOSKIP repeats all arms on identical genes. |
+| MAJOR-2 | fixed | Amended bands are a decision tree: INVALID, CRITIC, CRITIC-ALL/SET-ABOVE, NOISE, GENE-SET, HIGH-NOT-METHOD, DAY, HIGH-PARTIAL-METHOD, MIDDLE. Selftest enumerates a grid with missing values: every input gets exactly one band and all nine occur. Holes (a) and (b) are HIGH-PARTIAL-METHOD or MIDDLE, (c) is CRITIC-ALL/SET-ABOVE, (d) is INVALID or handled (empty source set). NOISE is tested before DAY and DAY needs dS-clean codons high, pS under the gate and dS-normal excluded codons. Registered band still printed, also with PAF1 in place of PF1. |
+| MAJOR-3 | fixed | A5's second clause replaced by: pS of the excluded codons relative to dS-clean pS (3x band) and the share within 10 codons of a Cactus frameshift run. The registered clause is still computed and labelled non-discriminating. **Deviation from the review:** the reference is the pS of arm UD, not U0's own pS, because U0's pS is inflated in exactly the noise worlds the test is for (selftest world: 2.6x against U0, far over 3x against UD). |
+| MAJOR-4 | fixed (by commit order) | Blindness statement in the docstring; the amendment commit precedes any L1b result. What is not blind is listed (L1 hg38 values, the selftest miniature). |
+| MAJOR-5 | fixed, with limits | Statement of what P and PA can and cannot show. New arms on the PA path: PL38 / PL16 (X-drop local segments; this audit's rule, parameters resembling BLASTP's from memory, unverified) and PGB (Gblocks documented defaults for two sequences; verified against the documentation, not against the binary). **Correction to the review:** global scoring does gap a substituted run once it costs more than two gaps (12 residues at -4; selftest), so "never gapped" is too strong. Not done: a real external codon aligner (none installed; queue item stays). |
+| MAJOR-6 | fixed | dS-based sets DSC / NONDSC / HQs and the codon-level arm UD (windows of 10 codons with at least 3 synonymous differences), beside the registered identity-based HQ. The amended bands use UD and pS, not identity. Uniform base noise, which no local dS filter sees, is caught by a gate on pS (0.023 = 1.5 x L1's one2one pS); the algebra and its assumption (noise not enriched for nonsynonymous sites beyond 1.15-1.41x; measured by arm NU) are in the docstring. |
+| MAJOR-7 | fixed | (i) Mode `transfer`: true omega 0.23 / 0.5 / 0.8 / 1.0, three clustering levels, four noise settings, every arm, input against output. Rates are assumed design values, stated as such. (ii) On real data the protein family is applied to NM(1.0), NR(0.02), NR(0.05), and the UT contrasts are tabulated (the registered P family realigns exactly UT's bases). |
+| MAJOR-8 | fixed | Set CSAC23 from Table S23 (bytes only, sha256 asserted) through GENCODE v35 RefSeq metadata (fetched, URL and sha256 in the script) and the annotation's transcript-to-gene map, symbol fallback, 85% floor, full accounting of unmapped ids by reason, map written out. Sets CSAC23nm, NOT23, O121NOT23 and coverage strata give the gene-level excluded accounting. CSACp kept; bands printed on both. RD credit rule (DN3 form, not Q186) recorded. |
+| MAJOR-9 | fixed | Reading A scored on REALISTIC arms only (PA, PAG, PAF1, PL38, PGB), and only when the removed codons are nonsynonymous-enriched and dS-normal; PF2 / PAF2 / PL16 are reported as an upper bound and decide nothing. |
+| MINOR-1 | fixed | Amended band also evaluated with sites at the integer kappa nearest kappa-hat (sensitivity line). F3x4 not modelled: queue item stays. |
+| MINOR-2 | fixed | NU and NM reported and predicted on the p-ratio and nonsynonymous fraction. |
+| MINOR-3 | fixed (wording) | Marked a restatement of U <= 0.40 in the docstring and the code comment; not counted as a hit. |
+| MINOR-4 | fixed (wording) | Gap cost stated as 10 + k; code unchanged. |
+| MINOR-5 | fixed | `rules_table` printed in every report; composition dependence and loss of flanking codons stated. Measured on the clean synthetic cells: PF2 reads about 30-38% low at every omega with no misalignment present. |
+| MINOR-6 | fixed | Excluded share computed for every set; A0 stored as PASS / FAIL and printed with the instruction to stop. It does not raise, so that a failed run still writes its outputs. |
+| MINOR-7 | fixed | Relative-drop flags beside the absolute ones. |
+| MINOR-8 | not changed, stated | Thresholds 0.40 and 0.65 kept (inherited); the asymmetry is in the docstring. |
+| MINOR-9 | fixed (wording) | "at any plausible threshold" withdrawn; PF2 called a stress setting. |
+| MINOR-10 | fixed | Fidelity line printed in every report whatever the band. |
+| MINOR-11 | fixed | Conversion table (73.9% as dN/dS at N/S 2.78, 3.34, 3.54; no-constraint fraction) printed, also for the run's own U0 and NU. |
+| MINOR-12 | stated | In the docstring; no code. |
+| Gene set | done as recommended | Added, not replaced. |
+
+### Verification of the from-memory statements
+- **Verified from fetched text:** PAL2NAL takes a protein alignment plus the corresponding DNA sequences (bork.embl.de/pal2nal). Gblocks method and defaults (a mirror of the documentation; the two original hosts did not answer). The GENCODE v35 RefSeq metadata file exists with the expected three columns.
+- **Corrected:** "a substituted codon is never gapped" (see MAJOR-5).
+- **Not verified:** TranslatorX; BLAST default gap costs and X-drop values (NCBI page behind a browser check), so PL38 / PL16 are this audit's parameters; the Gblocks rule against the binary; MACSE, PRANK and codeml remain uninstalled.
+
+### Found during the fix pass
+- The held `S23_NM_ids.txt` has 1,272 accessions with one digit too many (the next string's length byte in the .xls). Against the GENCODE file the faulty list matches 11,394 ids, the corrected one 12,637 of 13,454 (93.9%). The script parses the .xls itself and does not use the list. Corrected in `bib-literature.md` and the harvest log. This pre-check was made after the 85% floor was fixed in this review (017dea9); the gene-level share is unknown until the run.
+- The selftest's pure-noise world (half the genes misregistered, true omega 0.25) reads U0 = 0.91 with a nonsynonymous fraction of 0.74 and is scored NOISE: Day's 74% signature can come from misregistration alone, and the amended bands do not credit it (the order effect of MAJOR-2). Synthetic only.
+
+### Left open
+- No external aligner or ML estimator; the local-segment rule is not a named pipeline's.
+- PA uses the human frame projected through Cactus in place of a chimp annotation.
+- Transfer-function rates are assumed, not sourced.
+- The uniform-noise gate rests on a stated assumption about the noise, and its reference pS comes from L1 (hg38, Ensembl alignments).
+- Resources re-estimated from synthetic timings only: run 1-3 CPU-h, under 4 GB, 8 workers; transfer 1-2 CPU-h.
