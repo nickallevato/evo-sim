@@ -51,6 +51,8 @@ The end product is a **user-controllable evolution simulator** whose knobs are e
 
 <p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 232 claims" width="760"></p>
 
+*4 claims carry a reading-dependent verdict and 3 a reading-dependent rhetoric tag (rule RD, 2026-10-11); the tallies above show the value under the reading most charitable to the speaker, and the other readings are in each claim file.*
+
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
 | His empty-pipe formula $E[F(T)] = \mu L\int_0^T F_X$ is **exact** for its premise (B1) | Neutral substitution rate is $k=\mu$ for **any** $N_e$: fixation probability is $1/2N$, not $1/2N_e$ (B3) |
