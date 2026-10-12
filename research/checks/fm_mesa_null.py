@@ -166,6 +166,79 @@ realdata: as above.  Host: na-workhorse or builder (NOT run in this commit).
              research/checks/results/raw/fmnull_real.json
   score    : python -I research/checks/fm_mesa_null.py score --W 100000 --value 80 --reading R1 --unit DHC
   selftest : python -I research/checks/fm_mesa_null.py selftest
+
+POST HOC AMENDMENT 2026-10-12 (pre-run, no data seen)
+  Status when written: only `selftest` had ever been run; `analytic`, `simulate`, `realdata`, `score` had NOT, and
+  raw/fm_analyse.json was not opened for this amendment.  Everything above this section is the registration of
+  commit 48241c7 and is unchanged: brackets, bands, P1-P8 and their hand estimates, scoring rule.
+  WHAT CHANGED.  The registered brackets are kept verbatim as parameter set `PREREG`.  A second set `SOURCED` is
+  added (PARAM_SETS).  Every table, crossing, score, P4/P5 cell, BGS share, simulation arm and `score` output is
+  computed under BOTH sets and reported side by side; the write-up must state both, and every prediction is scored
+  as registered (PREREG) and re-scored under SOURCED.  `realdata` is empirical and uses neither set.  New output
+  only: `mutation_cv` (model CV of the window-mean mutation rate, M0-M3 + CPG, for comparison with Smith 2018).
+  WHY.  Literature pass c1712c9 (docs/research/sources/refresh-2026-10-12c-lit.md; quote ids FML-* in
+  quotes-literature.md) found sourced numbers for three components.  Each was re-derived here from the quotes;
+  the derivations below are arithmetic on quoted numbers, not quotes.
+  (a) M1, 1-Mb mutation-rate CV.  FML-S2: gamma CV of DNM density at 1 Mb = 0.18 (Francioli), 0.27 (Wong), 0.15
+      (Jonsson).  The comparable model quantity is NOT sigma_M1 and NOT sqrt(sigma_M0^2 + sigma_M1^2) (0.224, the
+      refresh file's comparison): it is the CV of the 1-Mb window mean, sqrt(sum_i sigma_i^2 g(1 Mb / ell_i)) over
+      the mutational components M0-M3 + CPG.  First order, PREREG: lo edge 0.044, hi edge 0.232.  So PREREG's hi
+      edge is below Wong (0.27) but ABOVE Francioli and Jonsson, and its lo edge is 3.4x BELOW the lowest dataset.
+      SOURCED M1 sigma [0.20, 0.25] is calibrated so the 1-Mb CV is 0.152 at the lo edge (ell 0.5 Mb: 0.04 x
+      g(2) = 0.0227, + others 0.0005) and 0.270 at the hi edge (ell 2 Mb: 0.0625 x g(0.5) = 0.0533, + others
+      0.0197).  Caveats, both ways: Smith's Abstract says the datasets differ "at the 1MB and 100KB scales probably
+      as a consequence of differences in sequencing technology and processing", so Wong 0.27 may be technical (hi
+      edge then too high: calibrating to Francioli 0.18 instead gives sigma_M1 0.12, BELOW the registered 0.20, i.e.
+      on that reading PREREG's hi edge was already too wide); and FML-S8 (divergence tracks DNM density only "about
+      half as strong as it could") means the long-term CV relevant to divergence may be below the DNM CV (lo edge
+      then too high).  Mutation only; gBGC, ILS, BGS are separate components.
+  (b) M2, 100-kb CV: UNCHANGED [0.05, 0.20].  No 100-kb CV is quoted.  Power-law interpolation of FML-S2 with the
+      FML-S5 slopes, CV(100 kb) = CV(1 Mb) x 10^(-b): 0.18 x 10^0.25 = 0.320, 0.27 x 10^0.10 = 0.340, 0.15 x
+      10^0.16 = 0.217 (assumes the 10 kb - 10 Mb slope holds between 1 Mb and 100 kb).  Comparable model quantity:
+      100-kb window-mean CV (not sqrt(0.01 + 0.04 + 0.04) = 0.30): PREREG [0.061, 0.313]; SOURCED, with M1 changed
+      and M2 as registered, [0.197, 0.346], which brackets 0.217-0.340 to within 10%.  So the registered M2 bracket
+      is supported once M1 is sourced.  Not applied, flagged: the same extrapolation to 10 kb gives 0.31-0.57
+      against a SOURCED hi edge of ~0.43 (M3 and CPG remain unsourced).
+  (c) ILS sigma.  Definition checked: sigma = SD across loci of relative divergence (t1 + T2)/(t1 + E[T2]) =
+      sd(T2)/(t1 + E[T2]); it is a PER-LOCUS (tract-scale, ell 0.1-2 kb) quantity, independent of W; its effect on
+      D at W >> ell is the W-independent 2 d sigma^2 ell.  The registered "T2/(t1 + T2)" equals this only for a
+      single exponential epoch (sd = mean).  FML-H1 (Hobolth 2007): speciation 4.1 +/- 0.4 My, N_HC 65,000 +/-
+      30,000, N_HCG 45,000 +/- 10,000; 25-y generations.  Single epoch: E[T2] = 2 N g = 3.25 My, sigma = 3.25/7.35
+      = 0.44; N 35k-95k: 1.75/5.85 = 0.30 to 4.75/8.85 = 0.54 (the refresh file's numbers: arithmetic confirmed).
+      But Hobolth's own model has a second epoch: FML-H2 ("around 50% ... coalesces with chimpanzee after speciation
+      with gorilla") implies exp(-Delta/3.25) = 0.5, Delta = 2.25 My, after which coalescence is at the HCG rate
+      (mean 2 x 45,000 x 25 y = 2.25 My).  Two-epoch: E[T2] = 2.75, sd = 2.41 My, sigma = 2.41/6.85 = 0.35; over
+      N_HC 35k-95k and N_HCG 35k-55k: 0.30-0.40 (insensitive to N_HC because the HCG epoch takes over).  The ratio
+      is calibration-independent.  SOURCED ILS sigma = [0.125 (CSAC2005, as registered), 0.40 (Hobolth two-epoch
+      upper)].  NOT comparable / not applied: CSAC2005 "polymorphism accounts for 14-22% of the observed divergence
+      rate" is present-day polymorphism, not the ancestral term.  Unverified, pointing higher: Yoo2025 Ne 198,000
+      with split 5.5-6.3 Ma gives single-epoch 0.56-0.64 at an (unquoted) 20-25-y generation; the registered ell
+      derivation already used that Ne while the sigma used T2 1-2 My (N 20-40k): an inconsistency inside PREREG,
+      recorded.  Simplification kept from PREREG: the same ILS sigma is applied to every unit (it is derived for
+      H, C and DHC; G, TREE and PAIRS have other depths).  Sensitivity, hand: sigma 0.54 instead of 0.40 adds a
+      further ~7 to N_hi (DHC, any W >= 10 kb).
+  (d) BGS sigma.  Definition checked: local ancestral coalescence scales with B, so SD of relative divergence =
+      [E[T2]/(t1 + E[T2])] x sd(B)/mean(B).  The registered form omitted 1/mean(B) and used the CSAC ratio.  The
+      ratio here is the MEAN fraction, not sd: Hobolth two-epoch 2.75/6.85 = 0.40, range 0.30-0.46 (single-epoch
+      0.30-0.54).  mean(B) = 0.74-0.81 (FML-M2).  sd(B) [0.05, 0.25] stays UNSOURCED (B distribution is in a figure
+      only).  SOURCED = [0.125 x 0.05/0.81, 0.44 x 0.25/0.74] = [0.0077, 0.15].  (The refresh file's 0.015-0.135 =
+      0.30 x 0.05 to 0.54 x 0.25: arithmetic confirmed; superseded by the two-epoch ratio and the 1/mean(B) factor.)
+  (e) No number found; SOURCED = registered bracket: M0, M2, M3, CPG, GBGC, LAMBDA, ALN, all ell, UNITS, TREE.
+  DIRECTION OF THE EFFECT (hand, first order, U-DHC, c = 1, d = 0.012 as in P1; the script's table governs)
+      N_hi masked   100 kb: PREREG ~133 -> SOURCED ~163 (+23%)    1 Mb: ~740 -> ~970 (+32%)    10 kb: ~24 -> ~30
+      N_hi unmasked 100 kb: ~288 -> ~319
+      N_lo          100 kb: ~5.7 -> ~48 (c = 0.5: ~3.4 -> ~24)    1 Mb: ~24 -> ~280 (c = 0.5: ~13 -> ~140)
+      BGS_hi share of N_hi(unmasked) excess: 1 Mb ~3.6% -> ~17%; 100 kb ~1.6% -> ~8%
+    Critic side: N_hi rises, so the W range where a given index is "far outside" (DAY) shrinks; 80 at 10 kb moves
+    from about 3.3x to about 2.7x N_hi.  Day side: N_lo rises 8-12x, so the band is NARROWER at the bottom, and
+    at 1 Mb an index of 80 would lie BELOW the SOURCED band (outcome BELOW, no verdict move) where P1 registered
+    "inside"; if Wong is technical the SOURCED hi edge overstates neutral variance.  These SOURCED figures are hand
+    expectations written before any run; they are NOT predictions of record and add no new prediction bands.
+  P7 stands as registered ("BGS_hi adds <= 25% to N_hi(unmasked) at every W <= 1 Mb") and will be scored as
+  registered under PREREG, then re-scored under SOURCED.  Noted for the reviews: P7 measures BGS against the UPPER
+  bound of all other components (including ALN), which is not the quantity in FML-M3 / FML-P1 (share of the actual
+  variance in H/C divergence explained by BGS); those model-based claims, and FML-M5, belong in both steelmen.
+  Resource: analytic still < 1 min; simulate runs both sets with the same seed, ~2x the registered estimate.
 """
 import functools
 import json
@@ -179,7 +252,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 BIN_BP = 100
 
 # name: (sigma_lo, sigma_hi), (ell_lo_bp, ell_hi_bp), arm, source note
-COMPONENTS = {
+PREREG = {
     "M0":   ((0.02, 0.10), (5e6, 2e7), "neutral", "unsourced"),
     "M1":   ((0.05, 0.20), (5e5, 2e6), "neutral", "unsourced"),
     "M2":   ((0.05, 0.20), (2e4, 1e5), "neutral", "unsourced"),
@@ -190,6 +263,27 @@ COMPONENTS = {
     "ALN":  ((0.016, 0.42), (1e4, 1e5), "unmasked", "unsourced; sigma^2 = pi(1-pi)e^2"),
     "BGS":  ((0.006, 0.0625), (2e5, 2e6), "selection", "unsourced sd(B) x CSAC2005 T2/(t1+T2)"),
 }
+# Post hoc amendment 2026-10-12 (pre-run, no data seen): literature-backed where verified (docstring (a)-(e)),
+# registered bracket where nothing was found.  PREREG above is unchanged from commit 48241c7.
+SOURCED = {
+    "M0":   ((0.02, 0.10), (5e6, 2e7), "neutral", "unsourced (FML-S4 qualitative only); = PREREG"),
+    "M1":   ((0.20, 0.25), (5e5, 2e6), "neutral", "sigma FML-S2 (1-Mb CV 0.15 Jonsson lo, 0.27 Wong hi; Wong may be "
+                                                  "technical, Smith Abstract; FML-S8); ell unsourced"),
+    "M2":   ((0.05, 0.20), (2e4, 1e5), "neutral", "unsourced; = PREREG; consistent with FML-S2 x FML-S5 derived "
+                                                  "100-kb CV 0.22-0.34"),
+    "M3":   ((0.10, 0.40), (2e2, 2e3), "neutral", "unsourced (FML-S7 qualitative only); = PREREG"),
+    "CPG":  ((0.03, 0.15), (5e3, 5e4), "neutral", "unsourced (FML-HG1 abstract only); = PREREG"),
+    "GBGC": ((0.02, 0.10), (5e4, 1e6), "neutral", "unsourced (FML-D4/D5 give no sigma); = PREREG; LAMBDA unsourced"),
+    "ILS":  ((0.125, 0.40), (1e2, 2e3), "neutral", "sigma lo CSAC2005 t1/t2 (= PREREG), hi FML-H1 + FML-H2 two-epoch "
+                                                   "derivation; ell unsourced"),
+    "ALN":  ((0.016, 0.42), (1e4, 1e5), "unmasked", "unsourced; = PREREG"),
+    "BGS":  ((0.0077, 0.15), (2e5, 2e6), "selection", "ratio CSAC2005 (lo) / FML-H1 + FML-H2 (hi) x sd(B) unsourced "
+                                                      "/ mean B FML-M2; ell unsourced"),
+}
+PARAM_SETS = {"PREREG": PREREG, "SOURCED": SOURCED}
+COMPONENTS = PREREG          # active set; switch only through use_set()
+ACTIVE = "PREREG"
+MUTATIONAL = ("M0", "M1", "M2", "M3", "CPG")
 LAMBDA = (0.3, 1.0)
 EXPOSURE = (0.5, 1.0)
 UNITS = {"H": (0.0051, 0.0051), "C": (0.0057, 0.0057), "G": (0.0077, 0.0077), "DHC": (0.0123, 0.0146),
@@ -205,6 +299,19 @@ WGRID = (1e3, 3e3, 1e4, 3e4, 1e5, 3e5, 1e6, 3e6, 1e7)
 
 
 # ------------------------------------------------------------------------------------------------ analytic core
+def use_set(name):
+    """Make PARAM_SETS[name] the active COMPONENTS (post hoc amendment 2026-10-12)."""
+    global COMPONENTS, ACTIVE
+    COMPONENTS, ACTIVE = PARAM_SETS[name], name
+    unit_bands.cache_clear()
+
+
+def mutation_cv(W, which, first_order=False):
+    """Model CV of the window-mean mutation rate (M0-M3 + CPG) at edge 'lo' / 'hi'; comparable to Smith 2018."""
+    comps = comp_params(which, MUTATIONAL)
+    return math.sqrt(cv2_first_order(W, comps) if first_order else window_var(W, comps))
+
+
 def comp_params(which, names):
     """which: 'lo' or 'hi' -> list of (sigma, ell)."""
     k = 0 if which == "lo" else 1
@@ -311,9 +418,34 @@ def crossing_windows(unit, T, hi_key):
 
 
 def analytic(outjson, fm_json=None):
+    """Both parameter sets, side by side (post hoc amendment 2026-10-12)."""
+    res = {"sets": {}}
+    for name in PARAM_SETS:
+        use_set(name)
+        print(f"===== parameter set {name}")
+        res["sets"][name] = analytic_one(fm_json)
+        print_table(res["sets"][name])
+    use_set("PREREG")
+    a, b = res["sets"]["PREREG"], res["sets"]["SOURCED"]
+    print("===== side by side: unit|W  edge  PREREG  SOURCED")
+    for k in a["table"]:
+        for e in ("N_lo", "N_hi_masked", "N_hi_unmasked", "K_hi"):
+            print(k, e, f"{a['table'][k][e]:.3g}", f"{b['table'][k][e]:.3g}")
+    for k in a["scores"]:
+        if a["scores"][k] != b["scores"][k]:
+            print("score differs", k, a["scores"][k], b["scores"][k])
+    for k in a["bgs_share"]:
+        print("bgs_share", k, f"{a['bgs_share'][k]:.3g}", f"{b['bgs_share'][k]:.3g}")
+    json.dump(res, open(outjson, "w"), indent=1)
+    return res
+
+
+def analytic_one(fm_json=None):
     fm_json = fm_json or os.path.join(HERE, "results", "raw", "fm_analyse.json")
     units = list(UNITS) + ["PAIRS-naive", "PAIRS-struct"]
-    res = {"brackets": {k: list(map(list, v[:2])) + list(v[2:]) for k, v in COMPONENTS.items()},
+    res = {"param_set": ACTIVE,
+           "mutation_cv": {f"{int(W)}|{e}": mutation_cv(W, e) for W in (1e4, 1e5, 1e6, 1e7) for e in ("lo", "hi")},
+           "brackets": {k: list(map(list, v[:2])) + list(v[2:]) for k, v in COMPONENTS.items()},
            "units": UNITS, "tree_struct": tree_struct(), "table": {}, "crossings": {}, "scores": {}}
     for u in units:
         for W in WGRID:
@@ -334,8 +466,6 @@ def analytic(outjson, fm_json=None):
             b = res["table"][f"{u}|{int(W)}"]
             res["bgs_share"][f"{u}|{int(W)}"] = (b["K_hi"] - b["N_hi_unmasked"]) / (b["N_hi_unmasked"] - 1.0)
     res["inhouse"] = inhouse(fm_json) if os.path.exists(fm_json) else "fm_analyse.json not found"
-    json.dump(res, open(outjson, "w"), indent=1)
-    print_table(res)
     return res
 
 
@@ -383,6 +513,7 @@ def inhouse(fm_json):
 
 
 def print_table(res):
+    print("mutation_cv (Smith 2018 FML-S2 at 1 Mb: 0.15, 0.18, 0.27)", {k: round(v, 3) for k, v in res["mutation_cv"].items()})
     print("unit | W | N_lo | N_hi masked | N_hi unmasked | K_hi")
     for k, b in res["table"].items():
         print(k, *(f"{b[e]:.3g}" for e in ("N_lo", "N_hi_masked", "N_hi_unmasked", "K_hi")))
@@ -471,9 +602,21 @@ def central(names):
 
 
 def simulate(outjson, genome_mb=300, reps=10, seed=20261012):
+    """Both parameter sets, same seed (post hoc amendment 2026-10-12)."""
+    res = {"sets": {}}
+    for name in PARAM_SETS:
+        use_set(name)
+        print(f"===== parameter set {name}", flush=True)
+        res["sets"][name] = simulate_one(genome_mb, reps, seed)
+    use_set("PREREG")
+    json.dump(res, open(outjson, "w"), indent=1)
+    return res
+
+
+def simulate_one(genome_mb, reps, seed):
     rng = np.random.default_rng(seed)
     n = int(genome_mb * 1e6 / BIN_BP)
-    res = {"genome_mb": genome_mb, "reps": reps, "seed": seed, "P6": {}, "arms": {}}
+    res = {"param_set": ACTIVE, "genome_mb": genome_mb, "reps": reps, "seed": seed, "P6": {}, "arms": {}}
     # P6: neutral bands reproduced (single lineage, d = 0.012 and 0.0051)
     for edge, comps in (("N_lo", comp_params("lo", NEUTRAL)), ("N_hi_masked", comp_params("hi", NEUTRAL)),
                         ("N_hi_unmasked", comp_params("hi", NEUTRAL + ("ALN",))), ("poisson", [])):
@@ -523,7 +666,6 @@ def simulate(outjson, genome_mb=300, reps=10, seed=20261012):
                     r["corr_cov"].append(float(np.corrcoef(h, cw)[0, 1]))
         res["arms"][name] = {W: {s: (float(np.mean(v)) if v else None) for s, v in r.items()} for W, r in acc.items()}
         print(name, json.dumps(res["arms"][name]), flush=True)
-    json.dump(res, open(outjson, "w"), indent=1)
     return res
 
 
@@ -600,12 +742,18 @@ def fm_split(h, c):
 
 # ------------------------------------------------------------------------------------------------ score / selftest
 def score(W, value, reading, unit, masked):
-    b = unit_bands(unit, W)
+    """Scored under PREREG (as registered) and SOURCED; both are printed and returned."""
     hk = "N_hi_masked" if masked else "N_hi_unmasked"
     D = value if reading in ("R1", "R1b") else (value + 1.0 if reading == "R1x" else value ** 2)
-    out = dict(W=W, reading=reading, unit=unit, D=D, lo=b["N_lo"], hi=b[hk], outcome=classify(D, b["N_lo"], b[hk]))
-    print(json.dumps(out))
-    return out
+    outs = {}
+    for name in PARAM_SETS:
+        use_set(name)
+        b = unit_bands(unit, W)
+        outs[name] = dict(param_set=name, W=W, reading=reading, unit=unit, D=D, lo=b["N_lo"], hi=b[hk],
+                          outcome=classify(D, b["N_lo"], b[hk]))
+        print(json.dumps(outs[name]))
+    use_set("PREREG")
+    return outs
 
 
 def selftest():
@@ -665,6 +813,22 @@ def selftest():
     r = realdata(p, os.path.join(d, "r.json"))
     for key in ("F0|1kb", "F0|10kb", "F0|100kb"):
         assert 0.7 < r["grid"][key]["H"]["phi"] < 1.4, (key, r["grid"][key]["H"]["phi"])
+    # 8. post hoc amendment 2026-10-12: PREREG is the registered set, unchanged; SOURCED differs only in M1, ILS, BGS;
+    #    the SOURCED M1 calibration reproduces the Smith 2018 1-Mb CVs (FML-S2); set switching works.
+    reg = {"M0": ((0.02, 0.10), (5e6, 2e7)), "M1": ((0.05, 0.20), (5e5, 2e6)), "M2": ((0.05, 0.20), (2e4, 1e5)),
+           "M3": ((0.10, 0.40), (2e2, 2e3)), "CPG": ((0.03, 0.15), (5e3, 5e4)), "GBGC": ((0.02, 0.10), (5e4, 1e6)),
+           "ILS": ((0.125, 0.25), (1e2, 2e3)), "ALN": ((0.016, 0.42), (1e4, 1e5)),
+           "BGS": ((0.006, 0.0625), (2e5, 2e6))}
+    assert {k: v[:2] for k, v in PREREG.items()} == reg and COMPONENTS is PREREG and ACTIVE == "PREREG"
+    assert sorted(k for k in reg if SOURCED[k][:2] != PREREG[k][:2]) == ["BGS", "ILS", "M1"]
+    assert all(SOURCED[k][1] == PREREG[k][1] and SOURCED[k][2] == PREREG[k][2] for k in reg)
+    use_set("SOURCED")
+    assert COMPONENTS is SOURCED
+    lo, hi = mutation_cv(1e6, "lo", True), mutation_cv(1e6, "hi", True)
+    assert abs(lo / 0.15 - 1) < 0.05 and abs(hi / 0.27 - 1) < 0.05, (lo, hi)
+    assert abs(mutation_cv(1e6, "hi") / hi - 1) < 0.10
+    use_set("PREREG")
+    assert COMPONENTS is PREREG and abs(mutation_cv(1e6, "hi", True) - 0.232) < 0.005
     print("selftest ok")
 
 
