@@ -1,6 +1,6 @@
 # R4 RHclose-critics: the owner's RH rule applied to critic and ally statements (RH5 symmetric pass)
 
-**Status: pre-registered (8aef421), run once, written up. Low-stakes tier: awaiting one combined review. Not integrated: no claim file, quote tag, ledger, QUEUE, RESULTS or argmap edits.** All tags below are **proposed and per reading**; the owner chooses the reading. Answers review finding RH5 of `REVIEW-R4-RHclose-combined.md`: the "remotely close" test had been applied only to Day statements (B9, C7, Q157/Q158).
+**Status: pre-registered (8aef421), run once, written up, reviewed (combined), fix pass done (see Review resolution at the end; where it differs from the tables above, the resolution governs). Not integrated: no claim file, quote tag, ledger, QUEUE, RESULTS or argmap edits.** All tags below are **proposed and per reading**; the owner chooses the reading. Answers review finding RH5 of `REVIEW-R4-RHclose-combined.md`: the "remotely close" test had been applied only to Day statements (B9, C7, Q157/Q158).
 
 ## Files
 - Script `research/checks/rhclose_critics.py` (pre-registered at **8aef421**; readings, criteria, predictions and verdict mapping are in its docstring; not edited after the run). Stdlib plus pyyaml, local, seconds.
@@ -29,7 +29,7 @@
 | | **Headline** | rhetoric on both in-scope readings | **rhetoric** (dialectic only on M3) |
 | | Descriptive | maths paragraphs are about 12% of the post's 1,686 words; "fairly short" is relative and is not scored | n/a |
 | **PZ-03 Myers** (10-02 post, para 23): "7 of those citations are to the LTEE ... and 2 are to ape genome sequencing papers" (of 11) | **CX.** Count the MITTENS 3.0 reference list | **11 entries; 7 LTEE-related; 2 ape-genome.** Exact match to Myers's three numbers. Rule: LTEE-related = Lenski / long-term / E. coli / generation experiment. Strict LTEE-population papers (excluding Gerrish & Lenski 1998, an asexual-theory paper with Lenski as author) = 6, still within the band. The remaining 2 entries are Day's own | **dialectic** (and the count is right). "contradict his conclusions" is evaluative, unscored |
-| **RH-18 Mansfield, MF-01**: "Genetic drift happens in every population and his claim otherwise is mystifying. Population size only affects which alleles are effectively neutral." | **F1 (in-scope).** "drift happens in every population" | Drift variance 0.25/(2N) > 0 for N = 1e3 ... 8e9; SD of drift over 280 gen at p = 0.5 is 0.18 (N 1e3), 0.059 (1e4), 0.0059 (1e6), 6.6e-5 (8e9). Neutral P_fix = 1/(2N) > 0 and substitution rate = mu at every N (so Day's Q93 "will not fixate at all" is false as stated) | **dialectic** (existence claim, exact) |
+| **RH-18 Mansfield, MF-01**: "Genetic drift happens in every population and his claim otherwise is mystifying. Population size only affects which alleles are effectively neutral." | **F1 (in-scope).** "drift happens in every population" | Drift variance 0.25/(2N) > 0 for N = 1e3 ... 8e9; SD of drift over 280 gen at p = 0.5 is 0.18 (N 1e3), 0.059 (1e4), 0.0059 (1e6), 6.6e-5 (8e9). Neutral P_fix = 1/(2N) > 0 and substitution rate = mu at every N (Q93 verdict withdrawn from this document, see Review resolution) | **dialectic** (existence claim, exact) |
 | | **F2 (in-scope).** "N only affects which alleles are effectively neutral" read as scaling | Kimura P_fix: 2N*P_fix at fixed S = 2Ns across N 1e4 ... 1e8, relative spread 5e-6 (S 0.1), 5e-5 (S 1), 5e-4 (S 10); edge 1e-3 | **dialectic** |
 | | **F3 (in-scope, strictest).** literal "only": no other effect of N | Drift variance per generation and neutral fixation time both scale with N: **x100** between N 1e4 and 1e6 (edge 3x). Mansfield's own MF-02 uses 2N new mutations per generation, so N also sets supply | **rhetoric** |
 | | "mystifying" | report of the speaker's state; no literal claim | rhetoric (device only; as the B5 claim file already tags) |
@@ -61,7 +61,7 @@
   - H1 is exactly true: F_max has no s, N_e, p0 or mu term, which is the content behind "can't do any of this".
   - The Day computations in H2 are plug-in retrodictions with chosen s and N_e (and G_f = (2/s) ln(2N_e) is the textbook sweep-time approximation): the logistic gives p(80 gen) = 0.989 and 72 generations to 95% from the same inputs, which is the standard model's output. They are not out-of-sample predictions of the kind in her paper list.
   - Myers's serial-reading point is right about Day's own Appendix A text (G2g `non-sequitur`; Day concedes the wording at para 25). His citation count (11 / 7 / 2) is exact.
-  - Mansfield's two factual clauses both check: drift is positive at every N, and N enters fixation probability through 2Ns (spread <= 5e-4). Day's Q93 "will not fixate at all" is false at every N (P_fix = 1/2N; rate = mu).
+  - Mansfield's two factual clauses both check: drift is positive at every N, and N enters fixation probability through 2Ns (spread <= 5e-4). (Q93 verdict withdrawn, see Review resolution item 5.)
 - **Both.** Each tag turns on one choice: Hancock on what "Day's math" is (formula vs applied); Myers on what "the disproof" is (MITTENS 3.0 vs Appendix A); Mansfield on whether "only" is read as scaling or as literally exclusive. The tags do not depend on tone.
 
 ## Caveats
@@ -77,3 +77,49 @@
 3. **The H2 edge** (count <= N/3). Is a count of 4 of 10 "remotely close" to none?
 4. **RH-18:** confirm that "Population size only..." is read as the scaling statement (dialectic) and "mystifying" stays rhetoric.
 5. Whether to close the "not independently checked" note on PZ-03 with the exact count at integration.
+
+## Review resolution (fix pass, 2026-10-11; reviewer: REVIEW-R4-RHclose-critics-combined.md; 0 BLOCKER, 2 MAJOR, 3 MINOR, 3 NOTE)
+No new computation was needed except hand arithmetic (stated). The pre-registered script and raw output are unchanged; the 2 MAJOR and 3 MINOR are answered by re-reporting and re-labelling the existing output. Registered edge (<= 3 of 10) is unchanged.
+
+**MAJOR-1 (H2 Drosophila) - accepted.** The Drosophila hit is Z18452504 l.12, "Drosophila melanogaster versus D. simulans fails by 127-fold": a species-pair divergence-time test, not an allele-frequency or selection-strength computation on the experimental-evolution systems Hancock listed (her "any of this", t=00:24:58-00:26:41). The organism-name match was generous to Day's side (it counted a different kind of computation) and strict to the critic; rule C points the other way. H2 is therefore reported as two counts:
+- **H2-excl (divergence tests excluded): k = 3** (peppered moth, stickleback Z18470617 s3.2 Eda fit, warfarin rats). At the registered edge (<= 3) -> **dialectic**. Excluding is the symmetric treatment and is the one used for the headline.
+- **H2-incl (organism-name match): k = 4** -> **rhetoric** (as originally printed).
+The original "4 of 10" and "rhetoric via H2" lines above are superseded. The author's pre-run prediction (3) was in fact right for the corrected operationalisation; the script's regex was the error, and it was not edited.
+
+**MAJOR-2 (H1 printed vs as-applied) - accepted.** H1 is split:
+- **H1-printed** (F_max = (t_div x d)/(g_len x G_f), G_f as an empirical input): overlap 0 of 4 -> **dialectic**.
+- **H1-applied** (Day's Z18470617 s3.3 usage G_f = (2/s) ln(2N_e), so G_f carries s and N_e): overlap with {s, N_e, p0, mu} = **2 of 4** (edge <= 1) -> **rhetoric**. (Hand count from the write-up's own Critic-side text; not scripted.)
+The Hancock **headline is reading-dependent** and no longer "dialectic via H1" alone: H1-printed dialectic, H1-applied rhetoric, H2-excl dialectic, H2-incl rhetoric, H3 (ext.) rhetoric, H4 (below) dialectic/untested. Under "any in-scope reading passes" it is dialectic, but with four in-scope readings split 3 to 2 the owner should decide the rule (see Owner choices).
+
+**MINOR-1 (M1/M2) - accepted.** M1 (0/24) is **uninformative**: one post engages at most about 3 nodes, so even a perfect hit gives <= 3/24 < 1/3; it cannot return dialectic for any single post, and its 0/24 is a design property, not a finding. **M2 carries the Myers tag.** M2 caveat: A and G1 are internal `holds`, so adverse can arise only from external `contradicted` or fidelity `misread`; `contested` never counts. M2 = 0/2 -> rhetoric; M3 (extended) dialectic. Myers headline: **reading-dependent** (rhetoric on the in-scope MITTENS 3.0 reading, dialectic on the Appendix A reading), not a flat rhetoric. Per NOTE-1, the M2 finding "post's 'sequential' description contradicted by s8.1" is partly interpretation: the post's "That's true, if each trait has to wait ..." is conditional.
+
+**MINOR-2 (H4 "predict" reading for Hancock) - added post hoc, untested by script.** Her premise (t=00:25:18) is that the math "ought to explain that data and make future predictions". **H4 (in-scope): "can't do any of this" = cannot make out-of-sample predictions of allele-frequency dynamics (selection coefficient not fitted to the same data).** Not computed: it would need a per-case provenance check of each Day s and N_e (cited or fitted), which is not trivial and was not pre-registered. Described status: by the write-up's own Critic-side argument Day's cases are plug-in retrodictions with chosen s and N_e (logistic p(80 gen) = 0.989, 72 gen to 95% from the same inputs), which would give 0 of 10 and tag **dialectic**; Day's own text says "It predicts trajectories" and "All four passed" (l.139), which the owner may count against it. Tag: **dialectic, UNTESTED (hand argument only)**; it does not set the headline. Reported so the critic does not get fewer registered readings than Day did in R4-RHclose.
+
+**MINOR-3 (Q93) - verdict dropped.** Q93 ("In any population over 10,000, neutral substitution will not fixate at all.") is removed from this document: no verdict on it is made here. Reason: the quote names no time window. Day's own standard from R4-RHclose C7 is the practical band F_drift <= 1e-4 over a stated window (280 generations there). Hand arithmetic, F_drift ~ 140/N: N = 1e4 gives 0.014 and N = 1e6 gives 1.4e-4 (both outside the band), N >= 1.4e6 gives <= 1e-4 (inside), N = 1e7 gives 1.4e-5. So on the C7 standard Q93 is dialectic-true for N >= 1.4e6 over 280 generations and outside it between 1e4 and 1.4e6; over longer windows (the same comment's 4N_e = 40,000 generations) neutral fixation does occur, so the reading matters, and it belongs in a Day-side RH check, not here. The earlier "false at every N" was an existence reading unequally generous to Mansfield; F1 itself (drift positive at every N) stands unchanged.
+
+**Myers "sequential" description - draft ledger entry for owner decision (R1).** Not entered anywhere. Draft:
+- *Statement (PZ-04 / 10-02 post, dialectic text):* the post describes MITTENS 3.0 as dividing by the time of one fixation, i.e. as a sequential-fixation calculation (252,000 gen vs 205M, 1,075,000-fold).
+- *Contradicting source:* MITTENS 3.0 s8.1: "The 45.4 fixations ... were not fixed one at a time" (G_f already includes parallel fixation).
+- *R1 test:* does correcting it move the author's stated conclusion or a downstream number in the same source by > 25%, or flip it? The post's conclusion ("debunked") rests on the serial-estimate objection; if MITTENS 3.0 already counts parallel fixation, the 205M and the 1,075,000-fold ratio are not what the post says they are, so on the literal reading it moves the downstream ratio by far more than 25% and **meets R1: error**. On the conditional reading (NOTE-1: "if each trait has to wait ...") it is a statement about Appendix A's wording, which G2g already scores `non-sequitur`, so it is **a slip/ledger item at most**. Whether G2e's `partial` fidelity is the right place is the owner's call. Symmetry: this is the critic-side counterpart of a Day slip and should be as prominent.
+
+**NOTE-1 - addressed above (Myers M2/M3 classification kept; the sentence is conditional). NOTE-2 - no `.host` file, seconds of stdlib compute, acceptable. NOTE-3 - closing PZ-03's "not independently checked" is correct; "contradict his conclusions" is evaluative and unscored (by design, the part Day disputes).**
+
+**Selection rule for skipped items (answers the review's SYMMETRY point).** A statement was skipped from the remotely-close test when no scored verdict hangs on it (relay under rule U; superlative over an unbounded set; verdict word with content elsewhere; idiom naming no input; incredulity or motive self-report with content elsewhere). The same rule skipped Day's RH-3, RH-7, RH-10 and RH-11 in R4-RHclose (tested only where a scored verdict hung on them: B9 Q104, C7 Q96, Q157/Q158). Parallels: RH-16 "garbage in, garbage out" with Day's RH-10 "absolutely nothing"; RH-13 (Tipler superlative) with RH-11 (hyperbole). Also stated: critic rhetoric is unscored by default, so the test cannot add a negative for a critic, while for Day it removed one.
+
+## Owner choices (readings and resulting tags)
+| Quote | Reading | Tag |
+|---|---|---|
+| RH-15 Hancock | H1-printed (F_max has no s, N_e, p0, mu) | dialectic |
+| | H1-applied (G_f = (2/s) ln 2N_e; overlap 2/4) | rhetoric |
+| | H2-excl (divergence tests excluded; k = 3, edge 3) | dialectic |
+| | H2-incl (organism-name match; k = 4) | rhetoric |
+| | H3 (ext.: no testable quantitative prediction) | rhetoric |
+| | H4 (predict = out-of-sample; untested, hand argument) | dialectic (untested) |
+| RH-20 Myers | M1 (whole argument, 0/24) | uninformative, not usable |
+| | M2 (MITTENS 3.0 method; 0/2) | rhetoric |
+| | M3 (ext.: Appendix A chain) | dialectic |
+| PZ-03 Myers | CX count 11/7/2 | dialectic, correct |
+| RH-18 Mansfield | F1 existence, F2 scaling | dialectic |
+| | F3 strict "only" (100x) | rhetoric |
+| | "mystifying" | rhetoric (device only) |
+Decisions needed: (1) Hancock: keep "any in-scope reading passes" (dialectic) or require the applied-math reading (H1-applied and H2-incl rhetoric)? (2) Myers: MITTENS 3.0 (rhetoric) or Appendix A (dialectic)? (3) Enter the Myers "sequential" description as an R1 error, a slip, or neither? (4) Is H4 worth a pre-registered provenance check of Day's s and N_e? (5) Q93 to be re-tested in a Day-side RH check, or dropped? (6) RH-18 and PZ-03 as before.
