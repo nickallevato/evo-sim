@@ -809,3 +809,173 @@ Full text via Europe PMC `fullTextXML` (PLoS OA) converted to plain text; every 
 > - id: FML-HG1; locator: Abstract (Europe PMC record; PNAS page behind bot challenge, abstract only); role: N; note: 19 mammals, 1.7 Mb region
 > "characterize phylogenetic variation in context-dependent substitution patterns in a 1.7-megabase genomic region in 19 mammalian species"
 > - id: FML-HG2; locator: Abstract; role: N; note: 
+
+## Criticality pass iii quotes (AMSTAR 2 and ROBIS), 2026-10-12
+
+Purpose: the wording of every AMSTAR 2 item and every ROBIS signalling question applied in [`../criticality/amstar2-robis-2026-10-12.md`](../criticality/amstar2-robis-2026-10-12.md), with the rating rules that pass relies on. These are appraisal instruments, not sources for any claim file; role codes S/C/N/K do not apply and the role field says what part of the instrument the line is. Fetched 2026-10-12 about 23:14 UTC into `sources/raw/crit3-amstar-robis-2026-10-12/` (gitignored), one directory per file. All 77 quotes were machine-checked as exact substrings of the extracted text after whitespace and curly-quote normalisation (curly quotation marks in the originals are printed straight here); checklist and tool items that wrap over several lines in the PDF are joined with single spaces. No item wording is from memory. Each sha256 is of the raw downloaded file (PDF or Europe PMC XML); the XML was matched after tags were stripped.
+
+### Shea2017 (sha256 a38ebd064d97d1e2253033b264f5b5d90d2bab92efcb9d816e15ea32203272e1)
+> "Protocol registered before commencement of the review (item 2)"
+> - id: AM-B1a; locator: Box 1; role: critical domain; note: 
+> "Adequacy of the literature search (item 4)"
+> - id: AM-B1b; locator: Box 1; role: critical domain; note: 
+> "Justification for excluding individual studies (item 7)"
+> - id: AM-B1c; locator: Box 1; role: critical domain; note: 
+> "Risk of bias from individual studies being included in the review (item 9)"
+> - id: AM-B1d; locator: Box 1; role: critical domain; note: 
+> "Appropriateness of meta-analytical methods (item 11)"
+> - id: AM-B1e; locator: Box 1; role: critical domain; note: 
+> "Consideration of risk of bias when interpreting the results of the review (item 13)"
+> - id: AM-B1f; locator: Box 1; role: critical domain; note: 
+> "Assessment of presence and likely impact of publication bias (item 15)"
+> - id: AM-B1g; locator: Box 1; role: critical domain; note: 
+> "We emphasise that our listing is a suggestion and appraisers may add or substitute other critical domains."
+> - id: AM-B1h; locator: section 'Identification of critical domains'; role: caveat; note: 
+> "No or one non-critical weakness"
+> - id: AM-B2a; locator: Box 2 (High); role: rating; note: 
+> "the systematic review provides an accurate and comprehensive summary of the results of the available studies that address the question of interest"
+> - id: AM-B2h; locator: Box 2 (High); role: rating; note: what the overall rating is a rating of
+> "More than one non-critical weakness"
+> - id: AM-B2b; locator: Box 2 (Moderate); role: rating; note: 
+> "One critical flaw with or without non-critical weaknesses"
+> - id: AM-B2c; locator: Box 2 (Low); role: rating; note: 
+> "More than one critical flaw with or without non-critical weaknesses"
+> - id: AM-B2d; locator: Box 2 (Critically low); role: rating; note: 
+> "Multiple non-critical weaknesses may diminish confidence in the review and it may be appropriate to move the overall appraisal down from moderate to low confidence"
+> - id: AM-B2e; locator: Box 2 footnote; role: rating; note: 
+> "We strongly recommend that individual item ratings are not combined to create an overall score."
+> - id: AM-B2f; locator: section 'Applying AMSTAR 2 to systematic reviews'; role: rating; note: 
+> "If no information is provided to rate an item, the review authors should not be given the benefit of doubt and the item should be rated as a "No.""
+> - id: AM-B2g; locator: section on response options; role: rating; note: 
+
+### AMSTAR2-checklist (sha256 318ba4139ff590e8aacc84c7be4dc84ddaa3fcd52522e10f7508c52ead2d1f05)
+> "AMSTAR 2: a critical appraisal tool for systematic reviews that include randomised or non- randomised studies of healthcare interventions, or both"
+> - id: AM-00; locator: title line, p.1; role: scope; note: the instrument's own statement of what it is for; "non- randomised" is a line-wrap artefact of the PDF text (the title prints "non-randomised")
+> "Did the research questions and inclusion criteria for the review include the components of PICO?"
+> - id: AM-01; locator: item 1, p.1; role: item; note: 
+> "Did the report of the review contain an explicit statement that the review methods were established prior to the conduct of the review and did the report justify any significant deviations from the protocol?"
+> - id: AM-02; locator: item 2, p.1; role: item (critical); note: 
+> "Did the review authors explain their selection of the study designs for inclusion in the review?"
+> - id: AM-03; locator: item 3, p.1; role: item; note: 
+> "Did the review authors use a comprehensive literature search strategy?"
+> - id: AM-04; locator: item 4, p.1; role: item (critical); note: 
+> "Did the review authors perform study selection in duplicate?"
+> - id: AM-05; locator: item 5, p.1; role: item; note: 
+> "Did the review authors perform data extraction in duplicate?"
+> - id: AM-06; locator: item 6, p.2; role: item; note: 
+> "Did the review authors provide a list of excluded studies and justify the exclusions?"
+> - id: AM-07; locator: item 7, p.2; role: item (critical); note: 
+> "Did the review authors describe the included studies in adequate detail?"
+> - id: AM-08; locator: item 8, p.2; role: item; note: 
+> "Did the review authors use a satisfactory technique for assessing the risk of bias (RoB) in individual studies that were included in the review?"
+> - id: AM-09; locator: item 9, p.2; role: item (critical); note: 
+> "Did the review authors report on the sources of funding for the studies included in the review?"
+> - id: AM-10; locator: item 10, p.2; role: item; note: 
+> "Reporting that the reviewers looked for this information but it was not reported by study authors also qualifies"
+> - id: AM-10n; locator: item 10, p.2; role: criterion; note: 
+> "If meta-analysis was performed did the review authors use appropriate methods for statistical combination of results?"
+> - id: AM-11; locator: item 11, p.3; role: item (critical); note: 
+> "If meta-analysis was performed, did the review authors assess the potential impact of RoB in individual studies on the results of the meta-analysis or other evidence synthesis?"
+> - id: AM-12; locator: item 12, p.3; role: item; note: 
+> "Did the review authors account for RoB in individual studies when interpreting/ discussing the results of the review?"
+> - id: AM-13; locator: item 13, p.3; role: item (critical); note: 
+> "Did the review authors provide a satisfactory explanation for, and discussion of, any heterogeneity observed in the results of the review?"
+> - id: AM-14; locator: item 14, p.3; role: item; note: 
+> "If they performed quantitative synthesis did the review authors carry out an adequate investigation of publication bias (small study bias) and discuss its likely impact on the results of the review?"
+> - id: AM-15; locator: item 15, p.3; role: item (critical); note: 
+> "Did the review authors report any potential sources of conflict of interest, including any funding they received for conducting the review?"
+> - id: AM-16; locator: item 16, p.4; role: item; note: 
+> "at least two reviewers independently agreed on selection of eligible studies and achieved consensus on which studies to include"
+> - id: AM-05c; locator: item 5, p.1; role: criterion; note: 
+> "provided a list of all potentially relevant studies that were read in full-text form but excluded from the review"
+> - id: AM-07c; locator: item 7, p.2; role: criterion; note: 
+
+### AMSTAR2-guidance (sha256 d08d0bb466a5f8b38a00153b7b2c68e62aa96e9857bfc303d4b17cb26680f6f5)
+> "Authors should demonstrate that they worked with a written protocol with independent verification."
+> - id: AM-G2a; locator: Item 2, p.1; role: guidance; note: 
+> "At a minimum this should be stated in the report (scores 'Partial Yes')."
+> - id: AM-G2b; locator: Item 2, p.1; role: guidance; note: 
+> "Obvious unexplained discrepancies should result in downgrading of the rating."
+> - id: AM-G2c; locator: Item 2, p.2; role: guidance; note: 
+> "There should have been at least two independent assessors for study selection."
+> - id: AM-G5; locator: Item 5, p.3; role: guidance; note: 
+> "In the event that one individual carried out data extraction a second reviewer should have checked agreement on a sample of studies and they should have achieved a kappa score of 0.80 or greater."
+> - id: AM-G6; locator: Item 6, p.3; role: guidance; note: 
+
+### Whiting2016 (sha256 18be2acca11a7fe431a04b76c557ee700808c3b9e4d735ae1c0cc4013b98c1b9)
+> "The tool is completed in three phases: (1) assess relevance (optional), (2) identify concerns with the review process, and (3) judge risk of bias."
+> - id: RB-W1; locator: Abstract (Results); role: structure; note: 
+> "ROBIS is the first rigorously developed tool designed specifically to assess the risk of bias in systematic reviews."
+> - id: RB-W2; locator: Abstract (Conclusion); role: scope; note: 
+
+### ROBIS-tool (sha256 6052c8cdf1bafbeacd6e7451da03069d0509775e00ba087dbd69b6b4c0bf65a0)
+> "ROBIS is designed to assess the risk of bias in reviews with questions relating to interventions, aetiology, diagnosis and prognosis."
+> - id: RB-00; locator: Phase 1, p.1; role: scope; note: 
+> "Did the review adhere to pre-defined objectives and eligibility criteria?"
+> - id: RB-1.1; locator: Domain 1; role: signalling question; note: 
+> "Were the eligibility criteria appropriate for the review question?"
+> - id: RB-1.2; locator: Domain 1; role: signalling question; note: 
+> "Were eligibility criteria unambiguous?"
+> - id: RB-1.3; locator: Domain 1; role: signalling question; note: 
+> "Were any restrictions in eligibility criteria based on study characteristics appropriate (e.g. date, sample size, study quality, outcomes measured)?"
+> - id: RB-1.4; locator: Domain 1; role: signalling question; note: 
+> "Were any restrictions in eligibility criteria based on sources of information appropriate (e.g. publication status or format, language, availability of data)?"
+> - id: RB-1.5; locator: Domain 1; role: signalling question; note: 
+> "Did the search include an appropriate range of databases/electronic sources for published and unpublished reports?"
+> - id: RB-2.1; locator: Domain 2; role: signalling question; note: 
+> "Were methods additional to database searching used to identify relevant reports?"
+> - id: RB-2.2; locator: Domain 2; role: signalling question; note: 
+> "Were the terms and structure of the search strategy likely to retrieve as many eligible studies as possible?"
+> - id: RB-2.3; locator: Domain 2; role: signalling question; note: 
+> "Were restrictions based on date, publication format, or language appropriate?"
+> - id: RB-2.4; locator: Domain 2; role: signalling question; note: 
+> "Were efforts made to minimise error in selection of studies?"
+> - id: RB-2.5; locator: Domain 2; role: signalling question; note: 
+> "Were efforts made to minimise error in data collection?"
+> - id: RB-3.1; locator: Domain 3; role: signalling question; note: 
+> "Were sufficient study characteristics available for both review authors and readers to be able to interpret the results?"
+> - id: RB-3.2; locator: Domain 3; role: signalling question; note: 
+> "Were all relevant study results collected for use in the synthesis?"
+> - id: RB-3.3; locator: Domain 3; role: signalling question; note: 
+> "Was risk of bias (or methodological quality) formally assessed using appropriate criteria?"
+> - id: RB-3.4; locator: Domain 3; role: signalling question; note: 
+> "Were efforts made to minimise error in risk of bias assessment?"
+> - id: RB-3.5; locator: Domain 3; role: signalling question; note: 
+> "Did the synthesis include all studies that it should?"
+> - id: RB-4.1; locator: Domain 4; role: signalling question; note: 
+> "Were all pre-defined analyses reported or departures explained?"
+> - id: RB-4.2; locator: Domain 4; role: signalling question; note: 
+> "Was the synthesis appropriate given the nature and similarity in the research questions, study designs and outcomes across included studies?"
+> - id: RB-4.3; locator: Domain 4; role: signalling question; note: 
+> "Was between-study variation (heterogeneity) minimal or addressed in the synthesis?"
+> - id: RB-4.4; locator: Domain 4; role: signalling question; note: 
+> "Were the findings robust, e.g. as demonstrated through funnel plot or sensitivity analyses?"
+> - id: RB-4.5; locator: Domain 4; role: signalling question; note: 
+> "Were biases in primary studies minimal or addressed in the synthesis?"
+> - id: RB-4.6; locator: Domain 4; role: signalling question; note: 
+> "Did the interpretation of findings address all of the concerns identified in Domains 1 to 4?"
+> - id: RB-A; locator: Phase 3; role: signalling question; note: 
+> "Was the relevance of identified studies to the review's research question appropriately considered?"
+> - id: RB-B; locator: Phase 3; role: signalling question; note: 
+> "Did the reviewers avoid emphasizing results on the basis of their statistical significance?"
+> - id: RB-C; locator: Phase 3; role: signalling question; note: 
+
+### ROBIS-guidance (sha256 d699009192cd66a26737c47de71fa24c3cd0d9fa306d9908f20a58aaab62c365)
+> "If the answers to all signalling questions for a domain are "Yes" or "Probably Yes", then level of concern can be judged as low. If any signalling question is answered "No" or "Probably No", potential for concern about bias exists."
+> - id: RB-K1; locator: section on rating, before Domain 1; role: rating rule; note: 
+> "The "No Information" category should be used only when insufficient data are reported to permit a judgment."
+> - id: RB-K2; locator: section on rating, before Domain 1; role: rating rule; note: 
+> "ROBIS users are likely to need both subject content and methodological expertise to complete an assessment."
+> - id: RB-K3; locator: section on rating, before Domain 1; role: caveat; note: 
+> "By recording the information used to reach the judgment (support for judgment), we aim to make the rating transparent and, where necessary, facilitate discussion among review authors completing assessments independently."
+> - id: RB-K4; locator: section on rating, before Domain 1; role: caveat; note: the tool expects more than one assessor
+> "Ideally this should be done independently but extraction by one reviewer and detailed checking by a second reviewer is also acceptable."
+> - id: RB-G3.1; locator: Table 9, question 3.1; role: guidance; note: 
+> "Checking should involve the second reviewer reading the paper in detail to not only check the extracted data for accuracy but also to ensure that no relevant information was missed."
+> - id: RB-G3.1b; locator: Table 9, question 3.1; role: guidance; note: 
+> "The assessor then needs to judge whether the criteria assessed were likely to identify potential sources of bias in the primary studies, given their study design."
+> - id: RB-G3.4; locator: Table 9, question 3.4; role: guidance; note: 
+> "As with data collection, risk of bias assessment should involve at least two reviewers."
+> - id: RB-G3.5; locator: Table 9, question 3.5; role: guidance; note: 
+> "If one or more concerns were identified for any of the previous domains, but these were appropriately considered when interpreting results and drawing conclusions, then this may also be rated as "Yes" and, depending on the rating of the other signalling questions, the review may still be rated as "Low risk of bias"."
+> - id: RB-P3a; locator: Phase 3 text; role: guidance; note: 
