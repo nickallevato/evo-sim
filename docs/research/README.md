@@ -40,6 +40,7 @@ This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Prob
 | `METHOD-AUDIT-2026-10-12.md` | Review of the method (findings MA-01 to MA-20) |
 | `METHOD-AUDIT-proposals.md` | Specs for the audit's rule and vocabulary changes. **Proposals only, not applied.** |
 | `DECISIONS.md` | Dated log of owner decisions, reconstructed from committed evidence, and the decisions still open |
+| `outreach/` | **Drafts only, nothing sent** (owner approval of text and channel required): right-of-reply letters (Day, critics), reviewer brief, non-Claude review packet, conflict-of-interest and licence draft |
 | `../../research/checks/PREREG-STATUS.md` | Per check: registration commit, first results commit, gap, and a label (blind, criterion-only, reproduction, single-commit, unknown) |
 
 ## Status

@@ -216,13 +216,13 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 
 **Fairness audit (X1).** The R5 draft found 22 of 112 Day claims with an "arithmetic error" or "doesn't follow" verdict against 0 of 51 critic claims. The audit then wrote [one verdict rule](research/checks/results/R4-X1-verdict-rule.md) for both sides, re-scored every numeric claim, and had the rule's application checked blind:
 
-| Error verdicts under one rule | Day | Critics | Fisher p |
-|---|---|---|---|
-| claims with a number in the author's quoted words (primary) | 13/81 | 1/20 | 0.29 |
-| claims with a number in the formal statement | 16/82 | 1/31 | 0.038 |
-| all claims | 18/114 | 1/51 | 0.008 |
+| Error verdicts (counts) | Day | Critics |
+|---|---|---|
+| claims with a number in the author's quoted words (primary) | 13 of 81 | 1 of 20 |
+| claims with a number in the formal statement | 16 of 82 | 1 of 31 |
+| all claims | 18 of 114 | 1 of 51 |
 
-Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls went the other way, the gap disappears (16/82 vs 4/31, p = 0.58). **Day's errors are robust to reading; the audit cannot claim critics err less per argument.**
+Raw counts per side are shown, but rates are not comparable between sides: the two sides differ in volume, in the precision of their claims, in the share of claims checked, and in how claims were routed (method audit MA-06, [`METHOD-AUDIT-2026-10-12.md`](docs/research/METHOD-AUDIT-2026-10-12.md)). No test of difference is reported.
 
 ---
 

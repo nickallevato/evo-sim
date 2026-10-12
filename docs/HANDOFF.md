@@ -71,13 +71,13 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 
 **Fairness audit (X1).** The audit's own first synthesis found 22 of 112 Day claims carrying an "arithmetic error" or "doesn't follow" verdict, against 0 of 51 critic claims, and only one check aimed at a critic claim. It then recomputed every numeric critic and ally claim, wrote [one verdict rule](../research/checks/results/R4-X1-verdict-rule.md) for both sides, re-scored every numeric claim on both sides, and had the rule's application checked by a blind audit. Result under the final rule:
 
-| Error verdicts | Day | Critics | Fisher p |
-|---|---|---|---|
-| claims with a number in the author's quoted words (primary) | 13/81 | 1/20 | 0.29 |
-| claims with a number in the formal statement | 16/82 | 1/31 | 0.038 |
-| all claims | 18/114 | 1/51 | 0.008 |
+| Error verdicts (counts) | Day | Critics |
+|---|---|---|
+| claims with a number in the author's quoted words (primary) | 13 of 81 | 1 of 20 |
+| claims with a number in the formal statement | 16 of 82 | 1 of 31 |
+| all claims | 18 of 114 | 1 of 51 |
 
-Per 10,000 quoted words: Day 22.7, critics 10.0. If the three close critic calls went the other way, the gap disappears (16/82 vs 4/31, p = 0.58). Day's errors are robust to reading; the audit cannot claim critics err less per argument. Three earlier Day error verdicts were withdrawn under the rule, one critic claim gained one (Hancock's 38M match, on his own event basis), and the audit's own figure for keruru's tail probability was found 41× too low and corrected.
+Raw counts per side are shown, but rates are not comparable between sides: the two sides differ in volume, in the precision of their claims, in the share of claims checked, and in how claims were routed (method audit MA-06, [`METHOD-AUDIT-2026-10-12.md`](research/METHOD-AUDIT-2026-10-12.md)). No test of difference is reported. Three earlier Day error verdicts were withdrawn under the rule, one critic claim gained one (Hancock's 38M match, on his own event basis), and the audit's own figure for keruru's tail probability was found 41× too low and corrected.
 
 **Overall verdict counts** (all sides combined, n/a omitted):
 
