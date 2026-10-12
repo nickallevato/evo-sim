@@ -16,7 +16,7 @@ evo-sim has two stages.
 2. **Claims.** 233 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-three nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09; ROOT-FM, Day's mesa claim, and its conclusion FM10 on 2026-10-10).
 4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Fifty-four checks have been reviewed so far.
-5. **Reviews.** Every check gets three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. A check counts only after it passes all three.
+5. **Reviews.** Load-bearing checks get three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. Since 2026-10-09, low-stakes checks (re-confirmations, bookkeeping, tool validation) get one combined review with the same three sections. All reviews so far are by instances of the same AI model family and are not blind; see `docs/research/METHOD-AUDIT-2026-10-12.md` (MA-01).
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
    - *Fidelity:* does the cited source actually say what the author says it does?
