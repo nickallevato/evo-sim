@@ -1,0 +1,79 @@
+sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json sha256 cba6b15b13d3cd04e38005a9c1388bb65f473abcdc1651d95dffdab889da92bc
+  OK   genetic drift isn't happening at all over the last 7000 years, and that there is a hard population limit on the neutral pipeline.
+sources/raw/day/zenodo-22129121.txt sha256 3182a5b6cd3a8ac822017d6d7f509c234ab147b334546d62f88623142d9dbfe2
+  OK   k(T) = μ · F(T), F(T) = P(τ ≤ T | fixation)
+  OK   F(T) ∼ exp( − π² Nₑ / T ), T ≪ 4Nₑ
+  OK   the neutral substitutions cannot be finished, because the pipe that would finish them never fills. Both the priced channel and the free channel shut inside the same lineage duration.
+  OK   for every large animal it had ever dated, the pipe was nearly empty.
+  MISS the pipe substantially fills, and Kimura’s rate is approached.
+  OK   Use the lineage duration, the full continuous ancestry, which in the case of the human lineage is roughly six and a half million years
+  OK   the one that reached thirty-five percent fill across two million years even when granted the entire lineage
+  OK   a partly-filled pipe
+  OK   when the populations were small and their pipes short enough to fill
+  OK   residual drainage from the smaller populations they descend from
+  OK   loaded, at least partially
+  OK   the drift exposure ∫ dt/4Nₑ(t)
+  OK   A population reaches the k = μ flux only after it has spent enough time to load every one of its pipes
+sources/raw/day/zenodo-18320599.txt sha256 78e62f7db4389f2b068a6a52a58513dceafa1dea9e28323ec7126aba85f78caa
+  OK   governs the relative strength of genetic drift versus natural selection in determining allele frequency trajectories
+  OK   The minimum observed drift variance was 0.00150 (750-1250 BP, Medieval period) and the maximum was 0.00495
+  OK   Minimum drift variance was 0.00330 (5000-6000 BP, Middle Neolithic) and maximum was 0.01514
+  OK   Drift variance as measured here reflects the combined effects of genetic drift, residual population structure, and migration
+quote misses: 1
+
+self-test vs R4-B2 (x: F, D): 1.4: 0.025/0.003, 4.0: 0.606/0.201, 4.55: 0.697/0.256, 8.0: 0.945/0.514, 26.0: 1.000/0.846
+
+## Part 1 (C7): central set, t = 280 generations (25 y)
+| case | F_drift | SD of drift change at p=0.5 (pct points) | x literal band 1e-4 |
+|---|---|---|---|
+| N_e 1e+04 | 0.0139 | 5.90 | 139.0x |
+| N_e 1.31e+04 | 0.0106 | 5.16 | 106.3x |
+| N_e 1.62e+04 | 0.0086 | 4.64 | 86.0x |
+| N_e 2e+04 | 0.00698 | 4.18 | 69.8x |
+
+## Part 1: reported, not used
+| case | F_drift | SD of drift change at p=0.5 (pct points) | x literal band 1e-4 |
+|---|---|---|---|
+| N_e 1e+04, 20 y/gen (350 gen) | 0.0173 | 6.59 | 173.5x |
+| N_e 2e+04, 20 y/gen (350 gen) | 0.00871 | 4.67 | 87.1x |
+| C1d measured temporal N_e 9,665 (lower bound) | 0.0144 | 6.00 | 143.8x |
+| growth: 1e4 for 6,000 y, 1e5 last 1,000 y | 0.0121 | 5.51 | 121.3x |
+| fast growth: 1e4 for 2,000 y, 1e5 for 5,000 y | 0.00499 | 3.53 | 49.9x |
+| Day frame census 1e+05, V_k 5 -> N_e 57,143 | 0.00245 | 2.47 | 24.5x |
+| Day frame census 1e+06, V_k 5 -> N_e 571,429 | 0.000245 | 0.78 | 2.4x |
+| Day frame census 1e+07, V_k 5 -> N_e 5,714,286 | 2.45e-05 | 0.25 | 0.2x |
+Day Z18320599 measured drift variance per 500-y step: pan-European 0.00150-0.00495; Britain 0.00330-0.01514 (raw Var(dp), includes structure/migration by his caveat)
+
+C7 charitable central value (min F_drift) = 0.006976; 3x band edge 3e-4 -> 23.3x; 10x band edge 1e-3 -> 7.0x
+C7 RH tag: RHETORIC
+P1 (central 0.0070..0.0139, rhetoric): HOLDS
+P2 (Day frame at census 1e6, 1e7 <= 3e-4): HOLDS
+
+## Part 2 (Q157/Q158): central set, human lineage, empty start
+| case | T (My) | x = ∫dt/N_e | exact F (fill) | Day exp law | linear x/4 | delivered D |
+|---|---|---|---|---|---|---|
+| (a) HL variance N_e 57,143, 6.3 My | 6.30 | 4.41 | 0.676 | 0.107 | 1 | 0.242 |
+| (b) N_e 1.0e4, 6.3 My | 6.30 | 25.2 | 1 | 0.676 | 1 | 0.841 |
+| (c) N_e 1.62e4, 6.3 My | 6.30 | 15.6 | 0.999 | 0.53 | 1 | 0.743 |
+| (d) Takahata 1e5 before 4.6 My, 1e4 after, 6.3 My | 6.30 | 19.1 | 1 | 0.596 | 1 | 0.841 |
+| (a) HL variance N_e 57,143, 6.5 My | 6.50 | 4.55 | 0.697 | 0.114 | 1 | 0.256 |
+| (b) N_e 1.0e4, 6.5 My | 6.50 | 26 | 1 | 0.684 | 1 | 0.846 |
+| (c) N_e 1.62e4, 6.5 My | 6.50 | 16 | 0.999 | 0.541 | 1 | 0.751 |
+| (d) Takahata 1e5 before 4.6 My, 1e4 after, 6.5 My | 6.50 | 19.2 | 1 | 0.597 | 1 | 0.846 |
+
+## Part 2: reported, not used
+| case | T (My) | x = ∫dt/N_e | exact F (fill) | Day exp law | linear x/4 | delivered D |
+|---|---|---|---|---|---|---|
+| H8 as written: N_e 57,143, 2 My | 2.00 | 1.4 | 0.0255 | 0.000868 | 0.35 | 0.00337 |
+| Takahata 1e5 whole lineage, 6.5 My | 6.50 | 2.6 | 0.281 | 0.0225 | 0.65 | 0.0649 |
+| Yoo HCB ancestral 1.98e5 whole lineage, 6.5 My | 6.50 | 1.31 | 0.0175 | 0.000544 | 0.328 | 0.00218 |
+| elephant, Day frame at census 415,000 (N_e 332,000), 2 My, g 22 | 2.27 | 0.274 | < 1e-12 | 2.22e-16 | 0.0685 | 2.34e-15 |
+| elephant at Day's ceiling X 28,000 (N_e 22,400), 2 My, g 22 | 2.27 | 4.06 | 0.617 | 0.0879 | 1 | 0.207 |
+(elephant rows: T column uses g = 25 for display only; x uses g = 22)
+
+Q157/Q158 charitable central value (min F) = 0.676; literal band 0.10 -> 6.8x; 3x edge 0.30 -> 2.25x
+Q157/Q158 RH tag: RHETORIC
+P3 (F(a,6.5)=0.70+/-0.02; F(a,6.3) in [0.66,0.70]; b,c,d >= 0.95): HOLDS
+P4 (min = F(a,6.3) ~0.68 > 0.30 -> rhetoric): HOLDS
+P5 (D(a,6.5) ~0.26 <= 0.30): HOLDS (D = 0.256)
+P6 (H8 2 My F ~0.026 <= 0.10): HOLDS (F = 0.0255)
