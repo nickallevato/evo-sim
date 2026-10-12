@@ -1,0 +1,102 @@
+# R4-RHclose-critics (pre-registered in its own commit; see docstring)
+## Source hashes (sha256)
+  hancock_transcript: 96109519df99f163...  sources/raw/critics/yt/_Vu0ZVVjwHc.transcript.txt
+  pz_10_02: 456fdcd9f87ce613...  sources/raw/critics/pz-vox-days-amazing-ego-and-bill-dembski-dont-care.html
+  pz_10_03: 43fd2696e5295bf2...  sources/raw/critics/pz-can-we-be-done-with-vox-day-now.html
+  mansfield_json: bd66de3a40bb4bd6...  sources/raw/critics/yt/jDxFtCOGZ3A.info.json
+  mittens3: 0287f54bf381e288...  sources/raw/day/zenodo-23003785.txt
+  z18470617: 6d115681f4262f39...  sources/raw/day/zenodo-18470617.txt
+  z18452504: cb250dbc301d4710...  sources/raw/day/zenodo-18452504.txt
+  hierarchy: 45368513a48ccd93...  docs/research/hierarchy.yaml
+
+## CH  Hancock RH-15 (GG-34)
+  quote GG-34: OK
+  quote context-continuation: OK
+  quote t=00:25:18 premise: OK
+  F_max string in claim A: True
+  G2h text says no mu or s term: True
+  H1: FMAX vars ['G_f', 'd', 'g_len', 't_div']; REQ ['N_e', 'mu', 'p0', 's']; overlap 0 of 4  (edge <= 1)
+  H1 tag: dialectic
+  H2: per class, Day-authored texts (sources/raw/day/*.txt): hits / hits with computation marker in +-600 chars
+    Drosophila             hits  76  marked  27  counts=True  files=['blog-2026-02-02-pz-print-editions.txt', 'blog-2026-05-13-reddit-takes-on-probability-zero.txt', 'zenodo-18165980.txt', 'zenodo-18209114.txt', 'zenodo-18452504.txt', 'zenodo-18637297.txt', 'zenodo-18637333.txt']
+    blowflies              hits   0  marked   0  counts=False  files=[]
+    crickets               hits   0  marked   0  counts=False  files=[]
+    mosquitoes             hits   0  marked   0  counts=False  files=[]
+    peppered moths         hits  14  marked  12  counts=True  files=['blog-2026-02-04-response-to-dennis-mccarthy-round-2.txt', 'zenodo-18470617.txt']
+    Darwin's finches       hits   1  marked   0  counts=False  files=[]
+    sticklebacks           hits  53  marked  27  counts=True  files=['blog-2026-02-02-pz-print-editions.txt', 'blog-2026-02-04-response-to-dennis-mccarthy-round-2.txt', 'zenodo-18452504.txt', 'zenodo-18470617.txt', 'zenodo-18637333.txt', 'zenodo-19984826.txt']
+    pesticide resistance   hits   7  marked   5  counts=True  files=['blog-2026-02-04-response-to-dennis-mccarthy-round-2.txt', 'zenodo-18470617.txt']
+    scrub jays             hits   0  marked   0  counts=False  files=[]
+    snails                 hits   4  marked   0  counts=False  files=[]
+  H2: k = 4 of 10 classes with a Day computation; edge <= 3; margin -1  -> rhetoric
+  H2 fragility: with N = 8 the edge is 2; k = 4 would be rhetoric
+  quote Z18470617 Gf 115: OK
+  quote Z18470617 0.66: OK
+  quote Z18470617 predicts trajectories: OK
+  H2a: G_f = 115.13; achievable = 0.660; logistic p(80 gen) = 0.9889; t to 95% = 72.3 gen (Day: 115; 0.66; observed carbonaria ~95-98% in polluted areas by Day's text)
+  H3: claim C present with internal verdict line: True
+  H3: ROOT-PG file says Day makes a testable prediction (zero completions, C): True
+  H3 tag (EXTENDED): rhetoric (>= 1 Day-side tested prediction exists; the literal claim is 0)
+  CH HEADLINE: dialectic  [H1 dialectic; H2 rhetoric; H3(ext) rhetoric]
+
+## CM  Myers RH-20 (PZ-04)
+  quote PZ-04: OK
+  quote PZ-03: OK
+  quote post cites 252,000 / 205 million / 1,075,000: OK
+  quote post: 191 mutations: OK
+  quote post names MITTENS 3.0: OK
+  post mentions 'Appendix A': False
+  words: post 1686; paragraphs with the maths [3, 4, 5] = 209 words = 0.124 of the post
+  quote MITTENS 3.0 s8.1 parallel in G_f: OK
+  MITTENS 3.0 s8.1 heading present: True
+  load-bearing Day nodes: 24  adverse among them: ['A2e', 'B3', 'B3a', 'C2', 'F1a', 'F3a']
+  ROOT: I=pending F=n/a E=pending load_bearing=True adverse=False
+  A: I=holds F=n/a E=contested load_bearing=True adverse=False
+  G1: I=holds F=n/a E=contested load_bearing=False adverse=False
+  G2g: I=non-sequitur F=n/a E=contested load_bearing=False adverse=True
+  G2: I=holds F=partial E=contested load_bearing=False adverse=False
+  G2e: I=holds F=partial E=contested load_bearing=False adverse=False
+  M1 (in-scope): units 24, engaged & adverse [], share 0.000, edge 0.333 -> rhetoric
+  M2 (in-scope): units 2, engaged & adverse [], share 0.000, edge 0.333 -> rhetoric
+  M3 (EXTENDED): units 1, engaged & adverse ['G2g'], share 1.000, edge 0.333 -> dialectic
+  CM HEADLINE: rhetoric  [M1 rhetoric; M2 rhetoric; M3(ext) dialectic]
+  CX: reference entries 11; LTEE-related 7; ape-genome 2  (Myers: 11 / 7 / 2)
+      LTEE | Barrick JE, Yu DS, Yoon SH, et al. Genome evolution and adaptation in a long-term experime
+      LTEE | Blount ZD, Barrick JE, Davidson CJ, Lenski RE. Genomic analysis of a key innovation in an 
+      APE  | Chimpanzee Sequencing and Analysis Consortium. Initial sequence of the chimpanzee genome a
+      LTEE | Couce A, et al. Changing fitness effects of mutations through long-term bacterial evolutio
+      other | Day V, Athos C. The Mathematical Impossibility of the Theory of Evolution by Natural Selec
+      other | Day V, Athos C. The Human-Derived Fixation Rate: An Independent Confirmation of MITTENS. I
+      LTEE | Gerrish PJ, Lenski RE. The fate of competing beneficial mutations in an asexual population
+      LTEE | Good BH, McDonald MJ, Barrick JE, Lenski RE, Desai MM. The dynamics of molecular evolution
+      LTEE | Lenski RE. Revisiting the Design of the Long-Term Evolution Experiment with Escherichia co
+      LTEE | Tenaillon O, Barrick JE, Ribeck N, et al. Tempo and mode of genome evolution in a 50,000-g
+      APE  | Yoo D, et al. Complete sequencing of ape genomes. Nature 641, 401–418 (2025).
+  CX tag: dialectic (exact match: True)
+
+## CF  Mansfield RH-18 (MF-01)
+  quote MF-01: OK
+  quote Q93 (quotes-day.md): OK
+  F1: N, per-gen drift var at p=.5 (=0.25/(2N)), SD of drift over 280 gen at p=.5, P_fix neutral=1/(2N), subst rate 2N*mu*(1/2N)/mu
+    N=    1e+03  var/gen 1.250e-04  SD280 1.807e-01  P_fix 5.000e-04  rate/mu 1.0
+    N=    1e+04  var/gen 1.250e-05  SD280 5.896e-02  P_fix 5.000e-05  rate/mu 1.0
+    N=    1e+05  var/gen 1.250e-06  SD280 1.870e-02  P_fix 5.000e-06  rate/mu 1.0
+    N=    1e+06  var/gen 1.250e-07  SD280 5.916e-03  P_fix 5.000e-07  rate/mu 1.0
+    N=    1e+07  var/gen 1.250e-08  SD280 1.871e-03  P_fix 5.000e-08  rate/mu 1.0
+    N=    8e+09  var/gen 1.563e-11  SD280 6.614e-05  P_fix 6.250e-11  rate/mu 1.0
+  F1 tag: dialectic (drift positive at every N: True)
+  F2: 2N*P_fix at fixed S = 2Ns, N in {1e4,1e5,1e6,1e8}
+    S=  0.1  2N*P_fix ['1.103326', '1.103331', '1.103331', '1.103331']  rel spread 5.00e-06
+    S=  1.0  2N*P_fix ['2.312920', '2.313024', '2.313034', '2.313035']  rel spread 5.00e-05
+    S= 10.0  2N*P_fix ['19.990003', '19.999000', '19.999900', '19.999999']  rel spread 5.00e-04
+  F2 tag: dialectic (worst spread 5.00e-04, edge 1e-3)
+  F3: N 1e4 -> 1e6: drift variance ratio 100x, neutral fixation time ratio 100x, edge 3x -> rhetoric
+  'mystifying': report of the speaker's state; no literal claim -> rhetoric (device: incredulity)
+  CF HEADLINE (factual clauses): dialectic  [F1 dialectic; F2 dialectic; F3 rhetoric]
+
+## Summary of proposed tags (per reading; owner chooses the reading)
+  CH Hancock RH-15: headline dialectic; H1 dialectic; H2 rhetoric (k=4/10, edge 3); H3-ext rhetoric
+  CM Myers RH-20:   headline rhetoric; M1 rhetoric; M2 rhetoric; M3-ext dialectic
+  CX Myers PZ-03:   dialectic (exact: True)
+  CF Mansfield RH-18: factual clauses dialectic; F1 dialectic; F2 dialectic; F3 rhetoric; 'mystifying' rhetoric
+  quote misses: 0
