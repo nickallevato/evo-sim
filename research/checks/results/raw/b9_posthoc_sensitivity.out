@@ -1,0 +1,23 @@
+| anchor | W=0.5 | W=0.1 | W=0.01 |
+|---|---|---|---|
+| mouse 0.5% | 3,457 | 11,484 | 22,968 |
+| central 1% | 1,724 | 5,728 | 11,455 |
+| upper 5% | 338 | 1,122 | 2,245 |
+
+registered (W 0.5, 0.1): central range 338-11,484 y
+  intersects strict 100-999: True
+  intersects 3x band 33.3-2,997: True
+  intersects 10x band 10-9,990: True
+
+with W=0.01 added: central range 338-22,968 y
+  intersects strict 100-999: True
+  intersects 3x band 33.3-2,997: True
+  intersects 10x band 10-9,990: True
+
+W=0.01 only: central range 2,245-22,968 y
+  intersects strict 100-999: False
+  intersects 3x band 33.3-2,997: True
+  intersects 10x band 10-9,990: True
+
+Anchors individually inside 100-999 y: [('upper 5%', 0.5, 338)]
+Anchors individually inside 3x band 33-2,997 y: [('central 1%', 0.5, 1724), ('upper 5%', 0.5, 338), ('upper 5%', 0.1, 1122), ('upper 5%', 0.01, 2245)]
