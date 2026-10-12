@@ -670,6 +670,22 @@ Verbatim (whitespace-normalised substrings of the saved text, machine-checked 20
 > - locator: same section; role: N
 > "Nucleotide divergence rates were estimated using baseml with the REV model."
 > - locator: Methods, rates of divergence; role: N
+> "A total of 19,277 human RefSeq transcripts157, representing 16,045 distinct genes, were indirectly aligned to the chimpanzee sequence via the genome alignment."
+> - locator: Methods, Gene annotation (CSAC2005.txt ~l.1996; added 2026-10-12, machine-checked against the held txt, whitespace normalised); role: N; params: Q180 (alignment method behind the 13,454 list: the genome alignment, not a protein-guided realignment)
+> "After removing low-quality sequences and likely alignment artefacts, an initial catalogue containing 13,454 distinct 1:1 human–chimpanzee orthologues was created for the analyses described here."
+> - locator: Methods, Gene annotation (~l.1997-1999); role: N; params: Q176, Q185
+> "A subset of 7,043 of these genes with unambiguous mouse and rat orthologues were realigned using Clustal W158 for the lineage-specific analyses."
+> - locator: Methods, Gene annotation (~l.2000-2002); role: N; params: Q180 (Clustal W only for a 7,043-gene subset, lineage-specific analyses)
+> "K A and K S were estimated jointly for each orthologue using codeml with the F3x4 codon frequency model and no additional constraints"
+> - locator: Methods, Rates of divergence (~l.2006-2008); role: N
+> "with N S/N A, the ratio of synonymous to non-synonymous sites, estimated as 0.36 from the orthologue alignments."
+> - locator: Methods, Rates of divergence (~l.2009-2011); role: N; note: stated for the divergent-vs-polymorphic comparison (K A/K S = (DA/N A)/(DS/N S)); inverse N A/N S = 2.78
+> "Unless otherwise specified, K A/K S for a set of genes was calculated by summing the number of substitutions and the number of sites to obtain K A and K S for the concatenated set before taking"
+> - locator: Methods, Rates of divergence (~l.2011-2013; sentence continues on the next page); role: N; params: pooled estimator (no mean-of-ratios mismatch unless the hominid 0.23 was "otherwise specified", which the main text does not say)
+> "with unambiguous 1:1 orthology for which it was possible to generate high-quality sequence alignments covering virtually the entire coding region"
+> - locator: main text, gene-evolution section (~l.702-704; added 2026-10-12, machine-checked); role: N; params: Q180, Q185 (the 13,454 set was selected on alignment quality and coverage: a point for Day's gene-set/alignment concern, and a point against reading the 0.23 as a protein-guided gap-out)
+> "than the value of 0.23 obtained with all human–chimpanzee orthologues"
+> - locator: main text (~l.891); role: N; note: the 0.23 is stated as the all-orthologue (13,454) value
 
 ### Nielsen2005 (sha256 a091301eb921b2df4616b1044bf5e40003477e9462be035c6cb2a3cdeae69ebb)
 > "The average numbers of nonsynonymous and synonymous mutations per nucleotide site are 0.002578 and 0.003281, respectively."

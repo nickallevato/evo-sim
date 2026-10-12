@@ -1359,7 +1359,7 @@ All from voxday.net, "How Biologists Keep "Proving" Selection", https://voxday.n
 - local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
 - branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
 - quote: "discovered that the protein-guided CDS alignment method has a circular reasoning problem that's impossible to ignore once you recognize it:"
-- note: Core new claim of the post: protein-aware alignment biases dN/dS downward. Mechanism stated without a test, code or example gene. Directly relevant to DN3/DN5.
+- note: Core new claim of the post: protein-aware alignment biases dN/dS downward. Mechanism stated without a test, code or example gene. Directly relevant to DN3/DN5. Checked 2026-10-12 against the held CSAC 2005 Methods: the 13,454 set came from the genome alignment (16,045 genes), Clustal W only for a 7,043-gene subset, K_A/K_S pooled (quotes-literature.md CSAC2005). Readings (RD): (a) this is how the 0.23 was produced: contradicted by that text; (b) protein-guided pipelines in general bias dN/dS down: pending L1c. Claim DN6.
 
 ### Q181 Gapping-out mechanism (added 2026-10-12)
 - source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)

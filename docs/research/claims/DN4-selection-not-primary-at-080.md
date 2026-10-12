@@ -43,3 +43,6 @@ R4 L1 fix pass (`research/checks/results/R4-L1.md`, Verdicts section): rule N sc
 
 ## Simulator variables implied
 - per-site selection classes (neutral, purifying, adaptive) needed to separate dN/dS from alpha
+
+## R-refresh 2026-10-12
+Q187-Q190 ("only 20 percent are actually eliminated"; canonical evidence "incorrect"; coding sequences "evolving near-neutrally"; separate from MITTENS) repeat the DN4 inference on 0.7989. Q187 arithmetic holds (1 - 0.7989 = 20.1%; 77/20.1 = 3.8) under the standard simplification. Verdicts unchanged (internal non-sequitur, external contested). Credit: Day concedes purifying selection exists and scopes the result as separate from MITTENS (Q190). The Q188 wording ("therefore incorrect") rests on DN1/DN6 and is dialectic; its reading under "the dN/dS average" is defensible if 0.80 stands, as a statement about adaptive evolution it is the DN4 non-sequitur. reading-dependent, as already recorded in the verdict comments; no change.

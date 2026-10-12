@@ -52,3 +52,6 @@ R4 L1 (`research/checks/results/R4-L1.md`; three reviews a352991; fix pass): poo
 
 ## Simulator variables implied
 - none (an empirical summary statistic; the simulator would need per-site selection classes to predict it)
+
+## R-refresh 2026-10-12
+Day's follow-up "The Method is the Conclusion" (2026-10-12) restates the figure as 0.7989 on 20,400 genes with subset rows 0.7956, 0.7939 (nested) and 0.8237 and a uniform 73.8-74.4% nonsynonymous share (Q183, Q184). Verdicts unchanged: internal `pending` (no code, gene list or per-gene table; Zenodo still 39 records), external `contradicted` (L1). Refresh maths review: all rows imply one constant N/S of about 3.54, so the uniformity restates one dN/dS, it is not independent evidence; 74% nonsynonymous is close to the no-constraint expectation (~75-78% of sites), which alignment noise also produces. Credit: the rows are mutually coherent. Day now attributes the gap to alignment method, not gene curation (DN6, DN3 R-refresh). Pending: L1c.

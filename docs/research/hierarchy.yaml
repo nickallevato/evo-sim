@@ -2705,7 +2705,7 @@ nodes:
   status: checked
   verdicts:
     internal: holds
-    fidelity: pending
+    fidelity: partial
     external: contradicted
   claim_file: docs/research/claims/DN3-consortium-gene-set-artefact.md
 - id: DN4
@@ -2737,9 +2737,28 @@ nodes:
   status: extracted
   verdicts:
     internal: n/a
-    fidelity: pending
+    fidelity: accurate
     external: supported
   claim_file: docs/research/claims/DN5-csac-2005-kaks-023.md
+- id: DN6
+  title: 'Day: the protein-guided CDS alignment method has a circular reasoning problem: divergent codons are gapped out, so dN/dS is biased downward
+    (the 2005 Consortium''s 0.23 is called a methodological artefact)'
+  side: day
+  branch: ROOT
+  parent: DN1
+  edges:
+  - type: revises
+    target: DN3
+  - type: depends-on
+    target: DN1
+  load_bearing: false
+  sourcing: firsthand
+  status: extracted
+  verdicts:
+    internal: pending
+    fidelity: pending
+    external: pending
+  claim_file: docs/research/claims/DN6-protein-guided-alignment-biases-dnds-down.md
 - id: E
   title: 'Punctuated equilibrium''s peripatric mechanism sits where hypermutation is favoured: 6 of 12 LTEE populations became mutators and a
     founder event has a ~2.3% chance of producing a repair-deficient homozygote'
