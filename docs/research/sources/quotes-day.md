@@ -1991,10 +1991,10 @@ Not scored: no claim node, verdict or ledger was changed by this pass. RH tags a
 ### Q251 The Irrelevance of k = mu: any one link can err (added 2026-10-12d)
 - source: `B2026-08-26-the-irrelevance-of-k-%ce%bc`; voxday.net, "The Irrelevance of k = μ" (2026-08-26)
 - URL: https://voxday.net/2026/08/26/the-irrelevance-of-k-%ce%bc/
-- locator: single-line extracted text; character offset 4545 of the whitespace-normalised file
+- locator: single-line extracted text; character offset 4362 of the whitespace-normalised file
 - local copy: sources/raw/day/blog-2026-08-26-the-irrelevance-of-k-%ce%bc.txt
 - branch: Triveritas / applied to a critic (keruru); RH tag: dialectic
-- quote: "This also, rather fortuitously, demonstrates the importance of the Triveritas, as any one link in the triad is capable of serious error when allowed to operate outside the bounds of the other two."
+- quote: "His work here is very far from valueless, as I will demonstrate, but it is nevertheless incorrect due to his failure to anchor the abstract mathematical elements in material reality. This also, rather fortuitously, demonstrates the importance of the Triveritas, as any one link in the triad is capable of serious error when allowed to operate outside the bounds of the other two."
 - note: Day applies the triad to a critic's martingale argument for k = mu (branch B3/B7): the charge is M without E ("failure to anchor the abstract mathematical elements in material reality"). Same structure as method-audit finding MA-05 against this audit's simulation-based external verdicts.
 
 ### Q252 Veriphysics, as requested: 'wrecking ball' (book blurb) (added 2026-10-12d)
