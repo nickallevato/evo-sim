@@ -574,3 +574,115 @@ Each quote machine-checked as a substring (whitespace and quote-mark normalised)
 > - locator: MesserLab/SLiM `description` (sha256 667c00a6…555560); role: N
 > "Simulate ARGs and genomic sequence data using population genetic models"
 > - locator: tskit-dev/msprime `description` (sha256 b821b198…bb0ce); role: N
+
+## Refresh 2026-10-11b-lit quotes
+
+Verbatim (whitespace-normalised substrings of the saved text, machine-checked 2026-10-11). Math glyph spacing follows the XML/PDF extraction ("10 −4"). Sha256 are of the saved files (see `bib-literature.md`, section "Refresh 2026-10-11b-lit").
+
+### Kim2017 (sha256 9a1a87c4b167d4c4f7f3cf78db6c3e39f8c8cba2808c19bc8d676b0ec2e00a8b)
+> "We infer significantly fewer (0.38–0.84 fold) strongly deleterious mutations with selection coefficient | s | > 0.01 and more (1.24–1.43 fold) weakly deleterious mutations with selection coefficient | s | < 0.001 compared to previous estimates."
+> - locator: Abstract; role: N; params: DFE shares (GAP-05, B9)
+> "These studies have found ∼57–61% of new nonsynonymous mutations to be moderately to strongly deleterious (| s | ≥ 10 −3 ), about 15–16% to be weakly deleterious (10 −4 ≤ | s | < 10 −3 ), and the remainder (24–28%) to be nearly neutral"
+> - locator: Introduction (describing Eyre-Walker 2006 and Boyko 2008); role: N
+> "Our results suggest that nearly neutral forces play a larger role in human evolution than previously thought."
+> - locator: Abstract; role: N
+> "0 ≤ | s | < 10 −5 10 −5 ≤ | s | < 10 −4 10 −4 ≤ | s | < 10 −3 10 −3 ≤ | s | < 10 −2 10 −2 ≤ | s |"
+> - locator: Table 3 column headers; role: N
+> "Boyko et al. (2008) (AA a ) 1.8 × 10 −8 , 2.5 b Gamma 0.183 0.096 0.147 0.219 0.355"
+> - locator: Table 3, Boyko row; role: N
+> "1000 Genomes 1.8 × 10 −8 , 2.5 b Gamma 0.217 (0.212–0.223) 0.112 (0.111–0.113) 0.169 (0.165–0.172) 0.243 (0.235–0.249) 0.259 (0.252–0.266)"
+> - locator: Table 3, 1000 Genomes gamma row; role: N
+> "A population size of 10,000 diploids is used to rescale"
+> - locator: Figure 1 legend; role: N; note: s, not Ns
+> "estimates of the proportion of nearly neutral and neutral mutations (| s | < 10 −4 ) are less accurate"
+> - locator: Results, simulations (Fig. 2A); role: C
+
+### Boyko2008 (sha256 2312fe12f5140f09bdb0e81dc15ed3134e77edc1cd95dccf05f611d1c5d57fb4)
+> "we predict 27–29% of amino acid changing (nonsynonymous) mutations are neutral or nearly neutral (| s |<0.01%), 30–42% are moderately deleterious"
+> - locator: Abstract; role: N
+> "Our results are consistent with 10–20% of amino acid differences between humans and chimpanzees having been fixed by positive selection"
+> - locator: Abstract; role: N; params: alpha (RG-03)
+
+### EyreWalker2006 (sha256 78fc986d4f20eb6052a3e6323e9c0c15fa361ff04929f188c2d80d74fbf4c36f)
+> "a gamma distribution with a shape parameter of 0.23 provides a good fit to the data and we estimate that >50% of mutations are likely to have mild effects, such that they reduce fitness by between one one-thousandth and one-tenth"
+> - locator: Abstract (abstract only); role: N
+> "We also infer that <15% of new mutations are likely to have strongly deleterious effects."
+> - locator: Abstract; role: N
+> "the average strength of selection acting against a nonsynonymous polymorphism is ∼9 × 10 −5"
+> - locator: Abstract; role: N
+
+### KeightleyEyreWalker2007 (sha256 592538eff7271106770b5493765b19612d505d9c7aa8a960fe840b79af9cae94)
+> "the mean estimate for the distribution shape parameter is approximately 0.2 for human populations, which implies that the DFE is strongly leptokurtic"
+> - locator: Abstract (abstract only); role: N
+
+### Huber2017 (sha256 6fabb2a07d0ac7caa975d212ad81a0e0e1f6304f2b94752a55847e5c81301ae5)
+> "we find that humans have a higher proportion of strongly deleterious mutations than Drosophila melanogaster"
+> - locator: Abstract (abstract only); role: N
+
+### Rands2014 (sha256 3fd9dde1c35d4f3f865fcf25df5076299e802f73cc45eaf74e3c3a82c3f0a9cb)
+> "we estimate that 8.2% (7.1–9.2%) of the human genome is presently subject to negative selection and thus is likely to be functional, while only 2.2% has maintained constraint in both human and mouse since these species diverged"
+> - locator: Abstract; role: N; params: constrained fraction (HF)
+
+### Zoonomia2023 (search JSON sha256 d0adb23d306e987cb93fefd62804b2dddc03751c3d212d2db293ecef8ce6e515)
+> "At least 332 million bases (~10.7%) in the human genome are unusually conserved across species (evolutionarily constrained) relative to neutrally evolving repeats"
+> - locator: Abstract (Science structured abstract via Europe PMC; abstract only); role: N
+> "Of 101 million significantly constrained single bases, 80% are outside protein-coding exons"
+> - locator: same; role: N
+
+### Uricchio2019 (sha256 3e7c44cb27fb68ffbe07b4ba2884dc31c448145c93d365142643e22c5b865977)
+> "estimate α = 0.135 in human protein-coding sequences, 72% of which is contributed by weakly-adaptive variants"
+> - locator: Abstract; role: N; params: alpha (RG-03)
+> "95% highest posterior density. α: total adaptation rate;"
+> - locator: table caption, inferred adaptation rates; role: N
+> "0.135 (0.096,0.17) 0.097 (0.0,0.21) 0.041 (0.0,0.13) VIPs 6249 10309 0.224 (0.17,0.28)"
+> - locator: same table (total, weak, strong; then VIPs row); role: N; note: first row label reads "Whole-egoism" in the saved copy
+> "original aMK approach ( α ^ = 0.076"
+> - locator: Results; role: N
+
+### CSAC2005 (held copies; txt sha256 0b5abab3be36578ac4c7e994a94c051ba1f39e491cb8615d3be39b2abf908e5a)
+> "The K A/K S ratio for the human–chimpanzee lineage (q hominid) is 0.23."
+> - locator: main text, gene-evolution section, journal p. 76-77; role: N; params: dN/dS (Day 0.80 vs 0.23)
+> "Similarly, K A/K I was also estimated as 0.23."
+> - locator: same paragraph; role: N
+> "the results imply that 77% of amino acid alterations in hominid genes are sufficiently deleterious as to be eliminated by natural selection"
+> - locator: same paragraph; role: N
+> "We began by identifying a set of 13,454 pairs of human and chimpanzee genes with unambiguous 1:1 orthology"
+> - locator: same section; role: N; params: gene list (Q176)
+> "A total of 585 of the 13,454 human–chimpanzee orthologues (4.4%) have observed K A/K I . 1"
+> - locator: same section; role: N
+> "Nucleotide divergence rates were estimated using baseml with the REV model."
+> - locator: Methods, rates of divergence; role: N
+
+### Nielsen2005 (sha256 a091301eb921b2df4616b1044bf5e40003477e9462be035c6cb2a3cdeae69ebb)
+> "The average numbers of nonsynonymous and synonymous mutations per nucleotide site are 0.002578 and 0.003281, respectively."
+> - locator: Results; role: N; note: per nucleotide site, not per nonsynonymous/synonymous site; ratio 0.786 is NOT dN/dS
+> "We here compare 13,731 annotated genes from humans to their chimpanzee orthologs"
+> - locator: Synopsis; role: N
+> "Seven hundred thirty-three of the 8,079 genes evolved with d N / d S greater than one, but only 35 had p -values less than 0.05"
+> - locator: Results; role: N
+
+### Bakewell2007 (sha256 e388f6fc89f2d347e22c34cd8a67b9e3603a948c048a1a977f630b6ffc4d0e92)
+> "Here, we test this hypothesis by analyzing nearly 14,000 genes of humans and chimps."
+> - locator: Abstract (abstract only); role: N
+> "despite a generally higher nonsynonymous substitution rate in humans"
+> - locator: Abstract; role: N
+
+### Good2017-SI (sha256 bb23faa5e97dd59cc6e3176d5720ee9c662ade6123ed6935f135d9cb762be9ba)
+> "From this polymorphic state, the mutation can transition to either a fixed state F, where all reference reads are sequencing errors, or an extinct state E that is similar to the ancestral state above. In rare cases, mutations are allowed to transition from E back to A, after which it can be reborn as a recurrent mutation event."
+> - locator: SI section 5.2 "Simplest hidden Markov model", p. 15; role: N; params: L6 (F has no listed exit)
+> "Pr[A → P] ≈ 10−2 , Pr[P → F] ≈ Pr[P → E] ≈ 0.5 , Pr[E → P] ≈ 10−6 , (31)"
+> - locator: SI Eq. (31); role: N
+> "we turned to an ad hoc Markov model that contains some of the minimal features of a true mutation trajectory"
+> - locator: SI section 5.2; role: C
+> "though the results are relatively insensitive to the precise values"
+> - locator: SI after Eq. (31); role: C
+
+### Byars2010 (sha256 3c6fae3d376fd3d26889f440871437d60c2bc59ca85aae5ca8c93a3cc0198a77)
+> "we measured the strength of selection, estimated genetic variation and covariation, and predicted the response to selection for women in the Framingham Heart Study"
+> - locator: Abstract (abstract only); role: N; params: L2 h
+> "We found that natural selection is acting to cause slow, gradual evolutionary change."
+> - locator: Abstract; role: N
+
+### Stearns2010 (Nat Rev Genet; sha256 077101180e25164da96b10c4a5a2fe763b05b0c9ec20e0c5e6e4b47da442f132)
+> "Are humans currently evolving? This question can be answered using data on lifetime reproductive success, multiple traits and genetic variation and covariation in those traits."
+> - locator: Abstract (PubMed; abstract only); role: N; params: L2 h
