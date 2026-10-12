@@ -292,7 +292,7 @@ flowchart LR
 - [x] **GAP-07b:** direct event count from the human–chimp alignment (9.7×, bracket ~7–14×; follow-ups GAP-07c and a T2T re-run)
 - [x] **C1c / C1d:** Day's aDNA 21-count with real call depth and ancestry replacement (model), then on the real AADR genotypes (contradicted as stated; keruru's $N_e$ replicates)
 - [x] **D1:** sequence-space spike (RNA folding, deep mutational scans, GB1): alternatives per needed change against G1's flip
-- [x] **X1:** arithmetic of every critic and ally claim, and one verdict rule applied to both sides (blind-audited)
+- [x] **X1:** arithmetic of every critic and ally claim, and one verdict rule applied to both sides (the "blind audit" was by a same-model agent, not an independent party; see Known gaps)
 - [x] **GAP-07c:** polymorphic share of the divergent sites (15.6% human side; 205M is 10.6–12.6× fixed events)
 - [x] **Mapping:** every critic and ally argument attached to the map (12 new claims from the Hancock video, pending review); Holocene $N_e$ literature retrieved
 - [ ] **In progress:** XT (cross-tool replication), D15 (regulatory waiting time)
