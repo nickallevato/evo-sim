@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: holds
   fidelity: accurate
-  external: "contested"   # exact at steady state; transient and overlap effects (B1c, B3b)
+  external: "contested"   # exact at steady state; transient and overlap effects (B1c, B3b)   # RD (2026-10-11): RH-18's tag is reading-dependent; B5 unchanged under every reading
 ---
 
 ## Statement (verbatim)
@@ -28,7 +28,7 @@ Source: [Mansfield (@brianmansfield6912), YouTube comments under Examining Origi
 Source: [r/DebateEvolution, Dumb-and-Dumber, "New anti-evolution paper today from Vox Day"](https://www.reddit.com/r/DebateEvolution/comments/1wss2wj/), 2026-09-28, comment pcovtvf by DarwinZDF42 (score 27), reply under r/DebateEvolution post 1wss2wj
 
 
-RH tag (2026-10-10 pass): the Mansfield remark 'his claim otherwise is mystifying' is rhetoric (incredulity, ledger RH-18); the Hancock derivation and the Mansfield claim 'Population size only affects which alleles are effectively neutral' are dialectic.
+RH tag: 'mystifying' is rhetoric (incredulity, ledger RH-18; a report of the speaker's state). The factual clauses of RH-18 ('Genetic drift happens in every population'; 'Population size only affects which alleles are effectively neutral') are **reading-dependent** (R4 RHclose-critics, RD, 2026-10-11): dialectic on the existence and scaling readings (verdict-field reading, most charitable to Mansfield), rhetoric on the strict 'only' reading. The Hancock derivation is dialectic. Readings table in the R4 paragraph below.
 ## Formal statement
 k = (2Nμ_site-or-genome) × (1/2N) = μ per generation (diploid, census N, neutral). In genome terms k = μ_G = μ_site × L_haploid. Glossary sense: **throughput** at steady state; the identity says nothing about how long an individual fixation takes or whether the window is long enough (B1).
 Acceptance by Day's side: Z22129121 "this paper accepts it throughout"; blog 2026-08-27 (B3g).
@@ -64,3 +64,11 @@ R4 B1c/B3b (research/checks/results/R4-B1c-B4a.md, R4-B3b-C1.md): k = mu holds e
 - mutation input per generation (U)
 - N
 - equilibrium vs non-equilibrium start
+
+R4 RHclose-critics (research/checks/results/R4-RHclose-critics.md; integrated 2026-10-11). Mansfield, RH-18 (MF-01). Readings (RD; none picked):
+| Reading | Test and result | RH tag |
+|---|---|---|
+| F1: "drift happens in every population" | drift variance 0.25/(2N) > 0 for N = 1e3 ... 8e9; SD of drift over 280 gen at p = 0.5: 0.18 (N 1e3), 0.059 (1e4), 0.0059 (1e6), 6.6e-5 (8e9); neutral P_fix = 1/(2N) > 0 and substitution rate mu at every N | dialectic (existence claim, exact) |
+| F2: N only affects which alleles are effectively neutral, as scaling | 2N P_fix at fixed S = 2Ns across N 1e4 to 1e8: relative spread 5e-6 (S 0.1), 5e-5 (S 1), 5e-4 (S 10); edge 1e-3 | dialectic |
+| F3: literal "only" (no other effect of N) | drift variance and neutral fixation time scale x100 between N 1e4 and 1e6 (edge 3x); Mansfield's own MF-02 uses 2N new mutations per generation, so N also sets supply | rhetoric |
+B5 stays holds / accurate / contested under every reading. The strict 'only' overstates by about 100x on drift rate. Credit to Mansfield: F1 and F2 are exact. Credit to Day: F3, and N sets mutation supply. The R4 RHclose-critics Q93 verdict ("false at every N") was withdrawn: Q93 names no window; it is queued as a Day-side closeness re-test (QUEUE.md).

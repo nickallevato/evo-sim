@@ -123,3 +123,5 @@ The Hancock **headline is reading-dependent** and no longer "dialectic via H1" a
 | | F3 strict "only" (100x) | rhetoric |
 | | "mystifying" | rhetoric (device only) |
 Decisions needed: (1) Hancock: keep "any in-scope reading passes" (dialectic) or require the applied-math reading (H1-applied and H2-incl rhetoric)? (2) Myers: MITTENS 3.0 (rhetoric) or Appendix A (dialectic)? (3) Enter the Myers "sequential" description as an R1 error, a slip, or neither? (4) Is H4 worth a pre-registered provenance check of Day's s and N_e? (5) Q93 to be re-tested in a Day-side RH check, or dropped? (6) RH-18 and PZ-03 as before.
+
+**Integration (2026-10-11, owner rule RD):** integrated into the claim files, ledgers and argmap as reading-dependent verdicts (value = reading most charitable to the speaker; all readings in the claim files Readings tables). See QUEUE item 15.

@@ -9,7 +9,7 @@ load_bearing: true  # ROOT as worded ("no evolutionary mechanism") fails if neut
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: pending   # R4 B2 (rule N, 2026-10-10): stays `pending`. B's Statement quotes are the Feb blog line (predates HL by seven months, not answerable to HL under N2b; revised in HL l.425-428, versions ledger SC) and the HL abstract sentence (B2's, holds). The candidate sentence Q157 (l.453-457; also Q158) is not decided: if `dialectic` -> `non-sequitur` (N2b within HL: it needs an empty lineage pipe, which HL's own text excludes, Q140, Q151, Q152, Q156); if `rhetoric` -> `holds` (HL basis; core = B2). The text is figurative (channel, pipe, shut) yet makes a checkable claim ('inside the same lineage duration', Table 1: 6.5 My), so the tag is not clear from the text.
+  internal: holds   # reading-dependent (RD, owner 2026-10-11; value = reading most charitable to Day). SCOPED to the B2 statement only (current-size confinement, HL abstract l.22-24); B's lineage-level conclusion ('cannot rescue the shortfall') gets 'no dialectical support offered' (RH3), not a bare holds. Reading F over 6.5 My (Q157/Q158 'fills' = flux fill 0.697, 2.25x the 0.30 edge) -> rhetoric -> this value. Readings D (delivered share 0.256), Takahata N_e = 1e5 held (F 0.281), S (current size) and HL's 2 My window (F 0.025) -> dialectic -> non-sequitur (R4-B2 Rule N, N2b within HL: it needs an empty lineage pipe that HL's own text, Q140, Q151, Q152, Q156, excludes). Quote 1 (Feb blog line) predates HL by seven months, not answerable to HL under N2b (versions ledger SC)
   fidelity: partial
   external: contested
 ---
@@ -25,7 +25,7 @@ Source: [Z22129121, The Hard Limits of Fixation Through Genetic Drift (Day & Ath
 
 > And now the neutral channel closes on the same window for an entirely independent reason. The adaptive substitutions cannot be paid for; the neutral substitutions cannot be finished, because the pipe that would finish them never fills. Both the priced channel and the free channel shut inside the same lineage duration.
 
-Source: Z22129121 (Hard Limits), 2026-08-27, l.453-457 of the local text (Q157). **Candidate Statement; rule RH tag unresolved** (see R4 B2 paragraph).
+Source: Z22129121 (Hard Limits), 2026-08-27, l.453-457 of the local text (Q157). **Candidate Statement; rule RH tag reading-dependent** (see the R4 RHclose paragraph and Readings table).
 
 
 RH tag (2026-10-10 pass): quote 1 rhetoric (finality claim, ledger RH-10); quotes 2-3 dialectic (the k = mu domain condition and the two-channel claim, scored in B1/B2). Support for the node rests on the dialectic quotes.
@@ -71,7 +71,17 @@ Written **before** the check runs.
 ## Check
 See B1c, B3b, B4a (proposed) and the done checks B1, B1b, B2a, B3.
 
-R4 B2 / rule N (`research/checks/results/R4-B2.md`, reviews #37-#39, fix pass 45edb6f): the paraphrase 'cannot rescue the shortfall' is the claim title and is not scored (S1). Scored on HL's own material: B2 holds. B's internal verdict stays `pending` pending the RH tag of Q157 (both readings above, left to the owner; the text does not settle it). External (ancestral fill and counts) stays with B1c and B4a. On HL's own lineage window the pipe at H8's census is about 70% loaded at the end of the window and about 26% of mu T is delivered from an empty start; pre-window fill raises both. Day side: the current-size reading of B2 is Day's own abstract. Critic side: HL concedes the throughput point, the drainage and a partial ancestral load, so the 'neutral channel closes' sentence needs an empty pipe that HL's own text does not give.
+R4 B2 / rule N (`research/checks/results/R4-B2.md`, reviews #37-#39, fix pass 45edb6f): the paraphrase 'cannot rescue the shortfall' is the claim title and is not scored (S1). Scored on HL's own material: B2 holds. B's internal verdict was `pending` on the RH tag of Q157; since R4 RHclose (2026-10-11) it is reading-dependent (see the Readings table below). External (ancestral fill and counts) stays with B1c and B4a. On HL's own lineage window the pipe at H8's census is about 70% loaded at the end of the window and about 26% of mu T is delivered from an empty start; pre-window fill raises both. Day side: the current-size reading of B2 is Day's own abstract. Critic side: HL concedes the throughput point, the drainage and a partial ancestral load, so the 'neutral channel closes' sentence needs an empty pipe that HL's own text does not give.
+
+R4 RHclose (research/checks/results/R4-RHclose.md Part 2; fix pass 3c0dccb, post hoc `rhclose_posthoc.py`; integrated 2026-10-11): Q157/Q158 ('the pipe was nearly empty'; both channels 'shut inside the same lineage duration') RH tag is **reading-dependent** (RD); no reading picked. Registered edge: fill F >= 0.30 is 'not nearly empty'. Human lineage, empty start, N_e 57,143:
+| Reading of "fills / nearly empty" | Value | RH tag | B internal |
+|---|---|---|---|
+| F, 6.5 My (HL l.249 lineage duration; registered; verdict field, most charitable to Day) | 0.697 (6.3 My: 0.676); 2.25x the edge | rhetoric | holds, scoped to B2 only; lineage conclusion 'no dialectical support offered' (RH3) |
+| D, delivered share (Day's own mu L integral of F, Q34) | 0.256 (6.3 My: 0.242) | dialectic | non-sequitur (Rule N, N2b) |
+| Takahata N_e = 1e5 held for the whole lineage | F 0.281 | dialectic (just under 0.30) | non-sequitur |
+| S, current size ('near end', l.464; restates B2) | n/a | dialectic (as a restatement of B2) | non-sequitur at lineage level; B2 itself holds |
+| HL's 2 My window (l.416 'entire lineage') | F 0.025 (D 0.003) | dialectic | non-sequitur |
+So 'nearly empty' is literally true on HL's 2 My window, which l.416 calls 'the entire lineage' while l.249 defines the lineage as 6.5 My (an HL-internal ambiguity of referent as well as R4-B2's slip). Net: B2 holds and C's non-sequitur are unchanged under every reading; only B's own internal verdict is reading-dependent, and the whole move favours Day under the rhetoric reading. B external stays with B1c / B4a. Ledger entry: `ledgers/slips.md` RH-26.
 
 ## Simulator variables implied
 - fill state

@@ -194,3 +194,5 @@ Net: C7's effect is small (C and B2 already carry the ROOT-path verdicts); B's e
 2. Q157/Q158: which reading of "fills" (F, D, Takahata-1e5, S, or 2 My)?
 3. Given 1 and 2: rhetoric (B = `holds` scoped to B2, lineage conclusion "no dialectical support offered") or dialectic (B = `non-sequitur`)?
 4. Is a sourced Holocene census wanted (to settle R2)? It would need a new retrieval; none is in the repo.
+
+**Integration (2026-10-11, owner rule RD):** integrated into the claim files, ledgers and argmap as reading-dependent verdicts (value = reading most charitable to the speaker; all readings in the claim files Readings tables). See QUEUE item 15.

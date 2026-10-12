@@ -107,3 +107,5 @@ Review: `REVIEW-R4-GAP05-combined.md` (0 BLOCKER, 2 MAJOR, 9 MINOR, 2 NOTE).
 - **Steelman-Day/critic sections:** Day's calibrated-base and N_e < 1e4 points are now computed (above); the critic's hard-selection and stationarity points are carried in caveats 3 and 5 and the Critics paragraph.
 
 **For the owner.** (a) Decide whether the headline for GAP-05 states the pre-registered figure (0.29-0.43) or the calibrated range; the draft keeps the pre-registered one as the headline and gives the calibrated range beside it. (b) The pedigree-mu versus clock tension (why mu x T is 2.8x low in coding sites) is not resolved by this check.
+
+**Integration (2026-10-11, owner rule RD):** integrated into the claim files, ledgers and argmap as reading-dependent verdicts (value = reading most charitable to the speaker; all readings in the claim files Readings tables). See QUEUE item 15.
