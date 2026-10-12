@@ -9,7 +9,8 @@
 
 ![phase](https://img.shields.io/badge/phase-research%20(R4%20of%205)-orange)
 ![claims](https://img.shields.io/badge/claims%20mapped-233-blue)
-![checks](https://img.shields.io/badge/reviewed%20checks-17-success)
+![checks](https://img.shields.io/badge/checks%20run-57%20(10%20demonstrably%20blind)-blue)
+![reviews](https://img.shields.io/badge/reviews-same--model%2C%20not%20blind-critical)
 ![sides](https://img.shields.io/badge/scrutiny-both%20sides-blueviolet)
 ![python](https://img.shields.io/badge/python-numpy%20·%20msprime%20·%20fwdpy11-3776AB?logo=python&logoColor=white)
 
@@ -17,7 +18,28 @@
 
 ---
 
+> **Caveat first:** this is an AI-run audit with no independent human review yet. See [Known gaps](#known-gaps-stated-up-front) before relying on any tally.
+>
 > **New here?** Read the whole story at your level: **[ELI5](docs/explain/eli5/README.md)** · **[ELI8](docs/explain/eli8/README.md)** · **[ELI10](docs/explain/eli10/README.md)** · **[ELI12](docs/explain/eli12/README.md)** · **[ELI18](docs/explain/eli18/README.md)**
+
+## Known gaps, stated up front
+
+Read this before trusting any number below. This audit is run by an AI system (Claude) directing subagents of the same model family, with one human owner. On 2026-10-12 it was audited twice from the inside: once in the style of a neutral third party, and once by Vox Day's own Triveritas test (logic, mathematics and empirical anchoring must all hold). Both reached the same headline: the individual checks are careful and well disclosed, but the audit's claims about itself are not yet earned. Nothing here has been reviewed by an independent human expert.
+
+| # | Gap | Why it matters | Mitigation | Status |
+|---|---|---|---|---|
+| 1 | **Reviews are not independent.** All 65 reviews, steelmen and "re-derivations" are by the same model family, not blind, and the check's author decides what to do with them. One blocker was ever raised. | Shared blind spots and shared priors about evolution cannot be caught this way. | A planted-error test of the reviews; blind re-derivation of ten load-bearing nodes; a review packet for a different model family; a human population geneticist and one reader from each camp. | Packet and reviewer brief drafted ([outreach](docs/research/outreach/)); nothing sent; needs the owner |
+| 2 | **The tallies overstate what was checked.** 58 of the 131 "holds" sit on claims with no reviewed check; "contested" is 114 of 172 decided external verdicts; only 14 of 233 claims pass all three verdict columns at once. | A count of verdicts reads as a score. It is not one. | An `unexamined` status, a four-way split of "contested", and a conjunction flag; comparative Day-versus-critic rates and p-values already removed. | Rates removed; the rest are written proposals awaiting go-ahead |
+| 3 | **Pre-registration is weaker than the word suggests.** Of 57 checks run, 10 are demonstrably blind (registration clearly before results), 6 criterion-only, 3 reproductions, 18 single commits and 20 unknown. | "Pre-registered" should mean the prediction could have failed. | Every check now carries one of those labels ([table](research/checks/PREREG-STATUS.md)); new checks get a pre-run design review and pushed registration before any run. | Labels done; applied to L1c and FMnull |
+| 4 | **Half the external verdicts rest on models.** 26 of 52 decided external verdicts rest on simulation or standard theory rather than independent data, and so do seven of the eight load-bearing ones. | Using mainstream theory to judge a critic of mainstream theory can beg the question. | A recorded basis for every external verdict (data, literature, simulation, theory), enforced by lint; real-data checks queued (L1b, L1c, FMnull real-data arm). | Coded count done; field is a proposal; checks queued |
+| 5 | ***Probability Zero* itself has not been read.** The audit works from Day's posts and Zenodo papers. Paywalled papers and some platforms (X, Gab, Telegram) are also unread. | The book is the primary source. | Buy the book and re-extract a blind sample; list of paywalled papers for the owner. | Needs the owner |
+| 6 | **No right of reply.** Neither Day nor any critic has been shown the findings about them. | An audit that cannot be answered is a verdict, not an audit. | Notices to Day and to 18 critics and allies listing findings for and against each, a 21-day window, replies published verbatim. | Drafted; not sent; needs the owner |
+| 7 | **Rules changed mid-audit.** Two rules were added and redefined on 2026-10-11; two load-bearing verdicts (B and A2e) moved against Day without the three reviews the audit's own tiers require. | Changing the rule and the verdict together looks like fitting the rule to the answer. | A rule freeze with a written proposal, a 24-hour wait and a three-review re-score for any later change; decision pending on reverting B and A2e until reviewed. | Freeze accepted by the owner; revert decision open |
+| 8 | **No rule for the final answer.** Nothing registered says how node verdicts combine into a top-level conclusion, or when the audit stops. | Without it, the conclusion can be chosen after the fact. | Register an aggregation rule and a stopping rule before the synthesis (R5). | Draft proposal written |
+| 9 | **Rhetoric exemption.** Statements tagged as rhetoric are not fact-checked, and the "remotely close" test is undefined for absolute claims. | Either side can shelter a false statement behind the tag. | Tag by context, and always report the literal distance from the facts. | Proposal written |
+| 10 | **Missing basics.** No licence, conflict-of-interest statement, stated priors, threat model or estimate of the audit's own error rate. | Standard for any audit meant to be relied on. | Drafts and templates written. | Needs the owner |
+
+Full detail: [methods and limitations](docs/research/criticality/METHODS-AND-LIMITATIONS.md) · [method audit](docs/research/criticality/METHOD-AUDIT-2026-10-12.md) (MA-01 to MA-20) · [Triveritas critique](docs/research/criticality/triveritas-audit-2026-10-12.md) (TV-01 to TV-11) · [roadmap](docs/research/ROADMAP.md) · [decisions log](docs/research/DECISIONS.md). No finding counts as closed until a later pass re-audits it.
 
 ## Play with it
 **[Is There Enough Time](https://nickallevato.github.io/evo-sim/explain/eli-series/play.html)** is an interactive explainer of the math and the sims at five levels (ELI5 to ELI18). It has five small simulations you can run in the browser: a drift jar, a mutation river, a selection race, the MITTENS budget board, and a combination lock. ([source](docs/explain/eli-series/index.html))
