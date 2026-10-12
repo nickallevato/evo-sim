@@ -3861,7 +3861,7 @@
   why: ""
   fate: alive
   fate_date:
-  fate_locator: "R4 B9 (2026-10-11): relaxed-selection load gives centuries to millennia; owner decision pending on internal"
+  fate_locator: "R4 B9 (2026-10-11): relaxed-selection load gives centuries to millennia; internal reading-dependent (RD, 2026-10-11): holds on reading A, non-sequitur on reading B"
 
 - id: L-audit-b9-2026
   label: "Audit B9: relaxed-selection load halves fitness in 338-3,457 y (Lynch 2016); Q104 dialectic; premises 1 and 2 as worded false"
@@ -3879,3 +3879,67 @@
   fate_date:
   fate_locator: "Reviewed and integrated 2026-10-11"
 
+
+- id: L-audit-rhclose-2026
+  label: "Audit RHclose: Q96 and Q157/Q158 tags depend on the reading; C7 and B reading-dependent"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [C7, B]
+  locator: "research/checks/results/R4-RHclose.md"
+  quote: "It is rhetoric only on F over the 6.5 My lineage; it is dialectic on D, on Takahata-1e5, on S, and on 2 My."
+  parents:
+    - {id: L-audit-c1d-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#62), fix-passed and integrated 2026-10-11 under rule RD"
+
+- id: L-audit-rhclose-critics-2026
+  label: "Audit RHclose-critics: Hancock, Myers and Mansfield tags are reading-dependent; PZ-03 count exact"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [ROOT-PG, G2e, B5]
+  locator: "research/checks/results/R4-RHclose-critics.md"
+  quote: "dialectic, reading-dependent"
+  parents:
+    - {id: L-audit-rhclose-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#63), fix-passed and integrated 2026-10-11 under rule RD"
+
+- id: L-audit-a2e-uricchio-2026
+  label: "Audit A2e-alpha addendum: Uricchio 2019 full text, lower HPD 4.2x the flip; two-reading scoping accepted"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [A2e]
+  locator: "research/checks/results/R4-A2e-alpha.md addendum"
+  quote: "Strong-effect-only and fitness-weighted readings stay contested"
+  parents:
+    - {id: L-audit-a2e-alpha-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#64), fix-passed; owner accepted the scoping and integrated 2026-10-11"
+
+- id: L-audit-gap05-2026
+  label: "Audit GAP05: sourced coding DFE gives a decline of 0.29-0.43 (pre-registered) to about 0.8-1.1 (calibrated), not a collapse"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [B9]
+  locator: "research/checks/results/R4-GAP05.md"
+  quote: "Premise supported; collapse not."
+  parents:
+    - {id: L-audit-b9-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#65), fix-passed and integrated 2026-10-11"

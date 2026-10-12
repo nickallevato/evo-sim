@@ -5564,7 +5564,7 @@
   audit_status: upheld
   audit_basis: '0 BLOCKER, 3 MAJOR (reading A as most charitable and internal holds; external mixes readings; loose criterion and "not hyperbole"), 9 MINOR'
   counter: []
-  note: 'applied in fix pass e51ab10 with post hoc b9_posthoc_sensitivity.py (c20c210): "holds" proposal withdrawn, internal left to the owner; external scoped contradicted; W = 0.01 added; the dialectic tag survives a 3x band'
+  note: 'applied in fix pass e51ab10 with post hoc b9_posthoc_sensitivity.py (c20c210): "holds" proposal withdrawn, internal reading-dependent (RD, 2026-10-11); external scoped contradicted; W = 0.01 added; the dialectic tag survives a 3x band'
   hierarchy_edge: false
 - id: d430
   attacker: rev:R4-B9-combined
@@ -5577,5 +5577,201 @@
   audit_status: partly
   audit_basis: 'Day-side case: "infertile" only makes sense as mutation load (reading A, Lynch 2016), so the N2a conflict spans two arguments in one comment; on Day''s premise 2 "within centuries" holds (12-970 y); premise 1 is closer to overstated than false (background selection); GAP-05 stays open'
   counter: []
-  note: 'Recorded as the case for internal holds conditional on reading A; not adopted as settling. Owner decision pending between (a) holds conditional on A with N2a under reading B recorded (auditor recommends) and (b) keep non-sequitur with A as ledger rescue.'
+  note: 'Recorded as the case for internal holds conditional on reading A; not adopted as settling. Resolved 2026-10-11 by the owner RD rule: internal is reading-dependent, holds on reading A (verdict field), non-sequitur on reading B (N2a).'
+  hierarchy_edge: false
+
+- id: d431
+  attacker: chk:A2e-alpha-uricchio
+  target: A2e
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-A2e-alpha.md (Post hoc addendum, Review resolution)
+  audit_status: upheld
+  audit_basis: 'A2e external contradicted, scoped to the per-generation count of adaptive fixations of any effect size, coding-only (A2e formal statement): Uricchio 2019 lower 95% HPD (alpha 0.096) gives 798 on the most Day-charitable row (4.2x the flip 191, after a 25% haircut) and 11-21x on the paper own base. Reading-dependent (RD): strong-only and fitness-weighted readings stay contested'
+  counter: [d433]
+  note: 'Critic-side. Owner accepted the two-reading scoping on 2026-10-11. Boyko lower CL 599 and the aMK baseline (alpha 0.076, 843 on N2) agree in direction; three estimators would all need a ~4-fold error in one direction to reach 191.'
+  hierarchy_edge: false
+
+- id: d432
+  attacker: rev:R4-A2e-uricchio-combined
+  target: chk:A2e-alpha-uricchio
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #64)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-A2e-uricchio-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (scope of the label; trigger and blockers set by the same author who scored them), 6 MINOR; post hoc disclosure corrected (full text read before registration)'
+  counter: []
+  note: 'Applied in the Review resolution (Uricchio addendum): label scoped; the trigger counted as a judgement, not a mechanical result; owner confirmed the scoping 2026-10-11.'
+  hierarchy_edge: false
+
+- id: d433
+  attacker: rev:R4-A2e-uricchio-combined
+  target: chk:A2e-alpha-uricchio
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #64, steelman-Day section)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-A2e-uricchio-combined.md (section 2)
+  audit_status: partly
+  audit_basis: 'Day-side case: strong-effect-only reading (alpha_S 0.041) clears 191 only at the point estimate (455) and its lower HPD is 0; 72% of alpha is weakly adaptive; ABC-MK is a model inference, no fixation observed; the paper NS = 29,925 is unreconciled with N1-N3'
+  counter: []
+  note: 'Reading-dependent (RD): on the strong-only and fitness-weighted readings A2e external stays contested. The VIP strong-only lower bound (112) is a subset, not like for like.'
+  hierarchy_edge: false
+
+- id: d434
+  attacker: chk:RHclose
+  target: C7
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-RHclose.md (Part 1, Review resolution MAJOR-1)
+  audit_status: upheld
+  audit_basis: 'Q96 tag reading-dependent (RD): fixation reading dialectic and the count true (P <= 1e-17 from p0 = 0.5 in 280 generations), but the inference to no drift is a non-sequitur at C; strict allele-frequency drift reading rhetoric (F_drift 23-46x the edge); census reading pending a sourced census (about 8.2e5)'
+  counter: [d436]
+  note: 'Critic-side. Verdict field takes the fixation reading (most charitable to Day): non-sequitur / contradicted (conclusion). C and B2 are unchanged under every reading.'
+  hierarchy_edge: false
+
+- id: d435
+  attacker: rev:R4-RHclose-combined
+  target: chk:RHclose
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #62)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-RHclose-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 3 MAJOR (C7 tag scope of most charitable; Q157/Q158 reading dependence; no bare holds for B), 6 MINOR, 3 NOTE'
+  counter: []
+  note: 'Applied in the fix pass 3c0dccb with post hoc rhclose_posthoc.py: the single rhetoric finding withdrawn, per-reading tags reported, owner choices listed; integrated under RD.'
+  hierarchy_edge: false
+
+- id: d436
+  attacker: rev:R4-RHclose-combined
+  target: chk:RHclose
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #62, steelman-Day section)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-RHclose.md (Part 2, MAJOR-2)
+  audit_status: partly
+  audit_basis: 'Day-side case: nearly empty is literally true on HL 2 My window (F 0.025), on the delivered share D (0.256) and on Takahata N_e 1e5 held (0.281); the count of zero fixations is literally true'
+  counter: []
+  note: 'Reading-dependent (RD): rhetoric only on F over 6.5 My (0.697, 2.25x the edge); dialectic on D, Takahata 1e5, S and 2 My. Day-side credit; the lineage-level inference still fails Rule N on the dialectic readings.'
+  hierarchy_edge: false
+
+- id: d437
+  attacker: chk:RHclose
+  target: B
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-RHclose.md (Part 2, MAJOR-3)
+  audit_status: partly
+  audit_basis: 'B internal reading-dependent (RD): holds scoped to the B2 statement only on F over 6.5 My (rhetoric; lineage conclusion no dialectical support offered, RH3); non-sequitur (R4-B2 Rule N, N2b) on D, Takahata 1e5, S and 2 My'
+  counter: []
+  note: 'Critic-side on the dialectic readings, Day-side on F. B2 holds and C non-sequitur are unchanged. Quote tags Q157 and Q158 updated to reading-dependent.'
+  hierarchy_edge: false
+
+- id: d438
+  attacker: chk:RHclose-critics
+  target: ROOT-PG
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-RHclose-critics.md (per-quote table; Review resolution MAJOR-1, MAJOR-2)
+  audit_status: partly
+  audit_basis: 'Day-side: Hancock RH-15 (Day math cannot do any of this) is reading-dependent (RD): dialectic on H1-printed (overlap 0 of 4) and H2-excl (k = 3 of 10), rhetoric on H1-applied (2 of 4) and H2-incl (k = 4); Day texts compute 3-4 of her 10 classes'
+  counter: []
+  note: 'Credit to Hancock: the printed formula has no selection or mutation term (G2h). Credit to Day: the applied G_f carries s and N_e. ROOT-PG verdicts unchanged under every reading.'
+  hierarchy_edge: false
+
+- id: d439
+  attacker: chk:RHclose-critics
+  target: G2e
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-RHclose-critics.md (Myers rows; Review resolution MINOR-1)
+  audit_status: partly
+  audit_basis: 'Day-side: Myers RH-20 (I debunked the disproof in one short post) reading-dependent (RD): rhetoric on M2 (MITTENS 3.0 method; 0 of 2 adverse; s8.1 already counts parallel fixation), dialectic on M3 (Appendix A chain, G2g non-sequitur); M1 uninformative'
+  counter: []
+  note: 'Entered as slip S-G2e-1 with both readings (R1 error literal, slip conditional). Credit to Myers: PZ-03 count exact (11 / 7 / 2) and the Appendix A chain is non-sequitur.'
+  hierarchy_edge: false
+
+- id: d440
+  attacker: rev:R4-RHclose-critics-combined
+  target: chk:RHclose-critics
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #63)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-RHclose-critics-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (H2 Drosophila species-pair test; H1 printed vs applied), 3 MINOR, 3 NOTE'
+  counter: []
+  note: 'Applied in fix pass 3c0dccb: H2 reported as k = 3 and k = 4, H1 split, M1 marked uninformative, H4 added untested, Q93 verdict dropped.'
+  hierarchy_edge: false
+
+- id: d441
+  attacker: chk:RHclose-critics
+  target: B5
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-RHclose-critics.md (Mansfield rows)
+  audit_status: partly
+  audit_basis: 'Day-side: Mansfield RH-18 factual clauses reading-dependent (RD): dialectic on F1 (drift in every population) and F2 (scaling), rhetoric on the strict only (drift variance and neutral fixation time scale x100 between N 1e4 and 1e6)'
+  counter: []
+  note: 'Credit to Mansfield: F1 and F2 exact. Credit to Day: N also sets mutation supply (MF-02 uses 2N new mutations). B5 verdicts unchanged.'
+  hierarchy_edge: false
+
+- id: d442
+  attacker: chk:GAP05
+  target: B9
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-GAP05.md (What it shows; Post hoc sensitivity)
+  audit_status: partly
+  audit_basis: 'Coding-only drift account fixes about 15,000-21,000 slightly deleterious nonsynonymous mutations per lineage; log-fitness decline 0.29-0.43 pre-registered, about 0.8-1.1 calibrated (post hoc), against ln 3 = 1.10: a decline, not collapse in centuries; premise supported'
+  counter: [d443]
+  note: 'Critic-side on the collapse; Day-side credit for the premise (GAP-05 supported on a sourced coding DFE). Noncoding unsourced, compensation untestable.'
+  hierarchy_edge: false
+
+- id: d443
+  attacker: rev:R4-GAP05-combined
+  target: chk:GAP05
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #65, steelman-Day section)']
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-GAP05.md (Post hoc sensitivity)
+  audit_status: partly
+  audit_basis: 'Day-side: mu x T undershoots observed divergence 2.8x, so on a divergence-calibrated base the decline reaches ln 3 for some DFE rows at N_e 1e4 (1000G, ESP) and from k about 2.0-2.4 at N_e 7,778; base-dependent, not no'
+  counter: []
+  note: 'Reported beside the pre-registered range, labelled post hoc; question (2) base k about 2.2-2.4 sits at about ln 3.'
+  hierarchy_edge: false
+
+- id: d444
+  attacker: rev:R4-GAP05-combined
+  target: chk:GAP05
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #65)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-GAP05-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (s convention and N = 10,000 misattribution; mu x T base), 9 MINOR, 2 NOTE'
+  counter: []
+  note: 'Applied in fix pass 5601687 and post hoc gap05_posthoc.py (2d134d0); DB2 recorded as base-dependent.'
   hierarchy_edge: false
