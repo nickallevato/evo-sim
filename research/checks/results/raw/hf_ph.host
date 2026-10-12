@@ -10,3 +10,4 @@ shard bd: host builder (AMD Ryzen 7 3700X, 8 vCPU, ~3.9 GB RAM), launched 2026-1
   command: HF_SHARD=bd setsid -f nohup research/.venv/bin/python -I research/checks/hf_posthoc.py ph 7 > raw/hf_ph_bd.out
 estimated wall ~31 h per shard (rough cost model, est_cost); expected finish ~2026-10-12 evening to 10-13 morning (-06:00).
 Shards are a fixed split; seeds per (cell, rep), so the split cannot change any row.
+2026-10-12 ~09:35 -06:00: shard bd DONE (163/163, 73,837 s). Shard wh at 28/247. Rebalance per QUEUE 8 step 2: copied hf_ph_wh.jsonl (28 rows) to builder; launched HF_SHARD=all with 5 workers on builder -> raw/hf_ph_all.out (219 jobs to run; duplicates with wh to be cross-checked at merge).
