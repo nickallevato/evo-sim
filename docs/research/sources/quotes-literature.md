@@ -720,3 +720,92 @@ Verbatim (whitespace-normalised substrings of the saved text, machine-checked 20
 ### Stearns2010 (Nat Rev Genet; sha256 077101180e25164da96b10c4a5a2fe763b05b0c9ec20e0c5e6e4b47da442f132)
 > "Are humans currently evolving? This question can be answered using data on lifetime reproductive success, multiple traits and genetic variation and covariation in those traits."
 > - locator: Abstract (PubMed; abstract only); role: N; params: L2 h
+
+## Refresh 2026-10-12c-lit quotes (variance components for FMnull, `research/checks/fm_mesa_null.py`)
+Full text via Europe PMC `fullTextXML` (PLoS OA) converted to plain text; every quote machine-checked as a whitespace-normalised substring. Ids `FML-<paper>-<n>`. Abstract-only items are marked. Numbers not in the text (figures, tables) are not recorded.
+
+### Smith2018 (sha256 c9d859311826828aa3457e037f60ea6abb2710228636b3301e5537899bfc4939)
+> "at the 1MB scale we infer that ~90% of regions have a mutation rate within 50% of the mean"
+> - id: FML-S1; locator: Abstract; role: N; note: 1 Mb; human germline DNM (130,000 DNMs, 3 trio datasets); mutation, not divergence
+> "The CV of the gamma distribution fitted to the density of DNMs is 0.18, 0.27 and 0.15 for the Francioli, Wong and Jonsson datasets respectively (Fig 2)."
+> - id: FML-S2; locator: Results, Distribution of rates; role: N; note: 1 Mb; human DNM; CV = excess over sampling error
+> "A gamma distribution with a coefficient of variation of 0.18 is one in which 90% of regions have a mutation rate within 30% of the mean"
+> - id: FML-S3; locator: Results, Distribution of rates; role: N; note: internal tension with the Abstract's 'within 50%' (CV 0.18 gives ~+/-30%); both recorded
+> "we divided the genome into non-overlapping windows of 10KB, 100KB, 1MB and 10MB and fit a gamma distribution to the number of mutations per region"
+> - id: FML-S4; locator: Results, Distribution of rates; role: N; note: scales 10 kb-10 Mb
+> "The slope for each dataset is shallower than this (Francioli b = -0.25; Wong b = -0.10; Jonsson b = -0.16)."
+> - id: FML-S5; locator: Results, Fig 4 text; role: N; note: log-log slope of CV on window size; -0.5 would mean all variation is finer-scale. 100-kb CV is NOT given in text (Fig 4/S1 Table only); 100-kb CV from these slopes is derived, not quoted
+> "We find that genomic features explain less than 40% of the explainable variance in the rate of DNM."
+> - id: FML-S6; locator: Abstract; role: N; note: covariates (replication time, recombination, GC etc.) vs DNM density; the Discussion says 'less than 50%'
+> "Furthermore, the largest amounts of variation are at the smallest scales (Fig 4) where we have the lowest density of DNMs."
+> - id: FML-S7; locator: Discussion; role: N; note: fine scale carries the most variance but is least measured
+> "the correlation between divergence and rate of DNM is only about half as strong as it could and this correlation gets worse as more divergent species are considered"
+> - id: FML-S8; locator: Discussion; role: N; note: divergence vs DNM density; biased gene conversion proposed as the cause
+
+### McVicker2009 (sha256 9bee2be2a1ef463dbfbf26bba15456b8a8e33aac1fd9bfff6fe3bf7073b3fcdf)
+> "a surprisingly large genome average diversity reduction due to selection of 19–26% on the autosomes and 12–40% on the X chromosome"
+> - id: FML-M1; locator: Abstract; role: N; note: diversity (Ne) reduction by background selection, genome average
+> "The mean autosomal B value predicted by our model is 0.74–0.81 (bootstrap 90% CI)"
+> - id: FML-M2; locator: Discussion; role: N; note: B = fraction of neutral diversity retained
+> "Long term selection, rather than complex speciation scenarios, explains the large intragenomic variation in human/chimpanzee divergence."
+> - id: FML-M3; locator: Abstract; role: N; note: H/C divergence variation; paper's own claim
+> "Human diversity and human/chimpanzee (H/C) divergence are indeed both substantially reduced near conserved segments"
+> - id: FML-M4; locator: Results; role: N; note: 10% nearest vs 50% farthest neutral sites; magnitudes in Fig 3 only (not in text)
+> "In comparison to B, factors previously proposed to influence local mutation rates such as recombination rate and GC content [17] are only weakly correlated with diversity and H/C divergence"
+> - id: FML-M5; locator: Discussion; role: N; note: 1 Mb windows; Spearman r^2 (Fig 7C)
+> "Pairwise correlations (Spearman's rank squared) with regional human/chimpanzee (H/C) divergence and human diversity in non-overlapping 1 Mb windows across all autosomes."
+> - id: FML-M6; locator: Figure 7 legend; role: N; note: 1 Mb; values in figure only
+> "Non-overlapping autosomal windows of sizes between 212 and 222 bp were used for calculations."
+> - id: FML-M7; locator: Figure S6 legend (Supporting Information); role: N; note: extraction lost superscripts: 2^12-2^22 bp (4 kb-4 Mb)
+
+### Phung2016 (sha256 35e3b9413f9139d549c317f894d6003401727ebceb197d7d3dd98985c03ac1d1)
+> "background selection in the ancestral population can still explain a large proportion of the variance in divergence across the genome"
+> - id: FML-P1; locator: Abstract; role: N; note: paper's claim; simulation, human-chimp and deeper pairs
+> "Here we use the value of Spearman's ρ estimated from the data after filtering out sites that could be affected by biased gene conversion (ρ = 0.108)."
+> - id: FML-P2; locator: Results (recombination vs human-chimp divergence); role: N; note: 100 kb windows; human-chimp
+> "When considering a model without background selection (i.e. B = 1 for all windows), the average value of Spearman's ρ between human-chimp divergence and recombination rate was 0.042"
+> - id: FML-P3; locator: Results; role: N; note: simulated, no BGS; with McVicker B the paper reports rho 0.107
+> "Each point represents the mean divergence and functional content (A and B) or recombination rate (C and D) in 1% of the 100kb windows binned by functional content or recombination rate."
+> - id: FML-P4; locator: Figure legend; role: N; note: window = 100 kb
+> "the main driver of these correlations is not the average amount of ancestral polymorphism, but rather the contribution to the variance in divergence due to the variance in ancestral polymorphism."
+> - id: FML-P5; locator: Results (S4 Fig discussion); role: N; note: ancestral-polymorphism variance, not mean, drives the BGS-divergence correlation
+
+### DuretArndt2008 (sha256 9576c4f34078f8e66b59dee065414862ea9c7630f84d4ec704cbd3762ea8db6c)
+> "the GC-content toward which sequences are evolving is strongly negatively correlated to the distance to telomeres and positively correlated to the rate of crossovers (R2 = 47%)"
+> - id: FML-D1; locator: Abstract; role: N; note: GC* (stationary GC) in primate non-coding DNA, 1 Mb; human
+> "we found at the 1 Mb scale a strong correlation between GC* and the sex-averaged rate of crossover on autosomes, both with the HAPMAP data (Pearson correlation R2 = 0.36, Figure 1b) and with the deCODE data (R2 = 0.31)."
+> - id: FML-D2; locator: Results; role: N; note: 1 Mb; R^2 of GC*, not of substitution density
+> "the crossover rate explains 36% of the variance in GC*, compared to only 15% of the variance in GC"
+> - id: FML-D3; locator: Results; role: N; note: 1 Mb; human
+> "Thus, for an average recombination hotspot (i.e. 4Ns = 5.2), the impact of BGC on the local substitution rate is relatively modest."
+> - id: FML-D4; locator: Results, BGC Model; role: N; note: model prediction
+> "The rate of substitution in that hotspot is predicted to be about 11.1%, i.e. about 20 times higher than in the rest of the genome."
+> - id: FML-D5; locator: Results, BGC Model; role: N; note: hotspot of ~450 cM/Mb; model prediction; hotspot extent small
+> "recombination hotspots can create strong substitution hotspots"
+> - id: FML-D6; locator: Abstract; role: N; note: gBGC substitution excess is localized to hotspots
+
+### Hobolth2007 (sha256 a2a5520884c479cf77fbd224f933c2f5228ce20b1494f38a4ed6d84669144c3f)
+> "We find a very recent speciation time of human–chimp (4.1 ± 0.4 million years), and fairly large ancestral effective population sizes (65,000 ± 30,000 for the human–chimp ancestor and 45,000 ± 10,000 for the human–chimp–gorilla ancestor)."
+> - id: FML-H1; locator: Abstract; role: N; note: coal-HMM; 1.9 Mb of four autosomal HCGO alignments; assumes orangutan 18 My, generation 25 y
+> "Furthermore, around 50% of the human genome coalesces with chimpanzee after speciation with gorilla."
+> - id: FML-H2; locator: Abstract; role: N; note: i.e. coalescence in the HCG ancestor
+> "We apply the HMM to four autosomal contiguous human–chimp–gorilla–orangutan alignments comprising a total of 1.9 million base pairs."
+> - id: FML-H3; locator: Abstract; role: N; note: data size
+> "shows that 78% ± 5% of the alignment supports state HC1"
+> - id: FML-H4; locator: Results (X chromosome); role: N; note: X chromosome; ~250 kb; state HC1 = human-chimp sister topology
+> "The average number of base pairs in state HC1 correlates well with the average recombination rate of the target estimated from pedigree data"
+> - id: FML-H5; locator: Results (Table 2); role: N; note: tract-length scale: numbers in Table 2, not in extracted text
+
+### MasseyKoren2022 (sha256 6c6e6c61bb0feea0dbbe5bdf4cd510095878c22c95aa11c4beb2470f14e5db15)
+> "Sequence data analyzed in this study are available from the Sequence Read Archive (SRA) under accession number PRJNA419407. The reference assembly T2T-CHM13 v1.1 was downloaded from GitHub (https://github.com/marbl/CHM13). Chain files for liftOver (grch38.t2t-chm13-v1.1.over.chain; t2t-chm13-v1.1.grch38.over.chain) were obtained from the UCSC Genome Browser (https://t2t.gi.ucsc.edu/chm13/dev/t2t-chm13-v1.1/downloads/)."
+> - id: FML-R1; locator: Data availability; role: N; note: T2T replication-timing profiles (5 cell lines); processed profile location NOT stated in the open text
+
+### HodgkinsonEyreWalker2011 (sha256 676d1d7066e2b4b948296bcedb8256d87934a5fb1e483d36892ec743a72d768b)
+> "The mutation rate varies over many different scales, from adjacent sites to whole chromosomes, with the strongest variation seen at the smallest scales."
+> - id: FML-HE1; locator: Abstract (Europe PMC record; paywalled, abstract only); role: N; note: no numbers in abstract
+
+### HwangGreen2004 (sha256 5c4e781eab4f8e95d241c55888f1560215cc221eafd38e28fb8d22dd881426d1)
+> "In contrast to other substitution types, CpG transition substitutions have accumulated in a relatively clock-like fashion."
+> - id: FML-HG1; locator: Abstract (Europe PMC record; PNAS page behind bot challenge, abstract only); role: N; note: 19 mammals, 1.7 Mb region
+> "characterize phylogenetic variation in context-dependent substitution patterns in a 1.7-megabase genomic region in 19 mammalian species"
+> - id: FML-HG2; locator: Abstract; role: N; note: 
