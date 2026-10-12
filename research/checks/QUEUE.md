@@ -56,6 +56,7 @@ Next:
 11. **Review of the 12 mapping claims: DONE 2026-10-10** (`results/REVIEW-mapping-12-combined.md`, review #50; 0 MAJOR; verdicts applied to the claim files; all external verdicts that rest on unretrieved literature stay pending).
 12. **E leftovers, GAP-03.**
 13. **RH pass: DONE 2026-10-10** (all Statement quotes tagged in the claim files; rhetoric items RH-9..RH-20 and counters in `ledgers/slips.md`; four unclear tags (B9, C7, ROOT, ROOT-M) listed there for the owner; nodes with only-rhetoric support marked: ROOT-B, D8, ROOT-T quote 1). Open: Q157/Q158 tags (owner decision pending); FM10 internal stays pending until Day releases method (owner decision 2026-10-10).
+14. **B9 (low-stakes tier, one combined review `REVIEW-R4-B9-combined.md`): written up, combined review pending.** `results/R4-B9.md`, pre-registered e95f0d3 (`b9_relaxed_load.py`; exploratory reading-A numbers disclosed), run locally. Owner RH rule (2026-10-11): central range 338-11,484 y touches 100-999 y => Q104 dialectic; proposed internal holds, external contradicted (premise 1 false), fidelity unverifiable; GAP-05 stays open. Not integrated.
 
 
 ## Later queue (test-methods review, 2026-10-11; candidates only, nothing pre-registered or run)

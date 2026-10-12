@@ -1,0 +1,68 @@
+sources/raw/refresh-2026-10-09b/lit/txt/Lynch2016.txt sha256 802c9d5cd70aff2d21bd4f34a98f9790e2c5330ffbc908251c4dbc3f9e1062af
+  OK   ∼100×0.01×1%=1% per generation
+  OK   as high as 5% per generation
+  OK   Extrapolating by dividing by 6.7 suggests a human decline rate of ∼0.5%
+  OK   0.2–2% decline in fitness per generation
+  OK   1–10% of all human mutations
+  OK   on the order of 1% per mutation
+  OK   Owing to the indirect way in which this estimate of the recurrent human mutation load has been obtained
+sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json sha256 cba6b15b13d3cd04e38005a9c1388bb65f473abcdc1651d95dffdab889da92bc
+  OK   rendered infertile and gone extinct within centuries
+  OK   1. For neutral substitution to work to fixation at its maximum speed, natural selection cannot be operating.
+  OK   2. There are 3x more harmful substitutions than neutral substitutions.
+  OK   There are 3x more harmful mutations than neutral ones.
+  OK   requires ~one million years apiece to fixate
+
+## Reading A: Lynch anchors (define the central range)
+| case | d per gen | gens to W=0.5 | years | gens to W=0.1 | years |
+|---|---|---|---|---|---|
+| Lynch mouse extrapolation | 0.5% | 138.3 | 3,457 | 459.4 | 11,484 |
+| Lynch central 100x0.01x1% | 1% | 69.0 | 1,724 | 229.1 | 5,728 |
+| Lynch upper | 5% | 13.5 | 338 | 44.9 | 1,122 |
+
+Central range: 338 - 11,484 y
+
+## Reading A: Drosophila equal-family-size range (reported)
+| case | d per gen | gens to W=0.5 | years | gens to W=0.1 | years |
+|---|---|---|---|---|---|
+| Drosophila (Lynch cites) | 0.2% | 346.2 | 8,656 | 1150.1 | 28,754 |
+| Drosophila (Lynch cites) | 2% | 34.3 | 858 | 114.0 | 2,849 |
+
+## Reading A: Lynch grid, U = 100, f x s (years to W=0.5 / W=0.1)
+| f \ s | 0.1% | 0.2% | 0.5% | 1% | 2% |
+|---|---|---|---|---|---|
+| 1% | d 0.1%: 17,320 / 57,536 | d 0.2%: 8,656 / 28,754 | d 0.5%: 3,457 / 11,484 | d 1%: 1,724 / 5,728 | d 2%: 858 / 2,849 |
+| 2% | d 0.2%: 8,656 / 28,754 | d 0.4%: 4,323 / 14,362 | d 1%: 1,724 / 5,728 | d 2%: 858 / 2,849 | d 4%: 424 / 1,410 |
+| 5% | d 0.5%: 3,457 / 11,484 | d 1%: 1,724 / 5,728 | d 2.5%: 684 / 2,274 | d 5%: 338 / 1,122 | d 10%: 164 / 546 |
+| 10% | d 1%: 1,724 / 5,728 | d 2%: 858 / 2,849 | d 5%: 338 / 1,122 | d 10%: 164 / 546 | d 20%: 78 / 258 |
+
+Grid span: 78 - 57,536 y
+
+## Reading A: Day's premise 2 (f = 0.75)
+| case | d per gen | gens to W=0.5 | years | gens to W=0.1 | years |
+|---|---|---|---|---|---|
+| U 76.8, s 0.1% | 5.76% | 11.7 | 292 | 38.8 | 970 |
+| U 76.8, s 0.2% | 11.5% | 5.7 | 142 | 18.8 | 470 |
+| U 76.8, s 0.5% | 28.8% | 2.0 | 51 | 6.8 | 169 |
+| U 76.8, s 1% | 57.6% | 0.8 | 20 | 2.7 | 67 |
+| U 100, s 0.1% | 7.5% | 8.9 | 222 | 29.5 | 738 |
+| U 100, s 0.2% | 15% | 4.3 | 107 | 14.2 | 354 |
+| U 100, s 0.5% | 37.5% | 1.5 | 37 | 4.9 | 122 |
+| U 100, s 1% | 75% | 0.5 | 12 | 1.7 | 42 |
+
+Day premise-2 span: 12.5 - 970.3 y
+
+## Reading B: neutral-like fixation time 4 Ne generations, g = 25 y
+| Ne | gens | years | x upper 'centuries' (999 y) |
+|---|---|---|---|
+| 1e+04 | 40,000 | 1,000,000 | 1,001x |
+| 1.31e+04 | 52,400 | 1,310,000 | 1,311x |
+| 1.62e+04 | 64,800 | 1,620,000 | 1,622x |
+
+## Criterion
+central range 338-11,484 y; overlaps 100-999 y: True; intersects 10-9,990 y: True
+RH tag: DIALECTIC
+P1 (~340..~11,500, dialectic): HOLDS
+P2 (Day premise 2 all within 10-999 y): HOLDS
+P3 (reading B >= 1,000x centuries): HOLDS
+P4 (grid < 100 to > 1e4 y): HOLDS
