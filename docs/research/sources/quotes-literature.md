@@ -603,6 +603,24 @@ Verbatim (whitespace-normalised substrings of the saved text, machine-checked 20
 > "Our results are consistent with 10–20% of amino acid differences between humans and chimpanzees having been fixed by positive selection"
 > - locator: Abstract; role: N; params: alpha (RG-03)
 
+### Boyko2008 and Kim2017: s convention and rescaling (added 2026-10-11, R4-GAP05 fix pass; same saved files, thin spaces normalised to plain spaces, machine-checked)
+> "We assume s and 2s are the selective disadvantage of heterozygotes and homozygous mutants and infer the DFE based on the scaled selection parameter, γ = 2Nes."
+> - locator: Boyko 2008, Materials and Methods (Boyko2008 sha256 as above); role: N; params: s convention (GAP-05)
+> "our results should be interpreted as the distribution of heterozygote fitnesses over all genetic backgrounds"
+> - locator: Boyko 2008, Discussion/Methods (saved text); role: N
+> "The DFEs inferred using the approach described above were for the population-scaled selection coefficient, scaled by twice the ancestral population size (γ = 2NAs)."
+> - locator: Kim 2017, Materials and Methods, "Estimating s from 2Ns"; role: N
+> "We computed NA from the value of θS inferred from synonymous sites (Table S1 in File S1) using the equation θS = 4NAμLS."
+> - locator: Kim 2017, same subsection; role: N
+> "We assumed the mutation rate to be μ = 1.5 × 10−8 to reflect estimates of the mutation rate in the human exome (Ségurel et al. 2014)."
+> - locator: Kim 2017, same subsection; role: N
+> "For comparison to results from Boyko et al. (2008), we assumed the mutation rate to be μ = 1.8 × 10−8. For the reanalysis of the Boyko et al. (2008) data set, we assumed the same ancestral population size, N = 7778 diploids, instead of computing it."
+> - locator: Kim 2017, same subsection; role: N
+> "like the method of Boyko et al. (2008), our method assumes additive selective effects and should be interpreted as averaging of selection over all heterozygotes and genetic backgrounds."
+> - locator: Kim 2017, Discussion; role: N
+> "A population size of 10,000 diploids is used to rescale the distribution of 2Ns to s for Eyre-Walker et al. (2006). For Boyko et al. (2008) and Li et al. (2010), we rescale the DFE from 2Ns to s using population sizes of 25,636 and 52,097 diploids, respectively"
+> - locator: Kim 2017, Figure 1 legend (applies to the figure's comparison curves, not to Table 3); role: N
+
 ### EyreWalker2006 (sha256 78fc986d4f20eb6052a3e6323e9c0c15fa361ff04929f188c2d80d74fbf4c36f)
 > "a gamma distribution with a shape parameter of 0.23 provides a good fit to the data and we estimate that >50% of mutations are likely to have mild effects, such that they reduce fitness by between one one-thousandth and one-tenth"
 > - locator: Abstract (abstract only); role: N
