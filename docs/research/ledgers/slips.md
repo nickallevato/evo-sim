@@ -78,7 +78,7 @@ Each statement is classified by how it works in its source (RH1). It is analysed
 Both readings recorded; no choice made, no verdict changed (as with Q157/Q158).
 | Node | Quote | Reading A (dialectic) | Reading B (rhetoric) |
 |---|---|---|---|
-| B9 | "the human species would have been rendered infertile and gone extinct within centuries" (Q104) | literal reductio about the cost of drift | hyperbole for the harmful-to-neutral ratio |
+| B9 | "the human species would have been rendered infertile and gone extinct within centuries" (Q104) | literal reductio about the cost of drift | hyperbole for the harmful-to-neutral ratio. **Resolved 2026-10-11 (R4 B9): dialectic, by the owner rule** (graded by whether the literal claim is remotely close): relaxed-selection load gives 338-11,484 y, centuries on Lynch's upper value and Day's premise 2. Reading A (mutation load) is recorded as a possible rescue of the internal verdict; owner decision pending between holds-conditional-on-A and keep non-sequitur (N2a under reading B). |
 | C7 | "genetic drift isn't happening at all over the last 7000 years" (Q96) | literal; scored against C and C4 | intensifier for "no fixations observed" |
 | ROOT | "mathematical impossibility of evolution by natural selection..." | impossibility = F_max < F_req (the repo's form, used for scoring under rule C) | intensifier |
 | ROOT-M | same wording | same | same |

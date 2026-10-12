@@ -265,9 +265,12 @@ flowchart RL
   F1b["F1b: McCarthy: mutations do not increase in frequency one at a ti…"]:::critic
   chk_B2a["chk:B2a: Hard Limits tail (exact chain)"]:::audit
   chk_B2b["chk:B2b: Hard Limits ceiling and Wright N_e formula against simulated…"]:::audit
+  chk_B9["chk:B9: Q104 'infertile and gone extinct within centuries' mathed ou…"]:::audit
   chk_C1d["chk:C1d: Day's 11-bin and two-period aDNA statistics on the real AADR…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
   B7a ==>|"undercuts · upheld"| B9
+  chk_B9 -->|"rebuts · upheld"| B9
+  chk_B9 -.->|"undermines · upheld"| B9
   B1c -.->|"undermines · upheld"| B1a
   B4a ==>|"undercuts · upheld"| B1a
   B6 -.->|"undermines · upheld"| B1a
@@ -903,7 +906,7 @@ flowchart RL
 
 ## Other: objections to audit checks and unregistered items (part 1)
 
-Objections to chk:A-sim, chk:A2e, chk:A2e-alpha, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B2, chk:B3, chk:B3-family, chk:B3g, chk:B3m, chk:B4a, chk:B5b, chk:C1, chk:C1b.
+Objections to chk:A-sim, chk:A2e, chk:A2e-alpha, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B2, chk:B3, chk:B3-family, chk:B3g, chk:B3m, chk:B4a, chk:B5b, chk:B9, chk:C1.
 
 ```mermaid
 flowchart RL
@@ -927,9 +930,8 @@ flowchart RL
   chk_B3m["chk:B3m: Day's 'median 25 across 55 vertebrates' recomputed from Berg…"]:::audit
   chk_B4a["chk:B4a: two-lineage divergence with ILS"]:::audit
   chk_B5b["chk:B5b: Mansfield's supply argument with a sourced neutral fraction …"]:::audit
+  chk_B9["chk:B9: Q104 'infertile and gone extinct within centuries' mathed ou…"]:::audit
   chk_C1["chk:C1: 1240k ascertainment"]:::audit
-  chk_C1b["chk:C1b: Day's binned 21-count"]:::audit
-  chk_C1c["chk:C1c: Day's 11-bin aDNA statistic under real AADR call depth and a…"]:::audit
   rev_R4_A2e_alpha_correctness["rev:R4-A2e-alpha-correctness: correctness review of A2e-alpha; load-bearing tier"]:::audit
   rev_R4_A2e_alpha_steelman_critic["rev:R4-A2e-alpha-steelman-critic: critic-side steelman review of A2e-alpha; load-bearing tier"]:::audit
   rev_R4_A2e_alpha_steelman_day["rev:R4-A2e-alpha-steelman-day: Day-side steelman review of A2e-alpha; load-bearing tier"]:::audit
@@ -945,8 +947,8 @@ flowchart RL
   rev_R4_B3g_combined["rev:R4-B3g-combined: combined review of B3g; low-stakes tier"]:::audit
   rev_R4_B3m_combined["rev:R4-B3m-combined: combined review of B3m; low-stakes tier"]:::audit
   rev_R4_B5b_combined["rev:R4-B5b-combined: combined review (correctness, Day-side and critic-side steel…"]:::audit
+  rev_R4_B9_combined["rev:R4-B9-combined: review #61, combined (B9); low-stakes tier"]:::audit
   rev_R4_correctness["rev:R4-correctness: review #4, correctness"]:::audit
-  rev_R4_new["rev:R4-new: review #4, new checks"]:::audit
   rev_R4_steelman_critic["rev:R4-steelman-critic: review #4, critic-side steelman"]:::audit
   rev_review_2["rev:review-2: correctness review #2"]:::audit
   rev_R4_steelman_critic ==>|"undercuts · upheld"| chk_A_sim
@@ -972,14 +974,14 @@ flowchart RL
   B3d ==>|"undercuts · partly"| chk_B3m
   rev_R4_correctness ==>|"undercuts · upheld"| chk_B4a
   rev_R4_B5b_combined ==>|"undercuts · upheld"| chk_B5b
+  rev_R4_B9_combined ==>|"undercuts · upheld"| chk_B9
+  rev_R4_B9_combined ==>|"undercuts · partly"| chk_B9
   rev_R4_correctness ==>|"undercuts · upheld"| chk_C1
-  rev_R4_new ==>|"undercuts · upheld"| chk_C1b
-  chk_C1c ==>|"undercuts · upheld"| chk_C1b
 ```
 
 ## Other: objections to audit checks and unregistered items (part 2)
 
-Objections to chk:C1c, chk:C1d, chk:C1e, chk:C2, chk:D1, chk:D15, chk:F1, chk:F1b, chk:F2, chk:F3a, chk:FM.
+Objections to chk:C1b, chk:C1c, chk:C1d, chk:C1e, chk:C2, chk:D1, chk:D15, chk:F1, chk:F1b, chk:F2, chk:F3a.
 
 ```mermaid
 flowchart RL
@@ -988,7 +990,7 @@ flowchart RL
   classDef critic fill:#3b82f622,stroke:#3b82f6,stroke-width:2px
   classDef literature fill:#a3a3a322,stroke:#a3a3a3,stroke-width:2px
   classDef audit fill:#22c55e22,stroke:#22c55e,stroke-width:2px
-  ROOT_FM["ROOT-FM: Day, 'The Fourth Mechanism': substitution density along the …"]:::day
+  chk_C1b["chk:C1b: Day's binned 21-count"]:::audit
   chk_C1c["chk:C1c: Day's 11-bin aDNA statistic under real AADR call depth and a…"]:::audit
   chk_C1d["chk:C1d: Day's 11-bin and two-period aDNA statistics on the real AADR…"]:::audit
   chk_C1e["chk:C1e: C1c model on each published Holocene N_e trajectory (Gravel,…"]:::audit
@@ -999,7 +1001,6 @@ flowchart RL
   chk_F1b["chk:F1b: in-transit fixation count measured directly (latency vs thro…"]:::audit
   chk_F2["chk:F2: multi-locus interference"]:::audit
   chk_F3a["chk:F3a: Zeng et al. 2021 s = 0.001: quotes, fidelity scan, latency a…"]:::audit
-  chk_FM["chk:FM: Day's mesas replicated on the T2T ape alignment against a he…"]:::audit
   rev_R4_C1c_correctness["rev:R4-C1c-correctness: review #9, correctness (C1c)"]:::audit
   rev_R4_C1c_steelman_critic["rev:R4-C1c-steelman-critic: review #9, critic-side steelman (C1c)"]:::audit
   rev_R4_C1c_steelman_day["rev:R4-C1c-steelman-day: review #9, Day-side steelman (C1c)"]:::audit
@@ -1015,14 +1016,12 @@ flowchart RL
   rev_R4_D15_steelman_day["rev:R4-D15-steelman-day: Day-side steelman review of Hössjer regulatory waiting time;…"]:::audit
   rev_R4_F1b_combined["rev:R4-F1b-combined: combined review (correctness, Day-side and critic-side steel…"]:::audit
   rev_R4_F3a_combined["rev:R4-F3a-combined: combined review of F3a; low-stakes tier"]:::audit
-  rev_R4_FM_correctness["rev:R4-FM-correctness: correctness review of the FM mesa replication; load-bearing …"]:::audit
-  rev_R4_FM_fix2_light["rev:R4-FM-fix2-light: light review of FM fix pass 2 (fm_fix2.py); low-stakes tier"]:::audit
-  rev_R4_FM_mirror_combined["rev:R4-FM-mirror-combined: combined re-review of the FM fix pass, post hoc follow-ups a…"]:::audit
-  rev_R4_FM_steelman_critic["rev:R4-FM-steelman-critic: critic-side steelman review of the FM replication; load-bear…"]:::audit
-  rev_R4_FM_steelman_day["rev:R4-FM-steelman-day: Day-side steelman review of the FM replication; load-bearing…"]:::audit
   rev_R4_correctness["rev:R4-correctness: review #4, correctness"]:::audit
+  rev_R4_new["rev:R4-new: review #4, new checks"]:::audit
   rev_R4_steelman_day["rev:R4-steelman-day: review #4, Day-side steelman"]:::audit
   rev_review_3["rev:review-3: review #3 (correctness + two-sided steelman)"]:::audit
+  rev_R4_new ==>|"undercuts · upheld"| chk_C1b
+  chk_C1c ==>|"undercuts · upheld"| chk_C1b
   chk_C1d ==>|"undercuts · partly"| chk_C1c
   rev_R4_C1c_correctness ==>|"undercuts · upheld"| chk_C1c
   rev_R4_C1c_steelman_day ==>|"undercuts · upheld"| chk_C1c
@@ -1043,17 +1042,11 @@ flowchart RL
   rev_R4_correctness ==>|"undercuts · upheld"| chk_F2
   rev_R4_steelman_day ==>|"undercuts · upheld"| chk_F2
   rev_R4_F3a_combined ==>|"undercuts · upheld"| chk_F3a
-  ROOT_FM ==>|"undercuts · partly"| chk_FM
-  rev_R4_FM_correctness ==>|"undercuts · upheld"| chk_FM
-  rev_R4_FM_steelman_day ==>|"undercuts · upheld"| chk_FM
-  rev_R4_FM_steelman_critic ==>|"undercuts · upheld"| chk_FM
-  rev_R4_FM_mirror_combined ==>|"undercuts · upheld"| chk_FM
-  rev_R4_FM_fix2_light ==>|"undercuts · upheld"| chk_FM
 ```
 
 ## Other: objections to audit checks and unregistered items (part 3)
 
-Objections to chk:G2c, chk:GAP02, chk:GAP04, chk:GAP07, chk:GAP07b, chk:GAP07c, chk:H, chk:H2-hard, chk:H3, chk:H8, chk:L1, chk:L6.
+Objections to chk:FM, chk:G2c, chk:GAP02, chk:GAP04, chk:GAP07, chk:GAP07b, chk:GAP07c, chk:H, chk:H2-hard, chk:H3.
 
 ```mermaid
 flowchart RL
@@ -1062,6 +1055,8 @@ flowchart RL
   classDef critic fill:#3b82f622,stroke:#3b82f6,stroke-width:2px
   classDef literature fill:#a3a3a322,stroke:#a3a3a3,stroke-width:2px
   classDef audit fill:#22c55e22,stroke:#22c55e,stroke-width:2px
+  ROOT_FM["ROOT-FM: Day, 'The Fourth Mechanism': substitution density along the …"]:::day
+  chk_FM["chk:FM: Day's mesas replicated on the T2T ape alignment against a he…"]:::audit
   chk_G2c["chk:G2c: forward simulation of unlinked neutral diversity under sweep…"]:::audit
   chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
   chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
@@ -1071,9 +1066,11 @@ flowchart RL
   chk_H["chk:H: cost of selection (Haldane, Nunney, Keightley)"]:::audit
   chk_H2_hard["chk:H2-hard: hard-selection multilocus treadmill"]:::audit
   chk_H3["chk:H3: cost of selection at human scale: hard adaptive treadmill, s…"]:::audit
-  chk_H8["chk:H8: Haldane's 1/300 in Haldane's own regime (R 1.05-3, D measure…"]:::audit
-  chk_L1["chk:L1: human-chimp dN/dS on Ensembl one2one vs all knownCanonical g…"]:::audit
-  chk_L6["chk:L6: Day's 'ten of twelve' LTEE populations with undone fixations…"]:::audit
+  rev_R4_FM_correctness["rev:R4-FM-correctness: correctness review of the FM mesa replication; load-bearing …"]:::audit
+  rev_R4_FM_fix2_light["rev:R4-FM-fix2-light: light review of FM fix pass 2 (fm_fix2.py); low-stakes tier"]:::audit
+  rev_R4_FM_mirror_combined["rev:R4-FM-mirror-combined: combined re-review of the FM fix pass, post hoc follow-ups a…"]:::audit
+  rev_R4_FM_steelman_critic["rev:R4-FM-steelman-critic: critic-side steelman review of the FM replication; load-bear…"]:::audit
+  rev_R4_FM_steelman_day["rev:R4-FM-steelman-day: Day-side steelman review of the FM replication; load-bearing…"]:::audit
   rev_R4_G2c_combined["rev:R4-G2c-combined: combined review (correctness, Day-side and critic-side steel…"]:::audit
   rev_R4_GAP07b_correctness["rev:R4-GAP07b-correctness: review #8, correctness (GAP-07b)"]:::audit
   rev_R4_GAP07b_steelman_critic["rev:R4-GAP07b-steelman-critic: review #8, critic-side steelman (GAP-07b)"]:::audit
@@ -1086,16 +1083,14 @@ flowchart RL
   rev_R4_H3_correctness["rev:R4-H3-correctness: review #7, correctness (H3)"]:::audit
   rev_R4_H3_steelman_critic["rev:R4-H3-steelman-critic: review #7, critic-side steelman (H3)"]:::audit
   rev_R4_H3_steelman_day["rev:R4-H3-steelman-day: review #7, Day-side steelman (H3)"]:::audit
-  rev_R4_H8_correctness["rev:R4-H8-correctness: correctness review of Haldane regime / Term 3; load-bearing …"]:::audit
-  rev_R4_H8_kscale64_combined["rev:R4-H8-kscale64-combined: combined review of H8 kscale64; low-stakes tier"]:::audit
-  rev_R4_H8_steelman_critic["rev:R4-H8-steelman-critic: critic-side steelman review of Haldane regime / Term 3; load…"]:::audit
-  rev_R4_H8_steelman_day["rev:R4-H8-steelman-day: Day-side steelman review of Haldane regime / Term 3; load-be…"]:::audit
-  rev_R4_L1_correctness["rev:R4-L1-correctness: correctness review of L1; load-bearing tier"]:::audit
-  rev_R4_L1_steelman_critic["rev:R4-L1-steelman-critic: critic-side steelman review of L1; load-bearing tier"]:::audit
-  rev_R4_L1_steelman_day["rev:R4-L1-steelman-day: Day-side steelman review of L1; load-bearing tier"]:::audit
-  rev_R4_L6_combined["rev:R4-L6-combined: review #59, combined (L6); low-stakes tier"]:::audit
   rev_R4_correctness["rev:R4-correctness: review #4, correctness"]:::audit
   rev_R4_new["rev:R4-new: review #4, new checks"]:::audit
+  ROOT_FM ==>|"undercuts · partly"| chk_FM
+  rev_R4_FM_correctness ==>|"undercuts · upheld"| chk_FM
+  rev_R4_FM_steelman_day ==>|"undercuts · upheld"| chk_FM
+  rev_R4_FM_steelman_critic ==>|"undercuts · upheld"| chk_FM
+  rev_R4_FM_mirror_combined ==>|"undercuts · upheld"| chk_FM
+  rev_R4_FM_fix2_light ==>|"undercuts · upheld"| chk_FM
   rev_R4_G2c_combined ==>|"undercuts · upheld"| chk_G2c
   rev_R4_GAPS_correctness ==>|"undercuts · upheld"| chk_GAP02
   rev_R4_GAPS_steelman_day ==>|"undercuts · upheld"| chk_GAP02
@@ -1114,19 +1109,11 @@ flowchart RL
   rev_R4_H3_correctness ==>|"undercuts · upheld"| chk_H3
   rev_R4_H3_steelman_day ==>|"undercuts · upheld"| chk_H3
   rev_R4_H3_steelman_critic ==>|"undercuts · upheld"| chk_H3
-  rev_R4_H8_correctness ==>|"undercuts · upheld"| chk_H8
-  rev_R4_H8_steelman_day ==>|"undercuts · upheld"| chk_H8
-  rev_R4_H8_steelman_critic ==>|"undercuts · upheld"| chk_H8
-  rev_R4_H8_kscale64_combined ==>|"undercuts · upheld"| chk_H8
-  rev_R4_L1_correctness ==>|"undercuts · upheld"| chk_L1
-  rev_R4_L1_steelman_day ==>|"undercuts · upheld"| chk_L1
-  rev_R4_L1_steelman_critic ==>|"undercuts · upheld"| chk_L1
-  rev_R4_L6_combined ==>|"undercuts · upheld"| chk_L6
 ```
 
 ## Other: objections to audit checks and unregistered items (part 4)
 
-Objections to chk:L7, chk:R2-term3-ratio, chk:X1, chk:XT, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
+Objections to chk:H8, chk:L1, chk:L6, chk:L7, chk:R2-term3-ratio, chk:X1, chk:XT, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
 
 ```mermaid
 flowchart RL
@@ -1140,10 +1127,21 @@ flowchart RL
   D9a["D9a: Dawkins's Weasel actually demonstrates the opposite of its p…"]:::day
   H4["H4: Worden's O(1) bits per generation is exactly the Haldane-sca…"]:::day
   chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
+  chk_H8["chk:H8: Haldane's 1/300 in Haldane's own regime (R 1.05-3, D measure…"]:::audit
+  chk_L1["chk:L1: human-chimp dN/dS on Ensembl one2one vs all knownCanonical g…"]:::audit
+  chk_L6["chk:L6: Day's 'ten of twelve' LTEE populations with undone fixations…"]:::audit
   chk_L7["chk:L7: readings of Yoo 2025 SI sheets 14/19/24 that give 410 M; bas…"]:::audit
   chk_R2_term3_ratio["chk:R2-term3-ratio: R2 note comparing Term 3 with Haldane + d (7.7×, corrected t…"]:::audit
   chk_X1["chk:X1: arithmetic and internal-validity audit of every numeric crit…"]:::audit
   chk_XT["chk:XT: cross-tool replication of the k-vs-mu and fixation-time resu…"]:::audit
+  rev_R4_H8_correctness["rev:R4-H8-correctness: correctness review of Haldane regime / Term 3; load-bearing …"]:::audit
+  rev_R4_H8_kscale64_combined["rev:R4-H8-kscale64-combined: combined review of H8 kscale64; low-stakes tier"]:::audit
+  rev_R4_H8_steelman_critic["rev:R4-H8-steelman-critic: critic-side steelman review of Haldane regime / Term 3; load…"]:::audit
+  rev_R4_H8_steelman_day["rev:R4-H8-steelman-day: Day-side steelman review of Haldane regime / Term 3; load-be…"]:::audit
+  rev_R4_L1_correctness["rev:R4-L1-correctness: correctness review of L1; load-bearing tier"]:::audit
+  rev_R4_L1_steelman_critic["rev:R4-L1-steelman-critic: critic-side steelman review of L1; load-bearing tier"]:::audit
+  rev_R4_L1_steelman_day["rev:R4-L1-steelman-day: Day-side steelman review of L1; load-bearing tier"]:::audit
+  rev_R4_L6_combined["rev:R4-L6-combined: review #59, combined (L6); low-stakes tier"]:::audit
   rev_R4_L7_combined["rev:R4-L7-combined: review #60, combined (L7); low-stakes tier"]:::audit
   rev_R4_X1_correctness["rev:R4-X1-correctness: review #12, correctness (X1)"]:::audit
   rev_R4_X1_rule_audit["rev:R4-X1-rule-audit: review #12, blind audit of the verdict rule (X1)"]:::audit
@@ -1154,6 +1152,14 @@ flowchart RL
   x_darwinzdf42_hitchhiking["x:darwinzdf42-hitchhiking: DarwinZDF42: selective sweeps fix many loci at once, mostly …"]:::critic
   x_dawkins_weasel["x:dawkins-weasel: Dawkins's Weasel program (1986): cumulative selection reache…"]:::literature
   x_eugine_sqrtN["x:eugine-sqrtN: Commenter 'Eugine' at Tree of Woe: 'Vox is wrong about paral…"]:::critic
+  rev_R4_H8_correctness ==>|"undercuts · upheld"| chk_H8
+  rev_R4_H8_steelman_day ==>|"undercuts · upheld"| chk_H8
+  rev_R4_H8_steelman_critic ==>|"undercuts · upheld"| chk_H8
+  rev_R4_H8_kscale64_combined ==>|"undercuts · upheld"| chk_H8
+  rev_R4_L1_correctness ==>|"undercuts · upheld"| chk_L1
+  rev_R4_L1_steelman_day ==>|"undercuts · upheld"| chk_L1
+  rev_R4_L1_steelman_critic ==>|"undercuts · upheld"| chk_L1
+  rev_R4_L6_combined ==>|"undercuts · upheld"| chk_L6
   rev_R4_L7_combined ==>|"undercuts · upheld"| chk_L7
   rev_R4_correctness ==>|"undercuts · upheld"| chk_R2_term3_ratio
   rev_R4_X1_correctness ==>|"undercuts · upheld"| chk_X1
@@ -1183,7 +1189,7 @@ This uses grounded semantics (Dung 1995): an argument is *accepted* when every a
 | day (99) | 38 / 60 / 1 | 67 / 32 / 0 | 43 / 56 / 0 |
 | ally (13) | 2 / 11 / 0 | 10 / 3 / 0 | 5 / 8 / 0 |
 | critic (63) | 37 / 25 / 1 | 62 / 1 / 0 | 46 / 17 / 0 |
-| audit (123) | 80 / 43 / 0 | 80 / 43 / 0 | 80 / 43 / 0 |
+| audit (125) | 81 / 44 / 0 | 81 / 44 / 0 | 81 / 44 / 0 |
 
 **Support is not modelled by Dung's framework.** A claim can be *accepted* (no surviving direct objection) while claims it rests on are rejected. The last column lists those rejected supports (lenient reading), so read both together. ROOT, for instance, draws few direct objections; most objections target its supports.
 
@@ -1395,6 +1401,7 @@ Load-bearing claims are in **bold**.
 | chk:B3m | audit | rejected | rejected | rejected | – |
 | chk:B4a | audit | rejected | rejected | rejected | – |
 | chk:B5b | audit | rejected | rejected | rejected | – |
+| chk:B9 | audit | rejected | rejected | rejected | – |
 | chk:C1 | audit | rejected | rejected | rejected | – |
 | chk:C1b | audit | rejected | rejected | rejected | – |
 | chk:C1c | audit | rejected | rejected | rejected | – |
@@ -1447,6 +1454,7 @@ Load-bearing claims are in **bold**.
 | rev:R4-B3g-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-B3m-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-B5b-combined | audit | accepted | accepted | accepted | – |
+| rev:R4-B9-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-C1c-correctness | audit | accepted | accepted | accepted | – |
 | rev:R4-C1c-steelman-critic | audit | accepted | accepted | accepted | – |
 | rev:R4-C1c-steelman-day | audit | accepted | accepted | accepted | – |

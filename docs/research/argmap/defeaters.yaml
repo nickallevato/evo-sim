@@ -5526,3 +5526,56 @@
   counter: [d421, d422, d423]
   note: 'Critic-side. Day-side charitable reading (rule C): "most coding substitutions are not selection-driven", which follows from 0.80 but equally from 0.23 under neutral theory, so it does not carry the stated words. External stays contested, not contradicted: a false premise does not make the conclusion false.'
   hierarchy_edge: false
+
+- id: d427
+  attacker: chk:B9
+  target: B9
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-B9.md (Verdicts)
+  audit_status: upheld
+  audit_basis: 'B9 external contradicted, scoped: premise 1 ("selection cannot be operating" for neutral substitution at maximum speed) is false under standard theory (Kimura 1962; k = mu at neutral loci, selection and drift concurrent)'
+  counter: [d430]
+  note: 'Critic-side. The conditional''s arithmetic is not at issue (relaxed-selection load gives centuries to millennia on reading A), but the antecedent never obtains. Day-side steelman: premise 1 is closer to overstated than false, since background selection reduces Ne (Hudson-Kaplan).'
+  hierarchy_edge: false
+- id: d428
+  attacker: chk:B9
+  target: B9
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-11
+  locator: research/checks/results/R4-B9.md (Verdicts, Who this helps)
+  audit_status: upheld
+  audit_basis: 'premise 2 as worded ("3x more harmful substitutions") is false against R4-L1 human-chimp dN/dS ~0.21-0.27 and conflates mutations with substitutions; uncited (fidelity unverifiable)'
+  counter: [d430]
+  note: 'Critic-side. Even read as mutations, 3:1 is far from Lynch''s 1-10% deleterious share, which puts the timescale at millennia (1,724-11,484 y) rather than centuries.'
+  hierarchy_edge: false
+- id: d429
+  attacker: rev:R4-B9-combined
+  target: chk:B9
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #61)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-B9-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 3 MAJOR (reading A as most charitable and internal holds; external mixes readings; loose criterion and "not hyperbole"), 9 MINOR'
+  counter: []
+  note: 'applied in fix pass e51ab10 with post hoc b9_posthoc_sensitivity.py (c20c210): "holds" proposal withdrawn, internal left to the owner; external scoped contradicted; W = 0.01 added; the dialectic tag survives a 3x band'
+  hierarchy_edge: false
+- id: d430
+  attacker: rev:R4-B9-combined
+  target: chk:B9
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #61, steelman-Day section)']
+  first_date: 2026-10-11
+  locator: research/checks/results/REVIEW-R4-B9-combined.md (section 2)
+  audit_status: partly
+  audit_basis: 'Day-side case: "infertile" only makes sense as mutation load (reading A, Lynch 2016), so the N2a conflict spans two arguments in one comment; on Day''s premise 2 "within centuries" holds (12-970 y); premise 1 is closer to overstated than false (background selection); GAP-05 stays open'
+  counter: []
+  note: 'Recorded as the case for internal holds conditional on reading A; not adopted as settling. Owner decision pending between (a) holds conditional on A with N2a under reading B recorded (auditor recommends) and (b) keep non-sequitur with A as ledger rescue.'
+  hierarchy_edge: false

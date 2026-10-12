@@ -3846,3 +3846,36 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed and integrated 2026-10-11"
+
+- id: L-day-extinction-centuries-2026
+  label: "Day: if drift could change the genome, humans would have been rendered infertile and extinct within centuries"
+  side: day
+  kind: value
+  date: 2026-09-15
+  claim_ids: [B9]
+  locator: "https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874 (Q104)"
+  quote: "the human species would have been rendered infertile and gone extinct within centuries"
+  parents:
+    - {id: L-day-1-over-2ne-restated-2026, relation: borrows}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "R4 B9 (2026-10-11): relaxed-selection load gives centuries to millennia; owner decision pending on internal"
+
+- id: L-audit-b9-2026
+  label: "Audit B9: relaxed-selection load halves fitness in 338-3,457 y (Lynch 2016); Q104 dialectic; premises 1 and 2 as worded false"
+  side: audit
+  kind: reply
+  date: 2026-10-11
+  claim_ids: [B9]
+  locator: "research/checks/results/R4-B9.md"
+  quote: "Premise 1 is false."
+  parents:
+    - {id: L-day-extinction-centuries-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed and integrated 2026-10-11"
+

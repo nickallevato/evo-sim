@@ -1642,7 +1642,7 @@ nodes:
   verdicts:
     internal: non-sequitur
     fidelity: unverifiable
-    external: pending
+    external: contradicted
   claim_file: docs/research/claims/B9-drift-would-cause-extinction-within-centuries.md
 - id: C
   title: 'European aDNA shows ~zero fixations from intermediate frequency across ~1.1-1.2M SNPs in ~7,000 years (blog: 0 of 1,211,499; Zenodo:
