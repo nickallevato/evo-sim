@@ -1,6 +1,6 @@
 # R4 RHclose: the owner's RH rule applied to C7 (Q96) and the Hard Limits peroration (Q157, Q158)
 
-**Status: pre-registered (7185f1e), run, written up. Awaiting the combined review** (`REVIEW-R4-RHclose-combined.md`, a separate agent). Low-stakes tier: RH tagging plus arithmetic. Not integrated: no claim file, quote tag, ledger, QUEUE or argmap edits yet. The verdict moves below are **proposed**.
+**Status: pre-registered (7185f1e), run, written up, reviewed (`REVIEW-R4-RHclose-combined.md`: 0 BLOCKER, 3 MAJOR, 6 MINOR, 3 NOTE), fix pass done (see "Review resolution" at the end; it supersedes the single-tag headline above). The tags are reading-dependent and the owner chooses the reading.** Low-stakes tier: RH tagging plus arithmetic. Not integrated: no claim file, quote tag, ledger, QUEUE or argmap edits yet. The verdict moves below are **proposed**.
 
 ## Files
 - Script `research/checks/rhclose.py`, pre-registered at **7185f1e**. Readings, criteria, input sets, predictions and the verdict mapping are in its docstring. It was run locally once after that commit (stdlib arithmetic, a few seconds) and has not been edited since.
@@ -137,3 +137,60 @@ Context, not used in the verdict: Day's own January 2026 paper reports "drift va
 1. **The tags release B and C7.** Confirm that `rhetoric` should release B (pending -> holds) and C7 (internal and external -> n/a).
 2. **C7 and Day's census frame.** Should Day's census-scale variance-N_e frame count as a charitable input? It is HL's explicit method but gives no Holocene census, and Q96 states none. At a census of about 1e6 or more the tag flips.
 3. **Q157/Q158: fill measure and window.** Confirm F (Day's flux definition) rather than D, and HL's defined 6.5 My lineage rather than H8's 2 My "entire lineage" (l.416).
+
+## Review resolution (fix pass, 2026-10-11)
+Post hoc script: `research/checks/rhclose_posthoc.py` (pre-registered in its own commit before the run; output `results/raw/rhclose_posthoc.out`). The registered script and its tags are unchanged. **The headline tags above hold only for the registered readings; the findings below are per reading. The owner chooses the reading before integration.** Nothing is integrated (no claim, ledger, QUEUE or argmap edits).
+
+### MAJOR-1 (C7: scope of "most charitable") - answered
+The registered tag is **rhetoric on the strict-drift reading (random allele-frequency change, F_drift) with sourced coalescent-range N_e (1.0e4-2.0e4)**. It is reported as that, not as a bare finding. Post hoc rows (A1, A2):
+
+| Reading of Q96 "genetic drift isn't happening at all" | Quantity | Result | Tag |
+|---|---|---|---|
+| R1. Strict drift, coalescent N_e 1e4-2e4 (registered) | F_drift, 280 gen | 0.0070-0.0139 (23-46x the 3e-4 edge) | **rhetoric** |
+| R2. Census frame (HL l.101-118 variance N_e, N_e = 4N/7) | census needed for F_drift <= 3e-4 | N_e 466,597, **census about 8.2e5** (for the 1e-3 edge: about 2.4e5). **Census unsourced**: no Holocene or early-modern European census is in the repo (`parameters.yaml` has none; `sources/holocene-ne.md` has effective-size estimates only, 1.5k-12k through the Holocene by coalescent, IBS, ROH and SFS methods, 0.65M-27M present-day Ne) | dialectic iff the author's census is >= 8.2e5 held for 7,000 y. Not adopted: the repo's sourced Holocene Ne point the other way, and Q96 states no census |
+| R3. Fixation-count reading ("drift is not producing fixations") | P(an allele starting at p0 reaches 1 by drift in 280 gen) | p0 = 0.5: <= 1e-17 at N_e 1e4, 2e4 (z 8.5-12). p0 = 0.9: Gaussian upper bound 2e-3 (1e4), 3e-5 (2e4), an overestimate near the boundary. Kimura F(x) at p -> 0: 6e-16 (1e4), 1e-15 (2e4) | **dialectic as a count** (true to a good approximation; also the neutral expectation, X1 row C). The inference "so drift is not happening" stays `non-sequitur` at C |
+
+Prediction scoring: flip census about 8.2e5 (predicted about 8.2e5): holds; expected count about 0: holds. Consequence: the C7 tag is **rhetoric on R1, dialectic on R3 (count) and on R2 (if a census of >= 8.2e5 is sourced)**. The practical effect on C7 is small either way: C keeps its own `non-sequitur` (X1 row C), and C7's duplicate internal `non-sequitur` and external `contradicted` come back under any dialectic reading. Robustness (answers MINOR-5, NOTE-2): the growth rows (0.0121; 0.0050) are 40x and 17x the 3e-4 edge, so expansion inside the window does not flip R1; the 10x edge (1e-3) leaves 7.0x; the 20 y/gen row does not flip it.
+
+### MAJOR-2 (Q157/Q158: reading-dependence) - answered
+Per reading, human lineage, empty start, N_e 57,143 unless stated; tag against the registered 0.30 edge (post hoc output reproduces the registered values):
+
+| Reading (neutral description) | Value | Tag |
+|---|---|---|
+| **F, 6.5 My** (registered). Fill = end-of-window flux of the cohort entering at the window start, over HL's defined lineage duration (l.249) | 0.697 (6.3 My: 0.676) | rhetoric (2.25x the edge) |
+| **D, delivered share.** Fill = fraction of the pipe contents actually delivered, Day's own mu*L*integral of F (Q34); D <= F always | 0.256 (6.3 My: 0.242) | dialectic |
+| **Takahata 1e5 held for the whole lineage.** Constant N_e = 1e5, a held-constant value like (a) | F 0.281 | dialectic (just under 0.30) |
+| **S, current size.** "near end" (l.464) and "exactly as long as Kimura said" read as the pipe at today's size; restates B2 (abstract l.22-24), no separate number | n/a (restates B2, `holds`) | dialectic (as a restatement of B2) |
+| **HL's 2 My window** (l.416 "entire lineage") | F 0.025 (D 0.003) | dialectic |
+
+**Conclusion: the tag is not robust.** It is rhetoric only on F over the 6.5 My lineage; it is dialectic on D, on Takahata-1e5, on S, and on 2 My. The registered selection ("min F over the central set") was operationalised as the most charitable among readings that give a high F. **The owner chooses the reading** (a single `rhetoric` with a 2.25x margin is withdrawn as a finding). The P6 point stands: "nearly empty" is literally true on HL's 2 My window, which HL's l.416 itself calls "the entire lineage" while l.249 defines the lineage as 6.5 My; this is an internal HL ambiguity of referent (rule C territory) as well as R4-B2's slip.
+
+### MAJOR-3 (B: no bare `holds`) - answered
+- **If the owner chooses rhetoric:** B internal = **`holds` scoped to the B2 statement only** (current-size confinement, HL abstract l.22-24). B's lineage-level conclusion ("cannot rescue the shortfall", which needs ancestral fill that HL's own text, Q140, Q151, Q152, l.416-419, says is partial) gets **"no dialectical support offered" (RH3)**. The verdict table must not display a bare `holds`.
+- **If the owner chooses dialectic:** B internal = **`non-sequitur`** per R4-B2 Rule N (N2b within HL).
+- **Asymmetry, quantified.**
+
+| Verdict | If rhetoric | If dialectic | Who benefits from rhetoric |
+|---|---|---|---|
+| B internal | pending -> `holds` (scoped; lineage conclusion unsupported, RH3) | pending -> `non-sequitur` | Day: the whole move (negative vs scoped positive) |
+| C7 internal / external | `non-sequitur` / `contradicted` -> n/a | stay `non-sequitur` / `contradicted` | Day: loses two negatives |
+| C internal | unchanged (`non-sequitur`, X1 row C) | unchanged | none |
+| B2 | unchanged (`holds`) | unchanged | none |
+
+Net: C7's effect is small (C and B2 already carry the ROOT-path verdicts); B's effect is the entire move. Both moves favour Day if rhetoric is chosen, and the tag that triggers it is reading-dependent (MAJOR-2). This was disclosed before (Caveats; B9 MINOR-8) and is now quantified.
+
+### MINOR answers
+- **MINOR-1 (Q152 glyph).** Fixed in `docs/research/sources/quotes-day.md` (Q152 "Kimura's", straight apostrophe), verified read-only against `sources/raw/day/zenodo-22129121.txt` l.363 (grep count 1). The script's original MISS line stays as recorded.
+- **MINOR-2 (Q96 lead-in not covered).** Hand-verified post hoc: the lead-in "And we've now got hard evidence that genetic drift isn't happening at all" is a whitespace-normalised substring of `comments.json` (checked 2026-10-11, True). The registered script is not edited.
+- **MINOR-3 (Day's January data).** The counter-rhetoric draft for Q96 now reads: "In January Day measured the drift variance in this very window, 0.0015-0.005 per 500 years (which he says includes structure and migration). Zero fixations from below 50% in 280 generations is what drift predicts. The frequencies moved." The values are about 6-20x the neutral expectation at N_e 1e4 (about 2.5e-4), so the clause matters (RH2: the counter must be true).
+- **MINOR-4 (3x edge lenient, band arbitrary).** Accepted: the band 0.10 and edge 0.30 are the author's. The generalisation point is recorded: "every large animal" fails on the one other animal with inputs, the elephant, which reaches F 0.62 at Day's own ceiling X (already in the table, not used for the tag). P6 stands as an HL-internal 2 My point (MAJOR-2).
+- **MINOR-5 (growth rows).** Robustness sentence added under MAJOR-1 (40x and 17x the edge).
+- **MINOR-6 (second clause of Q96).** Under RH3 the clause "and that there is a hard population limit on the neutral pipeline" is tagged **B2** (current-size confinement, `holds`); the C7 core is the first clause's evidence (claim C) plus this B2 clause. The ledger entry at integration should list both.
+- **RH5 (symmetry; review steelman-critic).** `grep` of `docs/research/ledgers/slips.md`, `claims/` and the check files finds the "remotely close" test applied only to **Day statements**: B9 (Q104), C7 (Q96), Q157/Q158. The critic and ally rows (RH-2, RH-13 to RH-20) were tagged by device only and marked "Not scored", never run through the remotely-close test; no `quotes-critics.md` entry carries an RH tag. So the rule is symmetric in text, not yet in application. Candidates for a future symmetric pass (tag unclear): (1) RH-15 Hancock, "The blunt fact of the matter is Vox Day's math can't do any of this" (the literal claim is checkable against MITTENS/F_max outputs); (2) RH-20 Myers, "I debunked Vox Day's stupid evolution 'disproof' in one fairly short written post" (checkable against what his post actually addresses, branch G2); (3) RH-18 Mansfield, "Genetic drift happens in every population and his claim otherwise is mystifying" (literal claim is close to true; likely dialectic, which would be a useful symmetric test).
+- **NOTE-1..3.** No action (NOTE-1 and NOTE-2 are folded into the text above; NOTE-3: no `.host` file, run was seconds of stdlib arithmetic; the post hoc run likewise).
+
+### Owner choices needed before integration
+1. C7: which reading of "genetic drift isn't happening" (R1 strict, R2 census, R3 fixation count)?
+2. Q157/Q158: which reading of "fills" (F, D, Takahata-1e5, S, or 2 My)?
+3. Given 1 and 2: rhetoric (B = `holds` scoped to B2, lineage conclusion "no dialectical support offered") or dialectic (B = `non-sequitur`)?
+4. Is a sourced Holocene census wanted (to settle R2)? It would need a new retrieval; none is in the repo.

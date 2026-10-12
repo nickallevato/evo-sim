@@ -1,0 +1,21 @@
+## A1 census-frame flip (census UNSOURCED)
+F_drift(280 gen) = 0.0003 at N_e 466,597 -> census 816,545 (V_k 5)
+F_drift(280 gen) = 0.001 at N_e 139,930 -> census 244,878 (V_k 5)
+
+## A2 fixation-count reading (280 generations)
+| N_e | F_drift | p0 | Gaussian-tail upper bound on P(reach 1) | Kimura F(x), x=T/N_e, p->0 |
+|---|---|---|---|---|
+| 10,000 | 0.0139 | 0.5 | 1.12e-17 (z 8.5) | 5.60e-16 |
+| 10,000 | 0.0139 | 0.9 | 2.35e-03 (z 2.8) | 5.60e-16 |
+| 20,000 | 0.00698 | 0.5 | 2.46e-33 (z 12.0) | 1.03e-15 |
+| 20,000 | 0.00698 | 0.9 | 3.29e-05 (z 4.0) | 1.03e-15 |
+| 466,597 | 0.0003 | 0.5 | 0.00e+00 (z 57.7) | 0.00e+00 |
+| 466,597 | 0.0003 | 0.9 | 7.77e-83 (z 19.2) | 0.00e+00 |
+
+## B per-reading (human lineage, N_e 57,143, empty start; tag vs registered 0.30 edge)
+| F over 6.3 My | 0.676 | rhetoric |
+| D over 6.3 My | 0.242 | dialectic |
+| F over 6.5 My | 0.697 | rhetoric |
+| D over 6.5 My | 0.256 | dialectic |
+| Takahata 1e5 whole lineage F, 6.5 My | 0.281 | dialectic |
+| HL 2 My window F | 0.025 | dialectic |

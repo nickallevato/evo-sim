@@ -1117,7 +1117,7 @@ All quotes machine-checked as substrings (whitespace and quote-mark normalised) 
 - local copy: `sources/raw/day/zenodo-22129121.txt` (verified verbatim by whitespace-normalised substring test, 2026-10-10)
 - branch: B2, B
 - tag (rule RH): dialectic
-- quote: "When Nₑ is of the same order as T — when a lineage sits near its own X — the exponent is order one: the pipe substantially fills, and Kimura’s rate is approached."
+- quote: "When Nₑ is of the same order as T — when a lineage sits near its own X — the exponent is order one: the pipe substantially fills, and Kimura's rate is approached."
 - note: R4-B2: at T = N_e the exact flux is 0.3%; fill is substantial near T = 4N_e (0.61). Concedes more than HL's own law gives (slips ledger).
 
 ### Q153 Hard Limits: a census near 100,000 held static for 2 My, linear bound about 35% (H8)
