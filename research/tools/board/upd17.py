@@ -52,7 +52,7 @@ def fig_mesa():
     for v in (1, 10, 100, 1000, 10000):
         o.append('<line x1="%.1f" y1="176" x2="%.1f" y2="181" class="ax"/><text x="%.1f" y="194" class="lbl m" text-anchor="middle">%s</text>' % (L(v), L(v), L(v), format(v, ',')))
     o.append('<text x="310" y="214" class="lbl m" text-anchor="middle">overdispersion index (variance / Poisson variance), log scale</text>')
-    o.append('<text x="310" y="232" class="lbl m" text-anchor="middle">hand estimates, pre-run &#183; no selection, human-lineage unit with masking, exposure 1</text>')
+    o.append('<text x="310" y="232" class="lbl m" text-anchor="middle">hand estimates, pre-run &#183; no selection, human-chimp pairwise differences, masked, exposure 1</text>')
     o.append('<text x="310" y="250" class="lbl m" text-anchor="middle">fm_mesa_null.py at cc5e6dd (brackets 48241c7; sourced set cc5e6dd); the script table governs</text>')
     o.append('</svg>')
     return ''.join(o)
