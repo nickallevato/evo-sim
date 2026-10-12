@@ -36,6 +36,11 @@ This is a neutral, two-sided audit of the mathematical claims in Vox Day's *Prob
 | `opponents/<name>.md` | Each critic or ally, with their arguments mapped to claim IDs |
 | `ledgers/` | Citation fidelity, side-by-side balance, contradictions, version drift |
 | `../../research/checks/` | Throwaway verification code and `REVIEW.md` |
+| `METHODS-AND-LIMITATIONS.md` | How the audit was done and what that method can and cannot support: who performs it, same-model reviews, pre-registration by kind, basis of external verdicts, what the tallies mean, sources not read. Read this before quoting any count. |
+| `METHOD-AUDIT-2026-10-12.md` | Review of the method (findings MA-01 to MA-20) |
+| `METHOD-AUDIT-proposals.md` | Specs for the audit's rule and vocabulary changes. **Proposals only, not applied.** |
+| `DECISIONS.md` | Dated log of owner decisions, reconstructed from committed evidence, and the decisions still open |
+| `../../research/checks/PREREG-STATUS.md` | Per check: registration commit, first results commit, gap, and a label (blind, criterion-only, reproduction, single-commit, unknown) |
 
 ## Status
 | Stage | Status |

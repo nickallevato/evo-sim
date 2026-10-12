@@ -10,6 +10,8 @@ These scripts produced the committed research files. They were written during th
 | `board/` | Scripts that patch `docs/research/status.html` (the status Artifact) node by node |
 | `argmap_check.py` | Checks `docs/research/argmap/` (verbatim lineage quotes, registered ids, dates, standard-form targets, mechanical `counter` lists, coverage of hierarchy attack edges) |
 | `argmap_render.py` | Draws `docs/img/argmap/genealogy.svg` and writes `docs/arguments/defeaters.md` (objection graph per branch, grounded semantics read three ways) |
+| `prereg_status.py` | Writes `research/checks/PREREG-STATUS.md` from `git log` and the local `origin/research` reflog (descriptive; reads history only) |
+| `method_audit_stats.py` | Read-only counts over the claim files used in `docs/research/METHOD-AUDIT-proposals.md` (holds on unchecked files, seeded sample of `contested`) |
 | `readme_figs.py`, `eli_figs.py` | README and explainer figures, from committed check outputs only |
 
 Ad hoc arithmetic checks are in `research/checks/adhoc/`. Raw run outputs are in `research/checks/results/raw/`.

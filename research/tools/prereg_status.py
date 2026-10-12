@@ -244,6 +244,7 @@ FOOTER = """
 - **Round 1 and round 2** (`3d888e9`, `36a7ff9`, `a89d06c`, `9a2148b`) are `single-commit`: scripts, outputs and, for round 2, reviews and verdict merges arrived together. Round 2 has partial cover from the claim files' prediction sections (`ad44c23`), which precede `a89d06c`; round 1 precedes the claim files.
 - **Gaps under five minutes with no push in between** are `unknown` unless a disclosure makes them `criterion-only` or `reproduction`. For a sub-minute deterministic script the registration binds the criterion at most.
 - **`blind` rows with a short push lead** deserve the same caution as `unknown` rows: the push shows the registration left the workstation, not that the run had not happened.
+- **Partial disclosures do not change a label** but are quoted in the last column. Two `blind` rows carry one: D1 (bands literature-informed, in its own words "not blind"; one data summary seen) and D15 (analytic baselines run before registration; the simulation sweep was not). A stricter reading puts D1 under `criterion-only`, giving blind 9 and criterion-only 7.
 - Tier is the review tier in `REVIEW.md` (`pre-tier` = before tiering began at review #14).
 
 To regenerate: `research/.venv/bin/python -I research/tools/prereg_status.py > research/checks/PREREG-STATUS.md`.
