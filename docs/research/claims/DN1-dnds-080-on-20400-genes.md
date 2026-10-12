@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: pending   # method unreleased (no code, gene list or per-gene table; Zenodo paper promised, Q176). R4 L1 fix pass (reviewed a352991): no correct-frame computation on any gene set, estimator or filter reproduces 0.80 (0.15-0.45); ¶12 'The code is correct. The data is complete. The number is real.' is an N2d candidate (the diagnostics test neither frame, strand nor orthology), limited by N1; slip S-DN1-1 (implied N/S 3.55 vs 3.34) ledgered
   fidelity: n/a   # Day's own computation
-  external: contradicted   # R4 L1 fix pass; verdict set at integration: hg38/panTro5: all genes 0.271, one2one 0.207; Day's own single-SNV count ratio 2.52 vs 0.85 in correctly aligned CDS (estimator-free; no assembly change raises it); T2T cannot add genes (20,400 < 23,183). Open: the alignment-level route (ALL is syntenic-net aligned). L1b overturns only if a T2T CDS extraction vs mPanTro3 gives >= 0.65 and share >= 66% on genes passing a synteny/orthology check
+  external: contradicted   # conditional on L1b (like-for-like T2T rerun not yet run), see METHOD-AUDIT MA-12. R4 L1 fix pass; verdict set at integration: hg38/panTro5: all genes 0.271, one2one 0.207; Day's own single-SNV count ratio 2.52 vs 0.85 in correctly aligned CDS (estimator-free; no assembly change raises it); T2T cannot add genes (20,400 < 23,183). Open: the alignment-level route (ALL is syntenic-net aligned). L1b overturns only if a T2T CDS extraction vs mPanTro3 gives >= 0.65 and share >= 66% on genes passing a synteny/orthology check
 ---
 
 ## Statement (verbatim)

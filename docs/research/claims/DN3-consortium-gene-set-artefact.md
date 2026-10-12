@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds   # R4 L1 fix pass; verdict set at integration: (the conditional's test-design core is well formed; ¶15 arithmetic right: 20,400 - 13,454 = 6,946 = 34%, 20,400/13,454 = 1.516; ¶18 hedged). N2d note: even the antecedent would not show cherry-picking (a difference concentrated in non-one2one genes fits misaligned paralogs equally). 'Cherry-picked', 'artificial' are rhetoric (RH-22)
   fidelity: partial   # R-refresh 2026-10-12: CSAC 2005 now held. Count 13,454 and 'unambiguous 1:1 orthology' accurate; 'curation' partial (CSAC removed low-quality sequences and likely alignment artefacts and required high-quality alignments covering virtually the entire coding region, from 16,045 distinct genes, not from Day's 20,400); 'threw out 6,946 genes' compares different denominators
-  external: contradicted   # R4 L1 fix pass; verdict set at integration: for the gene-list version: one2one 0.207 vs all genes 0.271 on one pipeline; credit: a real gene-set effect in Day's direction, material by R1 (+31%, a pipeline-level upper bound; orthology filtering has a methodological rationale), against +0.57 needed. Alignment-level version untested (L1b)
+  external: contradicted   # conditional on L1b (like-for-like T2T rerun not yet run), see METHOD-AUDIT MA-12. R4 L1 fix pass; verdict set at integration: for the gene-list version: one2one 0.207 vs all genes 0.271 on one pipeline; credit: a real gene-set effect in Day's direction, material by R1 (+31%, a pipeline-level upper bound; orthology filtering has a methodological rationale), against +0.57 needed. Alignment-level version untested (L1b)
 ---
 
 ## Statement (verbatim)

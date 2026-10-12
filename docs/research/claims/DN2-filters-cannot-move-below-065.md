@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: pending   # filter thresholds unstated. R4 L1 fix pass: 0.64 against 'below 0.65' in the same paragraph is a 1.5% slip (S-DN2-1); the 10-gene stack offered as robustness is ledgered (S-DN2-2, N2d candidate limited by N1)
   fidelity: n/a   
-  external: contradicted   # R4 L1 fix pass; verdict set at integration: as a statement about human-chimp coding sequence: all 32 stacks give 0.23-0.28 on a correct extraction, and no correct extraction leaves a near-empty strict stack (13,610 genes; 258 with a terminal-stop convention). As a report of his pipeline it is plausible: a within-gene contaminated extraction is filter-robust (0.76-0.85, post hoc)
+  external: contradicted   # conditional on L1b (like-for-like T2T rerun not yet run), see METHOD-AUDIT MA-12. R4 L1 fix pass; verdict set at integration: as a statement about human-chimp coding sequence: all 32 stacks give 0.23-0.28 on a correct extraction, and no correct extraction leaves a near-empty strict stack (13,610 genes; 258 with a terminal-stop convention). As a report of his pipeline it is plausible: a within-gene contaminated extraction is filter-robust (0.76-0.85, post hoc)
 ---
 
 ## Statement (verbatim)
