@@ -1350,3 +1350,129 @@ All from voxday.net, "How Biologists Keep "Proving" Selection", https://voxday.n
 - branch: ROOT-FM / selection strength / LTEE / T2T
 - quote: "the real number turned out to involve an estimated 410 million total genomic differences, not 35 million"
 - note: Bears on A3x1 (Yoo 2025 fidelity), A3x (bp vs events). The 410M is a Day-side sum; Day's own post (¶ on supplementary sheets) says 'no total is either calculated or provided' by the paper, so 410M is Day's own aggregation across tools (his wording). Not checked here against Yoo SI.
+
+## Refresh 2026-10-12 quotes (Q180-Q194; added 2026-10-12)
+
+### Q180 The method is the conclusion: circularity claim (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶3 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "discovered that the protein-guided CDS alignment method has a circular reasoning problem that's impossible to ignore once you recognize it:"
+- note: Core new claim of the post: protein-aware alignment biases dN/dS downward. Mechanism stated without a test, code or example gene. Directly relevant to DN3/DN5.
+
+### Q181 Gapping-out mechanism (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶7 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "Regions too divergent to score well get gapped out or are left unaligned, so they aren't counted."
+- note: Premise of the circularity argument. Human-chimp protein sequences are about 99% identical (not verified here), so how much can be gapped out is an empirical question Day does not quantify. Source text is a bullet list; the list items are separate non-empty paragraphs.
+
+### Q182 Excluded codons enriched for nonsynonymous (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶10 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "Those excluded codons are enriched for nonsynonymous substitutions by definition, because that's why they scored poorly in the protein alignment."
+- note: Testable: Day reports no count of excluded codons. Note a poor score can also come from misalignment, in which case excluded positions carry no information about selection.
+
+### Q183 Uniform nonsynonymous fraction across subsets (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶13 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "It's 73.8% nonsynonymous across every subset we tested. The signal is uniform across the genome, it's not concentrated in problematic genes."
+- note: Subsets A, B, B-HC are nested and C = A minus B (table, Q184), so uniformity is not independent evidence. Table values: 73.9, 73.8, 73.8, 74.4%.
+
+### Q184 Gene-set table rows (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶17,18,19,20,21 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "A: All GENCODE20,4000.798973.9%"
+- quote: "B: 1:1 chimp orthologs16,9950.795673.8%"
+- quote: "B-HC: High-confidence 1:115,9370.793973.8%"
+- quote: "C: Excluded by filter3,4050.823774.4%"
+- quote: "Published (Consortium 2005)13,4540.2300~40%"
+- note: Table cells are run together by text extraction (extraction artefact; columns: gene set, genes measured, pooled dN/dS, nonsynonymous fraction). The Consortium 13,454-gene list is not a row that Day measured: the 0.2300 and ~40% are the published figures. Genes: 16,995 + 3,405 = 20,400.
+
+### Q185 Smaller subset not cherry-picked (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶13 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "We ran the same test on their smaller subset, which I suspected might be cherry-picked. Except they weren't."
+- note: Reading-dependent: (R1) "their smaller subset" = the 1:1 chimp orthologs B (16,995) or B-HC (15,937), not the 13,454 list (no such row in the table); (R2) the 13,454 list itself was rebuilt and run (no number given). This reverses the 2026-10-11 version of the post, which said "the only way to get 0.23 is to start with a pre-selected gene set" (Q176 context).
+
+### Q186 Not gene selection, filtering or error (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶15 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "The difference is not a matter of gene selection, quality filtering, or computational error. It is a methodological artifact of using a conservation-dependent alignment to measure conservation."
+- note: Explicit change of explanation from the 2026-10-11 text (gene curation) to alignment circularity. Day also says (10-11) the strictest filter stack left dN/dS = 0.64 on 10 genes (Q175).
+
+### Q187 dN/dS 0.7989 implies only 20 percent eliminated (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶15 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "the whole-genome measurement of dN/dS = 0.7989 implies that only 20 percent are actually eliminated, which is nearly four times less purifying selection than the mainstream science assumes."
+- note: Arithmetic: 1 - 0.7989 = 20.1%; 1 - 0.23 = 77%; 77/20.1 = 3.8 ("nearly four times"). Holds given the reading "1 - dN/dS = fraction of nonsynonymous changes removed" (standard simplification; Day uses it himself in the 2026-10-11 text, cf. DN4).
+
+### Q188 Canonical evidence "incorrect" (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶23 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "First, they demonstrate that the canonical evidence for strong purifying selection in coding sequences is methodologically compromised and therefore incorrect."
+- note: Strong wording on an unreleased analysis. Day lists no alternative-evidence lines for purifying selection (polymorphism pN/pS, conservation across deep clades) that do not rely on the 2005 value.
+
+### Q189 Coding sequences evolving near-neutrally (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶23 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "Second, they indicate that even coding sequences are evolving near-neutrally. Purifying selection exists, but is a much weaker mechanism than previously believed, removing roughly one in five nonsynonymous mutations rather than three in four."
+- note: Concedes purifying selection exists (credit). Compare the neutral-theory material in B (Q155).
+
+### Q190 Decoupling from MITTENS (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶24 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / MITTENS scope; RH tag: dialectic
+- quote: "And, just to be clear, none of this genomic analysis has anything to do with MITTENS per se. It merely happens to be empirical evidence that tends to independently confirm the mathematical and empirical impossibility of evolution by natural selection."
+- note: Credit to Day: states the dN/dS result is not an input to MITTENS, so a failure of it would not by itself touch the MITTENS arithmetic. The second sentence claims independent confirmation of an "impossibility", which dN/dS = 0.80 does not give (an average purifying/neutral balance).
+
+### Q191 Kevin Hart analogy (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶10 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / rhetoric; RH tag: rhetoric
+- quote: "In other words, the method presupposes the conclusion. This is, again, the same way one proves that Kevin Hart can dunk a basketball on a 10-foot basket, by showing that he is one inch taller than Lebron James."
+- note: Device: analogy of absurd proof; audience: sympathetic readers; function: delegitimise the method without a test. Dialectical core: a conservation-dependent alignment can bias a conservation estimate (see the circularity claim). Better answer: grant the possible bias, then ask for the excluded-codon count and the 13,454-gene run.
+
+### Q192 Opening: how would anyone tell the difference (added 2026-10-12)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶2 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / rhetoric; RH tag: rhetoric
+- quote: "how would anyone, no matter how well-credentialed, ever be able to tell the difference given their absolute refusal to even look at the growing body of evidence that natural selection is a very weak force totally incapable of accounting for the chimp-human genetic divergence, much less the origin of the species?"
+- note: Device: rhetorical question, attribution of refusal to unnamed critics; function: pre-empt dismissal. Dialectical core: the work should be judged on its method; both sides can be asked to release code and data. No critic named beyond "Erika" (not identified in the fetched text).
+
+### Q193 Natural Philosophy: logic-plus-math step (added 2026-10-12, RELAY endorsed)
+- source: voxday.net, "Natural Philosophy" (2026-10-12 05:01:10 UTC) (SG cross-post not seen)
+- locator: ¶11 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-natural-philosophy/body.txt
+- branch: ROOT / philosophy of selection; RH tag: dialectic
+- quote: "if "natural selection" by its secondary definition can be shown to be mathematically incapable of reaching it, then natural selection by both definitions is thereby shown to be incapable of explaining what it is meant to by a combination of logic and math."
+- note: RELAY (rule U): the post opens "The connection between my assault on TENS and the development of Veriphysics has become apparent to others:" and quotes an unnamed third party at length; Day closes with his own paragraph. Not scored internal. The conditional is valid in form; its antecedent (MITTENS-type incapacity) is the contested part.
+
+### Q194 Natural Philosophy: tautology of secondary definition (added 2026-10-12, RELAY endorsed)
+- source: voxday.net, "Natural Philosophy" (2026-10-12 05:01:10 UTC) (SG cross-post not seen)
+- locator: ¶9 of the non-empty paragraphs of the saved body text
+- local copy: sources/raw/refresh-2026-10-12/post-natural-philosophy/body.txt
+- branch: ROOT / philosophy of selection; RH tag: dialectic
+- quote: "Natural selection by its secondary definition can be logically critiqued for its tautological nature, and the conflation of the two can of course be logically critiqued for being a logical conflation."
+- note: RELAY (rule U). Contrast: population-genetic usage estimates selection coefficients from data (cf. claim A4f). No numbers.

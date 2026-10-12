@@ -785,3 +785,12 @@ Harvested 2026-10-09 evening. One new item; machine-checked as a substring of th
   - source: B2026-10-09-the-irrelevance-of-ees; https://voxday.net/2026/10/09/the-irrelevance-of-ees/
   - local copy: `sources/raw/refresh-2026-10-09b/day-post-2026-10-09-the-irrelevance-of-ees/page.html`
   - note: RELAY: the text is Hilbert's, as reposted by Day (rule U: relays and unidentified authors are not scored internal). Hilbert's claim that EES is "the leading theory of evolution" is an assertion, not a model. The same repost has Hilbert ending the exchange with "Damn, you’re really just a crank." and calling both Day and McCarthy cranks; Day's answer is Q122 (EES is irrelevant because it addresses the "adaptive space", at most 2 percent). Neither side supplies a quantitative EES model. Symmetric record: the EES advocate also gives no number, as in RF-8/RF-17.
+
+## RF3: Refresh 2026-10-12 (critics/allies slice)
+Harvested 2026-10-12. Thin window: one verbatim item (backfill of a comment counted but not quoted on 2026-10-09b). Machine-checked as a substring of the local raw JSON (JSON escapes of quote marks normalised).
+
+- **RF-19** | Substack comment on Dembski interview thread (post 217813768), 2026-10-09 13:57 UTC, comment id 356747589, author "Chuckles" (pseudonymous commenter), reply in the thread under Hilbert's 2026-10-08 EES comment (the comment relayed by Day in RF-18) | branch ROOT-excluded-mechanisms (EES) | tag: rhetoric (terse dismissal)
+  > "Again, it doesn't show anything, it tautologically theorizes "everything""
+  - source: B2026-10-12-dembski-interview-comments; https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (comments)
+  - local copy: `sources/raw/refresh-2026-10-12-critics/c-dembski-interview/comments.json` (sha256 bf2d02b9f8ed927634d1f92fdc374933ceba4e374ba6c593ab776360ccccaafe)
+  - note: Unidentified commenter, so not scored internal (rule U). "it" is not named in the comment; the parent is Hilbert's EES comment, so the plausible referent is the EES. Readings (rule RD): (a) the EES, as a framework, is unfalsifiable because it accommodates every outcome (a recognised critic line; dialectical core: a testability demand on EES); (b) the Day/Hilbert argument form (not read as the referent). Verdict under reading (a): n/a (opinion; no number). It touches nothing quantitative. Credit: the testability demand is a fair challenge to EES proponents, and it applies equally to Day's own "Fourth Mechanism" until a method is released.
