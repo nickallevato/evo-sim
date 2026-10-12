@@ -2,7 +2,7 @@
 
 > **DRAFT — not sent; owner approval required for text and channel.** Nothing in this file has been sent, posted or submitted anywhere (AGENTS.md hard rule 6).
 
-Fills the "Interests" paragraph of [`METHODS-AND-LIMITATIONS.md`](../METHODS-AND-LIMITATIONS.md). **Every blank is for the owner; the agents do not know these facts and must not guess them.** Nothing in the repository records them.
+Fills the "Interests" paragraph of [`METHODS-AND-LIMITATIONS.md`](../criticality/METHODS-AND-LIMITATIONS.md). **Every blank is for the owner; the agents do not know these facts and must not guess them.** Nothing in the repository records them.
 
 ## 1. COI statement template (owner to complete, in the owner's own words)
 

@@ -226,6 +226,7 @@ research/checks/       # THROWAWAY verification code + REVIEW.md
 - every critic and ally argument is mapped;
 - the gap list is closed or explicitly recorded as inaccessible;
 - the variable list is final.
+- *(proposed, owner to confirm)* a criticality pass has been run on the R5 draft (`criticality/README.md`) and no CRITICAL finding stands open; every MAJOR finding is closed or explicitly accepted by the owner in `DECISIONS.md`.
 
 Branches can graduate independently. Then: brainstorming → spec → writing-plans for the simulator.
 

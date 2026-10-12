@@ -222,7 +222,7 @@ At Day's parameters ($N = 10^4$, $s = 0.001$), the simulation and diffusion give
 | claims with a number in the formal statement | 16 of 82 | 1 of 31 |
 | all claims | 18 of 114 | 1 of 51 |
 
-Raw counts per side are shown, but rates are not comparable between sides: the two sides differ in volume, in the precision of their claims, in the share of claims checked, and in how claims were routed (method audit MA-06, [`METHOD-AUDIT-2026-10-12.md`](docs/research/METHOD-AUDIT-2026-10-12.md)). No test of difference is reported.
+Raw counts per side are shown, but rates are not comparable between sides: the two sides differ in volume, in the precision of their claims, in the share of claims checked, and in how claims were routed (method audit MA-06, [`METHOD-AUDIT-2026-10-12.md`](docs/research/criticality/METHOD-AUDIT-2026-10-12.md)). No test of difference is reported.
 
 ---
 

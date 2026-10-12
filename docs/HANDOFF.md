@@ -16,7 +16,7 @@ evo-sim has two stages.
 2. **Claims.** 233 distinct mathematical or empirical claims, each with a verbatim quote, a source locator and a date. Claims come from both sides.
 3. **Argument tree.** Each claim is attached to one of eight branches (A–H) under Day's root claim. Thirty-three nodes are marked as load-bearing (A3, the required-fixation count, was added on 2026-10-09; ROOT-FM, Day's mesa claim, and its conclusion FM10 on 2026-10-10).
 4. **Checks.** Each load-bearing equation is tested with an exact Markov chain or a forward simulation. The prediction is written down before the run. Fifty-four checks have been reviewed so far.
-5. **Reviews.** Load-bearing checks get three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. Since 2026-10-09, low-stakes checks (re-confirmations, bookkeeping, tool validation) get one combined review with the same three sections. All reviews so far are by instances of the same AI model family and are not blind; see `docs/research/METHOD-AUDIT-2026-10-12.md` (MA-01).
+5. **Reviews.** Load-bearing checks get three reviews: one for correctness, one steelmanning Day's position, and one steelmanning the critics'. Since 2026-10-09, low-stakes checks (re-confirmations, bookkeeping, tool validation) get one combined review with the same three sections. All reviews so far are by instances of the same AI model family and are not blind; see `docs/research/criticality/METHOD-AUDIT-2026-10-12.md` (MA-01).
 6. **Verdicts.** Each claim gets three separate verdicts:
    - *Internal:* does the conclusion follow from the author's own premises?
    - *Fidelity:* does the cited source actually say what the author says it does?
@@ -77,7 +77,7 @@ These are R4 results. The R5 synthesis has not been done, so every verdict is pr
 | claims with a number in the formal statement | 16 of 82 | 1 of 31 |
 | all claims | 18 of 114 | 1 of 51 |
 
-Raw counts per side are shown, but rates are not comparable between sides: the two sides differ in volume, in the precision of their claims, in the share of claims checked, and in how claims were routed (method audit MA-06, [`METHOD-AUDIT-2026-10-12.md`](research/METHOD-AUDIT-2026-10-12.md)). No test of difference is reported. Three earlier Day error verdicts were withdrawn under the rule, one critic claim gained one (Hancock's 38M match, on his own event basis), and the audit's own figure for keruru's tail probability was found 41× too low and corrected.
+Raw counts per side are shown, but rates are not comparable between sides: the two sides differ in volume, in the precision of their claims, in the share of claims checked, and in how claims were routed (method audit MA-06, [`METHOD-AUDIT-2026-10-12.md`](research/criticality/METHOD-AUDIT-2026-10-12.md)). No test of difference is reported. Three earlier Day error verdicts were withdrawn under the rule, one critic claim gained one (Hancock's 38M match, on his own event basis), and the audit's own figure for keruru's tail probability was found 41× too low and corrected.
 
 **Overall verdict counts** (all sides combined, n/a omitted):
 

@@ -1,6 +1,6 @@
 # Methods and limitations
 
-*State at 2026-10-12, commit `408ba53`. This page says how the audit was done and what that method can and cannot support. It follows the text proposed in [`METHOD-AUDIT-2026-10-12.md`](METHOD-AUDIT-2026-10-12.md); each limitation carries the id of the finding it answers (MA-01 to MA-20). Counts come from `research/tools/method_audit_stats.py` and [`research/checks/PREREG-STATUS.md`](../../research/checks/PREREG-STATUS.md) unless a source is named. Changes proposed in answer to these limits, none yet adopted, are in [`METHOD-AUDIT-proposals.md`](METHOD-AUDIT-proposals.md); decisions waiting on the owner are in [`DECISIONS.md`](DECISIONS.md).*
+*State at 2026-10-12, commit `408ba53`. This page says how the audit was done and what that method can and cannot support. It follows the text proposed in [`METHOD-AUDIT-2026-10-12.md`](METHOD-AUDIT-2026-10-12.md); each limitation carries the id of the finding it answers (MA-01 to MA-20). Counts come from `research/tools/method_audit_stats.py` and [`research/checks/PREREG-STATUS.md`](../../../research/checks/PREREG-STATUS.md) unless a source is named. Changes proposed in answer to these limits, none yet adopted, are in [`METHOD-AUDIT-proposals.md`](METHOD-AUDIT-proposals.md); decisions waiting on the owner are in [`DECISIONS.md`](../DECISIONS.md).*
 
 ## What this is
 

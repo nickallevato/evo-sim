@@ -26,7 +26,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 | What | Where |
 |---|---|
 | Plan, stages, exit criteria | `docs/research/PLAN.md` |
-| Methods and limitations (publishable); method audit; held-back rule proposals; owner decisions log | `docs/research/METHODS-AND-LIMITATIONS.md`; `METHOD-AUDIT-2026-10-12.md`; `METHOD-AUDIT-proposals.md` (not applied); `DECISIONS.md` (add new owner decisions verbatim, dated) |
+| **Criticality layer** (the audit auditing itself: method audit MA-01..20 and status table, Triveritas critique, methods and limitations, held-back proposals; procedure for each pass) | `docs/research/criticality/README.md` (start here); `METHOD-AUDIT-2026-10-12.md`, `METHOD-AUDIT-proposals.md` (not applied), `METHODS-AND-LIMITATIONS.md` in the same folder; `docs/research/DECISIONS.md` (add new owner decisions verbatim, dated); `research/checks/PREREG-STATUS.md` |
 | Claims (one file each, three verdicts); claim tree | `docs/research/claims/` (`_TEMPLATE.md`); `hierarchy.yaml`, `hierarchy/*.md` (generated) |
 | Parameters (numeric provenance) | `docs/research/parameters.yaml` |
 | Sources, quotes, harvest logs, refreshes | `docs/research/sources/` (`bib-*`, `quotes-*`, `harvest-log-*`, `prior-art.md`, `refresh-*.md`) |
@@ -64,6 +64,7 @@ research/.venv/bin/python -I research/checks/baseline_textbook.py   # baselines 
    - `REVIEW.md` entry, `QUEUE.md`, `RESULTS.md`; verdict comments and an "R4 …" paragraph in each affected claim file.
    - Argmap: register `chk:<ID>` and review ids in `argmap/NOTES.md`; defeaters in `defeaters.yaml` (next `dNNN`, both sides where warranted); lineage node; mini-form in `standard-forms.md`.
    - Run `lint_research.py --write-hierarchy`, `research/tools/argmap_check.py`, `argmap_render.py`; refresh counts in `docs/arguments/README.md`, `README.md`, `docs/HANDOFF.md`; `research/tools/readme_figs.py`, then `git checkout` SVGs whose only change is random ids.
+   - Before each milestone post and before R5: run a criticality pass (`docs/research/criticality/README.md`); rule or vocabulary changes arising from it follow the freeze procedure in `docs/research/DECISIONS.md`.
    - Milestone post (and update notes on older posts the result changes); board patch `upd<N+1>.py` and republish the status Artifact (same file, same URL).
    - Commit with explicit paths; `git push origin research` and `git push origin research:master`.
 

@@ -1,4 +1,4 @@
-"""method_audit_stats.py: counts behind docs/research/METHOD-AUDIT-proposals.md (read-only).
+"""method_audit_stats.py: counts behind docs/research/criticality/METHOD-AUDIT-proposals.md (read-only).
 
     research/.venv/bin/python -I research/tools/method_audit_stats.py
 
