@@ -132,11 +132,11 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
   </div>
   <div class="stats">
     <span><b>154</b> Day posts</span><span><b>32</b> Zenodo papers</span><span><b>37</b> literature sources</span><span><b>23</b> critic/ally profiles</span>
-    <span><b>233</b> claims</span><span><b>468</b> typed objections</span><span><b>246</b> dated argument versions</span>
+    <span><b>233</b> claims</span><span><b>468</b> typed objections</span><span><b>246</b> dated argument versions</span><span>argmap_check.py: <b>4 known errors</b>, all quote-not-found (<span class="mono">L-adna-630-21-2026</span>, <span class="mono">L-dembski-scaling-reply-2026</span>, d129, d176); not yet fixed</span>
   </div>
   <div class="stats">
-    <span>Verdicts so far, internal: <b>132</b> holds · <b>19</b> non-sequitur · <b>2</b> arithmetic error · <b>51</b> pending · <b>15</b> reading-dependent verdicts (8 claims carry a reading-dependent verdict field, 12 fields in all, 3 more claims a reading-dependent RH tag; counted from the claim files)</span>
-    <span>External: <b>34</b> supported · <b>116</b> contested · <b>18</b> contradicted · <b>6</b> untestable · <b>47</b> pending</span>
+    <span>Verdicts so far, internal: <b>132</b> holds · <b>18</b> non-sequitur · <b>2</b> arithmetic error · <b>52</b> pending · <b>15</b> reading-dependent verdicts (8 claims carry a reading-dependent verdict field, 12 fields in all, 3 more claims a reading-dependent RH tag; counted from the claim files)</span>
+    <span>External: <b>34</b> supported · <b>116</b> contested · <b>17</b> contradicted · <b>6</b> untestable · <b>48</b> pending</span>
     <span>Citation fidelity: <b>44</b> accurate · <b>39</b> partial · <b>11</b> misread · <b>58</b> unverifiable · <b>10</b> pending</span>
   </div>
 </section>
@@ -205,7 +205,7 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
         <li data-s="ok"><span class="id">GAP-07b</span><span class="claim"><span class="c">Direct event count from the human–chimp alignment (reviewed)</span><span class="f">hg38 vs panTro6 (non-T2T): 37.8M SNVs + 4.3M indel events = 42.1M, 21.05M per lineage. 205M is 9.7× (bracket ~7–14×). For Day: his SNV-only 17.5M brackets the polymorphism-corrected count (16.4–18.1M), and his base-pair total is the right order for non-aligned sequence. His stated position is a weighting claim; as a weight 205M needs ~3,250 SNV-equivalents per large event (untested).</span></span></li>
         <li data-s="ok"><span class="id">GAP-07c</span><span class="claim"><span class="c">How many differences are still variable in humans (reviewed)</span><span class="f">1000 Genomes: 15.6% of human-lineage single-letter differences still polymorphic (CSAC 14–22%); indels 7–9%, SVs ~7%; chimp side assumed. Fixed events 17.2–17.9M per lineage, so 205M is 10.6–12.6× fixed events (about 8–13× combined). For Day: 84% fixed; large variants mostly fixed. Like for like, his 17.5M is 10% above the fixed single-letter count.</span></span></li>
         <li data-s="ok"><span class="id">A4</span><span class="claim"><span class="c">Turnover coefficient d ≈ 0.45</span><span class="f">d works as a unit conversion, equivalent to a ~56-year generation time. Its value can't be identified from the data.</span></span></li>
-        <li data-s="ok"><span class="id">A2e</span><span class="claim"><span class="c">LTEE-to-human transfer sensitivity (reviewed)</span><span class="f">Per generation, supply-limited: F ≤ 0.104 at κ = 1; at κ = 93,659 capped F 1.98-7.1. Flip point κ* 3.9-13,050 (central 217), a threshold on supply × beneficial fraction × effect size the check cannot set; decoupled effect sizes close the gap in 6 of 96 cells. On Day's total-throughput basis F = 50,765, conditional on k = μ. Internal non-sequitur, external contested (two dependencies).</span></span></li>
+        <li data-s="ok"><span class="id">A2e</span><span class="claim"><span class="c">LTEE-to-human transfer sensitivity (reviewed)</span><span class="f">Per generation, supply-limited: F ≤ 0.104 at κ = 1; at κ = 93,659 capped F 1.98-7.1. Flip point κ* 3.9-13,050 (central 217), a threshold on supply × beneficial fraction × effect size the check cannot set; decoupled effect sizes close the gap in 6 of 96 cells. On Day's total-throughput basis F = 50,765, conditional on k = μ. Internal non-sequitur; external <b>pending</b> since 2026-10-13 (D-21; the earlier value, contradicted in scope, is kept in the claim file as superseded).</span></span></li>
       </ul>
     </details>
 
@@ -355,11 +355,11 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
 <section>
   <h2>Rules and integrations (2026-10-11 to 2026-10-12)</h2>
   <ol class="next">
-    <li><b>Rule RD (reading-dependent verdicts, owner 2026-10-11):</b> where a verdict depends on how a quote is read, every plausible reading is recorded with its verdict; the claim file's field takes the reading under which the quoted statement is most defensible, and such verdicts are counted separately. Now <b>7 reading-dependent verdicts</b>: 4 claims carry a verdict (DN6 external, B9 internal, C7 internal and external, B internal) and 3 a rhetoric tag with no verdict change (Hancock RH-15, Myers RH-20, Mansfield RH-18). <b>RH6</b>: the standing test for unclear dialectic/rhetoric tags, both sides, is "remotely close" under the most charitable reading with a 3x band fixed in advance.</li>
+    <li><b>Rule RD (reading-dependent verdicts, owner 2026-10-11):</b> where a verdict depends on how a quote is read, every plausible reading is recorded with its verdict; the claim file's field takes the reading under which the quoted statement is most defensible, and such verdicts are counted separately. Now <b>7 reading-dependent verdicts</b>: 4 claims carry a verdict (DN6 external, B9 internal, C7 internal and external, B internal) and 3 a rhetoric tag with no verdict change (Hancock RH-15, Myers RH-20, Mansfield RH-18). <b>Since 2026-10-13 (D-21) B internal is <span class="mono">pending</span>; its reading-dependent value, non-sequitur, is kept in the claim file as superseded.</b> <b>RH6</b>: the standing test for unclear dialectic/rhetoric tags, both sides, is "remotely close" under the most charitable reading with a 3x band fixed in advance.</li>
     <li><b>B9</b> ("infertile and gone extinct within centuries"): "centuries" holds on Lynch's upper decline rate and on Day's own premise 2 (12-970 y), millennia on Lynch's central rate; the literal fixation reading gives 1.0-1.6 million y. Tagged dialectic; external contradicted, scoped.</li>
     <li><b>RHclose</b> (C7 and the Hard Limits peroration): the tag depends on the reading; the fixation-count reading of C7 is dialectic (non-sequitur at the conclusion), strict drift is rhetoric; the peroration is rhetoric on the 6.5 My fill (0.697) and dialectic on the delivered share (0.256) and Takahata Ne (0.281).</li>
     <li><b>RHclose-critics</b> (same test on the critics): Hancock RH-15 dialectic or rhetoric by reading; Myers RH-20 rhetoric on MITTENS 3.0 "sequential" (his Appendix A chain is dialectic and a non-sequitur); Mansfield RH-18 dialectic on existence and scaling. For Day: the applied math has covered 3-4 of Hancock's 10 classes. For critics: the printed formula really has no selection term.</li>
-    <li><b>A2e-alpha addendum</b> (Uricchio 2019 full text): human-lineage bias-corrected alpha 0.135 gives 798 on the most Day-charitable row, 4.2x the 191 flip; A2e external is contradicted for the any-effect-size count, contested for strong-only and fitness-weighted readings (scoped, not reading-dependent).</li>
+    <li><b>A2e-alpha addendum</b> (Uricchio 2019 full text): human-lineage bias-corrected alpha 0.135 gives 798 on the most Day-charitable row, 4.2x the 191 flip; A2e external (<b>pending</b> since 2026-10-13, D-21; the value below is superseded) was contradicted for the any-effect-size count, contested for strong-only and fitness-weighted readings (scoped, not reading-dependent).</li>
     <li><b>GAP05</b> (slightly deleterious fixations, Kim 2017 DFE): about 15,000-21,000 coding fixations per lineage; log-fitness decline 0.29-0.43 on the pre-registered base, about 0.8-1.1 on a divergence-calibrated base (post hoc), against ln 3 = 1.10; the DFE reproduces dN/dS 0.21-0.25 with no fitted parameter. For Day: the premise is supported. For critics: no pre-registered row reaches ln 3.</li>
   </ol>
 </section>
@@ -463,7 +463,7 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
   <ol class="next">
     <li><b>Pre-registration labels</b> (<span class="mono">research/checks/PREREG-STATUS.md</span>, 62 registered checks, regenerated 2026-10-13): blind <b>15</b>, criterion-only <b>6</b>, reproduction <b>3</b>, single-commit <b>18</b>, unknown <b>20</b>, registered not run <b>0</b>. Commit order is not working order; the reflog behind the push times is local.</li>
     <li><b>Basis of the 52 decided external verdicts</b> (proposal b, one coder, same model family, not applied): data <b>16</b>, literature <b>10</b>, model <b>26</b>. None of the eight load-bearing external verdicts rests on data the audit processed.</li>
-    <li><b>Open owner decisions</b> (<span class="mono">docs/research/DECISIONS.md</span>): O-1 purchase of the book (owner to supply text); O-5 revert or re-review B internal and A2e external (owner asked for an explanation); O-9 licence and conflict-of-interest statement (drafts only). O-2, O-3, O-4 (right of reply, human reviewers, non-Claude seat): drafts exist, nothing sent, awaiting approval of text and channel. O-6, O-7 accepted by the owner; interpretation recorded for his correction. O-8 applied.</li>
+    <li><b>Open owner decisions</b> (<span class="mono">docs/research/DECISIONS.md</span>): O-1 purchase of the book (owner to supply text); O-5 answered 2026-10-13 (D-21): B internal and A2e external are back to <span class="mono">pending</span> until three reviews are done (the three reviews each are not yet weighed; no ruling made); O-9 licence and conflict-of-interest statement (drafts only). O-2, O-3, O-4 (right of reply, human reviewers, non-Claude seat): drafts exist, nothing sent, awaiting approval of text and channel. O-6, O-7 accepted by the owner; interpretation recorded for his correction. O-8 applied.</li>
     <li><b>Triveritas critique</b> (the audit assessed with Day's own test: logic, mathematics and empirical anchoring must all hold, Q203): <b>done 2026-10-12</b>, findings TV-01 to TV-11 (2 CRITICAL, 6 MAJOR, 1 MINOR to MAJOR, 2 MINOR); no verdict, rule or claim changed. By that test the audit's tallies do not yet merit assent, chiefly on independence (the same weakness as MA-01); Day's root claim and the critics' positive thesis also fail the conjunction as things stand. Concordance with the first 20 MA findings: agrees 11, in part 3, partly disagrees 3, not covered 6. Same model family, not blind, outside Day's own protocol (TV-11). Files: <span class="mono">docs/research/criticality/triveritas-method.md</span>, <span class="mono">triveritas-audit-2026-10-12.md</span>.</li>
     <li><b>Proposed R5 exit criterion</b> (owner to confirm): no CRITICAL finding stands open; every MAJOR finding closed or explicitly accepted by the owner.</li>
   </ol>
@@ -481,19 +481,18 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
   <h2>Roadmap: everything outstanding</h2>
   <p>One table of every open item, with source, status, blocker, next step, who and cost: <span class="mono">docs/research/ROADMAP.md</span> (120 rows in sections A to D; section E is the ordered path to R5 and the simulator phase). No dates: order and dependencies only.</p>
   <table class="rm">
-    <thead><tr><th scope="col">Section</th><th scope="col">Rows</th><th scope="col">running</th><th scope="col">queued</th><th scope="col">proposal</th><th scope="col">needs owner</th><th scope="col">tbd</th><th scope="col">done</th></tr></thead>
+    <thead><tr><th scope="col">Section</th><th scope="col">Rows</th><th scope="col">running</th><th scope="col">queued</th><th scope="col">proposal</th><th scope="col">needs owner</th><th scope="col">decided / go-ahead</th><th scope="col">tbd</th><th scope="col">done</th></tr></thead>
     <tbody>
-      <tr><th scope="row">A</th><td>23</td><td>0</td><td>3</td><td>0</td><td>0</td><td>12</td><td>8</td></tr>
-      <tr><th scope="row">B</th><td>61</td><td>0</td><td>1</td><td>21</td><td>5</td><td>34</td><td>0</td></tr>
-      <tr><th scope="row">C</th><td>30</td><td>0</td><td>0</td><td>0</td><td>28</td><td>1</td><td>1</td></tr>
-      <tr><th scope="row">D</th><td>6</td><td>0</td><td>0</td><td>0</td><td>1</td><td>5</td><td>0</td></tr>
-      <tr><th scope="row">All</th><td><b>120</b></td><td><b>0</b></td><td><b>4</b></td><td><b>21</b></td><td><b>34</b></td><td><b>52</b></td><td><b>9</b></td></tr>
+      <tr><th scope="row">A</th><td>23</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>12</td><td>8</td></tr>
+      <tr><th scope="row">B</th><td>61</td><td>0</td><td>1</td><td>20</td><td>4</td><td>2</td><td>34</td><td>0</td></tr>
+      <tr><th scope="row">C</th><td>30</td><td>0</td><td>0</td><td>0</td><td>23</td><td>5</td><td>1</td><td>1</td></tr>
+      <tr><th scope="row">D</th><td>6</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>5</td><td>0</td></tr>
+      <tr><th scope="row">All</th><td><b>120</b></td><td><b>0</b></td><td><b>4</b></td><td><b>20</b></td><td><b>28</b></td><td><b>7</b></td><td><b>52</b></td><td><b>9</b></td></tr>
     </tbody>
   </table>
   <p>A compute and checks; B criticality remediation; C owner decisions; D outside inputs. Nothing has been sent to anyone. New open owner decisions from pass vii: <b>O-24</b> (raise the two-subagent cap?), <b>O-25</b> (review tier when a registration carries a verdict flip), <b>O-26</b> (who rules conflicts between steelman reviews; whether briefs name suspected issues), <b>O-27</b> (fairer Day-side criterion for FM10, proposal l).</p>
-  <p><b>Needs the owner (34):</b></p>
+  <p><b>Needs the owner (28):</b></p>
   <ul class="next">
-    <li><b>B7</b> Stale "most charitable to Day" comments in C7 and B9; revert or re-review of B and A2e (O-5)</li>
     <li><b>B20</b> Triveritas findings TV-01 to TV-11 (2 CRITICAL, 6 MAJOR, 1 MINOR to MAJOR, 2 MINOR)</li>
     <li><b>B39</b> Severe-testing findings ST-01 to ST-13 (1 CRITICAL for the document's standing, 6 MAJOR, 6 MINOR)</li>
     <li><b>B47</b> Argument-structure findings AS-01 to AS-13 (1 CRITICAL for the document's standing, 7 MAJOR, 5 MINOR)</li>
@@ -502,7 +501,6 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
     <li><b>C2</b> O-2 right of reply to Day and each named critic (drafts exist; 21-day window suggested)</li>
     <li><b>C3</b> O-3 recruit a human population geneticist and one reader per camp</li>
     <li><b>C4</b> O-4 non-Claude review seat (packet drafted; seeded draw D15, A2e, HF)</li>
-    <li><b>C5</b> O-5 revert B (internal) and A2e (external) to pending or their pre-2026-10-11 values, or re-review</li>
     <li><b>C6</b> O-6 verdict-rule freeze (rev 3) and 24-hour cooling-off</li>
     <li><b>C7</b> O-7 corpus freeze at 2026-10-12, later material logged but not scored until R5 is drafted (except replies unde...</li>
     <li><b>C9</b> O-9 LICENSE and conflict-of-interest statement</li>
@@ -522,10 +520,6 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
     <li><b>C24</b> O-20 and O-21</li>
     <li><b>C25</b> O-22</li>
     <li><b>C26</b> O-23</li>
-    <li><b>C27</b> O-24</li>
-    <li><b>C28</b> O-25</li>
-    <li><b>C29</b> O-26</li>
-    <li><b>C30</b> O-27</li>
     <li><b>D4</b> Paywalled or blocked full texts for the owner to supply: Bakewell 2007 (PNAS); Byars 2010 (PNAS, free); Stearn...</li>
   </ul>
 </section>
@@ -544,6 +538,7 @@ table.rm{border-collapse:collapse;font-size:.88rem} table.rm th,table.rm td{bord
 </section>
 
 <footer>Canonical source: <span class="mono">docs/research/</span> in the evo-sim repo (branch <span class="mono">research</span>). Code: reviewed checks in <span class="mono">research/checks/</span>, ad hoc calculations in <span class="mono">research/checks/adhoc/</span>, raw run outputs in <span class="mono">research/checks/results/raw/</span>, and harvest, claim-generator and board scripts in <span class="mono">research/tools/</span>. Results marked "review pending" or "running" are provisional.</footer>
+<!-- upd23 applied 2026-10-13 -->
 <!-- upd22 applied 2026-10-13 -->
 <!-- upd21 applied 2026-10-13 -->
 </div>
