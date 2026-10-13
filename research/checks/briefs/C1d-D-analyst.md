@@ -32,22 +32,44 @@ a new branch.
 
 - `QUEUE.md` items 5 and 6 are the full text of both follow-up lists; nothing else is
   registered for them.
-- In `docs/research/hierarchy.yaml`: **D10** and **D12** are `load_bearing: false`; D11
-  attacks D10 and supports D; D is a branch root under ROOT. C1d sits in the C branch under
-  C1.
+- In `docs/research/hierarchy.yaml`: **D10**, **D11**, **D12** and **D** itself are all
+  `load_bearing: false`; D11 and D12 attack D10, D10 supports D, and D is a branch root
+  under ROOT. **C1d is a check id, not a claim id** (corrected by the lead 2026-10-13): the
+  original C1d scored C6, C7, C, C5a, C5b, B2e and C4 (`RESULTS.md` section C1d,
+  `results/R4-C1d.md`); none of those is marked `load_bearing: true` either.
 - The D branch is where the audit most risks scoring a rhetorical point as a mathematical
   one. Rule **RH** applies: tag each quoted statement `dialectic` or `rhetoric` first;
   rhetoric is not literal-fact-checked and moves no verdict.
 
 ## Review tier
 
-**Low-stakes: one combined review** for each part — `REVIEW-R4-C1d-fu-combined.md` and
-`REVIEW-R4-D-fu-combined.md` (correctness plus both steelman sections in each). None of
-C1d, D10, D11 or D12 is marked `load_bearing: true`.
+**Lead ruling, 2026-10-13 (supersedes the tier paragraph this brief carried when it was
+first committed at 817d049).** The original paragraph set "low-stakes: one combined review"
+per part on the test "none of these nodes is marked `load_bearing: true`". That is the
+**D-16** test, and **D-23** (owner, 2026-10-13, "Three reviews") supersedes it: three
+reviews are due where a check's registration carries a verdict-field flip, **or its node is
+a listed feeder of a load-bearing node** (`R5-draft.md` section 1.3), even where
+`hierarchy.yaml` does not mark it `load_bearing`. Both parts hit that clause:
 
-**Escalation clause, stated in advance:** if either part would change a verdict or defeater
-on **D** itself (a branch root feeding ROOT) or on **C2 / C2a** (both load-bearing), that
-part becomes load-bearing and takes **three reviews**. Report it; do not apply the move.
+- **Part A — three reviews.** `R5-draft.md` 1.3 lists the row **"C / C6 / C1c (aDNA '21')"**
+  as a feeder on a ROOT path. The C1d follow-ups test that same node. Files:
+  `REVIEW-R4-C1d-fu-correctness.md`, `-steelman-day.md`, `-steelman-critic.md`, run one
+  after another under the cap of one agent.
+- **Part B — tier decided at registration, default three.** `R5-draft.md` 1.3 lists the row
+  **"D (sequence space)"**. D10-D12 are not themselves rows, so the trigger is the other
+  D-23 limb: **if the registration carries any verdict-field flip** on D10, D11, D12 or D,
+  Part B takes three reviews (`REVIEW-R4-D-fu-correctness.md`, `-steelman-day.md`,
+  `-steelman-critic.md`). Only if the registration carries no verdict-field flip and touches
+  no verdict or defeater on D does Part B fall back to the single combined
+  `REVIEW-R4-D-fu-combined.md`. **State which, in the registration docstring, before the
+  run** — the tier is fixed in advance, never after the numbers are seen.
+
+**Escalation clause, unchanged:** if either part would change a verdict or defeater on **D**
+itself (a branch root feeding ROOT) or on **C2 / C2a** (both load-bearing), that part is
+load-bearing and takes three reviews. Report it; do not apply the move.
+
+This is a tier change, so standing procedure item 3 (a criticality pass) applies to it, as
+it did to D-23 itself; the lead carries that, not the analyst.
 
 ## Files you may write
 
