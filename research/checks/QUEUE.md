@@ -2,6 +2,34 @@
 
 The live queue (moved out of `REVIEW.md` on 2026-10-09 to save tokens: agents that only need the queue read this file, not the review log). Update it here; `REVIEW.md` keeps the review log only.
 
+## Owner decisions of 2026-10-13 (D-21 to D-25): the work they create
+
+Answers are in `docs/research/DECISIONS.md`, with the owner's words pasted. Concurrency is
+**one agent at a time** (D-22), so everything below runs in sequence, in roughly this order.
+Briefs are committed before each task exists (MA-21).
+
+1. **O5 revert** (D-21, brief `briefs/O5-revert-operator.md`, operator): B internal
+   `non-sequitur` → `pending`, A2e external `contradicted` (scoped) → `pending`, superseded
+   values kept in the file; ROADMAP B7's stale "most charitable to Day" comments in C7 and
+   B9 fixed in the same pass; then the lint / argmap / counts housekeeping.
+2. **Six reviews** (D-21, brief `briefs/O5-reviews-reviewer.md`, reviewer): three on B
+   internal, three on A2e external, one task each, one after another. Then a fix pass and a
+   separate integration before either field leaves `pending`.
+3. **L5's two missing reviews** (D-23, brief `briefs/L5-reviews-reviewer.md`, reviewer):
+   steelman-day and steelman-critic. The withheld C-external flip stays withheld until the
+   lead has ruled on the two and a fix pass has answered every MAJOR and MINOR. *The lead's
+   reading of D-23; the owner was not asked this sub-question and may overrule it.*
+4. **FM10 fairer criterion** (D-25, brief `briefs/FM10-fair-criterion-analyst.md`, analyst):
+   cooling-off to **2026-10-14 21:22 UTC**, then source the neutral lineage-specific range
+   (stop if there is no sourced upper end), pre-register, run on na-workhorse, write up,
+   three reviews. FM10 **internal** stays `pending` under D-09.
+5. **Criticality pass for the tier change** (D-23): changing the review tier is a rule
+   change, so standing procedure item 3 applies. Fold it into the batch-15 pass rather than
+   running a separate one.
+6. **Two sub-questions still for the owner** (O-26): may a reviewer's brief name the issues
+   the lead already suspects, and may one agent write both steelman reviews. Until answered,
+   briefs name the suspicions openly and each steelman is a separate task.
+
 ## Queue (after review #13)
 In flight (2026-10-09; one subagent at a time from now on, per the user; compute on na-workhorse only):
 - **Runs launched 2026-10-10 afternoon (one agent; collect, then write up; do not rerun):**
@@ -58,7 +86,7 @@ Next:
 
 15. **Batched integration 2026-10-11 (one agent): B9, RHclose, RHclose-critics, A2e-alpha Uricchio addendum, GAP05: DONE.** Reviews #61-#65. Owner directive 2026-10-11 (rules RD and RH6 in `R4-X1-verdict-rule.md`): where a verdict or RH tag depends on the reading, every plausible reading is recorded; the claim file's verdict field takes the reading under which the quoted statement is most defensible (owner-approved RD consistency fix, 2026-10-11: not the reading best for the speaker), with a `reading-dependent:` comment and a Readings table. Reading-dependent: B9 internal, C7 (internal/external/tag), B internal (Q157/Q158; field now `non-sequitur`, F-over-6.5-My `holds` scoped to B2 recorded alongside), A2e external (now SCOPED, no longer reading-dependent: formal count statement; strong-only stays contested); 6 reading-dependent verdicts in all, RH-15 Hancock, RH-20 Myers, RH-18 Mansfield. GAP-05: computed on a sourced coding DFE; noncoding unsourced. Milestone post and board patch deferred until the HF `ph` run lands.
     - **DONE 2026-10-13 (R4-Q93close, review #81, fix-passed df9c6c6, integrated; reading-dependent, `dialectic`, no verdict moves). Day-side closeness re-test for Q93 ("In any population over 10,000, neutral substitution will not fixate at all.") queued (new):** no window is named, so test the C7 standard (F_drift <= 1e-4 over a stated window, about 140/N for 280 generations: true for N >= 1.4e6, outside the band for 1e4 to 1.4e6) and the 4N_e window of the same comment (fixation occurs); all readings reported, 3x band, pre-registered, low-stakes tier.
-    - **Process notes (owner, 2026-10-11):** L5's review tier is one combined review (the pre-registered `l5_adna_power.py` docstring says three; the script is never edited, so the tier is recorded here only). H8 extra reps (K = 16k/64k): skipped for now. H4 (provenance check of Day's s and N_e for Hancock's "predict" reading): skipped.
+    - **Process notes (owner, 2026-10-11; the L5 tier note is SUPERSEDED by D-23 of 2026-10-13, which restores three reviews for a registration that carries a verdict flip):** L5's review tier is one combined review (the pre-registered `l5_adna_power.py` docstring says three; the script is never edited, so the tier is recorded here only). H8 extra reps (K = 16k/64k): skipped for now. H4 (provenance check of Day's s and N_e for Hancock's "predict" reading): skipped.
 
 
 ## Later queue (test-methods review, 2026-10-11; candidates only, nothing pre-registered or run)

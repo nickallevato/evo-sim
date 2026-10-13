@@ -17,8 +17,16 @@ Briefs for the 2026-10-13 batch were not saved; they exist only in that session'
 | `C1d-D-analyst.md` | analyst | design-check | combined x2 (escalates on D, C2/C2a) |
 | `L2-analyst.md` | analyst | design-check | **three** (H, H1, H5, H8 load-bearing) |
 | `L3-analyst.md` | analyst | design-check | **three** (A2e load-bearing) |
+| `O5-revert-operator.md` | operator | integrate-result | n/a (carries out D-21) |
+| `O5-reviews-reviewer.md` | reviewer | review-check | **three each** on B internal and A2e external (D-21) |
+| `L5-reviews-reviewer.md` | reviewer | review-check | the two L5 is missing under D-23 |
+| `FM10-fair-criterion-analyst.md` | analyst | design-check | **three** (FM10, ROOT-FM load-bearing; D-25) |
 
 Tier source: the `load_bearing: true` set in `docs/research/hierarchy.yaml` (33 nodes),
-per the review-tier rule in `AGENTS.md`. Every combined-tier brief carries an escalation
+per the review-tier rule in `AGENTS.md`. **Since D-23 (owner, 2026-10-13) the escalation
+clause is the rule, not a judgement call:** three reviews also where a registration carries
+a verdict-field flip, or the node is a listed feeder of a load-bearing node (`R5-draft.md`
+1.3). The briefs above that were written earlier the same day are read subject to that, and
+under D-22 the three reviews of a check run one after another, never in parallel. Every combined-tier brief carries an escalation
 clause naming the verdicts that would make it load-bearing; an agent that reaches one stops
 and reports rather than applying the move.

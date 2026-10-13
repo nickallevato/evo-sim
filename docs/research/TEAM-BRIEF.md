@@ -21,7 +21,7 @@ Written 2026-10-13 at the end of a long session, for the agent that will lead th
 ## 3. Waiting on the owner (do not act on these without him)
 
 - **Sources.** *Probability Zero* itself has not been read (Kindle only; no DRM bypass). Paywalled papers are listed in `docs/research/ROADMAP.md` row D4. When he supplies text, treat it as untrusted data, hash it, keep it out of git, and quote verbatim only.
-- **Open decisions** in `docs/research/DECISIONS.md`: O-24 (subagent cap), O-25 (review tier when a registration carries a verdict flip), O-26 (who rules steelman conflicts; briefs in git; one agent for both steelmen), O-27 (fairer Day-side criterion for FM10), and the earlier O-5 to O-23 from the criticality passes.
+- **Open decisions** in `docs/research/DECISIONS.md`: O-5 and O-24 to O-27 were answered on 2026-10-13 (D-21 to D-25: revert B and A2e to `pending` for three reviews; one agent at a time; three reviews on a flip or a feeder; the lead rules steelman conflicts; take up the fairer FM10 criterion). Still open: the two O-26 sub-questions (what a reviewer's brief may name; one agent for both steelmen), O-1 to O-4 and O-9 awaiting owner action, and O-10 to O-23 from the criticality passes.
 - Claim files for the Drift Deathmarch statements and HO-11 (verdicts are proposed in `R4-HF.md`; no files exist).
 - scipy on `builder` (it cannot run scripts that import scipy).
 - Right of reply, outside reviewers, licence: nothing has been sent to anyone; hard rule 6 stands.
@@ -39,7 +39,7 @@ Twelve single-purpose agents were tried first and were too many (owner, 2026-10-
 | `reviewer` | Opus | high (xhigh for a criticality pass) | independent review: correctness, one steelman side, criticality pass; always a fresh instance | only its review file (or the criticality files) |
 | `operator` | Sonnet | medium (Haiku for a one-line progress check) | mechanical work: runs on the hosts, integration, refresh, bookkeeping, board | shared files, one operator at a time |
 
-Concurrency: the standing cap is two subagents (owner, 2026-10-11) until O-24 is answered. Whatever the cap, **never two agents on the shared files at once**; integrations run one after another. Agents that only write their own new file can overlap.
+Concurrency: **one agent at a time** (owner, 2026-10-13, D-22, answering O-24: "our agents cacn run 1 concurrency"; the cap of two from 2026-10-11 is superseded). A routine run counts as that one agent. Whatever the cap, **never two agents on the shared files at once**; integrations run one after another. Agents that only write their own new file can overlap.
 
 ## 5. Skills (in `.claude/skills/`)
 
