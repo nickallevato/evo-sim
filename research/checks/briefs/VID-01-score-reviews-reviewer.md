@@ -143,3 +143,120 @@ ruling into this brief, committed, before the fix pass. Where a ruling moves the
 of a verdict field, a fresh reviewer checks it before integration. Then the fix pass answers every
 MAJOR and MINOR by id, then the integration task (`QUEUE.md`, `REVIEW.md`, `RESULTS.md`, argmap,
 lint, counts, the seven items under "Open" in the write-up, and NOTE-6's unpinned `yt-dlp`).
+
+---
+
+# Lead rulings R-8..R-15 (D-24), written before the fix pass
+
+All three reviews are in: correctness `385c443` (0/4/5/7), steelman-day `a22bd78` (0/4/5/6),
+steelman-critic `98b820a` (0/5/5/6). None moves a verdict field: **A4d `internal: holds`,
+A5h `arithmetic-error` / `pending`, Ge `internal: holds` all survive all three.** The rulings below
+bind the fix pass and are not reopened by it. Where I rely on a fact I checked it myself; the
+locator is given so the fix pass and the next reviewer can re-check me.
+
+**R-8 (Q1 reading (c): steelman-day MAJOR-1/2 vs steelman-critic MAJOR-1/2). Reading (c) keeps
+`partly accurate`; the Day-side regrade to "contradicted" is declined — but its evidence is
+adopted, against the critic review's dismissal of it.**
+
+Both steelmen are partly right and neither wins outright.
+
+- For the critics: `C2-bio-cycle-d.md` title line defines Bio-Cycle as `g_eff = d x g_nominal`.
+  MITTENS 3.0 §8.6 cites a rate "calculated ... using Kimura's fixation time formula and the
+  Bio-Cycle correction for overlapping generations ... approximately one fixation per 27,600
+  **effective** generations". A rate denominated in *effective* generations has d inside it by
+  definition. **A token search establishes the absence of the symbol `d`, not the absence of the
+  correction.** GGR-13's core assertion — that the d correction is still in play in "mittens" — is
+  therefore accurate as to 3.0.
+- For Day: GGR-14's elaboration — that he computes 450,000, multiplies by d, and "is still using
+  that number for all his math" — is **not** accurate as to 3.0. The steelman-day evidence
+  discriminates here and the steelman-critic's "discriminates nothing" is **overstated**:
+  252,000/27,600 = 9.13 against a printed 8 (a 12% gap `A5e` line 26 already records as
+  unreconciled), versus 113,400/27,600 = 4.11, which is off by a factor of two. The printed 8 is
+  consistent with the **uncut** 252,000 and not with a d-cut count.
+
+Accurate core, inaccurate elaboration, is exactly what `partly accurate` means. The two findings
+do not conflict once each is confined to the proposition it actually bears on: GGR-13 and GGR-14
+are not the same assertion and must be scored separately in the Readings table.
+
+**R-9 (governing reading: correctness MAJOR-3, steelman-critic MAJOR-1, steelman-day NOTE-3 —
+concordant). Reading (a) is struck as governing; (c) governs among in-scope readings.**
+Rule RD line 202, verbatim: "Extended readings (a different object, or a wider claim) are reported
+with their own verdicts but cannot set the verdict field or the headline tag." Reading (a) is the
+pre-3.0 / *Probability Zero* line — a different object from MITTENS 3.0. It stays in the Readings
+table with its `accurate` verdict and its TW-01 cross-reference; it may not set the headline.
+All three reviewers reached this independently and the Day-side steelman agrees Day does not need
+it. **This moves the governing reading, so under the lifecycle a fresh reviewer checks it before
+integration** — ordered below.
+
+**R-10 (correctness MAJOR-1/2 vs steelman-day NOTE-2: t=01:49:52). Re-label, keep, and strip of
+its corroborating role.** The turn is **GGR-11**, attributed `panel` by the EVO-69 fix pass and
+confirmed by the correctness review's transcript check. Three files call it "the host's own
+narration": the write-up, `A4d` (R4 paragraph), and **`quotes-critics.md` line 846**, which the
+reviews did not name but which carries the same error and the claim that it is "evidence for
+(a)/(b) over (c)". All three are corrected. The quote is **not deleted** (steelman-day NOTE-2 is
+right): it is a real panel turn and it does support A4d's substance. But it cannot corroborate
+reading (a), because the panel is speaking **about 3.0** and GGR-13 is the reply disagreeing with
+it. What it shows is that the panel is internally split about 3.0 — which is worth recording in
+its own right, and is a point for Day.
+
+**R-11 (correctness MINOR-5 vs steelman-day MAJOR-4 and steelman-critic NOTE-1: the 1.03 ± 0.02
+figure). Correctness MINOR-5 is NOT applied.** I checked `R4-G1.md` myself: line 163 is the free
+row, pair ratio **1.029 ± 0.022**; line 164 is linked 1 M at **1.015 ± 0.022**. Both steelmen
+reached this independently and both are right. A correctness finding is not privileged over two
+concurring steelmen plus the source table. The fix pass records it as "not applied, with reason",
+and does not silently drop it.
+
+**R-12 (Q3 human density: steelman-day MAJOR-2 vs steelman-critic MINOR-1). The refinement is
+weakened, not deleted; both sides' qualifications ride with it.** Each is factually right and
+`R4-G1.md` supports both, so the write-up must carry both or neither:
+free recombination is Day's own stipulation (s7.10) and gives independence at 1.029 ± 0.022
+(line 163); the **only pre-registered** linkage row **failed** (predicted 0.5-0.95, got 1.015,
+line 172); the tighter maps giving 0.84 / 0.65 are **labelled post hoc** (lines 165-166); and
+~4,500 loci/M "between the two tight maps" (line 173) is an **interpolation, not a run** — no
+run exists at human-relevant density. Every clause above goes in. Neither steelman may carry
+more weight than its row.
+
+**R-13 (steelman-critic MAJOR-3: the "clean of the d coefficient" headline). Accepted.** Given
+R-8, the phrase overstates what a token search can establish. It occurs at `R4-VID-01-score.md`
+lines 477 and 502 and in `A4d` line 12 — fix all three to the defensible form: *3.0 contains no
+`d` term and applies no d multiplier to its generation count; an overlap correction survives by
+citation inside the §8.6 rate.* This is the **third** audit error against the critics from this
+source, and the fix pass says so plainly, as it would for a Day-side error.
+**Out of scope here, routed on:** `C2-bio-cycle-d.md` line 8 makes the same unqualified assertion
+("MITTENS 3.0 ... drops d") in the `load_bearing: true` comment of a load-bearing node. It is
+**not** this task's to edit. The integration task raises it, and because C2 is load-bearing it
+gets its own tier, not a drive-by edit.
+
+**R-14 (steelman-critic MAJOR-5: Q2's registered criterion vs the audit's operative `contested`).
+Recorded, not acted on.** A5h `external` stays `pending`: all three reviews agree the field does
+not move, and the registered criterion was fixed before looking. But if MA-08 is right that the
+audit's operative `contested` is looser than the criterion registered here, that is an
+inconsistency in the **vocabulary**, not in this check. Changing it is a rule change and takes the
+freeze procedure in `DECISIONS.md`. The fix pass records it and routes it to the batch-15
+criticality pass. It does **not** rescore Q2.
+
+**R-15 (the remaining uncontested findings).** Apply as written, by id:
+steelman-day MAJOR-3 (all three "Open" proposals run against Day; add the two symmetric items it
+names — A5h's now-inaccurate "In support: none located", and the GGR-11 turn into A4d's Responses
+— plus a Day-side defeater; hard rule 1 is the reason, the same reason the Day-side findings were
+applied); steelman-critic MINOR-2 (Ge's §1 clause under RH3); steelman-critic MINOR-5 (band 3d
+was never checked though a candidate exists at t=01:55:19 — check it and score it);
+steelman-critic MINOR-4 (band 3b is **not** too high — a finding against the reviewer's own side,
+which closes the question the brief asked and needs no change).
+**The correctness review's ruling on the declined RD instruction stands: the analyst was right.**
+Rule RD line 198 — "A claim whose formal statement fixes the reading ... is `SCOPED`, not
+reading-dependent" — and A4d's Formal statement fixes it. No `reading-dependent:` comment, no
+separate count. **The defect was in my registration, not in the analyst's execution**, and the
+fix pass records it that way.
+
+## What happens next, in order
+
+1. **Fix pass** (analyst): answer every MAJOR and MINOR of all three reviews by id in a "Review
+   resolution" section, including the ones ruled *not applied* (R-11, R-14) with their reason.
+   New computation is labelled **post hoc**. May write: the write-up, `A4d`, `A5h`, `Ge`,
+   `quotes-critics.md` (the line 846 correction under R-10), `ledgers/slips.md` (RH3 under R-15).
+2. **Fresh reviewer check of R-9** before integration, as the lifecycle requires for a ruling that
+   moves a governing reading. Narrow scope: the Readings table and the headline only.
+3. **Integration** (operator): `QUEUE.md`, `REVIEW.md`, `RESULTS.md`, argmap ids and defeaters,
+   lint, counts, the seven "Open" items, the C2 referral from R-13, the MA-08 referral from R-14,
+   and NOTE-6's unpinned `yt-dlp`.
