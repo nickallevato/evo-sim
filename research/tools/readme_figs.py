@@ -127,11 +127,11 @@ ax.set_title("H2 · hard-selection cap is ln R / D, not a flat 1/300", color=INK
 ax.legend(fontsize=8.5, loc="lower right")
 save(fig, "h2_persistence.svg")
 
-# 6. Verdict tallies (lint_research.py output on 2026-10-09 after R4 X1, GAP-07c and the mapping round, 217 claims)
+# 6. Verdict tallies (lint_research.py output on 2026-10-13 after R4 B2f, 233 claims; n/a verdicts not drawn)
 tallies = {
-    "internal": [("holds", 109, ACC), ("non-sequitur", 18, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 64, "#525252")],
-    "fidelity": [("accurate", 39, ACC), ("partial", 34, "#eab308"), ("misread", 9, DAY), ("unverifiable", 53, "#525252"), ("pending", 22, "#3f3f46")],
-    "external": [("supported", 26, ACC), ("contested", 103, "#eab308"), ("contradicted", 11, DAY), ("untestable", 6, NEU), ("pending", 59, "#525252")],
+    "internal": [("holds", 132, ACC), ("non-sequitur", 19, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 51, "#525252")],
+    "fidelity": [("accurate", 44, ACC), ("partial", 39, "#eab308"), ("misread", 11, DAY), ("unverifiable", 58, "#525252"), ("pending", 10, "#3f3f46")],
+    "external": [("supported", 34, ACC), ("contested", 116, "#eab308"), ("contradicted", 18, DAY), ("untestable", 6, NEU), ("pending", 47, "#525252")],
 }
 fig, ax = plt.subplots(figsize=(7.2, 2.6))
 for i, (k, segs) in enumerate(tallies.items()):

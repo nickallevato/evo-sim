@@ -90,7 +90,7 @@ A standing layer audits the method, not the sources: a third-party-style method 
 
 <p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 233 claims" width="760"></p>
 
-*7 claims carry a reading-dependent verdict and 3 a reading-dependent rhetoric tag (10 reading-dependent verdicts in all before B1e's three fields were added on 2026-10-13; rule RD, 2026-10-11); the tallies above show the value under the reading in which the quoted statement is most defensible (not the reading best for the speaker), and the other readings are in each claim file.*
+*8 claims carry a reading-dependent verdict (12 fields) and 3 a reading-dependent rhetoric tag (15 reading-dependent verdicts in all, recounted 2026-10-13 from the claim files; rule RD, 2026-10-11); the tallies above show the value under the reading in which the quoted statement is most defensible (not the reading best for the speaker), and the other readings are in each claim file.*
 
 | ✅ Where **Day** holds up | ✅ Where the **critics** hold up |
 |---|---|
