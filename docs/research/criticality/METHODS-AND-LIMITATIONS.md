@@ -118,7 +118,7 @@ No conflict-of-interest statement, priors statement or licence exists yet. They 
 Stated so that the limits above are not read as "nothing here counts":
 
 - Quotes are verbatim and machine-checked against hashed raw text; misses are printed.
-- The checks are executable, seeded and re-runnable. The largest reproduced 696 jobs on two hosts with no mismatch, and core results were replicated in a second simulation tool.
+- The checks are executable, seeded and re-runnable. The largest reproduced 696 jobs on two hosts with no mismatch, and core results were replicated in a second simulation tool. The replication was not clean: the second tool's substitution counts came out 0.7% to 36% low in step with the mutation rate per gamete, seven table items missed their registered tolerance (`RESULTS.md` names four results as not replicated), the cause has not been localised and the follow-up run has not been made (`R4-XT.md`; severe-testing pass, ST-06).
 - Internal validity is scored on each author's own basis, separately from fidelity and realism, so the audit cannot simply assert the consensus.
 - The long runs and one prediction note were registered and pushed before their results; missed predictions were reported.
 - Limits were disclosed before this page existed (`HANDOFF.md`, "Things a reader should weigh").
