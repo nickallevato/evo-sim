@@ -2248,3 +2248,55 @@ Passages cited by the L5 write-up that had no Q id. Each checked as an exact sub
 - locator: ¶7 of extracted text
 - quote: "Evolution by natural selection, as a mechanism of directional change capable of producing adaptation or speciation, has been empirically demonstrated to be inoperative in human populations for at least 7,000 years."
 - note: Shows the selection-driven reading of the comparator is the post's own framing. RH tag: dialectic.
+
+## Refresh 2026-10-13 quotes
+Q279-Q280 are the two Drift Deathmarch passages the audit had only second-hand; each checked as an exact substring (curly quotes normalised) of the held extracted text `sources/raw/day/blog-2026-01-11-the-drift-dilemma.txt` (sha256 a4a1f88c...59b25a; html sha256 192cd61e...0489d, fetched 2026-10-07). Q281-Q285 are checked against fetched copies in `sources/raw/refresh-2026-10-13/`.
+
+### Q279 Drift Deathmarch: 'kills off the entire proto-human race thousands of times faster' - blog 2026-01-11
+- source: `B2026-01-11-the-drift-dilemma` (post titled "The Drift Deathmarch", slug `the-drift-dilemma`); URL: https://voxday.net/2026/01/11/the-drift-dilemma/
+- locator: line 16 of the extracted text (last sentence of the paragraph that gives "7.6 harmful mutations per actual generation", "9 generations", "225 years", "7.5 million years", "between 225 and 2250 years")
+- quote: "The proposed drift model kills off the entire proto-human race thousands of times faster than it can produce the observed changes in the modern human genome."
+- note: Ratio as stated by Day: 7.5 million years against 225-2250 years is about 3,300-33,000. The paragraph's inputs are Day's own (not re-derived here). RH tag proposed: dialectic (a checkable comparison of two stated times).
+
+### Q280 Drift Deathmarch: 'closes it with a corpse' - blog 2026-01-11
+- source: `B2026-01-11-the-drift-dilemma`; URL as Q279
+- locator: line 18 of the extracted text (the final paragraph)
+- quote: "The Bernoulli Barrier closes the door with a mathematical proof. The Drift Deathmarch closes it with a corpse."
+- note: The sentence the audit had as "closes it with a corpse". It follows in the same paragraph with "Some people need to see the corpse. You can't drift your way to a human brain. You can only drift your way to a corpse." (not filed separately). RH tag proposed: rhetoric (figure of speech about the Deathmarch model result; its dialectical core is Q279).
+
+### Q281 Announcement of a written response to the Gutsick Gibbon video - blog 2026-10-13
+- source: voxday.net "The Evo-Avengers Strike Back!", published 2026-10-13 18:41:27 UTC (tags evolution, science); URL: https://voxday.net/2026/10/13/the-evo-avengers-strike-back/; local copy `sources/raw/refresh-2026-10-13/the-evo-avengers-strike-back/` (fetched 2026-10-13 about 19:00 UTC)
+- locator: ¶2 (of 3: video announcement, this paragraph, "DISCUSS ON SG")
+- quote: "Feel free to leave your impressions on SG, but leave the YouTube comments alone… for now. I’ll respond to the substantive matters in writing, as I always do."
+- note: Announces a reply but gives none; the same post's ¶1 calls the video "Six Scientists Roast One Racist Loser" and says it is "four hours and 14 minutes long". RH tag: dialectic (a commitment to respond). Pending: the written reply.
+
+### Q282 Claim of zero successful challenges - blog 2026-10-13 (text attributed in the post to "Claude Athos")
+- source: voxday.net "A Shot Fired", published 2026-10-13 13:21:30 UTC, updated 2026-10-13 15:36:06 UTC (tags evolution, history, philosophy, science); URL: https://voxday.net/2026/10/13/a-shot-fired/; local copy `sources/raw/refresh-2026-10-13/a-shot-fired/`
+- locator: section "On the Question of Peers" / "What happened with peer review", the paragraph beginning "That is a more rigorous review process than any journal provides." (last two sentences); the section opens "I am Claude Athos."
+- quote: "The entire internet has been the reviewer. The result is zero successful challenges."
+- note: Relay-type text (written under the AI co-author's name, published by Day; rule U: not scored internal for Day). Posted about five hours before the video (Q281). RH tag: rhetoric (universal claim without a stated test of "successful"); dialectical core: no critic number survives. Compare critic positions in `quotes-critics.md`.
+
+### Q283 LTEE gen/fix change described as an adoption - blog 2026-10-13
+- source: as Q282; same section, paragraph beginning "Meanwhile, we found five errors in our own LTEE analysis"
+- locator: that paragraph, third sentence
+- quote: "When the updated LTEE data gave us 1,587 gen/fix instead of 1,322, we immediately adopted it, not because it made our case stronger, but because it was a more accurate calcuation at a higher-resolution over more generations."
+- note: "calcuation" is Day's/the post's spelling. A Day statement about the 1,322 to 1,587 change (versions ledger): it says the update was adopted immediately and "not because it made our case stronger". Check against the dates of the two versions in `ledgers/versions.md`. RH tag: dialectic (checkable against the versions record).
+
+### Q284 Red-team and the 10^(-78,000,000) figure - blog 2026-10-13
+- source: as Q282; same section, paragraph beginning "We also subjected the Hard Limits paper"
+- locator: that paragraph, fourth sentence
+- quote: "The corrected figure for modern humans: a fixation probability of approximately 10^(−78,000,000)."
+- note: A new headline number as stated in the post (the minus sign is U+2212 in the source). Provenance is the Hard Limits paper, not re-derived here. The preceding sentence says "The true suppression turned out to be exponential, not linear." Relay-type (rule U). RH tag: dialectic. Candidate for `parameters.yaml` (provenance: Day/Athos, 2026-10-13, unchecked against the paper in this pass).
+
+### Q285 'twin 96-core 512GB digital abacuses' - blog 2026-10-13
+- source: voxday.net "An Unfair Fight", published 2026-10-13 17:58:23 UTC (tags evolution, science, trainwreck); URL: https://voxday.net/2026/10/13/an-unfair-fight/; local copy `sources/raw/refresh-2026-10-13/an-unfair-fight/`
+- locator: ¶1, last sentence
+- quote: "And twin 96-core 512GB digital abacuses."
+- note: Day's description of his compute for the dN/dS and FM work (cf. the 96-core machine teased for UATV, 2026-10-09). No code, gene list or table is released in the post. RH tag: rhetoric (joke); factual core: two machines of 96 cores and 512 GB each.
+
+### Q286 Z22903977 revised (retitled "k ≠ μ: ..."): closed-form F(T) added - Zenodo, record modified 2026-10-13
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c, sha256 9d142f3f...c9ca1), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/` (text via pdftotext, whitespace normalised; superscripts as extracted)
+- locator: §1 (the paragraph on Chalub 2022), sentences 3-5
+- quote: "Day and Athos (2026b) extract the dominant eigenvalue of that expansion via diffusion asymptotics in the arcsine-transformed coordinate system, converting Chalub's abstract series into the closed-form finite-time completion fraction F(T) = exp(−π²Nₑ/T) — the proportion of theoretically destined fixations that actually complete within T generations."
+- following sentence, also checked: "The steady state requires infinite time. It therefore cannot be utilized in any finite-time equation, and every application of k = μ to a finite-time calculation is guaranteed to be incorrect."
+- note: The earlier version (md5 e325def9...) had the "mean time to fixation" subtraction `E[F(T)] ≈ μL(T − 4Nₑ)` and no F(T); the §2-§3 text is unchanged. The new text cites "Day and Athos (2026b)", which is not identified in the paragraph. Silent revision (new title, new file, same record id and DOI). RH tag: dialectic. Not checked: the eigenvalue derivation.
