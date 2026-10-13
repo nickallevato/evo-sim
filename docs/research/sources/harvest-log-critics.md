@@ -171,7 +171,9 @@ pending capture, item 5 of the "next" list in this file).
 - Method: `curl` of the watch page, then `yt-dlp --skip-download --write-auto-subs --sub-langs en
   --sub-format vtt --write-info-json` into the fetch directory `sources/raw/vid01-2026-10-13/`;
   transcript by `research/tools/harvest/vtt.py` (20 s chunks); 42 quotes machine-verified as exact
-  substrings by `research/tools/harvest/verify_vid01.py` (42/42).
+  substrings by `research/tools/harvest/verify_vid01.py` (42/42; **48/48 after the fix pass of
+  2026-10-13**, which appended GGR-41..GGR-46 and made the verifier read its quote list from
+  `quotes-critics.md` and `slips.md` instead of the gitignored fetch directory).
 - **Pitfalls.** `yt-dlp` was missing from `research/.venv` although `HOWTO-refresh.md` §5 calls it from
   there; reinstalled with `pip install --no-deps yt-dlp` (2026.8.19; `requirements.txt` untouched).
   Fetching the signed `timedtext` URL from the watch page directly returned **0 bytes** in both `json3`
@@ -179,6 +181,14 @@ pending capture, item 5 of the "next" list in this file).
   yt-dlp's own player request produced the track. yt-dlp warns that no JS runtime is installed (formats
   may be missing) - irrelevant for subtitles, relevant if a future task needs audio or video.
 - Yield: bib `GG-4`; quotes `GGR-01..GGR-40`; rhetoric `RH-31`, `RH-32`. Comments (656) not pulled.
+- **Fix pass 2026-10-13** (review `REVIEW-R4-VID-01-combined.md`, 1 MAJOR / 10 MINOR; rulings R-1..R-7
+  in the brief; resolution table in `refresh-2026-10-13-video.md`). Yield `GGR-41..GGR-46`: the panel's
+  answer to the Bernoulli barrier, which the harvest had recorded as a bare rejection (recombination
+  t=01:57:03-01:57:44; the infinitesimal model t=02:13:47-02:14:28), and two further credits to Day
+  (t=01:22:28, t=01:51:34). Nine `(inferred)` speakers downgraded to `panel`. **Lesson:** do not write
+  an evaluative line about one side's reply ("without a derivation ... the weaker half") without
+  reading forward to the end of the exchange; and do not state a credential the fetched text does not
+  give ("credentialed scientists").
 - Negative result worth as much as the quotes: zero coverage of aDNA (C), the dN/dS = 0.80 numbers (DN),
   the Fourth Mechanism (FM) and sequence space (D). The only `dN/dS` mention in four hours is a
   within-genome heterogeneity argument at t=02:15:08.
