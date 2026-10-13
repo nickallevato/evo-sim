@@ -1,0 +1,13 @@
+host: na-garage (workstation; local run within limits: one process, 1.4 s wall, 104 MB RSS)
+date: 2026-10-13T19:33:23Z
+registered at: 4213c5e (pushed to origin/research on gitea and GitHub before the run)
+python: 3.14.4 numpy 2.5.3 scipy 1.18.1
+bbe870a5ddd57387e9200253e4308c2f  b2f_finite_time_formula.py
+0f98377de6af55e06dda4a7919081034  b2_hard_limits_internal.py
+ea6f9c82e08b8bd2f18574772a77b980  results/raw/b2f.out
+13b771a734530e52c79e81be641b2e34  results/raw/b2f.json
+1e6eb6b8d823bffac2890bf8415e5c7b  sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt
+fbb2070542997a274f0591ff2c710136  sources/raw/refresh-2026-10-13/zenodo-22903977-new/old.txt
+739634e97a80c8f9d0d31d125544b94c  sources/raw/refresh-2026-10-13/zenodo-22903977-new/k_neq_mu.pdf
+e8fed8def791455de183557c9e6c78b0  sources/raw/day/zenodo-22129121.txt
+e325def9ecd74611e6e75f1befcc788f  sources/raw/day/zenodo-22903977.pdf

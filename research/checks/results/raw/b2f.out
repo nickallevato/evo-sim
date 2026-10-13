@@ -1,0 +1,126 @@
+## Textual facts T1-T6 (verification, not predictions)
+  T1: Q286 in NEW: True
+  T1: N1 in NEW: True
+  T1: N2 in NEW: True
+  T1: N3 in NEW: True
+  T1: N4 in NEW: True
+  T1: N7 in NEW: True
+  T1: Q286 not in OLD: True
+  T1: N1 not in OLD: True
+  T1: N3 not in OLD: True
+  T1: N2 not in OLD: True
+  T1: N5 in OLD: True
+  T1: N5 not in NEW: True
+  T1: N4 in OLD: True
+  T1: N7 in OLD: True
+  T2/T4: Q31 in HL: True
+  T2/T4: N6 in HL: True
+  T2/T4: HL def (l.287) in HL: True
+  T2/T4: HL lacks 'Chalub': True
+  T2/T4: HL lacks 'eigenvalue': True
+  T2/T4: HL lacks 'arcsine': True
+  T2/T4: HL lacks 'Gegenbauer': True
+  T3: NEW lacks '≪': True
+  T3: NEW lacks '∼': True
+  T3: NEW lacks '<<': True
+  T5: N3 URL is 22903977 (own record): True
+  T6: 'F(T)' count 5, of which 'E[F(T)]' 3, bare 2 (expected bare 2): True
+  T6: 'exp(' count 1 (expected 1): True
+  note T1: N2 (the two sentences) is new text; OLD had N5 in its place.
+
+## Cross-check of the two exact series (decimal eigen-series vs float modular series)
+  x=0.05   F_dec=7.5062385204e-83 F_modular=7.5062385204e-83 rel.diff=2.7e-14
+  x=0.1    F_dec=1.9425930782e-40 F_modular=1.9425930782e-40 rel.diff=1.3e-14
+  x=0.25   F_dec=2.5907870314e-15 F_modular=2.5907870314e-15 rel.diff=2.3e-15
+  x=0.5    F_dec=3.4777794119e-07 F_modular=3.4777794119e-07 rel.diff=1.4e-15
+  x=1      F_dec=2.4526945790e-03 F_modular=2.4526945790e-03 rel.diff=5.3e-16
+  x=2      F_dec=1.2835099738e-01 F_modular=1.2835099738e-01 rel.diff=4.3e-16
+  x=4      F_dec=6.0634492024e-01 F_modular=6.0634492024e-01 rel.diff=1.8e-16
+  x=5.04   F_dec=7.6122365690e-01 F_modular=7.6122365690e-01 rel.diff=2.9e-16
+  x=6      F_dec=8.5125573731e-01 F_modular=8.5125573731e-01 rel.diff=2.6e-16
+  x=8      F_dec=9.4508380413e-01 F_modular=9.4508380413e-01 rel.diff=1.2e-16
+  x=12     F_dec=9.9256381962e-01 F_modular=9.9256381962e-01 rel.diff=1.1e-16
+  x=25.2   F_dec=9.9998988395e-01 F_modular=9.9998988395e-01 rel.diff=1.1e-16
+  x=60     F_dec=1.0000000000e+00 F_modular=1.0000000000e+00 rel.diff=2.2e-16
+  worst relative difference 2.7e-14 (need < 1e-9): True
+
+## P1 exponent: E(x) = -d ln F / d(1/x) against pi^2 = 9.8696
+  x=0.05: E=9.7948 (-0.76%; band 1%, below pi^2): True   [analytic pi^2 - 1.5x + x^2/16 = 9.7948]
+  x=0.25: E=9.4985 (-3.76%; band 5%, below pi^2): True   [analytic pi^2 - 1.5x + x^2/16 = 9.4985]
+  x=1.0: E=8.4321 (-14.56%; band 16%, below pi^2): True   [analytic pi^2 - 1.5x + x^2/16 = 8.4321]
+
+## P2 prefactor: F_exact / exp(-pi^2/x)
+  | x = T/N_e | T/4N_e | F_exact | C = exp(-pi^2/x) | F/C | (4pi/x)^1.5 e^(x/16) | 1 - 3e^(-x/2) |
+  | 0.05 | 0.013 | 7.506239e-83 | 1.878042e-86 | 3997 | 3997 | -1.925930 |
+  | 0.1 | 0.025 | 1.942593e-40 | 1.370417e-43 | 1418 | 1418 | -1.853688 |
+  | 0.25 | 0.062 | 2.590787e-15 | 7.157166e-18 | 362 | 362 | -1.647491 |
+  | 0.5 | 0.125 | 3.477779e-07 | 2.675288e-09 | 130 | 130 | -1.336402 |
+  | 1 | 0.250 | 2.452695e-03 | 5.172319e-05 | 47.42 | 47.42 | -0.819592 |
+  | 1.4 | 0.350 | 2.546655e-02 | 8.676541e-04 | 29.35 | 29.35 | -0.489756 |
+  | 2 | 0.500 | 1.283510e-01 | 7.191883e-03 | 17.85 | 17.85 | -0.103638 |
+  | 3 | 0.750 | 3.852934e-01 | 3.725876e-02 | 10.34 | 10.34 | 0.330610 |
+  | 4 | 1.000 | 6.063449e-01 | 8.480497e-02 | 7.15 | 7.15 | 0.593994 |
+  | 5.04 | 1.260 | 7.612237e-01 | 1.411045e-01 | 5.395 | 5.395 | 0.758621 |
+  | 6 | 1.500 | 8.512557e-01 | 1.930253e-01 | 4.41 | 4.41 | 0.850639 |
+  | 8 | 2.000 | 9.450838e-01 | 2.912129e-01 | 3.245 | 3.246 | 0.945053 |
+  | 10.4 | 2.600 | 9.834511e-01 | 3.871278e-01 | 2.54 | 2.544 | 0.983450 |
+  | 12 | 3.000 | 9.925638e-01 | 4.393464e-01 | 2.259 | 2.269 | 0.992564 |
+  | 16 | 4.000 | 9.989936e-01 | 5.396415e-01 | 1.851 | 1.892 | 0.998994 |
+  | 20 | 5.000 | 9.998638e-01 | 6.104980e-01 | 1.638 | 1.738 | 0.999864 |
+  | 25.2 | 6.300 | 9.999899e-01 | 6.759400e-01 | 1.479 | 1.701 | 0.999990 |
+  | 30 | 7.500 | 9.999991e-01 | 7.196525e-01 | 1.39 | 1.768 | 0.999999 |
+  | 40 | 10.000 | 1.000000e+00 | 7.813437e-01 | 1.28 | 2.145 | 1.000000 |
+  | 50 | 12.500 | 1.000000e+00 | 8.208687e-01 | 1.218 | 2.868 | 1.000000 |
+  | 60 | 15.000 | 1.000000e+00 | 8.483234e-01 | 1.179 | 4.076 | 1.000000 |
+  ratio > 1 everywhere: True; monotone decreasing: True; closed prefactor within 1% for x<=2: True; B2 values 47.4/17.8 reproduced (47.42, 17.85): True
+
+## P3 at the paper's own inputs (T = 252,000 generations)
+  N_e=10000: x=25.20, T/4N_e=6.30; F_exact=0.999990 (band [0.9999, 1.0]: True); C=0.6759 (pred 0.676 +-2%: True); C below exact by 32.4% (>25%: True); deficit 1-F=1.012e-05, 1-C=0.324
+  N_e=50000: x=5.04, T/4N_e=1.26; F_exact=0.761224 (band [0.7, 0.82]: True); C=0.1411 (pred 0.141 +-2%: True); C below exact by 81.5% (>25%: True); deficit 1-F=2.388e-01, 1-C=0.859
+  N_e=63000: x=4.00, T/4N_e=1.00; F_exact=0.606345 (band [0.59, 0.62]: True); C=0.0848 (pred 0.085 +-2%: True); C below exact by 86.0% (>25%: True); deficit 1-F=3.937e-01, 1-C=0.915
+
+## P4 where C is within 25% of exact
+  x* = 44.23 (T/4N_e = 11.06); band [40, 48]: True; every grid x < x* is outside 25%: True; deficit ratio (1-C)/(1-F) at x* = 2.681e+08 (> 1e6: True)
+  (reported, no band) C within a factor 3 of exact for x >= 8.67
+
+## P5 dominant-eigenvalue term 1 - 3 exp(-x/2)
+  eigen term within 1% of exact for all grid x >= 8: True; negative below x = 2 ln 3: True
+  at x = 25.2: (1-C)/(1-F) = 3.203e+04 (> 1e4: True); grid x >= 8 where 1-C is within 25% of 1-F: []
+    x=8: 1-F_exact=5.492e-02  3e^(-x/2)=5.495e-02  1-C=7.088e-01
+    x=12: 1-F_exact=7.436e-03  3e^(-x/2)=7.436e-03  1-C=5.607e-01
+    x=25.2: 1-F_exact=1.012e-05  3e^(-x/2)=1.012e-05  1-C=3.241e-01
+    x=60: 1-F_exact=2.807e-13  3e^(-x/2)=2.807e-13  1-C=1.517e-01
+
+## P6 consistency with the paper's own s2-s4
+  (a) exact mean fixation time = 4.000000 N_e (4.000 +-0.1%): True
+      C as a CDF: int_0^X (1-C) = 49.80, 72.48, 95.21 N_e at X = 1e3, 1e4, 1e5; growth per decade 22.68, 22.72 (pi^2 ln 10 = 22.73 +-5%): True  -> no finite mean
+  | N_e | x | paper loss % | exact loss % | C loss % | paper's T-4N_e loss % |
+  | 10000 | 25.20 | 15.9 | 15.87 (band (15.5, 16.5): True) | 60.47 (band (55, 67): True) | 15.87 |
+  | 50000 | 5.04 | 79.4 | 69.82 (band (65, 75): True) | 96.04 (band (93, 98): True) | 79.37 |
+  | 63000 | 4.00 | 100.0 | 79.91 (band (79, 81): True) | 97.94 (band (96, 99): True) | 100.00 |
+
+## P7 steady-state flux, exact WF chain 2N = 200 (N_e = 100), infinite sites, input 2N mu copies/generation
+  | T | x | stationary-start flux/mu | empty-start flux/mu | chain F(T) | diffusion F(x) | stationary count/(mu T) | empty count/(mu T) |
+  | 1 | 0.01 | 1.000000000000 | 0.000000e+00 | 0.000000e+00 | 0.000000e+00 | 1.000000000 | 0.000000 | True
+  | 100 | 1.00 | 1.000000000000 | 3.088825e-03 | 3.088825e-03 | 2.452695e-03 | 1.000000000 | 0.000327 | True
+  | 400 | 4.00 | 1.000000000000 | 6.137741e-01 | 6.137741e-01 | 6.063449e-01 | 1.000000000 | 0.207200 | True
+  | 504 | 5.04 | 1.000000000000 | 7.662508e-01 | 7.662508e-01 | 7.612237e-01 | 1.000000000 | 0.308186 | True
+  | 2520 | 25.20 | 1.000000000000 | 9.999903e-01 | 9.999903e-01 | 9.999899e-01 | 1.000000000 | 0.843052 | True
+  segregating copies-classes at stationarity (sum phi / 2N mu) = 11.94 sites per unit mu
+
+## Summary
+  T1: HIT
+  T2/T4: HIT
+  T3: HIT
+  T5: HIT
+  T6: HIT
+  series agree: HIT
+  P1: HIT
+  P2: HIT
+  P3: HIT
+  P4: HIT
+  P5: HIT
+  P6a: HIT
+  P6b: HIT
+  P6c: HIT
+  P7: HIT
