@@ -4025,3 +4025,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#80), fix-passed (0b0431c) and integrated 2026-10-13; C external stays contested (reading-dependent); C1a sign untested"
+
+- id: L-audit-q93close-2026
+  label: "Audit Q93close: Q93 tag depends on the reading; dialectic on the 7,000-year-window and the N_e / 2 My readings, false at every N with no window"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [B2b]
+  locator: "research/checks/results/R4-Q93close.md"
+  quote: "The statement is true for windows shorter than about a million years (4N_e), where nothing fixes above 10,000, and at 7,000 years nothing fixes above 700 either."
+  parents:
+    - {id: L-audit-rhclose-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#81), fix-passed (df9c6c6) and integrated 2026-10-13 under rule RD"

@@ -272,6 +272,7 @@ flowchart RL
   chk_B9["chk:B9: Q104 'infertile and gone extinct within centuries' mathed ou…"]:::audit
   chk_C1d["chk:C1d: Day's 11-bin and two-period aDNA statistics on the real AADR…"]:::audit
   chk_GAP05["chk:GAP05: slightly deleterious fixations on the human lineage from a s…"]:::audit
+  chk_Q93close["chk:Q93close: the owner's 'remotely close' RH rule applied to Day's Q93 ('…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
   B7b -.->|"undermines · untested"| B5j
   B7a ==>|"undercuts · upheld"| B9
@@ -287,6 +288,7 @@ flowchart RL
   chk_R2_arith -->|"rebuts · partly"| B2b
   B2e -.->|"undermines · partly"| B2b
   chk_B2b ==>|"undercuts · upheld"| B2b
+  chk_Q93close ==>|"undercuts · partly"| B2b
   chk_B2a ==>|"undercuts · partly"| B2c
   F1 -.->|"undermines · partly"| B2d
   F1b -.->|"undermines · partly"| B2d
@@ -1181,7 +1183,7 @@ flowchart RL
 
 ## Other: objections to audit checks and unregistered items (part 4)
 
-Objections to chk:H2-hard, chk:H3, chk:H8, chk:HF, chk:L1, chk:L1b, chk:L1c, chk:L5, chk:L6, chk:L7, chk:R2-term3-ratio.
+Objections to chk:H2-hard, chk:H3, chk:H8, chk:HF, chk:L1, chk:L1b, chk:L1c, chk:L5, chk:L6, chk:L7.
 
 ```mermaid
 flowchart RL
@@ -1201,7 +1203,6 @@ flowchart RL
   chk_L5["chk:L5: ancient-DNA zero-fixation power analysis: Day's required rat…"]:::audit
   chk_L6["chk:L6: Day's 'ten of twelve' LTEE populations with undone fixations…"]:::audit
   chk_L7["chk:L7: readings of Yoo 2025 SI sheets 14/19/24 that give 410 M; bas…"]:::audit
-  chk_R2_term3_ratio["chk:R2-term3-ratio: R2 note comparing Term 3 with Haldane + d (7.7×, corrected t…"]:::audit
   rev_R4_H3_correctness["rev:R4-H3-correctness: review #7, correctness (H3)"]:::audit
   rev_R4_H3_steelman_critic["rev:R4-H3-steelman-critic: review #7, critic-side steelman (H3)"]:::audit
   rev_R4_H3_steelman_day["rev:R4-H3-steelman-day: review #7, Day-side steelman (H3)"]:::audit
@@ -1225,7 +1226,6 @@ flowchart RL
   rev_R4_L5_combined["rev:R4-L5-combined: review #80, combined (correctness, steelman-day, steelman-cr…"]:::audit
   rev_R4_L6_combined["rev:R4-L6-combined: review #59, combined (L6); low-stakes tier"]:::audit
   rev_R4_L7_combined["rev:R4-L7-combined: review #60, combined (L7); low-stakes tier"]:::audit
-  rev_R4_correctness["rev:R4-correctness: review #4, correctness"]:::audit
   rev_R4_new["rev:R4-new: review #4, new checks"]:::audit
   rev_R4_new ==>|"undercuts · upheld"| chk_H2_hard
   rev_R4_H3_correctness ==>|"undercuts · upheld"| chk_H3
@@ -1252,12 +1252,11 @@ flowchart RL
   rev_R4_L5_combined ==>|"undercuts · upheld"| chk_L5
   rev_R4_L6_combined ==>|"undercuts · upheld"| chk_L6
   rev_R4_L7_combined ==>|"undercuts · upheld"| chk_L7
-  rev_R4_correctness ==>|"undercuts · upheld"| chk_R2_term3_ratio
 ```
 
 ## Other: objections to audit checks and unregistered items (part 5)
 
-Objections to chk:RHclose, chk:RHclose-critics, chk:X1, chk:XT, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
+Objections to chk:Q93close, chk:R2-term3-ratio, chk:RHclose, chk:RHclose-critics, chk:X1, chk:XT, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
 
 ```mermaid
 flowchart RL
@@ -1271,10 +1270,13 @@ flowchart RL
   D9a["D9a: Dawkins's Weasel actually demonstrates the opposite of its p…"]:::day
   H4["H4: Worden's O(1) bits per generation is exactly the Haldane-sca…"]:::day
   chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
+  chk_Q93close["chk:Q93close: the owner's 'remotely close' RH rule applied to Day's Q93 ('…"]:::audit
+  chk_R2_term3_ratio["chk:R2-term3-ratio: R2 note comparing Term 3 with Haldane + d (7.7×, corrected t…"]:::audit
   chk_RHclose["chk:RHclose: the owner's 'remotely close' RH rule applied to Day's Q96 (C…"]:::audit
   chk_RHclose_critics["chk:RHclose-critics: the same rule applied to critic statements: Hancock RH-15 (H…"]:::audit
   chk_X1["chk:X1: arithmetic and internal-validity audit of every numeric crit…"]:::audit
   chk_XT["chk:XT: cross-tool replication of the k-vs-mu and fixation-time resu…"]:::audit
+  rev_R4_Q93close_combined["rev:R4-Q93close-combined: review #81, combined (Q93close); low-stakes tier"]:::audit
   rev_R4_RHclose_combined["rev:R4-RHclose-combined: review #62, combined (RHclose); low-stakes tier"]:::audit
   rev_R4_RHclose_critics_combined["rev:R4-RHclose-critics-combined: review #63, combined (RHclose-critics); low-stakes tier"]:::audit
   rev_R4_X1_correctness["rev:R4-X1-correctness: review #12, correctness (X1)"]:::audit
@@ -1282,9 +1284,13 @@ flowchart RL
   rev_R4_X1_steelman_critic["rev:R4-X1-steelman-critic: review #12, critic-side steelman (X1)"]:::audit
   rev_R4_X1_steelman_day["rev:R4-X1-steelman-day: review #12, Day-side steelman (X1)"]:::audit
   rev_R4_XT_combined["rev:R4-XT-combined: combined review (correctness, Day-side and critic-side steel…"]:::audit
+  rev_R4_correctness["rev:R4-correctness: review #4, correctness"]:::audit
   x_darwinzdf42_hitchhiking["x:darwinzdf42-hitchhiking: DarwinZDF42: selective sweeps fix many loci at once, mostly …"]:::critic
   x_dawkins_weasel["x:dawkins-weasel: Dawkins's Weasel program (1986): cumulative selection reache…"]:::literature
   x_eugine_sqrtN["x:eugine-sqrtN: Commenter 'Eugine' at Tree of Woe: 'Vox is wrong about paral…"]:::critic
+  rev_R4_Q93close_combined ==>|"undercuts · partly"| chk_Q93close
+  rev_R4_Q93close_combined ==>|"undercuts · upheld"| chk_Q93close
+  rev_R4_correctness ==>|"undercuts · upheld"| chk_R2_term3_ratio
   rev_R4_RHclose_combined ==>|"undercuts · upheld"| chk_RHclose
   rev_R4_RHclose_combined ==>|"undercuts · partly"| chk_RHclose
   rev_R4_RHclose_critics_combined ==>|"undercuts · upheld"| chk_RHclose_critics
@@ -1315,7 +1321,7 @@ This uses grounded semantics (Dung 1995): an argument is *accepted* when every a
 | day (100) | 39 / 60 / 1 | 68 / 32 / 0 | 44 / 56 / 0 |
 | ally (13) | 2 / 11 / 0 | 10 / 3 / 0 | 5 / 8 / 0 |
 | critic (63) | 37 / 25 / 1 | 62 / 1 / 0 | 46 / 17 / 0 |
-| audit (152) | 99 / 53 / 0 | 99 / 53 / 0 | 99 / 53 / 0 |
+| audit (154) | 100 / 54 / 0 | 100 / 54 / 0 | 100 / 54 / 0 |
 
 **Support is not modelled by Dung's framework.** A claim can be *accepted* (no surviving direct objection) while claims it rests on are rejected. The last column lists those rejected supports (lenient reading), so read both together. ROOT, for instance, draws few direct objections; most objections target its supports.
 
@@ -1567,6 +1573,7 @@ Load-bearing claims are in **bold**.
 | chk:L5 | audit | rejected | rejected | rejected | – |
 | chk:L6 | audit | rejected | rejected | rejected | – |
 | chk:L7 | audit | rejected | rejected | rejected | – |
+| chk:Q93close | audit | rejected | rejected | rejected | – |
 | chk:R2-arith | audit | accepted | accepted | accepted | – |
 | chk:R2-fidelity | audit | accepted | accepted | accepted | – |
 | chk:R2-term3-ratio | audit | rejected | rejected | rejected | – |
@@ -1648,6 +1655,7 @@ Load-bearing claims are in **bold**.
 | rev:R4-L5-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-L6-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-L7-combined | audit | accepted | accepted | accepted | – |
+| rev:R4-Q93close-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-RHclose-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-RHclose-critics-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-X1-correctness | audit | accepted | accepted | accepted | – |

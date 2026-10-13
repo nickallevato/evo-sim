@@ -43,6 +43,19 @@ RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; 
 Table 2 (Vₖ halved/doubled) also reproduces: human 22,500/60,000; elephant 19,886/45,455; mouse 2.72e6/9.75e6; fly 7.89e8/3.13e9.
 Discrepancies: (i) the abstract's "about ten thousand" is 3.5–11× below the table's human ceilings (35,000–114,000) and 2.8× below the elephant's; (ii) with Vₖ = 5 Wright's formula gives Nₑ = 0.57 N, so the paper treats census 8.2e9 as Nₑ ≈ 4.7e9, whereas Z18525547 and the Q&A use Nₑ = 3,300–10,000 for the same census (N/Nₑ = 800,000 in the 2026-04-30 post); (iii) mouse and fly Vₖ and census values are flagged "original estimates pending a proper source".
 
+R4 Q93close (research/checks/results/R4-Q93close.md; review #81, 2026-10-13): Day's Q93 "In any population over 10,000, neutral substitution will not fixate at all." (not in this Statement block; no verdict here moves). reading-dependent: tag `dialectic` (RH-29), value under the readings in which the quoted statement is most defensible.
+
+| Reading | Window, meaning of 10,000, criterion | Cutoff N* | Status vs the 3x band | Tag |
+|---|---|---|---|---|
+| No window (steady state) | rate = mu | none | OFF | rhetoric |
+| (i) status-first | 7,000 y imported from Q96 (280 gen), N_e, Day's criterion | 70 | TRUE, slack 143x | dialectic |
+| (ii) located | 2 My (HL species window), N_e, Day's criterion | 20,000 | CLOSE (2.0x) | dialectic |
+| HL census frame | 2 My, census with Wright's formula | 35,000 | OFF-10x (3.5x) | rhetoric |
+| HL lineage, census | 6.5 My | 113,750 | OFF (11.4x) | rhetoric |
+| McCarthy's 9 My | N_e, Day's criterion | 90,000 | OFF-10x | rhetoric |
+
+Discrepancy (i) above stands: the table's human ceilings are 35,000 to 114,000.
+
 ## Assumptions
 - Stated: Variance Nₑ is the relevant quantity; the lineage duration is the window; Vₖ is the least certain input (sensitivity table given).
 - Implicit: Panmictic, constant size over G; mean time is the criterion (the tail is handled in B2a); Wright's formula applies with a single Vₖ for the species.

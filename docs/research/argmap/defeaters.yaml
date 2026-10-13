@@ -6125,3 +6125,45 @@
   counter: []
   note: 'Applied in fix pass 0b0431c with post hoc l5_posthoc_v3.py (c9f3d69). Not accepted: the part of K3 that keeps the unreachable-band limit on Day''s side; D6''s vocabulary word. No verdict value moves.'
   hierarchy_edge: false
+
+- id: d470
+  attacker: chk:Q93close
+  target: B2b
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-Q93close.md (Readings table; Review resolution D1, K1)
+  audit_status: partly
+  audit_basis: 'Q93 tag reading-dependent (RD), value dialectic: no window stated, the substitution rate is mu at every N (false, rhetoric); with the 7,000-year window imported from Q96 the cutoff is about 70 (true, slack); with 10,000 as N_e and the 2 My Hard Limits window the cutoff is 20,000 (CLOSE, 2.0x); Hard Limits census frame 35,000 to 113,750, McCarthy 9 My 90,000, C7 standard 1.4e6 (rhetoric)'
+  counter: [d471]
+  note: 'Critic-side: B2b discrepancy (i) stands (the paper table puts the human ceiling at 35,000 to 114,000, not 10,000) and where the statement is true the 10,000 does no work. No B2b verdict moves; Q93 is in no Statement block.'
+  hierarchy_edge: false
+
+- id: d471
+  attacker: rev:R4-Q93close-combined
+  target: chk:Q93close
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #81, steelman-Day section)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-Q93close-combined.md (D1, D2)
+  audit_status: partly
+  audit_basis: 'Day-side: the statement is literally true on the window his next sentence invokes (the aDNA evidence, 7,000 years) and on his own N_e frame with the 2 My window it lands within 2.0x of 10,000 (inside the 3x band); the time component matters (exact fill 0.61 within 1 My at N_e 10,000)'
+  counter: []
+  note: 'Credit to Day. The step from a true reading to a hard limit at 10,000 stays the non-sequitur scored at claim C.'
+  hierarchy_edge: false
+
+- id: d472
+  attacker: rev:R4-Q93close-combined
+  target: chk:Q93close
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #81)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-Q93close-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 1 MAJOR (the registered selection picks the reading in which 10,000 does no work; both leading readings now named), 7 MINOR, 5 NOTE'
+  counter: []
+  note: 'Applied in fix pass df9c6c6; the P6 docstring slip (0.63 vs 0.606) recorded as the audit''s own error, script not edited.'
+  hierarchy_edge: false
