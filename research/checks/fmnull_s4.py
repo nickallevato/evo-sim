@@ -103,10 +103,14 @@ genome, so homoplasy is present).  One haploid genome each of H, C, G and orangu
   Simplifications kept: bonobo not simulated (b = c, so iHG's b constraint is vacuous in the null); hs1 = hg38;
   no alignment error (hence F0 not scored); no gene conversion; one constant population per epoch.
   Grid: 2 (N_HC) x 2 (N_HCG) x 2 (r) x 2 (RHET) x 3 (BGS) = 48 CORNERS, plus CENTRAL (N_HC 65,000, N_HCG 45,000,
-  r 1.25e-8, RHET 0, no BGS) used only as the base of the planted scenarios.  Genome per configuration: 200 Mb
-  as 20 chunks of 10 Mb (windows never span chunks).  Fallback fixed now: if the compute-host smoke measures a
-  projected wall time above 8 h at the allowed number of processes, the run uses 100 Mb (10 chunks) per
-  configuration, and the .host file records which.
+  r 1.25e-8, RHET 0, no BGS) used only as the base of the planted scenarios.  Genome per configuration: 1000 Mb
+  as 100 chunks of 10 Mb (windows never span chunks).  POST HOC, PRE-RUN (after the local smoke, no data and no
+  full-size null seen): was 200 Mb with a 100-Mb fallback.  Reason: the smoke measured ~0.05 CPU-s per 0.2 Mb
+  per configuration (~1 CPU-h for the whole 200-Mb grid), and at 200 Mb (~2,000 simulated 100-kb windows against
+  ~9,500 F2 data windows) the Poisson upper limit of a null mesa count of 0 already scales to E_hi ~ 17, so S4-M
+  could miss DAY for simulation size alone; 1000 Mb brings that floor to ~3.5.  Fallback fixed now: if the
+  compute-host smoke projects a wall time above 8 h at the allowed number of processes, 500 Mb, then 200 Mb; the
+  .host file records which.
 
 BANDS (per statistic, filter, W; computed from the 48 corners after thinning to the data cell)
   phi statistics: for corner c, value v_c and a leave-one-chunk-out jackknife SE_c (one group per chunk).
@@ -150,7 +154,7 @@ PLANTED SCENARIOS (power, both ways; CENTRAL demography, same chunk seeds as CEN
     T1  f 0.02,  Lb 100 kb, s 1        T2  f 0.02, Lb 300 kb, s 1        T3  f 0.005, Lb 300 kb, s 1
     T4  f 0.5,   Lb 100 kb, s 1        T5  f 0.5,  Lb 1 Mb,   s 1        T6  f 0.1,   Lb 300 kb, s 0.5
   Blocks are placed on a grid of Lb slots with a random phase per chunk (FMnull's grid-phase lesson).  T3 has
-  about 3 blocks per 200 Mb; its yield is also reported per block, and as projected from T2's yield per block.
+  about 17 blocks per 1000 Mb; its yield is also reported per block, and as projected from T2's yield per block.
 
 PREDICTIONS (fixed now; hand values from the formulas in HAND below; the scoring code in `post` implements each)
   P1 S4-A on F2.  Critic side: CRITIC or MARGINAL-IN at every scored W.  Day side (S4 read as a test of a
@@ -239,7 +243,7 @@ across all agents, RAM under ~12 GB; launch with < /dev/null; record hostname an
   $P -I $S selftest
   $P -I $S smoke --procs 10 --mb 2 --out /tmp/fmnull_s4_smoke.npz > $R/fmnull_s4_smoke.out 2>&1
   $P -I $S realdata $R/fm_bins.npz $R/fmnull_s4_real.json > $R/fmnull_s4_real.out 2>&1
-  $P -I $S sim --procs 10 --mb 200 --out $R/fmnull_s4_sim.npz > $R/fmnull_s4_sim.out 2>&1     (or --mb 100, rule)
+  $P -I $S sim --procs 10 --mb 1000 --out $R/fmnull_s4_sim.npz > $R/fmnull_s4_sim.out 2>&1   (or 500 / 200, rule)
   $P -I $S post $R/fmnull_s4_sim.npz $R/fmnull_s4_real.json $R/fmnull_s4_post.json > $R/fmnull_s4_post.out 2>&1
   Collect: rsync $R/fmnull_s4_* back (the sim npz is kept on the host, md5 in .host; json and .out committed).
 """
@@ -778,8 +782,17 @@ def post(simnpz, realjson, outjson, seed=20261013):
                 Mp, Mc = sp["mesa"]["M"] * scale, sc["mesa"]["M"] * scale
                 r["M"] = dict(value_scaled=Mp, central_scaled=Mc, raw=sp["mesa"], cls=classify_count(Mp, b["lo"], b["hi"]),
                               central_cls=classify_count(Mc, b["lo"], b["hi"]))
+                p = PLANTED[pn]
+                if p["kind"] == "swap":                     # expected blocks placed in the simulated genome
+                    nblk = p["f"] * meta["mb"] * 1e6 / p["Lb"]
+                    r["M"]["yield_per_block"] = (sp["mesa"]["M"] - sc["mesa"]["M"]) / nblk
+                    r["M"]["data_blocks_at_f"] = p["f"] * cell["data"]["mesa"]["k_elig"] * W * BIN / p["Lb"]
             rows[W] = r
         out["planted"][pn] = rows
+    t2 = out["planted"].get("T2", {}).get(100, {}).get("M")
+    if t2 and "T3" in out["planted"]:                # T3 projected from T2's yield per block (docstring)
+        out["planted"]["T3_from_T2_yield_100kb"] = t2["yield_per_block"] * PLANTED["T3"]["f"] / PLANTED["T2"]["f"] * \
+            t2["data_blocks_at_f"] + t2["central_scaled"]
     out["aggregate"] = aggregate(out)
     out["predictions"] = score_predictions(out, real, meta)
     json.dump(out, open(outjson, "w"), indent=1, default=float)
@@ -810,49 +823,72 @@ def aggregate(out):
     return agg
 
 
+def _all(flags):
+    """None (unscorable) if any required class or value is missing; else all()."""
+    flags = list(flags)
+    return None if (not flags or any(f is None for f in flags)) else all(flags)
+
+
+def _ok(c):
+    return c is not None and c != "UNSCORED"
+
+
 def score_predictions(out, real, meta):
+    """Post hoc, pre-run (after the local smoke): a missing or UNSCORED class makes a prediction unscorable (None),
+    never a vacuous hit."""
     P = {}
     C = lambda W, s: out["cells"].get(f"F2|{W}", {}).get("classes", {}).get(f"FULL|{s}")
     V = lambda W, s: (real["cells"].get(f"F2|{W}") or {}).get(s)
     inside = ("CRITIC", "MARGINAL-IN")
     a_cls = [C(W, "phi_A") for W in WS]
     a_val = [V(W, "phi_A") for W in WS]
-    P["P1"] = dict(critic=all(c in inside for c in a_cls), day=any(C(W, "phi_A") == "DAY" for W in WS if W >= 100),
-                   audit=bool(all(v is not None and 1.5 <= v <= 8 for v in a_val)
-                              and a_val[0] and a_val[-1] and a_val[-1] / a_val[0] <= 3), classes=a_cls, values=a_val)
+    a_ge100 = [C(W, "phi_A") for W in WS if W >= 100]
+    P["P1"] = dict(critic=_all((c in inside) if _ok(c) else None for c in a_cls),
+                   day=(any(c == "DAY" for c in a_ge100) if all(_ok(c) for c in a_ge100) else None),
+                   audit=(None if any(v is None for v in a_val) else
+                          bool(all(1.5 <= v <= 8 for v in a_val) and a_val[-1] / a_val[0] <= 3)),
+                   classes=a_cls, values=a_val)
     m_cls = [C(W, "M") for W in MESA_W]
-    P["P2"] = dict(critic=all(c not in ("DAY", "MARGINAL-OUT") for c in m_cls), day=C(100, "M") == "DAY", classes=m_cls)
+    P["P2"] = dict(critic=_all((c not in ("DAY", "MARGINAL-OUT")) if _ok(c) else None for c in m_cls),
+                   day=(C(100, "M") == "DAY") if _ok(C(100, "M")) else None, classes=m_cls)
     r_cls = [C(W, "phi_R") for W in WS]
     wid = [out["cells"].get(f"F2|{W}", {}).get("bands", {}).get("FULL", {}).get("phi_R", {}).get("width") for W in WS if W >= 300]
-    P["P3"] = dict(critic=all(c in inside for c in r_cls), day=any(c == "DAY" for c in r_cls),
-                   audit=all(x is not None and x > 9 for x in wid), classes=r_cls, widths_ge300=wid)
+    P["P3"] = dict(critic=_all((c in inside) if _ok(c) else None for c in r_cls),
+                   day=(any(c == "DAY" for c in r_cls) if all(_ok(c) for c in r_cls) else None),
+                   audit=_all((x > 9) if x is not None else None for x in wid), classes=r_cls, widths_ge300=wid)
     ok4, det4 = True, {}
     for pn in ("Q1", "Q2"):
+        if sorted(out["planted"].get(pn, {})) != sorted(WS):
+            ok4 = None
+            continue
         for W, r in out["planted"].get(pn, {}).items():
             for stat in ("phi_A", "phi_R"):
                 v, c0 = r[stat]["value"], r[stat]["central"]
                 good = c0 and abs(v / c0 - 1) < 0.10 and r[stat]["cls"] == r[stat]["central_cls"]
-                ok4 &= bool(good)
+                ok4 = ok4 and bool(good) if ok4 is not None else None
                 det4[f"{pn}|{W}|{stat}"] = (v, c0, r[stat]["cls"], r[stat]["central_cls"])
             if "M" in r:
                 v, c0 = r["M"]["value_scaled"], r["M"]["central_scaled"]
                 good = abs(v - c0) <= max(0.2 * c0, 3) and r["M"]["cls"] == r["M"]["central_cls"]
-                ok4 &= bool(good)
+                ok4 = ok4 and bool(good) if ok4 is not None else None
                 det4[f"{pn}|{W}|M"] = (v, c0, r["M"]["cls"], r["M"]["central_cls"])
     P["P4"] = dict(hit=ok4, detail=det4)
     pl = out["planted"]
     g = lambda pn, W, s: pl.get(pn, {}).get(W, {}).get(s, {}).get("cls")
-    P["P5"] = dict(T5_A_1000_DAY=g("T5", 1000, "phi_A") == "DAY", T2_M_100_DAY=g("T2", 100, "M") == "DAY",
-                   T1_A_never_DAY=all(g("T1", W, "phi_A") != "DAY" for W in WS),
-                   T4_A_100=g("T4", 100, "phi_A") in ("MARGINAL-OUT", "DAY"))
-    P["P5"]["hit"] = all(P["P5"].values())
-    P["P5"]["S4_unreachable_for_Day"] = not (P["P5"]["T5_A_1000_DAY"] or P["P5"]["T2_M_100_DAY"])
+    eq = lambda c, vals: (c in vals) if _ok(c) else None
+    t1 = [g("T1", W, "phi_A") for W in WS]
+    P["P5"] = dict(T5_A_1000_DAY=eq(g("T5", 1000, "phi_A"), ("DAY",)), T2_M_100_DAY=eq(g("T2", 100, "M"), ("DAY",)),
+                   T1_A_never_DAY=_all((c != "DAY") if _ok(c) else None for c in t1),
+                   T4_A_100=eq(g("T4", 100, "phi_A"), ("MARGINAL-OUT", "DAY")))
+    P["P5"]["hit"] = _all(P["P5"].values())
+    t5, t2 = P["P5"]["T5_A_1000_DAY"], P["P5"]["T2_M_100_DAY"]
+    P["P5"]["S4_unreachable_for_Day"] = None if (t5 is None or t2 is None) else not (t5 or t2)
     ok6, det6 = True, {}
     for n, v in meta["pilot"].items():
         if n == "central" or (n.startswith("c_") and n.endswith("bgs0")):
             fe = out["full_exposure_100kb"].get(n, {})
             good = 0.20 <= v["topo"] <= 0.45 and fe.get("a") is not None and 0.40 <= fe["a"] <= 0.60 and 0.15 <= fe["qbar"] <= 0.40
-            ok6 &= bool(good)
+            ok6 = ok6 and bool(good)
             det6[n] = (v["topo"], fe.get("a"), fe.get("qbar"))
     P["P6"] = dict(hit=ok6, detail=det6)
     d = real["cells"].get("F2|100") or {}
@@ -969,16 +1005,16 @@ def main(argv):
     opt = {argv[i][2:]: argv[i + 1] for i in range(1, len(argv) - 1) if argv[i].startswith("--")}
     pos = [a for i, a in enumerate(argv[1:], start=1) if not a.startswith("--") and not argv[i - 1].startswith("--")]
     if mode in ("sim", "smoke"):
-        meta = run_sims(int(opt.get("procs", 1)), float(opt.get("mb", 200 if mode == "sim" else 0.2)), opt["out"])
+        meta = run_sims(int(opt.get("procs", 1)), float(opt.get("mb", 1000 if mode == "sim" else 0.2)), opt["out"])
         cpu = meta["cpu_s"]
         print(json.dumps({k: meta[k] for k in ("mb", "wall_s", "peak_rss_mb_worker", "procs")}))
         print("cpu_s per configuration:", json.dumps({k: round(v, 2) for k, v in cpu.items()}))
         if mode == "smoke":
             tot = sum(cpu.values())
-            for mb in (200, 100):
+            for mb in (1000, 500, 200):
                 proj = tot * mb / meta["mb"] / max(int(opt.get("procs", 1)), 1) / 3600.0
                 print(f"projected wall at {mb} Mb per configuration and {opt.get('procs', 1)} processes: {proj:.2f} h "
-                      f"(rule: 200 Mb if <= 8 h, else 100 Mb)")
+                      f"(rule: the largest of 1000 / 500 / 200 Mb with a projection <= 8 h)")
         return
     if mode == "synth":                     # synthetic npz in the fm_bins layout, for the local smoke of realdata/post
         return synthetic_npz(pos[0], np.random.default_rng(20261013), nbins=int(opt.get("nbins", 20000)))

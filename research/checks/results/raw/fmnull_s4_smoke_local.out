@@ -1,0 +1,97 @@
+host paperclip; Tue Oct 13 22:03:15 UTC 2026; script md5 89185c8f5ae331a9e367b91193fcd1ac; commit 75743af
+== smoke --procs 1 --mb 0.2
+{"mb": 0.2, "wall_s": 8.74752950668335, "peak_rss_mb_worker": 71.82421875, "procs": 1}
+cpu_s per configuration: {"c_35k_35k_r1.0e-08_h0_bgs0": 0.05, "c_35k_35k_r1.0e-08_h0_bgs200k": 0.04, "c_35k_35k_r1.0e-08_h0_bgs2000k": 0.04, "c_35k_35k_r1.0e-08_h1_bgs0": 0.02, "c_35k_35k_r1.0e-08_h1_bgs200k": 0.06, "c_35k_35k_r1.0e-08_h1_bgs2000k": 0.02, "c_35k_35k_r1.5e-08_h0_bgs0": 0.05, "c_35k_35k_r1.5e-08_h0_bgs200k": 0.06, "c_35k_35k_r1.5e-08_h0_bgs2000k": 0.05, "c_35k_35k_r1.5e-08_h1_bgs0": 0.02, "c_35k_35k_r1.5e-08_h1_bgs200k": 0.08, "c_35k_35k_r1.5e-08_h1_bgs2000k": 0.04, "c_35k_55k_r1.0e-08_h0_bgs0": 0.05, "c_35k_55k_r1.0e-08_h0_bgs200k": 0.04, "c_35k_55k_r1.0e-08_h0_bgs2000k": 0.04, "c_35k_55k_r1.0e-08_h1_bgs0": 0.04, "c_35k_55k_r1.0e-08_h1_bgs200k": 0.03, "c_35k_55k_r1.0e-08_h1_bgs2000k": 0.04, "c_35k_55k_r1.5e-08_h0_bgs0": 0.07, "c_35k_55k_r1.5e-08_h0_bgs200k": 0.08, "c_35k_55k_r1.5e-08_h0_bgs2000k": 0.06, "c_35k_55k_r1.5e-08_h1_bgs0": 0.09, "c_35k_55k_r1.5e-08_h1_bgs200k": 0.04, "c_35k_55k_r1.5e-08_h1_bgs2000k": 0.1, "c_95k_35k_r1.0e-08_h0_bgs0": 0.04, "c_95k_35k_r1.0e-08_h0_bgs200k": 0.04, "c_95k_35k_r1.0e-08_h0_bgs2000k": 0.04, "c_95k_35k_r1.0e-08_h1_bgs0": 0.06, "c_95k_35k_r1.0e-08_h1_bgs200k": 0.18, "c_95k_35k_r1.0e-08_h1_bgs2000k": 0.08, "c_95k_35k_r1.5e-08_h0_bgs0": 0.06, "c_95k_35k_r1.5e-08_h0_bgs200k": 0.05, "c_95k_35k_r1.5e-08_h0_bgs2000k": 0.06, "c_95k_35k_r1.5e-08_h1_bgs0": 0.07, "c_95k_35k_r1.5e-08_h1_bgs200k": 0.02, "c_95k_35k_r1.5e-08_h1_bgs2000k": 0.12, "c_95k_55k_r1.0e-08_h0_bgs0": 0.04, "c_95k_55k_r1.0e-08_h0_bgs200k": 0.04, "c_95k_55k_r1.0e-08_h0_bgs2000k": 0.05, "c_95k_55k_r1.0e-08_h1_bgs0": 0.05, "c_95k_55k_r1.0e-08_h1_bgs200k": 0.04, "c_95k_55k_r1.0e-08_h1_bgs2000k": 0.04, "c_95k_55k_r1.5e-08_h0_bgs0": 0.07, "c_95k_55k_r1.5e-08_h0_bgs200k": 0.08, "c_95k_55k_r1.5e-08_h0_bgs2000k": 0.07, "c_95k_55k_r1.5e-08_h1_bgs0": 0.03, "c_95k_55k_r1.5e-08_h1_bgs200k": 0.04, "c_95k_55k_r1.5e-08_h1_bgs2000k": 0.07, "central": 0.05, "Q1": 0.06, "Q2": 0.05, "T1": 0.11, "T2": 0.11, "T3": 0.12, "T4": 0.13, "T5": 0.11, "T6": 0.1}
+projected wall at 200 Mb per configuration and 1 processes: 0.96 h (rule: 200 Mb if <= 8 h, else 100 Mb)
+projected wall at 100 Mb per configuration and 1 processes: 0.48 h (rule: 200 Mb if <= 8 h, else 100 Mb)
+wall 8.90 s, parent maxrss 73548 KB
+== synth
+== realdata (synthetic uniform-Poisson bins)
+wall 2.47 s, maxrss 131480 KB
+F0 10 {"k_used": 6000, "a": 0.5007, "qbar": 0.288, "n_mean": 5.4277, "N_mean": 18.8462, "c_mean": 0.9001, "dH": 0.005, "phi_A": 0.9864, "phi_A_se": 0.0122, "phi_R": 1.0125, "phi_R_se": 0.0236, "phi_R0
+F0 30 {"k_used": 1998, "a": 0.5006, "qbar": 0.288, "n_mean": 16.2813, "N_mean": 56.5355, "c_mean": 0.9001, "dH": 0.005, "phi_A": 0.9794, "phi_A_se": 0.0354, "phi_R": 1.0583, "phi_R_se": 0.0266, "phi_R
+F0 100 {"k_used": 600, "a": 0.5007, "qbar": 0.288, "n_mean": 54.2767, "N_mean": 188.4617, "c_mean": 0.9001, "dH": 0.005, "phi_A": 0.9987, "phi_A_se": 0.0402, "phi_R": 1.0845, "phi_R_se": 0.1016, "phi_
+F0 300 {"k_used": 198, "a": 0.5003, "qbar": 0.2879, "n_mean": 162.8131, "N_mean": 565.4343, "c_mean": 0.9001, "dH": 0.005, "phi_A": 1.0007, "phi_A_se": 0.1656, "phi_R": 1.0327, "phi_R_se": 0.1192, "ph
+F0 1000 {"k_used": 60, "a": 0.5007, "qbar": 0.288, "n_mean": 542.7667, "N_mean": 1884.6167, "c_mean": 0.9001, "dH": 0.005, "phi_A": 1.0763, "phi_A_se": 0.243, "phi_R": 1.1037, "phi_R_se": 0.1666, "phi
+F0 3000 {"k_used": 18, "unscored": true}
+F2 10 {"k_used": 5944, "a": 0.5, "qbar": 0.2882, "n_mean": 4.624, "N_mean": 16.0468, "c_mean": 0.768, "dH": 0.005, "phi_A": 0.9895, "phi_A_se": 0.0107, "phi_R": 0.9978, "phi_R_se": 0.0157, "phi_R0": 0
+F2 30 {"k_used": 1998, "a": 0.5, "qbar": 0.2882, "n_mean": 13.8148, "N_mean": 47.9354, "c_mean": 0.7649, "dH": 0.005, "phi_A": 0.9956, "phi_A_se": 0.0292, "phi_R": 1.0568, "phi_R_se": 0.0284, "phi_R0"
+F2 100 {"k_used": 600, "a": 0.5001, "qbar": 0.2882, "n_mean": 46.0517, "N_mean": 159.8, "c_mean": 0.7649, "dH": 0.005, "phi_A": 0.9736, "phi_A_se": 0.0098, "phi_R": 1.0621, "phi_R_se": 0.0801, "phi_R0
+F2 300 {"k_used": 198, "a": 0.4997, "qbar": 0.2882, "n_mean": 138.1263, "N_mean": 479.3535, "c_mean": 0.7648, "dH": 0.005, "phi_A": 0.9334, "phi_A_se": 0.16, "phi_R": 0.9899, "phi_R_se": 0.0654, "phi_
+F2 1000 {"k_used": 60, "a": 0.5001, "qbar": 0.2882, "n_mean": 460.5167, "N_mean": 1598.0, "c_mean": 0.7649, "dH": 0.005, "phi_A": 1.0352, "phi_A_se": 0.1945, "phi_R": 0.9924, "phi_R_se": 0.1196, "phi_
+F2 3000 {"k_used": 18, "unscored": true}
+F3 10 {"k_used": 5534, "a": 0.5001, "qbar": 0.2873, "n_mean": 4.1812, "N_mean": 14.5546, "c_mean": 0.6968, "dH": 0.005, "phi_A": 0.9881, "phi_A_se": 0.0178, "phi_R": 0.9933, "phi_R_se": 0.019, "phi_R0
+F3 30 {"k_used": 1980, "a": 0.5005, "qbar": 0.2874, "n_mean": 12.1894, "N_mean": 42.4091, "c_mean": 0.6772, "dH": 0.005, "phi_A": 0.9779, "phi_A_se": 0.018, "phi_R": 1.0582, "phi_R_se": 0.0226, "phi_R
+F3 100 {"k_used": 600, "a": 0.5008, "qbar": 0.2874, "n_mean": 40.515, "N_mean": 140.9667, "c_mean": 0.6752, "dH": 0.005, "phi_A": 0.9268, "phi_A_se": 0.0129, "phi_R": 1.0485, "phi_R_se": 0.0357, "phi_
+F3 300 {"k_used": 198, "a": 0.5004, "qbar": 0.2873, "n_mean": 121.5202, "N_mean": 422.904, "c_mean": 0.6753, "dH": 0.005, "phi_A": 0.9358, "phi_A_se": 0.1494, "phi_R": 0.9426, "phi_R_se": 0.0563, "phi
+F3 1000 {"k_used": 60, "a": 0.5008, "qbar": 0.2874, "n_mean": 405.15, "N_mean": 1409.6667, "c_mean": 0.6752, "dH": 0.005, "phi_A": 0.9809, "phi_A_se": 0.1822, "phi_R": 1.0365, "phi_R_se": 0.1163, "phi
+F3 3000 {"k_used": 18, "unscored": true}
+== post (synthetic; classes meaningless)
+wall 1.06 s, maxrss 101220 KB
+F2|10 {'FULL|phi_A': 'BELOW-NEAR', 'FULL|phi_R': 'CRITIC'} {'phi_A': (0.99, 1.1, 6.81), 'phi_R': (0.998, 0.425, 12.442)} ('M', None, None)
+F2|30 {} {'phi_A': (0.996, nan, nan), 'phi_R': (1.057, nan, nan)} ('M', 0, None)
+F2|100 {} {'phi_A': (0.974, nan, nan), 'phi_R': (1.062, nan, nan)} ('M', 0, None)
+F2|300 {} {'phi_A': (0.933, nan, nan), 'phi_R': (0.99, nan, nan)} ('M', None, None)
+F2|1000 {} {'phi_A': (1.035, nan, nan), 'phi_R': (0.992, nan, nan)} ('M', None, None)
+F3|10 {'FULL|phi_A': 'CRITIC', 'FULL|phi_R': 'CRITIC'} {'phi_A': (0.988, 0.778, 5.457), 'phi_R': (0.993, 0.625, 13.426)} ('M', None, None)
+F3|30 {} {'phi_A': (0.978, nan, nan), 'phi_R': (1.058, nan, nan)} ('M', 0, None)
+F3|100 {} {'phi_A': (0.927, nan, nan), 'phi_R': (1.048, nan, nan)} ('M', 0, None)
+F3|300 {} {'phi_A': (0.936, nan, nan), 'phi_R': (0.943, nan, nan)} ('M', None, None)
+F3|1000 {} {'phi_A': (0.981, nan, nan), 'phi_R': (1.037, nan, nan)} ('M', None, None)
+F0|10 {'FULL|phi_A': 'CRITIC', 'FULL|phi_R': 'BELOW-NEAR'} {'phi_A': (0.986, 0.585, 6.49), 'phi_R': (1.012, 1.025, 13.863)} ('M', None, None)
+F0|30 {} {'phi_A': (0.979, nan, nan), 'phi_R': (1.058, nan, nan)} ('M', 0, None)
+F0|100 {} {'phi_A': (0.999, nan, nan), 'phi_R': (1.084, nan, nan)} ('M', 0, None)
+F0|300 {} {'phi_A': (1.001, nan, nan), 'phi_R': (1.033, nan, nan)} ('M', None, None)
+F0|1000 {} {'phi_A': (1.076, nan, nan), 'phi_R': (1.104, nan, nan)} ('M', None, None)
+AGGREGATE {"F2": "S4-NOT-MET", "F3": "S4-NOT-MET", "F0": "S4-NOT-MET", "governing": "S4-NOT-MET"}
+PREDICTIONS {"P1": {"critic": false, "day": false, "audit": false, "classes": ["BELOW-NEAR", null, null, null, null], "values": [0.9895226664530262, 0.9956390419668234, 0.973590989028358, 0.933406446104179, 1.0352307633683433]}, "P2": {"critic": true, "day": false, "classes": [null, null]}, "P3": {"critic": false, "day": false, "audit": false, "classes": ["CRITIC", null, null, null, null], "widths
+
+######## second local smoke, after the post hoc pre-run fixes (scoring None-guard, 1000 Mb, per-block yield)
+host paperclip; Tue Oct 13 22:04:47 UTC 2026; script md5 a8f72e1e1823df783968cda73c444fac; based on commit 75743af plus the uncommitted fix diff
+== smoke --procs 1 --mb 0.3
+{"mb": 0.3, "wall_s": 14.307979106903076, "peak_rss_mb_worker": 71.6015625, "procs": 1}
+cpu_s per configuration: {"c_35k_35k_r1.0e-08_h0_bgs0": 0.08, "c_35k_35k_r1.0e-08_h0_bgs200k": 0.06, "c_35k_35k_r1.0e-08_h0_bgs2000k": 0.06, "c_35k_35k_r1.0e-08_h1_bgs0": 0.03, "c_35k_35k_r1.0e-08_h1_bgs200k": 0.09, "c_35k_35k_r1.0e-08_h1_bgs2000k": 0.06, "c_35k_35k_r1.5e-08_h0_bgs0": 0.12, "c_35k_35k_r1.5e-08_h0_bgs200k": 0.1, "c_35k_35k_r1.5e-08_h0_bgs2000k": 0.11, "c_35k_35k_r1.5e-08_h1_bgs0": 0.09, "c_35k_35k_r1.5e-08_h1_bgs200k": 0.11, "c_35k_35k_r1.5e-08_h1_bgs2000k": 0.07, "c_35k_55k_r1.0e-08_h0_bgs0": 0.08, "c_35k_55k_r1.0e-08_h0_bgs200k": 0.07, "c_35k_55k_r1.0e-08_h0_bgs2000k": 0.07, "c_35k_55k_r1.0e-08_h1_bgs0": 0.06, "c_35k_55k_r1.0e-08_h1_bgs200k": 0.05, "c_35k_55k_r1.0e-08_h1_bgs2000k": 0.08, "c_35k_55k_r1.5e-08_h0_bgs0": 0.12, "c_35k_55k_r1.5e-08_h0_bgs200k": 0.11, "c_35k_55k_r1.5e-08_h0_bgs2000k": 0.09, "c_35k_55k_r1.5e-08_h1_bgs0": 0.14, "c_35k_55k_r1.5e-08_h1_bgs200k": 0.05, "c_35k_55k_r1.5e-08_h1_bgs2000k": 0.11, "c_95k_35k_r1.0e-08_h0_bgs0": 0.07, "c_95k_35k_r1.0e-08_h0_bgs200k": 0.05, "c_95k_35k_r1.0e-08_h0_bgs2000k": 0.06, "c_95k_35k_r1.0e-08_h1_bgs0": 0.1, "c_95k_35k_r1.0e-08_h1_bgs200k": 0.21, "c_95k_35k_r1.0e-08_h1_bgs2000k": 0.09, "c_95k_35k_r1.5e-08_h0_bgs0": 0.1, "c_95k_35k_r1.5e-08_h0_bgs200k": 0.07, "c_95k_35k_r1.5e-08_h0_bgs2000k": 0.09, "c_95k_35k_r1.5e-08_h1_bgs0": 0.26, "c_95k_35k_r1.5e-08_h1_bgs200k": 0.04, "c_95k_35k_r1.5e-08_h1_bgs2000k": 0.15, "c_95k_55k_r1.0e-08_h0_bgs0": 0.07, "c_95k_55k_r1.0e-08_h0_bgs200k": 0.06, "c_95k_55k_r1.0e-08_h0_bgs2000k": 0.09, "c_95k_55k_r1.0e-08_h1_bgs0": 0.07, "c_95k_55k_r1.0e-08_h1_bgs200k": 0.07, "c_95k_55k_r1.0e-08_h1_bgs2000k": 0.08, "c_95k_55k_r1.5e-08_h0_bgs0": 0.13, "c_95k_55k_r1.5e-08_h0_bgs200k": 0.1, "c_95k_55k_r1.5e-08_h0_bgs2000k": 0.14, "c_95k_55k_r1.5e-08_h1_bgs0": 0.06, "c_95k_55k_r1.5e-08_h1_bgs200k": 0.05, "c_95k_55k_r1.5e-08_h1_bgs2000k": 0.08, "central": 0.09, "Q1": 0.1, "Q2": 0.09, "T1": 0.17, "T2": 0.17, "T3": 0.19, "T4": 0.18, "T5": 0.19, "T6": 0.19}
+projected wall at 1000 Mb per configuration and 1 processes: 5.27 h (rule: the largest of 1000 / 500 / 200 Mb with a projection <= 8 h)
+projected wall at 500 Mb per configuration and 1 processes: 2.63 h (rule: the largest of 1000 / 500 / 200 Mb with a projection <= 8 h)
+projected wall at 200 Mb per configuration and 1 processes: 1.05 h (rule: the largest of 1000 / 500 / 200 Mb with a projection <= 8 h)
+wall 14.46 s, parent maxrss 73320 KB
+== synth
+== realdata (synthetic)
+wall 1.79 s, maxrss 131740 KB
+F0 10 {"k_used": 6000, "a": 0.5007, "qbar": 0.288, "n_mean": 5.4277, "N_mean": 18.8462, "c_mean": 0.9001, "dH": 0.005, "
+F0 30 {"k_used": 1998, "a": 0.5006, "qbar": 0.288, "n_mean": 16.2813, "N_mean": 56.5355, "c_mean": 0.9001, "dH": 0.005, 
+F0 100 {"k_used": 600, "a": 0.5007, "qbar": 0.288, "n_mean": 54.2767, "N_mean": 188.4617, "c_mean": 0.9001, "dH": 0.005,
+F0 300 {"k_used": 198, "a": 0.5003, "qbar": 0.2879, "n_mean": 162.8131, "N_mean": 565.4343, "c_mean": 0.9001, "dH": 0.00
+F0 1000 {"k_used": 60, "a": 0.5007, "qbar": 0.288, "n_mean": 542.7667, "N_mean": 1884.6167, "c_mean": 0.9001, "dH": 0.00
+F0 3000 {"k_used": 18, "unscored": true}
+F2 10 {"k_used": 5944, "a": 0.5, "qbar": 0.2882, "n_mean": 4.624, "N_mean": 16.0468, "c_mean": 0.768, "dH": 0.005, "phi_
+F2 30 {"k_used": 1998, "a": 0.5, "qbar": 0.2882, "n_mean": 13.8148, "N_mean": 47.9354, "c_mean": 0.7649, "dH": 0.005, "p
+F2 100 {"k_used": 600, "a": 0.5001, "qbar": 0.2882, "n_mean": 46.0517, "N_mean": 159.8, "c_mean": 0.7649, "dH": 0.005, "
+F2 300 {"k_used": 198, "a": 0.4997, "qbar": 0.2882, "n_mean": 138.1263, "N_mean": 479.3535, "c_mean": 0.7648, "dH": 0.00
+F2 1000 {"k_used": 60, "a": 0.5001, "qbar": 0.2882, "n_mean": 460.5167, "N_mean": 1598.0, "c_mean": 0.7649, "dH": 0.005,
+F2 3000 {"k_used": 18, "unscored": true}
+F3 10 {"k_used": 5534, "a": 0.5001, "qbar": 0.2873, "n_mean": 4.1812, "N_mean": 14.5546, "c_mean": 0.6968, "dH": 0.005, 
+F3 30 {"k_used": 1980, "a": 0.5005, "qbar": 0.2874, "n_mean": 12.1894, "N_mean": 42.4091, "c_mean": 0.6772, "dH": 0.005,
+F3 100 {"k_used": 600, "a": 0.5008, "qbar": 0.2874, "n_mean": 40.515, "N_mean": 140.9667, "c_mean": 0.6752, "dH": 0.005,
+F3 300 {"k_used": 198, "a": 0.5004, "qbar": 0.2873, "n_mean": 121.5202, "N_mean": 422.904, "c_mean": 0.6753, "dH": 0.005
+F3 1000 {"k_used": 60, "a": 0.5008, "qbar": 0.2874, "n_mean": 405.15, "N_mean": 1409.6667, "c_mean": 0.6752, "dH": 0.005
+F3 3000 {"k_used": 18, "unscored": true}
+== post (synthetic; classes meaningless)
+wall 1.42 s, maxrss 101864 KB
+F2|10 {'FULL|phi_A': 'CRITIC', 'FULL|phi_R': 'BELOW-NEAR'} {'phi_A': (0.99, 0.98, 6.016), 'phi_R': (0.998, 1.417, 13.463)} ('M', None, None)
+F2|30 {} {'phi_A': (0.996, nan, nan), 'phi_R': (1.057, nan, nan)} ('M', 0, None)
+F2|100 {} {'phi_A': (0.974, nan, nan), 'phi_R': (1.062, nan, nan)} ('M', 0, None)
+F2|300 {} {'phi_A': (0.933, nan, nan), 'phi_R': (0.99, nan, nan)} ('M', None, None)
+F2|1000 {} {'phi_A': (1.035, nan, nan), 'phi_R': (0.992, nan, nan)} ('M', None, None)
+F3|10 {'FULL|phi_A': 'BELOW-NEAR', 'FULL|phi_R': 'BELOW-NEAR'} {'phi_A': (0.988, 0.999, 5.584), 'phi_R': (0.993, 1.373, 12.328)} ('M', None, None)
+F3|30 {} {'phi_A': (0.978, nan, nan), 'phi_R': (1.058, nan, nan)} ('M', 0, None)
+F3|100 {} {'phi_A': (0.927, nan, nan), 'phi_R': (1.048, nan, nan)} ('M', 0, None)
+F3|300 {} {'phi_A': (0.936, nan, nan), 'phi_R': (0.943, nan, nan)} ('M', None, None)
+F3|1000 {} {'phi_A': (0.981, nan, nan), 'phi_R': (1.037, nan, nan)} ('M', None, None)
+F0|10 {'FULL|phi_A': 'BELOW-NEAR', 'FULL|phi_R': 'BELOW-NEAR'} {'phi_A': (0.986, 1.065, 6.802), 'phi_R': (1.012, 1.739, 11.761)} ('M', None, None)
+F0|30 {} {'phi_A': (0.979, nan, nan), 'phi_R': (1.058, nan, nan)} ('M', 0, None)
+F0|100 {} {'phi_A': (0.999, nan, nan), 'phi_R': (1.084, nan, nan)} ('M', 0, None)
+F0|300 {} {'phi_A': (1.001, nan, nan), 'phi_R': (1.033, nan, nan)} ('M', None, None)
+F0|1000 {} {'phi_A': (1.076, nan, nan), 'phi_R': (1.104, nan, nan)} ('M', None, None)
+AGGREGATE {"F2": "S4-NOT-MET", "F3": "S4-NOT-MET", "F0": "S4-NOT-MET", "governing": "S4-NOT-MET"}
+PREDICTIONS {"P1": {"critic": null, "day": null, "audit": false, "classes": ["CRITIC", null, null, null, null], "values": [0.9895226664530262, 0.9956390419668234, 0.973590989028358, 0.933406446104179, 1.0352307633683433]}, "P2": {"critic": null, "day": null, "classes": [null, null]}, "P3": {"critic": null, "day": null, "audit": null, "classes": ["BELOW-NEAR", null, null, null, null], "widths_ge300": [null, null]}, "P4": {"hit": null, "detail": {}}, "P5": {"T5_A_1000_DAY": null, "T2_M_100_DAY": null, "T1_A_never_DAY": null, "T4_A_100": null, "hit": null, "S4_unreachable_for_Day": null}, "P6": {
