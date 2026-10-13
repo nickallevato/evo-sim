@@ -226,6 +226,8 @@ Reviews (baa7595): `REVIEW-R4-HF-correctness.md` (C), `-steelman-day.md` (Day), 
 - **R4-X1 RH (C).** "kills off the entire proto-human race thousands of times faster" (same post) is rhetoric (hyperbole) like "closes it with a corpse"; log in `ledgers/slips.md` at integration, not scored.
 
 ### Pending post hoc run `ph` (what each stage decides)
+*Scored 2026-10-13: see "Post hoc run `ph`" at the end of this file. Every "pending post hoc run `ph`" above is closed there.*
+
 | Stage | Decides | Review items |
 |---|---|---|
 | L (long burn) | PA1 at R = 1.05, PA5 softJ, K = 4000 softJ at R = 1.111: fill lag or rate limit | C5, C (burn-in), Critic-5 |
@@ -234,8 +236,137 @@ Reviews (baa7595): `REVIEW-R4-HF-correctness.md` (C), `-steelman-day.md` (Day), 
 | N (noisy truncation, genotypic share 1 / 0.5 / 0.1) | whether "Term 3 contradicted in-model" extends from noise-free to phenotypic truncation | Day-2 |
 
 ### Provisional verdicts (rule R4-X1; for integration after the post hoc run; nothing in the claim files is changed yet)
+*The bracket figures in the H and H8 items below are replaced by the stage M and N numbers in "Post hoc run `ph`" (section "Verdict text after `ph`"). No verdict value changes.*
+
 - **H (Day, 1/300).** Fidelity and internal unchanged (HF re-tests the external premise only). **External: contested**, with the h-scope: "the cap binds for hard selection and stays within about 1-3x of it at h = 0.3; at h = 0.1 the limit is about 3-5.5x; with purely relative fitness (no extinction possible in-model) or noise-free truncation there is no cap in-model". Never "fails for soft selection" without "conditional on purely relative fitness". h is the audit's parameter, not an author's input, so rule F does not apply; the verdict stays contested because h, like R (V17), has no source. Day-side addition: at R = 1.111, hard selection, the 1/300 is conservative at 95% at every K tested (PC3). The stage M numbers will replace the bracket figures.
 - **H8 (Day, Z19984826).** s3.3.1 "None of them raises smax above order unity": **internal holds** (literal s_max; trunc s_max = R; softWF realised maxrel <= 1.75). **Term 3 as a rate bound across mechanisms: external contested**; contradicted in-model for purely relative fitness and noise-free genotype truncation; supported for hard selection, h >= 0.3, and quadratic synergy against an absolute optimum. These counterexamples rest on modelling choices Day does not share, so this is an external disagreement, not rule N. Phenotypic truncation: pending stage N.
 - **H5 (Hössjer).** Same as H: **conditional on h and R; external contested**.
 - **Drift Deathmarch (Day, blog 2026-01-11).** The 9-generation figure: **internal holds** as the second horn of a stated dilemma, conditional on its premise (rule C). "Standard estimates for the damage caused by each mutation" is uncited: **fidelity unverifiable** (rule F). The 7.6 vs 28.8 difference runs in the direction that strengthens Day's horn: slip ledger, not an error against him (R1). The crux "You cannot turn selection off for neutral mutations while keeping it on for harmful ones": **external contradicted** by standard per-mutation fixation (Kimura u(s); S1 computes exactly that case). The dilemma's remaining force is horn 1 (purging load under hard selection, H7), which HF-d does not test. "Thousands of times faster": rhetoric, slip ledger.
 - **HO-11 (Hössjer, p.6).** "the overall fitness of the population declines over time": **external contested** (supported only at the upper-end U_d = 3 with Ne = 1e4, from the optimum or after an Ne decline, and only under the hard-selection reading of the decline). "and the population eventually (and quite rapidly) dies": **external contradicted** in this model (about 1e-5 log units per generation).
+
+## Post hoc run `ph` (scored 2026-10-13)
+
+**Status of this section.** Post hoc. `hf_posthoc.py` was written after the three HF reviews and committed with its predictions before any run (5c30ed9). Its docstring says of itself that every prediction was made after `raw/hf_main.jsonl` had been seen, so nothing here can rescue or sink a pre-registered HF score. It closes the items the reviews left open. One combined light review is owed before integration (low-stakes tier: the run re-measures reviewed items).
+
+**Run.** 83 cells, 410 jobs, 454.8 CPU-h, peak worker RSS 385 MB. Two hosts and three shard files (`raw/hf_ph_wh.jsonl`, `raw/hf_ph_bd.jsonl`, `raw/hf_ph_all.jsonl`); na-workhorse rebooted on 2026-10-12 and its shard was relaunched (history and md5s in `raw/hf_ph.host`). Merge: 410 unique of 410 expected, missing 0, extra 0; **209 jobs were run on two hosts, 0 mismatches** on every field but run time and memory. Merged rows `raw/hf_ph.jsonl`; tables `raw/hf_ph_analyse.out`. Engine identity was checked before the run (`smoke`: 4 `hf_main` jobs rerun with their original seeds).
+
+Rules are the ones fixed in the docstring: HF's rule (no failure, k/lam >= 0.9, nopen q4/q1 <= 1.15) and, beside it, the reviews' stricter rule (k/lam >= 0.95, q4/q1 <= 1.10). tau = nopen / k.
+
+### Stage L: long burn-in (softJ, 80,000 generations, 40,000 burn)
+
+| Series | lam 0.0351 / 0.1 / 0.2 / 0.4: k/lam | HF rule | strict rule | tau (generations) |
+|---|---|---|---|---|
+| s = 0.01, R = 1.05, K = 1000 | 0.973 / 0.993 / 0.997 / 1.001 | 4/4 each | 4/4 each | 7,041 / 7,023 / 7,129 / 7,385 |
+| s = 0.01, R = 1.111, K = 1000 | 1.011 / 0.983 / 1.002 / 0.995 | 4/4 each | 4/4, 3/4, 4/4, 4/4 | 4,329 / 4,405 / 4,424 / 4,508 |
+| s = 0.01, R = 1.111, K = 4000 | 0.989 / 1.004 / 0.999 / 1.004 | 4/4 each | 3/4, 4/4, 4/4, 4/4 | 5,411 / 5,549 / 5,597 / 5,693 |
+| s = 0.002, R = 1.111, K = 1000 | 0.991 / 0.988 / 0.978 / 0.987 | 4/4 each | 4/4 each | 16,072 / 15,817 / 16,015 / 15,877 |
+| s = 0.002, R = 2, K = 1000 | 1.010 / 1.015 / 0.996 / 1.005 | 4/4 each | 4/4 each | 7,413 / 7,404 / 7,433 / 7,432 |
+
+| Prediction | Result |
+|---|---|
+| Critic side: every L cell passes HF's rule at every lam | **Hit** (80 of 80 runs) |
+| Day side: in at least one series k/lam falls with lam, below 0.9 at 0.4 with no backlog | **Miss** (k/lam at 0.4 is 0.987 to 1.005) |
+| Audit PL1: k/lam >= 0.95 and q4/q1 <= 1.10 in every cell | **Hit** on cell means (lowest k/lam 0.973, highest q4/q1 1.05); 2 of 80 single runs miss the strict rule |
+| Audit PL1, tau values: about 7,500 / 4,300 / 6,000 / 20,000 / 9,000 | First three within 10%; the two weak-s values are 18-20% below the prediction (15,900 and 7,420) |
+| Audit PL2: tau flat in lam within 25% | **Hit** (largest spread 5%) |
+
+The flat-k/lam softJ "failures" of the main run at R = 1.05, at K = 4000 and at weak s were a fill lag: the pipeline had not filled when the 5,000-generation burn ended. With a 40,000-generation burn they are gone. Recorded for Day's side: in the three s = 0.01 series tau rises by 4-5% over an 11-fold range of lam, and tau is about 25% longer at K = 4000 than at K = 1000. Sweeps take longer when more are concurrent and when the population is larger; neither lowers throughput in this range.
+
+### Stage C: cap release (max_open 20,000; the main-stage window: 20,000 generations, 5,000 burn)
+
+| Cell | lam | HF rule | k/lam | q4/q1 | nopen | backlog failures |
+|---|---|---|---|---|---|---|
+| softJ K = 1000, R = 1.05 | 0.8 | 0/4 | 0.784 | 1.40 | 5,275 | 0 |
+| | 1.6 | 0/4 | 0.746 | 1.49 | 11,098 | 0 |
+| softJ K = 1000, R = 1.111 | 0.8 | 3/4 | 0.931 | 1.13 | 3,588 | 0 |
+| | 1.6 | 0/4 | 0.916 | 1.16 | 7,570 | 0 |
+| softJ K = 4000, R = 1.111 | 0.8 | 0/3 | 0.894 | 1.17 | 4,524 | 0 |
+| | 1.6 | 0/3 | 0.871 | 1.22 | 9,586 | 0 |
+| trunc K = 1000, R = 1.05 | 1.6 | 0/4 | 0.935 | 1.21 | 5,578 | 0 |
+
+| Prediction | Result |
+|---|---|
+| Audit PC-1 (a): no C cell backlogs at max_open 20,000; nopen <= 12,000 | **Hit** (0 of 26 runs; largest nopen 11,178) |
+| Audit PC-1 (b): softJ R = 1.111 and trunc R = 1.05 sustain 1.6 on HF's rule | **Miss** (0/4 and 0/4; both fail on q4/q1, 1.16 and 1.21: the open count is still rising at 20,000 generations) |
+| Audit PC-1 (c): softJ K = 4000 k/lam 0.88-0.93, a coin-flip on the rule, no backlog | Partly: 0.894 at 0.8 is inside, 0.871 at 1.6 is just below; 0/3 and 0/3 on the rule, not a coin-flip; no backlog |
+| Audit PC-1 (d): softJ R = 1.05 fails the rule on the fill lag (k/lam about 0.8), no backlog | **Hit** (0.78 and 0.75) |
+| Day side, DA2 restated: K = 4000 sustains less than K = 1000 at R = 1.111, not explained by the fill lag | **Undecided.** At lam 0.8 K = 1000 passes 3/4 and K = 4000 passes 0/3, so the first half is met. The second half is not settled: k/lam falls with lam at both K (0.931 to 0.916; 0.894 to 0.871), tau exceeds the 5,000-generation burn in three of the four cells, and the long-burn series above show no K deficit up to lam 0.4 |
+| Critic side: no K effect beyond the lag | **Undecided**, for the same reason |
+
+What stage C settles: the main run's failures at nopen near 5,000 were the cap (with the cap at 20,000 the mean open count is 3,600 to 11,200 and no run fails on it). What it does not settle: whether lam 0.8 and 1.6 are sustained in the steady sense, because a 20,000-generation run with a 5,000-generation burn is too short when tau is 3,700 to 9,300 and the open count is still rising. The audit predicted that two of these cells would pass the rule and they did not. A long-burn run at lam 0.8 and 1.6 would decide it and has not been run. In every C cell the realised rate over the window is at least 0.63 substitutions per generation (k/lam x lam).
+
+**DA2 and PA4 by the letter.** With the cap released the two can be scored at this horizon: softJ lam_max at R = 1.111 is 0.8 at K = 1000 and 0.4 at K = 4000 (4/4 at 0.4 in stage L; 0/3 at 0.8 here). DA2 ("K = 4000 lam_max <= K = 1000 lam_max") **holds by the letter**; PA4 ("within one lam step") **holds**. The cause of the one-step difference is the undecided item above, so neither is evidence for or against a K effect on the limit.
+
+### Stage M: mix boundary (s = 0.01, K = 1000, 8 runs per lam, 40,000 generations)
+
+| h | R | lam50 at 20k (bracket) | x H8 hard cap at 10k / at 20k | lam50 at 40k | Runs passing the 20k rule, by lam |
+|---|---|---|---|---|---|
+| 0.1 | 1.111 | 0.0130 (0.0130, 0.0157) | 3.53 / 3.71 | 0.0130 | 7, 5, 4, 4, 2 of 8 at 0.0074, 0.0094, 0.0111, 0.0130, 0.0157 |
+| 0.1 | 2 | 0.128 (0.119, 0.141) | 3.53 / 4.27 | 0.1295 | 8, 7, 0, 0, 0 at 0.1, 0.119, 0.141, 0.168, 0.2 |
+| 0.3 | 1.111 | 0.00575 (0.0049, 0.0064) | 1.56 / 1.64 | 0.0056 | 5, 7, 2, 1, 0 at 0.0037, 0.0049, 0.0064, 0.0084, 0.0111 |
+| 0.3 | 2 | 0.0479 (0.0454, 0.0592) | 1.32 / 1.60 | 0.0518 | 7, 5, 0, 0, 0 at 0.0351, 0.0454, 0.0592, 0.0768, 0.1 |
+
+| Prediction | Result |
+|---|---|
+| Day side (DA1 restated): h = 0.3 lam50(20k) <= 2x the 10k hard cap at both R | **Hit** (1.56x and 1.32x; the upper ends of the brackets are 1.74x and 1.63x) |
+| Day side: h = 0.1 lam50(20k) < 3x the cap at R = 1.111 (< 0.0110) | **Miss** (0.0130, 3.53x) |
+| Critic side (CA2 restated): h = 0.1 lam50(20k) >= 3x the cap at R = 1.111 and at R = 2 | **Hit** at both (0.0130 >= 0.0110; 0.128 >= 0.109) |
+| Audit PM1 [0.0094, 0.0135], PM2 [0.12, 0.18], PM3 [0.0045, 0.0090], PM4 [0.045, 0.090] | **Hit**, all four (PM1 and PM4 near an edge) |
+| Audit PM5: the mean-field limit within 2x of lam50(20k) in all four | **Miss**: 1.21x and 0.90x at R = 1.111, but 2.27x and 2.005x at R = 2 (the mean field overstates the limit there) |
+| Audit PM6: lam50(40k) <= lam50(20k) in all four | **Miss** in two (h = 0.1, R = 2: 0.1295 against 0.128; h = 0.3, R = 2: 0.0518 against 0.0479). The brackets are the same at 20k and 40k in all four series; survival only falls, but more surviving runs meet the rate criterion over the longer window |
+
+Limits of this stage, stated for both sides. At h = 0.1, R = 1.111 the boundary is wide at eight runs: the passing share is 5/8 at 2.55x the cap and 4/8 at both 3.0x and 3.5x, so the critic-side hit and the Day-side miss there both rest on a share at the 50% line (4 of 8 has a 95% interval of about 16-84%). At R = 2 the boundary is sharp (7/8 at 0.119, 0/8 at 0.141) and the same conclusion does not depend on a tie. h is the audit's parameter (the share of the log-load expressed as density-independent survival at fixed R, with no density compensation); it has no field estimator and no author's value.
+
+### Stage N: truncation on a noisy phenotype (K = 1000, 80,000 generations, 40,000 burn; g = genotypic share of the variance of the truncation variable)
+
+| R | g | HF rule at lam 0.0351 ... 1.6 | lam_max | x Term 3 | nopen at 1.6 | tau at 0.0351 / 1.6 |
+|---|---|---|---|---|---|---|
+| 1.111 | 1 | 4/4 at every lam | 1.6+ | >= 231 | 2,179 | 94 / 1,360 |
+| 1.111 | 0.5 | 4/4 except 3/4 at 0.1 | 1.6+ | >= 231 | 3,565 | 110 / 2,227 |
+| 1.111 | 0.1 | 4/4 at every lam | 1.6+ | >= 231 | 11,754 | 296 / 7,374 |
+| 2 | 1 | 4/4 at every lam | 1.6+ | >= 35 | 195 | 15 / 122 |
+| 2 | 0.5 | 4/4 at every lam | 1.6+ | >= 35 | 305 | 17 / 191 |
+| 2 | 0.1 | 4/4 at every lam | 1.6+ | >= 35 | 1,114 | 31 / 696 |
+
+| Prediction | Result |
+|---|---|
+| Day side (steelman-day #2; DB1 for phenotypic truncation): at g = 0.1 lam_max <= 1.25x Term 3 | **Miss** (1.6 sustained 4/4 at both R; 1.6 is the grid top) |
+| Critic side: at g = 0.1 lam_max >= 5x Term 3 at both R | **Hit** |
+| Audit PN1: g = 1 reproduces HF trunc (lam_max 1.6+; nopen within 25% of `hf_main`) | **Hit** (R = 1.111: 3, 13, 43, 158, 593, 2,179 against 3, 13, 43, 161, 579, 2,162; R = 2: 1, 2, 5, 14, 52, 195 against 1, 2, 4, 14, 51, 194, the 5 against 4 being a rounding of small counts) |
+| Audit PN2: R = 2, lam_max 1.6+ at g = 0.5 and 0.1 | **Hit** |
+| Audit PN3: R = 1.111, lam_max 1.6+ at g = 0.5; at g = 0.1 lam_max 0.8 with 1.6 failing by backlog | **Miss** on the second half: 1.6 is sustained at g = 0.1 with nopen 11,754, about half the 21,760 the audit's mean field predicted (the open count grows about 5.4-fold from g = 1 to g = 0.1, not 10-fold) |
+| Audit PN4: tau(g = 0.1) / tau(g = 1) in [3, 20] at every sustained lam | **Miss** at low lam, R = 2 (2.07 at 0.0351, 3.0 at 0.1); 3.2 to 6.2 elsewhere |
+
+Standing condition, from the docstring and from review item Day-1: truncation in this model keeps N = K in every generation at every g. It cannot go extinct, so stage N measures sweep speed and backlog and charges no demographic cost. The result says that adding phenotypic noise down to a genotypic share of 0.1 does not bring the truncation rate near Term 3; it does not say a real population could pay for it.
+
+**Correction to the fix pass (C2).** "tau nearly flat in lam" is true of softJ (stage L, within 5%) and false of truncation: at g = 1, R = 1.111, tau rises from 94 to 1,360 generations between lam 0.0351 and 1.6, and the open count grows roughly as lam squared (as the stage N mean field in the docstring has it). The C2 sentence is restricted to softJ.
+
+### Review items closed by `ph`
+
+| Item | Closed as |
+|---|---|
+| C1 (mix midpoints) | Stage M boundaries replace the midpoints and the earlier brackets: h = 0.1 about 3.5x the 10k hard cap at both R (brackets 3.5-4.3x and 3.3-3.9x); h = 0.3 about 1.6x and 1.3x (brackets 1.3-1.7x and 1.25-1.6x). CA2 holds at both R (at R = 1.111 on a 4-of-8 share); the audit gloss DA1 holds at h = 0.3 and fails at h = 0.1; PA2's h = 0.3 rows are no longer indeterminate (0.00575 in [0.004, 0.012]; 0.0479 in [0.04, 0.12], scored here at 20k, post hoc) |
+| C2 (max_open censoring) | The cap was the cause of the main run's failures near nopen 5,000 (no backlog in 26 runs at 20,000). Restated: softJ R = 1.111, K = 1000 sustains 0.8 on the rule (3/4); 1.6 is not shown at this horizon (0/4, k/lam 0.916, still filling). softJ K = 4000 sustains 0.4 (stage L); 0.8 and 1.6 not shown at this horizon. trunc R = 1.05: >= 0.8 stands; 1.6 not shown at this horizon (k/lam 0.935). DA2 and PA4 hold by the letter; their cause is undecided |
+| C5; C, flagged burn-in artefact; Critic-5 | Fill lag, confirmed (stage L: 80 of 80 runs pass HF's rule). PA1 at R = 1.05 holds at the top of its band (0.4 sustained; 0.8 not shown at the short horizon). PA5's softJ part fails upward (weak-s softJ sustains 0.4, the top of the L grid, at R = 2; predicted 0.1-0.2). K = 4000 softJ at R = 1.111 passes to 0.4 |
+| Critic-1 (h = 0.3 numbers were floor ties and noise) | Replaced by eight-run boundaries with brackets (stage M). "Within 1-3x" becomes "about 1.3-1.6x (brackets 1.25-1.74x)" |
+| Day-2 (truncation was noise-free genotype truncation) | Extended to phenotypic truncation with genotypic share 1, 0.5 and 0.1 (stage N), under the standing condition N = K |
+| Day-4 (weight of both halves) | Unchanged in substance, numbers updated: "near the hard cap for h >= 0.3 (about 1.3-1.6x); a few-fold above it at h = 0.1 (about 3.5x); uncapped in-model only at h = 0" |
+
+### Verdict text after `ph` (proposals for integration; no verdict value changes)
+
+- **H (Day, 1/300). External: contested**, with the h-scope now: "the cap binds for hard selection; at h = 0.3 the sustainable rate is about 1.3-1.6x the hard cap (R = 1.111 and 2, K = 1000, s = 0.01; brackets 1.25-1.74x); at h = 0.1 about 3.5x (brackets 3.3-4.3x); with purely relative fitness, or truncation that holds N = K, there is no cap in-model". The rest of the provisional H text stands (h and R unsourced; PC3 at R = 1.111; latency against throughput, C4).
+- **H8 (Day, Z19984826).** s3.3.1 on s_max: internal holds, unchanged. Term 3 as a rate bound across mechanisms: **external contested**, unchanged. The sentence "Phenotypic truncation: pending stage N" becomes: "contradicted in-model for truncation on a phenotype with a genotypic share of the truncation variable down to 0.1 (K = 1000, R = 1.111 and 2, lam to 1.6), under the condition that truncation holds N = K and cannot go extinct; supported for hard selection and for h >= 0.3".
+- **H5 (Hössjer).** As H.
+- Drift Deathmarch and HO-11: not touched by `ph`.
+
+### Who this helps (`ph` only)
+
+- **Day side.** A modest hard component restores a limit near Haldane's: at h = 0.3 the sustainable rate is within 1.3-1.6x of the hard cap at both R, on eight runs per point (DA1 restated holds there). The cost per substitution is still not reduced in any soft or truncation arm, only not charged (Day-1 stands; stage N cannot go extinct by construction). Sweep residence time grows with the number of concurrent sweeps and with K. Two audit predictions that favoured the critic-side reading missed (PC-1 (b): 1.6 not sustained on the rule at the 20k horizon; PM5: the mean field overstates the limit at R = 2).
+- **Critic side.** The softJ "failures" Day's side could have cited were a fill lag (80 of 80 long-burn runs pass). Ten per cent hardness leaves about 3.5x the hard cap at both R (CA2 restated holds). Truncation keeps its rate when the phenotype is mostly noise (genotypic share 0.1: 1.6 per generation sustained at both R, against a Day-side prediction of failure at 0.0351 and an audit prediction of a backlog at 1.6, both missed).
+- **Both.** The answer still turns on h and R, which no source fixes. Nothing in `ph` moves a verdict value; it replaces brackets with measured boundaries and removes one artefact.
+
+### Open after `ph` (none run)
+
+1. A long-burn run of softJ and trunc at lam 0.8 and 1.6 (K = 1000 and 4000), to decide the DA2 item and whether 1.6 is sustained.
+2. More runs at h = 0.1, R = 1.111 between 0.0094 and 0.0157 (the 4-of-8 tie).
+3. A synergy arm under relative fitness (Critic-2), a density-compensating mix arm (Critic-4), and a sourced h for humans (queue item L2).
