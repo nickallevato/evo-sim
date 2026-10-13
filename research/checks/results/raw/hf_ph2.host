@@ -1,0 +1,11 @@
+HF post hoc run ph2 (hf_posthoc2.py stage ph2), pre-registered post hoc at a995771 (parent 274e058); 8 cells, 31 jobs, est. 584 CPU-h, wall ~60 h
+host: na-workhorse.allevato.io (12 threads, 14 GB); launched 2026-10-13 19:40:17 UTC = 2026-10-13 13:40:17 -0600
+workers: 10; shard wh -> raw/hf_ph2_wh.jsonl, log raw/hf_ph2.out
+command: cd ~/projects/evo-sim && setsid -f nohup research/.venv/bin/python -I research/checks/hf_posthoc2.py ph2 10 > research/checks/results/raw/hf_ph2.out 2>&1 < /dev/null
+numpy 2.5.3; python Python 3.14.4
+md5 (equal to the local copies at a995771):
+a098388d4a73e392585a65240c691ce4  research/checks/hf_posthoc2.py
+5f571634461d29ce0e60722cbc77da37  research/checks/hf_posthoc.py
+446323c4c82f821991d12ec0c2dd431e  research/checks/hf_followups.py
+smoke (this host, 2026-10-13 ~13:33-13:40 -06:00, before the a995771 commit, script md5 as above): ENGINE IDENTITY PASS (ph cell 4 rep 0 softJ and cell 68 rep 0 trunc rerun with original seeds, 30 fields each identical to raw/hf_ph.jsonl md5 5076f839c629ae03acffdc21387251af, sec and maxrss_mb excluded); log raw/hf_ph2_smoke.out, rows raw/hf_ph2_smoke.jsonl, raw/hf_ph2_mini.jsonl (stay on the host)
+collect: rsync raw/hf_ph2* back; hf_posthoc2.py merge; hf_posthoc2.py analyse > raw/hf_ph2_analyse.out. Jobs are not checkpointed: after a reboot relaunch the same command (finished jobs are skipped).
