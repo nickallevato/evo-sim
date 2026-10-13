@@ -386,6 +386,38 @@ POST HOC AMENDMENT 2 2026-10-12 (pre-run, no data seen)
     post  : python -I research/checks/fm_mesa_null.py post research/checks/results/raw/fmnull_real.json \
             research/checks/results/raw/fmnull_post.json
     score : ... --exposure 0.86 --d 0.0137 [--cvc 0.3] [--real research/checks/results/raw/fmnull_real.json]
+POST HOC 2026-10-13 (fix pass after the three reviews of R4-FMnull; AFTER the run, data seen)
+  Status when written: the chain (selftest, analytic, simulate, realdata, post) ran on 2026-10-13 and is written up
+  in results/R4-FMnull.md (b3c0ab3); reviews af8a960 (correctness), 5a36667 (steelman-day), 64c2dba (steelman-
+  critic).  Everything above this section, and every function defined before the marker "post hoc 2026-10-13" in
+  the code, is unchanged.  The modes below are ADDITIVE, write NEW output files and are post hoc and descriptive:
+  they change no registered score.  Each was committed and pushed before its run.
+  MODE `simphase` (correctness review, finding 3).  `sim_two_lineage` starts every block on a multiple of Lb, so
+  with Lb = W = 100 kb every block fills exactly one window.  `simphase` replays `simulate_one` with the SAME seed
+  and the SAME random stream (the P6 draws are repeated and discarded, the scenarios are simulated by the same
+  calls), and then takes the windows at an offset against the block grid: phases 0, 1/4, 1/2, 3/4 of Lb, and
+  `rand` (one offset per replicate, uniform on [0, Lb), from a separate generator seeded seed + 3).  For a
+  stationary field shifting the windows is the same as shifting the blocks; phase 0 must reproduce
+  raw/fmnull_sim.json exactly, which is checked and recorded (`phase0_max_rel_diff`).  The headline off-grid
+  figure is `rand`; the fixed phases are reported beside it.  Neutral scenarios are run as a control.
+    On-grid result (committed, PREREG / SOURCED, 100 kb): registered block model (f 0.02, e 1, Lb 100 kb) phi_HC
+    5.06 / 5.00; dominant model (f 0.5, e 2, Lb 100 kb) phi_HC 103 / 103, phi_H 283 / 328.  P8 (i) (> 10) missed,
+    P8 (ii) (> 100) hit by 3%.
+    Audit expectation, fixed now (block excess at Lb = W scales by 1 - 2 o (1 - o) at phase o; the correctness
+    reviewer's reduced run gave 3.65 to 4.04 and 53 to 64): dominant phi_HC at 100 kb about 64 at phases 1/4 and
+    3/4, about 52 at 1/2, 55 to 85 for `rand`; so P8 (ii) MISSES off the grid.  Registered block model 3.5 to 4.1
+    at every non-zero phase (P8 (i) misses by more).  Neutral scenarios (S0, S0_hi_ls, S1) change by < 3% at any
+    phase.  Lb = 20 kb scenarios change by < 10% at 100 kb.  Dominant phi_H at 100 kb keeps its DAY class against
+    the masked band at phase 0 only by a margin that phase 1/2 removes (expected about 147 / 180 against
+    3 N_hi = 178 / 221); no call is made for `rand`.
+    Day-side expectation (audit gloss, not a statement of his): the lineage-split statistic is weaker than the
+    on-grid run showed; off the grid the dominant model no longer clears 3x the bound at lambda_M = 0.25
+    (3 x 19.6 PREREG, 3 x 22.7 SOURCED), so S2 as amended cannot fire for it at two of three lambda_M.
+    Critic-side expectation (audit gloss): the dominant model stays above 3x the lambda_M = 0 bound (18.6) at
+    every phase and stays more than 20 times the measured F2 excess (phi_HC - 1) at matched exposure, so the
+    data remain far from it; block models with f e^2 <= 0.02 stay inside the bound at every phase.
+    simphase : python -I research/checks/fm_mesa_null.py simphase research/checks/results/raw/fmnull_simphase.json \
+               [research/checks/results/raw/fmnull_sim.json]      (1 process, ~10 min, < 600 MB, na-workhorse)
 """
 import functools
 import json
@@ -1514,6 +1546,88 @@ def band_one(W, d, comps):
     return W * d * window_var(W, comps)
 
 
+# ------------------------------------------------------------------- post hoc 2026-10-13 (fix pass, after the run)
+# Everything from here to the mode dispatch is post hoc (docstring section "POST HOC 2026-10-13").  It adds modes
+# and output files beside the registered and amended ones and changes none of the functions above.
+PHASES = (0.0, 0.25, 0.5, 0.75)
+
+
+def two_stats(H, C, nb, off=0):
+    """The statistics of simulate_one for windows of nb bins starting at bin `off`."""
+    k = (len(H) - off) // nb
+    h = H[off: off + k * nb].reshape(k, nb).sum(1).astype(float)
+    c = C[off: off + k * nb].reshape(k, nb).sum(1).astype(float)
+    E = h.sum() / c.sum() * (c + 1.0)
+    return dict(phi_H=float(h.var(ddof=1) / h.mean()), phi_C=float(c.var(ddof=1) / c.mean()), phi_HC=split_phi(h, c),
+                corr_HC=float(np.corrcoef(h, c)[0, 1]), phi_res_H=float(((h - E) ** 2 / E).sum() / (k - 1)))
+
+
+def simphase_one(genome_mb, reps, seed):
+    """Replay of simulate_one (same seed, same calls in the same order) with windows off the block grid."""
+    rng = np.random.default_rng(seed)
+    rng_phase = np.random.default_rng(seed + 3)          # separate stream: the replayed stream is not touched
+    n = int(genome_mb * 1e6 / BIN_BP)
+    res = {"param_set": ACTIVE, "genome_mb": genome_mb, "reps": reps, "seed": seed, "phase_seed": seed + 3, "arms": {}}
+    for edge, comps in (("N_lo", comp_params("lo", NEUTRAL)), ("N_hi_masked", comp_params("hi", NEUTRAL)),
+                        ("N_hi_unmasked", comp_params("hi", NEUTRAL + ("ALN",))), ("poisson", [])):
+        for d in (0.0051, 0.012):
+            for _ in range(reps):
+                rng.poisson(BIN_BP * d * rate_field(n, comps, rng))      # P6 draws: repeated, discarded
+    lam = math.sqrt(LAMBDA[0] * LAMBDA[1])
+    sh = [c for k, c in zip(NEUTRAL, central(NEUTRAL)) if k != "GBGC"]
+    sg, lg = central(("GBGC",))[0]
+    shared = sh + [(sg * math.sqrt(1 - lam), lg)]
+    ls = [(sg * math.sqrt(lam), lg)]
+    scen = {"S0_neutral": {}, "S0_hi_ls": {"ls": [(COMPONENTS["GBGC"][0][1], COMPONENTS["GBGC"][1][1])]},
+            "S1_bgs": {"bgs": (COMPONENTS["BGS"][0][1], 1e6)}}
+    for Lb in (2e4, 1e5):
+        for e in (0.5, 1.0):
+            for f in (0.005, 0.02):
+                scen[f"S2_sig_L{int(Lb/1e3)}k_e{e}_f{f}"] = {"blocks": (Lb, e, f)}
+    scen["S2_sig_dominant_L100k_e2_f0.5"] = {"blocks": (1e5, 2.0, 0.5)}
+    for name, sp in scen.items():
+        Lb_bins = int(round((sp["blocks"][0] if "blocks" in sp else 1e5) / BIN_BP))
+        acc = {}
+        for _ in range(reps):
+            H, C, _ = sim_two_lineage(n, shared, sp.get("ls", ls), 0.0051, 0.0057, rng,
+                                      blocks=sp.get("blocks"), bgs=sp.get("bgs"))
+            offs = {str(p): int(round(p * Lb_bins)) for p in PHASES}
+            offs["rand"] = int(rng_phase.integers(0, Lb_bins))
+            for W in (1e4, 1e5, 1e6):
+                for lab, off in offs.items():
+                    st = two_stats(H, C, int(W / BIN_BP), off)
+                    r = acc.setdefault(int(W), {}).setdefault(lab, {})
+                    for s, v in st.items():
+                        r.setdefault(s, []).append(v)
+                acc[int(W)].setdefault("rand_offsets_bins", []).append(offs["rand"])
+        res["arms"][name] = {W: {lab: (v if lab == "rand_offsets_bins" else {s: float(np.mean(x)) for s, x in v.items()})
+                                 for lab, v in r.items()} for W, r in acc.items()}
+        print(name, json.dumps(res["arms"][name]), flush=True)
+    return res
+
+
+def simphase(outjson, ref_json=None, genome_mb=300, reps=10, seed=20261012):
+    """Post hoc 2026-10-13: block scenarios with the windows off the block grid; both sets, registered seed."""
+    ref_json = ref_json or os.path.join(HERE, "results", "raw", "fmnull_sim.json")
+    ref = json.load(open(ref_json)) if os.path.exists(ref_json) else None
+    res = {"status": "post hoc 2026-10-13 (fix pass); phase 0 = the registered on-grid run", "sets": {}}
+    for name in PARAM_SETS:
+        use_set(name)
+        print(f"===== parameter set {name}", flush=True)
+        res["sets"][name] = simphase_one(genome_mb, reps, seed)
+        if ref is not None and ref["sets"][name]["genome_mb"] == genome_mb and ref["sets"][name]["reps"] == reps:
+            worst = 0.0
+            for scn, byW in res["sets"][name]["arms"].items():
+                for W, r in byW.items():
+                    for s, v in r["0.0"].items():
+                        worst = max(worst, abs(v / ref["sets"][name]["arms"][scn][str(W)][s] - 1.0))
+            res["sets"][name]["phase0_max_rel_diff"] = worst
+            print("phase 0 against", ref_json, "max relative difference", worst, flush=True)
+    use_set("PREREG")
+    json.dump(res, open(outjson, "w"), indent=1)
+    return res
+
+
 if __name__ == "__main__":
     a = sys.argv[1:]
     if not a or a[0] == "selftest":
@@ -1540,5 +1654,7 @@ if __name__ == "__main__":
         score(o.W, o.value, o.reading, o.unit, o.masked, o.exposure, o.d, o.cvc, o.real)
     elif a[0] == "post":
         post(a[1], a[2])
+    elif a[0] == "simphase":            # post hoc 2026-10-13
+        simphase(a[1], a[2] if len(a) > 2 else None, *(float(x) if i == 0 else int(x) for i, x in enumerate(a[3:])))
     else:
         sys.exit(__doc__)
