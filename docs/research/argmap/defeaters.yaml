@@ -6083,3 +6083,45 @@
   counter: []
   note: 'Critic-side. Adopted: cross-tabulation and lineage table in the Readings section, W <= 10 kb as an extended reading, 3-10 Mb cells above the Francioli-edge bound reported against the critics. Not adopted: the covariate-adjusted result as a critic point (the estimator is invalid, correctness review C5); the rider that only mechanisms too small to be dominant are missed. Where it conflicts with the Day-side review both are recorded as readings (RD).'
   hierarchy_edge: false
+
+- id: d467
+  attacker: chk:L5
+  target: C
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-L5.md sections 4, 8, 9 (Critics; Readings R-a..R-e)
+  audit_status: partly
+  audit_basis: 'against "zero observed fixations refutes the required rate" (Q275, Q276): at Day''s required rate (15,556 completions per window, face value) the expected count of his zero-reported statistics is effectively 0 for every s <= 0.02, Q44''s 1e-3 included (no simulated sweep registers at s <= 0.01; sweep-time arithmetic, a sweep about 1,000 generations against a 280-generation window, corroborated by a direct trajectory bound); the mainstream model predicts about zero (at most 4.7e-31 at 25 y); no simulated completion at s <= 0.02 began below 50% at 7,500 BP. Reading-dependent (rule RD): contradicted (scoped) under R-a and R-b; under R-c (the source states no s) the zero excludes the rate only if its sweeps had s >= s* (0.03 to 0.05 on B10, 0.05 on Z50, 0.1 on Z10), so the field stays contested'
+  counter: [d468]
+  note: 'Critic-side. The registered field flip to contradicted is withheld (weak-test caveat of the pre-run notes; R-c unresolved). Day-side credit recorded in the same result: the observation stands; at s >= 0.05 the panel registers hundreds to thousands of events and his zero excludes any strong-sweep rescue (P(0) below 1e-69).'
+  hierarchy_edge: false
+
+- id: d468
+  attacker: C
+  target: chk:L5
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-L5.md sections 1, 8, 10 (Day; Both); 11 items 2, 3, 5, 7
+  audit_status: partly
+  audit_basis: 'against "L5 contradicts Day''s ancient-DNA argument": the test could not have come out DAY at s <= 0.01 (the registered arithmetic excluded it), so "not DAY" carries no information against him; the run tested the positive control and the crossover, not the move (weak-test caveat); the source states no s, so R-c is the literal state of the text and the sentence is true on a condition the source leaves open; Z50 and Z10 run low at s >= 0.05 because the hitchhiking formula understates monomorphy of linked SNPs (0.90 explicit against 8.5e-5); D3 is a partial panel sensitivity; C1a''s sign is untested; sweeps at F = 15,556 and s >= 0.05 are not independent'
+  counter: [d467]
+  note: 'Day-side. Granted in the write-up and not rebutted: all of the above are limits of the test. Not granted: that they restore the required rate at low s (the arithmetic does not depend on them).'
+  hierarchy_edge: false
+
+- id: d469
+  attacker: rev:R4-L5-combined
+  target: chk:L5
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #80)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L5-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 7 MAJOR (E <= 1 printed on the wrong grounds; V3 bias direction unsupported; carrying sentences not numbered quotes; field flip not licensed under rule RD; registered C1 and C1a parentheticals; two claim-file figures wrong by about two orders; Day-side bullets resting on the audit''s own choices), 10 MINOR, 6 NOTE'
+  counter: []
+  note: 'Applied in fix pass 0b0431c with post hoc l5_posthoc_v3.py (c9f3d69). Not accepted: the part of K3 that keeps the unreachable-band limit on Day''s side; D6''s vocabulary word. No verdict value moves.'
+  hierarchy_edge: false

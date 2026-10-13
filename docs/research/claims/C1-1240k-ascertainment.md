@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"   # point 1 trivially; new-in-window fixations ~0
   fidelity: accurate
-  external: "supported"   # v62 total within 1.3x of neutral D2/D3; v66 3.8x below, unexplained; R4 C1c: the low-frequency panel density (flat to q = 0, 7% fixed) is unmeasured and controls the eligible leg of Day's 11-bin statistic far more than its post-6000 count
+  external: "supported"   # R4 L5 (integrated 2026-10-13; no value change): the zero power at s <= 0.01 comes from the 7,000-year window, not from the panel; point 1 is exact only for post-split European mutations (inclusion 0 at s >= 0.02) and costs nothing at s >= 0.05 because linked panel SNPs carry the sweep; ascertainment does not hide selection-driven completions at s >= 0.05 (the swept site is on the panel in 8.8% to 24.7% of standing completions). v62 total within 1.3x of neutral D2/D3; v66 3.8x below, unexplained; R4 C1c: the low-frequency panel density (flat to q = 0, 7% fixed) is unmeasured and controls the eligible leg of Day's 11-bin statistic far more than its post-6000 count
 ---
 
 ## Statement (verbatim)
@@ -43,6 +43,7 @@ Let S be the panel (sites chosen because they were polymorphic in a discovery se
 
 1. New-mutation substitutions are mostly absent from S. A mutation that arose and fixed in Europe within the window would not have been polymorphic in D, so it is not a panel site. The panel can register frequency changes of standing variants and cannot register most substitutions along a lineage. The quantity Day compares (about 20 million substitutions required; 15,556 expected in 7,000 y) is a substitution count over the whole genome.
    derived: genome-wide neutral substitutions in 350 generations at k = mu = 1.2e-8 (`mutation.mu_per_site_per_gen.pedigree_human`) x 3.1e9 sites = 37.2 per generation x 350 = 13,020 (haploid-lineage count; Day's 15,556 is the same order). Panel fraction = 1,143,671 / 3.1e9 = 3.7e-4, so a uniform sample would give 4.8 events even if every panel site could register a new substitution (derived: 13,020 x 3.69e-4).
+   **Correction (2026-10-13, R4 L5 review C-D5; the figure above is kept as first written):** the "4.8 events" is an error of the audit's, from uniform scaling; a swept standing-variant site is on the panel in 8.8% to 24.7% of completions, which at 15,556 completions is 1,376 to 3,836 sites (hard mode at s <= 0.01: 76 to 1,010). Logged in `ledgers/slips.md` (S-L5-1).
 2. Direction of bias for intermediate-frequency completions is unsettled. The African-male discovery step selects alleles polymorphic in Africans, which are mostly old, intermediate-frequency variants in Europeans too. That enriches the panel for the very class (intermediate start) in which completions could be seen (Day's reply, C1a). Against this, sites already near-fixed in Europeans are inflated among "newly 100%" (17,806 of 1,143,671 at 90-99% start, Z23046531 Table 3).
 
 Panel size parameters: 1,233,013 SNPs (AADR), 1,143,671 autosomal after Day's filter.
@@ -70,6 +71,8 @@ Panel size parameters: 1,233,013 SNPs (AADR), 1,143,671 autosomal after Day's fi
 - Result that would change a verdict: a simulation that ascertains sites exactly as the panel did (African-male heterozygosity plus array SNPs) and shows (i) a non-negligible expected count of panel-registered new substitutions (verdict on point 1 reverses) or (ii) that the ascertained panel increases the neutral expected count of 50-90% completions above ~0.1 (verdict on point 2 reverses toward C1a).
 
 ## Check
+R4 L5 (research/checks/results/R4-L5.md; integrated 2026-10-13): comment only, `supported` unchanged. Reading of C1 as written (point 1: new mutations that arose and fixed in Europe in the window are not panel sites): exact in the model, `supported`. Wider reading (ascertainment is why Day's test could not see selection-driven completions): not so; at s >= 0.05 the panel registers hundreds to thousands of events, and at s <= 0.01 the window removes the power before the panel matters; `contested` for selection-driven completions under that reading (recorded, field unchanged). Point 1's "4.8 events" corrected above.
+
 R4 C1c (research/checks/results/R4-C1c.md §6, §9): the panel-density input used to model Day's 11-bin statistic is assumed (flat folded density to q = 0 from the C1 chain); tilting it by (q/0.01)^±0.5 multiplies the eligible count by 3.1 / 0.38 but the post-6000 count only by 1.7 / 0.62, so S21 / eligible is the density-robust comparison. R4 C1d: on the real genotypes Day's literal statistic gives thousands of post-6000 events, so ascertainment alone does not produce his 21.
 
 R4 C1 (research/checks/results/R4-B3b-C1.md): point 1 holds (new-in-window fixations are ~0 genome-wide, 5e-151 per site). Sample-level newly-100% counts: D2 (African single-male discovery) 13,807 and D3 18,157 vs v62 observed 17,806 (within 1.3x); v66 3,469 is 3.8x below the model, unexplained. Same-population MAF design (D1) gives 0. Panel denominator omits African-private post-split mutations (slight upper bound). Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)

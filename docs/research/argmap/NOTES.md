@@ -273,6 +273,8 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-FMnull-correctness | audit | review #77, correctness (FMnull); load-bearing tier | results/REVIEW-R4-FMnull-correctness.md (2026-10-13) |
 | rev:R4-FMnull-steelman-day | audit | review #78, Day-side steelman (FMnull); load-bearing tier | results/REVIEW-R4-FMnull-steelman-day.md (2026-10-13) |
 | rev:R4-FMnull-steelman-critic | audit | review #79, critic-side steelman (FMnull); load-bearing tier | results/REVIEW-R4-FMnull-steelman-critic.md (2026-10-13) |
+| chk:L5 | audit | ancient-DNA zero-fixation power analysis: Day's required rate (15,556 completions per window) simulated against his zero-reported statistics by selection coefficient, mode and demography; band CRITIC; C external stays `contested` (reading-dependent) | RESULTS §L5; results/R4-L5.md (added 2026-10-13) |
+| rev:R4-L5-combined | audit | review #80, combined (correctness, steelman-day, steelman-critic) for L5 | results/REVIEW-R4-L5-combined.md (2026-10-13) |
 | rev:R4-RHclose-combined | audit | review #62, combined (RHclose); low-stakes tier | results/REVIEW-R4-RHclose-combined.md (2026-10-11) |
 | rev:R4-RHclose-critics-combined | audit | review #63, combined (RHclose-critics); low-stakes tier | results/REVIEW-R4-RHclose-critics-combined.md (2026-10-11) |
 | rev:R4-A2e-uricchio-combined | audit | review #64, combined (A2e-alpha Uricchio addendum); low-stakes tier | results/REVIEW-R4-A2e-uricchio-combined.md (2026-10-11) |

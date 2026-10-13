@@ -2220,3 +2220,31 @@ Passages cited by the L1b and L1c write-ups that had no Q id. Each checked by ma
 - branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
 - quote: "So what the Consortium’s method actually measured is: “among the coding positions conserved enough to survive protein alignment, how conserved are they?” That’s not a valid measurement, that’s a tautological quantification."
 - note: The one sentence that states outright that the Consortium's 0.23 came through a protein alignment. Held CSAC 2005 text says the 13,454-gene set came from the BLASTZ genome alignment (quotes-literature.md CSAC2005, Methods, Genome alignment). DN6 Reading a (fidelity `misread`).
+
+## Refresh 2026-10-13 quotes (Q275-Q278; added 2026-10-13, integration of L5)
+
+Passages cited by the L5 write-up that had no Q id. Each checked as an exact substring of the held extracted text `sources/raw/day/blog-2026-01-14-empirically-impossible.txt` (html sha256 5303e99360342a1e...bc025b76, fetched 2026-10-07). Paragraph numbers follow Q55's convention (non-empty lines, the TITLE line counting as ¶1; Q55 is ¶5). The s = 1e-3 figure is Q44.
+
+### Q275 Comparator: 'approximately 15,500 fixations per 7,000-year period' - blog 2026-01-14
+- source: `B2026-01-14-empirically-impossible` (blog post dated 2026-01-14); URL: https://voxday.net/2026/01/14/empirically-impossible/
+- locator: ¶4 of extracted text
+- quote: "The Modern Synthesis requires approximately 20 million fixations over the 9 million years since the human-chimpanzee divergence, implying a rate of 2.22 fixations per year or approximately 15,500 fixations per 7,000-year period."
+- note: 20,000,000 / 9,000,000 y x 7,000 y = 15,556. No selection coefficient and no panel scaling stated. Used by claim C (Statement), C1, C6 and R4-L5.
+
+### Q276 Inference: 'decisively favors the MITTENS prediction' - blog 2026-01-14
+- source: `B2026-01-14-empirically-impossible`; URL as Q275
+- locator: ¶6 of extracted text
+- quote: "This result decisively favors the MITTENS prediction over the Modern Synthesis expectation."
+- note: The sentence carrying the inference from zero observed to a refuted rate. RH tag: dialectic (a checkable comparative claim; R4-L5 scores it).
+
+### Q277 Framing: 'very strongly support Probability Zero's assertion' - blog 2026-01-14
+- source: `B2026-01-14-empirically-impossible`; URL as Q275
+- locator: ¶2 of extracted text (the opening paragraph; the R4-L5 fix pass numbered it ¶3 by a different count)
+- quote: "the results very strongly support Probability Zero‘s assertion of the mathematical impossibility of the theory of evolution by natural selection."
+- note: The post frames the comparator as bearing on evolution by natural selection; s is not stated. RH tag: dialectic.
+
+### Q278 Conclusion: 'inoperative in human populations for at least 7,000 years' - blog 2026-01-14
+- source: `B2026-01-14-empirically-impossible`; URL as Q275
+- locator: ¶7 of extracted text
+- quote: "Evolution by natural selection, as a mechanism of directional change capable of producing adaptation or speciation, has been empirically demonstrated to be inoperative in human populations for at least 7,000 years."
+- note: Shows the selection-driven reading of the comparator is the post's own framing. RH tag: dialectic.

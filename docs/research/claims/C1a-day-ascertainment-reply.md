@@ -11,7 +11,7 @@ status: reviewed
 verdicts:
   internal: "holds"   # for the 10-90% bands (1.2-3.4x enrichment)
   fidelity: n/a
-  external: "contested"   # wrong sign for >=90% bands and same-population discovery; immaterial to the ~0 headline; not tested by R4 C1c/C1d, which concern the near-fixation 21-statistic
+  external: "contested"   # R4 L5 (integrated 2026-10-13; no value change): sign not tested by L5 (no unascertained random-SNP comparator was computed); the panel does not hide strong sweeps. Wrong sign for >=90% bands and same-population discovery; immaterial to the ~0 headline; not tested by R4 C1c/C1d, which concern the near-fixation 21-statistic
 ---
 
 ## Statement (verbatim)
@@ -46,6 +46,8 @@ The reply asserts a sign without a calculation. It is silent on (a) substitution
 - Result that would change a verdict: the C1 simulation. If ascertained-panel completions from intermediate starts exceed the unascertained rate (even if both are ~0 in absolute terms), C1a's sign is correct for that class; verdict on C1 point 2 then moves toward C1a.
 
 ## Check
+R4 L5 (research/checks/results/R4-L5.md; integrated 2026-10-13): comment only. L5 does not test the sign Day asserts here; an earlier draft credited it ("240 to 670 times") by comparing a known polymorphism with a random base pair, and that credit is withdrawn. What L5 shows is that the panel does not hide strong sweeps (swept site on the panel in 8.8% to 24.7% of standing completions). Open: the random-SNP comparator.
+
 R4 C1 (research/checks/results/R4-B3b-C1.md): sign is right for the 10-90% start bands Day's headline uses (African discovery enriches them 1.2-3.4x): credit to Day. It is wrong for the >=90% bands (suppressed 5-30x), where most true completions occur, and for a same-population design (D1: 0). The effect on the headline is immaterial because the expectation there is ~0 either way. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 Earlier note: Script: shared with C1 (`research/checks/c1_ascertainment_sim.py`, planned). · Result: not run · Review: pending
 

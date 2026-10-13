@@ -4009,3 +4009,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#76-#79), fix-passed (2802425) and integrated 2026-10-13; FM10 internal pending (owner decision); Day has released no window, statistic or code"
+
+- id: L-audit-l5-2026
+  label: "Audit L5: the zero in 1.1-1.2M ancient-DNA SNPs carries no information on Day's required rate at s <= 0.02; at s >= 0.05 the panel registers sweeps; the test could not have come out for Day at low s"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [C, C1, C1a]
+  locator: "research/checks/results/R4-L5.md"
+  quote: "the zero carries no information on selection with s <= 1e-2, which includes Day's own s = 1e-3"
+  parents:
+    - {id: L-audit-c1e-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#80), fix-passed (0b0431c) and integrated 2026-10-13; C external stays contested (reading-dependent); C1a sign untested"
