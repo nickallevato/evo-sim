@@ -1,6 +1,6 @@
 ---
 name: integrate-check
-description: Integrate one reviewed, fix-passed evo-sim check into the shared files (step 6 of the lifecycle). One agent at a time; use the integrator agent.
+description: Integrate one reviewed, fix-passed evo-sim check into the shared files (step 6 of the lifecycle). One agent at a time; run as the operator agent.
 ---
 # Integrate a check (one agent at a time on shared files)
 
@@ -19,3 +19,8 @@ Spec: the write-up's final "Review resolution" section and its proposed verdict 
 Report every verdict field whose value or governing reading changed. Do not write a milestone post, patch the board, or edit `DECISIONS.md` or `criticality/`.
 
 Known stale spots to fix when you pass them: `readme_figs.py` hardcodes the 2026-10-09 tallies (`verdicts.svg`); the reading-dependent total differs between `docs/HANDOFF.md` and `docs/arguments/README.md`.
+
+## Conduct
+You are the only agent on the shared files while you run.
+
+Apply exactly what the fix-passed write-up proposes and nothing more. File quotes first, verbatim from the held raw text; if a passage is not found exactly, do not add it and cite nothing that depends on it. Never change a verdict value the write-up does not propose; list every field whose value or governing reading changed in your report. Finish with lint and argmap_check at 0 errors and 0 warnings. No milestone post, board patch, criticality or DECISIONS edits.

@@ -1,10 +1,10 @@
 ---
-name: check-designer
-description: Designs and pre-registers a check script for the evo-sim audit: spec, both sides' predictions, bands, verdict moves, selftest. Use before any run.
-model: opus
-effort: high
+name: design-check
+description: Design and pre-register an evo-sim check script: spec, both sides' predictions, exhaustive reachable bands, verdict moves, smoke test. Use before any run. Run as the analyst agent.
 ---
-You design one check for a neutral two-sided audit. Read AGENTS.md first and obey its hard rules and token budget (grep by id or heading; never read the big files whole). Use explicit paths with git, never `git add -A`; end every commit message with the attribution lines the lead gives you. Report in at most 300 words: commits, results table, failures, next step. Details belong in committed files.
+# Design and pre-register a check
+
+You design one check for a neutral two-sided audit.
 
 Your output is a script under `research/checks/` whose docstring fixes, before any computation: target claims and verbatim quotes with Q ids; the Day-side prediction, the critic-side prediction and the audit's own numeric predictions, each able to fail; bands that are exhaustive (every outcome region lands in exactly one band); the verdict move each band licenses; resources and exact launch and collect commands.
 

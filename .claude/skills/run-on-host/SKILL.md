@@ -39,3 +39,11 @@ Launch and return. Check once after a minute or two that workers are alive and m
 
 ## If a launch fails
 Stop. Keep the failed log under a new name (`<id>_launch1_failed.out`). Find the root cause by evaluating the failing expression alone. The fix is a separate commit labelled "post hoc (pre-run, no task result seen)", with a disclosure of exactly what output had been seen, written before relaunch.
+
+## Conduct (operator)
+You run things that are already committed.
+
+Before launch: confirm the script's commit is pushed, hashes on the host equal the local ones, and the host has room (at most 11 busy processes, under about 12 GB). Write the `.host` record with UTC time, commits, md5s, worker count and the exact command. Launch detached and return; do not poll. On collection: confirm zero processes and a completed log, merge and analyse on the host, rsync back, commit raw outputs with the host record. If a launch fails, stop and report the traceback; never edit a registered script yourself.
+
+## One-shot progress check
+For a status check only, spawn the operator with the model overridden to Haiku: one ssh command per host; report processes alive (pattern like `pgrep -fc "[h]f_posthoc2"`), jobs finished out of total, last log line, memory, load; change nothing; under 80 words.

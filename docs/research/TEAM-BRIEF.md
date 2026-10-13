@@ -13,7 +13,7 @@ Written 2026-10-13 at the end of a long session, for the agent that will lead th
 
 ## 2. What to do next, in order
 
-1. Check `ph2` once when it is due (agent `progress-poller`), then `run-operator` to collect, then score and review.
+1. Check `ph2` once when it is due (an `operator` on Haiku, skill `run-on-host`), then an `operator` to collect, then score and review.
 2. One bookkeeping pass: the stale `verdicts.svg` tallies (`readme_figs.py` hardcodes 2026-10-09 counts), the reading-dependent total that differs between `docs/HANDOFF.md` and `docs/arguments/README.md`, and a board patch `upd22.py` that adds Q93close and B2f and fixes the page's stale numbers ("61 checks labelled", 419 objections / 232 versions, truncated needs-owner items). Then republish (skill `republish-board`).
 3. Queue items that need no owner decision (`research/checks/QUEUE.md`, "Next" and "Later queue"): B1e's second Statement quote and its Kimura 1955 link (its internal `holds` rests on the Zenodo wording only); harvest of the 2026-10-13 critic video once captions exist; FMnull criterion S4 and the Poisson re-estimate; L1c with an external codon aligner and an independent chimp CDS set; L5's random-SNP comparator for C1a; C1d and D follow-ups; L2 (a sourced hardness h) and L3 (alpha from MK).
 4. When a batch of checks is integrated, close it with skill `close-batch`.
@@ -28,39 +28,38 @@ Written 2026-10-13 at the end of a long session, for the agent that will lead th
 
 Record anything he decides verbatim, dated, in `DECISIONS.md`. A question he asks in chat is not a decision: on 2026-10-13 "can you use another subagent for any work?" was taken as leave to run three agents for that session only, and logged as open (O-24).
 
-## 4. The team
+## 4. The team: three agents, thirteen skills
 
-Agent definitions are in `.claude/agents/`; the model and effort are in each file's frontmatter. The lead is the main session.
+Twelve single-purpose agents were tried first and were too many (owner, 2026-10-13). There are now **three** agent definitions in `.claude/agents/`; what an agent does on a given task comes from the **skill** its brief names. Model and effort are in each file's frontmatter (if effort levels do not take effect, check that `effort:` is the key the harness reads).
 
-| Agent | Model | Effort | Does | Writes to |
+| Agent | Model | Effort | Used for | May write |
 |---|---|---|---|---|
 | lead (main session) | Opus | high | plans, briefs, rules on steelman conflicts, talks to the owner, final checks | briefs, QUEUE notes, small fixes |
-| `check-designer` | Opus | high | spec and pre-registered script, both sides' predictions, reachable bands | one new script |
-| `run-operator` | Sonnet | low | launch, collect, merge on the hosts | raw outputs, `.host` records |
-| `progress-poller` | Haiku | low | one status check of a run | nothing |
-| `writeup-author` | Opus | high | `R4-<ID>.md`, every prediction scored | one write-up |
-| `reviewer-correctness` | Opus | high | recomputes, checks calls against the registration | one review file |
-| `steelman-day` | Opus | high | Day's side as strongly as the evidence allows | one review file |
-| `steelman-critic` | Opus | high | the critics' side as strongly as the evidence allows | one review file |
-| `fix-pass` | Opus | high | answers every MAJOR and MINOR, post hoc runs | the write-up, post hoc script |
-| `integrator` | Sonnet | medium | shared files, one at a time | REVIEW, RESULTS, QUEUE, claims, quotes, argmap |
-| `source-refresher` | Sonnet | medium | pre-milestone refresh, read-only fetches | refresh file, quotes, bib, harvest log |
-| `criticality-auditor` | Opus | xhigh | independent method audit of a batch | `criticality/`, ROADMAP, DECISIONS (open items) |
-| `milestone-writer` | Opus | medium | milestone post and update notes | one new post, notes on old posts |
+| `analyst` | Opus | high | authoring that needs judgment: design a check, write a results file, fix pass, milestone post | only its own script, write-up or post |
+| `reviewer` | Opus | high (xhigh for a criticality pass) | independent review: correctness, one steelman side, criticality pass; always a fresh instance | only its review file (or the criticality files) |
+| `operator` | Sonnet | medium (Haiku for a one-line progress check) | mechanical work: runs on the hosts, integration, refresh, bookkeeping, board | shared files, one operator at a time |
 
-For low-stakes checks one combined review may be written by `reviewer-correctness` with three sections; Sonnet is acceptable for a light re-review of a re-measurement (as for HF `ph` and Q93close).
-
-Concurrency: the standing cap is two subagents (owner, 2026-10-11) until O-24 is answered. Whatever the cap, **never two agents on the shared files at once**; integrations run one after another. Agents that only write their own new file can overlap freely.
+Concurrency: the standing cap is two subagents (owner, 2026-10-11) until O-24 is answered. Whatever the cap, **never two agents on the shared files at once**; integrations run one after another. Agents that only write their own new file can overlap.
 
 ## 5. Skills (in `.claude/skills/`)
 
-| Skill | Use it when |
-|---|---|
-| `run-on-host` | anything must run on na-workhorse or builder; holds the launch pattern and the shell pitfalls |
-| `check-lifecycle` | raw outputs are in and a check needs its write-up, reviews, rulings and fix pass |
-| `integrate-check` | a fix-passed check goes into the shared files |
-| `close-batch` | refresh, criticality pass, milestone post, board, merge |
-| `republish-board` | the board file changed and the Artifact must be updated in place |
+Each brief names one skill; the agent loads it and follows it.
+
+| Skill | Agent | Use it when |
+|---|---|---|
+| `design-check` | analyst | a new check needs its spec and pre-registered script |
+| `run-on-host` | operator | anything must run on na-workhorse or builder (launch pattern, shell pitfalls, collection, progress check) |
+| `write-up-check` | analyst | raw outputs are in and need a results file |
+| `review-correctness` | reviewer | a write-up needs its numbers and calls recomputed |
+| `review-steelman` | reviewer | one side's strongest case against a write-up (one agent per side) |
+| `fix-pass` | analyst | reviews are in and every MAJOR and MINOR must be answered |
+| `check-lifecycle` | lead | orchestrating the five steps above for one check: tiers, rulings, briefs |
+| `integrate-check` | operator | a fix-passed check goes into the shared files |
+| `source-refresh` | operator | before a milestone post |
+| `criticality-pass` | reviewer | before a milestone post, on the whole batch |
+| `milestone-post` | analyst | a batch is integrated and audited |
+| `close-batch` | lead | orchestrating refresh, criticality pass, post, bookkeeping, board, merge |
+| `republish-board` | operator | the board file changed and the Artifact must be updated in place |
 
 ## 6. What the last session got wrong, so the next one does not
 
@@ -69,7 +68,7 @@ From the method audit of this batch (`criticality/METHOD-AUDIT-2026-10-13.md`, M
 1. **The lead was author, briefer and judge** (MA-21). Briefs were not in git, and rulings on steelman conflicts reached claim files minutes after each fix pass with no review. From now on: commit each brief under `research/checks/briefs/` before spawning; write rulings down before the fix pass; where a ruling moves a verdict field's governing reading, have a second instance check it before integration.
 2. **"Extended reading" and "registered wording governs" were applied case by case** (MA-22). State which test you are applying and apply it the same way to both sides.
 3. **One review for a check carrying a registered verdict flip** (MA-23, L5). Use three.
-4. **Day-side outcomes that could not occur** (MA-24): half of L5's DAY band, FMnull's criterion S2, an amended clause in L1c. Every registered outcome needs a stated way to be reached; `check-designer` is told to write it down.
+4. **Day-side outcomes that could not occur** (MA-24): half of L5's DAY band, FMnull's criterion S2, an amended clause in L1c. Every registered outcome needs a stated way to be reached; the `design-check` skill requires it to be written down.
 5. **Bugs the smoke test should have caught:** an unpicklable function sent to a worker pool; a probability rounding to 1 + 2^-52 at one grid value; a label mismatch (`1Mb` against `1000kb`) that silently dropped cells from two registered predictions since registration.
 6. **A wrong statement written before a run** (the direction of a selftest bias in the L5 pre-run note). It was corrected in a dated section; do not interpret a validation miss before you have checked it.
 7. **Cost estimates wrong by large factors** (4 minutes against 1-2 hours; 11 minutes and 4 GB against one second and 300 MB). Measure in the smoke.

@@ -39,7 +39,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 | Tools (argmap, figures, board) | `research/tools/` (`README.md`) |
 | Status board Artifact | `docs/research/status.html`, patched by `research/tools/board/updN.py` |
 | Milestone posts; explainers | `docs/YYYY-MM-DD-N-slug.md`; `docs/explain/` (revise after R5) |
-| **Team brief** (state, next steps, agent roles, lessons of the last session); agent definitions; skills; agent briefs | [`docs/research/TEAM-BRIEF.md`](docs/research/TEAM-BRIEF.md); `.claude/agents/`; `.claude/skills/` (`run-on-host`, `check-lifecycle`, `integrate-check`, `close-batch`, `republish-board`); `research/checks/briefs/` (commit each brief before spawning) |
+| **Team brief** (state, next steps, agent roles, lessons of the last session); agent definitions; skills; agent briefs | [`docs/research/TEAM-BRIEF.md`](docs/research/TEAM-BRIEF.md); `.claude/agents/` (three: `analyst`, `reviewer`, `operator`); `.claude/skills/` (thirteen procedures; the brief names the skill); `research/checks/briefs/` (commit each brief before spawning) |
 | Refresh procedure and the watch list | [`docs/research/sources/HOWTO-refresh.md`](docs/research/sources/HOWTO-refresh.md); run one before each milestone post |
 
 ## Verdict rule (one rule for Day, critics and allies)
