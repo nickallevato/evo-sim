@@ -1,0 +1,80 @@
+sources/raw/refresh-2026-10-09/mccarthy-comments-why/comments.json sha256 cba6b15b13d3cd04e38005a9c1388bb65f473abcdc1651d95dffdab889da92bc
+comment 337074301: Vox Day 2026-09-14T18:11:27.590Z edited_at=None
+  OK   In any population over 10,000, neutral substitution will not fixate at all.
+  OK   This is Kimura's standard neutral theory equation for how long it takes a neutral mutation to fixate
+  OK   With the standard human effective population size, Nₑ = 10,000:
+  OK   t̄ = 4 × 10,000 = 40,000 generations. At 25 years per generation, that's 1,000,000 years per neutral fixation.
+  OK   Now, it's actually a lot worse for the neutral substitution case than that, because there is a hard limit to genetic drift even being able to affect a population. In any population over 10,000, neutral substitution will not fixate at all. And we have actually found empirical evidence for this mathematical barrier in the ancient DNA database.
+comment 337048907: Dennis McCarthy 2026-09-14T17:38:06.191Z edited_at=2026-09-14T17:40:19.765Z
+  OK   over the course of 9 million years
+  OK   in a population of 10,000 humans
+comment 335823489: Vox Day 2026-09-13T00:22:55.653Z edited_at=None
+  OK   genetic drift isn't happening at all over the last 7000 years
+sources/raw/day/zenodo-22129121.txt sha256 3182a5b6cd3a8ac822017d6d7f509c234ab147b334546d62f88623142d9dbfe2
+  OK   A population of 10,000 is roughly where drift permanently stops for an animal like us, the size of the population below which a neutral allele can still cross the whole population by chance in all the generations its lineage will ever have, and above which it cannot.
+  OK   4Nₑ < G, where G is the number of generations of the lineage concerned.
+  OK   effective ceiling falls to about ten thousand individuals.
+  OK   Nₑ = (4N − 2) / (Vₖ + 2)
+quote misses: 0
+
+self-test vs R4-B2: F(1.40) = 0.0255, F(4.55) = 0.697
+self-test exact Wright-Fisher (2N = 100, one copy) vs diffusion: t=100: exact 0.143 / F(2) 0.128, t=200: exact 0.620 / F(4) 0.606, t=400: exact 0.948 / F(8) 0.945; worst |diff| 0.015 -> OK
+
+roots: x_a (F = 1e-4) = 0.7297; x_b (F = 0.10) = 1.8704
+
+## Used grid (25 rows)
+| window | '10,000' as | criterion | N_e at N=10,000 | value at N=10,000 | value / band | N* (true cutoff) | miss N*/10,000 | status (3x band) | cutoff | RH tag |
+|---|---|---|---|---|---|---|---|---|---|---|
+| W1 unbounded / steady state | Ne | Ca | 10,000 | 1 | 10,000 | inf | inf | OFF | HIGH | rhetoric |
+| W2 280 gen (7,000 y, aDNA) | Ne | Ca | 10,000 | < 1e-12 | 5.6e-12 | 384 | 0.0384 | TRUE | SLACK | dialectic |
+| W2 280 gen (7,000 y, aDNA) | Ne | Cb | 10,000 | < 1e-12 | < 1e-12 | 150 | 0.015 | TRUE | SLACK | dialectic |
+| W2 280 gen (7,000 y, aDNA) | Ne | Cc | 10,000 | 0.007 | 0.007 | 70 | 0.007 | TRUE | SLACK | dialectic |
+| W2 280 gen (7,000 y, aDNA) | Ne | Cd | 10,000 | 0.0139 | 139 | 1,399,930 | 140 | OFF | HIGH | rhetoric |
+| W2 280 gen (7,000 y, aDNA) | wright | Ca | 5,714 | < 1e-12 | 8.95e-12 | 672 | 0.0672 | TRUE | SLACK | dialectic |
+| W2 280 gen (7,000 y, aDNA) | wright | Cd | 5,714 | 0.0242 | 242 | 2,449,878 | 245 | OFF | HIGH | rhetoric |
+| W3 40,000 gen (comment's 4N_e) | Ne | Ca | 10,000 | 0.606 | 6,063 | 54,815 | 5.48 | OFF-10x | HIGH | rhetoric |
+| W3 40,000 gen (comment's 4N_e) | Ne | Cb | 10,000 | 0.606 | 6.06 | 21,386 | 2.14 | CLOSE | LOCATED | dialectic |
+| W3s 4N_e(N), scaling | Ne | Ca | 10,000 | 0.606 | 6,063 | inf | inf | OFF | HIGH | rhetoric |
+| W4 80,000 gen (HL 2 My) | wright | Cc | 5,714 | 3.5 | 3.5 | 35,000 | 3.5 | OFF-10x | HIGH | rhetoric |
+| W4 80,000 gen (HL 2 My) | wright | Ca | 5,714 | 0.997 | 9,973 | 191,854 | 19.2 | OFF | HIGH | rhetoric |
+| W4 80,000 gen (HL 2 My) | wright | Cb | 5,714 | 0.997 | 9.97 | 74,852 | 7.49 | OFF-10x | HIGH | rhetoric |
+| W4 80,000 gen (HL 2 My) | Ne | Cc | 10,000 | 2 | 2 | 20,000 | 2 | CLOSE | LOCATED | dialectic |
+| W4 80,000 gen (HL 2 My) | Ne | Ca | 10,000 | 0.945 | 9,451 | 109,630 | 11 | OFF | HIGH | rhetoric |
+| W4 80,000 gen (HL 2 My) | Ne | Cb | 10,000 | 0.945 | 9.45 | 42,772 | 4.28 | OFF-10x | HIGH | rhetoric |
+| W5 260,000 gen (HL 6.5 My) | wright | Cc | 5,714 | 11.4 | 11.4 | 113,750 | 11.4 | OFF | HIGH | rhetoric |
+| W5 260,000 gen (HL 6.5 My) | wright | Ca | 5,714 | 1 | 10,000 | 623,524 | 62.4 | OFF | HIGH | rhetoric |
+| W5 260,000 gen (HL 6.5 My) | wright | Cb | 5,714 | 1 | 10 | 243,268 | 24.3 | OFF | HIGH | rhetoric |
+| W5 260,000 gen (HL 6.5 My) | Ne | Cc | 10,000 | 6.5 | 6.5 | 65,000 | 6.5 | OFF-10x | HIGH | rhetoric |
+| W5 260,000 gen (HL 6.5 My) | Ne | Ca | 10,000 | 1 | 10,000 | 356,299 | 35.6 | OFF | HIGH | rhetoric |
+| W5 260,000 gen (HL 6.5 My) | Ne | Cb | 10,000 | 1 | 10 | 139,010 | 13.9 | OFF | HIGH | rhetoric |
+| W6 360,000 gen (McCarthy 9 My) | Ne | Cc | 10,000 | 9 | 9 | 90,000 | 9 | OFF-10x | HIGH | rhetoric |
+| W6 360,000 gen (McCarthy 9 My) | Ne | Ca | 10,000 | 1 | 10,000 | 493,337 | 49.3 | OFF | HIGH | rhetoric |
+| W6 360,000 gen (McCarthy 9 My) | Ne | Cb | 10,000 | 1 | 10 | 192,475 | 19.2 | OFF | HIGH | rhetoric |
+
+## Reported, not used
+| window | '10,000' as | criterion | N_e at N=10,000 | value at N=10,000 | value / band | N* (true cutoff) | miss N*/10,000 | status (3x band) | cutoff | RH tag |
+|---|---|---|---|---|---|---|---|---|---|---|
+| W3 40,000 gen (comment's 4N_e) | Ne | Cc | 10,000 | 1 | 1 | 10,000 | 1 | TRUE | LOCATED | dialectic | identity: window defined as 4 x 10,000 (circular)
+| W2 280 gen (7,000 y, aDNA) | frank | Cd | 1,000 | 0.131 | 1,307 | 13,999,302 | 1,400 | OFF | HIGH | rhetoric | N_e/N = 0.1 unverified
+| W5 260,000 gen (HL 6.5 My) | frank | Cc | 1,000 | 65 | 65 | 650,000 | 65 | OFF | HIGH | rhetoric | N_e/N = 0.1 unverified
+| W2 350 gen | Ne | Cd | 10,000 | 0.0173 | 173 | 1,749,913 | 175 | OFF | HIGH | rhetoric | 20 y per generation
+R1b per-mutation, unbounded: P_fix = 1/(2N) = 5e-05 at N = 10,000; scale-free, no cutoff; band 1e-4 would give N* = 5,000 (an artefact of the band)
+absolute P(a given new mutation is fixed within the window) at N = N_e = 10,000: W2 < 1e-12, W3 3.03e-05, W4 4.73e-05, W5 5e-05, W6 5e-05
+W1 steady state: k/mu = 1 at every N (substitutions per site per generation = mu, independent of N)
+
+status counts over the 25 used rows: {'TRUE': 4, 'CLOSE': 2, 'OFF-10x': 6, 'OFF': 13}
+selected (RD) reading: W2 / Ne / Cc: status TRUE, cutoff SLACK, N* = 70, tag dialectic
+outcome branch: (a) -> reading-dependent, value dialectic on the selected reading
+
+P1: HOLDS
+P2: HOLDS
+P3: HOLDS
+P4: HOLDS
+P5: HOLDS
+P6: MISS
+P7: HOLDS
+P8: HOLDS
+Day-side prediction (most defensible reading TRUE or CLOSE): HOLDS
+Critic-side prediction (no used row TRUE or CLOSE): MISS (6 of 25 rows TRUE or CLOSE)
+
+wrote research/checks/results/raw/q93_closeness.json
