@@ -1,0 +1,7 @@
+host paperclip
+date 2026-10-13T22:44:03Z
+script research/checks/l3_amk.py md5 ae4a764eec0ff8100c05d120fb41ecb4 at commit f5b7e5e
+command research/.venv/bin/python -I research/checks/l3_amk.py smoke (local workstation, synthetic inputs only; na-workhorse busy with ph2)
+Elapsed (wall clock) time (h:mm:ss or m:ss): 0:38.87
+Maximum resident set size (kbytes): 241444
+out md5 f8394f45ca779ca8fc5a4222c8c59dcf

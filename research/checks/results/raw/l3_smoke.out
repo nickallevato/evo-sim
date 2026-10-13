@@ -1,0 +1,21 @@
+L3 smoke (synthetic inputs only)
+asserted 20 strings (thresholds, Uricchio record, Haller & Messer quotes)
+baseline GG: ok=True {'model': 'exponential', 'a': 0.584797581072991, 'b': -0.6219430850257682, 'c': 3.804089591273216, 'est': 0.5709410179220433, 'lo': 0.5356265367143574, 'hi': 0.5925967381319192}
+band function: 20,000 random cases in B1-B6, 7 ties as registered, robustness rule ok
+count entry point on the hand-built inputs: all 26 QC counters and all per-transcript arrays as expected (0.8 s)
+count cost: 200000 VCF lines in 0.2 s (1000000 lines/s); child peak RSS 102 MB; extrapolated to 86e6 lines: 1 min (VCF pass only; alignment parse and divergence pass not included)
+count cost (alignment): 600000 lines, 2700000 CDS nt, 1500 transcripts passed: parse 2.2 s (272727 lines/s), divergence 0.4 s; child peak RSS 236 MB; extrapolated to 37.6e6 lines and an assumed 35e6 CDS nt: parse 2.3 min, divergence 0.1 min, RAM about 1860 MB ((peak - 100 MB) scaled by nt, + 100 MB)
+  case B1     gov B1 move B1  P 0.0973 L 0.0731 U 0.1246  h 0.0175  (2.0 s)
+  case B2     gov B2 move B2  P 0.0562 L 0.0264 U 0.0902  h 0.0175  (1.9 s)
+  case B3     gov B3 move B3  P 0.0261 L -0.0116 U 0.0907  h 0.0175  (2.0 s)
+  case B4     gov B4 move B4  P 0.0078 L -0.0223 U 0.0335  h 0.0175  (1.9 s)
+  case B5     gov B5 move B5  P -0.0150 L -0.0456 U 0.0172  h 0.0175  (1.9 s)
+  case B6     gov B6 move B6  P -0.0862 L -0.1185 U -0.0614  h 0.0175  (2.0 s)
+  case B1>B2  gov B1 move B2  P 0.1016 L 0.0797 U 0.1239  h 0.0175  (1.9 s)
+  case B6>B5  gov B6 move B5  P -0.0403 L -0.0702 U -0.0115  h 0.0175  (1.7 s)
+  case B0     gov B0 move B0  P 0.0534 L 0.0293 U 0.0832  h 0.0175  (1.9 s)
+bands reached: ['B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6']
+analyse cost: 20,000 transcripts, 200 bootstrap replicates x 7 rows: 10.0 s wall; linear extrapolation to the registered 1000: 50 s
+t_analyse_s 9.18 peak_rss_mb 124.3
+smoke total 38.0 s; this process peak RSS 120 MB
+SMOKE OK
