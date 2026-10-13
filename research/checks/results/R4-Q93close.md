@@ -1,6 +1,6 @@
 # R4 Q93close: the "remotely close" test (RH6, RD) applied to Day's Q93, "over 10,000 ... will not fixate at all"
 
-**Status: pre-registered (0ee6292), run once, written up. Not reviewed (one combined review to follow: `REVIEW-R4-Q93close-combined.md`). Not integrated: no claim file, quote tag, ledger, QUEUE, REVIEW.md or argmap edits. The tag and verdict comments below are proposals.** Low-stakes tier (ROADMAP A6; QUEUE item 15 follow-up). **Result: reading-dependent.** 6 of 25 registered readings are true or within the 3x band, 19 are outside it.
+**Status: pre-registered (0ee6292), run once, written up, reviewed (`REVIEW-R4-Q93close-combined.md`, e5021ea: 0 BLOCKER, 1 MAJOR, 7 MINOR), fix-passed 2026-10-13 (see the last section). Integrated under RD in the commit that follows the fix pass.** Low-stakes tier (ROADMAP A6; QUEUE item 15 follow-up). **Result: reading-dependent.** 6 of 25 registered readings are true or within the 3x band, 19 are outside it.
 
 ## Files
 - Script `research/checks/q93_closeness.py`, pre-registered at **0ee6292**, run locally once after that commit (stdlib, 0.2 s), not edited since. It imports `F`, `f_drift` and `verify` from `rhclose.py` (R4-RHclose).
@@ -73,10 +73,10 @@ Reported, not used:
 - 20 y per generation (350 generations), C7 standard: cutoff 1.75e6.
 
 ## Which reading is most defensible (RD: all recorded, none picked for the speaker)
-- **Selected by the registered rule: W2 / Ne / Cc.** Within the 7,000-year ancient-DNA window, no new neutral mutation completes fixation in any population over 10,000. This is true, and the sentence after Q93 points at exactly that evidence.
+- **Selected by the registered rule (status first): W2 / Ne / Cc.** Within the 7,000-year ancient-DNA window, no new neutral mutation completes fixation in any population over 10,000. This is true, and the sentence after Q93 points at exactly that evidence.
 - **It is true with a great deal of slack.** The same statement is true of any population over about 70 to 700. The "over 10,000" does no work on this reading. This is the C7-R3 situation: true as a count, and also what neutral drift predicts.
 - **The reading closest to Day's own text does not pass.** Hard Limits l.52-54 gives the window ("all the generations its lineage will ever have") and the frame (census, Wright N_e). On Hard Limits' own criterion and its own two human windows the cutoff is 35,000 (3.5x, just outside the band, inside 10x) or 113,750 (11.4x). This restates B2b's existing discrepancy (i). At a census of exactly 10,000 the window is 3.5 to 11.4 mean fixation times and the exact fill is 0.997 to 1.000.
-- **Two readings locate the cutoff near 10,000:** the 2 My window with 10,000 read as N_e (cutoff 20,000), and the comment's own 1 My figure as a fixed window with the loose band (cutoff 21,386). Neither is Day's stated frame: Hard Limits uses census with Wright's formula, and 40,000 generations is offered as a fixation time, not a window.
+- **Two readings locate the cutoff near 10,000:** the 2 My window with 10,000 read as N_e (cutoff 20,000), and the comment's own 1 My figure as a fixed window with the loose band (cutoff 21,386). The first (W4 / Ne / Cc) is in Day's stated frame: the comment itself says "Nₑ = 10,000", Hard Limits' criterion is stated in N_e ("4Nₑ < G"), and the window is Hard Limits' own species window. Hard Limits' census frame (Wright's formula applied to a census of 10,000) enters separately and is a second reading (OFF-10x). The second (W3) offers 40,000 generations as a fixation time, not as a window.
 - **No window at all** (steady state): the flux is mu at every N, so there is no cutoff. On the C7 standard the cutoff is 1.4e6 (140x), as the queue entry expected.
 
 ## Scoring of pre-registered predictions (not blind)
@@ -96,6 +96,7 @@ Reported, not used:
 **P6 miss.** The audit's 0.63 was a misremembered value (F(4.06) = 0.62 from R4-RHclose). F(4) is 0.606. The docstring's "F = 0.63 at every N" for W3s carries the same wrong figure. No status depends on it. Self-tests pass: F(1.40) = 0.0255 and F(4.55) = 0.697 as in R4-B2; the exact Wright-Fisher chain (2N = 100) is within 0.015 of the diffusion F at x = 2, 4, 8.
 
 ## Proposed tag and verdict comments (pre-registered mapping, outcome (a); proposals only)
+*Superseded where it differs by the final tag and the replacement counter-rhetoric in the Review resolution section (fix pass, 2026-10-13).*
 - **Q93 RH tag: `reading-dependent` (RD); value `dialectic` on the selected reading** (W2 fixation count: true, cutoff slack). Rhetoric on W1, on the C7 standard, on HL's own census frame over both HL windows, and on McCarthy's 9 My.
 - **No claim verdict moves.** Q93 is in no claim's Statement block, so under rule S it scores nothing directly.
 - **B2b:** add a Q93 Readings table under the existing discrepancy (i). Verdicts unchanged (holds / unverifiable / contested).
@@ -126,6 +127,35 @@ Reported, not used:
 ## Open
 1. **Does SLACK count as close?** The registered rule tags a true-with-slack universal `dialectic`. A reviewer may hold that a claimed threshold which is off by 15 to 140x on the low side is not "remotely close" as a threshold claim. On a two-sided 3x test only the two LOCATED rows pass.
 2. **Is W2 a fair window for Q93?** The 7,000 years is in Q96 and in the aDNA papers, not in this comment; the comment says only "the ancient DNA database".
-3. **Anchor order.** The tie-break put HL first, but no HL row reached TRUE, so status decided. If textual closeness came before status, the selected reading would be HL's own frame (OFF-10x at 2 My, OFF at 6.5 My) and the value would be `rhetoric`. The owner's RD rule as written (most defensible) gives the W2 row.
+3. **Anchor order.** The tie-break put HL first, but no HL row reached TRUE, so status decided. If textual closeness came before status, the selected reading would be HL's census frame (OFF-10x at 2 My, OFF at 6.5 My) and the value would be `rhetoric`; this holds for the census sub-reading only. The textually close reading in the comment's own N_e frame is W4 / Ne / Cc, which is CLOSE and `dialectic` (review C2).
 4. **Where the Readings table lives** (B2b proposed; B2 or C7 are alternatives), and whether Q93 should get a tag line in `quotes-day.md`.
 5. The docstring's wrong F(4) figure (0.63) stays as registered; correct it only in a commit labelled post hoc if the review asks.
+
+
+## Review resolution (fix pass, 2026-10-13)
+Review: `REVIEW-R4-Q93close-combined.md` (e5021ea). 0 BLOCKER, 1 MAJOR, 7 MINOR, 5 NOTE. All numbers below were checked against `raw/q93_closeness.json` (W2 / Ne / Cc: cutoff 70, window 0.007 mean fixation times, TRUE, SLACK; W4 / Ne / Cc: cutoff 20,000, 2.0, CLOSE, LOCATED; W4 / wright / Cc: 35,000, 3.5, OFF-10x; W3 / Ne / Cb: 21,386 CLOSE; status counts TRUE 4, CLOSE 2, OFF-10x 6, OFF 13). No script was edited and nothing was re-run.
+
+- **D1 (MAJOR), accepted.** The proposal now names two leading readings, with the verdict-field value `dialectic` under either:
+  - (i) **status-first, fixation count:** W2 / Ne / Cc, 280 generations, cutoff about 70, TRUE with large slack (143x below 10,000); the "10,000" does no work (the C7-R3 situation). This is what the registered RD selection returns.
+  - (ii) **located:** W4 / Ne / Cc, the 2 My Hard Limits window with 10,000 as N_e, cutoff 20,000 (2.0x), CLOSE, inside the 3x band. On a two-sided "close" test (cutoff within 3x of 10,000 either way) only (ii) and W3 / Ne / Cb (21,386) pass.
+- **C2 (MINOR), accepted.** Corrected in place (Which reading is most defensible, bullet 4): W4 / Ne / Cc uses the comment's N_e frame, Hard Limits' species window and Hard Limits' criterion. The census frame is a separate reading (OFF-10x). Open 3 restricted: `rhetoric` applies to the census sub-reading only.
+- **C3 (MINOR), accepted.** The earlier counter-rhetoric ("the one window where nothing fixes above 10,000 is the 7,000-year one") was false: under Day's own criterion any window shorter than 4 x 10,000 = 40,000 generations (1 My) gives a cutoff of 10,000 or less. Replaced in the proposed ledger entry (below).
+- **C1 and P6 (MINOR), recorded as the audit's own error.** The pre-registered 0.63 for F(4) (P6) and for W3s (P7, "F = 0.63 at every N") is a registered slip: predicted 0.63, actual 0.606 (F(4.06) = 0.62 in R4-RHclose is a different point). The P6 miss is scored honestly (value missed, both statuses held); P7 is scored on status only, so nothing moves. The script is not edited. A docstring correction would go only in a commit labelled post hoc.
+- **C4 (MINOR), accepted.** The "19 of 25 outside the band" count is a row count. By (window, frame) with the best criterion per cell: W1 OFF; W2 TRUE; W3 CLOSE (Ne, Cb) but OFF-10x on Ca; W4 CLOSE (Ne, Cc) and OFF-10x (wright, Cc); W5 OFF-10x (Ne, Cc) and OFF (wright); W6 OFF-10x (Ne, Cc). Read the 19 together with this line; the per-cell picture is mixed, not lopsided.
+- **C6 (NOTE), added to the caveats.** The registered grid is not a full cross-product (no wright rows for W3 and W6, no wright Cb or Cc for W2). The omissions change no status: W3 wright Cb and Ca lie beyond 30,000 (OFF-10x), W6 wright is further out, and W2 wright Cc would stay TRUE.
+- **D2 (MINOR), accepted.** The 7,000-year window is a licensed import (Day's own figure in Q96, 2026-09-13, the same thread; the next sentence names the aDNA evidence), not the unique reading. McCarthy's 9 My and Hard Limits' 2 and 6.5 My are equally in the thread. The tag says so.
+- **K1 (MINOR), accepted.** The window-free reading leads the proposed readings: with no window stated, "neutral substitution" is a rate and the rate is mu at every N, so the statement is false at every N (W1, OFF, no cutoff); it is true only if a window of about 1 My or less is imported.
+- **K4 (MINOR), accepted.** The 3x band here is applied to the cutoff N*, not to the value at the stated N_e as in Q96 and Q157/Q158. The value-based test agrees on direction: at a census of 10,000 the Hard Limits window (2 My) is 3.5 mean fixation times (W4 wright Cc), outside the band. For Q93 the count reading is also the statement's own object ("will not fixate"), where for Q96 it was an RD extension.
+- **D3, K2, K3, C5 (NOTE).** Accepted without change. K2: the tag must not carry the step from the true reading to a "hard limit" at 10,000 (scored at claim C, X1 row C); the proposed tag says so. K3: the Cd rows score drift variance, not a fixation count; they are not selected.
+- **3(a), 3(b), 3(c) rulings.** Accepted: `dialectic` under either test; the import is named; status-first is the faithful RD reading, textual anchor a tie-break.
+
+### Final proposed tag (as integrated)
+**Q93: `reading-dependent` (RD); value `dialectic` under either leading reading.**
+- No window stated, steady state (W1): false at every N (the substitution rate is mu), no cutoff; `rhetoric`. True only if a window of about 1 My or less is imported.
+- Leading reading (i), status-first: the 7,000-year window imported from Q96 in the same thread, 280 generations, cutoff about 70, TRUE with large slack, the "10,000" doing no work. `dialectic`.
+- Leading reading (ii), located: 10,000 read as N_e (the comment's own "Nₑ = 10,000"), the 2 My Hard Limits window and Hard Limits' own criterion, cutoff 20,000, CLOSE (2.0x). `dialectic`.
+- `rhetoric` on Hard Limits' census sub-reading (35,000 at 2 My, 113,750 at 6.5 My), on McCarthy's 9 My and on the C7 standard.
+- The step from a true reading to a "hard limit" or "mathematical barrier" at 10,000 stays the non-sequitur scored at claim C. No verdict moves.
+
+### Better rhetoric (replaces the earlier counter-line)
+"The statement is true for windows shorter than about a million years (4N_e), where nothing fixes above 10,000, and at 7,000 years nothing fixes above 700 either. Hard Limits' own windows are 2 and 6.5 million years, and its own table puts the human ceiling at 35,000 to 114,000."
