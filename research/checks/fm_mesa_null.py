@@ -433,6 +433,18 @@ POST HOC 2026-10-13 (fix pass after the three reviews of R4-FMnull; AFTER the ru
   which this mode is expected to reproduce.
     p45fix : python -I research/checks/fm_mesa_null.py p45fix research/checks/results/raw/fmnull_p45fix.json \
              > research/checks/results/raw/fmnull_p45fix.out        (local, one process, seconds)
+  MODE `fixpass` (the remaining review items; from committed json only, plus raw/fmnull_simphase.json when it
+  exists).  Descriptive tables for the write-up's "Review resolution" section, none of them a score: (A) cells
+  where the measured index is >= 80, with their classes and phi / N_hi; (B) lineage table; (C) own-exposure
+  counts split into clean-inside and ALN-dependent (rule A5 applied to the measured cells); (D) own-exposure
+  classes at 3 and 10 Mb; (E) phi_HC bounds at each cell's own exposure and density, all nine W, with the
+  lambda_M at which the bound equals the measurement; (F) the R2 gate in variance units (as coded) and in SD
+  units, and 6,400 against the unnormalised index; (G) power table: class of the simulated phi_H of each
+  planted scenario; (H) scenarios rescaled to the F2 cell's exposure (excess proportional to the mean count)
+  beside the measurement, and the f e^2 bound; (I) NOT-HIGH consensus and the class at W_T; (J)-(M) small
+  counts.  No prediction is attached; the reviewers' post hoc figures are what it is expected to reproduce.
+    fixpass : python -I research/checks/fm_mesa_null.py fixpass research/checks/results/raw/fmnull_fixpass.json \
+              [research/checks/results/raw/fmnull_simphase.json] > research/checks/results/raw/fmnull_fixpass.out
 """
 import functools
 import json
@@ -1787,6 +1799,353 @@ def p45fix(outjson, fm_json=None, analytic_json=None):
     return res
 
 
+def hc_bound_own(setname, W, lam_m, masked, dH, dC, c):
+    """phi_hc_bound() at a cell's own densities and exposure (post hoc 2026-10-13); same components."""
+    setd = SOURCED if setname == "AMENDED" else SETS2[setname]
+    ls = [(s * math.sqrt(LAMBDA[1]), ell) for s, ell in cp(setd, "hi", ("GBGC",))]
+    if lam_m > 0:
+        ls += [(s * math.sqrt(lam_m), ell) for s, ell in cp(setd, "hi", MUTATIONAL)]
+    if not masked:
+        ls += cp(setd, "hi", ("ALN",))
+    return phi_hc_from(W, dH, dC, ls, c)
+
+
+def _rng(v):
+    v = list(v)
+    return [min(v), max(v)] if v else None
+
+
+def _tally(v):
+    t = {}
+    for x in v:
+        t[x] = t.get(x, 0) + 1
+    return t
+
+
+def fixpass(outjson, simphase_json=None):
+    """Post hoc 2026-10-13: descriptive tables for the fix pass, from committed json (docstring, MODE `fixpass`)."""
+    R = os.path.join(HERE, "results", "raw")
+    real, postj, ana, sim, fma = (json.load(open(os.path.join(R, f))) for f in (
+        "fmnull_real.json", "fmnull_post.json", "fmnull_analytic.json", "fmnull_sim.json", "fm_analyse.json"))
+    simphase_json = simphase_json or os.path.join(R, "fmnull_simphase.json")
+    sp = json.load(open(simphase_json)) if os.path.exists(simphase_json) else None
+    mir = os.path.join(R, "fm_mirror_analyse.json")
+    mir = json.load(open(mir)) if os.path.exists(mir) else None
+    LIN, SINGLE = ("H", "C", "B", "G", "DHC"), ("H", "C", "B", "G")
+    grid = {(k.split("|")[0], float(k.split("|")[1][:-2]) * 1e3): v for k, v in real["grid"].items()}
+    labels = [v[0] for v in variants2()]
+    res = {"status": "post hoc 2026-10-13 (fix pass); descriptive, no score", "simphase": bool(sp)}
+    P = lambda *a: print(*a, flush=True)
+
+    # ---- A. where the measured index is >= 80
+    cells = postj["cells"]
+    hit = [c for c in cells if c["phi"] >= 80.0]
+    keys = sorted({(c["cell"], c["L"]) for c in hit})
+    A = dict(n_cells_ge80_W_le_1Mb=len(keys), cells=[f"{a}|{b}" for a, b in keys], set_cells=len(hit),
+             classes=_tally(c["cls"] for c in hit), ratio_phi_over_hi=_rng(c["phi"] / c["hi"] for c in hit),
+             single=dict(classes=_tally(c["cls"] for c in hit if c["L"] != "DHC"),
+                         ratio=_rng(c["phi"] / c["hi"] for c in hit if c["L"] != "DHC")),
+             above_hi=sum(c["phi"] > c["hi"] for c in hit),
+             min_phi_at_W_ge_1Mb={f"{f}|{L}": min(v[L]["phi"] for (ff, W), v in grid.items() if ff == f and W >= 1e6)
+                                  for f in ("F0", "F2") for L in LIN},
+             phi_at_1Mb={f"{f}|{L}": grid[(f, 1e6)][L]["phi"] for f in ("F0", "F2") for L in LIN},
+             phi_single_W_le_10kb={f: _rng(v[L]["phi"] for (ff, W), v in grid.items() if ff == f and W <= 1e4 for L in SINGLE)
+                                   for f in ("F0", "F2")},
+             phi_DHC_W_le_3kb={f: _rng(v["DHC"]["phi"] for (ff, W), v in grid.items() if ff == f and W <= 3e3)
+                               for f in ("F0", "F2")},
+             max_sd_ratio={L: max(math.sqrt(v[L]["phi"]) for v in grid.values()) for L in LIN})
+    res["A_true_cells"] = A
+    P("A. cells (W <= 1 Mb) with measured index >= 80:", A["n_cells_ge80_W_le_1Mb"], A["cells"])
+    P("   over 8 sets:", A["set_cells"], "set-cells; classes", A["classes"], "; phi/N_hi", A["ratio_phi_over_hi"],
+      "; above N_hi:", A["above_hi"], "; single lineages", A["single"])
+    P("   min phi at W >= 1 Mb per filter|lineage", {k: round(v, 1) for k, v in A["min_phi_at_W_ge_1Mb"].items()})
+    P("   single-lineage phi at W <= 10 kb", A["phi_single_W_le_10kb"], "DHC at W <= 3 kb", A["phi_DHC_W_le_3kb"],
+      "max SD ratio sqrt(phi)", {k: round(v, 1) for k, v in A["max_sd_ratio"].items()})
+
+    # ---- B. lineage table
+    B = {}
+    for (f, W), v in sorted(grid.items()):
+        B[f"{f}|{int(W)}"] = dict(phi={L: v[L]["phi"] for L in LIN}, excess_cv={L: math.sqrt(max(v[L]["cv2_excess"], 0)) for L in LIN},
+                                  phiH_over_phiC=v["H"]["phi"] / v["C"]["phi"], phiH_over_phiB=v["H"]["phi"] / v["B"]["phi"],
+                                  cv2_H_over_C=v["H"]["cv2_excess"] / v["C"]["cv2_excess"],
+                                  cv2_H_over_G=v["H"]["cv2_excess"] / v["G"]["cv2_excess"],
+                                  cv2_C_over_G=v["C"]["cv2_excess"] / v["G"]["cv2_excess"],
+                                  corr_HC=v["corr_HC"], corr_HG=v["corr_HG"], k=v["k"],
+                                  phi_cov_share={L: (v[L]["phi"] - v[L]["phi_cov"]) / (v[L]["phi"] - 1.0) for L in ("H", "DHC")},
+                                  D_unnorm_over_phi={L: v[L]["D_unnorm_all"] / v[L]["phi"] for L in LIN})
+        b = B[f"{f}|{int(W)}"]
+        P("B.", f, int(W), "phi", {L: round(x, 1) for L, x in b["phi"].items()}, "H/C %.3f H/B %.3f" % (b["phiH_over_phiC"], b["phiH_over_phiB"]),
+          "cv2 H/C %.3f H/G %.3f C/G %.3f" % (b["cv2_H_over_C"], b["cv2_H_over_G"], b["cv2_C_over_G"]),
+          "corr HC %.3f HG %.3f" % (b["corr_HC"], b["corr_HG"]), "excess CV", {L: round(x, 3) for L, x in b["excess_cv"].items()},
+          "phi_cov share", {L: round(x, 2) for L, x in b["phi_cov_share"].items()})
+    res["B_lineages"] = B
+    r = [x for b in B.values() for x in b["D_unnorm_over_phi"].values()]
+    res["M_unnorm_over_phi_range"] = _rng(r)
+    P("M. D_unnorm_all / phi range", _rng(r))
+
+    # ---- C. own-exposure counts with rule A5 applied to the measured cells
+    C = {}
+    for lab in labels:
+        cs = [c for c in cells if c["set"] == lab]
+        row = dict(n=len(cs), inside=0, clean_inside=0, aln_dependent=0, above_masked_equiv=0, below=0, day=0,
+                   day_masked_equiv=0, F2_at_or_below_hi=0, F2_n=0, F2_inside=0, F2_below=0)
+        f2r, f2rs, dhc = [], [], {}
+        for c in cs:
+            f0 = c["cell"].startswith("F0")
+            inside = c["cls"] in ("CRITIC", "MARGINAL-IN")
+            row["inside"] += inside
+            row["below"] += c["cls"].startswith("BELOW")
+            row["day"] += c["cls"] == "DAY"
+            if f0:
+                hm = c["hi"] - c["ALN_part"]
+                cm = classify2(c["phi"], c["lo"], hm)
+                dep = cm != c["cls"]
+                row["aln_dependent"] += dep
+                row["above_masked_equiv"] += c["phi"] > hm
+                row["day_masked_equiv"] += cm == "DAY"
+                row["clean_inside"] += inside and not dep
+                if c["L"] == "DHC":
+                    dhc[c["cell"]] = c["phi"] / hm
+            else:
+                row["clean_inside"] += inside
+                row["F2_n"] += 1
+                row["F2_at_or_below_hi"] += c["phi"] <= c["hi"]
+                row["F2_inside"] += inside
+                row["F2_below"] += c["cls"].startswith("BELOW")
+                f2r.append(c["phi"] / c["hi"])
+                if c["L"] != "DHC":
+                    f2rs.append(c["phi"] / c["hi"])
+        row.update(F2_max_ratio=max(f2r), F2_single_max_ratio=max(f2rs), DHC_F0_phi_over_masked_equiv=dhc)
+        C[lab] = row
+        P("C.", lab, {k: (round(v, 3) if isinstance(v, float) else v) for k, v in row.items() if k != "DHC_F0_phi_over_masked_equiv"})
+        P("   DHC F0 phi / (N_hi - ALN_part):", {k: round(v, 2) for k, v in dhc.items()})
+    res["C_own_exposure_A5"] = C
+    res["C_DHC_F0_sets_above_masked_equiv"] = {k: sum(C[lab]["DHC_F0_phi_over_masked_equiv"][k] > 1 for lab in labels)
+                                               for k in C[labels[0]]["DHC_F0_phi_over_masked_equiv"]}
+    P("C. DHC F0: number of the 8 sets with phi above the masked-equivalent bound, per W:", res["C_DHC_F0_sets_above_masked_equiv"])
+    Hx = {}
+    for c in cells:
+        if c["L"] == "H" and c["cell"].startswith("F0"):
+            Hx.setdefault(c["cell"], []).append(c["phi"] > c["hi"] - c["ALN_part"])
+    P("C. H F0: sets above the masked-equivalent bound per W:", {k: sum(v) for k, v in Hx.items()})
+
+    # ---- D. own-exposure classes at 3 and 10 Mb (same construction as `post`)
+    D = []
+    for (f, W), v in sorted(grid.items()):
+        if W < 3e6:
+            continue
+        c = v["m_mean"] / W
+        for L in LIN:
+            for lab, sname, cal, p in variants2():
+                b = bands2(sname, W, "H", d=(v[L]["density"],) * 2, c=(c, c), cal=cal, persist=p)
+                hi = b["N_hi_masked" if f == "F2" else "N_hi_unmasked"]
+                D.append(dict(cell=f"{f}|{int(W)}", L=L, set=lab, phi=v[L]["phi"], lo=b["N_lo"], hi=hi, ratio=v[L]["phi"] / hi,
+                              cls=classify2(v[L]["phi"], b["N_lo"], hi)))
+    res["D_3_10Mb"] = D
+    for lab in labels:
+        d = [x for x in D if x["set"] == lab]
+        P("D.", lab, _tally(x["cls"] for x in d), "phi/N_hi", [round(z, 2) for z in _rng(x["ratio"] for x in d)],
+          "at or above N_hi:", [(x["cell"], x["L"], round(x["ratio"], 2)) for x in d if x["ratio"] >= 0.995])
+
+    # ---- E. phi_HC bounds at own exposure and density
+    E = {}
+    for (f, W), v in sorted(grid.items()):
+        c, dH, dC = v["m_mean"] / W, v["H"]["density"], v["C"]["density"]
+        row = dict(measured=v["phi_HC"], c=c, N=v["m_mean"] * (dH + dC), bounds={})
+        for sname in ("PREREG", "SOURCED"):
+            for m in (True, False):
+                row["bounds"][f"{sname}|{'masked' if m else 'unmasked'}"] = [hc_bound_own(sname, W, lam, m, dH, dC, c) for lam in LAMBDA_M]
+        b0 = row["bounds"]["SOURCED|masked"][0]
+        row["excess_ratio_lam0_masked"] = (v["phi_HC"] - 1) / (b0 - 1)
+        row["value_ratio_lam0_masked"] = v["phi_HC"] / b0
+        for sname in ("PREREG", "SOURCED"):
+            if v["phi_HC"] <= row["bounds"][sname + "|masked"][0]:
+                row["lam_needed_" + sname] = 0.0
+            elif v["phi_HC"] > hc_bound_own(sname, W, 1.0, True, dH, dC, c):
+                row["lam_needed_" + sname] = None
+            else:
+                lo_, hi_ = 0.0, 1.0
+                for _ in range(40):
+                    mid = (lo_ + hi_) / 2
+                    lo_, hi_ = (mid, hi_) if hc_bound_own(sname, W, mid, True, dH, dC, c) < v["phi_HC"] else (lo_, mid)
+                row["lam_needed_" + sname] = hi_
+        E[f"{f}|{int(W)}"] = row
+        P("E.", f, int(W), "measured %.3f c %.2f N %.0f" % (v["phi_HC"], c, row["N"]),
+          "bound masked S", [round(x, 3) for x in row["bounds"]["SOURCED|masked"]], "P", [round(x, 3) for x in row["bounds"]["PREREG|masked"]],
+          "unmasked S", [round(x, 2) for x in row["bounds"]["SOURCED|unmasked"]],
+          "excess ratio %.2f value ratio %.2f" % (row["excess_ratio_lam0_masked"], row["value_ratio_lam0_masked"]),
+          "lambda_M needed S/P", row["lam_needed_SOURCED"] if row["lam_needed_SOURCED"] is None else round(row["lam_needed_SOURCED"], 3),
+          row["lam_needed_PREREG"] if row["lam_needed_PREREG"] is None else round(row["lam_needed_PREREG"], 3))
+    res["E_phi_hc_own"] = E
+
+    # ---- F. R2 gate in variance units (as coded) and in SD units; 6,400 against the unnormalised index
+    F = {}
+    for f in ("F0", "F2"):
+        for L in LIN:
+            unit = "C" if L == "B" else L
+            for key in ("phi", "D_unnorm_all"):
+                pts = sorted((W, v[L][key]) for (ff, W), v in grid.items() if ff == f)
+                var_ok = [W for W, x in pts if 6400 / 3 <= x <= 19200]
+                sd_ok = [W for W, x in pts if 80 / 3 <= math.sqrt(x) <= 240]
+                row = dict(max_index=max(x for _, x in pts), max_sd_ratio=math.sqrt(max(x for _, x in pts)),
+                           variance_units_W=var_ok, sd_units_W=sd_ok, at={})
+                for W in sorted(set(var_ok) | set(sd_ok)):
+                    x = dict(pts)[W]
+                    per = {}
+                    for lab, sname, cal, p in variants2():
+                        b = bands2(sname, W, unit, cal=cal, persist=p, cvc=CVC if key == "D_unnorm_all" else (0.0, 0.0))
+                        hi = b["N_hi_masked" if f == "F2" else "N_hi_unmasked"]
+                        rs = 80.0 / math.sqrt(hi)
+                        per[lab] = dict(cls_variance=classify2(6400.0, b["N_lo"], hi), sd_ratio_80_over_sqrt_hi=rs,
+                                        cls_sd=("DAY" if rs > 3 else "MARGINAL-OUT" if rs > 1 else
+                                                "BELOW" if 80.0 < math.sqrt(b["N_lo"]) else "inside"))
+                    row["at"][str(int(W))] = dict(index=x, sd_ratio=math.sqrt(x), per_set=per)
+                F[f"{f}|{L}|{key}"] = row
+                P("F.", f, L, key, "max index %.0f max SD ratio %.1f" % (row["max_index"], row["max_sd_ratio"]),
+                  "within 3x in variance units at", [int(w) for w in var_ok], "in SD units at", [int(w) for w in sd_ok])
+                for W, a in row["at"].items():
+                    am = [v for k, v in a["per_set"].items() if k.startswith("AMENDED")]
+                    P("     W", W, "index %.0f SD ratio %.1f" % (a["index"], a["sd_ratio"]),
+                      "| AMENDED six: 6400 class (variance)", sorted({v["cls_variance"] for v in am}),
+                      "| 80/sqrt(N_hi) %.2f to %.2f" % tuple(_rng(v["sd_ratio_80_over_sqrt_hi"] for v in am)), sorted({v["cls_sd"] for v in am}),
+                      "| PREREG", a["per_set"]["PREREG"]["cls_variance"], round(a["per_set"]["PREREG"]["sd_ratio_80_over_sqrt_hi"], 2),
+                      "SOURCED", a["per_set"]["SOURCED"]["cls_variance"], round(a["per_set"]["SOURCED"]["sd_ratio_80_over_sqrt_hi"], 2))
+    res["F_r2_gate_units"] = F
+
+    # ---- G. power table: class of the simulated phi_H of each planted scenario (bands at the simulation's c = 1)
+    G = {}
+    for sname in ("PREREG", "SOURCED"):
+        arms = sim["sets"][sname]["arms"]
+        for scn, byW in arms.items():
+            for W in ("10000", "100000", "1000000"):
+                b = bands2(sname, float(W), "H", d=(0.0051, 0.0051), c=(1.0, 1.0))
+                row = dict(N_lo=b["N_lo"], N_hi_masked=b["N_hi_masked"], N_hi_unmasked=b["N_hi_unmasked"], phases={})
+                src = {"grid": byW[W]}
+                if sp:
+                    src["rand"] = sp["sets"][sname]["arms"][scn][W]["rand"]
+                    for ph in ("0.25", "0.5", "0.75"):
+                        src[ph] = sp["sets"][sname]["arms"][scn][W][ph]
+                for ph, st in src.items():
+                    x = st["phi_H"]
+                    row["phases"][ph] = dict(phi_H=x, phi_HC=st["phi_HC"], phi_res_H=st["phi_res_H"], corr_HC=st["corr_HC"],
+                                             masked=classify2(x, b["N_lo"], b["N_hi_masked"]), ratio_masked=x / b["N_hi_masked"],
+                                             unmasked=classify2(x, b["N_lo"], b["N_hi_unmasked"]), ratio_unmasked=x / b["N_hi_unmasked"],
+                                             excess_over_S0=(x - 1) / (arms["S0_neutral"][W]["phi_H"] - 1))
+                G[f"{sname}|{scn}|{W}"] = row
+                P("G.", sname, scn, W, "band [%.3g, %.3g / %.3g]" % (b["N_lo"], b["N_hi_masked"], b["N_hi_unmasked"]),
+                  " ; ".join("%s: phi_H %.4g %s (%.2f) / %s (%.2f) x S0 %.2f phi_HC %.4g" % (
+                      ph, r["phi_H"], r["masked"], r["ratio_masked"], r["unmasked"], r["ratio_unmasked"], r["excess_over_S0"], r["phi_HC"])
+                      for ph, r in row["phases"].items()))
+    res["G_power"] = G
+    nd = [v for k, v in G.items() if "dominant" not in k and "S2_sig" in k]
+    res["G_nondominant_classes_grid"] = _tally(c for v in nd for c in (v["phases"]["grid"]["masked"], v["phases"]["grid"]["unmasked"]))
+    P("G. non-dominant block scenarios, on grid, masked + unmasked classes:", res["G_nondominant_classes_grid"],
+      "max excess over S0 %.2f" % max(v["phases"]["grid"]["excess_over_S0"] for v in nd))
+    if sp:
+        res["G_nondominant_classes_rand"] = _tally(c for v in nd for c in (v["phases"]["rand"]["masked"], v["phases"]["rand"]["unmasked"]))
+        P("G. same, rand phase:", res["G_nondominant_classes_rand"])
+
+    # ---- H. scenarios at the F2 cell's exposure beside the measurement; f e^2 bound; per-lambda ratios
+    Hh = {}
+    for W in (1e4, 1e5, 1e6):
+        v = grid[("F2", W)]
+        facN = v["m_mean"] * (v["H"]["density"] + v["C"]["density"]) / (W * (0.0051 + 0.0057))
+        facH = v["m_mean"] * v["H"]["density"] / (W * 0.0051)
+        fk = f"auto|F2|{int(W / 1e3)}kb"
+        meas = dict(phi_H=v["H"]["phi"], phi_HC=v["phi_HC"], corr_HC=v["corr_HC"],
+                    phi_res_H=fma["grid"].get(fk, {}).get("H", {}).get("phi_res"))
+        Hh[str(int(W))] = dict(facN=facN, facH=facH, measured=meas, scen={})
+        P("H. W", int(W), "F2 measured", {k: (round(x, 3) if x is not None else None) for k, x in meas.items()},
+          "N factor %.3f H factor %.3f; measured phi_HC rescaled to c = 1: %.3f" % (facN, facH, 1 + (v["phi_HC"] - 1) / facN))
+        for sname in ("PREREG", "SOURCED"):
+            arms = sim["sets"][sname]["arms"]
+            for scn in arms:
+                for ph in (("grid", "rand") if sp else ("grid",)):
+                    st = arms[scn][str(int(W))] if ph == "grid" else sp["sets"][sname]["arms"][scn][str(int(W))]["rand"]
+                    s0 = arms["S0_neutral"][str(int(W))] if ph == "grid" else sp["sets"][sname]["arms"]["S0_neutral"][str(int(W))]["rand"]
+                    row = dict(phi_HC_c1=st["phi_HC"], phi_HC_matched=1 + (st["phi_HC"] - 1) * facN,
+                               phi_H_matched=1 + (st["phi_H"] - 1) * facH, phi_res_matched=1 + (st["phi_res_H"] - 1) * facH,
+                               excess_ratio_vs_measured=(st["phi_HC"] - 1) * facN / (v["phi_HC"] - 1),
+                               value_ratio_vs_measured=(1 + (st["phi_HC"] - 1) * facN) / v["phi_HC"],
+                               phi_H_ratio_vs_measured=(1 + (st["phi_H"] - 1) * facH) / v["H"]["phi"])
+                    if "S2_sig" in scn:
+                        t = scn.replace("S2_sig_", "").replace("dominant_", "").split("_")
+                        Lb, e, f_ = t[0], float(t[1][1:]), float(t[2][1:])
+                        slope = (st["phi_HC"] - s0["phi_HC"]) / (f_ * e * e)
+                        row.update(Lb=Lb, e=e, f=f_, fe2=f_ * e * e, slope_per_fe2_c1=slope,
+                                   fe2_bound_all_excess=(v["phi_HC"] - 1) / (slope * facN) if slope > 0 else None)
+                    Hh[str(int(W))]["scen"][f"{sname}|{scn}|{ph}"] = row
+                    P("   ", sname, scn, ph, "phi_HC c=1 %.4g matched %.4g (excess x%.2f, value x%.2f of measured); phi_H matched %.4g (x%.2f); phi_res matched %.4g" % (
+                        row["phi_HC_c1"], row["phi_HC_matched"], row["excess_ratio_vs_measured"], row["value_ratio_vs_measured"],
+                        row["phi_H_matched"], row["phi_H_ratio_vs_measured"], row["phi_res_matched"]),
+                      ("slope %.4g fe2 bound %.4g" % (row["slope_per_fe2_c1"], row["fe2_bound_all_excess"])) if row.get("fe2_bound_all_excess") else "")
+    res["H_data_bound"] = Hh
+    lamr = {}
+    for sname in ("PREREG", "SOURCED"):
+        for scn in ("S2_sig_L100k_e1.0_f0.02", "S2_sig_dominant_L100k_e2_f0.5"):
+            for W in ("10000", "100000", "1000000"):
+                bnd = [ana["amend2"]["phi_hc_bound"][f"{sname}|{W}|lam{lam}|masked"] for lam in LAMBDA_M]
+                for ph in (("grid", "0.25", "0.5", "0.75", "rand") if sp else ("grid",)):
+                    x = sim["sets"][sname]["arms"][scn][W]["phi_HC"] if ph == "grid" else sp["sets"][sname]["arms"][scn][W][ph]["phi_HC"]
+                    lamr[f"{sname}|{scn}|{W}|{ph}"] = dict(phi_HC=x, bounds=bnd, value_ratio=[x / b for b in bnd],
+                                                         excess_ratio=[(x - 1) / (b - 1) for b in bnd])
+                    P("H. per lambda_M", sname, scn, W, ph, "phi_HC %.4g" % x, "bounds", [round(b, 2) for b in bnd],
+                      "value ratios", [round(x / b, 2) for b in bnd], "excess ratios", [round((x - 1) / (b - 1), 2) for b in bnd])
+    res["H_per_lambda"] = lamr
+
+    # ---- I. NOT-HIGH consensus (A4's anomaly question) and the class at W_T
+    I = {"not_high": {}, "at_W_T": {}}
+    for u in ("H", "C", "G", "DHC"):
+        for W in WGRID:
+            for m in ("masked", "unmasked"):
+                ks = sorted({ana["amend2"]["classes"][f"{lab}|{u}|{int(W)}"]["R1"][m] for lab in labels if lab.startswith("AMENDED")})
+                I["not_high"][f"{u}|{int(W)}|{m}"] = dict(classes=ks, not_high=set(ks) <= {"CRITIC", "BELOW-NEAR", "BELOW-FAR"})
+    P("I. R1: NOT-HIGH in all six AMENDED variants (classes within CRITIC / BELOW):",
+      [k for k, v in I["not_high"].items() if v["not_high"]])
+    P("I. masked, W >= 1 Mb, not NOT-HIGH:", [(k, v["classes"]) for k, v in I["not_high"].items()
+                                              if not v["not_high"] and k.endswith("|masked") and float(k.split("|")[1]) >= 1e6])
+    for f in ("F0", "F2"):
+        for L in LIN:
+            WT = real["W_T"].get(f"{f}|{L}|R1")
+            unit = "C" if L == "B" else L
+            dmean = float(np.mean([v[L]["density"] for (ff, W), v in grid.items() if ff == f]))
+            per = {}
+            for lab, sname, cal, p in variants2():
+                b = bands2(sname, WT, unit, d=(dmean, dmean), cal=cal, persist=p)
+                hi = b["N_hi_masked" if f == "F2" else "N_hi_unmasked"]
+                per[lab] = dict(lo=b["N_lo"], hi=hi, cls=classify2(80.0, b["N_lo"], hi), registered=classify(80.0, b["N_lo"], hi),
+                                cls_masked=classify2(80.0, b["N_lo"], b["N_hi_masked"]))
+            am = [v for k, v in per.items() if k.startswith("AMENDED")]
+            I["at_W_T"][f"{f}|{L}"] = dict(W_T=WT, d=dmean, per_set=per, amended=sorted({v["cls"] for v in am}),
+                                          not_high=set(v["cls"] for v in am) <= {"CRITIC", "BELOW-NEAR", "BELOW-FAR"})
+            P("I. at W_T", f, L, "%.0f" % WT, "PREREG", per["PREREG"]["registered"], "[%.3g, %.3g]" % (per["PREREG"]["lo"], per["PREREG"]["hi"]),
+              "SOURCED", per["SOURCED"]["registered"], "N_lo %.4g N_hi %.4g" % (per["SOURCED"]["lo"], per["SOURCED"]["hi"]),
+              "AMENDED six", I["at_W_T"][f"{f}|{L}"]["amended"], "masked-band", sorted({v["cls_masked"] for v in am}),
+              "N_lo %.3g to %.3g, N_hi %.3g to %.3g" % (*_rng(v["lo"] for v in am), *_rng(v["hi"] for v in am)))
+    res["I_not_high"] = I
+
+    # ---- J. registered P4 R2 rows (committed, truncated grid)
+    res["J_P4_R2_committed"] = {s_: _tally(v["out"] for k, v in ana["sets"][s_]["inhouse"]["P4"].items() if k.endswith("|R2"))
+                                for s_ in ("PREREG", "SOURCED")}
+    P("J. committed P4 R2 rows:", res["J_P4_R2_committed"],
+      [(k, v["out"]) for k, v in ana["sets"]["SOURCED"]["inhouse"]["P4"].items() if k.endswith("|R2") and v["out"] != "MARGINAL"])
+
+    # ---- L. R4-FM mirror test (reference-projection effect): hs1-referenced against chimp-referenced
+    if mir:
+        Lm = {}
+        for k in ("auto|F0|10kb", "auto|F0|100kb", "auto|F0|1000kb", "auto|F1|10kb", "auto|F1|100kb", "auto|F1|1000kb",
+                  "auto|F2|10kb", "auto|F2|100kb", "auto|F2|1000kb"):
+            a, b = fma["grid"].get(k), mir["grid"].get(k)
+            if a is None or b is None:
+                continue
+            Lm[k] = {q: [a[q]["phi"] if q != "phi_HC" else a[q], b[q]["phi"] if q != "phi_HC" else b[q]]
+                     for q in ("H", "C", "DHC", "phi_HC") if q in a and q in b}
+            P("L. mirror", k, "(hs1 ref, mirror ref):", {q: [round(z, 2) for z in x] for q, x in Lm[k].items()})
+        res["L_mirror"] = Lm
+    json.dump(res, open(outjson, "w"), indent=1)
+    return res
+
+
 if __name__ == "__main__":
     a = sys.argv[1:]
     if not a or a[0] == "selftest":
@@ -1813,6 +2172,8 @@ if __name__ == "__main__":
         score(o.W, o.value, o.reading, o.unit, o.masked, o.exposure, o.d, o.cvc, o.real)
     elif a[0] == "post":
         post(a[1], a[2])
+    elif a[0] == "fixpass":             # post hoc 2026-10-13
+        fixpass(a[1], a[2] if len(a) > 2 else None)
     elif a[0] == "p45fix":              # post hoc 2026-10-13
         p45fix(a[1], *a[2:4])
     elif a[0] == "selftest_fix":        # post hoc 2026-10-13
