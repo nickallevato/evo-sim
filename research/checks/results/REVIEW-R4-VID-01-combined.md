@@ -1,0 +1,80 @@
+# Review of VID-01 (combined, low-stakes tier): harvest of the 2026-10-13 Gutsick Gibbon roundtable
+Date 2026-10-13. Reviewer: fresh reviewer instance, no part in the harvest (same agent family: independence caveat). Object: commit `6d090de` (bib GG-4, quotes GGR-01..GGR-40, RH-31/32, `refresh-2026-10-13-video.md`, harvest-log entry, `research/tools/harvest/verify_vid01.py`) against brief `research/checks/briefs/VID-01-operator.md` (committed `817d049`, 21:21:40 UTC, before the 21:51 UTC fetch and the 22:01 UTC commit). Tier check: a harvest, no verdict moves, no ROOT-path node touched; the combined tier is right. Severity labels BLOCKER / MAJOR / MINOR / NOTE.
+
+Method (all local, read or grep only, plus two trivial one-process runs): `sha256sum` of the fetch directory; re-derived the transcript from the hashed `.vtt` with `research/tools/harvest/vtt.py` into scratch; reran `verify_vid01.py` on the operator's quote list (`sources/raw/vid01-2026-10-13/all.txt`, 42 lines); read the transcript context of every quote (about ±40 s); read metadata fields from `info.json` and the caption-track list in `watch.html`; recounted the keyword scan with ASR-variant spellings; read claim files A4d, A4, A-mittens-formula, A5h and the cross-referenced quote and bib rows. The MITTENS 3.0 text (`zenodo-23003785.txt`) and the Reddit mirrors `1wws70t.json` / `1wv4zeg` are **not** on this workstation, so nothing below rests on them.
+
+## Verified (no finding)
+| Item | Record | Recomputed |
+|---|---|---|
+| sha256 `.vtt` / transcript / info.json / watch.html | aacdd0d9… / 50c28ed9… / cce93066… / 689456b3… | identical (all four) |
+| Transcript derives from the hashed `.vtt` | `vtt.py`, 20 s chunks | re-derived: same sha256, 730 lines |
+| Quotes exact substrings | 42/42 | 42/42 PASS; every `t=` equals the chunk-start the verifier prints |
+| Published | 2026-10-13 18:00:40 UTC | `timestamp` 1791914440 = 18:00:40 UTC |
+| Duration | 4:14:02 | 15,242 s = 4:14:02 (the brief's 4:14:03 was the rounding, NOTE-7) |
+| Counters / access | 18,566 / 2,046 / 656; 21:51 UTC | same; `epoch` 21:52:22 UTC (info.json written one minute after the page) |
+| Caption gate | one ASR track `a.en`, no human track | `watch.html`: one `vssId` `a.en`, one `kind:asr` |
+| Participants | Grayson, Zach, Jon, Dan, Maddie + host | description, in that order |
+| Keyword scan (chunks) | mesa…Holocene 0; Kamura 7; dN/dS 1 | same; also 0 for Neanderthal, sequence space, Wistar, "zero fixations", "0.8"; the one "ancient" is "ancient age of the earth" |
+| Arithmetic in notes | 3.2e9 × 1.2e-8 × 100 = 3,840; 450,000 × 0.45 = 202,500 | correct |
+| Rule 3 / 4 / 6 | no full text in git; own fetch dir; read-only | holds: only short quotes and hashes committed; scripts outside the fetch dir; no outward action found |
+| Files touched | brief's list | five of six files are on the list; see MINOR-7 for the sixth |
+
+## 1. Correctness
+
+**MINOR-1 (attribution contradicted by the transcript).** Two `(inferred)` speakers are contradicted by the very turns the notes cite:
+- GGR-08 "(inferred: Hancock, who is addressed as 'Dr. Hancock' in the preceding turn)". At 01:38:29 the reader says "Well, let's let's ask Dr. Hancock here." and, in the same turn, keeps reading the LLM's points and comments "Yes, we are all aware of Haldane's dilemma…". Hancock is asked again at 01:38:50 ("what do you think, Dr. Hancock?") and answers only there (GGR-10). GGR-08 is the reader, not Hancock.
+- GGR-31 "(inferred: Erika, sharing her screen)". At 03:44:42 the screen-sharer says "Erica, I'm sharing my screen." The sharer is therefore not Erika.
+Unsupported under the section's own rule ("`panel` unless the surrounding turn names the speaker"): GGR-26 (Hancock; 02:11:41-02:13:05 reads as the host's scripted narration, "as alluded to earlier in this video up top"), GGR-33/34 (Hancock; no name in 03:45:43-03:46:25), GGR-38/39 (Hancock, from "I've got a couple papers in PNAS": a credential, not a name), GGR-40 (Erika; no name). **Fix:** GGR-08, GGR-31 -> `panel`; the other five -> `panel`, or keep the guess in the note as "speaker unnamed; possibly X because …".
+
+**MINOR-2 (verifier count stale in the section header).** `quotes-critics.md` says "39 of 39 PASS, plus 3 added after", which reads as if three quotes were not verified; the refresh file, harvest log and commit say 42/42, and the rerun gives 42/42 (`candidates.txt` 39 + `cand2.txt` 3 = `all.txt` 42). **Fix:** "42 of 42 PASS (40 GGR quotes plus the two RH-32 lines)".
+
+**MINOR-3 (slips table broken).** RH-31 and RH-32 were appended after the blank line that closes the table at `ledgers/slips.md:90`, so they render as an orphan, headerless table, not as rows. **Fix:** delete line 90 (or move the two rows above it).
+
+**NOTE-1 (order).** Entries are not in time order (GGR-04 01:06:15 after GGR-03 01:06:55; GGR-24 02:12:24 before GGR-25 02:12:03; GGR-32 03:46:25 before GGR-33 03:46:03). Ids must not be renumbered; no fix needed, but GGR-01's note "shown later at t=03:44:42 (GGR-31..GGR-35)" is right.
+
+**NOTE-2 (secondary claims not re-verifiable here).** GGR-40's note dates the qbg comment (submitted 2025-12-28, rejected 2026-01-12); the only record is the unquoted row C-12 in `refresh-2026-10-09.md`, consistent with it; the mirror file is not on this workstation. GGR-17's `prior-art.md` statement holds (the term appears there only as Day's).
+
+## 2. Steelman, Day side
+
+**MINOR-4 (the GGR-13/14 "apparent conflict" ignores the audit's own reconciling record).** Refresh item 1 and the commit present the d claim as a conflict with A4d that "is as likely to be a critic-side error as a Day-side one". The audit's own files already favour one reading: 450,000 × 0.45 = 202,500 is the 2019 / Tree of Woe framing (`A-mittens-formula.md` row TW-01; A4 `derived:`), and the host's own narration at 01:49:52 says that in MITTENS 3.0 Day "kind of throws the D coefficient off to the side. It no longer seems nearly as important as it was in probability zero", which agrees with A4d. Grayson says "in mittens", not "in Mittens 3.0". On the critic side, A4d's own Weaknesses line records that 3.0's Appendix D still invokes the "Bio-Cycle correction for overlapping generations" (A5e), which gives the panel partial support. **Fix:** record readings (rule RD) in the GGR-13/14 notes and in refresh item 1: (a) "mittens" = the PZ / pre-3.0 formula: no conflict, figure matches TW-01; (b) = MITTENS 3.0 body: contradicted by A4d (252,000, no d term) unless the Appendix D Bio-Cycle step counts; (c) = 3.0 including Appendix D: partly right. Cite the three files.
+
+**MINOR-5 (the A5h "modelling objection" is recorded without its cost to the critics).** GGR-33/34 say s6.4 "is supposed to be a genetic load" and use the wrong model. The A5h Statement (s6.4, "The Breeding Reality Principle") computes a carrier's fitness from its deleterious count, (1-s)^n; the quoted text does not contain the word "load". Under the panel's preferred model, fitness ≈ e^(-U), at the corrected U = 384 (per A5h) carrier fitness is e^-384 ≈ 10^-167 (post hoc, this review), independent of s. If adopted, the objection makes the supermutator *more* dead, which removes the s = 0.001 escape A5h records (0.68). **Fix:** refresh item 2 and the GGR-34 note: add "the quoted s6.4 text does not call itself a load calculation; on the panel's own e^-U the conclusion's direction strengthens. Bears on the model, not on 'functionally dead'". Both sides go to the analyst.
+
+**MINOR-6 (the LLM "peer review" was of a version that is not MITTENS 3.0).** The LLM's framing at 01:37:03 is "a Haldane style ceiling of roughly 1,600 selected … fixations … built on Haldane's figure of about one substitution per 300 generations". That is the 2019 G_f = 1,600 framing; MITTENS 3.0 uses the LTEE G_f = 1,322 and 205 million (A4d). The persona prompt at 01:36:23-01:36:43 ("Claude new Athos … reincarnated") is also on record. GGR-10's endorsement ("the five things that I probably would have said") therefore endorses critiques of the Haldane framing; points 1-3 do not reach the 3.0 argument, while 4 (parallel sweeps) and 5 (how many adaptive) do. **Fix:** add this to the GGR-09 note; in the refresh table, "an LLM asked to 'peer review' MITTENS 3.0" -> "… asked about MITTENS 3.0; it reviewed the Haldane-1,600 version from memory".
+
+**MINOR-7 (credit to Day under-harvested; rule 1).** The harvest records one credit (GGR-04) and the brief asks for passages bearing on claims, but two more statements of credit are in harvested segments: 01:22:28-01:22:49 "genuinely this was a good exercise and the response the review that he got was quite fair" (the appendix paper's AI review; the same speaker as GGR-38/39, which are harvested); 01:51:34 "Remember how D was one earlier? This goes back to the whole he's trying to give conventional science the bestcase scenario numbers" (the d = 1 choice as charity to the other side; branch A4). **Fix:** add both as GGR-41, GGR-42 (appended), tagged and verified.
+
+**MINOR-8 (RH tags on GGR-04 and on the belittling lines).** GGR-04 is filed as a plain concession ("Credit to Day on arithmetic"). In context it is irony: "I would love to check your math, but it's >> just division … well you you did the division correctly, right?". Under the standing RD test it has two readings: literal concession (dialectic; credit stands) and bathos (rhetoric). GGR-03 ("explain to a seventh grader"), GGR-35 ("still falling through the cracks") and GGR-39 ("could even cross the editor's desk") carry diminution or hyperbole devices around a checkable core. They are tagged `dialectic` with no readings, where Day's comparable lines (RH-29) got a readings record. **Fix:** a readings line for GGR-04 (governing reading: the literal concession, the more defensible one, so the credit stays) and for GGR-03/35/39 (core dialectic, device noted). GGR-40 has `secondhand` in the RH slot and no RH tag: add `dialectic` (hearsay report) and keep `secondhand`.
+
+## 3. Steelman, critic side
+
+**MAJOR-1 (the critics' answer to the Bernoulli barrier is mischaracterised, and the answer itself was not harvested).** Refresh item 4 says the panel rejects the relayed formulation "('that's preposterous', t=01:57:03) without a derivation, which is the weaker half of the exchange"; the GGR-19 note says the same. The transcript does not support this:
+- "that's preposterous" (01:57:03) answers a panellist's own reconstruction at 01:56:41 (law of large numbers, "selection becomes less and less efficient"), offered as "me trying to steal man V", not the Reddit CV formulation; it is followed at once by a reason: recombination brings separately arising beneficial mutations together, "then you can select for both at the same time and they can achieve fixation together" (01:57:03-01:57:44).
+- At 02:13:47-02:14:28 the speaker of GGR-27..29 says "I'll give the pop gen answer to go back to Bernoli's law if you want to know how it is that variance and fitness can be maintained even if you have very … low fitness impacts of each individual mutation … this is literally called the infinite decimal model. It's the fundamental model of quantitative genetics." That is a direct answer to GGR-19's claim that the coefficient of variation goes to zero. GGR-27..29 are the *second* point of the same answer ("the second thing is that…"); the first was skipped.
+Neither answer is a derivation, but both name a standard mechanism or model, and the record's only evaluative line on the critics' branch-G reply is therefore wrong against them. This would mislead the analyst scoring G. **Fix:** harvest 01:57:23-01:57:44 (recombination) and 02:13:47-02:14:28 (infinitesimal model) as new GGR ids, verified; rewrite refresh item 4 and the GGR-19 note: "'preposterous' answers a panellist's own steelman; the panel then answers with recombination and with the infinitesimal model (Fisher 1918), without a derivation". Drop "the weaker half".
+
+**MINOR-9 ("credentialed" is unsourced).** RH-31 ("Six credentialed scientists") and the refresh ("the newest, longest and most credentialed critic reply to date") assert credentials no fetched text gives. The description says "We're apologizing to our doctoral committees with this one", which suggests some panellists are doctoral students. Only Hancock's PhD is on record elsewhere. **Fix:** "six panellists described in the title as scientists"; drop "most credentialed". (This favours the critics; rule 2 applies both ways.)
+
+**MINOR-10 (scope: a file outside the brief, and a verifier that cannot be rerun from git).** `research/tools/harvest/verify_vid01.py` is not in the brief's "Files you may write … Nothing else". It is the right practice (scripts outside the fetch dir, rule 4), but its input, the quote list `all.txt`, sits in the gitignored fetch directory, so the 42/42 claim cannot be reproduced from the repository without the raw directory. **Fix:** the lead ratifies the file in the brief or the REVIEW.md entry; have the verifier read the quotes from the `YT-AqC1ZM4icms` section of `quotes-critics.md` (short quotes only, already public), or commit the 42-line list next to it.
+
+**NOTE-3 (the A5h objection is right in standard theory, as far as it goes).** Equilibrium mutational load does not depend on s (Haldane 1937; Muller 1950: L ≈ 1 − e^-U). So the s-dependence of "functionally dead at s = 0.001" is the model's, not biology's. This is the critics' strongest form of GGR-33/34; see MINOR-5 for its cost to them. For the analyst, not applied.
+
+**NOTE-4 (rhetoric in the body, like for like).** Only the title (RH-31) and one exchange (RH-32) are in `slips.md`. The body has personal attacks of the same kind that Day's lines get ledgered for: 00:00:00 "statistical know nothing and otherwise bad guy", 03:47:47 "this 58-year-old loser is completely insignificant", and the Fuentes segment, 03:48:09-03:49. The brief limited the harvest to claim-bearing passages, so this is not an error. RH-31's dialectical-core column could say that the body also contains ad hominem, which changes no verdict.
+
+**NOTE-5 (panel inconsistency, for the analyst).** GGR-12 ("he omits … the Bernoli barrier stuff") and GGR-20 ("It's mentioned once in that paper and not defined") disagree. A grep of the 3.0 text settles it; that text is not on this workstation.
+
+**NOTE-6 (tooling).** `yt-dlp` was pip-installed into the pinned venv, unpinned (`--no-deps`, 2026.8.19). The refresh file records it. A pin in `requirements.txt`, or a line in `HOWTO-refresh.md` §5, would stop the drift. Not this harvest's file to change.
+
+**NOTE-7.** The brief's duration 4:14:03 is a rounding; the record's 4:14:02 is the metadata value.
+
+## Verdict
+The harvest's integrity holds: the gate opened as recorded, all four hashes match, the transcript re-derives exactly from the hashed captions, all 42 quotes are exact substrings with correct chunk locators, and the negative scan (no C, DN, FM, D content) survives ASR-variant spellings. No verdict moved and no claim file was touched. The record needs a fix pass before an analyst scores from it. One MAJOR: the critics' Bernoulli-barrier reply is mischaracterised and its substance was left out. The MINORs: attributions, two A4d/A5h framings that lack the other side's half, two missed credits to Day, RH readings, the broken table and the stale count. Rule 3/4/6 compliance holds; one file falls outside the brief's list (MINOR-10).
+
+**Counts:** 0 BLOCKER, 1 MAJOR, 10 MINOR, 7 NOTE.
+
+**Wrong numbers / facts (old -> right):**
+- `quotes-critics.md` header: "39 of 39 PASS, plus 3 added after" -> "42 of 42 PASS".
+- GGR-08 speaker: "inferred: Hancock" -> `panel` (the reader of the LLM output).
+- GGR-31 speaker: "inferred: Erika, sharing her screen" -> `panel` (the sharer addresses "Erica").
+- Refresh item 4 / GGR-19: "rejects it … without a derivation, the weaker half" -> answers with recombination (01:57:03-01:57:44) and the infinitesimal model (02:13:47-02:14:28).
+- Brief: 4:14:03 -> 4:14:02 (record already right).
