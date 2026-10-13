@@ -40,6 +40,7 @@ Source: `QUEUE.md`. Everything below is launched from na-workhorse or builder, n
 | A20 | Data probe of the ancestral pipeline (B6 external `supported` rests on derivations that assume it): discordant site patterns among human, chimp and gorilla with an outgroup, from the alignments held for GAP-07b; bands for an empty and a full ancestral pipe; msprime with and without ancestral diversity through the same counting code as controls; reproduce the published discordance share | ST-03, ST-04; pass section 6 | tbd | Outgroup alignment fetch; pre-registration | Specify and pre-register | agent | CPU-h small; tokens M |
 | A21 | Linked-site probe for G2c / B6c and overlap at human scale for F1b (all three external `supported` on runs whose falsifier could not fire): neutral sites on the same map as the sweeps; a short-map positive control where hitchhiking must cut diversity; compare with a published human diversity map | ST-02, ST-05; pass section 6 | tbd | Pre-registration; diversity map fetch | Specify and pre-register | agent | CPU-h tens; tokens M |
 | A22 | Base-rate control for the B3 family reconstruction ("32.3 reconstructs only from base-pair totals", 8 of 480 grid cells): L7's random-target method applied to the B3 grid | ST-11 | tbd | Pre-registration | Write, pre-register, run locally (trivial) | agent | trivial CPU; tokens S |
+| A23 | FMnull criterion S4 (tree-incongruent sharing above the ILS rate): the statistic ST-10's remedy asked to lead with was not measured by `fm_mesa_null.py`; queue it with a reachability line, or drop it with a stated reason | ST-10; MA-24; `R4-FMnull.md` section 7 (S4 row) | tbd | Pre-registration; decide with proposal l (B60) | Specify, or record why not | agent | tokens S; CPU tbd |
 
 ---
 
@@ -104,6 +105,12 @@ Source: [`criticality/README.md`](criticality/README.md) findings table and [`ME
 | B53 | B3 external: one field per k/mu value (N/N_e, 0.743, 0.5, 32.3, 800,000) in place of one `contradicted` over five; the per-site 32.3 leg rests on measured counts and would rate higher alone | GR-01 (row B3); AS-01 | proposal | Rule-freeze (a load-bearing verdict is restated) | Draft the five lines for review | agent, then owner | tokens S |
 | B54 | Revision 2 of the certainty adaptation: fold in application notes N1 to N4 (start level against the `mw` tag; one fact, one domain; conditional rows and selection; the FR column), add a rule for conditional statements, then re-rate the 58 rows and report what moved | GR-07, GR-05 | tbd | None | Write the revision, commit it, re-rate in a second commit | agent | tokens M |
 | B55 | Certainty-of-evidence findings GR-01 to GR-13 (1 CRITICAL for the document's standing, 5 MAJOR, 7 MINOR); concordance: agrees 16, in part 3, disagrees in part 4, refines 1, not covered 2. GR-13 (one same-model rater; GRADE's handbook does not promise reproducible judgements) stands until a second rater who is not of this model family has rated the same 58 rows without the codes; registered expectation: the same level on at least half the rated rows, within one level on at least 80%, and at least 6 of the 8 verdicts found over-stated under every mapping found over-stated again | [`criticality/grade-certainty-2026-10-12.md`](criticality/grade-certainty-2026-10-12.md) | needs owner | Outside or non-Claude rater (C3, C4, C26) | Prepare the packet: sections 2 and 4 notes, the 58 ids, a blank code sheet | owner, outside | tokens S |
+| B56 | Integrator fixes from pass vii that change no rule, vocabulary or verdict: regenerate `research/checks/PREREG-STATUS.md` (blind 14, registered-not-run 0), hand notes for L1c and L5, a row or stated exclusion for HF `ph`; claim C and the `QUEUE.md` L5 line back to the registered scope "s <= 1e-2 (descriptively the same at 0.02)"; cut the superseded "L1b overturns only if" sentence in DN1 and add the gloss sentence to its side tally; note in the `REVIEW.md` L1c entry that one agent wrote both steelmen | MA-25, MA-26, MA-28, MA-29; `criticality/METHOD-AUDIT-2026-10-13.md` Remediation | tbd | None (one agent at a time on shared files) | Do with the next integration | agent (Sonnet) | tokens S |
+| B57 | Commit each reviewer brief beside its review, from the next check on | MA-21 | tbd | None for the commit; O-26 (C29) decides what a brief may contain | Add to the review step | agent | tokens S |
+| B58 | Register of every reading-dependent field choice: claim, readings, the reading in the field, the alternative and its verdict, who ruled. Data are in the claim files | MA-22 | tbd | None | One table under `ledgers/` or in the criticality folder | agent | tokens S |
+| B59 | Proposal (m): an operational test for "extended reading" in rule RD and a stated precedence between a registered verdict move and RD. Could move DN1 external, DN6 external, C external (none load-bearing) and any earlier reading-dependent field re-read under it | MA-22; pass vii Remediation | proposal | Rule-freeze (O-6): written proposal, 24-hour cooling-off, re-score | Draft the test with the fields it moves under each wording | agent, then owner | tokens M |
+| B60 | Proposal (l): a fairer Day-side criterion for FM10 (alternative stated at the size Day asserts and at a tenth; interval for the one-lineage excess variance on both references; DAY if it excludes the whole neutral lineage-specific range, CRITIC if its upper end is 3x below the alternative; margin on the excess). Could move FM10 and ROOT-FM external (both load-bearing) and FM3's annotation. Not applied | ST-10 record; MA-24; pass vii section 7b; FMnull review K12 | proposal | O-27 (C30); rule-freeze; no sourced upper end for the lineage-specific range; the data have been seen | On go-ahead: source the range, fix the interval method, pre-register, three reviews | agent, then owner | tokens M; CPU hours |
+| B61 | Milestone post for the 2026-10-13 batch: state per check which Day-side outcomes were reachable (pass vii section 3); print no side tally without the sentence that the predictions are the audit's; describe FMnull as "no class, no move", not as a CRITIC band | MA-24, MA-29 | tbd | None | Apply when the post is drafted | agent | tokens S |
 
 ---
 
@@ -139,6 +146,10 @@ Source: [`DECISIONS.md`](DECISIONS.md), "Owner replies to O-1 to O-9" (the owner
 | C24 | O-20 and O-21 (proposed, not yet recorded): add to the right-of-reply packet the two reading questions (A2e: a count of adaptive fixations, or total throughput; B: which sense of "nearly empty") and the closure rule of the pass's section 9.4; appoint a second rater for the pass (B47) | AS-04, AS-07, AS-13 | needs owner | C2 (right of reply), C3, C4 | Agent drafts the two questions and the closure rule; owner decides | owner, agent | owner min; tokens S |
 | C25 | O-22 (proposed by the certainty-of-evidence pass; **not yet in `DECISIONS.md`**): adopt certainty and direction beside the external verdict (B48), or treat the pass as a one-off; if adopted, which starting-level mapping is stored and whether all three are always printed. Decide with proposals (b) and (c), which it partly absorbs | GR-01, GR-02; pass sections 2.4, 8 | needs owner | Owner choice | Decide; if adopted, B54, then B48 and B49 | owner | owner min 15 |
 | C26 | O-23 (proposed, not yet recorded): a second rater for the 58 rows who is not of this model family (B55), with the second raters asked for by ST-13 and AS-13 | GR-13 | needs owner | C3, C4 | Agent prepares the packet; owner decides who | owner, outside | owner min; tokens S |
+| C27 | O-24 (pass vii; recorded open in `DECISIONS.md`): is the cap of two concurrent subagents (D-11) raised permanently, and to what? It was exceeded (three) on 2026-10-13 after an owner question in chat that is not on record | MA-30 | needs owner | Owner's words | Record the answer verbatim; update `AGENTS.md` | owner | owner min |
+| C28 | O-25 (pass vii; recorded open): review tier when a check's registration carries a verdict-field flip, or the node is a listed feeder (`R5-draft.md` 1.3), although it is not `load_bearing`: three reviews, or one combined as for L5? | MA-23 | needs owner | Owner choice; a tier-rule change triggers a criticality pass (standing procedure 3) | Decide; if three, whether L5 gets the two missing reviews | owner | owner min; tokens M if L5 is re-reviewed |
+| C29 | O-26 (pass vii; recorded open): who rules conflicts between the two steelman reviews (the write-up's author, as now, or a separate instance or the owner); whether briefs may name the issues the lead suspects, or one reviewer per check goes in unbriefed; whether one agent may write both steelmen | MA-21, MA-26 | needs owner | Owner choice | Decide; agent updates the lifecycle in `AGENTS.md` | owner | owner min |
+| C30 | O-27 (pass vii; recorded open): take up proposal (l), the fairer Day-side criterion for FM10 (B60), under the rule-freeze procedure, or leave FMnull's criteria as run with the defect on record | ST-10; MA-24 | needs owner | Owner go-ahead; C6 reading of the freeze | Decide with C10 | owner | owner min |
 
 ---
 
@@ -178,13 +189,13 @@ Rows by section and status (counted from the tables above on 2026-10-12; section
 
 | Section | Rows | running | queued | proposal | needs owner | tbd | done |
 |---|---|---|---|---|---|---|---|
-| A | 22 | 1 | 9 | 0 | 0 | 12 | 0 |
-| B | 55 | 0 | 1 | 19 | 5 | 30 | 0 |
-| C | 26 | 0 | 0 | 0 | 24 | 1 | 1 |
+| A | 23 | 1 | 9 | 0 | 0 | 13 | 0 |
+| B | 61 | 0 | 1 | 21 | 5 | 34 | 0 |
+| C | 30 | 0 | 0 | 0 | 28 | 1 | 1 |
 | D | 6 | 0 | 0 | 0 | 1 | 5 | 0 |
-| **All** | **109** | 1 | 10 | 19 | 30 | 48 | 1 |
+| **All** | **120** | 1 | 10 | 21 | 34 | 53 | 1 |
 
-Needs-owner rows (30): B7, B20, B39, B47, B55, C1, C2, C3, C4, C5, C6, C7, C9, C10, C11, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, D4.
+Needs-owner rows (34): B7, B20, B39, B47, B55, C1, C2, C3, C4, C5, C6, C7, C9, C10, C11, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, D4.
 
 *2026-10-12, later the same day: 14 rows added by the AMSTAR 2 and ROBIS appraisal (B23 to B33, C17 to C19). The roadmap figure `audit-roadmap.svg` was not regenerated and does not show them.*
 
@@ -193,3 +204,5 @@ Needs-owner rows (30): B7, B20, B39, B47, B55, C1, C2, C3, C4, C5, C6, C7, C9, C
 *2026-10-12, later still: 10 rows added by the argument-structure pass (B41 to B47, C22 to C24). The figure was not regenerated.*
 
 *2026-10-12, last: 10 rows added by the certainty-of-evidence pass (B48 to B55, C25, C26). The figure was not regenerated.*
+
+*2026-10-13: 11 rows added by criticality pass vii, the method audit of that day's batch (A23, B56 to B61, C27 to C30); counts above adjusted for those rows only. The section A rows for HF `ph`, L1b, L1c, FMnull and L5, all run and integrated on 2026-10-13, were not re-statused by that pass (not its files' business; see `research/checks/QUEUE.md`), so the "running" and "queued" columns are as counted on 2026-10-12. The figure was not regenerated.*
