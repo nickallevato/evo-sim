@@ -29,3 +29,11 @@ Recorded before the run:
 5. **Weight of a CRITIC result.** Because CRITIC is what the registered arithmetic expects, a CRITIC outcome is a weak test of the registered move "C external `contested` -> `contradicted` (scoped)". That move stays a proposal for the three reviews; the write-up reports the severity limit beside it.
 
 Neither note changes what Day or his critics are predicted to say in the two docstrings.
+
+## L5 launch failure and post hoc launch fix (2026-10-13, after the notes above)
+
+The first launch of `l5_adna_power.py main 8` on na-workhorse (script md5 5ecde49e..., as registered) stopped before any task ran: `PicklingError: Can't pickle local object <function const.<locals>.<lambda>>`. A task tuple carries the constant-size demography function, and the forkserver pool cannot send it to a worker. The local smoke of 2026-10-11 called `run_task` in-process, so it did not meet this. No task output exists (`raw/l5/` held only `l5_selftest.json`); no expected count was produced or seen.
+
+**Fix (separate commit, post hoc, pre-run):** the pool is sent the task index and the worker rebuilds the tuple (`run_task_k`). Task order, seeds (keyed on the index) and output files are unchanged. No model, parameter, prediction or band is touched.
+
+**What was seen before the fix, disclosed:** the selftest printed by that launch. V2 (fixation probability, event sanity cases) passed. **V3 missed in one of three cells:** at r = 1e-4 the simulated mean final non-founder share was 0.0185 against the formula's 0.0084 (n = 300), a difference of 0.0102 against the registered tolerance of max(0.01, 30%); r = 1e-3 (0.0823 against 0.0786) and r = 5e-3 (0.3091 against 0.3083) passed. The docstring states a consequence only for V1. Reading fixed here, before any task result: the run proceeds; the write-up reports V3 as a miss at tight linkage, by a margin of 0.0002 in absolute share; the formula understates the non-founder share there, so it overstates how completely a linked panel SNP is carried, which raises expected S* counts (a bias toward Day's band). The tolerance is not changed and the selftest is not rerun with other seeds. Reviewers decide whether the miss qualifies any band.

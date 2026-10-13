@@ -613,6 +613,11 @@ def get_ns(gy, sz):
     return _NS[gy]
 
 
+def run_task_k(a):
+    k, outdir, sz = a
+    return run_task((k, task_list()[k], outdir, sz))
+
+
 def run_task(args):
     k, tk, outdir, sz = args
     kind, s, mode, d = tk
@@ -843,9 +848,12 @@ if __name__ == "__main__":
         os.makedirs(outdir, exist_ok=True)
         st = selftest(small=False, outdir=outdir)
         tl = task_list()
-        jobs = sorted([(k, tk, outdir, SIZES) for k, tk in enumerate(tl)], key=lambda a: -cost(a[1]))
+        # post hoc 2026-10-13 (pre-run, launch fix): a task tuple holds a demography lambda (c1e.const), which the
+        # forkserver pool cannot pickle; send the task index and rebuild the tuple in the worker.  Order, seeds
+        # (keyed on k) and outputs are unchanged.
+        jobs = [(k, outdir, SIZES) for k, tk in sorted(enumerate(tl), key=lambda a: -cost(a[1]))]
         with mp.get_context("forkserver").Pool(workers, maxtasksperchild=4) as pool:
-            for _ in pool.imap_unordered(run_task, jobs):
+            for _ in pool.imap_unordered(run_task_k, jobs):
                 pass
         print("all done", flush=True)
     elif cmd == "analyse":
