@@ -1,6 +1,8 @@
 # Milestone 13: Day's dN/dS post checked, "ten of twelve" and 410 M recounted, and published alpha against the 191 flip
 *2026-10-11 · stage: R4 (in progress) · A2e-alpha `49824e0`, `651e0d3`, `164837e`, `e7ecda6`, `7ea7290`; GAP-06/GAP-07t `49824e0`, `547bcd5`, `1b068bc`; refresh and test-methods review `448a7b6`; L1 `868bb60`, `36c5b85`; L6 `0b478dd`, `10cfe1e`; L7 `5b44f3d`, `42df167`; integration `524603e`*
 
+> **Update (2026-10-13):** three sections below are changed by [milestone 14](2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md). **L1:** the T2T rerun (L1b) gives 0.271 on all genes and 0.238 on one2one genes with bases paired by alignment column, so the complete-extraction route is closed for that alignment and annotation; a naive position-by-position extraction reads 0.853, a candidate error class credited to neither side, and the inference that mispairing must sit in most genes is withdrawn (13.7% of genes carry it). Day's alignment-method explanation (new claim DN6, L1c) is external `contested`, fidelity `misread`, both reading-dependent. **HF** is final: no verdict value changed. **A2e** external moved to `contradicted`, scoped to the any-effect-size count, on the Uricchio full text (2026-10-11).
+
 This milestone covers what was done since [milestone 12](2026-10-10-12-mesas-replicated-median-25-and-k-to-64000.md):
 - **A2e-alpha:** published alpha estimates against the roughly 191 adaptive-substitution threshold in A2e;
 - **GAP-06 and GAP-07t:** Yoo 2025's mutation rate and generation times through Day's numbers; the divergence-event count on the T2T ape alignment;
@@ -37,6 +39,8 @@ Day and Athos report a genome-wide dN/dS of 0.80 on 20,400 GENCODE v46 genes, ag
 - **Q177 does not follow from its premises by Day's own material (rule N):** his own P6, P20 and P21 treat dN/dS as the purifying/neutral balance of all nonsynonymous changes, not the adaptive fraction (alpha).
 - **Pending on both sides:** Day's per-gene table (promised on Zenodo, not yet released); CSAC 2005 text and an independent ML estimate to score the 0.23 relay.
 
+> **Update (2026-10-13):** L1b is run and reviewed ([milestone 14](2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md)): band CRITIC, no DN verdict value changed, and the audit's prediction for the naive arm (0.28 to 0.60) missed at 0.853. The CSAC 2005 text is now held: DN5 fidelity `accurate`, DN3 fidelity `partial`.
+
 ## L6: "ten of twelve" LTEE populations undoing fixations (Q178)
 Day writes "ten of the twelve populations even show intervals where fixations are being undone faster than any new ones complete."
 - **It reproduces on his rule.** From Good 2017's public trajectories, the count of mutations at or above 95% frequency falls in at least one 10K interval in **10 of 12 populations**, exactly as he says (sign only; 7 of 12 at a net fall of 5 or more, 6 of 12 at 10 or more). 28 of 29 of his tabulated cells match.
@@ -56,6 +60,8 @@ The 2026-10-11 refresh (`sources/refresh-2026-10-11.md`) found one new relevant 
 
 ## HF (H follow-ups): not final
 The main run finished (696 jobs on two hosts, 1,720 unique, 0 mismatches) and three reviews are done (0 BLOCKER, 10 MAJOR). A post hoc run `ph` (pre-registered, 410 jobs) is in progress on na-workhorse and the builder, about 31 hours. **Provisional, pending `ph`, no claim file changed:** soft-selection and truncation results are scoped to "purely relative fitness" and "noise-free genotype truncation"; some pre-registered scores were rescored (for example CA2 fails marginally at R = 1.111 and DA1 fails at h = 0.1, R = 2; two comparisons of censoring points are unscorable); the "43 times" figure splits into 4.5 times from selection and 9.6 times from Day's premise; and latency (HF-c) and throughput (HF-a) results must be cited together. Full detail is in the Review resolution of `results/R4-HF.md`.
+
+> **Update (2026-10-13):** `ph` is scored, reviewed and integrated ([milestone 14](2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md)). The provisional statements above stand with these numbers: at 30% hard selection the sustainable rate is about 1.3 to 1.7 times the hard cap, at 10% about 2.6 to 3.5 times (marginal at R = 1.111); the soft-selection failures were a fill lag. H, H8 and H5 external stay `contested`; h and R remain unsourced.
 
 ## Verdict changes
 | Claim | Before | After |

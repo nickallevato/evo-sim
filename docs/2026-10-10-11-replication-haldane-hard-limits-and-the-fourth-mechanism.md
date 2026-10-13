@@ -3,6 +3,8 @@
 
 > **[Update 2026-10-11, see [milestone 13](2026-10-11-1-dnds-ten-of-twelve-410m-and-alpha.md): A2e-alpha compared published alpha estimates with the roughly 191 threshold behind the A2e entry below. Bias-corrected estimates (Boyko, Eyre-Walker) all land above it; the lowest value is an uncorrected null, not a count. A2e external moves from contested to contested, leaning contradicted. Internal verdict unchanged.]**
 
+> **Update (2026-10-13):** see [milestone 14](2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md). **Fourth Mechanism:** the null model listed below as absent has been run (FMnull); Day's overdispersion sentence is true of the data and not anomalous against a neutral band where it is true, the test is weak against small mechanisms, and no verdict value moved. **H8 / H5:** the H follow-ups are final, external still `contested`, turning on the unsourced hardness h and excess R. **A2e:** external is now `contradicted`, scoped to the any-effect-size count (Uricchio full text, 2026-10-11); strong-only and fitness-weighted readings stay `contested`.
+
 This milestone covers everything since [milestone 10](2026-10-09-10-fairness-audit.md):
 - **XT:** the core results re-run in a second simulator (fwdpy11);
 - **G2c:** the standing-variation check restored after a longer rerun;

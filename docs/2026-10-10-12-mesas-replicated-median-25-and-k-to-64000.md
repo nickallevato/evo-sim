@@ -1,6 +1,8 @@
 # Milestone 12: Day's "mesas" replicated, the "median 25" recomputed, and Haldane's limit to K = 64,000
 *2026-10-10 · stage: R4 (in progress) · commits `d723064` (FM pre-registration), `5f05791`, `e201384`, `455f22b` (integration); B3m `5ca5f2e`, `4442c99`; kscale64 `15e4941`, `6f8eaa0`*
 
+> **Update (2026-10-13):** two items below were tested further ([milestone 14](2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md)). **FM3 / FM10:** a neutral-null calibration (FMnull) finds that "more than 80" is true of the alignment at 1 Mb and above in every lineage, and that where it is true the measured index is inside or below a mechanistic neutral band; the check has little power against mechanisms smaller than a dominant one, and no verdict value moved (FM3 external `supported` as a description, non-discriminating; FM10 internal `pending`, external `contested`). **H8:** the H follow-ups (HF) are final; Term 3 holds in-model for hard selection and at 30% hardness and not at 10% or under purely relative fitness; external stays `contested`.
+
 This milestone covers what was pending or running at the end of [milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md):
 - **H8 kscale64:** the post hoc run of the cost-of-selection check at population sizes up to K = 64,000;
 - **B3m:** Day's "median 25 across 55 vertebrates", recomputed from Bergeron 2023;

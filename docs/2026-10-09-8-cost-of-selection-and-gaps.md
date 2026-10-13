@@ -5,6 +5,8 @@
 
 > **Update (2026-10-10):** H8/H5 re-tested the numbers below in Haldane's regime ([milestone 11](2026-10-10-11-replication-haldane-hard-limits-and-the-fourth-mechanism.md)). Haldane's 1/300 is confirmed at R = 1.111 with D rescaled to 30 (K = 1,000); Hössjer's 15,800 is payable from R of about 2 to 2.7 under hard selection; a post hoc run at K = 16,000 did not support a finite-size explanation, so "slower than 1/300" stays conditional on K. The lineage-scale figures here (about 1/530 to 1/1,050) are not overturned. Verdicts unchanged.
 
+> **Update (2026-10-13):** the H follow-ups (HF) are final ([milestone 14](2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md)). The hard cap reproduces; with 30% hard selection the sustainable rate is about 1.3 to 1.7 times the cap and with 10% about 2.6 to 3.5 times; with purely relative fitness the population cannot go extinct in the model and the cost is not charged. H, H8 and H5 external stay `contested`.
+
 This milestone covers four checks:
 - **GAP-04, GAP-07 and GAP-02:** three of the gaps from milestone 7 that neither side, nor this audit, had addressed;
 - **H3:** the cost-of-selection question at human scale. Milestone 7 called it the one place the overall verdict could still go either way.
