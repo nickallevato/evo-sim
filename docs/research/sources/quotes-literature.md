@@ -1280,3 +1280,159 @@ Purpose: the definitions, argumentation schemes, critical questions and discussi
 ### HahnHornikx2016 (sha256 965a29439593ebb539ab28bddc78239223dce8677702b148a87e74f3ddeb4864)
 > "in order to justify different argument schemes there must minimally be some consequential difference to either the basic inference or the critical questions."
 > - id: AT-95; locator: section 5 (discussion); role: a criticism of scheme lists; note: used as a caution on counting by scheme
+
+## Criticality pass vi quotes (certainty of evidence: GRADE), 2026-10-12
+
+Purpose: the certainty definitions, the five downgrading and three upgrading domains, and the guidance on modelled and non-randomised evidence applied in [`../criticality/grade-certainty-2026-10-12.md`](../criticality/grade-certainty-2026-10-12.md). These are method texts, not sources for any claim file; role codes S/C/N/K do not apply and the role field says what the line is used for. Fetched 2026-10-13 about 00:54 to 00:57 UTC (2026-10-12 evening, -06:00) into `sources/raw/crit6-grade-2026-10-12/` (gitignored), one directory per file. All 67 quotes (GC-01 to GC-67) were cut by script from the extracted text and then machine-checked, re-read from this file, as substrings of that text after whitespace normalisation; 0 misses. The handbook's and the 2008 papers' word is "quality of evidence"; the working group's later texts say "certainty" (GC-41). Section numbers of the J Clin Epidemiol papers are given only where the extracted text shows them. **Not obtained:** the new "GRADE Book" (book.gradepro.org serves a script-rendered page with no text; the handbook's own disclaimers say that sections 1, 2, 3, 5 and 8 have each "been updated in the new GRADE Book"); Balshem et al. 2011 (GRADE guidelines 3) and the rest of the J Clin Epidemiol series (not in Europe PMC); the two BMJ papers from the publisher (403 challenge page, not bypassed; read from PubMed Central instead).
+
+### GRADE-Handbook (sha256 2fb19241ae0c365ef62e7bac16978d48cb6ad75e1b4465fb915912aaa919a606)
+> "The quality of evidence reflects the extent to which we are confident that an estimate of the effect is correct."
+> - id: GC-01; locator: section 5, 'For authors of systematic reviews'; role: certainty: definition for a review; note: the definition this pass adapts; the handbook's word is 'quality', later GRADE texts say 'certainty' (GC-35)
+> "The quality of evidence is rated for each outcome across studies (i.e. for a body of evidence). This does not mean rating each study as a single unit."
+> - id: GC-02; locator: section 5; role: unit of rating; note: a body of evidence per outcome, not a study
+> "We are very confident that the true effect lies close to that of the estimate of the effect."
+> - id: GC-03; locator: Table 5.1, High; role: certainty level: high
+> "We are moderately confident in the effect estimate: The true effect is likely to be close to the estimate of the effect, but there is a possibility that it is substantially different"
+> - id: GC-04; locator: Table 5.1, Moderate; role: certainty level: moderate
+> "Our confidence in the effect estimate is limited: The true effect may be substantially different from the estimate of the effect."
+> - id: GC-05; locator: Table 5.1, Low; role: certainty level: low
+> "We have very little confidence in the effect estimate: The true effect is likely to be substantially different from the estimate of effect"
+> - id: GC-06; locator: Table 5.1, Very Low; role: certainty level: very low
+> "Quality of evidence is a continuum; any discrete categorisation involves some degree of arbitrariness."
+> - id: GC-07; locator: section 5, after Table 5.1; role: limits of the scale; note: four grades cut a continuum
+> "The GRADE approach to rating the quality of evidence begins with the study design (trials or observational studies) and then addresses five reasons to possibly rate down the quality of evidence and three to possibly rate up the quality."
+> - id: GC-08; locator: section 5.1; role: structure: start, five down, three up
+> "Therefore, GRADE is not a quantitative system for grading the quality of evidence."
+> - id: GC-09; locator: section 5.1; role: limits: not quantitative
+> "Indeed, the great merit of GRADE is not that it ensures reproducible judgments but that it requires explicit judgment that is made transparent to users."
+> - id: GC-10; locator: section 5.1; role: limits: transparency, not reproducibility; note: bears on a single-rater application
+> "observational studies without special strengths or important limitations provide low quality evidence"
+> - id: GC-11; locator: section 5.1.1; role: starting level: observational
+> "Expert opinion is not a category of quality of evidence."
+> - id: GC-12; locator: section 5.1.1; role: starting level: expert opinion; note: used for 'standard theory' and 'concession' in the adaptation
+> "It is important to describe what type of evidence (whether published or unpublished) is being used as the basis for interpretation."
+> - id: GC-13; locator: section 5.1.1; role: starting level: expert opinion; note: say what the opinion rests on
+> "Our confidence in an estimate of effect decreases if studies suffer from major limitations that are likely to result in a biased assessment of the intervention"
+> - id: GC-14; locator: section 5.2.1; role: domain: risk of bias
+> "Inconsistency refers to an unexplained heterogeneity of results."
+> - id: GC-15; locator: section 5.2.2; role: domain: inconsistency
+> "Investigators should explore explanations for heterogeneity, and if they cannot identify a plausible explanation, the quality of evidence should be downgraded."
+> - id: GC-16; locator: section 5.2.2; role: domain: inconsistency; note: explained heterogeneity does not downgrade
+> "Direct evidence consists of research that directly compares the interventions which we are interested in, delivered to the populations in which we are interested, and measures the outcomes important to patients."
+> - id: GC-17; locator: section 5.2.3; role: domain: indirectness
+> "Authors of systematic reviews and guideline panels making recommendations should consider the extent to which they are uncertain about the applicability of the evidence to their relevant question and downgrade the quality rating by one or even two levels."
+> - id: GC-18; locator: section 5.2.3; role: domain: indirectness; note: one or two levels
+> "In general, results are imprecise when studies include relatively few patients and few events and thus have a wide confidence interval (CI) around the estimate of the effect."
+> - id: GC-19; locator: section 5.2.4; role: domain: imprecision
+> "Publication bias is a systematic under-estimation or an over-estimation of the underlying beneficial or harmful effect due to the selective publication of studies."
+> - id: GC-20; locator: section 5.2.5; role: domain: publication bias
+> "Confidence in the combined estimates of effects from a systematic review can be reduced when publication bias is suspected, even when the included studies themselves have a low risk of bias."
+> - id: GC-21; locator: section 5.2.5; role: domain: publication bias; note: a property of the set of studies, not of one study
+> "Consideration of factors reducing quality of evidence must precede consideration of reasons for rating it up."
+> - id: GC-22; locator: section 5.3; role: upgrading: order
+> "The decision to rate up should only rarely be made if serious limitations are present in any of these areas."
+> - id: GC-23; locator: section 5.3; role: upgrading: restriction; note: the pass applies this as a rule
+> "When body of evidence from observational studies not downgraded for any of the 5 factors yield large or very large estimates of the magnitude of an intervention effect, then we may be more confident about the results."
+> - id: GC-24; locator: section 5.3.1; role: upgrade: large effect
+> "one should rarely and very cautiously rate up quality of evidence because of apparent large effects, if the CI overlaps substantially with effects smaller than the chosen threshold of clinical importance."
+> - id: GC-25; locator: section 5.3.1; role: upgrade: large effect; note: the interval, not the point value, must clear the threshold
+> "The presence of a dose-response gradient may increase our confidence in the findings of observational studies and thereby increase the quality of evidence."
+> - id: GC-26; locator: section 5.3.2; role: upgrade: dose-response
+> "On occasion, all plausible residual confounding from observational studies may be working to reduce the demonstrated effect or increase the effect, if no effect was observed."
+> - id: GC-27; locator: section 5.3.3; role: upgrade: opposing bias
+> "We caution against a mechanistic approach toward the application of the criteria for rating the quality of the evidence up or down."
+> - id: GC-28; locator: section 5.4; role: limits: not mechanical
+> "Authors of systematic reviews do not grade the overall quality of evidence across outcomes."
+> - id: GC-29; locator: section 5.4; role: limits: no overall grade in a review; note: bears on a certainty for ROOT
+
+### Guyatt2008a (sha256 334e55d8b9227a6aaa4e4067e6a0a3d48e7eb4c5e4308771fe32ab22624301ff)
+> "Further research is very unlikely to change our confidence in the estimate of effect"
+> - id: GC-30; locator: Box 2, High quality; role: certainty level: high (2008 wording); note: the 2008 definitions are in terms of further research
+> "Further research is likely to have an important impact on our confidence in the estimate of effect and may change the estimate"
+> - id: GC-31; locator: Box 2, Moderate quality; role: certainty level: moderate (2008 wording)
+> "Further research is very likely to have an important impact on our confidence in the estimate of effect and is likely to change the estimate"
+> - id: GC-32; locator: Box 2, Low quality; role: certainty level: low (2008 wording)
+> "Any estimate of effect is very uncertain"
+> - id: GC-33; locator: Box 2, Very low quality; role: certainty level: very low (2008 wording)
+> "Although observational studies (for example, cohort and case-control studies) start with a “low quality” rating, grading upwards may be warranted if the magnitude of the treatment effect is very large (such as severe hip osteoarthritis and hip replacement), if there is evidence of a dose-response relation or if all plausible biases would decrease the magnitude of an apparent treatment effect."
+> - id: GC-34; locator: box listing the factors, before Box 2; role: starting level and upgrades
+> "Systems that classify “expert opinion” as a category of evidence also create confusion."
+> - id: GC-35; locator: section before 'How does the GRADE system classify quality of evidence?'; role: starting level: expert opinion; note: agrees with GC-12
+
+### Guyatt2008b (sha256 3f6d74310d37d04c10a5baffda99f00c08263dad669d5d250d803d6737a238aa)
+> "The quality of evidence reflects the extent to which confidence in an estimate of the effect is adequate to support a particular recommendation."
+> - id: GC-36; locator: section 'Judging the quality of evidence requires consideration of the context'; role: certainty: definition for a guideline; note: context-dependent definition
+> "When heterogeneity exists but investigators fail to identify a plausible explanation then the quality of evidence decreases."
+> - id: GC-37; locator: section 'Inconsistent results'; role: domain: inconsistency
+> "The quality of evidence will be reduced if investigators fail to report studies they have undertaken."
+> - id: GC-38; locator: section 'Publication bias'; role: domain: publication bias
+> "The larger the magnitude of effect, the stronger becomes the evidence."
+> - id: GC-39; locator: section 'Three factors can increase the quality of evidence'; role: upgrade: large effect
+> "Secondly, on occasion all plausible biases from observational studies may be working to underestimate the true treatment effect."
+> - id: GC-40; locator: same section; role: upgrade: opposing bias
+
+### Hultcrantz2017 (sha256 85778c4f818d520ea73fbffc5971e0297b8945d9cef12282a4879e06fc9b97fd)
+> "Certainty of evidence is best considered as the certainty that a true effect lies on one side of a specified threshold, or within a chosen range."
+> - id: GC-41; locator: abstract, Results; role: certainty: threshold construct; note: the construct the adaptation rests on: a verdict is a statement about a side of a threshold
+> "we are not assessing our confidence in point estimates of effects, but rather our confidence in where effects lie relative to particular thresholds"
+> - id: GC-42; locator: Introduction; role: certainty: threshold construct
+> "It is desirable for systematic review authors, guideline panelists, and health technology assessors to specify the threshold or ranges they are using when rating the certainty in evidence."
+> - id: GC-43; locator: abstract, Conclusion; role: certainty: state the threshold
+
+### Brozek2021 (sha256 0142e5860f8c8dc6f4ac165411eeb4c51dfbe2f2578f3805872d70f1ada0c7dd)
+> "Workshop participants agreed that the domains determining the certainty of evidence previously identified in the GRADE approach (risk of bias, indirectness, inconsistency, imprecision, reporting bias, magnitude of an effect, dose—response relation, and the direction of residual confounding) also apply when assessing the certainty of evidence from models."
+> - id: GC-44; locator: abstract, Results; role: modelled evidence: domains apply
+> "Workshop participants agreed that all GRADE domains are applicable to assess the certainty of model outputs, but further work is needed to identify examples and develop specific criteria to be assessed"
+> - id: GC-45; locator: section 3.3; role: modelled evidence: criteria not yet specified; note: no starting level for a model is given in this paper
+> "The risk of bias of model outputs (i.e., model outputs being systematically overestimated or underestimated) is determined by the credibility of a model itself and the certainty of evidence for each of model inputs."
+> - id: GC-46; locator: section 3.4; role: modelled evidence: risk of bias; note: credibility of the model plus certainty of its inputs
+> "The credibility of a model, also referred to as the quality of a model (Table 2), is influenced by its conceptualization, structure, calibration, validation, and other factors."
+> - id: GC-47; locator: section 3.4; role: modelled evidence: credibility
+> "By directness or relevance, we mean the extent to which model outputs directly represent the phenomenon being modeled."
+> - id: GC-48; locator: section 3.5; role: modelled evidence: indirectness
+> "When there are concerns about the directness of the model or there is limited understanding of the system being modeled making it difficult to assess directness, then one may have lower confidence in model outputs."
+> - id: GC-49; locator: section 3.5; role: modelled evidence: indirectness
+> "Sensitivity analysis characterizes the response of model outputs to parameter variation and helps to determine the robustness of model’s qualitative conclusions"
+> - id: GC-50; locator: section 3.7; role: modelled evidence: imprecision; note: robustness of the qualitative conclusion
+> "is the likelihood that relevant models have been constructed but were not published or otherwise made publicly available."
+> - id: GC-51; locator: section 3.8; role: modelled evidence: publication bias
+> "Risk of publication bias may not be relevant when assessing the certainty of outputs of a single model constructed de novo."
+> - id: GC-52; locator: section 3.8; role: modelled evidence: publication bias; note: the pass departs from this and says why
+> "Similarly, whether or not a large magnitude of an effect in model outputs increases the certainty of the evidence may depend on the modeling discipline."
+> - id: GC-53; locator: section 3.9; role: modelled evidence: large effect
+> "The effect of an opposite direction of plausible residual confounding seems theoretically also applicable in assessing the certainty of model outputs (i.e., a conservative model not incorporating input data parameter in favor of an intervention but still finding favorable outputs), but an actual example of this phenomenon in modeling studies is still under discussion."
+> - id: GC-54; locator: section 3.9; role: modelled evidence: opposing bias; note: a conservative model that still finds the result
+> "The assessment of inconsistency should focus on unexplained differences across model outputs for a given outcome."
+> - id: GC-55; locator: section 3.14; role: modelled evidence: inconsistency across models
+> "Specific methods for operationalizing this integration remain to be developed."
+> - id: GC-56; locator: section 3.11; role: modelled evidence: limits
+
+### Schunemann2019 (sha256 0951c4536c3204f2ddf095838edba7710164295e60c0b4153f2ebd96e8735323)
+> "The choice of starting observational studies at low rather than moderate or very low certainty followed intense discussion in the GRADE working group’s early days, and was based on the group’s assessment of the magnitude of the potential for residual confounding, and the limited protection against bias provided by adjusted analysis in observational studies."
+> - id: GC-57; locator: Introduction; role: starting level: why observational starts low; note: residual confounding
+> "the initial GRADE certainty in the evidence from a body of studies using an NRS design would be high"
+> - id: GC-58; locator: main text on ROBINS-I and the initial rating (after the section 4 heading); role: starting level: alternative; note: start high when a full risk-of-bias tool is applied; basis of mapping M2
+> "First, users of GRADE may inappropriately double count the risk of confounding and selection bias"
+> - id: GC-59; locator: section 4; role: limits: double counting; note: start level and risk of bias must not count one defect twice
+> "the final certainty rating should be the same."
+> - id: GC-60; locator: same passage; role: starting level: mappings should converge; note: tested here by rating under two mappings
+
+### Murad2017 (sha256 8a5ae4b257b8f7b74f6755d20da45a5f8cbcb040b4e7c9fe8aeedfa5520421a1)
+> "In this guide, we illustrate how to apply the constructs of the GRADE (Grading of Recommendation, Assessment, Development and Evaluation) approach to assess the certainty in evidence when a meta-analysis has not been performed and data were summarised narratively."
+> - id: GC-61; locator: abstract; role: certainty without a pooled estimate
+> "Judge inconsistency by evaluating the consistency of the direction and primarily the difference in the magnitude of effects across studies"
+> - id: GC-62; locator: Table 1, Inconsistency; role: domain: inconsistency without a pooled estimate; note: direction first
+> "rather, we address evidence synthesis of quantitative estimates of effect not amenable to meta-analysis (and thus summarised narratively)."
+> - id: GC-63; locator: section 'The approach'; role: limits: not for conceptual questions; note: GRADE's narrative guidance excludes reviews of 'conceptual underpinnings'
+
+### Schunemann2019 (sha256 0951c4536c3204f2ddf095838edba7710164295e60c0b4153f2ebd96e8735323)
+> "If GRADE assessments for all types of studies were to start at high certainty, questions of intervention, prognosis, values and preferences, and test accuracy, would not require different initial certainty ratings."
+> - id: GC-64; locator: main text, advantages of a single starting point; role: starting level: differs by question type; note: GRADE's starting level already depends on the kind of question
+
+### GRADE-Handbook (sha256 2fb19241ae0c365ef62e7bac16978d48cb6ad75e1b4465fb915912aaa919a606)
+> "Large RR* >2 or <0.5 (based on direct evidence, with no plausible confounders) may increase 1 level"
+> - id: GC-65; locator: Table 5.9 (row flattened by text extraction); role: upgrade: large effect, threshold; note: factor of 2, direct evidence only
+> "Very large RR* >5 or <0.2 (based on direct evidence with no serious problems with risk of bias or precision, i.e. with (sufficiently narrow confidence intervals) may increase 2 levels"
+> - id: GC-66; locator: Table 5.9 (row flattened by text extraction); role: upgrade: very large effect, threshold; note: factor of 5
+> "it is possible that stroke - much more vulnerable to biased judgments - will be rated down for risk of bias, whereas all-cause mortality will not."
+> - id: GC-67; locator: section 5, Example 1; role: domain: risk of bias, by vulnerability of the outcome; note: basis for counting non-blind same-model review only where a judgement decides the verdict

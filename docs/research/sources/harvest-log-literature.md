@@ -149,3 +149,26 @@ Fetched 2026-10-13 00:16 to about 01:05 UTC (2026-10-12 18:16 to 19:05 -06:00) w
 Extraction (files read as data, never executed or loaded; scripts kept in the session scratch directory, outside the download directory, run as `research/.venv/bin/python -I`): `pdftotext -layout` for the PDFs; a tag stripper for HTML and XML; a wikitext stripper (references, link brackets and quote marks removed) for the three Wikipedia pages. Text files are in `txt/` beside the fetch directories. 95 quotes (AT-01 to AT-95) machine-checked as substrings after whitespace, curly-quote and ligature normalisation, with line-end hyphens tried three ways; 0 misses. The checker re-reads the quotes from `quotes-literature.md`, not from the extraction step.
 
 Not fetched or not read: Toulmin 1958; Walton, Reed and Macagno 2008; Walton 1996; van Eemeren and Grootendorst 1984, 1992, 2004; van Eemeren, Grootendorst and Snoeck Henkemans 2002; Lumer 2022 (bot challenge). The order of the argument-scheme and validity rules differs between sources (the Wikipedia list, after the 2002 textbook, puts the scheme rule seventh and the validity rule eighth; the pass says from memory that the 2004 book reverses them, and does not rely on the numbering).
+
+## Criticality pass vi (certainty of evidence: GRADE), 2026-10-12
+Fetched 2026-10-13 00:54 to about 00:57 UTC (2026-10-12 18:54 to 18:57 -06:00) with `curl -sS -L --max-time 60` to `120`, serial, curl's default user agent, each kept file in its own new directory under `sources/raw/crit6-grade-2026-10-12/` (gitignored). Nothing posted, archived or sent; no login; no bot challenge solved; TLS verification left on. Discovery: seven Europe PMC REST title searches, used only to read PMCIDs; the URLs of the handbook and of the PMC pages were known to the agent and were confirmed by the fetch, and every citation detail in the bib rows was read from the fetched files. The session's web-search tool was not used. Purpose: the certainty definitions and domains applied in `docs/research/criticality/grade-certainty-2026-10-12.md`. Bib rows: `bib-literature.md`, section "Criticality pass vi"; quotes: `quotes-literature.md`, same section name.
+
+| What | URL | Result |
+|---|---|---|
+| Europe PMC title searches (seven: the two BMJ 2008 papers, Brozek 2021, Hultcrantz 2017, Murad 2017, Schünemann 2019, Balshem 2011) | `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:...&format=json` | 200, JSON. Read for PMCIDs, then deleted. Balshem 2011 (PMID 21208779): not in Europe PMC, no PMCID |
+| Europe PMC full-text XML for PMC2335261, PMC2364804, PMC8514123, PMC6692166, PMC6542664 | `https://www.ebi.ac.uk/europepmc/webservices/rest/<PMCID>/fullTextXML` | **500** each (150 B JSON error; the articles are not in the open-access subset). Deleted |
+| Murad 2017, Europe PMC | `https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5502230/fullTextXML` | 200, XML, 39,267 B, sha256 `8a5ae4b2...21a1` |
+| GRADE Handbook | `https://gdt.gradepro.org/app/handbook/handbook.html` | 200, HTML, 566,499 B, sha256 `2fb19241...a606` |
+| NCBI E-utilities, PMC2335261 and PMC2364804 | `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=<n>&rettype=xml` | 200, front matter only (9,318 B and 8,857 B) with the comment that the publisher "does not allow downloading of the full text in XML form". Deleted |
+| NCBI E-utilities, Brozek 2021 | `...efetch.fcgi?db=pmc&id=8514123&rettype=xml` | 200, XML, 148,843 B, sha256 `0142e586...c7dd` |
+| NCBI E-utilities, Schünemann 2019 | `...efetch.fcgi?db=pmc&id=6692166&rettype=xml` | 200, XML, 81,050 B, sha256 `0951c453...5323` |
+| NCBI E-utilities, Hultcrantz 2017 | `...efetch.fcgi?db=pmc&id=6542664&rettype=xml` | 200, XML, 72,368 B, sha256 `85778c4f...97fd` |
+| Europe PMC PDF render of the two BMJ papers | `https://europepmc.org/articles/<PMCID>?pdf=render` | **403** each (challenge page, about 5.5 kB). Not bypassed. Deleted |
+| BMJ, the two 2008 papers | `https://www.bmj.com/content/336/7650/924.full`, `.../336/7651/995.full` | **403** each ("Just a moment...", 5,423 B). Not bypassed. Deleted |
+| PubMed Central page, Guyatt 2008a | `https://pmc.ncbi.nlm.nih.gov/articles/PMC2335261/` | 200, HTML, 125,327 B, sha256 `334e55d8...01ff` |
+| PubMed Central page, Guyatt 2008b | `https://pmc.ncbi.nlm.nih.gov/articles/PMC2364804/` | 200, HTML, 158,672 B, sha256 `3f6d7431...38aa` |
+| GRADE Book, overview chapter | `https://book.gradepro.org/guideline/overview-of-the-grade-approach` | 200, 2,099 B: an application shell with no text (script-rendered). Not read; deleted |
+
+Extraction (files read as data, never executed or loaded; scripts kept in the session scratch directory, outside the download directory, run as `research/.venv/bin/python -I`): one tag stripper for HTML and XML. Text files are in `txt/` beside the fetch directories. 67 quotes (GC-01 to GC-67) cut by script from the extracted text by a start and an end string, written to `quotes-literature.md`, then re-read from that file and checked as substrings after whitespace normalisation; 0 misses.
+
+Not fetched or not read: the GRADE Book; Balshem et al. 2011 and the J Clin Epidemiol papers on the single domains (GRADE guidelines 4 to 9); the GRADE guidance on prognosis (the pass cites a starting level for prognosis only through GC-64); any GRADE-CERQual text.
