@@ -258,6 +258,14 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:A2e-alpha-uricchio | audit | Uricchio, Petrov and Enard 2019 full text: human-lineage ABC-MK alpha 0.135 (HPD 0.096-0.17) mapped to the A2e flip (191); two-reading scoping | RESULTS §A2e-alpha addendum; results/R4-A2e-alpha.md addendum (added 2026-10-11) |
 | chk:GAP05 | audit | slightly deleterious fixations on the human lineage from a sourced DFE (Kim, Huber & Lohmueller 2017) with Kimura fixation; pre-registered and calibrated bases | RESULTS §GAP05; results/R4-GAP05.md (added 2026-10-11) |
 | chk:HF | audit | H follow-ups: soft-rate limit with hardness h, truncation (noise-free and phenotypic), synergy, T50/lam50 intervals, GAP-05, and post hoc run ph | RESULTS §HF; results/R4-HF.md (added 2026-10-13) |
+| chk:L1b | audit | T2T rerun of L1: GENCODE v35 CAT on hs1 against mPanTro3 (Cactus MAF), column-paired extraction and a naive position-by-position arm (X1); band CRITIC | RESULTS §L1b; results/R4-L1b.md (added 2026-10-13) |
+| rev:R4-L1b-correctness | audit | review #70, correctness (L1b); load-bearing tier | results/REVIEW-R4-L1b-correctness.md (2026-10-13) |
+| rev:R4-L1b-steelman-day | audit | review #71, Day-side steelman (L1b); load-bearing tier | results/REVIEW-R4-L1b-steelman-day.md (2026-10-13) |
+| rev:R4-L1b-steelman-critic | audit | review #72, critic-side steelman (L1b); load-bearing tier | results/REVIEW-R4-L1b-steelman-critic.md (2026-10-13) |
+| chk:L1c | audit | alignment method against human-chimp dN/dS (Day's protein-guided "gapping out" mechanism, Q180-Q186): protein-guided arms on the L1b codons, synthetic transfer table, CSAC 2005 method text; band CRITIC | RESULTS §L1c; results/R4-L1c.md (added 2026-10-13) |
+| rev:R4-L1c-correctness | audit | review #73, correctness (L1c); load-bearing tier | results/REVIEW-R4-L1c-correctness.md (2026-10-13) |
+| rev:R4-L1c-steelman-day | audit | review #74, Day-side steelman (L1c); load-bearing tier | results/REVIEW-R4-L1c-steelman-day.md (2026-10-13) |
+| rev:R4-L1c-steelman-critic | audit | review #75, critic-side steelman (L1c); load-bearing tier | results/REVIEW-R4-L1c-steelman-critic.md (2026-10-13) |
 | rev:R4-RHclose-combined | audit | review #62, combined (RHclose); low-stakes tier | results/REVIEW-R4-RHclose-combined.md (2026-10-11) |
 | rev:R4-RHclose-critics-combined | audit | review #63, combined (RHclose-critics); low-stakes tier | results/REVIEW-R4-RHclose-critics-combined.md (2026-10-11) |
 | rev:R4-A2e-uricchio-combined | audit | review #64, combined (A2e-alpha Uricchio addendum); low-stakes tier | results/REVIEW-R4-A2e-uricchio-combined.md (2026-10-11) |

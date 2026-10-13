@@ -3959,3 +3959,36 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#66-#69), fix-passed (c2ac2c3) and integrated 2026-10-13"
+
+- id: L-audit-l1b-2026
+  label: "Audit L1b: on the T2T assemblies with bases paired by alignment column the pooled dN/dS is 0.27 (all) and 0.24 (one2one); a position-by-position extraction reads 0.85, a candidate error class"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [DN1, DN2, DN3, DN5]
+  locator: "research/checks/results/R4-L1b.md"
+  quote: "a candidate error class with a real-data instance"
+  parents:
+    - {id: L-audit-l1-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#70-#72), fix-passed (098ac12) and integrated 2026-10-13"
+
+- id: L-audit-l1c-2026
+  label: "Audit L1c: protein-guided alignment lowers dN/dS by 2-6% here, not 71%; the published 0.23 came from a BLASTZ genome alignment"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [DN6, DN1, DN3, DN5]
+  locator: "research/checks/results/R4-L1c.md"
+  quote: "The published 0.23 was not made by a protein-guided alignment"
+  parents:
+    - {id: L-audit-l1b-2026, relation: descends}
+    - {id: L-day-dnds-080-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#73-#75), fix-passed (140a69a) and integrated 2026-10-13; external codon aligner from an independent chimp CDS not run"

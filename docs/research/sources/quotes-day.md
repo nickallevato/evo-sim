@@ -2192,3 +2192,31 @@ Kept in this file only because this pass's write set is the Day-side source file
 - branch: Triveritas / worked example, evolution; parameters for `ledgers/versions.md`; RH tag: dialectic; speaker: Day
 - quote: "Using the most generous assumptions—the longest timescales proposed, the shortest generation lengths, the fastest fixation rates ever observed in any organism—the mathematics permits fewer than three hundred fixed mutations in the human lineage. The theory requires at least twenty million."
 - note: Numbers as stated in the Treatise serial of 2026-02-27. Not reconciled here with the MITTENS versions (branch A).
+
+## Refresh 2026-10-13 quotes (Q272-Q274; added 2026-10-13, integration of L1b and L1c)
+
+Passages cited by the L1b and L1c write-ups that had no Q id. Each checked by machine against the held body text (paragraph numbers count non-empty lines).
+
+### Q272 'The data is complete': 98.8% of coding positions are found (added 2026-10-13)
+- source: voxday.net, "How Biologists Keep "Proving" Selection" (2026-10-11 14:13:57 UTC) (SG cross-post not seen)
+- locator: ¶12 of the non-empty paragraphs of the saved body text (the diagnostics paragraph; the sentence is in the middle of the paragraph, followed without a space by "Is the substitution classification correct?")
+- local copy: sources/raw/refresh-2026-10-11/post-how-biologists-keep-proving-selection/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic (a numeric completeness statement)
+- quote: "98.8% of coding positions are found."
+- note: The same paragraph states "The extraction contains 226 million positions for chromosome 1 alone". Reproduced in kind by L1b (98.87% of CDS bases, 98.84% of codons with a first-row chimp base on the audit's Cactus extraction). A credit to Day, R4-L1b "Who this helps".
+
+### Q273 'The whole-genome alignment we utilize doesn't have this scoring bias' (added 2026-10-13)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶11 of the non-empty paragraphs of the saved body text (first sentence)
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "The whole-genome alignment we utilize doesn’t have this scoring bias."
+- note: Day exempts the Cactus whole-genome alignment from the bias he asserts in Q180-Q182. The paragraph continues: "Cactus aligns DNA based on genomic context ... When we project gene coordinates onto that alignment and extract codons, we get ALL the aligned coding positions, not just the ones that are deemed to look conserved at the protein level." Relevant to DN6 Reading d (an extended reading, not taken from his text).
+
+### Q274 'What the Consortium's method actually measured' (added 2026-10-13)
+- source: voxday.net, "The Method is the Conclusion" (2026-10-12 14:12:35 UTC) (SG cross-post not seen)
+- locator: ¶14 of the non-empty paragraphs of the saved body text (first two sentences)
+- local copy: sources/raw/refresh-2026-10-12/post-the-method-is-the-conclusion/body.txt
+- branch: ROOT-FM / selection strength / dN/dS; RH tag: dialectic
+- quote: "So what the Consortium’s method actually measured is: “among the coding positions conserved enough to survive protein alignment, how conserved are they?” That’s not a valid measurement, that’s a tautological quantification."
+- note: The one sentence that states outright that the Consortium's 0.23 came through a protein alignment. Held CSAC 2005 text says the 13,454-gene set came from the BLASTZ genome alignment (quotes-literature.md CSAC2005, Methods, Genome alignment). DN6 Reading a (fidelity `misread`).

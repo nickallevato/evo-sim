@@ -686,6 +686,8 @@ Verbatim (whitespace-normalised substrings of the saved text, machine-checked 20
 > - locator: main text, gene-evolution section (~l.702-704; added 2026-10-12, machine-checked); role: N; params: Q180, Q185 (the 13,454 set was selected on alignment quality and coverage: a point for Day's gene-set/alignment concern, and a point against reading the 0.23 as a protein-guided gap-out)
 > "than the value of 0.23 obtained with all human–chimpanzee orthologues"
 > - locator: main text (~l.891); role: N; note: the 0.23 is stated as the all-orthologue (13,454) value
+> "Genome alignment. BLASTZ154 was used to align non-repetitive chimpanzee regions against repeat-masked human sequence."
+> - locator: Methods, Genome alignment (CSAC2005.txt l.1982-1983; added 2026-10-13, machine-checked against the held txt, whitespace normalised); role: N; params: Q180, DN6 (the genome alignment behind the 13,454 list is a BLASTZ nucleotide alignment; BLAT for the more repetitive regions, chained, "only best reciprocal alignments were retained", l.1983-1985)
 
 ### Nielsen2005 (sha256 a091301eb921b2df4616b1044bf5e40003477e9462be035c6cb2a3cdeae69ebb)
 > "The average numbers of nonsynonymous and synonymous mutations per nucleotide site are 0.002578 and 0.003281, respectively."

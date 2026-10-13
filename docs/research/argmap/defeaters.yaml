@@ -5873,3 +5873,143 @@
   counter: []
   note: 'Applied in fix pass c2ac2c3; the R = 1.111 h = 0.1 calls are marginal.'
   hierarchy_edge: false
+
+- id: d452
+  attacker: chk:L1b
+  target: DN1
+  target_part: P1
+  type: undermining
+  by: ['audit (check L1b)']
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-L1b.md
+  audit_status: partly
+  audit_basis: 'reviewed (#70-#72), fix-passed (098ac12), integrated 2026-10-13; T2T / GENCODE v35 CAT / Cactus, bases paired by alignment column: V0 ALL 0.271, one2one 0.238, syntenic 0.209; 0.246-0.293 under every chimp-row choice; 0.214-0.283 over 32 filter stacks; band CRITIC. Scope: this alignment and annotation, one estimator'
+  counter: [d457, d458]
+  note: 'Critic-side: "0.80 is a property of the genomes" (DN1 Reading A) is contradicted on the assemblies Day names. Day-side (partly): a position-by-position extraction of the first chimp row (X1) reads 0.853 pooled, so his number is reproducible in kind on these data (Reading B, identity with his pipeline untestable); X1 is the audit''s own missed prediction, a candidate error class with a real-data instance, LOCATED not licensed; the 1.16% of codons the column pairing leaves out are bounded (0.56-0.85), not tested.'
+  hierarchy_edge: false
+
+- id: d453
+  attacker: chk:L1b
+  target: DN3
+  target_part: C
+  type: rebutting
+  by: ['audit (check L1b)']
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-L1b.md
+  audit_status: partly
+  audit_basis: 'reviewed (#70-#72), integrated 2026-10-13; T2T: ALL - one2one +0.033 (+14%), +30% against the CSAC-like set, +3% among syntenic genes; non-one2one genes 1.93 times one2one; DN3 external contradicted, extended to the alignment-level version; registered `supported` needed >= +0.40'
+  counter: [d457, d458]
+  note: 'Day-side credit: a gene-set effect with his sign on a second pipeline (hg38 +31%, T2T +14%), stated with all numbers and no materiality label on the T2T value; size depends on annotation and composition. Critic-side: +0.033 against the +0.57 needed; Day''s own Q184 table shows +0.003.'
+  hierarchy_edge: false
+
+- id: d454
+  attacker: chk:L1c
+  target: DN6
+  target_part: P1
+  type: undermining
+  by: ['audit (check L1c)']
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-L1c.md
+  audit_status: upheld
+  audit_basis: 'reviewed (#73-#75), fix-passed (140a69a), integrated 2026-10-13; held CSAC 2005 Methods: the 13,454-gene set came from the BLASTZ genome alignment ("were indirectly aligned to the chimpanzee sequence via the genome alignment"), Clustal W only for a 7,043-gene subset; U0 on the real list reproduces 0.219 and 42.6% against the published row 0.2300 and ~40%. Fidelity misread on reading a; a-broad partial/unverifiable'
+  counter: [d459, d460, d461]
+  note: 'Critic-side: protein-guided alignment does not explain the published 0.23; no simulation needed. Day-side (partly, recorded in the reading a-broad): CSAC removed "low-quality sequences and likely alignment artefacts" and chose genes with high-quality, near-full-coverage alignments, so alignment quality did select the set; its criteria are in the SI, not held. Reading d (the Cactus genome alignment is itself the conservation-dependent step; Day''s own post exempts it, Q273) is extended and not tested.'
+  hierarchy_edge: false
+
+- id: d455
+  attacker: chk:L1c
+  target: DN6
+  target_part: P2
+  type: undermining
+  by: ['audit (check L1c)']
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-L1c.md
+  audit_status: partly
+  audit_basis: 'band CRITIC (registered and amended); realistic protein-guided arms lower pooled dN/dS by 2.3-5.8% (ALL) and 1.3-3.7% (real list) against the 71% needed; direction is Day''s in every arm (dropped codons 0.71-0.85 nonsynonymous against 0.479); external contested on reading b2, b1 contradicted'
+  counter: [d459, d460, d461]
+  note: 'Critic-side: the size is an order of magnitude too small at human-chimp divergence on this alignment, annotation and in-script aligner. Day-side: the direction is real; a strict protein-score filter (PAF2, stress arm) lowers the estimate by a third; synthetic near-total replacement runs show the mechanism (55-65% low); no external codon aligner or independent chimp CDS was run, which is a condition on any move past contested; the 1.40% of codons no arm sees leave a rise of order 10% open.'
+  hierarchy_edge: false
+
+- id: d456
+  attacker: rev:R4-L1b-correctness
+  target: chk:L1b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #70)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L1b-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 1 MAJOR (what the X1 misregistration consists of; post hoc breakdown needed), 7 MINOR, 9 NOTE; all table cells reproduced'
+  counter: []
+  note: 'Applied in fix pass 098ac12: post hoc breakdown of X1 (in-frame indel 55.7%, hole 28.8%, frame-changing indel 8.4%, exon edge 7.1%); "frame-preserving" replaced by "pairs bases by alignment column"; 73.6% labelled post hoc.'
+  hierarchy_edge: false
+
+- id: d457
+  attacker: rev:R4-L1b-steelman-day
+  target: chk:L1b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #71)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L1b-steelman-day.md
+  audit_status: partly
+  audit_basis: '0 BLOCKER, 4 MAJOR (DN1 Readings table; 73.6% outcome-defined and the no-constraint counterpoint; left-out codons unbounded; credit stated with all numbers), 4 MINOR, 3 NOTE'
+  counter: []
+  note: 'Day-side. Against "Day''s 0.80 is shown to be an extraction artefact": his pipeline is unseen, the naive arm only locates a candidate class (X1 reproduces his number in kind, misses his share on the whole set, his single-difference ratio and, under S, his filter floor). Accepted in part (fix pass 098ac12): Readings table, left-out-codon section, all-numbers credit; not adopted: post hoc narrowing or broadening of the registered sentence.'
+  hierarchy_edge: false
+
+- id: d458
+  attacker: rev:R4-L1b-steelman-critic
+  target: chk:L1b
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #72)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L1b-steelman-critic.md
+  audit_status: partly
+  audit_basis: '0 BLOCKER, 3 MAJOR (registered CRITIC sentence not to be narrowed post hoc; X1 is the audit''s own miss; share-uniformity split), 7 MINOR, 4 NOTE'
+  counter: []
+  note: 'Critic-side. Accepted in full: the registered sentence kept as written. Accepted in part: X1 credited to neither side (lead ruling), not entered under the critics.'
+  hierarchy_edge: false
+
+- id: d459
+  attacker: rev:R4-L1c-correctness
+  target: chk:L1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #73)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L1c-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (the x discriminator does not separate saturated runs from misalignment; the indel-free bound on the clustering regime), 5 MINOR, 5 NOTE; rulings: Reading A amended `contested` is the result of record, docstring licenses `contested` and not `contradicted` for DN6 Reading b'
+  counter: []
+  note: 'Applied in fix pass 140a69a with post hoc transfer-excl (6c5d8cf, 40e4021).'
+  hierarchy_edge: false
+
+- id: d460
+  attacker: rev:R4-L1c-steelman-day
+  target: chk:L1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #74)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L1c-steelman-day.md
+  audit_status: partly
+  audit_basis: '0 BLOCKER, 4 MAJOR (arms re-pair Cactus-paired codons; Reading d, the genome alignment as the conservation-dependent step; realistic/stress are the audit''s labels; clustering regime in the genes where the mechanism acts), 4 MINOR, 2 NOTE'
+  counter: []
+  note: 'Day-side. Against "L1c shows alignment cannot lower dN/dS": the transfer table shows it can at clustered divergence (lenient trim and Gblocks rule 55-65% low) and the prior-filter reading (d) is untested. Accepted: contested is not strengthened; reading d recorded as extended and not tested with its bound (cannot carry 0.80 or 0.65 unless the left-out 1.40% reads like unrelated sequence; a rise of order 10% open). Not adopted: moving reading d into the field.'
+  hierarchy_edge: false
+
+- id: d461
+  attacker: rev:R4-L1c-steelman-critic
+  target: chk:L1c
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #75)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-L1c-steelman-critic.md
+  audit_status: partly
+  audit_basis: '0 BLOCKER, 4 MAJOR (contested rests on a reading wider than the quoted statement; fidelity misread needs no simulation; size bound as headline; register-loss account undersold), 3 MINOR, 2 NOTE'
+  counter: []
+  note: 'Critic-side. Adopted: fidelity misread first, size bound as the headline, b1/b2 split. Where it conflicts with the Day-side review, both positions are recorded as readings (RD): the field takes b2 (`contested`). Not adopted: b1 `contradicted` in the field.'
+  hierarchy_edge: false

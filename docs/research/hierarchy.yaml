@@ -2756,8 +2756,8 @@ nodes:
   status: extracted
   verdicts:
     internal: pending
-    fidelity: pending
-    external: pending
+    fidelity: misread
+    external: contested
   claim_file: docs/research/claims/DN6-protein-guided-alignment-biases-dnds-down.md
 - id: E
   title: 'Punctuated equilibrium''s peripatric mechanism sits where hypermutation is favoured: 6 of 12 LTEE populations became mutators and a
