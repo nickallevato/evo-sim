@@ -418,6 +418,21 @@ POST HOC 2026-10-13 (fix pass after the three reviews of R4-FMnull; AFTER the ru
     data remain far from it; block models with f e^2 <= 0.02 stay inside the bound at every phase.
     simphase : python -I research/checks/fm_mesa_null.py simphase research/checks/results/raw/fmnull_simphase.json \
                [research/checks/results/raw/fmnull_sim.json]      (1 process, ~10 min, < 600 MB, na-workhorse)
+  MODE `p45fix` (correctness review, finding 1).  `inhouse()` maps the labels 1kb, 10kb, 100kb, 1Mb, but
+  raw/fm_analyse.json names the last cell 1000kb, so the twenty 1-Mb cells were skipped without a message and
+  P4 / P5 were computed on a truncated grid.  `inhouse()` and raw/fmnull_analytic.{out,json} are NOT changed.
+  `inhouse_fix` has the same body with both labels accepted, an assertion that every `auto|...` key is mapped
+  and that the cell count is the expected one (80 on the committed grid), and two counts per set: the cells
+  the code scores (F0-F3) and the registered cell sets (P5: F0, F2, F3; P4: F0 and F2).  With `truncated=True`
+  it uses the registered label map and must reproduce the committed P5 cells and the R1 / R1x rows of P4
+  (checked, `reproduces_committed`).  R2 rows: the window is computed; the band is evaluated only if the
+  window is <= 31.6 Mb (the top of the registered crossing grid), otherwise recorded as not evaluated (windows
+  of 0.03 to 0.9 Gb are longer than most chromosomes and no measured index reaches 6,400).  No prediction is
+  attached: P4 and P5 are "informed, not predictive" (A10) and the correctness reviewer has already computed
+  the label-fixed counts (P5 79 / 80 PREREG, 75 / 80 SOURCED; P4 R1 CRITIC 40 / 40 PREREG, 37 + 3 BELOW SOURCED),
+  which this mode is expected to reproduce.
+    p45fix : python -I research/checks/fm_mesa_null.py p45fix research/checks/results/raw/fmnull_p45fix.json \
+             > research/checks/results/raw/fmnull_p45fix.out        (local, one process, seconds)
 """
 import functools
 import json
@@ -1628,6 +1643,150 @@ def simphase(outjson, ref_json=None, genome_mb=300, reps=10, seed=20261012):
     return res
 
 
+WMAP_REG = {"1kb": 1e3, "10kb": 1e4, "100kb": 1e5, "1Mb": 1e6}                 # as in inhouse() (48241c7)
+WMAP_FIX = {"1kb": 1e3, "10kb": 1e4, "100kb": 1e5, "1000kb": 1e6, "1Mb": 1e6}  # post hoc: both spellings of 1 Mb
+P5_REG_FILTERS, P4_REG_FILTERS, R2_BAND_MAX_W = ("F0", "F2", "F3"), ("F0", "F2"), 10 ** 7.5
+
+
+def inhouse_fix(fm_json, truncated=False, expect_cells=None):
+    """inhouse() with the 1-Mb label accepted (post hoc 2026-10-13).  Same body; adds the mapping assertion, the
+    registered-cell-set counts, and skips the band of R2 rows whose window is beyond R2_BAND_MAX_W."""
+    g = json.load(open(fm_json))["grid"]
+    Wmap = WMAP_REG if truncated else WMAP_FIX
+    auto = [k for k in g if k.split("|")[0] == "auto"]
+    if not truncated:
+        unmapped = [k for k in auto if k.split("|")[2] not in Wmap]
+        assert not unmapped, ("window labels not mapped", unmapped)
+    cells, curves = [], {}
+    for key, v in g.items():
+        st, filt, wl = key.split("|")
+        if st != "auto" or wl not in Wmap:
+            continue
+        W = Wmap[wl]
+        hk = "N_hi_unmasked" if filt in ("F0", "F1") else "N_hi_masked"
+        for L in ("H", "C", "B", "G", "DHC"):
+            if L not in v or "phi" not in v[L]:
+                continue
+            p, phi = v[L]["density"], v[L]["phi"]
+            lo, _ = band(W, p, "N_lo")
+            hi, _ = band(W, p, hk)
+            cells.append(dict(cell=key, L=L, phi=phi, d=p, lo=lo, hi=hi, out=classify(phi, lo, hi)))
+            curves.setdefault((filt, L), []).append((W, phi, p))
+    if not truncated:
+        want = sum(1 for k in auto for L in ("H", "C", "B", "G", "DHC") if L in g[k] and "phi" in g[k][L])
+        assert len(cells) == want, (len(cells), want)
+        assert expect_cells is None or len(cells) == expect_cells, (len(cells), expect_cells)
+    p4 = {}
+    for (filt, L), pts in curves.items():
+        pts.sort()
+        if len(pts) < 2:
+            continue
+        lw = np.log([q[0] for q in pts])
+        lp = np.log([max(q[1], 1.0001) for q in pts])
+        dmean = float(np.mean([q[2] for q in pts]))
+        hk = "N_hi_unmasked" if filt in ("F0", "F1") else "N_hi_masked"
+        for r, T in READINGS.items():
+            if lp[-1] >= math.log(T):
+                W80 = float(np.exp(np.interp(math.log(T), lp, lw)))
+                extrap = False
+            else:   # log-log extrapolation from the last two points (flagged)
+                slope = (lp[-1] - lp[-2]) / (lw[-1] - lw[-2])
+                W80 = float(np.exp(lw[-1] + (math.log(T) - lp[-1]) / max(slope, 1e-6)))
+                extrap = True
+            if W80 > R2_BAND_MAX_W:
+                p4[f"{filt}|{L}|{r}"] = dict(W_T=W80, extrapolated=extrap, lo=None, hi=None,
+                                             out="band not evaluated (window beyond 31.6 Mb)")
+                continue
+            lo, _ = band(W80, dmean, "N_lo")
+            hi, _ = band(W80, dmean, hk)
+            p4[f"{filt}|{L}|{r}"] = dict(W_T=W80, extrapolated=extrap, lo=lo, hi=hi, out=classify(T, lo, hi))
+
+    def tally(rows, key):
+        t = {}
+        for x in rows:
+            t[x[key]] = t.get(x[key], 0) + 1
+        return t
+    reg5 = [c for c in cells if c["cell"].split("|")[1] in P5_REG_FILTERS]
+    out = {"P5_cells": cells, "P5_inside": sum(c["out"] == "CRITIC" for c in cells), "P5_n": len(cells),
+           "P5_registered_set": dict(filters=P5_REG_FILTERS, inside=sum(c["out"] == "CRITIC" for c in reg5), n=len(reg5)),
+           "P5_not_inside": [dict(cell=c["cell"], L=c["L"], phi=c["phi"], lo=c["lo"], hi=c["hi"], out=c["out"])
+                             for c in cells if c["out"] != "CRITIC"],
+           "P4": p4, "P4_tally": {}}
+    for r in READINGS:
+        rows = [dict(v, k=k) for k, v in p4.items() if k.endswith("|" + r)]
+        out["P4_tally"][r] = dict(code_curves=tally(rows, "out"), n_code=len(rows),
+                                  registered_curves=tally([x for x in rows if x["k"].split("|")[0] in P4_REG_FILTERS], "out"),
+                                  extrapolated=sum(x["extrapolated"] for x in rows))
+    return out
+
+
+def selftest_fix():
+    """Post hoc 2026-10-13: inhouse_fix on a synthetic four-label grid (the case `selftest` never had)."""
+    import tempfile
+    d = tempfile.mkdtemp()
+
+    def grid(labels):
+        return {"grid": {f"auto|{f}|{wl}": {L: {"phi": 2.0 + 5.0 * i + j, "density": 0.005 + 0.001 * j}
+                                             for j, L in enumerate(("H", "C", "B", "G", "DHC"))}
+                         for f in ("F0", "F1", "F2", "F3") for i, wl in enumerate(labels)} | {"chrX|F0|1kb": {}}}
+    for name, labels in (("a", ("1kb", "10kb", "100kb", "1000kb")), ("b", ("1kb", "10kb", "100kb", "1Mb"))):
+        json.dump(grid(labels), open(os.path.join(d, name + ".json"), "w"))
+    a = inhouse_fix(os.path.join(d, "a.json"), expect_cells=80)
+    b = inhouse_fix(os.path.join(d, "b.json"), expect_cells=80)
+    t = inhouse_fix(os.path.join(d, "a.json"), truncated=True)
+    assert a["P5_n"] == b["P5_n"] == 80 and t["P5_n"] == 60 and a["P5_registered_set"]["n"] == 60
+    assert [c["out"] for c in a["P5_cells"]] == [c["out"] for c in b["P5_cells"]]
+    assert {c["cell"].split("|")[2] for c in a["P5_cells"]} == {"1kb", "10kb", "100kb", "1000kb"}
+    assert len(a["P4"]) == 20 * len(READINGS) and a["P4_tally"]["R1"]["n_code"] == 20
+    assert sum(a["P4_tally"]["R1"]["registered_curves"].values()) == 10
+    json.dump(grid(("1kb", "10kb", "100kb", "5Mb")), open(os.path.join(d, "c.json"), "w"))
+    try:
+        inhouse_fix(os.path.join(d, "c.json"))
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("an unmapped window label must stop inhouse_fix")
+    print("selftest_fix ok")
+
+
+def p45fix(outjson, fm_json=None, analytic_json=None):
+    """Post hoc 2026-10-13: registered P4 / P5 with the 1-Mb label fixed, beside the committed truncated result."""
+    fm_json = fm_json or os.path.join(HERE, "results", "raw", "fm_analyse.json")
+    analytic_json = analytic_json or os.path.join(HERE, "results", "raw", "fmnull_analytic.json")
+    selftest_fix()
+    com = json.load(open(analytic_json))["sets"]
+    res = {"status": "post hoc 2026-10-13 (fix pass); P4 / P5 informed, not predictive (A10); registered outputs kept",
+           "fm_json": fm_json, "sets": {}}
+    for name in PARAM_SETS:
+        use_set(name)
+        tr, fx = inhouse_fix(fm_json, truncated=True), inhouse_fix(fm_json, expect_cells=80)
+        ih = com[name]["inhouse"]
+        same5 = ([(c["cell"], c["L"], c["out"]) for c in tr["P5_cells"]] ==
+                 [(c["cell"], c["L"], c["out"]) for c in ih["P5_cells"]]
+                 and max(abs(a["hi"] / b["hi"] - 1) for a, b in zip(tr["P5_cells"], ih["P5_cells"])) < 1e-9)
+        same4 = all(tr["P4"][k]["out"] == ih["P4"][k]["out"] and abs(tr["P4"][k]["W_T"] / ih["P4"][k]["W_T"] - 1) < 1e-9
+                    for k in ih["P4"] if not k.endswith("|R2"))
+        sameW = all(abs(tr["P4"][k]["W_T"] / ih["P4"][k]["W_T"] - 1) < 1e-9 for k in ih["P4"])
+        res["sets"][name] = dict(truncated=tr, fixed=fx, reproduces_committed=dict(P5=bool(same5), P4_R1_R1x=bool(same4),
+                                                                                   P4_all_windows=bool(sameW)))
+        print(f"===== parameter set {name}; truncated grid reproduces the committed json:", res["sets"][name]["reproduces_committed"])
+        for lab, x in (("REGISTERED code, truncated grid", tr), ("post hoc, label fixed", fx)):
+            print(f"  {lab}: P5 code cells (F0-F3) {x['P5_inside']}/{x['P5_n']}; registered set (F0, F2, F3) "
+                  f"{x['P5_registered_set']['inside']}/{x['P5_registered_set']['n']}")
+            for c in x["P5_not_inside"]:
+                print("    not inside:", c["cell"], c["L"], f"phi {c['phi']:.4g} lo {c['lo']:.4g} hi {c['hi']:.4g}", c["out"])
+            for r, t in x["P4_tally"].items():
+                print(f"    P4 {r}: code curves {t['code_curves']} (extrapolated {t['extrapolated']}/{t['n_code']}); "
+                      f"registered curves (F0, F2) {t['registered_curves']}")
+        for k, v in fx["P4"].items():
+            o = tr["P4"][k]
+            print("  P4", k, f"W_T {o['W_T']:.4g} -> {v['W_T']:.4g}", "extrap" if v["extrapolated"] else "interp",
+                  o["out"], "->", v["out"], "" if v["lo"] is None else f"lo {v['lo']:.4g} hi {v['hi']:.4g}")
+    use_set("PREREG")
+    json.dump(res, open(outjson, "w"), indent=1)
+    return res
+
+
 if __name__ == "__main__":
     a = sys.argv[1:]
     if not a or a[0] == "selftest":
@@ -1654,6 +1813,10 @@ if __name__ == "__main__":
         score(o.W, o.value, o.reading, o.unit, o.masked, o.exposure, o.d, o.cvc, o.real)
     elif a[0] == "post":
         post(a[1], a[2])
+    elif a[0] == "p45fix":              # post hoc 2026-10-13
+        p45fix(a[1], *a[2:4])
+    elif a[0] == "selftest_fix":        # post hoc 2026-10-13
+        selftest_fix()
     elif a[0] == "simphase":            # post hoc 2026-10-13
         simphase(a[1], a[2] if len(a) > 2 else None, *(float(x) if i == 0 else int(x) for i, x in enumerate(a[3:])))
     else:
