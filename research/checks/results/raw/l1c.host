@@ -1,0 +1,9 @@
+na-workhorse.allevato.io
+Tue Oct 13 04:59:22 PM UTC 2026
+launched after L1b collected (commit of l1b raw outputs pushed); L1c script as amended pre-run
+aef21cb3eb0038e8f754a8155fe9ece8  research/checks/l1b_t2t_dnds.py
+2692334e7f66b33738d87e302ec8c25f  research/checks/l1c_alignment_method.py
+fde848f7b5600d17d73f320ccd4ec707  research/checks/l1_dnds_genesets.py
+86b0e672d70bb6be1bd2978f869c06519482f191d11fe06d829d21b573afeacd  sources/raw/l1b-seg-2026-10-13/seg.json.gz
+ac9e966cb41ff72d8f3446c26ded8d2fcb771d681e8c3117091b08de4a3f5bb9  sources/raw/csac2005-nature-2026-10-12/S23_MOESM6.xls
+02c7a3e7f0416b124b78d845f4d0076dc9c292548e92181fbae8f9af9cf19edb  sources/raw/gencode-v35-refseq-2026-10-12/gencode.v35.metadata.RefSeq.gz
