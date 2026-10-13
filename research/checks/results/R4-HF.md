@@ -267,7 +267,7 @@ Rules are the ones fixed in the docstring: HF's rule (no failure, k/lam >= 0.9, 
 | Critic side: every L cell passes HF's rule at every lam | **Hit** (80 of 80 runs) |
 | Day side: in at least one series k/lam falls with lam, below 0.9 at 0.4 with no backlog | **Miss** (k/lam at 0.4 is 0.987 to 1.005) |
 | Audit PL1: k/lam >= 0.95 and q4/q1 <= 1.10 in every cell | **Hit** on cell means (lowest k/lam 0.973, highest q4/q1 1.05); 2 of 80 single runs miss the strict rule |
-| Audit PL1, tau values: about 7,500 / 4,300 / 6,000 / 20,000 / 9,000 | First three within 10%; the two weak-s values are 18-20% below the prediction (15,900 and 7,420) |
+| Audit PL1, tau values: about 7,500 / 4,300 / 6,000 / 20,000 / 9,000 | First three within 10%; the two weak-s values are 18-21% below the prediction (15,900 and 7,420) |
 | Audit PL2: tau flat in lam within 25% | **Hit** (largest spread 5%) |
 
 The flat-k/lam softJ "failures" of the main run at R = 1.05, at K = 4000 and at weak s were a fill lag: the pipeline had not filled when the 5,000-generation burn ended. With a 40,000-generation burn they are gone. Recorded for Day's side: in the three s = 0.01 series tau rises by 4-5% over an 11-fold range of lam, and tau is about 25% longer at K = 4000 than at K = 1000. Sweeps take longer when more are concurrent and when the population is larger; neither lowers throughput in this range.
@@ -293,7 +293,7 @@ The flat-k/lam softJ "failures" of the main run at R = 1.05, at K = 4000 and at 
 | Day side, DA2 restated: K = 4000 sustains less than K = 1000 at R = 1.111, not explained by the fill lag | **Undecided.** At lam 0.8 K = 1000 passes 3/4 and K = 4000 passes 0/3, so the first half is met. The second half is not settled: k/lam falls with lam at both K (0.931 to 0.916; 0.894 to 0.871), tau exceeds the 5,000-generation burn in three of the four cells, and the long-burn series above show no K deficit up to lam 0.4 |
 | Critic side: no K effect beyond the lag | **Undecided**, for the same reason |
 
-What stage C settles: the main run's failures at nopen near 5,000 were the cap (with the cap at 20,000 the mean open count is 3,600 to 11,200 and no run fails on it). What it does not settle: whether lam 0.8 and 1.6 are sustained in the steady sense, because a 20,000-generation run with a 5,000-generation burn is too short when tau is 3,700 to 9,300 and the open count is still rising. The audit predicted that two of these cells would pass the rule and they did not. A long-burn run at lam 0.8 and 1.6 would decide it and has not been run. In every C cell the realised rate over the window is at least 0.63 substitutions per generation (k/lam x lam).
+What stage C settles: the main run's failures at nopen near 5,000 were the cap (with the cap at 20,000 the mean open count is 3,600 to 11,200 and no run fails on it). What it does not settle: whether lam 0.8 and 1.6 are sustained in the steady sense, because a 20,000-generation run with a 5,000-generation burn is too short when tau is 3,700 to 9,300 and the open count is still rising. The audit predicted that two of these cells would pass the rule and they did not. A long-burn run at lam 0.8 and 1.6 would decide it and has not been run. In every C run the realised rate over the window is at least 0.62 substitutions per generation (lowest cell mean 0.63).
 
 **DA2 and PA4 by the letter.** With the cap released the two can be scored at this horizon: softJ lam_max at R = 1.111 is 0.8 at K = 1000 and 0.4 at K = 4000 (4/4 at 0.4 in stage L; 0/3 at 0.8 here). DA2 ("K = 4000 lam_max <= K = 1000 lam_max") **holds by the letter**; PA4 ("within one lam step") **holds**. The cause of the one-step difference is the undecided item above, so neither is evidence for or against a K effect on the limit.
 
@@ -312,7 +312,7 @@ What stage C settles: the main run's failures at nopen near 5,000 were the cap (
 | Day side: h = 0.1 lam50(20k) < 3x the cap at R = 1.111 (< 0.0110) | **Miss** (0.0130, 3.53x) |
 | Critic side (CA2 restated): h = 0.1 lam50(20k) >= 3x the cap at R = 1.111 and at R = 2 | **Hit** at both (0.0130 >= 0.0110; 0.128 >= 0.109) |
 | Audit PM1 [0.0094, 0.0135], PM2 [0.12, 0.18], PM3 [0.0045, 0.0090], PM4 [0.045, 0.090] | **Hit**, all four (PM1 and PM4 near an edge) |
-| Audit PM5: the mean-field limit within 2x of lam50(20k) in all four | **Miss**: 1.21x and 0.90x at R = 1.111, but 2.27x and 2.005x at R = 2 (the mean field overstates the limit there) |
+| Audit PM5: the mean-field limit within 2x of lam50(20k) in all four | **Miss**: 1.21x and 0.90x at R = 1.111, but 2.27x and 2.005x at R = 2 (the mean field overstates the limit there; the miss rests on the 2.27, the 2.005 being inside the rounding of a two-digit prediction) |
 | Audit PM6: lam50(40k) <= lam50(20k) in all four | **Miss** in two (h = 0.1, R = 2: 0.1295 against 0.128; h = 0.3, R = 2: 0.0518 against 0.0479). The brackets are the same at 20k and 40k in all four series; survival only falls, but more surviving runs meet the rate criterion over the longer window |
 
 Limits of this stage, stated for both sides. At h = 0.1, R = 1.111 the boundary is wide at eight runs: the passing share is 5/8 at 2.55x the cap and 4/8 at both 3.0x and 3.5x, so the critic-side hit and the Day-side miss there both rest on a share at the 50% line (4 of 8 has a 95% interval of about 16-84%). At R = 2 the boundary is sharp (7/8 at 0.119, 0/8 at 0.141) and the same conclusion does not depend on a tie. h is the audit's parameter (the share of the log-load expressed as density-independent survival at fixed R, with no density compensation); it has no field estimator and no author's value.
@@ -332,10 +332,10 @@ Limits of this stage, stated for both sides. At h = 0.1, R = 1.111 the boundary 
 |---|---|
 | Day side (steelman-day #2; DB1 for phenotypic truncation): at g = 0.1 lam_max <= 1.25x Term 3 | **Miss** (1.6 sustained 4/4 at both R; 1.6 is the grid top) |
 | Critic side: at g = 0.1 lam_max >= 5x Term 3 at both R | **Hit** |
-| Audit PN1: g = 1 reproduces HF trunc (lam_max 1.6+; nopen within 25% of `hf_main`) | **Hit** (R = 1.111: 3, 13, 43, 158, 593, 2,179 against 3, 13, 43, 161, 579, 2,162; R = 2: 1, 2, 5, 14, 52, 195 against 1, 2, 4, 14, 51, 194, the 5 against 4 being a rounding of small counts) |
+| Audit PN1: g = 1 reproduces HF trunc (lam_max 1.6+; nopen within 25% of `hf_main`) | **Hit** (R = 1.111: 3, 13, 43, 158, 593, 2,179 against 3, 13, 43, 160, 579, 2,162; R = 2: 1, 2, 5, 14, 52, 195 against 1, 2, 4, 14, 51, 194, the 5 against 4 being a rounding of small counts) |
 | Audit PN2: R = 2, lam_max 1.6+ at g = 0.5 and 0.1 | **Hit** |
 | Audit PN3: R = 1.111, lam_max 1.6+ at g = 0.5; at g = 0.1 lam_max 0.8 with 1.6 failing by backlog | **Miss** on the second half: 1.6 is sustained at g = 0.1 with nopen 11,754, about half the 21,760 the audit's mean field predicted (the open count grows about 5.4-fold from g = 1 to g = 0.1, not 10-fold) |
-| Audit PN4: tau(g = 0.1) / tau(g = 1) in [3, 20] at every sustained lam | **Miss** at low lam, R = 2 (2.07 at 0.0351, 3.0 at 0.1); 3.2 to 6.2 elsewhere |
+| Audit PN4: tau(g = 0.1) / tau(g = 1) in [3, 20] at every sustained lam | **Miss** at one point (R = 2, lam 0.0351: 2.07); 3.01 to 6.2 at the other eleven |
 
 Standing condition, from the docstring and from review item Day-1: truncation in this model keeps N = K in every generation at every g. It cannot go extinct, so stage N measures sweep speed and backlog and charges no demographic cost. The result says that adding phenotypic noise down to a genotypic share of 0.1 does not bring the truncation rate near Term 3; it does not say a real population could pay for it.
 
@@ -370,3 +370,46 @@ Standing condition, from the docstring and from review item Day-1: truncation in
 1. A long-burn run of softJ and trunc at lam 0.8 and 1.6 (K = 1000 and 4000), to decide the DA2 item and whether 1.6 is sustained.
 2. More runs at h = 0.1, R = 1.111 between 0.0094 and 0.0157 (the 4-of-8 tie).
 3. A synergy arm under relative fitness (Critic-2), a density-compensating mix arm (Critic-4), and a sourced h for humans (queue item L2).
+
+### Review resolution for `ph` (fix pass, 2026-10-13)
+
+Review: `REVIEW-R4-HF-ph-combined.md` (e1d0ad0; 0 BLOCKER, 2 MAJOR, 9 MINOR, 8 NOTE). The reviewer found every table number equal to `raw/hf_ph_analyse.out`, the per-run counts equal to `raw/hf_ph.jsonl`, and no hit or miss call wrong. Number corrections were made in place above (C1, C5, C6, C7); wording corrections are stated here and **override the text above where they differ**. One new computation, on the traces already recorded, is labelled post hoc.
+
+**MAJOR**
+
+- **D1 (the h = 0.1, R = 1.111 boundary rests on a 4-of-8 tie, and survival is still falling). Accepted.** The registered estimator takes the last lam with a passing share of at least 50%, which gives 0.0130 (3.53x). The share is 5/8 at 0.0094, 4/8 at 0.0111 and 4/8 at 0.0130, so a strict "more than half" reading gives 0.0094 (2.55x), and under it CA2 misses and the Day-side prediction hits at R = 1.111. Runs alive at 0.0130 are 7, 6 and 4 of 8 at 10k, 20k and 40k. Both calls at R = 1.111 are therefore **marginal**: scored as registered (CA2 hit, Day side miss), and reported as depending on the tie convention. At R = 2 the boundary is sharp and the calls stand. Everywhere above and in the verdict text, "about 3.5x at both R" is replaced by **"about 2.6-3.5x at R = 1.111 (marginal, eight runs) and about 3.5x at R = 2 (sharp)"**.
+- **D2 (the proposed H text dropped the Day-1 clause). Accepted.** "There is no cap in-model" is replaced, in H and in H8, by the sentence the first fix pass made mandatory: **"with purely relative fitness, or truncation that holds N = K, the population cannot go extinct in this model, and the rate is limited only by sweep latency and the open-locus cap"**, with the measured figures beside it: residence time 4,300 to 9,300 generations for softJ, and 3,600 to 11,800 loci open at once at lam 0.8 to 1.6.
+
+**MINOR**
+
+- **C1. Fixed in place.** The PN4 miss rests on one point (2.07); the value at lam 0.1 is 3.01, inside the band.
+- **C2 (the cap was the cause of the failure label only). Accepted.** With the cap at 20,000 no run fails on it, but no lam_max moved: softJ R = 1.111, K = 1000 stays at 0.8 and trunc R = 1.05 stays at 0.8 on the rule. softJ at lam 1.6 fails the rule narrowly (q4/q1 1.151 to 1.167 against 1.15). The closure row should read "the cap produced the failure label; the rule outcome is unchanged at this horizon".
+- **C3 (PA4 scored on softJ only). Accepted.** No K = 4000 truncation cell is in `ph`. The truncation half of PA4 is carried from the main run (1.6+ at both K).
+- **C4 (verdict words reused for sub-scopes). Accepted.** In the H8 sentence, "contradicted in-model for" and "supported for" become "does not hold in-model for" and "holds in-model for", so that the claim-file word `contested` is the only verdict word.
+- **D3 (restated DA2 scored more strictly than the letter of DA2 and PA4). Accepted in part.** The registered discriminator, "k/lam falling with lam", is met at K = 4000 and also at K = 1000, so it cannot separate a K effect from the lag; "undecided" was the right call on the registered test. The trace analysis below now speaks to it.
+- **D4 (Term 3 at h = 0.3 not reported). Accepted; added to the Day side.** Against Term 3 (0.00693 at R = 1.111, 0.0456 at R = 2) the h = 0.3 boundary is 0.83x and 1.05x: **Term 3 holds as a rate bound in-model when 30% of selection is hard.** At h = 0.1 the boundary is 1.9x and 2.8x Term 3.
+- **K1 (the headline ratio was the smallest available). Accepted.** h = 0.3: 1.3-1.6x against the 10k cap (the registered comparison), 1.6x at both R like for like (20k boundary against the 20k cap), up to 1.7x at 40k. The headline becomes **"about 1.3-1.7x"**. h = 0.1: 3.5x against the 10k cap, 3.7-4.3x against the 20k cap.
+- **K2 (the traces can test convergence without a new run). Done, below.**
+- **K3 ("near Haldane's" is true only at R = 1.111). Accepted.** The statement is "within about 1.3-1.7x of the H8 hard cap at the same R". That cap is near 1/300 only at R = 1.111 (the h = 0.3 boundary is about 1.7x 1/300 there); at R = 2 the hard cap is itself about 11x 1/300 and the h = 0.3 boundary about 14x. R is unsourced (V17).
+
+**NOTE items carried into the text.** D5: the 10k cap is the comparison that gives the smaller multiples; it was the registered one. D6: in stage N the measured cost per substitution rises with noise (D at lam 1.6, R = 1.111: 18.3 at g = 1, 31.1 at g = 0.5, 114.7 at g = 0.1, against about 16 under hard selection); truncation on a noisy phenotype sustains the rate by not charging a cost that grows about six-fold, which strengthens the standing condition. K4: at g = 0.1, R = 1.111, lam 1.6 the open count is 11,754 against a cap of 20,000, so a genotypic share below 0.1 would probably hit the cap; "down to 0.1" is the limit of what was tested. K5: the 20k rule is noisy at small open counts and biases lam50(20k) low, toward Day's side (h = 0.3, R = 2, lam 0.0454: 8 of 8 alive throughout, 5 of 8 on the 20k rule, 8 of 8 on the 40k rule).
+
+**Post hoc, descriptive (K2, D3): the late window of the stage C runs.** From the traces in `raw/hf_ph.jsonl` (every 250 generations), cell means over runs; no new simulation.
+
+| Cell | lam | k/lam over the last 5,000 generations | change in open count over the last 2,500 | open count at the end | lam x tau from stage L at lam 0.4 |
+|---|---|---|---|---|---|
+| softJ K = 1000, R = 1.05 | 0.8 | 0.931 | +2.1% | 6,037 | 5,908 |
+| | 1.6 | 0.896 | +2.4% | 13,081 | 11,816 |
+| softJ K = 1000, R = 1.111 | 0.8 | 0.990 | +0.4% | 3,748 | 3,606 |
+| | 1.6 | 0.981 | +0.6% | 7,985 | 7,213 |
+| softJ K = 4000, R = 1.111 | 0.8 | 0.991 | +0.3% | 4,737 | 4,554 |
+| | 1.6 | 0.981 | -0.1% | 10,260 | 9,109 |
+| trunc K = 1000, R = 1.05 | 1.6 | 0.986 | +1.8% | 6,052 | n/a |
+
+Reading. At R = 1.111 the runs have nearly converged by generation 20,000: the rate over the last quarter is 98-99% of the supply and the open count has stopped rising. K = 4000 and K = 1000 are then the same to the third decimal (0.991 against 0.990; 0.981 against 0.981). On this evidence **the one-step difference in lam_max between K = 4000 and K = 1000 is the fill lag, and there is no K effect on the sustained rate up to lam 1.6**; the critic-side prediction for stage C is supported and restated DA2 is not, both post hoc and descriptive, with DA2 and PA4 still holding by the letter of their registered wording. At R = 1.05 the runs have not converged (0.90-0.93, open count still rising 2% per 2,500 generations), so 0.8 and 1.6 remain not shown there. Recorded for Day's side: the open count at the end exceeds lam x tau from the low-lam long-burn series by 4-13%, so residence time keeps rising with the number of concurrent sweeps; the latency limit is real and grows with lam.
+
+**Verdict text after the fix pass (replaces "Verdict text after `ph`" where they differ; no verdict value changes).**
+
+- **H (Day, 1/300). External: contested.** h-scope: "the cap binds for hard selection; at h = 0.3 the sustainable rate is about 1.3-1.7x the H8 hard cap at the same R (and within about 1.05x of Term 3); at h = 0.1 it is about 2.6-3.5x at R = 1.111 (marginal) and about 3.5x at R = 2; with purely relative fitness, or truncation that holds N = K, the population cannot go extinct in this model, and the rate is limited only by sweep latency and the open-locus cap". h and R have no source.
+- **H8 (Day, Z19984826).** s3.3.1 on s_max: internal holds. Term 3 as a rate bound across mechanisms: **external contested**; it holds in-model for hard selection and at h = 0.3, and does not hold in-model at h = 0.1 (about 1.9-2.8x), for purely relative fitness, or for truncation on a phenotype with genotypic share down to 0.1, the last two under the condition that the population cannot go extinct and the cost per substitution is not charged (and under noisy truncation rises about six-fold).
+- **H5 (Hössjer).** As H.
