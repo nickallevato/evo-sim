@@ -1,0 +1,9 @@
+na-workhorse.allevato.io
+Tue Oct 13 04:53:21 PM UTC 2026
+pre-run note commit 5e64f0a; script commit 0fe3c7f
+3ff94c1bcdaf8ca6625a17cc1984b92f80d2f339bcd3f077ad6b93849a35d5e9  sources/raw/l1b-annot-2026-10-11/chm13v2.0_GENCODEv35_CAT_Liftoff.vep.gff3.gz
+f30b6ff5bcb682441c3138e9c40bffe454acdd676581925102e869f39797f0f9  sources/raw/l1-biomart-2026-10-11/orth_ptro.tsv
+aef21cb3eb0038e8f754a8155fe9ece8  research/checks/l1b_t2t_dnds.py
+fde848f7b5600d17d73f320ccd4ec707  research/checks/l1_dnds_genesets.py
+df51e5c3b842e3be4b81f3dd6486e53b  sources/raw/fm-maf-2026-10-10/hs1.maf.gz
+seg dump: sources/raw/l1b-seg-2026-10-13/seg.json.gz

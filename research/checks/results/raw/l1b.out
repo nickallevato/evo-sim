@@ -1,0 +1,84 @@
+annotation: {"pc_transcripts": 83965, "not_ortholog": 328, "extra_paralog": 0, "nf_tag": 25450, "len3": 238, "no_gene": 0, "chrom_strand_mixed": 0, "genes_chosen": 19407, "cds_bp": 33505272, "mane": 15485, "frameshift_flag": 0, "proper_orf_false": 0}
+[     48s] blocks 2000000
+[     95s] blocks 4000000
+extract: {"blocks": 5366631, "ref_not_first": 0, "ref_minus": 0, "no_ref": 0, "cds_blocks": 169678, "cds_blocks_multi_chimp": 11229, "cds_blocks_no_chimp": 653, "double_cover_bp": 0, "seconds": 127.21226119995117, "human_bp_covered": 33494864}
+chosen transcripts 19407, no chimp base 97
+extract: {"blocks": 5366631, "ref_not_first": 0, "ref_minus": 0, "no_ref": 0, "cds_blocks": 169678, "cds_blocks_multi_chimp": 11229, "cds_blocks_no_chimp": 653, "double_cover_bp": 0, "seconds": 127.21226119995117, "human_bp_covered": 33494864}
+variant set            n   pooledJC  NdSd_raw  N/S   mean   median  1diff_share stopfree_both
+V0  ALL             19310  0.271    0.919    3.36  0.271  0.163   0.449       18750
+V0  O121            16824  0.238    0.807    3.36  0.251  0.153   0.421       16466
+V0  NON121           2486  0.459    1.543    3.33  0.417  0.289   0.575       2284
+V0  MAPPED_NON121    2438  0.459    1.543    3.33  0.416  0.290   0.575       2243
+V0  UNMAPPED           48  0.445    1.486    3.31  0.441  0.270   0.561       41
+V0  O121q           15678  0.208    0.705    3.36  0.242  0.148   0.398       15648
+V0  SYN             17606  0.209    0.707    3.36  0.249  0.150   0.402       17376
+V0  NONSYN           1704  0.491    1.694    3.39  0.495  0.396   0.595       1374
+V0  O121SYN         15811  0.203    0.686    3.36  0.242  0.147   0.395       15648
+    ALL: 32 stacks min 0.214 max 0.283; full n=11743 dnds=0.225; S' min 0.229 full n=9 dnds=0.302; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+    SYN: 32 stacks min 0.194 max 0.218; full n=11141 dnds=0.204; S' min 0.199 full n=7 dnds=0.225; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+VS  ALL             19310  0.246    0.833    3.36  0.268  0.159   0.434       18919
+VS  O121            16824  0.217    0.734    3.36  0.247  0.150   0.407       16580
+VS  NON121           2486  0.427    1.434    3.33  0.413  0.279   0.565       2339
+VS  MAPPED_NON121    2438  0.427    1.435    3.33  0.411  0.279   0.565       2298
+VS  UNMAPPED           48  0.426    1.420    3.31  0.506  0.257   0.568       41
+VS  SYN             17606  0.209    0.706    3.36  0.249  0.150   0.402       17379
+VS  NONSYN           1704  0.445    1.524    3.39  0.457  0.319   0.576       1540
+VS  O121SYN         15811  0.203    0.686    3.36  0.242  0.147   0.395       15650
+    ALL: 32 stacks min 0.208 max 0.257; full n=12041 dnds=0.220; S' min 0.217 full n=9 dnds=0.228; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+    SYN: 32 stacks min 0.194 max 0.217; full n=11146 dnds=0.204; S' min 0.198 full n=7 dnds=0.225; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+VR  ALL             19310  0.262    0.888    3.36  0.272  0.164   0.445       18761
+VR  O121            16824  0.231    0.783    3.36  0.251  0.154   0.417       16466
+VR  NON121           2486  0.447    1.501    3.33  0.419  0.287   0.572       2295
+VR  MAPPED_NON121    2438  0.447    1.502    3.33  0.419  0.287   0.572       2254
+VR  UNMAPPED           48  0.437    1.460    3.31  0.408  0.266   0.568       41
+VR  SYN             17606  0.209    0.707    3.36  0.249  0.150   0.402       17375
+VR  NONSYN           1704  0.478    1.646    3.39  0.499  0.394   0.591       1386
+VR  O121SYN         15811  0.203    0.686    3.36  0.242  0.147   0.395       15646
+    ALL: 32 stacks min 0.210 max 0.274; full n=11778 dnds=0.221; S' min 0.224 full n=9 dnds=0.284; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+    SYN: 32 stacks min 0.194 max 0.217; full n=11142 dnds=0.204; S' min 0.199 full n=7 dnds=0.225; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+VL  ALL             19310  0.293    0.994    3.36  0.275  0.166   0.464       18590
+VL  O121            16824  0.253    0.857    3.36  0.253  0.155   0.432       16362
+VL  NON121           2486  0.497    1.672    3.33  0.433  0.298   0.593       2228
+VL  MAPPED_NON121    2438  0.496    1.671    3.33  0.432  0.298   0.592       2186
+VL  UNMAPPED           48  0.529    1.766    3.31  0.480  0.422   0.608       42
+VL  SYN             17606  0.209    0.707    3.36  0.249  0.150   0.402       17373
+VL  NONSYN           1704  0.515    1.786    3.40  0.534  0.461   0.608       1217
+VL  O121SYN         15811  0.203    0.687    3.36  0.242  0.147   0.395       15645
+    ALL: 32 stacks min 0.221 max 0.306; full n=11956 dnds=0.233; S' min 0.246 full n=9 dnds=0.302; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+    SYN: 32 stacks min 0.194 max 0.218; full n=11142 dnds=0.204; S' min 0.199 full n=7 dnds=0.225; triple {'parts': [0, 0, 0, 0], 'meets': 0} S' {'parts': [0, 0, 0, 1], 'meets': 0}
+X1  ALL             19310  0.853    2.890    3.36  0.345  0.189   0.601       16908
+X1  O121            16824  0.844    2.861    3.36  0.324  0.176   0.588       15030
+X1  NON121           2486  0.898    3.021    3.32  0.496  0.339   0.670       1878
+X1  MAPPED_NON121    2438  0.898    3.021    3.32  0.494  0.338   0.669       1847
+X1  UNMAPPED           48  0.910    3.048    3.30  0.586  0.364   0.705       31
+X1  SYN             17606  0.818    2.768    3.35  0.307  0.166   0.565       16207
+X1  NONSYN           1704  0.912    3.158    3.37  0.755  0.779   0.718       701
+X1  O121SYN         15811  0.818    2.769    3.36  0.301  0.162   0.563       14615
+    ALL: 32 stacks min 0.524 max 0.864; full n=10673 dnds=0.551; S' min 0.818 full n=8 dnds=0.861; triple {'parts': [1, 0, 0, 0], 'meets': 0} S' {'parts': [1, 0, 1, 1], 'meets': 0}
+    SYN: 32 stacks min 0.509 max 0.833; full n=10226 dnds=0.537; S' min 0.807 full n=6 dnds=0.896; triple {'parts': [1, 0, 0, 0], 'meets': 0} S' {'parts': [1, 0, 1, 1], 'meets': 0}
+Q176: NON121 share of N sites 0.098; NON121 p-ratio needed for ALL = 0.80: 3.954
+gap ALL - O121 +0.033; ratio 1.140 (L1: +0.064, 1.31)
+BAND: CRITIC
+	Command being timed: "research/.venv/bin/python -I research/checks/l1b_t2t_dnds.py run sources/raw/l1b-annot-2026-10-11/chm13v2.0_GENCODEv35_CAT_Liftoff.vep.gff3.gz sources/raw/l1-biomart-2026-10-11/orth_ptro.tsv sources/raw/fm-maf-2026-10-10/hs1.maf.gz research/checks/results/raw/l1b sources/raw/l1b-seg-2026-10-13/seg.json.gz"
+	User time (seconds): 238.50
+	System time (seconds): 13.22
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:10.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 481172
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 359715
+	Voluntary context switches: 21
+	Involuntary context switches: 3756
+	Swaps: 0
+	File system inputs: 168
+	File system outputs: 32640
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
