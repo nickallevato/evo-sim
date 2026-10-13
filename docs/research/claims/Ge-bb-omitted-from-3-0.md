@@ -9,9 +9,9 @@ load_bearing: false
 sourcing: firsthand
 status: checked
 verdicts:
-  internal: pending
+  internal: holds   # R4 VID-01-score (2026-10-13), registered band 4a: verified against a re-fetched, sha256-matched MITTENS 3.0 (22bb4ef8...). "Bernoulli" occurs exactly once, in a rhetorical clause in s1, undefined and underived; "Averaging"/"averaging problem"/"law of large numbers" occur 0 times in body and addendum. The omission half of the statement is true as stated
   fidelity: n/a
-  external: pending
+  external: pending   # the second clause, "both of them remain entirely correct", is a claim about G, whose own external is `contested`. R4 VID-01-score proposed `pending` -> `contested` but did NOT apply it: outside its registered bands. For the integration task
 ---
 
 ## Statement (verbatim)
@@ -41,6 +41,39 @@ Not testable; consistency note.
 
 ## Check
 No script.
+
+R4 VID-01-score (`research/checks/results/R4-VID-01-score.md`, 2026-10-13; predictions and the band
+table pre-registered at `e857d1f` before the text was re-fetched). Settles review NOTE-5 of check
+VID-01. The MITTENS 3.0 text had been lost from `sources/raw/`; it was re-fetched read-only into its
+own new directory and both sha256s matched the pinned `bib-day.md` values (`22bb4ef8...`, addendum
+`d55e8a03...`), so the registered search ran. **Registered band 4a, hit exactly:**
+
+| Term | Hits (body + addendum) |
+|---|---|
+| `Bernoulli` | **exactly 1**, s1: "When the Bernoulli Barrier demonstrates that parallel fixation is probabilistically self-defeating, the defender invokes neutral drift" - inside a paragraph on "the characteristic rhetorical structure" of the polythesis. No definition, no derivation, no number |
+| `Bernoullian`, any other `barrier`, `Averaging`, `averaging problem`, `law of large numbers` | **0** |
+| `coefficient of variation` | 1, addendum, descriptive statistics of per-population fixation counts; unrelated to the barrier |
+
+**`internal` moves `pending` -> `holds`.** Day's statement that he omitted both the Bernoulli Barrier
+and the Averaging Problem from 3.0 is **true as stated**: the Averaging Problem is absent outright
+and the Barrier survives only as one undefined rhetorical clause, which under rule C is "omitted",
+not retained. This is an accuracy credit to Day about his own work, now verified against a
+hash-matched text rather than against a file the audit no longer had. The Formal statement above
+("only in a rhetorical sentence in s1") is confirmed verbatim and exhaustively.
+
+**The two critic statements are both right, and the review's NOTE-5 was wrong to call them
+inconsistent.** GG-4: "Essentially, he omits the averaging error stuff as well as the Bernoli barrier
+stuff" (GGR-12, t=01:50:12) and "It's mentioned once in that paper and not defined" (GGR-20,
+t=01:55:39) state the same fact at different precision. GGR-20 is literally exact. Recorded as an
+audit-side error in the write-up's "Both" section.
+
+**Not applied, proposed:** `external` `pending` -> `contested` for the second clause ("both of them
+remain entirely correct"), inheriting G's existing `external: contested` and G's ledgered label
+slip. The scoring task's registered bands licensed only the internal move, so it left the external
+field alone.
+
+Consequence for branch G: the Barrier is not an argument of MITTENS 3.0, so the GG-4 panel's replies
+to it (GGR-41..GGR-44) answer the January 2026 Zenodo paper (Z18167588, claim G), not 3.0.
 
 ## Simulator variables implied
 - None.
