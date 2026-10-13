@@ -1,0 +1,5 @@
+na-workhorse.allevato.io
+Tue Oct 13 06:06:17 PM UTC 2026
+post hoc transfer-excl (fix pass), commit 6c5d8cf, 2 workers, 2000 genes x 300 codons, clean + misreg25 cells
+c61c39ba7b9d1a2f7dad1d4923282989  research/checks/l1c_alignment_method.py
+d1e7d7115a8362473b08ea006790e6e3  research/checks/results/raw/l1c.transfer.json
