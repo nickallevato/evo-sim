@@ -397,6 +397,56 @@ LAUNCH (AMENDED; replaces LAUNCH above; after L1b has written the seg dump; chec
     > research/checks/results/raw/l1c.transfer.out 2>&1 < /dev/null &'
   Outputs added: raw/l1c.csac23_map.tsv, raw/l1c.transfer.json, raw/l1c.transfer.out.
   Modes added: `transfer <out_prefix> [workers] [genes per cell] [codons]`, `transfer-report <json>`.
+
+POST HOC (fix pass, 2026-10-13; after the main run, the transfer table and three post-run reviews; new mode
+  `transfer-excl`, additive: no registered or amended function, constant, band, reading or prediction is changed)
+  Why: REVIEW-R4-L1c-correctness finding 1 (MAJOR). The transfer json does not store what each arm drops, so the
+  excluded-codon discriminator was never checked on synthetic cells. The reviewer regenerated three clean cells in
+  part and found that x (pS of dropped codons over the dS-clean pS) does NOT separate a saturated replacement run
+  from misalignment (x = 9.6 at nominal 0.8, clustering 2), and proposed the nonsynonymous fraction and p-ratio of
+  the dropped codons instead. This mode stores, per cell and per arm, the dropped codons' count, pS, x against the
+  cell's own UD pS, nonsynonymous fraction and p-ratio (excl_agg, unchanged), using the SAME generator, seeds and
+  per-gene function (_tf_one) as `transfer`, for the clean and misreg25 cells (24 of 48).
+  Windows fixed here, before the run (the audit's choice, like the 3x band):
+    MISPAIRING window  nonsyn fraction <= 0.80 AND p-ratio <= 1.5   (unrelated in-frame pairing, arm NU on real
+                       data: 0.774 and 1.018)
+    DENSE-RUN window   nonsyn fraction >= 0.90 AND p-ratio >= 3.0
+    anything else      AMBIGUOUS
+  Known from the real run (not a prediction): the realistic arms' dropped codons have fraction 0.71-0.77 and
+  p-ratio 0.76-1.01 on ALL, i.e. inside the MISPAIRING window.
+  Scored only for PAF1 and PGB (the two arms that trim) in cells where the arm drops >= 50 codons.
+  PREDICTIONS
+  X1 consistency (audit): pooled dN/dS per arm equals raw/l1c.transfer.json for every cell rerun, to 1e-9. Fail =
+     the mode does not reproduce the table; stop, nothing below is used.
+  X2 (audit; NOT BLIND, the reviewer measured 9.6 on 1,344 genes): clean, nominal 0.8, clustering 2: x > 3 for
+     PAF1 and PGB. If it holds, the amended DAY clause "excluded codons have x <= 3" was unreachable in the one
+     synthetic world built to let the mechanism work: a defect of the amendment, on Day's side.
+  X3 (critic side; BLIND for nominal 0.5 and 1.0, and for PGB; NOT BLIND for PAF1 at 0.23 / clustering 2, 0.8 /
+     clustering 1 and 0.8 / clustering 2, where the reviewer measured fractions 0.995, 0.986, 0.947): every clean
+     clustered cell (clustering 1 and 2, all four omegas) is in the DENSE-RUN window for PAF1 and PGB.
+  X4 (critic side; BLIND): every misreg25 cell at clustering 0 (four omegas) is in the MISPAIRING window for PAF1
+     and PGB, with x > 3.
+  X5 (Day side; BLIND for the same cells as X3): at least one clean clustered cell falls in the MISPAIRING window
+     for PAF1 or PGB, i.e. real dense replacement at ordinary synonymous divergence can look exactly like what the
+     real arms drop, and the discriminator proposed by the reviewer fails like x did.
+  Reading, fixed now: X3 and X4 hold and X5 fails = the fraction / p-ratio pair separates the two on synthetic
+     data and "what the realistic arms drop looks like mispairing" may rest on it (with the limits of the
+     generator: uniform codon usage, kappa 1, runs of 15, no indels inside runs). X5 holds, or X3 fails in any
+     cell = the pair does not separate them there, and the write-up must say the real dropped codons are not
+     classified. AMBIGUOUS cells are reported as such and count for neither side.
+     Mixed cells (misreg25 with clustering 1 or 2) are reported without a threshold.
+  No band, reading or verdict proposal depends on this run (the x clause is never reached under CRITIC).
+  NOT BLIND, disclosed: the predictions and windows above were written before any execution of this mode and
+     were not changed afterwards, but a smoke test (30 genes per cell, 1 worker, 27 s, workstation, output not
+     kept) was run before this commit to see that the mode executes, and its output was seen: X3 5 of 5 and
+     X4 8 of 8 arm-cells with >= 50 codons in the predicted window, X5 none, X2 x = 6.8 and 9.1. Commit order
+     therefore does not prove blindness for X3-X5; the full run is a confirmation at 2,000 genes per cell.
+  LAUNCH (at most 2 workers; another job holds 8 of the host's 12 cores; check `uptime` first)
+  ssh -o BatchMode=yes na-workhorse 'cd ~/projects/evo-sim && setsid -f nohup /usr/bin/time -v
+    research/.venv/bin/python -I research/checks/l1c_alignment_method.py transfer-excl research/checks/results/raw/l1c
+    2 2000 300 research/checks/results/raw/l1c.transfer.json > research/checks/results/raw/l1c.transfer_excl.out 2>&1
+    < /dev/null'
+  Outputs: raw/l1c.transfer_excl.json, raw/l1c.transfer_excl.out. Estimated 25-40 min wall, < 1 GB.
 """
 import gzip
 import importlib.util
@@ -1956,6 +2006,105 @@ def transfer(out_prefix, workers="8", genes="2000", ncod="300"):
     transfer_report(rows)
 
 
+# ---------------------------------------------------------------- POST HOC (fix pass, 2026-10-13): transfer-excl
+# Additive mode. Reuses _tf_one, agg and excl_agg unchanged; same cell index and seeds as transfer_cells.
+TFX_NOISE = ["clean", "misreg25"]
+TFX_SCORED = ["PAF1", "PGB"]
+TFX_MINCOD = 50
+
+
+def _tfx_window(nf, pr):
+    if nf is None or pr is None:
+        return "undefined"
+    if nf <= 0.80 and pr <= 1.5:
+        return "MISPAIRING"
+    if nf >= 0.90 and pr >= 3.0:
+        return "DENSE-RUN"
+    return "AMBIGUOUS"
+
+
+def transfer_excl_cells(G, ncod, mapper):
+    out = []
+    for ci, (om, cl, nz) in enumerate((o, c, z) for o in TF_OMEGAS for c in TF_CLUSTER for z in TF_NOISE):
+        if nz not in TFX_NOISE:
+            continue
+        xs = [x for x in mapper(_tf_one, [(1_000_000 * (ci + 1) + gi, ncod, om, cl, nz) for gi in range(G)]) if x]
+        u0c = sum(round((x["arms"]["U0"]["S"] + x["arms"]["U0"]["N"]) / 3.0) for x in xs)
+        ud = agg([x["arms"]["UD"] for x in xs])
+        ps_ud = (ud["Sd"] / ud["S"]) if ud.get("S") else None
+        row = dict(omega_in=om, cluster=cl, noise=nz, n=len(xs), U0_codons=u0c, pS_UD=ps_ud, out={}, excl={})
+        for a in ARMS:
+            row["out"][a] = agg([x["arms"][a] for x in xs]).get("dnds")
+        for a in EXCL_ARMS:
+            e = excl_agg([x["excl"][a] for x in xs])
+            pn = (e["Nd"] / e["N"]) if e["N"] else None
+            row["excl"][a] = dict(codons=e["codons"], share=(e["codons"] / u0c if u0c else None), Sd=e["Sd"],
+                                  Nd=e["Nd"], S=e["S"], N=e["N"], pS=e["pS"], pN=pn,
+                                  x_vs_cell_UD=(e["pS"] / ps_ud if (e["pS"] is not None and ps_ud) else None),
+                                  nonsyn_frac=e["nonsyn_frac"], p_ratio=e["dnds_p"],
+                                  window=_tfx_window(e["nonsyn_frac"], e["dnds_p"]))
+        out.append(row)
+    return out
+
+
+def transfer_excl_report(rows, ref=None):
+    f = lambda v, w=6, d=3: " " * (w - 3) + "nan" if v is None or v != v else f"{v:{w}.{d}f}"
+    print("POST HOC transfer-excl: what each arm drops on synthetic cells (windows fixed in the docstring)")
+    if ref is not None:
+        key = {(r["omega_in"], r["cluster"], r["noise"]): r for r in ref}
+        worst = 0.0
+        for r in rows:
+            q = key[(r["omega_in"], r["cluster"], r["noise"])]
+            for a in ARMS:
+                u, v = r["out"][a], q["out"][a]
+                if (u is None or u != u) and (v is None or v != v):
+                    continue
+                worst = max(worst, abs(u - v))
+        print(f"X1 consistency against the committed transfer table: max |difference| = {worst:.3e} "
+              f"({'PASS' if worst <= 1e-9 else 'FAIL'})")
+    print("omega cl noise     arm   codons  share%     pS      x     pN  nsfrac  p-ratio  window")
+    for r in rows:
+        for a in ["UD", "PA", "PAG", "PAF1", "PL38", "PGB", "PAF2", "PL16"]:
+            e = r["excl"][a]
+            print(f"{r['omega_in']:4.2f}  {r['cluster']}  {r['noise']:9s} {a:5s} {e['codons']:7d} "
+                  f"{f(100 * e['share'] if e['share'] is not None else None, 7, 3)} {f(e['pS'], 6, 4)} "
+                  f"{f(e['x_vs_cell_UD'], 6, 1)} {f(e['pN'], 6, 3)} {f(e['nonsyn_frac'], 7, 3)} "
+                  f"{f(e['p_ratio'], 8, 2)}  {e['window'] if e['codons'] >= TFX_MINCOD else 'under 50 codons'}")
+    print("Scored statements (PAF1, PGB; cells with >= 50 dropped codons):")
+    for lab, sel in (("X3 clean clustered cells in DENSE-RUN", lambda r: r["noise"] == "clean" and r["cluster"] > 0),
+                     ("X4 misreg25 clustering-0 cells in MISPAIRING", lambda r: r["noise"] == "misreg25"
+                      and r["cluster"] == 0)):
+        want = "DENSE-RUN" if lab.startswith("X3") else "MISPAIRING"
+        cells = [(r, a) for r in rows if sel(r) for a in TFX_SCORED if r["excl"][a]["codons"] >= TFX_MINCOD]
+        bad = [(r["omega_in"], r["cluster"], a, r["excl"][a]["window"]) for r, a in cells
+               if r["excl"][a]["window"] != want]
+        print(f"  {lab}: {len(cells) - len(bad)} of {len(cells)} arm-cells; exceptions: {bad or 'none'}")
+    x5 = [(r["omega_in"], r["cluster"], a) for r in rows if r["noise"] == "clean" and r["cluster"] > 0
+          for a in TFX_SCORED if r["excl"][a]["codons"] >= TFX_MINCOD and r["excl"][a]["window"] == "MISPAIRING"]
+    print(f"  X5 clean clustered arm-cells in MISPAIRING: {x5 or 'none'}")
+    for r in rows:
+        if r["noise"] == "clean" and r["cluster"] == 2 and r["omega_in"] == 0.8:
+            print("  X2 clean 0.8 clustering 2, x: " + ", ".join(f"{a} {f(r['excl'][a]['x_vs_cell_UD'], 5, 1)}"
+                                                                 for a in TFX_SCORED))
+        if r["noise"] == "misreg25" and r["cluster"] == 0:
+            print(f"  X4 misreg25 clustering 0 omega {r['omega_in']:4.2f}, x: "
+                  + ", ".join(f"{a} {f(r['excl'][a]['x_vs_cell_UD'], 5, 1)}" for a in TFX_SCORED))
+
+
+def transfer_excl(out_prefix, workers="2", genes="2000", ncod="300", ref_json=None):
+    t0 = time.time()
+    with Pool(int(workers), maxtasksperchild=2000) as pool:
+        rows = transfer_excl_cells(int(genes), int(ncod), lambda fn, it: pool.imap(fn, it, chunksize=16))
+    ref = json.load(open(ref_json))["rows"] if ref_json else None
+    res = dict(rows=rows, genes_per_cell=int(genes), ncod=int(ncod), ds=TF_DS, cluster=TF_CLUSTER, run=TF_RUN,
+               noise=TFX_NOISE, windows=dict(MISPAIRING="nonsyn_frac <= 0.80 and p_ratio <= 1.5",
+                                             DENSE_RUN="nonsyn_frac >= 0.90 and p_ratio >= 3.0"),
+               min_codons=TFX_MINCOD, ref_json=ref_json, seconds=time.time() - t0)
+    with open(out_prefix + ".transfer_excl.json", "w") as fh:
+        json.dump(res, fh, indent=1, default=float)
+    transfer_excl_report(rows, ref)
+
+
 # ---------------------------------------------------------------- selftest (synthetic; trivial)
 def _sim_gene(rng, ncod, omega, ds):
     sense = [c for c in L1.SITES]
@@ -2246,5 +2395,7 @@ if __name__ == "__main__":
         report(json.load(open(a[1])))
     elif len(a) == 2 and a[0] == "transfer-report":
         transfer_report(json.load(open(a[1]))["rows"])
+    elif a and a[0] == "transfer-excl" and len(a) in (2, 3, 4, 5, 6):   # POST HOC (fix pass, 2026-10-13)
+        transfer_excl(*a[1:])
     else:
         print(__doc__)
