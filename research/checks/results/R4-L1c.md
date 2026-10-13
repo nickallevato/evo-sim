@@ -1,6 +1,6 @@
 # R4 L1c: does the alignment method manufacture a low human-chimp dN/dS? Day's "protein-guided alignment gaps out divergent codons" tested on the T2T codons of L1b
 
-**Status: main run done and written up; NOT reviewed (three post-run reviews owed: correctness, steelman-day, steelman-critic); NOT integrated. The synthetic `transfer` table was still running when this was written and is reported as pending.** Band **CRITIC** on the registered rule and on the amended rule, on both source sets. Tier: not load-bearing by the ROOT path (docstring, TIER), kept at three reviews because it decides DN6's external verdict.
+**Status: main run and synthetic `transfer` table done and written up; NOT reviewed (three post-run reviews owed: correctness, steelman-day, steelman-critic); NOT integrated.** Band **CRITIC** on the registered rule and on the amended rule, on both source sets. Tier: not load-bearing by the ROOT path (docstring, TIER), kept at three reviews because it decides DN6's external verdict.
 
 ## Target
 Day, "The Method is the Conclusion" (voxday.net, 2026-10-12 14:12:35 UTC; quotes-day.md Q180-Q186; claim file DN6). RH tag: dialectic for every quote below, as filed.
@@ -118,7 +118,7 @@ Protein family applied to extractions that read high (amendment 6 ii; pooled JC)
 | NR 0.05 | 0.776 | 0.774 | 0.765 | 0.773 | 0.772 |
 | UT through the registered P / PF1 / PF2 (valid for this purpose: UT is the frame-0 reading) | 0.853 | P 0.535 | PF1 0.340 | PF2 0.190 | |
 
-A protein-guided realignment with trimming does take a high value down by a large amount when the input is frame-broken (0.853 to 0.340 with the lenient rule, 0.807 to 0.48-0.49), and does nothing to uniform base error. On the frame-preserving input it has almost nothing to remove.
+A protein-guided realignment with trimming does take a high value down by a large amount when the input is register-broken (0.853 to 0.340 with the lenient rule, 0.807 to 0.48-0.49), and does nothing to uniform base error. On the frame-preserving input it has almost nothing to remove.
 
 ### Identity bins and coverage strata (U0)
 | nucleotide identity of the gene | genes | share | pooled dN/dS | nonsyn fraction | pS |
@@ -190,12 +190,12 @@ Upper bound from the stress arms: PAF2 0.094 (34.8%), PL16 0.009. They decide no
 
 **Registered against amended, a disagreement that matters to Day.** The registered Reading A rule was: supported "if any of P/PF1/PF2 has mechanism flag >= small with excluded nonsyn fraction > U0's". PF2 has flag `small` (0.081) and its excluded codons a fraction of 0.762 against 0.479. As registered, Reading A scores **`supported`**, on an arm that is invalid as registered; its valid counterpart PAF2 meets the same rule (0.094; 0.846). The amendment (MAJOR-9, made before the run) restricted Reading A to realistic arms, where it scores `contested`. The registration itself called PF2 adversarial ("it removes nonsynonymous changes because they are nonsynonymous"), and the selftest miniature had shown PAF2 reading 30-38% low before the amendment (docstring, NOT BLIND). By the amendment's own rule the amended result is the one proposed; the registered one is shown here with the reason. The reviewers should rule on it.
 
-**Reading B: "the published 0.23 is this artefact."** Printed `contradicted`. Registered rule: contradicted under CRITIC with the PF2 flag below `large` (it is `small`). Amended rule: contradicted under CRITIC when no realistic arm has a `large` flag (all are `none`). The two agree. Independently of the run, the held CSAC text says the 13,454-gene value came from a nucleotide genome alignment. The amended rule asks for the transfer table beside Reading B; it is pending.
+**Reading B: "the published 0.23 is this artefact."** Printed `contradicted`. Registered rule: contradicted under CRITIC with the PF2 flag below `large` (it is `small`). Amended rule: contradicted under CRITIC when no realistic arm has a `large` flag (all are `none`). The two agree. Independently of the run, the held CSAC text says the 13,454-gene value came from a nucleotide genome alignment. The amended rule asks for the transfer table beside Reading B; it is in the transfer section and does not change the value.
 
 **Q183.** Reading A (uniformity shows the gap is not gene-list driven): on U0 the sets are not uniform (0.193 to 0.344). Reading B (73.8% is the misalignment signature): NU 0.774, NM 1.0 0.739, NR 0.05-0.10 0.724-0.742, UT 0.743, against U0's 0.479. Neither reading has a registered verdict rule; numbers only. **Q185** is not decidable here (Day's run on the smaller subset is unpublished); CSAC23 is now the real list, not a proxy. **Q186** ("not ... computational error") bears through the noise arms and identity bins above; no verdict rule was registered for it beyond the band.
 
 ## Scoring of the predictions
-Hits and misses with equal weight. Where a registered prediction names an arm that is invalid as registered, the registered arm is scored as printed and the frame-aware counterpart beside it. "Pending" = needs the transfer table.
+Hits and misses with equal weight. Where a registered prediction names an arm that is invalid as registered, the registered arm is scored as printed and the frame-aware counterpart beside it. The three transfer rows were scored after the table landed (transfer section).
 
 ### Day side
 | prediction | value | result |
@@ -213,7 +213,7 @@ Hits and misses with equal weight. Where a registered prediction names an arm th
 | AM: pS <= 0.023 | 0.0177 | **hit** |
 | AM: a realistic arm with a large flag, excluded codons x <= 3 and dN/dS >= 2 | all `none`; x 7.6-15.2; dN/dS 0.76-1.01 | **miss** |
 | AM: CSAC23 within 0.05 of ALL on U0 | 0.219 against 0.271: 0.052 | **miss**, by 0.002 |
-| AM: transfer, some realistic arm <= 0.40 at true 0.8 | | pending |
+| AM: transfer, some realistic arm <= 0.40 at true 0.8 | PAF1 0.239, PGB 0.308 at clustering 2 (truth 0.683); none at clustering 0 or 1 | **hit** (extreme clustering only; see the transfer section) |
 
 ### Critic side
 | prediction | value | result |
@@ -237,7 +237,7 @@ Hits and misses with equal weight. Where a registered prediction names an arm th
 | AM: NOT23 above CSAC23 by >= 0.10 | +0.126 | hit |
 | AM: NM(1.0) p-ratio >= 0.60; NU nonsyn fraction 0.68-0.80 | 0.861; 0.774 | hit |
 | AM: NM(1.0)>PAF1 at least 0.25 below NM(1.0) | 0.807 to 0.495 (-0.313) | hit |
-| AM: transfer, realistic arms within 10% of truth on clean cells | | pending |
+| AM: transfer, realistic arms within 10% of truth on clean cells at clustering 0 and 1 | PAF1 -13.5% at nominal 1.0, clustering 1; the other 39 arm-cells within 10% | **miss** |
 
 ### Audit
 | prediction | value | result |
@@ -259,18 +259,121 @@ Hits and misses with equal weight. Where a registered prediction names an arm th
 | A7 cap-skipped genes < 0.5% per family | 0 | hit |
 | A8 registered P out of frame in > 1% of genes | 1,173 genes (6.1%) | hit: BLOCKER-1 was material |
 | A9 CSAC23 floor met (>= 85%) | 94.6% | hit |
-| A10 transfer checks | | pending |
+| A10 transfer: PA = U0 on clean cells; UD within 5% of U0 (no clustering); U0 >= 25% above truth under misreg25 | PA below U0 by 1.4% to 24.5% at clustering 2; UD +0.5% to +1.3%; U0 +19% or less in some cells at nominal 0.8 and 1.0 | **miss** (clause ii hit; i and iii miss) |
 
-Tally (excluding pending and the uncounted restatement): Day side 3 hits, 1 empty, 9 misses. Critic side: 14 hits; 4 further registered predictions name the protein arms that are invalid as registered and fail there (3 misses, 1 met with the wrong sign) while holding on the frame-aware counterparts. Audit: 12 hits, 4 misses, and 1 split (A5 first clause: miss on the registered arm, hit by 0.01 on PAF1).
+Tally (excluding the uncounted restatement): Day side 4 hits, 1 empty, 9 misses. Critic side: 14 hits, 1 miss (transfer); 4 further registered predictions name the protein arms that are invalid as registered and fail there (3 misses, 1 met with the wrong sign) while holding on the frame-aware counterparts. Audit: 12 hits, 5 misses (A10 among them), and 1 split (A5 first clause: miss on the registered arm, hit by 0.01 on PAF1).
 
 ## Transfer table (synthetic; amendment 6 i)
-**Pending: transfer run not finished at the time of writing.** `raw/l1c.transfer.out` on na-workhorse was empty at both collection attempts (start and end of this write-up) and `raw/l1c.transfer.json` did not exist. Nothing from it is used above. Owed when it lands: the table (`transfer-report <json>`), the three pending predictions (Day AM, critic AM, A10), and the in-principle half of Readings A and B. Known beforehand and not blind (docstring): in the 100-gene miniature, at true 0.8 with 80% of replacements in 1% of codons, PAF1 read 0.25 and PGB 0.29 against a truth of 0.66, so a realistic arm can carry a high value to the published range when replacements are extremely clustered.
+Run: na-workhorse, `transfer research/checks/results/raw/l1c 8 2000 300`, wall 15 min 5 s (script clock 905 s), peak RSS 182 MB, exit status 0; outputs `raw/l1c.transfer.out`, `raw/l1c.transfer.json` (collected in 9d61b8a). Same script file as the main run. 48 cells (4 nominal omegas x 3 clustering levels x 4 noise settings), 2,000 synthetic genes of 300 codons per cell, every arm. No real data enters.
+
+What the generator does (script, `_tf_gene`; all rates are ASSUMED design values, uniform codon usage, kappa 1):
+- Synonymous divergence 1.2%. "Truth" in the table is what U0 reads on the clean cell of the same omega and clustering, not the nominal omega (0.216 for 0.23; 0.757, 0.729, 0.683 for 0.8 at clustering 0, 1, 2: multiple hits lower it).
+- **Clustering 0:** every codon has the same omega. **Clustering 1:** 2% of codons, in runs of 15, hold 50% of the replacements (omega 25 times the nominal inside a run). **Clustering 2:** 1% of codons, in runs of 15, hold 80% of the replacements. Inside a clustering-2 run the codon omega is 80 times the nominal (64 at nominal 0.8), so each base is hit with probability 0.77 and the 15-residue stretch is close to fully replaced, at ordinary synonymous divergence. A 300-codon gene carries such a run with probability 0.2. It is the extreme level by design.
+- Noise: `indel` = 10% of genes with one in-frame 3/6/9-bp indel and 5% with a 1-bp indel, all correctly gapped; `misreg05` / `misreg25` = 5% / 25% of genes with a 40-codon stretch shifted by one base with no gap.
+
+Compact table (pooled JC dN/dS; nominal 0.23 and 0.80 in full, 0.50 and 1.00 clean cells only; the full 48 x 15 table, including the registered arms, is in `raw/l1c.transfer.out`):
+
+| nominal omega | clustering | noise | truth (U0, clean cell) | U0 | UT | UD | PA | PAF1 | PL38 | PGB | PAF2 (stress) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0.23 | 0 | clean | 0.216 | 0.216 | 0.216 | 0.217 | 0.216 | 0.216 | 0.216 | 0.216 | 0.147 |
+| 0.23 | 0 | indel | 0.216 | 0.211 | 0.816 | 0.213 | 0.213 | 0.213 | 0.213 | 0.210 | 0.146 |
+| 0.23 | 0 | misreg05 | 0.216 | 0.406 | 0.406 | 0.220 | 0.363 | 0.250 | 0.359 | 0.265 | 0.152 |
+| 0.23 | 0 | misreg25 | 0.216 | 0.723 | 0.723 | 0.221 | 0.600 | 0.358 | 0.592 | 0.402 | 0.172 |
+| 0.23 | 1 | clean | 0.211 | 0.211 | 0.211 | 0.212 | 0.211 | 0.210 | 0.211 | 0.211 | 0.130 |
+| 0.23 | 1 | indel | 0.211 | 0.222 | 0.811 | 0.223 | 0.224 | 0.222 | 0.223 | 0.220 | 0.136 |
+| 0.23 | 1 | misreg05 | 0.211 | 0.451 | 0.451 | 0.225 | 0.402 | 0.261 | 0.395 | 0.287 | 0.141 |
+| 0.23 | 1 | misreg25 | 0.211 | 0.715 | 0.715 | 0.223 | 0.608 | 0.355 | 0.599 | 0.408 | 0.155 |
+| 0.23 | 2 | clean | 0.218 | 0.218 | 0.218 | 0.219 | 0.218 | 0.190 | 0.218 | 0.218 | 0.078 |
+| 0.23 | 2 | indel | 0.218 | 0.228 | 0.828 | 0.229 | 0.230 | 0.197 | 0.230 | 0.226 | 0.082 |
+| 0.23 | 2 | misreg05 | 0.218 | 0.414 | 0.414 | 0.201 | 0.361 | 0.217 | 0.354 | 0.251 | 0.083 |
+| 0.23 | 2 | misreg25 | 0.218 | 0.718 | 0.718 | 0.225 | 0.608 | 0.341 | 0.601 | 0.409 | 0.107 |
+| 0.50 | 0 | clean | 0.446 | 0.446 | 0.446 | 0.452 | 0.446 | 0.446 | 0.445 | 0.446 | 0.299 |
+| 0.50 | 1 | clean | 0.475 | 0.475 | 0.475 | 0.478 | 0.475 | 0.457 | 0.474 | 0.475 | 0.250 |
+| 0.50 | 2 | clean | 0.473 | 0.473 | 0.473 | 0.474 | 0.467 | 0.256 | 0.466 | 0.411 | 0.088 |
+| 0.80 | 0 | clean | 0.757 | 0.757 | 0.757 | 0.760 | 0.757 | 0.757 | 0.756 | 0.757 | 0.511 |
+| 0.80 | 0 | indel | 0.757 | 0.768 | 0.919 | 0.776 | 0.764 | 0.763 | 0.763 | 0.762 | 0.514 |
+| 0.80 | 0 | misreg05 | 0.757 | 0.800 | 0.800 | 0.744 | 0.749 | 0.724 | 0.747 | 0.730 | 0.491 |
+| 0.80 | 0 | misreg25 | 0.757 | 0.898 | 0.898 | 0.788 | 0.795 | 0.723 | 0.789 | 0.744 | 0.495 |
+| 0.80 | 1 | clean | 0.729 | 0.729 | 0.729 | 0.733 | 0.729 | 0.661 | 0.728 | 0.728 | 0.343 |
+| 0.80 | 1 | indel | 0.729 | 0.729 | 0.914 | 0.733 | 0.725 | 0.656 | 0.724 | 0.722 | 0.341 |
+| 0.80 | 1 | misreg05 | 0.729 | 0.804 | 0.804 | 0.743 | 0.753 | 0.664 | 0.752 | 0.733 | 0.340 |
+| 0.80 | 1 | misreg25 | 0.729 | 0.911 | 0.911 | 0.778 | 0.799 | 0.670 | 0.793 | 0.745 | 0.363 |
+| 0.80 | 2 | clean | 0.683 | 0.683 | 0.683 | 0.684 | 0.599 | 0.239 | 0.595 | 0.308 | 0.110 |
+| 0.80 | 2 | indel | 0.683 | 0.651 | 0.889 | 0.650 | 0.565 | 0.239 | 0.562 | 0.296 | 0.113 |
+| 0.80 | 2 | misreg05 | 0.683 | 0.756 | 0.756 | 0.675 | 0.651 | 0.278 | 0.644 | 0.342 | 0.122 |
+| 0.80 | 2 | misreg25 | 0.683 | 0.862 | 0.862 | 0.680 | 0.733 | 0.378 | 0.724 | 0.469 | 0.146 |
+| 1.00 | 0 | clean | 0.948 | 0.948 | 0.948 | 0.955 | 0.948 | 0.948 | 0.946 | 0.948 | 0.639 |
+| 1.00 | 1 | clean | 0.915 | 0.915 | 0.915 | 0.922 | 0.913 | 0.792 | 0.913 | 0.907 | 0.401 |
+| 1.00 | 2 | clean | 0.750 | 0.750 | 0.750 | 0.730 | 0.566 | 0.262 | 0.562 | 0.227 | 0.133 |
+
+Scored statements, as printed:
+```
+Scored statements (docstring amendment 6):
+  omega 0.80 cluster 0 clean    : realistic arms reading <= 0.40: none; stress arms: PAF2 0.511, PL16 0.756
+  omega 0.80 cluster 0 indel    : realistic arms reading <= 0.40: none; stress arms: PAF2 0.514, PL16 0.763
+  omega 0.80 cluster 0 misreg05 : realistic arms reading <= 0.40: none; stress arms: PAF2 0.491, PL16 0.735
+  omega 0.80 cluster 0 misreg25 : realistic arms reading <= 0.40: none; stress arms: PAF2 0.495, PL16 0.767
+  omega 0.80 cluster 1 clean    : realistic arms reading <= 0.40: none; stress arms: PAF2 0.343, PL16 0.728
+  omega 0.80 cluster 1 indel    : realistic arms reading <= 0.40: none; stress arms: PAF2 0.341, PL16 0.724
+  omega 0.80 cluster 1 misreg05 : realistic arms reading <= 0.40: none; stress arms: PAF2 0.340, PL16 0.742
+  omega 0.80 cluster 1 misreg25 : realistic arms reading <= 0.40: none; stress arms: PAF2 0.363, PL16 0.774
+  omega 0.80 cluster 2 clean    : realistic arms reading <= 0.40: ['PAF1', 'PGB']; stress arms: PAF2 0.110, PL16 0.487
+  omega 0.80 cluster 2 indel    : realistic arms reading <= 0.40: ['PAF1', 'PGB']; stress arms: PAF2 0.113, PL16 0.454
+  omega 0.80 cluster 2 misreg05 : realistic arms reading <= 0.40: ['PAF1', 'PGB']; stress arms: PAF2 0.122, PL16 0.506
+  omega 0.80 cluster 2 misreg25 : realistic arms reading <= 0.40: ['PAF1']; stress arms: PAF2 0.146, PL16 0.597
+```
+
+### What it shows, both directions
+**Day side: the mechanism exists in principle, and these arms can detect it.**
+- At nominal 0.8 with clustering 2, realistic arms read far below the truth of 0.683 on the clean cell: PAF1 0.239 (-65%), PGB 0.308 (-55%); PA, PAG and PL38 0.586 to 0.599 (-12% to -14%). PAF1 stays at or below 0.40 in all four noise settings (0.239, 0.239, 0.278, 0.378); PGB in three (0.308, 0.296, 0.342; 0.469 under misreg25). A lenient divergence trim and the Gblocks rule do carry a high value into the published range when replacements sit in dense runs. The check was not built so that it could only find nothing.
+- Plain frame-aware protein guidance with no trimming (PA) is itself biased in that regime: -12% at nominal 0.8 and -25% at nominal 1.0 (0.566 against 0.750). Global scoring gaps a fully replaced 15-residue run.
+- At clustering 1 the lenient trim is already off: PAF1 -9.3% at nominal 0.8 and -13.5% at 1.0; -3.8% at 0.5.
+- The bias also acts on a low truth: at nominal 0.23 with clustering 2, PAF1 reads 0.190 against 0.218 (-12.7%).
+- The strict filter is biased everywhere: PAF2 reads about 32% low with no clustering at all, 38% to 56% low at clustering 1, 64% to 84% low at clustering 2.
+
+**Critic side: without extreme clustering the arms return the truth, and the errors that inflate are the naive ones.**
+- At clustering 0, every realistic arm is within 0.3% of the truth on the clean cell at every omega. At clustering 1, PA, PAG, PL38 and PGB are within 1%.
+- At nominal 0.23 (truth 0.211 to 0.218), clean and indel cells: realistic arms read 0.210 to 0.230, except PAF1 at clustering 2 (0.190, 0.197).
+- Misregistration inflates the unguided arm at a low truth: U0 reads 0.406 to 0.451 under misreg05 and 0.715 to 0.723 under misreg25, 3.3 times the truth. UD returns 0.201 to 0.225 in the same cells: the dS-window filter removes it.
+- The gap-tolerant arm UT reads 0.811 to 0.828 under correctly gapped indels at a truth of 0.211 to 0.218, with only 15% of genes carrying an indel. That is the direction and the size of L1b's naive arm on real data (0.853).
+- The protein arms repair misregistration only in part (misreg25, clustering 0, truth 0.216: PA 0.600, PL38 0.592, PGB 0.402, PAF1 0.358).
+- The registered frame-0 arm P! reads 0.519 under correctly gapped indels at a truth of 0.216: BLOCKER-1 reproduced on synthetic data.
+
+### Which clustering regime are real coding sequences in?
+The real-data run does not measure within-gene clustering of replacements directly, and nothing in it fixes the regime on its own. The identity bins say nothing here: they are per gene, and clustering is within genes. What the run does constrain (comparison below is **post hoc and descriptive**, from the `excl_share` field of `raw/l1c.transfer.json` and the excluded-codon table above):
+
+| | PAF1 codons dropped, share of U0 | PAF1 reading against U0 | PGB reading against U0 | dropped codons |
+|---|---|---|---|---|
+| synthetic, nominal 0.8, clustering 2, clean | 0.80% | -65% | -55% | ordinary synonymous divergence by construction (their pS is not stored in the json) |
+| synthetic, nominal 0.5, clustering 2, clean | 0.53% | -46% | -13% | same |
+| synthetic, nominal 0.23, clustering 2, clean | 0.09% | -12.7% | -0.3% | same |
+| synthetic, nominal 0.8, clustering 1, clean | 0.23% | -9.3% | -0.1% | same |
+| synthetic, misreg25, any omega | 2.4% to 3.3% | | | misregistered stretches |
+| **real data (ALL)** | **0.13%** | **-5.8%** | **-4.1%** | pS 15.2 times the dS-clean pS; 24% within 10 codons of a frameshift run |
+
+- The combination Day's reading needs, a high true value together with extreme clustering, is not what the real run looks like: in that cell U0 itself returns the high truth (0.68), PAF1 drops about 0.8% of codons and PGB about 0.7%. The real U0 reads 0.271 and the two arms drop 0.13% and 0.11%.
+- A low true value with some dense runs is not excluded: at nominal 0.23 and clustering 2 the synthetic PAF1 drops 0.09% of codons and reads 13% low, the same order as the real 0.13% and 5.8%. On that reading the real estimate could carry a downward bias of a few percent from the lenient trim, and none from the other realistic arms.
+- The one observable that would separate "dense real replacements" from "misalignment" in the dropped codons is their pS. On real data it is 7.6 to 15.2 times normal. The synthetic json does not store the pS of dropped codons, so the matching synthetic number is not available; by construction a clustering-2 run has ordinary pS and a misregistered stretch does not. A direct synthetic check of x is owed (queue).
+
+### Predictions scored and what changes
+| prediction | value | result |
+|---|---|---|
+| Day AM: some realistic arm reads <= 0.40 at true 0.8 | PAF1 and PGB at clustering 2 (0.239, 0.308; truth 0.683); none at clustering 0 or 1 | **hit**, at the extreme level only |
+| Critic AM: realistic arms within 10% of truth on clean cells at clustering 0 and 1, every omega | 39 of 40 arm-cells within 10%; PAF1 at nominal 1.0, clustering 1: -13.5% (0.8, clustering 1: -9.3%) | **miss** |
+| A10 (i) PA equals U0 on clean cells | equal at clustering 0 and 1 (largest gap 0.2%) and at 0.23 clustering 2; -1.4%, -12.4%, -24.5% at clustering 2 for 0.5, 0.8, 1.0 | **miss** |
+| A10 (ii) UD within 5% of U0 on clean cells without clustering | +0.5% to +1.3% | hit |
+| A10 (iii) U0 above truth by >= 25% under misreg25 | 3.3x at 0.23, +66% to +79% at 0.5; +19% to +26% at 0.8; -1% to +22% at 1.0 | **miss** at high omega (holds at 0.23 and 0.5) |
+
+**Printed READINGS: unchanged.** The transfer mode does not rewrite them; the docstring has the table "reported beside" Reading B.
+- Reading B. The docstring: "if no realistic arm takes 0.8 to <= 0.40 at any clustering, the mechanism is insufficient in principle; if one does only at the extreme level, the real-data question is whether realistic arms exclude that kind of codon (dS-normal, replacement-dense) in quantity, which the excluded-codon table answers." The second branch applies: PAF1 and PGB do it, at clustering 2 only. The excluded-codon table answers the real-data question in the negative: 0.08% to 0.23% of codons, dS-saturated (x 7.6 to 15.2). So the mechanism is **not** "insufficient in principle", and Reading B stays `contradicted` on the real-data half of the rule and on band CRITIC.
+- Reading A. The docstring: "In principle (synthetic): the transfer table says for which clustering a realistic arm can move omega." Answer: strongly at clustering 2 (PAF1, PGB; PA, PAG, PL38 by 12% to 30% at nominal 0.8 and 1.0), mildly at clustering 1 (PAF1 only), not at clustering 0. The printed real-data value stays `contested`.
+- **Bearing on the open question for DN6 Reading b (`contested` or `contradicted`).** No rule in the docstring ties the transfer table to that move, so it changes no proposal by rule. As evidence it speaks for `contested`: the general statement "protein-guided pipelines can bias dN/dS down" is true of these very arms on synthetic data with dense replacement runs, so `contradicted` would overstate what the real-data run shows, which is that the bias is 2% to 6% on human-chimp CDS and that what is removed looks like misalignment. The proposal below is unchanged.
 
 ## Interpretation
 1. On the hs1/mPanTro3 Cactus codons, an extraction with no protein guidance reads 0.271 on all genes and 0.219 on the real 2005 gene list. The low value is there before any protein-guided step, so on these data the protein-guided step cannot be what produces it.
 2. Adding protein guidance, gap trimming, lenient divergence trimming, local segments or the Gblocks rule moves the pooled value by 0.006 to 0.016. The mechanism of Q181-Q182 exists in sign and is 2% to 6% in size here.
 3. What those arms remove looks like misalignment (pS 8 to 15 times normal, a fifth to a quarter beside frameshift runs), not like fast-evolving protein at ordinary synonymous divergence.
-4. The mechanism becomes large in two situations: a deliberately strict filter (PAF2, minus a third), and a frame-broken input (0.853 to 0.340, 0.807 to 0.48). The second reproduces the pattern Day reports, "high without protein guidance, low with it", but the high value is then the extraction's, not the genome's.
+4. The mechanism becomes large in two situations: a deliberately strict filter (PAF2, minus a third), and a register-broken input (0.853 to 0.340, 0.807 to 0.48). The second reproduces the pattern Day reports, "high without protein guidance, low with it", but the high value is then the extraction's, not the genome's.
 5. The gene list matters modestly: ALL is 24% above the real CSAC list. That is DN3's form of the claim, which Q186 sets aside.
 6. The site model matters more than any alignment arm: transition-aware sites raise every value by about 40% (ALL 0.38). It does not approach 0.80 and does not change the band.
 
@@ -292,13 +395,14 @@ The docstring's text: "new alignment-circularity claim external: DAY -> supporte
 - Move sentence with realistic arms only (amendment 8 restricts Reading A to them and says stress arms decide nothing): all `none` gives "CRITIC with flag none -> contradicted".
 - Printed Reading A under the amended rule: `contested`.
 
-Two of the three routes give `contested`, and rule RD puts the field on the reading most defensible for the speaker, so `contested` is proposed. The amendment did not say which flags the move sentence uses. That is a gap in the amendment, recorded here, for the reviewers and the owner.
+Two of the three routes give `contested`, and rule RD puts the field on the reading most defensible for the speaker, so `contested` is proposed. The transfer table changes no move by rule; as evidence it supports `contested` (the mechanism works in principle on synthetic data with dense replacement runs). The amendment did not say which flags the move sentence uses. That is a gap in the amendment, recorded here, for the reviewers and the owner.
 
 ## Who this helps
 **Day**
 - Q182 is right in direction on real data: in every arm the dropped codons are nonsynonymous-enriched (0.71-0.85 against 0.479), and every realistic arm lowers dN/dS.
 - A strict protein-score filter is not harmless: PAF2 removes 0.92% of codons and 37% of all nonsynonymous differences, and lowers the estimate by a third, on dS-clean gene sets as well. Any pipeline with a filter of that kind would understate dN/dS by a material amount (R1's 25% line is passed).
-- On a frame-broken extraction the protein family lowers 0.85 to 0.34 or 0.19. His observation that the two kinds of pipeline disagree widely is reproducible; the dispute is over which input is right.
+- On synthetic genes with dense replacement runs (clustering 2) the lenient trim and the Gblocks rule read 55% to 65% below the truth, and plain protein guidance 12% to 25% below: the mechanism of Q181-Q182 exists in principle and these arms can show it.
+- On a register-broken extraction the protein family lowers 0.85 to 0.34 or 0.19. His observation that the two kinds of pipeline disagree widely is reproducible; the dispute is over which input is right.
 - Under the registration as written, Reading A scores `supported` (through PF2 / PAF2). The `contested` comes from an amendment.
 - The registered protein-guided arms were invalid as written. The audit's first design would have produced a wrong protein-guided result, and only the pre-run review caught it.
 - The aligner is the audit's own in-script code: not MACSE, PRANK, PAL2NAL, Clustal W or any pipeline Day has in mind. The X-drop values rest on unverified memory of BLAST defaults; the Gblocks rule is not validated against the binary.
@@ -312,11 +416,13 @@ Two of the three routes give `contested`, and rule RD puts the field on the read
 - Frame-aware protein guidance pairs 99.95% of codons as Cactus does and moves the value by 0.006. Realistic trimming removes 0.08-0.23% of codons.
 - What is removed is dS-saturated, and a fifth to a quarter of it lies beside frameshift runs.
 - Every route to 0.80 on these data is an error model, and each one carries about 74% nonsynonymous with an inflated pS. Uniformity across gene sets is a property of the naive arm, not of the frame-preserving one.
+- Synthetic: with no or moderate clustering the realistic arms return the truth at every omega (one exception, PAF1), and the naive arm reads 0.81 to 0.83 at a truth of 0.22 with correctly gapped indels in 15% of genes.
 - Fidelity: the held CSAC text describes a BLASTZ genome alignment for the 13,454 genes; Clustal W only for the 7,043-gene subset.
 
 **Against the critics and the audit**
 - "No bias" is not shown: the sign is Day's in every arm, and the general claim is `contested`, not `contradicted`.
 - Four registered critic-side predictions fail as registered, because the arm they name was invalid. They hold only on the amended arm.
+- Synthetic misses: the critic-side "within 10% of truth" fails for PAF1 at nominal 1.0 with moderate clustering, and the audit's own A10 fails: PA is not neutral under extreme clustering.
 - Audit misses: N/S at kappa-hat (2.40, not 2.6-3.0), the estimand ordering, CSACp against ALL (0.078, not within 0.06), UT (0.853, not 0.28-0.60). The stand-in CSACp was stricter than the real list (0.193 against 0.219): had the proxy stayed the source set, the low value would have been flattered by 0.026.
 - The amendment's "~17%" for the NG shortfall is 29% here.
 
@@ -332,10 +438,11 @@ Two of the three routes give `contested`, and rule RD puts the field on the read
 9. CSAC23 covers 94.6% of the list; 663 accessions are absent from GENCODE v35. Membership reflects 2004 assembly coverage.
 10. O121 comes from Ensembl's protein-tree orthology, itself protein-guided (docstring, amendment 10): an instance of Day's concern at the gene level. U0 on ALL uses none of it.
 11. Columns and sentences marked post hoc were computed for this write-up from `raw/l1c.json` or read off the printed tables. They are descriptive and score nothing.
-12. An empty, untracked `raw/l1c.transfer.out` sits in the working tree from the collection attempt; it is not committed.
+12. The transfer table is synthetic: assumed rates, uniform codon usage, kappa 1, 300-codon genes, runs of 15 codons. Its clustering levels are design choices, not estimates of real proteins, and the json does not store the pS of the codons each arm drops, so the x discriminator is not validated on the clustered cells. (The first version of this write-up, b9e83e0, reported the table as pending; it was collected in 9d61b8a.)
+13. "Register-broken" for the naive arm UT: L1b's fix pass (098ac12) broke the naive arm's excess down post hoc (`raw/l1b_x1_breakdown.json`). All of the excess sits in 2,637 of 19,310 genes. By first cause, in-frame deletions and insertions (multiples of 3) carry 37.6% and 18.1% of it (889 and 397 genes), the class `hole_rowempty` 23.0% (601 genes), and frameshift indels 5.4% and 3.0% (235 and 120 genes). So the naive arm is mostly out of codon register after an ordinary in-frame indel, not out of reading frame.
 
 ## Open
-- Collect and report the transfer table; score the three pending predictions.
+- A synthetic check of the x discriminator on clustered cells (store the pS of dropped codons in `transfer`); not run.
 - Three post-run reviews; then the fix pass and integration (DN6 claim file, defeaters, QUEUE). None of that is done here.
 - For the reviewers to rule on: Reading A as registered (`supported` via PF2 / PAF2) against amended (`contested`); which flags the verdict-move sentence takes; whether the kappa sensitivity belongs in the DN5 comment.
 - Queue items unchanged: external codon aligner; an ML codon model for the site ratio.
