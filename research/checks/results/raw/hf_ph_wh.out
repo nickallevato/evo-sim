@@ -1,0 +1,33 @@
+stage ph shard wh: 83 cells, 247 jobs in shard, 247 to run, workers 11; est. wall (h) wh 31.5 bd 31.5; est. CPU-h shard 346
+[  31929s] 1/247 L softJ K=1000 s=0.002 R=1.111 lam=0.4 rep0 fail=None@None k/lam=0.971 nopen=6141 sec=31929 rss=98MB
+[  32418s] 2/247 L softJ K=1000 s=0.002 R=1.111 lam=0.4 rep1 fail=None@None k/lam=0.987 nopen=6268 sec=32417 rss=105MB
+[  32607s] 3/247 L softJ K=1000 s=0.002 R=1.111 lam=0.4 rep2 fail=None@None k/lam=0.995 nopen=6342 sec=32607 rss=110MB
+[  32640s] 4/247 L softJ K=1000 s=0.002 R=1.111 lam=0.4 rep3 fail=None@None k/lam=0.996 nopen=6323 sec=32639 rss=124MB
+[  49133s] 5/247 C softJ K=4000 s=0.01 R=1.111 lam=1.6 rep1 fail=None@None k/lam=0.870 nopen=9519 sec=49133 rss=380MB
+[  49409s] 6/247 C softJ K=4000 s=0.01 R=1.111 lam=1.6 rep0 fail=None@None k/lam=0.868 nopen=9588 sec=49409 rss=383MB
+[  49811s] 7/247 C softJ K=4000 s=0.01 R=1.111 lam=1.6 rep2 fail=None@None k/lam=0.875 nopen=9651 sec=49811 rss=385MB
+[  50543s] 8/247 L softJ K=4000 s=0.01 R=1.111 lam=0.4 rep2 fail=None@None k/lam=1.004 nopen=2280 sec=50542 rss=147MB
+[  50872s] 9/247 L softJ K=4000 s=0.01 R=1.111 lam=0.4 rep1 fail=None@None k/lam=0.995 nopen=2263 sec=50872 rss=147MB
+[  51003s] 10/247 L softJ K=4000 s=0.01 R=1.111 lam=0.4 rep0 fail=None@None k/lam=1.007 nopen=2295 sec=51003 rss=148MB
+[  51030s] 11/247 L softJ K=4000 s=0.01 R=1.111 lam=0.4 rep3 fail=None@None k/lam=1.008 nopen=2306 sec=51030 rss=146MB
+[  56759s] 12/247 L softJ K=4000 s=0.01 R=1.111 lam=0.2 rep0 fail=None@None k/lam=0.986 nopen=1105 sec=24830 rss=99MB
+[  57441s] 13/247 L softJ K=4000 s=0.01 R=1.111 lam=0.2 rep1 fail=None@None k/lam=1.013 nopen=1125 sec=25023 rss=106MB
+[  57640s] 14/247 L softJ K=4000 s=0.01 R=1.111 lam=0.2 rep3 fail=None@None k/lam=1.004 nopen=1131 sec=25000 rss=124MB
+[  57757s] 15/247 L softJ K=4000 s=0.01 R=1.111 lam=0.2 rep2 fail=None@None k/lam=0.991 nopen=1111 sec=25150 rss=110MB
+[  61697s] 16/247 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=1.6 rep1 fail=None@None k/lam=1.001 nopen=1114 sec=10667 rss=146MB
+[  61752s] 17/247 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=1.6 rep0 fail=None@None k/lam=1.004 nopen=1123 sec=10748 rss=148MB
+[  66375s] 18/247 L softJ K=1000 s=0.002 R=1.111 lam=0.2 rep2 fail=None@None k/lam=0.989 nopen=3178 sec=15832 rss=147MB
+[  66677s] 19/247 L softJ K=1000 s=0.002 R=1.111 lam=0.2 rep3 fail=None@None k/lam=0.990 nopen=3175 sec=15805 rss=147MB
+[  71366s] 20/247 C softJ K=1000 s=0.01 R=1.050 lam=1.6 rep0 fail=None@None k/lam=0.747 nopen=11098 sec=13609 rss=208MB
+[  71764s] 21/247 C softJ K=4000 s=0.01 R=1.111 lam=0.8 rep0 fail=None@None k/lam=0.891 nopen=4502 sec=22631 rss=380MB
+[  71962s] 22/247 C softJ K=4000 s=0.01 R=1.111 lam=0.8 rep1 fail=None@None k/lam=0.893 nopen=4494 sec=22553 rss=383MB
+[  72635s] 23/247 L softJ K=1000 s=0.01 R=1.050 lam=0.4 rep1 fail=None@None k/lam=1.008 nopen=2989 sec=15877 rss=99MB
+[  72775s] 24/247 C softJ K=4000 s=0.01 R=1.111 lam=0.8 rep2 fail=None@None k/lam=0.899 nopen=4577 sec=22963 rss=385MB
+[  72983s] 25/247 L softJ K=1000 s=0.01 R=1.050 lam=0.4 rep2 fail=None@None k/lam=0.984 nopen=2924 sec=15542 rss=106MB
+[  73408s] 26/247 L softJ K=1000 s=0.01 R=1.050 lam=0.4 rep3 fail=None@None k/lam=1.007 nopen=2957 sec=15768 rss=124MB
+[  75269s] 27/247 C softJ K=1000 s=0.01 R=1.050 lam=1.6 rep1 fail=None@None k/lam=0.741 nopen=10983 sec=13572 rss=187MB
+[  75489s] 28/247 C softJ K=1000 s=0.01 R=1.050 lam=1.6 rep2 fail=None@None k/lam=0.745 nopen=11133 sec=13737 rss=166MB
+[  78489s] 29/247 L softJ K=4000 s=0.01 R=1.111 lam=0.1 rep0 fail=None@None k/lam=0.984 nopen=548 sec=12114 rss=147MB
+[  78837s] 30/247 L softJ K=4000 s=0.01 R=1.111 lam=0.1 rep1 fail=None@None k/lam=1.019 nopen=562 sec=12160 rss=147MB
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-hgcx937w', '/mp-navez5on', '/mp-8ji42ifa', '/mp-f9e5rg8m', '/mp-_yban7zh', '/mp-0_erfmvr'}
+  warnings.warn(

@@ -1,0 +1,9 @@
+identity cell 49 A-soft trunc h=0.0 R=3.0 lam=0.0351: OK (4 s)
+identity cell 60 A-soft softWF h=0.0 R=nan lam=0.0351: OK (38 s)
+identity cell 86 A-mix mix h=0.3 R=1.1111111111111112 lam=0.0351: OK (0 s)
+identity cell 107 A-valid mix h=1.0 R=2.0 lam=0.01813: OK (26 s)
+ENGINE IDENTITY: PASS
+probe softJ K=4000 R=1.111 lam=1.6 gens=1500: nopen_end=2137 fail=None sec=244 peak RSS 154 MB
+probe softJ K=1000 R=1.111 lam=3.2 gens=1500: nopen_end=4210 fail=None sec=120 peak RSS 154 MB
+probe trunc g=0.1 K=1000 R=2.000 lam=1.6 gens=1500: nopen_end=981 fail=None sec=59 peak RSS 154 MB
+probe h=0.1 K=1000 R=1.111 lam=0.0111 gens=1500: nopen_end=19 fail=None sec=1 peak RSS 154 MB

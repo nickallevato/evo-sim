@@ -1,0 +1,165 @@
+stage ph shard bd: 83 cells, 163 jobs in shard, 163 to run, workers 7; est. wall (h) wh 31.5 bd 31.5; est. CPU-h shard 221
+[  12695s] 1/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.8 rep0 fail=None@None k/lam=1.000 nopen=3499 sec=12695 rss=102MB
+[  12729s] 2/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.8 rep1 fail=None@None k/lam=1.011 nopen=3560 sec=12729 rss=115MB
+[  12735s] 3/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.8 rep2 fail=None@None k/lam=1.011 nopen=3588 sec=12735 rss=97MB
+[  16495s] 4/163 L softJ K=1000 s=0.002 R=2.000 lam=0.4 rep3 fail=None@None k/lam=1.005 nopen=2993 sec=16495 rss=104MB
+[  16848s] 5/163 L softJ K=1000 s=0.002 R=2.000 lam=0.4 rep0 fail=None@None k/lam=1.006 nopen=2984 sec=16848 rss=116MB
+[  16854s] 6/163 L softJ K=1000 s=0.002 R=2.000 lam=0.4 rep2 fail=None@None k/lam=1.008 nopen=3012 sec=16854 rss=120MB
+[  16931s] 7/163 L softJ K=1000 s=0.002 R=2.000 lam=0.4 rep1 fail=None@None k/lam=1.001 nopen=2962 sec=16931 rss=122MB
+[  24198s] 8/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.8 rep3 fail=None@None k/lam=1.003 nopen=3516 sec=11503 rss=112MB
+[  24607s] 9/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=1.6 rep1 fail=None@None k/lam=1.001 nopen=3563 sec=11871 rss=130MB
+[  24859s] 10/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=1.6 rep0 fail=None@None k/lam=1.006 nopen=3607 sec=12130 rss=117MB
+[  25416s] 11/163 L softJ K=1000 s=0.002 R=1.111 lam=0.2 rep0 fail=None@None k/lam=0.956 nopen=3045 sec=8562 rss=120MB
+[  25658s] 12/163 L softJ K=1000 s=0.002 R=1.111 lam=0.2 rep1 fail=None@None k/lam=0.978 nopen=3138 sec=8727 rss=122MB
+[  28048s] 13/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=1.6 rep2 fail=None@None k/lam=1.001 nopen=3574 sec=11553 rss=113MB
+[  28307s] 14/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=1.6 rep3 fail=None@None k/lam=0.994 nopen=3518 sec=11458 rss=116MB
+[  30500s] 15/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=1.6 rep2 fail=None@None k/lam=1.002 nopen=1115 sec=6302 rss=112MB
+[  30855s] 16/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=1.6 rep3 fail=None@None k/lam=0.995 nopen=1102 sec=6248 rss=130MB
+[  32995s] 17/163 L softJ K=1000 s=0.002 R=2.000 lam=0.2 rep0 fail=None@None k/lam=0.989 nopen=1473 sec=8136 rss=117MB
+[  33524s] 18/163 L softJ K=1000 s=0.002 R=2.000 lam=0.2 rep1 fail=None@None k/lam=1.001 nopen=1495 sec=8108 rss=120MB
+[  33761s] 19/163 L softJ K=1000 s=0.002 R=2.000 lam=0.2 rep2 fail=None@None k/lam=0.998 nopen=1481 sec=8103 rss=122MB
+[  36241s] 20/163 L softJ K=1000 s=0.002 R=2.000 lam=0.2 rep3 fail=None@None k/lam=0.997 nopen=1473 sec=8193 rss=113MB
+[  37598s] 21/163 L softJ K=1000 s=0.01 R=1.050 lam=0.4 rep0 fail=None@None k/lam=1.005 nopen=2960 sec=9291 rss=116MB
+[  38913s] 22/163 C softJ K=1000 s=0.01 R=1.050 lam=1.6 rep3 fail=None@None k/lam=0.749 nopen=11178 sec=8413 rss=204MB
+[  43613s] 23/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=1.6 rep0 fail=None@None k/lam=1.006 nopen=2197 sec=7372 rss=113MB
+[  45039s] 24/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=1.6 rep1 fail=None@None k/lam=1.006 nopen=2190 sec=7441 rss=116MB
+[  46375s] 25/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=1.6 rep3 fail=None@None k/lam=1.000 nopen=2185 sec=7462 rss=204MB
+[  49298s] 26/163 C softJ K=1000 s=0.01 R=1.111 lam=1.6 rep0 fail=None@None k/lam=0.920 nopen=7634 sec=5685 rss=201MB
+[  50653s] 27/163 C softJ K=1000 s=0.01 R=1.111 lam=1.6 rep1 fail=None@None k/lam=0.911 nopen=7516 sec=5615 rss=175MB
+[  52211s] 28/163 C softJ K=1000 s=0.01 R=1.111 lam=1.6 rep2 fail=None@None k/lam=0.921 nopen=7568 sec=5836 rss=204MB
+[  54738s] 29/163 L softJ K=1000 s=0.002 R=2.000 lam=0.1 rep0 fail=None@None k/lam=1.020 nopen=753 sec=4085 rss=175MB
+[  55150s] 30/163 C softJ K=1000 s=0.01 R=1.111 lam=1.6 rep3 fail=None@None k/lam=0.911 nopen=7564 sec=5852 rss=216MB
+[  56181s] 31/163 L softJ K=1000 s=0.002 R=2.000 lam=0.1 rep1 fail=None@None k/lam=1.023 nopen=751 sec=3970 rss=204MB
+[  58284s] 32/163 C softJ K=1000 s=0.01 R=1.050 lam=0.8 rep1 fail=None@None k/lam=0.790 nopen=5299 sec=3546 rss=175MB
+[  58610s] 33/163 C softJ K=1000 s=0.01 R=1.050 lam=0.8 rep2 fail=None@None k/lam=0.772 nopen=5227 sec=3460 rss=216MB
+[  59597s] 34/163 C softJ K=1000 s=0.01 R=1.050 lam=0.8 rep3 fail=None@None k/lam=0.784 nopen=5271 sec=3416 rss=204MB
+[  61318s] 35/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.4 rep0 fail=None@None k/lam=0.997 nopen=972 sec=3034 rss=175MB
+[  61646s] 36/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.4 rep1 fail=None@None k/lam=1.008 nopen=992 sec=3035 rss=216MB
+[  61695s] 37/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.2 rep2 fail=extinct@3236 k/lam=0.000 nopen=0 sec=49 rss=216MB
+[  61741s] 38/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.2 rep5 fail=extinct@3503 k/lam=0.000 nopen=0 sec=46 rss=216MB
+[  61790s] 39/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.2 rep6 fail=extinct@3357 k/lam=0.000 nopen=0 sec=49 rss=216MB
+[  62688s] 40/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.4 rep2 fail=None@None k/lam=1.006 nopen=991 sec=3091 rss=204MB
+[  63379s] 41/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.8 rep1 fail=None@None k/lam=0.996 nopen=294 sec=1589 rss=216MB
+[  64264s] 42/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.8 rep2 fail=None@None k/lam=1.000 nopen=294 sec=1576 rss=204MB
+[  64438s] 43/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.4 rep3 fail=None@None k/lam=1.006 nopen=989 sec=3121 rss=175MB
+[  66151s] 44/163 L softJ K=1000 s=0.01 R=1.111 lam=0.2 rep0 fail=None@None k/lam=0.990 nopen=876 sec=2772 rss=216MB
+[  66239s] 45/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.168 rep0 fail=extinct@4899 k/lam=0.000 nopen=0 sec=88 rss=216MB
+[  66307s] 46/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.168 rep1 fail=extinct@3942 k/lam=0.000 nopen=0 sec=68 rss=216MB
+[  66389s] 47/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.168 rep2 fail=extinct@4563 k/lam=0.000 nopen=0 sec=83 rss=216MB
+[  66472s] 48/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.168 rep3 fail=extinct@4544 k/lam=0.000 nopen=0 sec=83 rss=216MB
+[  66540s] 49/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.168 rep5 fail=extinct@4213 k/lam=0.000 nopen=0 sec=68 rss=216MB
+[  66622s] 50/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.168 rep6 fail=extinct@5201 k/lam=0.000 nopen=0 sec=82 rss=216MB
+[  66968s] 51/163 C softJ K=1000 s=0.01 R=1.111 lam=0.8 rep3 fail=None@None k/lam=0.932 nopen=3565 sec=2529 rss=175MB
+[  67085s] 52/163 L softJ K=1000 s=0.01 R=1.111 lam=0.2 rep1 fail=None@None k/lam=1.017 nopen=892 sec=2821 rss=204MB
+[  68426s] 53/163 L softJ K=1000 s=0.002 R=1.111 lam=0.0351 rep0 fail=None@None k/lam=0.958 nopen=531 sec=1459 rss=175MB
+[  68597s] 54/163 L softJ K=1000 s=0.01 R=1.050 lam=0.1 rep3 fail=None@None k/lam=0.987 nopen=688 sec=1975 rss=216MB
+[  68659s] 55/163 L softJ K=1000 s=0.002 R=1.111 lam=0.0351 rep1 fail=None@None k/lam=1.022 nopen=588 sec=1574 rss=204MB
+[  68955s] 56/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=1.6 rep0 fail=None@None k/lam=0.998 nopen=11803 sec=38100 rss=215MB
+[  69142s] 57/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.141 rep1 fail=extinct@9306 k/lam=0.000 nopen=0 sec=187 rss=215MB
+[  70113s] 58/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=1.6 rep0 fail=None@None k/lam=1.005 nopen=308 sec=1687 rss=175MB
+[  70280s] 59/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=1.6 rep2 fail=None@None k/lam=0.998 nopen=304 sec=1683 rss=216MB
+[  70338s] 60/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=1.6 rep3 fail=None@None k/lam=0.995 nopen=303 sec=1679 rss=204MB
+[  70482s] 61/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=1.6 rep3 fail=None@None k/lam=0.990 nopen=11614 sec=36721 rss=217MB
+[  70518s] 62/163 L softJ K=1000 s=0.002 R=2.000 lam=0.0351 rep2 fail=None@None k/lam=1.075 nopen=276 sec=1376 rss=215MB
+[  70656s] 63/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=1.6 rep2 fail=None@None k/lam=0.998 nopen=11774 sec=37133 rss=210MB
+[  71149s] 64/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.119 rep0 fail=None@None k/lam=0.997 nopen=258 sec=667 rss=217MB
+[  71175s] 65/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.119 rep3 fail=None@None k/lam=0.993 nopen=252 sec=657 rss=215MB
+[  71185s] 66/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.1 rep0 fail=extinct@2345 k/lam=0.000 nopen=0 sec=10 rss=215MB
+[  71192s] 67/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.1 rep3 fail=extinct@1509 k/lam=0.000 nopen=0 sec=7 rss=215MB
+[  71200s] 68/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.1 rep4 fail=extinct@1666 k/lam=0.000 nopen=0 sec=9 rss=215MB
+[  71208s] 69/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.1 rep5 fail=extinct@1660 k/lam=0.000 nopen=0 sec=7 rss=215MB
+[  71365s] 70/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.119 rep4 fail=None@None k/lam=1.023 nopen=267 sec=709 rss=210MB
+[  71445s] 71/163 L softJ K=1000 s=0.002 R=2.000 lam=0.0351 rep3 fail=None@None k/lam=0.975 nopen=261 sec=1332 rss=175MB
+[  71462s] 72/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0768 rep1 fail=extinct@3179 k/lam=0.000 nopen=0 sec=17 rss=175MB
+[  71479s] 73/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0768 rep4 fail=extinct@3219 k/lam=0.000 nopen=0 sec=17 rss=175MB
+[  71512s] 74/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0768 rep7 fail=extinct@5281 k/lam=0.000 nopen=0 sec=33 rss=175MB
+[  71533s] 75/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=1.6 rep1 fail=None@None k/lam=0.999 nopen=11823 sec=38538 rss=204MB
+[  71672s] 76/163 M h=0.1 K=1000 s=0.01 R=2.000 lam=0.1 rep5 fail=None@None k/lam=0.989 nopen=197 sec=523 rss=217MB
+[  72187s] 77/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=0.8 rep0 fail=None@None k/lam=1.003 nopen=589 sec=1907 rss=216MB
+[  72236s] 78/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=0.8 rep3 fail=None@None k/lam=1.001 nopen=591 sec=1898 rss=204MB
+[  72298s] 79/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0592 rep6 fail=extinct@9280 k/lam=0.000 nopen=0 sec=62 rss=204MB
+[  72299s] 80/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.2 rep0 fail=None@None k/lam=0.969 nopen=250 sec=787 rss=175MB
+[  72364s] 81/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.2 rep1 fail=None@None k/lam=0.987 nopen=260 sec=830 rss=204MB
+[  72397s] 82/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0592 rep7 fail=extinct@12671 k/lam=0.993 nopen=155 sec=99 rss=204MB
+[  72499s] 83/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.2 rep2 fail=None@None k/lam=0.994 nopen=264 sec=826 rss=217MB
+[  72528s] 84/163 L softJ K=1000 s=0.01 R=1.111 lam=0.1 rep1 fail=None@None k/lam=0.983 nopen=436 sec=1320 rss=215MB
+[  72693s] 85/163 L softJ K=1000 s=0.01 R=1.111 lam=0.1 rep2 fail=None@None k/lam=0.973 nopen=425 sec=1328 rss=210MB
+[  72750s] 86/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0454 rep0 fail=None@None k/lam=1.007 nopen=84 sec=222 rss=215MB
+[  72784s] 87/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.4 rep1 fail=None@None k/lam=0.997 nopen=77 sec=421 rss=204MB
+[  72807s] 88/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.4 rep2 fail=None@None k/lam=0.996 nopen=77 sec=410 rss=204MB
+[  72888s] 89/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0454 rep2 fail=None@None k/lam=0.922 nopen=75 sec=195 rss=210MB
+[  72914s] 90/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.4 rep3 fail=None@None k/lam=1.000 nopen=78 sec=415 rss=217MB
+[  72943s] 91/163 L softJ K=1000 s=0.01 R=1.050 lam=0.0351 rep2 fail=None@None k/lam=0.957 nopen=240 sec=644 rss=175MB
+[  73018s] 92/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.2 rep3 fail=None@None k/lam=1.016 nopen=276 sec=831 rss=216MB
+[  73048s] 93/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0351 rep1 fail=None@None k/lam=0.996 nopen=59 sec=160 rss=210MB
+[  73082s] 94/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0351 rep5 fail=None@None k/lam=1.008 nopen=64 sec=168 rss=217MB
+[  73112s] 95/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0351 rep6 fail=None@None k/lam=1.059 nopen=65 sec=169 rss=175MB
+[  73173s] 96/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.8 rep0 fail=None@None k/lam=0.996 nopen=79 sec=423 rss=215MB
+[  73184s] 97/163 M h=0.3 K=1000 s=0.01 R=2.000 lam=0.0351 rep7 fail=None@None k/lam=1.010 nopen=62 sec=167 rss=216MB
+[  73209s] 98/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.8 rep1 fail=None@None k/lam=0.993 nopen=79 sec=424 rss=204MB
+[  73235s] 99/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.8 rep2 fail=None@None k/lam=1.010 nopen=81 sec=428 rss=204MB
+[  73362s] 100/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.2 rep2 fail=None@None k/lam=1.020 nopen=21 sec=128 rss=204MB
+[  73413s] 101/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.1 rep0 fail=None@None k/lam=1.010 nopen=74 sec=229 rss=216MB
+[  73426s] 102/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.1 rep2 fail=None@None k/lam=1.000 nopen=71 sec=218 rss=204MB
+[  73441s] 103/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0157 rep0 fail=extinct@12048 k/lam=0.901 nopen=64 sec=15 rss=204MB
+[  73460s] 104/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0157 rep1 fail=extinct@12426 k/lam=1.207 nopen=65 sec=19 rss=204MB
+[  73484s] 105/163 L softJ K=1000 s=0.01 R=1.111 lam=0.0351 rep0 fail=None@None k/lam=0.983 nopen=150 sec=435 rss=210MB
+[  73485s] 106/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0157 rep2 fail=extinct@16926 k/lam=1.140 nopen=64 sec=25 rss=204MB
+[  73486s] 107/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.4 rep0 fail=None@None k/lam=1.002 nopen=21 sec=124 rss=204MB
+[  73498s] 108/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0157 rep4 fail=extinct@9859 k/lam=0.000 nopen=0 sec=14 rss=210MB
+[  73528s] 109/163 L softJ K=1000 s=0.01 R=1.111 lam=0.0351 rep1 fail=None@None k/lam=1.036 nopen=153 sec=447 rss=217MB
+[  73538s] 110/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.4 rep2 fail=None@None k/lam=1.006 nopen=21 sec=124 rss=216MB
+[  73538s] 111/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0157 rep5 fail=extinct@34619 k/lam=1.024 nopen=63 sec=53 rss=204MB
+[  73547s] 112/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.013 rep4 fail=extinct@28020 k/lam=0.999 nopen=64 sec=49 rss=210MB
+[  73557s] 113/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.013 rep0 fail=None@None k/lam=0.985 nopen=61 sec=70 rss=204MB
+[  73574s] 114/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0111 rep0 fail=extinct@19954 k/lam=0.950 nopen=60 sec=37 rss=204MB
+[  73577s] 115/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=0.4 rep0 fail=None@None k/lam=0.995 nopen=156 sec=465 rss=175MB
+[  73578s] 116/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0111 rep6 fail=extinct@1971 k/lam=0.000 nopen=0 sec=1 rss=175MB
+[  73579s] 117/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0111 rep0 fail=extinct@5545 k/lam=0.000 nopen=0 sec=5 rss=204MB
+[  73579s] 118/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0111 rep7 fail=extinct@1674 k/lam=0.000 nopen=0 sec=1 rss=175MB
+[  73597s] 119/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.013 rep5 fail=None@None k/lam=0.900 nopen=64 sec=68 rss=217MB
+[  73608s] 120/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.013 rep6 fail=None@None k/lam=0.992 nopen=65 sec=70 rss=216MB
+[  73624s] 121/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0111 rep1 fail=None@None k/lam=1.015 nopen=58 sec=76 rss=210MB
+[  73627s] 122/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0111 rep3 fail=None@None k/lam=1.087 nopen=62 sec=71 rss=204MB
+[  73634s] 123/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0084 rep4 fail=extinct@10719 k/lam=1.488 nopen=24 sec=7 rss=204MB
+[  73636s] 124/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=0.4 rep2 fail=None@None k/lam=1.002 nopen=158 sec=463 rss=215MB
+[  73639s] 125/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0084 rep7 fail=extinct@4354 k/lam=0.000 nopen=0 sec=3 rss=215MB
+[  73647s] 126/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0094 rep0 fail=None@None k/lam=0.950 nopen=50 sec=68 rss=204MB
+[  73653s] 127/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0084 rep5 fail=extinct@24134 k/lam=0.817 nopen=19 sec=19 rss=204MB
+[  73656s] 128/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0094 rep1 fail=None@None k/lam=1.053 nopen=56 sec=77 rss=175MB
+[  73675s] 129/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0094 rep5 fail=extinct@34741 k/lam=1.118 nopen=62 sec=67 rss=216MB
+[  73680s] 130/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0094 rep3 fail=None@None k/lam=1.046 nopen=63 sec=83 rss=217MB
+[  73686s] 131/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0064 rep3 fail=extinct@10150 k/lam=3.104 nopen=21 sec=7 rss=217MB
+[  73707s] 132/163 M h=0.1 K=1000 s=0.01 R=1.111 lam=0.0074 rep6 fail=None@None k/lam=0.883 nopen=30 sec=51 rss=175MB
+[  73709s] 133/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0064 rep2 fail=None@None k/lam=1.047 nopen=19 sec=34 rss=216MB
+[  73709s] 134/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=0.1 rep1 fail=None@None k/lam=0.966 nopen=18 sec=71 rss=215MB
+[  73710s] 135/163 N trunc g=1.0 K=1000 s=0.01 R=2.000 lam=0.4 rep2 fail=None@None k/lam=1.014 nopen=14 sec=87 rss=210MB
+[  73720s] 136/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0064 rep6 fail=None@None k/lam=0.859 nopen=17 sec=33 rss=217MB
+[  73720s] 137/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=0.1 rep2 fail=None@None k/lam=0.981 nopen=19 sec=73 rss=204MB
+[  73726s] 138/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=0.1 rep3 fail=None@None k/lam=0.982 nopen=19 sec=73 rss=204MB
+[  73740s] 139/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0064 rep7 fail=None@None k/lam=0.885 nopen=17 sec=34 rss=175MB
+[  73740s] 140/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0049 rep0 fail=None@None k/lam=0.973 nopen=13 sec=30 rss=210MB
+[  73748s] 141/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0049 rep4 fail=None@None k/lam=1.061 nopen=14 sec=29 rss=217MB
+[  73749s] 142/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0049 rep5 fail=None@None k/lam=0.952 nopen=14 sec=29 rss=204MB
+[  73757s] 143/163 N trunc g=1.0 K=1000 s=0.01 R=2.000 lam=0.0351 rep0 fail=None@None k/lam=1.018 nopen=1 sec=16 rss=210MB
+[  73757s] 144/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.1 rep0 fail=None@None k/lam=0.972 nopen=5 sec=48 rss=216MB
+[  73758s] 145/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.1 rep2 fail=None@None k/lam=1.006 nopen=5 sec=49 rss=215MB
+[  73765s] 146/163 N trunc g=1.0 K=1000 s=0.01 R=2.000 lam=0.0351 rep3 fail=None@None k/lam=0.990 nopen=1 sec=16 rss=217MB
+[  73775s] 147/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.0351 rep0 fail=None@None k/lam=1.031 nopen=10 sec=49 rss=204MB
+[  73776s] 148/163 N trunc g=1.0 K=1000 s=0.01 R=2.000 lam=0.1 rep0 fail=None@None k/lam=1.005 nopen=2 sec=27 rss=204MB
+[  73778s] 149/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.0351 rep0 fail=None@None k/lam=0.984 nopen=1 sec=20 rss=215MB
+[  73784s] 150/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.0351 rep3 fail=None@None k/lam=0.976 nopen=1 sec=20 rss=217MB
+[  73786s] 151/163 N trunc g=0.1 K=1000 s=0.01 R=1.111 lam=0.0351 rep3 fail=None@None k/lam=1.033 nopen=11 sec=46 rss=175MB
+[  73797s] 152/163 N trunc g=1.0 K=1000 s=0.01 R=2.000 lam=0.2 rep2 fail=None@None k/lam=0.978 nopen=4 sec=41 rss=210MB
+[  73799s] 153/163 N trunc g=1.0 K=1000 s=0.01 R=2.000 lam=0.2 rep3 fail=None@None k/lam=1.020 nopen=5 sec=42 rss=216MB
+[  73800s] 154/163 N trunc g=0.1 K=1000 s=0.01 R=2.000 lam=0.0351 rep2 fail=None@None k/lam=1.033 nopen=1 sec=25 rss=204MB
+[  73807s] 155/163 N trunc g=0.5 K=1000 s=0.01 R=2.000 lam=0.1 rep0 fail=None@None k/lam=1.018 nopen=2 sec=32 rss=204MB
+[  73810s] 156/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0037 rep0 fail=None@None k/lam=1.072 nopen=11 sec=26 rss=217MB
+[  73813s] 157/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0037 rep1 fail=None@None k/lam=1.045 nopen=11 sec=27 rss=175MB
+[  73821s] 158/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0037 rep2 fail=None@None k/lam=0.811 nopen=9 sec=24 rss=210MB
+[  73823s] 159/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0037 rep5 fail=None@None k/lam=1.063 nopen=10 sec=24 rss=216MB
+[  73825s] 160/163 M h=0.3 K=1000 s=0.01 R=1.111 lam=0.0037 rep6 fail=None@None k/lam=1.135 nopen=12 sec=25 rss=204MB
+[  73830s] 161/163 N trunc g=1.0 K=1000 s=0.01 R=1.111 lam=0.1 rep1 fail=None@None k/lam=1.009 nopen=13 sec=52 rss=215MB
+[  73835s] 162/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=0.0351 rep0 fail=None@None k/lam=0.981 nopen=4 sec=28 rss=204MB
+[  73837s] 163/163 N trunc g=0.5 K=1000 s=0.01 R=1.111 lam=0.0351 rep2 fail=None@None k/lam=0.999 nopen=4 sec=26 rss=217MB
+stage ph shard bd done in 73837 s
