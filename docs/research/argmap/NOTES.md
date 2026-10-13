@@ -10,6 +10,8 @@ Files:
 
 ## Counts (checker output, 2026-10-08, after the integration fixes)
 
+**Update 2026-10-13 (HF integration, incl. post hoc run ph; reviews #66-#69).** Added d445-d447 (chk:HF against H8 and H: Term 3 not a bound across mechanisms, Day-1 condition, Day-side credit; all `partly`), d448-d451 (reviews against chk:HF); lineage L-audit-hf-2026; mini-form HFchk. Counts: see the checker output of the integration commit.
+
 **Update 2026-10-11 (batched integration: B9 internal, RHclose, RHclose-critics, A2e-alpha Uricchio addendum, GAP05; reviews #62-#65; rules RD and RH6).** The checker now reports 437 defeaters, 238 lineage nodes and 162 standard forms, 0 errors, 0 warnings. Added: d431-d433 (chk:A2e-alpha-uricchio against A2e, rebutting for the any-effect-size count; review #64 undercutters, one `partly` for the strong-only reading), d434-d437 (chk:RHclose against C7 and B; review #62), d438, d439, d441 (chk:RHclose-critics against ROOT-PG, G2e, B5, `partly`, reading-dependent), d440 (review #63), d442-d444 (chk:GAP05 against B9; review #65, one `partly` Day-side calibrated-base case); lineage L-audit-rhclose-2026, L-audit-rhclose-critics-2026, L-audit-a2e-uricchio-2026, L-audit-gap05-2026; mini-forms C7chk, Bchk, A2eU, GAP05, RHcrit. Convention (RD): where a verdict depends on the reading, the defeaters name the reading and carry `partly` when the reading changes the verdict.
 
 **Update 2026-10-11 (R4 B9 integration; review #61).** The checker now reports 423 defeaters, 234 lineage nodes and 157 standard forms, 0 errors, 0 warnings. Added: d427 (chk:B9 against B9's conclusion, rebutting: premise 1 false under standard theory), d428 (chk:B9 against B9 P2, undermining: premise 2 as worded against R4-L1 dN/dS), d429 (review #61 against chk:B9), d430 (review #61 steelman-Day section against chk:B9, `partly`: the Day-side case for reading A); lineage L-day-extinction-centuries-2026 and L-audit-b9-2026; mini-form B9chk. Internal verdict on B9 is an owner decision (holds conditional on reading A, or keep non-sequitur); nothing here changes it.
@@ -255,10 +257,15 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:RHclose-critics | audit | the same rule applied to critic statements: Hancock RH-15 (H1-H4), Myers RH-20 (M1-M3) and PZ-03, Mansfield RH-18 (F1-F3) | RESULTS §RHclose-critics; results/R4-RHclose-critics.md (added 2026-10-11) |
 | chk:A2e-alpha-uricchio | audit | Uricchio, Petrov and Enard 2019 full text: human-lineage ABC-MK alpha 0.135 (HPD 0.096-0.17) mapped to the A2e flip (191); two-reading scoping | RESULTS §A2e-alpha addendum; results/R4-A2e-alpha.md addendum (added 2026-10-11) |
 | chk:GAP05 | audit | slightly deleterious fixations on the human lineage from a sourced DFE (Kim, Huber & Lohmueller 2017) with Kimura fixation; pre-registered and calibrated bases | RESULTS §GAP05; results/R4-GAP05.md (added 2026-10-11) |
+| chk:HF | audit | H follow-ups: soft-rate limit with hardness h, truncation (noise-free and phenotypic), synergy, T50/lam50 intervals, GAP-05, and post hoc run ph | RESULTS §HF; results/R4-HF.md (added 2026-10-13) |
 | rev:R4-RHclose-combined | audit | review #62, combined (RHclose); low-stakes tier | results/REVIEW-R4-RHclose-combined.md (2026-10-11) |
 | rev:R4-RHclose-critics-combined | audit | review #63, combined (RHclose-critics); low-stakes tier | results/REVIEW-R4-RHclose-critics-combined.md (2026-10-11) |
 | rev:R4-A2e-uricchio-combined | audit | review #64, combined (A2e-alpha Uricchio addendum); low-stakes tier | results/REVIEW-R4-A2e-uricchio-combined.md (2026-10-11) |
 | rev:R4-GAP05-combined | audit | review #65, combined (GAP05); low-stakes tier | results/REVIEW-R4-GAP05-combined.md (2026-10-11) |
+| rev:R4-HF-correctness | audit | review #66, correctness review of HF; load-bearing tier | results/REVIEW-R4-HF-correctness.md (2026-10-11) |
+| rev:R4-HF-steelman-day | audit | review #67, Day-side steelman of HF; load-bearing tier | results/REVIEW-R4-HF-steelman-day.md (2026-10-11) |
+| rev:R4-HF-steelman-critic | audit | review #68, critic-side steelman of HF; load-bearing tier | results/REVIEW-R4-HF-steelman-critic.md (2026-10-11) |
+| rev:R4-HF-ph-combined | audit | review #69, combined review of HF post hoc run ph; low-stakes tier | results/REVIEW-R4-HF-ph-combined.md (2026-10-13) |
 | x:dnds-steelman-critic | audit | the audit's critic-side steelman of Day's dN/dS inference (DN4): dN/dS is not alpha (no critic has replied as of 2026-10-11) | docs/research/sources/test-methods-review-2026-10-11.md entry 5 |
 
 ## Judgement calls

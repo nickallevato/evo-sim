@@ -5775,3 +5775,101 @@
   counter: []
   note: 'Applied in fix pass 5601687 and post hoc gap05_posthoc.py (2d134d0); DB2 recorded as base-dependent.'
   hierarchy_edge: false
+
+- id: d445
+  attacker: chk:HF
+  target: H8
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-HF.md (HF-a, HF-b; Post hoc run ph, stages M and N)
+  audit_status: partly
+  audit_basis: 'Term 3 is not a bound across mechanisms: it does not hold in-model at h = 0.1 (about 1.9-2.8x Term 3), for purely relative fitness (>= 217x the hard cap) or for truncation on a phenotype with genotypic share down to 0.1 (1.6 per generation sustained); it holds in-model for hard selection and at h = 0.3 (0.83x and 1.05x Term 3). h and R unsourced (V17)'
+  counter: [d448, d449, d450, d451]
+  note: 'Critic-side counter to the premise that selection cannot be sped up by any mechanism. Day-side: s3.3.1 on s_max is literally true (internal holds); the counterexamples rest on modelling choices Day does not share (external disagreement, not rule N); the last two arms cannot go extinct and are not charged for cost.'
+  hierarchy_edge: false
+
+- id: d446
+  attacker: chk:HF
+  target: H
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-HF.md (Review resolution, Day-1; Post hoc run ph, D2)
+  audit_status: partly
+  audit_basis: 'Against soft selection removes the cost: with purely relative fitness or truncation holding N = K the population cannot go extinct in this model, and the rate is limited only by sweep latency and the open-locus cap; the cost per substitution is not reduced, only not charged (softWF D 16.2-16.8 against about 16 hard; mean log-viability about -27 at lam 1.6; D rises about six-fold under noisy truncation)'
+  counter: [d448, d449, d450, d451]
+  note: 'Day-side defeater of the critic-side soft-selection result; conditional on Day-1. Latency vs throughput (C4): H-C2 soft T50 > hard T50 and HF-a throughput answer different questions; neither is cited alone.'
+  hierarchy_edge: false
+
+- id: d447
+  attacker: chk:HF
+  target: H
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-HF.md (HF-c, HF-a mix, Post hoc run ph, stage M)
+  audit_status: partly
+  audit_basis: 'Day-side credit: at R = 1.111 and D = 30 the 95% interval lies wholly above 300 at every K tested (K = 64,000: 326-768), so 1/300 is conservative under hard selection; at h = 0.3 the rate is about 1.3-1.7x the hard cap; at h = 0.1 about 2.6-3.5x (R = 1.111 marginal, R = 2 sharp 3.5x). Critic-side: hardness h and R have no source, so external stays contested'
+  counter: [d448, d449, d450, d451]
+  note: 'Scope text of H: no verdict value change. R-scope: 213-349 at R = 1.2, 50-69 at R = 2.'
+  hierarchy_edge: false
+
+- id: d448
+  attacker: rev:R4-HF-correctness
+  target: chk:HF
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #66)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-HF-correctness.md
+  audit_status: upheld
+  audit_basis: 'mix lam50 were log-midpoints between a 4/4 and a 0/4 grid point (C1); max_open censoring (C2); 43x decomposed (C3); latency vs throughput (C4); PD5 validation closed as sampling noise (C12)'
+  counter: []
+  note: 'Applied in the fix pass 2026-10-11; boundaries replaced by post hoc run ph.'
+  hierarchy_edge: false
+
+- id: d449
+  attacker: rev:R4-HF-steelman-day
+  target: chk:HF
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #67)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-HF-steelman-day.md
+  audit_status: upheld
+  audit_basis: 'Day-1 soft arms cannot fail for population reasons and cost is uncharged; Day-2 truncation was noise-free genotype truncation; Day-3 HF-d tests only horn two; Day-4 DA1 is an audit gloss; Day-5 PC3 credit'
+  counter: []
+  note: 'Applied in the fix pass 2026-10-11; Day-1 clause restored in the H text after ph (D2).'
+  hierarchy_edge: false
+
+- id: d450
+  attacker: rev:R4-HF-steelman-critic
+  target: chk:HF
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #68)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-HF-steelman-critic.md
+  audit_status: upheld
+  audit_basis: 'Critic-1 h = 0.3 numbers were floor ties; Critic-2 synergy anchored to an absolute optimum; Critic-3 S3 stacks upper-end inputs; Critic-4 h is not a field parameter; Critic-6 R-scope of PC3'
+  counter: []
+  note: 'Applied in the fix pass 2026-10-11; synergy arm under relative fitness and density-compensating arm remain open.'
+  hierarchy_edge: false
+
+- id: d451
+  attacker: rev:R4-HF-ph-combined
+  target: chk:HF
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #69)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-HF-ph-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (D1 the h = 0.1, R = 1.111 boundary rests on a 4-of-8 tie; D2 Day-1 clause dropped), 9 MINOR, 8 NOTE; all table numbers equal raw'
+  counter: []
+  note: 'Applied in fix pass c2ac2c3; the R = 1.111 h = 0.1 calls are marginal.'
+  hierarchy_edge: false

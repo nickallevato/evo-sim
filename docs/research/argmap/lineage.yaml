@@ -3943,3 +3943,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#65), fix-passed and integrated 2026-10-11"
+
+- id: L-audit-hf-2026
+  label: "Audit HF: soft selection and truncation sustain >= 0.8-1.6 per generation but cannot go extinct and are not charged; Term 3 holds at h = 0.3 and not at h = 0.1"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [H8, H, H5]
+  locator: "research/checks/results/R4-HF.md"
+  quote: "no more than approximately one"
+  parents:
+    - {id: L-audit-h8-kscale64-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#66-#69), fix-passed (c2ac2c3) and integrated 2026-10-13"
