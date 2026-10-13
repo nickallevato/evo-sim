@@ -44,7 +44,7 @@ Sources become verbatim quotes, quotes become claims with three verdicts, claims
 | `opponents/<name>.md` | Each critic or ally, with their arguments mapped to claim IDs |
 | `ledgers/` | Citation fidelity, side-by-side balance, contradictions, version drift |
 | `../../research/checks/` | Throwaway verification code and `REVIEW.md` |
-| `criticality/` | **Criticality layer**: the audit auditing itself (method audit MA-01 to MA-20 with status table, Triveritas critique TV-01 to TV-11, AMSTAR 2 and ROBIS appraisal AR-01 to AR-14 in `amstar2-robis-2026-10-12.md`, severe-testing pass ST-01 to ST-13 in `severe-testing-2026-10-12.md`, methods and limitations, proposals, standing procedure). Start at `criticality/README.md`. |
+| `criticality/` | **Criticality layer**: the audit auditing itself (method audit MA-01 to MA-20 with status table, Triveritas critique TV-01 to TV-11, AMSTAR 2 and ROBIS appraisal AR-01 to AR-14 in `amstar2-robis-2026-10-12.md`, severe-testing pass ST-01 to ST-13 in `severe-testing-2026-10-12.md`, argument-structure pass AS-01 to AS-13 in `argument-structure-2026-10-12.md`, methods and limitations, proposals, standing procedure). Start at `criticality/README.md`. |
 | `criticality/METHODS-AND-LIMITATIONS.md` | How the audit was done and what that method can and cannot support: who performs it, same-model reviews, pre-registration by kind, basis of external verdicts, what the tallies mean, sources not read. Read this before quoting any count. |
 | `criticality/METHOD-AUDIT-2026-10-12.md` | Review of the method (findings MA-01 to MA-20) |
 | `criticality/METHOD-AUDIT-proposals.md` | Specs for the audit's rule and vocabulary changes. **Proposals only, not applied.** |

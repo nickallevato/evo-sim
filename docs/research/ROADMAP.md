@@ -8,7 +8,7 @@
 
 **Who.** *owner* = Nick; *agent* = a Claude instance in the project's session; *outside* = a person or party not yet approached (nothing has been sent to anyone: hard rule 6). **Cost** is a rough guide: *tokens* = agent time (S/M/L), *CPU-h* = compute (free per the owner; tokens are the scarce resource), *owner min* = owner time.
 
-**Where the plan sits.** Stages and exit criteria: [`PLAN.md`](PLAN.md). Method audit, Triveritas, AMSTAR 2 / ROBIS and severe-testing findings and their status: [`criticality/README.md`](criticality/README.md). Owner decisions: [`DECISIONS.md`](DECISIONS.md). Queue detail: [`research/checks/QUEUE.md`](../../research/checks/QUEUE.md).
+**Where the plan sits.** Stages and exit criteria: [`PLAN.md`](PLAN.md). Method audit, Triveritas, AMSTAR 2 / ROBIS, severe-testing and argument-structure findings and their status: [`criticality/README.md`](criticality/README.md). Owner decisions: [`DECISIONS.md`](DECISIONS.md). Queue detail: [`research/checks/QUEUE.md`](../../research/checks/QUEUE.md).
 
 ---
 
@@ -89,6 +89,13 @@ Source: [`criticality/README.md`](criticality/README.md) findings table and [`ME
 | B38 | Write-up rules for the queued checks: FMnull leads with the empirical lineage-specificity and tree-incongruence statistics and prints each CRITIC class with its band width and the sourced share of it (ST-10); L1c runs one arm through a third-party aligner, or validates its stand-in against one on a sample, before DN6 moves | ST-10; pass section 7.3 | tbd | A3, A4 | Apply at write-up | agent | tokens S; CPU-h small |
 | B39 | Severe-testing findings ST-01 to ST-13 (1 CRITICAL for the document's standing, 6 MAJOR, 6 MINOR); concordance: agrees 3, in part 4, new 6. ST-13 (one same-model rater, rubric written after the checks were read) stands until a second rater has applied the rubric to the same 57 rows without seeing the codes; registered prediction: fewer than a third of grades move by more than one step | [`criticality/severe-testing-2026-10-12.md`](criticality/severe-testing-2026-10-12.md) | needs owner | An outside or non-Claude rater (C3, C4); a same-model second rater in the meantime | Run the second-rater pass; report agreement per question | owner, outside, agent | tokens M |
 | B40 | Presentation after ST-01, ST-06, ST-07: the methods-page sentence "count 10 checks as pre-registered tests" reworded to say what the 10 are; any "replicated in a second tool" statement in `README.md` or `HANDOFF.md` carries the XT exception (the methods page does since this pass); miss count per check printed in `RESULTS.md` from the scoring tables by script | ST-01, ST-06, ST-07 | tbd | None | Correct in the next integration commit | agent | tokens S |
+| B41 | Comment wording for the ten audit arguments worded above their grounds: the external fields of A2e, B1c, B3, B3a, B3g, B6 and B7, the internal fields of B and F1a, and the B1 comment that outruns B4a. Add the kind of ground and its regime per the pass's table 9.3; no verdict value changes | AS-01, AS-08 | tbd | Owner go-ahead to edit claim-file comments (C22); rule-freeze if any verdict word changes | Draft the ten comment texts in one file for review, then apply in one commit | agent | tokens S |
+| B42 | Proposal (i): a `warrant:` line and a `rebuttal conditions:` line beside each decided verdict on load-bearing claim files (74 fields; 29 have no comment at the field now), each naming a standing warrant and answering the non-circularity question; lint for presence only. Moves no verdict and no count | AS-02, AS-08; pass section 9.1 | proposal | Owner go-ahead (C22) | Add to the proposals file as (i); draft the lines for the 15 fully laid-out nodes first | agent | tokens M |
+| B43 | Proposal (j): standing warrants SW-1 to SW-7 stated once (own basis, model to world, concession, literature as benchmark, default and burden, reading, materiality), each with what would make the audit drop it. SW-3 and SW-6 could move B3g external, A2e external and B internal | AS-01, AS-03, AS-04, AS-05; pass section 9.2 | proposal | Owner go-ahead (C22, C23); rule-freeze for SW-3 and SW-6 | Add to the proposals file as (j) with the verdicts each would move | agent | tokens S |
+| B44 | Internal verdicts: name the rule-N clause at the field for A2e and F1a; add "inputs supplied by the audit: none / list" to internal comments on load-bearing nodes; for C2 say that the sensitivity paragraph cited is from version 1 of the paper | AS-05 | tbd | Owner go-ahead to edit claim-file comments (C22); owner if a value moves | List the supplied inputs for the five internal `non-sequitur` nodes | agent | tokens S |
+| B45 | Mark opposing cases written by the audit at the node (ROOT-FM, FM10, H8, H2, H5, F3a); in any synthesis count the audit's 146 check-attacks as the audit's own standpoints. Goes with `side: audit` (B12) and the mirror statements (B32) | AS-06 | proposal | B12, B32 | Add the note field to the B12 specification | agent | tokens S |
+| B46 | Smaller notes: "searched / not searched" wherever a claim file argues from absence (ROOT, ROOT-M, B3); a provenance sentence (notes on a source's nature never enter a verdict comment); a direction sub-label for `contested` (with B3); a `qualifier:` note per Statement quote (with B35) | AS-09, AS-10, AS-11, AS-12 | proposal | Owner go-ahead (C22); B3 and B35 for the last two | Add to the proposals file under (c) and (g) | agent | tokens S |
+| B47 | Argument-structure findings AS-01 to AS-13 (1 CRITICAL for the document's standing, 7 MAJOR, 5 MINOR); concordance: agrees 6, in part 4, new 3. AS-13 (one same-model rater, three constructed schemes, primary books not obtained) stands until a second rater has applied sections 2.2 to 2.4 of the pass to the same 33 nodes without seeing the codes; registered expectation: the audit's hidden-warrant count and mismatch count each move by less than a third | [`criticality/argument-structure-2026-10-12.md`](criticality/argument-structure-2026-10-12.md) | needs owner | Outside or non-Claude rater (C3, C4, C24) | Prepare the packet: rubric, node list, blank code sheet | owner, outside | tokens M |
 
 ---
 
@@ -119,6 +126,9 @@ Source: [`DECISIONS.md`](DECISIONS.md), "Owner replies to O-1 to O-9" (the owner
 | C19 | O-15 (proposed, not yet recorded): keep AMSTAR 2 and ROBIS as a standing lens, re-applied to the R5 draft, or treat the pass as a one-off | AR pass section 11 | needs owner | Owner choice | Decide; if standing, add to the standing procedure | owner | owner min |
 | C20 | O-16 (proposed by the severe-testing pass; **not yet in `DECISIONS.md`**): keep severity as a standing lens of the criticality layer and adopt the `severity` field (B35) and the reachability line (B36), or treat the pass as a one-off | ST-01, ST-05; pass sections 10, 11 | needs owner | Owner choice | Decide; if standing, add to the standing procedure and apply B35, B36 | owner | owner min 5 |
 | C21 | O-17 (proposed, not yet recorded): for B internal, A2e external, F1a internal and B6 external, whose deciding probes are WEAK or BENT, leave the present values with a "weak probe" note, or return them to `pending` / `contested` until a severe probe has run (A12, A20, B37). Related to O-5 (C5) | ST-03 | needs owner | Owner choice; rule-freeze if values move | Decide with C5 | owner | owner min 10 |
+| C22 | O-18 (proposed by the argument-structure pass; **not yet in `DECISIONS.md`**): adopt the comment wording (B41), the `warrant:` and `rebuttal conditions:` lines (B42) and the standing warrants (B43), or treat the pass as a one-off | AS-01, AS-02; pass sections 9, 12 | needs owner | Owner choice | Decide; if adopted, apply B41 and B44, then B42 | owner | owner min 10 |
+| C23 | O-19 (proposed, not yet recorded): may an author's concession decide an external verdict? If not, B3g external and the concession clauses in B3, B3a, B1c and B6 are argued again on evidence, under the rule-freeze | AS-03 | needs owner | Owner choice; rule-freeze if values move | Decide with C5 and C21 | owner | owner min 10 |
+| C24 | O-20 and O-21 (proposed, not yet recorded): add to the right-of-reply packet the two reading questions (A2e: a count of adaptive fixations, or total throughput; B: which sense of "nearly empty") and the closure rule of the pass's section 9.4; appoint a second rater for the pass (B47) | AS-04, AS-07, AS-13 | needs owner | C2 (right of reply), C3, C4 | Agent drafts the two questions and the closure rule; owner decides | owner, agent | owner min; tokens S |
 
 ---
 
@@ -159,13 +169,15 @@ Rows by section and status (counted from the tables above on 2026-10-12; section
 | Section | Rows | running | queued | proposal | needs owner | tbd | done |
 |---|---|---|---|---|---|---|---|
 | A | 22 | 1 | 9 | 0 | 0 | 12 | 0 |
-| B | 40 | 0 | 1 | 11 | 3 | 25 | 0 |
-| C | 21 | 0 | 0 | 0 | 19 | 1 | 1 |
+| B | 47 | 0 | 1 | 15 | 4 | 27 | 0 |
+| C | 24 | 0 | 0 | 0 | 22 | 1 | 1 |
 | D | 6 | 0 | 0 | 0 | 1 | 5 | 0 |
-| **All** | **89** | 1 | 10 | 11 | 23 | 43 | 1 |
+| **All** | **99** | 1 | 10 | 15 | 27 | 45 | 1 |
 
-Needs-owner rows (23): B7, B20, B39, C1, C2, C3, C4, C5, C6, C7, C9, C10, C11, C13, C14, C15, C16, C17, C18, C19, C20, C21, D4.
+Needs-owner rows (27): B7, B20, B39, B47, C1, C2, C3, C4, C5, C6, C7, C9, C10, C11, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, D4.
 
 *2026-10-12, later the same day: 14 rows added by the AMSTAR 2 and ROBIS appraisal (B23 to B33, C17 to C19). The roadmap figure `audit-roadmap.svg` was not regenerated and does not show them.*
 
 *2026-10-12, later again: 13 rows added by the severe-testing pass (A19 to A22, B34 to B40, C20, C21); A2, A5, A12 and A15 amended to point at them. The figure was not regenerated.*
+
+*2026-10-12, later still: 10 rows added by the argument-structure pass (B41 to B47, C22 to C24). The figure was not regenerated.*
