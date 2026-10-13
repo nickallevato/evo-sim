@@ -1049,3 +1049,234 @@ Purpose: the statements of the severity requirement applied in [`../criticality/
 ### MayoCox2006 (sha256 e8389c2fd3418add598740a2952470595a11b2c90b2ee0fdfaa26aa0ae40a3a4)
 > "only if there is a high probability the test would have given a worse fit with H0 (i.e., smaller p value) were a discrepancy δ to exist."
 > - id: SV-MC1; locator: p.84, FEV(ii) (second half; the sentence starts on p.83); role: principle for non-rejection; note: a passing result is evidence of no discrepancy only if the test could have shown one
+
+## Criticality pass v quotes (argument structure: Toulmin, Walton's schemes, pragma-dialectics), 2026-10-12
+
+Purpose: the definitions, argumentation schemes, critical questions and discussion rules applied in [`../criticality/argument-structure-2026-10-12.md`](../criticality/argument-structure-2026-10-12.md). These are method texts, not sources for any claim file; role codes S/C/N/K do not apply and the role field says what the line is used for. Fetched 2026-10-13 about 00:16 to 01:05 UTC (2026-10-12 evening, -06:00) into `sources/raw/crit5-argument-structure-2026-10-12/` (gitignored), one directory per file. All 95 quotes were machine-checked as substrings of the extracted text after whitespace, curly-quote and ligature normalisation, with line-end hyphens tried three ways (kept with the space, joined, removed); 0 misses. **What is and is not primary:** Walton 2001, Walton 2005, Macagno, Walton and Reed 2017, van Eemeren and Verheij 2017 and the two van Eemeren, Garssen and Meuffels texts are by the frameworks' own authors. The Stanford Encyclopedia entries are secondary. The three Wikipedia pages (raw wikitext, markup stripped for the check), the Carneades scheme file and the Calvo Figueras and Agerri templates are tertiary or derived: they restate Walton, Reed and Macagno 2008, Toulmin 1958 and van Eemeren and Grootendorst's rules, **none of which was obtained**, and their wording was not checked against those books. Quote ids `AT-nn` (argumentation theory) are not finding ids; the pass's findings are `AS-nn`.
+
+
+### EemerenVerheij2017 (sha256 bb2184b6f6d2173aa22adcdec952cb27dcf8a46042d3a8358ee6e00f56884be6)
+> "The validity of argumentation is in his view primarily determined by the degree to which the (usually implicit) warrant that connects the data advanced in the argumentation with the claim at issue is acceptable—or, if challenged, can be made acceptable by a backing."
+> - id: AT-01; locator: section 2 (issue p.2109 by running head); role: Toulmin: warrant and backing; note: what the warrant does; it is 'usually implicit'
+> "What kind of backing may be required in a particular case depends on the field to which the standpoint at issue belongs."
+> - id: AT-02; locator: section 2; role: Toulmin: field dependence; note: backing differs by field
+> "view argumentation as part of a discourse aimed at resolving a difference of opinion on the merits by methodically testing the acceptability of the standpoints at issue."
+> - id: AT-03; locator: section 2 (pp.2113-2114); role: pragma-dialectics: aim; note: resolution on the merits by testing standpoints; the sentence begins 'As van Eemeren and Grootendorst [1984] explain, pragma-dialecticians'
+> "Any violation of any of the rules amounts to making an argumentative move that is an impediment to the resolution of a difference of opinion on the merits and is therefore fallacious"
+> - id: AT-04; locator: section 2 (p.2114); role: pragma-dialectics: fallacy as rule violation; note: any violation is a fallacy
+
+### WP-Toulmin (sha256 402b7975a4b6f9d52bfabf98d7fc5b02d3bf4eb3fe368ae369030381fbe6e336)
+> "A conclusion whose merit must be established."
+> - id: AT-05; locator: section 'The Toulmin model of argument'; role: Toulmin: claim; note: tertiary source; Toulmin 1958 not obtained
+> "A fact one appeals to as a foundation for the claim."
+> - id: AT-06; locator: same; role: Toulmin: ground (data); note: tertiary
+> "A statement authorizing movement from the ground to the claim."
+> - id: AT-07; locator: same; role: Toulmin: warrant; note: tertiary
+> "Credentials designed to certify the statement expressed in the warrant; backing must be introduced when the warrant itself is not convincing enough to the readers or the listeners."
+> - id: AT-08; locator: same; role: Toulmin: backing; note: tertiary
+> "Statements recognizing the restrictions which may legitimately be applied to the claim."
+> - id: AT-09; locator: same; role: Toulmin: rebuttal; note: tertiary
+> "Words or phrases expressing the speaker's degree of force or certainty concerning the claim."
+> - id: AT-10; locator: same; role: Toulmin: qualifier; note: tertiary
+> "The first three elements, claim, ground, and warrant, are considered as the essential components of practical arguments, while the second triad, qualifier, backing, and rebuttal, may not be needed in some arguments."
+> - id: AT-11; locator: same; role: Toulmin: which parts are essential; note: tertiary
+
+### SEP-InformalLogic (sha256 df35565a99bbccba84bc737464a2d05c358cc6b1152febfba43cd5f867014247)
+> "Sometimes it is expanded by defining an argument as a premise-conclusion complex which is directed at an audience, or backed by a warrant, or provided as an answer to a questioning opponent."
+> - id: AT-12; locator: section 2.1; role: argument and warrant; note: informal logic allows a warrant or an opponent as part of an argument
+> "The most common approach to argument schemes combines a pattern of argument with a set of “critical questions” with which it is associated."
+> - id: AT-13; locator: section 4.4 (argument schemes); role: scheme = pattern + critical questions; note: 
+> "A is an authority in domain D. A says that T is true. T is within D. (Therefore) T is true."
+> - id: AT-14; locator: section 4.4; role: scheme: argument from authority; note: SEP's wording of the scheme
+> "1. How credible is A? 2. Is A an authority in domain D? 3. What did A assert that implies T? 4. Is A someone who can be trusted? 5. Is T consistent with what other experts assert? 6. Is A’s assertion of T based on evidence?"
+> - id: AT-15; locator: section 4.4; role: critical questions: authority; note: six questions
+> "The critical question approach to schemes suggests that a credible argument from authority must include acceptable premises of the form outlined in the definition of the scheme, and is valid if it can be backed by answers to the scheme’s critical questions."
+> - id: AT-16; locator: section 4.4; role: how critical questions bear on strength; note: 
+> "The basic question that must be asked is whether there is a good reason why the arguer’s views should not be taken seriously — a question that subsumes the more specific questions whether they have repeatedly shown poor judgment, are biased, lack expertise in the area in question, or are for some other reason an arguer who should not be listened to."
+> - id: AT-17; locator: section 4.4; role: ad hominem as a scheme; its basic question; note: 
+
+### SEP-Fallacies (sha256 45467658874e59756cafdde7e0efcaba81d7f7312ed7804b5560ac6c81db4e2f)
+> "Schemes do not identify fallacies but rather argument kinds that are sometimes used fairly, and, other times, fallaciously. With each kind of scheme is associated a set of critical questions which guide us in deciding whether a given use of an argument is correct, weak or fallacious."
+> - id: AT-18; locator: section 3.5 (Walton); role: schemes are not fallacies; note: 
+> "If one of the questions cannot be answered clearly this is an indication that the argument is weak, and answering No to either of the two questions cancels the presumption for the conclusion"
+> - id: AT-19; locator: section 3.5; role: scoring basis: unanswered question = weak; No = presumption cancelled; note: the passage is about the two questions of the expert scheme
+> "A set of ten rules has been proposed as constitutive of the critical-discussion ideal, and the proponents of the theory believe that rational arguers would accept them."
+> - id: AT-20; locator: section 3.4 (pragma-dialectics); role: ten rules; note: 
+> "at the confrontation stage there is a rule which says one may not prevent the other party from expressing their view; for the argumentation stage there is a rule which requires argumentation to be logically strong and in accord with one or another of three general argumentation schemes; at the closing stage there is a rule that the participants themselves are to decide which party was successful based on the quality of the argumentation they have made: if the proponent carries the day, the opponent should acknowledge it, and vice versa."
+> - id: AT-21; locator: section 3.4; role: rules by stage; note: freedom, validity/scheme, closure in SEP's paraphrase
+> "evading the burden of proof which breaks the rule that you must defend your standpoint if asked to do so"
+> - id: AT-22; locator: section 3.4; role: burden of proof rule; note: 
+> "equivocation is a violation of the rule that formulations in arguments must be clear and unambiguous; post hoc ergo propter hoc violates the rule that arguments must be instances of schemes correctly applied."
+> - id: AT-23; locator: section 3.4; role: usage rule and argument scheme rule; note: 
+> "the Pragma-dialectical rules of a critical discussion are not just rules of logic or epistemology, but rules of conduct for rational discussants"
+> - id: AT-24; locator: section 3.4; role: status of the rules; note: rules of conduct, not of logic
+> "However, the inability of an opponent to produce a better argument is not sufficient reason to think the proponent’s argument must be accepted. Modern versions of this kind of argument take it as a fallacy to infer a proposition to be true because there is no evidence against it"
+> - id: AT-25; locator: section 2.3 (Locke); role: argument from ignorance; note: 
+> "Similarly, when there is controversy, and authorities are divided, it is an error to base one’s view on the authority of just some of them."
+> - id: AT-26; locator: section 1 (core fallacies, item 9); role: appeal to authority where authorities are divided; note: 
+> "The fallacy ad populum is similar to the ad verecundiam, the difference being that the source appealed to is popular opinion, or common knowledge, rather than a specified authority."
+> - id: AT-27; locator: section 1 (item 10); role: ad populum; note: 
+> "straw man fallacies happen when someone in the course of argumentation inaccurately and unfavourable distorts a ground-level argument in an attempt to refute it or discredit its source."
+> - id: AT-28; locator: section 4 (Aikin and Casey); role: straw man; note: 'unfavourable' is the entry's wording
+> "In the case of bothsiderism, there are conflicting arguments each drawing on prima facie evidence. This can lead to the meta-argument that the truth lies somewhere in the middle between the opposed ground-level conclusions. This is considered a fallacy because purported contrary evidence noticed at the meta-level is insufficient reason to abandon both the ground-level conclusions in favour of a compromise."
+> - id: AT-29; locator: section 4; role: false balance ('bothsiderism'); note: 
+> "This fallacy ascribes a causal relationship between two states or events on the basis of temporal succession."
+> - id: AT-30; locator: section 1 (item 7); role: post hoc; note: 
+
+### SEP-Argument (sha256 4ea18363951c1381cd10a2cc615f9509cd9297957f2e30b85e6ca067df9287d0)
+> "Another leading author in argumentation theory is Douglas Walton, who pioneered the argument schemes approach to argumentation that borrows tools from formal logic but expands them so as to treat a wider range of arguments than those covered by traditional logical systems"
+> - id: AT-31; locator: section 4 (argumentation theory); role: standing of Walton, Reed and Macagno 2008; note: 
+
+### Walton2001 (sha256 f7e9ce6edee1cbc33fea3b13f1465c334dc34fcd4be8da3bcd519c46992ef822)
+> "Major Premise: Source E is an expert in subject domain S containing proposition A. Minor Premise: E asserts that proposition A (in domain S) is true (false). Conclusion: A may plausibly be taken to be true (false)."
+> - id: AT-32; locator: p.158; role: scheme: argument from expert opinion; note: Walton's own wording, citing Walton 1997 p.210
+> "1. Expertise Question: How credible is E as an expert source? 2. Field Question: Is E an expert in the field that A is in? 3. Opinion Question: What did E assert that implies A? 4. Trustworthiness Question: Is E personally reliable as a source? 5. Consistency Question: Is A consistent with what other experts assert? 6. Backup Evidence Question: Is A's assertion based on evidence?"
+> - id: AT-33; locator: p.158; role: critical questions: expert opinion; note: six, citing Walton 1997 p.223
+> "An example of argument from sign is the following inference: here are some bear tracks in the snow, therefore a bear recently passed this way"
+> - id: AT-34; locator: p.160; role: argument from sign; note: example; Walton classes sign as abductive
+> "F is a finding or given set of facts. E is a satisfactory explanation of F. No alternative explanation E' given so far is as satisfactory as E. Therefore, E is plausible, as a hypothesis."
+> - id: AT-35; locator: p.162; role: scheme: abductive argument; note: 
+> "CQ 1: How satisfactory is E itself as an explanation of F, apart from the alternative explanations available so far in the dialogue? CQ2: How much better an explanation is E than the alternative explanations available so far in the dialogue? CQ3: How far has the dialogue progressed? If the dialogue is an inquiry, how thorough has the search been in the investigation of the case? CQ4: Would it be better to continue the dialogue further, instead of drawing a conclusion at this point?"
+> - id: AT-36; locator: p.162; role: critical questions: abduction; note: four
+
+### Walton2005 (sha256 4219210c790e0fdae5f8e34dfdfff8b9246bd5a3c3b7306f4c12d79e246b29e1)
+> "If a respondent asks any one of the six appropriate critical questions, a burden of proof is shifted back onto the proponent of the argument to provide a satisfactory answer to the question. If she fails to give such an answer, the appeal to expert opinion loses its previous weight of support."
+> - id: AT-37; locator: p.3 (section 2); role: what asking a critical question does; note: burden shifts back to the proponent
+
+### MacagnoWaltonReed2017 (sha256 bb2184b6f6d2173aa22adcdec952cb27dcf8a46042d3a8358ee6e00f56884be6)
+> "every scheme has a corresponding set of critical questions, representing its defeasibility conditions and the possible weak points that the interlocutor can use to question the argument and evaluate its strength."
+> - id: AT-38; locator: section 1 (p.2494); role: critical questions = defeasibility conditions; note: 
+> "Major premise Generally, if A occurs, then B will (might) occur. Minor premise In this case, A occurs (might occur). Conclusion Therefore, in this case B will (might) occur)."
+> - id: AT-39; locator: Table 1 (p.2495); role: scheme: argument from cause to effect; note: citing Walton et al. 2008 p.328; the stray bracket is in the source
+> "CQ1 What other goals do I have that should be considered that might conflict with G? CQ2 What alternative actions to my bringing about A that would also bring about G should be considered? CQ3 Among bringing about A and these alternative actions, which is arguably the most efficient? CQ4 What grounds are there for arguing that it is practically possible for me to bring about A? CQ5 What consequences of my bringing about A should also be taken into account?"
+> - id: AT-40; locator: section 5 (after Table 12); role: critical questions: practical reasoning; note: five; the scheme itself (Table 12: 'I have a goal G' / carrying out A is a means to realise G / therefore I ought to carry out A) is laid out in two columns and is paraphrased here, not quoted
+> "According to the scheme for argument from positive consequences, known or estimated consequences that have a positive value for the agent are cited as a reason, or set of reasons, supporting the carrying out of the action initially considered."
+> - id: AT-41; locator: section 5 (before Table 13); role: argument from consequences; note: prose statement of the positive form; Tables 13 and 14 give 'If A is brought about, good (bad) consequences will plausibly occur / Therefore A should (should not) be brought about' in two columns, paraphrased here
+
+### CalvoFigueras2024 (sha256 b92becf594ce00ad8464b79cfb3fe05acbba39172763ebf4c5703b19de508e78)
+> "templates of argumentation schemes and critical questions defined in Walton et al. (2008)"
+> - id: AT-42; locator: Figure 1 caption; role: provenance of the templates; note: secondary source: templates built from Walton et al. 2008, not the book's wording checked against the book
+> "Is there a proved relation between ‘< eventB >’ and ‘< eventA >’?"
+> - id: AT-43; locator: Appendix C table; role: critical questions: argument from sign; note: placeholders as extracted
+> "Are there any events other than < eventB > that would more reliably account for < eventA >?"
+> - id: AT-44; locator: Appendix C table; role: critical questions: argument from sign; note: 
+> "Is < subjecta > actually a typical case of other < subjectx > that < f eatF >? How widely applicable is the"
+> - id: AT-45; locator: Appendix C table; role: critical questions: argument from example; note: 'f eatF' is a text-extraction artefact for featF
+> "Are there special circumstances pertaining to < subjecta > that undermine its generalisability to other < subjectx >"
+> - id: AT-46; locator: Appendix C table; role: critical questions: argument from example; note: 
+> "Is < subjecta > in a position to know whether < eventA >?"
+> - id: AT-47; locator: Appendix C table; role: critical questions: position to know; note: 
+> "Is < subjecta > an honest (trustworthy, reliable) source?"
+> - id: AT-48; locator: Appendix C table; role: critical questions: position to know; note: 
+> "Did < subjecta > assert that < eventA >?"
+> - id: AT-49; locator: Appendix C table; role: critical questions: position to know; note: 
+> "How strong is the generalisation that if < eventA > then < eventB >?"
+> - id: AT-50; locator: Appendix C table; role: critical questions: cause to effect; note: 
+> "Are there other factors in this particular case that could have interfered with the event of ‘< eventB >’?"
+> - id: AT-51; locator: Appendix C table; role: critical questions: cause to effect; note: 
+> "If < eventA >, will < eventB > occur? What evidence supports this claim? How likely are the consequences?"
+> - id: AT-52; locator: Appendix C table; role: critical questions: consequences; note: 
+> "What other consequences should also be taken into account if < neg > < eventA >?"
+> - id: AT-53; locator: Appendix C table; role: critical questions: consequences; note: 
+> "Are < C1 > and < C2 > similar in the respect cited?"
+> - id: AT-54; locator: Appendix C table; role: critical questions: analogy; note: 
+> "Are there differences between < C1 > and < C2 > that would tend to undermine the force of the similarity cited?"
+> - id: AT-55; locator: Appendix C table; role: critical questions: analogy; note: 
+> "Is there some other case that is also similar to < C1 >, but in which < eventA > is false?"
+> - id: AT-56; locator: Appendix C table; role: critical questions: analogy; note: 
+> "What evidence supports that < eventA > is generally accepted as true?"
+> - id: AT-57; locator: Appendix C table; role: critical questions: popular opinion; note: 
+> "Even if < eventA > is generally accepted as true, are there any good reasons for doubting that it is true?"
+> - id: AT-58; locator: Appendix C table; role: critical questions: popular opinion; note: 
+> "How does the allegation made affect the reliability of < subjecta >?"
+> - id: AT-59; locator: Appendix C table; role: critical questions: generic ad hominem; note: 
+> "Is the reliability of < subjecta > relevant in the current dialogue?"
+> - id: AT-60; locator: Appendix C table; role: critical questions: generic ad hominem; note: 
+> "What evidence is there that < subjecta > is < subjectx >?"
+> - id: AT-61; locator: Appendix C table; role: critical questions: argument from bias; note: 
+
+### WP-ArgScheme (sha256 3bdf6c3c2a7ccfde074aa6fc64fa5ed438217174b9434cb3f3c8593347efd9f1)
+> "a is in a position to know whether A is true or false."
+> - id: AT-62; locator: Overview, table 'Argument from position to know'; role: scheme: position to know; note: tertiary; cites Walton 2006
+> "A may plausibly be taken to be true ([or] false)."
+> - id: AT-63; locator: same table; role: scheme: position to know; note: tertiary
+> "If A were true, then A would be known to be true."
+> - id: AT-64; locator: section 'Argument from ignorance'; role: scheme: argument from ignorance; note: tertiary; cites Walton, Reed and Macagno 2008 p.327
+> "It is not the case that A is known to be true."
+> - id: AT-65; locator: same; role: scheme: argument from ignorance; note: tertiary
+> "How far along has the search for evidence progressed?"
+> - id: AT-66; locator: same; role: critical questions: ignorance; note: tertiary
+> "Which side has the burden of proof in the dialogue as a whole? In other words, what is the ultimate probandum [claim that is to be proved] and who is supposed to prove it?"
+> - id: AT-67; locator: same; role: critical questions: ignorance; note: tertiary
+> "How strong does the proof need to be in order for this party to be successful in fulfilling the burden?"
+> - id: AT-68; locator: same; role: critical questions: ignorance; note: tertiary
+
+### Carneades-walton-yml (sha256 5f292cfef82ca8412560623466fd215480fcfa33b302bf6747a694bd8dd50977)
+> "Events %s and %s are correlated."
+> - id: AT-69; locator: language block; scheme `correlation_to_cause` (source field: Walton 1995 p.142); role: correlation to cause: premise, assumption, exception; note: a formalisation by the Carneades project of Walton, Reed and Macagno 2008; this string is the scheme's premise, and AT-70 and AT-71 are its assumption and exception
+> "There exists a theory explaining how event %s causes event %s."
+> - id: AT-70; locator: same; role: correlation to cause: assumption; note: 
+> "Some other event causes both %s and %s."
+> - id: AT-71; locator: same; role: correlation to cause: exception; note: 
+> "There are relevant differences between case %s and the current case."
+> - id: AT-72; locator: scheme `precedent` (source field: Walton 1995 p.148); role: precedent and analogy: exception; note: 
+> "Rule %s is inapplicable in this case."
+> - id: AT-73; locator: scheme `precedent`; role: precedent: exception; note: 
+> "The truth of %s has not been sufficiently investigated."
+> - id: AT-74; locator: scheme `ignorance` (source field: Walton 1995 p.150); role: ignorance: exception; note: 
+> "%s is false in another case which is more on point than case %s."
+> - id: AT-75; locator: scheme `analogy` (source field: Walton 2006 pp.96-97); role: analogy: exception; note: 
+> "There exists a more coherent explanation than theory %s of observation %s."
+> - id: AT-76; locator: scheme `abduction`; role: abduction: exception; note: 
+
+### WP-PragmaDialectics (sha256 c4db03f3baa692d1f8a5626606df2ca8286d77f8e46708e9418a3a3501110484)
+> "Parties must not prevent each other from advancing standpoints or from casting doubt on standpoints."
+> - id: AT-77; locator: section 'Rules for critical discussion' (cites van Eemeren, Grootendorst and Snoeck Henkemans 2002 pp.182-183); role: rule 1, freedom; note: tertiary; numbering as in this list
+> "A party that advances a standpoint is obliged to defend it if asked by the other party to do so."
+> - id: AT-78; locator: same; role: rule 2, burden of proof; note: tertiary
+> "A party's attack on a standpoint must relate to the standpoint that has indeed been advanced by the other party."
+> - id: AT-79; locator: same; role: rule 3, standpoint; note: tertiary
+> "A party may defend a standpoint only by advancing argumentation relating to that standpoint."
+> - id: AT-80; locator: same; role: rule 4, relevance; note: tertiary
+> "A party may not deny premise that he or she has left implicit or falsely present something as a premise that has been left unexpressed by the other party."
+> - id: AT-81; locator: same; role: rule 5, unexpressed premise; note: tertiary; 'deny premise' is the page's wording
+> "A party may not falsely present a premise as an accepted starting point nor deny a premise representing an accepted starting point."
+> - id: AT-82; locator: same; role: rule 6, starting point; note: tertiary
+> "A party may not regard a standpoint as conclusively defended if the defense does not take place by means of an appropriate argumentation scheme that is correctly applied."
+> - id: AT-83; locator: same; role: rule 7 in this list, argument scheme; note: tertiary
+> "A party may only use arguments in its argumentation that are logically valid or capable of being made logically valid by making explicit one or more unexpressed premises."
+> - id: AT-84; locator: same; role: rule 8 in this list, validity; note: tertiary
+> "A failed defense of a standpoint must result in the party that put forward the standpoint retracting it and a conclusive defense of the standpoint must result in the other party retracting its doubt about the standpoint."
+> - id: AT-85; locator: same; role: rule 9, closure; note: tertiary
+> "A party must not use formulations that are insufficiently clear or confusingly ambiguous and a party must interpret the other party's formulations as carefully and accurately as possible."
+> - id: AT-86; locator: same; role: rule 10, usage; note: tertiary
+
+### Hitchcock2003 (sha256 9d63419772e547c894a84e83b9dc11d6b35b797712656fffb2009c18f867de18)
+> "A fallacy is a violation of one of the ten rules."
+> - id: AT-87; locator: p.91; role: ten rules; fallacy; note: 
+> "Parties must not prevent each other from advancing standpoints or casting doubt on standpoints"
+> - id: AT-88; locator: p.92; role: rule 1 as quoted from van Eemeren (ed.) 2002, p.47 n.4; note: cross-check of AT-77
+> "Parties must not use any formulations that are insufficiently clear or confusingly ambiguous, and they must interpret the formulations of the other party as carefully and accurately as possible."
+> - id: AT-89; locator: p.106; role: rule 10 as quoted from the same note; note: cross-check of AT-86
+
+### Weger1998 (sha256 913d9b55dac75ac699e49a2fca5e020342a07a6a56a51cd708ed5eaedb2c830a)
+> "Rule five deals with the responsibility of arguers to accurately represent the expressed and unexpressed premises that each party is actually accountable for."
+> - id: AT-90; locator: section 1; role: rule 5 paraphrased; note: 
+> "The ninth rule necessitates that standpoints that are conclusively defeated or upon which doubt has been cast must be withdrawn."
+> - id: AT-91; locator: section 1; role: rule 9 paraphrased; note: 
+
+### EemerenGarssenMeuffels2002 (sha256 2cd8e6c132d99118bd1c7af756975a6369dbf0adb93b8bbb5663b33a28b3db03)
+> "According to the rule for the confrontation stage (i.e. the freedom rule) the parties are not allowed to prevent each other from advancing standpoints or casting doubt on standpoints."
+> - id: AT-92; locator: section 2; role: freedom rule, by the theory's authors; note: cross-check of AT-77
+
+### EemerenGarssenMeuffels2012 (sha256 028f1b8df2ed76a94331ccb80d780f4454781933b0f64720f5620a6a8b83b244)
+> "Any move that is an infringement of any of these rules, whichever party performs it and at whatever stage in the discussion, is a possible threat to the resolution of a difference of opinion on the merits and must therefore—and in this particular sense—be regarded as fallacious."
+> - id: AT-93; locator: section 2; role: fallacy as rule violation, whichever party; note: 
+
+### Visser2021 (sha256 0d2c597f84eb59d930c15e185054d3cd7abe794d89721c215ec2e081cc2a9b06)
+> "divides schemes into three general categories: reasoning, source-based arguments, and applying rules to cases."
+> - id: AT-94; locator: section 3.1; role: Walton's classification; note: 'byWalton' is as extracted
+
+### HahnHornikx2016 (sha256 965a29439593ebb539ab28bddc78239223dce8677702b148a87e74f3ddeb4864)
+> "in order to justify different argument schemes there must minimally be some consequential difference to either the basic inference or the critical questions."
+> - id: AT-95; locator: section 5 (discussion); role: a criticism of scheme lists; note: used as a caution on counting by scheme
