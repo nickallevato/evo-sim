@@ -37,3 +37,13 @@ The first launch of `l5_adna_power.py main 8` on na-workhorse (script md5 5ecde4
 **Fix (separate commit, post hoc, pre-run):** the pool is sent the task index and the worker rebuilds the tuple (`run_task_k`). Task order, seeds (keyed on the index) and output files are unchanged. No model, parameter, prediction or band is touched.
 
 **What was seen before the fix, disclosed:** the selftest printed by that launch. V2 (fixation probability, event sanity cases) passed. **V3 missed in one of three cells:** at r = 1e-4 the simulated mean final non-founder share was 0.0185 against the formula's 0.0084 (n = 300), a difference of 0.0102 against the registered tolerance of max(0.01, 30%); r = 1e-3 (0.0823 against 0.0786) and r = 5e-3 (0.3091 against 0.3083) passed. The docstring states a consequence only for V1. Reading fixed here, before any task result: the run proceeds; the write-up reports V3 as a miss at tight linkage, by a margin of 0.0002 in absolute share; the formula understates the non-founder share there, so it overstates how completely a linked panel SNP is carried, which raises expected S* counts (a bias toward Day's band). The tolerance is not changed and the selftest is not rerun with other seeds. Reviewers decide whether the miss qualifies any band.
+
+## L5 second launch failure and second post hoc launch fix (2026-10-13)
+
+The relaunch (script md5 35488dae...) stopped within two minutes, before any task file was written: `ValueError: p < 0, p > 1 or p contains NaNs` in `run_pass`, at the binomial draw for the European frequency. Cause, confirmed by evaluating the function alone: `sel(1.0, 0.003)` returns 1.0000000000000002. An allele that has fixed stays in the pool, and for s = 3e-3 the selection formula rounds one unit in the last place above 1. The other grid values give exactly 1 (s = 1e-3, 2e-2, 0.1) or 1 - 2^-52 (s = 1e-2, 3e-2, 5e-2). The local smoke used s = 5e-2 only.
+
+**Fix (separate commit, post hoc, pre-run):** `sel` clamps its result at 1. No value at x < 1 changes (checked on 2,000,001 evenly spaced x for each grid s: none exceeds 1 except x = 1 at s = 3e-3), so no random draw changes in any task that would have run.
+
+**Disclosed and left alone:** for s = 1e-2, 3e-2 and 5e-2 a fixed allele is redrawn with p = 1 - 2^-52, so it can drop one copy with probability about 2N x 2.2e-16 per generation (below 1e-9) and then refix; its fixation time is already recorded. This is not corrected.
+
+No expected count, band or task output was seen: `raw/l5/` holds only `l5_selftest.json` (same values as above; the selftest is seeded). The run moves to builder with 4 workers (the docstring's alternative), because na-workhorse is running L1c with 8.

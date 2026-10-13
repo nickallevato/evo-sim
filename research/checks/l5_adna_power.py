@@ -215,7 +215,9 @@ CI = {k: i for i, k in enumerate(COLS)}
 # ------------------------------------------------------------------------------------------------ basics
 def sel(x, s):
     """additive diploid selection, fitnesses 1, 1+s/2, 1+s"""
-    return x * (1.0 + 0.5 * s + 0.5 * s * x) / (1.0 + s * x)
+    # post hoc 2026-10-13 (pre-run, launch fix): at x = 1 the expression rounds to 1 + 2^-52 for s = 3e-3, which
+    # numpy's binomial rejects; clamp at 1.  No value at x < 1 changes.
+    return np.minimum(x * (1.0 + 0.5 * s + 0.5 * s * x) / (1.0 + s * x), 1.0)
 
 
 def kimura(p, s, ne):
