@@ -8,7 +8,7 @@ Answers are in `docs/research/DECISIONS.md`, with the owner's words pasted. Conc
 **one agent at a time** (D-22), so everything below runs in sequence, in roughly this order.
 Briefs are committed before each task exists (MA-21).
 
-1. **O5 revert** (D-21, brief `briefs/O5-revert-operator.md`, operator): B internal
+1. **O5 revert: DONE 2026-10-13 (EVO-58).** (D-21, brief `briefs/O5-revert-operator.md`, operator): B internal
    `non-sequitur` → `pending`, A2e external `contradicted` (scoped) → `pending`, superseded
    values kept in the file; ROADMAP B7's stale "most charitable to Day" comments in C7 and
    B9 fixed in the same pass; then the lint / argmap / counts housekeeping.

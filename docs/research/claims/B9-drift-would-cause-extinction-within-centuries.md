@@ -9,7 +9,7 @@ load_bearing: false  # comment-level argument; not in the papers
 sourcing: firsthand
 status: extracted
 verdicts:
-  internal: holds   # reading-dependent (RD, owner 2026-10-11; value = reading most charitable to Day): reading A (selection fully relaxed, mutation load, Lynch 2016) -> holds; reading B (literal fixation of harmful substitutions, 4Ne generations) -> non-sequitur (N2a: 'within centuries' vs Day's own '~one million years apiece' in the same comment). R4 X1 rev 2: the earlier Q105 basis is dropped (premise 1 makes harmful mutations effectively neutral)
+  internal: holds   # reading-dependent (RD, owner 2026-10-11; value = the reading under which the quoted statement is most defensible, i.e. closest to literally true (D-15)): reading A (selection fully relaxed, mutation load, Lynch 2016) -> holds; reading B (literal fixation of harmful substitutions, 4Ne generations) -> non-sequitur (N2a: 'within centuries' vs Day's own '~one million years apiece' in the same comment). R4 X1 rev 2: the earlier Q105 basis is dropped (premise 1 makes harmful mutations effectively neutral)
   fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contradicted   # R4 B9, scoped to premises 1 and 2 as worded (premise 1 false under standard theory; premise 2 against R4-L1 dN/dS ~0.21-0.27); the conditional's arithmetic ('if selection were off, fitness collapse in centuries to millennia') is supported on reading A (Lynch 2016). GAP-05 (R4 GAP05) is credited to Day: his premise that slightly deleterious fixations occur is supported on a sourced coding DFE; a collapse is not
 ---
@@ -20,7 +20,7 @@ verdicts:
 Source: [Vox Day, comment on McCarthy, "Why Probability Zero is Wrong About Evolution"](https://dennismccarthy.substack.com/p/why-probability-zero-is-wrong-about-0d1/comment/337302874), 2026-09-15, comment id 337302874, last paragraph (Q104). Premises in the same comment: "1. For neutral substitution to work to fixation at its maximum speed, natural selection cannot be operating." "2. There are 3x more harmful substitutions than neutral substitutions."
 
 
-RH tag: **dialectic** (owner rule, 2026-10-11: graded by whether the literal claim is remotely close when mathed out under the most charitable reading; R4 B9). Replaces the 2026-10-10 UNCLEAR note (reading A literal reductio vs reading B hyperbole).
+RH tag: **dialectic** (owner rule, 2026-10-11: graded by whether the literal claim is remotely close when mathed out under the most defensible reading (D-15); R4 B9). Replaces the 2026-10-10 UNCLEAR note (reading A literal reductio vs reading B hyperbole).
 
 ## Formal statement
 Premise A: drift fixes neutral mutations only if selection is not operating. Premise B: harmful mutations outnumber neutral 3:1. Conclusion: drift would fix harmful mutations, causing extinction within centuries. Standard theory: fixation probability of a new mutation with selection coefficient s < 0 is u(s) = (1 - e^(-2s)) / (1 - e^(-4N_e s)) (Kimura 1962, N = N_e, initial frequency 1/(2N)), which for s < 0 and N_e|s| >> 1 is about 2|s| e^(-4N_e|s|), far below 1/(2N). `derived:` (python3 -I) N_e = 1e4, s = -0.001: 4N_e s = -40, u = 8.5e-21 against 1/(2N) = 5e-5. Only the nearly neutral class (|N_e s| < ~1) fixes at near-neutral rates (Ohta).
@@ -55,7 +55,7 @@ R4 B9 (research/checks/results/R4-B9.md; combined review #61, 2026-10-11; fix pa
 Readings (R4 B9, RD; integrated 2026-10-11):
 | Reading | What Q104 means | RH tag | Internal | Basis |
 |---|---|---|---|---|
-| A (charitable; verdict field) | Selection relaxed; new deleterious mutations accumulate as load | dialectic | holds | 338-11,484 y to half or a tenth of fitness; "centuries" on Lynch's upper value and Day's premise 2 |
+| A (most defensible; verdict field) | Selection relaxed; new deleterious mutations accumulate as load | dialectic | holds | 338-11,484 y to half or a tenth of fitness; "centuries" on Lynch's upper value and Day's premise 2 |
 | B (literal) | Harmful *substitutions* fix at neutral speed, 4Ne generations | dialectic | non-sequitur | N2a: 1.0-1.6 million y, 1,000-1,600x "centuries", and Day's own "~one million years apiece" |
 
 External `contradicted` is scoped to premises 1 and 2 as worded and does not depend on the reading; the conditional's arithmetic is supported on reading A. Fidelity `unverifiable`. R4 GAP05 (2026-10-11): Day's GAP-05 premise is supported on a sourced coding DFE (about 15,000-21,000 slightly deleterious nonsynonymous fixations per lineage on the pre-registered base); a collapse is not (log-fitness decline 0.29-0.43 pre-registered, about 0.8-1.1 on a divergence-calibrated base, post hoc, against ln 3 = 1.10).

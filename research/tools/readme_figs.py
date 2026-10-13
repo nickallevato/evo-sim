@@ -129,9 +129,9 @@ save(fig, "h2_persistence.svg")
 
 # 6. Verdict tallies (lint_research.py output on 2026-10-13 after R4 B2f, 233 claims; n/a verdicts not drawn)
 tallies = {
-    "internal": [("holds", 132, ACC), ("non-sequitur", 19, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 51, "#525252")],
+    "internal": [("holds", 132, ACC), ("non-sequitur", 18, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 52, "#525252")],
     "fidelity": [("accurate", 44, ACC), ("partial", 39, "#eab308"), ("misread", 11, DAY), ("unverifiable", 58, "#525252"), ("pending", 10, "#3f3f46")],
-    "external": [("supported", 34, ACC), ("contested", 116, "#eab308"), ("contradicted", 18, DAY), ("untestable", 6, NEU), ("pending", 47, "#525252")],
+    "external": [("supported", 34, ACC), ("contested", 116, "#eab308"), ("contradicted", 17, DAY), ("untestable", 6, NEU), ("pending", 48, "#525252")],
 }
 fig, ax = plt.subplots(figsize=(7.2, 2.6))
 for i, (k, segs) in enumerate(tallies.items()):

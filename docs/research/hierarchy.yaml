@@ -186,7 +186,7 @@ nodes:
   verdicts:
     internal: non-sequitur
     fidelity: pending
-    external: contradicted
+    external: pending
   claim_file: docs/research/claims/A2e-ltee-as-ceiling.md
 - id: A2f
   title: 'Natural-selection-only LTEE rates: 4,615 (blog) vs ~1,408 (Zenodo 3.0) vs ~24,500 "serial" (blog)'
@@ -750,7 +750,7 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: non-sequitur
+    internal: pending
     fidelity: partial
     external: contested
   claim_file: docs/research/claims/B-neutral-theory-cannot-rescue.md
