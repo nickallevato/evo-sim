@@ -1,0 +1,9 @@
+na-workhorse.allevato.io
+Tue Oct 13 05:27:38 PM UTC 2026
+script commit 9c4a359 (post hoc)
+6f623667b00d1b96b75e2319a7482458  research/checks/l1b_posthoc_x1_breakdown.py
+aef21cb3eb0038e8f754a8155fe9ece8  research/checks/l1b_t2t_dnds.py
+86b0e672d70bb6be1bd2978f869c06519482f191d11fe06d829d21b573afeacd  sources/raw/l1b-seg-2026-10-13/seg.json.gz
+035f359a70f824dae4ff37cebf3d49a80f59cb34675d3f1efe6df0f9dd85d547  research/checks/results/raw/l1b.genes.tsv.gz
+4707e8f614934a4b05e2cec685fbee3884728aeb647883de8a81415e73e11641  research/checks/results/raw/l1b.json
+df6f10fa1cadc25ec7d21acd39946085069159a053ab901fa6ffc2e4c0c039ce  research/checks/results/raw/l1b.out

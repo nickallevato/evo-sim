@@ -1,0 +1,133 @@
+seg dump sha256 86b0e672d70bb6be1bd2978f869c06519482f191d11fe06d829d21b573afeacd (as expected)
+gene table sha256 035f359a70f824dae4ff37cebf3d49a80f59cb34675d3f1efe6df0f9dd85d547
+transcripts in the dump not found in the annotation: 0; 41 s
+transcripts in dump 19407; in the registered gene table (ALL) 19310; affected (X1 Sd,Nd,s1,n1 differ from V0) 2637
+X1 excess differences (X1 Sd+Nd - V0 Sd+Nd): ALL 2457819; in affected genes 2457819
+ORDER CHECK: transcripts with g0 not strictly increasing in list order: 0 (in ALL: 0); with overlapping segments: 0
+MODEL CHECK: genes with >=1 event and affected 2637; event(s) but not affected 128; no event but affected 0; neither 16545; in-register codons whose X1 codon differs from the column-paired codon: 0; out-of-register codons in not-affected genes 10909
+
+AFFECTED GENES BY FIRST CAUSE (transcript order; shares of affected genes and of their X1 excess)
+  class                               genes  %genes    excess  %excess     X1  X1shr     V0 oor codons
+  del_3                                 889    33.7    923596     37.6  0.996  0.731  0.320     466392
+  hole_rowempty                         601    22.8    565920     23.0  0.924  0.749  0.359     316330
+  ins_3                                 397    15.1    444312     18.1  0.996  0.731  0.439     233027
+  edge_exon                             206     7.8    174856      7.1  0.921  0.763  0.534      99845
+  del_fs                                235     8.9    133859      5.4  0.876  0.731  0.530      70689
+  hole_break                            113     4.3     94249      3.8  0.919  0.741  0.561      59782
+  ins_fs                                120     4.6     73488      3.0  0.862  0.702  0.476      40452
+  hole_norow                             75     2.8     47378      1.9  0.915  0.745  0.562      34712
+  hole_noblock                            1     0.0       160      0.0  0.678  0.938  0.917        154
+
+AFFECTED GENES BY FIRST CAUSE, COARSE
+  class                               genes  %genes    excess  %excess     X1  X1shr     V0 oor codons
+  INDEL_3                              1286    48.8   1367909     55.7  0.996  0.731  0.367     699419
+  HOLE                                  790    30.0    707708     28.8  0.922  0.748  0.436     410978
+  INDEL_FS                              355    13.5    207347      8.4  0.871  0.719  0.501     111141
+  EDGE                                  206     7.8    174856      7.1  0.921  0.763  0.534      99845
+
+AFFECTED GENES BY COMBINATION OF COARSE CLASSES PRESENT
+  class                               genes  %genes    excess  %excess     X1  X1shr     V0 oor codons
+  INDEL_3                              1138    43.2   1106868     45.0  1.009  0.731  0.281     544408
+  HOLE                                  577    21.9    508949     20.7  0.916  0.741  0.300     281155
+  HOLE+INDEL_3                          116     4.4    202216      8.2  0.938  0.731  0.502     111888
+  INDEL_3+INDEL_FS                       94     3.6     95979      3.9  0.898  0.725  0.544      50004
+  INDEL_FS                              230     8.7     88526      3.6  0.842  0.702  0.446      44868
+  EDGE+HOLE+INDEL_3+INDEL_FS             44     1.7     77030      3.1  0.877  0.780  0.608      55070
+  HOLE+INDEL_3+INDEL_FS                  64     2.4     74234      3.0  0.893  0.740  0.582      51309
+  EDGE                                   93     3.5     66330      2.7  0.936  0.754  0.336      34123
+  HOLE+INDEL_FS                          74     2.8     57175      2.3  0.977  0.745  0.531      37385
+  EDGE+HOLE                              67     2.5     48744      2.0  0.948  0.767  0.603      31996
+  EDGE+HOLE+INDEL_3                      35     1.3     41040      1.7  0.918  0.801  0.740      26878
+  EDGE+HOLE+INDEL_FS                     33     1.3     24125      1.0  0.948  0.768  0.511      16935
+  EDGE+INDEL_FS                          30     1.1     23594      1.0  0.854  0.746  0.389      12683
+  EDGE+INDEL_3+INDEL_FS                  21     0.8     22962      0.9  0.910  0.759  0.594      12204
+  EDGE+INDEL_3                           21     0.8     20047      0.8  0.881  0.710  0.429      10477
+
+AFFECTED GENES WITH / WITHOUT A FRAME-CHANGING INDEL ANYWHERE
+  class                               genes  %genes    excess  %excess     X1  X1shr     V0 oor codons
+  no_frame_changing_indel              2047    77.6   1994194     81.1  0.974  0.736  0.350    1040925
+  has_frame_changing_indel              590    22.4    463626     18.9  0.903  0.737  0.541     280458
+
+AFFECTED GENES WHOSE ONLY EVENTS ARE IN-FRAME INDELS
+  class                               genes  %genes    excess  %excess     X1  X1shr     V0 oor codons
+  other                                1499    56.8   1350951     55.0  0.916  0.741  0.487     776975
+  INDEL_3_only                         1138    43.2   1106868     45.0  1.009  0.731  0.281     544408
+
+EVENTS IN ALL GENES (events, human or chimp bases involved, genes with >=1)
+  del_fs         events    744  bp     5109  genes    419
+  del_3          events   1520  bp    28752  genes   1126
+  ins_fs         events    613  bp     2818  genes    310
+  ins_3          events    917  bp     7227  genes    624
+  hole_noblock   events      2  bp      514  genes      2
+  hole_norow     events    667  bp    74927  genes    182
+  hole_rowempty  events   1313  bp   184487  genes    862
+  hole_break     events    531  bp    47743  genes    298
+  edge_exon      events    667  bp    37457  genes    363
+
+CODONS: total 11141429; out of register under X1 1332292 (11.96%), of which beyond the end of X1 (padding, not compared) 124967
+  out-of-register codons by assigned class | state:
+    del_3|codon_shift               437601
+    ins_3|codon_shift               191447
+    hole_rowempty|frame_shift       166621
+    hole_rowempty|codon_shift       104255
+    edge_exon|frame_shift            62385
+    hole_rowempty|pad                53051
+    del_fs|frame_shift               51655
+    hole_break|frame_shift           35815
+    ins_fs|frame_shift               28306
+    ins_3|frame_shift                27725
+    edge_exon|codon_shift            25758
+    del_3|frame_shift                15682
+    ins_3|pad                        15293
+    hole_norow|frame_shift           14098
+    hole_break|codon_shift           13975
+    edge_exon|pad                    13455
+    del_fs|codon_shift               13043
+    del_3|pad                        12626
+    hole_break|pad                   11558
+    hole_norow|pad                   10655
+    ins_fs|codon_shift                9722
+    hole_norow|codon_shift            9112
+    ins_fs|pad                        4472
+    del_fs|pad                        3828
+    hole_noblock|codon_shift           125
+    hole_noblock|pad                    29
+  base mismatches in compared out-of-register codons: 2577582 (in-register codons of genes with events: 31603)
+    del_3                           941753   36.5%
+    hole_rowempty                   598389   23.2%
+    ins_3                           462870   18.0%
+    edge_exon                       193233    7.5%
+    del_fs                          140859    5.5%
+    hole_break                      106748    4.1%
+    ins_fs                           82556    3.2%
+    hole_norow                       50983    2.0%
+    hole_noblock                       191    0.0%
+
+FLAGS among affected genes: first-row switch of chimp sequence/strand 359; step back in chimp coordinate 268; either 530 (excess share 20.3%)
+
+CRITERIA STATED IN THE DOCSTRING (descriptive; no verdict moves)
+  Day side: frame-changing indel as first cause in > 50% of affected genes: 13.5%; those genes carry > 50% of the excess: 8.4%; hole classes < 25% of the excess: 28.8%
+  Critic side: hole + in-frame indel + exon-edge first causes >= 50% of the excess: 91.6%; frame-changing first cause in < 50% of affected genes: 13.5%; genes with no frame-changing indel read 0.85-1.15 under X1: 0.974 on 2047 genes (V0 0.350)
+	Command being timed: "research/.venv/bin/python -I research/checks/l1b_posthoc_x1_breakdown.py run sources/raw/l1b-annot-2026-10-11/chm13v2.0_GENCODEv35_CAT_Liftoff.vep.gff3.gz sources/raw/l1b-seg-2026-10-13/seg.json.gz research/checks/results/raw/l1b.genes.tsv.gz research/checks/results/raw/l1b_x1_breakdown.json"
+	User time (seconds): 38.89
+	System time (seconds): 2.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:41.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 323864
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 78417
+	Voluntary context switches: 17
+	Involuntary context switches: 1197
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,458 @@
+{
+ "n_dump": 19407,
+ "n_tsv": 19310,
+ "n_affected": 2637,
+ "excess_total": 2457819.4094,
+ "excess_in_affected": 2457819.4094,
+ "order": {
+  "not_increasing": 0,
+  "not_increasing_in_ALL": 0,
+  "overlap": 0
+ },
+ "consistency": {
+  "events_and_affected": 2637,
+  "events_not_affected": 128,
+  "no_events_affected": 0,
+  "no_events_not_affected": 16545,
+  "inreg_violations": 0,
+  "oor_codons_in_not_affected": 10909
+ },
+ "first_cause": {
+  "del_3": {
+   "genes": 889,
+   "genes_share": 0.3371255214258627,
+   "excess": 923596.211,
+   "excess_share": 0.3757787115960108,
+   "x1": 0.9963526822272127,
+   "x1_share": 0.7311200690416106,
+   "v0": 0.3197852631498405,
+   "oor_codons": 466392
+  },
+  "hole_rowempty": {
+   "genes": 601,
+   "genes_share": 0.22791050436101631,
+   "excess": 565919.974,
+   "excess_share": 0.23025287042474443,
+   "x1": 0.9238934799448463,
+   "x1_share": 0.7491534545780728,
+   "v0": 0.3585401287159288,
+   "oor_codons": 316330
+  },
+  "ins_3": {
+   "genes": 397,
+   "genes_share": 0.15054986727341677,
+   "excess": 444312.34,
+   "excess_share": 0.1807750147552399,
+   "x1": 0.9958116857139401,
+   "x1_share": 0.7314810498345066,
+   "v0": 0.43942023598843766,
+   "oor_codons": 233027
+  },
+  "edge_exon": {
+   "genes": 206,
+   "genes_share": 0.07811907470610542,
+   "excess": 174855.8794,
+   "excess_share": 0.07114268799866205,
+   "x1": 0.920936893022727,
+   "x1_share": 0.7631067961165049,
+   "v0": 0.5335600802810444,
+   "oor_codons": 99845
+  },
+  "del_fs": {
+   "genes": 235,
+   "genes_share": 0.08911642017444066,
+   "excess": 133859.047,
+   "excess_share": 0.05446252336036256,
+   "x1": 0.8760886133120775,
+   "x1_share": 0.7305084745762712,
+   "v0": 0.5302239155941011,
+   "oor_codons": 70689
+  },
+  "hole_break": {
+   "genes": 113,
+   "genes_share": 0.0428517254455821,
+   "excess": 94249.22,
+   "excess_share": 0.038346682282490406,
+   "x1": 0.9190398371645553,
+   "x1_share": 0.7406419963741069,
+   "v0": 0.5614491458814885,
+   "oor_codons": 59782
+  },
+  "ins_fs": {
+   "genes": 120,
+   "genes_share": 0.04550625711035267,
+   "excess": 73488.394,
+   "excess_share": 0.029899834674159364,
+   "x1": 0.8616958156008103,
+   "x1_share": 0.7015657863986913,
+   "v0": 0.4757835713412161,
+   "oor_codons": 40452
+  },
+  "hole_norow": {
+   "genes": 75,
+   "genes_share": 0.02844141069397042,
+   "excess": 47378.294,
+   "excess_share": 0.019276556210273375,
+   "x1": 0.9147508125265739,
+   "x1_share": 0.7449150514477147,
+   "v0": 0.562108900756609,
+   "oor_codons": 34712
+  },
+  "hole_noblock": {
+   "genes": 1,
+   "genes_share": 0.0003792188092529389,
+   "excess": 160.05,
+   "excess_share": 6.511869805726338e-05,
+   "x1": 0.6781367527415236,
+   "x1_share": 0.9375,
+   "v0": 0.9169228523962288,
+   "oor_codons": 154
+  }
+ },
+ "first_cause_coarse": {
+  "INDEL_3": {
+   "genes": 1286,
+   "genes_share": 0.4876753886992795,
+   "excess": 1367908.551,
+   "excess_share": 0.5565537263512507,
+   "x1": 0.9962403097400571,
+   "x1_share": 0.7312352630521939,
+   "v0": 0.3673364709161985,
+   "oor_codons": 699419
+  },
+  "HOLE": {
+   "genes": 790,
+   "genes_share": 0.29958285930982176,
+   "excess": 707707.5380000001,
+   "excess_share": 0.2879412276155655,
+   "x1": 0.9223087668242756,
+   "x1_share": 0.7475285824808734,
+   "v0": 0.4358985244042814,
+   "oor_codons": 410978
+  },
+  "INDEL_FS": {
+   "genes": 355,
+   "genes_share": 0.13462267728479332,
+   "excess": 207347.441,
+   "excess_share": 0.08436235803452193,
+   "x1": 0.8707008735433666,
+   "x1_share": 0.7193148951554591,
+   "v0": 0.5011423940806208,
+   "oor_codons": 111141
+  },
+  "EDGE": {
+   "genes": 206,
+   "genes_share": 0.07811907470610542,
+   "excess": 174855.8794,
+   "excess_share": 0.07114268799866205,
+   "x1": 0.920936893022727,
+   "x1_share": 0.7631067961165049,
+   "v0": 0.5335600802810444,
+   "oor_codons": 99845
+  }
+ },
+ "combination": {
+  "INDEL_3": {
+   "genes": 1138,
+   "genes_share": 0.4315510049298445,
+   "excess": 1106867.927,
+   "excess_share": 0.45034550657658257,
+   "x1": 1.0085873687794913,
+   "x1_share": 0.7313020909489691,
+   "v0": 0.2814338741256894,
+   "oor_codons": 544408
+  },
+  "HOLE": {
+   "genes": 577,
+   "genes_share": 0.21880925293894576,
+   "excess": 508949.44,
+   "excess_share": 0.207073570195397,
+   "x1": 0.9160556699443805,
+   "x1_share": 0.7406313094006992,
+   "v0": 0.2995365022862391,
+   "oor_codons": 281155
+  },
+  "HOLE+INDEL_3": {
+   "genes": 116,
+   "genes_share": 0.043989381873340914,
+   "excess": 202215.91,
+   "excess_share": 0.08227451912317868,
+   "x1": 0.9379440011669303,
+   "x1_share": 0.7307222900255187,
+   "v0": 0.5024813362003336,
+   "oor_codons": 111888
+  },
+  "INDEL_3+INDEL_FS": {
+   "genes": 94,
+   "genes_share": 0.03564656806977626,
+   "excess": 95979.227,
+   "excess_share": 0.039050561092049615,
+   "x1": 0.89831449548721,
+   "x1_share": 0.7254682410423453,
+   "v0": 0.5436414737669079,
+   "oor_codons": 50004
+  },
+  "INDEL_FS": {
+   "genes": 230,
+   "genes_share": 0.08722032612817596,
+   "excess": 88526.148,
+   "excess_share": 0.036018166209213436,
+   "x1": 0.8422778870829629,
+   "x1_share": 0.7017318159327066,
+   "v0": 0.44587324757304764,
+   "oor_codons": 44868
+  },
+  "EDGE+HOLE+INDEL_3+INDEL_FS": {
+   "genes": 44,
+   "genes_share": 0.016685627607129314,
+   "excess": 77029.89,
+   "excess_share": 0.031340744444200014,
+   "x1": 0.8765411321513333,
+   "x1_share": 0.7797982885085575,
+   "v0": 0.6075078904903178,
+   "oor_codons": 55070
+  },
+  "HOLE+INDEL_3+INDEL_FS": {
+   "genes": 64,
+   "genes_share": 0.02427000379218809,
+   "excess": 74234.357,
+   "excess_share": 0.030203340699519503,
+   "x1": 0.8928687169934681,
+   "x1_share": 0.739898661816292,
+   "v0": 0.5817368864060404,
+   "oor_codons": 51309
+  },
+  "EDGE": {
+   "genes": 93,
+   "genes_share": 0.03526734926052332,
+   "excess": 66329.5867,
+   "excess_share": 0.026987168563451253,
+   "x1": 0.936018360001237,
+   "x1_share": 0.7536563876651983,
+   "v0": 0.33634666266815244,
+   "oor_codons": 34123
+  },
+  "HOLE+INDEL_FS": {
+   "genes": 74,
+   "genes_share": 0.028062191884717484,
+   "excess": 57174.997,
+   "excess_share": 0.023262489010108967,
+   "x1": 0.9766408037434962,
+   "x1_share": 0.7446658437665314,
+   "v0": 0.5308285245092176,
+   "oor_codons": 37385
+  },
+  "EDGE+HOLE": {
+   "genes": 67,
+   "genes_share": 0.02540766021994691,
+   "excess": 48743.7767,
+   "excess_share": 0.019832122943442488,
+   "x1": 0.948371563665075,
+   "x1_share": 0.7668172094128833,
+   "v0": 0.6033186952846475,
+   "oor_codons": 31996
+  },
+  "EDGE+HOLE+INDEL_3": {
+   "genes": 35,
+   "genes_share": 0.013272658323852863,
+   "excess": 41039.747,
+   "excess_share": 0.016697625074910846,
+   "x1": 0.9182916409523146,
+   "x1_share": 0.8007682458386683,
+   "v0": 0.7402898239688311,
+   "oor_codons": 26878
+  },
+  "EDGE+HOLE+INDEL_FS": {
+   "genes": 33,
+   "genes_share": 0.012514220705346985,
+   "excess": 24125.12,
+   "excess_share": 0.009815660136677576,
+   "x1": 0.9483293361327904,
+   "x1_share": 0.7680461982675649,
+   "v0": 0.5106236450148358,
+   "oor_codons": 16935
+  },
+  "EDGE+INDEL_FS": {
+   "genes": 30,
+   "genes_share": 0.011376564277588168,
+   "excess": 23594.003,
+   "excess_share": 0.009599567368442152,
+   "x1": 0.8536825969812316,
+   "x1_share": 0.7459932005828072,
+   "v0": 0.389387459780487,
+   "oor_codons": 12683
+  },
+  "EDGE+INDEL_3+INDEL_FS": {
+   "genes": 21,
+   "genes_share": 0.007963594994311717,
+   "excess": 22961.97,
+   "excess_share": 0.009342415440362012,
+   "x1": 0.9101208489992958,
+   "x1_share": 0.7590597453476984,
+   "v0": 0.5937052084657597,
+   "oor_codons": 12204
+  },
+  "EDGE+INDEL_3": {
+   "genes": 21,
+   "genes_share": 0.007963594994311717,
+   "excess": 20047.31,
+   "excess_share": 0.008156543122463961,
+   "x1": 0.8807430369436604,
+   "x1_share": 0.7102335928809789,
+   "v0": 0.42879577548065234,
+   "oor_codons": 10477
+  }
+ },
+ "only_inframe_or_hole": {
+  "no_frame_changing_indel": {
+   "genes": 2047,
+   "genes_share": 0.7762609025407661,
+   "excess": 1994193.6974,
+   "excess_share": 0.8113670555994268,
+   "x1": 0.9739794782174249,
+   "x1_share": 0.7360835071250048,
+   "v0": 0.350265267978775,
+   "oor_codons": 1040925
+  },
+  "has_frame_changing_indel": {
+   "genes": 590,
+   "genes_share": 0.22373909745923398,
+   "excess": 463625.712,
+   "excess_share": 0.18863294440057327,
+   "x1": 0.9025253617005607,
+   "x1_share": 0.7370925684485007,
+   "v0": 0.5413855831768655,
+   "oor_codons": 280458
+  }
+ },
+ "only_inframe_indel": {
+  "other": {
+   "genes": 1499,
+   "genes_share": 0.5684489950701554,
+   "excess": 1350951.4824,
+   "excess_share": 0.5496544934234175,
+   "x1": 0.9159623242245685,
+   "x1_share": 0.7408208241506924,
+   "v0": 0.48665925700944773,
+   "oor_codons": 776975
+  },
+  "INDEL_3_only": {
+   "genes": 1138,
+   "genes_share": 0.4315510049298445,
+   "excess": 1106867.927,
+   "excess_share": 0.45034550657658257,
+   "x1": 1.0085873687794913,
+   "x1_share": 0.7313020909489691,
+   "v0": 0.2814338741256894,
+   "oor_codons": 544408
+  }
+ },
+ "flags_affected": {
+  "switch": 359,
+  "backstep": 268,
+  "either": 530
+ },
+ "flags_affected_excess_share": 0.20311438061345144,
+ "events_ALL": {
+  "del_fs": {
+   "events": 744,
+   "bp": 5109,
+   "genes": 419
+  },
+  "del_3": {
+   "events": 1520,
+   "bp": 28752,
+   "genes": 1126
+  },
+  "ins_fs": {
+   "events": 613,
+   "bp": 2818,
+   "genes": 310
+  },
+  "ins_3": {
+   "events": 917,
+   "bp": 7227,
+   "genes": 624
+  },
+  "hole_noblock": {
+   "events": 2,
+   "bp": 514,
+   "genes": 2
+  },
+  "hole_norow": {
+   "events": 667,
+   "bp": 74927,
+   "genes": 182
+  },
+  "hole_rowempty": {
+   "events": 1313,
+   "bp": 184487,
+   "genes": 862
+  },
+  "hole_break": {
+   "events": 531,
+   "bp": 47743,
+   "genes": 298
+  },
+  "edge_exon": {
+   "events": 667,
+   "bp": 37457,
+   "genes": 363
+  }
+ },
+ "oor_codons_by_class_state": {
+  "ins_3|codon_shift": 191447,
+  "edge_exon|frame_shift": 62385,
+  "edge_exon|pad": 13455,
+  "ins_3|frame_shift": 27725,
+  "del_3|codon_shift": 437601,
+  "del_3|pad": 12626,
+  "del_fs|frame_shift": 51655,
+  "del_fs|pad": 3828,
+  "edge_exon|codon_shift": 25758,
+  "hole_norow|frame_shift": 14098,
+  "hole_norow|pad": 10655,
+  "ins_3|pad": 15293,
+  "hole_rowempty|frame_shift": 166621,
+  "hole_rowempty|pad": 53051,
+  "hole_rowempty|codon_shift": 104255,
+  "ins_fs|frame_shift": 28306,
+  "hole_break|pad": 11558,
+  "hole_break|frame_shift": 35815,
+  "ins_fs|codon_shift": 9722,
+  "ins_fs|pad": 4472,
+  "del_3|frame_shift": 15682,
+  "hole_norow|codon_shift": 9112,
+  "del_fs|codon_shift": 13043,
+  "hole_break|codon_shift": 13975,
+  "hole_noblock|codon_shift": 125,
+  "hole_noblock|pad": 29
+ },
+ "oor_mismatch_by_class": {
+  "ins_3": 462870,
+  "edge_exon": 193233,
+  "del_3": 941753,
+  "del_fs": 140859,
+  "hole_norow": 50983,
+  "hole_rowempty": 598389,
+  "ins_fs": 82556,
+  "hole_break": 106748,
+  "hole_noblock": 191
+ },
+ "codons_total": 11141429,
+ "oor_codons_total": 1332292,
+ "pad_codons_total": 124967,
+ "inreg_mismatch": 31603,
+ "criteria": {
+  "day_fs_first_cause_gene_share": 0.13462267728479332,
+  "day_fs_first_cause_excess_share": 0.08436235803452193,
+  "day_hole_excess_share": 0.2879412276155655,
+  "critic_hole_inframe_edge_excess_share": 0.9156376419654783,
+  "critic_no_fs_genes": 2047,
+  "critic_no_fs_x1": 0.9739794782174249,
+  "critic_no_fs_v0": 0.350265267978775
+ },
+ "seg_sha256": "86b0e672d70bb6be1bd2978f869c06519482f191d11fe06d829d21b573afeacd",
+ "tid_not_in_annotation": 0,
+ "seconds": 40.958073139190674
+}
