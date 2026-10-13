@@ -161,3 +161,24 @@ Thin window, effectively empty for the critic side. Method per HOWTO §2: Substa
 - Comment diffs against 2026-10-09 copies: McCarthy "Why" 37 (0 new), "Vox Day Responds" 75 (0), Hossjer review 18 (0), Dembski interview 75 (0 vs 2026-10-09b; the 2026-10-09 "Chuckles" comment is now quoted as RF-19).
 - Newest relevant-host posts: McCarthy 10-08 (known, off topic), keruru 09-27, Dembski 10-07, Tree of Woe 09-28, Kurgan 10-11 (off topic), Keen 10-11 "Of Mathematics, mathiness, mythematics..." (economics; the word "evolution" once, no Day), Uncle John's Band 10-10 (no Day), Sigma Game and AI Central: off topic. Pharyngula: last Day items are 10-02..04 (known). Camestros: no Day item since 10-06.
 - Pitfalls: Arctic Shift `query=` searches all returned "Timeout. Maybe slow down a bit" (errors, not zero hits), so Reddit keyword coverage is NOT verified; the unfiltered DebateEvolution listing (`subreddit=` and `after=` only) worked and was read. PullPush returned 0 hits for "vox day" after 2026-10-03 (lag). Peaceful Science DNS did not resolve. zsh `set -- $var` does not word-split: use `while read`. WebSearch found no Oct 2026 critic items and no coverage of either Day post.
+
+## Refresh 2026-10-13 (video slice, check VID-01): the Gutsick Gibbon roundtable
+Full record: `refresh-2026-10-13-video.md`. One target only, the 4:14:02 video `AqC1ZM4icms` published
+2026-10-13 18:00:40 UTC (the "credentialed roundtable" that the 2026-10-07 and 2026-10-09 logs list as
+pending capture, item 5 of the "next" list in this file).
+- **Captions gate opened.** No caption track at the 2026-10-13 morning fetch; one auto-generated English
+  (ASR) track at 21:51 UTC. No audio was machine-transcribed by this audit.
+- Method: `curl` of the watch page, then `yt-dlp --skip-download --write-auto-subs --sub-langs en
+  --sub-format vtt --write-info-json` into the fetch directory `sources/raw/vid01-2026-10-13/`;
+  transcript by `research/tools/harvest/vtt.py` (20 s chunks); 42 quotes machine-verified as exact
+  substrings by `research/tools/harvest/verify_vid01.py` (42/42).
+- **Pitfalls.** `yt-dlp` was missing from `research/.venv` although `HOWTO-refresh.md` §5 calls it from
+  there; reinstalled with `pip install --no-deps yt-dlp` (2026.8.19; `requirements.txt` untouched).
+  Fetching the signed `timedtext` URL from the watch page directly returned **0 bytes** in both `json3`
+  and `vtt` formats, and a hand-rolled `youtubei/v1/player` ANDROID request returned HTTP 400; only
+  yt-dlp's own player request produced the track. yt-dlp warns that no JS runtime is installed (formats
+  may be missing) - irrelevant for subtitles, relevant if a future task needs audio or video.
+- Yield: bib `GG-4`; quotes `GGR-01..GGR-40`; rhetoric `RH-31`, `RH-32`. Comments (656) not pulled.
+- Negative result worth as much as the quotes: zero coverage of aDNA (C), the dN/dS = 0.80 numbers (DN),
+  the Fourth Mechanism (FM) and sequence space (D). The only `dN/dS` mention in four hours is a
+  within-genome heterogeneity argument at t=02:15:08.

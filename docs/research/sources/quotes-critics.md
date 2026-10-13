@@ -794,3 +794,111 @@ Harvested 2026-10-12. Thin window: one verbatim item (backfill of a comment coun
   - source: B2026-10-12-dembski-interview-comments; https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (comments)
   - local copy: `sources/raw/refresh-2026-10-12-critics/c-dembski-interview/comments.json` (sha256 bf2d02b9f8ed927634d1f92fdc374933ceba4e374ba6c593ab776360ccccaafe)
   - note: Unidentified commenter, so not scored internal (rule U). "it" is not named in the comment; the parent is Hilbert's EES comment, so the plausible referent is the EES. Readings (rule RD): (a) the EES, as a framework, is unfalsifiable because it accommodates every outcome (a recognised critic line; dialectical core: a testability demand on EES); (b) the Day/Hilbert argument form (not read as the referent). Verdict under reading (a): n/a (opinion; no number). It touches nothing quantitative. Credit: the testability demand is a fair challenge to EES proponents, and it applies equally to Day's own "Fourth Mechanism" until a method is released. Rule RD record (2026-10-12): the verdict field takes reading (a), the reading under which the comment is most defensible (dialectic core: EES testability; verdict n/a, no claim file); reading (b) has no content. Counted as one reading-dependent item with no verdict effect.
+
+## YT-AqC1ZM4icms: Gutsick Gibbon et al., "Six Scientists Roast One Racist Loser (Heartwarming) (Four Hours) (Hopecore)" (auto-captions)
+URL: https://www.youtube.com/watch?v=AqC1ZM4icms  
+Date: 2026-10-13 (published 18:00:40 UTC); duration 4:14:02; access date 2026-10-13 (bib key GG-4)
+
+Harvested 2026-10-13 under brief `research/checks/briefs/VID-01-operator.md` (check VID-01). Captions are **auto-generated (ASR)**: recognition errors are preserved verbatim ("Kamura" = Kimura, "Berni"/"Bernoli" = Bernoulli, "lossi" = loci, "latius"/"dilitterious" = deleterious, "lensy" = Lenski, "alals" = alleles, "Mockbox"/"VD"/"Teddy" = Vox Day/Theodore Beale, "in"/"n" = n). Every quote below was machine-checked as an exact substring of the local transcript by `research/tools/harvest/verify_vid01.py` (39 of 39 PASS, plus 3 added after); `t=` is the start of the ~20 s caption chunk in which the quote begins, as produced by `research/tools/harvest/vtt.py` (the convention used for GG-1..GG-3 and JG-1).
+
+**Speakers are not marked in the captions.** The video has six participants (Erika/Gutsick Gibbon as host; Zach Hancock; and, per the video description, Grayson, Jon, Dan, Maddie). Attribution below is `panel` unless the surrounding turn names the speaker, in which case the inference is stated in the note and marked `(inferred)`. Day's own words read aloud by a panellist are tagged `secondhand` and are **not** scored as critic statements (rule U).
+
+- **GGR-01** | t=01:06:15 | branch A5h | panel | dialectic
+  > "is off by his multiplication of three numbers by a factor of 10."
+  - note: Forward reference to the 38,400 slip, shown later at t=03:44:42 (GGR-31..GGR-35). Audit node A5h already scores that slip `arithmetic-error` (3,840); this is an independent critic statement of the same point, found without reference to this audit.
+- **GGR-02** | t=01:06:35 | branch A | panel | dialectic
+  > "the core mittens equation, it's basically divergence time over generations generation length."
+- **GGR-03** | t=01:06:55 | branch A | panel | dialectic
+  > "It's it's a simple multiplying of two variables that you could explain to a seventh grader and have them master it."
+  - note: Characterisation of F_max; bears on A (the MITTENS formula) and on the "no statistics" line in the 2026-10-03 video.
+- **GGR-04** | t=01:06:15 | branch A | panel | dialectic
+  > "it's just he just did a division and like and I'm like well you you did the division correctly"
+  - note: Context names the speaker as the panel's mathematician/physicist ("I'm the math guy in this group"); concedes the division is done correctly. Credit to Day on arithmetic at this step.
+- **GGR-05** | t=01:07:15 | branch epistemic | panel | dialectic
+  > "I gave up after listing 40 errors that I noticed just in Mittens 3.0."
+  - note: Count asserted, not itemised in the video. No list is given; the audit cannot check it.
+- **GGR-06** | t=01:07:38 | branch epistemic | panel | dialectic
+  > "Mittens 3.0 is 17 pages and this is supposed to be his correction."
+- **GGR-07** | t=01:07:59 | branch versions | Day (relayed) | secondhand
+  > "It turned out there were a number of problems with the published methodology."
+  - note: Read aloud as a direct quote of Day about the published book vs MITTENS 3.0; no locator is given in the video for the original. Not scored (rule U); flagged for the versions ledger, which already tracks the PZ 1st edition -> MITTENS 3.0 changes.
+- **GGR-08** | t=01:38:29 | branch A/F | panel (inferred: Hancock, who is addressed as "Dr. Hancock" in the preceding turn) | dialectic
+  > "Yes, we are all aware of Haldane's dilemma being not so much of a dilemma anymore."
+- **GGR-09** | t=01:38:29 | branch A/B5 | AI output (Claude, read aloud) | secondhand
+  > "Haldane's one per 300 applies only to selected substitutions is number one, followed by the neutral rate predicts the observed divergence without selection."
+  - note: The panel asked an LLM to "peer review" MITTENS 3.0 and read its five points aloud. Not a critic statement (rule U; an LLM is not an author). Recorded because the panel then endorses it (GGR-10). The LLM's own framing earlier in the segment: "I'm working from my recollection of the argument, not the text" (t=01:36:43).
+- **GGR-10** | t=01:38:50 | branch A/B5 | panel (inferred: Hancock, answering "what do you think, Dr. Hancock?") | dialectic
+  > "I mean, honestly, these are the five things that I probably would have said as well."
+- **GGR-11** | t=01:49:52 | branch versions/B2e | panel (inferred: Erika, who introduces the comparison) | dialectic
+  > "In mittens 3.0, he completely retracts all of his arguments with regard to the census population size versus the effective population size."
+- **GGR-12** | t=01:50:12 | branch G | panel | dialectic
+  > "Essentially, he omits the averaging error stuff as well as the Bernoli barrier stuff."
+- **GGR-13** | t=01:50:52 | branch A4d | panel (inferred: Grayson, invited by name in the preceding turn) | dialectic
+  > "he's still using the de coefficient in mittens, which is really strange to me because like if he's retracting the claim about like effective population size, then like he's retracting the claim that they population genetics does not account for like overlapping generations."
+  - note: **Apparent conflict with an audit finding.** A4d records that the MITTENS 3.0 text has no d term (searched "turnover" and "d ="), internal `holds`. Recorded, not applied: scoring is the analyst task this harvest unblocks.
+- **GGR-14** | t=01:51:14 | branch A4d | panel (same speaker as GGR-13) | dialectic
+  > "he calculates it at 450,000 generations and then he multiplies it by the D coefficient in order to cut it almost in half to like 225,000 generations or whatever and he's still using that number for all his math."
+  - note: Same conflict as GGR-13, now with numbers: 450,000 x 0.45 = 202,500, and MITTENS 3.0 prints 252,000 (A4d). The video gives no page locator.
+- **GGR-15** | t=01:51:34 | branch A4 | panel | dialectic
+  > "Vox actually proposes that since D is meant to account for overlapping generations, when we take human behavior into account, instead of one, it should actually be about 0.45."
+- **GGR-16** | t=01:52:34 | branch A4e | panel | dialectic
+  > "the whole reason why day created the D coefficient, the selective turnover coefficient, is because he thought that population genetics didn't have a way to handle overlapping generations. He didn't know that Wright Fischer could do it and he didn't know about Moran either."
+  - note: Same line as Hancock's 2026-10-03 point (GG-17..GG-19, claim A4e: overlap is handled by N_e and Moran). States Day's motive, which the audit does not score.
+- **GGR-17** | t=01:54:18 | branch G | panel | dialectic
+  > "That's why we've never heard of it. It's a madeup term."
+  - note: Of "Bernoulli barrier". A terminology claim. The audit's `prior-art.md` has no pre-Day use of the term either (it appears there only as Day's own coinage), but the harvest did no independent literature search, so this is recorded, not confirmed.
+- **GGR-18** | t=01:54:58 | branch G | Reddit commenter (relayed; "somebody with a masters in mathematics") | secondhand
+  > "describe it as uh a coefficient of variation for the number of inbeneficial alals that are segregating simultaneously in a population carried by an individual of this population."
+- **GGR-19** | t=01:54:58 | branch G | Reddit commenter (relayed, same) | secondhand
+  > "It's essentially arguing that because the coefficient of variation goes to zero as in increases, Fischer's fundamental theorem of natural selection implies that the rate of increase in mean fitness must also go to zero as n increases and that this makes a parallel fixation selfdefeating."
+  - note: The clearest statement of the Bernoulli-barrier argument found in the critic corpus to date, relayed from r/DebateEvolution (commenter "artistic course 1334" as captioned; the audit has not located the comment). Bears on branch G; the panel then rejects it ("that's preposterous", t=01:57:03) without a derivation.
+- **GGR-20** | t=01:55:39 | branch G/versions | panel | dialectic
+  > "it doesn't really matter for the full argument anyways because he effectively abandons it by Mittens 3.0. It's mentioned once in that paper and not defined."
+- **GGR-21** | t=02:06:52 | branch A2e/A5c/A5f | panel | dialectic
+  > "you cannot use the lensy long-term evolution fixation rate which is seen in asexually reproducing non-recombining ecoli bacteria to humans"
+  - note: The LTEE-as-ceiling objection (A2e), on the asexual/non-recombining ground (A5f).
+- **GGR-22** | t=02:10:18 | branch B/B9 | Day (relayed, read from the book) | secondhand
+  > "Here is what the drift argument necessarily requires. Natural selection must be effectively turned off."
+- **GGR-23** | t=02:11:00 | branch B/B9 | Day (relayed, read from the book) | secondhand
+  > "If selection is not operating on beneficial mutations, it's not operating on harmful mutations either."
+- **GGR-24** | t=02:12:24 | branch B/B9 | Day (relayed, read from the book) | secondhand
+  > "Kamura's formula does not exclude the latius mutation. It includes them the moment you remove selection from the model. This is precisely why invoking drift is fatal. the neutral substitution rate becomes the total substitution rate and 75% of that is harmful."
+  - note: Three Day quotes relayed from "Probability Zero" (chapter named in the video only as "the two escape hatches or something"). Not scored here (rule U, relay); if the audit wants them they must be re-quoted from Day's own text. They bear on B9 (drift would cause extinction) and on the drift-vs-selection dichotomy the panel attacks in GGR-25..GGR-29.
+- **GGR-25** | t=02:12:03 | branch B | panel | dialectic
+  > "you can have drift and natural selection at play simultaneously. This is literally part of the definition of fixation as we already discussed."
+- **GGR-26** | t=02:13:05 | branch B | panel (inferred: Hancock) | dialectic
+  > "we literally observe drift and natural selection at play simultaneously in populations right now."
+- **GGR-27** | t=02:15:08 | branch B/DN | panel (inferred: Hancock, giving "the pop gen answer") | dialectic
+  > "the ratio of non- synonymous to synonymous mutations which we often use as a detection of selective pressure purifying selection"
+  - note: The **only** mention of dN/dS in the four hours, and it is used as a within-genome heterogeneity argument, not as a reply to Day's genome-wide 0.80 (branch DN). See the negative findings in `refresh-2026-10-13-video.md`.
+- **GGR-28** | t=02:15:08 | branch B | panel (same speaker) | dialectic
+  > "look across the human genome you see it varies that that rate varies across the genome."
+- **GGR-29** | t=02:15:49 | branch B | panel (same speaker) | dialectic
+  > "again scan across the genome and find signatures of drift, find signatures of selection within a single individual."
+  - note: The argument of GGR-27..GGR-29: if drift and selection were exclusive, dN/dS and heterozygosity would not vary between genomic regions of one individual; they do. Offered against Day's dichotomy (GGR-22..GGR-24), not against any dN/dS number.
+- **GGR-30** | t=02:16:50 | branch B | panel (inferred: Grayson) | dialectic
+  > "that is one of the biggest errors in the entire book in all of Mittens 3.0. Like if he could understand that then like the mathematical problem evaporates."
+- **GGR-31** | t=03:44:42 | branch A5h | panel (inferred: Erika, sharing her screen) | dialectic
+  > "these three numbers multiplied together do not equal 38,400 like he says. It's literally he's off by a factor of 10. It's like 3,800 when you multiply those three numbers."
+  - note: "3,800" is approximate; corrected in the room to 3,840 at GGR-32. The audit's A5h value is 3,840 (3.2e9 x 1.2e-8 x 100).
+- **GGR-32** | t=03:46:25 | branch A5h | panel | dialectic
+  > "This is also the answer is 3,840."
+- **GGR-33** | t=03:46:03 | branch A5h | panel (inferred: Hancock) | dialectic
+  > "This is supposed to be a genetic load that he's calculating. This is not the genetic load calculation. You wouldn't use a selection coefficient. Famously, what you would use is the mutation rate."
+- **GGR-34** | t=03:46:03 | branch A5h | panel (same speaker) | dialectic
+  > "what the genetic load is based on one minus mu raised to the number of lossi, not one minus s raised to the number of lossi"
+  - note: A modelling objection the audit has not yet recorded at A5h, whose "Responses" section currently lists only the arithmetic (RE-02 / A2h). The claim is that s6.4 uses the wrong model (mutational load, not a per-mutation selection coefficient). Not scored here.
+- **GGR-35** | t=03:45:22 | branch A5h/versions | panel | dialectic
+  > "Mittens 3.0. This is the third version where he's like repeatedly updated the math like over and over and over again and this is still falling through the cracks. Like a literal multiplication error."
+- **GGR-36** | t=00:50:24 | branch G1/A | panel (inferred: Hancock) | dialectic
+  > "the things that you need to know are things like population size and the selection coefficient"
+- **GGR-37** | t=00:50:45 | branch G1/A | panel (same speaker) | dialectic
+  > "every single mutation in that distribution of fitness effects has a unique probability of fixation based on where it falls in that distribution of fitness effects"
+  - note: The "there is no single average fixation rate" reply to Day's demand for a constant (branch G1, average rate). Bears on G1c (the averaging concession) from the critic side.
+- **GGR-38** | t=01:22:49 | branch epistemic | panel (inferred: Hancock, "I've got a couple papers in PNAS") | dialectic
+  > "It's got a total of what 12 or 13 14 references."
+- **GGR-39** | t=01:23:13 | branch epistemic | panel (same speaker) | dialectic
+  > "This is nowhere close to the standard that could even cross the editor's desk long enough for him to read the whole thing before sending it back"
+- **GGR-40** | t=01:44:00 | branch epistemic | panel (inferred: Erika) | secondhand
+  > "I heard through the grapevine that apparently also submitted mittens 3.0 know or one of the earlier versions of Mittens, it's unclear to Nature to get that bad boy published. Uh and it was rejected without revisions."
+  - note: Explicitly hearsay ("through the grapevine"), and the speaker says which version is unclear. Same claim as RD-1wws70t (commenter qbg: submitted 2025-12-28, rejected 2026-01-12), still secondhand; Day's own post "Rejection" (2026-01-12) is the firsthand record in `bib-day.md`.
