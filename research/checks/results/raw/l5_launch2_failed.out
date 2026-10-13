@@ -1,0 +1,35 @@
+V2_pfix ok
+V2_events ok
+V3 r=0.0001 FAIL
+V3 r=0.001 ok
+V3 r=0.005 ok
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ~~~~^^^^^^^^^^^^^^^
+  File "/home/na/projects/evo-sim/research/checks/l5_adna_power.py", line 618, in run_task_k
+    return run_task((k, task_list()[k], outdir, sz))
+  File "/home/na/projects/evo-sim/research/checks/l5_adna_power.py", line 633, in run_task
+    res = sweep_task(s, mode, d, ns, k, sz)
+  File "/home/na/projects/evo-sim/research/checks/l5_adna_power.py", line 567, in sweep_task
+    r = run_pass(s, mode, twoN, T_hi, npg, gy, ns, rng)
+  File "/home/na/projects/evo-sim/research/checks/l5_adna_power.py", line 446, in run_pass
+    V[CI["xE"]] = rng.binomial(N2, sel(V[CI["xE"]], s)) / N2
+                  ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "numpy/random/_generator.pyx", line 3088, in numpy.random._generator.Generator.binomial
+  File "numpy/random/_common.pyx", line 393, in numpy.random._common.check_array_constraint
+  File "numpy/random/_common.pyx", line 379, in numpy.random._common._check_array_cons_bounded_0_1
+ValueError: p < 0, p > 1 or p contains NaNs
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/na/projects/evo-sim/research/checks/l5_adna_power.py", line 856, in <module>
+    for _ in pool.imap_unordered(run_task_k, jobs):
+             ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/multiprocessing/pool.py", line 873, in next
+    raise value
+ValueError: p < 0, p > 1 or p contains NaNs

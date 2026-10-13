@@ -1,0 +1,26 @@
+V2_pfix ok
+V2_events ok
+V3 r=0.0001 FAIL
+V3 r=0.001 ok
+V3 r=0.005 ok
+Traceback (most recent call last):
+  File "/home/na/projects/evo-sim/research/checks/l5_adna_power.py", line 848, in <module>
+    for _ in pool.imap_unordered(run_task, jobs):
+             ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/multiprocessing/pool.py", line 873, in next
+    raise value
+  File "/usr/lib/python3.14/multiprocessing/pool.py", line 540, in _handle_tasks
+    put(task)
+    ~~~^^^^^^
+  File "/usr/lib/python3.14/multiprocessing/connection.py", line 213, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.14/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+_pickle.PicklingError: Can't pickle local object <function const.<locals>.<lambda> at 0x77392a42b480>
+when serializing tuple item 1
+when serializing tuple item 3
+when serializing tuple item 1
+when serializing tuple item 0
+when serializing tuple item 3

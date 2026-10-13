@@ -1,0 +1,8 @@
+na-workhorse.allevato.io
+Tue Oct 13 05:02:33 PM UTC 2026
+registered 0e6da82; pre-run note 5e64f0a; post hoc launch fixes 369354d, 30e1302; 8 workers; queued to start when L1c (run + transfer) exits; launches 1 and 2 failed before any task output (l5_launch1_failed.out, l5_launch2_failed.out); builder attempt failed on import (no scipy there)
+89607a4b09cb2df0c71ed467047bcd02  research/checks/l5_adna_power.py
+e2264383685e644c3b6656dc10666963  research/checks/c1c_call_depth_replacement.py
+c3b3c41f750be89fa369fb4358ee24f8  research/checks/c1e_holocene_trajectories.py
+83feb6956b569ba7806aec7990af22ca  research/checks/results/c1c_depth_table.json
+Tue Oct 13 05:31:25 PM UTC 2026
