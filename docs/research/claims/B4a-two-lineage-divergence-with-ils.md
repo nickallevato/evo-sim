@@ -21,11 +21,11 @@ Source: [Chimpanzee Sequencing and Analysis Consortium 2005, Nature 437:69-87](h
 
 > where D is the number of neutral differences and the factor of 2 accounts for both lineages.
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §5 The Circularity
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §5 The Circularity. Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 > Under coalescent theory, the expected pairwise divergence contributed by ancestral polymorphism is θ = 4Nₑμ per site.
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3)
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3). Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 
 RH tag (2026-10-10 pass): dialectic (literature source, no side).

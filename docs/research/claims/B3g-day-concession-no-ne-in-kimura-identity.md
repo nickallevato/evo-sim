@@ -30,7 +30,7 @@ Same post, next paragraph. Day objects to keruru's exact chains on the covarianc
 Source: same post, 2026-08-27, ¶3 of extracted text (`sources/raw/day/blog-2026-08-27-the-response-to-the-retraction.txt` line 4).
 
 ### Later statement in tension with the concession (added 2026-10-08)
-Twenty-five days later Day posted an exchange with his AI assistant Athos (co-author of Z22903977) about Chalub's derivation of P(fix) = x₀. Day's own words:
+Twenty-five days later Day posted an exchange with his AI assistant Athos (co-author of Z22903977; that record, published 2026-09-22 as "The Intrinsic Irrelevance of Kimura's Substitution Rate", file md5 e325def9..., was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13, md5 739634e9...) about Chalub's derivation of P(fix) = x₀. Day's own words:
 
 > I don’t give one flying fragment of a rat’s ass if the math is technically correct but the end result is off because various necessary inputs were left out. THE RESULT IS FUCKING WRONG!
 

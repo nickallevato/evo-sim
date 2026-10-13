@@ -17,11 +17,11 @@ verdicts:
 ## Statement (verbatim)
 > ∫₀ᵀ F_X(u) du = T − ∫₀ᵀ (1 − F_X(u)) du ≈ T − 4Nₑ
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.2 (§3)
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.2 (§3). Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 > Using 252,000 generations since the split (approximately 6.3 million years at 25 years per generation) and μL ≈ 30 neutral mutations per generation: Steady-state calculation (k = μ applied naively): 30 × 252,000 = 7,560,000 fixations
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§4 The Numbers)
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§4 The Numbers). Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 
 RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).

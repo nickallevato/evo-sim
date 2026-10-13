@@ -1567,6 +1567,7 @@
   date: 2026-09-22
   claim_ids: [B1, B1a]
   locator: "https://zenodo.org/records/22903977 §3 The Empty Pipe"
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   quote: "At generation zero, the subsitution pipeline is empty."
   parents:
     - {id: L-hard-limits-2026, relation: descends}
@@ -1585,6 +1586,7 @@
   date: 2026-09-22
   claim_ids: [B6a]
   locator: "https://zenodo.org/records/22903977 p.3 (§3)"
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   quote: "The ancestral polymorphism objection is not merely trivial. It is a rounding error."
   parents:
     - {id: L-camestros-all-post-split-2026, relation: responds-to, inferred: true}
@@ -1601,6 +1603,7 @@
   date: 2026-09-22
   claim_ids: [B4d]
   locator: "https://zenodo.org/records/22903977 §5 The Circularity"
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   quote: "The identity is its own evidence. At no point does an independent measurement enter the loop."
   parents:
     - {id: L-recal-200-580-2026, relation: descends}
@@ -4041,3 +4044,38 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#81), fix-passed (df9c6c6) and integrated 2026-10-13 under rule RD"
+
+- id: L-ir-k-neq-mu-2026
+  label: "Intrinsic Irrelevance retitled 'k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory', file replaced: closed-form F(T) = exp(−π²Nₑ/T) said to replace k = μ"
+  side: day
+  kind: revision
+  date: 2026-10-13
+  claim_ids: [B1e, B2a]
+  locator: "https://zenodo.org/records/22903977 §1 The Identity, last paragraph, sentence 3 (file k_neq_mu.pdf, md5 739634e9..., record modified 2026-10-13; Q286)"
+  quote: "converting Chalub's abstract series into the closed-form finite-time completion fraction F(T) = exp(−π²Nₑ/T)"
+  parents:
+    - {id: L-ir-empty-2026, relation: revises}
+    - {id: L-hard-limits-2026, relation: cites}
+    - {id: L-chalub-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Same record id, DOI and version number as the 2026-09-22 file (md5 e325def9...); sections 2-6 and the abstract word-identical; ledgers/versions.md"
+
+- id: L-audit-b2f-2026
+  label: "Audit B2f: the exponent is exact in the short-time limit and the described derivation route is real (one wrong word, 'eigenvalue'); as an equality the formula is low by (4πNₑ/T)^1.5 e^(T/16Nₑ) and misses at all three of the paper's N_e; reading-dependent, recorded on B1e"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [B1e, B2a]
+  locator: "research/checks/results/R4-B2f.md"
+  quote: "Day's exponent π²Nₑ/T is exact in the short-time limit, the derivation route he describes exists (all but the word \"eigenvalue\")"
+  parents:
+    - {id: L-ir-k-neq-mu-2026, relation: responds-to}
+    - {id: L-audit-b2-hl-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#82), fix-passed (de3c1a2) and integrated 2026-10-13 under rule RD; no verdict on B1, B1a, B2 or B moved"

@@ -860,9 +860,9 @@ nodes:
   sourcing: firsthand
   status: extracted
   verdicts:
-    internal: pending
+    internal: holds
     fidelity: partial
-    external: pending
+    external: contested
   claim_file: docs/research/claims/B1e-chalub-2022-reading.md
 - id: B2
   title: 'Hard Limits: drift cannot complete fixations above a census ceiling; the domain of k = mu is empty for large vertebrates'

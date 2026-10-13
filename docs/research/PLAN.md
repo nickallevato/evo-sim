@@ -31,7 +31,7 @@ Three agents ran in parallel: Day's archive, his cited sources, and his critics.
 | Selective turnover coeff. d | d = T·[∫μ(x)l(x)v(x)dx / ∫l(x)v(x)dx]; d≈0.45 | Zenodo 18166234; Q&A post |
 | Bernoulli Barrier | pⁿ = 0.02^(2×10⁷) ≈ 10^−34,000,000; ~230 simultaneous sweeps; 14.7× vs 1,570× fitness spread | Zenodo 18167588 |
 | Hard Limits | 4Nₑ<G; X=(Vₖ+2)·G/16 ≈10⁴; P(fix within G) ≈ exp(−π²Nₑ/G) | Zenodo 22129121 (no refs) |
-| Intrinsic Irrelevance | E[F(T)] = μL∫₀ᵀF_X(u)du ≈ μL(T−4Nₑ) | Zenodo 22903977 |
+| Intrinsic Irrelevance | E[F(T)] = μL∫₀ᵀF_X(u)du ≈ μL(T−4Nₑ) | Zenodo 22903977 (as published 2026-09-22, file md5 e325def9...; retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and file replaced 2026-10-13, md5 739634e9...; this formula is unchanged in the new file) |
 | N/Nₑ rate | k = μ·N/Nₑ; also k = 0.743μ; k = 32.3μ (not in Zenodo; probably book only) | 18429937, 18525262, 19984826 |
 | Beneficial fix time | t ≈ (2/s)ln(2Nₑ), s=0.001 → "~19,800 gens/fixation" | Q&A post |
 | Haldane limit | 1 sub / 300 gens; with d → 487 | Zenodo 18168236 |

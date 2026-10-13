@@ -17,7 +17,7 @@ verdicts:
 ## Statement (verbatim)
 > Balloux and Lehmann (2012) demonstrated that under the joint conditions of fluctuating demography and overlapping generations, conditions which are satisfied by every natural population of interest, k ≠ μ.
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §6 The Irrelevance
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §6 The Irrelevance. Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 > we show that the substitution rate at neutral genes does depend on population size fluctuations in the presence of overlapping generations
 

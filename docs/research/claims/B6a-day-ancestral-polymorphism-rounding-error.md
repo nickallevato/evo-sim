@@ -17,11 +17,11 @@ verdicts:
 ## Statement (verbatim)
 > At Nₑ = 10,000 and μ = 1.2 × 10⁻⁸, this yields approximately 1.44 million differences across the genome, less than half of the 2.4 million fixations the empty-pipe correction removes from the naive prediction. The net adjustment still reduces the expected count.
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3)
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3). Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 > The ancestral polymorphism objection is not merely trivial. It is a rounding error.
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3)
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), p.3 (§3). Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 
 RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).

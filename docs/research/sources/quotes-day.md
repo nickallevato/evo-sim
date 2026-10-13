@@ -2296,7 +2296,63 @@ Q279-Q280 are the two Drift Deathmarch passages the audit had only second-hand; 
 
 ### Q286 Z22903977 revised (retitled "k ≠ μ: ..."): closed-form F(T) added - Zenodo, record modified 2026-10-13
 - source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c, sha256 9d142f3f...c9ca1), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/` (text via pdftotext, whitespace normalised; superscripts as extracted)
-- locator: §1 (the paragraph on Chalub 2022), sentences 3-5
+- locator: §1 (the paragraph on Chalub 2022), sentence 3; the "following sentence" below is sentences 5-6 (locator corrected 2026-10-13, review #82 C8; quote text unchanged)
 - quote: "Day and Athos (2026b) extract the dominant eigenvalue of that expansion via diffusion asymptotics in the arcsine-transformed coordinate system, converting Chalub's abstract series into the closed-form finite-time completion fraction F(T) = exp(−π²Nₑ/T) — the proportion of theoretically destined fixations that actually complete within T generations."
 - following sentence, also checked: "The steady state requires infinite time. It therefore cannot be utilized in any finite-time equation, and every application of k = μ to a finite-time calculation is guaranteed to be incorrect."
 - note: The earlier version (md5 e325def9...) had the "mean time to fixation" subtraction `E[F(T)] ≈ μL(T − 4Nₑ)` and no F(T); the §2-§3 text is unchanged. The new text cites "Day and Athos (2026b)", which is not identified in the paragraph. Silent revision (new title, new file, same record id and DOI). RH tag: dialectic. Not checked: the eigenvalue derivation.
+
+Q287-Q295 were filed at the integration of check B2f (`research/checks/results/R4-B2f.md`, review #82, 2026-10-13). Each was checked as an exact substring of the whitespace-normalised held text named in its source line. Q286 above is sentence 3 of the same paragraph.
+
+### Q287 Z22903977 new title - Zenodo, record modified 2026-10-13
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised)
+- locator: title block (l.1-2 of the extracted text)
+- quote: "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory"
+- note: Replaces the title "The Intrinsic Irrelevance of Kimura's Substitution Rate" (2026-09-22). RH tag: rhetoric (ledger RH-30). Not literal-fact-checked; changes no verdict.
+
+### Q288 Z22903977 revised: the Chalub sentence as reworded - Zenodo, record modified 2026-10-13
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised)
+- locator: §1 The Identity, last paragraph, sentence 2
+- quote: "Chalub (2022), solving the neutral Kimura diffusion equation with absorbing boundaries, derives the explicit transient solution as a Gegenbauer polynomial expansion whose terms converge to the steady-state fixation probability u(p) = p only as t → ∞."
+- note: Replaces the 2026-09-22 sentence quoted in claim B1e ("...explicitly in terms of Gegenbauer polynomials, derives the time-dependent fixation probability as a series of exponential decay terms that converge to the steady-state value only as t → ∞."), which exists only in the old file (md5 e325def9...). RH tag: dialectic.
+
+### Q289 Z22903977 revised: k(T) = μ·F(T) "replaces the steady-state identity" - Zenodo, record modified 2026-10-13
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised)
+- locator: §1 The Identity, last paragraph, sentence 4 (new)
+- quote: "Multiplied through the mutation supply, this yields the time-dependent substitution rate k(T) = μ·F(T), which replaces the steady-state identity with a function that drops exponentially with effective population size (Day and Athos 2026b)."
+- note: N1 of R4-B2f. No number in the paper is derived from the function. RH tag: dialectic.
+
+### Q290 Z22903977 revised: the added reference "Day and Athos (2026b)" - Zenodo, record modified 2026-10-13
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised)
+- locator: References (l.175-176 of the extracted text)
+- quote: "Day, V. and Athos, C. (2026b). The Hard Limits of Fixation Through Genetic Drift. Zenodo. https://zenodo.org/records/22903977."
+- note: N3 of R4-B2f. The URL is this record's own id; Hard Limits is Zenodo 22129121 (slip ledger S-B2f-3). The list has no "(2026a)". This identifies the "Day and Athos (2026b)" that the Q286 note left unidentified. RH tag: dialectic.
+
+### Q291 Z22903977: "comfortably in the regime where the approximation holds" - Zenodo (text unchanged from 2026-09-22)
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised); the same sentence is in the 2026-09-22 file (md5 e325def9...)
+- locator: §3 The Empty Pipe, l.87-88 of the extracted text
+- quote: "For the human-chimpanzee application, T = 252,000 generations and 4Nₑ = 40,000, giving T/4Nₑ ≈ 6.3 — comfortably in the regime where the approximation holds."
+- note: N4 of R4-B2f. The approximation meant is E[F(T)] ≈ μL(T − 4Nₑ), which the same paragraph says holds "at any T sufficiently larger than that mean". RH tag: dialectic.
+
+### Q292 Z22903977 as first published: the two sentences removed on 2026-10-13 - Zenodo 2026-09-22
+- source: Zenodo 22903977 as published 2026-09-22, file `Kimura.pdf` (md5 e325def9ecd74611e6e75f1befcc788f); URL: https://zenodo.org/records/22903977 (the record now serves a different file); local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/old.txt` (md5 fbb2070542997a274f0591ff2c710136) and `sources/raw/day/zenodo-22903977.pdf`
+- locator: §1 The Identity, last two sentences (l.38-40 of the extracted old text)
+- quote: "The steady state is the destination; it is not the journey, and it is not the starting point. Every finite-time application of k = μ treats the destination as though it were the departure."
+- note: N5 of R4-B2f. Absent from the current file; replaced there by the sentences quoted under Q286 ("The steady state requires infinite time. ..."). RH tag: rhetoric (metaphor: destination / journey / departure); dialectical core: the start state of the count (claims B1, B1c, B6a).
+
+### Q293 Z22903977: t̄ = 4Nₑ as the conditional mean - Zenodo (text unchanged from 2026-09-22)
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised); the same text is in the 2026-09-22 file (md5 e325def9...)
+- locator: §2 The Missing Equation (l.51-52 of the extracted text; a displayed equation followed by the next line, joined by whitespace normalisation)
+- quote: "t̄ = 4Nₑ generations This is the mean time to fixation for a neutral mutation, conditional on fixation."
+- note: N7 of R4-B2f. RH tag: dialectic.
+
+### Q294 Z22903977: mean and SD of the fixation time - Zenodo (text unchanged from 2026-09-22)
+- source: Zenodo 22903977, file `k_neq_mu.pdf` (md5 739634e97a80c8f9d0d31d125544b94c), record `modified` 2026-10-13T15:07:16Z; publication_date still 2026-09-22; URL: https://zenodo.org/records/22903977; local copy `sources/raw/refresh-2026-10-13/zenodo-22903977-new/new.txt` (md5 1e6eb6b8d823bffac2890bf8415e5c7b; pdftotext, whitespace normalised); the same sentence is in the 2026-09-22 file (md5 e325def9...)
+- locator: §3 The Empty Pipe, ¶1, sentence 3 (l.67-68 of the extracted text)
+- quote: "The process has a mean length of 4Nₑ generations and a broad distribution around that mean (SD ≈ 0.538 × 4Nₑ under Kimura's diffusion treatment)."
+- note: N8 of R4-B2f. 0.538 = √(π²/3 − 3) is the value for the exact conditional fixation-time law (audit arithmetic). RH tag: dialectic.
+
+### Q295 Hard Limits: the transform and the distance π√(2Nₑ) - Zenodo 2026-08-27
+- source: `Z22129121` (Zenodo pub. 2026-08-27); URL: https://zenodo.org/records/22129121; local copy `sources/raw/day/zenodo-22129121.txt` (md5 e8fed8def791455de183557c9e6c78b0)
+- locator: l.296-299 of the local text (§The Second Objection), the clause before the displayed law of Q31
+- quote: "under the transform that turns neutral drift into a symmetric random walk, the distance from a single copy to fixation is a fixed length, π√(2Nₑ), and the chance of covering it in time T is the short-time first-passage law"
+- note: N6 of R4-B2f. The paper does not name the transform; the audit identifies it as the angular (arcsine) one, y = arccos(1 − 2p), whose range is π (R4 P1). RH tag: dialectic.

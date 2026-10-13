@@ -17,7 +17,7 @@ verdicts:
 ## Statement (verbatim)
 > a broad distribution around that mean (SD ≈ 0.538 × 4Nₑ under Kimura's diffusion treatment)
 
-Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §3 The Empty Pipe
+Source: [Z22903977, The Intrinsic Irrelevance of Kimura's Substitution Rate (Day & Athos)](https://zenodo.org/records/22903977), Zenodo 2026-09-22 (v1), §3 The Empty Pipe. Version cited: file md5 e325def9ecd74611e6e75f1befcc788f (`Kimura.pdf`, 2026-09-22). The record was retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and its file replaced on 2026-10-13 (`k_neq_mu.pdf`, md5 739634e97a80c8f9d0d31d125544b94c); this passage is word-identical in the new file (`ledgers/versions.md`).
 
 
 RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; no rhetorical device scored).

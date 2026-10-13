@@ -77,7 +77,7 @@ Steelman source: [B](../claims/B-neutral-theory-cannot-rescue.md) (blog 2026-02-
 - Audit: pending / partial / contested ([B](../claims/B-neutral-theory-cannot-rescue.md)).
 
 ### B1 — Intrinsic Irrelevance: k = μ is a rate, the finite-time count is smaller (Day)
-Steelman source: [B1](../claims/B1-intrinsic-irrelevance-steady-state.md), [B1a](../claims/B1a-eF-formula-and-numbers.md) (Z22903977, 2026-09-22).
+Steelman source: [B1](../claims/B1-intrinsic-irrelevance-steady-state.md), [B1a](../claims/B1a-eF-formula-and-numbers.md) (Z22903977, 2026-09-22; version cited: file md5 e325def9...; record retitled "k ≠ μ: The Finite-Time Collapse of Neutral Substitution Theory" and file replaced 2026-10-13, md5 739634e9...; the passages used here are unchanged in the new file).
 - P1. k = μ is a rate, not a count; turning it into a count needs a window and a start state ([B1](../claims/B1-intrinsic-irrelevance-steady-state.md)).
 - P2. From an empty start, E[F(T)] = μL ∫₀ᵀ F_X(u) du ≈ μL(T − 4Nₑ) ([B1a](../claims/B1a-eF-formula-and-numbers.md)).
 - P3. At the split the substitution pipeline was empty ([B1](../claims/B1-intrinsic-irrelevance-steady-state.md); restated "functionally nonexistent" in [B1c](../claims/B1c-ancestral-pipeline-state-ne-history.md)).

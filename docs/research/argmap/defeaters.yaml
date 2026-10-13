@@ -210,6 +210,7 @@
   by: [Vox Day]
   first_date: 2026-09-22
   locator: https://zenodo.org/records/22903977 §3 The Empty Pipe
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   audit_status: not_upheld
   audit_basis: B6 supported; B1c external contradicted; Day conceded a full pipe at the split (B1d, 2026-10-01)
   counter: [d323]
@@ -567,6 +568,7 @@
   by: [Vox Day]
   first_date: 2026-09-22
   locator: https://zenodo.org/records/22903977 p.3 (§3)
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   audit_status: not_upheld
   audit_basis: 'B6a arithmetic-error/n/a/contradicted; R4 B4a: ''rounding error'' holds only at Nₑ,anc = 1e4'
   counter: [d047, d149]
@@ -1751,6 +1753,7 @@
   by: [Vox Day]
   first_date: 2026-09-22
   locator: https://zenodo.org/records/22903977 §1, §3
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   audit_status: partly
   audit_basis: 'RESULTS B1: Day''s formula exact for an empty start; R4 B1c: sourced histories give an excess; Day conceded a full pipe (B1d)'
   counter: [d025, d028, d030, d032, d035, d037, d039, d044, d048, d132, d203]
@@ -1777,6 +1780,7 @@
   by: [Vox Day]
   first_date: 2026-09-22
   locator: https://zenodo.org/records/22903977 p.2-3
+  # version cited: file md5 e325def9... (2026-09-22); record retitled and file replaced 2026-10-13 (md5 739634e9...); sections 2-6 and the abstract unchanged, in section 1 only the last (Chalub) paragraph changed
   audit_status: partly
   audit_basis: 'claims/B5a: subtracting 4Nₑ is a ~9% effect at McCarthy''s inputs; empty-start premise contradicted (B1c)'
   counter: [d020, d024, d045]
@@ -6167,3 +6171,46 @@
   counter: []
   note: 'Applied in fix pass df9c6c6; the P6 docstring slip (0.63 vs 0.606) recorded as the audit''s own error, script not edited.'
   hierarchy_edge: false
+
+- id: d473
+  attacker: chk:B2f
+  target: B1e
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-B2f.md (Readings table; Review resolution C4, K1, K4)
+  audit_status: partly
+  audit_basis: 'Reading-dependent (RD); Reading A (a relay of the Hard Limits short-time asymptote) sets the fields and holds with ledger slips S-B2f-1..4; under Reading B (literal equality, no domain) the formula is a non-sequitur against the same paper: with F_X = exp(-pi^2 N_e/u) the integral of 1 - F_X diverges, against its own mean 4N_e (Q293), SD 0.538 x 4N_e (Q294) and T - 4N_e. Exact F exceeds the formula at every T: 3,997x at T = N_e/20, 47x at T = N_e, 7.2x at T = 4N_e; under Reading A the formula applies to none of the paper inputs (T/4N_e = 6.3, 1.26, 1.0)'
+  counter: [d474]
+  note: 'Critic-side. The values the formula gives at the paper inputs (0.676, 0.141, 0.085) are audit substitutions, not figures Day states. Targets B1e only (not load-bearing); no defeater is entered against B1, B1a, B2 or B (tier condition of review #82).'
+  hierarchy_edge: false
+
+- id: d474
+  attacker: rev:R4-B2f-combined
+  target: chk:B2f
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #82, steelman-Day section)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-B2f-combined.md (D1, D2, D3, D4)
+  audit_status: upheld
+  audit_basis: 'Day-side: the exponent pi^2 N_e/T is exact in the short-time limit; the derivation route the new text describes is real (the arcsine coordinate is the Hard Limits transform, Q295; the eigen-expansion resummed by the Jacobi identity has exp(-pi^2 N_e/T) in its leading term, equal to the exact F to 1 part in 1e8 for T <= 4N_e), wrong only in the word eigenvalue; in the stated domain the prefactor does not move the conclusion (2.6e-15 against 7.2e-18 at T = N_e/4); the empty start is the paper stated premise and its 15.9% is the exact value (15.87%)'
+  counter: []
+  note: 'Credit to Day, applied in fix pass de3c1a2. Not checked: whether Chalub 2022 expansion is the Kimura 1955 series (B1e).'
+  hierarchy_edge: false
+
+- id: d475
+  attacker: rev:R4-B2f-combined
+  target: chk:B2f
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #82)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-B2f-combined.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 2 MAJOR (C2: the proposed node B2f duplicates B2a, withdrawn; D1: the described derivation route is real, credited), 11 MINOR, 7 NOTE; every recomputed value and the diff confirmed'
+  counter: []
+  note: 'Applied in fix pass de3c1a2: readings recorded on B1e, B2f kept as the check id only; one wrong count corrected (B1 has three Statement quotes); the two conventions for within 25% stated (x* = 44.2 and 34.3).'
+  hierarchy_edge: false
+
