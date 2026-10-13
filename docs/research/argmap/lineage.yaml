@@ -3992,3 +3992,20 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#73-#75), fix-passed (140a69a) and integrated 2026-10-13; external codon aligner from an independent chimp CDS not run"
+
+- id: L-audit-fmnull-2026
+  label: "Audit FMnull: Day's \"more than 80 times\" is true at W >= 1 Mb in every lineage and never outside the neutral band where true; the check has little power below a dominant block mechanism"
+  side: audit
+  kind: reply
+  date: 2026-10-13
+  claim_ids: [ROOT-FM, FM3, FM10]
+  locator: "research/checks/results/R4-FMnull.md"
+  quote: "supported as a description, non-discriminating"
+  parents:
+    - {id: L-audit-fm-2026, relation: descends}
+    - {id: L-day-fourth-mechanism-2026, relation: responds-to}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#76-#79), fix-passed (2802425) and integrated 2026-10-13; FM10 internal pending (owner decision); Day has released no window, statistic or code"

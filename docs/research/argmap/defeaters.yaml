@@ -6013,3 +6013,73 @@
   counter: []
   note: 'Critic-side. Adopted: fidelity misread first, size bound as the headline, b1/b2 split. Where it conflicts with the Day-side review, both positions are recorded as readings (RD): the field takes b2 (`contested`). Not adopted: b1 `contradicted` in the field.'
   hierarchy_edge: false
+
+- id: d462
+  attacker: chk:FMnull
+  target: ROOT-FM
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-FMnull.md sections 0, 8 (Readings; Critics)
+  audit_status: partly
+  audit_basis: 'against "an index above 80 is anomalous": under R1 the sentence is true at W >= 1 Mb in all ten lineage-by-masking cells, and wherever it is true at W <= 1 Mb the measured index is inside or below the mechanistic neutral band (112 set-cells: CRITIC 37, MARGINAL-IN 61, BELOW-NEAR 14, none above N_hi; index / N_hi 0.11-0.91); it is lineage-shared (phi_H / phi_C 0.97-1.04 from 1 kb to 3 Mb); pedigree de novo mutation variation alone reaches the measured 1-Mb dispersion'
+  counter: [d463]
+  note: 'Critic-side, and answered in the same record against "the null would absorb anything": the dominant planted block scenario scores DAY at 100 kb against the masked band and the measured F2 phi_HC is 22-31 times below it at matched exposure. Day-side: Q164 is granted in full as a description; six 3-10 Mb cells exceed the Francioli-edge bound (none DAY), phi_HC is above the lambda_M = 0 bound at 1-10 kb (absorbed by a lineage-specific share of 0.04-0.07), most brackets are unsourced. Not a defeater against FM10, whose internal verdict stays pending (owner decision) and for which the registered rule licenses none.'
+  hierarchy_edge: false
+
+- id: d463
+  attacker: ROOT-FM
+  target: chk:FMnull
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-13
+  locator: research/checks/results/R4-FMnull.md sections 6a, 7, 8 (Day); 9 items 1, 15
+  audit_status: partly
+  audit_basis: 'against "FMnull shows there is no block signal": the check has little power below a dominant one-lineage mechanism (all eight non-dominant planted scenarios CRITIC or MARGINAL-IN; DAY needs 15 / 6.9 times the central neutral index masked, 34 / 14 unmasked); no Day-side criterion could be met by a mechanism smaller than the one Q169 (b) asserts, and S2 not even by that one off the window grid (a defect of the audit''s criteria, not counted against Day); the margin is symmetric about the stacked upper corner; "no DAY" is the weakly tested outcome (ST-10)'
+  counter: [d462]
+  note: 'Critic-side: the dominant mechanism is the one Day asserts and the data are 22-31 times below it; the description is recorded together with its power statement (K13). Block models up to f e^2 of about 0.01-0.03 are not excluded on either side.'
+  hierarchy_edge: false
+
+- id: d464
+  attacker: rev:R4-FMnull-correctness
+  target: chk:FMnull
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #77)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-FMnull-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 4 MAJOR (P4/P5 label bug dropped twenty cells; bounds at c = 1 compared with measurements at exposure 0.54-0.64; P8 (ii) held only because blocks and windows shared a grid; R2 in one unit convention), 8 MINOR, 6 NOTE'
+  counter: []
+  note: 'Applied in fix pass 2802425 with post hoc p45fix, simphase, fixpass. No verdict value moves.'
+  hierarchy_edge: false
+
+- id: d465
+  attacker: rev:R4-FMnull-steelman-day
+  target: chk:FMnull
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #78)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-FMnull-steelman-day.md
+  audit_status: partly
+  audit_basis: '0 BLOCKER, 6 MAJOR (Q164 true at W >= 1 Mb under R1 is not stated first; power against block mechanisms; clean-inside versus ALN-dependent cells; gate in variance and SD units; gate scope; phi_HC above the lambda_M = 0 bound and the S2 criterion defect), 6 MINOR, 3 NOTE'
+  counter: []
+  note: 'Day-side. Accepted in whole or part: the true-at-1-Mb fact now leads, in the neutral Readings paragraph; power table added; criteria table gains a could-it-have-been-met column. Not adopted: "or not at all" for the recorded description (it is kept with its power statement); unmasked F0 cells as a Day item (reference-projection effect).'
+  hierarchy_edge: false
+
+- id: d466
+  attacker: rev:R4-FMnull-steelman-critic
+  target: chk:FMnull
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #79)']
+  first_date: 2026-10-13
+  locator: research/checks/results/REVIEW-R4-FMnull-steelman-critic.md
+  audit_status: partly
+  audit_basis: '0 BLOCKER, 7 MAJOR (where the sentence is true it is never anomalous; NOT-HIGH labels; pedigree-calibrated low edge exceeds the data; lineage sharing; mirror test for ALN and F0; what the data bound; small-W reading is an extended reading), 6 MINOR, 3 NOTE'
+  counter: []
+  note: 'Critic-side. Adopted: cross-tabulation and lineage table in the Readings section, W <= 10 kb as an extended reading, 3-10 Mb cells above the Francioli-edge bound reported against the critics. Not adopted: the covariate-adjusted result as a critic point (the estimator is invalid, correctness review C5); the rider that only mechanisms too small to be dominant are missed. Where it conflicts with the Day-side review both are recorded as readings (RD).'
+  hierarchy_edge: false
