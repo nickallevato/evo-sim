@@ -232,7 +232,7 @@ Reading across the table: the numbers that carry Day's dN/dS conclusion (0.80, a
 - L5 follow-ups: a random-SNP comparator for C1a's sign; sizing the Z50 and Z10 understatement.
 - L2: source the hardness h from public data. HF long burns at R = 1.05 and the h = 0.1 tie.
 - New from the refresh: check the closed-form F(T) in the revised Zenodo record; check Q283 against the versions ledger.
-- Integrator fixes listed by the method audit (pre-registration table, two claim-file drifts, reviewer briefs in git).
+- Integrator fixes listed by the method audit: done the same day in `0bb9070` (pre-registration table regenerated with a row for HF `ph`; claim C's scope wording; DN1's superseded sentence; the note that one agent wrote both L1c steelmen). Still open: the DN1 side-tally gloss (MA-29), the HF `ph` push order, which is not shown to the second, and whether reviewer briefs go in git (O-26).
 - Stage R5 begins when the load-bearing claims without a reviewed check are resolved.
 
 ```
