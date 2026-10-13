@@ -16,6 +16,12 @@ informed by published values):
     lines of the alignment file, i.e. a few transcripts on chr1), opened only to confirm formats (INFO fields
     AA and AFR_AF; header layout; strand convention).  No count, frequency spectrum or alpha was computed from
     them.  The 1000 Genomes sample panel was tabulated by super-population (AFR 661, EUR 503; a design input).
+  * Commit history (disclosed, not chosen): an unfinished draft of this file was swept into commit 9d87dbf
+    (2026-10-13 22:35 UTC, a concurrent session's D-26/D-27 commit, not made by this analyst) while the
+    synthetic smoke was being debugged.  That draft is not the registration.  The registration is the next
+    commit that touches only this file and says so in its message.  No version of this file has been run on
+    real data; up to the registration only the synthetic smoke, the baseline gate and the string asserts ran,
+    locally.
   * Background from training: naive MK estimates on human data are commonly near zero or negative, and
     published bias-corrected human alphas are of order 0.1.  The audit's numeric predictions (Q1-Q9) lean on
     this and on Uricchio's 0.076; they are labelled as such.  No number from memory is used as an input.
@@ -92,8 +98,11 @@ DATA (exact releases; public, no terms beyond attribution; rule 6)
   P  1000 Genomes phase 3, sites-only VCF (GRCh37), release 20130502, v5c:
      https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.wgs.phase3_shapeit2_mvncall_integrated_v5c.20130502.sites.vcf.gz
      Content-Length 1,458,224,240; Last-Modified 2021-03-16 15:53:26 GMT (HEAD, 2026-10-13); about 86 million
-     records (format sample).  INFO used: VT, MULTI_ALLELIC, AA (Ensembl EPO ancestral allele; upper case =
-     high confidence, lower case = low confidence), AFR_AF, EUR_AF (4 decimals).
+     records (format sample).  INFO used: VT, MULTI_ALLELIC, AA, AFR_AF, EUR_AF (4 decimals).  AA is the
+     ancestral allele (header: "Ancestral Allele. Format: AA|REF|ALT|IndelType"); it comes in upper and lower
+     case.  The audit reads upper case as the high-confidence call (Ensembl EPO convention); that reading is
+     from background knowledge, NOT from a fetched text, so the run task must quote it from the 1000 Genomes
+     ancestral-alignment README before the write-up uses it.  S4 (all cases) covers the other reading.
   S  1000 Genomes sample panel integrated_call_samples_v3.20130502.ALL.panel (same directory), 55,156 bytes,
      sha256 b4023dc6ee2d62ee89c8d4d347db4d348e65518d66d346574cdae7a4bbd76858; AFR 661 (2n = 1,322),
      EUR 503 (2n = 1,006).  AFR includes ASW and ACB, as in Uricchio's 661.
@@ -137,10 +146,12 @@ STATISTIC (`analyse`)
   Governing row GOV: AFR, upper-case AA, 20 bins, fit window [0.1, 0.9] on x_k inclusive (bins 3-18; HM5).
   Fit: the asymptoticMK procedure ported to Python (above; least_squares 'lm' in place of R's Gauss-Newton,
   validated by the baseline gate GG).  P = alpha_fit(1) (HM3).
-  Intervals: (i) the asymptoticMK interval (Monte Carlo, 10,000 draws, seed 20261013; or the linear t interval);
-  (ii) a gene bootstrap: 1,000 resamples of transcripts with replacement (seed 20261013), the whole procedure
+  Intervals: (i) the asymptoticMK interval (Monte Carlo, 10,000 draws; or the linear t interval);
+  (ii) a gene bootstrap: 1,000 resamples of transcripts with replacement, the whole procedure
   refitted in each, percentile 2.5%/97.5%.  The governing interval is their envelope, L = min of the two lower
   bounds, U = max of the two upper bounds (conservative for both sides: it makes every clearance harder).
+  Seeds (fixed): baseline 20261013; row i of ROWS (GOV = 0 ... S6 = 6): Monte Carlo 20261013 + 100 + i,
+  bootstrap 20261013 + i.
   Also reported, no verdict weight: alpha_std_all = 1 - (Ds/Dn)(sum Pn / sum Ps) over all bins (the classic MK);
   alpha_original = the same over the window bins (asymptoticMK's comparator); the correction P - alpha_std_all;
   bootstrap intervals for both; alpha(x_k) for every bin; the chosen model and its coefficients.
@@ -177,7 +188,8 @@ SENSITIVITY ROWS AND THE ROBUSTNESS RULE
   S1 window [0.05, 0.95]; S2 window [0.15, 0.85]; S3 10 bins (pairs of the 20 merged), window [0.1, 0.9];
   S4 all-case AA (low-confidence ancestral alleles included); S5 EUR instead of AFR (the demography contrast:
   HM6 says demographic bias cancels if it affects both classes "in the same way"; a bottlenecked sample tests it).
-  S6 (report only, excluded from the rule): pooled human-chimp divergence (a two-lineage basis; counts as Dn_hc/2).
+  S6 (report only, excluded from the rule): pooled human-chimp divergence (a two-lineage basis; P and intervals
+  reported, no count mapping).
   Rule: the move row is the governing band, except that B1 drops to B2 and B2 drops to B3 if any of S1-S5 has its
   point P <= h; and B6 rises to B5 and B5 rises to B4 if any of S1-S5 has its point P >= l.  The rule is
   symmetric: it removes a clearance on either side that does not survive a registered alternative choice.
@@ -229,11 +241,14 @@ PREDICTIONS (scored by `score`; B0 makes the side predictions unscorable)
   Q7  the governing fit chooses the exponential model.
   Q8  move row B2.
   Q9  no gate fails.
-  Consistency with the band rule (ST-09): DS and CS partition B1-B6; Q2 (P >= 0.03 > h_max) and Q8 are compatible.
+  Consistency with the band rule (ST-09): DS and CS partition B1-B6.  Q2 and Q8 are compatible whenever
+  Dn > 6,354 (then h = max(0.0175, G1/Dn) < 0.03); Q4 predicts Dn >= 12,000.  If Dn <= 6,354, Q2 and Q8 can
+  both hold only if P > h, which the scoring checks as written.
 
 RESOURCES, LAUNCH AND COLLECT (a separate run task, AFTER the `ph2` collect task on na-workhorse is done)
-  Cost from the local smoke (synthetic): see raw/l3_smoke.out (`count` throughput and peak RSS; `analyse` time on
-  a 20,000-transcript table).  Expected order on the real files: one process, < 2 GB RAM, < 1 h.
+  Cost measured by the local smoke (synthetic; raw/l3_smoke.out), extrapolated: VCF pass about 1.5 min at about
+  1e6 lines/s; alignment parse about 4 min at about 1.7e5 lines/s; divergence pass under 1 min (assumed 35e6 CDS
+  nt); RAM about 1.9 GB; `analyse` about 40 s.  One process; expected under 15 min and under 3 GB in total.
   1. Commit is pushed; on na-workhorse: `uptime` (at most 11 busy processes in total; RAM under ~12 GB).
   2. rsync this script and the three local source directories to na-workhorse:
        rsync -a research/checks/l3_amk.py na-workhorse:projects/evo-sim/research/checks/
@@ -257,9 +272,10 @@ SMOKE (`smoke`; local, one process at a time, synthetic inputs only)
   checked for exhaustiveness and ties; a synthetic alignment + VCF + panel run through the real `count` entry point
   (subprocess) with exact expected counts (both strands, upper/lower-case AA, multi-allelic, REF mismatch,
   overlap, polymorphic divergence site, two-hit codon, stop-creating SNP); synthetic count tables run through the
-  real `analyse` entry point (subprocess, all sensitivity rows) reaching B0-B6 and both robustness moves; cost
-  measured (wall time and peak RSS of `count` per input line; `analyse` on 20,000 transcripts with 1,000
-  bootstrap replicates).
+  real `analyse` entry point (subprocess, all sensitivity rows; 50 bootstrap replicates per case to stay near
+  the local one-minute limit) reaching B0-B6 and both robustness moves; cost measured (wall time and peak RSS of
+  `count` per input line; `analyse` on 20,000 transcripts with 200 replicates, extrapolated linearly to 1,000).
+  Synthetic alpha(x) = a + b exp(-c x), so the true alpha(1) of a case is a + b exp(-c), not a.
 """
 
 import argparse
@@ -419,7 +435,8 @@ def _mc_ci(th, cov, rng, nsim=N_MC):
     Lz = np.linalg.cholesky(Cz)
     Z = np.linalg.solve(Lz, Z.T).T
     X = th + Z @ (V * np.sqrt(w)).T
-    ev = X[:, 0] + X[:, 1] * np.exp(-X[:, 2] * 1.0)
+    with np.errstate(over="ignore", invalid="ignore"):
+        ev = X[:, 0] + X[:, 1] * np.exp(-X[:, 2] * 1.0)
     ev = ev[np.isfinite(ev)]
     if len(ev) < nsim // 2:
         return None
@@ -699,7 +716,7 @@ def count(exonnuc, vcf, panel, out_prefix):
             vt = _info(info, b"VT")
             if vt is None or b"SNP" not in vt.split(b","):
                 continue
-            ti = entry[2][i]
+            ti = entry[3][i]
             t = trs[ti]
             st, en, off = entry[0][i], entry[1][i], entry[4][i]
             ci = off + (pos - st if t["strand"] == "+" else en - pos)
@@ -921,7 +938,7 @@ def gates(qc, gov, Ds_total, Dn_total, baseline_ok):
     wb = [b - 1 for b in gov["window_bins"]]
     g["GE"] = all(gov["Ps"][b] >= 50 for b in wb)
     g["GF"] = gov["boot_fail"] <= 0.05 * gov["boot_n"] and gov["P"] is not None
-    return g
+    return {k: bool(v) for k, v in g.items()}
 
 
 ROWS = [  # name, Pn key, Ps key, bins, window, divergence keys, in robustness rule
@@ -958,7 +975,7 @@ def score(res):
     s["Q7"] = g["fit"] is not None and g["fit"]["model"] == "exponential"
     s["Q8"] = mr == "B2"
     s["Q9"] = all(res["gates"].values())
-    return s
+    return {k: (v if isinstance(v, str) else bool(v)) for k, v in s.items()}
 
 
 def analyse(npz_path, n_boot=N_BOOT, json_out=None, qc_path=None, baseline=True):
@@ -1102,32 +1119,37 @@ def _synthetic_inputs(d):
         return "%s\t%d\t.\t%s\t%s\t100\tPASS\tAC=1;AF=0.1;AN=5008;NS=2504;EAS_AF=0;AMR_AF=0;AFR_AF=%s;EUR_AF=%s;" \
                "SAS_AF=0;AA=%s|||;VT=SNP%s" % (chrom, pos, ref, alt, afr_s, eur_s, aa, extra)
     vl = ["##fileformat=VCFv4.1", "#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO"]
-    # chr1 (T1 +): idx1 pos1002 T: ATG -> AAG? codon0 ATG pos idx1 'T' -> A gives AAG (M->K) nonsyn, but it
-    #   creates no stop.  derived A in AFR 1322*0.5 = 661 -> bin 10.  EUR 0.25 -> 251.5? use 0.2495 -> 251.0
-    vl.append(v("1", 1002, "T", "A", 661 / 1322, 251 / 1006, "T"))                 # Pn afr bin10, eur bin 5
-    vl.append(v("1", 1003, "G", "C", 0.1, 0.0, "G"))                               # idx2 ATG->ATC (M->I) Pn
-    #   AF 0.1 -> 132.2: non-integral (counted), rounds to 132 -> bin 2
-    vl.append(v("1", 1005, "A", "G", 0.0, 0.0, "A"))                               # overlap with T4 -> excluded
-    vl.append(v("1", 2003, "T", "C", 1300 / 1322, 0.5, "t"))                       # idx8 GCT->GCC syn; AA lower
-    #   -> only in all-case arrays; also makes idx8 polymorphic -> its human-specific Ds excluded
-    vl.append(v("1", 2004, "G", "T", 0.5, 0.5, "G", ";MULTI_ALLELIC"))             # multi-allelic: skipped
+    # chr1, T1 (+).  idx1 ATG->AAG (M->K) nonsyn; AFR derived 661 -> bin 10; EUR "0.2495" -> 251 -> bin 5
+    vl.append(v("1", 1002, "T", "A", 661 / 1322, 251 / 1006, "T"))
+    # idx2 ATG->ATC (M->I) nonsyn; AFR 0.1 -> 132.2: non-integral (counted), rounds to 132 -> bin 2; EUR 0
+    vl.append(v("1", 1003, "G", "C", 0.1, 0.0, "G"))
+    # idx4: overlap with T4 -> snp_overlap
+    vl.append(v("1", 1005, "A", "G", 0.5, 0.5, "A"))
+    # idx8 GCT->GCC syn; AA lower case -> all-case arrays only (AFR 1300 -> bin 20); EUR not counted;
+    # also makes idx8 polymorphic -> its human-specific Ds is excluded (div_site_poly)
+    vl.append(v("1", 2003, "T", "C", 1300 / 1322, 0.5, "t"))
+    # two multi-allelic records at idx9: skipped
+    vl.append(v("1", 2004, "G", "T", 0.5, 0.5, "G", ";MULTI_ALLELIC"))
     vl.append(v("1", 2004, "G", "C", 0.5, 0.5, "G", ";MULTI_ALLELIC"))
-    vl.append(v("1", 2007, "T", "A", 0.5, 0.5, "T"))                               # idx12? stop codon TAA -> terminal
-    vl.append(v("1", 2005, "C", "T", 0.5, 0.5, "C"))                               # idx10 hg19 is 'A' -> mismatch
-    vl.append(v("1", 3000, "C", "T", 0.5, 0.5, "C"))                               # not in CDS
-    # chr2 (T2 -): idx3 = exon1 genomic 5012-3 = 5009; transcript base 'C' (CCC) -> genome G. SNP G>A genome
-    #   = C>T transcript: CCC -> CTC? idx3 is codon1 pos0: CCC -> TCC (P->S) nonsyn.  AA = G (ref) upper.
-    vl.append(v("2", 5009, "G", "A", 1 / 1322, 0.0, "G"))                          # Pn afr bin1
-    #   idx5 = genomic 5007, transcript 'C' -> genome G; SNP G>T genome = C>A transcript: CCC->CCA syn, AA = T
-    #   (alt) so derived = G (ref) with derived count = 1322 - round(0.75*1322)= 1322-992 = 330 -> bin 5
-    vl.append(v("2", 5007, "G", "T", 0.75, 1.0, "T"))                              # Ps afr bin5 (der=ref)
-    #   EUR AF 1.0 -> derived count 0 -> not polymorphic in EUR
-    # chr2 idx9 = exon2 transcript idx 9 -> genomic 3009 - (9-6) = 3006; transcript 'A' (AAA) -> genome T.
-    #   SNP T>A genome = A>T transcript: AAA -> TAA stop -> excluded (snp_stop)
+    # idx16, terminal stop codon -> snp_terminal_codon
+    vl.append(v("1", 2011, "A", "G", 0.5, 0.5, "A"))
+    # idx10: hg19 base is A, REF says C -> snp_ref_mismatch
+    vl.append(v("1", 2005, "C", "T", 0.5, 0.5, "C"))
+    # not in any CDS
+    vl.append(v("1", 3000, "C", "T", 0.5, 0.5, "C"))
+    # chr2, T2 (-).  genomic 5009 = idx3 (5012 - 5009), transcript C (genome G).  G>A genome = C>T transcript:
+    # CCC->TCC (P->S) nonsyn; AA = REF; AFR "0.0008" -> 1.06 -> 1 -> bin 1; EUR 0
+    vl.append(v("2", 5009, "G", "A", 1 / 1322, 0.0, "G"))
+    # genomic 5007 = idx5, transcript C.  G>T genome = C>A transcript; AA = T = ALT, so derived = REF (C in the
+    # transcript): CCA->CCC syn; AFR alt 992 ("0.7504") -> derived 330 -> bin 5; EUR AF 1 -> derived 0
+    vl.append(v("2", 5007, "G", "T", 992 / 1322, 1.0, "T"))
+    # genomic 3006 = idx 6 + (3009 - 3006) = 9, transcript A (AAA).  T>A genome = A>T transcript: AAA->TAA stop
     vl.append(v("2", 3006, "T", "A", 0.5, 0.5, "T"))
-    # chr4 T5: idx8 (CCC codon2 pos2) human-specific C vs A syn; SNP present -> div excluded, poly counted
-    vl.append(v("4", 509, "C", "G", 0.3, 0.3, "C"))                                # CCC->CCG syn Ps; AA C
-    vl.append(v("X", 3, "G", "A", 0.5, 0.5, "G"))                                  # non-autosomal
+    # chr4, T5 (+).  idx8 CCC->CCG syn; AFR 350 -> bin 6; EUR 300 -> bin 6; also makes the human-specific
+    # difference at idx8 polymorphic (div_site_poly)
+    vl.append(v("4", 509, "C", "G", 350 / 1322, 300 / 1006, "C"))
+    # non-autosomal
+    vl.append(v("X", 3, "G", "A", 0.5, 0.5, "G"))
     with gzip.open(os.path.join(d, F_SITES), "wt") as f:
         f.write("\n".join(vl) + "\n")
     with open(os.path.join(d, F_PANEL), "w") as f:
@@ -1136,17 +1158,20 @@ def _synthetic_inputs(d):
             for j in range(n):
                 f.write("S%d_%d\tPOP\t%s\tmale\n" % (i, j, sp))
     expect = {
-        "tx_pass": 4,              # T1, T2, T4, T5 (T3 no ATG, T6 chrX)
+        "tx_seen": 6, "tx_pass": 4,  # T1, T2, T4, T5 (T3 no ATG, T6 chrX)
         "tx_fail_start": 1, "tx_nonautosomal": 1,
         "overlap_positions": 3,
-        "snp_records_cds": 11, "snp_multiallelic": 2, "snp_overlap": 1, "snp_ref_mismatch": 1,
-        "snp_terminal_codon": 1, "snp_stop": 1, "snp_aa_lower": 1, "snp_af_nonint": 1,
-        "poly_afr_hi": 4, "poly_afr_all": 5, "poly_eur_hi": 3,
-        "div_codons_multi": 1, "div_site_poly": 2,
+        "vcf_lines": 14, "snp_records_cds": 12, "snp_multiallelic": 2, "snp_overlap": 1,
+        "snp_ref_checked": 8, "snp_ref_mismatch": 1, "snp_terminal_codon": 1, "snp_stop": 1,
+        "snp_aa_lower": 1, "snp_aa_missing": 0, "snp_af_nonint": 1, "snp_codon_filtered": 0,
+        "poly_afr_hi": 5, "poly_afr_all": 6, "poly_eur_hi": 2,
+        "div_codons_multi": 1, "div_site_poly": 2, "div_site_overlap": 1, "div_hs": 2, "div_stop": 0,
+        "div_hc_codons_multi": 1,
     }
-    # per-transcript expectations (sorted names: T1, T2, T4, T5)
+    # per-transcript expectations (sorted names: T1, T2, T4, T5 -> rows 0-3)
     exp_arr = {
-        "Dn": [0, 1, 0, 0], "Ds": [1, 0, 0, 0],          # T1 idx5 syn (idx8 polymorphic); T2 idx8 nonsyn
+        "Dn": [0, 1, 0, 0], "Ds": [1, 0, 0, 0],          # T1 idx14 syn; T2 idx8 TGG/TGT nonsyn
+        "Dn_hc": [0, 1, 0, 0], "Ds_hc": [2, 0, 0, 0],    # T1 idx11 and idx14
         "Pn_afr_bins": {(0, 9): 1, (0, 1): 1, (1, 0): 1},
         "Ps_afr_bins": {(1, 4): 1, (3, 5): 1},
         "Ps_afr_all_extra": {(0, 19): 1},
@@ -1182,7 +1207,7 @@ def _synthetic_table(path, ntx, dn_tot, ds_tot, ps_tot, a_inf, b, c, seed, eur=N
     np.savez_compressed(path, tx=np.array(["t%d" % i for i in range(ntx)]), chrom=np.array(["chr1"] * ntx),
                         Dn=Dn, Ds=Ds, Dn_hc=2 * Dn, Ds_hc=2 * Ds, Pn_afr=Pn, Ps_afr=Ps, Pn_afr_all=Pn_a,
                         Ps_afr_all=Ps_a, Pn_eur=Pn_e, Ps_eur=Ps_e)
-    qc = {"tx_pass": ntx, "snp_ref_checked": 100000, "snp_ref_mismatch": 10, "snp_af_nonint": 0}
+    qc = {"tx_pass": 20000, "snp_ref_checked": 100000, "snp_ref_mismatch": 10, "snp_af_nonint": 0}
     qc.update(qc_over or {})
     with open(path[:-4] + ".json", "w") as f:
         json.dump(qc, f)
@@ -1191,11 +1216,12 @@ def _synthetic_table(path, ntx, dn_tot, ds_tot, ps_tot, a_inf, b, c, seed, eur=N
 SYN_CASES = [  # name, expected governing band, expected move row, table args
     ("B1", "B1", "B1", dict(a_inf=0.12, b=-0.6, c=5.0, ps_tot=400000)),
     ("B2", "B2", "B2", dict(a_inf=0.045, b=-0.5, c=5.0, ps_tot=400000)),
-    ("B3", "B3", "B3", dict(a_inf=0.03, b=-0.5, c=5.0, ps_tot=8000)),
-    ("B4", "B4", "B4", dict(a_inf=0.012, b=-0.5, c=5.0, ps_tot=400000)),
-    ("B5", "B5", "B5", dict(a_inf=-0.002, b=-0.5, c=5.0, ps_tot=8000)),
+    ("B3", "B3", "B3", dict(a_inf=0.0254, b=-0.5, c=5.0, ps_tot=150000)),
+    ("B4", "B4", "B4", dict(a_inf=0.0155, b=-0.5, c=5.0, ps_tot=400000)),
+    ("B5", "B5", "B5", dict(a_inf=0.0, b=-0.5, c=5.0, ps_tot=400000, eur=(-0.05, -0.5, 5.0, 240000),
+                             allcase=(-0.05, -0.5, 5.0, 440000))),
     ("B6", "B6", "B6", dict(a_inf=-0.06, b=-0.5, c=5.0, ps_tot=400000)),
-    ("B2>B3", "B2", "B3", dict(a_inf=0.045, b=-0.5, c=5.0, ps_tot=400000, eur=(0.0, -0.5, 5.0, 240000))),
+    ("B1>B2", "B1", "B2", dict(a_inf=0.12, b=-0.6, c=5.0, ps_tot=400000, eur=(0.0, -0.5, 5.0, 240000))),
     ("B6>B5", "B6", "B5", dict(a_inf=-0.06, b=-0.5, c=5.0, ps_tot=400000, eur=(0.03, -0.5, 5.0, 240000))),
     ("B0", "B0", "B0", dict(a_inf=0.05, b=-0.5, c=5.0, ps_tot=400000, qc_over={"tx_pass": 5000})),
 ]
@@ -1234,7 +1260,8 @@ def smoke():
     z = np.load(os.path.join(tmp, "cnt.npz"))
     bad = {k: (qc.get(k), v) for k, v in expect.items() if qc.get(k) != v}
     assert list(z["tx"]) == ["T1", "T2", "T4", "T5"], list(z["tx"])
-    assert list(z["Dn"]) == exp_arr["Dn"] and list(z["Ds"]) == exp_arr["Ds"], (list(z["Dn"]), list(z["Ds"]))
+    for k in ("Dn", "Ds", "Dn_hc", "Ds_hc"):
+        assert list(z[k]) == exp_arr[k], (k, list(z[k]))
 
     def nz(a):
         return {(int(i), int(j)): int(a[i, j]) for i, j in zip(*np.nonzero(a))}
@@ -1262,13 +1289,45 @@ def smoke():
     print("count cost: %d VCF lines in %.1f s (%.0f lines/s); child peak RSS %.0f MB; extrapolated to 86e6 lines: "
           "%.0f min (VCF pass only; alignment parse and divergence pass not included)" %
           (qcb["vcf_lines"], qcb["t_vcf_s"], rate, qcb["peak_rss_mb"], 86e6 / rate / 60))
+    # cost of the alignment parse and divergence pass: 1,500 transcripts x 2 exons x 100 species
+    crng = np.random.default_rng(5)
+    sense = [k for k, v in CODE.items() if v != "*"]
+    others = ["sp%02d" % i for i in range(97)]
+    nt_tot = 0
+    aln = os.path.join(tmp, "big.exonNuc.fa.gz")
+    with gzip.open(aln, "wt") as f:
+        for i in range(1500):
+            cds = "ATG" + "".join(crng.choice(sense, 598)) + "TAA"
+            nt_tot += len(cds)
+            ex = [cds[:900], cds[900:]]
+            base = 1000000 + 10000 * i
+            coords = [(base, base + 899), (base + 5000, base + 5000 + len(ex[1]) - 1)]
+            for k in (0, 1):
+                mut = list(ex[k])
+                for j in crng.choice(len(mut), 9, replace=False):
+                    mut[j] = "ACGT"[(("ACGT".index(mut[j])) + 1) % 4]
+                mut = "".join(mut)
+                for db, sq in [("hg19", ex[k]), ("panTro4", mut), ("ponAbe2", mut)] + [(o, mut) for o in others]:
+                    f.write(">X%d.1_%s_%d_2 %d 0 0 chr5:%d-%d+\n%s\n" %
+                            (i, db, k + 1, len(ex[k]), coords[k][0], coords[k][1], sq))
+    out, dt = _run(["count", aln, os.path.join(tmp, F_SITES), os.path.join(tmp, F_PANEL), os.path.join(tmp, "aln")])
+    qca = json.load(open(os.path.join(tmp, "aln.json")))
+    nlines = 1500 * 2 * 100 * 2
+    t_div = qca["t_total_s"] - qca["t_parse_s"] - qca["t_vcf_s"]
+    print("count cost (alignment): %d lines, %d CDS nt, %d transcripts passed: parse %.1f s (%.0f lines/s), "
+          "divergence %.1f s; child peak RSS %.0f MB; extrapolated to 37.6e6 lines and an assumed 35e6 CDS nt: "
+          "parse %.1f min, divergence %.1f min, RAM about %.0f MB ((peak - 100 MB) scaled by nt, + 100 MB)" %
+          (nlines, nt_tot, qca["tx_pass"], qca["t_parse_s"], nlines / max(qca["t_parse_s"], 0.05), t_div,
+           qca["peak_rss_mb"], 37.6e6 / (nlines / max(qca["t_parse_s"], 0.05)) / 60,
+           35e6 / nt_tot * max(t_div, 0.05) / 60, max(qca["peak_rss_mb"] - 100, 0) * 35e6 / nt_tot + 100))
+    assert qca["tx_pass"] == 1500
     # synthetic analysis tables through the real analyse entry point
     reached = {}
-    for name, want_gov, want_mr, kw in SYN_CASES:
+    for ci, (name, want_gov, want_mr, kw) in enumerate(SYN_CASES):
         p = os.path.join(tmp, "syn_%s.npz" % name.replace(">", "_"))
-        _synthetic_table(p, 2000, 20000, 30000, seed=hash(name) % 1000 + 7, **kw)
+        _synthetic_table(p, 2000, 20000, 30000, seed=100 + ci, **kw)
         js = p[:-4] + "_res.json"
-        out, dt = _run(["analyse", p, "--boot", "200", "--json", js])
+        out, dt = _run(["analyse", p, "--boot", "50", "--json", js])
         r = json.load(open(js))
         g = r["rows"]["GOV"]
         print("  case %-6s gov %s move %s  P %s L %s U %s  h %.4f  (%.1f s)" %
@@ -1279,9 +1338,10 @@ def smoke():
     assert set(reached.values()) == set(BANDS)
     # analyse cost at real size and full bootstrap
     p = os.path.join(tmp, "cost.npz")
-    _synthetic_table(p, 20000, 20000, 30000, 0.07, -0.5, 5.0, 400000, seed=11)
-    out, dt = _run(["analyse", p, "--json", p[:-4] + "_res.json"])
-    print("analyse cost: 20,000 transcripts, %d bootstrap replicates x 7 rows: %.1f s wall" % (N_BOOT, dt))
+    _synthetic_table(p, 20000, 20000, 30000, 400000, 0.07, -0.5, 5.0, seed=11)
+    out, dt = _run(["analyse", p, "--boot", "200", "--json", p[:-4] + "_res.json"])
+    print("analyse cost: 20,000 transcripts, 200 bootstrap replicates x 7 rows: %.1f s wall; linear "
+          "extrapolation to the registered %d: %.0f s" % (dt, N_BOOT, dt * N_BOOT / 200))
     print(out.strip().splitlines()[-1])
     print("smoke total %.1f s; this process peak RSS %.0f MB" % (time.time() - t_start, peak_rss_mb()))
     print("SMOKE OK")
