@@ -75,3 +75,66 @@ report — do not apply it.
 Commits; whether captions existed; a table of Q ids harvested with timestamp, the claim
 each bears on and its RH tag; anything that looks like it contradicts an audit verdict;
 failures; next step.
+
+---
+
+# Addendum: lead rulings before the fix pass (Big Sim, 2026-10-13)
+
+The harvest ran and was committed (`6d090de`). The combined review is
+`research/checks/results/REVIEW-R4-VID-01-combined.md` (commit `38a1950`): 0 BLOCKER,
+1 MAJOR, 10 MINOR, 7 NOTE. Its integrity findings are accepted in full — all four hashes
+match, the transcript re-derives from the hashed captions, 42/42 quotes are exact
+substrings, the gate and the negative scan hold.
+
+These rulings are written before the fix pass, per step 4 of the lifecycle (D-24). They
+bind the fix pass; the fix pass answers **every MAJOR and MINOR by id** in a "Review
+resolution" section appended to `docs/research/sources/refresh-2026-10-13-video.md`.
+
+**R-1 (MAJOR-1, controlling).** The mischaracterisation is conceded. The panel's reply to
+the Bernoulli barrier is to be harvested on its substance (the recombination and
+infinitesimal-model material the review names), as new appended GGR ids, and the
+"without a derivation" wording struck from refresh item 4 and from the GGR-19 note.
+A harvest that records one side's dismissal and omits the other side's argument fails
+hard rule 1 whichever side it favours. This is the one finding that must be fully closed
+before any analyst scores from this record.
+
+**R-2 (MINOR-5 vs NOTE-3: the A5h modelling objection).** The Day-side and critic-side
+sections conflict only in emphasis, not in fact; both halves are correct and both are
+recorded. The ruling: the critics' point (equilibrium load does not depend on *s*;
+Haldane 1937, Muller 1950) and its cost to them (on their own e^-U the "functionally dead"
+direction strengthens, and the s = 0.001 escape A5h records disappears) go into the same
+note, in that order, neither applied. **No verdict moves in this task.** A5h's fields are
+not touched; the analyst scoring task decides.
+
+**R-3 (MINOR-4: the GGR-13/14 *d*-coefficient "conflict").** Record all three readings
+under rule RD with their sources (`A-mittens-formula.md` TW-01; A4 `derived:`; A4d and its
+Weaknesses line on Appendix D) and the host's own 01:49:52 narration. Do **not** declare a
+winner and do not touch A4d. The framing "as likely a critic-side error as a Day-side one"
+is withdrawn as unsupported by our own files; the readings replace it.
+
+**R-4 (MINOR-8: GGR-04's RH tag).** Governing reading is the literal concession, so the
+credit to Day stands; the ironic reading is recorded beside it. This follows rule RD as
+written (the most defensible reading of the quoted statement), not a preference for the
+reading that favours either side.
+
+**R-5 (MINOR-10: scope of `research/tools/harvest/verify_vid01.py`).** The file is
+**ratified** as in-scope: it is correct practice under hard rule 4 (script outside the
+fetch directory) and the brief's file list did not anticipate it. The reproducibility half
+of the finding stands and must be fixed: make the verifier read its quote list from the
+`YT-AqC1ZM4icms` section of `quotes-critics.md`, so that the pass count is reproducible
+from the repository alone without the gitignored fetch directory. Re-run it and record the
+new count (42 plus whatever MINOR-7 and R-1 add).
+
+**R-6 (MINOR-9: "credentialed").** Accepted as written. This finding costs the critics and
+is applied for the same reason the Day-side findings are: hard rule 1 cuts both ways.
+
+**R-7 (NOTE-4, NOTE-6: out of scope here).** The body's ad hominem lines may be noted in
+RH-31's dialectical-core column, nothing more; a wider rhetoric harvest is a separate task.
+The unpinned `yt-dlp` is a `requirements.txt` / `HOWTO-refresh.md` matter for the
+bookkeeping task, not for this fix pass.
+
+## Files the fix pass may write
+
+The five harvest files, plus `research/tools/harvest/verify_vid01.py` (R-5) and the raw
+output of its re-run. Still **no claim file, no verdict field, no `QUEUE.md` edit.**
+New quotes are appended with fresh ids; nothing is renumbered.
