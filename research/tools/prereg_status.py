@@ -75,6 +75,7 @@ CHECKS = [
     ("A2e-alpha", "load-bearing", "a2e_alpha_map.py", "R4-A2e-alpha.md", ["a2e_alpha.*", "a2e_alpha_map*"], None),
     ("HF-d (GAP-05 part of HF)", "load-bearing", "hf_followups.py", "R4-HF.md", ["hf_gap05*"], None),
     ("HF main (HF-a, HF-b)", "load-bearing", "hf_followups.py", None, ["hf_main*", "hf_analyse*"], None),
+    ("HF ph (post hoc scoring)", "load-bearing", "hf_posthoc.py", None, ["hf_ph*", "hf_posthoc*"], None),
     ("L1", "load-bearing", "l1_dnds_genesets.py", "R4-L1.md", ["l1_*", "l1.*"], None),
     ("L6", "low", "l6_ltee_undone.py", "R4-L6.md", ["l6*"], None),
     ("L7", "low", "l7_410m_accounting.py", "R4-L7.md", ["l7*"], None),
@@ -111,7 +112,9 @@ NOTES = {
     "GAP-07t": "docstring l.8: FM's DHC SNV totals were seen (disclosed)",
     "FMnull": "docstring A10: P4 and P5 \"informed, not predictive\"",
     "HF-d (GAP-05 part of HF)": "the fast part of HF, run and written up 632 s after registration; the main sweep is the next row",
-    "L5": "review tier cut from three to one after registration (QUEUE.md)",
+    "HF ph (post hoc scoring)": "added 2026-10-13 (MA-25); host record gives launch as 11:53 -06:00 only (push to the second not shown to precede it) and the smoke run probed ph-type cells before the commit time (about 2 min); registered post hoc as 5c30ed9; 455 CPU-hours",
+    "L1c": "script amended before the run (0e0e840) after a selftest miniature showed one transfer outcome; the Day-side transfer hit is 'not blind' (R4-L1c.md)",
+    "L5": "ran with two post hoc launch fixes and the selftest V3 miss already seen (MA-25); review tier cut from three to one after registration (QUEUE.md)",
 }
 
 

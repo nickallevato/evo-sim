@@ -26,13 +26,13 @@ Limits of this table, all of which apply to every row:
 
 | Label | Checks |
 |---|---|
-| blind | 10 |
+| blind | 15 |
 | criterion-only | 6 |
 | reproduction | 3 |
 | single-commit | 18 |
 | unknown | 20 |
-| registered, not run | 4 |
-| **total** | **61** |
+| registered, not run | 0 |
+| **total** | **62** |
 
 ## Table
 
@@ -89,6 +89,7 @@ Limits of this table, all of which apply to every row:
 | A2e-alpha | load-bearing | `a2e_alpha_map.py` | `49824e0` | `4a37912` | 94 |  | `4a37912` | unknown |  |
 | HF-d (GAP-05 part of HF) | load-bearing | `hf_followups.py` | `8bd9d29` | `88a33e8` | 632 |  | `88a33e8` | unknown | the fast part of HF, run and written up 632 s after registration; the main sweep is the next row |
 | HF main (HF-a, HF-b) | load-bearing | `hf_followups.py` | `8bd9d29` | `adbff0a` | 59510 | 50483 |  | blind |  |
+| HF ph (post hoc scoring) | load-bearing | `hf_posthoc.py` | `5c30ed9` | `13820e5` | 169690 | 169106 |  | blind | added 2026-10-13 (MA-25); host record gives launch as 11:53 -06:00 only (push to the second not shown to precede it) and the smoke run probed ph-type cells before the commit time (about 2 min); registered post hoc as 5c30ed9; 455 CPU-hours |
 | L1 | load-bearing | `l1_dnds_genesets.py` | `868bb60` | `35e1755` | 333 |  | `4793761` | unknown |  |
 | L6 | low | `l6_ltee_undone.py` | `0b478dd` | `481dbbf` | 191 |  | `4793761` | unknown |  |
 | L7 | low | `l7_410m_accounting.py` | `5b44f3d` | `6ca69d3` | 16 |  | `4793761` | criterion-only | R4-L7.md l.14: sheet 14 and 19 values "were seen while deriving the readings" (R1 partly informed) |
@@ -97,10 +98,10 @@ Limits of this table, all of which apply to every row:
 | A2e-alpha addendum (Uricchio) | low | `a2e_alpha_uricchio.py` | `7d68de9` | `2b5e319` | 21 |  |  | criterion-only | docstring l.3: "POST HOC LABEL: the abstract value ... was already known" |
 | RHclose-critics | low | `rhclose_critics.py` | `8aef421` | `a48ac8a` | 74 |  | `a48ac8a` | criterion-only | docstring l.17: "DISCLOSURE (mandatory).  NOT BLIND." |
 | GAP05 | low | `gap05_slightly_deleterious.py` | `b59f2e5` | `314a743` | 36 |  | `314a743` | criterion-only | docstring l.6-7: predictions "NOT blind to the DFE" |
-| L1b | load-bearing | `l1b_t2t_dnds.py` | `0fe3c7f` |  |  |  |  | registered, not run |  |
-| L5 | low (registered as three) | `l5_adna_power.py` | `0e6da82` |  |  |  |  | registered, not run | review tier cut from three to one after registration (QUEUE.md) |
-| L1c | load-bearing | `l1c_alignment_method.py` | `536b19b` |  |  |  |  | registered, not run |  |
-| FMnull | load-bearing | `fm_mesa_null.py` | `48241c7` |  |  |  |  | registered, not run | docstring A10: P4 and P5 "informed, not predictive" |
+| L1b | load-bearing | `l1b_t2t_dnds.py` | `0fe3c7f` | `c168b65` | 139940 | 139931 |  | blind |  |
+| L5 | low (registered as three) | `l5_adna_power.py` | `0e6da82` | `f99d925` | 143311 | 143302 |  | blind | ran with two post hoc launch fixes and the selftest V3 miss already seen (MA-25); review tier cut from three to one after registration (QUEUE.md) |
+| L1c | load-bearing | `l1c_alignment_method.py` | `536b19b` | `90b32ba` | 84214 | 84214 |  | blind | script amended before the run (0e0e840) after a selftest miniature showed one transfer outcome; the Day-side transfer hit is 'not blind' (R4-L1c.md) |
+| FMnull | load-bearing | `fm_mesa_null.py` | `48241c7` | `29245a8` | 83613 | 83613 |  | blind | docstring A10: P4 and P5 "informed, not predictive" |
 
 ## Reading the table
 

@@ -95,3 +95,5 @@ shortfall:
   mittens3_snv_only: {value: 91600, note: "pass-1 said ~94,000", source: Z23003785, verified: true}
 genetic_map_morgans:
   human_w_b_regime: {value: 36.8, note: "map length (Morgans) used by R4 A2e/F2 for the Weissman-Barton recombination model (R = 35-38 M)", source: R4-F2-A, verified: false}
+day_stated_figures:
+  fixation_probability_modern_humans_hard_limits_corrected: {value: "10^(-78,000,000)", note: "headline figure as stated in the post (Q284), minus sign U+2212 in the source; text under the name 'Claude Athos'; provenance is the Hard Limits paper, not re-derived; relay-type (rule U)", source: B2026-10-13-shot-fired, verified: false}
