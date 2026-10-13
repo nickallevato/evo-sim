@@ -1,0 +1,20 @@
+# L5-C1a local smoke on registered script 1c6e983, md5 592baec774b9ae24fe32e5e70be1b19d, host paperclip, 2026-10-13T23:11:03Z; timing/structure only
+selfcheck: cR=0.09364 phi=0.924 sum_seg_w=0.00394 b_tail=0.7803 (model constants, not results)
+V-id hard s=0.05: ok (kept 77, n_wc 29)
+V-id standing s=0.05: ok (kept 1458, n_wc 729)
+V-id hard s=0.003: ok (kept 21, n_wc 0)
+V-bnd violations where bound < 1e-6: 0 (20000 SNP x 9 stat-designs tested, 11985 SNPs with bound < 1e-6)
+pickle jobs: ok
+SELFCHECK OK
+selfcheck 4.2s
+done c1a_neutral_const1e4 2s
+smoke c1a_neutral_const1e4: 1.7s {}
+done c1a_sweep_const1e4_hard_s0.003 2s
+smoke c1a_sweep_const1e4_hard_s0.003: 1.5s {'n_wc': 17, 'n_kept': 131, 'n_hh_snps': 22470, 'comp_hh_snps': 22401, 'comp_tp_evals': 17727, 'passes': 1, 'secs_l5': 1.2, 'secs_comp': 0.3}
+done c1a_sweep_const1e4_hard_s0.05 6s
+smoke c1a_sweep_const1e4_hard_s0.05: 6.1s {'n_wc': 79, 'n_kept': 160, 'n_hh_snps': 273508, 'comp_hh_snps': 273917, 'comp_tp_evals': 354411, 'passes': 1, 'secs_l5': 2.5, 'secs_comp': 3.7}
+done c1a_sweep_const1e4_standing_s0.003 1s
+smoke c1a_sweep_const1e4_standing_s0.003: 1.3s {'n_wc': 36, 'n_kept': 1007, 'n_hh_snps': 40367, 'comp_hh_snps': 40821, 'comp_tp_evals': 33888, 'passes': 1, 'secs_l5': 0.8, 'secs_comp': 0.5}
+smoke tasks 14.9s, peak RSS 269 MB
+analyse(smoke, stdout discarded): ok; smoke total 14.9s
+wall 15.77 s, maxrss 275508 KB
