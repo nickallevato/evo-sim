@@ -9,7 +9,7 @@ Written 2026-10-13 at the end of a long session, for the agent that will lead th
 - Latest milestone post: [`docs/2026-10-13-1-...-hf-final.md`](../2026-10-13-1-t2t-dnds-alignment-method-overdispersion-null-adna-power-and-hf-final.md) (milestone 14). It lists every verdict field that moved and the audit's own errors.
 - Integrated today: HF (with post hoc run `ph`), L1b, L1c, FMnull, L5, then Q93close and B2f in the afternoon. Reviews run to #82. The last two are **not yet in a milestone post or on the status board**.
 - **Running:** HF long-burn run `ph2` on na-workhorse (10 workers, launched 2026-10-13 13:40 -06:00, about 60 h, due 2026-10-16 02:00-08:00 -06:00; jobs are not checkpointed). Collect, merge and analyse commands are in `research/checks/QUEUE.md` item 8. Score it against the docstring of `research/checks/hf_posthoc2.py` in a new section of `R4-HF.md`; one combined light review; no verdict value can move.
-- Status board Artifact: https://claude.ai/artifact/AsRA58LU6Uw174xPcUsdHL (private; version 28, labelled upd21).
+- Status board (public page): https://nickallevato.github.io/evo-sim/research/status.html — GitHub Pages, source `master` `/docs`, file `docs/research/status.html`. The claude.ai Artifact (version 28, upd21) is abandoned as of D-26 and is not updated again.
 
 ## 2. What to do next, in order
 
@@ -59,7 +59,7 @@ Each brief names one skill; the agent loads it and follows it.
 | `criticality-pass` | reviewer | before a milestone post, on the whole batch |
 | `milestone-post` | analyst | a batch is integrated and audited |
 | `close-batch` | lead | orchestrating refresh, criticality pass, post, bookkeeping, board, merge |
-| `republish-board` | operator | the board file changed and the Artifact must be updated in place |
+| `republish-board` | operator | the board file changed on `research` and the public page must be brought level: patch against the files of record, get the page to `master`, confirm the Pages URL returns 200 with the new counts |
 
 ## 6. What the last session got wrong, so the next one does not
 
@@ -79,4 +79,4 @@ What worked: pre-run notes that assign unclassified outcome regions before launc
 
 ## 7. Talking to the owner
 
-He wants plain, short answers and a visual with every status summary (the status board is that visual; update the same Artifact). CPU time is free and tokens are scarce. He does not want to be asked to pick a reading. Lead with what changed and what he needs to do; put the audit's own errors in the open; keep ids and jargon out of the first lines.
+He wants plain, short answers and a visual with every status summary (the status board is that visual; update the same file and the same public URL). CPU time is free and tokens are scarce. He does not want to be asked to pick a reading. Lead with what changed and what he needs to do; put the audit's own errors in the open; keep ids and jargon out of the first lines.
