@@ -979,3 +979,73 @@ Purpose: the wording of every AMSTAR 2 item and every ROBIS signalling question 
 > - id: RB-G3.5; locator: Table 9, question 3.5; role: guidance; note: 
 > "If one or more concerns were identified for any of the previous domains, but these were appropriately considered when interpreting results and drawing conclusions, then this may also be rated as "Yes" and, depending on the rating of the other signalling questions, the review may still be rated as "Low risk of bias"."
 > - id: RB-P3a; locator: Phase 3 text; role: guidance; note: 
+
+## Criticality pass iv quotes (severe testing: Mayo), 2026-10-12
+
+Purpose: the statements of the severity requirement applied in [`../criticality/severe-testing-2026-10-12.md`](../criticality/severe-testing-2026-10-12.md), and the passages that pass relies on for how severity differs from long-run performance, from Popper and from probabilist (Bayesian and likelihood) accounts. These are method texts, not sources for any claim file; role codes S/C/N/K do not apply and the role field says what the line is used for. Fetched 2026-10-12 about 23:38 to 23:45 UTC into `sources/raw/crit4-severe-testing-2026-10-12/` (gitignored), one directory per file. All 27 quotes were machine-checked as exact substrings of the extracted text after whitespace, curly-quote and typographic-ligature (fi, fl, ff, ffi, ffl) normalisation, 0 misses; the quotes below are printed in the normalised form. `x0` is the papers' x with subscript 0. Mayo 2018 (the book) was not obtained: the two `MayoBlog` entries are the author's own posts of notes and an excerpt from it, and are quoted as such.
+
+### MayoSpanos2006 (sha256 2e7681ae648c6dbdec3e183b3767820fb5b1d545cd29e83bb7272773cc330b71)
+> "A statistical hypothesis H passes a severe test T with data x0 if, (S-1) x0 agrees with H, and (S-2) with very high probability, test T would have produced a result that accords less well with H than x0 does, if H were false."
+> - id: SV-MS1; locator: p.329 (section 1); role: definition; note: conditions (S-1) and (S-2); footnote 4 gives the equivalent low-probability form
+> "The severity function has three arguments: a test, an outcome or result, and an inference or a claim."
+> - id: SV-MS2; locator: p.329; role: definition; note: severity is of a test, an outcome and a claim together
+> "the severity evaluation must be sensitive to the particular outcome x0; it must be a post-data assessment."
+> - id: SV-MS3; locator: p.330, item (c); role: definition; note: assessed after the data
+> "the guide for evaluating, and possibly adjusting, error probabilities (e.g., in multiple hypothesis testing, in data mining) is whether the probativeness is altered with respect to the particular error of interest"
+> - id: SV-MS4; locator: p.330; role: selection effects; note: what matters about data-dependent choices is whether they alter probativeness
+> "we will also suggest how the idea may be generalized to inferring the presence of 'an error' or flaw, very generally conceived."
+> - id: SV-MS5; locator: p.329; role: scope of the concept; note: the authors allow an informal use beyond parametric discrepancies
+
+### MayoSpanos2011 (sha256 6930621e7584961503b032725320b4f447e06c07657786804a23cc0f701ce6d2)
+> "Severity Principle (weak). Data x0 (produced by process G) do not provide good evidence for hypothesis H if x0 results from a test procedure with a very low probability or capacity of having uncovered the falsity of H, even if H is incorrect."
+> - id: SV-ES1; locator: section 1.3, p.162 (pages of this source are inferred from its running heads); role: principle, weak; note: the negative form
+> "Severity Principle (full). Data x0 (produced by process G) provides good evidence for hypothesis H (just) to the extent that test T severely passes H with x0"
+> - id: SV-ES2; locator: section 1.3, p.162; role: principle, full; note: the positive form
+> "The onus is on the person claiming to have evidence for H to show that they are not guilty of at least so egregious a lack of severity."
+> - id: SV-ES3; locator: section 1.3, p.162; role: burden; note: who must show severity
+> "were George to have gained δ pounds or more (i.e., were H false), then this method would almost certainly have detected this."
+> - id: SV-ES4; locator: section 1.3, p.163; role: example; note: calibration on known weights: the instrument detects a known difference
+> "It requires being very specific about which inference is thereby warranted"
+> - id: SV-ES5; locator: section 1.3, p.163-164; role: scope; note: severity is for a specific inference
+> "what we are calling the error-statistical philosophy goes beyond falsificationism, of both the Popperian and Fisherian varieties, most notably in its consideration of what positive inferences are licensed when data do not falsify but rather accord with a hypothesis or claim."
+> - id: SV-ES6; locator: section 1.1, "Objectivity in error statistics", p.158; role: contrast: Popper; note: positive inferences from passing results
+> "The reliability of the rule used to infer H is at most a necessary and not a sufficient condition to warrant inferring H."
+> - id: SV-ES7; locator: section 1.3, p.163-164; role: contrast: performance; note: long-run reliability is not enough
+
+### MayoBlog2018 (sha256 bc118ed2ae9661fef96ad2b67d31e2488a6135926ab94657c89150c65535783d)
+> "severity requirement (weak): One does not have evidence for a claim if little if anything has been done to rule out ways the claim may be false."
+> - id: SV-B1a; locator: post body, "Notes from Section1.1 Severity Requirement: Bad Evidence, No Test (BENT)" (Mayo 2018 section 1.1, as posted by the author); role: principle, weak; note: first sentence
+> "If data x agree with a claim C but the method used is practically guaranteed to find such agreement, and had little or no capability of finding flaws with C even if they exist, then we have bad evidence, no test (BENT)."
+> - id: SV-B1b; locator: same place, next sentence; role: principle, weak; BENT; note: source of the label BENT
+> "a difference between finding H poorly tested by data x, and finding x renders H improbable – in any of the many senses the latter takes on."
+> - id: SV-B2; locator: post body, notes from Section 1.1; role: contrast: probabilism; note: poorly tested is not the same as improbable
+
+### MayoBlog2019 (sha256 da8d10b8bbb2bba1f1f7c30955f7b3e32d4c3d572769077d93437d7c20e0f867)
+> "Severity (strong): We have evidence for a claim C just to the extent it survives a stringent scrutiny. If C passes a test that was highly capable of finding flaws or discrepancies from C, and yet none or few are found, then the passing result, x, is evidence for C."
+> - id: SV-B3; locator: post body, excerpt of Mayo 2018 section 1.2; role: principle, strong; note: 
+> "The weakest version of the severity requirement (Section 1.1), in the sense of easiest to justify, is negative, warning us when BENT data are at hand, and a surprising amount of mileage may be had from that negative principle alone."
+> - id: SV-B4; locator: post body, excerpt of Mayo 2018 section 1.2; role: principle, weak; note: 
+> "It is not probabilism or performance we seek to quantify, but probativeness."
+> - id: SV-B5; locator: post body, excerpt of Mayo 2018 section 1.2; role: contrast; note: 
+> "He shoots all his bullets any old way into the side of a barn and then paints a bull's-eye in spots where the bullet holes are clustered. This fails utterly to severely test his marksmanship ability."
+> - id: SV-B6; locator: post body, excerpt of Mayo 2018 section 1.2; role: example; note: criterion fitted after the data (Texas marksman)
+> "With probabilism, one has evidence for a claim to the extent that it's probable in some sense, or gets a probability boost, or is comparatively more likely than some other claim."
+> - id: SV-B7; locator: comment thread, Mayo reply to "Rick"; role: contrast: Bayesian and likelihood accounts; note: a comment by the author, not book text
+> "To block BENT cases requires considering error probabilities of methods and these go beyond likelihoods."
+> - id: SV-B8; locator: comment thread, Mayo reply to "Rick"; role: contrast: likelihood accounts; note: a comment by the author, not book text
+
+### MayoHand2022 (sha256 24cb0059688deac275eb9ec89eeb6c5d493d113ed3613786fa0b6cf462c98cf0)
+> "Minimal requirement for evidence: We have evidence for H only if H passes a test that probably would have found evidence of flaws in H, if they are present."
+> - id: SV-MH1; locator: section "Performance vs probativeness" (full-text XML; no page numbers); role: principle, minimal; note: 
+> "In our view, a probative test will generally involve combining several subsidiary tests, deliberately designed to unearth different flaws."
+> - id: SV-MH2; locator: section "Performance vs probativeness"; role: design; note: several subsidiary tests aimed at different flaws
+> "for a given test of H it is essential to specify in advance at least some outcomes that will not be allowed to count in favor of H."
+> - id: SV-MH3; locator: section "A central function of statistics in science is undermined"; role: design; note: outcomes that count against must be named in advance
+> "impressive-looking results are easy to achieve if one can ignore unwelcome results, alter what is being tested post-data, or exploit a variety of sources of researcher flexibility (e.g., exclusion criteria, data dredging, stopping rules)."
+> - id: SV-MH4; locator: section "P-values are uninterpretable if there has been p-hacking, data-dredging or a variety of biasing selection effects"; role: selection effects; note: flexibility destroys the error probability
+> "Good long-run performance is a necessary but not a sufficient condition for a test to calibrate probativeness."
+> - id: SV-MH5; locator: section "Performance vs probativeness"; role: contrast: performance; note: 
+
+### MayoCox2006 (sha256 e8389c2fd3418add598740a2952470595a11b2c90b2ee0fdfaa26aa0ae40a3a4)
+> "only if there is a high probability the test would have given a worse fit with H0 (i.e., smaller p value) were a discrepancy δ to exist."
+> - id: SV-MC1; locator: p.84, FEV(ii) (second half; the sentence starts on p.83); role: principle for non-rejection; note: a passing result is evidence of no discrepancy only if the test could have shown one

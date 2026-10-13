@@ -86,3 +86,26 @@ Fetched about 23:14 UTC (17:14 -06:00) with plain `curl -sS -L --max-time 60`, s
 Extraction (files read as data, never executed; scripts kept in the session scratch directory, outside the download directory): `pdftotext -layout` and plain `pdftotext` for the PDFs; a 12-line tag stripper run as `research/.venv/bin/python -I` for the XML. Text files are in `txt/` beside the fetch directories. 77 quotes machine-checked as substrings after whitespace and curly-quote normalisation, 0 misses.
 
 Not fetched or not read: the BMJ web appendices (the paper's "Supplementary appendix 1" is its guidance; the amstar.ca guidance PDF was used and was not compared with it); the ROBIS publisher page; the worked examples in the ROBIS guidance (read only as far as the rating rules); PRISMA 2020 (the flow in the pass is "PRISMA-style" as a layout only, and no PRISMA wording is relied on). No item or signalling-question wording in the pass is from memory.
+
+## Criticality pass iv (severe testing: Mayo's texts), 2026-10-12
+Fetched 23:38 to 23:45 UTC (17:38 -06:00) with plain `curl -sS -L --max-time 60` (90 for the two PDFs), serial, each kept file in its own new directory under `sources/raw/crit4-severe-testing-2026-10-12/` (gitignored). Nothing posted, archived or sent; no login; no bot challenge met or solved; TLS verification left on. Purpose: the severity requirement applied in `docs/research/criticality/severe-testing-2026-10-12.md`. Bib rows: `bib-literature.md`, section "Criticality pass iv"; quotes: `quotes-literature.md`, same section name.
+
+| Target | URL | Result |
+|---|---|---|
+| Mayo & Cox 2006, arXiv | `https://arxiv.org/pdf/math/0610846` | 200, PDF 1.4, 22 pp., 252,964 B, sha256 `e8389c2f...a3a4` |
+| Mayo & Spanos 2006, author's old site | `https://www.phil.vt.edu/dmayo/personal_website/2006Mayo_Spanos_severity.pdf` | **curl error 60** (certificate does not match the host). Not overridden. Over `http://` the same path returns the department's HTML home page (200, 122,957 B), not the paper. Stubs and directories deleted |
+| Mayo & Spanos 2011, author's old site | `https://www.phil.vt.edu/dmayo/personal_website/Error_Statistics_2011.pdf` | **curl error 60**, as above. Not retried over http |
+| Mayo 2018 excerpt, guessed URL | `https://errorstatistics.com/2019/03/28/severity-strong-vs-weak-excursion-1-continues/` | **404** (104,145 B error page). Deleted. The right date was found through the blog's own search |
+| Mayo & Spanos 2006, guessed upload path | `https://errorstatistics.files.wordpress.com/2012/08/2006mayo_spanos_severity.pdf` | **404**. Deleted |
+| Europe PMC search for open Mayo papers | `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=AUTH:"Mayo DG" AND (severity OR "severe testing" OR significance)&format=json` | 200, JSON 6,792 B. Read for PMCIDs, then deleted (found PMC9096069 and PMC9300112; only the first was fetched) |
+| Blog search | `https://errorstatistics.com/?s=severity+strong+vs+weak` | 200, HTML 152,594 B. Read for post URLs, then deleted |
+| Mayo & Hand 2022, Europe PMC | `https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9096069/fullTextXML` | 200, XML, 185,664 B, sha256 `24cb0059...8cf0` |
+| Mayo 2018 excerpt (blog, strong vs weak) | `https://errorstatistics.com/2019/10/10/severity-strong-vs-weak-excursion-1-continues/` | 200, HTML, 179,741 B, sha256 `da8d10b8...f867` |
+| Mayo 2018 notes (blog, mementos) | `https://errorstatistics.com/2018/10/16/tour-guide-mementos-excursion-1-tour-i-of-how-to-get-beyond-the-statistics-wars/` | 200, HTML, 184,358 B, sha256 `bc118ed2...783d` |
+| Author's publications page | `https://errorstatistics.com/mayo-publications/` | 200, HTML, 146,601 B, sha256 `4b276253...b085`. Read for PDF links |
+| Mayo & Spanos 2006, author-posted | `https://errorstatistics.com/wp-content/uploads/2016/03/2006mayo_spanos_severe_testing2.pdf` | 200, PDF 1.4, 336,595 B, sha256 `2e7681ae...0b71` |
+| Mayo & Spanos 2011, author-posted | `https://errorstatistics.com/wp-content/uploads/2015/11/error_statistics_2011.pdf` | 200, PDF 1.5, 523,799 B, sha256 `6930621e...e6d2` |
+
+Extraction (files read as data, never executed; scripts kept in the session scratch directory, outside the download directory, run as `research/.venv/bin/python -I`): `pdftotext -layout` for the three PDFs; a tag stripper for the XML and the two blog pages. Text files are in `txt/` beside the fetch directories. 27 quotes machine-checked as substrings after whitespace, curly-quote and ligature normalisation, 0 misses (the checker re-reads the quotes from `quotes-literature.md`, not from the extraction step).
+
+Not fetched or not read: Mayo 2018 (the book; only the author's two posts of notes and an excerpt); Mayo 1996, *Error and the Growth of Experimental Knowledge*; Mayo 2008 on double counting and Mayo 1991 on novel evidence (both listed on the publications page, not fetched); the publisher pages for the 2006 and 2011 texts; Popper 1959 and any Bayesian primary text (the pass's remarks on Popper and on Bayesian confirmation beyond the quoted Mayo passages are from memory and are marked so there); Lakens 2019 on pre-registration and severity (from memory, marked). PMC9300112 (Mayo 2022, Conserv Biol) was listed by the search and not fetched.
