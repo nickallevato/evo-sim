@@ -1,0 +1,48 @@
+P5 own exposure PREREG {'inside': 69, 'n': 70}
+P5 own exposure SOURCED {'inside': 60, 'n': 70}
+P5 own exposure AMENDED|ALL3|persist1.0 {'inside': 65, 'n': 70}
+P5 own exposure AMENDED|ALL3|persist0.5 {'inside': 70, 'n': 70}
+P5 own exposure AMENDED|NOWONG|persist1.0 {'inside': 65, 'n': 70}
+P5 own exposure AMENDED|NOWONG|persist0.5 {'inside': 70, 'n': 70}
+P5 own exposure AMENDED|FRANC|persist1.0 {'inside': 51, 'n': 70}
+P5 own exposure AMENDED|FRANC|persist0.5 {'inside': 70, 'n': 70}
+gate R1|H|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0, 1000000.0], 'max_measured': 576.1988728198471}
+gate R1|H|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 269.1443693150186}
+gate R1|C|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 649.141732585661}
+gate R1|C|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 305.6275584408123}
+gate R1|B|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 642.0263417046948}
+gate R1|B|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 293.1295412366585}
+gate R1|G|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0, 3000000.0], 'max_measured': 497.3537429285125}
+gate R1|G|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 272.2223479474548}
+gate R1|DHC|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [10000.0, 30000.0, 100000.0], 'max_measured': 2860.9612228724027}
+gate R1|DHC|masked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 875.192724125597}
+gate R1x|H|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0, 1000000.0], 'max_measured': 576.1988728198471}
+gate R1x|H|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 269.1443693150186}
+gate R1x|C|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 649.141732585661}
+gate R1x|C|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 305.6275584408123}
+gate R1x|B|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 642.0263417046948}
+gate R1x|B|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0], 'max_measured': 293.1295412366585}
+gate R1x|G|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0, 3000000.0], 'max_measured': 497.3537429285125}
+gate R1x|G|masked {'gate': 'REPRODUCED', 'W_within_3x': [300000.0, 1000000.0, 3000000.0], 'max_measured': 272.2223479474548}
+gate R1x|DHC|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [10000.0, 30000.0, 100000.0], 'max_measured': 2860.9612228724027}
+gate R1x|DHC|masked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 875.192724125597}
+gate R2|H|unmasked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 576.1988728198471}
+gate R2|H|masked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 269.1443693150186}
+gate R2|C|unmasked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 649.141732585661}
+gate R2|C|masked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 305.6275584408123}
+gate R2|B|unmasked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 642.0263417046948}
+gate R2|B|masked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 293.1295412366585}
+gate R2|G|unmasked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 497.3537429285125}
+gate R2|G|masked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 272.2223479474548}
+gate R2|DHC|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [10000000.0], 'max_measured': 2860.9612228724027}
+gate R2|DHC|masked {'gate': 'NOT-REPRODUCED', 'W_within_3x': [], 'max_measured': 875.192724125597}
+gate R1u|H|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [30000.0, 100000.0, 300000.0], 'max_measured': 2872.781954773021}
+gate R1u|H|masked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 2289.168900004386}
+gate R1u|C|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 2936.9286048274153}
+gate R1u|C|masked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 2488.3300919998574}
+gate R1u|B|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 2941.9308659393632}
+gate R1u|B|masked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 2485.3072633276915}
+gate R1u|G|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [100000.0, 300000.0], 'max_measured': 3748.0285520379043}
+gate R1u|G|masked {'gate': 'REPRODUCED', 'W_within_3x': [30000.0, 100000.0, 300000.0], 'max_measured': 3097.102852618201}
+gate R1u|DHC|unmasked {'gate': 'REPRODUCED', 'W_within_3x': [10000.0, 30000.0], 'max_measured': 5304.674622195355}
+gate R1u|DHC|masked {'gate': 'REPRODUCED', 'W_within_3x': [30000.0, 100000.0], 'max_measured': 5691.659652105617}

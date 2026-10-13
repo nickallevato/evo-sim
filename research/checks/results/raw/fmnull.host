@@ -1,0 +1,8 @@
+na-workhorse.allevato.io
+Tue Oct 13 05:06:42 PM UTC 2026
+FMnull chain: selftest, analytic, simulate, realdata, post; 1 process; registered 48241c7, post hoc pre-run amendments cc5e6dd, 408ba53
+0b25eaf7c2978aa726a6e404d8cab68c  research/checks/fm_mesa_null.py
+53f9985339b11515496b8519a76c4693  research/checks/fm_mesa_replication.py
+716db19e2ed5a43015a49f0b7a5ff98c  research/checks/results/raw/fm_bins.npz
+b8e4732b84829beeb8a7f4ebcf8860a6  research/checks/results/raw/fm_analyse.json
+Tue Oct 13 05:28:37 PM UTC 2026
