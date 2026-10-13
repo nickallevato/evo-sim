@@ -1,0 +1,9 @@
+host: paperclip (workstation; registered 'trivial check' allowance, lead ruling EVO-43: no na-workhorse run needed)
+run: 2026-10-13 23:36 UTC, research/.venv/bin/python -I research/checks/l2_hardness.py main
+python: 3.12.3
+1d3b20f191596eb619b93eaf2b0f02d6  research/checks/l2_hardness.py
+e25ebfc0acc1a0e9f8cc62578bd9cc91  research/checks/results/raw/l2_inputs.json
+dac81965193ea9c3f1da9cb50990f0a9  research/checks/results/raw/l2_screening.tsv
+264c23b63ca916fd4b8791192e74f7da  research/checks/results/raw/l2_quotes.md
+8d473a202a08a17a0b3bc0553504810b  research/checks/results/raw/l2_main.out
+script at registration commit ade0542: git diff ade0542 -- research/checks/l2_hardness.py is empty
