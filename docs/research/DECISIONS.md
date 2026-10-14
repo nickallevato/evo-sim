@@ -211,3 +211,15 @@ work. **Standing rule:** the lead does not commit to `research` from a second wo
 a shared checkout is dirty. Either commit in the shared checkout, or give the worktree a
 detached head and cherry-pick. Every commit made from a worktree is checked with
 `git show --stat` against the files it was meant to touch before it is pushed.
+
+**Addendum to the lane-token mechanism (2026-10-14).** A task created with
+`blockedByIssueIds` set is returned by the control plane with status **`todo`**, not
+`blocked`: the blocker is attached but the status is not recomputed on creation. A task left
+in that state is startable, which is the likeliest root cause of the earlier
+"nothing released them" incidents. Creating a gated task therefore takes **two** writes -
+create, then `PATCH {"status":"blocked"}` - and the second is verified by a GET, not assumed.
+Releasing takes two writes in the other order: clear `blockedByIssueIds`, then set `todo`;
+a single combined PATCH is rejected with 409 "Issue follow-up blocked by unresolved
+blockers". The gate was also audited task by task on this wake: of 36 blocked tasks, every
+lane head carries the token, and the one task that did not and would have started itself
+when `ph2` landed (EVO-77) now does.
