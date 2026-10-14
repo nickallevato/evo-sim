@@ -4096,3 +4096,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#83-#85, ruling check #86), fix-passed (88c444d, 83f4f4d) and integrated 2026-10-14; one verdict field moved (Ge internal pending to holds)"
+
+- id: L-audit-l2-2026
+  label: "Audit L2: two disjoint sourced proxies for human hardness h (route (a) [0.125, 0.256] under A1, route (b) [0.284, 0.641] under M-b1; neither mapping validated), band B-MH, no verdict value moves"
+  side: audit
+  kind: reply
+  date: 2026-10-14
+  claim_ids: [H8, H, H5]
+  locator: "research/checks/results/R4-L2.md"
+  quote: "based on the reproductive cost each substitution imposes on a population"
+  parents:
+    - {id: L-audit-hf-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#87-#89), fix-passed (2026-10-14) and integrated 2026-10-14; no verdict value moved"

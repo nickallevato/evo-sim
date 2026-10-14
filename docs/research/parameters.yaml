@@ -97,3 +97,7 @@ genetic_map_morgans:
   human_w_b_regime: {value: 36.8, note: "map length (Morgans) used by R4 A2e/F2 for the Weissman-Barton recombination model (R = 35-38 M)", source: R4-F2-A, verified: false}
 day_stated_figures:
   fixation_probability_modern_humans_hard_limits_corrected: {value: "10^(-78,000,000)", note: "headline figure as stated in the post (Q284), minus sign U+2212 in the source; text under the name 'Claude Athos'; provenance is the Hard Limits paper, not re-derived; relay-type (rule U)", source: B2026-10-13-shot-fired, verified: false}
+hardness_h:
+  declared_bracket: {value: "tested points 0.1, 0.3, 1 (R4-HF)", note: "h stays a declared bracket (the audit's choice, V17; the 0.1-0.3 prior is QUEUE L2); L2 supplies two sourced proxies under audit assumptions A1 and M-b1, recorded beside it, not as its source. Neither mapping recovers h when applied to the HF mix model (M-b1 returns (R - 1)/R at every h; A1 reads a model returned to K as fully compensated at every h, including h = 1). Mapping not validated.", source: R4-L2, verified: false}
+  l2_route_a_A1: {value: [0.125, 0.256], note: "population regulation in nine European countries 1470-1870 (Madsen, Robertson and Ye 2019, working paper); run-time rules incl. R-E2; use for placement only until the published version is read", source: R4-L2, verified: false}
+  l2_route_b_Mb1: {value: [0.284, 0.641], note: "viability share of Crow's index, ten pre-transition records from seven sources; DISJOINT from route (a); governing hull [0.125, 0.641], band B-MH", source: R4-L2, verified: false}

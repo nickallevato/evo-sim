@@ -6340,3 +6340,73 @@
   counter: []
   note: 'Applied at integration 2026-10-14: locators dropped, partial wording normalised.'
   hierarchy_edge: false
+
+- id: d485
+  attacker: chk:L2
+  target: H8
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-14
+  locator: research/checks/results/R4-L2.md (Predictions, scored; Verdict moves)
+  audit_status: partly
+  audit_basis: 'Critic-side: no sourced proxy puts the upper end of h below 0.3 on route (b) [0.284, 0.641], where Term 3 holds within R1 in-model (M-b1 assumed); route (a) [0.125, 0.256] lies between the tested points 0.1 and 0.3, where whether Term 3 is exceeded by more than R1 is untested. Band B-MH, no value move; h and R remain unsourced (V17); both mappings unvalidated'
+  counter: [d487, d488, d489]
+  note: 'Placement sentence only; H8 external stays contested.'
+  hierarchy_edge: false
+
+- id: d486
+  attacker: chk:L2
+  target: H
+  target_part: P2
+  type: undermining
+  by: [audit]
+  first_date: 2026-10-14
+  locator: research/checks/results/R4-L2.md (Who this helps, Day side)
+  audit_status: partly
+  audit_basis: 'Day-side credit: on the registered readings no eligible record on either route gives a proxy below 0.1, and the source also reaches high estimates (median about 0.70-0.74); in-model a reproductive cost exists at every h > 0. Conditional: PD-w is reading-dependent (miss under R-a2 and R-a3), PD missed, and neither mapping recovers h from the mix model, so the proxies are not h'
+  counter: [d487, d488, d489]
+  note: 'Placement sentence only; H and H5 external stay contested. R-a1 governs.'
+  hierarchy_edge: false
+
+- id: d487
+  attacker: rev:R4-L2-correctness
+  target: chk:L2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #87)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-L2-correctness.md
+  audit_status: upheld
+  audit_basis: '3 MAJOR (PD-w reading-dependent; R-E2 dropped the registered mortality conjunct; H8 placement overreached between tested points), 3 MINOR, 5 NOTE'
+  counter: []
+  note: 'Applied in the fix pass 2026-10-14 (EVO-46).'
+  hierarchy_edge: false
+
+- id: d488
+  attacker: rev:R4-L2-steelman-day
+  target: chk:L2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #88)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-L2-steelman-day.md
+  audit_status: upheld
+  audit_basis: '3 MAJOR (A1 reads the audit hard-selection models as soft; critic-side credits built into the design; Day-favourable estimates in the same source omitted), 4 MINOR, 4 NOTE'
+  counter: []
+  note: 'Applied in the fix pass 2026-10-14 (EVO-46).'
+  hierarchy_edge: false
+
+- id: d489
+  attacker: rev:R4-L2-steelman-critic
+  target: chk:L2
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #89)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-L2-steelman-critic.md
+  audit_status: upheld
+  audit_basis: '2 MAJOR (neither mapping recovers h, so proxies not sourced h; GG-26 scored on a premise the quote does not state), 3 MINOR, 7 NOTE'
+  counter: []
+  note: 'Applied in the fix pass 2026-10-14 (EVO-46).'
+  hierarchy_edge: false
