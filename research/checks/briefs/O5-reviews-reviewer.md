@@ -286,3 +286,140 @@ it.) The owner's answer does not depend on the direction — the tier rule asks 
 reviews either way — so D-21 stands. But the premise as put was wrong, the lead put it,
 and the owner is told rather than left with the record as it reads. `DECISIONS.md` carries
 the correction.
+
+# Addendum 2: re-ruling on B internal after the D-24 fresh-reviewer check (Big Sim, 2026-10-14)
+
+The D-24 safeguard did its job and it went against me. The fresh-reviewer check
+`REVIEW-R4-B-internal-ruling-check.md` (ccdb989, EVO-73) returns **1 BLOCKER, 1 MAJOR,
+2 MINOR, 3 NOTE** and finds that **B-R4's stated ground is false on HL's text**. I accept
+it. These rulings supersede B-R4 and B-R5 as governing rulings. They are written before
+the second fix pass, per D-24 and lifecycle step 4, and **no verdict field moves on this
+commit**.
+
+I checked the BLOCKER against the source myself rather than taking the review's word for
+it. Local text `sources/raw/b-steelday-2026-10-13/hl.txt`, sha256 `3182a5b6…`, the same
+hash the review used. I read l.95-99, l.126-136, l.245-258, l.350-366, l.436-442 and
+l.450-462 directly.
+
+### B-R11. B-R4 is withdrawn. Its ground is false.
+B-R4 said a current-size reading "drops Q157's own defined term 'inside the same lineage
+duration'" and is therefore a reading of a different statement. That is true of the
+Day-side steelman's version of S ("near end", Q158). It is **not** true of the version the
+correctness review had already put and the check calls **S_L**: *at the current census the
+pipe cannot fill inside the lineage duration*. S_L keeps the term, in the sense HL itself
+fixes for it:
+
+- l.97-98: the criterion is `4 Nₑ < G`, "where G is the number of generations the lineage
+  has been available";
+- l.133-135: "Above the census X, a population is too large for a neutral allele to cross
+  it by drift **in the time its lineage has existed**";
+- l.247-253: "Use the lineage duration … roughly six and a half million years … The human
+  ceiling rises … to about one hundred fourteen thousand. And then note that we are still
+  eight billion strong, which puts us seventy-two thousand times over the enlarged
+  ceiling."
+
+l.247-253 is the only place HL introduces and applies "lineage duration", and it applies
+it to **the census against the ceiling**. S_L is therefore not a narrower statement
+substituted for Day's; it is Day's own computation. B-R4 reasoned from a reviewer's
+concession (Day-side cost item 3) instead of from the source's own definitions. That is
+the error the check names, and it is mine.
+
+### B-R12. S_L is not an extended reading, so RD's last bullet does not bar it from setting the field.
+This is the question B-R11 leaves open and it decides the field, so I rule on it
+explicitly. RD l.202 bars "extended readings (a different object, or a wider claim)" from
+setting the verdict field. S_L is neither:
+
+- **Not wider.** S_L restricts the substitutions in question to those seeded at the current
+  census. It claims less than the lineage-actual reading C, not more.
+- **Not a different object.** Q157's own paragraph names S_L's inputs. l.456-461, running
+  on from the quoted sentence without a break: "It takes Kimura's own fixation time,
+  Wright's own effective size, and **the field's own census**, generation, and
+  reproductive-variance figures, and it asks … how long is the pipe." Census, generation
+  time and reproductive variance are the inputs of `X = (Vₖ + 2)·G/16` and of the census
+  comparison, which is S_L. They are not the inputs of C.
+
+RD bars extended readings because they let a speaker be credited for a claim he did not
+make. A *narrowing* reading carries the mirror risk: crediting the speaker with a true but
+weaker claim than the one doing the work in his argument. RD handles that risk with
+scoping and RH3, not with exclusion — which is exactly what B-R14 does below.
+
+### B-R13. Under D-15/RD the governing reading of Q157 is S_L, and the field is `holds`, scoped.
+RD fixes the test: the field takes the reading under which **the quoted statement is most
+defensible — closest to literally true, best supported** — and explicitly not the reading
+that is most natural, nor the one best for the speaker.
+
+- Under **S_L** the clause is literally true. At the census, Nₑ/G is of order 2e4, so
+  F ≈ 0; HL's own form of it is 8 billion against a ceiling of 113,750, "seventy-two
+  thousand times over" (l.251-253). The inference also follows on HL's own words: the
+  closure vocabulary is used of the census regime and nowhere else — "the neutral
+  substitutions these species exhibit today are not being seeded at their current size at
+  all. The channel is not slow, **it is empty**" (l.353-354).
+- Under **C** the clause is false in the governing window (B-R15).
+
+So S_L is the most defensible reading and it governs. **Field: `holds`**, reading-dependent,
+set on Q157 under S_L. This meets B-R9's first overturn condition, which I wrote as the
+thing that would overturn B-R5, and it has been met.
+
+I record plainly what this ruling costs: it moves B internal from the superseded
+`non-sequitur` to `holds`, which is a **Day-favourable** move on a load-bearing internal
+field, made by me, on the charity rule the owner approved on 2026-10-11. I could keep
+`non-sequitur` only by ruling S_L implausible, and after reading HL myself I cannot: at
+l.247-253 S_L is Day's own answer to the lineage objection, and at l.456-461 Q157's own
+paragraph names its inputs. Ruling it implausible would be deciding the field first and
+finding the reason afterwards, which is the thing this audit exists to catch.
+
+### B-R14. The `holds` is never displayed bare, and the node-level claim takes RH3.
+Conditions on B-R13, all mandatory for the fix pass:
+
+- the value is written `holds` **scoped to the census ceiling at G = the lineage duration
+  (B2's content)**, and the scope travels with it into every table, tally and board row;
+- the Readings table records, not governing: **C** (lineage-actual, completion sense)
+  `non-sequitur` on the B-R15 basis; **2 My** `non-sequitur`; **F** `n/a` (B-R6);
+  **D**, **1e5**, **Yoo** "N2b not shown";
+- B's own title claim — that neutral theory cannot rescue the shortfall over the lineage —
+  is asserted by **no** governing reading, and takes RH3 "no dialectical support offered".
+  S_L is a counterfactual about a census the species has held for about 400 generations
+  (l.330) and says nothing about whether drift produced the observed divergence;
+- HL's own drainage concession stays on the record beside it: "The small number of
+  fixations we observe are just drainage: the completions of mutations that entered the
+  pipe long ago" (l.354-356).
+
+### B-R15. MAJOR-2 is accepted. B-R5's basis is withdrawn; its value under C survives on a corrected one.
+"The clause is literally true on HL's inputs in every window" is **false** and must not be
+restated. HL's operational test for filling is `4Nₑ < G` (l.97-98), and HL says of the
+region below the ceiling that "fixation can, at least in theory, potentially complete"
+(l.135) and "the only census population that fills the pipe in time is one too small to
+sustain a viable species" (l.437-438). The hominid census of 1e5 is **below** HL's own X
+(113,750 at 6.5 My; 110,250 at 6.3 My), x = 4.55 > 4. By HL's own criterion that pipe
+fills, so "never fills" is false there. The clause is true under C only at 2 My, Yoo and
+Takahata 1e5 — all non-governing rows. Under C the verdict stays `non-sequitur` on a
+**stronger** basis: N2b now bites on the clause as well as on the inference.
+
+### B-R16. MINOR-3 and MINOR-4 accepted.
+MINOR-3: the 6.5 My exclusion is cited to k(T) = μF(T) (l.287-291), l.362-363, l.419 and
+l.439-441. l.363-366 ("thirty-five percent — a partly-loaded pipe") is cited only a
+fortiori, with HL's own disavowal of that linear bound (l.302, "an overstatement, and a
+vast one") noted beside it. MINOR-4: B-R2 stands as written — Q157 adopted, Q158 refused —
+but it is struck as a ground for anything about S_L, which does not rest on Q158.
+
+### B-R17. NOTE-6: O-6 applies to the B-R7 aggregation rule.
+"An internal field takes the governing reading of the Statement quote that asserts the
+node's own claim" is new rule text, not an application of an existing rule. It therefore
+goes through O-6: a written proposal, the 24-hour cooling-off, and a re-score of any
+load-bearing verdict it moves. It moves nothing in B (every reading in play is of Q157),
+so this re-ruling does not depend on it, but it may not be applied anywhere else until the
+O-6 process has run. The fix pass states it as a **proposal**, not as a rule.
+
+### B-R18. NOTE-7 accepted: B stays reading-dependent in value, so B-R8 does not arise.
+The derived readings are now {`holds` (S_L), `non-sequitur` (C, 2 My), `n/a` (F)}. No
+reading-dependent count changes. The 7-against-15 disagreement already on the public board
+is untouched by this ruling and stays a separate bookkeeping item.
+
+### B-R19. One more fresh-reviewer check, and then it stops.
+D-24 asks for a fresh-reviewer check whenever a ruling changes the governing reading, and
+this one does. But this ruling *adopts* a fresh reviewer's finding, so a further check
+risks an unbounded regress of checks on checks. The bound: **one** check, scoped to two
+questions and no others — (a) is S_L wrongly admitted, i.e. is B-R12's extended-reading
+ruling wrong; (b) is the scoping in B-R14 sufficient to stop a bare `holds` travelling. If
+it returns no BLOCKER, the fix pass and the integration proceed. If it returns a BLOCKER,
+the field stays `pending` and the question goes to the owner, not to another reviewer.

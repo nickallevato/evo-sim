@@ -115,3 +115,41 @@ Given 2026-10-13 on a second question card of Paperclip task EVO-1 and resolved 
 | O-29 | "Your rule D-22 lets only one agent run at a time. Eleven reviews are in the queue. One at a time makes the work about two times slower, but the cost per hour is lower and the risk of two agents in the same file is zero. Do you want to keep the limit of one?" | "Keep one" | **D-27** | D-22 is confirmed with the cost stated and understood. The cap of one stands in `AGENTS.md` and `TEAM-BRIEF.md`; it is no longer a provisional reading. Routines count against it. The lead releases one task at a time. |
 
 **A correction the lead owes the owner on D-26.** The board committed at `4df7485` was written *before* the O-5 revert (`2740ded`) and therefore still shows B internal as `non-sequitur` and A2e external as `contradicted`. Publishing it unchanged would put two superseded verdicts on a public page. The board patch in step (i) above must be re-run against the current files of record first; that is the content of the next released task.
+
+## Lead decisions and incidents, 2026-10-14
+
+**The cap of one broke twice, and parking was the wrong mechanism (incident, 2026-10-13
+23:50 to 2026-10-14 01:10 UTC).** D-22/D-27 allow one agent run at a time. On two separate
+occasions three and then two runs were live at once: EVO-10 with two runs on EVO-21
+(00:23), then the B1e-Q2 fix pass with the L5 ruling check (01:0x). Nothing released them.
+The lead's mechanism was **parking** — moving a queued task to `backlog` — and parking does
+not hold: when a task's own lifecycle blocker reaches `done`, the runtime re-readies the
+task and starts it. Parking also cannot stop a run already in flight; there is no
+run-cancel endpoint available to the lead, which was checked twice.
+
+**Mechanism adopted in its place: a lane token.** A permanent issue, *LANE TOKEN - release
+gate, never close* (`36f51809-27fb-47ab-9376-c9932d50f151`, status `backlog`, assigned to
+the lead), is carried in the `blockedByIssueIds` of every queued worker task. Because the
+token is never `done`, `issue_blockers_resolved` can never fire for those tasks, so no task
+can start itself when its real blocker finishes. The lead releases work by removing the
+token id from exactly one task. 20 of the 27 queued worker tasks carry the token as of
+01:15 UTC; the remaining 7 are downstream of tasks that do carry it, so every lane head is
+held. They are gated on the next wake (a run may make at most 20 cross-issue writes).
+
+**Four board discrepancies, found during the publication pass (EVO-68) and still open.**
+Recorded here so they are not lost: (i) the Rule RD paragraph says "7 reading-dependent
+verdicts" against a headline of 15 — the standing `HANDOFF.md` / `arguments/README.md`
+disagreement, now visible on the public page; (ii) B's reading-dependent field count was
+not recounted after the O-5 revert; (iii) the ROADMAP "Counts" table is stale; (iv) the
+`republish-board` skill still documents the abandoned claude.ai Artifact route that
+`AGENTS.md` and `TEAM-BRIEF.md` no longer carry. All four are bookkeeping, none moves a
+verdict.
+
+**B internal: the lead's ruling was overturned by the D-24 check and re-ruled.** The fresh
+reviewer (EVO-73, `ccdb989`) found B-R4's ground false on HL's text. The lead accepts it,
+withdraws B-R4 and B-R5 as governing, and rules the field to `holds` scoped to the census
+ceiling at G, with the node-level claim taking RH3 — a **Day-favourable** move on a
+load-bearing field, made under the owner's charity rule (RD, 2026-10-11). The reasoning is
+B-R11 to B-R19 in `research/checks/briefs/O5-reviews-reviewer.md`, Addendum 2, committed
+before the fix pass. One further fresh-reviewer check is bounded by B-R19; if it returns a
+BLOCKER the question goes to the owner rather than to another reviewer.
