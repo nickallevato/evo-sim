@@ -153,3 +153,61 @@ load-bearing field, made under the owner's charity rule (RD, 2026-10-11). The re
 B-R11 to B-R19 in `research/checks/briefs/O5-reviews-reviewer.md`, Addendum 2, committed
 before the fix pass. One further fresh-reviewer check is bounded by B-R19; if it returns a
 BLOCKER the question goes to the owner rather than to another reviewer.
+
+## D-28. The owner stops taking registered owner questions back (2026-10-14)
+
+Put to the owner on the EVO-1 question card as the L5 / claim C pre-registration's own
+MIDDLE clause: "Day says the Modern Synthesis needs about 15,500 fixations in each
+7,000-year period. He does not say how strong the selection on those fixations is. Day's
+own data can only show such fixations if the selection strength s is about 0.03 or more.
+Weaker fixations are invisible to his test, so a result of zero tells you nothing about
+them. Does Day's argument need those 15,500 fixations to be strong (s of 0.03 or more)?"
+
+Owner's answer, verbatim (control plane, resolved 2026-10-14 01:34 UTC, stored with the
+owner's user id):
+
+> "if you need to ask me then you need to decide or leave it open and / or explore both
+> possible sides or interrpetations"
+
+**Standing rule.** A clause in a registration that names "an owner decision" is a flag, not
+a stop. The lead rules on it, or records every plausible reading with its verdict and lets
+none of them set the field; in both cases the reasoning is written and committed before any
+fix pass, and the D-24 fresh-reviewer safeguard applies where the ruling decides a governing
+reading. A question reaches the owner only where it is a question of **policy or of outward
+action** — what the audit's rules should be, what may be published, what may be spent — and
+not where it is a question of **fact or of reading**, which is the audit's own work. This
+supersedes the practice in L-R6, where the lead sent a reading question to the owner because
+the registration had labelled it one. It does not touch hard rule 6 (no outward action
+without the owner's word) or the rule-freeze procedure of O-6.
+
+**Applied the same day, in full, in the open.** L-R11 to L-R16
+(`research/checks/briefs/L5-reviews-reviewer.md`, Addendum 2) answer the question **no**:
+Day attaches no s to the comparator and the two s values he does state (1e-3 at Q44; 0.01 at
+the Q26 note) are below s\*; the mainstream model's strong class covers about 1.26
+substitutions per window, not 15,556; and the reading needs roughly 28,000 to 37,000
+concurrent sweeps against Day's own published "approximately 230 simultaneous sweeps" (Q25).
+The best case for "yes" — that Day's test is vacuous unless the substitutions are strong, so
+a charitable reader should supply the strength — is stated in full at L-R12 and refused
+because rule RD takes the most defensible reading of the **quoted statement** and is "not the
+reading that yields the best verdict for the speaker". Under the owner's "explore both
+possible sides", R-d is **kept on the record with its verdict** (`supported`, does not set
+the field) in claim C's Readings table, with what would reopen it. No verdict field moved on
+the ruling commit; integration is gated on one bounded D-24 check.
+
+## The B1e-Q2 fix pass was silently reverted by the lead's own commit, and is restored
+
+**Incident, 2026-10-14.** Commit `9f863fd` (the B internal re-ruling) was made from a second
+worktree on the `research` branch while the shared checkout at `/home/na/projects/evo-sim`
+held the EVO-11 B1e-Q2 fix pass staged and uncommitted. The worktree carried the
+pre-fix-pass blob, so `9f863fd` committed `research/checks/results/R4-B1e-Q2.md` **back** to
+its `e2bc2f1` state: 87 lines answering 11 MAJOR and 10 MINOR review items vanished from
+HEAD while surviving only in the shared checkout's index. Restored byte-identical to
+`3c9df34`'s blob in commit `34535d2`, pushed to both remotes. Nothing was re-authored and no
+verdict value moved.
+
+This is the hazard the 01:08 UTC report named and claimed to have cleaned; the claim was
+wrong — the cleanup restored the index, not HEAD, and HEAD was the thing that had lost the
+work. **Standing rule:** the lead does not commit to `research` from a second worktree while
+a shared checkout is dirty. Either commit in the shared checkout, or give the worktree a
+detached head and cherry-pick. Every commit made from a worktree is checked with
+`git show --stat` against the files it was meant to touch before it is pushed.

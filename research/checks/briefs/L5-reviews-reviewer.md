@@ -167,3 +167,122 @@ required rate at that s is unattainable, not invisible.
 A source that gives the 15,556 an s, or an owner ruling that R-c governs (L-R6), or HL-side
 evidence that claim C's formal statement does not fix the comparator. The fresh reviewer is
 asked to attack L-R2 and L-R4 in that order.
+
+---
+
+## Addendum 2 (L-R11 to L-R16): the lead answers the question L-R6 sent to the owner
+
+Written 2026-10-14 after the D-24 fresh-reviewer check (EVO-75, `7471d60`) and after the
+owner's reply on the EVO-1 question card, resolved 2026-10-14 01:34 UTC. The owner's answer,
+verbatim:
+
+> "if you need to ask me then you need to decide or leave it open and / or explore both
+> possible sides or interrpetations"
+
+That is a standing instruction, recorded as **D-28**. It withdraws the premise of L-R6:
+a registered "owner decision" is not a reason to stop. The lead decides, or records both
+readings and lets neither set the field. **No verdict field moves on this commit.**
+
+### L-R11. L-R6 is withdrawn. The question is answered here, and the answer is no.
+The registered question (docstring l.124-125) is "owner decision whether Day's model implies
+s >= s\* (his own beneficial s input is 1e-3)", where s\* <= 0.05 on B10 at 25 y and 0.03 at
+20 y (L-R7/S4). Equivalently, under the plausibility criterion of L-R7 ("an s given by Day,
+or by the mainstream model the comparator stands for"): is R-d — s >= s\* for all 15,556
+substitutions per window — a plausible reading of Q275?
+
+**Ruling: no.** Three grounds, each from the record as it already stands:
+
+1. **Day gives the 15,556 no s, and both s values he does give are below s\*.** Q44 is
+   s = 1e-3 (`R4-L5.md` l.5); the second is 0.01 (Q26 note on Z18167588 s7.8, L-R7/S6).
+   s\* is 0.03 to 0.05. No quote in the corpus attaches any s to the comparator.
+2. **The mainstream model the comparator stands for supplies a strong class, but not for
+   the 15,556.** The remapped strong class is 28% of F_ii = 4.489, i.e. about **1.26
+   substitutions per window** under an ASSUMED mapping (EVO-75 recomputation table, row 11),
+   against the 15,556 R-d needs. A strong class covering 0.008% of the required count does
+   not make "all 15,556 are strong" a reading the model gives.
+3. **R-d contradicts a figure Day states himself.** R-d needs the 15,556 to complete as
+   strong sweeps inside 280 generations: about **28,000 concurrent sweeps at s >= 0.05**
+   (`R4-L5.md` section 11 item 7, registered as review C10), rising as 1/s to roughly 37,000
+   at s = 0.03. Day's own pipeline figure is "**approximately 230 simultaneous sweeps**"
+   (Q25, derived at s = 0.01: Q26, Q27). R-d is therefore not merely unsupported in Day's
+   corpus; it is about **100 to 160 times** a number he publishes. `R4-L5.md` l.385 already
+   says it: that reading "is one no source holds; 15,556 concurrent strong sweeps are
+   outside the regime of the model that produced the number."
+
+### L-R12. The strongest case for "yes", and why it does not carry.
+It deserves stating, because it is the better argument and it nearly persuaded me. Day's
+**test** is ancient-DNA sweep detection. That test can only bite if the substitutions it
+looks for are strong enough to leave a signature; at the s values Day states it has no power
+(the audit's own finding: <= 5.9e-16 at s <= 0.01). So Day's *argument* needs s >= s\* to be
+non-vacuous, and a reading on which his argument works is the one a charitable reader should
+take. On that reading the field would be `supported`, not `contradicted` — this is the whole
+of what a "yes" is worth, and it is worth a lot.
+
+It does not carry, for two reasons.
+
+- **It is charity to the arguer, which rule RD excludes in terms.** RD takes "the reading
+  under which the speaker's *quoted statement* is most defensible … **It is not the reading
+  that yields the best verdict for the speaker.**" The "yes" case reasons from what Day's
+  conclusion requires back to what his premise must have been. That is the inference RD's
+  second sentence forbids, and the lead applied the first sentence against Day in L-R1 on
+  this same check. It cannot be applied in his favour here on the opposite ground.
+- **It is self-defeating as a defence.** Adopting it concedes that at every s Day states,
+  his own evidence shows nothing, and buys `supported` only with a premise that conflicts
+  with his Q25 figure by two orders of magnitude. A defence that trades a stated figure for
+  an unstated one is not a stronger reading of the statement; it is a different statement.
+
+**This ruling is the one that keeps me honest in both directions.** In B internal I admitted
+a Day-favourable reading (S\_L) because Day's own text supplied it, against my own earlier
+ruling. The test is the same here and gives the opposite answer for the same reason: S\_L was
+in Day's text at HL l.247-253; s >= s\* for the 15,556 is in no text, and collides with Q25.
+Supplied by the source, admitted; required by the conclusion, refused.
+
+### L-R13. R-d is not buried. It is recorded with its verdict, as RD requires.
+"No" means R-d does not set the field. Under RD every plausible reading is recorded with its
+verdict and R-d stays in claim C's Readings table and comment as **s >= s\*, `supported`,
+does not set the field (L-R11)**, with the three grounds above named in one line so a reader
+can reopen it. The owner's "explore both possible sides" is met on the record, not by leaving
+the field undecided: an undecided field would itself be a choice, and the one L-R2 shows is
+unavailable, since `contested` smuggles R-d's verdict in through a disjunction.
+
+**What would reopen it (replacing L-R10's second clause):** a quote in which Day attaches an
+s at or above 0.03 to the comparator; or a mainstream source that puts the *bulk* of the
+required substitutions in a strong class; or a resolution of Q25 showing "approximately 230
+simultaneous sweeps" is not Day's figure for the comparator's regime.
+
+### L-R14. L-R2 is re-grounded, as MAJOR-1 asks.
+The fresh reviewer is right that RD's extended-reading bullet does not bar R-d: R-d fixes the
+same unstated parameter as R-a and R-b and is not "a different object, or a wider claim"
+(S5, accepted in L-R7). The clause in L-R2 citing that bar is **withdrawn**. L-R2's
+conclusion stands on the ground the reviewer identifies and L-R11 now supplies: R-d fails the
+plausibility criterion, so R-c's admissible disjuncts are R-a and R-b alone, both
+`contradicted`, and the disjunction argument goes through. NOTE-14 is accepted: R-c is not
+exactly R-a/R-b ∪ R-d — the gap at s = 0.02, and 0.03 to 0.05 in hard mode at 25 y, lies in
+neither, and behaves like R-b (<= 9.6e-7 at 25 y). The fix pass states the gap rather than
+the union.
+
+### L-R15. L-R5 is corrected, not defended (MAJOR-2 accepted).
+The reviewer is right and the ruling was wrong: claim C's formal statement fixes the
+comparator's **object**, not its **s**, and s is the dimension in dispute. A2e's formal
+statement named its own disputed dimension ("of any effect size"); C's does not, so RD's
+`SCOPED` clause does not apply on the ground L-R5 gave. The reading-dependent count still
+does not rise, but for a different and weaker reason: **every admissible reading (R-a, R-b,
+R-e, and the s = 0.02 gap) returns `contradicted`**, so there is no dependence to report —
+and that reason rests on L-R11, where L-R5's did not. The fix pass carries the corrected
+wording and `R4-X1-verdict-rule.md`'s RD paragraph gains no new instance.
+
+### L-R16. What moves now, and what still gates it.
+The value L-R4 gave — `contradicted`, scoped — is unchanged by this addendum. Its chain is
+now L-R11 → L-R14 → L-R15, not the chain L-R2 and L-R5 originally gave. L-R4's **wording**
+does not survive the check: MAJOR-3 (the field word on a claim titled by the observation),
+MINOR-4 (Z50/Z10 carry no inference in their source), MINOR-5 (the clock qualifier
+understates — the zero holds at 20 y too), MINOR-6, MINOR-7, MINOR-8 (the x100 bracket rests
+on an ASSUMED mapping; R-e is a reading, not an s, and takes its own clause), MINOR-9,
+MINOR-11 are all accepted and go to the fix pass.
+
+**Integration still does not fire on this commit.** The gate is no longer the owner question;
+it is one bounded fresh-reviewer check of L-R11 to L-R15 alone — the D-24 safeguard, because
+L-R11 decides the governing reading. That check is asked to attack L-R11 first, in the form
+"is there any text in the corpus that attaches s >= 0.03 to the comparator, and is the Q25
+figure read correctly?", and L-R15 second. If it returns a BLOCKER on L-R11 the question goes
+to the owner with both branches costed, not to another reviewer.
