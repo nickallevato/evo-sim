@@ -5,8 +5,23 @@ a2e_alpha_map.py (abstract only). What was NOT known when this is written: the f
 (including HPDs for the weak/strong split) and the study's own fixation counts. The predictions below are
 registered before the first run of this script, but they are post hoc relative to the abstract value.
 
+POST HOC CORRECTION (fix pass 2026-10-14, EVO-71, lead ruling A-R7; the registered text above is kept as written):
+  the sentence "What was NOT known ..." is WRONG. Table 1 in full (total 0.135 (0.096, 0.17), strong 0.041
+  (0.0, 0.13), non-VIPs 0.12 (0.09, 0.15), aMK 0.076) and the counts 29,925 / 38,135 were filed in
+  docs/research/sources/refresh-2026-10-11b-lit.md at a44767f (2026-10-11 19:57:50), 33 minutes before this
+  script was committed (7d68de9, 20:30:27), and the Table 1 row with its HPDs is quoted in QUOTES below. The only
+  element written before the full text was read is milestone 13's trigger (e68816e, 14:10:41), which names a
+  source ("a full-text Uricchio"), not a result. So this script is a REPRODUCTION of a published interval against
+  Day's own 191, not a pre-registered test: P2-P5 and blockers (3)-(4) restate values known before registration
+  (a44767f) and could not have failed. Source path below re-pointed (A-R8): the original copy is gone from both
+  hosts; sources/raw/a2e-corr2-2026-10-13/a.xml is a re-fetch with the registered sha256 (checked 2026-10-14).
+
 Source: PMC6693860 (NIH author manuscript, OA), efetch XML, sha256 3e7c44cb27fb68ffbe07b4ba2884dc31c448145c93d365142643e22c5b865977
-(local, gitignored: sources/raw/refresh-2026-10-11b-lit/uric/a.xml). Read as data only.
+(local, gitignored: sources/raw/refresh-2026-10-11b-lit/uric/a.xml; post hoc: sources/raw/a2e-corr2-2026-10-13/a.xml,
+same sha256). Read as data only.
+  Post hoc re-run (2026-10-14, output to results/raw/a2e_alpha_uricchio.posthoc-2026-10-14.out; the original
+  .out is not overwritten): already seen = everything in the original output. Both sides expect it to be
+  identical line for line (same bytes in, unchanged code); any difference is a re-runnability fault, not a result.
 
 WHAT IS MAPPED (same mapping and same Day-charitable rows as a2e_alpha_map.py / the Review resolution):
   adaptive substitutions per lineage = alpha x N(nonsynonymous fixations on the human lineage), compared with
@@ -32,6 +47,8 @@ above about 1%. alpha* = 0.65-1.75%.
   any-effect-size row is <= 191 (the flip no longer holds under charity).
 
 PREDICTIONS (Day-side and critic-side; each stated before the run):
+  [post hoc label, A-R7: P2-P5 and blockers (3)-(4) are "values known before registration (a44767f);
+   reproduction". P1's quote check is the only part that tested anything, and only the copy's integrity.]
   P1 (critic): (a) and (b) both hold; every quote verifies.
   P2 (critic): lower HPD 0.096 / alpha*_max 1.75% >= 5; every "any effect size" row, including the compounded
      lowest (0.096 x 0.75 x 11,090 ~ 799), is >= 3.5 x G1, i.e. above 191 by >= 600.
@@ -50,7 +67,7 @@ import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-P = os.path.join(ROOT, "sources", "raw", "refresh-2026-10-11b-lit", "uric", "a.xml")
+P = os.path.join(ROOT, "sources", "raw", "a2e-corr2-2026-10-13", "a.xml")  # post hoc (A-R8); was refresh-2026-10-11b-lit/uric/a.xml
 QUOTES = [
     "number of human-specific fixed substitutions in coding sequences since divergence with chimpanzees",
     "Fixed substitutions were identified by parsimony based on alignments of human (hg19 assembly), chimpanzee (panTro4 assembly) and orangutan (ponAbe2 assembly) coding sequences",
