@@ -1,0 +1,93 @@
+== P1 / MINOR-2: Table 3 columns, registered interval rule (+-1.96 SE, G 25-30) ==
+col 1 gamma -0.002 SE 0.0001: SE [0.934, 0.955] | point [0.940, 0.950]
+col 2 gamma -0.028 SE 0.0006: SE [0.125, 0.256] | point [0.160, 0.217]
+col 3 gamma -0.034 SE 0.0004: SE [0.000, 0.009] | point [0.000, 0.000]  (1+30g<0 at point: clipped)
+col 4 gamma -0.032 SE 0.0006: SE [0.005, 0.116] | point [0.040, 0.068]
+col 5 gamma -0.029 SE 0.0003: SE [0.112, 0.203] | point [0.130, 0.183]
+col 6 gamma -0.029 SE 0.0004: SE [0.106, 0.210] | point [0.130, 0.183]
+col 7 gamma -0.021 SE 0.0006: SE [0.335, 0.471] | point [0.370, 0.437]
+
+== MAJOR-1 / SD-3: readings of the specification clause ==
+R-a1 col 2           route(a) [0.125, 0.256] governing [0.125, 0.641] band B-MH PD-w hit PC-w miss PA-4 miss DISJOINT True
+R-a2 cols 2+4        route(a) [0.005, 0.256] governing [0.005, 0.641] band B-LH PD-w miss PC-w miss PA-4 miss DISJOINT True
+R-a3 union cols 2-7  route(a) [0.000, 0.471] governing [0.000, 0.641] band B-LH PD-w miss PC-w miss PA-4 hit DISJOINT False
+R-a4 col 7           route(a) [0.335, 0.471] governing [0.284, 0.641] band B-MH PD-w hit PC-w miss PA-4 miss DISJOINT False
+
+== SD-4: column 2 over G brackets ==
+G (25.0, 30.0): route(a) [0.125, 0.256] governing [0.125, 0.641] band B-MH DISJOINT True
+G (20.0, 32.5): route(a) [0.105, 0.337] governing [0.105, 0.641] band B-MH DISJOINT False
+G (20.0, 20.0): route(a) [0.250, 0.337] governing [0.250, 0.641] band B-MH DISJOINT False
+G (32.5, 32.5): route(a) [0.105, 0.170] governing [0.105, 0.641] band B-MH DISJOINT True
+
+== SD-3: Table 4 countries (point gamma, G 25-30) ==
+Austria      -0.001 [0.970, 0.975]
+Belgium      -0.006 [0.820, 0.848]
+France       -0.010 [0.700, 0.743]
+Germany      -0.029 [0.130, 0.183]
+Italy        -0.037 [0.000, 0.000]
+Netherlands  -0.005 [0.850, 0.873]
+Spain        -0.024 [0.280, 0.346]
+Sweden       -0.010 [0.700, 0.743]
+UK           -0.027 [0.190, 0.251]
+median gamma -0.010 -> [0.700, 0.743]; countries with h_lo >= 0.70: 5 of 9
+Table 5 Protestant 1470-1870 with SE: [0.269, 0.418]
+Table 5 Baseline 1470-1600: point [0.490, 0.552], SE [0.455, 0.585]
+Table 5 Baseline 1600-1870: point [0.100, 0.147], SE [0.059, 0.196]
+
+== route (b): M-b1 point, Pd = Im/(1+Im) ==
+b-ammakodava-1983      E2 False h 0.185 Pd 0.057
+b-bidi-2015            E2 False h 0.514 Pd 0.167
+b-brazilisolate-1987   E2 False h 0.522 Pd 0.219
+b-evens-1990           E2 True  h 0.480 Pd 0.231
+b-gowda-2013           E2 False h 0.352 Pd 0.144
+b-halfmoon-1850        E2 False h 0.427 Pd 0.241
+b-halfmoon-1900        E2 False h 0.374 Pd 0.184
+b-ingush-2023          E2 False h 0.035 Pd 0.004
+b-kinnaura-2009        E2 False h 0.505 Pd 0.162
+b-kodava-1982          E2 False h 0.256 Pd 0.083
+b-kolam-2019           E2 False h 0.508 Pd 0.177
+b-koraga-1998          E2 False h 0.223 Pd 0.070
+b-koscierzyna-1978     E2 False h 0.282 Pd 0.099
+b-kshatriya-ap         E2 False h 0.232 Pd 0.090
+b-lucknow-brahmin      E2 False h 0.042 Pd 0.015
+b-lucknow-kshatriya    E2 False h 0.098 Pd 0.046
+b-lucknow-shudra       E2 False h 0.040 Pd 0.015
+b-lucknow-vaishya      E2 False h 0.041 Pd 0.016
+b-maca-1970            E2 False h 0.639 Pd 0.360
+b-mapuche-aguada       E2 False h 0.174 Pd 0.099
+b-mapuche-anecon       E2 True  h 0.563 Pd 0.180
+b-mapuche-cerro        E2 True  h 0.284 Pd 0.099
+b-nentsi-1996          E2 True  h 0.627 Pd 0.320
+b-nicobarese-2000      E2 False h 0.380 Pd 0.180
+b-paundra-2023         E2 False h 0.281 Pd 0.122
+b-puna-chanarcito      E2 True  h 0.291 Pd 0.115
+b-puna-olacapato       E2 True  h 0.324 Pd 0.091
+b-puna-santarosa       E2 False h 0.205 Pd 0.083
+b-slovincian-g1        E2 True  h 0.641 Pd 0.315
+b-slovincian-g2        E2 True  h 0.439 Pd 0.174
+b-sonowal-2022         E2 False h 0.252 Pd 0.036
+b-southaltai-1997      E2 False h 0.256 Pd 0.138
+b-ticuna-1979          E2 True  h 0.623 Pd 0.248
+b-utah-early           E2 True  h 0.333 Pd -
+b-utah-late            E2 False h 0.143 Pd -
+b-yakut-2002           E2 False h 0.215 Pd 0.094
+b-zapotec-1978         E2 False h 0.477 Pd 0.385
+b-zapotec-2000         E2 False h 0.070 Pd 0.019
+
+MAJOR-2 illustrative cut (drop eligible Pd < 0.15): route (b) [0.333, 0.641], band B-MH
+critic NOTE-1 clause (i) only: [0.333, 0.641]
+NOTE-5: col 7 + cut: governing [0.333, 0.641] band B-HH
+
+== MINOR-3: Albeza printed If/ps shares of the total index (L2Q-15) ==
+Chanarcito  h = 1 - share = 0.278
+Santa Rosa  h = 1 - share = 0.194
+Olacapato   h = 1 - share = 0.344
+Cerro       rounding range [0.271, 0.296]
+Chanarcito  rounding range [0.281, 0.302]
+gap to route (a) hi 0.256: registered 0.027, printed share 0.021
+
+== SD-1 / critic MAJOR-1: mappings applied to the HF mix model (analytic) ==
+R 1.111: M-b1 at N=K, Im = R-1 = 0.111, If/Ps = 1 -> h_Mb1 = (R-1)/R = 0.100 (any model h)
+R 1.500: M-b1 at N=K, Im = R-1 = 0.500, If/Ps = 1 -> h_Mb1 = (R-1)/R = 0.333 (any model h)
+R 2.000: M-b1 at N=K, Im = R-1 = 1.000, If/Ps = 1 -> h_Mb1 = (R-1)/R = 0.500 (any model h)
+A1, model h=1, R 1.111, log-load 0.05, 5% shock: N'/K = 1.000 -> beta_gen = 0 (fully compensated)

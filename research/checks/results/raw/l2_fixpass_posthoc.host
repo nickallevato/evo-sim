@@ -1,0 +1,9 @@
+host: paperclip (workstation; trivial check: stdlib arithmetic, one process, < 1 s; same allowance as the registered run, lead ruling EVO-43)
+run: 2026-10-14 00:12 UTC, research/.venv/bin/python -I research/checks/l2_fixpass_posthoc.py
+status: POST HOC (fix pass EVO-46); script committed and pushed before the run in b13aab3
+python: 3.12.3
+fbe3b8f9d6a996cf0b7f5f7f936a6e66  research/checks/l2_fixpass_posthoc.py
+1d3b20f191596eb619b93eaf2b0f02d6  research/checks/l2_hardness.py (imported; unchanged since ade0542)
+e25ebfc0acc1a0e9f8cc62578bd9cc91  research/checks/results/raw/l2_inputs.json
+39d4d2d79fac3b69914b35d2d8c38aff  research/checks/results/raw/l2_fixpass_posthoc.out
+source read for the typed-in gammas: sources/raw/l2-2026-10-13/C1440/oa.bin sha256 c24bca98e1bc96aff0e6ab5c7ee42c882e1c1c509aa38fb5648e9b8e3cdd3903 (pdftotext -layout to /tmp, read 2026-10-14)
