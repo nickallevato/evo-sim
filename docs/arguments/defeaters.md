@@ -50,6 +50,7 @@ flowchart RL
   chk_F2["chk:F2: multi-locus interference"]:::audit
   chk_GAP02["chk:GAP02: sweep-scan detection window: expected detectable completed s…"]:::audit
   chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
+  chk_VID_01_score["chk:VID-01-score: scoring of the Gutsick Gibbon panel (AqC1ZM4icms, GGR-01..GG…"]:::audit
   x_CA_06["x:CA-06: Camestros: 35 fixed by 15,000 generations, ~429 gens/fixatio…"]:::critic
   A1c -->|"rebuts · untested"| A1
   A2c -.->|"undermines · partly"| A2
@@ -69,6 +70,7 @@ flowchart RL
   chk_A2e ==>|"undercuts · partly"| A2e
   chk_A2e_alpha ==>|"undercuts · partly"| A2e
   chk_A2e_alpha_uricchio -->|"rebuts · upheld"| A2e
+  chk_VID_01_score -.->|"undermines · partly"| A2e
   A3d -.->|"undermines · partly"| A3
   A4b -.->|"undermines · untested"| A4
   A4e ==>|"undercuts · partly"| A4
@@ -80,7 +82,7 @@ flowchart RL
 
 ## A · MITTENS rate limit (part 2)
 
-Objections to A5, A3a, A3x, A3b, A3z, A3x1, A4c, A4e, A4g, A5a, A5b.
+Objections to A5, A3a, A3x, A3b, A3z, A3x1, A4c, A4d, A4e, A4g, A5a.
 
 ```mermaid
 flowchart RL
@@ -95,23 +97,22 @@ flowchart RL
   A3x1["A3x1: Yoo 2025 reports 327 Mb average SDR per lineage; the 410 Mb …"]:::literature
   A3z["A3z: Day 2026-10-11: Yoo 2025 implies 410 million total genomic d…"]:::day
   A4c["A4c: Duffy (presenting Day): at 80% selection efficiency the fixa…"]:::ally
+  A4d["A4d: MITTENS 3.0 drops d and uses 252,000 nominal generations"]:::day
   A4e["A4e: Hancock: overlapping generations are handled by effective si…"]:::critic
   A4g["A4g: Day: standard fixation models (Wright-Fisher and Kimura's re…"]:::day
   A5["A5: The LTEE rate does not transfer to humans: the human genome …"]:::critic
   A5a["A5a: Hössjer: scaling the MITTENS bound for mutation rate and gen…"]:::ally
   A5b["A5b: KITTENS: the 1.075M shortfall factors into 94,000 (mutation-…"]:::critic
   A5d["A5d: Hypermutators: a 100x mutation rate gives only 8.5x–17x fast…"]:::day
-  A5e["A5e: A rate derived from human parameters alone gives one fixatio…"]:::day
   A5g["A5g: Day: the E. coli study is cited for its fixation rate, not i…"]:::day
   B3["B3: k differs from mu: the family of Day k/mu values (N/Ne, 0.74…"]:::day
-  chk_A_sim["chk:A-sim: LTEE scaling simulation"]:::audit
-  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
   chk_GAP07["chk:GAP07: indel/SV event counts from germline rates (k = μ) vs Day's b…"]:::audit
   chk_GAP07b["chk:GAP07b: direct count of divergence events from the UCSC hg38–panTro6…"]:::audit
   chk_GAP07c["chk:GAP07c: share of human–chimp divergent sites still polymorphic in hu…"]:::audit
   chk_L7["chk:L7: readings of Yoo 2025 SI sheets 14/19/24 that give 410 M; bas…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
   chk_R2_fidelity["chk:R2-fidelity: R1–R2 fidelity checks of cited sources"]:::audit
+  chk_VID_01_score["chk:VID-01-score: scoring of the Gutsick Gibbon panel (AqC1ZM4icms, GGR-01..GG…"]:::audit
   x_day_dembski_scaling["x:day-dembski-scaling: Day's answer to Dembski's scaling question (DE-01)"]:::day
   A5g -.->|"undermines · not_upheld"| A5
   x_day_dembski_scaling -.->|"undermines · partly"| A5
@@ -129,21 +130,17 @@ flowchart RL
   chk_L7 -.->|"undermines · partly"| A3x1
   A4e -.->|"undermines · untested"| A4c
   chk_R2_arith ==>|"undercuts · partly"| A4c
+  chk_VID_01_score ==>|"undercuts · partly"| A4d
   B3 -.->|"undermines · untested"| A4e
   A4e -.->|"undermines · untested"| A4g
   A4e -.->|"undermines · partly"| A4g
   A5d -.->|"undermines · partly"| A5a
   chk_R2_arith -.->|"undermines · upheld"| A5a
-  A5d -.->|"undermines · partly"| A5b
-  A5e -->|"rebuts · untested"| A5b
-  chk_A_sim -.->|"undermines · partly"| A5b
-  chk_R2_arith -.->|"undermines · partly"| A5b
-  chk_GAP04 -.->|"undermines · partly"| A5b
 ```
 
 ## A · MITTENS rate limit (part 3)
 
-Objections to A5c, A5d, A5e, A5f, A5h, A.
+Objections to A5b, A5c, A5d, A5e, A5f, A5h, A.
 
 ```mermaid
 flowchart RL
@@ -164,7 +161,14 @@ flowchart RL
   G2["G2: Hancock: the formula assumes each mutation must arise and go…"]:::critic
   G2h["G2h: Hancock: MITTENS's F_max contains no mutation input and no s…"]:::critic
   H9["H9: Kimura and Ohta (1969) established that the expected time to…"]:::day
+  chk_A_sim["chk:A-sim: LTEE scaling simulation"]:::audit
+  chk_GAP04["chk:GAP04: Weissman–Barton finite-map limit vs F2 and human requirement…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
+  A5d -.->|"undermines · partly"| A5b
+  A5e -->|"rebuts · untested"| A5b
+  chk_A_sim -.->|"undermines · partly"| A5b
+  chk_R2_arith -.->|"undermines · partly"| A5b
+  chk_GAP04 -.->|"undermines · partly"| A5b
   chk_R2_arith -.->|"undermines · partly"| A5c
   A2h ==>|"undercuts · partly"| A5d
   chk_R2_arith ==>|"undercuts · upheld"| A5d
@@ -729,7 +733,7 @@ flowchart RL
 
 ## G · Bernoulli Barrier (part 1)
 
-Objections to G1, G2, G2b, G2g, G3, G4, Ga.
+Objections to G1, G2, G2b, G2g, G3, G4, G6, Ga.
 
 ```mermaid
 flowchart RL
@@ -755,6 +759,7 @@ flowchart RL
   G3b["G3b: Day: either the specific fixations matter (Darwillion applie…"]:::day
   G4["G4: Darwillion: the reciprocal of the probability of the pre-spe…"]:::day
   G4b["G4b: Day: McCarthy's use of a 40,000-generation fixation time inc…"]:::day
+  G6["G6: Gutsick Gibbon panel: the standard population-genetics answe…"]:::critic
   Ga["Ga: P(all) = p^n: 0.02^20,000,000 ≈ 10^−34,000,000 for 20 millio…"]:::day
   H["H: Haldane's cost of selection caps mammals at about one benefi…"]:::day
   chk_D1["chk:D1: sequence-space spike: alternatives per needed change from RN…"]:::audit
@@ -762,6 +767,7 @@ flowchart RL
   chk_G2c["chk:G2c: forward simulation of unlinked neutral diversity under sweep…"]:::audit
   chk_H3["chk:H3: cost of selection at human scale: hard adaptive treadmill, s…"]:::audit
   chk_R2_arith["chk:R2-arith: R2 arithmetic recomputations recorded in claim files and the…"]:::audit
+  rev_R4_VID_01_score_steelman_day["rev:R4-VID-01-score-steelman-day: review #84, Day-side steelman (VID-01-score); three-review t…"]:::audit
   x_day_TNSL["x:day-TNSL: 'They Never Stop Lying' ¶4: none of Day's math assumes seria…"]:::day
   G2 -->|"rebuts · partly"| G1
   G2d -.->|"undermines · partly"| G1
@@ -783,6 +789,7 @@ flowchart RL
   chk_R2_arith -.->|"undermines · partly"| G3
   chk_D1 -.->|"undermines · partly"| G3
   G3 ==>|"undercuts · upheld"| G4
+  rev_R4_VID_01_score_steelman_day ==>|"undercuts · upheld"| G6
   G2f ==>|"undercuts · partly"| Ga
   G3 ==>|"undercuts · upheld"| Ga
   chk_D1 ==>|"undercuts · partly"| Ga
@@ -808,6 +815,7 @@ flowchart RL
   G3b["G3b: Day: either the specific fixations matter (Darwillion applie…"]:::day
   G4b["G4b: Day: McCarthy's use of a 40,000-generation fixation time inc…"]:::day
   G5["G5: Matev: the Bernoulli Barrier's coefficient of variation fall…"]:::critic
+  G6["G6: Gutsick Gibbon panel: the standard population-genetics answe…"]:::critic
   Gc["Gc: The active zone limits the pipeline to about 230 simultaneou…"]:::day
   chk_D1["chk:D1: sequence-space spike: alternatives per needed change from RN…"]:::audit
   chk_F2["chk:F2: multi-locus interference"]:::audit
@@ -833,6 +841,7 @@ flowchart RL
   chk_R2_arith -.->|"undermines · partly"| G
   chk_G1 ==>|"undercuts · partly"| G
   G5 ==>|"undercuts · upheld"| G
+  G6 ==>|"undercuts · untested"| G
 ```
 
 ## H · Cost of selection
@@ -1263,7 +1272,7 @@ flowchart RL
 
 ## Other: objections to audit checks and unregistered items (part 5)
 
-Objections to chk:Q93close, chk:R2-term3-ratio, chk:RHclose, chk:RHclose-critics, chk:X1, chk:XT, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
+Objections to chk:Q93close, chk:R2-term3-ratio, chk:RHclose, chk:RHclose-critics, chk:VID-01-score, chk:X1, chk:XT, x:darwinzdf42-hitchhiking, x:dawkins-weasel, x:eugine-sqrtN.
 
 ```mermaid
 flowchart RL
@@ -1281,11 +1290,16 @@ flowchart RL
   chk_R2_term3_ratio["chk:R2-term3-ratio: R2 note comparing Term 3 with Haldane + d (7.7×, corrected t…"]:::audit
   chk_RHclose["chk:RHclose: the owner's 'remotely close' RH rule applied to Day's Q96 (C…"]:::audit
   chk_RHclose_critics["chk:RHclose-critics: the same rule applied to critic statements: Hancock RH-15 (H…"]:::audit
+  chk_VID_01_score["chk:VID-01-score: scoring of the Gutsick Gibbon panel (AqC1ZM4icms, GGR-01..GG…"]:::audit
   chk_X1["chk:X1: arithmetic and internal-validity audit of every numeric crit…"]:::audit
   chk_XT["chk:XT: cross-tool replication of the k-vs-mu and fixation-time resu…"]:::audit
   rev_R4_Q93close_combined["rev:R4-Q93close-combined: review #81, combined (Q93close); low-stakes tier"]:::audit
   rev_R4_RHclose_combined["rev:R4-RHclose-combined: review #62, combined (RHclose); low-stakes tier"]:::audit
   rev_R4_RHclose_critics_combined["rev:R4-RHclose-critics-combined: review #63, combined (RHclose-critics); low-stakes tier"]:::audit
+  rev_R4_VID_01_score_R9_check["rev:R4-VID-01-score-R9-check: review #86, fresh-reviewer check of lead ruling R-9 (the gov…"]:::audit
+  rev_R4_VID_01_score_correctness["rev:R4-VID-01-score-correctness: review #83, correctness (VID-01-score); three-review tier by…"]:::audit
+  rev_R4_VID_01_score_steelman_critic["rev:R4-VID-01-score-steelman-critic: review #85, critic-side steelman (VID-01-score); three-revie…"]:::audit
+  rev_R4_VID_01_score_steelman_day["rev:R4-VID-01-score-steelman-day: review #84, Day-side steelman (VID-01-score); three-review t…"]:::audit
   rev_R4_X1_correctness["rev:R4-X1-correctness: review #12, correctness (X1)"]:::audit
   rev_R4_X1_rule_audit["rev:R4-X1-rule-audit: review #12, blind audit of the verdict rule (X1)"]:::audit
   rev_R4_X1_steelman_critic["rev:R4-X1-steelman-critic: review #12, critic-side steelman (X1)"]:::audit
@@ -1301,6 +1315,11 @@ flowchart RL
   rev_R4_RHclose_combined ==>|"undercuts · upheld"| chk_RHclose
   rev_R4_RHclose_combined ==>|"undercuts · partly"| chk_RHclose
   rev_R4_RHclose_critics_combined ==>|"undercuts · upheld"| chk_RHclose_critics
+  rev_R4_VID_01_score_steelman_day ==>|"undercuts · upheld"| chk_VID_01_score
+  rev_R4_VID_01_score_steelman_day ==>|"undercuts · upheld"| chk_VID_01_score
+  rev_R4_VID_01_score_correctness ==>|"undercuts · upheld"| chk_VID_01_score
+  rev_R4_VID_01_score_steelman_critic ==>|"undercuts · upheld"| chk_VID_01_score
+  rev_R4_VID_01_score_R9_check ==>|"undercuts · upheld"| chk_VID_01_score
   rev_R4_X1_correctness ==>|"undercuts · upheld"| chk_X1
   rev_R4_X1_steelman_day ==>|"undercuts · upheld"| chk_X1
   rev_R4_X1_steelman_critic ==>|"undercuts · upheld"| chk_X1
@@ -1325,10 +1344,10 @@ This uses grounded semantics (Dung 1995): an argument is *accepted* when every a
 | Side | as argued: accepted / rejected / undecided | audited, strict: accepted / rejected / undecided | audited, lenient: accepted / rejected / undecided |
 |---|---|---|---|
 | literature (24) | 18 / 6 / 0 | 24 / 0 / 0 | 18 / 6 / 0 |
-| day (101) | 40 / 60 / 1 | 69 / 32 / 0 | 45 / 56 / 0 |
+| day (102) | 41 / 60 / 1 | 70 / 32 / 0 | 46 / 56 / 0 |
 | ally (13) | 2 / 11 / 0 | 10 / 3 / 0 | 5 / 8 / 0 |
-| critic (63) | 37 / 25 / 1 | 62 / 1 / 0 | 46 / 17 / 0 |
-| audit (156) | 101 / 55 / 0 | 101 / 55 / 0 | 101 / 55 / 0 |
+| critic (64) | 37 / 26 / 1 | 62 / 2 / 0 | 46 / 18 / 0 |
+| audit (161) | 105 / 56 / 0 | 105 / 56 / 0 | 105 / 56 / 0 |
 
 **Support is not modelled by Dung's framework.** A claim can be *accepted* (no surviving direct objection) while claims it rests on are rejected. The last column lists those rejected supports (lenient reading), so read both together. ROOT, for instance, draws few direct objections; most objections target its supports.
 
@@ -1357,6 +1376,7 @@ Load-bearing claims are in **bold**.
 | A4 | day | rejected | accepted | rejected | A4g |
 | A4b | critic | accepted | accepted | accepted | – |
 | A4c | ally | rejected | accepted | rejected | A4 |
+| A4d | day | accepted | accepted | accepted | – |
 | A4e | critic | rejected | accepted | accepted | – |
 | A4f | critic | accepted | accepted | accepted | – |
 | A4g | day | accepted | accepted | rejected | – |
@@ -1504,6 +1524,7 @@ Load-bearing claims are in **bold**.
 | G4 | day | accepted | rejected | accepted | Ga |
 | G4b | day | rejected | accepted | rejected | – |
 | G5 | critic | accepted | accepted | accepted | – |
+| G6 | critic | rejected | rejected | rejected | – |
 | Ga | day | rejected | rejected | rejected | G3 |
 | Gc | day | rejected | accepted | rejected | G |
 | **H** | day | rejected | rejected | rejected | H5, H8, H9 |
@@ -1589,6 +1610,7 @@ Load-bearing claims are in **bold**.
 | chk:RHclose | audit | rejected | rejected | rejected | – |
 | chk:RHclose-critics | audit | rejected | rejected | rejected | – |
 | chk:ROOT-M-survey | audit | accepted | accepted | accepted | – |
+| chk:VID-01-score | audit | rejected | rejected | rejected | – |
 | chk:X1 | audit | rejected | rejected | rejected | – |
 | chk:XT | audit | rejected | rejected | rejected | – |
 | rev:R4-A2e-alpha-correctness | audit | accepted | accepted | accepted | – |
@@ -1668,6 +1690,10 @@ Load-bearing claims are in **bold**.
 | rev:R4-Q93close-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-RHclose-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-RHclose-critics-combined | audit | accepted | accepted | accepted | – |
+| rev:R4-VID-01-score-R9-check | audit | accepted | accepted | accepted | – |
+| rev:R4-VID-01-score-correctness | audit | accepted | accepted | accepted | – |
+| rev:R4-VID-01-score-steelman-critic | audit | accepted | accepted | accepted | – |
+| rev:R4-VID-01-score-steelman-day | audit | accepted | accepted | accepted | – |
 | rev:R4-X1-correctness | audit | accepted | accepted | accepted | – |
 | rev:R4-X1-rule-audit | audit | accepted | accepted | accepted | – |
 | rev:R4-X1-steelman-critic | audit | accepted | accepted | accepted | – |

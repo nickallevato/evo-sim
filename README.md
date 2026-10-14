@@ -8,7 +8,7 @@
 **An open, numerical audit of Vox Day's *Probability Zero* / MITTENS argument and of his critics, as the groundwork for a simulator you can tune yourself.**
 
 ![phase](https://img.shields.io/badge/phase-research%20(R4%20of%205)-orange)
-![claims](https://img.shields.io/badge/claims%20mapped-233-blue)
+![claims](https://img.shields.io/badge/claims%20mapped-234-blue)
 ![checks](https://img.shields.io/badge/checks%20run-57%20(10%20demonstrably%20blind)-blue)
 ![reviews](https://img.shields.io/badge/reviews-same--model%2C%20not%20blind-critical)
 ![sides](https://img.shields.io/badge/scrutiny-both%20sides-blueviolet)
@@ -29,7 +29,7 @@ Read this before trusting any number below. This audit is run by an AI system (C
 | # | Gap | Why it matters | Mitigation | Status |
 |---|---|---|---|---|
 | 1 | **Reviews are not independent.** All 65 reviews, steelmen and "re-derivations" are by the same model family, not blind, and the check's author decides what to do with them. One blocker was ever raised. | Shared blind spots and shared priors about evolution cannot be caught this way. | A planted-error test of the reviews; blind re-derivation of ten load-bearing nodes; a review packet for a different model family; a human population geneticist and one reader from each camp. | Packet and reviewer brief drafted ([outreach](docs/research/outreach/)); nothing sent; needs the owner |
-| 2 | **The tallies overstate what was checked.** 58 of the 131 "holds" sit on claims with no reviewed check; "contested" is 115 of 173 decided external verdicts; only 14 of 233 claims pass all three verdict columns at once. | A count of verdicts reads as a score. It is not one. | An `unexamined` status, a four-way split of "contested", and a conjunction flag; comparative Day-versus-critic rates and p-values already removed. | Rates removed; the rest are written proposals awaiting go-ahead |
+| 2 | **The tallies overstate what was checked.** 58 of the 133 "holds" sit on claims with no reviewed check (the 58 not recomputed 2026-10-14; the 133 and the 116 are from the lint); "contested" is 116 of 173 decided external verdicts; only 14 of 234 claims pass all three verdict columns at once. | A count of verdicts reads as a score. It is not one. | An `unexamined` status, a four-way split of "contested", and a conjunction flag; comparative Day-versus-critic rates and p-values already removed. | Rates removed; the rest are written proposals awaiting go-ahead |
 | 3 | **Pre-registration is weaker than the word suggests.** Of 57 checks run, 10 are demonstrably blind (registration clearly before results), 6 criterion-only, 3 reproductions, 18 single commits and 20 unknown. | "Pre-registered" should mean the prediction could have failed. | Every check now carries one of those labels ([table](research/checks/PREREG-STATUS.md)); new checks get a pre-run design review and pushed registration before any run. | Labels done; applied to L1c and FMnull |
 | 4 | **Half the external verdicts rest on models.** 26 of 52 decided external verdicts rest on simulation or standard theory rather than independent data, and so do seven of the eight load-bearing ones. | Using mainstream theory to judge a critic of mainstream theory can beg the question. | A recorded basis for every external verdict (data, literature, simulation, theory), enforced by lint; real-data checks queued (L1b, L1c, FMnull real-data arm). | Coded count done; field is a proposal; checks queued |
 | 5 | ***Probability Zero* itself has not been read.** The audit works from Day's posts and Zenodo papers. Paywalled papers and some platforms (X, Gab, Telegram) are also unread. | The book is the primary source. | Buy the book and re-extract a blind sample; list of paywalled papers for the owner. | Needs the owner |
@@ -88,7 +88,7 @@ A standing layer audits the method, not the sources: a third-party-style method 
 
 ## Scorecard so far
 
-<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 233 claims" width="760"></p>
+<p align="center"><img src="docs/img/verdicts.svg" alt="Verdict tallies across 234 claims" width="760"></p>
 
 *8 claims carry a reading-dependent verdict (12 fields) and 3 a reading-dependent rhetoric tag (15 reading-dependent verdicts in all, recounted 2026-10-13 from the claim files; rule RD, 2026-10-11); the tallies above show the value under the reading in which the quoted statement is most defensible (not the reading best for the speaker), and the other readings are in each claim file.*
 
@@ -272,7 +272,7 @@ Everything outstanding (compute and checks, criticality remediation, owner decis
 ```mermaid
 flowchart LR
   R0["R0<br/>Scaffold"]:::done --> R1["R1<br/>Corpus<br/>154 posts · 32 Zenodo<br/>37 papers · 48 critic/ally sources"]:::done
-  R1 --> R2["R2<br/>233 claims<br/>verbatim + sourced"]:::done
+  R1 --> R2["R2<br/>234 claims<br/>verbatim + sourced"]:::done
   R2 --> R3["R3<br/>Argument tree<br/>33 load-bearing nodes"]:::done
   R3 --> R4["R4<br/>Math resolution<br/>54 checks reviewed"]:::active
   R4 --> R5["R5<br/>Synthesis<br/>verdicts · sensitivity<br/>variable list"]:::todo

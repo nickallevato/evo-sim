@@ -50,6 +50,8 @@ New = dated after the last pass cut-off in the newest `refresh-*.md` (exact time
 ## 5. Hashing and verification
 `sha256sum` every saved file; record in the bib. For API snapshots hash the JSON. Machine-check quotes: normalise whitespace and curly quotes, then test `quote in text` (script in the 2026-10-09b session; 20 lines). Abstract-only items: quote only the abstract; say so. Extraction artefacts (lost superscripts) must be noted beside the quote.
 
+**Pin the harvest tool (EVO-76, 2026-10-14; closes correctness NOTE-6 of R4 VID-01-score).** `yt-dlp` is now pinned in `research/requirements.txt` at `==2026.8.19`, the version installed in the workstation venv for the VID-01 harvest (caption hashes in `bib-critics.md`). It has no hard dependencies and was installed `--no-deps`; keep it so. YouTube changes break extractors often, so a newer yt-dlp may be needed to fetch at all: if you upgrade, change the pin in the same commit and record the old and new version in the refresh file, because caption text and chunk boundaries (the `t=` locators) can differ between versions. Captions already filed are not re-fetched; the `t=` locators in `quotes-critics.md` refer to the files hashed in the bib, not to a fresh download.
+
 ## 6. Writing `refresh-<date>.md`
 Copy the structure of `refresh-2026-10-09b.md`: scope paragraph; bottom line (bullets: Day, Zenodo, critics, social media, backfill, literature); a mermaid flowchart; "What was checked" table (source, result new/unchanged/inaccessible); Day table and Critics table (item, quote ids, touches, type, proposed ids/defeater targets, flag); literature table; verdict flags for both sides; inaccessible list. Keep proposals symmetric.
 

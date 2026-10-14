@@ -6,3 +6,4 @@ pyyaml
 msprime
 tskit
 ViennaRNA==2.7.2
+yt-dlp==2026.8.19   # workstation harvest tool only (HOWTO-refresh.md sections 2 and 5); installed with --no-deps, it has no hard dependencies

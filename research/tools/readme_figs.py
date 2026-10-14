@@ -127,11 +127,11 @@ ax.set_title("H2 · hard-selection cap is ln R / D, not a flat 1/300", color=INK
 ax.legend(fontsize=8.5, loc="lower right")
 save(fig, "h2_persistence.svg")
 
-# 6. Verdict tallies (lint_research.py output on 2026-10-13 after R4 B2f, 233 claims; n/a verdicts not drawn)
+# 6. Verdict tallies (lint_research.py output on 2026-10-14 after R4 VID-01-score, 234 claims; n/a verdicts not drawn)
 tallies = {
-    "internal": [("holds", 132, ACC), ("non-sequitur", 18, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 52, "#525252")],
+    "internal": [("holds", 133, ACC), ("non-sequitur", 18, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 52, "#525252")],
     "fidelity": [("accurate", 44, ACC), ("partial", 39, "#eab308"), ("misread", 11, DAY), ("unverifiable", 58, "#525252"), ("pending", 10, "#3f3f46")],
-    "external": [("supported", 34, ACC), ("contested", 116, "#eab308"), ("contradicted", 17, DAY), ("untestable", 6, NEU), ("pending", 48, "#525252")],
+    "external": [("supported", 34, ACC), ("contested", 116, "#eab308"), ("contradicted", 17, DAY), ("untestable", 6, NEU), ("pending", 49, "#525252")],
 }
 fig, ax = plt.subplots(figsize=(7.2, 2.6))
 for i, (k, segs) in enumerate(tallies.items()):
@@ -219,7 +219,7 @@ def systems_diagram():
     xs = [20, 190, 360, 530, 700, 870]
     g.box(xs[0], 40, w, h, ["Sources", "Day · critics · literature", "(book not yet read)"], C_DAY)
     g.box(xs[1], 40, w, h, ["Verbatim quotes", "locator + date + sha256", "no full texts in git"], C_CORE)
-    g.box(xs[2], 40, w, h, ["Claims (233)", "3 verdicts each:", "internal · fidelity · external"], C_CORE)
+    g.box(xs[2], 40, w, h, ["Claims (234)", "3 verdicts each:", "internal · fidelity · external"], C_CORE)
     g.box(xs[3], 40, w, h, ["Argument tree + map", "branches A-H, defeaters,", "lineage, standard forms"], C_CORE)
     g.box(xs[4], 40, w, h, ["Synthesis (R5)", "sensitivity table,", "aggregation + stopping rule"], C_CRIT)
     g.box(xs[5], 40, 120, h, ["Simulator spec", "variable list", "(next phase)"], C_CRIT)

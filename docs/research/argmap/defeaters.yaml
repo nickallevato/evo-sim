@@ -6214,3 +6214,129 @@
   note: 'Applied in fix pass de3c1a2: readings recorded on B1e, B2f kept as the check id only; one wrong count corrected (B1 has three Statement quotes); the two conventions for within 25% stated (x* = 44.2 and 34.3).'
   hierarchy_edge: false
 
+
+- id: d476
+  attacker: chk:VID-01-score
+  target: A4d
+  target_part: inference
+  type: undercutting
+  by: ['audit (scoring of the Gutsick Gibbon panel, GGR-13 / GGR-14)']
+  first_date: 2026-10-14
+  locator: research/checks/results/R4-VID-01-score.md (Q1 Readings table; Review resolution)
+  audit_status: partly
+  audit_basis: 'Reading-dependent (RD), but A4d itself is SCOPED, not reading-dependent (RD line 198), so its field does not move. The critic statement GGR-13/GGR-14 ("he''s still using the de coefficient in mittens") is graded under the governing reading (c), 3.0 including the Appendix D citation: GGR-13 core accurate (an overlap correction survives by citation inside the section 8.6 rate, in effective generations), GGR-14 elaboration contradicted (252,000/27,600 = 9.13 against a printed 8; 3.0 contains no d term and applies no d multiplier). Reading (b) (the body only) grades GGR-13 contradicted; reading (a) (the pre-3.0 line of argument) is an extended reading that may not govern (RD line 202) and is recorded with its own verdict accurate. Partial under (c).'
+  counter: [d477]
+  note: 'Critic-side, both readings recorded. A4d internal holds stays (verified against a re-fetched, hash-matched 3.0). The audits own error that this node corrects: the earlier wording clean of the d coefficient is withdrawn (third standing audit error against the critics from this source).'
+  hierarchy_edge: false
+
+- id: d477
+  attacker: rev:R4-VID-01-score-steelman-day
+  target: chk:VID-01-score
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #84, steelman-Day section)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-VID-01-score-steelman-day.md (MAJOR-1, MAJOR-2)
+  audit_status: upheld
+  audit_basis: 'Day-side, same reading dependence as d476: score GGR-13 and GGR-14 as separate propositions; GGR-14 includes the section 8.6 sentence Applied to 252,000 generations provides 8 achievable fixations (main:653-654), so the elaboration is contradicted under (b) and (c) alike, and the d-cut count (113,400/27,600 = 4.11) is off by a factor of two against the printed 8. The regrade of (c) to contradicted was declined by the lead (R-8).'
+  counter: []
+  note: 'Credit to Day, adopted in the fix pass 88c444d under R-8.'
+  hierarchy_edge: false
+
+- id: d478
+  attacker: chk:VID-01-score
+  target: A2e
+  target_part: P1
+  type: undermining
+  by: ['audit (scoring of the panel, GGR-42)', 'R4 G1']
+  first_date: 2026-10-14
+  locator: research/checks/results/R4-VID-01-score.md (Q3 refinement; Open 3)
+  audit_status: partly
+  audit_basis: 'Critic-side, against the section 2 bullet No recombination overhead (A2e Stated, p.4; main:128-131 in the re-fetched 3.0). GGR-42 attributes to Day that recombination makes fixation slower; accurate. R4 G1 line 163, the free row: pair ratio 1.029 +/- 0.022 x p^2 (free recombination is Day''s own stipulation) gives independence. Qualifications carried with it (R-12): the only pre-registered linkage row failed (line 172: predicted 0.5-0.95, got 1.015 +/- 0.022 at 1 M); the tighter maps 0.842 / 0.652 are labelled post hoc (lines 165-166); about 4,500 loci/M is an interpolation, not a run (lines 173-174); the bullet asserts linkage retention, not what the pairwise ratio tests.'
+  counter: [d479]
+  note: 'Critic-side. Extends d015 / d181 (clonal interference makes no recombination overhead a handicap). No field moves.'
+  hierarchy_edge: false
+
+- id: d479
+  attacker: rev:R4-VID-01-score-steelman-day
+  target: chk:VID-01-score
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #84, steelman-Day section)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-VID-01-score-steelman-day.md (MAJOR-2)
+  audit_status: upheld
+  audit_basis: 'Day-side counter to d478: free recombination is stipulated by Day and independence at 1.029 +/- 0.022 is the critics'' half only; the sole pre-registered linkage test failed; the tighter maps are post hoc; no run exists at human density; 3.0 already internalises clonal interference (main:13, 43, 65, 109, 272, 378, 573, 689; addendum:35) and states that fixation is bottlenecked by sweep dynamics, not mutation supply (section 9). The cost to Day stays: R4 G1 line 173, a clonal-derived rate is plausibly a lower bound for a recombining population.'
+  counter: []
+  note: 'Credit to Day, applied in the fix pass 88c444d under R-12 (the refinement weakened, not deleted).'
+  hierarchy_edge: false
+
+- id: d480
+  attacker: rev:R4-VID-01-score-steelman-day
+  target: G6
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #84, steelman-Day section, MAJOR-3)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-VID-01-score-steelman-day.md (MAJOR-3); research/checks/results/R4-VID-01-score.md (Q4, Open 10)
+  audit_status: upheld
+  audit_basis: 'Day-side defeater (Open 10): R4 VID-01-score Q4 shows the Bernoulli Barrier is absent from MITTENS 3.0 (Bernoulli occurs once, a rhetorical clause, undefined and underived; Averaging, averaging problem, law of large numbers, polygenic occur 0 times), so the panel''s answers (GGR-41..GGR-44, the infinitesimal model among them) address the January 2026 Zenodo paper (Z18167588, claim G), not the headline argument of the current paper. Does not touch G external contested.'
+  counter: []
+  note: 'Credit to Day. Ge internal holds records the omission; Ge external stays pending (the contested move is proposed, not applied).'
+  hierarchy_edge: false
+
+- id: d481
+  attacker: G6
+  target: G
+  target_part: inference
+  type: undercutting
+  by: ['Gutsick Gibbon panel (video AqC1ZM4icms, GGR-43, GGR-44)']
+  first_date: 2026-10-14
+  locator: research/checks/results/R4-VID-01-score.md (Q3); docs/research/sources/quotes-critics.md (GGR-43, GGR-44)
+  audit_status: untested
+  audit_basis: 'G6 internal pending: the infinitesimal-model answer is graded on point (top of the band) against GGR-19 but gives no derivation and never touches the CV-to-variance substitution; the fitness-variance angle is different from G5 (allele-count side). Not scored.'
+  counter: [d480]
+  note: 'Critic-side, created at integration of R4 VID-01-score; G6 carries no verdict.'
+  hierarchy_edge: true
+
+- id: d482
+  attacker: rev:R4-VID-01-score-correctness
+  target: chk:VID-01-score
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #83)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-VID-01-score-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 4 MAJOR (a struck attribution reasserted; the narration cannot corroborate reading (a); reading (a) governed A4d against RD line 202; Q4 did not name the Averaging Problem gloss), 5 MINOR, 7 NOTE; MINOR-5 declined (R-11)'
+  counter: []
+  note: 'Applied in the fix pass 88c444d under R-9, R-10, R-11 and R-13.'
+  hierarchy_edge: false
+
+- id: d483
+  attacker: rev:R4-VID-01-score-steelman-critic
+  target: chk:VID-01-score
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #85)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-VID-01-score-steelman-critic.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 5 MAJOR (reading (c) keeps partial; discriminates nothing overstated; the third audit error against the critics; the Q3 no-move ground corrected; Q2 criterion stricter than the operative contested, not rescored, R-14), 5 MINOR, 6 NOTE'
+  counter: []
+  note: 'Applied in the fix pass 88c444d under R-8, R-13, R-14 and R-15; band 3d checked post hoc in 83f4f4d.'
+  hierarchy_edge: false
+
+- id: d484
+  attacker: rev:R4-VID-01-score-R9-check
+  target: chk:VID-01-score
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #86, fresh reviewer, ruling R-9 only)']
+  first_date: 2026-10-14
+  locator: research/checks/results/REVIEW-R4-VID-01-score-R9-check.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 0 MAJOR, 1 MINOR (stale self-locators), 2 NOTE (the band 1b of the registration already named (c) as governing; partly accurate is not fidelity vocabulary); R-9 sound, applied faithfully, nothing moved beyond Ge'
+  counter: []
+  note: 'Applied at integration 2026-10-14: locators dropped, partial wording normalised.'
+  hierarchy_edge: false

@@ -78,7 +78,7 @@ is **struck as governing** while keeping its verdict.
 | (b) | the MITTENS 3.0 body | no lowercase `d` token, no 0.45, 252,000 used uncut, including at s8.6 ("Applied to 252,000 generations provides 8 achievable fixations", main:653-654) | contradicted | contradicted |
 | (c) — **governs among in-scope readings** | 3.0 as it stands, **including what it incorporates by citation** | 3.0 has no Appendix D of its own; s8.6 of the body cites *Day and Athos 2025*, Appendix D, for a rate "calculated ... using Kimura's fixation time formula and the **Bio-Cycle correction for overlapping generations**", quoted in "**effective generations**" - the unit `C2-bio-cycle-d.md` defines as `g_eff = d x g_nominal`. "effective generation" occurs exactly once in body and addendum, main:653 | **accurate** as to that step: the d correction is still in play in 3.0, inside the 27,600 rate | **contradicted**: `450,000`, `225,000`, `202,500`, `0.45` are 0 hits and 252,000 is never cut |
 
-**Governing reading: (c)**, giving the quoted statement the headline grade **`partly accurate`** -
+**Governing reading: (c)**, giving the quoted statement the headline grade **`partial`** (fidelity vocabulary; "partly accurate" in the R-8 wording, normalised at integration) -
 accurate core, inaccurate elaboration. Rule RD line 202: "Extended readings (a different object, or
 a wider claim) are reported with their own verdicts but cannot set the verdict field or the headline
 tag." Reading (a) is a different object, so it is recorded above with its `accurate` verdict and is
