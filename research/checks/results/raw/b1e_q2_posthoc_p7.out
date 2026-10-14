@@ -1,0 +1,9 @@
+x | rel(exact decimal x) | registered printed rel | first-order prediction | prediction/printed
+0.05 | 2.17e-68 | 1.09e-14 | 1.09e-14 | 0.9976 | x rounded in binary
+0.25 | 1.12e-138 | 1.12e-138 | 0.0 | 0.0 | x float-exact
+1 | 7.08e-157 | 7.08e-157 | 0.0 | 0.0 | x float-exact
+4 | 1.07e-160 | 1.07e-160 | 0.0 | 0.0 | x float-exact
+5.04 | 1.41e-160 | 5.45e-18 | 5.45e-18 | 1.0 | x rounded in binary
+25.2 | 9.27e-161 | 3.59e-21 | 3.59e-21 | 1.001 | x rounded in binary
+H1 (all six <= 1e-30 with exact x): HOLDS
+H2 (first-order prediction within 1.1x of printed; 0 where x exact): HOLDS
