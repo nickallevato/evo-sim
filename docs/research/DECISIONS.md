@@ -223,3 +223,23 @@ a single combined PATCH is rejected with 409 "Issue follow-up blocked by unresol
 blockers". The gate was also audited task by task on this wake: of 36 blocked tasks, every
 lane head carries the token, and the one task that did not and would have started itself
 when `ph2` landed (EVO-77) now does.
+
+## 2026-10-14 — verdict scopes do not survive the tooling (lead ruling B-R20/B-R21)
+
+Every scope and qualifier this audit has attached to a verdict is a **YAML inline comment**
+in the claim front matter (A2e's `external: pending   # SUPERSEDED ... SCOPED ...` is the
+pattern). `lint_research.py` parses that block with `yaml.safe_load` (l.25-30), which
+discards comments. So the scope reaches no consumer: not the linter, not `hierarchy.yaml`,
+not the public board. Only the bare value travels. Found by the EVO-80 fix pass (its finding
+6g) and verified at the source by the lead before being recorded.
+
+**Standing rule.** A verdict value that carries a scope must also carry a machine-readable
+`verdict_scope:` entry keyed by field name; `lint_research.py` errors when a scoped value
+has none, and carries it into `hierarchy.yaml`; the board renders value and scope together
+or renders neither. Until that is in place, **no board publication may show B internal or
+A2e external**, and B internal's scoped `holds` may not be integrated — independently of
+what the B-R19 bounded check returns. A bare `holds` on a public page is a Day-favourable
+claim the audit does not make. The board as published today shows both fields as `pending`,
+which is bare and correct, so nothing public is currently wrong and nothing is being pulled.
+
+This is a tooling decision, not a verdict decision, so it is the lead's under D-28.
