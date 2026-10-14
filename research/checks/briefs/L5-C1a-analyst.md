@@ -50,6 +50,55 @@ result would move **C1a off `contested`**, or would license the C external field
 L5 deliberately withheld, this becomes load-bearing and takes **three reviews**. Report it;
 do not apply the move.
 
+## Lead ruling LC-R1..LC-R5 (Big Sim, 2026-10-14; written before the main run)
+
+The registration (`l5_c1a_randsnp.py` s5, commit `1c6e983`) left one question to the lead:
+L-R8 made reading (i) governing for the *"not obscure"* clause but did not rule **which
+comparator governs the "favor detecting" clause**. Ruling it now, with no result in hand, is
+the only time it can be ruled without fitting it to the sign. D-24.
+
+**LC-R1. Within reading (iv), the governing comparator is R, the unascertained SNP panel.**
+Not (ii) random base pairs, not (iii) whole-genome data. Day's subject is *"such bias"* — a
+selection criterion — and the counterfactual to a criterion is the same object with the
+criterion removed and everything else held: same site count, map density, coverage model,
+samples. That is R by construction (s2). Reading (ii) confounds the ascertainment with
+*being an SNP panel at all*, which Day does not assert and no critic disputes.
+*Day-side counter, recorded:* the claim file's registered wording is "a random **site**
+sample", which reads toward (ii) — but that wording is the audit's own paraphrase, and an
+audit-written gloss may not fix the baseline against the author. The check prints the (ii)
+cross-check `rho_R0` anyway, so the Day-side number exists either way.
+
+**LC-R2. The clause splits, and the "strengthens" inference goes with "favor".** L-R8 stands:
+(i) governs *"not obscure"*. The *"favor detecting"* clause and the sentence it feeds — *"The
+absence of recent fixations despite this bias strengthens our conclusion"* — take the
+comparative reading, i.e. (iv) under LC-R1. Reason: that inference has no force on the
+absolute reading. A bias that merely fails to obscure adds nothing to a null result; only a
+bias that inflates the expected count relative to an unbiased design makes an observed zero
+*stronger* evidence. Rule C cuts this way, not against it: the comparative reading is the one
+on which Day's paragraph is a real argument rather than a truism.
+
+**LC-R3. A CRITIC band does not by itself take C1a off `contested`.** This overrides the s5
+proposal "C1a external contested -> contradicted (scoped)". Under rule RD, a result that
+contradicts the *"favor"* clause while (i) still carries Day's sign for *"not obscure"* leaves
+the statement **reading-dependent**: the field stays `contested`, and the Readings table
+carries (i) supported / (ii) supported / (iii) wrong / (iv) contradicted, with the comment
+naming the clause split and the scope (selection-driven completions, Day's zero-reported
+statistic, actual panel design). The *"strengthens"* inference is separately recorded as
+unsupported under LC-R2. A DAY band is a different matter: it aligns (i), (ii) and (iv), and
+a `contested -> supported` move is then on the table for the operator and the lead.
+
+**LC-R4. Escalation is retained on DAY *or* CRITIC, whether or not the field value moves.**
+LC-R3 would otherwise switch the escalation clause off for CRITIC by a side effect of my own
+ruling, which is not a reason to review a pivot result less. Either band changes the Readings
+table of the C branch's pivot: **three reviews** (correctness, steelman-Day, steelman-critic,
+separate agents, MA-21/O-26), unless the band is SENSITIVE under s5 (a)-(e), in which case it
+moves nothing and the combined review stands.
+
+**LC-R5. What would overturn LC-R1/LC-R2.** A located Day source that states the baseline
+explicitly; an owner decision; or a reviewer showing that the *"despite this bias"* sentence
+does not do inferential work in s9.4 of Z18525185 — the fresh reviewer is asked to attack
+LC-R2 first, then LC-R1.
+
 ## Files you may write
 
 - `research/checks/l5_c1a_randsnp.py` (pre-registered, committed before the run; comparator
