@@ -27,8 +27,8 @@ Limits of this table, all of which apply to every row:
 | Label | Checks |
 |---|---|
 | blind | 15 |
-| criterion-only | 6 |
-| reproduction | 3 |
+| criterion-only | 5 |
+| reproduction | 4 |
 | single-commit | 18 |
 | unknown | 20 |
 | registered, not run | 0 |
@@ -95,7 +95,7 @@ Limits of this table, all of which apply to every row:
 | L7 | low | `l7_410m_accounting.py` | `5b44f3d` | `6ca69d3` | 16 |  | `4793761` | criterion-only | R4-L7.md l.14: sheet 14 and 19 values "were seen while deriving the readings" (R1 partly informed) |
 | B9 | low | `b9_relaxed_load.py` | `e95f0d3` | `c7a1f12` | 51 |  | `c7a1f12` | criterion-only | docstring l.6-9: "DISCLOSURE ... The numbers below are known in advance" |
 | RHclose | low | `rhclose.py` | `7185f1e` | `0cdc47d` | 84 |  | `0cdc47d` | criterion-only | docstring l.9-13: numbers "ALREADY KNOWN from R4-B2"; "not blind predictions" |
-| A2e-alpha addendum (Uricchio) | low | `a2e_alpha_uricchio.py` | `7d68de9` | `2b5e319` | 21 |  |  | criterion-only | docstring l.3: "POST HOC LABEL: the abstract value ... was already known" |
+| A2e-alpha addendum (Uricchio) | low | `a2e_alpha_uricchio.py` | `7d68de9` | `2b5e319` | 21 |  |  | reproduction | post hoc docstring correction (EVO-71, A-R7): Table 1, its HPDs and the counts were filed at a44767f, 33 min before registration; only the milestone-13 trigger (e68816e) predates the table |
 | RHclose-critics | low | `rhclose_critics.py` | `8aef421` | `a48ac8a` | 74 |  | `a48ac8a` | criterion-only | docstring l.17: "DISCLOSURE (mandatory).  NOT BLIND." |
 | GAP05 | low | `gap05_slightly_deleterious.py` | `b59f2e5` | `314a743` | 36 |  | `314a743` | criterion-only | docstring l.6-7: predictions "NOT blind to the DFE" |
 | L1b | load-bearing | `l1b_t2t_dnds.py` | `0fe3c7f` | `c168b65` | 139940 | 139931 |  | blind |  |

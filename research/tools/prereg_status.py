@@ -100,7 +100,7 @@ HAND = {
     "RHclose": ("criterion-only", "docstring l.9-13: numbers \"ALREADY KNOWN from R4-B2\"; \"not blind predictions\""),
     "RHclose-critics": ("criterion-only", "docstring l.17: \"DISCLOSURE (mandatory).  NOT BLIND.\""),
     "GAP05": ("criterion-only", "docstring l.6-7: predictions \"NOT blind to the DFE\""),
-    "A2e-alpha addendum (Uricchio)": ("criterion-only", "docstring l.3: \"POST HOC LABEL: the abstract value ... was already known\""),
+    "A2e-alpha addendum (Uricchio)": ("reproduction", "post hoc docstring correction (EVO-71, A-R7): Table 1, its HPDs and the counts were filed at a44767f, 33 min before registration; only the milestone-13 trigger (e68816e) predates the table"),
     "L7": ("criterion-only", "R4-L7.md l.14: sheet 14 and 19 values \"were seen while deriving the readings\" (R1 partly informed)"),
 }
 # Partial disclosures that do not change the label; printed in the notes column.

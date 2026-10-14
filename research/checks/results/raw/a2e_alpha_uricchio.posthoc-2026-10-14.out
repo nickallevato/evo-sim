@@ -1,0 +1,66 @@
+sha256 3e7c44cb27fb68ffbe07b4ba2884dc31c448145c93d365142643e22c5b865977
+  OK   number of human-specific fixed substitutions in coding sequences since divergence with chimpanzees
+  OK   Fixed substitutions were identified by parsimony based on alignments of human (hg19 assembly), chimp
+  OK   estimate α = 0.135 in human protein-coding sequences, 72% of which is contributed by weakly-adaptive
+  OK   We show that in this adaptation regime α is reduced ≈ 25% by linkage genome-wide
+  OK   Deleterious polymorphism effectively makes the test overly conservative
+  OK   while our method nearly doubles the estimated human adaptation rate (to α ^ = 0.135 )
+  OK   Values in parentheses represent the area of 95% highest posterior density
+  OK   29925 38135 0.135 (0.096,0.17) 0.097 (0.0,0.21) 0.041 (0.0,0.13) VIPs 6249 10309 0.224 (0.17,0.28) 0
+  OK   for all 661 samples with African ancestry
+all quotes verified: True
+
+G1 190.6  G2 158.8   alpha* range 0.65-1.75%; lower HPD 0.096 / 0.0175 = 5.5 x
+
+| row | denominator | count | x G1 | x G2 | side (G1) |
+|---|---|---|---|---|---|
+| point 0.135 | N1 19,570 | 2642 | 13.86 | 16.64 | critic |
+| point 0.135 | N1-low 14,678 | 1982 | 10.40 | 12.48 | critic |
+| point 0.135 | N1-high 24,463 | 3303 | 17.33 | 20.80 | critic |
+| point 0.135 | N2 11,090 | 1497 | 7.85 | 9.43 | critic |
+| point 0.135 | N3 18,180 | 2454 | 12.88 | 15.46 | critic |
+| lower HPD 0.096 | N1 19,570 | 1879 | 9.86 | 11.83 | critic |
+| lower HPD 0.096 | N1-low 14,678 | 1409 | 7.39 | 8.87 | critic |
+| lower HPD 0.096 | N1-high 24,463 | 2348 | 12.32 | 14.79 | critic |
+| lower HPD 0.096 | N2 11,090 | 1065 | 5.59 | 6.70 | critic |
+| lower HPD 0.096 | N3 18,180 | 1745 | 9.16 | 10.99 | critic |
+| lower HPD x 0.75 (charity) | N1 19,570 | 1409 | 7.39 | 8.87 | critic |
+| lower HPD x 0.75 (charity) | N1-low 14,678 | 1057 | 5.54 | 6.66 | critic |
+| lower HPD x 0.75 (charity) | N1-high 24,463 | 1761 | 9.24 | 11.09 | critic |
+| lower HPD x 0.75 (charity) | N2 11,090 | 798 | 4.19 | 5.03 | critic |
+| lower HPD x 0.75 (charity) | N3 18,180 | 1309 | 6.87 | 8.24 | critic |
+| strong-only point 0.041 | N1 19,570 | 802 | 4.21 | 5.05 | critic |
+| strong-only point 0.041 | N1-low 14,678 | 602 | 3.16 | 3.79 | critic |
+| strong-only point 0.041 | N1-high 24,463 | 1003 | 5.26 | 6.32 | critic |
+| strong-only point 0.041 | N2 11,090 | 455 | 2.39 | 2.86 | critic |
+| strong-only point 0.041 | N3 18,180 | 745 | 3.91 | 4.69 | critic |
+| strong-only lower HPD 0.0 | N1 19,570 | 0 | 0.00 | 0.00 | NOT above |
+| strong-only lower HPD 0.0 | N1-low 14,678 | 0 | 0.00 | 0.00 | NOT above |
+| strong-only lower HPD 0.0 | N1-high 24,463 | 0 | 0.00 | 0.00 | NOT above |
+| strong-only lower HPD 0.0 | N2 11,090 | 0 | 0.00 | 0.00 | NOT above |
+| strong-only lower HPD 0.0 | N3 18,180 | 0 | 0.00 | 0.00 | NOT above |
+| strong-only upper HPD 0.13 | N1 19,570 | 2544 | 13.35 | 16.02 | critic |
+| strong-only upper HPD 0.13 | N1-low 14,678 | 1908 | 10.01 | 12.02 | critic |
+| strong-only upper HPD 0.13 | N1-high 24,463 | 3180 | 16.68 | 20.03 | critic |
+| strong-only upper HPD 0.13 | N2 11,090 | 1442 | 7.56 | 9.08 | critic |
+| strong-only upper HPD 0.13 | N3 18,180 | 2363 | 12.40 | 14.88 | critic |
+| point x 0.75 | N1 19,570 | 1981 | 10.39 | 12.48 | critic |
+| point x 0.75 | N1-low 14,678 | 1486 | 7.80 | 9.36 | critic |
+| point x 0.75 | N1-high 24,463 | 2477 | 12.99 | 15.60 | critic |
+| point x 0.75 | N2 11,090 | 1123 | 5.89 | 7.07 | critic |
+| point x 0.75 | N3 18,180 | 1841 | 9.66 | 11.59 | critic |
+
+Compounded lowest any-effect-size row: 0.096 x 0.75 x 11,090 = 798  (4.19 x G1, 5.03 x G2)
+Strong-only point on N2: 455 (2.39 x G1); strong-only lower HPD: 0
+
+Paper's own counts (NOT used for the verdict; denominator unreconciled with N1-N3):
+  all genes point: 4040 (21.19 x G1)
+  all genes lower HPD: 2873 (15.07 x G1)
+  all genes lower HPD x 0.75: 2155 (11.30 x G1)
+  all genes strong-only point: 1227 (6.44 x G1)
+  VIPs point: 1400 (7.34 x G1)
+  VIPs lower HPD: 1062 (5.57 x G1)
+  VIPs strong-only point 0.126: 787 (4.13 x G1)
+  VIPs strong-only lower HPD 0.018: 112 (0.59 x G1)
+
+Blocker checks: (1) human-specific True; (2) bias-corrected True; (3) lower HPD 0.096 >= 1.75%: True; (4) compounded 798 > 191: True
