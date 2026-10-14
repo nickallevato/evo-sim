@@ -1607,7 +1607,7 @@
   type: undermining
   by: [Vox Day]
   first_date: 2026-09-28
-  locator: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (answer to DE-01)
+  locator: https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (answer to DE-01, para 66 sentence 2; filed as Q296)
   audit_status: partly
   audit_basis: R4 A-sim (asexual sublinear but positive); the 'reproductive capacity' limit is branch H (contested)
   counter: []
@@ -2232,7 +2232,7 @@
   audit_basis: 'R4 G1: the middle case exists and flips at λ₅₀ = 12.3–17.2 alternatives per needed change (adaptive subset); G3b internal non-sequitur'
   counter: []
   note: '''Multiple mutational paths can lead to similar phenotypes'': functional and interchangeable is a third option. Dated before G3b.'
-  quote: Multiple mutational paths can lead to similar phenotypes.
+  quote: Multiple mutational paths can lead to similar phenotypes
   hierarchy_edge: false
 - id: d177
   attacker: chk:R2-arith

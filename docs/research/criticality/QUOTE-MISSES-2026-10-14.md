@@ -1,8 +1,8 @@
 # Quote-miss diagnosis: the 4 standing `argmap_check.py` errors (EVO-78)
 
 **Date:** 2026-10-14. **Branch:** `research`, reproduced at `e2bc2f1` (the ticket cites `18dbaec`; both give the same 4 errors, 0 warnings).
-**Scope: diagnose and propose only. Nothing was applied.** `lineage.yaml` and `defeaters.yaml` are untouched by this note.
-Findings are numbered QM-01..QM-04 for the owner's ruling.
+**Scope of the original pass: diagnose and propose only.** Findings are numbered QM-01..QM-04.
+**Resolved 2026-10-14** — the owner ruled on all three questions (EVO-78) and the remedies were applied; see "Resolution" at the foot of this note. `argmap_check.py` now reports **0 errors, 0 warnings**. The diagnosis above the Resolution section is left as written at diagnosis time.
 
 Classification vocabulary from the ticket: **(a)** transcription or typography drift; **(b)** a paraphrase that was never a verbatim quote; **(c)** a pointer to a source line that has since changed.
 
@@ -110,3 +110,30 @@ Until it is settled, the honest interim description of these two ids is "quoted 
 ## Suggested lint hardening (not applied, offered for the same ruling)
 
 Two of the four misses are a quotation whose *only* record is the argmap node asserting it. `argmap_check.py` would have caught both at build time if `find_quote()` reported *where* a quote resolved and the check warned when a `day`- or `critic`-side quote resolves only to `research/checks/results/*.md` (the audit's own prose) rather than to `quotes-*.md` or a claim file. That is a real change to the tool's contract and is listed here as a proposal only; it belongs in `METHOD-AUDIT-proposals.md` if the owner wants it.
+
+---
+
+## Resolution (2026-10-14, after the owner's ruling on EVO-78)
+
+The owner ruled: **QM-01** apply the minimal fix; **QM-02** option 1 (repoint at the C6-filed §5.3 sentence); **QM-03/QM-04** authorise the read-only re-fetch. All three were carried out in this commit.
+
+**QM-01 — applied.** Terminal period dropped from `d176`'s `quote:`. No other field touched; `audit_status: upheld` and `audit_basis` (R4 G1) unchanged. The secondary point stands as a to-do: the sentence is still unfiled in `quotes-critics.md` BOW, and should go in as `BO-05` at the next refresh so `d176` and `x:BO-paths` rest on a primary filing rather than on the audit's own write-up.
+
+**QM-02 — applied (option 1).** `L-adna-630-21-2026`'s `quote:` is now the sentence exactly as `C6-molecular-clock-stopped.md:22` files it from §5.3, and `locator:` is corrected from "§9 (line 263 of text extraction)" to "§5.3". The "21 observed" half is no longer presented as quotation; it remains in `label:` ("clock predicts ~630, 21 observed") and in `fate_locator:` ("R4 C1b: 21 not reproducible from the stated procedure"), where prose is allowed. The node stays `fate: dormant` (2026-09-29); no claim verdict field moves. The §9/§5.3 discrepancy is resolved **in favour of §5.3**, on the C6 filing; `NOTES.md:331`'s ambiguity bullet should record that when the argmap notes are next touched. Option 2's stronger remedy — filing `"We observe 21."` as a Q-entry against a re-fetched Z18525185 — is not foreclosed and remains available at the next refresh.
+
+**QM-03 / QM-04 — settled, branch 2 (verbatim; filing gap).** The interview was re-fetched read-only on 2026-10-14 under `HOWTO-refresh.md` (`sources/raw/qm03-dembski-2026-10-14/dembski-interview.html`, sha256 `d84dc78b…4c15a0`, 399,139 bytes; the API slug endpoint 302s to the page, so the page HTML was taken). `research/tools/qm03_locate.py` strips tags, NFKC-normalises and tests the argmap string as a substring:
+
+- **verbatim: True.** The sentence appears exactly as both nodes have it.
+- It is sentence 2 of a six-sentence answer at `<p>` index 58, immediately after the DE-01 question at `<p>` index 57. Under the para-65 convention `quotes-critics.md` uses for DE-01..DE-03, that makes the answer **para 66**. The answer opens "No, and that argument is flat-out wrong." and continues "Mutational fixation in humans and other vertebrates can never approach the speed of mutational fixation in bacteria. The defense is dead on arrival."
+
+So the argmap text was correct all along and reading (b-paraphrase) is **ruled out**; the defect was reading (b-unfiled-verbatim), a hard-rule-2 filing gap — a locator with no committed quotation behind it. Closed by filing the sentence as **`Q296`** in `quotes-day.md` (with the local copy, hash, locator and RH tag), adding `DM-1b` to `bib-critics.md`, and refining both nodes' `locator:` to "answer to DE-01, para 66 sentence 2; filed as Q296". No `quote:` text changed on either node, no verdict moves, the `A5`/P2 Day-side defeater `d129` stands at `audit_status: partly`, and the retraction branch is **not** taken. `ROOT-h:45` and `opponents/bill-dembski.md:19` need no correction: their four-word fragment is now backed by Q296.
+
+**A note in Day's favour, recorded with the same prominence as the errors.** Two of the four findings carried a live possibility that the audit had put words in Day's mouth. On the one that could have moved an argmap node's existence, the re-fetch vindicates Day's quoted sentence exactly: the audit's text was his. The remaining fidelity error of this set, QM-02, is also the audit's own and also against Day — a stitched two-sentence "quotation" attributed to his clock paper that he did not write in that form. Both corrections run the same way: against the audit, in Day's favour.
+
+**Ledger.** The four are entered in `docs/research/ledgers/fidelity.md` under "Audit's own fidelity (2026-10-14)", scored with the same vocabulary used for both sides: QM-01 verified-accurate (spurious period), QM-02 **verified-misread**, QM-03/QM-04 verified-accurate (filing gap).
+
+**Still open from this note (neither is a lint error):**
+1. File the Bowers sentence as `BO-05` at the next refresh (QM-01's "better" remedy).
+2. The lint-hardening proposal below is still a proposal: it was *not* applied. Note that QM-03/QM-04 are exactly the case it would have caught — a quotation whose only record was the node asserting it — and the re-fetch confirms the warning would have been a true positive about provenance even though the text was right. That strengthens the case for it as `METHOD-AUDIT-proposals.md` material.
+
+**EVO-6 batch close.** The middle path described above is no longer needed: the lint is green on the merits, not by a guess, and the batch can close without a standing red.

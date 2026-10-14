@@ -1005,8 +1005,8 @@
   kind: revision
   date: 2026-02-08
   claim_ids: [C6]
-  locator: "https://zenodo.org/records/18525185 §9 (line 263 of text extraction)"
-  quote: "The clock predicts ~630 fixations per 350 generations. We observe 21."
+  locator: "https://zenodo.org/records/18525185 §5.3"
+  quote: "The molecular clock predicts approximately 630 fixations per 350 generations (based on k = μ for neutral sites; see Appendix A)."
   parents:
     - {id: L-adna-zero-2026, relation: revises}
   inferred: false
@@ -1922,7 +1922,7 @@
   kind: reply
   date: 2026-09-28
   claim_ids: [A5g]
-  locator: "https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (answer to DE-01, para 65 ff.)"
+  locator: "https://billdembski.substack.com/p/vox-day-interview-on-evolutionary (answer to DE-01, para 66 sentence 2; filed as Q296)"
   quote: "The scaling element doesn’t apply at all, it is entirely irrelevant, because sexual reproductive capacity is the real limit on humans and other non-bacteria."
   parents:
     - {id: L-day-fixation-rate-reply-2026, relation: descends}

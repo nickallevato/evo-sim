@@ -82,3 +82,16 @@ All six blocked papers were downloaded by the user into `sources/raw/sources/man
 | Wright's twenty-questions passage | page fix | p.117, not p.118 |
 
 **Critic side, for balance:** the Rosenhouse ch.4 and ch.6 claims are known only secondhand (Felsenstein's TOC, Day's transcriptions). We have not read the book, so its fidelity is unverified.
+
+## Audit's own fidelity (2026-10-14, EVO-78 / QM-01..QM-04)
+
+Four argmap quotes did not match any committed source. All three distinct strings date to `9a2148b` (the original argmap build) and had never matched. These are the audit's own fidelity entries, scored by the same standard applied to both sides.
+
+| id | node | Audit's cited use | Status | Resolution (2026-10-14) |
+|---|---|---|---|---|
+| QM-01 | `d176` | Bowers, "Multiple mutational paths can lead to similar phenotypes." | **verified-accurate** (one spurious terminal period) | Period dropped. The sentence is attested in `G3b:32` and `R4-G1.md:292`; still unfiled in `quotes-critics.md` BOW (`BO-01`..`BO-04`) — file as `BO-05` at the next refresh. |
+| QM-02 | `L-adna-630-21-2026` | Day, Z18525185: a single quotation welding "The clock predicts ~630 fixations per 350 generations" to "We observe 21.", located at §9 | **verified-misread** (composite, first half reworded, wrong section) | `quote:` repointed at the sentence C6 files from §5.3 ("The molecular clock predicts approximately 630 fixations per 350 generations (based on k = μ for neutral sites; see Appendix A).") and `locator:` corrected §9 → §5.3. The "21 observed" half remains in `label:`/`fate_locator:`, where it is prose, not quotation. Node was already `fate: dormant` (2026-09-29); no verdict field moves. |
+| QM-03 | `L-dembski-scaling-reply-2026` | Day to Dembski, "The scaling element doesn't apply at all…" | **verified-accurate** (filing gap, now closed) | Re-fetched read-only 2026-10-14 (owner-authorised on EVO-78) and machine-checked: verbatim, para 66 sentence 2, Day's answer to DE-01. Filed as **Q296** in `quotes-day.md`; locator refined on both nodes. The defect was hard rule 2 (no committed quotation behind the locator), not misquotation. |
+| QM-04 | `d129` | same string as QM-03 | same | same; `A5`/P2 defeater stands, `audit_status: partly` unchanged. |
+
+Diagnosis note: `docs/research/criticality/QUOTE-MISSES-2026-10-14.md`. After these four, `argmap_check.py` reports 0 errors, 0 warnings.
