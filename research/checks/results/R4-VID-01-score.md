@@ -520,7 +520,26 @@ that bullet, the honest statement is the whole of the following and not any one 
 The earlier sentence "Day's own stated direction holds only in the linked and clonal cases" is
 **withdrawn**: it rested on the two post hoc rows against a failed pre-registered row.
 
-<!-- band 3d: post hoc check, committed separately -->
+**Band 3d was considered (post hoc check, fix pass; critic-side MINOR-5, a finding against the
+reviewer's own side).** Registered band 3d is "an answer is wrong as stated → critic-side ledger
+row". The results section graded 3a/3b/3c and never said whether 3d was reached, which a pass
+claiming its bands were applied owes. The candidate the critic-side steelman named is at
+**t=01:55:19**, answering the relayed GGR-19 formulation; verbatim from the transcript, ASR
+spelling preserved (the review's own rendering reads "Haldane's", the captions read **"Hallane's"**):
+"I'm going to say that sounds like vaguely related to **Hallane's** dilemma," (t=01:55:19) …
+"but that's not a thing anymore. That's not like actually an issue." (t=01:55:39).
+**Finding: band 3d is not reached; the line is tagged `rhetoric` under RH1 and recorded in
+`ledgers/slips.md` as RH-34.** Reasons, in order: (i) RH1 requires the tag before any scoring, and
+this is a dismissal with no argument attached, of the type RH2 does not literal-fact-check;
+(ii) its literal content — that Haldane's dilemma is no longer a live problem — is *not* wrong as
+stated on the audit's own record, where branch H's `H-haldane-limit` carries `external: contested`
+and the same panel's GGR-08 states the standard view ("Haldane's dilemma being not so much of a
+dilemma anymore"); it is unsupported, not false, so 3d's "wrong as stated" does not fit;
+(iii) RH5 applies the same treatment to the critics as to Day, and the surrounding "that's
+preposterous" / "that's just stupid" (t=01:57:03) are already noted at `quotes-critics.md` GGR-19.
+So: no critic-side ledger row under 3d, one rhetoric row under RH1/RH5, and the point stands that
+the clearest statement of the barrier in the critic corpus was met in the room with a dismissal
+before it was met with the infinitesimal model two reels later.
 
 **Note on the target.** Q4 establishes that the Bernoulli Barrier appears in MITTENS 3.0 only as one
 rhetorical clause, undefined. So the barrier the panel is answering is the January 2026 Zenodo
@@ -685,7 +704,7 @@ so it is Open item 9.
 | Q1 RD | A4d gains a `reading-dependent:` comment and the separate count | **not applied**; A4d is `SCOPED` (§RD line 198 — its Formal statement fixes the reading), Readings table in the R4 paragraph instead. All three reviews and the lead agree: **the defect was in the registration, not the execution** (R-15), so this is re-booked as a pre-registration defect, not a miss | **registration defect** |
 | Q2 band | **2b** | **2b**; `load` 0 occurrences strengthens half (ii) | **hit** |
 | Q2 fields | A5h internal and external both unchanged | unchanged | **hit** |
-| Q3 band | **3b** (infinitesimal on point, recombination adjacent) | **3b**; refinement carried with its qualifications (R-12) | **hit** |
+| Q3 band | **3b** (infinitesimal on point, recombination adjacent) | **3b**; refinement carried with its qualifications (R-12). **3d considered (post hoc, fix pass): not reached** — the t=01:55:19 candidate is tagged `rhetoric` (RH-34), not "wrong as stated" | **hit** |
 | Q3 fields | nothing moves on branch G | nothing moved; the stated *ground* corrected (critic MAJOR-4) | **hit** |
 | Q4 band | **4a** (exactly one, rhetorical, undefined) | **4a**, applied to the **omission clause** (rule S scope); the second clause is an external question, field unchanged. `Averaging` / `law of large numbers` / `polygenic` 0 | **hit** |
 | Q4 field | Ge `internal` `pending` → `holds` | applied | **hit** |
@@ -814,6 +833,9 @@ is prose. Nothing here is a miss by Day or by the critics.
 - **The "load occurs 0 times" rebuttal was given first place at Q2** and is a word count offered
   against a conceptual attribution — the overreach `RH5` charges to any side, including the audit.
   Demoted below the cost that bites. Both steelmen reached this independently, from opposite sides.
+- **Band 3d was never checked** although the registration carried it. Checked **post hoc** in the
+  fix pass (t=01:55:19): not reached, tagged `rhetoric` (RH-34). Found by the critic-side steelman
+  against its own side.
 - **The stated ground for the Q3 no-move was wrong** ("strictly weaker than G5"): G5 and GGR-43/44
   are about different quantities. The conclusion was right for an independent reason. Corrected.
 - **A4d's `holds` had been resting on a search of a file the audit no longer had** since
@@ -965,7 +987,7 @@ t=01:55:19 (Q3), committed separately.
 | **MINOR-2** | **Accepted** (R-15) | Ge's §1 clause is booked under **RH3** as "**no dialectical support offered**" — explicitly **not** an error and **not** a reason to disturb `holds` — in the write-up's Q4, in Ge's R4 paragraph, and as **RH-33** in `ledgers/slips.md` with a counter. The record is now both halves: the argument is omitted (Day's statement true) **and** its conclusion is asserted once in §1 without support in the paper. |
 | **MINOR-3** | **Accepted** | Same change as Day-side MINOR-1 (the word count demoted and restated). Two reviewers reaching the same finding from opposite sides is why it is applied without qualification. |
 | **MINOR-4** | **No change needed; recorded** (R-15) | A finding **against the reviewer's own side**, and it closes the question the brief asked: band 3b's "meets" is **not** pitched too high — the registered criterion reads "with or without numbers" and is clearable in one spoken sentence. It was applied as written and changing it now would be post hoc. The two tightenings it asks for **in the critics' favour** are applied: GGR-43/44 is placed at the top of *on point*, and the "weaker, model-naming restatement" prose is withdrawn (see MAJOR-4). |
-| **MINOR-5** | **Accepted** (R-15) | Band 3d is checked against the named t=01:55:19 candidate as a **post hoc** step, committed separately per the brief; the result is recorded in Q3 and in `ledgers/slips.md`. |
+| **MINOR-5** | **Accepted** (R-15) | **Band 3d was checked** against the named candidate, **post hoc**, and the result is recorded in Q3: at t=01:55:19 the transcript reads "I'm going to say that sounds like vaguely related to **Hallane's** dilemma," continuing at t=01:55:39 "but that's not a thing anymore. That's not like actually an issue." *(The review's own rendering reads "Haldane's"; the ASR captions read "Hallane's", and hard rule 2 takes the captions.)* **3d is not reached**: under RH1 the line is tagged `rhetoric` — a dismissal with no argument attached — and its literal content is unsupported rather than false, since the audit's own `H-haldane-limit` carries `external: contested` and the same panel states the standard view at GGR-08. So no critic-side ledger row under 3d, and one rhetoric row, **RH-34**, under RH1/RH5 — the same treatment Day's comparable lines get. |
 | NOTE-1..6 | Applied or recorded | NOTE-1 is R-11 (correctness MINOR-5 declined); NOTE-2 is the shape of the R-10 fix and is applied; NOTE-3 (SCOPED and the extended-reading bullet are compatible, one about A4d's own field and one about whose quote may set a headline) is adopted and is why both NOTE-1-correctness and MAJOR-3-correctness are applied together; NOTE-4 confirms four credits to the critics; NOTE-5 is Open 9; NOTE-6 reports no finding. |
 
 ## What a fresh reviewer should check before integration
