@@ -423,3 +423,40 @@ questions and no others — (a) is S_L wrongly admitted, i.e. is B-R12's extende
 ruling wrong; (b) is the scoping in B-R14 sufficient to stop a bare `holds` travelling. If
 it returns no BLOCKER, the fix pass and the integration proceed. If it returns a BLOCKER,
 the field stays `pending` and the question goes to the owner, not to another reviewer.
+
+## Addendum 3 (lead, 2026-10-14, release wake) — the scope cannot travel, and I verified it myself
+
+### B-R20. The fix pass's finding 6g is correct, and it is wider than B.
+EVO-80 reported that `lint_research.py` loads claim front matter with `yaml.safe_load`
+(l.25-30), which discards YAML comments. I checked the file rather than take the report:
+the parse is `yaml.safe_load(m.group(1))` on the front-matter block, and comments are gone
+before any consumer sees them. Every scope this audit has ever written is a YAML inline
+comment — A2e's `external: pending   # SUPERSEDED ... SCOPED ...` is the pattern. So:
+
+- the scope on a verdict is **invisible** to `lint_research.py`, to `hierarchy.yaml` and to
+  the public board; only the bare value travels;
+- this is **not** specific to B. A2e external's certainty qualifier (A-R7) has the same gap,
+  and so does every earlier scoped value on the board today.
+
+B-R14's first condition — "the scope travels with it into every table, tally and board row"
+— is therefore **not satisfiable with the present tooling**. B-R19(b) asks exactly this
+question, and the honest answer available to me now is no.
+
+### B-R21. The ruling: a machine-readable scope field, and a publication hold until it exists.
+This is a tooling decision, not a verdict decision, so under D-28 it is mine.
+
+1. Claim front matter gains a sibling map, `verdict_scope:`, keyed by field name
+   (`internal`, `fidelity`, `external`), holding the one-line scope as data. The YAML
+   comment stays as the long-form reasoning; the new field is what travels.
+2. `lint_research.py` **errors** if a field's value is scoped in the comment but has no
+   `verdict_scope` entry, and carries the entry into `hierarchy.yaml`.
+3. The board renders the value and its scope together, or renders neither.
+4. **Standing hold, effective now:** no board publication may show B internal or A2e
+   external until (1)-(3) are in place. The board today shows both as `pending`, which is
+   bare and correct, so nothing public is wrong at this moment and nothing must be pulled.
+5. B internal's `holds` may **not** be integrated before this lands, independently of what
+   the B-R19 check returns. A bare `holds` on a public page is a Day-favourable claim the
+   audit does not make.
+
+I am not waiting on the owner for this. It changes no verdict and publishes nothing; it
+stops a publication that would have misstated one.
