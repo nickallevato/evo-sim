@@ -12,6 +12,8 @@ verdicts:
   internal: pending      # holds | arithmetic-error | non-sequitur | pending | n/a
   fidelity: pending      # accurate | partial | misread | unverifiable | pending | n/a
   external: pending      # supported | contested | contradicted | untestable | pending | n/a
+# verdict_scope:         # required if a comment above states a scope (SCOPED, scoped to, conditional on, reading-dependent, only under); one plain line per field, e.g.
+#   external: "the scope as data"
 ---
 
 ## Statement (verbatim)

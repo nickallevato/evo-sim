@@ -12,6 +12,8 @@ verdicts:
   internal: holds   # only under an inferred mean-field (HW-expected) selection formulation; the literal §3.1 reading gives 2.75%, outside the pre-registered 2.33 +/- 0.15% band (falsifier fired). Table 8 not reproduced by either
   fidelity: unverifiable   # R4 X1 rule rev 2 (was n/a): rule F (uncited/unretrievable input) or S/U; see R4-X1-rescore.md
   external: contested   # overreach: 'independently sufficient' and 'minefields' not supported on the direct-viability endpoint; withdrawal of the hitchhiking pathway credited
+verdict_scope:
+  internal: "only under an inferred mean-field (HW-expected) selection formulation; the literal §3.1 reading gives 2.75%, outside the pre-registered 2.33 +/- 0.15% band (falsifier fired)"
 ---
 
 ## Statement (verbatim)

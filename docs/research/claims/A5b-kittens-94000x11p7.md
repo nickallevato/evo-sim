@@ -12,6 +12,8 @@ verdicts:
   internal: holds
   fidelity: accurate
   external: "contested"   # linear only under free recombination in tested range; asexual a = 0.23-0.34
+verdict_scope:
+  external: "linear only under free recombination in tested range; asexual a = 0.23-0.34"
 ---
 
 ## Statement (verbatim)

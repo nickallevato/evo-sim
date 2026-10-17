@@ -12,6 +12,8 @@ verdicts:
   internal: holds   # reading-dependent: (A) the current Zenodo wording (Q286, Q289; record replaced 2026-10-13) relays Hard Limits' short-time asymptote F(T) ∼ exp(−π²Nₑ/T), T ≪ 4Nₑ: `holds`, with ledger slips S-B2f-1..4 (sets the field: the reading under which the quoted statement is most defensible, rule RD); (B) a literal equality with no domain: `non-sequitur` against the paper's own F_X integral, mean 4Nₑ and SD (Q293, Q294). Was `pending` until R4 B2f (review #82, integrated 2026-10-13). Scope: the value covers the Zenodo statement; the 2026-08-23 blog quote (1/(2N) "imported") was not examined by B2f
   fidelity: partial   # reading-dependent: value unchanged. (A) `partial`: Hard Limits is cited and relayed with its domain omitted; (B) `misread`. The Chalub link itself (is Chalub's Gegenbauer expansion the Kimura 1955 series?) is unchecked and stays `partial` on the ledger basis below
   external: contested   # reading-dependent: (A) the exponent is supported in logarithms (exact as T/Nₑ → 0) and "every application of k = μ ... is guaranteed to be incorrect" is `contested` on the start state only (true from an empty start, the paper's premise; from a stationary start the flux is exactly μ; scored at B1, B1c, B6a): sets the field; (B) `contradicted` by the exact diffusion at every T. Was `pending` until R4 B2f
+verdict_scope:
+  internal: "Scope: the value covers the Zenodo statement; the 2026-08-23 blog quote (1/(2N) \"imported\") was not examined by B2f"
 ---
 
 ## Statement (verbatim)

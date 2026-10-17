@@ -12,6 +12,8 @@ verdicts:
   internal: pending      # the complaint is conditional on ch.6 not delivering; Day has announced a third post
   fidelity: unverifiable      # Day's claim about the content of ch.4 cannot be checked without the book
   external: pending      # depends on ch.6 and on D2g
+verdict_scope:
+  internal: "the complaint is conditional on ch.6 not delivering; Day has announced a third post"
 ---
 
 ## Statement (verbatim)

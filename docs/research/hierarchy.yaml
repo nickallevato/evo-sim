@@ -505,6 +505,8 @@ nodes:
     internal: holds
     fidelity: unverifiable
     external: pending
+  verdict_scope:
+    internal: overlap is absorbed by Ne or modelled directly (Moran) is a coherent reply to the book/Duffy d; conditional on the speaker's recollection.
   claim_file: docs/research/claims/A4e-hancock-overlap-is-handled-by-ne-and-moran.md
 - id: A4f
   title: 'Hancock: Day''s selective turnover coefficient d has no counterpart in population genetics, is not a selection coefficient, and would
@@ -591,6 +593,8 @@ nodes:
     internal: holds
     fidelity: accurate
     external: contested
+  verdict_scope:
+    external: linear only under free recombination in tested range; asexual a = 0.23-0.34
   claim_file: docs/research/claims/A5b-kittens-94000x11p7.md
 - id: A5c
   title: 'Hancock: on neutral supply alone E. coli expects ~4e-5 fixations per generation (22,000 gens per fixation) and humans dozens per generation'
@@ -863,6 +867,8 @@ nodes:
     internal: holds
     fidelity: partial
     external: contested
+  verdict_scope:
+    internal: 'Scope: the value covers the Zenodo statement; the 2026-08-23 blog quote (1/(2N) "imported") was not examined by B2f'
   claim_file: docs/research/claims/B1e-chalub-2022-reading.md
 - id: B2
   title: 'Hard Limits: drift cannot complete fixations above a census ceiling; the domain of k = mu is empty for large vertebrates'
@@ -1643,6 +1649,8 @@ nodes:
     internal: holds
     fidelity: unverifiable
     external: contradicted
+  verdict_scope:
+    external: scoped to premises 1 and 2 as worded (premise 1 false under standard theory; premise 2 against R4-L1 dN/dS ~0.21-0.27)
   claim_file: docs/research/claims/B9-drift-would-cause-extinction-within-centuries.md
 - id: C
   title: 'European aDNA shows ~zero fixations from intermediate frequency across ~1.1-1.2M SNPs in ~7,000 years (blog: 0 of 1,211,499; Zenodo:
@@ -1987,6 +1995,8 @@ nodes:
     internal: pending
     fidelity: accurate
     external: contested
+  verdict_scope:
+    external: Axe's 10^64 is conditional on a hydropathic signature and low-level function
   claim_file: docs/research/claims/D10-axe-2004-1-in-1e77.md
 - id: D11
   title: 'Taylor et al.: a fully randomized library of about 5 x 10^23 (approx. 10^24) members would be needed to obtain chorismate mutases'
@@ -2161,6 +2171,8 @@ nodes:
     internal: pending
     fidelity: unverifiable
     external: pending
+  verdict_scope:
+    internal: the complaint is conditional on ch.6 not delivering; Day has announced a third post
   claim_file: docs/research/claims/D2-day-rosenhouse-ch4-no-quantification.md
 - id: D2a
   title: 'Ulam: ''What I am going to do will come to Eden''s conclusions''; Ulam is an ally of Eden, not of the biologists'
@@ -2758,6 +2770,9 @@ nodes:
     internal: pending
     fidelity: misread
     external: contested
+  verdict_scope:
+    external: 'Scope: this genome alignment (hs1 / mPanTro3 Cactus), this annotation (GENCODE v35, human frame projected onto chimp) and the audit''s
+      in-script aligner; no external codon aligner, no independent chimp CDS.'
   claim_file: docs/research/claims/DN6-protein-guided-alignment-biases-dnds-down.md
 - id: E
   title: 'Punctuated equilibrium''s peripatric mechanism sits where hypermutation is favoured: 6 of 12 LTEE populations became mutators and a
@@ -2850,6 +2865,9 @@ nodes:
     internal: holds
     fidelity: unverifiable
     external: contested
+  verdict_scope:
+    internal: only under an inferred mean-field (HW-expected) selection formulation; the literal §3.1 reading gives 2.75%, outside the pre-registered
+      2.33 +/- 0.15% band (falsifier fired)
   claim_file: docs/research/claims/E3-cmmrd-simulation.md
 - id: E4
   title: 'Relictation: when one family replaces more than ~10% of a population, t̄ = 4Ne breaks (up to +7% to +25% at 2N = 20-50); fixation probability
@@ -3532,6 +3550,8 @@ nodes:
     internal: holds
     fidelity: accurate
     external: contested
+  verdict_scope:
+    external: P_any indistinguishable from 1 at McCarthy's inputs only under neutral k = mu; the threshold applies to the adaptive subset only
   claim_file: docs/research/claims/G3-specific-vs-any.md
 - id: G3a
   title: 'Camestros: the probability that some number is picked in a lottery is close to 1, unlike the probability of a specific number'
@@ -3735,6 +3755,8 @@ nodes:
     internal: holds
     fidelity: partial
     external: contested
+  verdict_scope:
+    external: '''slower than 1/300'' stays conditional on K (tested to 64,000) and on the survival horizon'
   claim_file: docs/research/claims/H-haldane-limit.md
 - id: H1
   title: '2026-05-07 retraction: Term 3 (Haldane cost limit) was misused as a bound on total substitution rate; it limits adaptive substitution
@@ -3862,6 +3884,8 @@ nodes:
     internal: non-sequitur
     fidelity: pending
     external: contested
+  verdict_scope:
+    external: '''slower than 1/300'' stays conditional on K (tested to 64,000) and on the survival horizon'
   claim_file: docs/research/claims/H5-hossjer-cost-step.md
 - id: H6
   title: 'Nesslig20: Haldane''s reproductive cost limit applies to selection but not to drift, so it cannot bound neutral fixations'
@@ -3920,6 +3944,8 @@ nodes:
     internal: holds
     fidelity: pending
     external: contested
+  verdict_scope:
+    external: '''slower than 1/300'' stays conditional on K (tested to 64,000) and on the survival horizon'
   claim_file: docs/research/claims/H8-kimura-calculator-term3.md
 - id: H9
   title: Kimura and Ohta (1969) established that the expected time to fixation does not depend on recombination rate

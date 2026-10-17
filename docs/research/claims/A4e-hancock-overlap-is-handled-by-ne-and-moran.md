@@ -12,6 +12,8 @@ verdicts:
   internal: holds   # internal: overlap is absorbed by Ne or modelled directly (Moran) is a coherent reply to the book/Duffy d; conditional on the speaker's recollection. fidelity: Hancock answers Duffy's slide wording (secondhand), citations not retrieved. external: textbook claim, literature not retrieved; Ne formula unverified. R4 mapping review (REVIEW-mapping-12-combined.md)
   fidelity: unverifiable
   external: pending
+verdict_scope:
+  internal: "overlap is absorbed by Ne or modelled directly (Moran) is a coherent reply to the book/Duffy d; conditional on the speaker's recollection."
 ---
 
 ## Statement (verbatim)

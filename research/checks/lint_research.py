@@ -6,6 +6,9 @@ Checks docs/research/claims/*.md front-matter and cross-references:
   - every claim has a Statement quote and a source line
   - every claim has three verdicts (pending allowed)
   - each side has claims (balance count)
+  - a verdict field whose YAML comment carries a scope (SCOPE_RE) has a one-line
+    `verdict_scope:` entry keyed by field name (B-R21; yaml.safe_load drops comments, so the
+    scope must be data to travel into hierarchy.yaml and the board)
 With --write-hierarchy, regenerates docs/research/hierarchy.yaml from claim front-matter
 (nodes in hierarchy.yaml without a claim file are kept and marked `claim_file: missing`).
 Exit 1 on errors.
@@ -22,6 +25,33 @@ EDGE_TYPES = {"supports", "attacks", "revises", "supersedes", "depends-on"}
 V_INT = {"holds", "arithmetic-error", "non-sequitur", "pending", "n/a"}
 V_FID = {"accurate", "partial", "misread", "unverifiable", "pending", "n/a"}
 V_EXT = {"supported", "contested", "contradicted", "untestable", "pending", "n/a"}
+FIELDS = ("internal", "fidelity", "external")
+# Survey of the corpus 2026-10-17 (EVO-84). Bare "scope" is not matched: it also occurs as
+# "out of scope" / "in-scope readings" (rule S), which are not scopes on a value.
+SCOPE_RE = re.compile(r"SCOPED|scoped to|conditional on|reading-dependent|only under", re.I)
+
+
+def verdict_comments(raw):
+    """Map field -> comment text for the `verdicts:` block (inline and following own-line comments)."""
+    out, inv, cur = {}, False, None
+    for ln in raw.split("\n"):
+        if re.match(r"verdicts:", ln):
+            inv = True
+            continue
+        if inv and re.match(r"\S", ln):
+            inv = False
+        if not inv:
+            continue
+        f = re.match(r"\s+(internal|fidelity|external):(.*)", ln)
+        if f:
+            cur, txt = f.group(1), f.group(2)
+        elif re.match(r"\s+#", ln) and cur:
+            txt = ln
+        else:
+            continue
+        if "#" in txt:
+            out[cur] = out.get(cur, "") + " " + txt.split("#", 1)[1]
+    return out
 
 
 def parse(path):
@@ -29,7 +59,10 @@ def parse(path):
     m = re.match(r"^---\n(.*?)\n---\n(.*)$", txt, re.S)
     if not m:
         return None, txt
-    return yaml.safe_load(m.group(1)) or {}, m.group(2)
+    fm = yaml.safe_load(m.group(1)) or {}
+    if isinstance(fm, dict):
+        fm["_comments"] = verdict_comments(m.group(1))
+    return fm, m.group(2)
 
 
 def main():
@@ -62,6 +95,19 @@ def main():
             val = str(v.get(k, "")).split()[0] if v.get(k) else ""
             if val not in allowed:
                 errs.append(f"{name}: verdicts.{k}={v.get(k)!r} not in {sorted(allowed)}")
+        vs = fm.get("verdict_scope")
+        if vs is not None and not isinstance(vs, dict):
+            errs.append(f"{name}: verdict_scope must be a map keyed by {list(FIELDS)}")
+            vs = None
+        vs = vs or {}
+        for k, t in vs.items():
+            if k not in FIELDS:
+                errs.append(f"{name}: verdict_scope key {k!r} not in {list(FIELDS)}")
+            elif not isinstance(t, str) or not t.strip() or "\n" in t.strip():
+                errs.append(f"{name}: verdict_scope.{k} must be one non-empty line of text")
+        for k, c in fm["_comments"].items():
+            if SCOPE_RE.search(c) and not (isinstance(vs.get(k), str) and vs[k].strip()):
+                errs.append(f"{name}: verdicts.{k} comment carries a scope ({SCOPE_RE.search(c).group(0)!r}) but there is no verdict_scope.{k} entry")
         if "## Statement" not in body or ">" not in body.split("## Statement", 1)[1][:2000]:
             errs.append(f"{name}: no quoted statement")
         if not re.search(r"Source:|source:", body):
@@ -102,7 +148,7 @@ def main():
     if a.write_hierarchy and not errs:
         nodes = []
         for cid, fm in sorted(claims.items()):
-            nodes.append({k: fm[k] for k in ("id", "title", "side", "branch", "parent", "edges", "load_bearing", "sourcing", "status", "verdicts") if k in fm} | {"claim_file": fm["_file"]})
+            nodes.append({k: fm[k] for k in ("id", "title", "side", "branch", "parent", "edges", "load_bearing", "sourcing", "status", "verdicts", "verdict_scope") if k in fm} | {"claim_file": fm["_file"]})
         for n in hier.get("nodes", []):
             if str(n["id"]) in missing:
                 nodes.append(dict(n) | {"claim_file": "missing"})

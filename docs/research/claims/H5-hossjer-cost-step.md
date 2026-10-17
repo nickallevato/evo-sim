@@ -12,6 +12,8 @@ verdicts:
   internal: "non-sequitur"   # the 15,800 is a rate scaling, not a cost computation (10.5x Haldane's 1,500)
   fidelity: pending
   external: "contested"   # R4 H8 kscale64 (15e4941, post hoc; K = 64,000, 60/60 jobs): 'slower than 1/300' stays conditional on K (tested to 64,000) and on the survival horizon; K1' miss (0.0863), K2' indeterminate (D = 30 interval 348 at 10k, bracket 294-368 straddles 300; 490 at 20k), K3' hit (0.567), K4' hit / marginal miss; no K trend; verdict unchanged. Earlier: R4 H8 kscale16 (409378f, post hoc): any 'slower than 1/300' reading is conditional on K (tested to 16,000); K1 miss, K2 indeterminate (D = 30 interval point 546, bracket 473-631), K3 miss, K4 hit; verdict unchanged. Earlier: R4 H8: Hossjer's conditional is confirmed (0.0351 per generation payable under hard selection from R about 2-2.7 at in-model D; under soft selection at every R, conditional on purely relative fitness); human-lineage R unsourced (R5 draft V17). Earlier: depends on H. R4 H3: the conditional is mechanically supported (shared budget); 15,800/450k payable at R ~2-3 under hard adaptive + soft load; cost step still uncomputed by Hössjer | R4 HF (2026-10-13): as H (h-scope, Day-1 clause, latency vs throughput); conditional on h and R, external stays contested.
+verdict_scope:
+  external: "'slower than 1/300' stays conditional on K (tested to 64,000) and on the survival horizon"
 ---
 
 ## Statement (verbatim)

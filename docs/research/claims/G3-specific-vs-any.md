@@ -12,6 +12,8 @@ verdicts:
   internal: holds
   fidelity: accurate   # rendering of the Darwillion is secondhand
   external: contested   # P_any indistinguishable from 1 at McCarthy's inputs only under neutral k = mu; the threshold applies to the adaptive subset only
+verdict_scope:
+  external: "P_any indistinguishable from 1 at McCarthy's inputs only under neutral k = mu; the threshold applies to the adaptive subset only"
 ---
 
 ## Statement (verbatim)
