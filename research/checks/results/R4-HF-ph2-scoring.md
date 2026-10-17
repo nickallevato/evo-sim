@@ -1,7 +1,7 @@
 # R4-HF ph2: scoring against the `hf_posthoc2.py` docstring (EVO-4)
 
 Post hoc run, registered at a995771 (script md5 a098388d…). Data: `raw/hf_ph2.jsonl` (31 rows), `raw/hf_ph2_analyse.out`
-(md5 5c30ed9b… see `raw/hf_ph2.host`). Scored mechanically from the analyse tables; no write-up prose, no review yet.
+(md5 5c0ad3b9…, see `raw/hf_ph2.host`). Scored mechanically from the analyse tables; no write-up prose, no review yet.
 **No verdict value moves** (the registration says so); verdict TEXT changes are for the analyst's write-up and fix pass.
 
 ## Run
