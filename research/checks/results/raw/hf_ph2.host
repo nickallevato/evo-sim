@@ -9,3 +9,10 @@ a098388d4a73e392585a65240c691ce4  research/checks/hf_posthoc2.py
 446323c4c82f821991d12ec0c2dd431e  research/checks/hf_followups.py
 smoke (this host, 2026-10-13 ~13:33-13:40 -06:00, before the a995771 commit, script md5 as above): ENGINE IDENTITY PASS (ph cell 4 rep 0 softJ and cell 68 rep 0 trunc rerun with original seeds, 30 fields each identical to raw/hf_ph.jsonl md5 5076f839c629ae03acffdc21387251af, sec and maxrss_mb excluded); log raw/hf_ph2_smoke.out, rows raw/hf_ph2_smoke.jsonl, raw/hf_ph2_mini.jsonl (stay on the host)
 collect: rsync raw/hf_ph2* back; hf_posthoc2.py merge; hf_posthoc2.py analyse > raw/hf_ph2_analyse.out. Jobs are not checkpointed: after a reboot relaunch the same command (finished jobs are skipped).
+finish: 31/31 jobs done on na-workhorse.allevato.io, shard wall 219282 s (60.9 h), log last write 2026-10-16 02:34 -0600 (08:34 UTC); zero hf_posthoc2 processes at check 2026-10-17 (host load 0.6). Merged and analysed on host (hf_posthoc2.py merge; analyse), analyse out 2026-10-17 17:11 -0600. Collected by rsync 2026-10-17; local md5s equal host md5s:
+09ab287131e7b5507fcbe6eb4ff41922  hf_ph2.jsonl
+afa518e5fa64d266d7776a39ce614983  hf_ph2_wh.jsonl
+27049bd7f6815da001c37ebba1c40fe9  hf_ph2.out
+5c0ad3b9921662b3969543ca4fd6e0a2  hf_ph2_analyse.out
+3724d8648bd0e9cdad78ba411e814b1e  hf_ph2_mini.jsonl
+7800032a2727c6083961897c6c5f6dad  hf_ph2_smoke.jsonl
