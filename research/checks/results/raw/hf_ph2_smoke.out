@@ -1,0 +1,16 @@
+identity ph cell 4 rep 0 softJ K=1000 R=1.111 lam=0.0351 gens=80000: 30 fields compared (trace 321 points), OK (sec 373 vs 435; rss 39 MB)
+identity ph cell 68 rep 0 trunc g=1.0 K=1000 R=2.000 lam=0.4 gens=80000: 30 fields compared (trace 321 points), OK (sec 72 vs 175; rss 33 MB)
+ENGINE IDENTITY: PASS (373 s)
+
+mini stage (K = 200, 4,000 generations; code path only, not a result):
+rows 2; peak worker RSS 51 MB; CPU-h 0.0; HF rule passes 0 of 2; strict 0; backlog 0; peak open count 3617
+
+## softJ (mix) K=200 s=0.01 R=1.1111 gens=4000 burn=2000 max_open=40000
+| lam | HF rule | strict rule | fails (type@t) | k/lam | q4/q1 | nopen | tau = nopen/k | maxrel | D | RSS MB | kq3/lam | kq4/lam (last quarter) | dn2500 | open at end | peak open | k/lam per run |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0.8 | 0/1 | 0/1 | - | 0.704 | 1.298 | 1571 | 2791 | 1.55 | 45.3 | 46 | 0.619 | 0.789 | +64.9% | 1811 | 1811 | 0.704 |
+| 1.6 | 0/1 | 0/1 | - | 0.652 | 1.272 | 3205 | 3075 | 1.85 | 50.1 | 51 | 0.574 | 0.729 | +66.8% | 3617 | 3617 | 0.652 |
+lam_max nan; x Term3 nan; x 1/300 nan
+tau(1.6) / tau(0.8) = 1.102; k/lam 0.704 -> 0.652; kq4 - kq3: +0.170, +0.156
+
+## K = 4000 against K = 1000 (softJ, R = 1.111)

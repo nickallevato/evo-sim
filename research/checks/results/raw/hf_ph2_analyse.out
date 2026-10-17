@@ -1,0 +1,37 @@
+rows 31; peak worker RSS 384 MB; CPU-h 591.3; HF rule passes 31 of 31; strict 31; backlog 0; peak open count 14319
+
+## softJ (mix) K=1000 s=0.01 R=1.05 gens=120000 burn=60000 max_open=40000
+| lam | HF rule | strict rule | fails (type@t) | k/lam | q4/q1 | nopen | tau = nopen/k | maxrel | D | RSS MB | kq3/lam | kq4/lam (last quarter) | dn2500 | open at end | peak open | k/lam per run |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0.8 | 4/4 | 4/4 | - | 0.999 | 1.013 | 6304 | 7886 | 2.65 | 123.5 | 213 | 0.995 | 1.003 | -0.6% | 6274 | 6533 | 1.002 0.997 0.997 1.001 |
+| 1.6 | 4/4 | 4/4 | - | 1.000 | 0.993 | 14022 | 8766 | 4.07 | 138.6 | 213 | 1.001 | 0.999 | -0.3% | 13942 | 14319 | 0.997 1.000 1.001 1.001 |
+lam_max 1.6+; x Term3 498.5; x 1/300 480
+tau(1.6) / tau(0.8) = 1.112; k/lam 0.999 -> 1.000; kq4 - kq3: +0.008, -0.002; tau(0.8) / stage L tau(0.4) = 1.068
+
+## softJ (mix) K=1000 s=0.01 R=1.1111 gens=80000 burn=40000 max_open=40000
+| lam | HF rule | strict rule | fails (type@t) | k/lam | q4/q1 | nopen | tau = nopen/k | maxrel | D | RSS MB | kq3/lam | kq4/lam (last quarter) | dn2500 | open at end | peak open | k/lam per run |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0.8 | 4/4 | 4/4 | - | 0.997 | 0.998 | 3757 | 4710 | 2.17 | 70.3 | 213 | 0.999 | 0.995 | -0.7% | 3722 | 3919 | 0.997 0.997 0.997 0.997 |
+| 1.6 | 4/4 | 4/4 | - | 0.998 | 0.996 | 8045 | 5037 | 3.02 | 75.6 | 213 | 0.998 | 0.998 | -0.2% | 8004 | 8355 | 1.002 1.000 0.996 0.994 |
+lam_max 1.6+; x Term3 230.9; x 1/300 480
+tau(1.6) / tau(0.8) = 1.069; k/lam 0.997 -> 0.998; kq4 - kq3: -0.005, -0.000; tau(0.8) / stage L tau(0.4) = 1.045
+
+## softJ (mix) K=4000 s=0.01 R=1.1111 gens=80000 burn=40000 max_open=40000
+| lam | HF rule | strict rule | fails (type@t) | k/lam | q4/q1 | nopen | tau = nopen/k | maxrel | D | RSS MB | kq3/lam | kq4/lam (last quarter) | dn2500 | open at end | peak open | k/lam per run |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0.8 | 4/4 | 4/4 | - | 1.003 | 1.006 | 4782 | 5958 | 2.47 | 83.3 | 231 | 1.004 | 1.002 | -0.8% | 4764 | 4930 | 1.001 1.003 1.003 1.006 |
+| 1.6 | 3/3 | 3/3 | - | 1.000 | 0.985 | 10345 | 6464 | 3.68 | 90.9 | 384 | 1.006 | 0.994 | -0.1% | 10336 | 10655 | 0.999 1.002 1.000 |
+lam_max 1.6+; x Term3 273.0; x 1/300 480
+tau(1.6) / tau(0.8) = 1.085; k/lam 1.003 -> 1.000; kq4 - kq3: -0.002, -0.012; tau(0.8) / stage L tau(0.4) = 1.046
+
+## trunc (trunc) K=1000 s=0.01 R=1.05 gens=80000 burn=40000 max_open=40000
+| lam | HF rule | strict rule | fails (type@t) | k/lam | q4/q1 | nopen | tau = nopen/k | maxrel | D | RSS MB | kq3/lam | kq4/lam (last quarter) | dn2500 | open at end | peak open | k/lam per run |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0.8 | 4/4 | 4/4 | - | 1.000 | 0.992 | 1687 | 2108 | 1.64 | 29.5 | 231 | 1.001 | 0.999 | +3.2% | 1704 | 1853 | 1.010 0.996 0.993 1.002 |
+| 1.6 | 4/4 | 4/4 | - | 0.998 | 1.014 | 6033 | 3777 | 2.53 | 55.3 | 213 | 0.995 | 1.001 | +0.0% | 6068 | 6312 | 0.996 0.999 0.992 1.005 |
+lam_max 1.6+; x Term3 498.5; x 1/300 480
+tau(1.6) / tau(0.8) = 1.792; k/lam 1.000 -> 0.998; kq4 - kq3: -0.002, +0.006
+
+## K = 4000 against K = 1000 (softJ, R = 1.111)
+lam 0.8: k/lam 1.003 against 0.997 (difference +0.006); kq4/lam 1.002 against 0.995 (+0.008); tau ratio 1.265; HF rule share 1.00 against 1.00
+lam 1.6: k/lam 1.000 against 0.998 (difference +0.002); kq4/lam 0.994 against 0.998 (-0.004); tau ratio 1.283; HF rule share 1.00 against 1.00

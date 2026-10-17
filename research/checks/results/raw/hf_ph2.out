@@ -1,0 +1,33 @@
+stage ph2 shard wh: 8 cells, 31 jobs, 31 to run, workers 10; est. CPU-h 584
+[ 103218s] 1/31 softJ K=4000 R=1.111 lam=0.8 rep0 fail=None@None k/lam=1.001 nopen=4765 sec=103217 rss=231MB
+[ 103752s] 2/31 softJ K=4000 R=1.111 lam=0.8 rep2 fail=None@None k/lam=1.003 nopen=4767 sec=103752 rss=206MB
+[ 106204s] 3/31 softJ K=4000 R=1.111 lam=0.8 rep1 fail=None@None k/lam=1.003 nopen=4785 sec=106203 rss=213MB
+[ 111906s] 4/31 softJ K=1000 R=1.050 lam=1.6 rep3 fail=None@None k/lam=1.001 nopen=14021 sec=111906 rss=186MB
+[ 112371s] 5/31 softJ K=1000 R=1.050 lam=1.6 rep0 fail=None@None k/lam=0.997 nopen=13954 sec=112371 rss=213MB
+[ 112580s] 6/31 softJ K=1000 R=1.050 lam=1.6 rep2 fail=None@None k/lam=1.001 nopen=14062 sec=112580 rss=190MB
+[ 112662s] 7/31 softJ K=1000 R=1.050 lam=1.6 rep1 fail=None@None k/lam=1.000 nopen=14051 sec=112662 rss=212MB
+[ 151909s] 8/31 softJ K=1000 R=1.050 lam=0.8 rep0 fail=None@None k/lam=1.002 nopen=6328 sec=48157 rss=206MB
+[ 154878s] 9/31 softJ K=1000 R=1.050 lam=0.8 rep1 fail=None@None k/lam=0.997 nopen=6292 sec=48674 rss=213MB
+[ 157589s] 10/31 softJ K=1000 R=1.111 lam=1.6 rep0 fail=None@None k/lam=1.002 nopen=8132 sec=45009 rss=190MB
+[ 157776s] 11/31 softJ K=1000 R=1.111 lam=1.6 rep1 fail=None@None k/lam=1.000 nopen=8036 sec=45114 rss=212MB
+[ 160264s] 12/31 softJ K=1000 R=1.050 lam=0.8 rep3 fail=None@None k/lam=1.001 nopen=6282 sec=47892 rss=213MB
+[ 161379s] 13/31 softJ K=1000 R=1.050 lam=0.8 rep2 fail=None@None k/lam=0.997 nopen=6313 sec=49473 rss=186MB
+[ 188579s] 14/31 trunc K=1000 R=1.050 lam=1.6 rep0 fail=None@None k/lam=0.996 nopen=5987 sec=30990 rss=190MB
+[ 188740s] 15/31 trunc K=1000 R=1.050 lam=1.6 rep1 fail=None@None k/lam=0.999 nopen=6051 sec=30964 rss=212MB
+[ 190962s] 16/31 trunc K=1000 R=1.050 lam=1.6 rep2 fail=None@None k/lam=0.992 nopen=5963 sec=30698 rss=213MB
+[ 192460s] 17/31 trunc K=1000 R=1.050 lam=1.6 rep3 fail=None@None k/lam=1.005 nopen=6131 sec=31081 rss=186MB
+[ 195723s] 18/31 softJ K=1000 R=1.111 lam=1.6 rep2 fail=None@None k/lam=0.996 nopen=8017 sec=43814 rss=206MB
+[ 198347s] 19/31 softJ K=1000 R=1.111 lam=1.6 rep3 fail=None@None k/lam=0.994 nopen=7996 sec=43469 rss=213MB
+[ 204681s] 20/31 trunc K=1000 R=1.050 lam=0.8 rep0 fail=None@None k/lam=1.010 nopen=1719 sec=8958 rss=206MB
+[ 206142s] 21/31 softJ K=4000 R=1.111 lam=0.8 rep3 fail=None@None k/lam=1.006 nopen=4809 sec=102925 rss=231MB
+[ 207104s] 22/31 trunc K=1000 R=1.050 lam=0.8 rep1 fail=None@None k/lam=0.996 nopen=1681 sec=8758 rss=213MB
+[ 208836s] 23/31 softJ K=1000 R=1.111 lam=0.8 rep1 fail=None@None k/lam=0.997 nopen=3755 sec=20095 rss=212MB
+[ 208868s] 24/31 softJ K=1000 R=1.111 lam=0.8 rep0 fail=None@None k/lam=0.997 nopen=3781 sec=20289 rss=190MB
+[ 210645s] 25/31 softJ K=1000 R=1.111 lam=0.8 rep2 fail=None@None k/lam=0.997 nopen=3756 sec=19683 rss=213MB
+[ 211625s] 26/31 softJ K=1000 R=1.111 lam=0.8 rep3 fail=None@None k/lam=0.997 nopen=3736 sec=19166 rss=186MB
+[ 212116s] 27/31 trunc K=1000 R=1.050 lam=0.8 rep2 fail=None@None k/lam=0.993 nopen=1657 sec=7435 rss=206MB
+[ 213075s] 28/31 trunc K=1000 R=1.050 lam=0.8 rep3 fail=None@None k/lam=1.002 nopen=1690 sec=6932 rss=231MB
+[ 218293s] 29/31 softJ K=4000 R=1.111 lam=1.6 rep2 fail=None@None k/lam=1.000 nopen=10364 sec=218293 rss=384MB
+[ 218965s] 30/31 softJ K=4000 R=1.111 lam=1.6 rep1 fail=None@None k/lam=1.002 nopen=10372 sec=218965 rss=377MB
+[ 219282s] 31/31 softJ K=4000 R=1.111 lam=1.6 rep0 fail=None@None k/lam=0.999 nopen=10298 sec=219282 rss=377MB
+stage ph2 shard wh done in 219282 s
