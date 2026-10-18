@@ -8,7 +8,11 @@ Checks docs/research/claims/*.md front-matter and cross-references:
   - each side has claims (balance count)
   - a verdict field whose YAML comment carries a scope (SCOPE_RE) has a one-line
     `verdict_scope:` entry keyed by field name (B-R21; yaml.safe_load drops comments, so the
-    scope must be data to travel into hierarchy.yaml and the board)
+    scope must be data to travel into hierarchy.yaml and the board). An entry beginning
+    `none:` (NO_SCOPE_RE) is the ruled answer "the current value carries no scope" and must
+    say why: the scope text belongs to a superseded value, or the reading-dependence is on a
+    rhetoric tag and not on the value (B-R22, B-R27; ruling 2026-10-18). Consumers must not
+    render a `none:` entry as a scope on the value.
 With --write-hierarchy, regenerates docs/research/hierarchy.yaml from claim front-matter
 (nodes in hierarchy.yaml without a claim file are kept and marked `claim_file: missing`).
 Exit 1 on errors.
@@ -29,6 +33,11 @@ FIELDS = ("internal", "fidelity", "external")
 # Survey of the corpus 2026-10-17 (EVO-84). Bare "scope" is not matched: it also occurs as
 # "out of scope" / "in-scope readings" (rule S), which are not scopes on a value.
 SCOPE_RE = re.compile(r"SCOPED|scoped to|conditional on|reading-dependent|only under", re.I)
+# A ruled "no scope on the current value" entry (B-R22, B-R27): the entry is required, so the
+# ruling is on the record as data, but it states no scope and no consumer may render one.
+NO_SCOPE_RE = re.compile(r"^\s*none\b\s*[:\-]", re.I)
+# A field whose current value is one of these has no verdict to scope and nothing to publish.
+NO_VALUE = {"pending", "n/a"}
 
 
 def verdict_comments(raw):

@@ -12,6 +12,8 @@ verdicts:
   internal: holds   # internal: weak inductive burden argument. external contested: Day does make a testable prediction (zero completions, C) that the audit tested, and the record is microevolutionary scale; the same standard applies to the critic-side models (GAP-07b). 'Day's math can't do any of this' is rhetoric (RH). R4 mapping review RD (2026-10-11): quote 3 is reading-dependent (dialectic on H1-printed and H2-excl, rhetoric on H1-applied and H2-incl); the verdicts above are unchanged under every reading.
   fidelity: n/a
   external: contested
+verdict_scope:
+  internal: "none: the reading-dependence is on quote 3's RH tag (dialectic on H1-printed and H2-excl, rhetoric on H1-applied and H2-incl); ROOT-PG's three verdicts are unchanged under every reading. Lint false positive ruled B-R27, 2026-10-18"
 ---
 
 ## Statement (verbatim)

@@ -12,6 +12,8 @@ verdicts:
   internal: holds   # R4 FM: > 80 is reachable (weak sense) with phi at W >= 1 Mb (>= 100 kb for DHC), every lineage; the statistic and window are unreleased
   fidelity: unverifiable   # rule F: window and statistic unreleased; phi grows roughly linearly with W (H at F0: 3.3, 10.4, 36.9, 136 at 1 kb to 1 Mb), so the same data give 3x or 800x
   external: supported   # reading-dependent: R4 FMnull (integrated 2026-10-13, reviews #76-#79; value unchanged). Field takes R1 (variance over mean, the reading "overdispersed" names; rule RD, most defensible reading): `supported` as a description, non-discriminating. "More than 80" is true of the held alignment at W >= 1 Mb in all ten lineage-by-masking cells (F2 at 1 Mb: H 89.4, C 89.5, B 88.3, G 85.1, DHC 253), and wherever it is true at W <= 1 Mb the measured index is inside or below a mechanistic neutral band (index / N_hi 0.11 to 0.91 over eight parameter sets; post hoc). R2 (SD ratio > 80, the audit's reading): true in no measured cell. R1 at W <= 10 kb: extended reading, UNTESTED, `unverifiable` until Day releases W. Earlier (R4 FM): against a shared-rate null it shrinks to about 2-6 (F2 100 kb: 2.7 H, 2.4 C). Alternative: contested for the implied 'surprising' reading
+verdict_scope:
+  external: "Scope: reading R1 governs (variance over mean, the reading \"overdispersed\" names): `supported` as a description and non-discriminating, true of the held alignment at W >= 1 Mb in all ten lineage-by-masking cells; R2 (SD ratio > 80, the audit's reading) is true in no measured cell; R1 at W <= 10 kb is an extended, untested reading and stays `unverifiable` until Day releases W"
 ---
 
 ## Statement (verbatim)

@@ -12,6 +12,8 @@ verdicts:
   internal: holds
   fidelity: accurate
   external: "contested"   # exact at steady state; transient and overlap effects (B1c, B3b)   # RD (2026-10-11): RH-18's tag is reading-dependent; B5 unchanged under every reading
+verdict_scope:
+  external: "none: the reading-dependence is on RH-18's rhetoric tag, not on the value; B5 external is `contested` under every reading (exact at steady state; transient and overlap effects at B1c, B3b). Lint false positive ruled B-R27, 2026-10-18"
 ---
 
 ## Statement (verbatim)

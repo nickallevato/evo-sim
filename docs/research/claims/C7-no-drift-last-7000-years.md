@@ -12,6 +12,9 @@ verdicts:
   internal: non-sequitur   # reading-dependent (RD, owner 2026-10-11; value = the reading under which the quoted statement is most defensible, i.e. closest to literally true (D-15), here the fixation reading): fixation reading -> non-sequitur (the count is true; the inference 'so drift is not happening' is the non-sequitur at C: few or no fixations from intermediate frequency in ~280 generations is what neutral drift predicts at N_e ~ 1e4, claim C, R4 C1/C1b); strict allele-frequency drift reading -> n/a (rhetoric, unscored); census reading -> pending a sourced census (flips at about 8.2e5)
   fidelity: n/a
   external: contradicted   # reading-dependent (RD): fixation reading -> the count itself is supported (P about 1e-17 for a fixation from p0 = 0.5 in 280 generations), the conclusion 'drift isn't happening' is contradicted: R4 C1d measures F_adj 0.002-0.014 between AADR bins (28-250 generations), far from zero (attribution to drift vs admixture, structure and composition stays open, B2e); strict reading -> n/a (rhetoric); census reading -> pending
+verdict_scope:
+  internal: "Scope: the fixation reading governs - the count is true and the inference \"so drift is not happening\" is the non-sequitur at C; the strict allele-frequency drift reading is `n/a` (rhetoric, unscored) and the census reading is pending a sourced census (flips at about 8.2e5)"
+  external: "Scope: the fixation reading governs - the count itself is supported (P about 1e-17 for a fixation from p0 = 0.5 in 280 generations) and the conclusion \"drift isn't happening\" is contradicted by R4 C1d (F_adj 0.002-0.014 between AADR bins, 28-250 generations), with attribution to drift vs admixture, structure and composition left open at B2e; strict reading `n/a` (rhetoric), census reading pending"
 ---
 
 ## Statement (verbatim)

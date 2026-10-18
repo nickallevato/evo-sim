@@ -12,6 +12,8 @@ verdicts:
   internal: holds   # R4 VID-01-score (2026-10-13), fix pass under lead rulings R-8/R-9/R-10/R-13: re-verified against a re-fetched, sha256-matched MITTENS 3.0 (22bb4ef8...). Token search of body + addendum: 0 lowercase `d` tokens case-sensitively (case-insensitively 3 in main, all "Appendix D" citations or an author initial, none a coefficient), 0 "0.45", 0 "450,000", 0 "selective turnover"; "252,000" 10x, never multiplied, and s8.6 applies its cited rate to the full 252,000. **3.0 contains no d term and applies no d multiplier to its generation count; an overlap correction survives by citation inside the s8.6 rate** (a token search establishes the absence of the symbol, not the absence of the correction). GGR-14's elaboration is contradicted under both in-scope readings; GGR-13's core assertion is accurate as to the s8.6 step. Reading (c) governs among in-scope readings; reading (a) is an extended reading and may not set the field or headline (rule RD line 202). SCOPED, not reading-dependent (rule RD line 198: the Formal statement fixes the reading)
   fidelity: n/a
   external: pending
+verdict_scope:
+  internal: "Scope: a token search of the re-fetched, sha256-matched MITTENS 3.0 (22bb4ef8...), reading (c) governing: `holds` as to the absence of the symbol `d` and of any d multiplier on the generation count, not as to the absence of an overlap correction, which survives by citation inside the s8.6 rate; reading (a) is an extended reading and may not set the field or the headline (rule RD line 202)"
 ---
 
 ## Statement (verbatim)

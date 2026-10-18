@@ -30,6 +30,30 @@ Briefs are committed before each task exists (MA-21).
    the lead already suspects, and may one agent write both steelman reviews. Until answered,
    briefs name the suspicions openly and each steelman is a separate task.
 
+## Verdict scopes (B-R20..B-R30): where this stands after 2026-10-18
+
+- **The 14 unresolved `verdict_scope` fields: RULED and applied 2026-10-18 (EVO-91).** Rulings
+  **B-R22..B-R30** in `docs/research/DECISIONS.md`. `lint_research.py` is clean (0 errors) and
+  `--write-hierarchy` runs again; `hierarchy.yaml` regenerated under a passing gate, 12 scope
+  entries -> 26. No verdict value moved and no governing reading moved (lint tallies unchanged;
+  `hierarchy.yaml` node-identical outside `verdict_scope`), so no D-24 fresh reviewer is owed.
+  New convention: a `verdict_scope` entry beginning `none:` means the current value carries no
+  scope and says why (B-R23) — used by A2e external, B internal, B5 external, ROOT-PG internal.
+- **The B-R20/B-R21 hold still stands.** Its tooling condition is met, but publication is
+  outward action: **no board publication may show B internal or A2e external**, and B internal's
+  scoped `holds` stays un-integrated (also behind D-21's three reviews). Lifting the publication
+  half needs the owner's word (hard rule 6).
+- **OPEN (B-R30), for the next board patch, before any publication:** the live page says
+  "H, H8, H5 external stay contested" in the reviews #66-#69 bullet with no scope, where all
+  three are conditional on K (tested to 64,000) and on the survival horizon. `scope_guard.py`
+  now exits 1 on it, so it blocks publication. Fix in `board/upd<N+1>.py`, not by hand-editing
+  `status.html`. The same run should clear the 9 REVIEW lines (B1e x3, B9, C, DN1 x2, DN6 x2):
+  each states its scope in its own words; a human confirms the paraphrase matches the ruled line.
+- **`scope_guard.py` is usable now, and was not before (B-R28).** As written on 2026-10-17 it
+  reported 22 of 22 entries, all noise. Re-cut: value within 120 chars of the id, `pending` and
+  `n/a` are not values, short ids must be quoted as claim references, two-tier VIOLATION/REVIEW
+  output. Do not lean on any scope-guard output from before this commit.
+
 ## Queue (after review #13)
 
 - **FM replication (new 2026-10-10; Day's "The Fourth Mechanism", ROOT-FM): pre-register a per-lineage mesa replication against a neutral null with variable mutation rate (Opus design).** Load-bearing tier (three reviews). Inputs: the public T2T Primate Consortium alignment (Yoo 2025; Progressive Cactus). Must define: window size and mesa-calling rule, the dispersion statistic and its null, per-lineage counts for every ape branch, repeat/SD/CpG masking, ILS-aware polarisation, and the units of the MITTENS-ceiling and Haldane comparison. Predictions for both sides before any run (Day: a human-specific excess survives the heterogeneous-mu null; critics: the pattern is reproduced on the chimp and gorilla lineages and by the null). Run on na-workhorse only; commit the script first. Day's three pre-registration checklist items (code, coordinates, statistic) are unmet as of 2026-10-10; the UATV broadcast is unread. Refresh file: `docs/research/sources/refresh-2026-10-10.md`.

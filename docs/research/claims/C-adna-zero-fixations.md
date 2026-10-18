@@ -12,6 +12,8 @@ verdicts:
   internal: "non-sequitur"   # neutral also predicts ~0 from <50% and 0.04-0.11 from 50-90%
   fidelity: n/a
   external: "contested"   # reading-dependent: contested under R-c (the source states no s: zero excludes the 15,556 required rate only if its sweeps had s >= s*; s* = 0.03 to 0.05 on the blog statistic B10, 0.05 on Z50, 0.1 on Z10); contradicted (scoped: the inference from zero to a refuted required rate fails for s <= 1e-2) under R-a (s = 1e-3, Q44, another post) and R-b; supported (scoped) under the extended reading R-d (s >= 0.05), which no source gives; observation not in question; Readings table in the R4 L5 paragraph (R4 L5, integrated 2026-10-13, reviews #80). Other notes: observed 1 and 3 mildly above neutral at Ne 1e4, equal at Ne ~7k; admixture not modelled; R4 C1c/C1d do not address this intermediate-start statistic (their 21-class events start at >=95%); C1d reproduces the completions in kind (2 and 0 from Neolithic MAF >=10% vs Day's 1 and 3), with his event total 3.6x below the reproduction
+verdict_scope:
+  external: "Scope: reading R-c governs, in which the source states no s (zero excludes the required rate only if the sweeps had s >= s*: 0.03-0.05 on the blog statistic B10, 0.05 on Z50, 0.1 on Z10); `contradicted` under R-a and R-b (s <= 1e-2), `supported` under the extended reading R-d (s >= 0.05), which no source gives; the observation itself is not in question"
 ---
 
 ## Statement (verbatim)

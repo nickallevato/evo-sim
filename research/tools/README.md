@@ -7,7 +7,7 @@ These scripts produced the committed research files. They were written during th
 | `harvest/` | Corpus fetching and conversion (blog, Zenodo, PMC, video captions), quote extraction and verification, bibliography and opponent-profile generators |
 | `harvest/data/` | URL lists, crawl classification, sha256 hashes, blog/Zenodo index tables (metadata only, no full texts) |
 | `claims/` | R2 claim-file generators (`p1`–`p7`, `gen_*`, and the `s/` package that writes `docs/research/claims/`) |
-| `board/` | Scripts that patch `docs/research/status.html` (the status Artifact) node by node |
+| `board/` | Scripts that patch `docs/research/status.html` node by node. `board/scope_guard.py` is the publication gate, not a patcher: it exits 1 where the page states a scoped verdict with no scope, or states a value the audit has pulled back to `pending`, and prints REVIEW lines where the page paraphrases a scope instead of quoting the ruled line (B-R21, re-cut by B-R28). Run it before every publication |
 | `argmap_check.py` | Checks `docs/research/argmap/` (verbatim lineage quotes, registered ids, dates, standard-form targets, mechanical `counter` lists, coverage of hierarchy attack edges) |
 | `argmap_render.py` | Draws `docs/img/argmap/genealogy.svg` and writes `docs/arguments/defeaters.md` (objection graph per branch, grounded semantics read three ways) |
 | `prereg_status.py` | Writes `research/checks/PREREG-STATUS.md` from `git log` and the local `origin/research` reflog (descriptive; reads history only) |

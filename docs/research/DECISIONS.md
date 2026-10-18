@@ -243,3 +243,99 @@ claim the audit does not make. The board as published today shows both fields as
 which is bare and correct, so nothing public is currently wrong and nothing is being pulled.
 
 This is a tooling decision, not a verdict decision, so it is the lead's under D-28.
+
+## 2026-10-18 — the 14 unresolved verdict scopes, ruled (lead ruling B-R22..B-R30)
+
+EVO-84 made verdict scopes machine-readable and populated 12 of them verbatim. It left **14
+fields** where `lint_research.py` sees a scope in the comment and finds no `verdict_scope`
+entry, and it gated `--write-hierarchy` behind them. All 14 are ruled below (EVO-91). Every
+question in them is a question of **reading or of tooling**, not of policy or of outward
+action, so they are the lead's under D-24 and D-28; none went to the owner.
+
+**Nothing moved.** The lint's verdict tallies are character-for-character what they were
+before the ruling (`internal:holds=133`, `external:contested=116`, and so on), and the
+regenerated `hierarchy.yaml` is node-for-node identical to the committed one outside the
+`verdict_scope` key (checked by loading both and comparing every node with the key dropped).
+Each ruled line is composed from the claim file's own comment: it names the governing reading
+already on the record and adds no reasoning. **No governing reading moved, so the D-24
+fresh-reviewer safeguard is not triggered.**
+
+**B-R22. A `pending` value has no scope (A2e external, B internal — the B-R21 pair).** In both
+files the SCOPED / reading-dependent text describes the value D-21 **superseded**; the current
+value is `pending`. Two ways to clear the lint were available: lift the superseded text out of
+the front matter so the comment scan stops seeing it, or record the ruling as data in place.
+The second is taken. Moving the text would move history out of the place reviewers read it,
+and the file of record should say what was pulled. The entry therefore reads `none:` (B-R23)
+and states that the scope belongs to the superseded value and may not be shown as a current
+one. **This does not lift the B-R20/B-R21 hold.** The tooling half of the hold's condition is
+now met — scope is data, the linter errors without it, `hierarchy.yaml` carries it, the guard
+checks the page — but publication is outward action, so showing B internal or A2e external
+still needs the owner's word under hard rule 6, and B internal's scoped `holds` is still
+un-integrated and still behind D-21's three reviews.
+
+**B-R23. The `none:` convention.** A `verdict_scope` entry beginning `none:` means "the current
+value carries no scope", and must say why. The entry is still **required**: the ruling belongs
+on the record as data, not as an absence that the next reader has to re-derive. No consumer may
+render a `none:` entry as a scope on the value. Implemented as `NO_SCOPE_RE` in
+`lint_research.py`, honoured by `scope_guard.py`. Four fields use it: A2e external and B
+internal (B-R22), B5 external and ROOT-PG internal (B-R27).
+
+**B-R24. A4d internal: the bare "SCOPED" tag now has its sentence.** The comment tags the value
+SCOPED and never says what the scope is; the scope is in the finding. Ruled: `holds` is scoped
+to what a token search can establish — the absence of the symbol `d` and of any d multiplier on
+the generation count in the re-fetched, sha256-matched MITTENS 3.0 (`22bb4ef8…`), reading (c)
+governing — and **not** to the absence of an overlap correction, which survives by citation
+inside the s8.6 rate. Reading (a) stays an extended reading and may not set the field or the
+headline (rule RD line 202). This is the distinction the VID-01-score fix pass already drew in
+prose; it is now data.
+
+**B-R25. The nine multi-reading fields.** B1e fidelity, B1e external, B9 internal, C external,
+C7 internal, C7 external, DN1 external, DN6 fidelity, FM3 external record several readings and
+no single plain sentence to copy. Ruled: where the comment offers no sentence, the scope line is
+written in one fixed shape — **the governing reading first, then every other reading with its
+verdict and its status** (extended, untested, not field-setting, carried at another node) —
+composed only from what the comment already says. No reading is added, dropped or re-ranked.
+This is deliberately a *restatement* and not a *decision*: the alternative, picking one reading
+per field as "the" scope, would move governing readings on nine fields, three of them on
+load-bearing branches, which is a verdict decision and not a tooling one.
+
+**B-R26. The lint test is not narrowed.** `SCOPE_RE` matching prose is generous on purpose. A
+false positive costs one recorded `none:` line; a false negative puts an unscoped value on a
+public page, which is the failure B-R20 found. Narrowing the test on phrases like "unchanged
+under every reading" would put the gate back into prose parsing — the thing that failed. The
+test stands as EVO-84 wrote it.
+
+**B-R27. B5 external and ROOT-PG internal are not scoped values.** In both, the
+reading-dependence is on a **rhetoric tag** — Mansfield RH-18 on B5, quote 3 on ROOT-PG — and
+the comment itself says the verdicts are unchanged under every reading. These are the two
+probable false positives EVO-84 flagged, and they are false positives. Under B-R26 the test is
+not changed; under B-R23 each gets a `none:` entry naming the tag.
+
+**B-R28. The board scope guard's threshold was wrong, and is re-cut.** Asked whether the guard
+can be leaned on: not as written on 2026-10-17. It reported **22 of 22** page entries as
+violations and every one was noise. Three causes: it accepted the *field name* near the claim
+id and then looked for the value anywhere in the same `<li>`; it counted `pending` as a stated
+value, so prose like "Open owner decisions … O-1 … pending" matched; and one-letter ids matched
+ordinary text and reading labels ("B (literal equality) non-sequitur" is *reading* B). Re-cut:
+the value must sit within 120 characters of the id with no sentence break; `pending` and `n/a`
+are not values; a one- or two-character id counts as a claim reference only where it opens the
+entry or carries a field name before the value; `none:` scopes require nothing of the page; and
+the report is now two-tier — **VIOLATION** (exit 1) where a scoped value is stated with no
+scope cue at all, **REVIEW** (exit 0) where the entry carries a scope in its own words but not
+the verbatim line, because the page is hand-written prose and will paraphrase. A verbatim
+substring test on prose reported nine entries that do state their scope. On the live page the
+re-cut guard reports 3 violations and 9 review lines.
+
+**B-R29. The EVO-84 `hierarchy.yaml` stands, and is regenerated anyway.** It was written by a
+run that bypassed the error gate, so it was not trustworthy on its face. Checked rather than
+assumed: outside `verdict_scope` it is identical to the file the clean run now writes, node for
+node. So nothing was wrong in it; it was only missing the 14 entries. It is regenerated under a
+passing gate in the ruling commit (12 scope entries -> 26), which is now the file of record.
+
+**B-R30. Finding, not yet fixed: the published board states three scoped verdicts bare.** The
+re-cut guard's three violations are one bullet — "H, H8, H5 external stay contested" in the
+reviews #66-#69 entry — which gives no hint that all three are conditional on K (tested to
+64,000) and on the survival horizon. This is the B-R21 hazard on the live page, in the critics'
+favour this time rather than Day's. It is **not** patched here: `status.html` is patched by
+`board/upd<N+1>.py` as its own task against the current files of record, and the guard now
+blocks publication until it is. Queued in `research/checks/QUEUE.md`.

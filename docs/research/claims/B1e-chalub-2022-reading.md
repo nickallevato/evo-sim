@@ -14,6 +14,8 @@ verdicts:
   external: contested   # reading-dependent: (A) the exponent is supported in logarithms (exact as T/Nₑ → 0) and "every application of k = μ ... is guaranteed to be incorrect" is `contested` on the start state only (true from an empty start, the paper's premise; from a stationary start the flux is exactly μ; scored at B1, B1c, B6a): sets the field; (B) `contradicted` by the exact diffusion at every T. Was `pending` until R4 B2f
 verdict_scope:
   internal: "Scope: the value covers the Zenodo statement; the 2026-08-23 blog quote (1/(2N) \"imported\") was not examined by B2f"
+  fidelity: "Scope: reading (A) governs - Hard Limits is cited and relayed with its domain omitted, `partial`; reading (B) is `misread`; the Chalub link itself (is Chalub's Gegenbauer expansion the Kimura 1955 series?) is unchecked and stays `partial` on the ledger basis only"
+  external: "Scope: reading (A) governs - the exponent is supported in logarithms (exact as T/Nₑ → 0) and \"every application of k = μ ... is guaranteed to be incorrect\" is contested on the start state only (true from an empty start, the paper's premise; from a stationary start the flux is exactly μ; scored at B1, B1c, B6a); reading (B) is `contradicted` by the exact diffusion at every T"
 ---
 
 ## Statement (verbatim)

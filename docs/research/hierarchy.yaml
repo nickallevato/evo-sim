@@ -187,6 +187,9 @@ nodes:
     internal: non-sequitur
     fidelity: pending
     external: pending
+  verdict_scope:
+    external: 'none: `pending` since 2026-10-13 (D-21) carries no scope of its own; the SCOPED text in the comment above belongs to the superseded
+      `contradicted` value and may not be shown as a current value (B-R20/B-R21 hold; ruled B-R22, 2026-10-18)'
   claim_file: docs/research/claims/A2e-ltee-as-ceiling.md
 - id: A2f
   title: 'Natural-selection-only LTEE rates: 4,615 (blog) vs ~1,408 (Zenodo 3.0) vs ~24,500 "serial" (blog)'
@@ -488,6 +491,10 @@ nodes:
     internal: holds
     fidelity: n/a
     external: pending
+  verdict_scope:
+    internal: 'Scope: a token search of the re-fetched, sha256-matched MITTENS 3.0 (22bb4ef8...), reading (c) governing: `holds` as to the absence
+      of the symbol `d` and of any d multiplier on the generation count, not as to the absence of an overlap correction, which survives by citation
+      inside the s8.6 rate; reading (a) is an extended reading and may not set the field or the headline (rule RD line 202)'
   claim_file: docs/research/claims/A4d-d-dropped-in-mittens-3.md
 - id: A4e
   title: 'Hancock: overlapping generations are handled by effective size and the Moran model; Kimura did not ''revise'' Wright-Fisher; a century
@@ -757,6 +764,10 @@ nodes:
     internal: pending
     fidelity: partial
     external: contested
+  verdict_scope:
+    internal: 'none: `pending` since 2026-10-13 (D-21) carries no scope of its own; the reading-dependent text in the comment above belongs to
+      the superseded `non-sequitur` value, and the B-R11..B-R19 re-ruling to a scoped `holds` is held un-integrated, so neither may be shown as
+      a current value (B-R20/B-R21 hold; ruled B-R22, 2026-10-18)'
   claim_file: docs/research/claims/B-neutral-theory-cannot-rescue.md
 - id: B1
   title: k = mu is a steady-state identity; finite-time count differs (Intrinsic Irrelevance)
@@ -869,6 +880,11 @@ nodes:
     external: contested
   verdict_scope:
     internal: 'Scope: the value covers the Zenodo statement; the 2026-08-23 blog quote (1/(2N) "imported") was not examined by B2f'
+    fidelity: 'Scope: reading (A) governs - Hard Limits is cited and relayed with its domain omitted, `partial`; reading (B) is `misread`; the
+      Chalub link itself (is Chalub''s Gegenbauer expansion the Kimura 1955 series?) is unchecked and stays `partial` on the ledger basis only'
+    external: 'Scope: reading (A) governs - the exponent is supported in logarithms (exact as T/Nₑ → 0) and "every application of k = μ ... is
+      guaranteed to be incorrect" is contested on the start state only (true from an empty start, the paper''s premise; from a stationary start
+      the flux is exactly μ; scored at B1, B1c, B6a); reading (B) is `contradicted` by the exact diffusion at every T'
   claim_file: docs/research/claims/B1e-chalub-2022-reading.md
 - id: B2
   title: 'Hard Limits: drift cannot complete fixations above a census ceiling; the domain of k = mu is empty for large vertebrates'
@@ -1327,6 +1343,9 @@ nodes:
     internal: holds
     fidelity: accurate
     external: contested
+  verdict_scope:
+    external: 'none: the reading-dependence is on RH-18''s rhetoric tag, not on the value; B5 external is `contested` under every reading (exact
+      at steady state; transient and overlap effects at B1c, B3b). Lint false positive ruled B-R27, 2026-10-18'
   claim_file: docs/research/claims/B5-critics-k-equals-mu-cancellation.md
 - id: B5a
   title: 'McCarthy: 100 mutations/newborn × N = 10,000 over 9 My gives 450 billion mutations; × 1/20,000 = 22.5 million fixed'
@@ -1650,6 +1669,9 @@ nodes:
     fidelity: unverifiable
     external: contradicted
   verdict_scope:
+    internal: 'Scope: reading A governs (selection fully relaxed, mutation load, Lynch 2016), `holds`; reading B (literal fixation of harmful
+      substitutions over 4Ne generations) is `non-sequitur` under N2a - "within centuries" against Day''s own "~one million years apiece" in the
+      same comment'
     external: scoped to premises 1 and 2 as worded (premise 1 false under standard theory; premise 2 against R4-L1 dN/dS ~0.21-0.27)
   claim_file: docs/research/claims/B9-drift-would-cause-extinction-within-centuries.md
 - id: C
@@ -1674,6 +1696,10 @@ nodes:
     internal: non-sequitur
     fidelity: n/a
     external: contested
+  verdict_scope:
+    external: 'Scope: reading R-c governs, in which the source states no s (zero excludes the required rate only if the sweeps had s >= s*: 0.03-0.05
+      on the blog statistic B10, 0.05 on Z50, 0.1 on Z10); `contradicted` under R-a and R-b (s <= 1e-2), `supported` under the extended reading
+      R-d (s >= 0.05), which no source gives; the observation itself is not in question'
   claim_file: docs/research/claims/C-adna-zero-fixations.md
 - id: C1
   title: The 1240k capture panel is ascertained on present-day variable sites, so near-zero fixations (and zero new-mutation substitutions) are
@@ -1936,6 +1962,13 @@ nodes:
     internal: non-sequitur
     fidelity: n/a
     external: contradicted
+  verdict_scope:
+    internal: 'Scope: the fixation reading governs - the count is true and the inference "so drift is not happening" is the non-sequitur at C;
+      the strict allele-frequency drift reading is `n/a` (rhetoric, unscored) and the census reading is pending a sourced census (flips at about
+      8.2e5)'
+    external: 'Scope: the fixation reading governs - the count itself is supported (P about 1e-17 for a fixation from p0 = 0.5 in 280 generations)
+      and the conclusion "drift isn''t happening" is contradicted by R4 C1d (F_adj 0.002-0.014 between AADR bins, 28-250 generations), with attribution
+      to drift vs admixture, structure and composition left open at B2e; strict reading `n/a` (rhetoric), census reading pending'
   claim_file: docs/research/claims/C7-no-drift-last-7000-years.md
 - id: D
   title: Functional proteins are a vanishing fraction of sequence space (about 1e52 proteins ever vs 1e325 sequences), and the Wistar challenge
@@ -2685,6 +2718,10 @@ nodes:
     internal: pending
     fidelity: n/a
     external: contradicted
+  verdict_scope:
+    external: 'Scope: reading (A) governs - 0.80 as a property of the genomes (Q172 "aligned positions", Q173 setting 0.80 against 0.23 as one
+      quantity); reading (B), 0.80 as the output of his unreleased pipeline, is a different object and stays `untestable` until code or a per-gene
+      table is released; reading (C), dependence on the alignment method, is carried at DN6'
   claim_file: docs/research/claims/DN1-dnds-080-on-20400-genes.md
 - id: DN2
   title: 'Day: no combination of quality filters moves dN/dS below 0.65; the strictest stack gives 0.64 on 10 genes'
@@ -2771,6 +2808,9 @@ nodes:
     fidelity: misread
     external: contested
   verdict_scope:
+    fidelity: 'Scope: the strict reading a governs - fidelity asks what the cited source did, and the held CSAC 2005 Methods put the 13,454-gene
+      set on the BLASTZ genome alignment with Clustal W only for a 7,043-gene subset, against Day''s Q274 "conserved enough to survive protein
+      alignment"; the broad reading a-broad is `partial` or `unverifiable` until the SI criteria are held'
     external: 'Scope: this genome alignment (hs1 / mPanTro3 Cactus), this annotation (GENCODE v35, human frame projected onto chimp) and the audit''s
       in-script aligner; no external codon aligner, no independent chimp CDS.'
   claim_file: docs/research/claims/DN6-protein-guided-alignment-biases-dnds-down.md
@@ -3225,6 +3265,10 @@ nodes:
     internal: holds
     fidelity: unverifiable
     external: supported
+  verdict_scope:
+    external: 'Scope: reading R1 governs (variance over mean, the reading "overdispersed" names): `supported` as a description and non-discriminating,
+      true of the held alignment at W >= 1 Mb in all ten lineage-by-masking cells; R2 (SD ratio > 80, the audit''s reading) is true in no measured
+      cell; R1 at W <= 10 kb is an extended, untested reading and stays `unverifiable` until Day releases W'
   claim_file: docs/research/claims/FM3-overdispersion-more-than-80-times.md
 - id: FM4
   title: 'Day, ''The Fourth Mechanism'' FM4: dense windows cluster into contiguous blocks with ''sharp boundaries'' (''mesas'')'
@@ -4152,6 +4196,9 @@ nodes:
     internal: holds
     fidelity: n/a
     external: contested
+  verdict_scope:
+    internal: 'none: the reading-dependence is on quote 3''s RH tag (dialectic on H1-printed and H2-excl, rhetoric on H1-applied and H2-incl);
+      ROOT-PG''s three verdicts are unchanged under every reading. Lint false positive ruled B-R27, 2026-10-18'
   claim_file: docs/research/claims/ROOT-pg-hancock-popgen-track-record.md
 - id: ROOT-T
   title: 'Frank Tipler: Probability Zero is the most rigorous mathematical challenge to Neo-Darwinian theory ever published'

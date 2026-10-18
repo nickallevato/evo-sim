@@ -13,6 +13,8 @@ verdicts:
   # INTERNAL pending since 2026-10-13 (owner D-21, "Put them back to `pending` until three reviews are done"): the non-sequitur value moved a load-bearing field on one review where three are required (audit finding MA-03); three reviews commissioned. Readings table unchanged (rule RD not revisited).
   fidelity: partial
   external: contested
+verdict_scope:
+  internal: "none: `pending` since 2026-10-13 (D-21) carries no scope of its own; the reading-dependent text in the comment above belongs to the superseded `non-sequitur` value, and the B-R11..B-R19 re-ruling to a scoped `holds` is held un-integrated, so neither may be shown as a current value (B-R20/B-R21 hold; ruled B-R22, 2026-10-18)"
 ---
 
 ## Statement (verbatim)
