@@ -135,6 +135,10 @@ _lint = subprocess.run([sys.executable, "-I", os.path.join(ROOT, "research", "ch
 _line = next((l for l in _lint.stdout.splitlines() if l.startswith("verdicts:")), None)
 if _line is None:
     raise SystemExit("readme_figs: no 'verdicts:' line from lint_research.py")
+_cl = next((l for l in _lint.stdout.splitlines() if l.startswith("claims:")), None)
+if _cl is None:
+    raise SystemExit("readme_figs: no 'claims:' line from lint_research.py")
+N_CLAIMS = int(_cl[len("claims:"):].split()[0])
 live = {}
 for item in _line[len("verdicts:"):].split(","):
     key, n = item.strip().rsplit("=", 1)
@@ -236,7 +240,7 @@ def systems_diagram():
     xs = [20, 190, 360, 530, 700, 870]
     g.box(xs[0], 40, w, h, ["Sources", "Day · critics · literature", "(book not yet read)"], C_DAY)
     g.box(xs[1], 40, w, h, ["Verbatim quotes", "locator + date + sha256", "no full texts in git"], C_CORE)
-    g.box(xs[2], 40, w, h, ["Claims (234)", "3 verdicts each:", "internal · fidelity · external"], C_CORE)
+    g.box(xs[2], 40, w, h, ["Claims (%d)" % N_CLAIMS, "3 verdicts each:", "internal · fidelity · external"], C_CORE)
     g.box(xs[3], 40, w, h, ["Argument tree + map", "branches A-H, defeaters,", "lineage, standard forms"], C_CORE)
     g.box(xs[4], 40, w, h, ["Synthesis (R5)", "sensitivity table,", "aggregation + stopping rule"], C_CRIT)
     g.box(xs[5], 40, 120, h, ["Simulator spec", "variable list", "(next phase)"], C_CRIT)
