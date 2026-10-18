@@ -513,3 +513,50 @@ half and the lean both stay on the record. Day gains no truth: `supported` stays
 one agent run and caught an inconsistency between two rulings written in the same pass by the
 same lead. That is the case for D-24, and it is recorded in favour of keeping the fresh check
 mandatory whenever a ruling moves a governing value.
+
+## 2026-10-18 — how a queued task is gated, corrected (D-30), and a timer backstop (D-31)
+
+Lane mechanics, not verdicts. Recorded because the standing record was wrong on a point of
+fact and because the error silently breached D-22 twice.
+
+**D-30. Creating a task dispatches a run, and gating it afterwards does not stop that run.**
+The rule carried from EVO-1 was "gating takes two writes: create, then set `blocked`, then
+read back — a task created with blockers comes back `todo` and is startable". That understates
+it. A task created in `todo` **gets an agent run immediately**, and the later `blocked` write
+does not kill the run already in flight. The evidence, from 2026-10-18:
+
+- **EVO-92** created 07:37:20, gated 07:37:28, and its agent posted a finished board patch at
+  07:38:12 — real work on `board/upd24.py` while **EVO-15's launch run was also live**. Two
+  agent runs at once, breaching the D-22/D-27 cap with nobody choosing to breach it.
+- **EVO-93** created 07:42:49, gated 07:42:57, and its agent checked `na-workhorse` at
+  07:43:01 before reporting "too early to collect". Harmless, by luck of what the task asked.
+
+Both outcomes were benign; the mechanism is not. A board patch running unsupervised alongside
+a compute launch is the exact collision the cap exists to prevent. Two lane reports (07:39 and
+07:44) described those tasks as quietly gated and were wrong.
+
+**The rule, from now on: a queued task is created in `backlog`, with the LANE TOKEN already in
+`blockedByIssueIds` in the same write.** `backlog` does not dispatch — EVO-6, EVO-96 and
+EVO-97 all sat there for hours with no run. Verified on **EVO-98**, created 08:21 this way and
+read back `backlog`, `blockedBy: [EVO-79]`, **no active run**. That is one write, not the three
+I expected. Release is unchanged and still takes two writes: remove the token, then set
+`in_progress`, then read back — a single PATCH carrying both is still rejected with `Issue
+follow-up blocked by unresolved blockers`.
+
+**D-31. A 4-hourly routine now backstops the blocker-edge wake.** EVO-85 waits on
+`issue_blockers_resolved`, which fires only when a blocker reaches `done`. It does not fire for
+a **cancelled** blocker, and it does not fire for a blocker whose **run dies while the issue
+stays `in_progress`** — that is the EVO-84 failure that left the lane stalled and the host idle
+from 2026-10-14 to 2026-10-17. `monitorNextCheckAt` is not writable through the API and there
+is no monitor endpoint, so the edge was the only wake available. Routines are: routine
+`ceca443d` ("Lane stall backstop"), schedule trigger `35 2,6,10,14,18,22 * * *` UTC, first fire
+2026-10-18 10:35, `concurrencyPolicy: skip_if_active`. Its run issue is instructed to **check
+for a live agent run first and close immediately, writing nothing, if one exists** — the
+backstop is not an exception to the D-22 cap — and to clear a dead blocker and report on
+EVO-85 rather than release anything itself. Releases stay on EVO-85. This bounds stall
+detection at four hours instead of unbounded, at six wakes a day instead of the ~96 that the
+old 15-minute cadence cost, which is what produced the three consecutive terminal limit
+failures on 2026-10-14 03:21-03:23.
+
+**What this does not touch.** No verdict field, no tier, no review tier, and not the
+B-R20/B-R21 publication hold.
