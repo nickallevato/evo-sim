@@ -339,3 +339,49 @@ reviews #66-#69 entry — which gives no hint that all three are conditional on 
 favour this time rather than Day's. It is **not** patched here: `status.html` is patched by
 `board/upd<N+1>.py` as its own task against the current files of record, and the guard now
 blocks publication until it is. Queued in `research/checks/QUEUE.md`.
+
+## 2026-10-18 — the release order of the seven queue heads (D-29)
+
+A sequencing decision, not a verdict decision, so it is the lead's under D-28. Recorded
+because it governs the next six releases and because the earlier lane note that "the queue is
+empty" (2026-10-14) was wrong and should not be the standing record.
+
+**The state it rules on.** Seven chain heads are gated on nothing but the LANE TOKEN, i.e.
+each is releasable the moment the lane frees: EVO-12 (integrate B1e-Q2), EVO-15 (FMnull-S4),
+EVO-22 (L1c-b), EVO-29 (L5-C1a), EVO-36 (C1d-D), EVO-50 (L3), EVO-77 (L2 Open 7). Everything
+behind them is gated on its own predecessor as well, so the chains self-order; only the order
+*among the seven* was open. Five of the seven put work on `na-workhorse`.
+
+**D-29a. Two scarce resources, not one, and they are not the same resource.** D-22/D-27 cap
+*agent runs* at one. It does not cap the compute host, which runs on its own once a job is
+launched — `ph2` cost 591 CPU-h of host time and almost none of it needed an agent awake. The
+cost of getting this wrong is measured in days: a launch-and-collect task that sits
+`in_progress` waiting on the host holds the single agent lane for the whole run, so every
+cheap bookkeeping task behind it waits on a job that needs no agent at all. Ruling: **the host
+gets loaded first, and the lane is not held while the host works.** Order below follows from
+that and nothing else.
+
+**D-29b. The launch half and the collect half are separate lane occupants.** The five compute
+tasks are each written as "launch and collect". They are not run that way. The released agent
+checks `uptime`, rsyncs the pre-registered script, launches with `< /dev/null`, records the
+hostname and md5s in `research/checks/results/raw/<x>.host`, reports, and **hands the lane
+back** — it does not wait. The collect becomes its own task, created at that point and woken
+when the run is done, which is the pattern `ph2` already proved (routine R1 moved EVO-4 from
+`backlog` to `todo` when the run finished). No agent polls a running job.
+
+**D-29c. The order.** FMnull-S4 (EVO-15) first: it is the only *load-bearing* tier among the
+launches whose design is pre-registered and whose inputs are settled, it feeds the FMnull
+criteria that D-25's fairer FM10 rule bears on, and its cooling-off expired on 2026-10-14. Then,
+while the host is busy, the lane takes the work that needs no host: EVO-12 (integrate B1e-Q2,
+shared-file bookkeeping, closes a chain whose fix pass is already done and unblocks EVO-7's
+check) and EVO-92 (the B-R30 board patch, which the re-cut guard now blocks publication on).
+Then the remaining host work, as the host frees: EVO-50 (L3, load-bearing, but likelier to
+stall on sourcing public polymorphism data than on compute), EVO-29 (L5-C1a), EVO-22 (L1c-b),
+EVO-36 (C1d-D), EVO-77 (L2 Open 7, tool validation, lowest stakes of the five and it moves no
+verdict field on its own). This order is a default, not a freeze: a result that moves a
+governing reading re-opens it.
+
+**What D-29 does not touch.** No verdict field, no tier, and not the B-R20/B-R21 publication
+hold, which stands on its own terms — its tooling condition is met as of B-R22..B-R29, but
+showing B internal or A2e external is outward action and needs the owner's word under hard
+rule 6.
