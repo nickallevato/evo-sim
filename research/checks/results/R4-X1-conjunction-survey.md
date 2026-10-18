@@ -147,8 +147,15 @@ would book against A4g for seven minutes.
 re-score of O-6 is therefore not triggered. The 33 load-bearing claims, all checked:
 
 A, A2e, A3, B, B1, B1c, B2, B2b, B3, B3a, B3g, B4a, B5, B6, B7, C2, C2a, E5, E6, F, F1, F1a, F2,
-F3a, FM10, H, H1, H2, H5, H8, ROOT-EM (`ROOT-excluded-mechanisms`), ROOT-FM, ROOT-NM
-(`ROOT-no-mechanism-suffices`).
+F3a, FM10, H, H1, H2, H5, H8, ROOT (`ROOT-no-mechanism-suffices.md`), ROOT-FM, ROOT-M
+(`ROOT-excluded-mechanisms.md`).
+
+*Id correction, 2026-10-18 18:3x:* the two root nodes were first written here as "ROOT-EM" and
+"ROOT-NM". Those ids do not exist. `hierarchy.yaml` calls them **ROOT** (line 4022, claim file
+`ROOT-no-mechanism-suffices.md`) and **ROOT-M** (line 4175, claim file
+`ROOT-excluded-mechanisms.md`); the claim files named in the original parentheses were right, so
+the set of 33 nodes screened is unchanged and the step-4 determination is unaffected. Checked
+against `lint_research.py`'s load-bearing list, which now matches this one exactly.
 
 Four are in T3 (B, F, F1a, H2) and each is adjudicated to no move in 3.1. None is in T4. The two
 with a single Statement quote block (A, FM10) cannot conjoin at all. For the remaining 27 no
@@ -167,7 +174,9 @@ re-survey is owed before then.
 
 ## 6. Drafted adoption text (not applied)
 
-Held for 2026-10-19 07:59 UTC, and for EVO-94 (section 7). Three edits, in this order.
+Held for 2026-10-19 07:59 UTC. The EVO-94 gate is discharged (section 7) and the owner has settled
+the B-R33a choice (section 8), so the cooling-off is the only condition left. Three edits, in this
+order.
 
 ### 6.1 `research/checks/results/R4-X1-verdict-rule.md`, new section after RD
 
@@ -197,15 +206,24 @@ Held for 2026-10-19 07:59 UTC, and for EVO-94 (section 7). Three edits, in this 
 >   Where a claim's Statement quotes assert propositions that do not stand or fall together, the
 >   claim is split into one node per proposition rather than conjoined. A split touches
 >   `hierarchy.yaml`, the argmap and the board, so it is filed as its own task.
+> - **CJ6 (the scope line still obeys B-R25).** CJ fixes what the scope line must *add* — the
+>   carrying quote first, then every other quote with its value and status. It removes nothing
+>   B-R25 requires: every reading of every conjoined quote keeps its verdict and its status in the
+>   line, none added, none dropped, including readings that favour the author (cross-reference only;
+>   B-R25 is already adopted and CJ changes no outcome under it).
 > - Applied to Day, critics and allies alike.
 >
-> **Test cases.** (i) B1e: external `contested` (QB, reading R-A) with the blog quote
-> `contradicted` → `contradicted`, carrier QB named first. (ii) B1e internal: `holds` scored, blog
-> quote unexamined → `holds` under CJ2, the gap in the scope line. (iii) A4g fidelity: quote 1
-> `accurate` firsthand, quotes 2-3 `secondhand`/`unverifiable` → `unverifiable` under CJ2, all three
-> named. (iv) B: quote 1 `rhetoric`, quotes 2-3 dialectic → the dialectic quotes conjoin, quote 1
-> recorded unscored under CJ3. (v) A claim whose two quotes are both `partial` → `partial`, both
-> named (B1e fidelity).
+> **Test cases.** (i) B1e external: both conjuncts `contested` under their governing readings →
+> `contested`, **value unmoved**, and because neither conjunct alone carries the value the scope
+> line says so rather than naming a carrier (B-R35; the drafted line is RC-6's). (ii) B1e internal
+> as it stood *before* B1e-Q2: QB `holds` scored, the Zenodo statement unexamined → `holds` under
+> CJ2's unexamined limb, the gap in the scope line. As it stands now both conjuncts are `holds`
+> (Zenodo under reading (A), with (B) `non-sequitur`), so the field is `holds` with neither quote
+> carrying it alone. (iii) A4g fidelity: quote 1 `accurate` firsthand, quotes 2-3
+> `secondhand`/`unverifiable` → `unverifiable` under CJ2's scored limb, all three named. (iv) B:
+> quote 1 `rhetoric`, quotes 2-3 dialectic → the dialectic quotes conjoin, quote 1 recorded unscored
+> under CJ3. (v) A claim whose two quotes are both `partial` → `partial`, both named, neither
+> carrying alone (B1e fidelity).
 
 ### 6.2 Vocabulary section note
 
@@ -227,7 +245,41 @@ be generalised before that review reports.** If the fresh reviewer faults how B-
 field, the clause drafted in 6.1 changes with it. Adoption needs both: the cooling-off expired and
 EVO-94 clear on B-R33.
 
-## 8. Who this helps
+**Discharged, 2026-10-18.** EVO-94 reported (`REVIEW-R4-B1e-Q2-ruling-check.md`, commit `009d5b6`).
+It **confirmed B-R33's rule** — "taking each field's weakest conjunct follows from what a claim node
+asserts ... it hides nothing once the scope line names the carrier ... Recording `unverifiable` /
+`untestable` / `pending` conjuncts in the scope line rather than on the scale is acceptable ... The
+split as the countermeasure, filed separately, is right" — with two MINOR corrections to the
+*drafted scope lines only*, not to the rule: RC-5 (the lines must keep every reading and the
+existing parentheticals, per B-R25) and RC-6 (redraft of the external line). It separately rejected
+**B-R32's value** on RC-1, re-ruled as **B-R35**: B1e external stays `contested`, so B-R33 moves no
+B1e value at all (external `contested`/`contested`, fidelity `partial`/`partial`, internal
+`holds`/`holds`) and RC-7's O-6 timing objection does not arise.
+
+Two consequences for this file, both applied above: the test cases in 6.1 that assumed
+`contradicted` are corrected to B-R35's values, and RC-5's requirement is written into the clause as
+**CJ6**. CJ6 is a cross-reference to an adopted rule and changes no outcome, so under O-6 it is not
+a material amendment and does not restart the clock. The gate in this section is **clear**: the only
+remaining condition on adoption is the cooling-off to 2026-10-19 07:59 UTC.
+
+## 8. Owner decision on the B-R33a choice (2026-10-18 17:02 UTC)
+
+The lead raised the one open choice — sub-rule B-R33a versus the literal reading of B-R33 — as a
+human-only confirmation on EVO-95 (`caba91bd`, prompt "Adopt rule CJ with sub-rule B-R33a (the
+recommended reading)?", options "Adopt with B-R33a" / "Use the literal reading"). The owner
+**accepted** at 2026-10-18 17:02:15 UTC, with no conditions attached.
+
+So the clause adopted is the one drafted in 6.1, B-R33 **as amended by B-R33a** (clause CJ2). The
+literal reading is declined, **A4g is not re-scored**, and its fidelity stays `unverifiable`. No
+verdict value moves on any claim. This is recorded as owner decision **D-35** in
+`docs/research/DECISIONS.md`.
+
+Adoption itself is still held: 2026-10-19 07:59 UTC is the O-6 cooling-off on the amendment, and an
+owner's answer does not shorten it. At 18:2x UTC on 2026-10-18 the lane was free and no shared file
+needed to move, so this run recorded the answer and the EVO-94 discharge and left the three edits of
+section 6 unapplied.
+
+## 9. Who this helps
 
 **Day's side.** The off-scale sub-rule (B-R33a) is the clause that *costs* Day a field: without it
 A4g's fidelity would rise from `unverifiable` to `accurate` on the strength of his own Zenodo

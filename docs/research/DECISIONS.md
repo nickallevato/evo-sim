@@ -618,3 +618,51 @@ blocker. It then releases **EVO-93 alone** and reports on EVO-85. Every other qu
 ordering question, and anything that is not EVO-93 stays EVO-85's call. The D-22/D-27 one-run cap
 is untouched — the first condition is the same live-run check the routine already did, and it
 still closes writing nothing if a run exists.
+
+## 2026-10-18 — the owner settles the B-R33a choice (owner decision D-35)
+
+**D-35. The owner adopts rule CJ with sub-rule B-R33a; the literal reading of B-R33 is declined
+and A4g is not re-scored.** EVO-95's survey (`research/checks/results/R4-X1-conjunction-survey.md`,
+commit `045803a`) found that B-R33 is silent on what a verdict field *shows* when one Statement
+conjunct is off-scale, and that the two readings disagree on exactly one claim, A4g
+(`load_bearing: false`). Read literally, A4g's fidelity would rise `unverifiable` → `accurate` on
+the strength of Day's own Zenodo abstract, with the two secondhand quotes demoted to the scope
+line — a verdict value move, and *upward*, which is the opposite of the cost B-R33 books against
+itself, and which would let one firsthand quote scrub the `unverifiable` rule U gives a relay.
+
+Because the choice moves a verdict field and amends a rule of the verdict rule, the lead put it to
+the owner rather than ruling it (D-28 reserves policy and value-moving rule changes to the owner).
+Card `caba91bd` on EVO-95, `human_only`, prompt: "Adopt rule CJ with sub-rule B-R33a (the
+recommended reading)?", options "Adopt with B-R33a" / "Use the literal reading", with the stated
+consequences of each and the note that adoption waits for the cooling-off either way. The owner
+**accepted** at **2026-10-18 17:02:15 UTC**, attaching no conditions.
+
+So the adopted clause is: a conjunct **scored** `unverifiable` or `untestable` sets the field (rules
+F and U reach the node, not one quote of it); a conjunct that is merely **unexamined** or `pending`
+does not, and the field takes the weakest *scored* conjunct with the gap recorded in the scope line.
+That is clause **CJ2** of the drafted rule. It matches what the corpus already does at B2, B2b, E6,
+D8, D10, H3, D7a, D7b, C2b, B5d, A3d and ROOT-T, and **no verdict value moves anywhere** on
+adoption — A4g's fidelity stays `unverifiable`, and under B-R35 no B1e value moves either.
+
+**What D-35 does not do: it does not adopt the rule.** O-6's cooling-off on the B-R33a amendment
+runs to **2026-10-19 07:59 UTC**, and an owner's answer does not shorten it — the cooling-off exists
+so that a rule written in the middle of an integration is read again cold, which the owner's assent
+does not substitute for. The three edits (rule CJ into `R4-X1-verdict-rule.md` with its test cases,
+the vocabulary note, the adoption row here) are drafted in section 6 of the survey file and stay
+unapplied until the clock expires. EVO-96, the B1e split, stays gated behind adoption per D-33.
+
+**Also recorded here: the EVO-94 gate on EVO-95 is discharged.** EVO-94 confirmed B-R33's rule with
+two MINOR corrections to the drafted scope lines only (RC-5, RC-6); its rejection of B-R32 was
+re-ruled as B-R35 and moves no B1e value. The survey's test cases are corrected to B-R35's values
+and RC-5's requirement is written into the clause as **CJ6**, a cross-reference to the already
+adopted B-R25 that changes no outcome and so does not restart the O-6 clock (survey section 7).
+
+**Amendment to D-34, same mechanism, next task.** D-34 gave routine `ceca443d` one bounded release
+exception for EVO-93, because an issue monitor cannot be armed through the API and a wait on a
+*clock* therefore produces no wake. EVO-93 is now `done` and that exception is spent. EVO-95 is in
+exactly the same position — nothing blocks it but 2026-10-19 07:59 UTC — so the exception is
+re-pointed, under the same three-condition guard: no agent run live anywhere in the company, the
+clock past 2026-10-19 07:59 UTC, and EVO-95 still `in_progress` with the adoption unapplied. The
+routine then wakes **EVO-95 alone** by posting on it, and releases nothing else. The first eligible
+tick is 2026-10-19 10:35 UTC. The D-22/D-27 one-run cap is untouched: the first condition is the
+same live-run check, and the run closes writing nothing if any run exists.
