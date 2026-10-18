@@ -600,3 +600,21 @@ phrase in EVO-96's description is superseded.
 
 **What D-32 and D-33 do not touch.** No verdict field, no governing reading, and not the
 B-R20/B-R21 publication hold.
+
+**D-34. Amendment to D-31: the backstop routine may release exactly one task, EVO-93, and
+nothing else.** D-31 says "releases stay on EVO-85". That holds for every ordering decision, but
+it leaves one hole that showed up the same morning it was written. EVO-85's only wake is
+`issue_blockers_resolved`, which needs a blocker to complete. When the lane is already free and
+what the queue is actually waiting on is a **clock** — the FMnull-S4 host job finishing at about
+10:30 — there is no blocker to complete and therefore no wake. Re-tested both candidate fields at
+08:4x: `monitorNextCheckAt` and `monitorWakeRequestedAt` each accept a PATCH with HTTP 200 and
+leave the field `null`, so an agent cannot arm an issue monitor at all. Without an amendment the
+collect would sit token-gated with an idle host until the 14:35 tick.
+
+So routine `ceca443d` (revision 4) now carries a release exception guarded by three conditions,
+all of which must hold: no agent run live anywhere in the company, the `fmnull_s4.py sim`
+processes gone from na-workhorse, and EVO-93 `blocked` with EVO-79 as its only unresolved
+blocker. It then releases **EVO-93 alone** and reports on EVO-85. Every other queued task, every
+ordering question, and anything that is not EVO-93 stays EVO-85's call. The D-22/D-27 one-run cap
+is untouched — the first condition is the same live-run check the routine already did, and it
+still closes writing nothing if a run exists.
