@@ -127,12 +127,29 @@ ax.set_title("H2 · hard-selection cap is ln R / D, not a flat 1/300", color=INK
 ax.legend(fontsize=8.5, loc="lower right")
 save(fig, "h2_persistence.svg")
 
-# 6. Verdict tallies (lint_research.py output on 2026-10-14 after R4 VID-01-score, 234 claims; n/a verdicts not drawn)
-tallies = {
-    "internal": [("holds", 133, ACC), ("non-sequitur", 18, DAY), ("arithmetic error", 2, "#ef4444"), ("pending", 52, "#525252")],
-    "fidelity": [("accurate", 44, ACC), ("partial", 39, "#eab308"), ("misread", 11, DAY), ("unverifiable", 58, "#525252"), ("pending", 10, "#3f3f46")],
-    "external": [("supported", 34, ACC), ("contested", 116, "#eab308"), ("contradicted", 17, DAY), ("untestable", 6, NEU), ("pending", 49, "#525252")],
+# 6. Verdict tallies, read from the lint_research.py "verdicts:" line (same source as the
+# lint tally; n/a verdicts not drawn). Segment order and colours are fixed here; counts are not.
+import subprocess, sys
+_lint = subprocess.run([sys.executable, "-I", os.path.join(ROOT, "research", "checks", "lint_research.py")],
+                       capture_output=True, text=True, cwd=ROOT)
+_line = next((l for l in _lint.stdout.splitlines() if l.startswith("verdicts:")), None)
+if _line is None:
+    raise SystemExit("readme_figs: no 'verdicts:' line from lint_research.py")
+live = {}
+for item in _line[len("verdicts:"):].split(","):
+    key, n = item.strip().rsplit("=", 1)
+    field, val = key.split(":", 1)
+    live[(field, val)] = int(n)
+_layout = {
+    "internal": [("holds", "holds", ACC), ("non-sequitur", "non-sequitur", DAY), ("arithmetic error", "arithmetic-error", "#ef4444"), ("pending", "pending", "#525252")],
+    "fidelity": [("accurate", "accurate", ACC), ("partial", "partial", "#eab308"), ("misread", "misread", DAY), ("unverifiable", "unverifiable", "#525252"), ("pending", "pending", "#3f3f46")],
+    "external": [("supported", "supported", ACC), ("contested", "contested", "#eab308"), ("contradicted", "contradicted", DAY), ("untestable", "untestable", NEU), ("pending", "pending", "#525252")],
 }
+tallies = {f: [(label, live.get((f, val), 0), c) for label, val, c in segs] for f, segs in _layout.items()}
+_drawn = {(f, v) for f, segs in _layout.items() for _, v, _ in segs} | {(f, "n/a") for f in _layout}
+_extra = sorted(set(live) - _drawn)
+if _extra:
+    raise SystemExit(f"readme_figs: lint reports verdict values the figure does not draw: {_extra}")
 fig, ax = plt.subplots(figsize=(7.2, 2.6))
 for i, (k, segs) in enumerate(tallies.items()):
     left = 0
