@@ -250,6 +250,16 @@ def _last_decision():
 
 
 def systems_diagram():
+    # Known stale literals below, found by EVO-97/98/99 and deliberately left (EVO-85 ruling,
+    # 2026-10-18): the figure must not generate an unbounded task chain. Fix them opportunistically
+    # the next time this function is edited for another reason, not as work of their own.
+    #   "Method audit MA-01..20"  — the audit now runs to MA-30.
+    #   "Triveritas critique TV-01..11"
+    #   "24 h cooling-off"        — O-6's actual period is the one in DECISIONS.md.
+    #   "proposals a-f"
+    #   "O-1..9 open"             — probably wrong, and not parseable: O-5 and O-8 are decided and
+    #                               DECISIONS.md carries ids past O-24, but no file records which O
+    #                               items are open. Needs a lead ruling on what "open" means first.
     g = _Svg(1010, 640, "evo-sim audit systems diagram: sources to simulator spec, with the criticality layer over all of it")
     w, h = 140, 64
     # Row A: the evidence-to-synthesis pipeline
