@@ -3,3 +3,16 @@ Sun Oct 18 07:39:32 AM UTC 2026
 commits 75743af + 45f814d (origin/research); 1000 Mb rule: smoke projected 2.52 h at 10 procs; chain /tmp/run_fmnull_s4.sh: realdata, sim --procs 10 --mb 1000, post; selftest and smoke (--procs 10 --mb 2) passed on host
 a8f72e1e1823df783968cda73c444fac  research/checks/fmnull_s4.py
 716db19e2ed5a43015a49f0b7a5ff98c  research/checks/results/raw/fm_bins.npz
+--- collected 2026-10-18 22:4x UTC (EVO-93) ---
+finish: chain done 2026-10-18 20:43:27 UTC (fmnull_s4.done); sim arm finished 20:35:44 UTC. No fmnull_s4 processes left on host.
+actual wall: sim arm 46482 s = 12.91 h (json wall_s) vs projected 2.52 h at launch = ~5.1x over (earlier status note said ~4x at 10.5 h, run was still going). Chain total 07:39->20:43 = 13.07 h. Cause: linear extrapolation from the 2 Mb smoke run. Tooling note for EVO-16: re-cut the projection rule before this script is launched again; moves no number or verdict.
+worker failures: none (no error/traceback/fail strings in any fmnull_s4*.out). peak_rss_mb_worker 333.9.
+md5 (host == workstation after rsync):
+dd6a903a759c29217b625cf5848105f1  fmnull_s4.done
+9ad581c657f7059f233eb19af8720060  fmnull_s4_real.json
+cc90bae7895b3de87ad3d7ccce400192  fmnull_s4_real.out
+6e8b23da129214f07b2ae586026d0015  fmnull_s4_post.out
+a9887c21011a855b02491c1f9a559df6  fmnull_s4_post.json
+2e0642310dfa59e25a30b21698d4c3ca  fmnull_s4_sim.out
+b126916e1b16cf18a7d02d575a71e9db  fmnull_s4_sim.npz  (179 MB, NOT committed; kept on host and workstation)
+a54cdc0c1e857e1e63dec31d08cd55b6  fmnull_s4_smoke.out
