@@ -2365,3 +2365,76 @@ Q296 closes the filing gap found by EVO-78: the sentence `L-dembski-scaling-repl
 - locator: para 66, Day's answer to DE-01 (para 65), sentence 2 of 6. Paragraph numbering follows the DE-01..DE-03 convention in `quotes-critics.md`; in this page copy the `<p>` indices are 57 (DE-01) and 58 (the answer), i.e. the answer is the paragraph immediately after the question, which is what the check verifies.
 - quote: "The scaling element doesn’t apply at all, it is entirely irrelevant, because sexual reproductive capacity is the real limit on humans and other non-bacteria."
 - note: Verbatim confirmed (QM-03/QM-04 branch 2: a hard-rule-2 filing gap, not a fidelity breach; the argmap text was correct). The answer opens "No, and that argument is flat-out wrong." and continues "Mutational fixation in humans and other vertebrates can never approach the speed of mutational fixation in bacteria. The defense is dead on arrival." The remaining two sentences are about "mathematicians failing to grasp … the context of the math" (not filed). Day's answer, in an ally venue, to an ally-side steelman of A5. RH tag: dialectic for the quoted sentence (a stated reason: sexual reproductive capacity as the binding limit); the "dead on arrival" sentence is rhetoric.
+
+## B1e-Q2 quotes (Q297-Q311; EVO-12 integration of `results/R4-B1e-Q2.md`, 2026-10-18)
+Filed from the held copies under `sources/raw/b1e-q2-2026-10-13/` (gitignored): `blog-2026-08-23.txt` (sha256 3e6292c1baeb3177fb96213810898b412b863d1479db963ce21d702aded2a2a5), `chalub2022v1.txt` (sha256 c7225292f5e2c28f21ffb88f412d91a0577de7fb332df97c522865a944fe0c3f, from `chalub2022v1.pdf` sha256 a720d24b68e25de825e4d183dd732564ed2c6e831974bc50973d6f1e8a10c0ed). Each blog quote was machine-checked as an exact substring (whitespace collapsed). Chalub quotes are exact after rejoining the pdftotext line-end hyphenation ("con- servation") and the split integral signs; those are extraction artefacts, noted per entry. All quotes are in the write-up's "Quotes for integration" list.
+
+### Q297 Day, "Chalub and the Kimura Cancellation": the 1/(2N) "is an assumption imported from the Wright-Fisher model" (QB) - voxday.net 2026-08-23
+- source: URL https://voxday.net/2026/08/23/chalub-and-the-kimura-cancellation/, published 2026-08-23T09:37:10Z (modified 13:16:18Z); held `blog-2026-08-23.txt`
+- locator: post body paragraph 4 (script extraction, 1-based), held .txt l.7. The claim file's "¶5 of extracted text" is not shown to be wrong; both counts recorded.
+- quote: "Chalub shows that the 1/(2N) is an assumption imported from the Wright-Fisher model. It is not a result produced by the mathematics."
+- note: B1e's second Statement quote (QB). RH tag: dialectic.
+
+### Q298 Day, same post: the paragraph that contains QB - voxday.net 2026-08-23
+- locator: post body ¶4, held .txt l.7, the sentences before Q297
+- quote: "The diffusion machinery is invoked throughout the literature as independent confirmation that a neutral allele fixes with probability equal to its frequency. Chalub shows the machinery cannot confirm any such thing, because it was given the answer in advance. That is the circular reasoning."
+- note: SC4 / D3 of the B1e-Q2 reviews (what "the mathematics" means in QB's context).
+
+### Q299 Day, same post: B3c - voxday.net 2026-08-23
+- locator: held .txt l.5 (the constraints paragraph, same line as B3a)
+- quote: "The second is that the average allele frequency never changes, which is not a fact about diffusion but an inherited assumption from the Wright-Fisher model, the very assumption that has been successfully disputed by me and three scientists before me."
+
+### Q300 Day, same post: B3e - voxday.net 2026-08-23
+- locator: held .txt l.5 (the constraints paragraph, same line as B3a)
+- quote: "he says plainly that the constraints are inherited from the discrete process."
+
+### Q301 Day, same post: B6 and the sentence after it - voxday.net 2026-08-23
+- locator: held .txt l.11
+- quote: "The initial-frequency theorem is not a theorem of the diffusion. The diffusion cannot produce it."
+- note: the next sentence (D3) is "The diffusion has to be provided as an assumed condition that is supplied in order to solve the equation."
+
+### Q302 Day, same post: B3a - voxday.net 2026-08-23
+- locator: held .txt l.5
+- quote: "Nothing in the Kimura equation determines how the escaping probability splits between those two boundaries."
+
+### Q303 Day, same post: the circularity sentence (D5) - voxday.net 2026-08-23
+- locator: held .txt l.5
+- quote: "Chalub writes in the constraint before he solves anything, recovers it as a result two pages later"
+- note: the sentence continues in the post; only this clause is quoted.
+
+### Q304 Chalub 2022 §2.2: the two conservation laws (C1) - arXiv:2208.00148v1, 30 Jul 2022
+- locator: §2.2, p.3, held .txt l.147-150 (bib key `Chalub2022`)
+- quote: "where a, b : R+ → R are such that two conservation laws derived directly from the discrete process are satisfied: ∂t ∫₀¹ p(x, t)dx = ∂t ∫₀¹ ϕ(x)p(x, t)dx = 0, where ϕ is the solution of ϕ′′ + ψϕ′ = 0, ϕ(0) = 0, ϕ(1) = 1."
+- note: integral signs as typeset; the extraction splits them over lines. The sentence continues "See [8] for further discussions."
+
+### Q305 Chalub 2022 §1: the Markov processes carry conservation laws (C13) - arXiv:2208.00148v1
+- locator: §1 ¶4, p.1, held .txt l.46-49
+- quote: "The finite population Markov processes referred above are associated with a number of conservation laws to be satisfied by their solutions. Most notably, the solution of the Markov process should satisfy the conservation of probability, but, in fact, the number of conservation laws is equal to the number of different alleles modeled by the associated Markov process."
+- note: line-end hyphenation ("con- servation") rejoined. "referred above" = Moran and Wright-Fisher (l.38-39).
+
+### Q306 Chalub 2022 §1: "two additional conservation laws had to be introduced" (C2) - arXiv:2208.00148v1
+- locator: §1, p.1-2
+- quote: "However, to obtain the correct solution, two additional conservation laws had to be introduced into the model."
+
+### Q307 Chalub 2022 §1: the Kimura equation as a limit (C3) - arXiv:2208.00148v1
+- locator: §1, p.1, held .txt l.38-39
+- quote: "limit of the Moran and the Wright-Fisher processes"
+- note: the full clause is "the Kimura equation was formally derived as the large population, small time-step limit, limit of the Moran and the Wright-Fisher processes" (line-end hyphenation rejoined).
+
+### Q308 Chalub 2022 §1: the correct solution (C4) - arXiv:2208.00148v1
+- locator: §1, held .txt l.55-57 (page marker 2 at l.54)
+- quote: "correct solution of the continuous models, in the sense of being a continuous approximation of the discrete process, is a measure that not only satisfy the Kimura equation (7) but also the two conservation laws given by Eqs. (9)."
+
+### Q309 Chalub 2022 §1: the main difference from earlier work (C7) - arXiv:2208.00148v1
+- locator: §1, p.2
+- quote: "The main difference between this and previous works on the same subject is that the conservation laws are taken into consideration."
+
+### Q310 Chalub 2022 §3: the Dirac-delta start (C9) - arXiv:2208.00148v1
+- locator: §3, p.4, held .txt l.232-235
+- quote: "If we assume (in the sense of distributions) that pI = δx0, i.e., an initial condition of Dirac-delta type"
+- note: extraction renders "pI = δx0 ," with a space before the comma. The only "assume" in the paper about this construction (D7).
+
+### Q311 Chalub 2022 §2.1: the α < 3/2 sentence (C12) and the §3 result line - arXiv:2208.00148v1
+- locator: §2.1 after Eq. (6), p.3, held .txt l.125-126 (the write-up's "Appendix" is corrected per C5); result line p.4, l.210
+- quote: "For α < 3/2, the right hand side of Eqs. (3)–(6) are identically zero"
+- note: result line (p.4): "Finally, the time-dependent fixation probability is given by". The §3 display "b(t) + ∫₀¹ xr(x, t)dx = ∫₀¹ xpI(x)dx" (p.3, l.175-177) is typeset with split integrals and is cited by locator only.
