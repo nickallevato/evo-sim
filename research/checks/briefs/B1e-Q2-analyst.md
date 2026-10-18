@@ -114,6 +114,12 @@ fire, and QB's fidelity stays `partial` on the basis D6 and SC3 restated.
 
 ### B-R32 (ruling 1). QB's external value under R-A is `contradicted`. `supported` is not open.
 
+> **SUPERSEDED in part by B-R35 (below), 2026-10-18, after the EVO-94 fresh-reviewer check.**
+> The value is **not** `contradicted`: it stays at the registered `contested`. Basis (3) is
+> withdrawn as a basis for QB's reading. The bar on `supported` stands, re-based on P3 with
+> P4. Read this section for the record; the integrator writes B-R35's values and scope lines,
+> not this section's.
+
 D1 (`supported`) and SC1 (`contradicted`) conflict and the lead rules. **Ruling: R-A
 external is `contradicted`, moved from the registered `contested`.** Both steelmen's
 positions stay on the record in the write-up; this is a ruling, not an average of them.
@@ -202,7 +208,7 @@ any load-bearing verdict it would move). It moves no load-bearing verdict here: 
 `load_bearing: false`. Until the freeze procedure completes, no other claim's fields are
 recomputed under it.
 
-Applied to B1e (the integrator writes these; values and scopes together, B-R21):
+Applied to B1e (**superseded by B-R35's three lines below**; kept for the record):
 - **external: `contested` → `contradicted`.** Carrier: the blog quote QB. Scope line, in
   B-R25's shape: `Scope: the value is carried by the 2026-08-23 blog quote (1/(2N)
   "imported"), `contradicted` under governing reading R-A (B-R32: P3 with P4 give the
@@ -256,18 +262,93 @@ P8 stays band U, so the Chalub-link fidelity stays `partial` on the ledger basis
 "old" half of the question stays `unverifiable`. Option (c) is declined as adding nothing:
 the post hoc docstring pre-stated H1 at the registered 1e-30 band before it ran.
 
+### B-R35 (re-ruling of B-R32, 2026-10-18, after EVO-94). RC-1 is accepted: QB's external value under R-A is `contested`, the registered value. No verdict value moves anywhere in B1e.
+
+The D-24 fresh-reviewer check (`results/REVIEW-R4-B1e-Q2-ruling-check.md`, EVO-94, 009d5b6)
+confirmed B-R31, confirmed B-R33's rule with two corrections, and **rejected B-R32's value**
+on one MAJOR (RC-1). The lead accepts RC-1 in full, and RC-2, RC-3, RC-5 and RC-6 with it.
+
+**Why RC-1 is right.** B-R32's basis (3) argued that "the most defensible reading of 'the
+mathematics' cannot be narrower than a diffusion whose boundaries are absorbing". As the
+reviewer shows, that *is* R-B's registered gloss ("the neutral diffusion model with its
+boundary behaviour", docstring l.198), not R-A's ("PDE (7) on the open interval", l.196). So
+B-R32 named R-A as governing and then scored the field on R-B's content. That is a
+re-ranking of readings, which B-R31 and RD forbid; RC-8 states the inconsistency plainly —
+B-R31 and basis (3) cannot both stand. Dropping (3) is the fix that keeps B-R31 as ruled.
+Without (3), items (1) and (2) show that the *number* is the classical solution's own
+outflux and that a free split needs non-local booking; they do not exclude non-local booking
+under a reading whose subject is (7) on the open interval, which says nothing about where
+mass that has left the interval is booked. And RC-1 (d) is decisive on consistency: the
+Zenodo conjunct in this very claim is `contested` because it is false under one premise and
+true under another, and A3a external is `contested` with a `contradicted` reading recorded
+beside it. Filing QB `contradicted` would hold Day's quote to a stricter standard than the
+audit applied to the sentence in the same file. Equal scrutiny is hard rule 1.
+
+**The ruling.**
+1. **QB external under R-A: `contested`** — the registered value. No field move, so under
+   D-24 no further fresh-reviewer check is required before integration (RC-1 fix, RC-7).
+2. **Basis (3) is withdrawn** as a basis for QB's reading (RC-2). Q288 is the Zenodo wording
+   of 2026-10-13; QB is the blog of 2026-08-23, and rule S scores a node on its own Statement
+   quotes and their derivation. (3) may stay as context — "Day's later Zenodo wording names
+   absorbing boundaries" — and it bears on R-B, not on QB's governing reading.
+3. **`supported` stays barred, re-based on P3 with P4** (RC-4), not on D1's weak-form
+   derivation or SC3 (iii), which are R-B's hinge and do not score R-A. The value *is*
+   produced by the classical solution's outflux, so sentence 2 has a genuinely false half
+   under every reading. R-A0 and R-B stay `contradicted`; R-C stays `supported` (trivially,
+   D7). None of the three is field-setting.
+4. **The two identities are named** (RC-3): P4 is extended to all t by the mode-wise identity
+   C_n^{3/2}(1) = λ_n/2 (correctness C3), b(0) = 0 comes from Chalub's printed b(t), and
+   b(∞) = ∫x p^I = x0 for a delta start (Chalub §3) is what makes the number the 1/(2N) for a
+   one-copy start. All three are analytic; none needs a run.
+5. **SC1's case is not discarded**; it moves into the scope line as the false half and the
+   lean (RC-1 (b), steelman paragraph): frequency 1 *is* fixation, so the only thing (7)
+   needs from outside is the meaning of the boundary states, which carries no number. That a
+   boundary convention is not "an assumption imported from the Wright-Fisher model" is
+   recorded as the audit's lean, not as a value that settles the open point between R-A and
+   R-B.
+6. **B-R33 stands as a rule**, with RC-5's two corrections. With (1) applied it moves **no**
+   B1e value — external `contested`/`contested`, fidelity `partial`/`partial`, internal
+   `holds`/`holds` — so the O-6 timing question RC-7 raises does not arise in EVO-12. General
+   adoption remains EVO-95 under the freeze procedure; the split remains EVO-96.
+7. **B-R34 is untouched** by the check (it was out of its remit and moves no field).
+
+**Applied to B1e — the three lines the integrator writes, values and scopes together (B-R21).
+These supersede B-R33's drafted lines above.**
+
+- **external: `contested`, value unmoved.** Both conjuncts are `contested`, so no single
+  quote carries the value. Scope line, RC-6's proposed text with RC-5 (i) and (ii) already in
+  it, verbatim:
+  `Scope: both Statement quotes are contested under their governing readings, so no single quote carries the value (B-R33, conjunction rule): the 2026-08-23 blog quote (1/(2N) "imported") under R-A - true that (7) on the open interval with probability conservation alone leaves the split free unless mass leaving at one end may be booked at the other (P5), the laws being added from the discrete process (C1, C2); false that the value is an input, the classical solution's own integrated outflux at x = 1 being ∫x p^I (P3 with P4) - with R-A0 and R-B contradicted and R-C supported (trivially), none field-setting; the Zenodo statement under its reading (A) - the exponent is supported in logarithms (exact as T/Nₑ → 0) and "every application of k = μ ... is guaranteed to be incorrect" is contested on the start state only (true from an empty start, the paper's premise; from a stationary start the flux is exactly μ; scored at B1, B1c, B6a) - with reading (B) contradicted by the exact diffusion at every T`
+- **fidelity: `partial`, value unmoved.** Both conjuncts are `partial`. The line gains QB and
+  **R-C**, and the words "the Chalub link itself ... is unchecked" are **replaced**, not
+  appended to (RC-5): QB is `partial` under R-A, narrowed from "the Moran and the
+  Wright-Fisher processes" (C3, C13) to Wright-Fisher and with "derived directly from the
+  discrete process" (C1) relabelled "assumption" (D6, SC3); `misread` under R-A0 and R-B and
+  `partial` under R-C (D7), none field-setting; the Chalub-link half stays `partial` on the
+  ledger basis, P8 band U, the P7 value item having been ruled mis-specified (B-R34) and the
+  E-line identity being post hoc and descriptive.
+- **internal: `holds`, value unmoved.** Both conjuncts are `holds`, so neither alone carries
+  the value (RC-5): QB `holds` under every reading (R-A, R-A0, R-B, R-C; T2, B3d), and the
+  Zenodo statement `holds` under reading (A) with reading (B) `non-sequitur`. "Was not
+  examined" is dropped — the blog quote has now been examined.
+- No other claim file's fields move, and no verdict *value* moves in B1e.
+
 ### What the integrator does with these
 
-1. The fresh-reviewer check on B-R31..B-R33 comes **first**; it is its own task. B-R34 moves
-   no field and needs no check.
-2. Then, in EVO-12's remaining pass: the verdict comments and `verdict_scope` entries above,
-   the defeaters on both sides (QB's external `contradicted` on the critic side; P5 with its
-   booking qualifier and Chalub's framing on the Day side), the lineage node, the mini-form,
+1. The fresh-reviewer check on B-R31..B-R33 is **done** (EVO-94, 009d5b6) and its MAJOR is
+   answered by B-R35. Because B-R35 keeps every registered value, no further check is due.
+   Write **B-R35's** three lines, not B-R33's drafted ones.
+2. Then, in EVO-12's remaining pass: the verdict comments and `verdict_scope` entries from
+   B-R35, the defeaters on both sides (on the critic side, that the 1/(2N) is the classical
+   solution's own integrated outflux at x = 1, P3 with P4 — a defeater of the "not a result
+   produced by the mathematics" half, not of the whole quote; on the Day side, P5 with its
+   booking qualifier and Chalub's own framing, C1, C2, C13), the lineage node, the mini-form,
    and the count refresh. `lint_research.py` rejects a verdict entry with no scope, so no
-   field is touched without its scope line in the same edit (B-R21).
+   field is touched without its scope line in the same edit (B-R21). No verdict *value*
+   changes, so the counts should not move; if a count does move, stop and report.
 3. Nothing publishes. B1e external appearing on the board is a later, gated task
    (EVO-92 / B-R30), not this one. The B-R20/B-R21 hold on B internal and A2e external is
-   untouched by all four rulings.
+   untouched by all five rulings.
 
 ## Report format (at most 300 words)
 

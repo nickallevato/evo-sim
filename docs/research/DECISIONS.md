@@ -460,3 +460,56 @@ field. P8 stays band U and the Chalub-link fidelity stays `partial` on the ledge
 **What these four do not touch.** No load-bearing node, no tier (C1 settled the tier
 independently: three reviews, done), nothing on a published page, and not the B-R20/B-R21
 publication hold.
+
+## 2026-10-18 — EVO-94 rejected B-R32's value; re-ruled (lead ruling B-R35)
+
+The D-24 fresh-reviewer check of B-R31..B-R33 (`research/checks/results/REVIEW-R4-B1e-Q2-ruling-check.md`,
+EVO-94, 009d5b6) confirmed **B-R31**, confirmed **B-R33**'s rule with two corrections
+(RC-5, RC-6), and **rejected B-R32's value** on one MAJOR (RC-1), with MINORs RC-2, RC-3 and
+NOTEs RC-4, RC-7, RC-8. It found no wrong number.
+
+**B-R35 (re-ruling of B-R32).** The lead accepts RC-1 in full. **QB's external value under
+R-A is `contested`, the registered value; no verdict value moves anywhere in B1e.** RC-1 is
+right on two independent grounds. (i) B-R32's basis (3) argued that the most defensible
+reading of "the mathematics" cannot be narrower than a diffusion with absorbing boundaries —
+which is R-B's registered gloss, not R-A's "PDE (7) on the open interval". B-R32 therefore
+named R-A as governing and scored the field on R-B's content, a re-ranking of readings that
+B-R31 and RD forbid; RC-8 states the inconsistency (B-R31 and basis (3) cannot both stand),
+and dropping (3) is the fix that keeps B-R31. Without (3), registered items (1) and (2) show
+that the number is the classical solution's own outflux and that a free split needs non-local
+booking, but they do not exclude non-local booking under a reading whose subject is (7) on
+the open interval. (ii) Consistency of scrutiny: the Zenodo conjunct in this same claim is
+`contested` because it is false under one premise and true under another, and A3a external is
+`contested` with a `contradicted` reading recorded beside it. `contradicted` here would hold
+Day's quote to a stricter standard than the audit applied to the sentence in the same file
+(hard rule 1).
+
+Also ruled: basis (3) is **withdrawn** as a basis for QB's reading (RC-2 — Q288 is the Zenodo
+wording of 2026-10-13, QB is the blog of 2026-08-23, and rule S scores a node on its own
+quotes; (3) survives only as context bearing on R-B). `supported` **stays barred**, re-based
+on **P3 with P4** rather than on D1's weak-form derivation and SC3 (iii), which are R-B's
+hinge and do not score R-A (RC-4). The identities the basis uses are named (RC-3): P4 extended
+to all t by C_n^{3/2}(1) = λ_n/2 (C3), b(0) = 0 from Chalub's printed b(t), and b(∞) = ∫x p^I
+= x0 for a delta start. R-A0 and R-B stay `contradicted`, R-C stays `supported` (trivially,
+D7), none field-setting. SC1's case is not discarded: it moves into the scope line as the
+false half (the value is the classical solution's own outflux) and as the audit's recorded
+lean (a boundary convention is not "an assumption imported from the Wright-Fisher model"),
+rather than into a value that settles the open point between R-A and R-B. **B-R33** stands
+with RC-5's corrections and, with this re-ruling, moves **no** B1e value (external
+`contested`/`contested`, fidelity `partial`/`partial`, internal `holds`/`holds`), so RC-7's
+O-6 timing question does not arise in EVO-12; general adoption stays EVO-95 and the split
+stays EVO-96. **B-R34** is untouched (out of the check's remit, moves no field).
+
+Because B-R35 keeps every registered value, **no further fresh-reviewer check is due** under
+D-24, and EVO-12's remaining pass may be written. The three `verdict_scope` lines the
+integrator writes are in `research/checks/briefs/B1e-Q2-analyst.md` §B-R35 and **supersede**
+B-R33's drafted lines. Nothing publishes; the B-R20/B-R21 hold is untouched.
+
+**Recorded cost to each side.** Critics lose a `contradicted` that SC1 argued well; the false
+half and the lean both stay on the record. Day gains no truth: `supported` stays barred, R-C's
+`supported` is trivial, fidelity stays `partial`, and B-R31 does not find that Day meant R-A.
+
+**Process note.** B-R32 was the first lead ruling overturned by a D-24 check. The check cost
+one agent run and caught an inconsistency between two rulings written in the same pass by the
+same lead. That is the case for D-24, and it is recorded in favour of keeping the fresh check
+mandatory whenever a ruling moves a governing value.
