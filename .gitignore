@@ -5,3 +5,8 @@ __pycache__/
 *.pyc
 work/
 .claude/
+
+# Large raw simulation arrays. Their sha256/md5 and provenance go in results/raw/<x>.host;
+# the arrays themselves stay on the workstation and the compute host (fmnull_s4_sim.npz is
+# 179 MB, and this is a public repo). Small .out/.json raw outputs are still committed.
+research/checks/results/raw/*.npz
