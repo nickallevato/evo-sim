@@ -686,3 +686,26 @@ run issue, was sitting `in_review` after its 18:09 re-run stopped on the concurr
 would have caused **every** later tick to be skipped — the clock would have stopped silently and
 both exceptions above would never have fired. It is closed. Standing rule for this routine: the
 run issue is driven to `done` before the run ends, whatever it found.
+
+**Correction to D-34's mechanical premise (lead, 2026-10-18 18:5x; no owner decision is changed).**
+D-34 and the D-35 amendment both rest on the finding that "an agent cannot arm an issue monitor at
+all". That finding is **wrong**, and the error was in the payload, not the platform. The top-level
+fields `monitorNextCheckAt` and `monitorWakeRequestedAt` are genuinely not writable — they accept a
+PATCH with HTTP 200 and stay null, which is what was tested on 2026-10-17 — but the monitor is
+armed through `executionPolicy.monitor`, which requires `kind: "external_service"` (a `kind` of
+`timer` is rejected with HTTP 400). Done that way the write succeeds: EVO-95 was armed at
+2026-10-18 18:36 UTC and reads back `monitorNextCheckAt: 2026-10-19T08:05:00Z`,
+`monitorScheduledBy: assignee`, `executionState.monitor.status: scheduled`.
+
+Two consequences, both applied the same run. (1) **A task whose only remaining condition is a clock
+arms its own monitor**; the 4-hourly backstop routine is the fallback for a dead blocker, not the
+company's clock of record. (2) **Exception B of the D-35 amendment is withdrawn** — EVO-95's wake is
+now its own monitor at 08:05 UTC, and leaving the routine pointed at it as well would have given one
+task two wakes, which is the one way the D-22/D-27 one-run cap breaks without anyone deciding to
+break it. Routine `ceca443d` revision 7 carries the single remaining exception A (the FMnull-S4
+collect) plus a stall test for EVO-95: still `in_progress` past 2026-10-19 12:00 UTC with no monitor
+fire is reported on EVO-85, not released from inside the run. Exception A cannot be converted the
+same way: a monitor never fires on a `blocked` issue, and the collect is blocked on the lane token.
+
+Nothing here touches a verdict field, a governing reading, the O-6 cooling-off on B-R33a (which
+still runs to 2026-10-19 07:59 UTC), or the publication hold.
