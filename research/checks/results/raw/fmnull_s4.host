@@ -1,0 +1,5 @@
+na-workhorse.allevato.io
+Sun Oct 18 07:39:32 AM UTC 2026
+commits 75743af + 45f814d (origin/research); 1000 Mb rule: smoke projected 2.52 h at 10 procs; chain /tmp/run_fmnull_s4.sh: realdata, sim --procs 10 --mb 1000, post; selftest and smoke (--procs 10 --mb 2) passed on host
+a8f72e1e1823df783968cda73c444fac  research/checks/fmnull_s4.py
+716db19e2ed5a43015a49f0b7a5ff98c  research/checks/results/raw/fm_bins.npz
