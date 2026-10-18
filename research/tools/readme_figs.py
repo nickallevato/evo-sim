@@ -233,6 +233,22 @@ class _Svg:
             f.write(svg)
 
 
+def _prereg_total():
+    import re
+    m = re.search(r"^\| \*\*total\*\* \| \*\*(\d+)\*\* \|", open(os.path.join(ROOT, "research", "checks", "PREREG-STATUS.md")).read(), re.M)
+    if m is None:
+        raise SystemExit("readme_figs: no total row in PREREG-STATUS.md")
+    return int(m.group(1))
+
+
+def _last_decision():
+    import re
+    ids = [int(n) for n in re.findall(r"\bD-(\d+)\b", open(os.path.join(ROOT, "docs", "research", "DECISIONS.md")).read(), re.M)]  # table rows stop at D-25; later ones are in headings and prose
+    if not ids:
+        raise SystemExit("readme_figs: no D-NN ids in DECISIONS.md")
+    return max(ids)
+
+
 def systems_diagram():
     g = _Svg(1010, 640, "evo-sim audit systems diagram: sources to simulator spec, with the criticality layer over all of it")
     w, h = 140, 64
@@ -267,9 +283,9 @@ def systems_diagram():
     cw, ch = 232, 62
     g.box(24, 322, cw, ch, ["Method audit MA-01..20", "third-party style, same-model", "proposals a-f held back"], C_LAYER)
     g.box(268, 322, cw, ch, ["Triveritas critique TV-01..11", "Day's own L / M / E test", "applied to this audit"], C_LAYER)
-    g.box(512, 322, cw, ch, ["Pre-registration status", "61 checks labelled:", "blind · single-commit · unknown"], C_LAYER)
+    g.box(512, 322, cw, ch, ["Pre-registration status", f"{_prereg_total()} checks labelled:", "blind · single-commit · unknown"], C_LAYER)
     g.box(756, 322, 232, ch, ["Methods + limitations", "who ran it, what tallies", "can and cannot mean"], C_LAYER)
-    g.box(24, 400, cw, ch, ["Decisions log", "D-01..19 done, O-1..9 open", "owner's words pasted"], C_LAYER)
+    g.box(24, 400, cw, ch, ["Decisions log", f"D-01..{_last_decision()} recorded, O-1..9 open", "owner's words pasted"], C_LAYER)
     g.box(268, 400, 476, ch, ["Outside seats (drafts only, nothing sent)", "right of reply: Day, critics · human geneticist + one reader per camp", "non-Claude review packet · COI + licence"], C_LAYER)
     g.box(756, 400, 232, ch, ["Hostile reviews", "one from each camp", "(written by same model)"], C_LAYER)
     g.box(24, 484, 964, 74, ["Feedback loop: finding → one of three routes",
