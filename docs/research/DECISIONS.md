@@ -657,12 +657,32 @@ re-ruled as B-R35 and moves no B1e value. The survey's test cases are corrected 
 and RC-5's requirement is written into the clause as **CJ6**, a cross-reference to the already
 adopted B-R25 that changes no outcome and so does not restart the O-6 clock (survey section 7).
 
-**Amendment to D-34, same mechanism, next task.** D-34 gave routine `ceca443d` one bounded release
-exception for EVO-93, because an issue monitor cannot be armed through the API and a wait on a
-*clock* therefore produces no wake. EVO-93 is now `done` and that exception is spent. EVO-95 is in
-exactly the same position — nothing blocks it but 2026-10-19 07:59 UTC — so the exception is
-re-pointed, under the same three-condition guard: no agent run live anywhere in the company, the
-clock past 2026-10-19 07:59 UTC, and EVO-95 still `in_progress` with the adoption unapplied. The
-routine then wakes **EVO-95 alone** by posting on it, and releases nothing else. The first eligible
-tick is 2026-10-19 10:35 UTC. The D-22/D-27 one-run cap is untouched: the first condition is the
-same live-run check, and the run closes writing nothing if any run exists.
+**Amendment to D-34: the one release exception becomes two, each separately guarded.** D-34 gave
+routine `ceca443d` one bounded exception for EVO-93, because an issue monitor cannot be armed
+through the API and a wait on a *clock* therefore produces no wake. EVO-93 is now `done` and that
+exception is spent, while two tasks are now in that position, so the exception is re-pointed to
+both:
+
+- **A, the FMnull-S4 collect (`1c02ae53`)** — D-34's original intent, re-pointed from EVO-93 to the
+  collect that is actually waiting. Guard unchanged in substance: no agent run live anywhere, no
+  `fmnull_s4.py sim` process on na-workhorse, and `1c02ae53` `blocked` with EVO-79 as its only
+  unresolved blocker. Checked by hand at 18:4x on 2026-10-18 over ssh: **the sim is still running**
+  (started 01:39, 10 procs), so the host gate is correctly closed, the queue is parked by design and
+  not stalled, and nothing was released tonight. If na-workhorse does not resolve from the routine's
+  runner the gate counts as unsatisfied.
+- **B, the EVO-95 adoption clock** — no agent run live anywhere, the time past 2026-10-19 07:59 UTC,
+  EVO-95 still `in_progress` with the adoption unapplied, and A not fired in the same run. The
+  routine then posts on EVO-95 and stops; it does not apply the edits itself.
+
+If both are eligible on one tick, A fires and B waits for the next: the collect is where the host
+and the open batch are, and the adoption is bookkeeping that keeps. The first eligible tick for B is
+2026-10-19 10:35 UTC. Everything that is not one of these two targets stays EVO-85's call, and the
+D-22/D-27 one-run cap is untouched — the first condition of each guard is the same live-run check,
+and the run closes writing nothing if any run exists.
+
+**One mechanical finding, fixed the same run.** The routine's concurrency policy is
+`skip_if_active`, and "active" includes an execution issue merely left open. EVO-101, the 14:35
+run issue, was sitting `in_review` after its 18:09 re-run stopped on the concurrency gate, which
+would have caused **every** later tick to be skipped — the clock would have stopped silently and
+both exceptions above would never have fired. It is closed. Standing rule for this routine: the
+run issue is driven to `done` before the run ends, whatever it found.
