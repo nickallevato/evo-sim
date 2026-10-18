@@ -560,3 +560,43 @@ failures on 2026-10-14 03:21-03:23.
 
 **What this does not touch.** No verdict field, no tier, no review tier, and not the
 B-R20/B-R21 publication hold.
+
+**D-32. Correction to D-30: `backlog` is not a gate. The token is the gate.** D-30 above says
+"`backlog` does not dispatch — EVO-6, EVO-96 and EVO-97 all sat there for hours with no run".
+The observation was right and the inference was wrong. Those three sat without a run because
+**the lane was occupied the whole time**, not because `backlog` holds anything. The evidence,
+2026-10-18: **EVO-96** was in `backlog` with an empty blocker list, and it started at
+**08:24:37.442Z** — the previous run ended at 08:24:37.119Z, so it was dispatched within a third
+of a second of the lane freeing. It then ran a full design pass on the B1e split, work that two
+lane reports had described as deliberately held back until EVO-95 settles, and parked itself
+`in_review` on an owner question card. Nothing was applied and the work is sound, but nobody
+chose to run it.
+
+So D-30's one-write recipe stands only because of the half that does the work: **the LANE TOKEN
+in `blockedByIssueIds`.** `backlog` is cosmetic. The rule, restated: **every task that is not
+meant to run next carries the token, whatever its status** — and in particular every *chain
+head*, i.e. every task whose only blockers are `done` or absent. A task gated solely by its
+predecessor is fine: when the predecessor completes, the chain advances one task, which respects
+the cap and is how the lane has always worked. A head with no predecessor and no token is an
+unowned auto-start.
+
+Swept all 36 open issues on 2026-10-18 08:3x. Two ungated heads existed: **EVO-96**, now gated
+and released only after CJ adoption, and **EVO-6**, now gated — that one matters, because its
+close-batch step publishes, and publication is outward action needing the owner's word under
+hard rule 6. Everything else is gated by the token or by a `blocked` predecessor.
+
+**D-33. EVO-96's two questions ruled by the lead; the owner card withdrawn.** EVO-96 asked the
+owner (a) when to execute the split and (b) whether the tier is one review or three. Neither is
+policy and neither is outward action, so under D-28 both are the lead's and the card
+(`eac10104`) was withdrawn rather than answered — the owner has one real card pending, the CJ
+adoption confirmation on EVO-95, and a second slot should not be spent on internal sequencing.
+Rulings: **(a) after CJ adoption**, earliest release 2026-10-19 07:59 UTC, because the split is
+CJ's named remedy and a shift in clause CJ5 moves the design's scope lines; **(b) one combined
+review**, because neither D-23 trigger fires — no check registration, no verdict value or
+reading moves, B1e not in the R5-draft 1.3 feeder list — with the binding condition that the
+review's first job is to test the no-value-moves claim, and that finding any moved value or
+reading escalates to the three-review tier **before** any edit. The "expect three reviews"
+phrase in EVO-96's description is superseded.
+
+**What D-32 and D-33 do not touch.** No verdict field, no governing reading, and not the
+B-R20/B-R21 publication hold.
