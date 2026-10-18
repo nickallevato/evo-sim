@@ -4112,3 +4112,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#87-#89), fix-passed (2026-10-14) and integrated 2026-10-14; no verdict value moved"
+
+- id: L-audit-b1e-q2-2026
+  label: "Audit B1e-Q2: the blog sentence 'the 1/(2N) is an assumption imported from the Wright-Fisher model' under R-A - the number is the classical solution's own outflux (P3 with P4) but the split needs non-local booking to stay free (P5) and Chalub adds the laws from the discrete process; contested / partial / holds, no verdict value moves (B-R35)"
+  side: audit
+  kind: reply
+  date: 2026-10-18
+  claim_ids: [B1e]
+  locator: "research/checks/results/R4-B1e-Q2.md; research/checks/briefs/B1e-Q2-analyst.md (B-R35)"
+  quote: "Chalub shows that the 1/(2N) is an assumption imported from the Wright-Fisher model. It is not a result produced by the mathematics."
+  parents:
+    - {id: L-audit-b2f-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#90-#92, ruling check REVIEW-R4-B1e-Q2-ruling-check.md), fix-passed (3c9df34) and integrated 2026-10-18; rulings B-R31..B-R35 closed; no verdict value moved"

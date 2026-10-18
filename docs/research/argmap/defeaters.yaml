@@ -6410,3 +6410,31 @@
   counter: []
   note: 'Applied in the fix pass 2026-10-14 (EVO-46).'
   hierarchy_edge: false
+
+- id: d490
+  attacker: chk:B1e-Q2
+  target: B1e
+  target_part: C
+  type: rebutting
+  by: [audit]
+  first_date: 2026-10-18
+  locator: research/checks/results/R4-B1e-Q2.md (P3, P4); research/checks/briefs/B1e-Q2-analyst.md (B-R35 item 4)
+  audit_status: partly
+  audit_basis: 'Critic-side, and of the "not a result produced by the mathematics" half of the 2026-08-23 blog quote only (Q297), not of the whole quote: under R-A the 1/(2N) is the classical solution''s own integrated outflux at x = 1, the integral of x p^I (P3 with P4; P4 extended to all t by C_n^{3/2}(1) = lambda_n/2, b(0) = 0 from Chalub''s printed b(t), and b(infinity) = x0 for a delta start), so sentence 2 has a false half under every reading. The "imported" half stays contested (d491). No field value moves'
+  counter: [d491]
+  note: 'Critic-side. Scored under reading R-A; R-A0 and R-B contradicted and R-C supported (trivially), none field-setting. hierarchy_edge false: B1e is not load-bearing and no value moves.'
+  hierarchy_edge: false
+
+- id: d491
+  attacker: rev:R4-B1e-Q2-steelman-day
+  target: chk:B1e-Q2
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-10-18
+  locator: research/checks/results/REVIEW-R4-B1e-Q2-steelman-day.md; R4-B1e-Q2.md (P5; Q304, Q305, Q306); research/checks/briefs/B1e-Q2-analyst.md (B-R35 items 3 and 5)
+  audit_status: upheld
+  audit_basis: 'Day-side: probability conservation alone leaves the fixation/loss split free if mass leaving one end may be booked at the other (P5, an identity), a qualifier d490 does not exclude under R-A, whose subject is equation (7) on the open interval; Chalub himself adds the two laws from outside ("had to be introduced into the model", Q306) and presents them as coming from the discrete process (C1, C2, C13), so the "imported" half is a fair paraphrase and stays contested. The value is not filed contradicted, to hold Day to the standard applied to the Zenodo conjunct in the same claim'
+  counter: []
+  note: 'Credit to Day, B-R35 (EVO-94 accepted RC-1). The lean that frequency 1 is fixation, so a boundary convention carries no number, is the audit''s lean, not a value.'
+  hierarchy_edge: false

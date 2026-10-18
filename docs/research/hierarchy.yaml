@@ -879,12 +879,22 @@ nodes:
     fidelity: partial
     external: contested
   verdict_scope:
-    internal: 'Scope: the value covers the Zenodo statement; the 2026-08-23 blog quote (1/(2N) "imported") was not examined by B2f'
-    fidelity: 'Scope: reading (A) governs - Hard Limits is cited and relayed with its domain omitted, `partial`; reading (B) is `misread`; the
-      Chalub link itself (is Chalub''s Gegenbauer expansion the Kimura 1955 series?) is unchecked and stays `partial` on the ledger basis only'
-    external: 'Scope: reading (A) governs - the exponent is supported in logarithms (exact as T/Nₑ → 0) and "every application of k = μ ... is
-      guaranteed to be incorrect" is contested on the start state only (true from an empty start, the paper''s premise; from a stationary start
-      the flux is exactly μ; scored at B1, B1c, B6a); reading (B) is `contradicted` by the exact diffusion at every T'
+    internal: 'Scope: both Statement quotes are `holds`, so neither alone carries the value (B-R35, RC-5): the blog quote QB `holds` under every
+      reading (R-A, R-A0, R-B, R-C; T2, B3d), and the Zenodo statement `holds` under reading (A) with reading (B) `non-sequitur` (against the
+      paper''s own F_X integral, mean 4Nₑ and SD, Q293, Q294)'
+    fidelity: 'Scope: both Statement quotes are partial. Zenodo statement, reading (A) governs - Hard Limits is cited and relayed with its domain
+      omitted, `partial`; reading (B) is `misread`. Blog quote QB under R-A is `partial`, narrowed from "the Moran and the Wright-Fisher processes"
+      (C3, C13) to Wright-Fisher and with "derived directly from the discrete process" (C1) relabelled "assumption" (D6, SC3); `misread` under
+      R-A0 and R-B and `partial` under R-C (D7), none field-setting. The Chalub-link half stays `partial` on the ledger basis, P8 band U, the
+      P7 value item having been ruled mis-specified (B-R34) and the E-line identity being post hoc and descriptive'
+    external: 'Scope: both Statement quotes are contested under their governing readings, so no single quote carries the value (B-R33, conjunction
+      rule): the 2026-08-23 blog quote (1/(2N) "imported") under R-A - true that (7) on the open interval with probability conservation alone
+      leaves the split free unless mass leaving at one end may be booked at the other (P5), the laws being added from the discrete process (C1,
+      C2); false that the value is an input, the classical solution''s own integrated outflux at x = 1 being ∫x p^I (P3 with P4) - with R-A0 and
+      R-B contradicted and R-C supported (trivially), none field-setting; the Zenodo statement under its reading (A) - the exponent is supported
+      in logarithms (exact as T/Nₑ → 0) and "every application of k = μ ... is guaranteed to be incorrect" is contested on the start state only
+      (true from an empty start, the paper''s premise; from a stationary start the flux is exactly μ; scored at B1, B1c, B6a) - with reading (B)
+      contradicted by the exact diffusion at every T'
   claim_file: docs/research/claims/B1e-chalub-2022-reading.md
 - id: B2
   title: 'Hard Limits: drift cannot complete fixations above a census ceiling; the domain of k = mu is empty for large vertebrates'
