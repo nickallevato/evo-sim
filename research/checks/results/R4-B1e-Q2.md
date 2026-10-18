@@ -167,13 +167,15 @@ D8 (NOTE, recorded): even under P7 E + P8 S, "Chalub's ... series" may be a fair
 - P6 uses M = 200 copies and three exchangeable neutral chains. A neutral, non-exchangeable chain with E[Δp] = 0 but P_fix ≠ p0 (the claim file's stated Day-favourable result) was not constructed. For a bounded martingale it cannot exist (optional stopping), which is why P6b is non-severe, as registered.
 
 ## Open
-1. **Lead ruling on P7** (D-24): apply the registered X move (B1e fidelity `misread`, flagged), rule the value item mis-specified, or re-register P7 alone with exact-decimal x. All three reviews recommend (b) (C2, D2, SC7). The tier question is settled independently (C1: three reviews, done).
-1a. **Ruling 1, QB R-A external** (D-24; steelmen conflict, no ruling written): `contested` (registered), `supported` (D1) or `contradicted` (SC1). If it moves, a fresh reviewer checks it before integration.
-1b. **Ruling 2, R-A plausibility** (D-24; D3 against SC4): does R-A stay a plausible reading of QB given its own paragraph? If not, R-B governs (fidelity `misread`, external `contradicted`).
-1c. **Combination rule** (SC6, D1 "Open"): how QB's values and the Zenodo quote's values combine in B1e's single fields.
-2. Q296 for QB and ids for B3c, B3e, B6 if the operator files them.
-3. QB's locator: record both counts, "post body ¶4 (1-based, `blog_paragraphs`), held .txt l.7"; the claim file's "¶5 of extracted text" is not shown to be wrong (C7).
-4. Kimura (1955) primary text: an owner decision whether to supply a copy (outside input).
+**Closed 2026-10-18 by lead rulings B-R31..B-R34, re-ruled by B-R35** (`docs/research/DECISIONS.md`, after the D-24 fresh-reviewer check `REVIEW-R4-B1e-Q2-ruling-check.md`, EVO-94). Items 1, 1a, 1b, 1c and 2 below are settled; item 3 was integrated; item 4 stays open. **No verdict value moved anywhere in B1e** (external `contested`, fidelity `partial`, internal `holds`).
+
+1. ~~**Lead ruling on P7**~~ → **B-R34**: option (b), the registered P7 value item was mis-specified by the audit (float x against exact-decimal x), so the registered X move does not fire and B1e fidelity does not go to `misread`. All three reviews had recommended (b) (C2, D2, SC7). Out of the check's remit otherwise; moves no field.
+1a. ~~**Ruling 1, QB R-A external**~~ → **B-R32** first ruled `contradicted`; EVO-94's RC-1 rejected that value and **B-R35** accepts RC-1 in full: QB's external under R-A is **`contested`, the registered value**. `supported` (D1) stays barred, re-based on P3 with P4. SC1's case is kept as the scope line's false half and as the audit's recorded lean, not as a value.
+1b. ~~**Ruling 2, R-A plausibility**~~ → **B-R31** (confirmed by EVO-94): R-A stays a plausible reading of QB; R-B does not displace it.
+1c. ~~**Combination rule**~~ → **B-R33** with RC-5's and RC-6's corrections: the conjunction rule for two Statement quotes scored in one field. General adoption is EVO-95; the field split is EVO-96.
+2. ~~Q296 for QB and ids for B3c, B3e, B6~~ → filed as Q297-Q311; the B3c/B3e/B6 ids are Q299-Q301 (QUEUE.md).
+3. QB's locator: integrated as "post body ¶4 (1-based, `blog_paragraphs`), held .txt l.7"; the claim file's "¶5 of extracted text" is not shown to be wrong (C7).
+4. **Still open.** Kimura (1955) primary text: an owner decision whether to supply a copy (outside input). P8 stays band U, the link `unverifiable`.
 
 ## Things that looked wrong (for the reviews to rule on)
 - The P7 value item compares at mismatched arguments. Diagnosed above; the registered call is reported unchanged.
