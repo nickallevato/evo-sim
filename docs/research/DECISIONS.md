@@ -385,3 +385,78 @@ governing reading re-opens it.
 hold, which stands on its own terms — its tooling condition is met as of B-R22..B-R29, but
 showing B internal or A2e external is outward action and needs the owner's word under hard
 rule 6.
+
+## 2026-10-18 — the four open B1e-Q2 rulings (lead rulings B-R31..B-R34)
+
+Verdict rulings under D-24 (where the Day-side and critic-side steelman conflict, the lead
+rules and writes the ruling into the brief, committed, before the fix pass — here, before the
+remainder of the integration, the fix pass having closed with the conflicts recorded and
+unchosen). Full reasoning, with the basis for each, is in
+`research/checks/briefs/B1e-Q2-analyst.md`, section "Lead rulings, 2026-10-18"; this section
+is the record of what was ruled. Paperclip: EVO-12, parent check EVO-7, reviews EVO-10, fix
+pass EVO-11.
+
+**B-R31 (ruling 2: R-A plausibility; D3 against SC4).** R-A stays a plausible reading of QB
+and keeps governing. RD ranks readings by the defensibility of the quoted statement, not by
+what the author meant, and Day's own sentence "The diffusion has to be provided as an assumed
+condition that is supplied in order to solve the equation." (blog .txt l.11) states R-A's
+gloss in his own words. R-B keeps its row — fidelity `misread`, external `contradicted` —
+marked plausible and not field-setting. SC4's conditional fidelity move does not fire; QB's
+fidelity stays `partial`. The withdrawn "not because the author meant it" stays withdrawn.
+
+**B-R32 (ruling 1: R-A external; D1 `supported` against SC1 `contradicted`).** `contradicted`,
+moved from the registered `contested`. Basis, registered items only: P3 with P4 give the
+classical solution's own integrated outflux at x = 1 as ∫x p^I, computed from r alone — for a
+one-copy start, the 1/(2N) itself; P5's alternative splits need non-local booking, which is a
+mis-booking of the flux and not a rival model of fixation; what the diffusion takes from
+outside is the meaning of its own absorbing boundaries, which Day's governing Zenodo sentence
+itself names. P6b is **out** of this field's basis (it tests Wright-Fisher exclusivity, which
+R-A's gloss sets aside; all three reviews asked for this). `supported` is barred by D1's own
+appended derivation (the weak form of (7) on [0, 1] yields both conservation laws from φ = 1
+and φ = x) and by SC3 (iii) (the second law is conservation of ϕ, the diffusion's own
+stationary backward equation): the input is not imported from any discrete process. What
+survives for Day: P5 as an identity that hit for him, with its booking qualifier; fidelity
+`partial`, not `misread`, on Chalub's own framing (C1, C2, C13); and the presentation point
+(D5, SC8). **A fresh reviewer checks B-R31..B-R33 before the rest of the integration is
+written** (D-24). The escalation clause does not fire: B1, B1a, B2 and B are untouched.
+
+**B-R33 (ruling 1c: two Statement quotes in one field; SC6, D1 "Open").** The conjunction
+rule: a claim asserts all of its Statement quotes, so each verdict field takes the value of
+its weakest conjunct, and the `verdict_scope` entry names the carrying quote first and then
+every other quote with its value and status (B-R25's shape, extended from readings to
+quotes). Weakest first: external `contradicted` < `contested` < `supported`; fidelity
+`misread` < `partial` < `accurate`; internal `arithmetic-error` / `non-sequitur` < `holds`.
+`unverifiable`, `untestable` and `pending` are not points on these scales; an unscored
+conjunct is recorded in the scope line. Taking the better conjunct was SC6's objection
+(it masks a verdict already reached); averaging to `contested` would invent a dispute the two
+quotes do not have. Cost recorded against the rule: it makes a node's field worse as quotes
+are attached, so the countermeasure is the split — where a claim's Statement quotes assert
+propositions that do not stand or fall together, the claim is split into one node per
+proposition. B1e is such a candidate and is **not** split in EVO-12 (a split touches
+`hierarchy.yaml`, the argmap and the board); the lead files it separately. Applied to B1e:
+external `contested` → `contradicted` (carrier QB), fidelity `partial` unmoved (both
+conjuncts `partial`), internal `holds` unmoved but its scope line rewritten, the blog quote
+now having been examined. As a *general* clause of the verdict rule this is a rule change and
+runs the O-6 freeze procedure (this section is the written proposal; 24-hour cooling-off; a
+three-review re-score of any load-bearing verdict it would move). It moves none here: B1e is
+`load_bearing: false`. Until the freeze procedure completes, no other claim's fields are
+recomputed under it.
+
+**B-R34 (the P7 ruling).** Option (b): the registered P7 value item was mis-specified by the
+audit. The call stays **MISS, band X** in every tally as the audit's own miss, and the
+licensed move (B1e fidelity `partial` → `misread`) is void and not applied. Basis, registered:
+coef_err 0.0 over n = 0..200; the three binary-exact x agree to ≤ 1.12e-138; the committed
+script compares `mp.mpf(x)/4` from a Python float against `F_dec(str(x))`, an exact decimal
+(C2, reproduced by two reviewers from the float offsets alone). Second and independent ground
+(D2): band X maps to `misread`, which the rule defines as the cited source being in hand and
+contradicting the reading; a mismatch with the *audit's* B2f series could only show that
+B2f's credit is not extended. Precedent adopted in SC7's symmetric wording, verbatim: "a
+registered band reached only through an audit argument mismatch, shown by registered items,
+is ruled mis-specified whichever side it favours." Option (c) declined. (b) voids the X move
+and does **not** register the E line: the identity of Chalub's b(t; x0)/x0 with the
+eigen-series B2f used stays post hoc and descriptive, credited to both sides, setting no
+field. P8 stays band U and the Chalub-link fidelity stays `partial` on the ledger basis.
+
+**What these four do not touch.** No load-bearing node, no tier (C1 settled the tier
+independently: three reviews, done), nothing on a published page, and not the B-R20/B-R21
+publication hold.
