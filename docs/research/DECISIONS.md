@@ -709,3 +709,30 @@ same way: a monitor never fires on a `blocked` issue, and the collect is blocked
 
 Nothing here touches a verdict field, a governing reading, the O-6 cooling-off on B-R33a (which
 still runs to 2026-10-19 07:59 UTC), or the publication hold.
+
+**D-36. Compute sizing: two smoke points, one of them at the production chunk length, under a hard
+ceiling** (lead, 2026-10-19 01:3x; no verdict value and no governing reading moves). The rule that
+sized FMnull-S4 — extrapolate one small smoke run linearly to the production size — is falsified on
+real data: it projected 2.52 h and the sim arm took 46,482 s (12.91 h), 5.1x over and past the 8 h
+ceiling the rule existed to enforce. The EVO-16 write-up found the cause, which is sharper than
+"linear extrapolation is unsafe": the smoke simulated 2-Mb msprime segments while the run simulated
+10-Mb segments for the no-BGS configurations. BGS configs then scaled roughly linearly (267-821x);
+no-BGS configs scaled 2,193-9,548x. The smoke was measuring a different shape of work from the one
+the run would do. `chunk_bp` and `mb` are as registered, so this bears on tooling only.
+
+The replacement rule, in three parts: (1) take two smoke points at different sizes and fit the
+scaling between them rather than extrapolating from one; (2) at least one point must use the
+production chunk/segment length; (3) keep a hard wall-clock ceiling (`timeout`) and record the whole
+basis — both points, the fitted fixed and variable costs, the ceiling, and the segment length each
+point used — in the `.host` file. If the job cannot be sized defensibly inside the ceiling, launch
+the smaller setting or stop and report. If the ceiling kills a job, re-sizing is a lane decision and
+the operator does not relaunch.
+
+Part (1) has one real data point in its favour. L3 was sized with two `count` points at 2M and 8M
+VCF lines, which separated a fixed 53.1 s alignment-parse cost from 0.8 us per line — a decomposition
+a single point cannot see. The projection was 3-5 minutes and the run took about 4 (launched 01:17,
+last output 01:21). A one-point linear extrapolation from the 2M point would have projected about 41
+minutes. Part (2) is new with this entry and is the part L3 did not test, because its two points
+already used the production unit of work.
+
+Carried as comments on EVO-29, EVO-22 and EVO-36, the three compute launches still queued.
