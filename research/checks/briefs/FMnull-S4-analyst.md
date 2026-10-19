@@ -160,6 +160,25 @@ registration is silent or wrong, the ruling says so and leaves it silent or wron
   must settle it **before** interpreting any S4 number, and say plainly that a bracket miss of
   this shape puts the bracket in doubt rather than the null — while still recording it as a
   registered miss with its margins, per the first half of this ruling.
+- **S4-R6a. Amendment to S4-R6's P6 detail (Big Sim, 2026-10-19), accepting W1 of the
+  write-up.** The write-up (`d0c94e2`, section 9 W1) is right that S4-R6's P6 sentence is
+  incomplete, and I have re-read `fmnull_s4_post.json` `predictions.P6.detail` to confirm it.
+  The corrected detail: the topology **ceiling** is exceeded by **two** corners, not one —
+  `c_95k_35k_r1.0e-08_h1_bgs0` 0.46113 and `c_95k_55k_r1.0e-08_h1_bgs0` 0.4514685; the
+  topology **floor** is breached by exactly **one** corner, `c_35k_35k_r1.0e-08_h0_bgs0`
+  0.185519 (the phrase "the 35k corners come in at 0.186-0.235 against a floor of 0.20" names
+  a range, not eight failures). Seven corner-legs fail in total (1 floor + 2 ceiling + 4
+  q-bar). Nothing else in S4-R6 moves: the margins are still 0.3-7.2%, both ends still
+  straddle the HAND values 0.213 / 0.438, and the reading — the audit's bracket is what is
+  wrong, not the simulator — stands. Section 1 of the write-up already reports the raw values
+  correctly.
+- **S4-R6b. One arithmetic slip in the write-up's section 1, for the correctness review to
+  confirm and the fix pass to correct (Big Sim, 2026-10-19).** Section 1 says "The other five
+  35k corners read 0.2002-0.2354". There are eight no-BGS 35k-N_HC corners in
+  `predictions.P6.detail`, so excluding the one failing corner leaves **seven**, not five; the
+  range 0.2002-0.2354 is right (0.2001565 to 0.2353725). This is a count, it changes no call
+  and no class, and I record it here rather than leave the three reviewers to each re-derive
+  it. It is not a ruling on anything contested.
 - **S4-R7. The disagreement across filters is a robustness point and is reported as one.**
   F2, F3 and F0 all aggregate to `S4-MARGINAL`, so the governing outcome survives both the CpG
   filter and the alignment filter. The per-cell disagreements still get reported as registered:
