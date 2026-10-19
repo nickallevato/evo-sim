@@ -1,0 +1,25 @@
+L3 main 2026-10-18 19:17:26 -0600
+input sites.vcf.gz sha256 381d2eceacd38edbd1c3d11774ec066cc3b4fcbf76a046159adef5446443b7f2 size 1458224240
+input knownCanonical.exonNuc.fa.gz sha256 9d27027b154f0c6e05dab9a6f84fdd6f91f86f23dbd1fc9167103bfeb2cb7541 size 751329171
+input integrated_call_samples_v3.20130502.ALL.panel sha256 b4023dc6ee2d62ee89c8d4d347db4d348e65518d66d346574cdae7a4bbd76858 size 55156
+count QC: {"div_codons_multi": 801, "div_hc_codons_multi": 4723, "div_hs": 67757, "div_site_overlap": 370, "div_site_poly": 20619, "div_stop": 60, "overlap_positions": 73370, "panel": {"AFR": 661, "AMR": 347, "EAS": 504, "EUR": 503, "SAS": 489}, "peak_rss_mb": 608.8, "poly_afr_all": 342531, "poly_afr_hi": 328054, "poly_eur_hi": 193893, "snp_aa_lower": 31775, "snp_aa_missing": 21709, "snp_af_nonint": 0, "snp_codon_filtered": 76443, "snp_multiallelic": 2841, "snp_nonsingle": 0, "snp_overlap": 2091, "snp_records_cds": 954834, "snp_ref_checked": 872626, "snp_ref_mismatch": 0, "snp_stop": 10035, "snp_terminal_codon": 833, "t_parse_s": 53.2, "t_total_s": 165.1, "t_vcf_s": 108.8, "tx_fail_exons": 0, "tx_fail_len": 0, "tx_fail_nonacgt": 0, "tx_fail_start": 32, "tx_fail_stop": 23, "tx_nonautosomal": 1961, "tx_pass": 19504, "tx_seen": 21520, "vcf_lines": 84801880}
+baseline GG (asymptoticMK sample data): ok=True fit={'model': 'exponential', 'a': 0.584797581072991, 'b': -0.6219430850257682, 'c': 3.804089591273216, 'est': 0.5709410179220433, 'lo': 0.5356265367143574, 'hi': 0.5925967381319192}
+gates: {"GG": true, "GA": true, "GB": true, "GC": true, "GD": true, "GE": true, "GF": true}
+h = 0.01750  l = 0.00556  (G1 190.6, G2 158.8)
+GOV  Dn 28565 Ds 39192  model exponential P -0.0200  MC/t [-0.0626, 48.9101]  boot [-0.0743, 0.0921] (fail 0)  L -0.0743 U 48.9101  std_all -0.8423  original -0.0789
+S1   Dn 28565 Ds 39192  model exponential P -0.0169  MC/t [-0.0601, 0.0148]  boot [-0.0545, 0.0683] (fail 0)  L -0.0601 U 0.0683  std_all -0.8423  original -0.1244
+S2   Dn 28565 Ds 39192  model linear      P 0.0016  MC/t [-0.0964, 0.0997]  boot [-0.1074, 0.0960] (fail 0)  L -0.1074 U 0.0997  std_all -0.8423  original -0.0517
+S3   Dn 28565 Ds 39192  model exponential P -0.0177  MC/t [-0.0519, 5.5689]  boot [-0.0759, 0.0877] (fail 0)  L -0.0759 U 5.5689  std_all -0.8423  original -0.0789
+S4   Dn 28565 Ds 39192  model exponential P -0.0286  MC/t [-0.0658, 1.5412]  boot [-0.0824, 0.0826] (fail 0)  L -0.0824 U 1.5412  std_all -0.8236  original -0.0885
+S5   Dn 28565 Ds 39192  model exponential P -0.0375  MC/t [-0.0957, 0.0199]  boot [-0.0844, 0.0353] (fail 0)  L -0.0957 U 0.0353  std_all -1.0062  original -0.1476
+S6   Dn 65520 Ds 86866  model exponential P 0.0144  MC/t [-0.0266, 58.0607]  boot [-0.0423, 0.1146] (fail 0)  L -0.0423 U 58.0607  std_all -0.7803  original -0.0425
+GOV alpha(x): 0.025:-0.996 0.075:-0.242 0.125:-0.178 0.175:-0.098 0.225:-0.072 0.275:-0.084 0.325:-0.037 0.375:-0.067 0.425:-0.086 0.475:0.090 0.525:0.038 0.575:-0.001 0.625:0.009 0.675:-0.146 0.725:0.019 0.775:-0.025 0.825:-0.060 0.875:-0.020 0.925:0.001 0.975:0.048
+GOV Pn: [168365, 5882, 2926, 1792, 1303, 993, 775, 602, 562, 430, 425, 353, 333, 344, 314, 304, 278, 324, 372, 1350]
+GOV Ps: [115736, 6500, 3407, 2240, 1668, 1257, 1025, 774, 710, 648, 606, 484, 461, 412, 439, 407, 360, 436, 511, 1946]
+correction P - alpha_std_all = 0.8224; P - alpha_original = 0.0589
+count at P: Dn_own -571 (-2.99x G1)  N1 -391 (-2.05x G1)  N2 -222 (-1.16x G1)  N3 -363 (-1.91x G1)  N1_low -293 (-1.54x G1)  N1_high -489 (-2.56x G1)
+count at L: Dn_own -2122 (-11.13x G1)  N1 -1454 (-7.63x G1)  N2 -824 (-4.32x G1)  N3 -1351 (-7.09x G1)  N1_low -1090 (-5.72x G1)  N1_high -1817 (-9.53x G1)
+count at U: Dn_own 1397118 (7329.32x G1)  N1 957171 (5021.35x G1)  N2 542413 (2845.52x G1)  N3 889186 (4664.70x G1)  N1_low 717903 (3766.14x G1)  N1_high 1196489 (6276.82x G1)
+governing band B5; move row B5; licensed: contested
+score: {"DS": true, "DS+": true, "CS": false, "CS+": false, "Q1": false, "Q2": false, "Q3": true, "Q4": true, "Q5": false, "Q6": true, "Q7": true, "Q8": false, "Q9": true}
+t_analyse_s 67.09 peak_rss_mb 608.8

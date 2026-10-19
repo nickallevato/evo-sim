@@ -1,0 +1,16 @@
+na-workhorse.allevato.io
+Mon Oct 19 01:17:20 AM UTC 2026
+EVO-50 L3 main. script commit f5b7e5e (pushed). Sizing basis: host smoke OK (34 s); two count points through the real entry point on uncompressed head-N of sites.vcf: N=2,000,000 total 57.9 s (parse 53.1 s, vcf 1.7 s), N=8,000,000 total 62.7 s (vcf 6.5 s); peak RSS 624 MB both; VCF slope ~0.8 us/line, full file ~84.8M lines -> projected ~3-5 min incl. gzip decode, RAM <1 GB. Hard ceiling: timeout 7200 s. Data: sites.vcf.gz was patched (1439336600..+500 B from the 10-19 copy into the 10-18 copy; the 10-19 copy had 3 bad 200-byte windows, the 10-18 copy 1; server refetch x3 identical); gzip -t OK; bad copy kept as sites_bad_3windows.vcf.gz.discard. Command: timeout 7200 research/.venv/bin/python -I research/checks/l3_amk.py main sources/raw/l3-data-2026-10-19
+ae4a764eec0ff8100c05d120fb41ecb4  research/checks/l3_amk.py
+381d2eceacd38edbd1c3d11774ec066cc3b4fcbf76a046159adef5446443b7f2  sources/raw/l3-data-2026-10-19/sites.vcf.gz
+9d27027b154f0c6e05dab9a6f84fdd6f91f86f23dbd1fc9167103bfeb2cb7541  sources/raw/l3-data-2026-10-19/knownCanonical.exonNuc.fa.gz
+b4023dc6ee2d62ee89c8d4d347db4d348e65518d66d346574cdae7a4bbd76858  sources/raw/l3-data-2026-10-19/integrated_call_samples_v3.20130502.ALL.panel
+
+--- collection (EVO-107) ---
+Main run finished 2026-10-19 ~01:21 UTC (host log 19:21 -0600; ~4 min wall, inside the 3-5 min projection, far under timeout 7200). Zero l3_amk processes at collection (01:29 UTC); l3_main.out complete (ends "t_analyse_s 67.09 peak_rss_mb 608.8"), no Traceback/error.
+Finish md5s (host = workstation):
+925f101e23d02c2484d36ffe5a4a8bf8  l3_counts.json
+6b31ba7a54bd491e7e696f782907a62a  l3_counts.npz   (488 KB; gitignored per FMnull-S4 pattern, not committed)
+18940a69b3d3d760405c12adb35821ed  l3_result.json
+c4225ff314fbf81bb32ce63336e4feb1  l3_main.out
+Input provenance (hand-patched, for EVO-51/EVO-52): registered sites.vcf.gz download was corrupt twice. Per the launch record above: patched window 1439336600..+500 B taken from the 10-19 copy into the 10-18 copy; the 10-19 copy had 3 bad 200-byte windows, the 10-18 copy 1; server re-fetch x3 identical. Result passes gzip -t, size 1458224240, sha256 381d2eceacd38edbd1c3d11774ec066cc3b4fcbf76a046159adef5446443b7f2, panel sha256 b4023dc6...; bad copy kept as sites_bad_3windows.vcf.gz.discard. Evidence files: sources/raw/l3-data-2026-10-19/parts/curl*.err (on host, not in git). Not re-patched by this run.

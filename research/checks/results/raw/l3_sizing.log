@@ -1,0 +1,7 @@
+smoke start 01:14:25
+smoke exit 0 end 01:15:00
+point N=2000000 start 01:15:01
+point N=2000000 exit 0 end 01:16:00
+point N=8000000 start 01:16:01
+point N=8000000 exit 0 end 01:17:05
+done
