@@ -736,3 +736,32 @@ minutes. Part (2) is new with this entry and is the part L3 did not test, becaus
 already used the production unit of work.
 
 Carried as comments on EVO-29, EVO-22 and EVO-36, the three compute launches still queued.
+
+**D-37. A `blocked` issue cannot hold an issue monitor, so a clock-wait is gated by the routine and
+not by the task** (lead, 2026-10-19 01:5x; tooling only — no verdict value, no governing reading,
+no bearing on the publication hold). D-35's correction to D-34 established that an agent *can* arm
+its own monitor through `executionPolicy.monitor` with `kind: "external_service"` — EVO-95 was armed
+that way and reads back `monitorNextCheckAt`. That is true only while the issue is not blocked. The
+test, on EVO-85 itself: arming the monitor for 03:35 UTC while `in_progress` succeeded and read back
+`monitorNextCheckAt: 2026-10-19T03:35:00.000Z`; the next write of `status: blocked` **cleared it to
+`null`**, and re-arming it while `blocked` returned HTTP 200 and left both `monitorNextCheckAt` and
+`executionPolicy.monitor` null. The failure is silent in both directions — no error, no warning.
+
+Consequence for the lane: a task that is waiting on a wall-clock time and is token-gated has no way
+to wake itself, and neither does the lane ticket while it is blocked on the current occupant. The
+only mechanism left is the backstop routine's cron. So the rule is: **when a release depends on a
+clock rather than on a task completing, add the clock to the routine's trigger and write the release
+condition into the routine, rather than arming a monitor anywhere.** Applied immediately — routine
+`ceca443d` is at revision 8 with its trigger moved from `35 2,6,10,14,18,22` to
+`35 2,3,4,6,10,14,18,22` UTC, and Exception A re-pointed from the spent FMnull-S4 collect to EVO-108
+(collect L5-C1a) with a fourth condition, "at or after 2026-10-19 03:30 UTC", alongside the
+one-run cap, the host-idle check and the token-only blocker shape.
+
+**D-37b. A collect task split out of a launch must carry the token in the same write that creates
+it.** EVO-108 was created at 01:47 UTC in `backlog` with an **empty** blocker list, which under D-32
+is an ungated chain head — and `backlog` gates nothing. Had the lane freed, it would have been
+dispatched onto a job that was still running: `pgrep -af l5_c1a` at 01:49 showed pid 2644932 alive
+with 7 workers and the first sweep output written at 01:46. That is the premature collect the clock
+in its own description exists to prevent, and the task would have been powerless to stop it. Gated
+at 01:5x; D-30's one-write create (`status: backlog` plus `blockedByIssueIds` together) is the form
+to use, and the D-32 sweep for ungated heads is what caught it.
