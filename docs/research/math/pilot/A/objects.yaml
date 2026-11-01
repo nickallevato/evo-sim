@@ -1,0 +1,748 @@
+objects:
+- id: M-001
+  kind: formula
+  statement: F_max = t_div * d / (g_len * G_f); shortfall = R / F_max
+  variables:
+  - divergence.t_div_years
+  - generation_time_years
+  - selection.turnover_d
+  - ltee.gens_per_fixation
+  - divergence.required_fixations
+  used_by:
+  - A
+  - A4d
+  - A2
+  - A1
+  sources:
+  - B2026-02-04 para10
+  - Z18441321
+  - Z18452504
+  positions:
+    day: 'Aggregate throughput: F_max is a maximum number of fixations per lineage; G_f already includes parallelism and all mechanisms.'
+    critic: 'Arithmetic is not wrong (Camestros CA-02); the dispute is the model: Hancock reads it as sequential; 3.0 drops d.'
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-F2-A.md
+- id: M-002
+  kind: identity
+  statement: 'Version arithmetic: 2019 table 125 / text 562 vs 9e6/20/1600=281.25; 2025 146,250/1,600=91.4; 3.0 252,000/1,322=190.6 and 205e6/190.6=1.075e6; Hoessjer 126.6; 252,000/1,400=180'
+  variables:
+  - divergence.t_div_years
+  - ltee.gens_per_fixation
+  used_by:
+  - A
+  - A2j
+  - A5a
+  sources:
+  - A claim file 'derived' table
+  positions:
+    day: 2025 and 3.0 figures reproduce to rounding; 2019 text/table need an unstated doubling.
+    critic: 'Camestros reviewed only the first edition; the 2019 125 vs 562 do not reconcile (candidate: 125 needs 4.0e6 y, 562 needs doubling).'
+  resolution: derivation
+  status: open
+- id: M-003
+  kind: model-choice
+  statement: Does the LTEE G_f (one fixation per ~1,322 gen, asexual, one clone) transfer as a ceiling to a recombining, sexual genome with ~38.4 new mutations per generation (vs 4.1e-4 in E. coli)? Fixation
+    rate vs supply, recombination and N_e
+  variables:
+  - mutation.new_mutations_per_haploid_genome
+  - ltee.mu_genome_ancestral
+  - ltee.gens_per_fixation
+  used_by:
+  - A
+  - A2e
+  - A5
+  - A5f
+  - A2
+  - A5b
+  sources:
+  - Q-A-sim
+  - Z23003785 s4.3
+  - RE-07
+  positions:
+    day: G_f is a measured aggregate throughput; asexual saturation is logarithmic (a=0.23-0.34 per 100x supply) so supply does not scale it linearly; no mammal fixation observed faster than 1,600 gen.
+    critic: Fixation rate scales with supply and recombination (free recombination R_int 0.97 vs clonal 0.09); LTEE is nonrecombining, one environment, so not transferable to mammals.
+  resolution: simulation
+  status: open
+  compute:
+    host: na-workhorse
+    est_cpu_h: 250
+    est_ram_gb: 6
+    measured: false
+- id: M-004
+  kind: inference
+  statement: 'The LTEE rate is an empirical ceiling on what evolution can do, so the human shortfall is a lower bound (conditional: per-generation adaptive-only supply-limited model, transfer factor kappa)'
+  variables:
+  - ltee.gens_per_fixation
+  used_by:
+  - A2e
+  - A
+  - A2d
+  - A2i
+  sources:
+  - Z23003785 p.2
+  positions:
+    day: Whatever the LTEE produces is the ceiling under ideal conditions (Formula One car vs cart).
+    critic: 'Non-sequitur: ceiling claim needs a transfer factor; flip kappa* is a threshold on supply x beneficial fraction x effect size.'
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-A2e.md
+- id: M-005
+  kind: inference
+  statement: 'Units: a high per-year bacterial fixation rate comes from short generation time B1, so using generations per fixation A1 as a generous bound for humans is not licensed (X = A x B)'
+  variables:
+  - generation_time_years
+  - ltee.gens_per_fixation
+  used_by:
+  - A2i
+  - A2e
+  sources:
+  - Matev comment 340270022 (RF-4)
+  positions:
+    day: Time, not generations, is what counts (as attributed, 2022 post not in corpus); LTEE rate generous for humans.
+    critic: Per-year rate says nothing about A1 vs A2 (generations per fixation); the 2022 attribution is unretrieved.
+  resolution: derivation
+  status: open
+- id: M-006
+  kind: parameter
+  statement: 'Divergence time t_div: 9.0 My (2019), 6.3 My (3.0), 5.5-6.3 My (Yoo 2025), >=7-8 My (Langergraber), ~6 My (Scally)'
+  variables:
+  - divergence.t_div_years
+  used_by:
+  - A1
+  - A1a
+  - A
+  sources:
+  - Yoo2025 Divergence and selection
+  - Langergraber2012
+  positions:
+    day: 6.3 My, likely top of Yoo's 5.5-6.3 range.
+    critic: Independent dating spans 5.5 to 8+ My; range changes generations only ~2.7x so cannot close a 1e5-1e6 gap.
+  resolution: lookup
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP06.md
+- id: M-007
+  kind: inference
+  statement: Day's 2026-05-07 revision places the CHLCA at 250 kya-1.3 Mya while MITTENS 3.0 (Sept 2026) uses 6.3 My; the two cannot both be current inputs
+  variables:
+  - divergence.t_div_years
+  used_by:
+  - A1c
+  - A1
+  - B4
+  sources:
+  - B2026-05-07 para7
+  positions:
+    day: Revision is a retraction-and-revision of the dating, depends on B4 population-genetic dating.
+    critic: 'Inconsistent inputs: if 1.3 My were used, generations drop ~5x and the shortfall changes; source of revision uncited (rule F).'
+  resolution: derivation
+  status: blocked
+  blocked_on: 'outside: Day''s source for the 250 kya-1.3 Mya revision (uncited, node B4)'
+- id: M-008
+  kind: parameter
+  statement: 'Generation length: 20 y (2019), 25 y (3.0), 22 y (Q&A, Gurven & Kaplan), 32.5 y (alt); chimpanzee 24.3-24.9 y (Langergraber)'
+  variables:
+  - generation_time_years
+  used_by:
+  - A1
+  - A1b
+  - A
+  sources:
+  - Langergraber2012 Results
+  - B2026-01-19 para5
+  positions:
+    day: 20-25 y per generation, chosen across versions.
+    critic: Chimp literature 24-25 y supports 25; Day's use of 20 in 2019 was lower than data.
+  resolution: lookup
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP06.md
+- id: M-009
+  kind: identity
+  statement: 'Available generations N_gen = t_div/g_len: 6.3e6/25 = 252,000; 9e6/20 = 450,000; 325,000 x 0.45 = 146,250 effective'
+  variables:
+  - divergence.t_div_years
+  - generation_time_years
+  - generations_available.day_2026
+  used_by:
+  - A1
+  - A
+  sources:
+  - Z23003785 p.11 s7.1
+  positions:
+    day: 252,000 nominal generations.
+    critic: Arithmetic reproduces; critique is in the inputs, not the division.
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP06.md
+- id: M-010
+  kind: parameter
+  statement: 'The 1,600 datum: 25 mutations fixed in ~40,000 LTEE generations (cited to Nature 2009, later to Good 2017)'
+  variables:
+  - ltee.gens_per_fixation.day_2019
+  used_by:
+  - A2a
+  - A5g
+  sources:
+  - B2019-02-07 para9
+  - B2026-01-27 para22
+  positions:
+    day: Cited for its fixation rate, not its mutation rate; no mammalian fixation faster than 1,600 generations.
+    critic: Citation drift (2009 vs 2017) and the figure's origin is unverifiable from the cited paper.
+  resolution: lookup
+  status: open
+- id: M-011
+  kind: model-choice
+  statement: 'Which LTEE counting rule defines G_f: pooled >=95% snapshot (1,322; 8,679 fixations), lineage-aware strict (1,587; 5,496 in 723,000 pop-gens), clone-pair (893)'
+  variables:
+  - ltee.gens_per_fixation
+  - ltee.gens_per_fixation.day_23105291_strict_nonmutator
+  used_by:
+  - A2
+  - A2b
+  - A2j
+  - A2c
+  sources:
+  - Z23105291 abstract
+  - Z23003785 p.1
+  positions:
+    day: Day himself moved to the strict rule (1,587) as 'the more accurate number'.
+    critic: Order of magnitude reproducible; calibration underdetermined; 95% snapshot rule yields falling counts that Good's HMM never shows.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-L6.md
+- id: M-012
+  kind: parameter
+  statement: 'Headline G_f = 1,400 (2nd-edition abstract, ''fastest empirical rate ever measured''): 180 fixations, 1,139,000-fold; matches neither the 1,322 nor the 1,587 count'
+  variables:
+  - ltee.gens_per_fixation
+  used_by:
+  - A2j
+  - A2
+  sources:
+  - Q91
+  - Matev thread comment 340102853
+  positions:
+    day: Abstract figure is the fastest empirical rate in any organism.
+    critic: 1,400 is not either LTEE count; no source given; also drifts between versions.
+  resolution: lookup
+  status: blocked
+  blocked_on: 'outside: source/derivation of the 1,400 figure not given by Day'
+- id: M-013
+  kind: empirical
+  statement: 'Natural-selection-only LTEE rates: 4,615 (blog 2026-09-27, 60 generations ''LTTE''), ~1,408 (Zenodo 3.0, clone-pair beneficial), ~24,500 ''serial'''
+  variables:
+  - ltee.gens_per_fixation.day_ns_only_parallel_max
+  - ltee.gens_per_fixation.day_beneficial_only_clone_pair
+  used_by:
+  - A2f
+  - A2
+  sources:
+  - B2026-09-27 para13
+  positions:
+    day: NS-only rate is slower than all-cause rate; all-cause 1,322 is the generous bound.
+    critic: Three NS-only values from two sources are mutually inconsistent; blog derivation not shown (rule F).
+  resolution: data-check
+  status: blocked
+  blocked_on: 'outside: derivation of 4,615 and ~24,500 in the blog is not provided'
+- id: M-014
+  kind: empirical
+  statement: The >=95% correction estimator gives -906 'true fixations' in Ara-2 and Ara+5 falls from 38 to 0 (60k gens), so it is not a count
+  variables:
+  - ltee.gens_per_fixation
+  used_by:
+  - A2c
+  - A2b
+  sources:
+  - RE-03 post 1wss2wj
+  positions:
+    day: Day abandoned the estimator on 2026-10-02 for the strict rule (A2b).
+    critic: 'Reproduced from Good 2017 trajectories: a falling count is impossible for fixations.'
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-L6.md
+- id: M-015
+  kind: inference
+  statement: G_f is an average over fixations, so it is not the fastest fixation rate attainable; the 'fastest' wording needs a distribution, not a mean
+  variables:
+  - ltee.gens_per_fixation
+  used_by:
+  - A2d
+  - A5g
+  - A2j
+  sources:
+  - CA-11 para9
+  positions:
+    day: Average is the right throughput quantity; he calculated an average.
+    critic: An average includes faster fixations, so it is not an upper rate.
+  resolution: derivation
+  status: open
+- id: M-016
+  kind: empirical
+  statement: LTEE non-mutator lineages accumulate mutations clock-like; neutral at constant rate; most fixed mutations beneficial early
+  variables:
+  - ltee.gens_per_fixation
+  used_by:
+  - A2g
+  - A2
+  sources:
+  - Tenaillon2016 Abstract
+  positions:
+    day: Supports treating LTEE rate as a genomic clock.
+    critic: Neutral clock implies many fixations are neutral, not selected (matters to A2/A6).
+  resolution: lookup
+  status: open
+- id: M-017
+  kind: identity
+  statement: 'Required fixations: 35e6 SNVs + 5e6 indel events = 40e6, /2 = 20e6 per lineage (2019: 15e6+15e6=30e6)'
+  variables:
+  - divergence.snv_differences_total
+  - divergence.indel_events_total
+  - divergence.required_fixations
+  used_by:
+  - A3
+  - A3c
+  - A3b
+  sources:
+  - B2019-02-07 para26
+  - Z18165980
+  positions:
+    day: ~20M fixations required on the human lineage.
+    critic: Magnitude corroborated (~20M events per lineage); 40M called SNVs though 5M are indels.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP07b-alignment.md
+- id: M-018
+  kind: empirical
+  statement: Polymorphism share of observed human-chimp divergence is 14-22% (CSAC 2005), so 35M differences overstate fixed divergence
+  variables:
+  - divergence.snv_divergence_fraction
+  used_by:
+  - A3c
+  - A3
+  - A3b
+  sources:
+  - CSAC2005 Nucleotide divergence
+  positions:
+    day: Not addressed in the 2019 or 2025 counts.
+    critic: Measured 15.6% of human-derived divergent SNVs polymorphic; chimp side unmeasured.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP07c.md
+- id: M-019
+  kind: identity
+  statement: 205M = 410M/2 where 410M = 35M SNV + 1,140 inversions + 187 Mb SDRs; literal component sum is 222M, charitable pairwise 409.0M
+  variables:
+  - divergence.required_fixations.day_2026
+  used_by:
+  - A3a
+  - A3z
+  - A3
+  sources:
+  - Z23003785 p.11 s7.1
+  - Q179
+  positions:
+    day: Total differences about 410M, halved symmetrically.
+    critic: Component list does not sum to 410M (222M literal); 410/187 not found in Yoo.
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-X1-rescore.md
+- id: M-020
+  kind: empirical
+  statement: Yoo 2025 reports a mean 327 Mb (10%) SDR per ape lineage; 187 Mb and 410 Mb are not in it; 14.9% divergence and 410M locatable only via SI sheets 14, 19, 24
+  variables:
+  - divergence.structurally_divergent_Mb_per_lineage.yoo_2025
+  used_by:
+  - A3x1
+  - A3a
+  - A3z
+  sources:
+  - Yoo2025 Divergence and selection
+  - Q179
+  positions:
+    day: Numbers are buried on pages 14, 19, 24 and are not additive.
+    critic: The 410 and 187 figures are not found; locator route unconfirmed (404-413M via one route).
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-L7.md
+- id: M-021
+  kind: model-choice
+  statement: 'Unit of the requirement: 410M base pairs of structural variation vs mutation events (one event can affect millions of bp); measured 21.05M events per lineage so 205M is ~9.7x raw (bracket
+    7-14x)'
+  variables:
+  - divergence.required_fixations.day_2026
+  used_by:
+  - A3x
+  - A3a
+  - A3z
+  - A5b
+  sources:
+  - MC-11 para26
+  - Q99
+  - Q101
+  - Q103
+  positions:
+    day: 'Weighting claim: 205M weights bp by SNV-equivalents, not a count of events.'
+    critic: 'One structural change affects millions of bases: counting bp as events inflates R ~10x.'
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP07b-alignment.md
+- id: M-022
+  kind: inference
+  statement: 'Day''s weighting rationale: a structural base-pair difference counts as a fixation-equivalent; would need ~3,250 SNV-equivalents per event'
+  variables:
+  - divergence.required_fixations.day_2026
+  used_by:
+  - A3a
+  - A3x
+  - A3z
+  sources:
+  - Q99
+  - B2026-04-28 para19
+  - B2026-05-13
+  positions:
+    day: Weighting claim with a range, not a count; stated in 04-28 and 05-13 posts.
+    critic: Weighting is untested and conflicts with the 'required fixations' unit used in F_max.
+  resolution: derivation
+  status: open
+- id: M-023
+  kind: model-choice
+  statement: 'Factor of two: required count apportioned symmetrically (410M/2) vs Hancock''s claim that achievable should be doubled (both lineages fix mutations; ''at least 360'')'
+  variables:
+  - divergence.required_fixations.day_2026
+  used_by:
+  - A3d
+  - A3a
+  - A3
+  sources:
+  - GG-02 t=01:37:07
+  positions:
+    day: 'Per-lineage requirement with per-lineage achievable: the factor is in the apportionment.'
+    critic: Basic math is off by a factor of two (auto-caption, unverifiable fidelity).
+  resolution: derivation
+  status: open
+- id: M-024
+  kind: identity
+  statement: 'SNV-only variant: 35M/2 = 17.5M required, 17.5e6/191 = 91,600-fold shortfall; 17.5M = 83% of measured events per lineage'
+  variables:
+  - divergence.required_fixations
+  used_by:
+  - A3b
+  - A3a
+  sources:
+  - Z23003785 p.12 s7.3
+  positions:
+    day: 'Concession: even SNV-only shortfall is 91,600-fold.'
+    critic: 17.5M brackets polymorphism-corrected fixed count 16.4-18.1M; omitted indels and included polymorphism cancel.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP07b-alignment.md
+- id: M-025
+  kind: formula
+  statement: Selective turnover coefficient d = (actual allele-frequency change per generation)/(change predicted by discrete model) = T x d_continuous; d*s exact for hazard-scale s, factor 1 for per-generation
+    s
+  variables:
+  - selection.turnover_d
+  used_by:
+  - A4
+  - A4b
+  - A4f
+  - A4g
+  - A
+  sources:
+  - Z18166234 s2.3 para33
+  positions:
+    day: A unit conversion for age-structured populations; not an extra correction.
+    critic: Undefined at first use (CA-12); no counterpart in population genetics; time-varying.
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-H-C2.md
+- id: M-026
+  kind: empirical
+  statement: d ~ 0.45 +/- 0.08 estimated from ancient-DNA time series at three loci (LCT, SLC24A5, HERC2 in one paper; LCT, SLC45A2, TYR in another)
+  variables:
+  - selection.turnover_d
+  used_by:
+  - A4a
+  - A4
+  sources:
+  - Z18165980 para69
+  positions:
+    day: Empirical d from aDNA at three independent loci.
+    critic: d is not identifiable apart from s, onset, T and dominance; loci differ between the two papers.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-H-C2.md
+- id: M-027
+  kind: model-choice
+  statement: 'How overlapping generations enter fixation theory: Wright-Fisher discrete replacement with d correction, vs N_e scaling and Moran model, and the sweep time-scale'
+  variables:
+  - selection.turnover_d
+  used_by:
+  - A4g
+  - A4e
+  - A4c
+  - A4
+  sources:
+  - Z18166234 abstract
+  - GG-03 t=00:43:38
+  positions:
+    day: WF and Kimura's revision assume complete replacement; real populations overlap.
+    critic: Moran and N_e treatments cover overlap; century of theory; Hancock concedes WF is discrete.
+  resolution: derivation
+  status: open
+- id: M-028
+  kind: empirical
+  statement: Fixation time about 25 generations at 80% selection efficiency (Duffy presenting Day's overlap claim)
+  variables:
+  - selection.turnover_d
+  used_by:
+  - A4c
+  - A4
+  sources:
+  - DU-01 t=00:25:11
+  positions:
+    day: Overlap shortens effective fixation time (Day's own statement not located).
+    critic: Number not derived from any standard model in the corpus.
+  resolution: lookup
+  status: blocked
+  blocked_on: 'outside: Day''s own statement/derivation of the 25-generation figure not located'
+- id: M-029
+  kind: identity
+  statement: 'MITTENS 3.0 contains no d symbol or d multiplier: 252,000 nominal generations, 205M required, 1,075,000-fold (non-mutators), 104,873-fold (all twelve populations)'
+  variables:
+  - selection.turnover_d
+  used_by:
+  - A4d
+  - A
+  sources:
+  - Z23003785 p.1
+  positions:
+    day: d is dropped; overlap correction survives by citation inside s8.6.
+    critic: The formula in the earlier editions (with d) is superseded; Camestros reviewed only the first edition.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-VID-01-score.md
+- id: M-030
+  kind: identity
+  statement: If d were a generation count (e.g. 25) it would cancel g_len in the denominator; d = 0.45 is dimensionless so cancellation does not apply
+  variables:
+  - selection.turnover_d
+  - generation_time_years
+  used_by:
+  - A4f
+  - A4
+  sources:
+  - GG-04 t=01:20:50
+  positions:
+    day: d is a dimensionless factor, not a generation count.
+    critic: The cancellation holds as a conditional; d has no population-genetics equivalent.
+  resolution: derivation
+  status: open
+- id: M-031
+  kind: identity
+  statement: 'Genome-size ratio 3.1e9/4.6e6 = 674 (text: ~690x)'
+  variables:
+  - mutation.new_mutations_per_haploid_genome
+  used_by:
+  - A5
+  sources:
+  - MC-05 para60
+  positions:
+    day: Not addressed (genome size ignored in 'fixation rate' citation).
+    critic: Expected fixed-mutation rate depends on genome size and mutation rate; 674 vs 690 is 2.4%.
+  resolution: derivation
+  status: open
+- id: M-032
+  kind: empirical
+  statement: 'Hypermutators: 100x mutation rate gives 8.5x (clone-pair 893->104.7 gen/fix) or 17x (metagenomics 1,322->78) faster fixation: sublinear'
+  variables:
+  - ltee.gens_per_fixation
+  used_by:
+  - A5d
+  - A5b
+  sources:
+  - Z23003785 p.8 s5.1
+  positions:
+    day: Fixation is bottlenecked by sweep dynamics, not supply.
+    critic: Sublinear for asexual clones (clonal interference); not for free recombination; Day's non-sequitur.
+  resolution: data-check
+  status: resolved
+  resolved_by: research/checks/results/R4-F2-A.md
+- id: M-033
+  kind: identity
+  statement: KITTENS decomposition 94,000 (mutation-supply ratio) x 11.7 (bases counted as events) = 1.1M; scaled achievable 17.9M vs required 17.5M
+  variables:
+  - mutation.new_mutations_per_haploid_genome
+  used_by:
+  - A5b
+  - A3a
+  - A2e
+  sources:
+  - Reddit 1wxgsjm s3
+  positions:
+    day: Linear scaling is assumed, not demonstrated.
+    critic: 'Shortfall decomposes into two artifacts: supply scaling and unit of counting.'
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-F2-A.md
+- id: M-034
+  kind: formula
+  statement: 'Hoessjer: scaling the MITTENS bound for human mutation rate and genome length raises 127 to ~15,800 then ~10M, a factor 2 below 20M; d = 0.45 placed inside the neutral rate'
+  variables:
+  - mutation.new_mutations_per_haploid_genome
+  - divergence.required_fixations
+  used_by:
+  - A5a
+  - A
+  sources:
+  - HO-01 p.3
+  - HO-06
+  positions:
+    day: Supports the conclusion even after rescaling for mutation rate.
+    critic: d inside the neutral rate is non-standard; without d 16.9M vs 20M.
+  resolution: derivation
+  status: open
+- id: M-035
+  kind: identity
+  statement: 'Neutral supply: E. coli expects ~4e-5 fixations per generation (22,000 gens per fixation) vs humans dozens per generation (neutral rate = mu per genome)'
+  variables:
+  - ltee.mu_genome_ancestral
+  - mutation.new_mutations_per_haploid_genome
+  used_by:
+  - A5c
+  - A5
+  sources:
+  - GG-07 t=01:53:50
+  positions:
+    day: Not addressed; G_f is an observed all-cause rate.
+    critic: 'Neutral rate = mutation rate x genome; Hancock''s 4e-5 vs mu 4.1e-4 differs 10x (candidate: effective-neutral fraction unstated).'
+  resolution: derivation
+  status: open
+- id: M-036
+  kind: identity
+  statement: 3.2e9 bp x 1.2e-8 x 100 = 3,840 (not 38,400); deleterious 10% = 384; fitness 0.999^384 = 0.68 (printed 0.02), 0.99^384 = 0.021 (printed 1e-17)
+  variables:
+  - mutation.new_mutations_per_haploid_genome
+  used_by:
+  - A2h
+  - A5h
+  - A5d
+  sources:
+  - Z23003785 s6.4
+  - RE-02
+  positions:
+    day: Tenfold slip; the carriers-are-dead conclusion is rhetorical emphasis on a mechanism.
+    critic: 3,840 vs 38,400 is a tenfold slip that moves downstream fitnesses by more than 25% (R1).
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-X1-rescore.md
+- id: M-037
+  kind: identity
+  statement: 252,000 / 27,600 = 9.13 vs printed 8 achievable fixations, against 205M required
+  variables:
+  - divergence.required_fixations.day_2026
+  used_by:
+  - A5e
+  - A5d
+  sources:
+  - Z23003785 p.15 s8.6
+  positions:
+    day: 8 achievable.
+    critic: 9.13 vs 8 is a 12% slip; shortfall moves 12%, ledger not error (R1b).
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-X1-rescore.md
+- id: M-038
+  kind: parameter
+  statement: 'Human-derived rate: one fixation per 27,600 effective generations (Day and Athos 2025, Appendix D)'
+  variables:
+  - ltee.gens_per_fixation
+  - selection.turnover_d
+  used_by:
+  - A5e
+  - A4
+  sources:
+  - Z23003785 p.15 s8.6
+  positions:
+    day: Derived from human parameters alone, independent of LTEE.
+    critic: Derivation in book appendix not harvested; unverifiable.
+  resolution: lookup
+  status: blocked
+  blocked_on: 'outside: Appendix D of Day and Athos 2025 (book) not available in the corpus'
+- id: M-039
+  kind: identity
+  statement: 'Detectable-sweep count: 3,200 sweeps over 325,000 gens is one per 100 gens; with a ~10,000-gen detection window at most ~98 detectable at power 1 (bonobo: 326,000 loci over 46,500 gens, ~1.4-1.6e5
+    detectable)'
+  variables:
+  - generations_available.day_2025_effective
+  used_by:
+  - A6
+  - A6a
+  sources:
+  - Z18452504 s4.3 item4
+  - Z18441321 s3.1
+  positions:
+    day: Genomes would be saturated with sweep signatures.
+    critic: At the stated 3,200 the count is dozens to hundreds, consistent with scans; inference needs scan power.
+  resolution: derivation
+  status: resolved
+  resolved_by: research/checks/results/R4-GAPS-04-07-02.md
+- id: M-040
+  kind: empirical
+  statement: 'Power of selection scans (SweepFinder2, iHS, Tajima''s D) to detect sweeps from a fixation count: 3,200-32,000 sweeps vs 250-5,110 observed candidate regions'
+  variables:
+  - selection.human_w_b_regime
+  used_by:
+  - A6
+  - A6a
+  sources:
+  - Voight2006
+  - Sabeti2007
+  - Akey2009
+  - Hernandez2011
+  positions:
+    day: Signatures absent at the required scale; Tajima's D near zero.
+    critic: Scans target incomplete or population-specific sweeps; signature absence may reflect neutral hitchhikers, not selection.
+  resolution: simulation
+  status: open
+  compute:
+    host: na-workhorse
+    est_cpu_h: 60
+    est_ram_gb: 4
+    measured: false
+- id: M-041
+  kind: model-choice
+  statement: All-fixations model (every fixation carried by a sweep, hitchhikers included) vs critics' model (only adaptive K_a passes through sweeps)
+  variables:
+  - divergence.required_fixations
+  - ltee.gens_per_fixation
+  used_by:
+  - A
+  - A6
+  - A6a
+  - A2e
+  - A3a
+  sources:
+  - Z23003785 s4.3 s8.2
+  - R4 GAP-04
+  positions:
+    day: 'Total throughput: every fixation regardless of mechanism counts against F_max.'
+    critic: 'Critics: asymptote binds only if >13-27% of differences are adaptive; branch B decides.'
+  resolution: derivation
+  status: open
+- id: M-042
+  kind: inference
+  statement: 'Rhetorical framing: Formula One car vs horse-drawn cart; Kevin Hart / LeBron James analogy; ''quietly excluded''; ''functionally dead'' (rule RH, no literal check)'
+  variables: []
+  used_by:
+  - A3z
+  - A2e
+  - A5h
+  sources:
+  - Z23003785 p.2
+  - Q179 para3
+  positions:
+    day: Illustrates ceiling and buried-total points; not scored.
+    critic: Answer with better rhetoric aimed at the method/number (rule RH).
+  resolution: rhetoric
+  status: open

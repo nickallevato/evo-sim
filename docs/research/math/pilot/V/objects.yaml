@@ -1,0 +1,145 @@
+objects:
+- id: M-001
+  kind: identity
+  statement: "Hancock's neutral count = mu_per_gen x generations x 2 lineages; as spoken 76.8 x 252,000 = 19.35 M per lineage (38.7 M for two), against 35 M observed differences"
+  variables: [generations_available, new_mutations_per_haploid_genome]
+  used_by: [B5c, A]
+  sources: ["vid02@00:35:32", "vid02@00:37:36"]
+  positions:
+    day: "WD: 38 M is not the right neutral prediction (haploid genome, D-corrected generations, restriction to divergent sites)."
+    critic: "Hancock: 76.8 x 252,000 per lineage reproduces the observed ~35 M differences, so neutral drift suffices. In-video he corrects the genome size but keeps 76 via the 152 de novo figure."
+  resolution: derivation
+  status: open
+- id: M-002
+  kind: parameter
+  statement: "Which mutation count validates an SNV-only rate: 152 de novo mutations/generation (Perumsky 2025) includes structural variants; SNV-only rate is lower"
+  variables: [new_mutations_per_genome]
+  used_by: [B5c]
+  sources: ["vid02@00:36:55", "vid02@00:57:52"]
+  positions:
+    day: "WD: an SV-inclusive count cannot validate an SNV-only calculation; unnoticed in thousands of comments."
+    critic: "Erica: SV rates are faster, the distinction is important, but Zach's use was still appropriate (no reason given). Hancock's own reply is not in this window."
+  resolution: lookup
+  status: open
+- id: M-003
+  kind: model-choice
+  statement: "Haploid (38.4 per generation, 3.2 Gb) versus diploid (76.8, 6.4 Gb) genome as the basis for the per-generation count of new fixable mutations"
+  variables: [new_mutations_per_haploid_genome]
+  used_by: [B5c, A5h]
+  sources: ["vid02@00:36:13", "vid02@00:37:36"]
+  positions:
+    day: "WD: fixation occurs on a haploid genome, so 38.4 is the right input."
+    critic: "Hancock concedes 3.2 Gb in the video but argues 76 still stands through the 152/2 figure. New heterozygous mutations arise in a diploid offspring, so the per-offspring and per-haploid counts are not interchangeable; not settled here."
+  resolution: derivation
+  status: open
+- id: M-004
+  kind: formula
+  statement: "WD's corrected count = (mu x gens x D') x (1.09% divergent fraction); stated 76.8 x 201,600 x 35e6/3.2e9 = 169,344"
+  variables: [generations_available, snv_differences_total, snv_divergence_fraction]
+  used_by: [B5c, B4f]
+  sources: ["vid02@00:37:58", "vid02@00:38:18", "vid02@00:38:39"]
+  positions:
+    day: "WD: only ~1.09% of neutral substitutions can land in the divergent zone; Hancock's step assumes all 35 M do, which is circular."
+    critic: "Not addressed in this window (Erica defers popgen detail). Plausible reply: the 35 M observed differences are the substitutions, so no extra filter applies; 1.09% is 35 M / 3.2 Gb, the same set."
+  resolution: derivation
+  status: open
+- id: M-005
+  kind: model-choice
+  statement: "Does the selective turnover coefficient d answer a question that N_e (Wright-Fisher / Moran scaling) does not: drift rate of neutral alleles versus turnover of the gene pool"
+  variables: [turnover_d]
+  used_by: [A4, A4e, A4f]
+  sources: ["vid02@00:34:11", "vid02@00:34:52", "vid02@00:37:58", "vid02@00:57:31"]
+  positions:
+    day: "WD: N_e addresses drift speed; d addresses how fast the whole gene pool turns over; the d formula has inputs absent from standard models."
+    critic: "Hancock (relayed): overlap is handled by N_e/Moran. Erica: the 'selective selection' point seems big, possible miscommunication by her side."
+  resolution: derivation
+  status: open
+- id: M-006
+  kind: inference
+  statement: "An observed mean generations-per-fixation rate holds whether fixations are serial or overlapping, so F_max is a rate and not a latency; does applying it to t_div follow"
+  variables: []
+  used_by: [G1, G2, G2g, F1]
+  sources: ["vid02@00:39:42", "vid02@00:41:05", "vid02@00:58:54", "vid02@00:59:14"]
+  positions:
+    day: "WD: the calculation is a rate, assumes no serial order; covered in Probability Zero."
+    critic: "Erica: agrees it is a rate equation, and that is the problem, since populations are not modelled that way; the extension to a deep-time total is not argued in this window."
+  resolution: derivation
+  status: open
+- id: M-007
+  kind: identity
+  statement: "Highway analogy: 3,600 s / 360 cars = 10 s per car"
+  variables: []
+  used_by: [G1]
+  sources: ["vid02@00:40:45"]
+  positions:
+    day: "WD: the same method yields the observed fixation rate."
+    critic: "Not addressed; the arithmetic is correct and the analogy is neutral to the dispute."
+  resolution: derivation
+  status: resolved
+  resolved_by: "recomputed in the source map (3600/360 = 10)"
+- id: M-008
+  kind: inference
+  statement: "Classification: is MITTENS the waiting-time problem (mutation arrival) or a distinct fixation problem built on observed fixations"
+  variables: []
+  used_by: [F1c]
+  sources: ["vid02@00:42:07", "vid02@00:42:28", "vid02@00:51:36", "vid02@00:51:57"]
+  positions:
+    day: "WD: not a waiting-time problem; no mutation rates, empirical audit of fixations (suggests 'the fixation problem')."
+    critic: "Erica: it is a waiting-time problem; in creationist literature mutation and fixation rates are used interchangeably, back to Axe. Dan: Day makes the waiting-time argument without knowing it."
+  resolution: derivation
+  status: open
+- id: M-009
+  kind: empirical
+  statement: "Which edition of Probability Zero the critics' first video used (original ePub vs second edition) and whether the numbers and page references mismatch for that reason"
+  variables: []
+  used_by: []
+  sources: ["vid02@00:32:25", "vid02@00:48:53"]
+  positions:
+    day: "WD: none of them bought the book; they used an ePub of the original edition; numbers and pages differed."
+    critic: "Erica: video 1 answered the PowerPoint and they lacked the book then; video 2 used MITTENS 3.0 (Day's stated strongest version)."
+  resolution: data-check
+  status: open
+- id: M-010
+  kind: model-choice
+  statement: "Transferability of the LTEE per-generation fixation rate to humans: clonal start, no recombination, no standing variation, population size"
+  variables: [ltee_gf]
+  used_by: [A2e, B6c, G2c]
+  sources: ["vid02@00:42:48", "vid02@00:43:29", "vid02@00:44:31", "vid02@00:53:00"]
+  positions:
+    day: "WD records no one claims humans fix faster than bacteria; Lynch (relayed): bacteria adapt at least as efficiently, supporting LTEE as a ceiling. Day's reply (relayed): standing variation is mostly neutral, so no head start."
+    critic: "Hancock/Erica: LTEE is clonal and non-recombining, apples to oranges for sexual diploids. WD calls this a valid point; Griffiths raised it too."
+  resolution: derivation
+  status: open
+- id: M-011
+  kind: inference
+  statement: "Meta-argument: critics ask to separate person from method while the audience responds to the person; critics' trusted-creator norm applied to WD's alleged errors"
+  variables: []
+  used_by: []
+  sources: ["vid02@00:46:11", "vid02@00:46:51", "vid02@00:53:21"]
+  positions:
+    day: "WD: responses attack Vox Day, not his maths; errors should be owned."
+    critic: "Erica: she finds it hard to set aside Day's other beliefs (unlike Darwin or Fisher, whose work stands on its own); demands Day reconcile the maths with the field."
+  resolution: rhetoric
+  status: open
+- id: M-012
+  kind: empirical
+  statement: "Standard population genetics and human pedigree studies model real populations accurately and 'don't match Vox's math'; no specific paper or number given in this window"
+  variables: []
+  used_by: [ROOT-PG]
+  sources: ["vid02@00:50:56", "vid02@00:51:16", "vid02@00:53:00", "vid02@00:53:21"]
+  positions:
+    day: "Not addressed in this window."
+    critic: "Erica: two dozen papers show accurate modelling; if Day were right they should not exist; pedigree-based rates disagree with F_max."
+  resolution: data-check
+  status: open
+- id: M-014
+  kind: inference
+  statement: "Is d separable from the MITTENS result (WD: 'essentially nothing to do with' it) given that d enters the effective-generations term of F_max"
+  variables: [turnover_d]
+  used_by: [A4, A]
+  sources: ["vid02@00:35:12"]
+  positions:
+    day: "WD: conceding D is harmless to the MITTENS argument. Day's own formula (A) carries d in G_f / effective generations."
+    critic: "Not addressed; Hancock (A4f) argues d would cancel or is not a selection coefficient."
+  resolution: derivation
+  status: open
