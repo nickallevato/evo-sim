@@ -36,6 +36,8 @@ def lint(objs):
         pos = o.get("positions") or {}
         if not pos.get("day") or not pos.get("critic"):
             errs.append(f"{oid}: positions must fill both day and critic")
+        if not (o.get("used_by") or o.get("new_claim")):
+            errs.append(f"{oid}: no used_by claim and no new_claim proposal")
         for u in o.get("used_by") or []:
             if u not in nodes:
                 errs.append(f"{oid}: used_by {u} is not a hierarchy node")

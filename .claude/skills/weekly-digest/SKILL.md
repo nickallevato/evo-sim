@@ -8,6 +8,8 @@ description: Sunday routine (Operator). Refresh the watch list read-only, map ev
 2. **Map** each new item (post, paper, video window) with the `deref-source` skill: `docs/research/math/sources/<source-id>.md`, plus new or changed objects in `docs/research/math/objects.yaml`.
    - Reuse an existing object whenever the maths is the same. If only an input differs (a parameter value, an edition), add an object with `variant_of: M-NNN`.
    - New objects are `status: open`. Never resolve anything here.
+   - **Link every object to the claims it bears on:** `used_by` lists the hierarchy node ids (grep `docs/research/claims/`). If no existing claim fits, leave `used_by: []` and add `new_claim: "<one-line proposed claim, speaker, side>"` so the Lead can decide. An object with neither is an error (first digest, 2026-11-01: all 19 objects were unlinked).
+   - Locators are real: a line number, timestamp or paragraph, never `LNone`.
    - Speakers must resolve in `docs/research/math/people.yaml`. Add new people there (name, side, aliases).
 3. **Pages:** `research/.venv/bin/python -I research/tools/people_pages.py`, then `research/tools/math_map.py --lint` (0 errors).
 4. **Digest:** `docs/digest/YYYY-MM-DD.md` (the Sunday's date), at most 150 lines:
