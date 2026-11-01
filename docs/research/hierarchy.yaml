@@ -185,9 +185,12 @@ nodes:
   status: reviewed
   verdicts:
     internal: non-sequitur
-    fidelity: pending
+    fidelity: unverifiable
     external: pending
   verdict_scope:
+    fidelity: the A2e ceiling passage (MITTENS 3.0 s1-s2, Statement quotes Q130 and Q131 and the premises their paragraphs give), not the s3 G_f
+      data citations (scored at A2, A2a, A2b); reading fixed by the formal statement (Day's own bound), so not reading-dependent; one uncited
+      non-standard number (LTEE Ne) sets the value and three cited works are not held; owner approval pending
     external: 'none: `pending` since 2026-10-13 (D-21) carries no scope of its own; the SCOPED text in the comment above belongs to the superseded
       `contradicted` value and may not be shown as a current value (B-R20/B-R21 hold; ruled B-R22, 2026-10-18)'
   claim_file: docs/research/claims/A2e-ltee-as-ceiling.md

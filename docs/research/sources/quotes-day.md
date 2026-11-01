@@ -2438,3 +2438,42 @@ Filed from the held copies under `sources/raw/b1e-q2-2026-10-13/` (gitignored): 
 - locator: §2.1 after Eq. (6), p.3, held .txt l.125-126 (the write-up's "Appendix" is corrected per C5); result line p.4, l.210
 - quote: "For α < 3/2, the right hand side of Eqs. (3)–(6) are identically zero"
 - note: result line (p.4): "Finally, the time-dependent fixation probability is given by". The §3 display "b(t) + ∫₀¹ xr(x, t)dx = ∫₀¹ xpI(x)dx" (p.3, l.175-177) is typeset with split integrals and is cited by locator only.
+
+## A2e-fidelity quotes (Q312-Q316; EVOA-17 integration of `results/R4-A2e-fidelity.md`, 2026-11-01)
+Filed from the held `sources/raw/vid01-score-2026-10-13/main.txt` (gitignored; sha256 0287f54bf381e288f8e8397a15c7b3ab404ad7b109f18d295a41fe35a6dd5b42, the hash-matched re-fetch of `main.pdf` 22bb4ef8…7a37b2). Each quote verified by whitespace-normalised substring test; line breaks and the bullet marker are normalised. Page from the form feeds.
+
+### Q312 MITTENS 3.0 s1: the LTEE transfer regime yields "an effective population size (Ne) of approximately 3 × 10⁷" (A2e fidelity U6)
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s1, PDF p.2, held main.txt l.82-85
+- branch: A2e, ltee.Ne_effective
+- tag (rule RH): dialectic
+- quote: "Each population is transferred daily into fresh minimal glucose medium with a 1:100 dilution, yielding approximately 6.64 generations per day and an effective population size (Ne) of approximately 3 × 10⁷."
+
+### Q313 MITTENS 3.0 s2: "Enormous effective population size. Ne ≈ 3 × 10⁷ in the LTEE. In humans, Ne ≈ 10,000–33,000." (A2e fidelity U6, U7)
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s2, PDF p.4, held main.txt l.136-138
+- branch: A2e, ltee.Ne_effective
+- tag (rule RH): dialectic
+- quote: "Enormous effective population size. Ne ≈ 3 × 10⁷ in the LTEE. In humans, Ne ≈ 10,000– 33,000."
+
+### Q314 MITTENS 3.0 s2: clonal interference "documented by Gerrish and Lenski (1998)" (A2e fidelity U3)
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s2, PDF p.3, held main.txt l.108-110
+- branch: A2e
+- tag (rule RH): dialectic
+- quote: "Clonal interference, the competition between independently arising beneficial mutations documented by Gerrish and Lenski (1998)"
+
+### Q315 MITTENS 3.0 s2: epistasis "documented by Couce et al. (2024)" (A2e fidelity U4)
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s2, PDF p.3, held main.txt l.112
+- branch: A2e
+- tag (rule RH): dialectic
+- quote: "Epistatic interactions between mutations, documented by Couce et al. (2024)"
+
+### Q316 MITTENS 3.0 s2: the citrate-utilizing clade in Ara-3 "(Blount et al. 2012)" (A2e fidelity U5)
+- source: `Z23003785` (Zenodo pub. 2026-09-28, record modified 2026-10-04); URL: https://zenodo.org/records/23003785
+- locator: s2, PDF p.3, held main.txt l.116-117
+- branch: A2e
+- tag (rule RH): dialectic
+- quote: "Eco-evolutionary dynamics, including the famous citrate-utilizing clade in Ara-3 (Blount et al. 2012)"
+- note (Q313): the held text wraps the range after the dash ("10,000–" / "33,000"); the space is the line break, kept as extracted.

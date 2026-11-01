@@ -6508,3 +6508,17 @@
   counter: []
   note: 'Applied in the fix pass e5e1a7d (lead rulings R1-R6).'
   hierarchy_edge: false
+
+- id: d497
+  attacker: rev:R4-A2e-fidelity-combined
+  target: chk:A2e-fidelity
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #96)']
+  first_date: 2026-11-01
+  locator: research/checks/results/REVIEW-R4-A2e-fidelity-combined.md
+  audit_status: upheld
+  audit_basis: '2 MAJOR (rule C not tried against the reference-list entry Lenski 2023 for U6; the Day-side steelman of it: K3 stop rule gives pending), 10 MINOR, 9 NOTE; the proposed value unverifiable licensed with changes'
+  counter: []
+  note: 'Applied in the fix pass da89938; lead ruling on conflict 1 in briefs/A2e-analyst-4.md.'
+  hierarchy_edge: false

@@ -1012,7 +1012,7 @@ flowchart RL
 
 ## Other: objections to audit checks and unregistered items (part 1)
 
-Objections to chk:A-sim, chk:A2e, chk:A2e-alpha, chk:A2e-alpha-uricchio, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B1e-Q2, chk:B2, chk:B2f, chk:B3, chk:B3-family, chk:B3g.
+Objections to chk:A-sim, chk:A2e, chk:A2e-alpha, chk:A2e-alpha-uricchio, chk:A2e-fidelity, chk:B0, chk:B0.4, chk:B1, chk:B1c, chk:B1e-Q2, chk:B2, chk:B2f, chk:B3, chk:B3-family, chk:B3g.
 
 ```mermaid
 flowchart RL
@@ -1025,6 +1025,7 @@ flowchart RL
   chk_A2e["chk:A2e: transfer of the LTEE fixation rate to humans: supply-limited…"]:::audit
   chk_A2e_alpha["chk:A2e-alpha: published alpha (adaptive fraction of coding differences) ma…"]:::audit
   chk_A2e_alpha_uricchio["chk:A2e-alpha-uricchio: Uricchio, Petrov and Enard 2019 full text: human-lineage ABC…"]:::audit
+  chk_A2e_fidelity["chk:A2e-fidelity: A2e-fidelity: citation fidelity of the 'LTEE as ceiling' pas…"]:::audit
   chk_B0["chk:B0: textbook baselines"]:::audit
   chk_B0_4["chk:B0.4: beneficial fixation time"]:::audit
   chk_B1["chk:B1: empty vs full pipeline"]:::audit
@@ -1040,6 +1041,7 @@ flowchart RL
   rev_R4_A2e_alpha_steelman_critic["rev:R4-A2e-alpha-steelman-critic: critic-side steelman review of A2e-alpha; load-bearing tier"]:::audit
   rev_R4_A2e_alpha_steelman_day["rev:R4-A2e-alpha-steelman-day: Day-side steelman review of A2e-alpha; load-bearing tier"]:::audit
   rev_R4_A2e_correctness["rev:R4-A2e-correctness: correctness review of LTEE-to-human transfer; load-bearing t…"]:::audit
+  rev_R4_A2e_fidelity_combined["rev:R4-A2e-fidelity-combined: review #96, combined (D-40) review of A2e-fidelity"]:::audit
   rev_R4_A2e_steelman_critic["rev:R4-A2e-steelman-critic: critic-side steelman review of LTEE-to-human transfer; load-…"]:::audit
   rev_R4_A2e_steelman_day["rev:R4-A2e-steelman-day: Day-side steelman review of LTEE-to-human transfer; load-bea…"]:::audit
   rev_R4_A2e_uricchio_combined["rev:R4-A2e-uricchio-combined: review #64, combined (A2e-alpha Uricchio addendum); low-stak…"]:::audit
@@ -1065,6 +1067,7 @@ flowchart RL
   rev_R4_A2e_uricchio_combined ==>|"undercuts · upheld"| chk_A2e_alpha_uricchio
   rev_R4_A2e_uricchio_combined ==>|"undercuts · partly"| chk_A2e_alpha_uricchio
   chk_L3 ==>|"undercuts · partly"| chk_A2e_alpha_uricchio
+  rev_R4_A2e_fidelity_combined ==>|"undercuts · upheld"| chk_A2e_fidelity
   rev_review_2 ==>|"undercuts · upheld"| chk_B0
   rev_review_2 ==>|"undercuts · upheld"| chk_B0_4
   rev_review_2 ==>|"undercuts · upheld"| chk_B1
@@ -1412,7 +1415,7 @@ This uses grounded semantics (Dung 1995): an argument is *accepted* when every a
 | day (102) | 41 / 60 / 1 | 70 / 32 / 0 | 46 / 56 / 0 |
 | ally (13) | 2 / 11 / 0 | 10 / 3 / 0 | 5 / 8 / 0 |
 | critic (64) | 37 / 26 / 1 | 62 / 2 / 0 | 46 / 18 / 0 |
-| audit (171) | 112 / 59 / 0 | 112 / 59 / 0 | 112 / 59 / 0 |
+| audit (173) | 113 / 60 / 0 | 113 / 60 / 0 | 113 / 60 / 0 |
 
 **Support is not modelled by Dung's framework.** A claim can be *accepted* (no surviving direct objection) while claims it rests on are rejected. The last column lists those rejected supports (lenient reading), so read both together. ROOT, for instance, draws few direct objections; most objections target its supports.
 
@@ -1615,6 +1618,7 @@ Load-bearing claims are in **bold**.
 | chk:A2e | audit | rejected | rejected | rejected | – |
 | chk:A2e-alpha | audit | rejected | rejected | rejected | – |
 | chk:A2e-alpha-uricchio | audit | rejected | rejected | rejected | – |
+| chk:A2e-fidelity | audit | rejected | rejected | rejected | – |
 | chk:B0 | audit | rejected | rejected | rejected | – |
 | chk:B0.4 | audit | rejected | rejected | rejected | – |
 | chk:B1 | audit | rejected | rejected | rejected | – |
@@ -1685,6 +1689,7 @@ Load-bearing claims are in **bold**.
 | rev:R4-A2e-alpha-steelman-critic | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-alpha-steelman-day | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-correctness | audit | accepted | accepted | accepted | – |
+| rev:R4-A2e-fidelity-combined | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-steelman-critic | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-steelman-day | audit | accepted | accepted | accepted | – |
 | rev:R4-A2e-uricchio-combined | audit | accepted | accepted | accepted | – |

@@ -50,6 +50,10 @@ Evidence is in `sources/quotes-literature.md`. Every quote there was machine-che
 | Takahata, Satta & Klein 1995 | human Nₑ ≈ 1e4; ancestral ~10× larger | unverified (partial) | Quoted from a search snippet and a publisher summary. The abstract PDF was not read. |
 | Charlesworth 2009 | human Nₑ 1–2e4 | unverified | Via search summary. |
 | LTEE Nₑ = 3.3e7 | A-sim calibration (audit) | **not sourced** | An audit assumption (≈N0·log2 100). Needs Lenski 1991 / Wiser 2013 or similar. |
+| LTEE Nₑ ≈ 3 × 10⁷ (U6) | stated as fact, uncited, MITTENS 3.0 s1 and s2 (Day; Q312, Q313; R4 A2e-fidelity, 2026-11-01) | **unverifiable** (rule F) | A non-standard numeric input with no citation; `parameters.yaml` `ltee.Ne_effective` verified: false. Lenski 2023 is in Day's reference list with no in-text call: not a citation under rule F (lead ruling, brief A2e-analyst-4). Day's 3e7 is within about 10% of the audit's own unsourced 3.3e7 above. |
+| Gerrish & Lenski 1998 (U3) | clonal interference "documented by" (Day, MITTENS 3.0 s2; Q314) | not scored (not held) | Cited, not retrieved; nobody has tried (not `unverifiable`). First fetch: does it report interference observed in the LTEE or model it? Open in R4 A2e-fidelity. |
+| Couce et al. 2024 (U4) | epistasis "documented by" (Day, MITTENS 3.0 s2; Q315) | not scored (not held) | Cited, not retrieved. Open. |
+| Blount et al. 2012 (U5) | citrate clade in Ara-3 (Day, MITTENS 3.0 s2; Q316) | not scored (not held) | Cited, not retrieved. Open. |
 | Z23046531 §2.4 | definition of fixation ("an allele reaching 100% frequency in the modern period") | used as quoted in R4 C1 | The 21-count of Z18525185 is a different statistic (first-passage in time bins). |
 | Haak 2015 | 1240k discovery "as heterozygous in a Yoruba male" (C1 design D2) | quoted in R4 C1 | Haak's panel design is still on the manual-download to-do list (below), so it has not been re-verified against the PDF. |
 | Coale-Demeny West life tables | Day's Table 1 d values (C2a) | **unverified** | Not retrieved. A Siler stand-in gives 0.79/0.93 vs Day's 0.53 at e0 = 32. This is an unresolved gap of 1.5–14×, not a refutation. |

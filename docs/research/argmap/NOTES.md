@@ -14,6 +14,8 @@ Files:
 
 **Update 2026-11-01 (L3 integration; reviews #93-#95).** Added d492-d493 (chk:L3: Day-side credit against chk:A2e-alpha-uricchio, `partly`; critic-side case against A2e C, `partly`), d494-d496 (reviews against chk:L3); lineage L-audit-l3-2026. No claim created, so no mini-form. No verdict value moved.
 
+**Update 2026-11-01 (A2e-fidelity integration; review #96).** Added d497 (rev:R4-A2e-fidelity-combined against chk:A2e-fidelity; the write-up licenses no other defeater); lineage L-audit-a2e-fidelity-2026. No claim created, so no mini-form. One verdict field moves, pending owner approval: A2e fidelity `pending` -> `unverifiable`.
+
 **Update 2026-10-14 (L2 integration; reviews #87-#89).** Added d485-d486 (chk:L2 against H8 and H: sourced proxies for h, critic side and Day side; both `partly`), d487-d489 (reviews against chk:L2); lineage L-audit-l2-2026. No claim created, so no mini-form. No verdict value moved.
 
 **Update 2026-10-13 (HF integration, incl. post hoc run ph; reviews #66-#69).** Added d445-d447 (chk:HF against H8 and H: Term 3 not a bound across mechanisms, Day-1 condition, Day-side credit; all `partly`), d448-d451 (reviews against chk:HF); lineage L-audit-hf-2026; mini-form HFchk. Counts: see the checker output of the integration commit.
@@ -303,6 +305,8 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-L3-correctness | audit | review #93, correctness review of L3 | results/REVIEW-R4-L3-correctness.md (2026-11-01) |
 | rev:R4-L3-steelman-day | audit | review #94, Day-side steelman of L3 | results/REVIEW-R4-L3-steelman-day.md (2026-11-01) |
 | rev:R4-L3-steelman-critic | audit | review #95, critic-side steelman of L3 (the critics' section, D-40) | results/REVIEW-R4-L3-steelman-critic.md (2026-11-01) |
+| chk:A2e-fidelity | audit | A2e-fidelity: citation fidelity of the "LTEE as ceiling" passage (1 unverifiable (LTEE Ne uncited), 8 n/a, 3 not held); A2e fidelity pending -> unverifiable, owner approval | RESULTS §A2e-fidelity; results/R4-A2e-fidelity.md (added 2026-11-01) |
+| rev:R4-A2e-fidelity-combined | audit | review #96, combined (D-40) review of A2e-fidelity | results/REVIEW-R4-A2e-fidelity-combined.md (2026-11-01) |
 | rev:R4-RHclose-combined | audit | review #62, combined (RHclose); low-stakes tier | results/REVIEW-R4-RHclose-combined.md (2026-10-11) |
 | rev:R4-RHclose-critics-combined | audit | review #63, combined (RHclose-critics); low-stakes tier | results/REVIEW-R4-RHclose-critics-combined.md (2026-10-11) |
 | rev:R4-A2e-uricchio-combined | audit | review #64, combined (A2e-alpha Uricchio addendum); low-stakes tier | results/REVIEW-R4-A2e-uricchio-combined.md (2026-10-11) |
