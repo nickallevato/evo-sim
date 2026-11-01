@@ -21,6 +21,7 @@ Briefs for the 2026-10-13 batch were not saved; they exist only in that session'
 | `O5-reviews-reviewer.md` | reviewer | review-check | **three each** on B internal and A2e external (D-21) |
 | `L5-reviews-reviewer.md` | reviewer | review-check | the two L5 is missing under D-23 |
 | `FM10-fair-criterion-analyst.md` | analyst | design-check | **three** (FM10, ROOT-FM load-bearing; D-25) |
+| `VERIFY-operator-1.md` | operator | (scope-task brief) | n/a (status fields and gap rows; no verdict moves) |
 
 Tier source: the `load_bearing: true` set in `docs/research/hierarchy.yaml` (33 nodes),
 per the review-tier rule in `AGENTS.md`. **Since D-23 (owner, 2026-10-13) the escalation

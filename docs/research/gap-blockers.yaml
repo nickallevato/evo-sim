@@ -22,19 +22,19 @@ items:
   blocker: none
   next: "D-21 chain: reviews, fix pass 2 (EVO-80), re-ruling B-R11..B-R19 and check EVO-83 (MAJOR on B-R12) are done; answer EVO-83's MAJOR in one fix pass, integrate. No further re-ruling: if the next check fails, escalate to the owner. Status `extracted` also needs moving."
 - id: A3
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: status is `checked`, not `reviewed`, though L1c was reviewed and integrated 2026-10-13; if the reviews cover A3, the operator moves the status field; if not, one combined review."
 - id: B2b
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: reviews #19-#21 and #23-#25 (2026-10-09) cover it, but status is still `extracted`; the operator moves the status field if the reviews cover it."
 - id: E5
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: reviewed 2026-10-09 (#19-#21, #23-#25), status still `extracted`, external `pending`; decide whether the external field needs a check or the existing review supports a value."
 - id: E6
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: same as E5 (reviewed 2026-10-09; status `extracted`; external `pending`)."
 - id: F1a
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: same as E5 (reviewed 2026-10-09; status `extracted`; external `pending`)."
 - id: B3
   blocker: none
@@ -43,10 +43,10 @@ items:
   blocker: outside
   next: "internal waits on Day releasing his method (owner decision 2026-10-10, D-09). External: the D-25 fairer-criterion check (B60) is the one permitted task."
 - id: H5
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: why fidelity is `pending` (check the claim file's fidelity section); if it needs Hössjer text that is held, one fidelity check; if not held, set blocker: owner."
 - id: H8
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "verify: same as H5."
 - id: ROOT
   blocker: after
@@ -58,7 +58,7 @@ items:
   blocker: after
   next: "Roll-up; same rule as ROOT."
 - id: X-ARGMAP
-  blocker: none
+  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
   next: "Exit criterion 'every critic and ally argument is mapped': argmap_check.py at 0 errors and coverage of hierarchy attack edges = 100%. verify current coverage once."
 - id: X-GAPS
   blocker: owner
