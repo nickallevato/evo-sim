@@ -16,10 +16,10 @@
 
 items:
 - id: A2e
-  blocker: in-flight
-  next: "D-21 chain: three reviews (O5 4-6/6), fix pass (EVO-71) and fresh check (EVO-74) are done; integrate the fix-passed external value, then fidelity. Publication of the value still needs the owner (B-R20/B-R21 hold)."
+  blocker: none
+  next: "Two parts. (1) D-21 chain: three reviews (O5 4-6/6), fix pass (EVO-71) and fresh check (EVO-74) are done; integrate the fix-passed external value, then fidelity. Publication of the value still needs the owner (B-R20/B-R21 hold). (2) L3 (alpha from MK, l3_amk.py): run collected 2026-10-19 (a8d14b8), not written up; write-up, then reviews (three: it feeds A2e). Old Paperclip chain EVO-48..54, cancelled at migration."
 - id: B
-  blocker: in-flight
+  blocker: none
   next: "D-21 chain: reviews, fix pass 2 (EVO-80), re-ruling B-R11..B-R19 and check EVO-83 (MAJOR on B-R12) are done; answer EVO-83's MAJOR in one fix pass, integrate. No further re-ruling: if the next check fails, escalate to the owner. Status `extracted` also needs moving."
 - id: A3
   blocker: none

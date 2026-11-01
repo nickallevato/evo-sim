@@ -153,3 +153,15 @@ In flight (2026-10-09; one subagent at a time from now on, per the user; compute
 ## Ideas (not queued)
 
 One line each. Not work: nothing here starts without a gap item or the owner (OPERATING-PROCESS.md).
+
+## Parked at the Paperclip migration (2026-11-01): off the exit gap, owner decides
+
+The old company (prefix EVO) had these chains pre-created on 2026-10-13. None serves an open exit-gap item except L3 (now in the A2e row of `gap-blockers.yaml`). They are cancelled in Paperclip, not deleted; their files stay in the repo. Each restarts only if the owner says so or a gap row comes to need it.
+
+- **FMnull-S4** (ROOT-FM external, already `contested`): written up; correctness and steelman-day reviews done (c2ae429, 9cf7521); steelman-critic review, fix pass and integration not done.
+- **L1c-b** (codon aligner): pre-registered (cc5fa6f); not run.
+- **L5-C1a** (C1a, not load-bearing): pre-registered (1c6e983), local smoke only; not run.
+- **C1d-fu / D-fu** (C1d, D): pre-registered (3f40a4c, f32dc14); not run.
+- **L2 Open 7** (EVO-77): tool-validation of mappings A1 and M-b1; not started.
+- **B-R33 adoption / B1e split** (EVO-95, EVO-96): design done (R4-X1-b1e-split.md), nothing applied.
+- **Close batch 15** (EVO-6): becomes the next milestone post under `close-batch` (upkeep; due, since the last post was 2026-10-13).
