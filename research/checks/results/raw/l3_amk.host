@@ -14,3 +14,24 @@ Finish md5s (host = workstation):
 18940a69b3d3d760405c12adb35821ed  l3_result.json
 c4225ff314fbf81bb32ce63336e4feb1  l3_main.out
 Input provenance (hand-patched, for EVO-51/EVO-52): registered sites.vcf.gz download was corrupt twice. Per the launch record above: patched window 1439336600..+500 B taken from the 10-19 copy into the 10-18 copy; the 10-19 copy had 3 bad 200-byte windows, the 10-18 copy 1; server re-fetch x3 identical. Result passes gzip -t, size 1458224240, sha256 381d2eceacd38edbd1c3d11774ec066cc3b4fcbf76a046159adef5446443b7f2, panel sha256 b4023dc6...; bad copy kept as sites_bad_3windows.vcf.gz.discard. Evidence files: sources/raw/l3-data-2026-10-19/parts/curl*.err (on host, not in git). Not re-patched by this run.
+
+--- provenance (A2e-operator-1, 2026-11-01) ---
+Read and hash only on na-workhorse (host clock -0600 in the ls times); nothing fetched, moved, deleted or re-patched. Offsets are 1-based byte offsets as printed by cmp -l.
+1. Listing, ~/projects/evo-sim/sources/raw/ holds two fetch directories, l3-data-2026-10-18 and l3-data-2026-10-19 (ls -la):
+ l3-data-2026-10-18/: integrated_call_samples_v3.20130502.ALL.panel 55156 (Oct 18 18:01); knownCanonical.exonNuc.fa.gz 751329171 (18:01); sites.vcf.gz 1458224240 (17:59). No parts/.
+ l3-data-2026-10-19/: integrated_call_samples_v3.20130502.ALL.panel 55156 (Oct 18 19:13); knownCanonical.exonNuc.fa.gz 751329171 (19:13); sites.vcf.gz 1458224240 (19:13); sites_bad_3windows.vcf.gz.discard 1458224240 (19:11); parts/ (dir, Oct 18 18:32).
+ l3-data-2026-10-19/parts/: curl0.err..curl7.err, each 0 bytes (18:32); part0..part7, each 182278030 bytes (18:38-18:41; 8 x 182278030 = 1458224240).
+2. sha256sum:
+ 381d2eceacd38edbd1c3d11774ec066cc3b4fcbf76a046159adef5446443b7f2  l3-data-2026-10-19/sites.vcf.gz   (patched file in use; MATCHES the launch record)
+ 8252995211807efc450338bc5f38f77fac539928b6fafac63f50fb4a3ab68f52  l3-data-2026-10-18/sites.vcf.gz   (the 10-18 copy; present)
+ 3ba2c8eddf29ccfb729e241fe9f95dfd496383b72afc1c8176becb01353cd673  l3-data-2026-10-19/sites_bad_3windows.vcf.gz.discard   (present)
+ Missing: none of the named copies. The unpatched 10-19 download exists only as the .discard file; no separate file by another name. The parts/part0..7 were not hashed (outside the brief).
+ knownCanonical.exonNuc.fa.gz: 10-18 and 10-19 copies are byte-identical (cmp), sha256 begins 9d27027b..., as in the launch record.
+3. parts/curl0.err .. curl7.err: all eight are empty (0 bytes), each sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 (the sha256 of empty input). Contents: nothing to quote. They record no curl error.
+4. Offsets, from cmp -l (count of differing bytes, first offset, last offset):
+ discard (10-19 download) vs patched sites.vcf.gz: 595 bytes in 3 windows: W1 199 bytes 299270108..299270308; W2 198 bytes 955026229..955026427; W3 198 bytes 1044205282..1044205480. (Each is a ~200-byte window; this matches "10-19 copy had 3 bad 200-byte windows".)
+ 10-18 copy vs patched sites.vcf.gz: 195 bytes in 1 window: 1439336696..1439336893, inside the recorded patch range 1439336600..+500 (1439336600..1439337099). (Matches "10-18 copy 1".)
+ 10-18 copy vs discard: 790 bytes (= 595 + 195), the same four windows and no others.
+ Reading: the patched file equals the 10-18 copy everywhere except the one 10-18 window, where it equals the 10-19 download; the 500 B patch window as stated in the launch record covers that window. Only the differing bytes are shown by cmp; the 500 B extent itself is taken from the launch record, not recomputed.
+5. What "server refetch x3 identical" compared: not recorded. Nothing on the host (empty .err files, no logs or checksums beside the data) says which copies, or by what method, were compared. The three refetch copies are not present.
+6. The two fetches share one directory: no. They are in separate directories (l3-data-2026-10-18, l3-data-2026-10-19). No provider checksum is held for sites.vcf.gz (none fetched; the registered Content-Length 1458224240 equals all three copies' size).
