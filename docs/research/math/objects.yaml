@@ -2,7 +2,7 @@ objects:
 - id: M-101
   kind: inference
   statement: An observed count over a duration gives an average rate (X/Y); does that rate exist and mean something as a bound when the process is stochastic, non-Gaussian and varies across species and conditions
-  used_by: []
+  used_by: [G1, G1c]
   sources:
   - evo006
   - evo007
@@ -16,6 +16,7 @@ objects:
   kind: formula
   statement: 'Cross-ape average rate: 398,673,272 bp / 6.3 My = 63.281 bp/y; mean over six apes 62.7 bp/y = 1,958.81 bp per effective generation (g=25 y, d=0.80, factor 25/0.8 inferred); read as the speed natural selection, drift and relictation must have run at'
   used_by: []
+  new_claim: "Cross-ape divergence gives a required evolutionary speed (~63 bp/y, ~1,959 bp per effective generation) independent of the LTEE; Day (day side)"
   sources:
   - evo006
   positions:
@@ -26,7 +27,7 @@ objects:
 - id: M-103
   kind: model-choice
   statement: 'Does the LTEE generations-per-fixation transfer to humans given clonal start, no recombination and no standing variation: Day says standing variation cannot cut fixation time once selection acts and recombination cannot compensate; critics say the clonal zero-polymorphism start inflates the LTEE rate and recombination speeds sweeps'
-  used_by: []
+  used_by: [A2e, A2d]
   sources:
   - evo005
   - evo008
@@ -39,6 +40,7 @@ objects:
   kind: parameter
   statement: 'Mean selection coefficient of fixed substitutions: 0.875 x 0 + 0.125 x 0.0012 = 1.5e-4, from alpha ~ 12.5% (McDonald-Kreitman, hominids) and s+ = N_e s / N_e = 12/10,000 = 0.0012 (Tataru et al.)'
   used_by: []
+  new_claim: "Mean s of human fixations is ~1.5e-4 (alpha 12.5%, s+ 0.0012), so sweeps are slower than the LTEE-derived s; Day (day side)"
   sources:
   - evo005
   positions:
@@ -49,7 +51,7 @@ objects:
 - id: M-105
   kind: formula
   statement: 'Fixation time under overlapping generations: dividing the discrete-model time by d = 0.80 (14,648 -> 18,310; 40,000 -> 50,000 generations); sweep time (2/s)ln(2N_e s) for s = 1.5e-4 at N_e 1e4, 1e5, 1e6 = 14,648, 45,349, 76,051'
-  used_by: []
+  used_by: [A4c, F3]
   sources:
   - evo005
   - evo006
@@ -61,7 +63,7 @@ objects:
 - id: M-106
   kind: formula
   statement: 'Throughput ceiling: total selection budget sum(s_i) <= s_max over concurrent sweeps, the mean s-bar cancels and the sum is n x s-bar, so the shape of the distribution of fitness effects does not matter'
-  used_by: []
+  used_by: [F1, G2h]
   sources:
   - evo007
   positions:
@@ -72,10 +74,11 @@ objects:
 - id: M-107
   kind: model-choice
   statement: 'Is the selective turnover coefficient d coherent and needed beyond N_e scaling: WD says Wright-Fisher and Moran answer how fast drift moves neutral alleles and d answers how fast the gene pool turns over; Hancock says gene-pool turnover is not meaningful because alleles are staggered; Day says rates are averages of staggered events'
-  used_by: []
+  used_by: [A4, A4e, A4f]
   sources:
   - evo008
   - evo009
+  - evo010
   positions:
     day: d is defined, derived and evidenced in a chapter and an appendix; "not meaningful" would invalidate every rate; Hancock must show d incoherent or already captured
     critic: d appears in no population-genetics model; the post gives no definition of its variables; WD says d is "essentially nothing to do with" MITTENS (separability open)
@@ -84,7 +87,7 @@ objects:
 - id: M-108
   kind: model-choice
   statement: A mutation rate that includes structural variants (76.8 per haploid genome per generation, Perubski et al.; u = 76.8/3e9 = 2.56e-8) compared with a divergence that counts only the ~35M SNV differences
-  used_by: []
+  used_by: [A3b, A3x]
   sources:
   - evo008
   - evo009
@@ -96,7 +99,7 @@ objects:
 - id: M-109
   kind: formula
   statement: 'Expected count of neutral fixations landing in the observed divergent sites: WD scales by the 1.09% divergent fraction (76.8 x 201,600 x 35e6/3.2e9 = 169,344) against Hancock/Day: about 90% of the genome is unconstrained, which 1.09% fixes is random, so the neutral expectation applies to the whole genome'
-  used_by: []
+  used_by: [A3c, B6a]
   sources:
   - evo008
   - evo009
@@ -108,7 +111,7 @@ objects:
 - id: M-110
   kind: parameter
   statement: 'Effective generations since the CHLCA: 252,000 nominal (6.3M y / 25 y) at d = 1; 252,000 x 0.80 = 201,600 effective at d = 0.80'
-  used_by: []
+  used_by: [A4c, A1]
   sources:
   - evo009
   - evo008
@@ -120,7 +123,7 @@ objects:
 - id: M-111
   kind: identity
   statement: k = mu holds in finite time only for a static effective population equal to the census size; with overlapping generations no finite period has k = mu (arXiv 2208.00148v1); the identity has no time term so it cannot say whether fixations complete in a window
-  used_by: []
+  used_by: [B2, B3]
   sources:
   - pgenetics
   - evo009
@@ -132,7 +135,7 @@ objects:
 - id: M-112
   kind: model-choice
   statement: 'Neutral fixation across a species when species lifespans (1-2 My per Gemini) are shorter than 4N_e generations: transient polymorphism, rescue by bottleneck or deme replacement; Day: a bottleneck at the optimum only halves the fixation time'
-  used_by: []
+  used_by: [B, B2]
   sources:
   - mailvox
   positions:
@@ -143,7 +146,7 @@ objects:
 - id: M-113
   kind: formula
   statement: 'Kimura fixation probability for a new mutation as given: P(fix) = (1 - e^(-2s)) / (1 - e^(-4Ns))'
-  used_by: []
+  used_by: [B7a, F4]
   sources:
   - evo007
   positions:
@@ -154,7 +157,7 @@ objects:
 - id: M-114
   kind: parameter
   statement: Day's parameter set in the 10-23 post (N_e ~ 33,000, s-bar ~ 0.001, g ~ 29 y, d ~ 0.45) against the 10-18..10-30 posts (N_e 10,000 in the 10-21 tables, g = 25 y, d = 0.80)
-  used_by: []
+  used_by: [A4a, A4c]
   sources:
   - evo007
   positions:
@@ -166,7 +169,7 @@ objects:
 - id: M-115
   kind: inference
   statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
-  used_by: []
+  used_by: [F1, F1a]
   sources:
   - evo008
   positions:
@@ -177,7 +180,7 @@ objects:
 - id: M-116
   kind: inference
   statement: 'Classification: is MITTENS the waiting-time problem (mutation arrival) or a distinct fixation problem built on observed fixations'
-  used_by: []
+  used_by: [F1, F1c]
   sources:
   - evo008
   positions:
@@ -189,6 +192,7 @@ objects:
   kind: empirical
   statement: Standard population genetics models real populations accurately (pedigree studies, fruit flies, rats, humans) and "doesn't match Vox's math"; no paper or number cited in the quoted passage
   used_by: []
+  new_claim: "Standard population genetics models real populations accurately, so MITTENS contradicting it is an error in MITTENS; Matthews/Hancock (critic side)"
   sources:
   - evo008
   - evo009
@@ -201,6 +205,7 @@ objects:
   kind: empirical
   statement: Which edition of Probability Zero the critics' first video used (original ePub vs the second edition) and whether page numbers and figures differ for that reason
   used_by: []
+  new_claim: "The critics' first video answered the original-edition ePub of Probability Zero, not the second edition; Day via Duffy (day side)"
   sources:
   - evo008
   positions:
@@ -211,7 +216,7 @@ objects:
 - id: M-119
   kind: inference
   statement: 'Molecular-clock circularity: divergence dates are derived from k = mu and then cited as independent confirmation of it (Day: the sole practical application of k = mu)'
-  used_by: []
+  used_by: [B4d, C6]
   sources:
   - pgenetics
   positions:
@@ -219,3 +224,26 @@ objects:
     critic: Clock dates also rest on fossil calibration, not on k = mu alone; "sole practical application" is an absolute claim
   resolution: derivation
   status: open
+- id: M-120
+  kind: model-choice
+  statement: 'Does the standard selection-visibility threshold (|s| > 1/(2N_e)) show selection becoming ever more effective as N grows, so that the models predict strong selection in modern humans (Day: N_e 10,000 -> 5e-5; 10 million -> 5e-8; N_e 80 million at N_e/N 0.01 -> ~6e-9) and fail empirically; or is the threshold a drift-versus-selection visibility criterion that says nothing about differential survival'
+  used_by: [H10, A4g]
+  sources:
+  - evo010
+  positions:
+    day: Neither Wright-Fisher nor Moran has an N_e at which selection becomes impossible; d is the missing variable
+    critic: 'Not addressed first-hand in the window. The ChatGPT answer Day quotes says selection is ineffective when N_e s << 1 and N_e/N sets no threshold; the post does not say whether the threshold concerns drift visibility or realised mortality (rule U: model output relayed by Day)'
+  resolution: derivation
+  status: open
+- id: M-121
+  kind: parameter
+  statement: 'd declines from 0.86 (wild chimps) to 0.015 (humanity 2026) "over evolutionary time" and "the chart" shows it; consequence claimed: humanity no longer subject to selection, genome degrading. Compare d = 0.80 (M-110) and d = 0.45 (M-114)'
+  used_by: [H10, A4a]
+  sources:
+  - evo010
+  positions:
+    day: 'd = 0.86 for wild chimps and 0.015 for 2026 humanity; selection has "no medium to work through" at 0.015'
+    critic: 'No data, chart or derivation in the post; three different d values for humans across one fortnight (0.80, 0.45, 0.015) leave the provenance of each open (parameters.yaml); not addressed first-hand'
+  resolution: lookup
+  status: open
+  variant_of: M-110
