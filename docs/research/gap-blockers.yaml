@@ -16,7 +16,7 @@
 
 items:
 - id: A2e
-  blocker: none   # A2e-operator-1 approved (8a55574, EVOA-12), 2026-11-01
+  blocker: in-flight   # A2e-operator-2 (integrate L3), 2026-11-01
   next: "L3 written up (R4-L3.md, 78d9d11: band B5, move row B5, licensed contested; no move against pending by itself). Reviews done: correctness (8432a1c, EVOA-6: 0/0/4 MINOR; hand-patched sites.vcf.gz ruled MINOR-1, run accepted, host evidence to commit in one operator task, no fetch), steelman-day (fb8b66d, EVOA-7: 2 MAJOR, 5 MINOR) and steelman-critic (eb593b4: 2 MAJOR, 4 MINOR; EVOA-8 was cancelled under D-40 after this file had landed, so it serves as the short critics' section). No further L3 review (D-40). Fix pass 1 of 2 done (e5e1a7d, EVOA-11, lead-approved; R1-R6 applied, no verdict field moved). MINOR-1 host provenance recorded (8a55574, EVOA-12, lead-approved: patched sha256 matches, offsets consistent with the launch record; what the server refetch x3 compared is not recorded on the host). Next: integrate L3 (operator, integrate-check; AA README quote stays open, needs a fetch, licensed value does not depend on it). After that, integrating the fix-passed external value (D-21 chain done: O5 reviews, EVO-71, EVO-74) waits on the same owner decision as B: EVO-83 MAJOR-7/8 name A2e external, and the bare renderers and tallies are still open (B-analyst-1, 2026-11-01). Then fidelity. Publication still needs the owner (B-R20/B-R21 hold)."
 - id: B
   blocker: owner   # B-analyst-1 (EVOA-4) stopped 2026-11-01: EVO-83 MAJOR-7/8 open
