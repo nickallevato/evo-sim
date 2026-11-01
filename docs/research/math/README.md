@@ -15,6 +15,7 @@ source (post, paper, video, book)  ->  statements (verbatim, located)
 |---|---|
 | `objects.yaml` | One entry per distinct math object (schema below). The single list of what must be settled. |
 | `sources/<source-id>.md` | The **source map** for one source: a table of each statement, its steps, and the object ids it lands on. |
+| `people.yaml` | Speaker registry (alias -> person, side). `research/tools/people_pages.py` writes `docs/people/` from the source maps. |
 | `pilot/` | Test runs of the `deref-source` skill and their scoring. |
 | `research/tools/math_map.py` | Read-only: lint the map, and print what is left (open objects by resolution, CPU-hours by host). |
 
@@ -34,6 +35,7 @@ source (post, paper, video, book)  ->  statements (verbatim, located)
   resolved_by: "results/R4-A4.md"                       # when resolved
   blocked_on: ""                                        # owner | outside: what exactly
   compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}   # simulation/regression only
+  variant_of: M-025                                     # optional: same maths as M-025, a different input (e.g. d = 0.8 vs 0.45)
 ```
 Kinds: **identity** (arithmetic that is true or not), **formula** (a model equation with parameters), **parameter** (a sourced number), **model-choice** (which model applies, e.g. d vs N_e), **inference** (a reasoning step, e.g. rate vs latency), **empirical** (a claim about data).
 

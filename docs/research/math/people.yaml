@@ -1,0 +1,13 @@
+# Speaker registry for source maps (docs/research/math/sources/*.md, column "Speaker").
+# alias -> canonical person. side: day | critic | ally | literature | audit.
+# A speaker written "X (relaying Y)" is attributed to X, marked as a relay of Y (rule U: relays aren't scored as X's own claim).
+people:
+  vox-day:        {name: "Vox Day", side: day, aliases: ["Day", "VD", "Vox", "Vox Day"]}
+  will-duffy:     {name: "Will Duffy", side: ally, aliases: ["WD", "Will", "Will Duffy", "Duffy"]}
+  erica:          {name: "Erica (Gutsick Gibbon)", side: critic, aliases: ["EV", "Erica", "GG", "Gutsick Gibbon"]}
+  zach-hancock:   {name: "Zach Hancock", side: critic, aliases: ["Zach", "ZH", "Hancock", "Zach Hancock"]}
+  dan:            {name: "Dr. Dan", side: critic, aliases: ["Dan", "Dr. Dan"]}
+  maddie:         {name: "Dr. Maddie", side: critic, aliases: ["Maddie", "Matty", "Dr. Maddie"]}
+  mike-griffiths: {name: "Mike Griffiths", side: ally, aliases: ["Mike Griffiths", "MG"]}
+  michael-lynch:  {name: "Michael Lynch", side: literature, aliases: ["Lynch", "Michael Lynch"]}
+  ola-hossjer:    {name: "Ola Hössjer", side: ally, aliases: ["Hössjer", "Hossjer", "HO"]}

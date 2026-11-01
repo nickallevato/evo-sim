@@ -39,6 +39,8 @@ def lint(objs):
         for u in o.get("used_by") or []:
             if u not in nodes:
                 errs.append(f"{oid}: used_by {u} is not a hierarchy node")
+        if o.get("variant_of") and o["variant_of"] not in {x.get("id") for x in objs}:
+            errs.append(f"{oid}: variant_of {o['variant_of']} is not an object id")
         rb = o.get("resolved_by")
         if o.get("status") == "resolved" and o.get("resolution") != "rhetoric":
             if not rb:
