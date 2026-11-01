@@ -16,7 +16,7 @@
 
 items:
 - id: A2e
-  blocker: none   # A2e-operator-2 (EVOA-13) approved 2026-11-01 (ea652fc)
+  blocker: in-flight   # A2e-analyst-3 (fidelity write-up), 2026-11-01; A2e-operator-2 (EVOA-13) approved (ea652fc)
   next: "L3 integrated (ea652fc, EVOA-13, lead-approved; REVIEW #93-#95, d492-d496, L-audit-l3-2026; licensed contested, no verdict field moved; AA README quote open, needs a fetch). External: integrating the fix-passed value (D-21 chain done: O5 reviews, EVO-71, EVO-74) waits on the owner decision for B (EVO-83 MAJOR-7/8 name A2e external; bare renderers and tallies open) and on O-17; do not act on it. Workable now: fidelity `pending`. Next task: scope one fidelity task (the two cited works are marked verified in the claim file's Primary literature table; first confirm whether existing material supports a value, else one fidelity check; a field move gets the owner approval stage). Publication still needs the owner (B-R20/B-R21 hold)."
 - id: B
   blocker: owner   # B-analyst-1 (EVOA-4) stopped 2026-11-01: EVO-83 MAJOR-7/8 open
