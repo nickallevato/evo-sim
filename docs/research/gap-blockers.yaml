@@ -16,8 +16,8 @@
 
 items:
 - id: A2e
-  blocker: in-flight   # A2e-analyst-1 (L3 write-up), 2026-11-01
-  next: "L3 write-up (R4-L3.md from the run collected at a8d14b8), then three reviews (it feeds A2e). After that, integrating the fix-passed external value (D-21 chain done: O5 reviews, EVO-71, EVO-74) waits on the same owner decision as B: EVO-83 MAJOR-7/8 name A2e external, and the bare renderers and tallies are still open (B-analyst-1, 2026-11-01). Then fidelity. Publication still needs the owner (B-R20/B-R21 hold)."
+  blocker: in-flight   # A2e-reviewer-1 (L3 correctness review), 2026-11-01
+  next: "L3 written up (R4-L3.md, 78d9d11: band B5, move row B5, licensed contested; no move against pending by itself; hand-patched sites.vcf.gz for the reviews to rule on). Now three reviews, one at a time: correctness (A2e-reviewer-1), steelman-day, steelman-critic; then a fix pass (2 left), then integrate. After that, integrating the fix-passed external value (D-21 chain done: O5 reviews, EVO-71, EVO-74) waits on the same owner decision as B: EVO-83 MAJOR-7/8 name A2e external, and the bare renderers and tallies are still open (B-analyst-1, 2026-11-01). Then fidelity. Publication still needs the owner (B-R20/B-R21 hold)."
 - id: B
   blocker: owner   # B-analyst-1 (EVOA-4) stopped 2026-11-01: EVO-83 MAJOR-7/8 open
   next: "Owner: (a) rule whether B-R22's 'tooling condition is met' stands over EVO-83 MAJOR-7/8 (gen_mermaid.py and board/snap.py carry no scope; the lint_research.py l.144-150 tally and readme_figs.py count scoped values bare), or authorise one upkeep task to scope them; (b) MAJOR-4(ii)/(iii): a dated note under D-15 in DECISIONS.md and an annotation of R4-X1-verdict-rule.md l.198. Then fix pass 3 answers EVO-83 by id under brief B-analyst-1 (unused; text findings planned per E1-E4), then integrate. Status `extracted` also needs moving."
