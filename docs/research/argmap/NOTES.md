@@ -12,6 +12,8 @@ Files:
 
 **Update 2026-10-13 (B2f integration; review #82).** The checker reports 468 defeaters (d473-d475 added: d473 chk:B2f against B1e, `partly`, with its Day-side counter d474 from the review's steelman-Day section, and d475 the review; none targets B1, B1a, B2 or B, a condition of the low-stakes tier), 246 lineage nodes (L-ir-k-neq-mu-2026, the 2026-10-13 replacement of the Zenodo 22903977 file, and L-audit-b2f-2026 added), 164 standard forms (no mini-form: no claim node was made, since B2a already holds the law), 0 errors, 0 warnings; 131 hierarchy attacks edges, all covered. Registry rows chk:B2f and rev:R4-B2f-combined added below. The seven `locator:` lines that cite Zenodo 22903977 in `lineage.yaml` and `defeaters.yaml` carry a YAML comment pinning the 2026-09-22 file (md5 e325def9...).
 
+**Update 2026-11-01 (L3 integration; reviews #93-#95).** Added d492-d493 (chk:L3: Day-side credit against chk:A2e-alpha-uricchio, `partly`; critic-side case against A2e C, `partly`), d494-d496 (reviews against chk:L3); lineage L-audit-l3-2026. No claim created, so no mini-form. No verdict value moved.
+
 **Update 2026-10-14 (L2 integration; reviews #87-#89).** Added d485-d486 (chk:L2 against H8 and H: sourced proxies for h, critic side and Day side; both `partly`), d487-d489 (reviews against chk:L2); lineage L-audit-l2-2026. No claim created, so no mini-form. No verdict value moved.
 
 **Update 2026-10-13 (HF integration, incl. post hoc run ph; reviews #66-#69).** Added d445-d447 (chk:HF against H8 and H: Term 3 not a bound across mechanisms, Day-1 condition, Day-side credit; all `partly`), d448-d451 (reviews against chk:HF); lineage L-audit-hf-2026; mini-form HFchk. Counts: see the checker output of the integration commit.
@@ -297,6 +299,10 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-L2-correctness | audit | review #87, correctness review of L2; load-bearing tier | results/REVIEW-R4-L2-correctness.md (2026-10-13) |
 | rev:R4-L2-steelman-day | audit | review #88, Day-side steelman of L2; load-bearing tier | results/REVIEW-R4-L2-steelman-day.md (2026-10-13) |
 | rev:R4-L2-steelman-critic | audit | review #89, critic-side steelman of L2; load-bearing tier | results/REVIEW-R4-L2-steelman-critic.md (2026-10-14) |
+| chk:L3 | audit | L3: asymptotic-MK alpha on the human lineage against the A2e flip (P -0.0200, band B5, licensed contested); no verdict moves | RESULTS §L3; results/R4-L3.md (added 2026-11-01) |
+| rev:R4-L3-correctness | audit | review #93, correctness review of L3 | results/REVIEW-R4-L3-correctness.md (2026-11-01) |
+| rev:R4-L3-steelman-day | audit | review #94, Day-side steelman of L3 | results/REVIEW-R4-L3-steelman-day.md (2026-11-01) |
+| rev:R4-L3-steelman-critic | audit | review #95, critic-side steelman of L3 (the critics' section, D-40) | results/REVIEW-R4-L3-steelman-critic.md (2026-11-01) |
 | rev:R4-RHclose-combined | audit | review #62, combined (RHclose); low-stakes tier | results/REVIEW-R4-RHclose-combined.md (2026-10-11) |
 | rev:R4-RHclose-critics-combined | audit | review #63, combined (RHclose-critics); low-stakes tier | results/REVIEW-R4-RHclose-critics-combined.md (2026-10-11) |
 | rev:R4-A2e-uricchio-combined | audit | review #64, combined (A2e-alpha Uricchio addendum); low-stakes tier | results/REVIEW-R4-A2e-uricchio-combined.md (2026-10-11) |

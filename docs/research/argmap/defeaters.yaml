@@ -6438,3 +6438,73 @@
   counter: []
   note: 'Credit to Day, B-R35 (EVO-94 accepted RC-1). The lean that frequency 1 is fixation, so a boundary convention carries no number, is the audit''s lean, not a value.'
   hierarchy_edge: false
+
+- id: d492
+  attacker: chk:L3
+  target: chk:A2e-alpha-uricchio
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-11-01
+  locator: research/checks/results/R4-L3.md (Who this helps, Day side; section 7 items 1 and 2)
+  audit_status: partly
+  audit_basis: 'Day-side credit: the audit own asymptotic-MK alpha on the human lineage is P = -0.0200 (band B5, licensed contested), every S1-S5 point below l and all points below h; it agrees with Gaya-Vidal DAF >= 60% (0.002); Uricchio aMK baseline 0.076 is not reproduced as a point (struck, B5). Conditional: bootstrap upper bound 0.0921 is 5.3x h, aMK leaves the weakly adaptive component uncorrected (HM7), pipeline spread up to 0.096 exceeds the alpha* band, and the outcome is also what the neutral-theory position predicts'
+  counter: []
+  note: 'No verdict moves: A2e external stays pending (no move against pending by L3 alone). Licensed value on L3 own evidence is contested (B5), any-effect-size count reading only.'
+  hierarchy_edge: false
+
+- id: d493
+  attacker: chk:L3
+  target: A2e
+  target_part: inference
+  type: undercutting
+  by: [audit]
+  first_date: 2026-11-01
+  locator: research/checks/results/R4-L3.md (Who this helps, Critic side; section 6)
+  audit_status: partly
+  audit_basis: 'Critic-side: L3 does not put the interval below the flip (U >= l under either interval; bootstrap upper bound 5.3x h); the bias aMK leaves uncorrected is the weakly adaptive component the any-effect-size reading counts (Uricchio 2019 alpha 0.135, 72% weakly adaptive; ABC-MK 0.135 against aMK 0.076 on the same samples); CS and CS+ missed, so the contradicted basis gets no aMK confirmation, and the neutral-theory rebuttal is not tested by L3'
+  counter: []
+  note: 'No verdict moves. Does not separate Day ceiling from the critics neutral-theory position (SC1).'
+  hierarchy_edge: false
+
+- id: d494
+  attacker: rev:R4-L3-correctness
+  target: chk:L3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #93)']
+  first_date: 2026-11-01
+  locator: research/checks/results/REVIEW-R4-L3-correctness.md
+  audit_status: upheld
+  audit_basis: '0 BLOCKER, 0 MAJOR, 4 MINOR (hand-patched input; AA case convention quote not on record; F = pending case; MC upper bounds above 1), 6 NOTE; band, move row and 13 scores reproduce'
+  counter: []
+  note: 'Applied in the fix pass e5e1a7d; host provenance 8a55574.'
+  hierarchy_edge: false
+
+- id: d495
+  attacker: rev:R4-L3-steelman-day
+  target: chk:L3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #94)']
+  first_date: 2026-11-01
+  locator: research/checks/results/REVIEW-R4-L3-steelman-day.md
+  audit_status: upheld
+  audit_basis: '2 MAJOR (B5 is the best outcome the design could give Day, not a shortfall; L3 corrected alpha agrees with Gaya-Vidal DAF >= 60%), 5 MINOR, 8 NOTE'
+  counter: []
+  note: 'Applied in the fix pass e5e1a7d (lead rulings R1-R6).'
+  hierarchy_edge: false
+
+- id: d496
+  attacker: rev:R4-L3-steelman-critic
+  target: chk:L3
+  target_part: inference
+  type: undercutting
+  by: ['audit (review #95)']
+  first_date: 2026-11-01
+  locator: research/checks/results/REVIEW-R4-L3-steelman-critic.md
+  audit_status: upheld
+  audit_basis: '2 MAJOR (the side score presents a non-discriminating outcome as a Day hit; the weakly adaptive component absent as the critics strongest case), 4 MINOR, 4 NOTE'
+  counter: []
+  note: 'Applied in the fix pass e5e1a7d (lead rulings R1-R6).'
+  hierarchy_edge: false
