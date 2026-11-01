@@ -61,3 +61,6 @@ items:
 - id: X-VARLIST
   blocker: after
   next: "Exit criterion 'variable list is final': the R5 sensitivity table. Starts after ROOT roll-ups."
+- id: X-MATHMAP
+  blocker: none
+  next: "Break every argument down, logically and mathematically: for each branch (B, C, D, E, F, G, H, ROOT; then merge the branch A and vid02 pilots), one Operator task with skill deref-source writes the source map (verbatim statement -> premises, hidden premises, inference -> math objects) and adds objects to docs/research/math/objects.yaml. One branch per task. Lead review: math_map.py --lint 0 errors, under 0.7 objects per claim, and a seeded 8-object spot check against the claim files. No other review. Done when every hierarchy node is used_by at least one object."
