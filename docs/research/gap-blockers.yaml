@@ -21,15 +21,12 @@ items:
 - id: B
   blocker: none
   next: "D-21 chain: reviews, fix pass 2 (EVO-80), re-ruling B-R11..B-R19 and check EVO-83 (MAJOR on B-R12) are done; answer EVO-83's MAJOR in one fix pass, integrate. No further re-ruling: if the next check fails, escalate to the owner. Status `extracted` also needs moving."
-- id: A3
-  blocker: none   # VERIFY-operator-1 2026-11-01: coverage not established
-  next: "Status stays `checked`. Reviews #73-#75 cover L1c, not claim A3; #14 (P1) touches A3 only as one wording MINOR. A3 is load-bearing, so this needs reviews, not a status move: one combined review of A3 (the lead may rule that the load-bearing tier applies: three)."
 - id: E5
   blocker: none   # VERIFY-operator-1 2026-11-01
-  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external (E5 is load-bearing)."
+  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external; the external check carries a verdict-field flip, so it gets three reviews (D-23)."
 - id: E6
   blocker: none   # VERIFY-operator-1 2026-11-01
-  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the strict state calls are not testable without the Good 2017 files (not held), so no existing material supports a value. Next task: one check on E6 external (load-bearing); it may need the owner to supply the Good 2017 data, so scope it first."
+  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the strict state calls are not testable without the Good 2017 files (not held), so no existing material supports a value. Next task: one check on E6 external; the external check carries a verdict-field flip, so it gets three reviews (D-23); it may need the owner to supply the Good 2017 data, so scope it first."
 - id: F1a
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."

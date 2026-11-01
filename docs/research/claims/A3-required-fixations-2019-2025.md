@@ -7,7 +7,7 @@ parent: A
 edges: [{type: supports, target: A}, {type: depends-on, target: A3c}]
 load_bearing: true   # ROOT P1 and A P4 rest on the required-fixation count; it is the largest quantified factor in the audit (205M vs measured events, bracket 7-14x, R4 GAP-07b); promoted 2026-10-09 (R5 draft recommendation)
 sourcing: firsthand
-status: checked
+status: reviewed   # reviews #6, #8, #13 (VERIFY-operator-1, 2026-11-01)
 verdicts:
   internal: holds   # 35e6 + 5e6 = 40e6, /2 = 20e6
   fidelity: partial   # CSAC verified-partial (one genome per species, includes polymorphism; A3c); 40M called 'single-nucleotide variants' though 5M are indel events; CSAC's 5M indel events are a two-lineage total (abstract; p.73 '5M vs 35M'), consistent with the 40M reading (R4 GAP-07)

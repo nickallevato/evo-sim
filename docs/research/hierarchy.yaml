@@ -287,7 +287,7 @@ nodes:
     target: A3c
   load_bearing: true
   sourcing: firsthand
-  status: checked
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: partial
