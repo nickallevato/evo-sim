@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>evo-sim: an open audit of the Probability Zero / MITTENS argument</title>
+<link rel="icon" href="img/favicon.ico">
+<style>
+/* Landing page only: links to the pages Pages serves. No counts here, so it never goes stale; the board carries them. */
+:root { --bg: #eef2ef; --surface: #fbfcfa; --ink: #18272b; --muted: #5b6d70; --rule: #c4d0cc; --link: #0d7a70; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0f1719; --surface: #162124; --ink: #e2ebe8; --muted: #93a6a8; --rule: #31464a; --link: #5cc4b8; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 "Atkinson Hyperlegible", Verdana, system-ui, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+header { text-align: center; }
+header img { width: 110px; height: auto; }
+h1 { margin: .4rem 0 .2rem; font-size: 2rem; }
+.lede { color: var(--muted); margin-top: 0; }
+.caveat { background: var(--surface); border-left: 4px solid var(--rule); padding: .75rem 1rem; margin: 1.5rem 0; }
+ul.cards { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+ul.cards li { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: .8rem 1rem; }
+ul.cards a { font-weight: 700; color: var(--link); }
+ul.cards span { display: block; color: var(--muted); font-size: .95rem; }
+a { color: var(--link); }
+footer { margin-top: 2.5rem; color: var(--muted); font-size: .9rem; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+<header>
+<img src="img/icon-animated.svg" alt="evo-sim icon: a double helix split by a cross into two lineages">
+<h1>evo-sim</h1>
+<p class="lede">Can evolution make enough mutations fix in the available time? An open, numerical audit of Vox Day's <i>Probability Zero</i> / MITTENS argument and of his critics, as the groundwork for an open-source evolution simulator.</p>
+</header>
+
+<p class="caveat"><b>Caveat first:</b> this is an AI-run audit with no independent human review yet. Both sides get the same scrutiny. Read the known gaps in the <a href="https://github.com/nickallevato/evo-sim#known-gaps-stated-up-front">README</a> before you rely on any tally.</p>
+
+<ul class="cards">
+<li><a href="research/status.html">Status board</a><span>Current counts, verdicts and open work, updated when a check is integrated.</span></li>
+<li><a href="explain/eli-series/index.html">Is There Enough Time? (interactive explainer)</a><span>The whole story at five reading levels, with small simulations you can run in the browser.</span></li>
+<li><a href="research/math/ledger/index.html">Math ledger</a><span>Every mathematical object the audit uses, with its source and the checks that rely on it.</span></li>
+<li><a href="https://github.com/nickallevato/evo-sim/blob/master/docs/HANDOFF.md">Findings (HANDOFF.md)</a><span>The findings so far and what is still open, on GitHub.</span></li>
+<li><a href="https://github.com/nickallevato/evo-sim">Repository</a><span>Claims, sources, check scripts, results, reviews and milestone posts.</span></li>
+</ul>
+
+<footer>Research phase. No simulator code yet. Source: <a href="https://github.com/nickallevato/evo-sim">github.com/nickallevato/evo-sim</a>.</footer>
+</main>
+</body>
+</html>
