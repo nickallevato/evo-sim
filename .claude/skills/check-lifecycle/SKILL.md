@@ -8,7 +8,7 @@ Three agents exist (`.claude/agents/`): `analyst` (Opus), `reviewer` (Opus), `op
 
 ## Steps
 1. **Write-up** (`analyst` + skill `write-up-check`): `research/checks/results/R4-<ID>.md`. Give it the script path and registration commit, any pre-run note, the raw output paths and the claim files. Tell it which numbers you have already seen and that it must verify them.
-2. **Reviews** (`reviewer`, a fresh instance per review). D-38 (lean): default ONE combined file (correctness plus both steelman sections, skill `review-correctness` then `review-steelman` for each side in the same file). Three separate reviews by three agents only when the result would change a verdict field of a load-bearing node (an exit-gap item). Math-map work, lookups, arithmetic: seeded spot check by the lead, no review.
+2. **Review** (`reviewer`, a fresh instance): always ONE combined file `REVIEW-R4-<ID>-combined.md` (D-40): a correctness section (skill `review-correctness`), then a Day-side and a critic-side section (skill `review-steelman`, both sides in the same file, equal depth). No three-review tier. Math-map work, lookups, arithmetic: seeded spot check by the lead, no review.
 3. **Rulings.** Where the steelmen conflict, rule each conflict in writing before the fix pass, and put the rulings in the fix-pass brief so they end up quoted in the write-up. Defaults that held up on 2026-10-13:
    - registered wording stays registered; new findings go in separate sentences labelled post hoc;
    - the audit's own missed predictions and bugs go under "Both / the audit's own errors", never as credit to a side;

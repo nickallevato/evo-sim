@@ -34,7 +34,7 @@ Every commit carries a `Gap: <ID>` trailer (the hook `.githooks/commit-msg` enfo
 | Report length | 300 words (unchanged) |
 | Source refresh | **Weekly**, as the owner ticked (D-20), plus one before a milestone post. The corpus is frozen (O-7), so a refresh only logs; it never starts a task by itself. |
 | Criticality pass | **One, on the R5 draft only** (D-38). Not per milestone. |
-| Reviews | One combined review by default; three separate only when a load-bearing verdict field would change; spot check only for math-map work, lookups and arithmetic (D-38). |
+| Reviews | **Always one combined review** per check (math plus both sides, equal depth), by one fresh reviewer (D-40). Spot check only for math-map work, lookups and arithmetic. |
 | Milestone post | When a gap item closes or two weeks have passed, whichever comes first. |
 | Tool fixes | Only when a gate (`lint_research.py`, `argmap_check.py`, `exit_gap.py --lint`) fails, as one `upkeep` task. Matching a figure to the files of record is not a gate failure. |
 
@@ -58,7 +58,7 @@ Every commit carries a `Gap: <ID>` trailer (the hook `.githooks/commit-msg` enfo
 | Design and pre-register a check | analyst | `design-check` | the item |
 | Launch or collect a run | operator | `run-on-host` | the item |
 | Write up, fix pass | analyst | `write-up-check`, `fix-pass` | the item |
-| Reviews (tier from AGENTS.md) | reviewer, a fresh one each time | `review-correctness`, `review-steelman` | the item |
+| One combined review (D-40) | reviewer, a fresh one each time | `review-correctness`, `review-steelman` | the item |
 | Integrate into shared files | operator | `integrate-check` | the item |
 | Fix status fields or `gap-blockers.yaml` rows marked `verify:` | operator | `scope-task` brief | the item |
 | Refresh, criticality pass, post, board | per `close-batch` | `close-batch` | `upkeep` |
