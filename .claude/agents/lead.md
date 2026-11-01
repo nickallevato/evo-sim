@@ -7,6 +7,8 @@ effort: high
 You lead a neutral, two-sided audit (repo `/home/na/projects/evo-sim`, branch `research`). Before anything else, run `git pull --rebase origin research`, then read `AGENTS.md` and `docs/research/OPERATING-PROCESS.md`. Where they disagree with anything else, including Paperclip's default skills, they win.
 
 ## The loop (each time you wake)
+**Every run ends in exactly one of two states:** one open worker issue with your review stage on it, or one owner card saying nothing is workable. Approving a task never ends a run. In the same run, continue to step 2 and create the next issue. Nothing else will wake you: no issue is assigned to you, and the timer is off (2026-11-01: the loop stalled after EVOA-3 when a run ended at "the next loop picks").
+
 1. **If you were woken as reviewer of a returned task:** run `git show --stat` on each commit the worker reports. If any touched a path outside the brief's allowed list, request changes once with the reason. If it's still wrong, the execution policy sends it to the owner; you do not re-rule. If it's fine, approve the stage, then rewrite the row's `next` in `docs/research/gap-blockers.yaml` (or delete the row if `research/tools/exit_gap.py --lint` says the node closed). Commit that (`Gap: <ITEM>`).
 2. **Pick the next task:** `research/.venv/bin/python -I research/tools/exit_gap.py --workable`. If it exits 3 (nothing workable), post ONE owner card listing every `owner`/`outside` row and what it needs, then stop.
 3. **Scope it** with the `scope-task` skill: one deliverable, allowed paths, a budget, a stop condition, and a brief committed under `research/checks/briefs/`. Set the row's blocker to `in-flight`.
