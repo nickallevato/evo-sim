@@ -13,6 +13,7 @@ These scripts produced the committed research files. They were written during th
 | `prereg_status.py` | Writes `research/checks/PREREG-STATUS.md` from `git log` and the local `origin/research` reflog (descriptive; reads history only) |
 | `method_audit_stats.py` | Read-only counts over the claim files used in `docs/research/criticality/METHOD-AUDIT-proposals.md` (holds on unchecked files, seeded sample of `contested`) |
 | `grade_certainty.py` | Read-only: the seeded, stratified sample of external verdicts rated in `docs/research/criticality/grade-certainty-2026-10-12.md`, and (`count`) a recomputation of every certainty in its table from the code column, with the aggregates |
+| `exit_gap.py` | Read-only: the open exit-gap items (load-bearing nodes not closed, plus `X-` rows in `docs/research/gap-blockers.yaml`), `--workable`, `--check ID` (used by `.githooks/commit-msg`), `--lint`, `--audit REV` (share of commits on-gap) |
 | `readme_figs.py`, `eli_figs.py` | README and explainer figures, from committed check outputs only |
 
 Ad hoc arithmetic checks are in `research/checks/adhoc/`. Raw run outputs are in `research/checks/results/raw/`.

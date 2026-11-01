@@ -149,3 +149,7 @@ In flight (2026-10-09; one subagent at a time from now on, per the user; compute
   - **F1b: DONE** (review #16, integrated).
   - **B5b: DONE** (review #15, integrated).
 - **P1: DONE** (combined review #14 and integration 2026-10-09; milestone post and board patch deferred to the next milestone). Pre-registered c17b44a; run 2026-10-09 on na-workhorse; write-up `results/R4-P1.md`. All 17 identity groups and 33 Day-arithmetic rows came out as predicted (no failures). Low-stakes tier (re-confirmation): one combined review, then integration.
+
+## Ideas (not queued)
+
+One line each. Not work: nothing here starts without a gap item or the owner (OPERATING-PROCESS.md).

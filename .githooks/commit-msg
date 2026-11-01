@@ -1,0 +1,19 @@
+#!/bin/sh
+# Every commit names the exit-gap item it serves (docs/research/OPERATING-PROCESS.md).
+# Trailer:  Gap: <ID>   where ID is an open item from research/tools/exit_gap.py,
+#           or `upkeep` (a failing gate forced it) or `owner` (cite the D- id in the body).
+# Merge commits are exempt. Do not bypass with --no-verify.
+msg="$1"
+head -1 "$msg" | grep -q '^Merge ' && exit 0
+tags=$(git interpret-trailers --parse < "$msg" | sed -n 's/^Gap: *//p' | tr ',' ' ')
+if [ -z "$tags" ]; then
+  echo "commit-msg: missing 'Gap: <ID>' trailer. Open items:" >&2
+  research/.venv/bin/python -I research/tools/exit_gap.py --workable >&2
+  exit 1
+fi
+for t in $tags; do
+  research/.venv/bin/python -I research/tools/exit_gap.py --check "$t" && exit 0
+done
+echo "commit-msg: Gap '$tags' is not an open exit-gap item, 'upkeep' or 'owner'." >&2
+echo "If the work is not on the gap, it should not be done. See docs/research/OPERATING-PROCESS.md." >&2
+exit 1

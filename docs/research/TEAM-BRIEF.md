@@ -1,5 +1,7 @@
 # Team brief: how to continue this audit with a team of agents
 
+> **Superseded in part, 2026-10-31.** [`OPERATING-PROCESS.md`](OPERATING-PROCESS.md) now governs what work starts (the exit gap only), the limits and delegation. Where they disagree, it wins. Section 2's list below is replaced by `research/tools/exit_gap.py --workable`.
+
 Written 2026-10-13 at the end of a long session, for the agent that will lead the next one. It does not repeat `AGENTS.md`; read that first, then this, then the latest milestone post.
 
 ## 1. Where things stand (2026-10-13, end of day)

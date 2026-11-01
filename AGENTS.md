@@ -14,6 +14,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 6. **No outward actions without the user's approval:** no Wayback snapshots, contacting authors, posting or commenting. No paywall bypass or shadow libraries.
 7. **The GitHub repo is public.** Work on branch `research`; merge with `git push origin research:master` (pre-approved). `origin` pushes to gitea and GitHub. Commit with explicit paths, never `git add -A`.
 8. Material dated after the model's knowledge cutoff must come from fetched text, never memory.
+9. **Work only on the exit gap** (`research/tools/exit_gap.py --workable`). Every commit carries a `Gap: <ITEM>` trailer (hook in `.githooks/`, enabled by `git config core.hooksPath .githooks`). Nothing workable means one owner card and stop. Limits and don'ts: [`docs/research/OPERATING-PROCESS.md`](docs/research/OPERATING-PROCESS.md).
 
 ## Token budget (user directive, 2026-10-09)
 - **Never read the big files whole.** `grep` by id or heading, then read only the lines you need: `sources/quotes-*.md` (grep `Q123`, `RF-18`), `research/checks/REVIEW.md` (review log only), `results/R4-X1-*.md`, `docs/HANDOFF.md`. The work queue is the small [`research/checks/QUEUE.md`](research/checks/QUEUE.md).
@@ -26,6 +27,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 | What | Where |
 |---|---|
 | Plan, stages, exit criteria | `docs/research/PLAN.md` |
+| **Operating process** (the loop, limits, do-nots, delegation); exit gap and its blockers; why | `docs/research/OPERATING-PROCESS.md`; `research/tools/exit_gap.py` + `docs/research/gap-blockers.yaml`; `docs/research/PROCESS-REVIEW-2026-10-31.md` |
 | Everything outstanding (checks, remediation, owner decisions, outside inputs, path to R5) | `docs/research/ROADMAP.md` |
 | **Criticality layer** (the audit auditing itself: method audit MA-01..30 and status table (MA-21..30 in `METHOD-AUDIT-2026-10-13.md`, the audit of the 2026-10-13 batch: HF `ph`, L1b, L1c, FMnull, L5), Triveritas critique TV-01..11, AMSTAR 2 / ROBIS appraisal AR-01..14, severe-testing pass ST-01..13 (`severe-testing-2026-10-12.md`: which checks could have failed), argument-structure pass AS-01..13 (`argument-structure-2026-10-12.md`: warrants, qualifiers and critical questions for Day, critics and the audit's own verdicts), certainty-of-evidence pass GR-01..13 (`grade-certainty-2026-10-12.md`: GRADE-style certainty and direction for external verdicts; recompute with `research/tools/grade_certainty.py count`), cross-pass synthesis, methods and limitations, held-back proposals; procedure for each pass) | `docs/research/criticality/README.md` (start here); `METHOD-AUDIT-2026-10-12.md`, `METHOD-AUDIT-proposals.md` (not applied), `METHODS-AND-LIMITATIONS.md` in the same folder; `docs/research/DECISIONS.md` (add new owner decisions verbatim, dated); `research/checks/PREREG-STATUS.md` |
 | Claims (one file each, three verdicts); claim tree | `docs/research/claims/` (`_TEMPLATE.md`); `hierarchy.yaml`, `hierarchy/*.md` (generated) |
@@ -39,7 +41,7 @@ A neutral, two-sided audit of Vox Day's mathematical case against evolution (*Pr
 | Tools (argmap, figures, board) | `research/tools/` (`README.md`) |
 | Status board (public page) | `docs/research/status.html`, patched by `research/tools/board/updN.py`; served by GitHub Pages from `master` `/docs` at https://nickallevato.github.io/evo-sim/research/status.html (D-26). The claude.ai Artifact is abandoned and is not updated again. |
 | Milestone posts; explainers | `docs/YYYY-MM-DD-N-slug.md`; `docs/explain/` (revise after R5) |
-| **Team brief** (state, next steps, agent roles, lessons of the last session); agent definitions; skills; agent briefs | [`docs/research/TEAM-BRIEF.md`](docs/research/TEAM-BRIEF.md); `.claude/agents/` (three: `analyst`, `reviewer`, `operator`); `.claude/skills/` (thirteen procedures; the brief names the skill); `research/checks/briefs/` (commit each brief before spawning) |
+| **Team brief** (state, next steps, agent roles, lessons of the last session); agent definitions; skills; agent briefs | [`docs/research/TEAM-BRIEF.md`](docs/research/TEAM-BRIEF.md); `.claude/agents/` (three: `analyst`, `reviewer`, `operator`); `.claude/skills/` (fourteen procedures, `scope-task` first; the brief names the skill); `research/checks/briefs/` (commit each brief before spawning) |
 | Refresh procedure and the watch list | [`docs/research/sources/HOWTO-refresh.md`](docs/research/sources/HOWTO-refresh.md); run one before each milestone post |
 
 ## Verdict rule (one rule for Day, critics and allies)

@@ -1,0 +1,68 @@
+# Hand-kept. One row per open exit-gap item (see research/tools/exit_gap.py).
+# Load-bearing node rows are checked against hierarchy.yaml by `exit_gap.py --lint`:
+# a row for a closed node is an error (delete it), an open node with no row is an error.
+# X-* rows are the PLAN.md exit criteria that are not node verdicts; set done: true when met.
+#
+# blocker: none      = the team may start the `next` action now
+#          in-flight = a task already exists for it; do not start a second one
+#          after     = starts only when the rows its `next` names are closed
+#          owner     = waits on an owner decision or owner-supplied text (do not act)
+#          outside   = waits on a third party (Day's code, a paper, a reply) (do not act)
+# next:    ONE action, small enough to be one task. When it is done, rewrite `next`.
+#
+# Seeded 2026-10-31 from hierarchy.yaml, QUEUE.md and the claim files. Rows marked
+# "verify:" were not confirmed against the files of record; the first task on each
+# row is to confirm or correct it (one operator task for all of them, see OPERATING-PROCESS.md).
+
+items:
+- id: A2e
+  blocker: in-flight
+  next: "D-21 chain: three reviews (O5 4-6/6), fix pass (EVO-71) and fresh check (EVO-74) are done; integrate the fix-passed external value, then fidelity. Publication of the value still needs the owner (B-R20/B-R21 hold)."
+- id: B
+  blocker: in-flight
+  next: "D-21 chain: reviews, fix pass 2 (EVO-80), re-ruling B-R11..B-R19 and check EVO-83 (MAJOR on B-R12) are done; answer EVO-83's MAJOR in one fix pass, integrate. No further re-ruling: if the next check fails, escalate to the owner. Status `extracted` also needs moving."
+- id: A3
+  blocker: none
+  next: "verify: status is `checked`, not `reviewed`, though L1c was reviewed and integrated 2026-10-13; if the reviews cover A3, the operator moves the status field; if not, one combined review."
+- id: B2b
+  blocker: none
+  next: "verify: reviews #19-#21 and #23-#25 (2026-10-09) cover it, but status is still `extracted`; the operator moves the status field if the reviews cover it."
+- id: E5
+  blocker: none
+  next: "verify: reviewed 2026-10-09 (#19-#21, #23-#25), status still `extracted`, external `pending`; decide whether the external field needs a check or the existing review supports a value."
+- id: E6
+  blocker: none
+  next: "verify: same as E5 (reviewed 2026-10-09; status `extracted`; external `pending`)."
+- id: F1a
+  blocker: none
+  next: "verify: same as E5 (reviewed 2026-10-09; status `extracted`; external `pending`)."
+- id: B3
+  blocker: none
+  next: "internal `pending` because components differ (no single value); apply rule RD (record each component's reading and verdict, field takes the most defensible one) in one write-up + one combined review."
+- id: FM10
+  blocker: outside
+  next: "internal waits on Day releasing his method (owner decision 2026-10-10, D-09). External: the D-25 fairer-criterion check (B60) is the one permitted task."
+- id: H5
+  blocker: none
+  next: "verify: why fidelity is `pending` (check the claim file's fidelity section); if it needs Hössjer text that is held, one fidelity check; if not held, set blocker: owner."
+- id: H8
+  blocker: none
+  next: "verify: same as H5."
+- id: ROOT
+  blocker: after
+  next: "R5 roll-up; starts only when every child above is closed or explicitly recorded as blocked. Needs ROADMAP B5 (aggregation rule), which needs the owner to confirm O-7."
+- id: ROOT-FM
+  blocker: after
+  next: "Roll-up of FM10 and siblings; same rule as ROOT."
+- id: ROOT-M
+  blocker: after
+  next: "Roll-up; same rule as ROOT."
+- id: X-ARGMAP
+  blocker: none
+  next: "Exit criterion 'every critic and ally argument is mapped': argmap_check.py at 0 errors and coverage of hierarchy attack edges = 100%. verify current coverage once."
+- id: X-GAPS
+  blocker: owner
+  next: "Exit criterion 'gap list closed or recorded inaccessible': Probability Zero text and the paywalled papers (ROADMAP D4) need the owner."
+- id: X-VARLIST
+  blocker: after
+  next: "Exit criterion 'variable list is final': the R5 sensitivity table. Starts after ROOT roll-ups."
