@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>evo-sim math ledger</title>
+<link rel="icon" href="../../../img/favicon.ico">
+<style>
+/* Standalone host for index.html, which is a claude.ai dashboard fragment: it expects the
+   dashboard runtime (dash.calc / dash.data / dash.draw / dash.colors), d3 and the host's
+   theme variables. This page supplies all three so GitHub Pages can serve it unchanged. */
+:root {
+  color-scheme: light dark;
+  --color-bg: #eef2ef; --color-panel: #fbfcfa; --color-fg: #18272b; --color-fg-muted: #5b6d70;
+  --color-border-line: #c4d0cc; --cds-border: #c4d0cc; --cds-text-secondary: #5b6d70;
+  --color-ok: #2e8b57; --color-warn: #d08a1a; --color-bad: #c0392b;
+  --dash-c0: #0d7a70; --dash-c1: #6c8fd6;
+  --cds-chart-grid: #dde5e2; --cds-chart-axis: #9aaaa8; --cds-chart-muted: #c4cfcc;
+  --cds-surface-popover: #ffffff; --cds-shadow-popover: 0 4px 14px rgba(0,0,0,.12);
+  --font-anthropic-sans: "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+  --font-anthropic-serif: Georgia, "Times New Roman", serif;
+  --cds-font-size-title: 2rem; --cds-font-size-heading: 1.15rem; --cds-font-size-body: 1rem; --cds-font-size-caption: .85rem;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: .25rem; --cds-gap-sm: .5rem; --cds-gap-md: 1rem; --cds-gap-lg: 2rem;
+  --cds-pad-xs: .25rem; --cds-pad-sm: .5rem; --cds-pad-md: .9rem; --cds-pad-lg: 1.25rem;
+  --cds-radius: 6px; --cds-dur-slow: .3s;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --color-bg: #0f1719; --color-panel: #162124; --color-fg: #e2ebe8; --color-fg-muted: #93a6a8;
+  --color-border-line: #31464a; --cds-border: #31464a; --cds-text-secondary: #93a6a8;
+  --color-ok: #4cb782; --color-warn: #e0a640; --color-bad: #e06a5c;
+  --dash-c0: #5cc4b8; --dash-c1: #8eaaf0;
+  --cds-chart-grid: #24363a; --cds-chart-axis: #4f6569; --cds-chart-muted: #3a4f53;
+  --cds-surface-popover: #1d2a2e; --cds-shadow-popover: 0 4px 14px rgba(0,0,0,.5);
+} }
+body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); }
+#dash-root { padding: 1.5rem var(--dash-gutter, 1.25rem) 3rem; }
+.back { display: block; max-width: 78rem; margin: 0 auto 1rem; color: var(--dash-c0); font-size: .9rem; }
+.dash-skeleton { background: var(--cds-chart-grid); border-radius: var(--cds-radius); }
+.load-fail { max-width: 78rem; margin: 2rem auto; color: var(--color-bad); }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="dash-root"><a class="back" href="../../../index.html">← evo-sim</a></div>
+<script>
+(() => {
+  const SOURCES = ['burndown', 'branches', 'checks', 'objects', 'phases'];
+  const css = getComputedStyle(document.documentElement);
+  const store = {}, calcs = {}, draws = {};
+  const data = (id) => {
+    if (calcs[id]) {
+      const ins = calcs[id].inputs.map(data);
+      const bad = ins.find((d) => d.status !== 'ok');
+      return bad || { status: 'ok', data: calcs[id].fn(...ins.map((d) => d.data)) };
+    }
+    return store[id] || { status: 'missing', data: [] };
+  };
+  const render = (name) => document.querySelectorAll(`[data-draw="${name}"]`).forEach((el) => draws[name](el));
+  window.dash = {
+    colors: [css.getPropertyValue('--dash-c0').trim(), css.getPropertyValue('--dash-c1').trim()],
+    data,
+    calc: (id, spec) => { calcs[id] = spec; },
+    draw: (name, fn) => { if (fn) draws[name] = fn; if (draws[name]) render(name); },
+  };
+  let t;
+  addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => Object.keys(draws).forEach(render), 150); });
+
+  const root = document.getElementById('dash-root');
+  Promise.all([
+    fetch('index.html').then((r) => { if (!r.ok) throw new Error(`index.html: ${r.status}`); return r.text(); }),
+    ...SOURCES.map((id) => fetch(`${id}.json`)
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((rows) => { store[id] = { status: 'ok', data: rows }; }, () => { store[id] = { status: 'error', data: [] }; })),
+  ]).then(([html]) => {
+    const frag = new DOMParser().parseFromString(html, 'text/html');
+    frag.head.querySelectorAll('style').forEach((s) => document.head.append(s));
+    const scripts = [];
+    [...frag.body.childNodes].forEach((n) => {
+      if (n.nodeName === 'SCRIPT') scripts.push(n.textContent);
+      else if (n.nodeName === 'STYLE') document.head.append(n);
+      else if (n.nodeName !== 'META') root.append(n);
+    });
+    // Inline scripts appended to the document run synchronously, in order.
+    scripts.forEach((src) => { const s = document.createElement('script'); s.textContent = src; document.body.append(s); });
+  }).catch((e) => {
+    const p = document.createElement('p'); p.className = 'load-fail'; p.textContent = `Failed to load the ledger: ${e}`; root.append(p);
+  });
+})();
+</script>
+</body>
+</html>
