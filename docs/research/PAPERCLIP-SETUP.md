@@ -71,3 +71,10 @@ The Lead appends a second stage, `{"type": "approval", "participants": [{"type":
 - `serialize` holds a second run until the first ends.
 
 Record what you see in `ops-notes.md` (at most five lines each).
+
+## 8. Applied 2026-11-01 (what differed from the plan)
+- New company **Evo-sim Audit**, prefix **EVOA**, id `63d6fc57-…`. Old **Evosim Labs** (EVO): 34 open issues cancelled with a migration comment, 4 routines archived, company archived. Nothing deleted.
+- Paperclip's onboarding auto-created an agent "Big Sim" (20 concurrent runs, no timeout, could hire) plus the issue **EVOA-1 "Paperclip onboarding"**. It was paused before it ever ran and converted into the **Lead** (the same agent id). The old company began the same way (EVO-1 onboarding, then 51 issues at 21:23 on 2026-10-13).
+- AI connections are per company. The old company's four connections all show `needs_attention`. The owner added a new default connection (API key) to EVOA. All four agents use it.
+- API details: the permissions call needs `canAssignTasks` (true for the Lead only); editing an instruction file needs the current `baseHash`.
+- State at hand-over: all agents paused, both routines paused, EVOA-1 still open. Kickoff (step 5) waits for the owner.
