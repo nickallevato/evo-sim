@@ -39,6 +39,12 @@ def lint(objs):
         for u in o.get("used_by") or []:
             if u not in nodes:
                 errs.append(f"{oid}: used_by {u} is not a hierarchy node")
+        rb = o.get("resolved_by")
+        if o.get("status") == "resolved" and o.get("resolution") != "rhetoric":
+            if not rb:
+                errs.append(f"{oid}: resolved but no resolved_by record")
+            elif not (ROOT / rb).exists() and not (ROOT / "research/checks/results" / Path(rb).name).exists():
+                errs.append(f"{oid}: resolved_by {rb} does not exist")
         if o.get("resolution") in ("simulation", "regression") and not o.get("compute"):
             errs.append(f"{oid}: simulation/regression needs a compute estimate")
     return errs

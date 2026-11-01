@@ -7,7 +7,7 @@ description: Close an evo-sim batch after its checks are integrated: source refr
 Order matters; steps 1 and 2 can run in parallel.
 
 1. **Source refresh** (`operator` + skill `source-refresh`): `docs/research/sources/HOWTO-refresh.md`; output `refresh-YYYY-MM-DD.md`. If a critic or author reply exists and is unread, the post must say so.
-2. **Criticality pass** (`reviewer` at effort xhigh + skill `criticality-pass`, a fresh instance that did none of the batch's work): `docs/research/criticality/README.md`, "Standing procedure". Tell it the process facts as well as the artefacts, including your own shortcuts.
+2. **Criticality pass:** none per batch (D-38). One pass, on the R5 draft only.
 3. **Bookkeeping** (`operator`): the pass's integrator fixes; queue the refresh follow-ups; ROADMAP statuses; board patch `research/tools/board/upd<N+1>.py` (runs from `docs/research/`, asserts its anchors, parses counts from the files of record).
 4. **Milestone post** (`analyst` + skill `milestone-post`), in parallel with 3: new `docs/YYYY-MM-DD-N-slug.md` plus update notes on older posts. Afterwards correct its "Next" list for anything step 3 already did.
 5. **Republish the board**: the `republish-board` skill.

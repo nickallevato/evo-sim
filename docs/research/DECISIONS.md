@@ -765,3 +765,10 @@ with 7 workers and the first sweep output written at 01:46. That is the prematur
 in its own description exists to prevent, and the task would have been powerless to stop it. Gated
 at 01:5x; D-30's one-write create (`status: backlog` plus `blockedByIssueIds` together) is the form
 to use, and the D-32 sweep for ungated heads is what caught it.
+
+
+## 2026-11-01 — lean review; the math is recorded as reusable code (owner decision D-38)
+
+**D-38.** Question put to the owner, verbatim: "Should the team switch to the leaner review rules: 1 combined review by default, 3 separate reviews only when a gating claim would change, no checks of the Lead's rulings, one audit-of-the-audit before the final synthesis, and spot-checks only for mapping and arithmetic?" Owner's answer, verbatim: **"yes lean, we want to audit their arguments and their claims using math (recording the math code+results to refer to later more efficiently)."** Context, owner the same day: "it feels like we do to much pointless review"; review files were 1.86 MB against 2.0 MB of write-ups, plus 0.73 MB of criticality passes.
+
+Applied: (1) default review is ONE combined file (correctness plus both steelman sections); three separate reviews only when the result would change a verdict field of a load-bearing node (the exit gap); this supersedes the tier parts of D-21 and D-23. (2) No fresh-reviewer check of lead rulings (supersedes D-24's check): one changes-requested round, then the owner (Paperclip `maxReviewRounds: 1`). (3) One criticality pass, on the R5 draft only. (4) Math-map work, lookups and arithmetic get a seeded spot check, not a review. (5) Every settled math object has a self-contained script and its saved output (`docs/research/math/README.md`, "Records"), which later checks cite instead of recomputing.

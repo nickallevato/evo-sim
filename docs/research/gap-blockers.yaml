@@ -64,3 +64,6 @@ items:
 - id: X-MATHMAP
   blocker: none
   next: "Break every argument down, logically and mathematically: for each branch (B, C, D, E, F, G, H, ROOT; then merge the branch A and vid02 pilots), one Operator task with skill deref-source writes the source map (verbatim statement -> premises, hidden premises, inference -> math objects) and adds objects to docs/research/math/objects.yaml. One branch per task. Lead review: math_map.py --lint 0 errors, under 0.7 objects per claim, and a seeded 8-object spot check against the claim files. No other review. Done when every hierarchy node is used_by at least one object."
+- id: X-MATHRESOLVE
+  blocker: after
+  next: "After X-MATHMAP: settle the open derivation and lookup objects in docs/research/math/objects.yaml, each with a record (records/M-NNN.py with asserts plus M-NNN.json; math/README.md 'Records'). Analyst designs and writes them; Lead spot-checks a seeded sample. Then each simulation or regression object becomes one pre-registered check (the compute campaign, P3). Batch by branch: one task per branch's open objects."

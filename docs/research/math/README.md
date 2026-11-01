@@ -38,3 +38,11 @@ source (post, paper, video, book)  ->  statements (verbatim, located)
 Kinds: **identity** (arithmetic that is true or not), **formula** (a model equation with parameters), **parameter** (a sourced number), **model-choice** (which model applies, e.g. d vs N_e), **inference** (a reasoning step, e.g. rate vs latency), **empirical** (a claim about data).
 
 Rules: two claims that need the same maths share one object (dedup is the point). A new source adds an object only if no existing object fits. Rhetoric (rule RH) is mapped with `resolution: rhetoric` and never enters the manifest.
+
+## Records: the maths as reusable code (owner, D-38)
+Every object that is settled by computation gets a **record** that later work cites instead of recomputing:
+- `docs/research/math/records/M-NNN.py`: self-contained (stdlib or the pinned venv), its inputs stated with their `parameters.yaml` keys or quote ids, and `assert`s for every number it claims. It runs in seconds locally or prints the command for the host.
+- `docs/research/math/records/M-NNN.json`: its saved output (values, inputs, script sha256, date).
+- In `objects.yaml`: `status: resolved`, `resolved_by: docs/research/math/records/M-NNN.json`. A full R4 check stays the record for simulations; its object points at the R4 file.
+
+`research/tools/math_map.py --lint` checks that every `resolved_by` file exists.

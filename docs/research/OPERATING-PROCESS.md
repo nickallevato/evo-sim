@@ -28,12 +28,13 @@ Every commit carries a `Gap: <ID>` trailer (the hook `.githooks/commit-msg` enfo
 |---|---|
 | Items in flight (any step from pre-register to integrate) | **2**. Finish and integrate one before designing a third. |
 | Agents running at once | 1 (D-22) |
-| Rulings per conflict | **1 ruling and 1 fresh check.** If the check finds a BLOCKER or MAJOR, do not write a second ruling: send the question to the owner as one card and set the row to `owner`. |
+| Rulings per conflict | **1 ruling**, in the fix-pass brief. No fresh check of it (D-38). If the worker disagrees after one round, the owner decides (`maxReviewRounds: 1`). |
 | Fix passes per check | **2.** A third means the design was wrong; tell the owner. |
 | Brief length | 60 lines. Point at files; don't paste them. |
 | Report length | 300 words (unchanged) |
 | Source refresh | **Weekly**, as the owner ticked (D-20), plus one before a milestone post. The corpus is frozen (O-7), so a refresh only logs; it never starts a task by itself. |
-| Criticality pass | One per milestone post. It uses the existing procedure and no new framework. Its proposals go to the owner; they are never queued as work. |
+| Criticality pass | **One, on the R5 draft only** (D-38). Not per milestone. |
+| Reviews | One combined review by default; three separate only when a load-bearing verdict field would change; spot check only for math-map work, lookups and arithmetic (D-38). |
 | Milestone post | When a gap item closes or two weeks have passed, whichever comes first. |
 | Tool fixes | Only when a gate (`lint_research.py`, `argmap_check.py`, `exit_gap.py --lint`) fails, as one `upkeep` task. Matching a figure to the files of record is not a gate failure. |
 
@@ -45,7 +46,8 @@ Every commit carries a `Gap: <ID>` trailer (the hook `.githooks/commit-msg` enfo
 - **Don't open new process machinery** (new fields, guards, ledgers, scoring frameworks, review tiers) without an owner decision. Propose it in one line on the owner card.
 - **Don't re-litigate.** When the owner has decided, apply the decision and move on.
 - **Don't refresh sources, re-render figures or patch the board on spec.** Each has its trigger in the limits table.
-- **Don't run a review of a review**, except the one fresh check of a ruling (D-24).
+- **Don't run a review of a review**, or a check of a ruling (D-38).
+- **Don't recompute settled maths.** Cite the object's record (`docs/research/math/README.md`, "Records").
 - **Never commit or push from a compute host; never `git add -A`.** These already apply and still stand.
 
 ## Delegation
