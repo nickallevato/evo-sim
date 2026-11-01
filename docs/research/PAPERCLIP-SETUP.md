@@ -42,11 +42,12 @@ Paperclip's default skills stay. Agents are created **paused** and resumed toget
 
 `serialize` makes runs in the shared checkout go one at a time, which enforces the cap of one agent at a time (D-22) at the platform level.
 
-## 4. Routines (two), with `concurrencyPolicy: "skip_if_active"` and `catchUpPolicy: "skip_missed"`
+## 4. Routines (three), with `concurrencyPolicy: "skip_if_active"` and `catchUpPolicy: "skip_missed"`
 | title | agent | trigger (`POST /api/routines/{id}/triggers`) |
 |---|---|---|
 | Weekly status to the owner | Lead | schedule `0 17 * * 5`, America/Denver |
-| Weekly source refresh (log only) | Operator | schedule `0 8 * * 0`, America/Denver |
+| Weekly argument digest (skill `weekly-digest`, D-39) | Operator | schedule `0 8 * * 0`, America/Denver |
+| Daily loop restart (owner, 2026-11-01) | Lead | schedule `0 7 * * *`, America/Denver. Does nothing if a worker issue is open; otherwise runs the loop once. Added because the loop stalls whenever a chain breaks (a cancelled task, a pause and resume) |
 
 There is no host-watch routine (long runs aren't polled) and no backstop routine.
 
