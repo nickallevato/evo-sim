@@ -7,7 +7,7 @@ parent: A2
 edges: [{type: revises, target: A2}]  # supersedes the Z23003785 (2026-09-28) figure of 1,322 gen/fix, which the later paper does not restate
 load_bearing: true  # Changes G_f for MITTENS: 1,322 (≥95% snapshot, Z23003785) to about 1,587 (strict non-mutator, derived). If the strict counts are right, the headline LTEE rate used in the shortfall slows by ~20%.
 sourcing: firsthand
-status: extracted
+status: reviewed   # reviews #19, #23 (VERIFY-operator-1, 2026-11-01)
 verdicts:
   internal: holds
   fidelity: unverifiable

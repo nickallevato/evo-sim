@@ -22,20 +22,17 @@ items:
   blocker: none
   next: "D-21 chain: reviews, fix pass 2 (EVO-80), re-ruling B-R11..B-R19 and check EVO-83 (MAJOR on B-R12) are done; answer EVO-83's MAJOR in one fix pass, integrate. No further re-ruling: if the next check fails, escalate to the owner. Status `extracted` also needs moving."
 - id: A3
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: status is `checked`, not `reviewed`, though L1c was reviewed and integrated 2026-10-13; if the reviews cover A3, the operator moves the status field; if not, one combined review."
-- id: B2b
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: reviews #19-#21 and #23-#25 (2026-10-09) cover it, but status is still `extracted`; the operator moves the status field if the reviews cover it."
+  blocker: none   # VERIFY-operator-1 2026-11-01: coverage not established
+  next: "Status stays `checked`. Reviews #73-#75 cover L1c, not claim A3; #14 (P1) touches A3 only as one wording MINOR. A3 is load-bearing, so this needs reviews, not a status move: one combined review of A3 (the lead may rule that the load-bearing tier applies: three)."
 - id: E5
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: reviewed 2026-10-09 (#19-#21, #23-#25), status still `extracted`, external `pending`; decide whether the external field needs a check or the existing review supports a value."
+  blocker: none   # VERIFY-operator-1 2026-11-01
+  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external (E5 is load-bearing)."
 - id: E6
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: same as E5 (reviewed 2026-10-09; status `extracted`; external `pending`)."
+  blocker: none   # VERIFY-operator-1 2026-11-01
+  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the strict state calls are not testable without the Good 2017 files (not held), so no existing material supports a value. Next task: one check on E6 external (load-bearing); it may need the owner to supply the Good 2017 data, so scope it first."
 - id: F1a
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: same as E5 (reviewed 2026-10-09; status `extracted`; external `pending`)."
+  blocker: none   # VERIFY-operator-1 2026-11-01
+  next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."
 - id: B3
   blocker: none
   next: "internal `pending` because components differ (no single value); apply rule RD (record each component's reading and verdict, field takes the most defensible one) in one write-up + one combined review."
@@ -43,11 +40,11 @@ items:
   blocker: outside
   next: "internal waits on Day releasing his method (owner decision 2026-10-10, D-09). External: the D-25 fairer-criterion check (B60) is the one permitted task."
 - id: H5
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: why fidelity is `pending` (check the claim file's fidelity section); if it needs Hössjer text that is held, one fidelity check; if not held, set blocker: owner."
+  blocker: owner   # VERIFY-operator-1 2026-11-01
+  next: "Fidelity `pending` because the Hössjer PDF (HO-1, billdembski.substack.com file f5a8533e..., 2026-09-14) is not held: no copy under sources/raw. Owner must supply the PDF or approve the fetch (sha256 to be recorded); then one fidelity check on H5. Status already `reviewed`."
 - id: H8
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "verify: same as H5."
+  blocker: owner   # VERIFY-operator-1 2026-11-01
+  next: "Fidelity `pending` because the cited works (Wallace 1975, Maynard Smith 1968, Crow and Kimura 1970, Charlesworth 1994, Lynch 2010/2016; Haldane 1957 primary) are not held (claim file table, \"not retrieved\"). Owner must supply those texts or name which ones to fetch; then one fidelity check on H8. Status already `reviewed` (#29-#31, #49)."
 - id: ROOT
   blocker: after
   next: "R5 roll-up; starts only when every child above is closed or explicitly recorded as blocked. Needs ROADMAP B5 (aggregation rule), which needs the owner to confirm O-7."
@@ -58,8 +55,9 @@ items:
   blocker: after
   next: "Roll-up; same rule as ROOT."
 - id: X-ARGMAP
-  blocker: in-flight   # VERIFY-operator-1 (EVOA kickoff)
-  next: "Exit criterion 'every critic and ally argument is mapped': argmap_check.py at 0 errors and coverage of hierarchy attack edges = 100%. verify current coverage once."
+  blocker: none   # VERIFY-operator-1 2026-11-01
+  next: "argmap_check.py run 2026-11-01: 0 errors, 0 warnings; 132 hierarchy attacks edges, all covered (100%); 484 defeaters, 249 lineage nodes. Both conditions met, so done."
+  done: true
 - id: X-GAPS
   blocker: owner
   next: "Exit criterion 'gap list closed or recorded inaccessible': Probability Zero text and the paywalled papers (ROADMAP D4) need the owner."

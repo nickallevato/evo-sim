@@ -7,7 +7,7 @@ parent: B2
 edges: [{type: supports, target: B2}]
 load_bearing: true  # X is the ceiling quoted in the abstract and in Day's blog replies
 sourcing: firsthand
-status: extracted
+status: reviewed   # reviews #21, #25 (VERIFY-operator-1, 2026-11-01)
 verdicts:
   internal: holds
   fidelity: unverifiable

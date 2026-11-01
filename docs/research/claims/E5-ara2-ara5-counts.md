@@ -7,7 +7,7 @@ parent: A2
 edges: [{type: attacks, target: A2}, {type: attacks, target: E7}]
 load_bearing: true  # The 1,322 generations/fixation figure (A2) averages Ara+5's 0 at 60K and the mutator 104.7 averages Ara-2's -906. If these cells are artefacts, the two headline LTEE rates in MITTENS 3.0 move; Day's later Z23105291 replaces them with lineage-aware counts.
 sourcing: firsthand
-status: extracted
+status: reviewed   # reviews #19, #23 (VERIFY-operator-1, 2026-11-01)
 verdicts:
   internal: holds   # R4 X1 rule rev 2 (was pending): arithmetic reproduces; artefact-vs-biology is external
   fidelity: accurate

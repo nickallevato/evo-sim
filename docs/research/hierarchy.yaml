@@ -944,7 +944,7 @@ nodes:
     target: B2
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: unverifiable
@@ -2951,7 +2951,7 @@ nodes:
     target: E7
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: accurate
@@ -2968,7 +2968,7 @@ nodes:
     target: A2
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: holds
     fidelity: unverifiable
