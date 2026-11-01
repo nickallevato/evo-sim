@@ -1,1 +1,221 @@
-objects: []
+objects:
+- id: M-101
+  kind: inference
+  statement: An observed count over a duration gives an average rate (X/Y); does that rate exist and mean something as a bound when the process is stochastic, non-Gaussian and varies across species and conditions
+  used_by: []
+  sources:
+  - evo006
+  - evo007
+  - evo009
+  positions:
+    day: The average exists by arithmetic ("It is division"); averages of fixation times are what 4N_e and (2/s)ln(2N_e s) are; variance affects the tails, not existence
+    critic: 'The average exists but is uninformative without the distribution (Hancock: not Gaussian, multimodal; Maddie: wind speed; Matthews: cancer metastasis); rates depend on parameters'
+  resolution: derivation
+  status: open
+- id: M-102
+  kind: formula
+  statement: 'Cross-ape average rate: 398,673,272 bp / 6.3 My = 63.281 bp/y; mean over six apes 62.7 bp/y = 1,958.81 bp per effective generation (g=25 y, d=0.80, factor 25/0.8 inferred); read as the speed natural selection, drift and relictation must have run at'
+  used_by: []
+  sources:
+  - evo006
+  positions:
+    day: Every input is mainstream and none comes from the LTEE; the rate is what any mechanism must reach
+    critic: 'Needs the step from an average divergence rate to a required fixation rate: constant rate, all divergence fixed (not polymorphic), assignment to lineages, bp vs events (see pilot A M-021)'
+  resolution: derivation
+  status: open
+- id: M-103
+  kind: model-choice
+  statement: 'Does the LTEE generations-per-fixation transfer to humans given clonal start, no recombination and no standing variation: Day says standing variation cannot cut fixation time once selection acts and recombination cannot compensate; critics say the clonal zero-polymorphism start inflates the LTEE rate and recombination speeds sweeps'
+  used_by: []
+  sources:
+  - evo005
+  - evo008
+  positions:
+    day: Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency
+    critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
+  resolution: derivation
+  status: open
+- id: M-104
+  kind: parameter
+  statement: 'Mean selection coefficient of fixed substitutions: 0.875 x 0 + 0.125 x 0.0012 = 1.5e-4, from alpha ~ 12.5% (McDonald-Kreitman, hominids) and s+ = N_e s / N_e = 12/10,000 = 0.0012 (Tataru et al.)'
+  used_by: []
+  sources:
+  - evo005
+  positions:
+    day: Empirical s for fixations is ~1.5e-4, two orders below s = 0.01
+    critic: Averaging s over a neutral/adaptive mixture and putting it in the sweep formula (2/s)ln(2N_e s) is a modelling choice; the sources were not checked here
+  resolution: lookup
+  status: open
+- id: M-105
+  kind: formula
+  statement: 'Fixation time under overlapping generations: dividing the discrete-model time by d = 0.80 (14,648 -> 18,310; 40,000 -> 50,000 generations); sweep time (2/s)ln(2N_e s) for s = 1.5e-4 at N_e 1e4, 1e5, 1e6 = 14,648, 45,349, 76,051'
+  used_by: []
+  sources:
+  - evo005
+  - evo006
+  positions:
+    day: d rescales generations (time-weighted overlap correction)
+    critic: Standard N_e scaling already handles overlap (Hancock, vid02); whether dividing by d is the correct correction is open (see pilot A M-025, M-027)
+  resolution: derivation
+  status: open
+- id: M-106
+  kind: formula
+  statement: 'Throughput ceiling: total selection budget sum(s_i) <= s_max over concurrent sweeps, the mean s-bar cancels and the sum is n x s-bar, so the shape of the distribution of fitness effects does not matter'
+  used_by: []
+  sources:
+  - evo007
+  positions:
+    day: The mean is the right summary statistic for a throughput ceiling; the DFE shape drops out
+    critic: 'Hancock: every mutation in the DFE has its own fixation probability and the DFE evolves; whether a fixed budget s_max exists is not derived in the post'
+  resolution: derivation
+  status: open
+- id: M-107
+  kind: model-choice
+  statement: 'Is the selective turnover coefficient d coherent and needed beyond N_e scaling: WD says Wright-Fisher and Moran answer how fast drift moves neutral alleles and d answers how fast the gene pool turns over; Hancock says gene-pool turnover is not meaningful because alleles are staggered; Day says rates are averages of staggered events'
+  used_by: []
+  sources:
+  - evo008
+  - evo009
+  positions:
+    day: d is defined, derived and evidenced in a chapter and an appendix; "not meaningful" would invalidate every rate; Hancock must show d incoherent or already captured
+    critic: d appears in no population-genetics model; the post gives no definition of its variables; WD says d is "essentially nothing to do with" MITTENS (separability open)
+  resolution: derivation
+  status: open
+- id: M-108
+  kind: model-choice
+  statement: A mutation rate that includes structural variants (76.8 per haploid genome per generation, Perubski et al.; u = 76.8/3e9 = 2.56e-8) compared with a divergence that counts only the ~35M SNV differences
+  used_by: []
+  sources:
+  - evo008
+  - evo009
+  positions:
+    day: A total mutation rate must be compared with the total divergence, not the SNP fraction (98.91% omitted); Griffiths was right to flag it
+    critic: 'Hancock: the fixation equation does not distinguish mutation types; swapping rate mid-calculation is a Day-side point against Hancock''s whiteboard, and Hancock disputes it'
+  resolution: derivation
+  status: open
+- id: M-109
+  kind: formula
+  statement: 'Expected count of neutral fixations landing in the observed divergent sites: WD scales by the 1.09% divergent fraction (76.8 x 201,600 x 35e6/3.2e9 = 169,344) against Hancock/Day: about 90% of the genome is unconstrained, which 1.09% fixes is random, so the neutral expectation applies to the whole genome'
+  used_by: []
+  sources:
+  - evo008
+  - evo009
+  positions:
+    day: 'Neutral prediction applies to the entire genome (WD: circular to put all of it in the divergent sites); Day in 009 says the same and charges Hancock with applying all of it to the 1.09%'
+    critic: Rerun the clock and a different 1.09% fixes; the 1.09% is the recency of divergence, not the only sites that could fix
+  resolution: derivation
+  status: open
+- id: M-110
+  kind: parameter
+  statement: 'Effective generations since the CHLCA: 252,000 nominal (6.3M y / 25 y) at d = 1; 252,000 x 0.80 = 201,600 effective at d = 0.80'
+  used_by: []
+  sources:
+  - evo009
+  - evo008
+  positions:
+    day: d = 0.80 is the weighted time-average correction for overlap; critics should have used 201,600
+    critic: Hancock used the number WD presented; Wright-Fisher/Moran-with-N_e already account for overlap
+  resolution: derivation
+  status: open
+- id: M-111
+  kind: identity
+  statement: k = mu holds in finite time only for a static effective population equal to the census size; with overlapping generations no finite period has k = mu (arXiv 2208.00148v1); the identity has no time term so it cannot say whether fixations complete in a window
+  used_by: []
+  sources:
+  - pgenetics
+  - evo009
+  positions:
+    day: Kimura's k = mu is a steady-state identity, irrelevant to finite-window questions, and the molecular clock is circular; AI answers agree
+    critic: 'k = mu is an expectation of the long-run substitution rate; the post cites an arXiv paper outside evolution journals and no derivation is given in it; Hancock: refuted by 1930s population genetics'
+  resolution: derivation
+  status: open
+- id: M-112
+  kind: model-choice
+  statement: 'Neutral fixation across a species when species lifespans (1-2 My per Gemini) are shorter than 4N_e generations: transient polymorphism, rescue by bottleneck or deme replacement; Day: a bottleneck at the optimum only halves the fixation time'
+  used_by: []
+  sources:
+  - mailvox
+  positions:
+    day: Neutral drift and bottlenecks are not a retreat; the halving is "done the math" (unreleased here; Relictation paper)
+    critic: No critic reply in the window; Gemini's concessions are an LLM output, not a derivation; the species-lifespan premise and what counts as one lineage are open
+  resolution: derivation
+  status: open
+- id: M-113
+  kind: formula
+  statement: 'Kimura fixation probability for a new mutation as given: P(fix) = (1 - e^(-2s)) / (1 - e^(-4Ns))'
+  used_by: []
+  sources:
+  - evo007
+  positions:
+    day: Needs N and s; throughput question is separate
+    critic: Hancock agrees inputs N and s determine P(fix) and varies with demography and DFE
+  resolution: lookup
+  status: open
+- id: M-114
+  kind: parameter
+  statement: Day's parameter set in the 10-23 post (N_e ~ 33,000, s-bar ~ 0.001, g ~ 29 y, d ~ 0.45) against the 10-18..10-30 posts (N_e 10,000 in the 10-21 tables, g = 25 y, d = 0.80)
+  used_by: []
+  sources:
+  - evo007
+  positions:
+    day: Stated as the human parameter set that "gets an answer"; the post gives no source for g = 29
+    critic: 'Version drift inside one fortnight: which set MITTENS 3.0 and the book use is a provenance question (parameters.yaml)'
+  resolution: lookup
+  status: open
+  variant_of: M-110
+- id: M-115
+  kind: inference
+  statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
+  used_by: []
+  sources:
+  - evo008
+  positions:
+    day: MITTENS is a rate calculation, not a latency calculation; anticipated in the book
+    critic: 'Hancock: the arithmetic assumes each mutation arises and fixes before the next; the LTEE regime may not transfer (M-103)'
+  resolution: derivation
+  status: open
+- id: M-116
+  kind: inference
+  statement: 'Classification: is MITTENS the waiting-time problem (mutation arrival) or a distinct fixation problem built on observed fixations'
+  used_by: []
+  sources:
+  - evo008
+  positions:
+    day: 'WD: not the waiting-time problem, "an empirical audit of observable fixations", better called the fixation problem'
+    critic: 'Matthews: still a waiting-time problem, mutation rate and fixation rate used interchangeably since Axe''s early-2000s paper'
+  resolution: derivation
+  status: open
+- id: M-117
+  kind: empirical
+  statement: Standard population genetics models real populations accurately (pedigree studies, fruit flies, rats, humans) and "doesn't match Vox's math"; no paper or number cited in the quoted passage
+  used_by: []
+  sources:
+  - evo008
+  - evo009
+  positions:
+    day: Not addressed in the window; Day cites six of his own papers as the answer to why classical formulas fail (M-111)
+    critic: If Day is right those papers should not exist (Matthews); no specific papers named
+  resolution: data-check
+  status: open
+- id: M-118
+  kind: empirical
+  statement: Which edition of Probability Zero the critics' first video used (original ePub vs the second edition) and whether page numbers and figures differ for that reason
+  used_by: []
+  sources:
+  - evo008
+  positions:
+    day: They obtained the original-edition ePub, not the purchasable second edition (WD, relayed by Day)
+    critic: 'Matthews: the first video answered WD''s PowerPoint; they had not read the book then and did read MITTENS 3.0'
+  resolution: lookup
+  status: open
+- id: M-119
+  kind: inference
+  statement: 'Molecular-clock circularity: divergence dates are derived from k = mu and then cited as independent confirmation of it (Day: the sole practical application of k = mu)'
+  used_by: []
+  sources:
+  - pgenetics
+  positions:
+    day: '"Both circular and logically invalid"'
+    critic: Clock dates also rest on fossil calibration, not on k = mu alone; "sole practical application" is an absolute claim
+  resolution: derivation
+  status: open
