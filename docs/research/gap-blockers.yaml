@@ -16,11 +16,11 @@
 
 items:
 - id: A2e
-  blocker: none
-  next: "Two parts. (1) D-21 chain: three reviews (O5 4-6/6), fix pass (EVO-71) and fresh check (EVO-74) are done; integrate the fix-passed external value, then fidelity. Publication of the value still needs the owner (B-R20/B-R21 hold). (2) L3 (alpha from MK, l3_amk.py): run collected 2026-10-19 (a8d14b8), not written up; write-up, then reviews (three: it feeds A2e). Old Paperclip chain EVO-48..54, cancelled at migration."
+  blocker: in-flight   # A2e-analyst-1 (L3 write-up), 2026-11-01
+  next: "L3 write-up (R4-L3.md from the run collected at a8d14b8), then three reviews (it feeds A2e). After that, integrating the fix-passed external value (D-21 chain done: O5 reviews, EVO-71, EVO-74) waits on the same owner decision as B: EVO-83 MAJOR-7/8 name A2e external, and the bare renderers and tallies are still open (B-analyst-1, 2026-11-01). Then fidelity. Publication still needs the owner (B-R20/B-R21 hold)."
 - id: B
-  blocker: in-flight   # B-analyst-1 (fix pass 3 on EVO-83), 2026-11-01
-  next: "D-21 chain: reviews, fix pass 2 (EVO-80), re-ruling B-R11..B-R19 and check EVO-83 (MAJOR on B-R12) are done; answer EVO-83's MAJOR in one fix pass, integrate. No further re-ruling: if the next check fails, escalate to the owner. Status `extracted` also needs moving."
+  blocker: owner   # B-analyst-1 (EVOA-4) stopped 2026-11-01: EVO-83 MAJOR-7/8 open
+  next: "Owner: (a) rule whether B-R22's 'tooling condition is met' stands over EVO-83 MAJOR-7/8 (gen_mermaid.py and board/snap.py carry no scope; the lint_research.py l.144-150 tally and readme_figs.py count scoped values bare), or authorise one upkeep task to scope them; (b) MAJOR-4(ii)/(iii): a dated note under D-15 in DECISIONS.md and an annotation of R4-X1-verdict-rule.md l.198. Then fix pass 3 answers EVO-83 by id under brief B-analyst-1 (unused; text findings planned per E1-E4), then integrate. Status `extracted` also needs moving."
 - id: E5
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external; the external check carries a verdict-field flip, so it gets three reviews (D-23)."
