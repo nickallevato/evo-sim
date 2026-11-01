@@ -1,0 +1,546 @@
+[
+ {
+  "check": "B0",
+  "tier": "pre-tier",
+  "script": "baseline_textbook.py",
+  "result_commit": "3d888e9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B0.4",
+  "tier": "pre-tier",
+  "script": "beneficial_fix_time.py",
+  "result_commit": "3d888e9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B1",
+  "tier": "pre-tier",
+  "script": "b1_start_state.py",
+  "result_commit": "3d888e9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B3 (N vs Ne)",
+  "tier": "pre-tier",
+  "script": "b3_N_vs_Ne.py",
+  "result_commit": "3d888e9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B2a",
+  "tier": "pre-tier",
+  "script": "b2a_hard_limits_chain.py",
+  "result_commit": "36a7ff9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "F1",
+  "tier": "pre-tier",
+  "script": "f1_throughput.py",
+  "result_commit": "36a7ff9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B1b",
+  "tier": "pre-tier",
+  "script": "b1b_demography.py",
+  "result_commit": "36a7ff9",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B1c",
+  "tier": "pre-tier",
+  "script": "b1c_ne_history.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B4a",
+  "tier": "pre-tier",
+  "script": "b4a_two_lineage_ils.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "B3b / B3c",
+  "tier": "pre-tier",
+  "script": "b3b_overlap_fluctuation.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "C1",
+  "tier": "pre-tier",
+  "script": "c1_ascertainment_sim.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "C1b",
+  "tier": "pre-tier",
+  "script": "c1b_day_binned_statistic.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "H",
+  "tier": "pre-tier",
+  "script": "h_cost_of_selection.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "H2-hard",
+  "tier": "pre-tier",
+  "script": "h2_hard_selection_multilocus.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "C2",
+  "tier": "pre-tier",
+  "script": "c2_overlap_vs_standard.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "F2 / A-sim",
+  "tier": "pre-tier",
+  "script": "f2_multilocus.py",
+  "result_commit": "a89d06c",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "E",
+  "tier": "pre-tier",
+  "script": "e_founder_hazard.py",
+  "result_commit": "9a2148b",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "G1",
+  "tier": "pre-tier",
+  "script": "g1_specific_vs_any.py",
+  "result_commit": "9a2148b",
+  "label": "single-commit",
+  "status": "calculated"
+ },
+ {
+  "check": "GAP-04/07/02",
+  "tier": "pre-tier",
+  "script": "gap04_weissman_barton.py",
+  "result_commit": "f90cb25",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "H3",
+  "tier": "pre-tier",
+  "script": "h3_human_scale.py",
+  "result_commit": "3329887",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "GAP-07b",
+  "tier": "pre-tier",
+  "script": "gap07b_alignment_count.py",
+  "result_commit": "51cea1f",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "C1c",
+  "tier": "pre-tier",
+  "script": "c1c_call_depth_replacement.py",
+  "result_commit": "f6fdc50",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "C1d",
+  "tier": "pre-tier",
+  "script": "c1d_aadr_real.py",
+  "result_commit": "0c696f9",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "D1",
+  "tier": "pre-tier",
+  "script": "d1_sequence_space_spike.py",
+  "result_commit": "8b4acfd",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "X1",
+  "tier": "pre-tier",
+  "script": "x1_critic_arithmetic.py",
+  "result_commit": "cedc86a",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "GAP-07c",
+  "tier": "pre-tier",
+  "script": "gap07c_polymorphic_share.py",
+  "result_commit": "bd26aaa",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "P1",
+  "tier": "low",
+  "script": "p1_symbolic_proofs.py",
+  "result_commit": "f8bffe6",
+  "label": "reproduction",
+  "status": "calculated"
+ },
+ {
+  "check": "B5b",
+  "tier": "low",
+  "script": "b5b_mansfield_supply.py",
+  "result_commit": "6412660",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "F1b",
+  "tier": "low",
+  "script": "f1b_in_transit_measured.py",
+  "result_commit": "6412660",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "C1e",
+  "tier": "low",
+  "script": "c1e_holocene_trajectories.py",
+  "result_commit": "a3c0a87",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "G2c / B6c",
+  "tier": "low",
+  "script": "g2c_standing_variation.py",
+  "result_commit": "a3c0a87",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "E5 / E6",
+  "tier": "low",
+  "script": "e5e6_ltee_counts.py",
+  "result_commit": "0bb4f4c",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "F1a",
+  "tier": "low",
+  "script": "f1a_serial_vs_parallel.py",
+  "result_commit": "0bb4f4c",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "B2b",
+  "tier": "low",
+  "script": "b2b_ceiling_vk.py",
+  "result_commit": "0bb4f4c",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "XT",
+  "tier": "low",
+  "script": "xt_cross_tool.py",
+  "result_commit": "dfbcbc1",
+  "label": "reproduction",
+  "status": "calculated"
+ },
+ {
+  "check": "D15",
+  "tier": "load-bearing",
+  "script": "d15_waiting_time.py",
+  "result_commit": "cb537f4",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "H8 / H5",
+  "tier": "load-bearing",
+  "script": "h8_haldane_regime.py",
+  "result_commit": "588d3f9",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "A2e",
+  "tier": "load-bearing",
+  "script": "a2e_ltee_transfer.py",
+  "result_commit": "83d6123",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "B3 family",
+  "tier": "load-bearing",
+  "script": "b3_family_reconstruction.py",
+  "result_commit": "abb66a0",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "B2 / B",
+  "tier": "load-bearing",
+  "script": "b2_hard_limits_internal.py",
+  "result_commit": "e448cb2",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "B3g",
+  "tier": "low",
+  "script": "b3g_concession_bookkeeping.py",
+  "result_commit": "157aab9",
+  "label": "reproduction",
+  "status": "calculated"
+ },
+ {
+  "check": "F3a",
+  "tier": "low",
+  "script": "f3a_zeng_s_small_checks.py",
+  "result_commit": "06286c2",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "B3m",
+  "tier": "low",
+  "script": "b3m_bergeron_median.py",
+  "result_commit": "52bee7e",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "FM",
+  "tier": "load-bearing",
+  "script": "fm_mesa_replication.py",
+  "result_commit": "87ace0b",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "GAP-06",
+  "tier": "low",
+  "script": "gap06_yoo_mu_g.py",
+  "result_commit": "4a37912",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "GAP-07t",
+  "tier": "low",
+  "script": "gap07t2t_event_counts.py",
+  "result_commit": "438233d",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "A2e-alpha",
+  "tier": "load-bearing",
+  "script": "a2e_alpha_map.py",
+  "result_commit": "4a37912",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "HF-d (GAP-05 part of HF)",
+  "tier": "load-bearing",
+  "script": "hf_followups.py",
+  "result_commit": "88a33e8",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "HF main (HF-a, HF-b)",
+  "tier": "load-bearing",
+  "script": "hf_followups.py",
+  "result_commit": "adbff0a",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "HF ph (post hoc scoring)",
+  "tier": "load-bearing",
+  "script": "hf_posthoc.py",
+  "result_commit": "13820e5",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "L1",
+  "tier": "load-bearing",
+  "script": "l1_dnds_genesets.py",
+  "result_commit": "35e1755",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "L6",
+  "tier": "low",
+  "script": "l6_ltee_undone.py",
+  "result_commit": "481dbbf",
+  "label": "unknown",
+  "status": "calculated"
+ },
+ {
+  "check": "L7",
+  "tier": "low",
+  "script": "l7_410m_accounting.py",
+  "result_commit": "6ca69d3",
+  "label": "criterion-only",
+  "status": "calculated"
+ },
+ {
+  "check": "B9",
+  "tier": "low",
+  "script": "b9_relaxed_load.py",
+  "result_commit": "c7a1f12",
+  "label": "criterion-only",
+  "status": "calculated"
+ },
+ {
+  "check": "RHclose",
+  "tier": "low",
+  "script": "rhclose.py",
+  "result_commit": "0cdc47d",
+  "label": "criterion-only",
+  "status": "calculated"
+ },
+ {
+  "check": "A2e-alpha addendum (Uricchio)",
+  "tier": "low",
+  "script": "a2e_alpha_uricchio.py",
+  "result_commit": "2b5e319",
+  "label": "reproduction",
+  "status": "calculated"
+ },
+ {
+  "check": "RHclose-critics",
+  "tier": "low",
+  "script": "rhclose_critics.py",
+  "result_commit": "a48ac8a",
+  "label": "criterion-only",
+  "status": "calculated"
+ },
+ {
+  "check": "GAP05",
+  "tier": "low",
+  "script": "gap05_slightly_deleterious.py",
+  "result_commit": "314a743",
+  "label": "criterion-only",
+  "status": "calculated"
+ },
+ {
+  "check": "L1b",
+  "tier": "load-bearing",
+  "script": "l1b_t2t_dnds.py",
+  "result_commit": "c168b65",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "L5",
+  "tier": "low (registered as three)",
+  "script": "l5_adna_power.py",
+  "result_commit": "f99d925",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "L1c",
+  "tier": "load-bearing",
+  "script": "l1c_alignment_method.py",
+  "result_commit": "90b32ba",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "FMnull",
+  "tier": "load-bearing",
+  "script": "fm_mesa_null.py",
+  "result_commit": "29245a8",
+  "label": "blind",
+  "status": "calculated"
+ },
+ {
+  "check": "FMnull-S4",
+  "tier": "",
+  "script": "fmnull_s4.py",
+  "result_commit": "",
+  "label": "written up, reviewed; fix pass pending",
+  "status": "in flight"
+ },
+ {
+  "check": "L3",
+  "tier": "",
+  "script": "l3_amk.py",
+  "result_commit": "",
+  "label": "run collected; not written up",
+  "status": "in flight"
+ },
+ {
+  "check": "L1c-b",
+  "tier": "",
+  "script": "l1c_extaln.py",
+  "result_commit": "",
+  "label": "registered; not written up",
+  "status": "in flight"
+ },
+ {
+  "check": "C1d-fu",
+  "tier": "",
+  "script": "c1d_tv.py",
+  "result_commit": "",
+  "label": "registered; not written up",
+  "status": "in flight"
+ },
+ {
+  "check": "D-fu",
+  "tier": "",
+  "script": "d_followups.py",
+  "result_commit": "",
+  "label": "registered; not written up",
+  "status": "in flight"
+ },
+ {
+  "check": "L5-C1a",
+  "tier": "",
+  "script": "l5_c1a_randsnp.py",
+  "result_commit": "",
+  "label": "smoke only; not written up",
+  "status": "in flight"
+ }
+]

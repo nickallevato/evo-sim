@@ -1,0 +1,56 @@
+[
+ {
+  "phase": "P1",
+  "work": "Map the other 8 branches into math objects, then merge",
+  "size": "191 claims; ~0.45M Sonnet tokens",
+  "cpu_h_low": 0,
+  "cpu_h_high": 0,
+  "basis": "projected",
+  "blocked": ""
+ },
+ {
+  "phase": "P1b",
+  "work": "Map new sources (vid02 merge; Probability Zero 2nd ed.)",
+  "size": "one pass per source",
+  "cpu_h_low": 0,
+  "cpu_h_high": 0,
+  "basis": "projected",
+  "blocked": "owner: book text"
+ },
+ {
+  "phase": "P2",
+  "work": "Settle derivation and lookup objects",
+  "size": "~60-90 objects",
+  "cpu_h_low": 0,
+  "cpu_h_high": 0,
+  "basis": "projected",
+  "blocked": "some outside"
+ },
+ {
+  "phase": "P3",
+  "work": "One simulation/regression campaign",
+  "size": "~10-15 runs",
+  "cpu_h_low": 1000,
+  "cpu_h_high": 3000,
+  "basis": "projected from branch A (2 runs, 310 CPU-h)",
+  "blocked": ""
+ },
+ {
+  "phase": "P4",
+  "work": "Roll-ups ROOT, ROOT-M, ROOT-FM",
+  "size": "3 nodes",
+  "cpu_h_low": 0,
+  "cpu_h_high": 0,
+  "basis": "measured",
+  "blocked": "P2, P3"
+ },
+ {
+  "phase": "P5",
+  "work": "R5 synthesis: sensitivity table = simulator variable list",
+  "size": "1 table",
+  "cpu_h_low": 0,
+  "cpu_h_high": 0,
+  "basis": "planned",
+  "blocked": "P4"
+ }
+]

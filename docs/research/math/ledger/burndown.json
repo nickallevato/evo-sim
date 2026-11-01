@@ -1,0 +1,82 @@
+[
+ {
+  "date": "2026-10-08",
+  "commit": "f90cb25",
+  "nodes": 196,
+  "pending_fields": 112,
+  "load_bearing": 30,
+  "load_bearing_open": 13
+ },
+ {
+  "date": "2026-10-09",
+  "commit": "c074f6f",
+  "nodes": 217,
+  "pending_fields": 145,
+  "load_bearing": 31,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-10",
+  "commit": "6a0036c",
+  "nodes": 225,
+  "pending_fields": 109,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-11",
+  "commit": "3f881b0",
+  "nodes": 232,
+  "pending_fields": 111,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-12",
+  "commit": "44cf0c5",
+  "nodes": 233,
+  "pending_fields": 112,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-13",
+  "commit": "cc0a750",
+  "nodes": 234,
+  "pending_fields": 111,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-16",
+  "commit": "cc0a750",
+  "nodes": 234,
+  "pending_fields": 111,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-19",
+  "commit": "9c2422f",
+  "nodes": 234,
+  "pending_fields": 111,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-25",
+  "commit": "9c2422f",
+  "nodes": 234,
+  "pending_fields": 111,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ },
+ {
+  "date": "2026-10-31",
+  "commit": "9c2422f",
+  "nodes": 234,
+  "pending_fields": 111,
+  "load_bearing": 33,
+  "load_bearing_open": 14
+ }
+]

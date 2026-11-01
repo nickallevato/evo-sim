@@ -1,0 +1,92 @@
+[
+ {
+  "branch": "A",
+  "nodes": 43,
+  "reviewed": 10,
+  "checked": 23,
+  "extracted": 10,
+  "pending_fields": 23,
+  "load_bearing": 3,
+  "load_bearing_open": 2
+ },
+ {
+  "branch": "B",
+  "nodes": 51,
+  "reviewed": 26,
+  "checked": 0,
+  "extracted": 25,
+  "pending_fields": 14,
+  "load_bearing": 12,
+  "load_bearing_open": 3
+ },
+ {
+  "branch": "C",
+  "nodes": 15,
+  "reviewed": 10,
+  "checked": 0,
+  "extracted": 5,
+  "pending_fields": 10,
+  "load_bearing": 2,
+  "load_bearing_open": 0
+ },
+ {
+  "branch": "D",
+  "nodes": 41,
+  "reviewed": 3,
+  "checked": 0,
+  "extracted": 38,
+  "pending_fields": 17,
+  "load_bearing": 0,
+  "load_bearing_open": 0
+ },
+ {
+  "branch": "E",
+  "nodes": 11,
+  "reviewed": 0,
+  "checked": 1,
+  "extracted": 10,
+  "pending_fields": 14,
+  "load_bearing": 2,
+  "load_bearing_open": 2
+ },
+ {
+  "branch": "F",
+  "nodes": 12,
+  "reviewed": 6,
+  "checked": 0,
+  "extracted": 6,
+  "pending_fields": 5,
+  "load_bearing": 5,
+  "load_bearing_open": 1
+ },
+ {
+  "branch": "G",
+  "nodes": 26,
+  "reviewed": 2,
+  "checked": 13,
+  "extracted": 11,
+  "pending_fields": 6,
+  "load_bearing": 0,
+  "load_bearing_open": 0
+ },
+ {
+  "branch": "H",
+  "nodes": 12,
+  "reviewed": 7,
+  "checked": 0,
+  "extracted": 5,
+  "pending_fields": 9,
+  "load_bearing": 5,
+  "load_bearing_open": 2
+ },
+ {
+  "branch": "ROOT",
+  "nodes": 23,
+  "reviewed": 6,
+  "checked": 4,
+  "extracted": 13,
+  "pending_fields": 13,
+  "load_bearing": 4,
+  "load_bearing_open": 4
+ }
+]

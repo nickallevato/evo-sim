@@ -1,0 +1,330 @@
+<meta name="dash-one-writer">
+<style>
+#dash-root { --dash-gutter: clamp(16px, 3vw, 32px); }
+.ml { display: flex; flex-direction: column; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); max-width: 78rem; margin-inline: auto; }
+.ml-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.ml-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.ml-lede { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); max-width: 72ch; line-height: 1.5; }
+.ml .ml-lede b { color: var(--color-fg); font-weight: 600; font-variant-numeric: tabular-nums; }
+.ml-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr)); gap: var(--cds-gap-md); }
+.ml-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.ml-lab { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ml-num { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.ml-sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ml-section { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.ml-section > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.ml-section > p { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); max-width: 80ch; }
+.ml-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+.ml-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.ml-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.ml-note { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ml-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ml-legend span { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+.ml-sw { display: inline-block; width: 0.625rem; height: 0.625rem; border-radius: 2px; background: var(--cds-chart-muted); }
+.ml-sw-ok { background: var(--color-ok); } .ml-sw-warn { background: var(--color-warn); } .ml-sw-bad { background: var(--color-bad); }
+.ml-chart { position: relative; min-height: 240px; }
+.ml-chart-short { min-height: 130px; }
+.ml-tip { position: absolute; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); pointer-events: none; white-space: nowrap; z-index: 2; font-variant-numeric: tabular-nums; }
+.ml-tip .t { color: var(--cds-text-secondary); }
+.ml-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: inherit; height: 100%; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.ml-fail i { width: 0.375rem; height: 0.375rem; border-radius: 50%; background: var(--color-bad); }
+.ml-tbl { max-height: 26rem; overflow: auto; }
+.ml table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.ml th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); }
+.ml th, .ml td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.ml td.n, .ml th.n { text-align: right; }
+.ml-search { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); width: min(100%, 18rem); }
+.ml-search:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: 1px; }
+.ml-tbl-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--cds-gap-sm); }
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+@media (max-width: 40rem) { .ml-hide-narrow { display: none; } }
+</style>
+
+<div class="ml">
+  <header class="ml-head">
+    <h1 id="title">Evo-sim math ledger</h1>
+    <p class="ml-lede"><b data-draw="t-checks" data-source="checkcount" data-field="calculated">—</b> checks have been calculated, and <b data-draw="t-flight" data-source="checkcount" data-field="in_flight">—</b> more are in flight. <b data-draw="t-pending" data-source="burndown" data-row="9" data-field="pending_fields">—</b> verdict fields are still open, unchanged since mid-October. The math map, which breaks each argument down to its underlying maths, so far covers one branch and one video. Of its <b data-draw="t-objs" data-source="objcount" data-field="total">—</b> objects, <b data-draw="t-res" data-source="objcount" data-field="resolved">—</b> are settled.</p>
+  </header>
+
+  <div class="ml-tiles">
+    <div class="ml-tile"><span class="ml-lab">Checks calculated</span><span class="ml-num" data-draw="k-checks" data-source="checkcount" data-field="calculated">—</span><span class="ml-sub">pre-registered and run</span></div>
+    <div class="ml-tile"><span class="ml-lab">Checks in flight</span><span class="ml-num" data-draw="k-flight" data-source="checkcount" data-field="in_flight">—</span><span class="ml-sub">registered, not finished</span></div>
+    <div class="ml-tile"><span class="ml-lab">Open verdict fields</span><span class="ml-num" data-draw="k-pending" data-source="burndown" data-row="9" data-field="pending_fields">—</span><span class="ml-sub">across all claims</span></div>
+    <div class="ml-tile"><span class="ml-lab">Load-bearing claims open</span><span class="ml-num" data-draw="k-lb" data-source="burndown" data-row="9" data-field="load_bearing_open">—</span><span class="ml-sub">these gate the exit</span></div>
+    <div class="ml-tile"><span class="ml-lab">Math objects settled</span><span class="ml-num" data-draw="k-res" data-source="objcount" data-field="resolved">—</span><span class="ml-sub">mapped so far: branch A and one video</span></div>
+    <div class="ml-tile"><span class="ml-lab">Mapped compute left</span><span class="ml-num" data-draw="k-cpu" data-source="objcount" data-field="cpu_open">—</span><span class="ml-sub">CPU-hours, estimated, branch A only</span></div>
+  </div>
+
+  <section class="ml-section" id="calculated">
+    <h2>What has been calculated</h2>
+    <p>Checks are the maths the audit has actually run. Each claim gets three verdicts (internal, fidelity, external). A claim counts as done once it has been reviewed.</p>
+    <div class="ml-grid">
+      <div class="ml-card">
+        <h3 id="burn-title">Open verdict fields over time</h3>
+        <p class="ml-note">Pending fields in the claim tree, from the last commit on or before each date. The line has been flat since mid-October.</p>
+        <div class="ml-chart" data-draw="burn" data-source="burndown"></div>
+      </div>
+      <div class="ml-card">
+        <h3 id="branch-title">Claims by branch</h3>
+        <p class="ml-note">How far each branch has got. Grey bars are claims that have never been checked.</p>
+        <div class="ml-legend"><span><i class="ml-sw" data-sw="0"></i>Reviewed</span><span><i class="ml-sw" data-sw="1"></i>Checked</span><span><i class="ml-sw"></i>Not yet checked</span></div>
+        <div class="ml-chart" data-draw="branches" data-source="branches"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ml-section" id="left">
+    <h2>What is left</h2>
+    <p>The math map reduces every argument to its underlying math objects: an equation, a parameter, a model choice or a reasoning step. Settling an object settles every claim that rests on it. Branch A is an unmerged pilot, so duplicates are still in it.</p>
+    <div class="ml-grid">
+      <div class="ml-card">
+        <h3 id="obj-title">Math objects by status</h3>
+        <p class="ml-note">Settled means a named result already answers the maths. Blocked means it waits on a source or on the author.</p>
+        <div class="ml-legend"><span><i class="ml-sw ml-sw-ok"></i>Settled</span><span><i class="ml-sw ml-sw-bad"></i>Blocked</span><span><i class="ml-sw ml-sw-warn"></i>Open</span></div>
+        <div class="ml-chart ml-chart-short" data-draw="objs" data-source="objects"></div>
+      </div>
+      <div class="ml-card">
+        <h3 id="phase-title">Phases to the exit</h3>
+        <p class="ml-note">Sizes and CPU are estimates, projected from the branch A pilot. CPU is not the constraint: even the high end fits on the hosts we have.</p>
+        <div class="ml-tbl">
+          <table data-source="phases" data-row-key="phase">
+            <thead><tr><th data-field="phase">Phase</th><th data-field="work">Work</th><th data-field="size">Size</th><th class="n" data-field="cpu_h_high">CPU-h (high)</th><th class="ml-hide-narrow" data-field="blocked">Waits on</th></tr></thead>
+            <tbody data-draw="phase-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="ml-card">
+      <h3 id="open-title">Open and blocked math objects</h3>
+      <p class="ml-note">Every object in the map that is not yet settled, with the claims it feeds. Simulations and regressions carry a CPU estimate.</p>
+      <div class="ml-tbl">
+        <table data-source="openobjects" data-row-key="key">
+          <thead><tr><th data-field="key">Object</th><th data-field="status">Status</th><th data-field="resolution">Settle by</th><th data-field="statement">The maths</th><th class="ml-hide-narrow" data-field="nodes">Claims</th><th class="n" data-field="cpu_h">CPU-h</th></tr></thead>
+          <tbody data-draw="open-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="ml-section" id="checks">
+    <h2>Every check</h2>
+    <div class="ml-card">
+      <div class="ml-tbl-head"><h3 id="checks-title">Checks, calculated and in flight</h3><input id="check-search" class="ml-search" type="search" placeholder="Search checks" aria-label="Search checks"></div>
+      <p class="ml-note">Calculated checks are listed in PREREG-STATUS.md, with their pre-registration label. In-flight checks come from the git log since then.</p>
+      <div class="ml-tbl">
+        <table data-source="checks" data-row-key="check">
+          <thead><tr><th data-field="check">Check</th><th data-field="status">Status</th><th class="ml-hide-narrow" data-field="tier">Tier</th><th data-field="script">Script</th><th data-field="label">Label or state</th></tr></thead>
+          <tbody data-draw="check-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+dash.calc('checkcount', {
+  inputs: ['checks'], title: 'Checks by status',
+  description: 'Counts checks that are calculated and checks in flight.',
+  fn: (checks) => [{
+    calculated: checks.filter((c) => c.status === 'calculated').length,
+    in_flight: checks.filter((c) => c.status === 'in flight').length,
+  }],
+});
+dash.calc('objcount', {
+  inputs: ['objects'], title: 'Math objects by status',
+  description: 'Counts mapped math objects by status and sums the estimated CPU-hours of those not settled.',
+  fn: (objects) => [{
+    total: objects.length,
+    resolved: objects.filter((o) => o.status === 'resolved').length,
+    open: objects.filter((o) => o.status === 'open').length,
+    blocked: objects.filter((o) => o.status === 'blocked').length,
+    cpu_open: objects.filter((o) => o.status !== 'resolved').reduce((s, o) => s + Number(o.cpu_h || 0), 0),
+  }],
+});
+dash.calc('openobjects', {
+  inputs: ['objects'], title: 'Math objects not yet settled',
+  description: 'The mapped math objects whose status is open or blocked.',
+  fn: (objects) => objects.filter((o) => o.status !== 'resolved'),
+});
+
+window.mlFmt = d3.format(',');
+window.mlReady = (el, d) => {
+  if (d.status === 'ok') { el.classList.remove('dash-skeleton'); return true; }
+  el.replaceChildren();
+  if (d.status === 'loading') { el.classList.add('dash-skeleton'); return false; }
+  el.classList.remove('dash-skeleton');
+  if (d.status === 'error' || d.status === 'missing') {
+    const f = document.createElement('div'); f.className = 'ml-fail';
+    f.append(document.createElement('i'), 'Failed to load'); el.append(f);
+  } else { el.textContent = '—'; }
+  return false;
+};
+window.mlNumber = (el, id, field, row, fmt) => {
+  const d = dash.data(id);
+  if (d.status !== 'ok' || !d.data.length) { el.textContent = '—'; return; }
+  const v = d.data[row == null ? 0 : row][field];
+  el.textContent = fmt ? fmt(v) : window.mlFmt(v);
+};
+window.mlTip = (box) => {
+  let t = box.querySelector('.ml-tip');
+  if (!t) { t = document.createElement('div'); t.className = 'ml-tip'; t.hidden = true; box.append(t); }
+  return {
+    show(x, y, head, lines) {
+      t.replaceChildren();
+      const h = document.createElement('div'); h.className = 't'; h.textContent = head; t.append(h);
+      lines.forEach((l) => { const r = document.createElement('div'); r.textContent = l; t.append(r); });
+      t.hidden = false;
+      const bw = box.clientWidth, tw = t.offsetWidth;
+      t.style.left = Math.max(0, Math.min(bw - tw, x + 12)) + 'px';
+      t.style.top = Math.max(0, y - 10) + 'px';
+    },
+    hide() { t.hidden = true; },
+  };
+};
+</script>
+
+<script>
+const lastRow = 9;
+[['t-checks', 'checkcount', 'calculated'], ['k-checks', 'checkcount', 'calculated'],
+ ['t-flight', 'checkcount', 'in_flight'], ['k-flight', 'checkcount', 'in_flight'],
+ ['t-objs', 'objcount', 'total'], ['t-res', 'objcount', 'resolved'], ['k-res', 'objcount', 'resolved'],
+].forEach(([name, id, field]) => dash.draw(name, (el) => window.mlNumber(el, id, field)));
+dash.draw('k-cpu', (el) => window.mlNumber(el, 'objcount', 'cpu_open', 0, d3.format(',.0f')));
+[['t-pending', 'pending_fields'], ['k-pending', 'pending_fields'], ['k-lb', 'load_bearing_open']]
+  .forEach(([name, field]) => dash.draw(name, (el) => window.mlNumber(el, 'burndown', field, lastRow)));
+
+document.querySelectorAll('[data-sw]').forEach((s) => { s.style.background = dash.colors[Number(s.dataset.sw)]; });
+</script>
+
+<script>
+dash.draw('burn', (el) => {
+  const d = dash.data('burndown');
+  if (!window.mlReady(el, d)) return;
+  el.replaceChildren();
+  const rows = d.data.map((r) => ({ ...r, t: new Date(r.date + 'T00:00:00Z'), v: Number(r.pending_fields) }));
+  const W = Math.max(280, el.clientWidth), H = 240, m = { t: 14, r: 44, b: 26, l: 36 };
+  const x = d3.scaleUtc(d3.extent(rows, (r) => r.t), [m.l, W - m.r]);
+  const y = d3.scaleLinear([0, Math.max(160, d3.max(rows, (r) => r.v))], [H - m.b, m.t]).nice();
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-labelledby', 'burn-title');
+  svg.append('g').selectAll('line').data(y.ticks(4)).join('line')
+    .attr('x1', m.l).attr('x2', W - m.r).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+  svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickSize(0))
+    .attr('font-size', null).attr('font-family', null).call((g) => g.select('.domain').remove())
+    .selectAll('text').style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+  const nTicks = W < 420 ? 3 : 5;
+  svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(nTicks).tickFormat(d3.utcFormat('%b %-d')).tickSizeOuter(0))
+    .attr('font-size', null).attr('font-family', null)
+    .call((g) => g.select('.domain').style('stroke', 'var(--cds-chart-axis)'))
+    .call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-axis)'))
+    .selectAll('text').style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+  const c = dash.colors[0];
+  svg.append('path').datum(rows).attr('d', d3.line((r) => x(r.t), (r) => y(r.v)))
+    .style('fill', 'none').style('stroke', c).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+  svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.t)).attr('cy', (r) => y(r.v)).attr('r', 3).style('fill', c);
+  const last = rows[rows.length - 1];
+  svg.append('text').attr('x', x(last.t) + 6).attr('y', y(last.v) + 4).text(window.mlFmt(last.v))
+    .style('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)');
+  const tip = window.mlTip(el), hover = svg.append('circle').attr('r', 5).style('fill', c).attr('opacity', 0);
+  svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).style('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [px] = d3.pointer(ev), i = d3.leastIndex(rows, (r) => Math.abs(x(r.t) - px)), r = rows[i];
+      hover.attr('cx', x(r.t)).attr('cy', y(r.v)).attr('opacity', 1);
+      const sx = el.clientWidth / W;
+      tip.show(x(r.t) * sx, y(r.v) * sx, d3.utcFormat('%b %-d')(r.t), [`${window.mlFmt(r.v)} open fields`, `${r.load_bearing_open} of ${r.load_bearing} load-bearing open`, `${r.nodes} claims`]);
+    })
+    .on('pointerleave', () => { hover.attr('opacity', 0); tip.hide(); });
+});
+</script>
+
+<script>
+window.mlStack = (el, rows, label, keys, colors, names, aria) => {
+  el.replaceChildren();
+  const W = Math.max(280, el.clientWidth), bh = 22, gap = 10, m = { t: 4, r: 40, b: 4, l: 0 };
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('role', 'img').attr('aria-labelledby', aria);
+  const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+  m.l = 8 + d3.max(rows, (r) => { probe.text(r[label]); return probe.node().getComputedTextLength(); });
+  probe.remove();
+  const H = m.t + m.b + rows.length * (bh + gap) - gap;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const tot = (r) => keys.reduce((s, k) => s + Number(r[k] || 0), 0);
+  const x = d3.scaleLinear([0, d3.max(rows, tot)], [m.l, W - m.r]);
+  const tip = window.mlTip(el), sx = () => el.clientWidth / W;
+  rows.forEach((r, i) => {
+    const y0 = m.t + i * (bh + gap);
+    svg.append('text').attr('x', m.l - 8).attr('y', y0 + bh / 2 + 4).attr('text-anchor', 'end').text(r[label])
+      .style('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)');
+    let acc = 0;
+    keys.forEach((k, j) => {
+      const v = Number(r[k] || 0); if (!v) return;
+      svg.append('rect').attr('x', x(acc)).attr('y', y0).attr('width', Math.max(0, x(acc + v) - x(acc) - 1)).attr('height', bh).attr('rx', 2)
+        .style('fill', colors[j]);
+      acc += v;
+    });
+    svg.append('text').attr('x', x(acc) + 6).attr('y', y0 + bh / 2 + 4).text(window.mlFmt(acc))
+      .style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    svg.append('rect').attr('x', 0).attr('y', y0).attr('width', W).attr('height', bh).style('fill', 'transparent')
+      .on('pointermove', (ev) => { const [px, py] = d3.pointer(ev); tip.show(px * sx(), py * sx(), String(r[label]), keys.map((k, j) => `${names[j]}: ${window.mlFmt(Number(r[k] || 0))}`)); })
+      .on('pointerleave', () => tip.hide());
+  });
+};
+
+dash.draw('branches', (el) => {
+  const d = dash.data('branches');
+  if (!window.mlReady(el, d)) return;
+  window.mlStack(el, d.data, 'branch', ['reviewed', 'checked', 'extracted'],
+    [dash.colors[0], dash.colors[1], 'var(--cds-chart-muted)'], ['Reviewed', 'Checked', 'Not yet checked'], 'branch-title');
+});
+
+dash.draw('objs', (el) => {
+  const d = dash.data('objects');
+  if (!window.mlReady(el, d)) return;
+  const maps = d3.rollups(d.data, (v) => ({
+    resolved: v.filter((o) => o.status === 'resolved').length,
+    blocked: v.filter((o) => o.status === 'blocked').length,
+    open: v.filter((o) => o.status === 'open').length,
+  }), (o) => o.map).map(([map, c]) => ({ map, ...c }));
+  window.mlStack(el, maps, 'map', ['resolved', 'blocked', 'open'],
+    ['var(--color-ok)', 'var(--color-bad)', 'var(--color-warn)'], ['Settled', 'Blocked', 'Open'], 'obj-title');
+});
+</script>
+
+<script>
+window.mlRows = (tbody, rows, cols) => {
+  tbody.replaceChildren(...rows.map((r) => {
+    const tr = document.createElement('tr');
+    cols.forEach(([f, cls, fmt]) => {
+      const td = document.createElement('td'); if (cls) td.className = cls;
+      td.textContent = fmt ? fmt(r[f]) : (r[f] == null ? '' : String(r[f]));
+      tr.append(td);
+    });
+    return tr;
+  }));
+};
+const cpuFmt = (v) => (Number(v) ? d3.format(',.0f')(Number(v)) : '');
+
+dash.draw('phase-rows', (tb) => {
+  const d = dash.data('phases');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  window.mlRows(tb, d.data, [['phase'], ['work'], ['size'], ['cpu_h_high', 'n', cpuFmt], ['blocked', 'ml-hide-narrow']]);
+});
+
+dash.draw('open-rows', (tb) => {
+  const d = dash.data('openobjects');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  const order = { blocked: 0, open: 1 };
+  const rows = [...d.data].sort((a, b) => (order[a.status] - order[b.status]) || (Number(b.cpu_h) - Number(a.cpu_h)) || a.key.localeCompare(b.key));
+  window.mlRows(tb, rows, [['key'], ['status'], ['resolution'], ['statement'], ['nodes', 'ml-hide-narrow'], ['cpu_h', 'n', cpuFmt]]);
+});
+
+dash.draw('check-rows', (tb) => {
+  const d = dash.data('checks');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  const qs = [...document.querySelectorAll('#check-search')].map((i) => i.value.trim().toLowerCase()).filter(Boolean);
+  const q = qs[0] || '';
+  const rows = [...d.data].sort((a, b) => (a.status === b.status ? 0 : a.status === 'in flight' ? -1 : 1))
+    .filter((r) => !q || [r.check, r.tier, r.script, r.label, r.status].join(' ').toLowerCase().includes(q));
+  window.mlRows(tb, rows, [['check'], ['status'], ['tier', 'ml-hide-narrow'], ['script'], ['label']]);
+});
+document.querySelectorAll('#check-search').forEach((i) => i.addEventListener('input', () => dash.draw('check-rows')));
+</script>
