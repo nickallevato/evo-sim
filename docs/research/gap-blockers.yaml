@@ -23,10 +23,10 @@ items:
   next: "Owner: (a) rule whether B-R22's 'tooling condition is met' stands over EVO-83 MAJOR-7/8 (gen_mermaid.py and board/snap.py carry no scope; the lint_research.py l.144-150 tally and readme_figs.py count scoped values bare), or authorise one upkeep task to scope them; (b) MAJOR-4(ii)/(iii): a dated note under D-15 in DECISIONS.md and an annotation of R4-X1-verdict-rule.md l.198. Then fix pass 3 answers EVO-83 by id under brief B-analyst-1 (unused; text findings planned per E1-E4), then integrate. Status `extracted` also needs moving."
 - id: E5
   blocker: none   # VERIFY-operator-1 2026-11-01
-  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external; the external check carries a verdict-field flip, so it gets three reviews (D-23)."
+  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external; one combined review (D-40)."
 - id: E6
   blocker: none   # VERIFY-operator-1 2026-11-01
-  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the strict state calls are not testable without the Good 2017 files (not held), so no existing material supports a value. Next task: one check on E6 external; the external check carries a verdict-field flip, so it gets three reviews (D-23); it may need the owner to supply the Good 2017 data, so scope it first."
+  next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the strict state calls are not testable without the Good 2017 files (not held), so no existing material supports a value. Next task: one check on E6 external; one combined review (D-40); it may need the owner to supply the Good 2017 data, so scope it first."
 - id: F1a
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."
