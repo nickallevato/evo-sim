@@ -1,0 +1,13 @@
+# Source map pykf: voxday.net "The pykF Anomaly", 2026-11-07
+
+Held copy: `sources/raw/refresh-2026-11-08/p-the-pykf-anomaly/page.html` (gitignored; sha256 227f7266125eb34c6c25798cf898e14a804381190187d48fc2b4a8ef2eebcfd4; body text in `body.txt` beside it, paragraph per line), URL https://voxday.net/2026/11/07/the-pykf-anomaly/ , published 2026-11-07 (feed, UTC date). Locator = line of `body.txt`. Mapped by the weekly digest (D-39); no verdicts. Relays are marked (rule U). Objects are in `docs/research/math/objects.yaml`.
+
+Steps: P = premise, I = inference, C = conclusion; "implicit" = hidden premise added by the mapper.
+
+| Locator | Speaker | Quote | RH | Steps | Objects | Existing node | Arithmetic |
+|---|---|---|---|---|---|---|---|
+| pykf@L3 | Vox Day | "In 9 of the 12 populations, one specific gene was one of the first five genes to reach fixation. In five of those 9 populations, it was the first gene to fixate, and in three of those five populations, the same gene was the second to reach fixation." | dialectic | P: Day's reading of the LTEE spreadsheets (gene not named in this paragraph; the title and L10 name pykF). C: the order of fixations is predictable. | M-122 | A2e | Counts are internally consistent (3 <= 5 <= 9 <= 12); not reproducible, spreadsheet and gene list not cited. |
+| pykf@L8 | Vox Day (relaying Athos, LLM output) | "each successive fixation event captures a smaller fitness gain than the one before it, meaning each subsequent beneficial mutation has a lower selection coefficient" | dialectic | P: declining fixation rate. I: diminishing-returns epistasis. C: populations run out of high-value moves. Relay of model output, rule U, not scored as Day's own. | M-123 | A2e | n/a |
+| pykf@L16 | Vox Day | "One thing I’ve noticed that is missing from the literature is the fact that the fixation rate is observably slowing down over time." | dialectic | P: Day's reading of the spreadsheets. C: the slowdown is unaddressed in the literature. Whether it is addressed is a lookup, not decided here. | M-123 | A2e | n/a (no rate or table given) |
+| pykf@L16 | Vox Day | "I was wondering if the LTEE might not accomplish the precise opposite of its original intention, and prove that evolution by natural selection cannot work even in the laboratory." | rhetoric | Device: hedged conjecture ("wondering"); audience: SG readers; function: frames LTEE as self-limiting; dialectical core: M-123. | M-123 | none | n/a |
+| pykf@L10 | Vox Day (relaying Athos, LLM output) | "The typical pykF mutations in the LTEE are loss-of-function" | dialectic | P: pykF mutations break a gene. C: LTEE shows degradation, not creation ("optimizing power" within existing architecture). Relay, rule U; no citation. | M-124 | none | n/a |

@@ -247,3 +247,61 @@ objects:
   resolution: lookup
   status: open
   variant_of: M-110
+- id: M-122
+  kind: parameter
+  statement: 'In the LTEE spreadsheets "one specific gene" (title: pykF) was among the first five fixations in 9 of 12 populations, first in 5 of those 9, and second in 3 of those 5; read as a predictable order of fixation'
+  used_by: [A2e]
+  sources:
+  - pykf
+  positions:
+    day: Day read the detailed spreadsheets of the twelve populations and found the repeat; it shows a constrained landscape (via Athos output)
+    critic: 'Not addressed first-hand in the window. The counts are not tied to a cited table, gene list or definition of "fixation"; parallel recurrence of pykF mutations in replicate populations is a lookup against the published LTEE data (not done here)'
+  resolution: lookup
+  status: open
+- id: M-123
+  kind: inference
+  statement: 'The fixation rate in the LTEE "is observably slowing down over time" and this is "missing from the literature"; inference (Athos, relayed): diminishing-returns epistasis, so LTEE shows optimisation within existing architecture and may "prove that evolution by natural selection cannot work even in the laboratory"'
+  used_by: [A2e]
+  new_claim: "The LTEE's falling fixation rate shows self-limiting optimisation, not open-ended evolution; Day (day side)"
+  sources:
+  - pykf
+  positions:
+    day: The rate declines, each later fixation has a smaller gain, and the literature does not say so
+    critic: 'Not addressed first-hand in the window. Open: whether a declining rate of fixations is already reported in the LTEE literature, whether it follows from diminishing returns, and whether a slowdown in a fixed, finite-N flask bears on the M-110 rate comparison; no rate series or table is given'
+  resolution: lookup
+  status: open
+- id: M-124
+  kind: inference
+  statement: 'pykF and spoT mutations are loss-of-function or regulatory tuning, so the most repeatable LTEE signal is "gene degradation" and the LTEE demonstrates optimising, not creative, power (Athos output, relayed by Day, no citation)'
+  used_by: []
+  new_claim: "Repeatable LTEE adaptations are loss-of-function or regulatory tuning, not novelty; Day relaying Claude Athos (day side)"
+  sources:
+  - pykf
+  positions:
+    day: Gene degradation is the predictable signal; this is optimisation inside a narrow niche
+    critic: 'Not addressed first-hand. Open: the mutation classes for pykF and spoT are a lookup; whether loss-of-function counts as adaptive fixation (it does under the standard model) is a definition question; model output relayed by Day, rule U'
+  resolution: lookup
+  status: open
+- id: M-125
+  kind: formula
+  statement: 'In humans relictation accounts for about half the base pairs natural selection does, and the two together account for under 8% of total divergence ("tens of millions of divergent base pairs" unaccounted); hitchhiking and relictation named as other routes to neutral substitution'
+  used_by: [E4, F6]
+  sources:
+  - smokescreen
+  - gene-flow
+  positions:
+    day: Relictation is an identified, proved and quantified mechanism; no further mechanism will close the gap
+    critic: 'No inputs or derivation in either post (the Relictation paper is the source, unreleased calculation per M-112 context); the 8% depends on the M-102 required rate and on N_e, g, d choices (M-110, M-114); hitchhiking is linked sites, not an additional free count'
+  resolution: derivation
+  status: open
+- id: M-126
+  kind: model-choice
+  statement: 'Gene flow is "a structural hindrance to the pace of fixation" by selection and drift: a species-wide substitution in a structured species needs migrants to carry an allele between demes, and between diverging lineages gene flow erases differences; does this bear on the rate comparison with the LTEE'
+  used_by: [F]
+  sources:
+  - gene-flow
+  positions:
+    day: Gene flow adds a stage to every fixation and works against divergence, so it cannot close the accounting gap
+    critic: 'Not addressed first-hand. Open: structured-population fixation times can be shorter or longer than panmictic ones depending on migration and selection regime (a derivation, not done); the post gives no transit-time formula; the LTEE is a set of isolated, unstructured flasks'
+  resolution: derivation
+  status: open
