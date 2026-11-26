@@ -22,7 +22,7 @@ items:
   blocker: owner   # B-analyst-1 (EVOA-4) stopped 2026-11-01: EVO-83 MAJOR-7/8 open
   next: "Owner: (a) rule whether B-R22's 'tooling condition is met' stands over EVO-83 MAJOR-7/8 (gen_mermaid.py and board/snap.py carry no scope; the lint_research.py l.144-150 tally and readme_figs.py count scoped values bare), or authorise one upkeep task to scope them; (b) MAJOR-4(ii)/(iii): a dated note under D-15 in DECISIONS.md and an annotation of R4-X1-verdict-rule.md l.198. Then fix pass 3 answers EVO-83 by id under brief B-analyst-1 (unused; text findings planned per E1-E4), then integrate. Status `extracted` also needs moving."
 - id: E5
-  blocker: none   # VERIFY-operator-1 2026-11-01
+  blocker: in-flight   # E5-analyst-1 (design and pre-registration, feasibility gate first), 2026-11-26
   next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the estimator-artefact question cannot be settled (formula not in text), so no existing material supports a value. Next task: one check on E5 external; one combined review (D-40)."
 - id: E6
   blocker: none   # VERIFY-operator-1 2026-11-01
