@@ -10,7 +10,7 @@ sourcing: firsthand
 status: reviewed   # reviews #6, #8, #13 (VERIFY-operator-1, 2026-11-01)
 verdicts:
   internal: holds   # 35e6 + 5e6 = 40e6, /2 = 20e6
-  fidelity: partial   # CSAC verified-partial (one genome per species, includes polymorphism; A3c); 40M called 'single-nucleotide variants' though 5M are indel events; CSAC's 5M indel events are a two-lineage total (abstract; p.73 '5M vs 35M'), consistent with the 40M reading (R4 GAP-07)
+  fidelity: partial   # CSAC verified-partial (one genome per species, includes polymorphism; A3c); 40M called 'single-nucleotide variants' though 5M are indel events; CSAC's 5M indel events are a two-lineage total (abstract; p.73 '5M vs 35M'), consistent with the 40M reading (R4 GAP-07). X-MATHRESOLVE 2026-11-26 (M-008 record): the 20e6 reproduces only on CSAC's 35e6 SNV + 5e6 indel split
   external: contested   # polymorphism share (A3c); R4 GAP-07: the event count (~20M per lineage, calibrated / CSAC-observed) corroborates the 20M magnitude; R4 GAP-07b direct count (hg38 vs panTro6, non-T2T): 21.05M events per lineage raw, 16.4-18.1M with the CSAC fixed share; polymorphism share of indels/SVs and the T2T question remain open; R4 GAP-07c: fixed events per lineage 17.2-17.9M against 21.05M raw (polymorphism measured on the human side, chimp side assumed)
 ---
 

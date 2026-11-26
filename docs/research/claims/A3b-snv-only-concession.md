@@ -11,7 +11,7 @@ status: checked
 verdicts:
   internal: holds   # 35M / 2 = 17.5M
   fidelity: partial   # CSAC 1.23% includes polymorphism (verified-partial); 's7.3 concession' wording is ambiguous on bp vs events (R4 GAP-07)
-  external: supported   # R4 GAP-07b: 17.5M is 83% of measured events per lineage (21.05M, hg38 vs panTro6) and brackets the polymorphism-corrected fixed-event count 16.4-18.1M; the omitted indels (~10-12%) and the included polymorphism (14-22% of SNV differences) roughly cancel. The shortfall built on it rises slightly on the measured count (~99,000-110,000 at G_f 1,322; 86,000-95,000 polymorphism-corrected); R4 GAP-07c correction: 17.5M is 9.8% above the measured fixed SNVs (15.94M) and 2.2% below all fixed events (17.89M), two offsetting errors; the SNV-only shortfall falls about 9% (about 83,600) on SNV-only fixed events and is about 93,800 on all fixed events
+  external: supported   # R4 GAP-07b: 17.5M is 83% of measured events per lineage (21.05M, hg38 vs panTro6) and brackets the polymorphism-corrected fixed-event count 16.4-18.1M; the omitted indels (~10-12%) and the included polymorphism (14-22% of SNV differences) roughly cancel. The shortfall built on it rises slightly on the measured count (~99,000-110,000 at G_f 1,322; 86,000-95,000 polymorphism-corrected); R4 GAP-07c correction: 17.5M is 9.8% above the measured fixed SNVs (15.94M) and 2.2% below all fixed events (17.89M), two offsetting errors; the SNV-only shortfall falls about 9% (about 83,600) on SNV-only fixed events and is about 93,800 on all fixed events. X-MATHRESOLVE 2026-11-26 (M-008 record): the 83% is on the hg38/panTro6 count; on the T2T count (24.14M events per lineage, R4 GAP-07t) 17.5M is 72%
 ---
 
 ## Statement (verbatim)

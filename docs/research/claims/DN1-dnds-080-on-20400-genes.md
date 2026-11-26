@@ -31,6 +31,7 @@ Source: [Day, "How Biologists Keep 'Proving' Selection"](https://voxday.net/2026
 
 ## Formal statement
 dN/dS = (Nd/N)/(Sd/S) over 20,400 genes, Nei-Gojobori sites and differences; aggregation (pooled vs mean of ratios), multiple-hit correction, filters and the CDS extraction route are unstated. Implied by Day's two single-SNV numbers: N/S = (71.6/28.4)/0.71 = 3.55 (R4 L1: a correct NG site ratio is 3.34).
+Correction (X-MATHRESOLVE 2026-11-26, M-905 record): at the correct site ratio N/S 3.34, Day's 71.6% gives (71.6/28.4)/3.34 = 0.755, not 0.71; his 0.71 implies N/S 3.55.
 
 ## Assumptions
 - Stated: synonymous changes are a neutral baseline; the T2T alignment extraction is complete (226 M positions on chr1; 98.8% of coding positions found).
