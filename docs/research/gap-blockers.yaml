@@ -31,8 +31,8 @@ items:
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."
 - id: B3
-  blocker: in-flight   # B3-analyst-1 (write-up R4-B3-internal.md, rule RD), 2026-11-26
-  next: "internal `pending` because components differ (no single value); apply rule RD (record each component's reading and verdict, field takes the most defensible one) in one write-up + one combined review."
+  blocker: in-flight   # B3-reviewer-1 (combined review of R4-B3-internal.md), 2026-11-26; write-up 26dabc8 approved (EVOA-53)
+  next: "internal `pending`; R4-B3-internal.md (26dabc8) proposes `holds`, reading-dependent (R-a convergent; R-b conjunctive = non-sequitur), fallback `pending` if RD cannot rank join-readings. Next: one combined review (D-40, B3-reviewer-1), then a fix pass if it has MAJOR/MINOR, then operator integration of the field."
 - id: FM10
   blocker: outside
   next: "internal waits on Day releasing his method (owner decision 2026-10-10, D-09). External: the D-25 fairer-criterion check (B60) is the one permitted task."
