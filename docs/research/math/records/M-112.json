@@ -1,0 +1,64 @@
+{
+  "id": "M-112",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-112.py",
+  "script_sha256": "5d51770344d0043bd83abe9e2f81a7ec015393cadc1ed244371b1b2efd63f522",
+  "object": "M-112",
+  "inputs": [
+    {
+      "name": "species lifespan",
+      "value": "1-2 My",
+      "cite": "mailvox@L7 (Gemini via EF, relay, rule U)"
+    },
+    {
+      "name": "N_e",
+      "value": [
+        10000,
+        33000,
+        198000
+      ],
+      "cite": "parameters population.Ne_modern_human; evo007@L32 (Day 10-23); parameters population.Ne_ancestral_hc.yoo_2025_HCB"
+    },
+    {
+      "name": "generation length (years)",
+      "value": [
+        25,
+        29
+      ],
+      "cite": "parameters generation_time_years.day_2026; evo007@L32 (no held source, M-114)"
+    },
+    {
+      "name": "T/4N_e over 252,000 generations",
+      "value": {
+        "10000": 6.3,
+        "33000": 1.90909,
+        "57143": 1.1025,
+        "198000": 0.318182
+      },
+      "cite": "M-203"
+    }
+  ],
+  "values": {
+    "four_Ne_years": {
+      "Ne_1e4_g25": 1000000,
+      "Ne_33000_g29": 3828000,
+      "Ne_198000_g25": 19800000
+    },
+    "Ne_needed_at_g25_for_premise": [
+      10000,
+      20000
+    ],
+    "halving_derived_in_held_text": false
+  },
+  "positions": {
+    "day": {
+      "reading": "neutral drift is no retreat; bottlenecks or deme replacement at best halve the fixation time (\"done the math\")",
+      "holds": "the premise holds at N_e of 33,000 (3.83 My) or 198,000 (19.8 My) against 1-2 My; the halving is unreleased here (no derivation held), so it is neither confirmed nor refuted"
+    },
+    "critic": {
+      "reading": "Gemini's concessions are an LLM output; the lifespan premise and what counts as one lineage are open",
+      "holds": "at the textbook N_e = 1e4, 4 N_e = 1.0 My, inside the 1-2 My range, so the premise depends on N_e; Day's own Hard Limits paper calls 'nothing finishes in the species lifetime' 'simply wrong as a claim about throughput' (B2d), and narrows to the fill state (M-202)"
+    }
+  },
+  "notes": "Model-choice: no single number settles it. The halving at 'the optimal population level' has no held derivation (mailvox@L14 'I've done the math on that as well'); it is recorded as unreleased, not asserted. The relayed Gemini sentence is rule U. Whether a species boundary ends a lineage for fixation counting (daughter species inherit the 'unresolved pipeline', mailvox@L8) is not settled by any held derivation. Steady-state throughput (mu per site) versus fill state is M-111/M-201 and M-202."
+}

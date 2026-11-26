@@ -115,7 +115,8 @@ objects:
     day: 'Neutral prediction applies to the entire genome (WD: circular to put all of it in the divergent sites); Day in 009 says the same and charges Hancock with applying all of it to the 1.09%'
     critic: Rerun the clock and a different 1.09% fixes; the 1.09% is the recency of divergence, not the only sites that could fix
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-109.json
 - id: M-110
   kind: parameter
   statement: 'Effective generations since the CHLCA: 252,000 nominal (6.3M y / 25 y) at d = 1; 252,000 x 0.80 = 201,600 effective at d = 0.80'
@@ -127,7 +128,8 @@ objects:
     day: d = 0.80 is the weighted time-average correction for overlap; critics should have used 201,600
     critic: Hancock used the number WD presented; Wright-Fisher/Moran-with-N_e already account for overlap
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-110.json
 - id: M-111
   kind: identity
   statement: k = mu holds in finite time only for a static effective population equal to the census size; with overlapping generations no finite period has k = mu (arXiv 2208.00148v1); the identity has no time term so it cannot say whether fixations complete in a window
@@ -139,7 +141,8 @@ objects:
     day: Kimura's k = mu is a steady-state identity, irrelevant to finite-window questions, and the molecular clock is circular; AI answers agree
     critic: 'k = mu is an expectation of the long-run substitution rate; the post cites an arXiv paper outside evolution journals and no derivation is given in it; Hancock: refuted by 1930s population genetics'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-111.json
 - id: M-112
   kind: model-choice
   statement: 'Neutral fixation across a species when species lifespans (1-2 My per Gemini) are shorter than 4N_e generations: transient polymorphism, rescue by bottleneck or deme replacement; Day: a bottleneck at the optimum only halves the fixation time'
@@ -150,7 +153,8 @@ objects:
     day: Neutral drift and bottlenecks are not a retreat; the halving is "done the math" (unreleased here; Relictation paper)
     critic: No critic reply in the window; Gemini's concessions are an LLM output, not a derivation; the species-lifespan premise and what counts as one lineage are open
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-112.json
 - id: M-113
   kind: formula
   statement: 'Kimura fixation probability for a new mutation as given: P(fix) = (1 - e^(-2s)) / (1 - e^(-4Ns))'
@@ -161,7 +165,8 @@ objects:
     day: Needs N and s; throughput question is separate
     critic: Hancock agrees inputs N and s determine P(fix) and varies with demography and DFE
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-113.json
 - id: M-114
   kind: parameter
   statement: Day's parameter set in the 10-23 post (N_e ~ 33,000, s-bar ~ 0.001, g ~ 29 y, d ~ 0.45) against the 10-18..10-30 posts (N_e 10,000 in the 10-21 tables, g = 25 y, d = 0.80)
@@ -172,7 +177,8 @@ objects:
     day: Stated as the human parameter set that "gets an answer"; the post gives no source for g = 29
     critic: 'Version drift inside one fortnight: which set MITTENS 3.0 and the book use is a provenance question (parameters.yaml)'
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-114.json
   variant_of: M-110
 - id: M-115
   kind: inference
@@ -184,7 +190,8 @@ objects:
     day: MITTENS is a rate calculation, not a latency calculation; anticipated in the book
     critic: 'Hancock: the arithmetic assumes each mutation arises and fixes before the next; the LTEE regime may not transfer (M-103)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-115.json
 - id: M-116
   kind: inference
   statement: 'Classification: is MITTENS the waiting-time problem (mutation arrival) or a distinct fixation problem built on observed fixations'
@@ -195,7 +202,8 @@ objects:
     day: 'WD: not the waiting-time problem, "an empirical audit of observable fixations", better called the fixation problem'
     critic: 'Matthews: still a waiting-time problem, mutation rate and fixation rate used interchangeably since Axe''s early-2000s paper'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-116.json
 - id: M-117
   kind: empirical
   statement: Standard population genetics models real populations accurately (pedigree studies, fruit flies, rats, humans) and "doesn't match Vox's math"; no paper or number cited in the quoted passage

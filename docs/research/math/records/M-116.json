@@ -1,0 +1,40 @@
+{
+  "id": "M-116",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-116.py",
+  "script_sha256": "a58c667547d544a23120b0cedfd289870e7626b662b9214556d6a5a81975a0e4",
+  "object": "M-116",
+  "inputs": [
+    {
+      "name": "F_max inputs",
+      "value": [
+        "t_div",
+        "d",
+        "g_len",
+        "G_f"
+      ],
+      "cite": "branch-A A q1 (Q06)"
+    },
+    {
+      "name": "LTEE supply ratio kappa",
+      "value": 93659,
+      "cite": "parameters mutation.supply_ratio_kappa; M-103"
+    }
+  ],
+  "values": {
+    "formula_has_mutation_rate_input": false,
+    "G_f_input_includes_mutation_arrival_wait": true,
+    "axe_2004_held": "abstract only"
+  },
+  "positions": {
+    "day": {
+      "reading": "Duffy: not the waiting-time problem; an empirical audit of observable fixations, better called the fixation problem",
+      "holds": "in form F_max has no mutation-rate input (Hancock says the same, G2h q1); it counts fixations from an observed rate, not arrivals"
+    },
+    "critic": {
+      "reading": "Matthews: still a waiting-time problem, since in creationist usage the waiting-time problem is a fixation problem and the two rates are used interchangeably (Axe)",
+      "holds": "the observed G_f MITTENS divides by includes the wait for mutations to arise in a clonal population, which Day concedes ('worst-case scenario', evo005@L16; kappa 93,659, M-103), so arrival waiting is inside the input; Hancock's lineage claim is a family resemblance (F1c)"
+    }
+  },
+  "notes": "Inference, classification only; no number is printed in the rows. The two sides use 'waiting-time problem' in different senses: Duffy's is mutation arrival; Matthews's is the creationist usage in which it is a fixation problem. Under Duffy's sense the formula is not one (no mutation rate); under Matthews's sense the label fits, and the LTEE input carries arrival waiting either way. The Axe attribution is not checked (abstract only). The rate-vs-distribution point is M-101; transfer is M-103."
+}

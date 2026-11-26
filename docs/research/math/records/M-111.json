@@ -1,0 +1,54 @@
+{
+  "id": "M-111",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-111.py",
+  "script_sha256": "da9aeb7bd7c9e2a2f19262d1573ff8049c7102c759dc69fa6d13c4508cfccced",
+  "object": "M-111",
+  "inputs": [
+    {
+      "name": "cited paper",
+      "value": "Chalub 2022, arXiv:2208.00148v1",
+      "cite": "pgenetics@L8; bib Chalub2022; quotes-literature; held sources/raw/b1e-q2-2026-10-13/chalub2022v1.txt"
+    },
+    {
+      "name": "finite-window count",
+      "value": {
+        "naive": 7560000,
+        "empty_start_Ne_1e4": 6360000,
+        "full_start": 7560000
+      },
+      "cite": "M-201 (Day's Q36 inputs: mu L = 30, T = 252,000)"
+    },
+    {
+      "name": "k/mu by N, census fluctuation",
+      "value": {
+        "constant_sizes": 1,
+        "rrme_four_cohorts": 0.742847
+      },
+      "cite": "M-209, M-210"
+    }
+  ],
+  "values": {
+    "chalub_models_mutation": false,
+    "chalub_terms_absent_checked_against_raw": true,
+    "empty_start_over_naive_Ne_1e4": 0.8413,
+    "full_start_over_naive": 1,
+    "k_over_mu_constant_sizes_any_N_over_Ne": 1,
+    "k_over_mu_rrme_window": 0.742847,
+    "bl_overlap_human_effect_pct": [
+      -1.08,
+      -0.03
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "k = mu is a steady-state identity; no finite period has k = mu under overlap except a static N_e equal to census; it has no time term, so it cannot bound a window",
+      "holds": "from an empty start the window count is below mu L T at every finite T (84.1% at N_e = 1e4, 20% at T = 4 N_e, M-201); census fluctuation with overlap moves k over a window (M-210); Day's own Z22903977 says a count needs assumptions the identity cannot supply"
+    },
+    "critic": {
+      "reading": "k = mu is the expected long-run substitution rate; the cited paper is outside evolution journals and gives no derivation of the claim; Hancock: refuted by 1930s theory",
+      "holds": "the cited paper has no mutation, so it cannot show k != mu (B1e: relevant to P_fix(t), not to k vs mu); from an equilibrium start the window count is mu L T at every T (M-201); k/mu = 1 at any constant N/N_e (M-209), so 'equal to census' is not a condition; the B&L overlap effect at human survival is 0.03-1.1%"
+    }
+  },
+  "notes": "The finite-window question is settled by the start state, not by the identity: empty start, below mu L T for every finite T; equilibrium start, mu L T for every T. Which start applies at the human-chimp split is M-202 (data-check, open). The arXiv 2208.00148v1 attribution is checked against held text only: the paper is a no-mutation two-allele diffusion (M-223 reads its P_fix(t) -> x0 result), so the 'static and equal to census' condition is the post's own statement, not the paper's. Day's six papers (evo009@L58) are not re-derived here; k != mu is the B branch records. Hancock's 1930s derivation is not in the window."
+}

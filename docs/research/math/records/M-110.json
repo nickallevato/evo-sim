@@ -1,0 +1,57 @@
+{
+  "id": "M-110",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-110.py",
+  "script_sha256": "9736992d15719f3b28ccb15de9657bcd6ac3f6fac9770eee8db7d79c308f76b1",
+  "object": "M-110",
+  "inputs": [
+    {
+      "name": "t_div (years)",
+      "value": 6300000.0,
+      "cite": "parameters divergence.t_div_years.day_2026_mittens3; Q18",
+      "held_verbatim": true
+    },
+    {
+      "name": "generation length (years)",
+      "value": 25,
+      "cite": "parameters generation_time_years.day_2026; Q18",
+      "held_verbatim": true
+    },
+    {
+      "name": "nominal generations",
+      "value": 252000,
+      "cite": "parameters generations_available.day_2026; Q18; evo009@L54",
+      "held_verbatim": true
+    },
+    {
+      "name": "d",
+      "value": 0.8,
+      "cite": "evo009@L54 (no parameters.yaml key; selection.turnover_d is 0.45)",
+      "held_verbatim": true
+    },
+    {
+      "name": "effective generations",
+      "value": 201600,
+      "cite": "evo009@L54; evo008@L89 (Duffy)",
+      "held_verbatim": true
+    }
+  ],
+  "values": {
+    "nominal_d1": 252000,
+    "effective_d080": 201600,
+    "effective_d045": 113400,
+    "effective_generation_years_d080": 31.25,
+    "share_removed_d080": 0.2
+  },
+  "positions": {
+    "day": {
+      "reading": "d = 0.80 corrects 252,000 for overlapping generations; critics should have used 201,600; neither Wright-Fisher nor Moran carries the correction",
+      "holds": "the arithmetic reproduces (6.3e6/25 = 252,000; x 0.80 = 201,600 = 6.3e6/31.25)"
+    },
+    "critic": {
+      "reading": "Hancock used the number Duffy presented (evo009@L51); Wright-Fisher/Moran with N_e already account for overlap",
+      "holds": "attribution is not arithmetic; whether N_e scaling captures what d does is M-107 (open there for selection); 0.80 is not the d in parameters.yaml (0.45, which gives 113,400)"
+    }
+  },
+  "notes": "Every input is held verbatim (Q18 and parameters.yaml for 6.3e6/25/252,000; evo009@L54 for 0.80 and 201,600). d multiplies generations (equivalently the generation length is g/d), as M-107 records; the record does not redo whether that correction is needed. The d series in Day's own figures: 0.45 (parameters, Z18166234; 325,000 x 0.45 = 146,250 in the 2025 version) and 0.80 (10-21..10-30 posts); which one MITTENS 3.0 and the book use is M-114."
+}

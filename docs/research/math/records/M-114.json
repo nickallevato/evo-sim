@@ -1,0 +1,84 @@
+{
+  "id": "M-114",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-114.py",
+  "script_sha256": "b2c23395d39a3a297feaad7f4c9307268e2a7ddee282949cc67ebc01e2c17c22",
+  "object": "M-114",
+  "inputs": [
+    {
+      "set": "A (10-23)",
+      "name": "N_e",
+      "value": 33000,
+      "cite": "evo007@L32, evo007@L22; no parameters key; Z18525547 uses 33,000 for chimpanzee (B3, B4)",
+      "flag": "no held human source"
+    },
+    {
+      "set": "A (10-23)",
+      "name": "s-bar",
+      "value": 0.001,
+      "cite": "evo007@L32; parameters selection.s_zeng_2021 (sign negative)"
+    },
+    {
+      "set": "A (10-23)",
+      "name": "g (years)",
+      "value": 29,
+      "cite": "evo007@L32",
+      "flag": "no held source; Day's keyed values are 20, 25, 32.5"
+    },
+    {
+      "set": "A (10-23)",
+      "name": "d",
+      "value": 0.45,
+      "cite": "evo007@L32; parameters selection.turnover_d (Z18166234)"
+    },
+    {
+      "set": "B (10-21..10-30)",
+      "name": "N_e",
+      "value": 10000,
+      "cite": "evo005 row (14,648 -> 18,310); parameters population.Ne_modern_human"
+    },
+    {
+      "set": "B (10-21..10-30)",
+      "name": "g (years)",
+      "value": 25,
+      "cite": "Q18; parameters generation_time_years.day_2026; evo006@L35"
+    },
+    {
+      "set": "B (10-21..10-30)",
+      "name": "d",
+      "value": 0.8,
+      "cite": "evo009@L54; evo006@L35 (inferred); no parameters key"
+    }
+  ],
+  "values": {
+    "differing_inputs": [
+      "Ne",
+      "d",
+      "g"
+    ],
+    "effective_generations_on_6.3e6": {
+      "A": 97758.62,
+      "B": 201600
+    },
+    "A_over_B_effective_generations": 0.48491,
+    "four_Ne_generations": {
+      "A": 132000,
+      "B": 40000
+    },
+    "unsourced": [
+      "g = 29",
+      "N_e = 33,000 as a human value"
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "set A is the human parameter set that 'gets an answer'; inputs are 'known or bounded'",
+      "holds": "s = 0.001 and d = 0.45 carry parameters.yaml keys; N_e is 'a number either way' (evo007@L22)"
+    },
+    "critic": {
+      "reading": "version drift inside one fortnight; which set MITTENS 3.0 and the book use is a provenance question",
+      "holds": "all three shared inputs differ; on the same t_div set A gives 0.485x the effective generations of set B; g = 29 has no held source and 33,000 is Day's chimpanzee N_e elsewhere"
+    }
+  },
+  "notes": "Lookup only; no verdict. Neither set is shown to be the one MITTENS 3.0 uses beyond Q18 (g = 25, 252,000). The 0.80 and 0.45 values of d are both Day's (M-110 notes); 33,000 against 3,300 is a factor of 10 that matches Day's chimp/human pair in Z18525547. s = 0.001 is keyed as a negative-selection mean (claim file F3a); set B's posts use other s values (M-104, M-105)."
+}

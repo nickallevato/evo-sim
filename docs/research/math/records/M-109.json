@@ -1,0 +1,67 @@
+{
+  "id": "M-109",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-109.py",
+  "script_sha256": "306e840d613dce443a7e83905ddb832efd22ab480ee32ea10ed927b136326930",
+  "object": "M-109",
+  "inputs": [
+    {
+      "name": "events per genome per generation",
+      "value": 76.8,
+      "cite": "evo008@L90 (Duffy, relayed); M-108 for u and its meaning"
+    },
+    {
+      "name": "effective generations",
+      "value": 201600,
+      "cite": "evo008@L89; M-110 (252,000 x 0.80)"
+    },
+    {
+      "name": "nominal generations",
+      "value": 252000,
+      "cite": "parameters generations_available.day_2026; B5c"
+    },
+    {
+      "name": "SNV differences",
+      "value": 35000000,
+      "cite": "parameters divergence.snv_differences_total.chimp_consortium_2005"
+    },
+    {
+      "name": "genome size",
+      "value": 3200000000.0,
+      "cite": "evo008@L90"
+    },
+    {
+      "name": "haploid rate Duffy calls for",
+      "value": 38.4,
+      "cite": "evo008@L88"
+    }
+  ],
+  "values": {
+    "whole_genome_count_one_lineage": 15482880,
+    "divergent_share": 0.0109375,
+    "wd_scaled": 169344,
+    "wd_scaled_with_38_4": 84672,
+    "hancock_38M": 38707200,
+    "whole_genome_two_lineages_at_201600": 30965760,
+    "ratio_to_observed": {
+      "two_lineages_201600": 0.8847,
+      "two_lineages_252000": 1.1059,
+      "wd_scaled": 0.004838
+    }
+  },
+  "positions": {
+    "wd": {
+      "reading": "only 1.09% of the neutral substitutions land in the divergent sites, so the prediction to set against them is 169,344",
+      "holds": "the arithmetic reproduces exactly (15,482,880 x 35e6/3.2e9); his first correction (38.4) is not used in it (84,672 with it)"
+    },
+    "day": {
+      "reading": "the neutral expectation applies to the entire genome (evo009@L58); Hancock put all of it on the 1.09%",
+      "holds": "the whole-genome reading is the one Hancock also states; Day does not restate 169,344 in evo009"
+    },
+    "critic": {
+      "reading": "which sites fix is random; the 1.09% marks recency, not the only sites that could fix (Hancock, evo009@L57)",
+      "holds": "the 35M are the realised substitutions, so the whole-genome count is their comparator: 30.97M at 201,600 or 38.71M at 252,000 (0.88x, 1.11x of 35M); WD's scaling predicts 169,344 divergent sites against 35M observed (1/207)"
+    }
+  },
+  "notes": "Arithmetic as printed holds. The object is which sites the expectation applies to: multiplying the expected count by the share of sites that turned out divergent counts the predicted substitutions that would hit a site set fixed in advance; the divergent set is not fixed in advance but is the realised substitutions, so both Hancock and Day (evo009) apply the expectation to the whole genome. Whether 76.8 is a haploid events rate or the diploid SNV product (and so one lineage or two) is M-108; the d = 0.80 input is M-110. The 35M includes polymorphism (CSAC, one genome per species)."
+}

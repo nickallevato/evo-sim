@@ -1,0 +1,47 @@
+{
+  "id": "M-115",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-115.py",
+  "script_sha256": "e28001c55c8d7b6a69a92b0848b7417349558f205b8d84931e975786938e201f",
+  "object": "M-115",
+  "inputs": [
+    {
+      "name": "highway window and count",
+      "value": [
+        3600,
+        360
+      ],
+      "cite": "evo008@L97 (Duffy, relayed)"
+    },
+    {
+      "name": "rate-vs-latency identity",
+      "value": "M-706 test points",
+      "cite": "M-706"
+    },
+    {
+      "name": "Day's divisions by a fixation time",
+      "value": {
+        "66000": 3.82,
+        "20000": 12.6
+      },
+      "cite": "M-706 (Z23003785 s8.2)"
+    }
+  ],
+  "values": {
+    "seconds_per_car": 10,
+    "cars_on_road_at_100s_latency": 10,
+    "bunched_average": 10,
+    "window_over_latency": 36
+  },
+  "positions": {
+    "day": {
+      "reading": "MITTENS divides a window by an observed throughput, so it is a rate, not a latency, calculation; anticipated in the book",
+      "holds": "3,600/360 = 10 for serial, overlapping or bunched arrivals; T/G_f with a measured G_f is the aggregate form and owes no parallelism factor (M-706, G1 q1)"
+    },
+    "critic": {
+      "reading": "Hancock: the arithmetic assumes each mutation arises and fixes before the next; the LTEE regime may not transfer",
+      "holds": "where a fixation time is the divisor the count is serial: Day's own 252,000/66,000 and /20,000 are drift fixation times (M-706); and a rate measured on one road says nothing about another without a transfer model (M-103, M-006)"
+    }
+  },
+  "notes": "Inference. The highway arithmetic holds and the rate/latency distinction is correct for a count over a window. Whether it follows that the LTEE rate applies to the human divergence time is not a rate-vs-latency question but a transfer question (M-103, M-006), not settled here. Day's own F q2 treats 4 N_e as a startup cost before output (M-201's empty start), which is a latency entering the count. Both the Mansfield (F1) and Day (G1 q1) wordings state the throughput reading."
+}
