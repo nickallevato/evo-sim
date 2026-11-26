@@ -31,8 +31,8 @@ items:
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."
 - id: B3
-  blocker: in-flight   # B3-operator-1 (integration), 2026-11-26; fix pass 1 4360f38 approved (EVOA-56)
-  next: "internal `pending` (no field move). Fix pass 1 (4360f38, EVOA-56) applied the lead ruling: RD as written does not rank joinings of an umbrella's quotes; R-a convergent holds (B3d alone), R-b conjunctive non-sequitur (B3c); not reading-dependent, not scoped. Now: operator integration of the l.12 comment, the R4 B3-internal paragraph and Readings table (B3-operator-1). Then the row goes to `owner`: does an umbrella node need an aggregation rule (K-1; ROADMAP B5)? One fix pass left if review reopens it."
+  blocker: owner   # B3-internal integrated 89b484e (EVOA-57), 2026-11-26
+  next: "internal `pending`, integrated (review #97, fix pass 4360f38, integration 89b484e): RD as written does not rank joinings of an umbrella's quotes; R-a convergent holds (B3d alone), R-b conjunctive non-sequitur (B3c); not reading-dependent, not scoped. Owner: does an umbrella node need an aggregation rule (convergent, conjunctive, or leave umbrellas `pending`; K-1, ROADMAP B5)? A rule is a rule change, so it needs the owner's yes before any task. Side note for the owner card: the review file's Counts table has MINOR summing to 5 against a total of 4 (not corrected; review files are not edited)."
 - id: FM10
   blocker: outside
   next: "internal waits on Day releasing his method (owner decision 2026-10-10, D-09). External: the D-25 fairer-criterion check (B60) is the one permitted task."
