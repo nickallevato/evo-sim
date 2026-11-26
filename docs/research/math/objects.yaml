@@ -468,8 +468,8 @@ objects:
 - id: M-221
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
-  used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG]
-  sources: [B#q1, B5#q2, B5j#q3]
+  used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG, FM8b]
+  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
   status: open
@@ -1088,7 +1088,7 @@ objects:
 - id: M-801
   kind: formula
   statement: "Haldane cost budget: cost per substitution C = 30 N selective deaths (diploid, single new copy), sustainable selective mortality 10% of N per generation, so the minimum interval is 30/0.10 = 300 generations per beneficial substitution; the limit bounds selected (adaptive) substitutions, not total substitutions; the 300 is verified only as reported by Nunney 2003 (Haldane 1957 not retrieved) and is restated by Day (Z18168236), Nesslig20 and Hössjer"
-  used_by: [H, H2, H4, H5, H6, ROOT-FM]
+  used_by: [H, H2, H4, H5, H6, ROOT-FM, FM5]
   sources:
   - H#q1
   - H2#q2
@@ -1205,7 +1205,7 @@ objects:
 - id: M-901
   kind: inference
   statement: "ROOT as a universal over mechanisms: for every M in S (selection hard and soft, parallel fixation, drift, neutral sweeps, hitchhiking, ILS, gBGC, relictation-type drift, recombination, hypermutation, 'every other imagined mechanism') F_M(T) < F_req; operational form F_max = T_gen/G_f = 252,000/1,322 = 190.6 against F_req = 2.05e8, shortfall 1.0754e6 (6.03 orders; reproduces the stated 1,075,000; this is the MITTENS 3.0 value, the '3-5 orders' is Z18452504 only and 220,000x is an older version, ledgers/versions.md); the catalogue of 18 named mechanisms has 9 computed or bounded, 3 partial, 5 asserted not computed and relictation not excluded by Day (claim file ROOT-M); the 2026-09-30 post exempts three minor mechanisms (recombination, ILS, HGT) while the 2026-10-05 sentence names ILS as excluded; and whether 'impossible' means this time-budget reading or a statement that selection cannot exist (Hancock: selection is a covariance, a descriptive statistic, so 'statistically impossible' is a category error; she concedes the live question next sentence)"
-  used_by: [ROOT, ROOT-M, ROOT-COV, ROOT-FM]
+  used_by: [ROOT, ROOT-M, ROOT-COV, ROOT-FM, FM10]
   sources:
   - ROOT#q1
   - ROOT#q2
@@ -1217,6 +1217,7 @@ objects:
   - ROOT-COV#q1
   - ROOT-COV#q2
   - ROOT-FM#q5
+  - FM10#q1
   positions:
     day: "Every mechanism with a computed bound fails the same rate bound; the asserted rows contribute negligible divergence; the unnamed remainder is the critics' burden (Z18452504 'burden of the alternative'); the time-budget reading is the repo's operational form"
     critic: "No critic addresses ROOT as a whole; they attack the branches (A5, B, F1, G, C1); a universal over unnamed mechanisms is untestable until each is named and 5 of 18 named rows have no computation; 'statistically impossible' is a category error for a covariance, though the time-budget version is a separate claim"
@@ -1225,10 +1226,12 @@ objects:
 - id: M-902
   kind: empirical
   statement: "Substitution density along the T2T ape genomes: Day, 'more than 80 times more variable than a uniform-rate process predicts' (window size and dispersion statistic not given) and contiguous dense blocks with sharp boundaries ('mesas', no coordinates); R4 FMnull: the sentence is true at W >= 1 Mb in every lineage and both maskings and, wherever true at W <= 1 Mb, the measured index is inside or below a heterogeneous-mutation-rate neutral band (index/N_hi 0.11-0.91, eight parameter sets); R4 FM: 32-53% of human-mesa windows lie inside chimp mesas against a 0.56-1.0% background and a shared-rate null reproduces 64-69% of human mesas at 100 kb; the null is uniform mutation rate against variable mutation rate"
-  used_by: [ROOT-FM]
+  used_by: [ROOT-FM, FM3, FM4]
   sources:
   - ROOT-FM#q1
   - ROOT-FM#q2
+  - FM3#q1
+  - FM4#q1
   positions:
     day: "The overdispersion and the mesas exist as described and a lineage-asymmetric excess confined to contiguous blocks is not what a uniform-rate neutral model predicts; no window, statistic or code released, so the check has little power below a dominant mechanism"
     critic: "Overdispersion is the standard result of mutation-rate heterogeneity (CpG, replication timing, recombination), alignment error and ILS; the pattern is shared across lineages and reproduced by a shared-rate null; 'more than 80 times' compares against a null no one uses"
@@ -1237,9 +1240,10 @@ objects:
 - id: M-903
   kind: inference
   statement: "One mesa against two ceilings: 'a single mesa on a single chromosome shows an excess of human-lineage substitutions that exceeds both the MITTENS fixation ceiling and the maximum that natural selection can theoretically fix across the entire genome according to Haldane'; no counts, units (SNV against bp, event against base), window or ceiling value are given; Haldane's cost bounds selected substitutions only (M-801), so comparing a mesa count with it presupposes the mesa substitutions are selected; the MITTENS ceiling is the F_max of M-713 over the lineage window; the post gives no genome-wide Haldane figure (unverifiable until the mesa counts are released)"
-  used_by: [ROOT-FM]
+  used_by: [ROOT-FM, FM5]
   sources:
   - ROOT-FM#q3
+  - FM5#q1
   positions:
     day: "A single mesa already exceeds what selection could fix genome-wide under Haldane and what MITTENS allows"
     critic: "One mesa against a genome-wide maximum is a units step; a neutral high-mutation block produces excess substitutions on every lineage, so only a human-specific excess discriminates and the post gives no per-lineage numbers"
@@ -1248,10 +1252,12 @@ objects:
 - id: M-904
   kind: inference
   statement: "From the mesa pattern to the mechanism: sigillation (some mesas are discrete deliberate-modification events that wrote contiguous blocks into one lineage; hedged as 'initial evidence', introduced after the data) and FM10 'neither natural selection nor neutral diffusive drift can still be considered viable'; the step needs the implicit premise that neutral diffusive drift implies a uniform per-window rate, which no harvested Day text states (rule-N grep 2026-10-10) and which Day's own relictation (time-varying, non-diffusive drift) contradicts; R4 FM pre-registered discriminating cells P3, P4, P5 and P7 all fall on the critics' side; chrX F1 100 kb (R 3.76 on hs1, 3.39 chimp-referenced) is the single Day-side cell, one orthologous centromeric-transition window"
-  used_by: [ROOT-FM]
+  used_by: [ROOT-FM, FM7, FM10]
   sources:
   - ROOT-FM#q4
   - ROOT-FM#q5
+  - FM7#q1
+  - FM10#q1
   positions:
     day: "A lineage-asymmetric excess in contiguous blocks is a pattern uniform-rate neutral theory does not predict; sigillation is an open hypothesis, hedged, and FM10 meets the replication checklist better than Day's earlier posts (data public)"
     critic: "A pattern both selection and drift can contain does not exclude either; the data do not test sigillation because it was introduced after them; the pattern is shared across lineages and a shared-rate null reproduces it"
@@ -1685,4 +1691,15 @@ objects:
     day: All required fixations are sweeps (linkage blocks are swept whole)
     critic: Only adaptive fixations pass through sweeps; neutral fixations need no sweep
   resolution: derivation
+  status: open
+- id: M-911
+  kind: empirical
+  statement: "Share of human-great-ape divergence inside the mesas: Day, 'the dominant source of genomic divergence between humans and the great apes' (no fraction, no divergence measure given); share = single-nucleotide differences inside human mesas / human-chimp single-nucleotide differences over the cell's used windows; R4 FM: 1.25-2.5% on alignable sequence (the FM8b and ROOT-FM files give the same range); structural, indel and segmental-duplication divergence (Yoo et al. 2025 SDRs, 327 Mb per lineage) not measured, so the reading of 'genomic divergence' as single-nucleotide is implicit; covers FM8b q1 (part b only; parts a and c are not carried here, and 'beyond any dispute' is rhetoric, M-221)"
+  used_by: [FM8b]
+  sources:
+  - FM8b#q1
+  positions:
+    day: "The mesa signature is the dominant source of divergence; the claim may refer to total (structural) divergence, on which the single-nucleotide check is silent"
+    critic: "1.25-2.5% of single-nucleotide differences is not dominant; no fraction of any divergence measure is stated, so dominance is unsupported"
+  resolution: data-check
   status: open
