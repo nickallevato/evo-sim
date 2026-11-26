@@ -16,6 +16,8 @@ Files:
 
 **Update 2026-11-26 (B3-internal integration; review #97).** Added chk:B3-internal and rev:R4-B3-internal-combined to the registry and lineage L-audit-b3-internal-2026. No defeater (the write-up licenses none), no claim created, so no mini-form. No verdict field moves: B3 internal stays `pending`.
 
+**Update 2026-11-26 (E5-external integration; review #98).** Added chk:E5-external and rev:R4-E5-external-combined to the registry and lineage L-audit-e5-external-2026. No defeater (the write-up licenses none), no claim created, so no mini-form. One verdict field moves: E5 external `pending` -> `supported`, scoped.
+
 **Update 2026-11-01 (A2e-fidelity integration; review #96).** Added d497 (rev:R4-A2e-fidelity-combined against chk:A2e-fidelity; the write-up licenses no other defeater); lineage L-audit-a2e-fidelity-2026. No claim created, so no mini-form. One verdict field moves, pending owner approval: A2e fidelity `pending` -> `unverifiable`.
 
 **Update 2026-10-14 (L2 integration; reviews #87-#89).** Added d485-d486 (chk:L2 against H8 and H: sourced proxies for h, critic side and Day side; both `partly`), d487-d489 (reviews against chk:L2); lineage L-audit-l2-2026. No claim created, so no mini-form. No verdict value moved.
@@ -311,6 +313,8 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-A2e-fidelity-combined | audit | review #96, combined (D-40) review of A2e-fidelity | results/REVIEW-R4-A2e-fidelity-combined.md (2026-11-01) |
 | chk:B3-internal | audit | B3-internal: rule RD on the B3 umbrella's internal verdict; RD does not rank joinings of an umbrella's quotes, so internal stays pending (no field moves) | RESULTS §B3-internal; results/R4-B3-internal.md (added 2026-11-26) |
 | rev:R4-B3-internal-combined | audit | review #97, combined (D-40) review of B3-internal | results/REVIEW-R4-B3-internal-combined.md (2026-11-26) |
+| chk:E5-external | audit | E5-external: registered bands A2 \| G5; the -906 is the n = 2 clone-pair correction, not a fixation count; E5 external pending -> supported, scoped | RESULTS §E5-external; results/R4-E5-external.md (added 2026-11-26) |
+| rev:R4-E5-external-combined | audit | review #98, combined (D-40) review of E5-external | results/REVIEW-R4-E5-external-combined.md (2026-11-26) |
 | rev:R4-RHclose-combined | audit | review #62, combined (RHclose); low-stakes tier | results/REVIEW-R4-RHclose-combined.md (2026-10-11) |
 | rev:R4-RHclose-critics-combined | audit | review #63, combined (RHclose-critics); low-stakes tier | results/REVIEW-R4-RHclose-critics-combined.md (2026-10-11) |
 | rev:R4-A2e-uricchio-combined | audit | review #64, combined (A2e-alpha Uricchio addendum); low-stakes tier | results/REVIEW-R4-A2e-uricchio-combined.md (2026-10-11) |

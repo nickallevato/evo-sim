@@ -4176,3 +4176,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#97), fix-passed (4360f38) and integrated 2026-11-26; no verdict value moved"
+
+- id: L-audit-e5-external-2026
+  label: "Audit E5-external: bands A2 | G5, the -906 is the clone-pair correction not a fixation count; E5 external pending to supported, scoped"
+  side: audit
+  kind: reply
+  date: 2026-11-26
+  claim_ids: [E5]
+  locator: "research/checks/results/R4-E5-external.md"
+  quote: "Their correction formula then produces minus 906 “true fixations” in Ara−2."
+  parents:
+    - {id: L-audit-b3-internal-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#98), fix-passed (3269481) and integrated 2026-11-26; E5 external pending to supported, scoped"

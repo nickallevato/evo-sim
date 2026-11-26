@@ -2958,7 +2958,12 @@ nodes:
   verdicts:
     internal: holds
     fidelity: accurate
-    external: pending
+    external: supported
+  verdict_scope:
+    external: 'Scope: A2 | G5 as registered. The -906 is the n = 2 clone-pair correction, not a fixation count; Ara-2 is positive under every
+      rule on record (s3.2 snapshot 708 at 50K / 730 at 60K, Good HMM 939 / 977, Day''s Z23105291 strict 94 and first-crossing 1,094). Day''s
+      pair is likely a cross-clade pair (Z23105291 Ara-2 94 whole-population / 1,816 within-lineage), so this is not a finding that Ara-2''s sub-population
+      structure is an artefact. Ara+5''s 0 at 60K is beyond the last sample (57,500, F95 14); that diagnosis is the audit''s, not RE-04''s.'
   claim_file: docs/research/claims/E5-ara2-ara5-counts.md
 - id: E6
   title: LTEE whole-population fixations are 5,496 by a strict lineage-aware definition against 8,679 by the naive ≥95% first-crossing rule; the

@@ -11,7 +11,9 @@ status: reviewed   # reviews #19, #23 (VERIFY-operator-1, 2026-11-01)
 verdicts:
   internal: holds   # R4 X1 rule rev 2 (was pending): arithmetic reproduces; artefact-vs-biology is external
   fidelity: accurate
-  external: pending
+  external: supported   # R4 E5-external (A2 | G5, as registered; REVIEW-R4-E5-external-combined cf1fbf1; fix pass 1, lead ruling K-1); was pending; scoped, see verdict_scope
+verdict_scope:
+  external: "Scope: A2 | G5 as registered. The -906 is the n = 2 clone-pair correction, not a fixation count; Ara-2 is positive under every rule on record (s3.2 snapshot 708 at 50K / 730 at 60K, Good HMM 939 / 977, Day's Z23105291 strict 94 and first-crossing 1,094). Day's pair is likely a cross-clade pair (Z23105291 Ara-2 94 whole-population / 1,816 within-lineage), so this is not a finding that Ara-2's sub-population structure is an artefact. Ara+5's 0 at 60K is beyond the last sample (57,500, F95 14); that diagnosis is the audit's, not RE-04's."
 ---
 
 ## Statement (verbatim)
@@ -67,6 +69,8 @@ Script: none yet (spec: re-implement the Z23003785 clone-pair correction on the 
 R4 X1 (research/checks/results/R4-X1-rescore.md; rule research/checks/results/R4-X1-verdict-rule.md rev 2; review #12, 2026-10-09): under the single both-sides rule this node is holds / accurate. arithmetic reproduces; artefact-vs-biology is external Charitable reading tried: attempted: no ambiguous referent.
 
 R4 E5/E6 (research/checks/results/R4-E5E6.md; review #19, 2026-10-09): recount from the papers' own tables. Ara+5 reads 0 under the 60K snapshot but 14 (strict), 63 (first crossing) and 119 (strict plus within-lineage) elsewhere, and Ara-2 is 94 (strict), never negative; so the zero is specific to the snapshot construction, as the critics said. The clone-pair formula behind -906 is not in the extracted text and was not recomputed; the artefact-vs-biology verdict stays pending. Verdicts unchanged. Charitable reading tried: attempted: no ambiguous referent.
+
+R4 E5-external (research/checks/results/R4-E5-external.md; review #98, combined, D-40, REVIEW-R4-E5-external-combined cf1fbf1; fix pass 1 3269481, lead ruling K-1 in briefs/E5-analyst-3.md; registration e5_external.py 4cfe7e5, run raw 0bfdfbf, 2026-11-26): external `pending` -> `supported`, scoped (see `verdict_scope`; not reading-dependent). Bands A2 | G5 as registered. Day side: the correction formula is right in kind (under a neutral SFS with n = 2, (P1+P2)/2 is the expected count of shared-but-unfixed sites); his data handling reproduces every measured cell (Ara+5 at 50K, four of five 60K non-mutator cells); Ara-2's sub-population structure is real (94 whole-population against 1,816 within-lineage in his Z23105291; the pair is likely cross-clade), and Ara+5's fall from 38 to 14 is real by his rule. Critic side: RE-10 (a count of fixed mutations cannot be negative) holds for Ara-2 under every counting rule on record; RE-03 (the -906 comes from the correction) holds; RE-04 (Ara+5 38 -> 0) is right about the cell, but the 0 is a G5 non-measurement (no sample at 60K; last sample 57,500, F95 14), the audit's diagnosis, not RE-04's. This is not a finding that the Ara-2 structure is an artefact. Open: the Tenaillon 2016 `.gd` files (owner-approved fetch only).
 
 ## Simulator variables implied
 Counting rule (snapshot, first crossing, strict whole-population), sampling endpoint per population, lineage structure, clone sample size.
