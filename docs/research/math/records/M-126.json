@@ -1,0 +1,60 @@
+{
+  "id": "M-126",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-126.py",
+  "script_sha256": "d17396108e75fd99a6942a373cefd768e6c887a5fb8d4f9022a3e04cea058266",
+  "object": "M-126",
+  "inputs": [
+    {
+      "name": "Day's claim",
+      "value": "structural hindrance to the pace of fixation",
+      "cite": "gene-flow@L3, L6, L7"
+    },
+    {
+      "name": "Maruyama invariance (Day's own Hard Limits)",
+      "value": "k = mu, P_fix = 1/(2N) under conservative migration",
+      "cite": "B7 q1 (Z22129121); record M-209"
+    },
+    {
+      "name": "rate vs latency; empty-start loss",
+      "cite": "records M-115, M-201"
+    },
+    {
+      "name": "structured fixation times, selected",
+      "value": "not held",
+      "cite": "gaps ledger K9 (Z18167588 cited, text not quoted in held files)"
+    },
+    {
+      "name": "gene flow after the split",
+      "value": "low materiality",
+      "cite": "gaps ledger K4"
+    },
+    {
+      "name": "LTEE regime",
+      "value": "12 populations, each transferred daily at 1:100, evolved independently",
+      "cite": "Q312 (Z23003785 s1); branch-E E q1 (Z23020792); parameters ltee.generations_per_day; E9; Day s5.2"
+    }
+  ],
+  "values": {
+    "transit_time_formula_in_post": false,
+    "neutral_rate_over_mu_under_conservative_migration": 1,
+    "neutral_rate_slowed_by_structure_on_days_cited_principle": false,
+    "structured_fixation_time_neutral_held": false,
+    "structured_fixation_time_selected_held": false,
+    "ltee_demes_per_population": 1,
+    "ltee_migration_between_populations": false,
+    "ltee_clonal_lineage_structure_within_flasks": true,
+    "log2_100": 6.644
+  },
+  "positions": {
+    "day": {
+      "reading": "gene flow only redistributes alleles; in a structured species a species-wide substitution waits on migrants (an extra stage, slower fixation), and between lineages gene flow erases differences, so it cannot help close the accounting gap",
+      "holds": "gene flow creates and fixes no allele, so it adds no substitutions to the count; between lineages it works against divergence (direction agreed; K4: low materiality); if structure lengthens transit, an empty-start count loses more (M-201); the LTEE flasks have no gene flow, so its G_f carries no such stage"
+    },
+    "critic": {
+      "reading": "pace is a rate over a window (M-115); structure changes latency, not the neutral rate",
+      "holds": "Day's own Hard Limits paper states Maruyama invariance: under conservative migration the neutral rate is exactly mu (M-209: k/mu = 1), so structure does not slow neutral substitution as a rate; the post gives no transit time and none is held for selected alleles; the LTEE comparison turns on transfer (M-103, M-006), not on gene flow"
+    }
+  },
+  "notes": "Model choice, qualitative. Both readings of 'pace' are recorded; no structured-population transit time is derived (brief: not in scope) and none is held, so the latency claim is quoted, not tested. Selected-case fixation times in subdivided populations would need Z18167588's Whitlock & Barton passage or a primary source; neither is quoted in held files."
+}

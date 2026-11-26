@@ -328,7 +328,8 @@ objects:
     day: Gene flow adds a stage to every fixation and works against divergence, so it cannot close the accounting gap
     critic: 'Not addressed first-hand. Open: structured-population fixation times can be shorter or longer than panmictic ones depending on migration and selection regime (a derivation, not done); the post gives no transit-time formula; the LTEE is a set of isolated, unstructured flasks'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-126.json
 - id: M-201
   kind: formula
   statement: 'Finite-window neutral count from an empty start: E[F(T)] = mu L int_0^T F_X(u) du ~ mu L (T - 4 Ne), against the naive mu L T; with mu L = 30 and T = 252,000, naive = 7,560,000'
