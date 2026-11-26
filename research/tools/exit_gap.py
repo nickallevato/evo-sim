@@ -9,7 +9,8 @@ gap-blockers.yaml is not marked done.
 Usage (run from the repo root, research/.venv/bin/python -I):
   exit_gap.py                 table of open items, workable ones first
   exit_gap.py --workable      only items whose blocker is `none` (exit 3 if there are none)
-  exit_gap.py --check ID      exit 0 if ID is an open item or a reserved tag, else 1
+  exit_gap.py --check ID      exit 0 if ID is a reserved tag or an open item in the working
+                              tree or at HEAD (so the commit that closes an item may carry its tag), else 1
   exit_gap.py --lint          exit 1 if gap-blockers.yaml and hierarchy.yaml disagree
   exit_gap.py --audit REV     share of commits since REV per Gap trailer (on-gap / upkeep / owner / none)
 
@@ -30,8 +31,17 @@ RESERVED = {"upkeep", "owner"}
 BLOCKERS = {"none", "after", "owner", "outside", "in-flight"}
 
 
-def open_nodes():
-    nodes = yaml.safe_load(HIER.read_text())["nodes"]
+def read(path, rev=None):
+    """File text from the working tree, or from git revision `rev` ('' if absent there)."""
+    if rev is None:
+        return path.read_text()
+    r = subprocess.run(["git", "-C", str(ROOT), "show", f"{rev}:{path.relative_to(ROOT)}"],
+                       capture_output=True, text=True)
+    return r.stdout if r.returncode == 0 else ""
+
+
+def open_nodes(rev=None):
+    nodes = (yaml.safe_load(read(HIER, rev)) or {}).get("nodes", [])
     out = {}
     for n in nodes:
         if not n.get("load_bearing"):
@@ -43,13 +53,13 @@ def open_nodes():
     return out
 
 
-def load_blockers():
-    rows = yaml.safe_load(BLOCK.read_text())["items"]
+def load_blockers(rev=None):
+    rows = (yaml.safe_load(read(BLOCK, rev)) or {}).get("items", [])
     return {r["id"]: r for r in rows}
 
 
-def open_items():
-    nodes, rows = open_nodes(), load_blockers()
+def open_items(rev=None):
+    nodes, rows = open_nodes(rev), load_blockers(rev)
     items = {}
     for nid, info in nodes.items():
         items[nid] = {**info, **rows.get(nid, {"blocker": "UNLISTED", "next": "add a row to gap-blockers.yaml"})}
@@ -96,7 +106,9 @@ def table(workable_only=False):
 
 
 def audit(rev):
-    items = set(open_items()) | set(load_blockers())
+    # A load-bearing node stays on-gap after it closes: the hook accepted its tag when the commit was made.
+    lb = {n["id"] for n in yaml.safe_load(HIER.read_text())["nodes"] if n.get("load_bearing")}
+    items = set(open_items()) | set(load_blockers()) | lb
     log = subprocess.run(
         ["git", "-C", str(ROOT), "log", "--no-merges", "--format=%H%x00%(trailers:key=Gap,valueonly,separator=%x2C)", f"{rev}..HEAD"],
         capture_output=True, text=True, check=True).stdout
@@ -130,7 +142,7 @@ def main(argv):
     if argv[0] == "--lint":
         return lint()
     if argv[0] == "--check" and len(argv) == 2:
-        ok = argv[1] in RESERVED or argv[1] in open_items()
+        ok = argv[1] in RESERVED or argv[1] in open_items() or argv[1] in open_items("HEAD")
         return 0 if ok else 1
     if argv[0] == "--audit" and len(argv) == 2:
         return audit(argv[1])
