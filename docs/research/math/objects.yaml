@@ -548,8 +548,9 @@ objects:
   positions: {day: 'Ascertainment toward modern European polymorphism favors detecting recent fixations, so a count of about 0 is conservative (C1a)', critic: 'Panel sites cannot register most new substitutions;
       the discovery step is African, not European; the sign of the bias is not calculated (R4 C1c, C1d, L5 model the swept-site share)'}
   resolution: simulation
-  status: open
-  compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
+  status: blocked
+  blocked_on: "after: X-VARLIST (R5 sensitivity table); not run, because no open field on a load-bearing node moves (compute-manifest.md §3)"
+  compute: {host: na-workhorse, est_cpu_h: 12, est_ram_gb: 7, measured: false}
 - id: M-302
   kind: formula
   statement: 'Expected neutral substitutions in a ~7,000-year window against a panel: genome-wide count (20e6/9e6 y x 7,000 = 15,556; 1.2e-8 x 1.5e8 x 350 = 630; 1.2e-8 x 3.1e9 x 350 = 13,020) compared
@@ -673,8 +674,9 @@ objects:
   used_by: [D2d, D3b]
   sources: [D2d#q1, D2d#q2, D3b#q1, D3b#q3, D3b#q4]
   positions: {day: 'Every intermediate must be viable and long paths are inaccessible, so topology and path length decide the case (Eden, Crosby)', critic: 'The size of the space is not the issue (Wright, Ulam); Eden gives no estimate of path length or of viability along the paths'}
-  resolution: simulation
-  status: open
+  resolution: data-check
+  status: blocked
+  blocked_on: "outside: no held source gives a landscape or a path-length distribution at Eden's scale (a 120-step minimum distance); a synthetic landscape would set the answer by the ruggedness chosen, an uncited input (rule F), and D3b's own test asks for a measured distribution on an empirical landscape (D2h), so this is data, not simulation (compute-manifest.md §4). The viability and connectivity leg is settled on held landscapes: research/checks/results/R4-D1-spike.md (GB1: one giant component with 99.8-99.9% of functional variants; 98.5% have an uphill SNV neighbour; 44% have a monotone SNV path to the best variant)"
   compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
 - id: M-406
   kind: formula
@@ -748,7 +750,7 @@ objects:
   resolution: simulation
   status: resolved
   resolved_by: research/checks/results/R4-D15.md
-  compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
+  compute: {host: na-workhorse, est_cpu_h: 49, est_ram_gb: 0, measured: true}
 - id: M-414
   kind: parameter
   statement: 'Stated probability figures with no model: Milton''s 1 in 10^65 for one protein forming by chance (relayed by Day, no derivation) and Schützenberger''s under 10^-1000 for a self-correcting mechanism arising spontaneously and under 10^-100 for meaning-preserving changes (hypothetical program class, no derivation in the volume)'
@@ -796,7 +798,7 @@ objects:
   - Q73
   positions:
     day: The per-event hazard is about 2.3% and the cumulative risk over 100 events exceeds 90%; hypermutation is a hazard to the peripatric mechanism, scoped by the paper as one mechanism of PE
-    critic: Not addressed in the corpus; the audit's own R4 E finds the number reproduces (2.0-2.75%) but the premise (>= 2 carriers needed) is wrong, and the consequence (one homozygote removed by selection in an isolate of 100) and independence of events are open
+    critic: "Not addressed in the corpus; the audit's own R4 E finds the number reproduces (2.0-2.75%) but the premise (>= 2 carriers needed) is wrong; the consequence on the direct-viability endpoint is settled by R4 E's threshold sweep (Adjudication, E3: 'At N = 100, a ≥2% cohort-fitness dip is 6× rarer than one affected birth, and a ≥5% dip 620× rarer'; 1-5x at N = 20-30), a reversal in size, not in sign; still untested (R4 E, Caveats): E3 §4's pathways (heterozygote mutation-rate load, lethal equilibrium, meltdown), homozygote fertility, demography, and independence of events (the 93.9% is 'Over 100 independent events')"
   resolution: simulation
   status: resolved
   resolved_by: research/checks/results/R4-E.md
@@ -860,9 +862,10 @@ objects:
   - E9#q3
   positions:
     day: Throughput is sublinear in supply (8-17x for 100x) because beneficial mutations compete; hypermutation cannot rescue the rate, and the hazard side shows it is lethal at tissue level in mammals
-    critic: The LTEE is largely non-recombining bacteria from one clone, so sublinearity does not transfer to sexual vertebrates (RE-07, GA-01, MC-07); the audit's own simulation (free recombination against asexual) is planned, not run
+    critic: "The LTEE is largely non-recombining bacteria from one clone, so sublinearity does not transfer to sexual vertebrates (RE-07, GA-01, MC-07); the audit's own simulation ran in R4-F2-A ('A interpretation'): asexual 100x gives 2.9-4.8x (a = 0.23-0.34, below Day's 0.47-0.61), free recombination gives a = 1.00 (up to 272 active loci, N = 1000, s = 0.01, soft selection), 'not shown at human scale'"
   resolution: simulation
-  status: open
+  status: blocked
+  blocked_on: "owner: the same inputs as M-503 and row E6, no second request: (1) Good 2017 clade-aware HMM state timecourses (R4-E6-external-feasibility.md); (2) the Z23105291 text and xlsx (bib-day.md l.55-56). E6's open field waits on these, not on compute (compute-manifest.md §1). Residual (human-scale map and DFE): after: X-VARLIST (R5 sensitivity table); not run, because no open field on a load-bearing node moves (compute-manifest.md §1)"
   compute: {host: na-workhorse, est_cpu_h: 4, est_ram_gb: 2, measured: false}
 - id: M-506
   kind: formula
@@ -877,7 +880,8 @@ objects:
     day: s_min is a floor under perfect efficiency; no parameter set is both PE and within the safe zone; parallelism is treated explicitly through P
     critic: Independent loci sweep in parallel (pipelining, F1), so the required s is lower by at least the B0.4 factor; the objection is the size of P and K_total, not seriality as such; no critic engaged the paper
   resolution: simulation
-  status: open
+  status: blocked
+  blocked_on: "after: X-VARLIST (R5 sensitivity table); not run, because no open field on a load-bearing node moves (compute-manifest.md §7)"
   compute: {host: na-workhorse, est_cpu_h: 2, est_ram_gb: 1, measured: false}
 - id: M-507
   kind: formula
@@ -954,7 +958,8 @@ objects:
     day: The active zone imposes a hard capacity near 230 simultaneous sweeps, so pipeline width is limited
     critic: Interference is real under tight linkage but the cap is not reproduced for r = 1/2; Good 2017 shows many simultaneous competing variants, which is parallelism with interference, not a hard cap; human-scale loci and hard selection with linkage are untested
   resolution: simulation
-  status: open
+  status: blocked
+  blocked_on: "after: X-VARLIST (R5 sensitivity table); not run, because no open field on a load-bearing node moves (compute-manifest.md §2): F2's fields are already set (external contested)"
   compute: {host: na-workhorse, est_cpu_h: 8, est_ram_gb: 4, measured: false}
 - id: M-605
   kind: inference
@@ -1372,7 +1377,7 @@ objects:
   resolved_by: docs/research/math/records/M-904.json
 - id: M-905
   kind: empirical
-  statement: "Genome-wide human-chimp dN/dS and its sensitivity to gene set and filters: Day, 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment; single-SNV codons 71.6% nonsynonymous, 28.4% synonymous, dN/dS 0.71; implied N/S = (71.6/28.4)/0.71 = 3.55 against a correct site ratio of 3.34) against the Consortium's Ka/Ks 0.23 on 13,454 1:1 orthologs (CSAC 2005); 'no combination of quality filters moves the number below 0.65' (full stack 0.64 on 10 genes); gene-set arithmetic 20,400 - 13,454 = 6,946 (34.05% of Day's set), 20,400/13,454 = 1.516; audit R4 L1 on hg38/panTro5: all genes 0.271, Ensembl one2one 0.207; R4 L1b on T2T and Cactus: all 0.271 (V0), one2one 0.238, minimum over 32 filter stacks 0.214; no correct-frame computation reproduces 0.80 (range 0.15-0.45); Day's code, gene list and per-gene table are unreleased"
+  statement: "Genome-wide human-chimp dN/dS and its sensitivity to gene set and filters: Day, 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment; single-SNV codons 71.6% nonsynonymous, 28.4% synonymous, dN/dS 0.71; implied N/S = (71.6/28.4)/0.71 = 3.55 against a correct site ratio of 3.34, at which his 71.6% gives (71.6/28.4)/3.34 = 0.755, not 0.71) against the Consortium's Ka/Ks 0.23 on 13,454 1:1 orthologs (CSAC 2005); 'no combination of quality filters moves the number below 0.65' (full stack 0.64 on 10 genes); gene-set arithmetic 20,400 - 13,454 = 6,946 (34.05% of Day's set), 20,400/13,454 = 1.516, which sets Day's set against CSAC's and is not CSAC's exclusion: CSAC's curation removed 2,591 of its own 16,045 genes (16.2%); audit R4 L1 on hg38/panTro5: all genes 0.271, Ensembl one2one 0.207; R4 L1b on T2T and Cactus: all 0.271 (V0), one2one 0.238, minimum over 32 filter stacks 0.214; no correct-frame computation reproduces 0.80 (range 0.15-0.45); Day's code, gene list and per-gene table are unreleased"
   used_by: [DN1, DN2, DN3, DN4, DN5, DN6]
   sources:
   - DN1#q1
@@ -1606,8 +1611,8 @@ objects:
   resolved_by: docs/research/math/records/M-007.json
 - id: M-008
   kind: identity
-  statement: 'Required fixation count by version: 2019 15e6 per lineage (30e6 total; 35e6 x 0.862 = 30.2e6 if corrected for polymorphism); 2025 (35e6 SNV + 5e6 indel)/2 = 20e6; 3.0 SNV-only 17.5e6 with shortfall 17.5e6/191 = 91,623 (paper 91,600)
-    at 1,322 and 17.5e6/2,407 = 7,270 (paper 7,271) at 105; KITTENS achievable 17.9e6 against 17.5e6. Absorbs pilot M-017, M-024.'
+  statement: 'Required fixation count by version: 2019 15e6 per lineage (30e6 total; 35e6 x 0.862 = 30.2e6 if corrected for polymorphism); 2025 (35e6 SNV + 5e6 indel)/2 = 20e6 (Q12 labels the 40e6 "single-nucleotide variants", but the 20e6 reproduces only on CSAC''s 35e6 SNV + 5e6 indel split); 3.0 SNV-only 17.5e6 with shortfall 17.5e6/191 = 91,623 (paper 91,600)
+    at 1,322 and 17.5e6/2,407 = 7,270 (paper 7,271) at 105 (the paper''s 2,407 achievable implies G_f 104.7, not 105: 252,000/105 = 2,400); KITTENS achievable 17.9e6 against 17.5e6. Absorbs pilot M-017, M-024.'
   used_by:
   - A3
   - A3b
@@ -1620,7 +1625,7 @@ objects:
   - A5b#q2
   positions:
     day: Each version halves a divergence count to a per-lineage requirement; the SNV-only restriction is stated as a concession and still gives 91,600x
-    critic: The SNV-only count is 83% of the measured events per lineage and the 17.9e6 achievable is a linear-scaling illustration, not a proof
+    critic: The SNV-only count is 83% of the measured events per lineage on the hg38/panTro6 count (21.05 M, GAP-07b) and 72% on the T2T count (24.14 M, GAP-07t), and the 17.9e6 achievable is a linear-scaling illustration, not a proof
   resolution: data-check
   status: resolved
   resolved_by: docs/research/math/records/M-008.json
