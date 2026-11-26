@@ -1,0 +1,42 @@
+{
+  "id": "M-801",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-801.py",
+  "script_sha256": "0bfea1641b0043cdae558628f15dfc292d2abb7e156ea272943af2212c07995c",
+  "object": "M-801",
+  "inputs": [
+    {
+      "name": "cost per substitution D (x N)",
+      "value": 30,
+      "cite": "claim file H formal statement (Haldane via Nunney 2003)"
+    },
+    {
+      "name": "selective mortality budget",
+      "value": 0.1,
+      "cite": "Nunney 2003 Abstract (H2 q2); H6 q2"
+    },
+    {
+      "name": "printed interval",
+      "value": 300,
+      "cite": "Nunney 2003 Abstract (H2 q2); Q47 = H q1; parameters haldane.gens_per_substitution"
+    }
+  ],
+  "values": {
+    "interval_generations": 300.0,
+    "rate_per_generation": 0.003333,
+    "N_cancels": true,
+    "D_new_copy_N_1e4": 19.81,
+    "interval_at_D_new_copy": 198.1
+  },
+  "positions": {
+    "day": {
+      "reading": "10% selective mortality is a total budget, about 1 beneficial substitution per 300 generations for mammals",
+      "holds": "30/0.10 = 300 exactly; N cancels; the figure matches Nunney's report of Haldane"
+    },
+    "critic": {
+      "reading": "the arithmetic is accepted; it bounds selected substitutions only, under hard selection, not drift",
+      "holds": "the budget is stated in deaths per beneficial substitution, so neutral fixations pay none (PS-04); hard/soft is M-803"
+    }
+  },
+  "notes": "300 = 30/0.10 holds exactly and is independent of N, so Nesslig20's N_e notation changes nothing. The 300 is verified only as Nunney 2003 reports Haldane; Haldane 1957 is not retrieved, so the D = 30 and 10% inputs are Haldane's as relayed. D = 30 is above the new-copy value 2 ln(2N) = 19.8 at N = 1e4 (about 200 generations at 10%), so 300 is the slower end of Haldane's own accounting. Whether the budget binds (hard vs soft selection, M = 2Ku) is M-803, not this record."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "M-803",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-803.py",
+  "script_sha256": "e5c0936afab38293b52db786e89fa83241dc59c5a0c26c89671538d90435d8cd",
+  "object": "M-803",
+  "inputs": [
+    {
+      "name": "M = 2Ku; C = C_0(M) + n C_1(M)",
+      "value": "structure only (C_0, C_1 not held)",
+      "cite": "H2 formal statement (Nunney Abstract, Discussion)"
+    },
+    {
+      "name": "Nunney K, u and reported intervals",
+      "value": {
+        "K": [
+          10000,
+          5000
+        ],
+        "u": 5e-06,
+        "M=10": "7 loci / 40 gen",
+        "M=1": 20,
+        "M=0.1": 300,
+        "M=0.05": 700
+      },
+      "cite": "H2 formal statement; H2 q4"
+    },
+    {
+      "name": "R4 H3 D_eff by M",
+      "value": {
+        "1": [
+          6.5,
+          6.5
+        ],
+        "0.3": [
+          10.5,
+          10.5
+        ],
+        "0.1": [
+          17,
+          22
+        ],
+        "0.03": [
+          39,
+          52
+        ],
+        "0.01": [
+          99,
+          163
+        ]
+      },
+      "cite": "research/checks/results/R4-H3-human.md (H2 row; stage M)"
+    },
+    {
+      "name": "standing-variation p0",
+      "value": [
+        0.01,
+        1e-06
+      ],
+      "cite": "research/checks/results/R4-H-C2.md; H2a q2"
+    }
+  ],
+  "values": {
+    "M_K1e4_u5e-6": 0.1,
+    "M_K5e3_u5e-6": 0.05,
+    "K_for_M_half": 50000,
+    "nunney_generations_per_substitution": {
+      "M=10": 5.714,
+      "M=1": 20,
+      "M=0.1": 300,
+      "M=0.05": 700
+    },
+    "speedup_vs_300": {
+      "M=10": 52.5,
+      "M=1": 15.0
+    },
+    "r4_15_plus_1_over_M": {
+      "M=0.03": 48.3,
+      "M=0.01": 115.0
+    },
+    "r4_pred_2ln2N_plus_1_over_M_K1000": {
+      "0.03": 48.5,
+      "0.01": 115.2
+    },
+    "D_2ln_1_over_p0": {
+      "p0=1e-2": 9.21,
+      "p0=1e-6": 27.63,
+      "printed_upper": 27.8
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "Nunney confirms hard selection imposes the cost and that directional change makes hard selection dominate (H2 q3); soft relief is limited to intraspecific competition (H2 q5); at M = 0.1 a population dies faster than 1 per 300 (H2 q4)",
+      "holds": "at M < 1/2 the reported intervals are 300-700 and R4 H3 gives D 39-163 at M <= 0.03, above Haldane's 30"
+    },
+    "critic": {
+      "reading": "the cost is not a general bound: it needs hard selection (H2a q1), shrinks at M > 1/2 (H2 q1) and with standing variation (H2a q2); Keightley reads U = 2.2 as intolerable under hard selection (H7 q1)",
+      "holds": "at M > 1/2 the reported intervals are 5.7-20 generations, 15-52x faster than 300; D falls with p0; R4 H3 gives D 6.5-22 at M >= 0.1"
+    }
+  },
+  "notes": "Model choice, not settled by arithmetic. The held numbers fix the structure of Nunney's result: M = 2Ku (0.1 at K = 1e4, u = 5e-6; M = 1/2 needs K = 50,000), tolerable intervals that rise monotonically as M falls, below 300 for M > 1/2 and at or above it below. Which side applies to ancestral humans turns on two inputs no held source gives: human M (K and per-locus beneficial u) and the hard/soft split (claim file H2a; L2 brackets h at 0.125-0.641 but h is not M). C_0(M) and C_1(M) are not held as formulas, so no threshold is computed. R4 H-C2's '9.2 to 27.8' for 2 ln(1/p0) has an upper end 0.6% above the closed form (27.63); its '278' would be 276."
+}

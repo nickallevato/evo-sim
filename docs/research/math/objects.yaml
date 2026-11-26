@@ -1154,7 +1154,8 @@ objects:
     day: 'Haldane''s 10% selective mortality is a total budget for the population, so parallel fixation does not multiply the limit: about 1 beneficial substitution per 300 generations for mammals'
     critic: 'The arithmetic 30/0.10 = 300 is accepted (Nesslig20, Nunney report it); the cost bounds selected substitutions only, applies to hard selection only (M-803), and does not apply to neutral drift'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-801.json
 - id: M-802
   kind: formula
   statement: "Day's extension of the Haldane limit with d: G_eff = G x d = 325,000 x 0.45 = 146,250 effective generations, achievable fixations 146,250/300 = 487 (487.5 truncated), shortfall 20,000,000/487 = 41,068-fold; without d 325,000/300 = 1,083; the claim that selection runs at 45% of Haldane's rate applies d to a death-budget argument as an additional step (Z18168236 s4.2; the 88 Million x post uses the same 146,250)"
@@ -1168,7 +1169,8 @@ objects:
     day: 'The Bio-Cycle correction d = 0.45 rescales the generations available, leaving 146,250 and 487 fixations against 20 million required'
     critic: 'The arithmetic reproduces; d rescales time for overlapping generations (M-107) and is not a feature of a death budget, so the extension is an extra step; d = 0.45 has its own provenance questions (M-114)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-802.json
 - id: M-803
   kind: model-choice
   statement: "Does a cost-of-selection budget exist: Nunney 2003 (M = 2Ku new mutations per generation; cost C = C_0(M) + n C_1(M)) finds the cost below Haldane's for M > 1/2 and rising for M < 1/2, soft selection removing the cost and hard selection likely under directional environmental change, with soft selection limited to intraspecific competition; Hancock says the cost applies only to hard selection and is smaller for an allele starting at intermediate frequency; Keightley 2012 reads U = 2.2 as intolerable under hard selection; the M-dependence figures (D about 6.5 at M = 1 up to 99-163 at M = 0.01) are R4 H3 results, Nunney's K = 10,000, u = 5e-6 gives M = 0.1 and extinction below one substitution per 300 generations"
@@ -1186,7 +1188,8 @@ objects:
     day: 'Nunney confirms that hard selection imposes the cost and that directional change makes hard selection dominate; the budget is real for the adaptive process'
     critic: 'The cost is not a general bound: it needs hard selection, shrinks at M > 1/2 and with standing variation, and no human hard/soft split is given; Nunney restricts soft-selection relief to intraspecific competition (reading-dependent, claim file H2a)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-803.json
 - id: M-804
   kind: formula
   statement: "Deleterious-mutation load under hard selection: mean fitness relative to a mutation-free genotype W = e^(-U), with U = 2.2 for the whole diploid genome (W = 0.11, 20 x (1 - 0.1108) = 17.8 selective deaths for 20 offspring per female) and 0.35 for amino-acid-changing mutations (W = 0.70), from mu about 1.1e-8 and about 70 new mutations per diploid genome per generation (Keightley 2012 abstract); the sqrt(N) truncation-selection purge of mutational load (Worden/LessWrong, relayed via a commenter) concerns this deleterious side, which Day says does not speed adaptation"
@@ -1200,7 +1203,8 @@ objects:
     day: 'The sqrt(N) trick helps with mutational load, not with the speed of adaptation; the deleterious side is a separate matter from Haldane''s cost of beneficial fixation'
     critic: 'Keightley: U = 2.2 is too high for hard selection but tolerable under relative-fitness selection or synergistic epistasis, and no detectable fitness decline is expected; the paper does not address beneficial substitutions or Haldane 1957'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-804.json
 - id: M-805
   kind: inference
   statement: "Hössjer's cost step: F_max = (t_div x d)/(g_len x G_f) = 9e6 x 0.45/(20 x 1,600) = 127 (his eq. 2.2), x (1.25e-8/1e-10) = 15,800 for the human mutation rate (his eq. 3), x (3e9/4.6e6) = 10 million for genome length (his eq. 4), then 'far less than eq. (4), perhaps more in line with eq. (3)'; the cost step is not computed: eq. (3) is a rate scaling, Haldane's limit over 450,000 generations is 1,500, so 15,800 is 10.5 times it (HO-03 and HO-06, p.3 of the Hössjer PDF)"
@@ -1214,7 +1218,8 @@ objects:
     day: 'Ally Hössjer agrees with the conclusion that selected fixations are far fewer than the neutral-style count, after adjusting the MITTENS equation for humans against E. coli'
     critic: 'The 15,800 is a rate scaling, not a cost computation, and exceeds both cost-based figures in the corpus (487 from H, about 6,650 from Term 3); no derivation links eq. (3) to the cost of selection (claim file H5, internal non-sequitur)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-805.json
 - id: M-806
   kind: identity
   statement: "Dawkins figures used by Day: time to half frequency 11,739 generations (dominant) and 321,444 (recessive) for s about 0.001 (999 survive per 1,000, secondhand from The Genetic Book of the Dead); Day takes t_site = 2 x 321,444 = 642,888, divides by G_eff = 146,250 (4.3958) and multiplies by n = 20,000,000 to get 87,916,307x; the doubling from half frequency to fixation is unexplained, the recessive/dominant choice moves the answer by 27.4 (321,444/11,739), and 20M x t_site treats the substitutions as sequential"
@@ -1228,7 +1233,8 @@ objects:
     day: 'Even 642,888 generations for one base pair exceeds the available time; the shortfall for 20 million is a factor of 87,916,307'
     critic: 'The arithmetic reproduces; a single-allele time to half frequency is not a fixation time for a parallel process, so the multiplication by 20 million is the serial reading (see M-706 and M-115)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-806.json
 - id: M-807
   kind: inference
   statement: "Is Worden's O(1) bits per generation 'exactly the same' as the Haldane-scale limit: O(1) bits per generation equals 1/300 substitutions per generation (0.0033) only if each substitution carries about 300 bits; at one bit per substitution the information limit is 300 times faster; Haldane counts deaths (30 N per substitution), Worden counts information, and the quoted sentence gives no conversion (Worden 1995 not retrieved; the claim file H4 states the unit argument)"
@@ -1239,7 +1245,8 @@ objects:
     day: 'Worden''s O(1) bits per generation is exactly the same as the Haldane-scale limit and Yudkowsky does not refute it'
     critic: 'The equivalence needs a stated bits-per-substitution conversion that the post does not give; the information bound and the death budget are different quantities'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-807.json
 - id: M-808
   kind: formula
   statement: "Term 3 selection-limited rate: n_max = s_max/s-bar concurrent sweeps each lasting tau = (2/(s-bar d)) ln(2Ne), so K_sel = s_max d/[2 ln(2Ne)] and per site k_sel = K_sel/L; human case s_max = 1, d = 0.45, L = 3.1e9, Ne = 3,300 gives 8.25e-12 per site (paper 8.3e-12), 0.0256 adaptive substitutions per generation (one per 39), about 6,650 over 260,000 generations; Ne = 1e4 gives 7.3e-12; Term 3 allows 17.1 times more adaptive substitutions per generation than Haldane + d (1/39 against 1/667); the 3,300 is unlocated in the corpus and 'ln(2Ne)' is the only place Ne enters (Z19984826 s3.3, s4.3)"
@@ -1254,7 +1261,8 @@ objects:
     day: 'Selection cannot operate without reproductive differential; s_max of order unity bounds the adaptive rate at about 1e-12 per site (retracted 2026-05-07 as a bound on total k, still a bound on adaptive substitution)'
     critic: 'The formula bounds adaptive substitutions only and the retraction concedes it does not constrain total k; Ne = 3,300 has no source and the 300 and 39 generations per substitution of Haldane + d and Term 3 are not reconciled'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-808.json
 - id: M-901
   kind: inference
   statement: "ROOT as a universal over mechanisms: for every M in S (selection hard and soft, parallel fixation, drift, neutral sweeps, hitchhiking, ILS, gBGC, relictation-type drift, recombination, hypermutation, 'every other imagined mechanism') F_M(T) < F_req; operational form F_max = T_gen/G_f = 252,000/1,322 = 190.6 against F_req = 2.05e8, shortfall 1.0754e6 (6.03 orders; reproduces the stated 1,075,000; this is the MITTENS 3.0 value, the '3-5 orders' is Z18452504 only and 220,000x is an older version, ledgers/versions.md); the catalogue of 18 named mechanisms has 9 computed or bounded, 3 partial, 5 asserted not computed and relictation not excluded by Day (claim file ROOT-M); the 2026-09-30 post exempts three minor mechanisms (recombination, ILS, HGT) while the 2026-10-05 sentence names ILS as excluded; and whether 'impossible' means this time-budget reading or a statement that selection cannot exist (Hancock: selection is a covariance, a descriptive statistic, so 'statistically impossible' is a category error; she concedes the live question next sentence)"

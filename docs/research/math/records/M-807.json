@@ -1,0 +1,39 @@
+{
+  "id": "M-807",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-807.py",
+  "script_sha256": "ba12c994936debf260b7abd75653229c4d2e3e99eff26579dd9afba1ecfdee4e",
+  "object": "M-807",
+  "inputs": [
+    {
+      "name": "Haldane rate",
+      "value": "1/300 per generation",
+      "cite": "M-801; parameters haldane.gens_per_substitution"
+    },
+    {
+      "name": "Worden bound",
+      "value": "O(1) bits per generation, constant unspecified",
+      "cite": "H4 q1 (Day's paraphrase; Worden 1995 not retrieved)"
+    }
+  ],
+  "values": {
+    "haldane_per_generation": 0.00333,
+    "bits_per_substitution_for_equality": {
+      "c=1/2": 150,
+      "c=1": 300,
+      "c=3": 900
+    },
+    "speedup_at_1_bit_per_substitution": 300
+  },
+  "positions": {
+    "day": {
+      "reading": "Worden's O(1) bits per generation is exactly the same as the Haldane-scale limit",
+      "holds": "both are O(1)-scale ceilings on adaptive change, and they coincide if a substitution carries about 300 bits"
+    },
+    "critic": {
+      "reading": "the equivalence needs a bits-per-substitution conversion the post does not give",
+      "holds": "equality holds only at b = 300c; at one bit per substitution the information limit is 300x faster; Haldane counts deaths (30 N), Worden counts bits"
+    }
+  },
+  "notes": "Units only. O(1) bits per generation equals 1/300 substitutions per generation only when each substitution carries 300c bits, with c the unstated constant; nothing in the quoted sentence or the held paraphrase fixes c or b. At b = 1 the information bound allows 300 times the Haldane rate. 'Exactly the same' is therefore a conditional equivalence. Worden 1995 is not retrieved, so the bound's own derivation is not checked here."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "M-805",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-805.py",
+  "script_sha256": "2bf7f64f4fde07bf530cb7c29a851c583fa27603ff50e0965cf90b825b9ae2ce",
+  "object": "M-805",
+  "inputs": [
+    {
+      "name": "t_div, d, g_len, G_f",
+      "value": [
+        9000000.0,
+        0.45,
+        20,
+        1600
+      ],
+      "cite": "H5 formal statement (Hossjer p.2-3); parameters divergence.t_div_years.day_2019, ltee.gens_per_fixation.day_2019, generation_time_years.day_2019"
+    },
+    {
+      "name": "mu human, mu E. coli; L human, L E. coli",
+      "value": [
+        1.25e-08,
+        1e-10,
+        3000000000.0,
+        4600000.0
+      ],
+      "cite": "H5 formal statement (eq. 2.3, 2.4)"
+    },
+    {
+      "name": "printed 127, 15,800, 10 million",
+      "value": [
+        127,
+        15800,
+        10000000.0
+      ],
+      "cite": "H5 formal statement; HO-03 = H5 q2"
+    }
+  ],
+  "values": {
+    "eq2.2_F_max": 126.5625,
+    "eq2.3_x125": 15820.3,
+    "eq2.3_from_rounded_127": 15875,
+    "eq2.4_x652.17_from_15800": 10304348,
+    "eq2.4_from_15820": 10317595,
+    "haldane_450k": 1500.0,
+    "haldane_450k_with_d": 675.0,
+    "ratio_15800_to": {
+      "haldane_1500": 10.53,
+      "haldane_d_487": 32.4,
+      "term3_6650": 2.38
+    },
+    "rate_15800_per_generation": 0.0351,
+    "neutral_eq3.1": 7593750.0,
+    "neutral_without_d": 16875000.0,
+    "gaps_to_20M": {
+      "neutral": 2.63,
+      "eq2.4": 1.94,
+      "1/d": 2.22
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "ally Hossjer agrees selected fixations are far fewer than the neutral-style count (H5 q2, q3) and that a parallel reproductive cost applies (H5 q1)",
+      "holds": "the three factors reproduce (126.6, 15,820, 10.3 million); 15,800 is far less than eq. (4)"
+    },
+    "critic": {
+      "reading": "15,800 is a rate scaling, not a cost computation, and exceeds both cost-based figures in the corpus",
+      "holds": "eq. (3) is eq. (2.2) x 125, a mutation-rate ratio; Haldane over the same window gives 1,500 (675 with d), so 15,800 is 10.5x Haldane, 32x the 487 and 2.4x Term 3's ~6,650"
+    }
+  },
+  "notes": "The arithmetic of the chain holds within rounding: 126.6 (127), 15,820 (15,800; 15,875 from the rounded 127), 10.3 million (10 million). No step links eq. (3) to the cost of selection: the factor 125 is a mutation-rate ratio, and a cost-based count over 450,000 generations is 1,500 at 1/300 (675 with d). 'Perhaps more in line with equation (3)' therefore has no derivation; at 0.035 per generation it would need about one selected fixation per 28 generations. H5's derived line cites Term 3 as 'about 6,690', while H1 and H8 give 6,650; M-808 asserts the closed form 6,652 (6,690 is the rounded 8.3e-12)."
+}

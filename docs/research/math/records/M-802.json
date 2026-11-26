@@ -1,0 +1,57 @@
+{
+  "id": "M-802",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-802.py",
+  "script_sha256": "9ca48a67eb0eba897cda1a2786e39bcbcb98277a092625d3ca6cc6b211e10a5f",
+  "object": "M-802",
+  "inputs": [
+    {
+      "name": "G, d",
+      "value": [
+        325000,
+        0.45
+      ],
+      "cite": "claim file H formal statement; parameters generations_available.day_2025_effective, selection.turnover_d"
+    },
+    {
+      "name": "Haldane interval",
+      "value": 300,
+      "cite": "M-801; parameters haldane.gens_per_substitution"
+    },
+    {
+      "name": "required fixations",
+      "value": 20000000,
+      "cite": "parameters divergence.required_fixations.day_2025"
+    },
+    {
+      "name": "printed 146,250, 487, 41,068",
+      "value": [
+        146250,
+        487,
+        41068
+      ],
+      "cite": "Q48 = H q2; H3 q3; claim file H derived"
+    }
+  ],
+  "values": {
+    "G_eff": 146250.0,
+    "fixations_exact": 487.5,
+    "fixations_printed_floor": 487,
+    "shortfall_20M/487": 41067.76,
+    "shortfall_20M/487.5": 41025.64,
+    "fixations_without_d": 1083.33,
+    "shortfall_without_d_20M/1083": 18467.2,
+    "nominal_generations_per_fixation_with_d": 666.67
+  },
+  "positions": {
+    "day": {
+      "reading": "d = 0.45 rescales the generations available: 146,250, 487 fixations against 20 million",
+      "holds": "146,250, 487 (487.5 truncated) and 41,068 (41,067.8 rounded) reproduce"
+    },
+    "critic": {
+      "reading": "d rescales time for overlapping generations, not a death budget; the extension is an extra step",
+      "holds": "the arithmetic is not at issue; d enters only as a 1/0.45 factor on the count (1,083 -> 487), so whether it belongs in a per-generation death budget (H q4) is the open modelling step"
+    }
+  },
+  "notes": "All printed figures reproduce: 146,250 = 325,000 x 0.45; 146,250/300 = 487.5, floored to 487 (rounding would give 488); 20M/487 = 41,067.8, printed 41,068 (41,025.6 with 487.5, a 0.1% difference). Without d the count is 1,083 (shortfall 18,467). The step 'selection operates at only 45% of the rate Haldane assumed' turns a time rescaling into a cut of the death budget; the record asserts only that d acts as a pure 2.22 factor. d's provenance is M-114, its meaning M-107."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "M-804",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-804.py",
+  "script_sha256": "3c6aa812e2e637c4e26584bd97f2f564bc75184c209c4f2e09d194d904bffbb5",
+  "object": "M-804",
+  "inputs": [
+    {
+      "name": "U whole diploid genome, amino-acid class",
+      "value": [
+        2.2,
+        0.35
+      ],
+      "cite": "Keightley 2012 Abstract as quoted in H7 formal statement; H7 q1"
+    },
+    {
+      "name": "offspring per female",
+      "value": 20,
+      "cite": "claim file H7 derived (Keightley's illustration)"
+    },
+    {
+      "name": "mu, new mutations per diploid genome",
+      "value": [
+        1.1e-08,
+        70
+      ],
+      "cite": "H7 q3; parameters mutation.mu_per_site_per_gen.keightley_2012"
+    }
+  ],
+  "values": {
+    "W_U2.2": 0.1108,
+    "W_U0.35": 0.7047,
+    "deaths_per_20_U2.2": 17.78,
+    "deaths_per_20_U0.35": 5.91,
+    "replacement_multiple_1/W": 9.03,
+    "haploid_sites_implied_70/(2mu)": "3.182e+09",
+    "deleterious_share_of_new": 0.0314
+  },
+  "positions": {
+    "day": {
+      "reading": "the sqrt(N) trick helps with mutational load, not the speed of adaptation (H4 q3); the deleterious side is separate from Haldane's cost of beneficial fixation",
+      "holds": "the record's numbers are all on the deleterious side; Keightley states the paper does not address beneficial substitutions or Haldane 1957"
+    },
+    "critic": {
+      "reading": "U = 2.2 is too high for hard selection but tolerable under relative-fitness selection or synergistic epistasis (H7 q1); no detectable fitness decline is expected (H7 q2)",
+      "holds": "W = 0.11 needs 17.8 selective deaths per 20 offspring (1/W = 9.0), which is the 'one mutation, one death' arithmetic Keightley rejects as a description of human selection"
+    }
+  },
+  "notes": "All printed figures reproduce: e^-2.2 = 0.1108 (0.11), e^-0.35 = 0.7047 (0.7), 20 x (1 - 0.1108) = 17.8 (18). The 70 new mutations per diploid genome at mu = 1.1e-8 imply about 3.2e9 sites per haploid genome. No raw Keightley text is in sources/raw/ in this checkout; the inputs are the Abstract as quoted in H7 and quotes-literature. parameters mutation.new_mutations_per_genome.common_citation is [60, 100], not the 70 the H7 link line attributes to it (70 is inside the range). The sqrt(N) purge has no held number."
+}

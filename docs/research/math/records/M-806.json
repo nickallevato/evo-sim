@@ -1,0 +1,50 @@
+{
+  "id": "M-806",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-806.py",
+  "script_sha256": "21f25ce6909eb1dcec9fb781025ae0e9327a934c286fa74df9c73d9b55ca629d",
+  "object": "M-806",
+  "inputs": [
+    {
+      "name": "Dawkins half-frequency times (dominant, recessive)",
+      "value": [
+        11739,
+        321444
+      ],
+      "cite": "Q50 = H3 q1 (secondhand, as posted by Day); parameters haldane.dawkins_figures"
+    },
+    {
+      "name": "G_eff",
+      "value": 146250,
+      "cite": "H3 q3; parameters generations_available.day_2025_effective (M-802)"
+    },
+    {
+      "name": "n",
+      "value": 20000000,
+      "cite": "Q51 = H3 q2 ('20 million')"
+    }
+  ],
+  "values": {
+    "s": 0.001,
+    "t_site_2x321444": 642888,
+    "t_site/G_eff": 4.3958,
+    "shortfall_exact": 87916307.69,
+    "shortfall_printed_floor": 87916307,
+    "shortfall_with_4.4": 88000000.0,
+    "recessive/dominant": 27.38,
+    "dominant_doubled_t_site": 23478,
+    "dominant_shortfall": 3210667,
+    "recessive_without_doubling_t/G_eff": 2.198
+  },
+  "positions": {
+    "day": {
+      "reading": "even 642,888 generations for one base pair exceeds the available time; for 20 million the factor is 87,916,307",
+      "holds": "2 x 321,444 = 642,888; 642,888/146,250 = 4.3958; x 20M = 87,916,307.7 (printed truncated)"
+    },
+    "critic": {
+      "reading": "a single-allele time to half frequency is not a fixation time for a parallel process; x 20M is serial",
+      "holds": "the factor is 20M x t_site / G_eff, the sequential form (M-706); the doubling is unexplained (x2) and the recessive choice multiplies the answer by 27.4 over the dominant one"
+    }
+  },
+  "notes": "The arithmetic reproduces: 642,888, 4.3958 (4.4), 87,916,307.7 (printed 87,916,307, truncated; 88 million with 4.4). The Dawkins figures are secondhand (book not retrieved), so the record does not test whether 11,739 and 321,444 follow from s = 0.001: their starting frequency is not held. Three choices set the answer: the doubling from half frequency (x2, not explained in the post), recessive over dominant (x27.4; the dominant case doubled is 23,478 generations, 6.2 times inside G_eff) and the serial multiplication by 20 million (M-706, M-115)."
+}

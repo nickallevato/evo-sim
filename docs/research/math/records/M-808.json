@@ -1,0 +1,59 @@
+{
+  "id": "M-808",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-808.py",
+  "script_sha256": "d8d93e58f03d5364ebfcd42f6195fec54f50901f0d61b30c013bdb8fea79a66e",
+  "object": "M-808",
+  "inputs": [
+    {
+      "name": "s_max, d, L, Ne",
+      "value": [
+        1,
+        0.45,
+        3100000000.0,
+        3300
+      ],
+      "cite": "H8 q2 (Z19984826 s4.3); parameters selection.turnover_d; Ne = 3,300 unlocated (H8 formal statement)"
+    },
+    {
+      "name": "generations",
+      "value": 260000,
+      "cite": "claim files H1, H8 (6.5 MYA at 25 years)"
+    },
+    {
+      "name": "alternative Ne",
+      "value": 10000.0,
+      "cite": "parameters population.Ne_modern_human"
+    },
+    {
+      "name": "required substitutions",
+      "value": 17500000.0,
+      "cite": "claim file H8 derived (17.5M)"
+    }
+  ],
+  "values": {
+    "ln_2Ne": 8.7948,
+    "k_sel_per_site": "8.253e-12",
+    "K_sel_per_generation": 0.02558,
+    "generations_per_substitution": 39.09,
+    "total_260k_closed_form": 6651.6,
+    "total_260k_from_printed_8.3e-12": 6689.8,
+    "required/total": 2630.9,
+    "k_sel_Ne_1e4": "7.329e-12",
+    "generations_per_substitution_Ne_1e4": 44.0,
+    "term3_over_haldane_d": 17.06,
+    "withdrawn_300/39": 7.67,
+    "s_max_0.1_generations_per_substitution": 390.9
+  },
+  "positions": {
+    "day": {
+      "reading": "s_max of order unity bounds the adaptive rate at about 1e-12 per site (retracted 2026-05-07 as a bound on total k, kept for adaptive substitution, Q67)",
+      "holds": "8.25e-12 (8.3e-12), 0.0256 per generation and one per 39 reproduce; s-bar cancels"
+    },
+    "critic": {
+      "reading": "the formula bounds adaptive substitutions only; Ne = 3,300 has no source; 300 and 39 generations per substitution are not reconciled",
+      "holds": "Term 3 allows 17.1x Haldane + d on a same basis; Ne enters only via ln(2Ne), so the source gap moves k by 12.6% between 3,300 and 1e4"
+    }
+  },
+  "notes": "All printed Term 3 figures reproduce: ln 6,600 = 8.795 (printed 8.79), 8.25e-12 (8.3e-12), 0.02558 per generation (one per 39.1), 7.33e-12 at Ne = 1e4 (one per 44), 17.06x Haldane + d (the withdrawn 7.7 = 300/39.1 differs by 1/d). Map-fix item: the closed-form total over 260,000 generations is 6,651.6, which matches 'about 6,650' in H1 and H8; H5's 'about 6,690' is the printed 8.3e-12 x 3.1e9 x 260,000 = 6,689.8 (0.6% higher, from the rounded rate). 17.5M/6,652 = 2,631 against the paper's 2,700x (2.6%). The 3,300 is unlocated (Z18320599 has no absolute Ne of 3,300). Which mechanism raises s_max (H8 q3, R4 HF) is outside this record."
+}
