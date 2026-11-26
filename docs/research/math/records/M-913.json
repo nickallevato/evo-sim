@@ -1,0 +1,56 @@
+{
+  "id": "M-913",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-913.py",
+  "script_sha256": "e16ec329558393b8b230f0352413100f408480d7e9d1f257ece550b9f03fc995",
+  "object": "M-913",
+  "variant_of": "M-912",
+  "inputs": [
+    {
+      "name": "L",
+      "value": 4600000.0,
+      "cite": "PR-1 (paul@L46): 'only 4.6 million base pairs'"
+    },
+    {
+      "name": "kappa",
+      "value": 1e-10,
+      "cite": "PR-1 (paul@L46): '1 mutation for every 10 billion bases'"
+    },
+    {
+      "name": "tau_hours",
+      "value": {
+        "corrected": 15,
+        "superseded": 0.5
+      },
+      "cite": "PR-1 (paul@L46, paul@L169)"
+    },
+    {
+      "name": "hours_per_year",
+      "value": 8766.0,
+      "cite": "Julian year; 365 d gives the same rounded figures"
+    }
+  ],
+  "values": {
+    "generations_per_My": 584400000,
+    "D_over_L_pct_tau_15h": {
+      "1My": 10.8,
+      "10My": 59.2,
+      "100My": 75.0
+    },
+    "D_over_L_pct_tau_30min_1My": 74.3,
+    "saturation_expected": 0.75,
+    "saturation_possible_max": 1.0,
+    "sd_at_saturation": 0.000202
+  },
+  "positions": {
+    "day": {
+      "reading": "the model saturates bacteria within 100 My, which no real genome shows; what stops real genomes saturating is constraint and fixation dynamics the model leaves out",
+      "holds": "D/L = 10.8% at 1 My, 59.2% at 10 My, 75.0% at 100 My; 'the maximum' is the expected saturation value, not the possible maximum (1.0)"
+    },
+    "critic": {
+      "reading": "Paul's point is that copying errors alone produce too much divergence, not too little; the figure illustrates supply, not a prediction for real bacteria",
+      "holds": "the numbers reproduce; at L = 4.6e6 the realised fraction sits within 0.0002 (one SD) of 0.75, so '75% is the maximum' is a practical ceiling and a wording slip only"
+    }
+  },
+  "notes": "Every bacteria number in the EVOA-102 review reproduces from Paul's inputs (59.2% is the review's '59%'). The 30-min figure (74.3% at 1 My) is superseded by Paul's own CORRECTION (rule SC). 'This is still way faster than any evolutionary model would predict' has no model named; neutral models at unconstrained sites also saturate over 100 My at these inputs."
+}

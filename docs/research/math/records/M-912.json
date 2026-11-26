@@ -1,0 +1,67 @@
+{
+  "id": "M-912",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-912.py",
+  "script_sha256": "a041fa8c9a2730b7d48d5bfc13ee5cc2b1322a0575e30d8852b461064d9836b6",
+  "object": "M-912",
+  "inputs": [
+    {
+      "name": "kappa",
+      "value": 2e-08,
+      "cite": "PR-1 (paul@L43): 'around one mutation per 50 million bases'"
+    },
+    {
+      "name": "tau_years",
+      "value": 20,
+      "cite": "PR-1 (paul@L43): 'every 20 years'"
+    },
+    {
+      "name": "L",
+      "value": 3000000000.0,
+      "cite": "review reading of PR-1 'A few billion base pairs' (D/L does not depend on L)"
+    },
+    {
+      "name": "pi_human_pairwise",
+      "value": 0.00088,
+      "cite": "parameters population.pi_human_pairwise (Zhao2000)"
+    },
+    {
+      "name": "MITTENS 3.0",
+      "value": {
+        "N_gen": 252000.0,
+        "F_max": 190.62,
+        "G_f": 1321.59
+      },
+      "cite": "M-001.json values.3.0"
+    }
+  ],
+  "values": {
+    "derivation_exact_n_1_to_5": true,
+    "early_slope_per_generation": 120.0,
+    "generations_to_1.2pct": 302426,
+    "years_to_1.2pct": 6048520,
+    "D_over_L_pct": {
+      "1My": 0.2,
+      "5My": 0.99,
+      "6.9My": 1.37,
+      "10My": 1.97
+    },
+    "linear_over_exact_at_1.2pct": 1.0081,
+    "E2_ratio_to_pi_0.088pct": 13.64,
+    "E2_ratio_to_0.1pct": 12.0,
+    "steelman_mu_L_T_per_lineage": 15120000.0,
+    "steelman_over_F_max": 79320,
+    "mutation_rate_over_fixation_rate": 158591
+  },
+  "positions": {
+    "day": {
+      "reading": "the model has no drift, so nothing fixes: D(t) counts differences between two individuals of one population, not fixed differences between species, and its zero transit time assumes the full-pipeline start Day disputes (M-202)",
+      "holds": "the within-population prediction, 1.2% at 6.05 My, is about 14x measured human pairwise diversity (0.088%), so the model as a model of one population is falsified, as Paul concedes"
+    },
+    "critic": {
+      "reading": "read the two aliens as two isolated lineages with no ancestral polymorphism: the early limit 2 L kappa t is the neutral 2 mu T of B4a with theta_anc = 0, and k = mu (B5, M-209)",
+      "holds": "at Day's 3.0 inputs the neutral rate gives 1.512e7 substitutions per lineage against F_max 190.62, a factor of about 79,300; mutation supply (120 per generation) is not limiting against 1 fixation per 1,322 generations"
+    }
+  },
+  "notes": "Every number in the EVOA-102 review's section 2 for the human-like model reproduces from Paul's inputs; the algebra is exact for n = 1..5. The review's '6.05 My (302,426 generations)' is the first generation at which D/L reaches 1.2%. E2: 1.2% against 0.088% is 13.6x (12x against the rounded 0.1%). Section 5: 1.512e7 / 190.62 = 79,320, stated 'about 79,000'. Whether D(t) speaks to fixed differences is the model question (E1, E3), not settled by this arithmetic."
+}

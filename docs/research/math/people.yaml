@@ -11,3 +11,4 @@ people:
   mike-griffiths: {name: "Mike Griffiths", side: ally, aliases: ["Mike Griffiths", "MG"]}
   michael-lynch:  {name: "Michael Lynch", side: literature, aliases: ["Lynch", "Michael Lynch"]}
   ola-hossjer:    {name: "Ola Hössjer", side: ally, aliases: ["Hössjer", "Hossjer", "HO"]}
+  paul-rimmer:    {name: "Paul B. Rimmer (paulnottheapostle Substack)", side: critic, aliases: ["Paul Rimmer", "PR"]}

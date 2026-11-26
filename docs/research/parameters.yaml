@@ -57,6 +57,7 @@ mutation:
 population:
   day_2025_26_Ne_33000: {value: 3.3e4, source: "evo007; Z18525547", locator: "evo007@L32 (body.txt line 32, called a human parameter: 'N_e ≈ 33,000'); Z18525547 abstract (zenodo record JSON, refresh-2026-11-22/zen/l1.json: 'chimpanzee Ne = 33,000' and 'human Ne = 3,300')", note: "Both readings recorded, none chosen (claims B3, B4; M-114): evo007 calls 33,000 a human parameter; Z18525547 uses 33,000 as the chimpanzee Ne and 3,300 as the human Ne. evo007 also: 'we've calculated ~33,000'", verified: true}
   Ne_modern_human: {value: 1.0e4, source: textbook, verified: false}
+  pi_human_pairwise: {value: 8.8e-4, units: "differences per site between two random human sequences", source: Zhao2000, locator: "abstract (Europe PMC core record, PMID 11005839): 'The average nucleotide diversity (pi) across the region was 0.088% among all of the human sequences obtained'; same sentence: 'a low nucleotide diversity ( approximately 0.1%) in humans'", note: "one 10-kb noncoding autosomal region, 128 sequences, so a single-locus estimate; full text not in the open-access subset, abstract only. Used by the EVOA-102 review E2 (records M-912)", verified: true}
   Ne_ancestral_hc:
     yoo_2025_HCB: {value: 1.98e5, note: "human-chimp-bonobo ancestor, average", source: Yoo2025, verified: true}
     yoo_2025_HCG: {value: 1.32e5, note: "human-chimp-gorilla ancestor", source: Yoo2025, verified: true}

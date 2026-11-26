@@ -1842,3 +1842,26 @@ objects:
   resolution: data-check
   status: blocked
   blocked_on: "owner: Yoo et al. 2025's per-SDR coordinates (MOESM4.xlsx sheet 24 lists per-SDR sizes by lineage; bib-literature.md l.15, sources/raw/sources/supp/Yoo2025/, not in this checkout) to measure the structural, indel and SD share of divergence inside the human mesas; the single-nucleotide leg is settled (R4-FM: 1.25-2.5% on alignable sequence) and R4-FM is silent on total divergence"
+- id: M-912
+  kind: formula
+  statement: "Jukes-Cantor (JC69) divergence of two lineages with one child per parent (no drift, no fixation): D(t) = (3L/4)[1 - (1 - 4 kappa/3)^(2 floor(t/tau))], early limit 2 L kappa t/tau (the two-lineage 2 mu t with theta_anc = 0); Paul Rimmer's inputs kappa = 2e-8, tau = 20 y, L ~ 3e9: 120 differences per generation, D/L = 1.2% at 302,426 generations (6.05 My), 0.20/0.99/1.97% at 1/5/10 My; as a within-population figure 1.2% is 13.6x human pairwise diversity (0.088%, Zhao2000); does a model with no fixation speak to MITTENS' fixed-difference count"
+  used_by: [B4a, B5]
+  sources: [paul@L18, paul@L43, paul@L44, paul@L46, paul@L52, paul@L53, paul@L54, paul@L65, paul@L87, paul@L96, paul@L135, paul@L159, paul@L162, paul@L163, paul@L165]
+  positions:
+    day: "The model has no fixation (fixed differences stay at zero) and zero transit time, so it measures within-population pairwise difference, not the fixed differences MITTENS counts, and it assumes the full-pipeline start Day disputes (M-202); its own within-population prediction is about 14x the measured human value"
+    critic: "Read as two isolated lineages with no ancestral polymorphism, the early limit is the neutral 2 mu T of B4a and k = mu (M-209); at Day's 3.0 inputs that gives 1.512e7 substitutions per lineage against F_max 190.62 (79,320x), and mutation supply is not limiting"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-912.json
+- id: M-913
+  kind: formula
+  statement: "M-912 at Paul Rimmer's bacteria-like inputs (L = 4.6e6, kappa = 1e-10, tau = 15 h, corrected from 30 min): D/L = 10.8% at 1 My, 59.2% at 10 My, 75.0% (saturated) at 100 My; the superseded 30 min gives 74.3% at 1 My (rule SC); 75% is the expected saturation value, not the possible maximum (1.0), with SD 0.0002 at L = 4.6e6"
+  variant_of: M-912
+  used_by: [B4a]
+  sources: [paul@L46, paul@L48, paul@L169]
+  positions:
+    day: "Saturation within 100 My shows the model is not a model of real genomes, which are held back by constraint and by fixation dynamics the model leaves out; 'faster than any evolutionary model would predict' names no model"
+    critic: "The figure illustrates that copying errors alone give too much divergence; the numbers reproduce and '75% is the maximum' is a wording slip (a practical ceiling at this L)"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-913.json
