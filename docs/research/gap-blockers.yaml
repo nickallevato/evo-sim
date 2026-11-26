@@ -21,9 +21,6 @@ items:
 - id: B
   blocker: owner   # B-analyst-1 (EVOA-4) stopped 2026-11-01: EVO-83 MAJOR-7/8 open
   next: "Owner: (a) rule whether B-R22's 'tooling condition is met' stands over EVO-83 MAJOR-7/8 (gen_mermaid.py and board/snap.py carry no scope; the lint_research.py l.144-150 tally and readme_figs.py count scoped values bare), or authorise one upkeep task to scope them; (b) MAJOR-4(ii)/(iii): a dated note under D-15 in DECISIONS.md and an annotation of R4-X1-verdict-rule.md l.198. Then fix pass 3 answers EVO-83 by id under brief B-analyst-1 (unused; text findings planned per E1-E4), then integrate. Status `extracted` also needs moving."
-- id: E5
-  blocker: in-flight   # E5-operator-2 (integration), 2026-11-26; fix pass 1 EVOA-62 approved (3269481)
-  next: "External `pending`, proposed `supported` (scoped). Pre-registered 4cfe7e5; run 0bfdfbf (A2 | G5); write-up cbf1e5f; combined review cf1fbf1; lead ruling for K-1 (7899b32); fix pass 1 3269481 (EVOA-62, approved): value `supported` as registered, with verdict_scope. Now: operator integration (E5-operator-2): field `pending` -> `supported` with verdict_scope, scope_guard exit 0. Then the moved field goes on the next close-batch board patch; row closes when --lint says so."
 - id: E6
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status moved to `reviewed` (#19, #23). External `pending` is case (b): R4-E5E6.md says the strict state calls are not testable without the Good 2017 files; those files ARE now held (builder:sources/raw/l6-good2017-data-2026-10-11/, sha256 in results/raw/l6_data.sha256, found by EVOA-58), so no owner supply is needed. Next task: one check on E6 external; one combined review (D-40). Scope it after E5's run."
