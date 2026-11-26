@@ -1,0 +1,58 @@
+{
+  "id": "M-414",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-414.py",
+  "script_sha256": "06ff69c4a69e8570abe21d0dfa39e6de6fe696dff668fc3a7c5c96c9da971d5d",
+  "object": "M-414",
+  "inputs": [
+    {
+      "name": "milton_1_in_1e65",
+      "quote": "When he examines the probability calculations for even a single protein forming by chance (1 in 10^65), he finds odds so astronomical that they’re equivalent to winning the lottery every week for a thousand years with the same numbers.",
+      "locator": "voxday.net, The Foundation of Sand, 2025-10-02 (blockquote, unattributed in the extracted text); claim file D8 q1"
+    },
+    {
+      "name": "schutzenberger_mechanism_lt_1e-1000",
+      "quote": "Further, there is no chance « I 0-1.000) to see this mechanism appear spontaneously and, if it did, even less for it to remain.",
+      "locator": "Wistar p.75 (Schützenberger); claim file D5a q1; OCR '« I 0-1.000)' read as '< 10^-1000'"
+    },
+    {
+      "name": "schutzenberger_meaningful_change_lt_1e-100",
+      "quote": "'I mean less than one out' ... 'of 10100' (OCR: 'less than one out ... of 10100 •')",
+      "locator": "Wistar p.76, discussion (column-interleaved OCR); claim file D5a"
+    }
+  ],
+  "values": {
+    "milton_1_in_1e65": {
+      "log10_probability_bound": -65,
+      "derivation_in_held_text": false,
+      "held_finding": "Single stated number: P(single protein by chance) = 10^-65, no length, function or fold stated."
+    },
+    "schutzenberger_mechanism_lt_1e-1000": {
+      "log10_probability_bound": -1000,
+      "derivation_in_held_text": false,
+      "held_finding": "Neither is derived in the text; on p.73 he says the cycle numbers are quoted from other speakers"
+    },
+    "schutzenberger_meaningful_change_lt_1e-100": {
+      "log10_probability_bound": -100,
+      "derivation_in_held_text": false,
+      "held_finding": "P(a random typographic change preserves 'meaningful' function) < 10^-100 (for programs/meaningfulness in his sense)"
+    },
+    "milton_candidate_50mer_log10": -65.05,
+    "milton_book_held": false
+  },
+  "positions": {
+    "day": {
+      "reading": "the figures show astronomical odds against chance formation",
+      "figures_log10": [
+        -65,
+        -1000,
+        -100
+      ]
+    },
+    "critic": {
+      "reading": "no model, inputs or derivation are given, so the figures cannot be checked or tied to a biological quantity",
+      "number": "none: the critic position is that there is nothing to compute"
+    }
+  },
+  "notes": "Milton's figure is held only as Day's unattributed relay (1 in 10^65, no length, function or fold); the book is not held, so whether Milton derives it is unknown, and the held text gives no derivation. Claim file D8's candidate 50-mer reading (20^-50 = 10^-65.05) fits the number but no source states it. Schützenberger's < 10^-1000 (p.75) and < 10^-100 (p.76) come with no derivation in the volume as quoted; they concern a hypothetical class of programs (claim file D5a, external untestable)."
+}

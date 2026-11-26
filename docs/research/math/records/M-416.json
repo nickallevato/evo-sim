@@ -1,0 +1,129 @@
+{
+  "id": "M-416",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-416.py",
+  "script_sha256": "2a0fcacc9cf521615f68e3893c4911f95aacf84a9d17c56eef13b5ea9e1e189a",
+  "object": "M-416",
+  "inputs": [
+    {
+      "claim": "D2a",
+      "day": "Ulam explicitly states: “What I am going to do will come to Eden’s conclusions.”",
+      "volume": "Eden's conclusions; but we will come to that later.",
+      "locator": "Ulam pp.22-23",
+      "verdict_line": "fidelity: partial      # quoted sentence not found; nearest text says the opposite about magnitude"
+    },
+    {
+      "claim": "D2b",
+      "day": "“Dr. Schützenberger: I would like to know how you could use a notion like quasi-continuity.” “Dr. Lewontin: That is a very good question. I don’t know.”",
+      "volume": "DR. SCHUTZENBERGER: That's a good question. I don't think I have time to answer it now.",
+      "locator": "Schützenberger p.79 (answering Mayr); the only 'good question' exchange in the volume per claim file D2b",
+      "verdict_line": "fidelity: misread      # quoted sentence not found in the volume"
+    },
+    {
+      "claim": "D2b",
+      "day": "Lewontin’s response was circular. The fitness topology, he suggested, was “itself a product of evolution.”",
+      "volume": "In fact, its topology is, itself, a product of evolution",
+      "locator": "Levins p.79 (not Lewontin)",
+      "verdict_line": "fidelity: misread      # quoted sentence not found in the volume"
+    },
+    {
+      "claim": "D2d",
+      "day": "Crosby actually supported Eden’s argument, noting that each intermediate stage “has got to be capable of existing viably”",
+      "volume": "We are going through a series of stages, each of which has got to be capable of existing viably, if it is going to have any possibility of giving rise to the next.",
+      "locator": "Crosby p.17 (on Eden's frame-shift suggestion)",
+      "verdict_line": "fidelity: partial      # both Crosby quotes are accurate (p.17, p.31); \"supported Eden's argument\" is an interpretation"
+    },
+    {
+      "claim": "D2f",
+      "day": "“The very fact that we have this conference,” he observed at one point, “is evidence that evolution has occurred.”",
+      "volume": "We are comforted by knowing that evolution has occurred.",
+      "locator": "Mayr p.30 (nearest text)",
+      "verdict_line": "fidelity: partial      # quote accurate (p.30)"
+    },
+    {
+      "claim": "D2j",
+      "day": "“I must apologize for being so vague on the nature of R,” he said, referring to the fitness function",
+      "volume": "DR. BOSSERT: I must apologize for having been so vague on the nature of R2 which appears in the figures.",
+      "locator": "Bossert p.40 (not Eden)",
+      "verdict_line": "fidelity: misread      # the quoted remark is William Bossert's answer to Waddington"
+    },
+    {
+      "claim": "D3a",
+      "day": "filled with cells at a density of a billion billion per cubic centimeter, each containing proteins at a concentration of one ten-thousandth",
+      "volume": "a protein concentration in these cells of 30%, a density of 1",
+      "locator": "Eden p.7 (M-402)",
+      "verdict_line": "fidelity: partial      # Eden: \"protein molecules ... ever existed\"; Day (Best I): \"functional proteins that have ever existed\""
+    },
+    {
+      "claim": "D3c",
+      "day": "Eden calculated that even under generous assumptions about mutation rates and selection coefficients, the time required to do so vastly exceeds the time available.",
+      "volume": "This is a little large but not implausible.",
+      "locator": "Eden p.8 (2.7e6 generations, M-406)",
+      "verdict_line": "fidelity: misread      # Eden's printed result is \"a little large but not implausible\""
+    },
+    {
+      "claim": "D4a",
+      "day": "But, I believe that the comments of Professor Eden, in the first five minutes of his talk at least, refer to a random construction of such molecules",
+      "volume": null,
+      "locator": "Ulam p.21 (Rosenhouse's quotation via Day matches)",
+      "verdict_line": "fidelity: accurate      # the quote as used by Rosenhouse (via Day) matches p.21"
+    },
+    {
+      "claim": "D5",
+      "day": "concluded that “there is a considerable gap in the neo-Darwinian theory of evolution, and we believe that this gap cannot be bridged within the current conception of biology.”",
+      "volume": "we believe this gap to be of such a nature that it cannot be bridged within the current conception of biology.",
+      "locator": "Schützenberger p.75 (wording altered, sense kept)",
+      "verdict_line": "fidelity: partial      # Day's Best I quotation alters the wording"
+    }
+  ],
+  "values": {
+    "fidelity_by_claim": {
+      "D2a": "partial",
+      "D2b": "misread",
+      "D2d": "partial",
+      "D2f": "partial",
+      "D2j": "misread",
+      "D3a": "partial",
+      "D3c": "misread",
+      "D4a": "accurate",
+      "D5": "partial"
+    },
+    "tally": {
+      "accurate": 1,
+      "misread": 3,
+      "partial": 5
+    },
+    "misattributed_speaker": {
+      "D2b": "Levins p.79 and Schützenberger p.79, not Lewontin",
+      "D2j": "Bossert p.40, not Eden"
+    },
+    "sentence_absent_from_volume": [
+      "D2a",
+      "D2b",
+      "D2f"
+    ],
+    "volume_in_sources_raw": false
+  },
+  "positions": {
+    "day": {
+      "reading": "the chapter and posts summarise the symposium accurately",
+      "accurate_or_partial": [
+        "D2a",
+        "D2d",
+        "D2f",
+        "D3a",
+        "D4a",
+        "D5"
+      ]
+    },
+    "critic": {
+      "reading": "several quotations and attributions do not match the volume",
+      "misread": [
+        "D2b",
+        "D2j",
+        "D3c"
+      ]
+    }
+  },
+  "notes": "Of nine attributions, one is accurate (Ulam p.21), five partial (Ulam's 'come to Eden's conclusions' not found, nearest text p.22-23 says the reverse about magnitude; Crosby's words accurate, 'supported Eden' an interpretation; Mayr p.30 accurate but the 'this conference' sentence is not in the volume; Eden's inputs restated; Schützenberger's conclusion reworded) and three misread (the 'I don't know' exchange and the topology remark are Schützenberger's and Levins's at p.79, not Lewontin's; the apology is Bossert's at p.40, not Eden's; Eden called his 2.7e6 'not implausible'). The fidelity concerns the historical half, not the arithmetic. The three 'not in the volume' findings rest on the claim files' recorded searches; the volume is not in sources/raw/."
+}
