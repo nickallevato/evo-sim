@@ -169,7 +169,7 @@ objects:
 - id: M-115
   kind: inference
   statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
-  used_by: [F1, F1a, B2d, B5g, B6c, E2]
+  used_by: [F, F1, F1a, F1b, B2d, B5g, B6c, E2]
   sources:
   - evo008
   positions:
@@ -324,7 +324,7 @@ objects:
 - id: M-203
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
-  used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4]
+  used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5]
   sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
@@ -806,15 +806,98 @@ objects:
 - id: M-507
   kind: formula
   statement: 'Relictation (Cannings jackpot model): one family replaces a fraction f of 2N gene copies per jackpot generation; exact chain gives t/4Ne above the Wright-Fisher baseline by 14.9%, 20.4% and 28.8% at 2N = 20, 30, 50 (peak ratios 1.071, 1.146, 1.249 at f = 50-60%), no deviation below about 10% replacement, and P_fix = 1/(2N) unchanged; the table covers 2N = 20-50 only, so "keeps growing with N" is an extrapolation'
-  used_by: [E4]
+  used_by: [E4, F6]
   sources:
   - E4#q1
   - E4#q2
   - E4#q3
   - E4#q4
+  - F6#q1
   - Q72
   positions:
     day: Below 10% replacement the formula holds; above it t = 4Ne breaks in quantifiable ways; the mechanism is established multiple-merger theory that is under-applied
     critic: The result is the known multiple-merger result and P_fix = 1/(2N) agrees with the critics' own chains (keruru); growth with N needs family size proportional to N (sweepstakes), and at 2N >= 1,000 with realistic vertebrate variance f is below 1%
   resolution: derivation
+  status: open
+- id: M-601
+  kind: formula
+  statement: 'Beneficial sweep latency t = (2/s) ln(2 Ne) generations (deterministic logistic sweep from p0 = 1/(2Ne)): 19,807 at s = 0.001, 1,981 at 0.01 and 39,614 at 0.0005 for Ne = 10,000; the stochastic conditional mean is (2/s)(ln 4Ns + gamma) = 8,532, 1,314 and 14,292, so the quoted formula overstates it by 2.32x at s = 0.001 (B0.4); the Zenodo text states a window p = 0.01 to 0.99, which gives a different logarithm (4.595 or 9.190) from ln(2Ne) = 9.9035'
+  used_by: [F, F1a, F3]
+  sources:
+  - F#q1
+  - F1a#q3
+  - F1a#q5
+  - F3#q1
+  - F3#q2
+  positions:
+    day: Kimura gives the time equations; (2/s) ln(2Ne) is the fixation time of a beneficial allele and enters the six/seven-fixation figure
+    critic: The formula is the deterministic sweep time, not the mean conditional fixation time (8,532 at s = 0.001, simulated 8,480); it is a latency, not a spacing between fixations (F1)
+  resolution: derivation
+  status: open
+- id: M-602
+  kind: formula
+  statement: 'Human 19,800 divisor: t = (2/s) ln(2Ne) = 2000 x 9.9035 = 19,807 at Ne = 10,000, s = 0.001 (T = 22 y, L = 51 y), called "generations per fixation" and used as the divisor for the six/seven fixations in the human window (9e6 y / 32.5 y x 0.45 / 19,807 = 6.3; 146,250 / 19,807 = 7.4, claim-file reconstruction since Day does not print the inputs), with no parallel-width factor; compared with the LTEE 1,600 and 1,322 gen/fix, a throughput'
+  used_by: [F1a]
+  sources:
+  - F1a#q2
+  - F1a#q3
+  - F1a#q4
+  - F1a#q5
+  - Q44
+  positions:
+    day: The division is a throughput calculation adjusted for parallelism, not serial use; 19,800 > 1,600 shows the 1,600 rate was generous
+    critic: A per-allele latency used as the generations per fixation is the serial reading; the figure is window x d divided by a latency with no width factor, and the two rates are different quantities (F1, F2)
+  resolution: derivation
+  status: open
+- id: M-603
+  kind: parameter
+  statement: 'Selection coefficient s = 0.001 attributed to Zeng et al. 2021 as the empirical mean for beneficial mutations in humans; Zeng reports a predicted mean selection coefficient of about 0.001 across 155 traits from signatures of negative selection, and the repo holds no sourced human beneficial mean; latency scales as 1/s (19,807 at 0.001, 1,981 at 0.01), within 25% only for s between 0.0008 and 0.00133'
+  used_by: [F1a, F3a]
+  sources:
+  - F3a#q1
+  - F3a#q2
+  - F1a#q3
+  positions:
+    day: 0.001 is the empirical mean selection coefficient from Zeng 2021 and a defensible order of magnitude for trait-affecting variants; even category means 0.0005-0.0010 keep the sentence true
+    critic: Zeng measures negative (purifying) selection, so the attribution to beneficial mutations is a misread and the sign matters; the steady-state rate does not depend on latency (F1)
+  resolution: lookup
+  status: open
+- id: M-604
+  kind: empirical
+  statement: 'Parallel sweep capacity under interference: does the active zone of intermediate-frequency alleles cap simultaneous sweeps at about 230 (Z18167588, not derived, worked backward from the constraint), or does R_int stay near 1 with free recombination (0.975 at 272 active loci, N = 1000, s = 0.01, soft selection) and fall with linkage (clonal 0.645 to 0.088; 1.5 M map 0.572); the F2 grid covers N = 1000 and soft selection; the Weissman and Barton asymptotes R/4-R/2 = 8.75-19 per generation at R = 35-38 M bound the interference leg only below adaptive shares of 13-27%'
+  used_by: [F2]
+  sources:
+  - F2#q1
+  - F2#q2
+  - Q25
+  positions:
+    day: The active zone imposes a hard capacity near 230 simultaneous sweeps, so pipeline width is limited
+    critic: Interference is real under tight linkage but the cap is not reproduced for r = 1/2; Good 2017 shows many simultaneous competing variants, which is parallelism with interference, not a hard cap; human-scale loci and hard selection with linkage are untested
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 8, est_ram_gb: 4, measured: false}
+- id: M-605
+  kind: inference
+  statement: 'Fixation probability against rate and time: u (about 2s for a beneficial allele under weak selection in diploids, 1/(2N) for a neutral one) is a per-mutation probability with no time variable, and the substitution rate is k = 2N x flux x u (k_neutral = mu; k_ben = 2N U_b x 2s = 4N s U_b); is a statement about 1/(2N) or 2s a statement about when or how fast fixations complete'
+  used_by: [F, F4a]
+  sources:
+  - F#q3
+  - F4a#q1
+  - BO-01
+  positions:
+    day: The reviewer confused fixation probability with fixation rate; 1/(2N) contains no time variable and says nothing about when
+    critic: Bowers gives the textbook 2s for a beneficial mutation (secondhand); whether Day's reply answers it depends on which quantity the original review addressed, and the original was not found
+  resolution: derivation
+  status: open
+- id: M-606
+  kind: formula
+  statement: 'Spread of the neutral fixation time: SD of the conditional neutral fixation time = 0.538 x 4Ne (0.538 = sqrt(pi^2/3 - 3), about 2.15 Ne), against mean 4Ne; simulated SD of t_fix/N = 2.105 (N = 50) and 2.108 (N = 200); the figure is not in Kimura and Ohta 1969, which derives the first moment only'
+  used_by: [F5]
+  sources:
+  - F5#q1
+  - Q294
+  positions:
+    day: Mean 4Ne with a broad distribution, SD about 0.538 x 4Ne, under Kimura diffusion
+    critic: The number reproduces by simulation but is not in the cited Kimura and Ohta paper; the expected count formula needs only the mean
+  resolution: lookup
   status: open
