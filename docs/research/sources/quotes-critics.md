@@ -40,7 +40,7 @@ Date: 2026-09-17
 
 - **MC-08** | para 22 | branch B1/F | McCarthy
   > "Obviously, mutations, whether neutral or not, do not have to increase in frequency throughout a population one at a time."
-- **MC-09** | para 21 | branch B1 | McCarthy
+- **MC-09** | comment 337116873 on MC-1 (2026-09-14; not in the MC-2 body as revised 2026-10-31, where "para 21" now reads "18 million … 16 million"; relocated 2026-11-26, owner approval EVOA-107) | branch B1 | McCarthy
   > "400 billion x 1/20,000 =20 million fixations. So when we apply the time available to the numbers we land on the exact correct result."
   - note: Time-adjusted version: subtracts 40,000 gens (4Ne) from 360,000 gens.
 - **MC-10** | para 24 | branch B2 | McCarthy

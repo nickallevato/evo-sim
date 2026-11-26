@@ -1,0 +1,145 @@
+{
+  "id": "M-915",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-915.py",
+  "script_sha256": "d47a02e3a72f6050adb076a470ee570510264d30a948c1ad59d9cc2530f0324e",
+  "object": "M-915",
+  "variant_of": "M-212",
+  "inputs": [
+    {
+      "name": "two_Ne",
+      "value": 20000,
+      "cite": "mc2@L12"
+    },
+    {
+      "name": "neutral_per_copy_per_generation",
+      "value": 50,
+      "cite": "mc2@L13"
+    },
+    {
+      "name": "generations",
+      "value": [
+        360000,
+        320000
+      ],
+      "cite": "mc2@L16 (25 y over 9 My; minus 4Ne, M-914)"
+    },
+    {
+      "name": "required_per_lineage",
+      "value": 20000000.0,
+      "cite": "mc2@L9 (Day 2025, M-008)"
+    },
+    {
+      "name": "l9_supply",
+      "value": 400000000000.0,
+      "cite": "mc2@L9"
+    },
+    {
+      "name": "deleterious_share_genome",
+      "value": 0.03,
+      "cite": "mc2@L19 (MC-10, uncited)"
+    },
+    {
+      "name": "coding_share",
+      "value": 0.015,
+      "cite": "mc2@L19 (uncited)"
+    },
+    {
+      "name": "harmful_to_neutral",
+      "value": 3,
+      "cite": "mc2@L18 (Day as relayed; mc1c#337302874; uncited)"
+    },
+    {
+      "name": "Day_410Mb_35M_13.8pct",
+      "value": [
+        410000000.0,
+        35000000.0,
+        0.138
+      ],
+      "cite": "mc2@L20 (Day as relayed)"
+    },
+    {
+      "name": "MITTENS_abstract",
+      "value": [
+        180,
+        205000000.0
+      ],
+      "cite": "mc2c#340102853 (Day)"
+    },
+    {
+      "name": "Day_corrected",
+      "value": [
+        3300,
+        8000000000.0,
+        400000
+      ],
+      "cite": "mc2c#345248135 (Matev quoting Day 2026-02-04)"
+    }
+  ],
+  "values": {
+    "revised_post": {
+      "per_generation": 1000000,
+      "fixations_per_generation": 50,
+      "full_360k": 18000000,
+      "lagged_320k": 16000000,
+      "vs_required": {
+        "18M": -0.1,
+        "16M": -0.2
+      },
+      "r1": "match holds (|move| <= 20%)"
+    },
+    "l9_vs_l16": {
+      "l9_count": 20000000.0,
+      "l16_supply": 320000000000.0,
+      "l9_supply_excess": 0.25,
+      "correction": -0.2,
+      "r1": "ledger"
+    },
+    "rate_and_pipeline": {
+      "per_my": 2000000.0,
+      "transit_my": 1.0,
+      "in_transit": 2000000.0
+    },
+    "neutral_share": {
+      "mc10": 0.97,
+      "day_3to1": 0.25,
+      "ratio": 3.88,
+      "counts_mc10": [
+        17460000.0,
+        15520000.0
+      ],
+      "counts_day": [
+        4500000.0,
+        4000000.0
+      ],
+      "move": -0.7423,
+      "r1": "flip: the input decides the match",
+      "coding_deleterious_share": 0.01125
+    },
+    "day_410": {
+      "over_35M": 11.71,
+      "implied_base_bp": 2971000000.0,
+      "share_of_3.2e9": 0.128
+    },
+    "thread": {
+      "400M_over_6M": 66.67,
+      "410M_over_6M": 68.33,
+      "kelvin": 227,
+      "mittens_pct": 8.78e-05,
+      "day_corrected": 8.25,
+      "shortfall": 2424242,
+      "133x": "not reproducible from the quoted inputs"
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the expected count needs the neutral share and the time; with three harmful per neutral the revised 16-18M falls to 4.0-4.5M",
+      "holds": "the neutral-share input decides the match (-74%); neither side cites its ratio"
+    },
+    "critic": {
+      "reading": "on Day's inputs, with the 4Ne lag and parallel transit, the neutral expectation meets the requirement (16-18M against 20M)",
+      "holds": "the revised post's arithmetic holds and stays within 20% of 2e7; 2e6/My with 2e6 in transit answers the serial reading; the 3% input gives 15.5-17.5M"
+    }
+  },
+  "notes": "MC-2 body was revised on 2026-10-31 (sha256 2f4dd854... against the 2026-10-07 78bf1ace...); the pre-revision text is not held. MC-09 is not in the revised body; on owner approval (EVOA-107, 2026-11-26) it is located at mc1c#337116873. L9 of the revised body keeps the 4e11 -> 2e7 of the mixed basis; L16 uses 25 y throughout. Matev's quote of Day's 'corrected calculation' is a double relay (Day blog 2026-02-04, not held)."
+}
