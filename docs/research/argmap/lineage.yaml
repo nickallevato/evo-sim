@@ -4160,3 +4160,19 @@
   fate: alive
   fate_date:
   fate_locator: "Reviewed (#96), fix-passed (da89938) and integrated 2026-11-01; A2e fidelity pending to unverifiable, subject to owner approval"
+
+- id: L-audit-b3-internal-2026
+  label: "Audit B3-internal: RD applied to the B3 umbrella's internal verdict; RD does not rank joinings of an umbrella's quotes, internal stays pending (no field moves)"
+  side: audit
+  kind: reply
+  date: 2026-11-26
+  claim_ids: [B3]
+  locator: "research/checks/results/R4-B3-internal.md"
+  quote: "it yields k = 0.743μ, confirming Balloux and Lehmann's finding"
+  parents:
+    - {id: L-audit-a2e-fidelity-2026, relation: descends}
+  inferred: false
+  why: ""
+  fate: alive
+  fate_date:
+  fate_locator: "Reviewed (#97), fix-passed (4360f38) and integrated 2026-11-26; no verdict value moved"

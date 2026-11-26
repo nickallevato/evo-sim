@@ -9,7 +9,8 @@ load_bearing: true  # with B1/B2, one route to closing the neutral escape; but i
 sourcing: firsthand
 status: reviewed
 verdicts:
-  internal: pending   # R4 B3: components differ (N/N_e leg withdrawn; 0.743 non-sequitur; 32.3 holds), no single value; stays pending.
+  internal: pending   # R4 B3-internal (2026-11-26): the verdict depends on how the node aggregates its three quotes, not on how any quote is read; no current rule sets it (RD ranks readings of one quote; lead ruling, brief B3-analyst-2). A convergent joining would credit one quoted route only, B3-3 / 32.3 (B3d), whose external value is contradicted; that is not a finding that the values are consistent or that k != mu is shown. A conjunctive joining fails on B3-2 / 0.743 (B3c non-sequitur). B3-1 states only the N/N_e ratio; its k/mu use (B3a) is not quoted here (S1). Pending withholds an internal credit B3d earned on Day's own arithmetic; the reason is the audit's missing aggregation rule, not his error. Readings table in R4-B3-internal.md.
+  # Earlier (superseded as the comment, value unchanged): R4 B3: components differ (N/N_e leg withdrawn; 0.743 non-sequitur; 32.3 holds), no single value; stays pending.
   fidelity: partial
   external: "contradicted"   # R4 B3 / B3g (2026-10-10): N/N_e leg withdrawn by its author (B3g, error-level by R1, no longer in force); 0.743 as scored in B3c; 32.3 external `contradicted`, internal `holds` (B3d); "median 25" pending. Verdict unchanged. Earlier: for the listed values (N/Ne, 0.743, 32.3, 800,000); the qualitative B&L effect is real but small (B3b)
 ---
@@ -69,7 +70,7 @@ Script: `research/checks/b3_N_vs_Ne.py` (seed 13) · see B3a. Review: `research/
 
 R4 B3b/B3c (research/checks/results/R4-B3b-C1.md): k != mu under overlapping generations plus fluctuating N is real (B&L eq. 3 reproduced, all |z| < 1.6), but at human-like parameters it is -2% to +38% (sign upward for realistic growth). 0.743 is a window artefact whose mechanism (fixation probability 1/(2N_t)) is falsified by simulation; 32.3 has no derivation and cannot come from B&L. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
 
-R4 B3 and R4 B3g (2026-10-10): the N/N_e leg (19-46, 15.2-30.3, 9.1-30.3, 800,000) is withdrawn by Day's own concession (B3g) and each k/mu factor falls to 1 (a 9.1x to 800,000x change). 0.743 stays window-dependent (B3c, R4 B3b-C1). 32.3 is Day's arithmetic on a base-pair numerator (B3d: internal holds, external contradicted per-site; residual 0.87-1.65 after the ancestral term). In force: 0.743 and 32.3 point in opposite directions but measure different windows (rule C, not scored). Day-side credit: public self-correction within a day. Critic-side credit: the unrevised Zenodo copies (fetched 2026-10-07) still carry the withdrawn values.
+R4 B3 and R4 B3g (2026-10-10): the N/N_e leg (19-46, 15.2-30.3, 9.1-30.3, 800,000) is withdrawn by Day's own concession (B3g) and each k/mu factor falls to 1 (a 9.1x to 800,000x change). 0.743 stays window-dependent (B3c, R4 B3b-C1). 32.3 is Day's arithmetic on a base-pair numerator (B3d: internal holds, external contradicted per-site; residual 0.87-1.65 after the ancestral term). In force: 0.743 and 32.3 point in opposite directions but measure different windows (rule C, not scored) [note 2026-11-26, R4 B3-internal: the ground is N2b own-text scope (X1 l.63) plus rule C (review C-3), not rule C alone]. Day-side credit: public self-correction within a day. Critic-side credit: the unrevised Zenodo copies (fetched 2026-10-07) still carry the withdrawn values.
 
 ## Simulator variables implied
 - mutation-supply N (census | reproducing | user)
@@ -79,3 +80,13 @@ R4 B3 and R4 B3g (2026-10-10): the N/N_e leg (19-46, 15.2-30.3, 9.1-30.3, 800,00
 - rate unit (per generation | per year | per average generation time)
 
 R4 XT (research/checks/results/R4-XT.md; combined review, 2026-10-09): independent-engine replication in fwdpy11 0.24.7. Reproduced: Kimura u(s,N) within 2%, beneficial t_fix 0.7-1% from the diffusion integral and 2-3x below (2/s)ln2N, exact-chain F_cond within 1.5%, P_fix = 1/2N and time scaling with Ne (not Day N/Ne), the B1c excess 3.8-3.9. NOT reproduced numerically, not localised: B1 counts (21% equilibrium deficit), B1b expansion (0.699 vs 0.733), B3b non-overlapping k/U (0.95-0.96), B3c(e) cohort (0.64, constant in cohort size). The deficit tracks per-gamete U in the runs (hypothesis, untested). Numpy numbers neither overturned nor independently confirmed at the failing rows; no verdict change.
+
+R4 B3-internal (research/checks/results/R4-B3-internal.md, 2026-11-26; combined review #97, fix pass 4360f38): no verdict field moves; internal stays `pending`. RD as written ranks readings of one quote, not joinings of an umbrella's quotes, so the field depends on an aggregation rule the audit does not have (lead ruling, brief B3-analyst-2). B3 is not reading-dependent and not scoped; it is not added to the reading-dependent count. Day-side credit: `pending` is no verdict against him; it withholds a credit B3d earned on his own arithmetic (32.3, 1.95% off), and the 0.743 defect is not charged twice. Critic-side credit: `pending` is not `holds`; the conjunctive reading fails on 0.743 (B3c), the one route that holds is externally `contradicted` (B3d), and a defensibility ranking over joinings would always give the speaker the best of his quoted children (K-1). Readings:
+
+| Reading | Tag | B3 internal |
+|---|---|---|
+| R-a convergent (some quoted route follows; rests on B3d alone) | dialectic | holds |
+| R-b conjunctive (each quoted value follows) | dialectic | non-sequitur |
+| R-b″ conjunctive on direction | dialectic | not scored (B3c's call) |
+| R-c one consistent k/μ (extended) | dialectic | not scored (N2b own-text scope; rule C) |
+| Field | | pending: no rule ranks joinings (R-a and R-b equal) |
