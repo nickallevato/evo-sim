@@ -27,7 +27,7 @@ objects:
 - id: M-103
   kind: model-choice
   statement: 'Does the LTEE generations-per-fixation transfer to humans given clonal start, no recombination and no standing variation: Day says standing variation cannot cut fixation time once selection acts and recombination cannot compensate; critics say the clonal zero-polymorphism start inflates the LTEE rate and recombination speeds sweeps'
-  used_by: [A2e, A2d]
+  used_by: [A2e, A2d, ROOT]
   sources:
   - evo005
   - evo008
@@ -123,7 +123,7 @@ objects:
 - id: M-111
   kind: identity
   statement: k = mu holds in finite time only for a static effective population equal to the census size; with overlapping generations no finite period has k = mu (arXiv 2208.00148v1); the identity has no time term so it cannot say whether fixations complete in a window
-  used_by: [B2, B3, B1, B7]
+  used_by: [B2, B3, B1, B7, ROOT-DE]
   sources:
   - pgenetics
   - evo009
@@ -191,7 +191,7 @@ objects:
 - id: M-117
   kind: empirical
   statement: Standard population genetics models real populations accurately (pedigree studies, fruit flies, rats, humans) and "doesn't match Vox's math"; no paper or number cited in the quoted passage
-  used_by: []
+  used_by: [ROOT-PG]
   new_claim: "Standard population genetics models real populations accurately, so MITTENS contradicting it is an error in MITTENS; Matthews/Hancock (critic side)"
   sources:
   - evo008
@@ -372,7 +372,7 @@ objects:
 - id: M-209
   kind: model-choice
   statement: 'Which population size enters neutral substitution: supply 2N mu uses census N; fixation probability is 1/(2Ne) (Day Feb 2026: k = mu N/Ne), vs 1/(2N) in the same N so that k = mu (critics; Day concession 2026-08-27, keruru retraction, Maruyama invariance in Day''s own Hard Limits); includes 2N x 1/(2Ne) = N/Ne > 1 (Matev) and 8e9/1e4 = 800,000 (Grok exchange)'
-  used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c]
+  used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c, ROOT-DE]
   sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4]
   positions: {day: 'Original: N/Ne enters k; later concession: no Ne on either side of the Kimura identity; 3rd edition needed', critic: 'The cancellation holds: supply and fixation share the same N; N/Ne > 1 is not a probability; neutral mutations fix at the mutation rate (Hancock, Mansfield, DarwinZDF42, Paul King, keruru, Kimura 1962)'}
   resolution: derivation
@@ -468,7 +468,7 @@ objects:
 - id: M-221
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
-  used_by: [B, B5, B5j, D2k, D8, D13, G4]
+  used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG]
   sources: [B#q1, B5#q2, B5j#q3]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
@@ -1050,7 +1050,7 @@ objects:
 - id: M-711
   kind: formula
   statement: "Duffy 180: 252,000 effective generations (6.3e6 y / 25 y) divided by the book's G_f of 1,400 gives 180 fixations; with the 3.0 value 1,322 it is 190.6; against 205e6 required the shortfall is 205e6/180 = 1,138,889 (the paper prints 1,139,000x); the 1,400 is a measured LTEE throughput, so the division is a rate calculation if read as T/G_f"
-  used_by: [G2b, G2g]
+  used_by: [G2b, G2g, ROOT]
   sources:
   - G2b#q1
   - G2b#q2
@@ -1076,7 +1076,7 @@ objects:
 - id: M-713
   kind: inference
   statement: "F_max = t_div x d / (g_len x G_f) has no mutation rate, population size or selection coefficient term: it divides a time by an empirical generations-per-fixation figure; Day's reading is that G_f is a measured total throughput that already includes supply, selection and parallelism, so the transfer to humans (not the formula) is the question; the supply scaling (about 690x) favours the critic on transfer"
-  used_by: [G2h, H5]
+  used_by: [G2h, H5, ROOT-H, ROOT-PG]
   sources:
   - G2h#q1
   - G2h#q2
@@ -1088,7 +1088,7 @@ objects:
 - id: M-801
   kind: formula
   statement: "Haldane cost budget: cost per substitution C = 30 N selective deaths (diploid, single new copy), sustainable selective mortality 10% of N per generation, so the minimum interval is 30/0.10 = 300 generations per beneficial substitution; the limit bounds selected (adaptive) substitutions, not total substitutions; the 300 is verified only as reported by Nunney 2003 (Haldane 1957 not retrieved) and is restated by Day (Z18168236), Nesslig20 and Hössjer"
-  used_by: [H, H2, H4, H5, H6]
+  used_by: [H, H2, H4, H5, H6, ROOT-FM]
   sources:
   - H#q1
   - H2#q2
@@ -1151,7 +1151,7 @@ objects:
 - id: M-805
   kind: inference
   statement: "Hössjer's cost step: F_max = (t_div x d)/(g_len x G_f) = 9e6 x 0.45/(20 x 1,600) = 127 (his eq. 2.2), x (1.25e-8/1e-10) = 15,800 for the human mutation rate (his eq. 3), x (3e9/4.6e6) = 10 million for genome length (his eq. 4), then 'far less than eq. (4), perhaps more in line with eq. (3)'; the cost step is not computed: eq. (3) is a rate scaling, Haldane's limit over 450,000 generations is 1,500, so 15,800 is 10.5 times it (HO-03 and HO-06, p.3 of the Hössjer PDF)"
-  used_by: [H5]
+  used_by: [H5, ROOT-H]
   sources:
   - H5#q2
   - H5#q3
@@ -1200,5 +1200,151 @@ objects:
   positions:
     day: 'Selection cannot operate without reproductive differential; s_max of order unity bounds the adaptive rate at about 1e-12 per site (retracted 2026-05-07 as a bound on total k, still a bound on adaptive substitution)'
     critic: 'The formula bounds adaptive substitutions only and the retraction concedes it does not constrain total k; Ne = 3,300 has no source and the 300 and 39 generations per substitution of Haldane + d and Term 3 are not reconciled'
+  resolution: derivation
+  status: open
+- id: M-901
+  kind: inference
+  statement: "ROOT as a universal over mechanisms: for every M in S (selection hard and soft, parallel fixation, drift, neutral sweeps, hitchhiking, ILS, gBGC, relictation-type drift, recombination, hypermutation, 'every other imagined mechanism') F_M(T) < F_req; operational form F_max = T_gen/G_f = 252,000/1,322 = 190.6 against F_req = 2.05e8, shortfall 1.0754e6 (6.03 orders; reproduces the stated 1,075,000; this is the MITTENS 3.0 value, the '3-5 orders' is Z18452504 only and 220,000x is an older version, ledgers/versions.md); the catalogue of 18 named mechanisms has 9 computed or bounded, 3 partial, 5 asserted not computed and relictation not excluded by Day (claim file ROOT-M); the 2026-09-30 post exempts three minor mechanisms (recombination, ILS, HGT) while the 2026-10-05 sentence names ILS as excluded; and whether 'impossible' means this time-budget reading or a statement that selection cannot exist (Hancock: selection is a covariance, a descriptive statistic, so 'statistically impossible' is a category error; she concedes the live question next sentence)"
+  used_by: [ROOT, ROOT-M, ROOT-COV, ROOT-FM]
+  sources:
+  - ROOT#q1
+  - ROOT#q2
+  - ROOT#q4
+  - ROOT-M#q1
+  - ROOT-M#q2
+  - ROOT-M#q3
+  - ROOT-M#q4
+  - ROOT-COV#q1
+  - ROOT-COV#q2
+  - ROOT-FM#q5
+  positions:
+    day: "Every mechanism with a computed bound fails the same rate bound; the asserted rows contribute negligible divergence; the unnamed remainder is the critics' burden (Z18452504 'burden of the alternative'); the time-budget reading is the repo's operational form"
+    critic: "No critic addresses ROOT as a whole; they attack the branches (A5, B, F1, G, C1); a universal over unnamed mechanisms is untestable until each is named and 5 of 18 named rows have no computation; 'statistically impossible' is a category error for a covariance, though the time-budget version is a separate claim"
+  resolution: derivation
+  status: open
+- id: M-902
+  kind: empirical
+  statement: "Substitution density along the T2T ape genomes: Day, 'more than 80 times more variable than a uniform-rate process predicts' (window size and dispersion statistic not given) and contiguous dense blocks with sharp boundaries ('mesas', no coordinates); R4 FMnull: the sentence is true at W >= 1 Mb in every lineage and both maskings and, wherever true at W <= 1 Mb, the measured index is inside or below a heterogeneous-mutation-rate neutral band (index/N_hi 0.11-0.91, eight parameter sets); R4 FM: 32-53% of human-mesa windows lie inside chimp mesas against a 0.56-1.0% background and a shared-rate null reproduces 64-69% of human mesas at 100 kb; the null is uniform mutation rate against variable mutation rate"
+  used_by: [ROOT-FM]
+  sources:
+  - ROOT-FM#q1
+  - ROOT-FM#q2
+  positions:
+    day: "The overdispersion and the mesas exist as described and a lineage-asymmetric excess confined to contiguous blocks is not what a uniform-rate neutral model predicts; no window, statistic or code released, so the check has little power below a dominant mechanism"
+    critic: "Overdispersion is the standard result of mutation-rate heterogeneity (CpG, replication timing, recombination), alignment error and ILS; the pattern is shared across lineages and reproduced by a shared-rate null; 'more than 80 times' compares against a null no one uses"
+  resolution: data-check
+  status: open
+- id: M-903
+  kind: inference
+  statement: "One mesa against two ceilings: 'a single mesa on a single chromosome shows an excess of human-lineage substitutions that exceeds both the MITTENS fixation ceiling and the maximum that natural selection can theoretically fix across the entire genome according to Haldane'; no counts, units (SNV against bp, event against base), window or ceiling value are given; Haldane's cost bounds selected substitutions only (M-801), so comparing a mesa count with it presupposes the mesa substitutions are selected; the MITTENS ceiling is the F_max of M-713 over the lineage window; the post gives no genome-wide Haldane figure (unverifiable until the mesa counts are released)"
+  used_by: [ROOT-FM]
+  sources:
+  - ROOT-FM#q3
+  positions:
+    day: "A single mesa already exceeds what selection could fix genome-wide under Haldane and what MITTENS allows"
+    critic: "One mesa against a genome-wide maximum is a units step; a neutral high-mutation block produces excess substitutions on every lineage, so only a human-specific excess discriminates and the post gives no per-lineage numbers"
+  resolution: derivation
+  status: open
+- id: M-904
+  kind: inference
+  statement: "From the mesa pattern to the mechanism: sigillation (some mesas are discrete deliberate-modification events that wrote contiguous blocks into one lineage; hedged as 'initial evidence', introduced after the data) and FM10 'neither natural selection nor neutral diffusive drift can still be considered viable'; the step needs the implicit premise that neutral diffusive drift implies a uniform per-window rate, which no harvested Day text states (rule-N grep 2026-10-10) and which Day's own relictation (time-varying, non-diffusive drift) contradicts; R4 FM pre-registered discriminating cells P3, P4, P5 and P7 all fall on the critics' side; chrX F1 100 kb (R 3.76 on hs1, 3.39 chimp-referenced) is the single Day-side cell, one orthologous centromeric-transition window"
+  used_by: [ROOT-FM]
+  sources:
+  - ROOT-FM#q4
+  - ROOT-FM#q5
+  positions:
+    day: "A lineage-asymmetric excess in contiguous blocks is a pattern uniform-rate neutral theory does not predict; sigillation is an open hypothesis, hedged, and FM10 meets the replication checklist better than Day's earlier posts (data public)"
+    critic: "A pattern both selection and drift can contain does not exclude either; the data do not test sigillation because it was introduced after them; the pattern is shared across lineages and a shared-rate null reproduces it"
+  resolution: derivation
+  status: open
+- id: M-905
+  kind: empirical
+  statement: "Genome-wide human-chimp dN/dS and its sensitivity to gene set and filters: Day, 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment; single-SNV codons 71.6% nonsynonymous, 28.4% synonymous, dN/dS 0.71; implied N/S = (71.6/28.4)/0.71 = 3.55 against a correct site ratio of 3.34) against the Consortium's Ka/Ks 0.23 on 13,454 1:1 orthologs (CSAC 2005); 'no combination of quality filters moves the number below 0.65' (full stack 0.64 on 10 genes); gene-set arithmetic 20,400 - 13,454 = 6,946 (34.05% of Day's set), 20,400/13,454 = 1.516; audit R4 L1 on hg38/panTro5: all genes 0.271, Ensembl one2one 0.207; R4 L1b on T2T and Cactus: all 0.271 (V0), one2one 0.238, minimum over 32 filter stacks 0.214; no correct-frame computation reproduces 0.80 (range 0.15-0.45); Day's code, gene list and per-gene table are unreleased"
+  used_by: [DN1, DN2, DN3, DN4, DN5, DN6]
+  sources:
+  - DN1#q1
+  - DN1#q2
+  - DN1#q3
+  - DN1#q4
+  - DN1#q5
+  - DN2#q1
+  - DN2#q2
+  - DN3#q1
+  - DN3#q2
+  - DN3#q3
+  - DN3#q4
+  - DN4#q1
+  - DN5#q1
+  - DN6#q4
+  positions:
+    day: "dN/dS is 0.80 on all 20,400 genes, no filter stack moves it below 0.65, and the published 0.23 comes from a pre-selected 13,454-gene subset"
+    critic: "A correct extraction gives about 0.27 on all genes and 0.21-0.24 on one2one genes; the gene set explains +0.06 (+31%), not the difference to 0.80; Day's 0.80 points to an unidentified extraction or alignment problem; the 0.23 reproduces in kind"
+  resolution: data-check
+  status: open
+- id: M-906
+  kind: empirical
+  statement: "Does a protein-guided CDS alignment bias dN/dS downward: with A the aligned codons of a genome (Cactus) alignment and P the subset kept by a protein-guided aligner, claim dN/dS(P) < dN/dS(A) because A minus P is enriched for nonsynonymous change; observables |A minus P|/|A| and dN/dS(A minus P), neither given by Day, and the premise needs human-chimp proteins (about 99% identical, unverified by Day) to have enough divergent stretches to matter; R4 L1c (audit's in-script aligner, hs1 / mPanTro3 Cactus, GENCODE v35): realistic arms lower dN/dS by 2% to 6% on all genes and 1% to 4% on the real 2005 list, dropped codons nonsynonymous-enriched (0.71-0.85 against 0.479); the held CSAC 2005 Methods put the 13,454-gene set on the BLASTZ genome alignment with Clustal W only for a 7,043-gene subset"
+  used_by: [DN6]
+  sources:
+  - DN6#q1
+  - DN6#q2
+  - DN6#q3
+  - DN6#q4
+  positions:
+    day: "A conservation-dependent alignment measures conservation: excluded codons are nonsynonymous-enriched, so the published 0.23 is a methodological artefact"
+    critic: "The direction is right but the size is 2-6% against the gap from 0.271 to 0.80; the published number does not come from a protein-guided alignment on the strict reading; no external codon aligner or independent chimp CDS has been tried"
+  resolution: data-check
+  status: open
+- id: M-907
+  kind: inference
+  statement: "dN/dS as a measure of selection strength: Day reads 0.80 as purifying selection removing 'only about 20%' of nonsynonymous mutations (1 - 0.80 = 0.20) and concludes 'selection is not the primary mechanism of adaptive evolution'; the genome-wide ratio averages purifying removal over all coding sites and does not measure the adaptive share (A2e-alpha, bias-corrected about 9-13%); the charitable reading 'most coding substitutions are not selection-driven' follows from 0.80 and equally from 0.23 under neutral theory, so it does not carry the stated words (rule N2d, own source: DN4 ¶6 defines the ratio as purifying removal, ¶21 concludes about adaptive evolution)"
+  used_by: [DN4]
+  sources:
+  - DN4#q1
+  - DN4#q2
+  positions:
+    day: "At 0.80 purifying selection removes only about 20% of nonsynonymous mutations, so selection is barely distinguishable from neutral evolution in coding sequence"
+    critic: "The average ratio measures purifying removal, not adaptive evolution; human alpha estimates show adaptive change occurs; the conclusion follows from 0.23 as well under neutral theory"
+  resolution: derivation
+  status: open
+- id: M-908
+  kind: inference
+  statement: "Superlative endorsement: Tipler's foreword called Probability Zero 'the most rigorous mathematical challenge to Neo-Darwinian theory ever published' (relayed by the interviewer, foreword not retrieved); a ranking claim rigor(PZ) > rigor(all other published challenges) with no comparison set and no calculation; rule RH, ledger RH-13: not scored, device and dialectical core recorded in ledgers/slips.md"
+  used_by: [ROOT-T]
+  sources:
+  - ROOT-T#q1
+  positions:
+    day: "The book is the most rigorous mathematical challenge ever published"
+    critic: "A superlative cannot be checked without a comparison set; the endorsement adds no calculation and Myers notes there was no peer review (process point)"
+  resolution: rhetoric
+  status: open
+- id: M-909
+  kind: inference
+  statement: "Evidential weight of endorsements and credentials: Tipler's foreword and appendix, Keen's preface, Hossjer's review and Dembski's own position as support for ROOT, against the critics' counter that the named endorsers have statistics, physics or mathematics backgrounds, not population genetics, and that ID association should be disclosed; Hossjer's agreement is limited to the main argument (Dembski: not the book as a whole) and he advocates 'uncommon descent'; the audit rule is that a credential count is not a rebuttal (FP-01) and that endorsement of a rate calculation is evidence about the arithmetic, not the biology; Tipler's appendix is in the paywalled book (not retrieved), Hossjer's population-genetics record was not examined and 'similar blunders' names no paper"
+  used_by: [ROOT-T, ROOT-EP, ROOT-DE, ROOT-H, ROOT-K]
+  sources:
+  - ROOT-T#q2
+  - ROOT-EP#q1
+  - ROOT-EP#q3
+  - ROOT-DE#q1
+  - ROOT-H#q1
+  - ROOT-H#q3
+  - ROOT-H#q4
+  - ROOT-K#q1
+  positions:
+    day: "Endorsements by a physicist, a mathematical statistician and an economist carry independent weight for the conclusion and add the endorsers' own arguments"
+    critic: "The endorsers lack population-genetics training so the endorsements carry little weight on the assumptions; the allies' arithmetic is checked in the repo regardless; the same standard applies to critic credentials"
+  resolution: lookup
+  status: open
+- id: M-910
+  kind: formula
+  statement: "Required time as a multiple of the age of the Universe: T_required = T_div x shortfall = 6.3e6 y x 1.075e6 = 6.7725e12 y = 490.8 universe-ages (13.8e9 y), 2.7 orders; read as a time multiplier at a fixed per-fixation rate; the older 220,000x gives 1.4e12 y (about 100 universe-ages); the 1.075e6 is the MITTENS 3.0 figure (M-901); Keen's preface gives no equation and endorses The Frozen Gene, not the MITTENS papers"
+  used_by: [ROOT-K]
+  sources:
+  - ROOT-K#q1
+  - ROOT-K#q2
+  positions:
+    day: "The required time is orders of magnitude greater than the age of the Universe because each fixation takes a fixed LTEE time"
+    critic: "The arithmetic reproduces only if the shortfall is a time multiplier at a fixed rate; with validated scaling (A5) and SNV-only counts (A3x) the multiplier falls to about 10-100, below universe-ages; the 205M counts bp of structural variants"
   resolution: derivation
   status: open
