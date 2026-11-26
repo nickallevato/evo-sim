@@ -1,0 +1,108 @@
+{
+  "id": "M-003",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-003.py",
+  "script_sha256": "c1a7b6a6a9843b36dbcc67b23371d3747a0fe2deb7457b92305d7c9968d68086",
+  "object": "M-003",
+  "inputs": [
+    {
+      "name": "G_f 1,600 (2019), cited to Nature 2009",
+      "value": 1600,
+      "quote": "Source: Sequencing of 19 whole genomes detected 25 mutations that were fixed in the 40,000 generations of the experiment. NATURE, 2009",
+      "locator": "Q02, B2019-02-07 ¶9"
+    },
+    {
+      "name": "G_f 1,600 (2025 paper)",
+      "value": 1600,
+      "quote": "Sequencing detected 25 mutations that were fixed over approximately 40,000 bacterial generations, yielding an average of 1,600 generations per fixed mutation.",
+      "locator": "Q64, Z18168236 ¶29"
+    },
+    {
+      "name": "citation of the 1,600 datum in the 2025 papers",
+      "value": "Good et al. 2017 / 'Nature in 2017'",
+      "quote": "Z18165980 cites Good et al. 2017 (60,000 gens) for the fixation time; Z18168236 says 25 in ~40,000 gens \"reported in Nature in 2017\"",
+      "locator": "quotes-day.md discrepancy table, row 10"
+    },
+    {
+      "name": "Barrick et al. 2009 genome span",
+      "value": 20000,
+      "quote": "Although adaptation decelerated sharply, genomic evolution was nearly constant for 20,000 generations.",
+      "locator": "A2g q2, Barrick et al. 2009 Abstract"
+    },
+    {
+      "name": "G_f 1,322 (non-mutators, 60,000 gens, mean 45.4 fixations)",
+      "value": 1322,
+      "quote": "The average across all five non-mutator populations at 60,000 generations is 45.4 fixations, yielding a cumulative rate of 1,322 generations per fixation.",
+      "locator": "Q58, Z23003785 p.6"
+    },
+    {
+      "name": "G_f 893 (clone pair, 50,000 gens)",
+      "value": 893,
+      "quote": "cross- validated at 893 generations per fixation by clone-pair analysis at 50,000 generations.",
+      "locator": "Q13, Z23003785 p.1"
+    },
+    {
+      "name": "G_f 1,400 (2nd-edition abstract)",
+      "value": 1400,
+      "quote": "we calculate that natural selection can accomplish at most 180 fixations on the human lineage given 252,000 generations and 1,400 generations per fixation (the fastest empirical rate ever measured in any organism). This represents 0.000088% of the approximately 205 million fixations required on the human lineage. The shortfall is 1,139,000-fold.",
+      "locator": "Q91, McCarthy thread comment 340102853 (2026-09-18)"
+    },
+    {
+      "name": "G_f 1,587 (strict count)",
+      "value": 1587,
+      "quote": "go to the high-resolution data set for all 273,000 generations across the 12 populations, then run the numbers, is 1,587 generations per fixation.",
+      "locator": "Q85, AI Central An Intelligent Groove ¶16 (2026-10-03)"
+    },
+    {
+      "name": "strict per-population non-mutator counts (Z23105291)",
+      "value": [
+        66,
+        73,
+        14,
+        9,
+        27
+      ],
+      "quote": "per-population non-mutator counts 66, 73, 14, 9, 27 (sum 189, avg 37.8; 60,000/37.8 = 1,587, derived)",
+      "locator": "quotes-day.md discrepancy table, row 9"
+    }
+  ],
+  "values": {
+    "1600": {
+      "derivation": "40,000/25",
+      "value": 1600,
+      "citations": [
+        "Nature 2009 (2019 post)",
+        "Good et al. 2017 (2025 papers)"
+      ],
+      "barrick_2009_span_gens": 20000
+    },
+    "1322": {
+      "derivation": "60,000/45.4",
+      "value": 1321.59
+    },
+    "893": {
+      "derivation": "clone pair at 50,000",
+      "implied_fixations": 55.991
+    },
+    "1400": {
+      "F": 180,
+      "share_pct": 8.78049e-05,
+      "shortfall": 1138890.0,
+      "printed_shortfall": 1139000
+    },
+    "1587": {
+      "derivation": "60,000/(189/5)",
+      "value": 1587.3
+    },
+    "ratios": {
+      "1400/1322": 1.059,
+      "1587/1400": 1.13357,
+      "1587/1322": 1.20045
+    }
+  },
+  "positions": {
+    "day": "cites the LTEE for its fixation rate and updates the figure as data improve: 1,600 -> 1,322 (893) -> 1,587",
+    "critic": "1,400 matches neither 1,322 (+5.9%) nor 1,587 (-11.8%); the 1,600 citation moves from Nature 2009 to Good 2017"
+  },
+  "notes": "Provenance only: every figure's arithmetic reproduces from its own stated counts; the origin of 1,400 is not in held text."
+}

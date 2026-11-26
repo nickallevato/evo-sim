@@ -1,0 +1,101 @@
+{
+  "id": "M-014",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-014.py",
+  "script_sha256": "bf61981fd22ba69939a9962948d4c34edb225a6841b3131fadb74ee5a8573dda",
+  "object": "M-014",
+  "inputs": [
+    {
+      "name": "d and loci, Z18165980 (Methods)",
+      "value": {
+        "d": 0.45,
+        "pm": 0.08,
+        "loci": [
+          "LCT",
+          "SLC24A5",
+          "HERC2"
+        ]
+      },
+      "quote": "Three independent loci (LCT, SLC24A5, HERC2) yielded d = 0.45 ± 0.08^2.",
+      "locator": "Q10, Z18165980 ¶69"
+    },
+    {
+      "name": "d and loci, Z18166234 (citing Day and Athos 2025a)",
+      "value": {
+        "d": 0.45,
+        "loci": [
+          "LCT",
+          "SLC45A2",
+          "TYR"
+        ]
+      },
+      "quote": "Day and Athos (2025a) estimated d empirically from ancient DNA time series, finding d ≈ 0.45 from three independent loci (LCT, SLC45A2, TYR).",
+      "locator": "Q22, Z18166234 ¶5"
+    },
+    {
+      "name": "Z18165980 publication date",
+      "value": "2025-12-28",
+      "quote": "`Z18165980` (Zenodo pub. 2025-12-28, record modified 2026-01-06)",
+      "locator": "quotes-day.md Q10 source line"
+    },
+    {
+      "name": "Z18166234 publication date",
+      "value": "2025-12-24",
+      "quote": "`Z18166234` (Zenodo pub. 2025-12-24, record modified 2026-01-06)",
+      "locator": "quotes-day.md Q22 source line"
+    },
+    {
+      "name": "2025 effective generations",
+      "value": 146250,
+      "quote": "Effective generations = 325,000 × 0.45 = 146,250",
+      "locator": "Q09, Z18165980 ¶37"
+    },
+    {
+      "name": "2019 generations",
+      "value": 450000,
+      "quote": "there have been 450,000 chimp and human generations since the CHLCA",
+      "locator": "Q04"
+    },
+    {
+      "name": "202,500 (Tree of Woe, TW-01)",
+      "value": 202500,
+      "quote": "450,000 x 0.45 = 202,500 (the \"202,500 generations\" Tree of Woe interview figure, TW-01)",
+      "locator": "claim file A4 formal statement"
+    }
+  ],
+  "values": {
+    "d": 0.45,
+    "pm": 0.08,
+    "loci_Z18165980": [
+      "HERC2",
+      "LCT",
+      "SLC24A5"
+    ],
+    "loci_Z18166234": [
+      "LCT",
+      "SLC45A2",
+      "TYR"
+    ],
+    "shared": [
+      "LCT"
+    ],
+    "differing": [
+      "HERC2",
+      "SLC24A5",
+      "SLC45A2",
+      "TYR"
+    ],
+    "days_apart": 4,
+    "N_eff_325000": 146250,
+    "N_eff_450000": 202500,
+    "N_eff_325000_band": [
+      120250.0,
+      172250.0
+    ]
+  },
+  "positions": {
+    "day": "d about 0.45 from three independent loci",
+    "critic": "the two papers list different locus sets (one shared, LCT) for the same value; held text cannot say which is a typo"
+  },
+  "notes": "The '^2' after 0.08 in Q10 is printed as in the extracted text (footnote marker or exponent; not resolved here)."
+}

@@ -1,0 +1,103 @@
+{
+  "id": "M-006",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-006.py",
+  "script_sha256": "11921df3a922d5905a08f0f40743c568bdf364b72b529e77c0df050878c8d664",
+  "object": "M-006",
+  "inputs": [
+    {
+      "name": "ceiling statement",
+      "cite": "A2e q1 (Q131)",
+      "quote": "Whatever number the LTEE produces, it is the empirical ceiling on what evolution can accomplish when every tool in its kit is deployed simultaneously under ideal conditions."
+    },
+    {
+      "name": "U_E, LTEE per genome per generation",
+      "value": 0.00041,
+      "cite": "Q132; parameters ltee.mu_genome_ancestral"
+    },
+    {
+      "name": "U_h factors 3.2e9 bp x 1.2e-8",
+      "value": [
+        3200000000.0,
+        1.2e-08
+      ],
+      "cite": "Q135 (printed with x100); parameters mutation.new_mutations_per_haploid_genome"
+    },
+    {
+      "name": "kappa",
+      "value": 93659,
+      "cite": "parameters mutation.supply_ratio_kappa"
+    },
+    {
+      "name": "G_f and achievable",
+      "value": [
+        1322,
+        191
+      ],
+      "cite": "Q58, Q17"
+    },
+    {
+      "name": "linear-scaling illustration",
+      "cite": "A5b q2 (RE-08), caveat A5b q3 (RE-09)",
+      "quote": "the achievable number (17.9 million) is about equal to the required number (17.5 million)"
+    },
+    {
+      "name": "mutator G_f 104.7 and 78, clone pair 893",
+      "cite": "claim file A2d; Q13"
+    },
+    {
+      "name": "supply-limited model result (not recomputed)",
+      "cite": "claim file A2e, R4 A2e",
+      "quote": "the flip kappa* is a threshold on supply x beneficial-fraction x effect-size (central 217, corners 3.9-13,050)"
+    }
+  ],
+  "values": {
+    "U_h": 38.4,
+    "U_E": 0.00041,
+    "kappa": 93658.5,
+    "rate_ceiling_per_gen": 0.00075643,
+    "F_no_scaling": 191,
+    "F_linear": 17888800.0,
+    "F_linear_over_17.5e6": 1.02222,
+    "mutator_exponents": [
+      0.465452,
+      0.614568
+    ],
+    "scale_factors": [
+      206.072,
+      1135.94
+    ],
+    "F_sublinear": [
+      39359.7,
+      216965.0
+    ],
+    "shortfall_sublinear_vs_17.5e6": [
+      444.617,
+      80.6582
+    ],
+    "shortfall_sublinear_vs_205e6": [
+      5208.37,
+      944.853
+    ]
+  },
+  "positions": {
+    "day": {
+      "transfer": "none (kappa^0): the LTEE is the best case, so human rate <= 1/G_f",
+      "F": 191,
+      "shortfall_vs_205e6": 1073300.0
+    },
+    "critic": {
+      "transfer": "unstated; supply gap 93,659x unscaled; linear scaling is an illustration only (RE-09)",
+      "F_linear": 17888800.0,
+      "shortfall_vs_17.5e6_linear": 0.978267
+    },
+    "sensitivity_not_a_side": {
+      "transfer": "LTEE 100x mutator response, exponent 0.47-0.61 (claim file A5b)",
+      "F": [
+        39359.7,
+        216965.0
+      ]
+    }
+  },
+  "notes": "The ceiling holds only under a stated transfer factor; Day states none. The arithmetic of each transfer is fixed here; the supply-limited model's flip point is R4 A2e's (kappa* central 217), cited not recomputed."
+}

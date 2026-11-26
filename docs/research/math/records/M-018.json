@@ -1,0 +1,107 @@
+{
+  "id": "M-018",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-018.py",
+  "script_sha256": "bf4927c06cc16542970bf08051b0d9e25f42f395d34e66c57f99ef0e857c6072",
+  "object": "M-018",
+  "inputs": [
+    {
+      "name": "human K, T",
+      "value": [
+        3200,
+        325000
+      ],
+      "cite": "A6 q1 (Z18452504 s4.3 l.325)"
+    },
+    {
+      "name": "human block range",
+      "value": [
+        3200,
+        32000
+      ],
+      "cite": "claim file A6 (Z18452504 l.318)"
+    },
+    {
+      "name": "scan counts",
+      "value": "dozens to hundreds",
+      "cite": "A6 q3"
+    },
+    {
+      "name": "W human",
+      "value": [
+        10000,
+        33000
+      ],
+      "cite": "claim file A6 (Hernandez 2011; MITTENS 3.0 s8.2 N_e); R4 GAP-02"
+    },
+    {
+      "name": "bonobo K, years, g",
+      "value": [
+        326000,
+        930000,
+        20
+      ],
+      "cite": "A6a q1; claim file A6a (Z18441321 l.69, l.71)"
+    },
+    {
+      "name": "W bonobo",
+      "value": 20000,
+      "cite": "claim file A6a (R4 GAP-02)"
+    },
+    {
+      "name": "bonobo SweepFinder2 candidates",
+      "value": 30,
+      "cite": "claim file A6a (Yoo 2025, R4 GAP-02)"
+    }
+  ],
+  "values": {
+    "human": {
+      "gens_per_sweep": 101.562,
+      "E_detect_W10k": [
+        98.4615,
+        984.615
+      ],
+      "E_detect_W33k": [
+        324.923,
+        3249.23
+      ]
+    },
+    "bonobo": {
+      "T_nominal": 46500.0,
+      "T_effective": 40000,
+      "E_detect": [
+        140215.0,
+        163000.0
+      ],
+      "window_share": [
+        0.430108,
+        0.5
+      ],
+      "E_detect_window_div10": 16300.0,
+      "yoo_candidates": 30
+    },
+    "scan_powers": "not computed here (R4 GAP-02 holds the audit calculation)"
+  },
+  "positions": {
+    "day": {
+      "reading": "all K sweeps would leave visible signatures; scans would be saturated",
+      "visible_human": [
+        3200,
+        32000
+      ],
+      "visible_bonobo": 326000
+    },
+    "critic": {
+      "reading": "only sweeps completed within the window W are detectable, at most K x W / T at power 1",
+      "visible_human_W10k": [
+        98.4615,
+        984.615
+      ],
+      "visible_bonobo": [
+        140215.0,
+        163000.0
+      ]
+    }
+  },
+  "notes": "Human: at W = 10,000 the bound (98) is 'dozens to hundreds', so the observation does not contradict 3,200; at K = 32,000 or W = 33,000 it is 325-3,250. Bonobo: the window covers 43-50% of the span, so the bound (1.4-1.6e5) is far above Yoo's 30 candidates whatever the window. Powers are R4 GAP-02's."
+}

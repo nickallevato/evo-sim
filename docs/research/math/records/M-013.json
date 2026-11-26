@@ -1,0 +1,76 @@
+{
+  "id": "M-013",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-013.py",
+  "script_sha256": "52ae1e3ade072e57b6095755c83fc7645d577fdb7753f82b391966ba01974aec",
+  "object": "M-013",
+  "inputs": [
+    {
+      "name": "verbal definition",
+      "cite": "Q20 (Z18166234 ¶33)",
+      "quote": "d = (Actual allele frequency change per generation) / (Change predicted by discrete-generation model)"
+    },
+    {
+      "name": "integral definition",
+      "cite": "Q21 (Z18166234 ¶51)",
+      "quote": "d = T × d_continuous = T × [∫ μ(x) × l(x) × v(x) dx / ∫ l(x) × v(x) dx]"
+    },
+    {
+      "name": "d = 0.45",
+      "cite": "Q22; parameters selection.turnover_d"
+    },
+    {
+      "name": "g_len 25, G_f 1,322, t_div 6.3 My",
+      "cite": "Q18, Q58"
+    },
+    {
+      "name": "Hancock cancellation",
+      "cite": "A4f q2 (GG-22)",
+      "quote": "if you plugged in 25 there then you also have 25 in the denominator and cancel"
+    },
+    {
+      "name": "R4 C2 hazard-scale results",
+      "cite": "claim file A4 (R4-H-C2)",
+      "quote": [
+        "Day's d = mean cumulative hazard at the age of mothers (0.789 vs 0.784)",
+        "d*s is exact (V1, T*dr/s = 0.778 vs d = 0.789, within 1.5%)",
+        "For per-generation s (fecundity, pre-maturity survival) the factor is 1 (V3/V4: Day's d*s 20-22% below exact)"
+      ]
+    }
+  ],
+  "values": {
+    "d_dims": "dimensionless",
+    "implied_mean_mortality_force_per_y": 0.018,
+    "F_max_with_d_0.45": 85.7791,
+    "F_max_units": "fix",
+    "F_max_hancock_d_25": 4765.51,
+    "F_max_hancock_units": "fix x gen",
+    "N_eff_hazard_scale_d_0.45": 113400.0,
+    "N_eff_per_generation_s": 252000,
+    "r4_c2": {
+      "d_vs_mean_cum_hazard": [
+        0.789,
+        0.784
+      ],
+      "T_dr_over_s_vs_d": [
+        0.778,
+        0.789
+      ],
+      "per_gen_s_factor": 1,
+      "day_ds_below_exact_per_gen": "20-22%"
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "d is defined (Ch.13, App. A, Z18166234) and dimensionless; Hancock's d = 25 is not Day's d",
+      "F_max": 85.7791,
+      "N_eff": 113400.0
+    },
+    "critic": {
+      "reading": "no equivalent term in population genetics; for per-generation s the correction is 1",
+      "N_eff": 252000,
+      "F_max_at_factor_1": 190.62
+    }
+  },
+  "notes": "d x s is exact for hazard-scale s and the factor is 1 for per-generation s (R4 C2); which scale the aDNA s values use was not retrieved, so the choice stays with the claim verdicts (A4, A4f)."
+}

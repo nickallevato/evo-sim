@@ -1,0 +1,37 @@
+{
+  "id": "M-017",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-017.py",
+  "script_sha256": "b20a019528a2fbcbd350d7c62516a3243091ab8e477bf9bee996b28f3d75507e",
+  "object": "M-017",
+  "inputs": [
+    {
+      "name": "human-derived G_f, N_gen, printed F, R",
+      "value": [
+        27600,
+        252000,
+        8,
+        205000000.0
+      ],
+      "cite": "Q19 (Z23003785 s8.6 p.15)"
+    },
+    {
+      "name": "g_len",
+      "value": 25,
+      "cite": "Q18"
+    }
+  ],
+  "values": {
+    "F": 9.13043,
+    "printed_F": 8,
+    "gens_for_printed_F": 220800,
+    "t_div_for_printed_F_at_25y": 5520000.0,
+    "printed_below_by": 0.12381,
+    "shortfall_printed": 25625000.0,
+    "shortfall_corrected": 22452400.0
+  },
+  "positions": {
+    "day": "about 8 achievable fixations against 205 million required",
+    "critic": "the printed 8 is 9.13 on its own inputs; the figure does not reproduce but the conclusion is unchanged"
+  }
+}

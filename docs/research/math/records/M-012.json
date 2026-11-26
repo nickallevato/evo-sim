@@ -1,0 +1,87 @@
+{
+  "id": "M-012",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-012.py",
+  "script_sha256": "99bfd43dd832b17571a5cdaf4c708c87a0697d18de60c4fe5265fe4e3ce75f57",
+  "object": "M-012",
+  "inputs": [
+    {
+      "name": "R total and per lineage (3.0)",
+      "value": [
+        410000000.0,
+        205000000.0
+      ],
+      "cite": "Q15"
+    },
+    {
+      "name": "R per lineage (2025)",
+      "value": [
+        40000000.0,
+        20000000.0
+      ],
+      "cite": "Q12"
+    },
+    {
+      "name": "F one lineage",
+      "value": "252,000/1,400 = 180",
+      "cite": "Q91 (A2j q1); A2d q3 (DU-02)"
+    },
+    {
+      "name": "Hancock doubling",
+      "value": 360,
+      "cite": "A3d q1 (GG-02) and claim file A3d"
+    },
+    {
+      "name": "2019 convention",
+      "value": [
+        562,
+        29999438,
+        "15e6 + 15e6"
+      ],
+      "cite": "Q04, Q05"
+    },
+    {
+      "name": "3.0 achievable",
+      "value": 191,
+      "cite": "Q17"
+    },
+    {
+      "name": "polarised SNV split",
+      "value": [
+        0.486,
+        0.514
+      ],
+      "cite": "claim file A3d (R4 GAP-07b)"
+    }
+  ],
+  "values": {
+    "shortfall_day_per_lineage": 1138890.0,
+    "shortfall_hancock_total": 1138890.0,
+    "conventions_equal": true,
+    "shortfall_both_double_count": 569444.0,
+    "shortfall_3.0_per_lineage_191": 1073300.0,
+    "shortfall_2019_either_convention": 53333.3,
+    "gap07b_human_share": 0.486
+  },
+  "positions": {
+    "day": {
+      "convention": "R halved to the human lineage, F for one lineage",
+      "R": 205000000.0,
+      "F": 180.0,
+      "shortfall": 1138890.0
+    },
+    "critic": {
+      "convention": "F doubled for two lineages, valid if R is the total divergence",
+      "R": 410000000.0,
+      "F": 360.0,
+      "shortfall": 1138890.0
+    },
+    "both": {
+      "R": 205000000.0,
+      "F": 360.0,
+      "shortfall": 569444.0,
+      "note": "double count: halves the shortfall"
+    }
+  },
+  "notes": "The two conventions are the same ratio; Hancock's doubling changes the shortfall only if applied to a required count that is already per lineage. The 2019 post used the doubled-F convention (562)."
+}

@@ -1,0 +1,130 @@
+{
+  "id": "M-001",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-001.py",
+  "script_sha256": "7ed3ff284b47999ad54da622c2d403a6360eb05b4f9f9d4a99c709cfb6fe2fcb",
+  "object": "M-001",
+  "inputs": [
+    {
+      "name": "formula",
+      "value": "F_max = (t_div x d)/(g_len x G_f)",
+      "cite": "Q06"
+    },
+    {
+      "name": "2019 t_div, g_len, G_f, table F",
+      "value": [
+        9000000.0,
+        20,
+        1600,
+        125
+      ],
+      "cite": "Q03; parameters divergence.t_div_years.day_2019, generation_time_years.day_2019, ltee.gens_per_fixation.day_2019"
+    },
+    {
+      "name": "2019 text generations, F, shortfall",
+      "value": [
+        450000,
+        562,
+        29999438
+      ],
+      "cite": "Q04"
+    },
+    {
+      "name": "2019 R",
+      "value": "15e6 per lineage, 30e6 total",
+      "cite": "Q05; parameters divergence.required_fixations.day_2019"
+    },
+    {
+      "name": "2025 nominal gens, d, G_f, F, R, shortfall",
+      "value": [
+        325000,
+        0.45,
+        1600,
+        91,
+        20000000.0,
+        219780
+      ],
+      "cite": "Q09"
+    },
+    {
+      "name": "3.0 t_div, g_len, N_gen",
+      "value": [
+        6300000.0,
+        25,
+        252000
+      ],
+      "cite": "Q18"
+    },
+    {
+      "name": "3.0 G_f",
+      "value": "60,000/45.4 = 1,322",
+      "cite": "Q58; parameters ltee.gens_per_fixation.day_mittens3_nonmutator"
+    },
+    {
+      "name": "3.0 R and shortfall",
+      "value": [
+        205000000.0,
+        1075000
+      ],
+      "cite": "Q14; parameters shortfall.mittens3_full"
+    },
+    {
+      "name": "Hoessjer F",
+      "value": "9e6 x 0.45/(20 x 1,600) = 126.6, 'upper bound 127'",
+      "cite": "A5a q1 (HO-01); claim file A5a formal statement"
+    }
+  ],
+  "values": {
+    "2019": {
+      "N_gen": 450000.0,
+      "F_max": 281.25,
+      "table_printed": 125,
+      "table_over_F": 0.444444,
+      "t_div_needed_for_125": 4000000.0,
+      "text_printed": 562,
+      "text_over_F": 1.99822,
+      "shortfall_per_lineage": 53333.3
+    },
+    "2025": {
+      "N_eff": 146250.0,
+      "F_max": 91.4062,
+      "printed_F": 91,
+      "shortfall_printed": 219780,
+      "shortfall_unrounded": 218803.0
+    },
+    "3.0": {
+      "N_gen": 252000.0,
+      "G_f": 1321.59,
+      "F_max": 190.62,
+      "shortfall": 1075440.0,
+      "printed": 1075000,
+      "F_max_with_d": 85.7791,
+      "shortfall_with_d": 2389860.0,
+      "ratio_with_d": 2.22222
+    },
+    "hoessjer": {
+      "F_max": 126.562,
+      "printed": 127
+    }
+  },
+  "positions": {
+    "day": {
+      "versions_after_2019_reconcile": true,
+      "2025_F_max": 91.4062,
+      "2025_shortfall_printed_inputs": 219780,
+      "3.0_F_max": 190.62,
+      "3.0_shortfall": 1075440.0,
+      "3.0_shortfall_with_d_0.45": 2389860.0,
+      "dropping_d_is_conservative": true
+    },
+    "critic": {
+      "2019_F_max_from_table_inputs": 281.25,
+      "2019_table_printed": 125,
+      "2019_text_printed": 562,
+      "2019_table_reconciles": false,
+      "2019_text_reconciles": false,
+      "note": "the formula is arithmetic on inputs whose transfer is the dispute (M-103, M-713); not computed here"
+    }
+  },
+  "notes": "2019 table (125) and text (562) do not reconcile with 450,000/1,600 = 281.25; the text's 562 and 29,999,438 use two-lineage F against total R, which gives the same shortfall as per-lineage R over one-lineage F (53,333). 2025 and 3.0 reconcile. Which inputs transfer is not settled here (M-103, M-713)."
+}

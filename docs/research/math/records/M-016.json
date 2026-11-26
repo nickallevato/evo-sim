@@ -1,0 +1,61 @@
+{
+  "id": "M-016",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-016.py",
+  "script_sha256": "20ae977337618db6dde04aaa14686b0bcd02760610873e21937360ca0602c903",
+  "object": "M-016",
+  "inputs": [
+    {
+      "name": "Matev units argument",
+      "cite": "A2i q1 (RF-4)",
+      "quote": "The reasoning is that 1/X1 is high (due to 1/B1 being high), so it very generous for the estimation of X2 to use the A1 value as an estimate for A2 even though A1 isn't why 1/X1 is high."
+    },
+    {
+      "name": "LTEE generations per day",
+      "value": 6.64,
+      "cite": "parameters ltee.generations_per_day (also Z23003785 p.4; verified: false)"
+    },
+    {
+      "name": "A1 (G_f)",
+      "value": [
+        1322,
+        1587
+      ],
+      "cite": "Q58, Q85"
+    },
+    {
+      "name": "B2 (human g_len)",
+      "value": 25,
+      "cite": "Q18"
+    }
+  ],
+  "values": {
+    "B1_years": 0.000412327,
+    "B1_hours": 3.61446,
+    "X1_years": [
+      0.545096,
+      0.654363
+    ],
+    "X2_years_if_A2_eq_A1": [
+      33050,
+      39675
+    ],
+    "X2_over_X1": 60631.5
+  },
+  "positions": {
+    "day": {
+      "reading": "G_f is in generations, so generation time is not a factor; A2 = A1",
+      "X2_years": [
+        33050,
+        39675
+      ],
+      "per_year_gap_from_B_only": 60631.5
+    },
+    "critic": {
+      "reading": "the LTEE's high per-year rate comes from short B1, not low A1, so it says nothing about A2 against A1",
+      "number": null,
+      "why_none": "Matev states no A2; the position is that A2 >= A1 is unshown, which has no figure to check"
+    }
+  },
+  "notes": "Both readings agree on the arithmetic: X = A x B and X2/X1 = (A2/A1)(B2/B1). The dispute is A2/A1, which no held source measures; the statement claims no number for it, so the object is resolved, not blocked."
+}

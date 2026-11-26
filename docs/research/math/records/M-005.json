@@ -1,0 +1,88 @@
+{
+  "id": "M-005",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-005.py",
+  "script_sha256": "0d3cc8ff000a539fe37e0cefbd2fc2f773a16f369f14e60b922a4f690f9be614",
+  "object": "M-005",
+  "inputs": [
+    {
+      "name": "Camestros: average is not fastest",
+      "cite": "A2d q1 (CA-11)",
+      "quote": "If the figure is an average then it includes some mutations that fixed quicker and so is not the fastest fixed mutation rate."
+    },
+    {
+      "name": "Camestros concession: an average",
+      "cite": "A2d q2 (CA-10)",
+      "quote": "He is correct that when he calculated the number it was an average."
+    },
+    {
+      "name": "Duffy relaying Day: 180 at the fastest rate",
+      "cite": "A2d q3 (DU-02)",
+      "quote": "180 total fixed mutations is all there's time for using the fastest rate of mutational fixation ever observed in any organism"
+    },
+    {
+      "name": "2nd-edition abstract: 1,400 the fastest",
+      "cite": "Q91",
+      "quote": "1,400 generations per fixation (the fastest empirical rate ever measured in any organism)"
+    },
+    {
+      "name": "no mammalian fixation faster than 1,600",
+      "cite": "A5g q2",
+      "quote": "No one has ever observed any human or even mammalian fixation faster than 1,600 generations."
+    },
+    {
+      "name": "mutator rates in the 3.0 tables",
+      "value": [
+        43,
+        183,
+        104.7,
+        78
+      ],
+      "cite": "claim file A2d formal statement (Z23003785 s5.1, s7.2)"
+    },
+    {
+      "name": "non-mutator G_f 1,322 and clone pair 893",
+      "value": [
+        1322,
+        893
+      ],
+      "cite": "Q58, Q13"
+    },
+    {
+      "name": "g_len",
+      "value": 25,
+      "cite": "Q18"
+    }
+  ],
+  "values": {
+    "1322_over_43": 30.7442,
+    "1322_over_183": 7.22404,
+    "893_over_104.7": 8.52913,
+    "1322_over_78": 16.9487,
+    "F_at_1322": 190.62,
+    "F_at_1400": 180.0,
+    "fastest_day_nonmutator_figure": 893,
+    "1322_over_893": 1.4804,
+    "window_years_1600_gen_at_25y": 40000
+  },
+  "positions": {
+    "day": {
+      "reading": "'fastest' means the throughput rate of the applicable non-mutator class; an average is the right quantity to multiply by time (Camestros concedes the average, CA-10)",
+      "F_at_1322": 190.62,
+      "F_at_1400": 180.0,
+      "caveat": "among Day's own non-mutator figures the clone-pair 893 is faster than 1,322 (1.48x) and 1,400 (1.57x)"
+    },
+    "critic": {
+      "reading": "a mean cannot be the fastest rate; the LTEE's point-mutator populations fix at 43-183 gen/fix",
+      "faster_by": [
+        7.22404,
+        30.7442
+      ],
+      "mutator_means_faster_by": [
+        8.52913,
+        16.9487
+      ]
+    },
+    "window": "1,600 generations at 25 y is 40,000 y, longer than any direct observation of human allele-frequency change, so 'no faster fixation observed' cannot separate a slow rate from a short window"
+  }
+}

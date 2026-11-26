@@ -1,0 +1,87 @@
+{
+  "id": "M-015",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-015.py",
+  "script_sha256": "dff003c833d8c62903620ec14bb6d97779bdf25c3c439b6d8a857e6269e759e0",
+  "object": "M-015",
+  "inputs": [
+    {
+      "name": "genome length, per-site rate, fold",
+      "value": [
+        3200000000.0,
+        1.2e-08,
+        100
+      ],
+      "cite": "Q135 (Z23003785 s6.4 p.11)"
+    },
+    {
+      "name": "printed mutations",
+      "value": 38400,
+      "cite": "Q135"
+    },
+    {
+      "name": "deleterious fraction and printed count",
+      "value": [
+        0.1,
+        3840
+      ],
+      "cite": "A5h q1"
+    },
+    {
+      "name": "s and printed fitnesses",
+      "value": [
+        [
+          0.001,
+          0.02
+        ],
+        [
+          0.01,
+          1e-17
+        ]
+      ],
+      "cite": "A5h q2"
+    },
+    {
+      "name": "critic correction",
+      "cite": "A2h q1 (RE-02)",
+      "quote": "3.2 billion × 1.2 × 10⁻⁸ × 100 is 3,840 mutations per haploid genome, not 38,400."
+    }
+  ],
+  "values": {
+    "mutations": 3840.0,
+    "printed_mutations": 38400,
+    "deleterious": 384.0,
+    "printed_deleterious": 3840,
+    "fitness_s0.001": 0.681001,
+    "fitness_s0.01": 0.0210821,
+    "fitness_s0.001_at_printed_3840": 0.0214523,
+    "fitness_s0.01_at_printed_3840": 1.73439e-17,
+    "ratio_s0.001": 31.7448,
+    "ratio_s0.01": 1215540000000000.0
+  },
+  "positions": {
+    "day": {
+      "claim": "a 100-fold supermutator is near zero fitness ('functionally dead')",
+      "printed": {
+        "mutations": 38400,
+        "deleterious": 3840,
+        "fitness": [
+          0.02,
+          1e-17
+        ]
+      },
+      "exponentiation_correct_for_printed_inputs": true
+    },
+    "critic": {
+      "claim": "the product is 3,840, not 38,400",
+      "corrected": {
+        "mutations": 3840.0,
+        "deleterious": 384.0,
+        "fitness": [
+          0.681001,
+          0.0210821
+        ]
+      }
+    }
+  }
+}

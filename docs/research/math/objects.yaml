@@ -1372,7 +1372,8 @@ objects:
     day: Formula is a rate calculation with five stated inputs; all versions after 2019 reconcile; dropping d in 3.0 makes the shortfall smaller than with d (2.39e6 with d = 0.45), so the drop is conservative
     critic: The formula is arithmetic on inputs whose transfer is the dispute (M-103, M-713); the 2019 table does not reconcile (125, 562 against 281.25)
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-001.json
 - id: M-002
   kind: parameter
   statement: 'Divergence-time and generation-length inputs: t_div 9.0 My (2019), 6-7 My (2025), 6.3 My (3.0), 5.5-6.3 My (Yoo 2025), at least 7-8 My (Langergraber 2012), about 6 My (Scally 2012), Day 2026-05-07 revision 250 kya to 1.3 Mya; g_len
@@ -1393,7 +1394,8 @@ objects:
     day: Uses 6.3 My (the Yoo maximum) at 25 y; the 3.0 paper returns to 6.3 My after the May 2026 revision to 250 kya-1.3 Mya
     critic: Literature gives 5.5 to at least 8 My and 24-25 y; the two Day inputs cannot both be current (A1c); the input range alone is 2.7x and does not close a 1e5-1e6 shortfall
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-002.json
 - id: M-003
   kind: parameter
   statement: 'Provenance of Day''s headline G_f values: 1,600 (25 mutations in about 40,000 LTEE generations, cited to Nature 2009 in 2019 and Good 2017 in 2025; Barrick 2009 reports 20,000-generation genomes), 1,322 (60,000/45.4, non-mutators,
@@ -1414,7 +1416,8 @@ objects:
     day: Cites the LTEE for its fixation rate and updates the figure as the data improve (1,600, 1,322, 1,587)
     critic: The 1,400 matches neither the 1,322 nor the 1,587 count and the 1,600 citation drifts between papers; the version drift is a provenance issue, not an arithmetic one
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-003.json
 - id: M-004
   kind: empirical
   statement: 'Three natural-selection-only LTEE generation figures in the Day corpus: 4,615 gens per beneficial fixation (blogs 2026-09-27, -28, -30; 60,000/4,615 = 13.0 fixations), about 1,408 (Z23003785 s4.3: 56.0 clone-pair - 20.5 neutral
@@ -1447,7 +1450,8 @@ objects:
     day: Wording "fastest" was meant of the throughput rate; Camestros concedes G_f is an average and not a time for one chromosome
     critic: A mean cannot be the fastest rate; point-mutator populations fix at 43-183 gen/fix
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-005.json
 - id: M-006
   kind: inference
   statement: 'The LTEE as an empirical ceiling: rate_human <= 1/G_f per generation with no scaling for mutation supply, recombination or population structure (human supply 38.4 per genome per generation against 4.1e-4 in the LTEE, ratio 93,659);
@@ -1461,7 +1465,8 @@ objects:
     day: LTEE is the best case with every tool deployed under ideal conditions, so human shortfall is a lower bound
     critic: 'The ceiling needs the transfer to hold; a 93,659-fold supply gap and sexual recombination are unscaled (claim file A2e: non-sequitur)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-006.json
 - id: M-007
   kind: identity
   statement: 'Mutation-supply arithmetic between E. coli and humans: genome ratio 3.1e9/4.6e6 = 674 (McCarthy text "roughly 690", 689 at 4.5 Mb); per-site ratio 1.2e-8/8.9e-11 = 135; per-genome U_h/U_E = 38.4/4.1e-4 = 93,659; KITTENS decomposition
@@ -1484,7 +1489,8 @@ objects:
     day: The formula uses an observed rate so supply is inside G_f; the LTEE per-genome supply is 4.1e-4 as in Day's own s4.3
     critic: The expected fixation rate must be set by genome size and mutation rate; the supply ratio is 94,000x and counts as an artifact of the headline
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-007.json
 - id: M-008
   kind: identity
   statement: 'Required fixation count by version: 2019 15e6 per lineage (30e6 total; 35e6 x 0.862 = 30.2e6 if corrected for polymorphism); 2025 (35e6 SNV + 5e6 indel)/2 = 20e6; 3.0 SNV-only 17.5e6 with shortfall 17.5e6/191 = 91,623 (paper 91,600)
@@ -1578,7 +1584,8 @@ objects:
     day: Required count apportioned symmetrically to the human lineage
     critic: Achievable should be doubled (2 x 180 = 360) if the required count is the total divergence
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-012.json
 - id: M-013
   kind: identity
   statement: 'Definition and units of d: d = (actual allele-frequency change per generation)/(change predicted by the discrete model) = T x d_continuous with d_continuous the l(x)v(x) weighted mean of the mortality force; d x s is exact for hazard-scale
@@ -1598,7 +1605,8 @@ objects:
     day: d is defined, derived in Ch.13 and App. A, and dimensionless; Hancock's cancellation uses a d that is not Day's
     critic: No equivalent term exists in population genetics; for per-generation s the correction is 1
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-013.json
 - id: M-014
   kind: empirical
   statement: 'The d = 0.45 +/- 0.08 estimate from ancient-DNA time series at three loci: {LCT, SLC24A5, HERC2} in Z18165980 and {LCT, SLC45A2, TYR} in Z18166234, four days apart; 325,000 x 0.45 = 146,250 and 450,000 x 0.45 = 202,500 effective
@@ -1614,7 +1622,8 @@ objects:
     day: d about 0.45 from three independent loci
     critic: The two papers list different locus sets for the same value; the record cannot say if one is a typo
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-014.json
 - id: M-015
   kind: identity
   statement: 'Supermutator arithmetic of s6.4: 3.2e9 x 1.2e-8 x 100 = 3,840 (printed 38,400); 10% deleterious = 384 (printed 3,840); 0.999^384 = 0.68 (printed 0.02) and 0.99^384 = 0.021 (printed 1e-17); Day''s exponentiation is right for the
@@ -1631,7 +1640,8 @@ objects:
     day: Fitness of a 100-fold supermutator is near zero ("functionally dead")
     critic: The product is 3,840 not 38,400 so the downstream fitnesses are 0.68 and 0.021
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-015.json
 - id: M-016
   kind: inference
   statement: 'Units of G_f, years against generations: years per fixation X = A x B with A generations per fixation and B years per generation (subscript 1 LTEE, 2 humans); a high per-year LTEE rate comes from a short B1, so using A1 for A2 is
@@ -1644,7 +1654,8 @@ objects:
     day: Uses generations per fixation, not years, so the generation-time difference is not a factor
     critic: A high per-year rate says nothing about A1 against A2 (Matev)
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-016.json
 - id: M-017
   kind: identity
   statement: 'Human-derived rate in s8.6: one fixation per 27,600 effective generations (Day and Athos 2025, App. D) applied to 252,000 generations gives 252,000/27,600 = 9.13 against the printed 8 (8 x 27,600 = 220,800, i.e. 5.5 My at 25 y);
@@ -1657,7 +1668,8 @@ objects:
     day: About 8 achievable fixations against 205 million required
     critic: The printed 8 is 9.13 on its own inputs; the figure is not reproduced but the conclusion is unchanged
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-017.json
 - id: M-018
   kind: inference
   statement: 'Detectable sweep signatures: 3,200 sweeps in 325,000 generations is one per 100 generations; detectable at power 1 is K x W / T with W about 10,000 generations (at most about 98) in the human case; bonobo 326,000 loci over 46,500
@@ -1676,7 +1688,8 @@ objects:
     day: If thousands of sweeps occurred the genome would show saturated signatures; it does not
     critic: At a ~10,000-generation window at most ~98 are detectable at power 1, so "dozens to hundreds" does not contradict 3,200
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-018.json
 - id: M-019
   kind: model-choice
   statement: 'All-fixations model against adaptive-only model: Day counts every fixation as carried by a sweep (hitchhikers included, required count 3,200 to 32,000 blocks or 326,000 loci); critics count only the adaptive K_a as sweeps and treat
@@ -1691,7 +1704,8 @@ objects:
     day: All required fixations are sweeps (linkage blocks are swept whole)
     critic: Only adaptive fixations pass through sweeps; neutral fixations need no sweep
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-019.json
 - id: M-911
   kind: empirical
   statement: "Share of human-great-ape divergence inside the mesas: Day, 'the dominant source of genomic divergence between humans and the great apes' (no fraction, no divergence measure given); share = single-nucleotide differences inside human mesas / human-chimp single-nucleotide differences over the cell's used windows; R4 FM: 1.25-2.5% on alignable sequence (the FM8b and ROOT-FM files give the same range); structural, indel and segmental-duplication divergence (Yoo et al. 2025 SDRs, 327 Mb per lineage) not measured, so the reading of 'genomic divergence' as single-nucleotide is implicit; covers FM8b q1 (part b only; parts a and c are not carried here, and 'beyond any dispute' is rhetoric, M-221)"
