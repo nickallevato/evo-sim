@@ -1,0 +1,84 @@
+{
+  "id": "M-905",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-905.py",
+  "script_sha256": "424108eb28720853cc1e374ac84aa69717ef986b8da119e2518ca8a9b814ec11",
+  "object": "M-905",
+  "inputs": [
+    {
+      "name": "Day's headline",
+      "value": "0.80 on 20,400 GENCODE v46 genes",
+      "cite": "DN1 (Q172-Q173)"
+    },
+    {
+      "name": "Day's single-SNV codons",
+      "value": "71.6% N, 28.4% S, dN/dS 0.71",
+      "cite": "DN1"
+    },
+    {
+      "name": "Day's filter sentence",
+      "value": "none below 0.65; full stack 0.64 on 10 genes",
+      "cite": "DN2 (Q175)"
+    },
+    {
+      "name": "Day's gene-set arithmetic",
+      "value": "13,454; 6,946 thrown out; 51.6% more",
+      "cite": "DN3"
+    },
+    {
+      "name": "CSAC 2005",
+      "value": "Ka/Ks 0.23 on 13,454 1:1 orthologs, from 16,045 genes",
+      "cite": "quotes-literature.md CSAC2005"
+    },
+    {
+      "name": "R4 L1 (hg38/panTro5)",
+      "value": {
+        "ALL": 0.271,
+        "one2one": 0.207,
+        "N/S": 3.34,
+        "correct-frame range": "0.15-0.45"
+      },
+      "cite": "R4-L1.md Results and rows 83-84"
+    },
+    {
+      "name": "R4 L1b (T2T hs1/mPanTro3 Cactus)",
+      "value": {
+        "ALL": 0.271,
+        "one2one": 0.238,
+        "32 stacks": "0.214-0.283"
+      },
+      "cite": "R4-L1b.md Results and Filters tables"
+    }
+  ],
+  "values": {
+    "day_implied_N_over_S": 3.551,
+    "measured_N_over_S": 3.34,
+    "day_share_at_measured_N_over_S": 0.755,
+    "genes_not_in_csac_set": 6946,
+    "share_not_in_csac_set": 0.3405,
+    "day_over_csac_genes": 1.5163,
+    "csac_removed_from_own_start": 2591,
+    "gene_set_effect_L1": 1.309,
+    "gene_set_effect_L1b": 1.139,
+    "day_over_measured_all": 2.952,
+    "filter_stacks_L1b": [
+      0.214,
+      0.283
+    ],
+    "correct_frame_range_L1": [
+      0.15,
+      0.45
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "0.80 is a property of the full gene set and the 0.23 an artefact of a curated subset",
+      "holds": "his gene-set arithmetic is right (6,946 = 34.05%, 1.516); the gene-set effect has his sign on both assemblies (+31% on hg38, +14% on T2T); CSAC did select on alignment quality and coverage"
+    },
+    "critic": {
+      "reading": "a correct extraction gives about 0.27 on all genes and 0.21-0.24 on one2one genes",
+      "holds": "0.80 is 2.95x the measured all-gene value; no correct-frame computation reaches it (0.15-0.45); all 32 filter stacks sit at 0.214-0.283; Day's own two single-SNV figures imply N/S 3.55 against a measured 3.34, and his full stack (0.64) is already below his 0.65 floor"
+    }
+  },
+  "notes": "Data-check object; no verdict moves. What Day's pipeline did to reach 0.80 cannot be settled without his code, gene list or per-gene table (unreleased; DN1 internal stays pending), but that is DN1's internal verdict, not this object's measurement: the genome-wide value and its sensitivity to gene set and filters are measured twice (L1, L1b). Day's '6,946 thrown out' sets his 20,400 against CSAC's 13,454; CSAC's own start was 16,045 genes, of which its curation removed 2,591 (16.2%). L1's 0.207 is the one2one value on hg38/panTro5; the T2T value is 0.238 (L1b)."
+}

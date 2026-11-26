@@ -216,7 +216,8 @@ objects:
     day: Not addressed in the window; Day cites six of his own papers as the answer to why classical formulas fail (M-111)
     critic: If Day is right those papers should not exist (Matthews); no specific papers named
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "owner: the titles of the papers shown on screen in Gutsick Gibbon + Hancock, 'No, Vox Day's AI-Generated Books Did Not Debunk Evolution' (2026-10-03, about t=00:22:54-00:26:41; claim file ROOT-PG: titles not in the captions), most likely the 'slideshow of two dozen' of evo008@L147; the held evo008 body text (L147-150) names no paper, figure or number"
 - id: M-118
   kind: empirical
   statement: Which edition of Probability Zero the critics' first video used (original ePub vs the second edition) and whether page numbers and figures differ for that reason
@@ -615,7 +616,8 @@ objects:
   positions: {day: 'Ne varied at least 3.3-fold and likely 4-fold across the Holocene, so it cannot be treated as a constant 10,000; a drift-variance Ne near 2', critic: 'The drift-variance values are not
       Ne by the paper''s own limitation; the temporal method gives about 8,000-10,000 with no mu, and Ne of 2 would saturate every locus within the window'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-C1d.md
 - id: M-308
   kind: empirical
   statement: 'Composition of the observed "fixation" counts in the aDNA panel: blog 0 of 1,211,499 (<10% to >90%); Zenodo 1 and 3 of 1,143,671 from 50-90%; 17,806 / 3,469 newly 100% almost all from 90-99%;
@@ -627,7 +629,8 @@ objects:
       the SNP filter, sample sizes, annotation format and fixation definition and do not overlap between v62 and v66; the 99.8% in a single window is the three-bin share; the observed 1 and 3 are mildly
       above neutral at Ne 1e4'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-C1d.md
 - id: M-401
   kind: identity
   statement: 'Size of protein sequence space: 20^250 = 10^325.257 (Eden, talk p.7; the working paper p.110 prints 10^350 for length 250 or less) against the count of molecules ever; ratio 10^-273.3'
@@ -653,7 +656,8 @@ objects:
   sources: [D#q3, D2e#q3, D2h#q1, D10#q1, D10#q2, D11#q1, D11#q2, D11#q3, D11#q4, D12#q1]
   positions: {day: 'Functional sequences are so rare that random search from a 1e52 budget fails (Axe), and Taylor says one-step isolation is impossible', critic: 'Frequencies measured in random libraries differ by many orders and are for different functions; binding is not catalysis; per-sequence prevalence is not connectivity (R4 D1 leaves it untouched)'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-403.json
 - id: M-404
   kind: empirical
   statement: 'Local landscape ruggedness: the fraction of single-residue or single-nucleotide changes that keep function (Wald ''hard put to find'' a neutral hemoglobin change; Lewontin ''a very large proportion'' do not render the molecule meaningless; Waddington a large fraction of the single-step space); R4 D1 measures 53% of singles below 0.8 of the WT-like level in 114 DMS sets, 71% keeping at least half, GB1 one connected component (99.8%)'
@@ -661,7 +665,8 @@ objects:
   sources: [D#q3, D1a#q1, D1d#q1, D2b#q2, D2b#q4, D2b#q6, D2c#q1, D2c#q2, D2c#q3, D2e#q1, D2e#q3, D2h#q1, D3b#q1]
   positions: {day: 'Single changes mostly reduce or destroy function, the landscape is rugged and DMS confirms Eden (D2h, unsourced)', critic: 'Most single changes keep some function and the functional set is connected (R4 D1, local level); ''confirmed'' and cross-family connectivity are untested'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-D1-spike.md
 - id: M-405
   kind: inference
   statement: 'Path viability and path length: each intermediate must be viable (Crosby), functional proteins common or a connected topology (Eden''s two hypotheses), path lengths bounded by the generations available so only short paths can have been taken; Eden offers no path-length distribution and says it is many powers of 10 above the minimal distance 120'
@@ -696,7 +701,8 @@ objects:
   sources: [D1b#q1, D1c#q1, D2g#q5, D2i#q1, D2i#q2, D5#q1, D5#q2, D5#q3, D5#q5, D9a#q1, D9a#q2, D13#q3]
   positions: {day: 'Every algorithm has a designed fitness function, so it cannot show that biology supplies the mapping', critic: 'Simulations show what selection does once a fitness mapping exists; biological fitness feedback exists and measured landscapes (GB1) are navigable (R4 D1)'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-D1-spike.md
 - id: M-409
   kind: formula
   statement: 'Ulam''s serial improvement time: 1e11 individuals, 1e-10 per individual, gamma = 1e-6 gives 1e6 generations to spread, 1e7 to near fixation (logistic ln(1e10)/gamma = 2.3e7), times 1e6 improvements in succession = 1e13 generations; whether improvements are serial or simultaneous and whether gamma = 1e-6 is realistic (Mayr: mutants with 30 percent advantage; Ulam: ''very optimistic'')'
@@ -840,7 +846,8 @@ objects:
     day: Reports both all-cause and beneficial-only figures; the all-cause rate is the one used for the total-difference comparison
     critic: Hitchhiked neutral and mildly deleterious fixations make all-cause G_f a poor measure of beneficial-sweep throughput (no verbatim critic statement located; the literature says most early fixations were beneficial)
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "owner: (1) Tenaillon 2016's full text (bib-literature: sources/raw/sources/txt/Tenaillon2016.txt, not in this checkout; as M-124) for its beneficial-fraction estimate in the non-mutators; the held abstract says only 'most fixed mutations are beneficial', and Barrick 2009 is abstract-only; (2) a fitness-effect or parallelism classification of the 5,496 strict whole-population fixations (R4-E5E6), which needs Good et al. 2017's annotated timecourses (as M-122: fetched for R4-L6 to builder sources/raw/l6-good2017-data-2026-10-11/, not in this checkout). Arithmetic: 1,322/4,615 = 28.6% (29%), valid only on a shared time base"
 - id: M-505
   kind: inference
   statement: 'Mutator sublinearity and transfer: does a 100-fold higher mutation rate raise LTEE fixation throughput only R = 8.5x (clone pair 893/104.7), 16.9x (metagenomic 1,322/78) or 19.7x (strict 5,307 over 424,500 against 189 over 298,500), so that supply is not the bottleneck because of clonal interference, and does that bacterial result carry to sexual vertebrates; the quoted 8-17x range covers the clone-pair and metagenomic rules only, the strict counts lie outside it'
@@ -1129,7 +1136,8 @@ objects:
     day: 'Every Ara+2 sweep event was sequential and each carried 5.3 neutral hitchhikers, so the LTEE count is serial'
     critic: 'Gaps of 1,500 or more between fixation times do not exclude overlap during the rise, 5.3 does not reconcile with 66 and 14 unless it averages over populations, and one clonal population does not show the human regime'
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "owner: the same inputs as M-503 and row E6, no second request: (1) Good et al. 2017's Ara+2 timecourses (p2 annotated and well-mixed state files; fetched for R4-L6 to builder sources/raw/l6-good2017-data-2026-10-11/, not in this checkout) to group its fixations into sweep events and test overlap during the rise; (2) the Z23105291 text and xlsx (bib-day.md l.55-56) for Table 1 and the basis of 5.3. Held: R4-L6 counts 66 HMM fixations in Ara+2 at 60K; 66/14 = 4.71 per event (3.71 hitchhikers), 5.3 x 14 = 74.2 against 66 (12%) and 60,000/66 = 909 reproduce as arithmetic"
 - id: M-711
   kind: formula
   statement: "Duffy 180: 252,000 effective generations (6.3e6 y / 25 y) divided by the book's G_f of 1,400 gives 180 fixations; with the 3.0 value 1,322 it is 190.6; against 205e6 required the shortfall is 205e6/180 = 1,138,889 (the paper prints 1,139,000x); the 1,400 is a measured LTEE throughput, so the division is a rate calculation if read as T/G_f"
@@ -1385,7 +1393,8 @@ objects:
     day: "dN/dS is 0.80 on all 20,400 genes, no filter stack moves it below 0.65, and the published 0.23 comes from a pre-selected 13,454-gene subset"
     critic: "A correct extraction gives about 0.27 on all genes and 0.21-0.24 on one2one genes; the gene set explains +0.06 (+31%), not the difference to 0.80; Day's 0.80 points to an unidentified extraction or alignment problem; the 0.23 reproduces in kind"
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-905.json
 - id: M-906
   kind: empirical
   statement: "Does a protein-guided CDS alignment bias dN/dS downward: with A the aligned codons of a genome (Cactus) alignment and P the subset kept by a protein-guided aligner, claim dN/dS(P) < dN/dS(A) because A minus P is enriched for nonsynonymous change; observables |A minus P|/|A| and dN/dS(A minus P), neither given by Day, and the premise needs human-chimp proteins (about 99% identical, unverified by Day) to have enough divergent stretches to matter; R4 L1c (audit's in-script aligner, hs1 / mPanTro3 Cactus, GENCODE v35): realistic arms lower dN/dS by 2% to 6% on all genes and 1% to 4% on the real 2005 list, dropped codons nonsynonymous-enriched (0.71-0.85 against 0.479); the held CSAC 2005 Methods put the 13,454-gene set on the BLASTZ genome alignment with Clustal W only for a 7,043-gene subset"
@@ -1399,7 +1408,8 @@ objects:
     day: "A conservation-dependent alignment measures conservation: excluded codons are nonsynonymous-enriched, so the published 0.23 is a methodological artefact"
     critic: "The direction is right but the size is 2-6% against the gap from 0.271 to 0.80; the published number does not come from a protein-guided alignment on the strict reading; no external codon aligner or independent chimp CDS has been tried"
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-L1c.md
 - id: M-907
   kind: inference
   statement: "dN/dS as a measure of selection strength: Day reads 0.80 as purifying selection removing 'only about 20%' of nonsynonymous mutations (1 - 0.80 = 0.20) and concludes 'selection is not the primary mechanism of adaptive evolution'; the genome-wide ratio averages purifying removal over all coding sites and does not measure the adaptive share (A2e-alpha, bias-corrected about 9-13%); the charitable reading 'most coding substitutions are not selection-driven' follows from 0.80 and equally from 0.23 under neutral theory, so it does not carry the stated words (rule N2d, own source: DN4 ¶6 defines the ratio as purifying removal, ¶21 concludes about adaptive evolution)"
@@ -1533,7 +1543,8 @@ objects:
     day: The 1,322 is an all-cause figure; the natural-selection-only count is higher (4,615 or 24,500)
     critic: No formula is shown for 24,500 and the 1,408 uses a different method than the 4,615; three different figures for one quantity
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "outside: Day's derivation and inputs for 4,615 and ~24,500 generations per beneficial fixation (claim file A2f: no derivation appears in the corpus; the 2026-09-30 blog gives 24,500 as an UPDATE with no formula); a beneficial-only recount from data needs the fitness-effect classification M-504 is blocked on. The arithmetic reproduces: 60,000/4,615 = 13.0; 56.0 - 20.5 = 35.5 and 50,000/35.5 = 1,408 (Z23003785 s4.3); 60,000/24,500 = 2.4"
 - id: M-005
   kind: inference
   statement: 'G_f as an average, not a fastest rate: a mean over fixations (and over populations) includes faster ones, so "the fastest empirical rate ever measured" and "no observed fixation faster than 1,600 generations" need a distribution,
@@ -1634,7 +1645,8 @@ objects:
     day: The SI numbers sit on pages 14, 19 and 24, are not additive and carry no total; 410M comes from them
     critic: The stated components do not sum to 410M and 187 Mb and 410 Mb are not in Yoo 2025; base pairs are a different unit from events (M-011)
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-L7.md
 - id: M-010
   kind: empirical
   statement: 'Polymorphism share of observed human-chimpanzee divergence: CSAC 2005 mean SNV rate 1.23% between single copies with 1.06% or less fixed, polymorphism 14-22% of the observed rate (fixed fraction 0.78-0.86; 0.0106/0.0123 = 0.862),
@@ -1649,7 +1661,8 @@ objects:
     day: The 35e6 count is the observed divergence between two assembled genomes
     critic: Part of observed divergence is within-species polymorphism, 14-22%, so the required fixed count is lower
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP07c.md
 - id: M-011
   kind: model-choice
   statement: 'Unit of the requirement: base pairs of structural variation (410e6) against mutation events (35e6 SNV + 5e6 indel events + 1,140 inversions = 40e6, /2 = 20e6); one structural event can change millions of bases, measured 21.05M events
@@ -1672,7 +1685,8 @@ objects:
     day: Structural base-pair differences count as fixation-equivalents for the required count; the SNV-only variant is given as a concession
     critic: Bases affected by a rearrangement are not separate mutation events, so the 205M overstates the required events by about 10x
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-GAP07b-alignment.md
 - id: M-012
   kind: model-choice
   statement: 'Factor of two between lineages: the required count is halved to a per-lineage figure (410M/2; 40M/2) against Hancock''s claim that the achievable count should be doubled to 360 because both lineages fix mutations; doing both would
@@ -1819,4 +1833,5 @@ objects:
     day: "The mesa signature is the dominant source of divergence; the claim may refer to total (structural) divergence, on which the single-nucleotide check is silent"
     critic: "1.25-2.5% of single-nucleotide differences is not dominant; no fraction of any divergence measure is stated, so dominance is unsupported"
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "owner: Yoo et al. 2025's per-SDR coordinates (MOESM4.xlsx sheet 24 lists per-SDR sizes by lineage; bib-literature.md l.15, sources/raw/sources/supp/Yoo2025/, not in this checkout) to measure the structural, indel and SD share of divergence inside the human mesas; the single-nucleotide leg is settled (R4-FM: 1.25-2.5% on alignable sequence) and R4-FM is silent on total divergence"
