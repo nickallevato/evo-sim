@@ -59,8 +59,8 @@ items:
   blocker: after
   next: "Exit criterion 'variable list is final': the R5 sensitivity table. Starts after ROOT roll-ups."
 - id: X-MATHMAP
-  blocker: in-flight   # X-MATHMAP-operator-1 (branch B source map), 2026-11-26
-  next: "Break every argument down, logically and mathematically: for each branch (B, C, D, E, F, G, H, ROOT; then merge the branch A and vid02 pilots), one Operator task with skill deref-source writes the source map (verbatim statement -> premises, hidden premises, inference -> math objects) and adds objects to docs/research/math/objects.yaml. One branch per task. Lead review: math_map.py --lint 0 errors, under 0.7 objects per claim, and a seeded 8-object spot check against the claim files. No other review. Done when every hierarchy node is used_by at least one object."
+  blocker: in-flight   # X-MATHMAP-operator-2 (branch C source map), 2026-11-26; branch B done 8ed4644 (EVOA-68, lead-approved: 51/51, 0.45/node, lint 0)
+  next: "Branch B done (sources/branch-B.md, M-201..M-223). Remaining: C, D, E, F, G, H, ROOT, then merge the A and vid02 pilots. Break every argument down, logically and mathematically: for each branch (B, C, D, E, F, G, H, ROOT; then merge the branch A and vid02 pilots), one Operator task with skill deref-source writes the source map (verbatim statement -> premises, hidden premises, inference -> math objects) and adds objects to docs/research/math/objects.yaml. One branch per task. Lead review: math_map.py --lint 0 errors, under 0.7 objects per claim, and a seeded 8-object spot check against the claim files. No other review. Done when every hierarchy node is used_by at least one object."
 - id: X-MATHRESOLVE
   blocker: after
   next: "After X-MATHMAP: settle the open derivation and lookup objects in docs/research/math/objects.yaml, each with a record (records/M-NNN.py with asserts plus M-NNN.json; math/README.md 'Records'). Analyst designs and writes them; Lead spot-checks a seeded sample. Then each simulation or regression object becomes one pre-registered check (the compute campaign, P3). Batch by branch: one task per branch's open objects."
