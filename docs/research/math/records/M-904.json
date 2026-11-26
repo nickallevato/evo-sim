@@ -1,0 +1,114 @@
+{
+  "id": "M-904",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-904.py",
+  "script_sha256": "84ad7884fffcbb42370934d4c830519849bec4244bf41ab618a39023121f06b1",
+  "object": "M-904",
+  "inputs": [
+    {
+      "name": "Day's step",
+      "value": "sigillation (hedged, Q170); neither selection nor neutral diffusive drift viable",
+      "cite": "ROOT-FM q4 = FM7 q1 (Q168); ROOT-FM q5 = FM10 q1 (Q171)"
+    },
+    {
+      "name": "rule-N grep",
+      "value": "'uniform-rate' only in Q164 (FM3)",
+      "cite": "claim ROOT-FM (2026-10-10); quotes-day.md count 1"
+    },
+    {
+      "name": "R4 FM cells P3, P4, P5, P7",
+      "value": {
+        "P3_phi_res_ratio": 1.11,
+        "P4_phi_HC": 1.81,
+        "P5_null_over_obs": 0.69,
+        "P7_DHC_share_pct": [
+          1.25,
+          1.3,
+          2.5
+        ]
+      },
+      "cite": "research/checks/results/R4-FM.md 'Against the predictions' table (read only, no rerun)"
+    },
+    {
+      "name": "chrX F1 100 kb",
+      "value": {
+        "hs1": [
+          18.16,
+          4.84,
+          3.76
+        ],
+        "chimp_ref": [
+          16.38,
+          4.84,
+          3.39
+        ],
+        "without_top_window": {
+          "hs1": 1.16,
+          "chimp_ref": 1.11
+        }
+      },
+      "cite": "R4-FM.md headline table, M3, T2a, T2b"
+    }
+  ],
+  "values": {
+    "registered_cells": {
+      "P3": {
+        "value": 1.112,
+        "day_cut": "> 3",
+        "critic_cut": "[0.5, 2] and <= 0.3 phi(H)",
+        "side": "critic"
+      },
+      "P4": {
+        "value": 1.81,
+        "day_cut": "> 10",
+        "critic_cut": "1-5",
+        "side": "critic"
+      },
+      "P5": {
+        "value": 0.689,
+        "day_cut": "< 0.2",
+        "critic_cut": ">= 0.5",
+        "side": "critic"
+      },
+      "P7": {
+        "value_pct": [
+          1.25,
+          1.3,
+          2.5
+        ],
+        "day_cut": "> 50%",
+        "critic_cut": "< 20%",
+        "side": "critic"
+      }
+    },
+    "cells_on_critic_side": 4,
+    "chrX_F1_100kb": {
+      "R_hs1_printed": 3.76,
+      "R_hs1_from_printed_parts": 3.752,
+      "R_chimp_printed": 3.39,
+      "R_chimp_from_printed_parts": 3.384,
+      "day_side": true,
+      "without_one_window": [
+        1.11,
+        1.16
+      ],
+      "registered": false
+    },
+    "uniform_rate_occurrences_in_quotes_day": 1
+  },
+  "positions": {
+    "day": {
+      "reading": "a lineage-asymmetric excess in contiguous blocks is a pattern uniform-rate neutral theory does not predict; sigillation is an open, hedged hypothesis; the data are public",
+      "holds": "chrX F1 100 kb crosses the registered > 3 cut on both references (3.76, 3.39); the hedge ('initial evidence') is real; FM10 invited a replication that was workable"
+    },
+    "critic": {
+      "reading": "a pattern both selection and drift can contain excludes neither; sigillation was introduced after the data, so the data do not test it",
+      "holds": "all four registered discriminating cells (P3, P4, P5, P7) fall on the critics' side; the chrX cell is one orthologous centromeric-transition window, 1.11-1.16 without it"
+    },
+    "relictation": {
+      "object_statement": "Day's relictation (time-varying, non-diffusive drift) contradicts the uniform-rate premise",
+      "claim_file": "FM10 says 'neutral diffusive drift', which excludes relictation, so N2b is not triggered; N2d is open and FM10 internal stays pending by owner decision"
+    }
+  },
+  "notes": "The step from the mesa pattern to 'neither selection nor drift' rests on a premise no harvested Day text states (one 'uniform-rate' occurrence, in Q164 itself). On the committed R4 FM results the pre-registered discriminating cells all fall on the critics' side; the only Day-side cell is unregistered (chrX) and is one window. The printed 3.76 and 3.39 are 0.008 and 0.006 above the ratio of their printed parts (3.752, 3.384), inside the rounding of those parts; the ratios were taken from unrounded values. The object statement's 'which Day's own relictation contradicts' is stronger than claim ROOT-FM, which finds N2b not triggered because FM10 names diffusive drift; both are recorded and no verdict moves (FM10 internal pending, owner 2026-10-10)."
+}

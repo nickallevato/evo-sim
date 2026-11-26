@@ -1,0 +1,91 @@
+{
+  "id": "M-903",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-903.py",
+  "script_sha256": "8e6afc972b4db355eb1d110988f0a5887690d1fdf7107ffd8eff4c62052185ff",
+  "object": "M-903",
+  "inputs": [
+    {
+      "name": "Day's sentence",
+      "value": "no count, unit, window or ceiling",
+      "cite": "ROOT-FM q3 = FM5 q1 (Q166)"
+    },
+    {
+      "name": "MITTENS ceiling",
+      "value": 191,
+      "cite": "M-713.json F_max_d1 = 190.62, rounded up; fm_mesa_replication.py docstring"
+    },
+    {
+      "name": "Haldane ceiling",
+      "value": 840,
+      "cite": "parameters generations_available.day_2026 / haldane gens_per_substitution 300 (M-801)"
+    },
+    {
+      "name": "R4 FM mesa counts above 191 / 840",
+      "value": {
+        "F0_100kb": {
+          "H": [
+            33,
+            32
+          ],
+          "C": [
+            31,
+            29
+          ]
+        },
+        "F2_100kb": {
+          "H": [
+            18,
+            10
+          ],
+          "C": [
+            17,
+            5
+          ]
+        },
+        "F0_100kb_above_840_all": {
+          "H": 32,
+          "C": 29,
+          "B": 31,
+          "G": 19
+        }
+      },
+      "cite": "research/checks/results/R4-FM.md mesa table, P6 row and FM5 verdict; raw/fm_analyse.json"
+    }
+  ],
+  "values": {
+    "day_figures_given": false,
+    "day_comparison_scoreable": false,
+    "audit_ceilings": {
+      "MITTENS": 191,
+      "Haldane": 840,
+      "ratio": 4.4
+    },
+    "F0_100kb_mesas_above_840": {
+      "H": 32,
+      "C": 29,
+      "B": 31,
+      "G": 19,
+      "C_over_H": 0.91
+    },
+    "F0_100kb_max_mesa_excess": {
+      "H": 20349,
+      "C": 19299,
+      "B": 14732,
+      "G": 21803
+    },
+    "literal_sentence_true_on_audit_reading": true,
+    "human_specific": false
+  },
+  "positions": {
+    "day": {
+      "reading": "a single mesa already exceeds what selection could fix genome-wide under Haldane and what MITTENS allows",
+      "holds": "on the audit's 191 / 840 reading the sentence is literally true: 32 of 33 human mesas exceed 840 at F0 100 kb"
+    },
+    "critic": {
+      "reading": "one mesa against a genome-wide maximum is a units step; Haldane bounds selected substitutions only; a high-mu block gives excess on every lineage",
+      "holds": "Day gives no count, unit or ceiling, so his own comparison is unverifiable; on the audit's reading 29 chimp, 31 bonobo and 19 gorilla mesas exceed 840 too, so the excess is not human-specific"
+    }
+  },
+  "notes": "Resolved as unscoreable on Day's own figures: the sentence has no numbers, so its comparison cannot be checked until the mesa counts, units and window are released (fidelity unverifiable, rule F). The audit's reading (191 and 840 per lineage over 252,000 generations; 252,000 is verified: false in parameters) is held from R4 FM, not re-run. Since 840 > 191 the MITTENS ceiling adds nothing once the Haldane one is passed. Comparing a mesa's substitution count with Haldane's cost presupposes the substitutions are selected (M-801); a neutral high-mutation block meets the same count on every lineage, which is what R4 FM finds."
+}

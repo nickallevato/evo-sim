@@ -1,0 +1,71 @@
+{
+  "id": "M-910",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-910.py",
+  "script_sha256": "f80ace02ecde33dd40bbab4ae0eaef9b17bbc25f666048f875cc2b6edafa5c00",
+  "object": "M-910",
+  "inputs": [
+    {
+      "name": "T_div",
+      "value": 6300000.0,
+      "cite": "parameters divergence.t_div_years.day_2026_mittens3"
+    },
+    {
+      "name": "shortfall",
+      "value": {
+        "mittens3_full": 1075000,
+        "older_2025": 220000,
+        "snv_only": 91600
+      },
+      "cite": "parameters shortfall.mittens3_full, shortfall.mittens3_snv_only; quotes-day.md row 14; M-901.json"
+    },
+    {
+      "name": "age of the Universe",
+      "value": 13800000000.0,
+      "cite": "claim ROOT-K formal statement (1.38e10)"
+    },
+    {
+      "name": "Keen",
+      "value": [
+        "ROOT-K q1",
+        "ROOT-K q2"
+      ],
+      "cite": "claim ROOT-K (KE-01, KE-05)"
+    }
+  ],
+  "values": {
+    "T_required_y": 6772500000000.0,
+    "universe_ages": 490.8,
+    "orders": 2.69,
+    "older_220000x": {
+      "T_required_y": 1386000000000.0,
+      "universe_ages": 100.4
+    },
+    "snv_only_91600": {
+      "T_required_y": 577080000000.0,
+      "universe_ages": 41.8
+    },
+    "breakeven_multiplier": 2190.5,
+    "critic_multiplier_10_to_100": {
+      "T_required_y": [
+        63000000.0,
+        630000000.0
+      ],
+      "universe_ages": [
+        0.0046,
+        0.0457
+      ]
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "each fixation takes a fixed LTEE time, so the required time is the divergence time times the shortfall: orders of magnitude beyond the age of the Universe",
+      "holds": "6.3e6 x 1.075e6 = 6.7725e12 y = 490.8 universe-ages (2.69 orders); even Day's SNV-only 91,600 gives 41.8 universe-ages; any shortfall above 2,190 exceeds one age"
+    },
+    "critic": {
+      "reading": "the arithmetic holds only if the shortfall is a time multiplier at a fixed rate; Keen gives no equation and endorses The Frozen Gene, not the MITTENS papers",
+      "holds": "with a validated scaling and SNV-only counts the multiplier falls to about 10-100, i.e. 6.3e7-6.3e8 y, 0.005-0.046 universe-ages; the 205M counts bp of structural variants"
+    }
+  },
+  "notes": "Keen's sentence is checkable only under the claim file's reading (T_required = T_div x shortfall at a fixed per-fixation rate); the preface has no equation and its subject is truncated in the extracted quote. Under that reading it holds at Day's figures (490.8 ages; 100.4 at the older 220,000x). The question is the shortfall, not this multiplication: the break-even is 2,190, so the critics' 10-100 falls below one age and Day's SNV-only 91,600 does not. Whether the shortfall is 1e6, 9e4 or 1e1-1e2 is A, A3x and A5's external question, not settled here."
+}

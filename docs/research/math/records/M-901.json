@@ -1,0 +1,120 @@
+{
+  "id": "M-901",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-901.py",
+  "script_sha256": "37a363ace27cb19d61b395c5f6b1740fb9c9c9fd3fb34dab7600331e4f44b6ee",
+  "object": "M-901",
+  "inputs": [
+    {
+      "name": "T_gen, F_req, G_f",
+      "value": [
+        252000,
+        205000000.0,
+        1322
+      ],
+      "cite": "parameters generations_available.day_2026, required_fixations.day_2026, ltee.gens_per_fixation.day_mittens3_nonmutator"
+    },
+    {
+      "name": "F_max",
+      "value": 190.62,
+      "cite": "docs/research/math/records/M-713.json (F_max_d1; M-711)"
+    },
+    {
+      "name": "stated shortfall",
+      "value": 1075000,
+      "cite": "parameters shortfall.mittens3_full (Z23003785)"
+    },
+    {
+      "name": "2025 version",
+      "value": {
+        "F_max": 91.4,
+        "F_req": 20000000.0,
+        "stated": "220,000x"
+      },
+      "cite": "quotes-day.md row 14; PLAN.md version table"
+    },
+    {
+      "name": "mechanism catalogue",
+      "value": {
+        "computed_or_bounded": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          15,
+          17
+        ],
+        "partial": [
+          10,
+          11,
+          16
+        ],
+        "asserted": [
+          5,
+          8,
+          12,
+          13,
+          14
+        ],
+        "day_accepted": [
+          18
+        ]
+      },
+      "cite": "claim ROOT-M table and Totals line"
+    },
+    {
+      "name": "quotes",
+      "value": [
+        "ROOT q1",
+        "ROOT q2",
+        "ROOT q4",
+        "ROOT-M q2",
+        "ROOT-M q3",
+        "ROOT-M q4",
+        "ROOT-COV q1",
+        "ROOT-COV q2",
+        "ROOT-FM q5 = FM10 q1"
+      ],
+      "cite": "claim files"
+    }
+  ],
+  "values": {
+    "F_max": 190.62,
+    "shortfall": 1075438,
+    "orders": 6.03,
+    "reproduces_stated_1075000": true,
+    "relative_gap_to_stated": 0.00041,
+    "above_Z18452504_3_to_5_orders": true,
+    "shortfall_2025": {
+      "F_max_rounded_91": 219780,
+      "F_max_unrounded": 218803,
+      "stated": 220000
+    },
+    "catalogue_counts": {
+      "named_rows": 18,
+      "computed_or_bounded": 9,
+      "partial": 3,
+      "asserted_not_computed": 5,
+      "day_accepted_relictation": 1
+    },
+    "ILS_dates": {
+      "exempted": "2026-09-30",
+      "named_excluded": "2026-10-05",
+      "days_apart": 5
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "'impossibility' is the time budget: every mechanism with a computed bound fails F_max < F_req; the unnamed remainder is the critics' burden (Z18452504)",
+      "holds": "the operational form reproduces: 2.05e8 / 190.6 = 1.0754e6, 6.03 orders, the stated 1,075,000; 9 of 18 named rows carry a computation or empirical bound"
+    },
+    "critic": {
+      "reading": "a universal over unnamed mechanisms is untestable; 'statistically impossible' is a category error for a covariance (ROOT-COV q1, q2)",
+      "holds": "5 of 18 named rows are asserted, not computed, and 3 are partial; Day accepts relictation; ILS is exempted on 2026-09-30 and named as excluded on 2026-10-05; Hancock concedes the live question in her next sentence, so her point is about wording, not the time budget"
+    }
+  },
+  "notes": "The arithmetic is settled; the quantifier is not. The shortfall is the MITTENS 3.0 value (6.03 orders), above Z18452504's '3-5 orders' and about 4.9x the 2025 paper's 220,000x (2e7 / 91 = 219,780). The object statement locates 220,000x in ledgers/versions.md; that ledger does not contain it; it is held in quotes-day.md row 14 and PLAN.md. Catalogue counts are the claim file's keyword-search counts over the harvested corpus; the paywalled books may hold computations for the asserted rows (ROOT-M Weaknesses). Row 10 (bounded empirically by the LTEE aggregate) and row 16 (a penalty, not a mechanism) are in the 'partial' group as the claim file places them. Whether 'impossible' is the time budget or an intensifier is the owner's open RH call (claim ROOT); both readings are recorded, none chosen."
+}

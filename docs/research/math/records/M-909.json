@@ -1,0 +1,141 @@
+{
+  "id": "M-909",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-909.py",
+  "script_sha256": "9c87ffb7c6dcab64d5e4717d615486cabdb826d4c0eaf1edb88ab00169dc1d80",
+  "object": "M-909",
+  "inputs": [
+    {
+      "name": "endorsements",
+      "value": [
+        "ROOT-T q2",
+        "ROOT-K q1",
+        "ROOT-H q1",
+        "ROOT-H q3",
+        "ROOT-H q4",
+        "ROOT-DE q1"
+      ],
+      "cite": "claims ROOT-T, ROOT-K, ROOT-H, ROOT-DE"
+    },
+    {
+      "name": "counters",
+      "value": [
+        "ROOT-EP q1",
+        "ROOT-EP q3"
+      ],
+      "cite": "claim ROOT-EP"
+    },
+    {
+      "name": "audit rule",
+      "value": "FP-01: a credential count is not a rebuttal",
+      "cite": "claim ROOT-EP"
+    },
+    {
+      "name": "Hossjer's rescaled gap",
+      "value": "about 2x",
+      "cite": "ROOT-H HO-02; docs/research/math/records/M-805.json"
+    }
+  ],
+  "values": {
+    "endorsements": [
+      {
+        "id": "ROOT-T q2",
+        "who": "Dembski relaying Tipler",
+        "role": "endorsement",
+        "quote": "Tipler gave it a glowing endorsement and also contributed an appendix to the book.",
+        "status": "held as a relay; the endorsement's text and the appendix are in the paywalled book, not retrieved"
+      },
+      {
+        "id": "ROOT-K q1",
+        "who": "Keen",
+        "role": "endorsement",
+        "quote": "The reason it fails, as Vox Day and Claude Athos show in this book, is time.",
+        "status": "held (public preface); endorses The Frozen Gene, not the MITTENS papers"
+      },
+      {
+        "id": "ROOT-H q1",
+        "who": "Hossjer",
+        "role": "endorsement",
+        "quote": "I agree with this conclusion, also after adjusting the MITTENS equation for the different mutation rates of humans and E. coli.",
+        "status": "held (review PDF p.3)"
+      },
+      {
+        "id": "ROOT-H q3",
+        "who": "Hossjer",
+        "role": "position of the endorser",
+        "quote": "I rather advocate uncommon descent between the two species.",
+        "status": "held (Dembski Substack review para 75)"
+      },
+      {
+        "id": "ROOT-H q4",
+        "who": "Dembski about Hossjer",
+        "role": "scope of the endorsement",
+        "quote": "Note that his positive remarks apply to Vox Day’s main argument, not to the book as a whole.",
+        "status": "held (same review para 34)"
+      },
+      {
+        "id": "ROOT-DE q1",
+        "who": "Dembski",
+        "role": "own position",
+        "quote": "As an intelligent design proponent, I have my own arguments for thinking that evolutionary mechanisms face serious explanatory shortfalls.",
+        "status": "held (Dembski Substack 2026-09-28 para 3); the arguments themselves are not given there"
+      }
+    ],
+    "counters": [
+      {
+        "id": "ROOT-EP q1",
+        "who": "Gutsick Gibbon (host)",
+        "role": "credentials",
+        "quote": "Generally, none of them have a particularly prevalent biology or population genetics background",
+        "status": "held (video t=03:04:48, auto-caption)"
+      },
+      {
+        "id": "ROOT-EP q3",
+        "who": "Gutsick Gibbon (host)",
+        "role": "disclosure",
+        "quote": "I think if you're going to include Tipler's quote in your rebuttal here, you probably should Google him and see that he's an ID proponent.",
+        "status": "held (video t=00:31:35)"
+      }
+    ],
+    "held_quotes": 8,
+    "not_retrieved": [
+      {
+        "item": "Tipler's foreword and appendix",
+        "where": "Probability Zero (paywalled book)",
+        "quote": "the foreword and appendix are in the paywalled book; contents unknown."
+      },
+      {
+        "item": "Hossjer's population-genetics publication record",
+        "where": "not examined in the corpus",
+        "quote": "his publication record in population genetics was not examined in the corpus"
+      },
+      {
+        "item": "Hossjer, Bechly & Gauger 2021 (J. Theor. Biol. 524:110657)",
+        "where": "not retrieved (D15)",
+        "quote": "| Hossjer, Bechly & Gauger 2021 (J. Theor. Biol. 524:110657) | not retrieved (see D15) | pending |"
+      },
+      {
+        "item": "the paper behind 'similar blunders'",
+        "where": "none named",
+        "quote": "the \"similar blunders\" claim names no paper"
+      },
+      {
+        "item": "Dembski's own arguments",
+        "where": "not given in the interview; 'Jason Rosenhouse's Whoppers' not retrieved",
+        "quote": "Dembski's own earlier critique of Rosenhouse ('Jason Rosenhouse's Whoppers') is linked by Day but was not retrieved (see D13)."
+      }
+    ],
+    "numeric_score": null
+  },
+  "positions": {
+    "day": {
+      "reading": "endorsements by a physicist, a mathematical statistician and an economist carry independent weight and add the endorsers' own arguments",
+      "holds": "the endorsements exist as quoted; Hossjer agrees with the main argument 'also after adjusting' and Dembski states his own ID arguments; credentials do not decide arithmetic (FP-01), which cuts against the counter as much as for the endorsers"
+    },
+    "critic": {
+      "reading": "the endorsers lack population-genetics training and ID associations should be disclosed, so the endorsements carry little weight on the assumptions",
+      "holds": "each endorsement is scoped: Keen endorses The Frozen Gene, Hossjer's remarks cover the main argument not the book and his own rescaled gap is about 2x, Tipler's text is not retrieved, Dembski's arguments are not given; Hossjer advocates uncommon descent"
+    }
+  },
+  "notes": "Lookup only. Under FP-01 an endorsement of a rate calculation is evidence about the arithmetic, not the biology, and the arithmetic is checked in the repo regardless (A, A5, M-001, M-805); a credential count is no rebuttal either way, and the same standard applies to critic credentials. What is not held is listed under not_retrieved and is not estimated around: Tipler's foreword and appendix (paywalled book), Hossjer's population-genetics record, Hossjer, Bechly & Gauger 2021, the paper behind 'similar blunders', and Dembski's own arguments. No numeric weight is assigned."
+}

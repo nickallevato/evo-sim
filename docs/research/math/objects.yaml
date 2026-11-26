@@ -1283,7 +1283,8 @@ objects:
     day: "Every mechanism with a computed bound fails the same rate bound; the asserted rows contribute negligible divergence; the unnamed remainder is the critics' burden (Z18452504 'burden of the alternative'); the time-budget reading is the repo's operational form"
     critic: "No critic addresses ROOT as a whole; they attack the branches (A5, B, F1, G, C1); a universal over unnamed mechanisms is untestable until each is named and 5 of 18 named rows have no computation; 'statistically impossible' is a category error for a covariance, though the time-budget version is a separate claim"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-901.json
 - id: M-902
   kind: empirical
   statement: "Substitution density along the T2T ape genomes: Day, 'more than 80 times more variable than a uniform-rate process predicts' (window size and dispersion statistic not given) and contiguous dense blocks with sharp boundaries ('mesas', no coordinates); R4 FMnull: the sentence is true at W >= 1 Mb in every lineage and both maskings and, wherever true at W <= 1 Mb, the measured index is inside or below a heterogeneous-mutation-rate neutral band (index/N_hi 0.11-0.91, eight parameter sets); R4 FM: 32-53% of human-mesa windows lie inside chimp mesas against a 0.56-1.0% background and a shared-rate null reproduces 64-69% of human mesas at 100 kb; the null is uniform mutation rate against variable mutation rate"
@@ -1309,7 +1310,8 @@ objects:
     day: "A single mesa already exceeds what selection could fix genome-wide under Haldane and what MITTENS allows"
     critic: "One mesa against a genome-wide maximum is a units step; a neutral high-mutation block produces excess substitutions on every lineage, so only a human-specific excess discriminates and the post gives no per-lineage numbers"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-903.json
 - id: M-904
   kind: inference
   statement: "From the mesa pattern to the mechanism: sigillation (some mesas are discrete deliberate-modification events that wrote contiguous blocks into one lineage; hedged as 'initial evidence', introduced after the data) and FM10 'neither natural selection nor neutral diffusive drift can still be considered viable'; the step needs the implicit premise that neutral diffusive drift implies a uniform per-window rate, which no harvested Day text states (rule-N grep 2026-10-10) and which Day's own relictation (time-varying, non-diffusive drift) contradicts; R4 FM pre-registered discriminating cells P3, P4, P5 and P7 all fall on the critics' side; chrX F1 100 kb (R 3.76 on hs1, 3.39 chimp-referenced) is the single Day-side cell, one orthologous centromeric-transition window"
@@ -1323,7 +1325,8 @@ objects:
     day: "A lineage-asymmetric excess in contiguous blocks is a pattern uniform-rate neutral theory does not predict; sigillation is an open hypothesis, hedged, and FM10 meets the replication checklist better than Day's earlier posts (data public)"
     critic: "A pattern both selection and drift can contain does not exclude either; the data do not test sigillation because it was introduced after them; the pattern is shared across lineages and a shared-rate null reproduces it"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-904.json
 - id: M-905
   kind: empirical
   statement: "Genome-wide human-chimp dN/dS and its sensitivity to gene set and filters: Day, 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment; single-SNV codons 71.6% nonsynonymous, 28.4% synonymous, dN/dS 0.71; implied N/S = (71.6/28.4)/0.71 = 3.55 against a correct site ratio of 3.34) against the Consortium's Ka/Ks 0.23 on 13,454 1:1 orthologs (CSAC 2005); 'no combination of quality filters moves the number below 0.65' (full stack 0.64 on 10 genes); gene-set arithmetic 20,400 - 13,454 = 6,946 (34.05% of Day's set), 20,400/13,454 = 1.516; audit R4 L1 on hg38/panTro5: all genes 0.271, Ensembl one2one 0.207; R4 L1b on T2T and Cactus: all 0.271 (V0), one2one 0.238, minimum over 32 filter stacks 0.214; no correct-frame computation reproduces 0.80 (range 0.15-0.45); Day's code, gene list and per-gene table are unreleased"
@@ -1373,7 +1376,8 @@ objects:
     day: "At 0.80 purifying selection removes only about 20% of nonsynonymous mutations, so selection is barely distinguishable from neutral evolution in coding sequence"
     critic: "The average ratio measures purifying removal, not adaptive evolution; human alpha estimates show adaptive change occurs; the conclusion follows from 0.23 as well under neutral theory"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-907.json
 - id: M-908
   kind: inference
   statement: "Superlative endorsement: Tipler's foreword called Probability Zero 'the most rigorous mathematical challenge to Neo-Darwinian theory ever published' (relayed by the interviewer, foreword not retrieved); a ranking claim rigor(PZ) > rigor(all other published challenges) with no comparison set and no calculation; rule RH, ledger RH-13: not scored, device and dialectical core recorded in ledgers/slips.md"
@@ -1402,7 +1406,8 @@ objects:
     day: "Endorsements by a physicist, a mathematical statistician and an economist carry independent weight for the conclusion and add the endorsers' own arguments"
     critic: "The endorsers lack population-genetics training so the endorsements carry little weight on the assumptions; the allies' arithmetic is checked in the repo regardless; the same standard applies to critic credentials"
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-909.json
 - id: M-910
   kind: formula
   statement: "Required time as a multiple of the age of the Universe: T_required = T_div x shortfall = 6.3e6 y x 1.075e6 = 6.7725e12 y = 490.8 universe-ages (13.8e9 y), 2.7 orders; read as a time multiplier at a fixed per-fixation rate; the older 220,000x gives 1.4e12 y (about 100 universe-ages); the 1.075e6 is the MITTENS 3.0 figure (M-901); Keen's preface gives no equation and endorses The Frozen Gene, not the MITTENS papers"
@@ -1414,7 +1419,8 @@ objects:
     day: "The required time is orders of magnitude greater than the age of the Universe because each fixation takes a fixed LTEE time"
     critic: "The arithmetic reproduces only if the shortfall is a time multiplier at a fixed rate; with validated scaling (A5) and SNV-only counts (A3x) the multiplier falls to about 10-100, below universe-ages; the 205M counts bp of structural variants"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-910.json
 - id: M-001
   kind: formula
   statement: 'F_max = (t_div x d) / (g_len x G_f) and its version arithmetic, shortfall = R / F_max: 2019 table 125 and text 562 against 450,000/1,600 = 281.25; 2025 146,250/1,600 = 91.4; 3.0 252,000/1,322 = 190.6 with no d term and 205e6/190.6
