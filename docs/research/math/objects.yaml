@@ -55,7 +55,7 @@ objects:
 - id: M-105
   kind: formula
   statement: 'Fixation time under overlapping generations: dividing the discrete-model time by d = 0.80 (14,648 -> 18,310; 40,000 -> 50,000 generations); sweep time (2/s)ln(2N_e s) for s = 1.5e-4 at N_e 1e4, 1e5, 1e6 = 14,648, 45,349, 76,051'
-  used_by: [A4c, F3]
+  used_by: [A4c]
   sources:
   - evo005
   - evo006
@@ -68,7 +68,7 @@ objects:
 - id: M-106
   kind: formula
   statement: 'Throughput ceiling: total selection budget sum(s_i) <= s_max over concurrent sweeps, the mean s-bar cancels and the sum is n x s-bar, so the shape of the distribution of fitness effects does not matter'
-  used_by: [F1, G2h, D4b, H, H5, H8]
+  used_by: [D4b, H, H5, H8]
   sources:
   - evo007
   positions:
@@ -183,7 +183,7 @@ objects:
 - id: M-115
   kind: inference
   statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
-  used_by: [F, F1, F1a, F1b, B2d, B5g, B6c, E2, G1, G1a, G1b, G2a, G2d, G2g, G2h, A]
+  used_by: [F, F1, F1a, F1b, B2d, B5g, B6c, G1, G1a, G1b, G2a, G2d, G2g, G2h, A]
   sources:
   - evo008
   positions:
@@ -195,7 +195,7 @@ objects:
 - id: M-116
   kind: inference
   statement: 'Classification: is MITTENS the waiting-time problem (mutation arrival) or a distinct fixation problem built on observed fixations'
-  used_by: [F1, F1c]
+  used_by: [F1c]
   sources:
   - evo008
   positions:
@@ -245,7 +245,7 @@ objects:
 - id: M-120
   kind: model-choice
   statement: 'Does the standard selection-visibility threshold (|s| > 1/(2N_e)) show selection becoming ever more effective as N grows, so that the models predict strong selection in modern humans (Day: N_e 10,000 -> 5e-5; 10 million -> 5e-8; N_e 80 million at N_e/N 0.01 -> ~6e-9) and fail empirically; or is the threshold a drift-versus-selection visibility criterion that says nothing about differential survival'
-  used_by: [H10, A4g]
+  used_by: [A4g]
   sources:
   - evo010
   positions:
@@ -308,7 +308,7 @@ objects:
 - id: M-125
   kind: formula
   statement: 'In humans relictation accounts for about half the base pairs natural selection does, and the two together account for under 8% of total divergence ("tens of millions of divergent base pairs" unaccounted); hitchhiking and relictation named as other routes to neutral substitution'
-  used_by: [E4, F6]
+  used_by: [E4]
   sources:
   - smokescreen
   - gene-flow
@@ -326,7 +326,7 @@ objects:
   - gene-flow
   positions:
     day: Gene flow adds a stage to every fixation and works against divergence, so it cannot close the accounting gap
-    critic: 'Not addressed first-hand. Open: structured-population fixation times can be shorter or longer than panmictic ones depending on migration and selection regime (a derivation, not done); the post gives no transit-time formula; the LTEE is a set of isolated, unstructured flasks'
+    critic: 'Not addressed first-hand. Open: the neutral substitution rate is unchanged by structure (Maruyama invariance, Day''s own Hard Limits paper; M-209), and a latency effect is not held (no structured-population fixation time in any held file); the post gives no transit-time formula; the LTEE is a set of isolated, unstructured flasks'
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-126.json
@@ -643,7 +643,7 @@ objects:
   resolved_by: docs/research/math/records/M-402.json
 - id: M-403
   kind: empirical
-  statement: 'Prevalence of function in random sequences and what it implies for search: Axe 1e-64 per signature-consistent sequence and 1e-77 overall (10^52 x 10^-77 = 1e-25 expected hits), Taylor 5.04e23 library for a 100-mer chorismate mutase (about 2e-24, 20^100 = 1.27e130), Keefe and Szostak 4 binders in 6e12 (6.7e-13); different proteins, lengths and functions, spread of about 53 orders of magnitude'
+  statement: 'Prevalence of function in random sequences and what it implies for search: Axe 1e-64 per signature-consistent sequence and 1e-77 overall (10^52 x 10^-77 = 1e-25 expected hits), Taylor 5.04e23 library for a 100-mer chorismate mutase (about 2e-24, 20^100 = 1.27e130), Keefe and Szostak 4 binders in 6e12 (6.7e-13); different proteins, lengths and functions; the spread of about 53 orders of magnitude covers Axe (1e-77) against Taylor (about 2e-24) only, and is about 65 with Keefe and Szostak (6.7e-13)'
   used_by: [D, D2e, D2h, D10, D11, D12]
   sources: [D#q3, D2e#q3, D2h#q1, D10#q1, D10#q2, D11#q1, D11#q2, D11#q3, D11#q4, D12#q1]
   positions: {day: 'Functional sequences are so rare that random search from a 1e52 budget fails (Axe), and Taylor says one-step isolation is impossible', critic: 'Frequencies measured in random libraries differ by many orders and are for different functions; binding is not catalysis; per-sequence prevalence is not connectivity (R4 D1 leaves it untouched)'}
@@ -775,7 +775,7 @@ objects:
   blocked_on: "owner: a standard history of population genetics (e.g. Provine 1971, The Origins of Theoretical Population Genetics) giving the mathematical training of Pearson, Fisher, Wright, Haldane and Kingman; the corpus holds only Hancock's recollection (quotes-critics GG-40..42) and Day's Q269, and claim file D2k marks the citation lookup pending"
 - id: M-501
   kind: formula
-  statement: 'Founder-event hazard: P(at least one CMMRD-equivalent homozygote) per founder event, analytic 0.06 x 0.39 = 2.34% (P(>= 2 carriers) at N = 100, q = 1/280 per diploid, times P(homozygote | >= 2 copies) = 1 - exp(-0.5) = 0.3935) against Wright-Fisher simulation 2.33% (literal reading 2.75%, exact models 2.0-2.75%), and cumulative risk 1 - (1 - p)^n = 90.5% at n = 100 (assumes independent events); the figure covers Z23020792 and Z23034852 only, and the analytic and simulated decompositions differ (0.0509 x 0.147 = 0.75% from Table 2)'
+  statement: 'Founder-event hazard: P(at least one CMMRD-equivalent homozygote) per founder event, analytic 0.06 x 0.39 = 2.34% (P(>= 2 carriers) at N = 100, carrier frequency 1/280 per diploid, times P(homozygote | >= 2 copies) = 1 - exp(-0.5) = 0.3935) against Wright-Fisher simulation 2.33% (literal reading 2.75%, exact models 2.0-2.75%), and cumulative risk 1 - (1 - p)^n = 90.5% at n = 100 (assumes independent events); the figure covers Z23020792 and Z23034852 only, and the analytic and simulated decompositions differ (0.0509 x 0.147 = 0.75% from Table 2)'
   used_by: [E, E3]
   sources:
   - E#q2
@@ -866,7 +866,7 @@ objects:
   compute: {host: na-workhorse, est_cpu_h: 2, est_ram_gb: 1, measured: false}
 - id: M-507
   kind: formula
-  statement: 'Relictation (Cannings jackpot model): one family replaces a fraction f of 2N gene copies per jackpot generation; exact chain gives t/4Ne above the Wright-Fisher baseline by 14.9%, 20.4% and 28.8% at 2N = 20, 30, 50 (peak ratios 1.071, 1.146, 1.249 at f = 50-60%), no deviation below about 10% replacement, and P_fix = 1/(2N) unchanged; the table covers 2N = 20-50 only, so "keeps growing with N" is an extrapolation'
+  statement: 'Relictation (Cannings jackpot model): one family replaces a fraction f of 2N gene copies per jackpot generation; exact chain gives t/4Ne above the Wright-Fisher baseline by 14.9%, 20.4% and 28.8% at 2N = 20, 30, 50 (peak ratios 1.071, 1.148, 1.249 at f = 50-60%; the 2N = 30 peak is 1.148 at f = 60% (20.6%)), no deviation below about 10% replacement, and P_fix = 1/(2N) unchanged; the table covers 2N = 20-50 only, so "keeps growing with N" is an extrapolation'
   used_by: [E4, F6]
   sources:
   - E4#q1
@@ -930,7 +930,7 @@ objects:
 - id: M-604
   kind: empirical
   statement: 'Parallel sweep capacity under interference: does the active zone of intermediate-frequency alleles cap simultaneous sweeps at about 230 (Z18167588, not derived, worked backward from the constraint), or does R_int stay near 1 with free recombination (0.975 at 272 active loci, N = 1000, s = 0.01, soft selection) and fall with linkage (clonal 0.645 to 0.088; 1.5 M map 0.572); the F2 grid covers N = 1000 and soft selection; the Weissman and Barton asymptotes R/4-R/2 = 8.75-19 per generation at R = 35-38 M bound the interference leg only below adaptive shares of 13-27%'
-  used_by: [F2, Gc, H9]
+  used_by: [F2, Gc, Gd, H9]
   sources:
   - F2#q1
   - F2#q2
@@ -1174,6 +1174,7 @@ objects:
   - H5#q1
   - H6#q1
   - H6#q2
+  - FM5#q1
   - Q47
   positions:
     day: 'Haldane''s 10% selective mortality is a total budget for the population, so parallel fixation does not multiply the limit: about 1 beneficial substitution per 300 generations for mammals'
@@ -1241,7 +1242,7 @@ objects:
   - HO-06
   positions:
     day: 'Ally Hössjer agrees with the conclusion that selected fixations are far fewer than the neutral-style count, after adjusting the MITTENS equation for humans against E. coli'
-    critic: 'The 15,800 is a rate scaling, not a cost computation, and exceeds both cost-based figures in the corpus (487 from H, about 6,650 from Term 3); no derivation links eq. (3) to the cost of selection (claim file H5, internal non-sequitur)'
+    critic: 'The 15,800 is a rate scaling, not a cost computation, and exceeds both cost-based figures in the corpus (487 from H, about 6,650 from Term 3 as H1 and H8 print it, about 6,690 as H5 line 39 prints it); no derivation links eq. (3) to the cost of selection (claim file H5, internal non-sequitur)'
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-805.json
@@ -1274,7 +1275,7 @@ objects:
   resolved_by: docs/research/math/records/M-807.json
 - id: M-808
   kind: formula
-  statement: "Term 3 selection-limited rate: n_max = s_max/s-bar concurrent sweeps each lasting tau = (2/(s-bar d)) ln(2Ne), so K_sel = s_max d/[2 ln(2Ne)] and per site k_sel = K_sel/L; human case s_max = 1, d = 0.45, L = 3.1e9, Ne = 3,300 gives 8.25e-12 per site (paper 8.3e-12), 0.0256 adaptive substitutions per generation (one per 39), about 6,650 over 260,000 generations; Ne = 1e4 gives 7.3e-12; Term 3 allows 17.1 times more adaptive substitutions per generation than Haldane + d (1/39 against 1/667); the 3,300 is unlocated in the corpus and 'ln(2Ne)' is the only place Ne enters (Z19984826 s3.3, s4.3)"
+  statement: "Term 3 selection-limited rate: n_max = s_max/s-bar concurrent sweeps each lasting tau = (2/(s-bar d)) ln(2Ne), so K_sel = s_max d/[2 ln(2Ne)] and per site k_sel = K_sel/L; human case s_max = 1, d = 0.45, L = 3.1e9, Ne = 3,300 gives 8.25e-12 per site (paper 8.3e-12), 0.0256 adaptive substitutions per generation (one per 39), about 6,650 over 260,000 generations (closed form 6,651.6; H1 and H8 print about 6,650, H5 line 39 prints about 6,690, which is 8.3e-12 as printed, 6,689.8); Ne = 1e4 gives 7.3e-12; Term 3 allows 17.1 times more adaptive substitutions per generation than Haldane + d (1/39 against 1/667); the 3,300 is unlocated in the corpus and 'ln(2Ne)' is the only place Ne enters (Z19984826 s3.3, s4.3)"
   used_by: [H8, H1]
   sources:
   - H8#q1
@@ -1290,7 +1291,7 @@ objects:
   resolved_by: docs/research/math/records/M-808.json
 - id: M-901
   kind: inference
-  statement: "ROOT as a universal over mechanisms: for every M in S (selection hard and soft, parallel fixation, drift, neutral sweeps, hitchhiking, ILS, gBGC, relictation-type drift, recombination, hypermutation, 'every other imagined mechanism') F_M(T) < F_req; operational form F_max = T_gen/G_f = 252,000/1,322 = 190.6 against F_req = 2.05e8, shortfall 1.0754e6 (6.03 orders; reproduces the stated 1,075,000; this is the MITTENS 3.0 value, the '3-5 orders' is Z18452504 only and 220,000x is an older version, ledgers/versions.md); the catalogue of 18 named mechanisms has 9 computed or bounded, 3 partial, 5 asserted not computed and relictation not excluded by Day (claim file ROOT-M); the 2026-09-30 post exempts three minor mechanisms (recombination, ILS, HGT) while the 2026-10-05 sentence names ILS as excluded; and whether 'impossible' means this time-budget reading or a statement that selection cannot exist (Hancock: selection is a covariance, a descriptive statistic, so 'statistically impossible' is a category error; she concedes the live question next sentence)"
+  statement: "ROOT as a universal over mechanisms: for every M in S (selection hard and soft, parallel fixation, drift, neutral sweeps, hitchhiking, ILS, gBGC, relictation-type drift, recombination, hypermutation, 'every other imagined mechanism') F_M(T) < F_req; operational form F_max = T_gen/G_f = 252,000/1,322 = 190.6 against F_req = 2.05e8, shortfall 1.0754e6 (6.03 orders; reproduces the stated 1,075,000; this is the MITTENS 3.0 value, the '3-5 orders' is Z18452504 only and 220,000x is an older version, held only in quotes-day.md row 14 and PLAN.md, not in ledgers/versions.md); the catalogue of 18 named mechanisms has 9 computed or bounded, 3 partial, 5 asserted not computed and relictation not excluded by Day (claim file ROOT-M); the 2026-09-30 post exempts three minor mechanisms (recombination, ILS, HGT) while the 2026-10-05 sentence names ILS as excluded; and whether 'impossible' means this time-budget reading or a statement that selection cannot exist (Hancock: selection is a covariance, a descriptive statistic, so 'statistically impossible' is a category error; she concedes the live question next sentence)"
   used_by: [ROOT, ROOT-M, ROOT-COV, ROOT-FM, FM10]
   sources:
   - ROOT#q1
@@ -1339,7 +1340,7 @@ objects:
   resolved_by: docs/research/math/records/M-903.json
 - id: M-904
   kind: inference
-  statement: "From the mesa pattern to the mechanism: sigillation (some mesas are discrete deliberate-modification events that wrote contiguous blocks into one lineage; hedged as 'initial evidence', introduced after the data) and FM10 'neither natural selection nor neutral diffusive drift can still be considered viable'; the step needs the implicit premise that neutral diffusive drift implies a uniform per-window rate, which no harvested Day text states (rule-N grep 2026-10-10) and which Day's own relictation (time-varying, non-diffusive drift) contradicts; R4 FM pre-registered discriminating cells P3, P4, P5 and P7 all fall on the critics' side; chrX F1 100 kb (R 3.76 on hs1, 3.39 chimp-referenced) is the single Day-side cell, one orthologous centromeric-transition window"
+  statement: "From the mesa pattern to the mechanism: sigillation (some mesas are discrete deliberate-modification events that wrote contiguous blocks into one lineage; hedged as 'initial evidence', introduced after the data) and FM10 'neither natural selection nor neutral diffusive drift can still be considered viable'; the step needs the implicit premise that neutral diffusive drift implies a uniform per-window rate, which no harvested Day text states (rule-N grep 2026-10-10) and which Day's own relictation (time-varying, non-diffusive drift) contradicts (the audit's reading; claim file ROOT-FM says rule N2b is not triggered); R4 FM pre-registered discriminating cells P3, P4, P5 and P7 all fall on the critics' side; chrX F1 100 kb (R 3.76 on hs1, 3.39 chimp-referenced) is the single Day-side cell, one orthologous centromeric-transition window"
   used_by: [ROOT-FM, FM7, FM10]
   sources:
   - ROOT-FM#q4
