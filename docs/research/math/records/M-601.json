@@ -1,0 +1,81 @@
+{
+  "id": "M-601",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-601.py",
+  "script_sha256": "250ce54c06efacf7b99861a882ae16ec4cedf515aac12586ce5927f078d0e6f1",
+  "object": "M-601",
+  "inputs": [
+    {
+      "name": "formula",
+      "value": "t = (2/s) ln(2Ne)",
+      "cite": "F q1, F3 q1 (Q45); Z18166426 with s_eff: F3 q2"
+    },
+    {
+      "name": "Ne, s",
+      "value": [
+        10000.0,
+        0.001
+      ],
+      "cite": "Q44 (F1a q3); parameters population.Ne_modern_human, selection.s_zeng_2021"
+    },
+    {
+      "name": "conditional mean asymptote",
+      "value": "(2/s)(ln 4Ns + gamma)",
+      "cite": "RESULTS B0.4 (review #2 correction); F3 formal statement"
+    },
+    {
+      "name": "diffusion integral at Ne = 1e4, s = 0.001",
+      "value": 8480,
+      "cite": "RESULTS B0.4 table (quoted, not rerun)"
+    },
+    {
+      "name": "Zenodo window",
+      "value": [
+        0.01,
+        0.99
+      ],
+      "cite": "F3 q2 (Z18166426 para 135)"
+    }
+  ],
+  "values": {
+    "ln_2Ne": 9.9035,
+    "sweep_time": {
+      "0.001": 19807.0,
+      "0.01": 1980.7,
+      "0.0005": 39614.0
+    },
+    "exact_logistic_p0_to_1_minus_p0_s0.001": 19806.9,
+    "conditional_mean": {
+      "0.001": 8532.2,
+      "0.01": 1313.7,
+      "0.0005": 14291.8
+    },
+    "overstatement": {
+      "0.001": 2.321,
+      "0.01": 1.508,
+      "0.0005": 2.772
+    },
+    "over_diffusion_8480": 2.336,
+    "window_0.01_0.99": {
+      "ln_99": 4.5951,
+      "ln_9801": 9.1902,
+      "time_logistic_(2/s)ln99": 9190.2,
+      "time_(2/s)ln9801": 18380.5,
+      "log_gap_to_ln2Ne": [
+        5.3084,
+        0.7132
+      ]
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "(2/s) ln(2Ne) is the fixation time of a beneficial allele and enters the six/seven figure",
+      "holds": "arithmetic exact: 19,807 (printed 19,800); a standard deterministic sweep-time approximation"
+    },
+    "critic": {
+      "reading": "deterministic sweep time, not the conditional mean; a latency, not a spacing (F1)",
+      "holds": "conditional mean 8,532 (diffusion 8,480), so the formula overstates it 2.32x at s = 0.001"
+    }
+  },
+  "notes": "The formula is the exact deterministic time from 1/(2Ne) to 1 - 1/(2Ne) under dp/dt = s p(1 - p) (19,806.6 against 19,807.0). The Zenodo text's window 0.01 -> 0.99 does not match it: the same dynamics give (2/s) ln 99 = 9,190, and ln 9,801 = 9.190 under the same prefactor gives 18,380; neither log is ln(2Ne) = 9.9035, so the stated window and the computed 19,807 use different starting points. Attribution: the claim files find the formula not in Kimura & Ohta 1969 (Z19984826 cites Charlesworth 1994); neither paper is in sources/raw/, so the record holds the claim files' statements, not the papers. The latency question (does it bound the count) is M-115/M-602, not this record."
+}

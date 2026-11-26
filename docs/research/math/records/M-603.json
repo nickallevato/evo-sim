@@ -1,0 +1,60 @@
+{
+  "id": "M-603",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-603.py",
+  "script_sha256": "01540daea9fb1c7ab812c1939873b838667ac7a20fd0e4d68dc5cbeb84d56325",
+  "object": "M-603",
+  "inputs": [
+    {
+      "name": "Day's attribution",
+      "value": "at s = 0.001 (the empirical mean for beneficial mutations in humans from Zeng et al. 2021)",
+      "cite": "F3a q1 (Education post para 15); Q44 (F1a q3)"
+    },
+    {
+      "name": "Zeng 2021",
+      "value": [
+        "We detect widespread signatures of negative selection in the genetic architecture across 155 complex traits with a predicted mean selection coefficient of ~0.001",
+        "about 1% of human genome sequence are mutational targets with a mean selection coefficient of ~0.001",
+        "Since we only detected signatures of negative selection in real traits, our evolutionary simulations focused on the models of negative selection."
+      ],
+      "cite": "quotes-literature Zeng2021 (Results; Abstract; Results, simulations); F3a q2"
+    },
+    {
+      "name": "parameter",
+      "value": 0.001,
+      "cite": "parameters selection.s_zeng_2021 (sign negative, verified: true)"
+    },
+    {
+      "name": "scan of Zeng's numeric-s sentences",
+      "value": "6 sentences with a numeric s (5 in the first run, which missed Z4); none mentions positive or beneficial selection.",
+      "cite": "R4 F3a P2 (raw Zeng text not in this checkout)"
+    }
+  ],
+  "values": {
+    "zeng_mean_s": 0.001,
+    "zeng_sign": "negative (purifying)",
+    "zeng_beneficial_mean": null,
+    "day_label": "beneficial",
+    "fidelity": "misread",
+    "latency": {
+      "0.001": 19807.0,
+      "0.01": 1980.7,
+      "0.0005": 39614.0
+    },
+    "s_band_latency_within_25pct": [
+      0.0008,
+      0.001333
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "0.001 is Zeng's empirical mean, a defensible order of magnitude for trait-affecting variants",
+      "holds": "Zeng does report a mean |s| of ~0.001; category means 0.0005-0.0010"
+    },
+    "critic": {
+      "reading": "Zeng measures negative selection; the beneficial label is a misread and the sign matters",
+      "holds": "no held Zeng sentence gives a beneficial mean; the repo holds no sourced human beneficial s"
+    }
+  },
+  "notes": "The number is Zeng's; the label is not: Zeng's ~0.001 is a mean |s| under negative selection, and Day calls it the empirical mean for beneficial mutations. Latency scales as 1/s, so the 19,807 moves by more than 25% for any s outside 0.0008-0.00133; with no sourced beneficial mean in the repo the materiality stays undetermined (R4 F3a). The steady-state rate does not depend on latency (F1). The 'none beneficial' finding rests on R4 F3a's scan and review; the Zeng raw text is not in this checkout's sources/raw/."
+}

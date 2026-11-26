@@ -1,0 +1,79 @@
+{
+  "id": "M-602",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-602.py",
+  "script_sha256": "1fb5b3bf407992c361d25c7b05cd52649c5ae064c115eb1691beabbc0028faab",
+  "object": "M-602",
+  "inputs": [
+    {
+      "name": "Ne, s, t",
+      "value": [
+        10000,
+        0.001,
+        19800
+      ],
+      "cite": "Q44 (F1a q3); formula not printed in the Q&A"
+    },
+    {
+      "name": "window 9e6 y, 32.5 y, d = 0.45",
+      "value": [
+        9000000.0,
+        32.5,
+        0.45
+      ],
+      "cite": "CLAIM-FILE RECONSTRUCTION (F1a formal statement; Day does not print the inputs); values from parameters divergence.t_div_years.day_2019, generation_time_years.day_alt, selection.turnover_d (verified: false)"
+    },
+    {
+      "name": "window 146,250",
+      "value": 146250,
+      "cite": "CLAIM-FILE RECONSTRUCTION (F1a); parameters generations_available.day_2025_effective (325000*0.45, verified: false)"
+    },
+    {
+      "name": "alternative windows",
+      "value": [
+        252000,
+        113400.0
+      ],
+      "cite": "F1a formal statement; parameters generations_available.day_2026"
+    },
+    {
+      "name": "LTEE gen/fix",
+      "value": [
+        1600,
+        1322
+      ],
+      "cite": "F1a q4, q1; parameters ltee.gens_per_fixation.day_2019, day_mittens3_nonmutator"
+    }
+  ],
+  "values": {
+    "ln_2Ne": 9.9035,
+    "divisor": 19807.0,
+    "fixations_per_generation_if_spacing": 5.049e-05,
+    "six": 6.29,
+    "seven": 7.38,
+    "other_readings": {
+      "252000": 12.72,
+      "252000x0.45": 5.73
+    },
+    "window_generations": {
+      "9e6/32.5x0.45": 124615.4,
+      "146250": 146250
+    },
+    "implied_width_factor": 1.0,
+    "divisor_over_ltee": {
+      "1600": 12.379,
+      "1322": 14.983
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the division is a throughput calculation adjusted for parallelism; 19,800 > 1,600",
+      "holds": "the arithmetic is exact (19,807; 6.3; 7.4) and 19,807 > 1,600"
+    },
+    "critic": {
+      "reading": "a one-allele latency used as generations per fixation is the serial reading",
+      "holds": "the reconstructed counts are window x d / latency, implied width exactly 1; no width factor"
+    }
+  },
+  "notes": "19,807 is a per-allele sweep latency (M-601); dividing a window by it gives one fixation per latency, so the six/seven figure carries width 1 whatever the division is called. Day's 'adjusted for parallelism' names no width factor in this figure; the Bernoulli paper's (300,000/440) x 230 shows what one looks like. The 1,600 and 1,322 gen/fix are LTEE throughputs (counts over a window), so '19,800 > 1,600' compares a latency with a throughput. The 6.3 and 7.4 inputs are the claim file's reconstruction; Day prints neither the window nor the quotient, and the parameters.yaml values carry verified: false."
+}

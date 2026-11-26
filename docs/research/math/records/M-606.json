@@ -1,0 +1,60 @@
+{
+  "id": "M-606",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-606.py",
+  "script_sha256": "4df7b8be7e9ca410c8316651d9e0f9b6b9fb82ae694fe2cf7bb1a17e06542411",
+  "object": "M-606",
+  "inputs": [
+    {
+      "name": "Day's sentence",
+      "value": "The process has a mean length of 4Nₑ generations and a broad distribution around that mean (SD ≈ 0.538 × 4Nₑ under Kimura's diffusion treatment).",
+      "cite": "Q294 (Z22903977 s3 para 1, sentence 3); F5 q1"
+    },
+    {
+      "name": "closed form",
+      "value": "sqrt(pi^2/3 - 3)",
+      "cite": "Q294 note (audit arithmetic)"
+    },
+    {
+      "name": "simulated SD of t_fix/N",
+      "value": {
+        "50": 2.105,
+        "200": 2.108
+      },
+      "cite": "RESULTS B0 table (baseline_textbook.py, seed 20261007); F5 formal statement"
+    },
+    {
+      "name": "Kimura & Ohta 1969 content",
+      "value": "| Kimura & Ohta 1969 | SD ≈ 2.15Nₑ (Day) | **not-found in this paper** | Only the first moment is derived here; the paper says higher moments can be obtained \"step by step\". The SD figure must come from a later source. Our B0.2 simulation gives SD ≈ 2.1N. |",
+      "cite": "ledgers/fidelity.md; F5 primary-literature table"
+    }
+  ],
+  "values": {
+    "sd_over_4Ne": 0.53839,
+    "sd_over_Ne": 2.1536,
+    "cv": 0.53839,
+    "series_mean_over_2Ne": 1.99999,
+    "series_sd_over_mean": 0.538397,
+    "simulated_sd_over_N": {
+      "50": 2.105,
+      "200": 2.108
+    },
+    "simulated_gap_to_2.154": {
+      "50": -0.0226,
+      "200": -0.0212
+    },
+    "in_kimura_ohta_1969": "not found (ledger; paper derives the first moment only)",
+    "raw_texts_read_by_record": false
+  },
+  "positions": {
+    "day": {
+      "reading": "mean 4Ne with a broad distribution, SD about 0.538 x 4Ne, under Kimura's diffusion",
+      "holds": "0.538 = sqrt(pi^2/3 - 3) is the exact diffusion value; simulation gives 2.105-2.108 against 2.154"
+    },
+    "critic": {
+      "reading": "the number reproduces but is not in the cited Kimura & Ohta 1969",
+      "holds": "the ledger finds only the first moment (Eq. 15) there; the count formula needs only the mean"
+    }
+  },
+  "notes": "The figure is right: SD/mean = sqrt(pi^2/3 - 3) = 0.5384, so SD = 2.154 Ne; the series form of the same law gives the same ratio, and the B0.2 simulation (2.105, 2.108) sits about 2% below it at N = 50 and 200. Fidelity concerns the attribution only: 'Kimura's diffusion treatment' is fair as a method, but the cited Kimura & Ohta 1969 derives the first moment and says higher moments follow 'step by step' (ledger). Neither Kimura & Ohta 1969 (ledger: sources/raw/sources/manual/) nor the Z22903977 text named in Q294 is present in this checkout, so the 'not in the paper' finding is the ledger's, held here, not re-read."
+}
