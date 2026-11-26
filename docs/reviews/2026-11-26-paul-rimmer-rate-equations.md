@@ -2,7 +2,9 @@
 
 _Lead review written at the owner's request (EVOA-102). Not an audit check: no claim file, verdict or count changed. Scope: the owner asked for the errors from Day's side; §5 gives the critic-side steelman at equal depth (hard rule 1)._
 
-**Source.** Paul (Paul B. Rimmer per his footnotes 3–4, Cambridge), [paulnottheapostle.substack.com/p/mathematical-models-of-evolution](https://paulnottheapostle.substack.com/p/mathematical-models-of-evolution), `post_date` 2026-11-08 (page JSON), public post, about 2,700 words. Fetched 2026-11-26 into gitignored `sources/raw/paulnottheapostle-2026-11-26/`, `page.html` sha256 `20061906c2badd561961534ef5c99cb2bd0d1b1db2bdf761904e81eedafd6cde`. The figures are images and are not in the text, so I recomputed every curve from his closed-form formula.
+_Written before D-41; Day-side framing at the owner's request (EVOA-102). Later reviews are neutral._
+
+**Source.** Paul (Paul B. Rimmer per his footnotes 3–4, Cambridge), [paulnottheapostle.substack.com/p/mathematical-models-of-evolution](https://paulnottheapostle.substack.com/p/mathematical-models-of-evolution), `post_date` 2026-11-08 (page JSON), public post, about 2,900 words. Fetched 2026-11-26 into gitignored `sources/raw/paulnottheapostle-2026-11-26/`, `page.html` sha256 `20061906c2badd561961534ef5c99cb2bd0d1b1db2bdf761904e81eedafd6cde`. The figures are images and are not in the text, so I recomputed every curve from his closed-form formula. Bibliography key PR-1 (`docs/research/sources/bib-critics.md`); source map [`paul-rimmer-2026-11-08.md`](../research/math/sources/paul-rimmer-2026-11-08.md); every number below is asserted in records [M-912](../research/math/records/M-912.py) and [M-913](../research/math/records/M-913.py) (D-41 item 0).
 
 **Scope.** You asked for the maths and for where it goes wrong from Beale's (Day's) side. Hard rule 1 still applies, so §5 gives the critic-side steelman at equal depth. This is a lead review for you. It is not an audit check, and nothing in the claim files or verdict fields moved.
 
@@ -29,19 +31,20 @@ Everything is in the end section "The Mathematical Model".
 
 **Model.** N asexual clones, genome length L, generation time τ. Each parent has exactly one child and then dies, so there is no drift, no lineage loss and no selection. Every site mutates with probability κ per generation, to one of the other three bases with equal probability (Jukes–Cantor substitution).
 
-| Step | Equation (his) | Check |
-|---|---|---|
-| Generations | n = ⌊t/τ⌋ | fine |
-| One site stays A | p₍ₙ₊₁₎ = (1−κ)pₙ + (κ/3)(1−pₙ) = (1−4κ/3)pₙ + κ/3 | correct |
-| Fixed point | c = 1/4 | correct |
-| Solution | pₙ = 1/4 + (3/4)(1−4κ/3)ⁿ | correct |
-| Two lineages match at a site | P = pₙ² + 3((1−pₙ)/3)² | correct (independent lineages) |
-| Site difference | dₙ = (3/4)[1 − (1−4κ/3)²ⁿ] | **verified algebraically**: 1 − p² − (1−p)²/3 with p = ¼ + ¾a gives ¾(1−a²) |
-| Genome | D(t) = (3L/4)[1 − (1−4κ/3)^(2⌊t/τ⌋)] | correct; this is the Jukes–Cantor (JC69) divergence of two lineages |
-| Small κ | D ≈ (3L/4)[1 − exp(−8κt/3τ)] | correct |
-| Early times | D ≈ 2Lκt/τ | correct; this is the textbook **2μt** two-lineage divergence |
+| Step | Equation (his) | Library object | Check |
+|---|---|---|---|
+| Generations | n = ⌊t/τ⌋ | M-912 | fine |
+| One site stays A | p₍ₙ₊₁₎ = (1−κ)pₙ + (κ/3)(1−pₙ) = (1−4κ/3)pₙ + κ/3 | M-912 (paul@L87) | correct |
+| Fixed point | c = 1/4 | M-912 (paul@L96) | correct |
+| Solution | pₙ = 1/4 + (3/4)(1−4κ/3)ⁿ | M-912 | correct (record: recursion = closed form, exact, n = 1..5) |
+| Two lineages match at a site | P = pₙ² + 3((1−pₙ)/3)² | M-912 | correct (independent lineages) |
+| Site difference | dₙ = (3/4)[1 − (1−4κ/3)²ⁿ] | M-912 (paul@L135) | **verified algebraically**: 1 − p² − (1−p)²/3 with p = ¼ + ¾a gives ¾(1−a²) |
+| Genome | D(t) = (3L/4)[1 − (1−4κ/3)^(2⌊t/τ⌋)] | M-912 | correct; this is the Jukes–Cantor (JC69) divergence of two lineages |
+| Small κ | D ≈ (3L/4)[1 − exp(−8κt/3τ)] | M-912 (paul@L159) | correct |
+| Early times | D ≈ 2Lκt/τ | M-912 (paul@L162); B4a's 2μT with θ_anc = 0 | correct; this is the textbook **2μt** two-lineage divergence |
+| Bacteria-like inputs | same D(t), L = 4.6×10⁶, κ = 10⁻¹⁰, τ = 15 h | new M-913, variant of M-912 | correct |
 
-**Inputs and outputs, recomputed** with his inputs: L = 3×10⁹, κ = 1/(5×10⁷) = 2×10⁻⁸, τ = 20 y.
+**Inputs and outputs, recomputed** with his inputs (record M-912; bacteria M-913): L = 3×10⁹, κ = 1/(5×10⁷) = 2×10⁻⁸, τ = 20 y.
 - The early slope is 2Lκ = **120 differences per generation**.
 - D/L reaches 1.2 % at **6.05 My** (302,426 generations) and 1.37 % at 6.9 My. At 1 My, 5 My and 10 My it is 0.20 %, 0.99 % and 1.97 %. That matches his "somewhere between 1 and 10 million years". He never states the human–chimp target he used. A target of about 1.2 % SNV divergence fits his figures.
 - Bacteria-like aliens (L = 4.6×10⁶, κ = 10⁻¹⁰, τ = 15 h): D/L is 10.8 % at 1 My, 59 % at 10 My and 75.0 % (saturated) at 100 My. That matches his "in 100 million years, there'd be maximal divergence".
@@ -55,7 +58,7 @@ Everything is in the end section "The Mathematical Model".
 MITTENS counts **fixed** differences per lineage: F_max = t_div·d/(g_len·G_f), where G_f is *generations per fixation* (claim **A**; Day: "I didn't cite the E. coli study for its mutation rate but for its fixation rate", **A5g**). Paul's model has **no fixation at all**. Each parent has exactly one child, so every new mutation stays at frequency 1/N for ever. No derived allele ever spreads through the alien population, and the number of fixed differences stays **zero** at every t. D(t) is the expected difference between **two individuals in one population**. The human–chimp count Day's side uses is the number of differences **fixed between two species**. Paul answers a question MITTENS never asks: he says himself he is asking "how much difference can copying errors produce". Day has never claimed that mutation supply is short.
 
 ### E2. The model's own prediction is falsified, and Paul half-concedes this
-At 6 My his aliens differ from **each other** by about 1.2 %, as much as humans differ from chimps. Real human pairwise diversity is about 0.1 % (the standard literature figure; this review did not check it against a source). So the model predicts roughly 10× too much *within-species* variation. Paul draws the right lesson: "To explain the diversity we actually see, we would need to show how differences arise and how they are squelched. Some mutations lose out. Some lineages die out." That squelching is drift and selection: the fixation process, which takes time. **That is the process MITTENS is about**, and the model removed it. "Too much variation, not too little" is therefore a statement about the wrong variable.
+At 6 My his aliens differ from **each other** by about 1.2 %, as much as humans differ from chimps. Real human pairwise nucleotide diversity is 0.088 % (Zhao et al. 2000, PNAS, abstract: "The average nucleotide diversity (pi) across the region was 0.088% among all of the human sequences obtained", one 10-kb noncoding region, 128 sequences; the same sentence calls human diversity "approximately 0.1%"; `parameters.yaml` population.pi_human_pairwise). So the model predicts about 14× too much *within-species* variation (12× against the rounded 0.1 %; record M-912). Paul draws the right lesson: "To explain the diversity we actually see, we would need to show how differences arise and how they are squelched. Some mutations lose out. Some lineages die out." That squelching is drift and selection: the fixation process, which takes time. **That is the process MITTENS is about**, and the model removed it. "Too much variation, not too little" is therefore a statement about the wrong variable.
 
 ### E3. Population size cancels only because it was assumed away
 > "It turns out, with this rate equation approach, the population size really doesn't matter anymore … These effects perfectly cancel."
