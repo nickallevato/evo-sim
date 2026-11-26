@@ -31,8 +31,8 @@ items:
   blocker: none   # VERIFY-operator-1 2026-11-01
   next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."
 - id: B3
-  blocker: in-flight   # B3-reviewer-1 (combined review of R4-B3-internal.md), 2026-11-26; write-up 26dabc8 approved (EVOA-53)
-  next: "internal `pending`; R4-B3-internal.md (26dabc8) proposes `holds`, reading-dependent (R-a convergent; R-b conjunctive = non-sequitur), fallback `pending` if RD cannot rank join-readings. Next: one combined review (D-40, B3-reviewer-1), then a fix pass if it has MAJOR/MINOR, then operator integration of the field."
+  blocker: in-flight   # B3-analyst-2 (fix pass 1 of 2), 2026-11-26; review 38e19ef approved (EVOA-55)
+  next: "internal `pending`. Review 38e19ef (0 BLOCKER, 4 distinct MAJOR): RD as written does not rank joinings of quotes. Lead ruling (brief B3-analyst-2): for C-1/K-1, so the proposal becomes `pending` (D-1 and SCOPED declined). Next: fix pass 1 (B3-analyst-2), then operator integration of the claim-file comment (field stays `pending`), then the row goes to `owner`: does an umbrella node need an aggregation rule (K-1; ROADMAP B5)?"
 - id: FM10
   blocker: outside
   next: "internal waits on Day releasing his method (owner decision 2026-10-10, D-09). External: the D-25 fairer-criterion check (B60) is the one permitted task."
