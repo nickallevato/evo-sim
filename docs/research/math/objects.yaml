@@ -774,7 +774,8 @@ objects:
     day: Six of twelve populations became mutators through loss of DNA repair (four mismatch repair, two oxidative damage), so hypermutation is common
     critic: Not addressed; the 96.5% and the six populations match Tenaillon 2016, but the 4+2 gene split is not in the quoted passage and Day's papers use six and seven without reconciling them
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-502.json
 - id: M-503
   kind: empirical
   statement: 'Which counting rule defines an LTEE fixation and so G_f: pooled >= 95% snapshot at 10K marks (non-mutator mean 45.4, 1,322 gen/fix; Ara+5 38 at 30K and 0 at 60K, a non-measurement past its last sample 57,500; clone-pair correction giving -906 for Ara-2 at n = 2), first crossing at >= 95% (8,679; 824 gen/fix), strict lineage-aware whole-population (5,496 over 723,000 population-generations; 1,587 gen/fix) and within-lineage sweeps (7,166); the spread across rules is 3.04x for the non-mutators (523 to 1,587); the figure covers Z23003785, Z23105291 and the Good 2017 clade structure only'
@@ -853,7 +854,8 @@ objects:
     day: Below 10% replacement the formula holds; above it t = 4Ne breaks in quantifiable ways; the mechanism is established multiple-merger theory that is under-applied
     critic: The result is the known multiple-merger result and P_fix = 1/(2N) agrees with the critics' own chains (keruru); growth with N needs family size proportional to N (sweepstakes), and at 2N >= 1,000 with realistic vertebrate variance f is below 1%
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-507.json
 - id: M-601
   kind: formula
   statement: 'Beneficial sweep latency t = (2/s) ln(2 Ne) generations (deterministic logistic sweep from p0 = 1/(2Ne)): 19,807 at s = 0.001, 1,981 at 0.01 and 39,614 at 0.0005 for Ne = 10,000; the stochastic conditional mean is (2/s)(ln 4Ns + gamma) = 8,532, 1,314 and 14,292, so the quoted formula overstates it by 2.32x at s = 0.001 (B0.4); the Zenodo text states a window p = 0.01 to 0.99, which gives a different logarithm (4.595 or 9.190) from ln(2Ne) = 9.9035'

@@ -1,0 +1,194 @@
+{
+  "id": "M-507",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-507.py",
+  "script_sha256": "1ae152b164f5e2ab255963fdba3698fdea43b336f008faa8cbbd283e57cc4392",
+  "object": "M-507",
+  "inputs": [
+    {
+      "name": "jackpot chain",
+      "cite": "claim file E4 Formal statement (Z23188201 s2)",
+      "text": "Cannings jackpot model: each generation, with probability p_jackpot, one random individual survives and its offspring replace round(f x 2N) other gene copies; remaining copies reproduce deterministically."
+    },
+    {
+      "name": "paper table t/4Ne and WF baseline at 2N = 20/30/50",
+      "cite": "claim file E4 Formal statement (Z23188201 s2)"
+    },
+    {
+      "name": "claim-file derived peak ratios",
+      "cite": "claim file E4",
+      "text": "derived: peak ratio over WF baseline = 1.071/0.932 = 1.149, 1.146/0.952 = 1.204, 1.249/0.970 = 1.288 (paper: \"~15%, ~21%, and ~29%\"; holds)."
+    },
+    {
+      "name": "10% threshold",
+      "cite": "Q72 (E4 q1, F6 q1)",
+      "text": "compression fails and a single family can replace more than ~10% of the population, the formula t̄ = 4Nₑ breaks in quantifiable ways. Below 10% replacement, the formula holds"
+    },
+    {
+      "name": "P_fix = 1/(2N)",
+      "cite": "E4 q2",
+      "text": "The fixation probability p = 1/(2N) is protected by the martingale property and holds exactly regardless of offspring distribution."
+    },
+    {
+      "name": "jackpot probability pj = 0.1; m = min(round(f 2N), 2N - 1)",
+      "cite": "R4 E (research/checks/e4_relictation_chain.py)"
+    },
+    {
+      "name": "cross-checks outside the table",
+      "cite": "R4 E",
+      "text": [
+        "Day's large-N numbers reproduce: 1.363 and 1.737 at f = 0.5 (2N = 100, 800)",
+        "For a **fixed family** (m = 6) the excess shrinks: 1.0445 (2N = 60)",
+        "Exact f* (post hoc bisection) for +5% over the WF chain: 15% (2N = 20), 13% (30), 8% (50)"
+      ]
+    }
+  ],
+  "values": {
+    "wf_ratio": {
+      "20": 0.9318,
+      "30": 0.9523,
+      "50": 0.9697
+    },
+    "table_ratio": {
+      "5%": [
+        0.95,
+        0.9827,
+        0.9929
+      ],
+      "10%": [
+        0.9679,
+        0.9992,
+        1.0334
+      ],
+      "20%": [
+        1.0034,
+        1.048,
+        1.1001
+      ],
+      "30%": [
+        1.0348,
+        1.0914,
+        1.1597
+      ],
+      "50%": [
+        1.0709,
+        1.1459,
+        1.2387
+      ],
+      "60%": [
+        1.0682,
+        1.1483,
+        1.249
+      ],
+      "80%": [
+        0.9759,
+        1.0597,
+        1.1726
+      ],
+      "90%": [
+        0.95,
+        0.9657,
+        1.0231
+      ],
+      "98%": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "max_abs_deviation_from_paper_table": 0.00042,
+    "pfix_times_2N": 1.0,
+    "statement_excess_pct_from_printed_cells": {
+      "20": 14.91,
+      "30": 20.38,
+      "50": 28.76
+    },
+    "printed_column_max": {
+      "20": {
+        "f": 0.5,
+        "ratio": 1.071
+      },
+      "30": {
+        "f": 0.6,
+        "ratio": 1.148
+      },
+      "50": {
+        "f": 0.6,
+        "ratio": 1.249
+      }
+    },
+    "excess_pct_at_printed_column_max": {
+      "20": 14.91,
+      "30": 20.59,
+      "50": 28.76
+    },
+    "exact_peak_over_integer_m": {
+      "20": {
+        "m": 11,
+        "f": 0.55,
+        "ratio": 1.0716
+      },
+      "30": {
+        "m": 17,
+        "f": 0.567,
+        "ratio": 1.1499
+      },
+      "50": {
+        "m": 30,
+        "f": 0.6,
+        "ratio": 1.249
+      }
+    },
+    "exact_peak_excess_pct_over_wf_chain": {
+      "20": 15.0,
+      "30": 20.75,
+      "50": 28.8
+    },
+    "excess_pct_over_wf_at_low_f": {
+      "5%": {
+        "20": 2.0,
+        "30": 3.2,
+        "50": 2.4
+      },
+      "10%": {
+        "20": 3.9,
+        "30": 4.9,
+        "50": 6.6
+      }
+    },
+    "f_star_plus5pct": {
+      "20": 0.15,
+      "30": 0.133,
+      "50": 0.08
+    },
+    "ratio_2N100_f50": 1.3635,
+    "fixed_family_m6": {
+      "60": 1.0445,
+      "120": 1.0323
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "above ~10% replacement t = 4Ne breaks (+15%, +21%, +29% over WF at 2N = 20/30/50); below it the formula holds; P_fix = 1/(2N)",
+      "excess_pct": {
+        "20": 14.91,
+        "30": 20.59,
+        "50": 28.76
+      },
+      "pfix_times_2N": 1.0
+    },
+    "critic": {
+      "reading": "the known multiple-merger result; P_fix unchanged; growth with N needs family size proportional to N, and a fixed family returns to the drift baseline",
+      "fixed_family_m6": {
+        "60": 1.0445,
+        "120": 1.0323
+      },
+      "f_star_plus5pct": {
+        "20": 0.15,
+        "30": 0.133,
+        "50": 0.08
+      }
+    }
+  },
+  "notes": "All 27 table cells and the WF baseline reproduce to 0.00042; P_fix = i/2N to 1e-12 in every chain. The object's 14.9% and 28.8% are the column maxima over WF; its 20.4% uses the 2N = 30 cell at f = 50% (1.146), but that column peaks at f = 60% (1.148), giving 20.6% (gap 0.2 points; the claim file's derived line has the same slip, and the paper's ~21% holds). Over every integer m the exact peak excess over the exact WF chain is 15.0%, 20.7%, 28.8% (m/2N = 0.55, 0.57, 0.60). 'No deviation below about 10%' holds at the +5% cut for 2N = 20 and 30 (+3.9%, +4.9% at f = 10%) but not at 2N = 50 (+6.6%; f* = 8%). The table covers 2N = 20-50; in this chain f = 50% gives 1.363 at 2N = 100 (R4 E), while a fixed family of 6 falls from 1.0445 at 2N = 60 toward the drift baseline."
+}
