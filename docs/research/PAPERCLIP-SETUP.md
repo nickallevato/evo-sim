@@ -54,10 +54,10 @@ There is no host-watch routine (long runs aren't polled) and no backstop routine
 ## 5. Issues the Lead creates (one at a time)
 Every worker issue carries:
 ```json
-"executionPolicy": {"mode": "normal", "commentRequired": true, "maxReviewRounds": 1,
+"executionPolicy": {"mode": "normal", "commentRequired": true, "maxReviewRounds": 2,
   "stages": [{"type": "review", "participants": [{"type": "agent", "agentId": "<Lead>"}]}]}
 ```
-The Lead appends a second stage, `{"type": "approval", "participants": [{"type": "user", "userId": "<owner>"}]}`, when the task moves a verdict field, changes a rule or publishes anything.
+No second stage (owner, 2026-11-26). An `approval` stage for a user has no button in Paperclip, and an owner comment reopens the issue and wipes the stage (EVOA-17). Verdict moves get the Lead review only. A rule change or a publish gets the owner's yes on an owner card before the task is scoped. `maxReviewRounds` is 2 so the Lead's one send-back goes to the worker; at 1 it went straight to the owner.
 
 ## 6. Migration, in order
 1. Repo: `.claude/agents/lead.md`; the old company's in-flight work goes into `gap-blockers.yaml` (L3 into the A2e row) and QUEUE.md "Parked at the Paperclip migration". Done in commit with this file.
