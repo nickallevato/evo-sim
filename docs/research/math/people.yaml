@@ -12,3 +12,4 @@ people:
   michael-lynch:  {name: "Michael Lynch", side: literature, aliases: ["Lynch", "Michael Lynch"]}
   ola-hossjer:    {name: "Ola Hössjer", side: ally, aliases: ["Hössjer", "Hossjer", "HO"]}
   paul-rimmer:    {name: "Paul B. Rimmer (paulnottheapostle Substack)", side: critic, aliases: ["Paul Rimmer", "PR"]}
+  dennis-mccarthy: {name: "Dennis McCarthy (All The Mysteries That Remain, Substack)", side: critic, aliases: ["Dennis McCarthy", "McCarthy", "MC"]}

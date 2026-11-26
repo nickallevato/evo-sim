@@ -1,0 +1,118 @@
+{
+  "id": "M-914",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-914.py",
+  "script_sha256": "752d6181ad9f0b21d1dc5a221f9ffa00cef8717217555f8971d7c9d05a94fbd2",
+  "object": "M-914",
+  "variant_of": "M-212",
+  "inputs": [
+    {
+      "name": "U_per_individual",
+      "value": 100,
+      "cite": "mc1@L35 (Day, as McCarthy quotes PZ)"
+    },
+    {
+      "name": "N",
+      "value": 10000,
+      "cite": "mc1@L35-L36; p_fix = 1/(2N)"
+    },
+    {
+      "name": "required_per_lineage",
+      "value": 20000000.0,
+      "cite": "mc1@L33, mc1@L35"
+    },
+    {
+      "name": "t_years",
+      "value": 9000000.0,
+      "cite": "mc1@L35"
+    },
+    {
+      "name": "supply_per_year",
+      "value": 50000,
+      "cite": "mc1@L35 (implies g = 20 y)"
+    },
+    {
+      "name": "g_lag_years",
+      "value": 25,
+      "cite": "mc1c#337074301 (Day), mc1c#337116873 (McCarthy)"
+    },
+    {
+      "name": "F_max",
+      "value": 180,
+      "cite": "mc2c#340102853 (Day quotes MITTENS 3.0: 252,000 / 1,400)"
+    },
+    {
+      "name": "U_Ecoli",
+      "value": 0.00041,
+      "cite": "mc1@L75 (Wielgoss et al. 2011, quoted)"
+    },
+    {
+      "name": "harmful_to_neutral",
+      "value": 3,
+      "cite": "mc1c#337302874 (Day)"
+    }
+  ],
+  "values": {
+    "day_text": {
+      "per_generation": 1000000,
+      "g_implied_y": 20.0,
+      "need_per_y": 2.2222,
+      "one_in": 22727,
+      "pct": 0.0044,
+      "supply_x_pfix_per_y": 2.5,
+      "excess_over_need": 0.125,
+      "log10_two_lineages": -172041200
+    },
+    "mc1_match": {
+      "expected": 22500000.0,
+      "vs_required": 0.125,
+      "neutral_share_quarter": 5625000.0,
+      "lag_adjusted_neutral_share_quarter": 5000000.0
+    },
+    "rf7_lag": {
+      "generations": 360000.0,
+      "productive_generations": 320000.0,
+      "years": 8000000.0,
+      "as_written": 20000000.0,
+      "single_basis_25y": 16000000.0,
+      "single_basis_20y": 20500000.0,
+      "moves": {
+        "25y": -0.2,
+        "20y": 0.025
+      },
+      "r1": "ledger (max |move| 20% <= 25%)"
+    },
+    "rf6": {
+      "true": 20000000.0,
+      "printed": 35000000.0,
+      "printed_over_true": 0.75,
+      "correction": -0.4286,
+      "ratio_to_180_printed": 194444,
+      "ratio_to_180_true": 111111,
+      "flips": false
+    },
+    "ecoli": {
+      "clone_fraction_pct": 99.959,
+      "divisions_per_mutation": 2439,
+      "human_over_ecoli": [
+        146341,
+        243902
+      ]
+    },
+    "day_thread": {
+      "lag_years": 1000000.0,
+      "410M_over_6M": 68.33
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the count ignores the fixation time and treats every mutation as neutral; with Day's 3x harmful ratio the neutral expectation is a quarter",
+      "holds": "the time point is answered by McCarthy's own lag (16-20.5M); the neutral-share point moves 22.5M to 5.6M only if three quarters of new mutations are harmful, an input"
+    },
+    "critic": {
+      "reading": "on Day's quoted inputs the expected neutral count meets the requirement",
+      "holds": "22.5M (+12.5%), 16-20.5M lag-adjusted; Day's own quoted 1 in 22,727 need sits below his 1 in 20,000 p_fix; RF-6's 35M is a slip for 20M and leaves '>> 180' standing"
+    }
+  },
+  "notes": "RF-6 is in the MC-2 thread (mc2c#340149310). R1 on RF-6 is reading-dependent: as a comparison with 180 (the stated conclusion, 'not 180') it is ledger; read as a headline total it moves 42.9% (R1(i)); see the review page. The RF-7 mixed generation basis (20 y supply, 25 y lag) is new to the library."
+}

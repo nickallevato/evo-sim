@@ -336,7 +336,7 @@ objects:
   kind: formula
   statement: 'Finite-window neutral count from an empty start: E[F(T)] = mu L int_0^T F_X(u) du ~ mu L (T - 4 Ne), against the naive mu L T; with mu L = 30 and T = 252,000, naive = 7,560,000'
   used_by: [B1, B1a, B6a]
-  sources: [B1#q1, B1a#q1, B1a#q2]
+  sources: [B1#q1, B1a#q1, B1a#q2, mc1c#337116873]
   positions: {day: Exact for an empty start; the leading-order correction subtracts the mean fixation time from the window, critic: 'Exact for the empty-start case (a point for Day); the premise is the empty start, and F_X holds only for new post-split mutations while pairwise divergence is not reduced by the empty-pipe term (R4 B1c/B4a)'}
   resolution: derivation
   status: resolved
@@ -354,7 +354,7 @@ objects:
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
   used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5, H9]
-  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1]
+  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
   status: resolved
@@ -435,7 +435,7 @@ objects:
   kind: formula
   statement: 'Expected neutral fixations on the human lineage as the product of a per-generation mutation count, a fixation probability and generations: McCarthy 450e9/20,000 = 22.5M (20M time-adjusted), Mansfield 1 per generation, Hancock 76.8 per generation, Nesslig20 2 x 75 x 252,000 = 37.8M, justatest90 38.4 x 252,000 = 9.7M, relayed 7.2M, Hossjer d x mu 7.6M, Day corrected 8.25'
   used_by: [B3e, B5a, B5b, B5c, B5d, B5e, B5f, B5h]
-  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2]
+  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310]
   positions: {day: 'Mutations are not fixations: 30 cannot fixate per generation; the corrected calculation gives 8.25 fixations against 20 million required', critic: 'Neutral mutations fix at the rate they arise, so supply x 1/(2N) = mu per site per generation gives millions over 252,000 generations, within a factor of 2 of the 17.5-20 million required'}
   resolution: derivation
   status: resolved
@@ -525,7 +525,7 @@ objects:
   kind: inference
   statement: 'Extinction under unchecked drift: if drift could fix at the maximum neutral speed, selection is not operating, and 3x more harmful than neutral substitutions would make humans infertile and extinct within centuries'
   used_by: [B9, H10]
-  sources: [B9#q1]
+  sources: [B9#q1, mc1c#337302874]
   positions: {day: 'Reductio: if drift changed the genome, deleterious accumulation would extinguish humans', critic: 'R4 B9 reading A: fitness halves in 338-3,457 years (Lynch 2016) but the premise (all selection off at once) is a counterfactual; the 3x ratio is an input'}
   resolution: derivation
   status: resolved
@@ -1030,6 +1030,9 @@ objects:
   - Q11
   - Q28
   - Q71
+  - mc1@L39
+  - mc1@L42
+  - mc1@L48
   positions:
     day: 'P(all) = p^n is the probability that all required fixations occur; it shows parallel or serial fixation is probabilistically self-defeating'
     critic: 'The arithmetic holds but prices pre-specified arisings, not the event history requires, and is timing-independent so it cannot force sequential fixation'
@@ -1050,6 +1053,9 @@ objects:
   - MC-01
   - MC-02
   - CA-09
+  - mc1@L48
+  - mc1@L49
+  - mc1@L53
   positions:
     day: 'Either the specific fixations matter, so the Darwillion applies, or they are interchangeable and neutral noise cannot explain functional divergence'
     critic: 'History needs some 20 million out of an enormous candidate pool, so P_any is near 1 (McCarthy, Camestros lottery, Bowers); the threshold applies only to the adaptive subset, and the neutral k = mu assumption is disputed'
@@ -1062,6 +1068,8 @@ objects:
   used_by: [G4b]
   sources:
   - G4b#q1
+  - mc1c#337302874
+  - mc1c#338774739
   positions:
     day: "Increasing 1,600 to 40,000 enlarges the Darwillion by 25x, so the critic's longer time raises the improbability"
     critic: 'The Darwillion as rendered carries no time-to-fixation input, so the factor of 25 is not derivable from the held text'
@@ -1086,6 +1094,8 @@ objects:
   - PZ-01
   - PZ-05
   - BO-02
+  - mc1c#337074301
+  - mc1c#337116873
   positions:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
@@ -1179,6 +1189,8 @@ objects:
   sources:
   - G2h#q1
   - G2h#q2
+  - mc1@L61
+  - mc1@L63
   positions:
     day: 'G_f is a measured total throughput of the LTEE, so mutation supply, selection and parallelism are inside the number'
     critic: 'The formula constrains an observed rate without saying which process produced it, so it is not itself a test of selection; the objection restates the supply objection (M-103)'
@@ -1487,6 +1499,9 @@ objects:
   - A1#q1
   - A4d#q1
   - A5a#q1
+  - mc1@L56
+  - mc1@L58
+  - mc2c#340149310
   positions:
     day: Formula is a rate calculation with five stated inputs; all versions after 2019 reconcile; dropping d in 3.0 makes the shortfall smaller than with d (2.39e6 with d = 0.45), so the drop is conservative
     critic: The formula is arithmetic on inputs whose transfer is the dispute (M-103, M-713); the 2019 table does not reconcile (125, 562 against 281.25)
@@ -1605,6 +1620,8 @@ objects:
   - A5b#q2
   - A5c#q1
   - A5c#q2
+  - mc1@L61
+  - mc1@L75
   positions:
     day: The formula uses an observed rate so supply is inside G_f; the LTEE per-genome supply is 4.1e-4 as in Day's own s4.3
     critic: The expected fixation rate must be set by genome size and mutation rate; the supply ratio is 94,000x and counts as an artifact of the headline
@@ -1625,6 +1642,8 @@ objects:
   - A3b#q2
   - A3b#q3
   - A5b#q2
+  - mc1@L33
+  - mc1c#337048907
   positions:
     day: Each version halves a divergence count to a per-lineage requirement; the SNV-only restriction is stated as a concession and still gives 91,600x
     critic: The SNV-only count is 83% of the measured events per lineage on the hg38/panTro6 count (21.05 M, GAP-07b) and 72% on the T2T count (24.14 M, GAP-07t), and the 17.9e6 achievable is a linear-scaling illustration, not a proof
@@ -1688,6 +1707,8 @@ objects:
   - A3z#q1
   - A5b#q1
   - A5b#q2
+  - mc1c#335155894
+  - mc1c#337035111
   positions:
     day: Structural base-pair differences count as fixation-equivalents for the required count; the SNV-only variant is given as a concession
     critic: Bases affected by a rearrangement are not separate mutation events, so the 205M overstates the required events by about 10x
@@ -1865,3 +1886,15 @@ objects:
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-913.json
+- id: M-914
+  kind: identity
+  statement: "McCarthy MC-1 / MC-1c arithmetic not held elsewhere: the Day text he quotes (100 x 1e4 = 1e6 per generation = 50,000/y at g = 20 y; need 2e7/9e6 = 2.22/y, 1 in 22,727 ('23,000'), 0.0044% ('0.004%'), against supply x p_fix = 2.5/y, 12.5% above the need; two lineages 10^-172,041,200, printed 10^-172,000,000); the RF-7 lag (9e6/25 - 4 x 1e4 = 320,000 generations = 8e6 y, x 50,000/y / 20,000 = 2e7 as written) mixes a 20 y supply with a 25 y lag, single basis 16.0M (25 y, -20%) or 20.5M (20 y, +2.5%), ledger under R1; RF-6 writes 4e11/20,000 as 35M (true 2e7, printed +75%), ratio to F_max = 180 is 111,111 not 194,444, no flip; MC-1's 22.5M is +12.5% over 20M, and 5.6M (5.0M lag-adjusted) if only a quarter of new mutations are neutral (Day's '3x more harmful'); E. coli 1 - 4.1e-4 = 99.959%, human/E. coli per genome 146,341-243,902 at 60-100 de novo; Day's thread 4 x 1e4 x 25 = 1e6 y and 410e6/6e6 = 68.3"
+  variant_of: M-212
+  used_by: [B5a, B1b, A5, G4]
+  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310]
+  positions:
+    day: "The count leaves out the fixation time and treats every mutation as neutral; with three harmful mutations per neutral one the expectation is a quarter (5.6M); 1e6 y per neutral fixation at 4Ne = 40,000 and 25 y"
+    critic: "On Day's quoted inputs the neutral expectation meets the requirement (22.5M, 16-20.5M lag-adjusted); Day's own quoted need (1 in 22,727) is below his p_fix (1 in 20,000); RF-6's 35M is a slip for 20M and '>> 180' stands"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-914.json
