@@ -1,0 +1,222 @@
+{
+  "id": "M-304",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-304.py",
+  "script_sha256": "e9c55c0ba36dbb19e2454689b3dc5761e46111071aa72eb3c1db68667de15c94",
+  "object": "M-304",
+  "inputs": [
+    {
+      "name": "recursion and g_eff = d G",
+      "cite": "C2 q2 (Z18203514 s2.1); claim file C2 Formal statement"
+    },
+    {
+      "name": "human loci p0, G, s",
+      "value": {
+        "LCT": [
+          0.01,
+          240,
+          0.05
+        ],
+        "SLC45A2": [
+          0.43,
+          160,
+          0.05
+        ],
+        "TYR": [
+          0.25,
+          200,
+          0.03
+        ]
+      },
+      "cite": "claim file C2 (Z18203514 Table 1; 25 y/gen)"
+    },
+    {
+      "name": "observed final frequencies",
+      "value": {
+        "LCT": 0.75,
+        "SLC45A2": 0.97,
+        "TYR": 0.76
+      },
+      "cite": "Table 1 predictions and errors (claim file C2 derived)"
+    },
+    {
+      "name": "Day d values",
+      "value": {
+        "Z18202768": [
+          0.49,
+          0.49,
+          0.38
+        ],
+        "Z18203514_Table4": {
+          "LCT": 0.46,
+          "SLC45A2": 0.43,
+          "TYR": 0.46
+        },
+        "mean": 0.45,
+        "s_minus_25": [
+          0.56,
+          0.51,
+          0.59
+        ],
+        "s_plus_25": [
+          0.36,
+          0.31,
+          0.39
+        ]
+      },
+      "cite": "C2 q3, q4; claim file C2"
+    },
+    {
+      "name": "Table 3 required s",
+      "value": {
+        "0.4": [
+          0.058,
+          0.028
+        ],
+        "0.5": [
+          0.047,
+          0.023
+        ],
+        "0.6": [
+          0.038,
+          0.019
+        ],
+        "1.0": [
+          0.023,
+          0.011
+        ]
+      },
+      "cite": "C2c q1; claim file C2c"
+    },
+    {
+      "name": "chicken",
+      "value": {
+        "p0": 0.44,
+        "pf": 0.97,
+        "G": 900,
+        "s": 0.0049,
+        "s_ci": [
+          0.0029,
+          0.0088
+        ],
+        "Day_d": 1.02
+      },
+      "cite": "C2d q1, q3; claim file C2d (Loog 2017 via Day; not retrieved)"
+    }
+  ],
+  "values": {
+    "human_required_d": {
+      "LCT": 0.486243,
+      "SLC45A2": 0.481392,
+      "TYR": 0.380816
+    },
+    "human_mean_d": 0.449484,
+    "table1_bio_pct": {
+      "LCT": 66.2447,
+      "SLC45A2": 96.1986,
+      "TYR": 82.6594
+    },
+    "table1_kimura_pct": {
+      "LCT": 99.9187,
+      "SLC45A2": 99.9461,
+      "TYR": 99.1943
+    },
+    "s_minus_25pct": {
+      "mean": 0.596106,
+      "range": [
+        0.505894,
+        0.644426
+      ],
+      "weak_limit": 0.6,
+      "day_printed": 0.56
+    },
+    "s_plus_25pct": {
+      "mean": 0.361503,
+      "range": [
+        0.305766,
+        0.391324
+      ],
+      "weak_limit": 0.36,
+      "day_printed": 0.36
+    },
+    "required_s_d1": {
+      "LCT": 0.0240075,
+      "SLC45A2": 0.0237652,
+      "TYR": 0.0113201
+    },
+    "required_s_d045": {
+      "LCT": 0.0541342,
+      "SLC45A2": 0.0535799,
+      "TYR": 0.0253298
+    },
+    "lct_carrier_reading": {
+      "allele_freq": 0.5,
+      "required_d": 0.392422
+    },
+    "c2c_ratio_exact": {
+      "0.2": 0.464621,
+      "0.4": 0.471936,
+      "0.5": 0.4734,
+      "0.6": 0.474376,
+      "1.0": 0.476329,
+      "2.0": 0.477794
+    },
+    "c2c_ratio_weak_limit": 0.47926,
+    "c2c_ratio_from_table3": {
+      "0.4": 0.482759,
+      "0.5": 0.489362,
+      "0.6": 0.5,
+      "1.0": 0.478261
+    },
+    "chicken_required_d": {
+      "additive": {
+        "0.0029": 1.4263,
+        "0.0049": 0.84498,
+        "0.0088": 0.471414
+      },
+      "recessive": {
+        "0.0029": 1.90253,
+        "0.0049": 1.12701,
+        "0.0088": 0.628645
+      }
+    },
+    "chicken_final_pct": {
+      "add_d1.0": 98.4603,
+      "add_d0.45": 85.0495,
+      "rec_d1.0": 94.9757,
+      "rec_d0.45": 70.704
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "d is a demographic constant: three loci converge on 0.45, the ratio is constant across d, chickens require d = 1.02",
+      "mean_d": 0.449484,
+      "sensitivity": [
+        0.56,
+        0.36
+      ],
+      "ratio": 0.49,
+      "chicken_d_printed": 1.02,
+      "note": "1.02 is not reproduced from the held inputs: additive 0.845, recessive 1.13 (also tried: genic diploid 1.69, dominant 8.0). Table 4 and its recursion are not held (Z18203514 text absent). Day's d = 0.45 prediction 0.68-0.72 reproduces under the recessive recursion (70.7%)"
+    },
+    "critic": {
+      "reading": "trajectories fix d ln(1+s); the ratio and the sensitivity are that identity; the chicken d depends on dominance and on s inside its CI",
+      "d_times_ln1ps_fixed": true,
+      "ratio_range_d_0.2_to_2": [
+        0.464621,
+        0.477794
+      ],
+      "chicken_d_over_ci": {
+        "additive": [
+          0.471414,
+          1.4263
+        ],
+        "recessive": [
+          0.628645,
+          1.90253
+        ]
+      }
+    }
+  },
+  "notes": "Required d reproduces (0.486 / 0.481 / 0.381, mean 0.449) and moves as 1/ln(1+s): +25% on s gives 0.36 (Day 0.36), -25% gives 0.596 (Day prints 0.56; the weak limit is 0.60). The SLC45A2/TYR ratio of required s is 0.465-0.478 for every d in [0.2, 2], so constancy is not a test of d. The chicken required d is 0.845 (additive) or 1.13 (recessive) at s = 0.0049 and 0.47-1.90 over Loog's CI; Day's 1.02 sits between the two recursions and is not reproduced. Q5 says 75% carry the allele; read as carriers of a dominant allele that is p = 0.5, and the LCT required d drops to 0.39."
+}

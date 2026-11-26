@@ -1,0 +1,73 @@
+{
+  "id": "M-305",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-305.py",
+  "script_sha256": "88857f6ae74602f8f4dcd9a4787df499a3e415ade0aae41d7c91b7e372abcce9",
+  "object": "M-305",
+  "inputs": [
+    {
+      "name": "fit",
+      "value": {
+        "slope": -2.242,
+        "intercept": 1.229,
+        "r": -0.991,
+        "R2": 0.981
+      },
+      "cite": "C2b q1, q2 (relayed; data not held)"
+    },
+    {
+      "name": "Delta-p example",
+      "value": {
+        "d": 0.08,
+        "s": 0.01,
+        "p": 0.01
+      },
+      "cite": "C2b q3"
+    },
+    {
+      "name": "k ceiling",
+      "value": "0.5 mu or less",
+      "cite": "C2b q4 (Q42)"
+    },
+    {
+      "name": "never reaches mu",
+      "value": "since d < 1",
+      "cite": "C2b q5"
+    },
+    {
+      "name": "d = 0.45",
+      "value": 0.45,
+      "cite": "parameters selection.turnover_d"
+    }
+  ],
+  "values": {
+    "d_at_k0": 1.229,
+    "k_at_d1": 0.102141,
+    "k_at_d0": 0.548171,
+    "k_at_d045": 0.347458,
+    "d_at_k_mu": -1.013,
+    "d_at_k_half_mu": 0.108,
+    "r_squared_from_r": 0.982081,
+    "r_R2_consistent_range_abs_r": [
+      0.9905,
+      0.9907
+    ],
+    "delta_p": 7.92e-06
+  },
+  "positions": {
+    "day": {
+      "reading": "k has been 0.5 mu or less; it never reaches mu because d never reaches 1; selection at d = 0.08 is negligible",
+      "k_half_mu_gives_d": 0.108,
+      "delta_p": 7.92e-06,
+      "note": "the Delta-p arithmetic holds; the fit itself cannot be checked (24 points not held)"
+    },
+    "critic": {
+      "reading": "the line, extrapolated, gives k = 0.102 mu at d = 1 and needs d = -1.013 for k = mu",
+      "k_at_d1": 0.102141,
+      "d_at_k_mu": -1.013,
+      "d_at_k0": 1.229,
+      "note": "the slope is negative, so on the fit k approaches mu as d falls below 0, not as d rises to 1; 'd never reaches 1' does not bear on k reaching mu"
+    }
+  },
+  "notes": "Every consequence in the statement reproduces from the printed line: k = 0 -> d = 1.229, d = 1 -> k = 0.102 mu, k = mu -> d = -1.013, k = 0.5 mu -> d = 0.108; r = -0.991 and R^2 = 0.981 agree within rounding; Delta-p = 7.92e-6. The data and fit are secondhand and not held, so the record checks implications only. Whether d = 1 is the discrete-generation case is C2a (M-107)."
+}

@@ -1,0 +1,137 @@
+{
+  "id": "M-303",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-303.py",
+  "script_sha256": "1c06d1b33c797dd598110109287b56bb2796ddffb860e118c7b73ee114e595c9",
+  "object": "M-303",
+  "inputs": [
+    {
+      "name": "Ne, 2N",
+      "value": [
+        10000,
+        20000
+      ],
+      "cite": "parameters population.Ne_modern_human (unverified; circularity is M-211)"
+    },
+    {
+      "name": "window",
+      "value": {
+        "keruru": 240,
+        "C7_25y": 280,
+        "day_20y": 350
+      },
+      "cite": "C5 Formal statement; C7; claim file C"
+    },
+    {
+      "name": "keruru per-locus and million-locus figures",
+      "value": {
+        "per_locus_p0.5": 4e-35,
+        "million_loci": "near 1e-29"
+      },
+      "cite": "C5 q1 (KR-03); C5 Formal statement"
+    },
+    {
+      "name": "zero counts",
+      "value": "0 from <50%, 0 from <10%",
+      "cite": "C q3 (Q53)"
+    },
+    {
+      "name": "50-90% expected completions",
+      "value": {
+        "v62": 0.04,
+        "v66": 0.11
+      },
+      "cite": "R4-B3b-C1.md (exact WF chain, panel spectrum; M-301 domain)"
+    },
+    {
+      "name": "rs35619459",
+      "value": {
+        "from": 0.293,
+        "to": 0.913,
+        "n": [
+          1372,
+          680
+        ]
+      },
+      "cite": "C5a q2"
+    },
+    {
+      "name": "C7 fixation probability",
+      "value": "about 1e-17 at p0 = 0.5, 280 generations",
+      "cite": "C7 verdict comment (R4 RHclose, Gaussian upper bound)"
+    }
+  ],
+  "values": {
+    "four_Ne": 40000,
+    "window_over_4Ne": 0.006,
+    "drift_sd": {
+      "240": 0.0547723,
+      "280": 0.0591608,
+      "350": 0.0661438
+    },
+    "diffusion_Ne_1e4_t240": {
+      "p0.5": 1.78932e-45,
+      "p0.1": 5.81635e-114
+    },
+    "diffusion_keruru_2N": {
+      "p0.5_2N_15364": 4.00229e-35,
+      "p0.1_2N_16278": 6.02302e-93
+    },
+    "exact_wf_2N_20000_t240": {
+      "p0.5": [
+        5.1193e-45,
+        5.1193e-45
+      ],
+      "p0.1_lower": 5.88302e-113,
+      "p0.9": 3.73262e-08,
+      "p0.95": 0.000224494,
+      "p0.99": 0.190616
+    },
+    "exact_wf_2N_20000_t280": {
+      "p0.5": [
+        9.4165e-39,
+        9.4165e-39
+      ],
+      "p0.9": 4.19144e-07
+    },
+    "band_W": 650,
+    "repo_brownian_1.2e-46": {
+      "value": 1.24226e-46,
+      "exact_over": 41.2096,
+      "diffusion_over": 14.4037
+    },
+    "million_loci_at_0.5": 5.1193e-39,
+    "poisson_50_90": {
+      "P_ge1_given_0.04": 0.0392106,
+      "P_ge3_given_0.11": 0.000204313
+    },
+    "rs35619459": {
+      "dp": 0.62,
+      "sigma_at_0.05": 12.4,
+      "sigma_at_0.0548": 11.3196,
+      "sigma_at_own_start": 12.4353,
+      "sampling_se": 0.0115714,
+      "in_se": 53.5803,
+      "sigma_350_gens": 9.37352
+    }
+  },
+  "not_checked_locally": [],
+  "positions": {
+    "day": {
+      "reading": "zero from intermediate frequency shows drift is not operating (C7); rs35619459 is a twelve-sigma excursion (C5a)",
+      "rs35619459_sigma": [
+        12.4,
+        11.3196
+      ],
+      "not_sampling_noise_in_se": 53.5803,
+      "note": "the excursion arithmetic holds (11.3-12.4 SD by convention, 54 SE); the zero count is what drift predicts, so it carries no evidence against drift (values above)"
+    },
+    "critic": {
+      "reading": "zero is the neutral prediction (keruru C5; R4 L5)",
+      "p_fix_p0.5_t240_exact": 5.1193e-45,
+      "keruru_per_locus_printed": 4e-35,
+      "note": "keruru's 4e-35 is ~10 orders above the exact value at Ne = 1e4 and reproduces only by diffusion at 2N = 15,364; the conclusion holds at any of these values. Observed 1 and 3 50-90% completions are above the 0.04 / 0.11 expectation (P(>=3) = 2e-4)"
+    }
+  },
+  "notes": "Exact WF at 2N = 20,000 gives 5.119e-45 from p = 0.5 in 240 generations (bracket width < 1e-8 relative), diffusion limit 1.789e-45; the audit's old 1.24e-46 is 41x / 14x low; keruru's 4e-35 is not reproduced at Ne = 1e4. At 280 generations the exact value is 9.4e-39: C7's 'about 1e-17' is a valid upper bound but 21 orders above. A large single-locus excursion is real (54 SE) and 11.3-12.4 drift SD; whether one locus in 1.14M at that size is drift, admixture or selection is outside this object (linkage, M-301)."
+}

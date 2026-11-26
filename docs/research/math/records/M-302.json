@@ -1,0 +1,110 @@
+{
+  "id": "M-302",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-302.py",
+  "script_sha256": "cedb0c144686183195fb015e7f97e5a2fad4df3365653258832ae1b2703e9269",
+  "object": "M-302",
+  "inputs": [
+    {
+      "name": "required count",
+      "value": "20e6 fixations / 9e6 y x 7,000 y",
+      "cite": "Q275 (C q4 context)"
+    },
+    {
+      "name": "clock count",
+      "value": {
+        "mu": 1.2e-08,
+        "neutral_sites": 150000000.0,
+        "generations": 350
+      },
+      "cite": "C6 q2, q4 (Z18525185 s5.3, Appendix A); parameters mutation.mu_per_site_per_gen.pedigree_human"
+    },
+    {
+      "name": "whole-genome count",
+      "value": {
+        "genome_sites": 3100000000.0
+      },
+      "cite": "claim file C1 derived (3.1e9 not a parameters.yaml key)"
+    },
+    {
+      "name": "panel sizes",
+      "value": {
+        "blog_v62": 1211499,
+        "zenodo_v62": 1143671,
+        "c6_1240k": 1233013
+      },
+      "cite": "claim file C table (Q55 blog, Q52 Z23046531); C6 (Mallick 2024)"
+    },
+    {
+      "name": "observed counts",
+      "value": {
+        "blog_lt10_to_gt90": 0,
+        "zenodo_v62_50_90": 1,
+        "zenodo_v66_50_90": 3,
+        "c6_post7000": 21
+      },
+      "cite": "Q55, Q52 (C q1, q2); C6 Formal statement"
+    },
+    {
+      "name": "swept-site share on the panel",
+      "value": {
+        "soft": [
+          8.8,
+          24.7
+        ],
+        "hard_s_le_0.01": [
+          0.5,
+          6.5
+        ]
+      },
+      "cite": "claim file C correction (R4 L5, S-L5-1)"
+    }
+  ],
+  "values": {
+    "genome_wide": {
+      "required_Q275": 15555.6,
+      "clock_C6": 630.0,
+      "whole_genome_C1": 13020.0
+    },
+    "panel_fraction_zenodo": 0.000368926,
+    "uniform_panel_scaling": {
+      "required_on_C_panel": 5.73885,
+      "whole_on_C_panel": 4.80342,
+      "clock_on_C6_panel": 5.17865,
+      "clock_on_C_panel": 4.80342
+    },
+    "c6_ratio_printed_630_over_21": 30.0,
+    "c6_observed_over_scaled_clock": 4.05511,
+    "swept_sites_on_panel_at_15556": {
+      "soft": [
+        1376,
+        3836
+      ],
+      "hard_s_le_0.01": [
+        76,
+        1010
+      ]
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "genome-wide counts against the panel counts",
+      "required": 15555.6,
+      "clock": 630.0,
+      "observed": {
+        "blog_lt10_to_gt90": 0,
+        "zenodo_v62_50_90": 1,
+        "zenodo_v66_50_90": 3,
+        "c6_post7000": 21
+      },
+      "ratio_630_over_21": 30.0
+    },
+    "critic": {
+      "reading": "scale the count to the panel before comparing",
+      "clock_on_panel": 5.17865,
+      "observed_21_over_expected": 4.05511,
+      "note": "uniform scaling assumes panel sites register new substitutions; claim file C's correction puts the swept site on the panel in 8.8-24.7% of completions (1,376-3,836 at 15,556). Which share applies is M-301 (simulation), not this record"
+    }
+  },
+  "notes": "All genome-wide counts reproduce (15,556; 630; 13,020). Against the panel the denominator decides: 630 scales to 5.2 on the 1,233,013-SNP panel, so 21 observed is 4x above, not 30x below; 15,556 and 13,020 scale uniformly to 5.7 and 4.8 on the 1,143,671-SNP panel, a scaling claim file C itself corrects to 1,376-3,836 panel-registered completions. The uniform figures are a lower bound on what the panel can see for selected completions, not the expectation."
+}

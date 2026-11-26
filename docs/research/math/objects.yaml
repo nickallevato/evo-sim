@@ -528,7 +528,8 @@ objects:
   positions: {day: 'The modern synthesis requires 15,500 fixations (630 in the clock paper) and the data show 0-21', critic: 'The 630 is for 1.5e8 genome-wide sites and the 21 is among 1,233,013 panel SNPs;
       scaled to the panel 630 becomes 5.2 and 21 is above expectation'}
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-302.json
 - id: M-303
   kind: formula
   statement: 'Neutral expectation for a locus starting at intermediate frequency over 240-350 generations at Ne ~ 1e4: fixation time of order 4Ne = 40,000 generations (240/40,000 = 0.6%), drift SD sqrt(p
@@ -539,7 +540,8 @@ objects:
   positions: {day: Zero from intermediate frequency is evidence that drift is not operating (C7); rs35619459 is a twelve-sigma excursion against the neutral expectation (C5a), critic: 'Zero is the neutral
       prediction: finding one would have been the falsification (keruru C5); few or no completions in ~280 generations is what drift at Ne ~ 1e4 gives (R4 L5)'}
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-303.json
 - id: M-304
   kind: model-choice
   statement: 'Identifiability of d: trajectory fits identify the product s x d (logit gain s d G), not d, so (i) three-locus convergence on d = 0.45 moves as 1/s (+/-25% on s gives 0.36 / 0.56), (ii) the
@@ -550,7 +552,8 @@ objects:
   positions: {day: Three loci independently converge on d = 0.45; the constant ratio across d shows d captures real dynamics; the chicken data require d = 1.02 and cross-species validation is decisive,
     critic: d is not identifiable apart from s; the constant ratio is an algebraic consequence of weak selection; the chicken value depends on dominance and on where s falls in its interval}
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-304.json
 - id: M-305
   kind: formula
   statement: 'Regression of d on k: d = -2.242 k + 1.229 (r = -0.991) and its consequences: k = 0 gives d = 1.229 (>1), d = 1 gives k = 0.102 mu, k = mu gives d = -1.013, k = 0.5 mu gives d = 0.108, Dp
@@ -560,7 +563,8 @@ objects:
   positions: {day: k in humans has been about 0.5 mu or less; it never reaches mu because d never reaches 1.0; selection at d = 0.08 is negligible, critic: The fit extrapolates outside the d range and gives
       k = 0.102 mu at d = 1 where Day says Kimura holds; data and fit are secondhand from an unidentified doctor; d = 1 point belongs to C2a}
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-305.json
 - id: M-306
   kind: formula
   statement: 'Linear extrapolation of observed spread to a fixation time and its global rescaling: CCR5-delta32 at about 10% after 30 generations gives 300 generations (6,000-7,500 y), rescaled to 840,
@@ -570,7 +574,8 @@ objects:
   positions: {day: 'Even a generous linear extrapolation from the strongest observed selection gives 300 to 2,278 generations per fixation in humans', critic: 'Linear extrapolation is not the logistic spread;
       the rescalings 840, 1,440, 2,278, 37,800 are stated without formulas; the ratio to the LTEE reverses between the 2025 and 2026 posts'}
   resolution: derivation
-  status: open
+  status: blocked
+  blocked_on: "outside: Day's arithmetic and inputs for the rescalings 1,440, 2,278 and 37,800 generations (C3 claim file: neither B2025-12-18 nor B2026-01-27 states a formula; the raw post texts are not in sources/raw/)"
 - id: M-307
   kind: formula
   statement: 'Temporal Ne from allele-frequency change between dated ancient samples: Day drift-variance proxy (3.3-fold pan-European, 4.6-fold Britain-Ireland, absolute values 0.3-1.4 uninterpretable;
