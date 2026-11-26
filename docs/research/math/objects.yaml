@@ -347,7 +347,8 @@ objects:
   sources: [B1#q3, B1c#q1, B1c#q2, B1d#q1, B5f#q4, B6#q1]
   positions: {day: 'Empty at generation zero (IR); later: full but shorter, 228,000 generations', critic: 'Full: the ancestral population was already fixing and eliminating variants (Mansfield, justatest90); a sourced Ne history decides it (R4 B1c: per-lineage excess K/UT 1.9-4.0)'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-B1c-B4a.md
 - id: M-203
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
@@ -382,7 +383,8 @@ objects:
   sources: [B2e#q1, B2e#q2, B3#q1]
   positions: {day: 'Census exceeds Ne by a large factor, so N/Ne is not 1', critic: 'The ratio is real but N/Ne does not enter the neutral rate (supply and fixation both use census, M-209); the measured temporal Ne tests the input, not the cancellation'}
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "owner: (1) the source and inputs of Day's mammal census/N_e range of 19- to 46-fold (Z18429937 abstract; its text, sources/raw/day/zenodo-18429937.docx in bib-day.md l.26, is not held here, and Frankham 1995 is not retrievable, quotes-literature.md l.309); (2) a sourced Bronze Age West Eurasian census and V_k for keruru's 'three orders' (RF-12): R4-C1d §4 gives the gap as 5.9x, 59x and 591x at census 1e5, 1e6 and 1e7, and 1e7 is unsourced (RF-14). The temporal N_e itself replicates (R4-C1d, 1-8%)"
 - id: M-207
   kind: inference
   statement: 'Does the pipe fill within the lineage window under the stated demography: HL says the neutral channel shuts because "the pipe never fills"; fill readings F 0.697 (6.5 My), delivered share D 0.256, Takahata Ne = 1e5 F 0.281, current size, HL 2 My window F 0.025 (R4 RHclose); also "the pipeline cannot fill" after conceding steady-state throughput'
@@ -453,7 +455,8 @@ objects:
   sources: [B3d#q2, B3m#q1]
   positions: {day: The identity is directly falsified by a median factor of 25, critic: 'The 25 is a ratio of two estimates with different calibrations (per-year vs per-generation, fossil dates), not a test of fixation probability; reproduces but proves what it measures only with the dating assumption'}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-B3m.md
 - id: M-215
   kind: formula
   statement: 'Human-chimp substitution rate vs pedigree mutation rate: Day k = 32.3 mu (Bergeron pedigree rate vs Yoo required count; reconstructs only from base-pair totals, 205M/252,000 over Bergeron mammal mean times 3.1e9 = 32.9, R4 B3); keruru: fossil-calibrated rate about twice the pedigree rate (~1.2e-8), unreconciled'
@@ -461,7 +464,8 @@ objects:
   sources: [B3#q3, B3d#q1, B4g#q1]
   positions: {day: 'k = 32.3 mu, not mu', critic: The factor is ~2 once the calibration is consistent; 32.3 treats base-pair totals as events}
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-B3.md
 - id: M-216
   kind: model-choice
   statement: 'Reproductive covariance between genotype and reproduction (sweepstakes): does P(fix) = 1/(2N) or = x0 hold in real populations; Day 08-27: keruru''s chains set the covariance to zero by fiat; Day 09-21 (Athos, relayed): P(fix) = x0 is the frictionless-coin answer; vs keruru exact chains 1/(2N_census); Day Z23188201: 1/(2N) holds under any offspring distribution by the martingale property'
@@ -736,7 +740,8 @@ objects:
   sources: [D15#q1, D15#q2]
   positions: {day: 'Waiting time far exceeds 9 million years for several genes and many orders more for an orphan gene', critic: 'The result holds only under the stated premises, which no source in the corpus supplies; outside them the answer flips (R4 D15)'}
   resolution: simulation
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-D15.md
   compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
 - id: M-414
   kind: parameter
@@ -787,7 +792,8 @@ objects:
     day: The per-event hazard is about 2.3% and the cumulative risk over 100 events exceeds 90%; hypermutation is a hazard to the peripatric mechanism, scoped by the paper as one mechanism of PE
     critic: Not addressed in the corpus; the audit's own R4 E finds the number reproduces (2.0-2.75%) but the premise (>= 2 carriers needed) is wrong, and the consequence (one homozygote removed by selection in an isolate of 100) and independence of events are open
   resolution: simulation
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-E.md
   compute: {host: na-workhorse, est_cpu_h: 1, est_ram_gb: 1, measured: false}
 - id: M-502
   kind: empirical
@@ -819,7 +825,8 @@ objects:
     day: Z23003785 gave 1,322 by a snapshot rule; the later Z23105291 replaces it with strict lineage-aware counts and says the number of fixation events and intervals are not well-defined; snapshot falls (ten of twelve) are real data features
     critic: A count of fixed mutations cannot be negative and the snapshot estimator is not a count of fixations (RE-03, RE-04, RE-10); Good 2017 shows clade coexistence so pooled >= 95% is not whole-population fixation; Good's own calls never fall by construction
   resolution: data-check
-  status: open
+  status: blocked
+  blocked_on: "owner: the strict-count leg needs the same inputs as row E6 (R4-E6-external-feasibility.md): (1) Good 2017 clade-aware HMM state timecourses for Ara+1, Ara+3, Ara+5, Ara+6, Ara-1, Ara-2, Ara-4, Ara-5 and Ara-6 from github.com/benjaminhgood/LTEE-metagenomic data_files/, and (2) the Z23105291 text and xlsx (bib-day.md l.55-56); corpus frozen (O-7), no second request. The -906 clone-pair formula is not in the extracted text (R4-E5E6). Every other figure reproduces as arithmetic of the papers' tables (R4-E5E6)"
 - id: M-504
   kind: empirical
   statement: 'Beneficial share of LTEE fixations: Barrick 2009 and Tenaillon 2016 report that most fixed mutations in non-mutators were beneficial with neutral mutations accumulating at a constant rate, against Day''s blog pair of 4,615 gen per beneficial fixation and 1,322 per all-cause fixation (implied share 29% only if the two share a time base; Z23003785 gives about 1,408 per beneficial fixation by clone pair); no fitness-effect classification of the 5,496 whole-population fixations exists in the repo'
@@ -1325,7 +1332,8 @@ objects:
     day: "The overdispersion and the mesas exist as described and a lineage-asymmetric excess confined to contiguous blocks is not what a uniform-rate neutral model predicts; no window, statistic or code released, so the check has little power below a dominant mechanism"
     critic: "Overdispersion is the standard result of mutation-rate heterogeneity (CpG, replication timing, recombination), alignment error and ILS; the pattern is shared across lineages and reproduced by a shared-rate null; 'more than 80 times' compares against a null no one uses"
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: research/checks/results/R4-FMnull.md
 - id: M-903
   kind: inference
   statement: "One mesa against two ceilings: 'a single mesa on a single chromosome shows an excess of human-lineage substitutions that exceeds both the MITTENS fixation ceiling and the maximum that natural selection can theoretically fix across the entire genome according to Haldane'; no counts, units (SNV against bp, event against base), window or ceiling value are given; Haldane's cost bounds selected substitutions only (M-801), so comparing a mesa count with it presupposes the mesa substitutions are selected; the MITTENS ceiling is the F_max of M-713 over the lineage window; the post gives no genome-wide Haldane figure (unverifiable until the mesa counts are released)"
@@ -1603,7 +1611,8 @@ objects:
     day: Each version halves a divergence count to a per-lineage requirement; the SNV-only restriction is stated as a concession and still gives 91,600x
     critic: The SNV-only count is 83% of the measured events per lineage and the 17.9e6 achievable is a linear-scaling illustration, not a proof
   resolution: data-check
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-008.json
 - id: M-009
   kind: empirical
   statement: 'Composition and fidelity of the 410 million / 205 million headline: components 35e6 SNV + 1,140 inversions + 187 Mb = 222,001,140 literally, 409.0e6 pairwise if 187 Mb is per lineage (0.24% from 410e6); Yoo 2025 reports a mean 327

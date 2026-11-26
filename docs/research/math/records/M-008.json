@@ -1,0 +1,78 @@
+{
+  "id": "M-008",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-008.py",
+  "script_sha256": "be7bf0022d306aeabfa02d887d9ce40924579d9c487739a065472bf0fa0914ce",
+  "object": "M-008",
+  "inputs": [
+    {
+      "name": "Day's requirement by version",
+      "value": {
+        "2019": "15e6 per lineage",
+        "2025": "~20e6 of ~40e6",
+        "3.0": "17.5e6 of ~35e6 SNVs"
+      },
+      "cite": "Q05, Q12, Q16"
+    },
+    {
+      "name": "Day's shortfalls",
+      "value": {
+        "1322": "191 achievable, 91,600x",
+        "105": "2,407 achievable, 7,271x"
+      },
+      "cite": "Q17"
+    },
+    {
+      "name": "CSAC 2005 counts",
+      "value": {
+        "SNV": 35000000,
+        "indel_events": 5000000
+      },
+      "cite": "quotes-literature.md l.85, l.97"
+    },
+    {
+      "name": "CSAC fixed share",
+      "value": "1.06% / 1.23% = 0.862",
+      "cite": "quotes-literature.md l.94"
+    },
+    {
+      "name": "measured events per lineage",
+      "value": {
+        "GAP-07b hg38/panTro6": 21050000,
+        "GAP-07t T2T": 24140000
+      },
+      "cite": "R4-GAP07b-alignment.md, R4-GAP07t.md"
+    },
+    {
+      "name": "KITTENS linear-scaling achievable",
+      "value": 17888800.0,
+      "cite": "record M-006 F_linear (cited)"
+    }
+  ],
+  "values": {
+    "required_2019_total": 30000000,
+    "fixed_snv_corrected": 30162602,
+    "fixed_snv_corrected_per_lineage": 15081301,
+    "required_2025_per_lineage": 20000000,
+    "required_3_0_per_lineage": 17500000,
+    "F_nonmutator": 190.62,
+    "shortfall_at_191": 91623.0,
+    "shortfall_at_190.62": 91805.6,
+    "shortfall_at_2407": 7270.46,
+    "kittens_achievable": 17888800.0,
+    "kittens_over_required": 1.02222,
+    "share_of_events_gap07b": 0.8314,
+    "share_of_events_gap07t": 0.7249
+  },
+  "positions": {
+    "day": {
+      "reading": "each version halves a divergence count to a per-lineage requirement; the SNV-only 17.5e6 is a concession and still gives 91,600x",
+      "holds": "every identity reproduces from Day's inputs: 30.2e6 x 1/2 = 15.1e6 (2019), 40e6/2 = 20e6 (2025), 35e6/2 = 17.5e6, 17.5e6/191 = 91,623 (91,600), 17.5e6/2,407 = 7,270 (7,271 at G_f 104.7). 17.5e6 brackets the measured fixed-event count (R4-GAP07b 16.4-18.1 M)"
+    },
+    "critic": {
+      "reading": "17.5e6 is below the measured events per lineage; 17.9e6 achievable is an illustration",
+      "holds": "17.5e6 is 83% of 21.05 M events per lineage (GAP-07b) and 72% of 24.14 M on the T2T count (GAP-07t); 17.9e6 reproduces only under linear supply scaling (M-006), which RE-09 itself disclaims"
+    }
+  },
+  "notes": "Identity object; no verdict moves. Q12 calls the 40e6 'single-nucleotide variants'; the 35e6 + 5e6 split is CSAC's (SNVs plus indel events), and the 2025 halving reproduces only on that split. The paper's 2,407 achievable implies G_f 104.7, not the printed 105 (252,000 / 105 = 2,400); its 7,271 follows from that. The critic-side '83%' (claim A3b) is on the hg38/panTro6 count; on the T2T count it is 72%. Whether 17.5e6 is the right requirement (polymorphism, indels, structural events) is M-010 and M-011, not this object."
+}
