@@ -7,6 +7,9 @@ objects:
   - evo006
   - evo007
   - evo009
+  - jg1@04:31
+  - jg1c#AbQ2C7SaCz8
+  - jg1c#AbRnhzCYTin
   positions:
     day: The average exists by arithmetic ("It is division"); averages of fixation times are what 4N_e and (2/s)ln(2N_e s) are; variance affects the tails, not existence
     critic: 'The average exists but is uninformative without the distribution (Hancock: not Gaussian, multimodal; Maddie: wind speed; Matthews: cancer metastasis); rates depend on parameters'
@@ -40,6 +43,9 @@ objects:
   - kt@L92
   - jb1@p9
   - jb1@p12
+  - jg1@04:31
+  - jg1c#AbOZjfoynVk
+  - jg1c#AbOED9OvX2Z
   positions:
     day: 'Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency. As stated this fails: a standing start (p0 0.01-0.5) cuts sweep time 27-50% at Ne = 1e4, capped at 2x for p0 <= 0.5 (M-103 record), which is small against the shortfalls'
     critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
@@ -132,6 +138,8 @@ objects:
   sources:
   - evo009
   - evo008
+  - jg1@01:15
+  - jg1@01:40
   positions:
     day: d = 0.80 is the weighted time-average correction for overlap; critics should have used 201,600
     critic: Hancock used the number WD presented; Wright-Fisher/Moran-with-N_e already account for overlap
@@ -146,6 +154,7 @@ objects:
   - pgenetics
   - evo009
   - kt@L43
+  - jg1c#AbTSnGMwWgS
   positions:
     day: Kimura's k = mu is a steady-state identity, irrelevant to finite-window questions, and the molecular clock is circular; AI answers agree
     critic: 'k = mu is an expectation of the long-run substitution rate; the post cites an arXiv paper outside evolution journals and no derivation is given in it; Hancock: refuted by 1930s population genetics'
@@ -171,6 +180,7 @@ objects:
   sources:
   - evo007
   - jb1@p3
+  - jg1c#AbPZ3OnnqSO
   positions:
     day: Needs N and s; throughput question is separate
     critic: Hancock agrees inputs N and s determine P(fix) and varies with demography and DFE
@@ -200,6 +210,13 @@ objects:
   - evo008
   - jb1@p10
   - jb1@p15
+  - jg1@01:26
+  - jg1@02:46
+  - jg1@04:14
+  - jg1c#AbQMQjXiOHQ
+  - jg1c#AbQQxek5pWp
+  - jg1c#AbrO2q2aErg
+  - B2026-09-30@p7
   positions:
     day: MITTENS is a rate calculation, not a latency calculation; anticipated in the book
     critic: 'Hancock: the arithmetic assumes each mutation arises and fixes before the next; the LTEE regime may not transfer (M-103)'
@@ -533,7 +550,7 @@ objects:
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
   used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG, FM8b]
-  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab, jb1@p1, jb1@p17, jb1@p19]
+  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab, jb1@p1, jb1@p17, jb1@p19, jg1@00:10, jg1@01:52, jg1c#AbPL4ON-POa, jg1c#AbQ_ZrVnAua, B2026-09-30@title]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
   status: resolved
@@ -1159,6 +1176,19 @@ objects:
   - ps1@s3.2
   - jb1@p4
   - jb1@p9
+  - jg1@01:26
+  - jg1@02:33
+  - jg1@02:46
+  - jg1@03:32
+  - jg1@04:23
+  - jg1c#AbLX0qTkveZ
+  - jg1c#AbQMQjXiOHQ
+  - jg1c#AbQQxek5pWp
+  - jg1c#AbQ2C7SaCz8
+  - jg1c#AbOZjfoynVk
+  - jg1c#AbOED9OvX2Z
+  - jg1c#AbrO2q2aErg
+  - B2026-09-30@p7
   positions:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
@@ -1231,6 +1261,10 @@ objects:
   - mc2c#340102853
   - kt@L91
   - ps1@s3.5
+  - jg1@00:46
+  - jg1@01:40
+  - jg1@01:52
+  - jg1c#AbPL4ON-POa
   positions:
     day: '180 total fixations is all there is time for at the fastest rate ever observed, against 205 million required'
     critic: 'The arithmetic reproduces exactly; the fastest-rate claim is not true of the point-mutator LTEE populations (43-183 gen/fix), and dividing by a per-lineage latency is the serial reading (see M-706)'
@@ -1588,6 +1622,9 @@ objects:
   - jb1@p11
   - jb1@p14
   - jb1@p18
+  - jg1@00:20
+  - jg1@01:15
+  - jg1@01:40
   positions:
     day: Formula is a rate calculation with five stated inputs; all versions after 2019 reconcile; dropping d in 3.0 makes the shortfall smaller than with d (2.39e6 with d = 0.45), so the drop is conservative
     critic: The formula is arithmetic on inputs whose transfer is the dispute (M-103, M-713); the 2019 table does not reconcile (125, 562 against 281.25)
@@ -1635,6 +1672,8 @@ objects:
   - A2j#q2
   - A5g#q1
   - kt@L65
+  - jg1@01:26
+  - jg1c#AbQQxek5pWp
   positions:
     day: Cites the LTEE for its fixation rate and updates the figure as the data improve (1,600, 1,322, 1,587)
     critic: The 1,400 matches neither the 1,322 nor the 1,587 count and the 1,600 citation drifts between papers; the version drift is a provenance issue, not an arithmetic one
@@ -1651,6 +1690,7 @@ objects:
   - A2f#q1
   - A2f#q2
   - kt@L39
+  - jg1c#AbOED9OvX2Z
   positions:
     day: The 1,322 is an all-cause figure; the natural-selection-only count is higher (4,615 or 24,500)
     critic: No formula is shown for 24,500 and the 1,408 uses a different method than the 4,615; three different figures for one quantity
@@ -2014,7 +2054,7 @@ objects:
   statement: "McCarthy MC-1 / MC-1c arithmetic not held elsewhere: the Day text he quotes (100 x 1e4 = 1e6 per generation = 50,000/y at g = 20 y; need 2e7/9e6 = 2.22/y, 1 in 22,727 ('23,000'), 0.0044% ('0.004%'), against supply x p_fix = 2.5/y, 12.5% above the need; two lineages 10^-172,041,200, printed 10^-172,000,000); the RF-7 lag (9e6/25 - 4 x 1e4 = 320,000 generations = 8e6 y, x 50,000/y / 20,000 = 2e7 as written) mixes a 20 y supply with a 25 y lag, single basis 16.0M (25 y, -20%) or 20.5M (20 y, +2.5%), ledger under R1; RF-6 writes 4e11/20,000 as 35M (true 2e7, printed +75%), ratio to F_max = 180 is 111,111 not 194,444, no flip; MC-1's 22.5M is +12.5% over 20M, and 5.6M (5.0M lag-adjusted) if only a quarter of new mutations are neutral (Day's '3x more harmful'); E. coli 1 - 4.1e-4 = 99.959%, human/E. coli per genome 146,341-243,902 at 60-100 de novo; Day's thread 4 x 1e4 x 25 = 1e6 y and 410e6/6e6 = 68.3"
   variant_of: M-212
   used_by: [B5a, B1b, A5, G4]
-  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310, mc2@L9, mc2@L16, mc2c#375371851, jb1@p9, jb1@p10]
+  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310, mc2@L9, mc2@L16, mc2c#375371851, jb1@p9, jb1@p10, jg1c#AbLX0qTkveZ, jg1c#AbPZ3OnnqSO, jg1c#AbTSnGMwWgS]
   positions:
     day: "The count leaves out the fixation time and treats every mutation as neutral; with three harmful mutations per neutral one the expectation is a quarter (5.6M); 1e6 y per neutral fixation at 4Ne = 40,000 and 25 y"
     critic: "On Day's quoted inputs the neutral expectation meets the requirement (22.5M, 16-20.5M lag-adjusted); Day's own quoted need (1 in 22,727) is below his p_fix (1 in 20,000); RF-6's 35M is a slip for 20M and '>> 180' stands"
@@ -2057,3 +2097,15 @@ objects:
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-917.json
+- id: M-918
+  kind: identity
+  statement: "Ghijselen JG-1 arithmetic not held elsewhere: the per-fixation time two ways, g x G_f = 25 x 1,400 = 35,000 y and 6.3e6/180 = 35,000 y (T / F_max, one quantity: the mean spacing on the aggregate reading, one allele's time on the serial one); marathon 60,000 x 4 h = 240,000 h = 10,000 d = 27.38 y ('27'); the marathon as M-706's overlap case at a constructed bound (all runners in one 4 h window): 0.24 s per finisher at the line, mean concurrency 60,000, serial count 1 against aggregate 60,000, so the analogy's 4 h is a per-runner latency and T/G_f's analogue is the line time; comment's logarithm: 2e6/200 = 1e4 and log10 1e4 = 4, but the exponent reading keeps the ratio 1e4 (n ln p) and the concurrent-completion reading gives ln(2e6)/ln(200) = 2.738 (H_k ratio 2.566), so the '4 times' reproduces under neither (+46% on the charitable one); neutral 4Ne = 40,000 > 10,000"
+  variant_of: M-706
+  used_by: [G2a, G2b]
+  sources: [jg1@02:33, jg1@03:04, jg1@03:32, jg1@04:09, jg1c#AbLX0qTkveZ, jg1c#AbQMQjXiOHQ, jg1c#AbQQxek5pWp, jg1c#AbOZjfoynVk, jg1c#AbPZ3OnnqSO, jg1c#AbrO2q2aErg, B2026-09-30@p6]
+  positions:
+    day: "35,000 years is g G_f, the mean spacing of an observed throughput, not the time one allele takes; the marathon's analogue of G_f is the time per finisher at the line, not 4 h per runner, so the analogy misses T/G_f (M-706); the comment's '4 times' reproduces under no reading"
+    critic: "On the serial reading the book's Appendix A gives the 180 (G2g), the marathon is exact (n t against t, a factor of n); concurrent events finish in time growing as ln k, not k (2.74x from 200 to 2e6)"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-918.json

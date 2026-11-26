@@ -1,0 +1,92 @@
+{
+  "id": "M-918",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-918.py",
+  "script_sha256": "f182a9188ba7cc84740fa5e70d077bd857616a24f92eacb654364a637bf7938a",
+  "object": "M-918",
+  "variant_of": "M-706",
+  "inputs": [
+    {
+      "name": "t_div_years, g_len, G_f, d",
+      "value": [
+        6300000,
+        25,
+        1400,
+        1
+      ],
+      "cite": "jg1@01:03-01:46 (Duffy's values as Ghijselen reads them; M-711)"
+    },
+    {
+      "name": "marathon",
+      "value": {
+        "runners": 60000,
+        "hours_each": 4
+      },
+      "cite": "jg1@03:32"
+    },
+    {
+      "name": "base_pair_counts",
+      "value": [
+        200,
+        2000000
+      ],
+      "cite": "jg1c#AbOZjfoynVk"
+    },
+    {
+      "name": "Ne",
+      "value": 10000,
+      "cite": "M-914 (Day's 4 x 1e4)"
+    }
+  ],
+  "values": {
+    "years_per_fixation": {
+      "g_x_Gf": 35000,
+      "T_over_Fmax": 35000
+    },
+    "marathon": {
+      "hours": 240000,
+      "days": 10000.0,
+      "years": 27.38,
+      "said": 27,
+      "said_move": -0.0138
+    },
+    "marathon_overlap_bound": {
+      "window_s": 14400,
+      "G_f_line_s": 0.24,
+      "concurrency": 60000,
+      "serial_in_window": 1,
+      "aggregate_in_window": 60000
+    },
+    "log_comment": {
+      "ratio": 10000.0,
+      "log10_ratio": 4.0,
+      "exponent_reading_ratio": 10000,
+      "ln_ratio": 2.7384,
+      "harmonic_ratio": 2.5665,
+      "said": 4,
+      "said_over_ln_ratio": 0.461
+    },
+    "neutral": {
+      "4Ne": 40000,
+      "2Ne": 20000,
+      "said_more_than": 10000
+    },
+    "quotes": {
+      "video_rows": 15,
+      "comment_rows": 16,
+      "day_rows": 3,
+      "uploader_comments_held": 44
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "G_f = T_obs / n_obs is a throughput that already counts overlapping fixations (G1 q1; ¶7)",
+      "holds": "35,000 years is the mean spacing g G_f, not one allele's time; the marathon's analogue of G_f is the 0.24 s per finisher at the line, not 4 h per runner, so T/G_f counts right at any overlap (M-706); the comment's '4 times' reproduces under neither reading (1e4 or 2.74)"
+    },
+    "critic": {
+      "reading": "the 180 is a serial count: one allele per 35,000 years (the book's Appendix A, G2g q1)",
+      "holds": "on that reading the marathon is exact: n t = 240,000 h against 4 h in parallel, a factor of n; the concurrent-completion reading makes the time grow as ln k (2.74x from 200 to 2e6), not as k"
+    }
+  },
+  "notes": "Exact on rationals for the marathon bound; floats elsewhere. The 0.24 s line time is a constructed bound (all runners in one 4 h window), not a race statistic; with a longer finish window the line time grows and the concurrency falls, the identity is unchanged. The H_k ratio models each duration as Exp(1); it is one charitable reading of the comment, not a population-genetics model, and it needs all k changes present at once."
+}
