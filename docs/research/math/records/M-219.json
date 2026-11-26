@@ -1,0 +1,86 @@
+{
+  "id": "M-219",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-219.py",
+  "script_sha256": "fd2c9c4508f7cafe4d96c064ba560994cad23ab2bac462345a86a0cee41a167d",
+  "object": "M-219",
+  "inputs": [
+    {
+      "name": "Day ancestral term and 2.4M removal",
+      "cite": "B6a q1, q2 (Z22903977 s3)"
+    },
+    {
+      "name": "theta = 4 Ne mu; factor 2 for two lineages",
+      "cite": "Q37 (B4a q3), B4a q2"
+    },
+    {
+      "name": "CSAC t1, t2; 1.23% total, 1.06% fixed; differences include polymorphism",
+      "cite": "B4a q1, B6 q2; quotes-literature CSAC2005; parameters divergence.snv_divergence_fraction"
+    },
+    {
+      "name": "Camestros; Day 2019 15M + 15M",
+      "cite": "B6b q1; Q05 (B6b q2)"
+    },
+    {
+      "name": "mu, T, L",
+      "value": [
+        1.2e-08,
+        252000,
+        3000000000.0,
+        3200000000.0
+      ],
+      "cite": "parameters mutation.mu_per_site_per_gen.pedigree_human, generations_available.day_2026; B6a (3e9), B4a (3.2e9)"
+    },
+    {
+      "name": "Ne values",
+      "value": [
+        10000.0,
+        132000.0,
+        198000.0
+      ],
+      "cite": "parameters population.Ne_modern_human, Ne_ancestral_hc.yoo_2025_HCG/HCB"
+    }
+  ],
+  "values": {
+    "theta_1e4": 0.00048,
+    "ancestral_sites": 1440000.0,
+    "share_of_410M": 0.0035122,
+    "share_of_35M": 0.0411429,
+    "removal_per_lineage": 1200000.0,
+    "removal_two_lineages": 2400000.0,
+    "anc_over_removal": {
+      "two_lineages": 0.6,
+      "per_lineage": 1.2
+    },
+    "net_per_lineage": 240000.0,
+    "D_by_Ne": {
+      "10000.0": 0.006528,
+      "132000.0": 0.012384,
+      "198000.0": 0.015552
+    },
+    "T_needed_Ne_1e4": 492500.0,
+    "anc_sites_yoo": {
+      "132000.0": 20275200.0,
+      "198000.0": 30412800.0
+    }
+  },
+  "positions": {
+    "day": {
+      "ancestral_term": 1440000.0,
+      "share_of_410M": 0.0035122,
+      "stated_less_than_half_of_2.4M": false,
+      "note": "1.44M / 2.4M = 0.6; against the per-lineage 1.2M the term is 1.2x the removal, so the net is +0.24M"
+    },
+    "critic": {
+      "reading": "pairwise D = 2 mu T + theta_anc; the empty-pipe term does not reduce D",
+      "D_by_Ne": {
+        "10000.0": 0.006528,
+        "132000.0": 0.012384,
+        "198000.0": 0.015552
+      },
+      "observed": 0.0123,
+      "fixed_max": 0.0106
+    }
+  },
+  "notes": "1.44M and 0.35% reproduce. 'Less than half of 2.4M' is false (0.6), and against IR's own per-lineage removal (1.2M) the ancestral term is larger, reversing the stated sign. With Ne = 1e4, D = 0.65% against 1.23% observed (a fit needs 12.3 My); with Yoo's ancestral Ne, 1.24-1.56%."
+}

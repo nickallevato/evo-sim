@@ -1,0 +1,106 @@
+{
+  "id": "M-204",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-204.py",
+  "script_sha256": "bc5f5b0dad34b9f694953dcb7f669c3464cbf74f27b3ddaa1e2ff60d65775b42",
+  "object": "M-204",
+  "inputs": [
+    {
+      "name": "short-time law",
+      "value": "F(T) ~ exp(-pi^2 Ne/T), T << 4Ne",
+      "cite": "Q31 (B2a q1)"
+    },
+    {
+      "name": "definition",
+      "value": "F(T) = P(tau <= T | fixation), k(T) = mu F(T)",
+      "cite": "Q147 (B2a q2)"
+    },
+    {
+      "name": "Day simulation",
+      "value": "~3,000 fixed, 750 linear, 6 observed",
+      "cite": "B2a q3; claim file B2a"
+    },
+    {
+      "name": "human Ne/T",
+      "value": [
+        18000000.0,
+        "Ne 7.3e9, T 400"
+      ],
+      "cite": "B2c q1; claim file B2c (HL Table 3)"
+    },
+    {
+      "name": "rescue count",
+      "value": 100000000000000.0,
+      "cite": "B2c q2"
+    },
+    {
+      "name": "lineage window and Ne readings",
+      "value": {
+        "G": 260000,
+        "Ne": [
+          7300000000.0,
+          4690000000.0,
+          198000.0,
+          132000.0,
+          10000.0
+        ]
+      },
+      "cite": "claim file B2c audit; parameters population.Ne_ancestral_hc.yoo_2025_HCB/HCG, Ne_modern_human"
+    }
+  ],
+  "values": {
+    "F_diffusion_by_G_over_N": {
+      "4": 0.606345,
+      "1": 0.00245269,
+      "0.25": 2.59079e-15
+    },
+    "F_day_by_G_over_N": {
+      "4": 0.084805,
+      "1": 5.17232e-05,
+      "0.25": 7.15717e-18
+    },
+    "prefactor_at_T_eq_Ne": 47.4196,
+    "sim_expected": {
+      "linear": 750.0,
+      "diffusion": 7.35808,
+      "day_formula": 0.15517,
+      "observed": 6
+    },
+    "human_log10F": {
+      "day_1.8e7": -77153700.0,
+      "day_Ne7.3e9": -78225200.0,
+      "exact_Ne7.3e9": -78225200.0
+    },
+    "rescue_log10": -77153700.0,
+    "lineage_window_log10F": {
+      "Ne_7.3e9": -120347.0,
+      "Ne_4.69e9": -77318.5
+    },
+    "lineage_window_F_day": {
+      "198000.0": 0.00054426,
+      "132000.0": 0.00666609,
+      "10000.0": 0.684135
+    },
+    "lineage_window_F_exact": {
+      "198000.0": 0.0174905,
+      "132000.0": 0.121493,
+      "10000.0": 0.999993
+    }
+  },
+  "positions": {
+    "day": {
+      "linear_overstates": true,
+      "linear_over_observed": 125,
+      "log10F_humans": -77153700.0,
+      "rescue_fails": true,
+      "note": "the exponent is exact; the omitted prefactor (4 pi Ne/T)^1.5 is 47 at T = Ne and 10^12.5 at Ne/T = 1.8e7, which moves nothing at 10^-7.7e7"
+    },
+    "critic": {
+      "reading": "the current-census era does not bound lineage fixations",
+      "lineage_F_exact_YooHCB": 0.0174905,
+      "lineage_F_exact_Ne1e4": 0.999993,
+      "note": "the lineage-scale fill and its demography are M-207 and M-202"
+    }
+  },
+  "notes": "Exponent pi^2 Ne/T reproduces; Day's 'seventy-eight-millionth' is 77.15 million decades at Ne/T = 1.8e7 (78.2 million at Ne = 7.3e9, T = 400), a 1% rounding. The exact diffusion F carries a prefactor that Day's form omits: 47x at T = Ne, which matches Day's own simulation (7.4 expected, 6 observed; his formula gives 0.16). Which window and Ne apply is the dispute; under the lineage window F ranges 0.017 to 1."
+}

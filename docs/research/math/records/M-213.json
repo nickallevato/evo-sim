@@ -1,0 +1,78 @@
+{
+  "id": "M-213",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-213.py",
+  "script_sha256": "782a1ef7deafe6526d3ea0c2b6ecadf3d99b05e4aa3643beb49ff5abcdac2351",
+  "object": "M-213",
+  "inputs": [
+    {
+      "name": "Hancock correction",
+      "value": "6.4e9 -> 3.2e9; 152 -> 76; about 38 million",
+      "cite": "B5c q2, q3, q4; claim file B5c"
+    },
+    {
+      "name": "Nesslig20 37.8M and mu_G definition",
+      "cite": "B5e q2; claim file B5e (s2.1)"
+    },
+    {
+      "name": "Dumb-and-Dumber 9.7M",
+      "cite": "B5f q1"
+    },
+    {
+      "name": "Day 2019 15M + 15M",
+      "cite": "Q05 (B6b q2)"
+    },
+    {
+      "name": "CSAC 35M SNV, polymorphism 14-22%",
+      "cite": "quotes-literature CSAC2005; parameters divergence.snv_differences_total"
+    },
+    {
+      "name": "mu, haploid count",
+      "value": [
+        1.2e-08,
+        38.4
+      ],
+      "cite": "parameters mutation.mu_per_site_per_gen.pedigree_human, mutation.new_mutations_per_haploid_genome"
+    }
+  ],
+  "values": {
+    "per_gen": {
+      "diploid": 76.8,
+      "haploid": 38.4,
+      "cited_halved": 76
+    },
+    "counts": {
+      "diploid_x2": 38707200.0,
+      "76_x2": 38304000,
+      "haploid_x2": 19353600.0,
+      "haploid_x1": 9676800.0,
+      "nesslig_as_written": 37800000.0,
+      "nesslig_zygote_reading": 18900000.0
+    },
+    "csac_fixed_total": [
+      27300000.0,
+      30100000.0
+    ],
+    "csac_fixed_per_lineage": [
+      13650000.0,
+      15050000.0
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "each lineage counted separately: 15M fixed in humans and 15M in chimps",
+      "per_lineage": 15000000.0,
+      "total": 30000000.0
+    },
+    "critic": {
+      "reading": "write the formula with haploid sites and the lineage count explicit",
+      "haploid_one_lineage": 9676800.0,
+      "haploid_two_lineages": 19353600.0,
+      "csac_fixed_per_lineage": [
+        13650000.0,
+        15050000.0
+      ]
+    }
+  },
+  "notes": "Factor 2 (diploid vs haploid) and factor 2 (one vs two lineages) are independent; Hancock's 38M keeps the x2 lineages after the haploid correction only through the 76 that counts all mutation types. Nesslig20's 37.8M halves to 18.9M if 75 is a zygote count. Day's 15M per lineage is at the top of CSAC's fixed share (13.65-15.05M)."
+}

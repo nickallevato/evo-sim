@@ -1,0 +1,76 @@
+{
+  "id": "M-201",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-201.py",
+  "script_sha256": "829fb104db35a08a35cc51bf9306514b1264d0955bfefca2acda9153f1373836",
+  "object": "M-201",
+  "inputs": [
+    {
+      "name": "formula",
+      "value": "E[F(T)] = mu L int_0^T F_X(u) du",
+      "cite": "Q34"
+    },
+    {
+      "name": "asymptote",
+      "value": "int F_X ~ T - 4 Ne",
+      "cite": "Q35 (B1a q1)"
+    },
+    {
+      "name": "T, mu L, naive count",
+      "value": [
+        252000,
+        30,
+        7560000
+      ],
+      "cite": "Q36 (B1a q2); parameters generations_available.day_2026"
+    },
+    {
+      "name": "IR table rows",
+      "value": {
+        "1e4": 6360000,
+        "5e4": 1560000,
+        "6.3e4": 0
+      },
+      "cite": "claim file B1a arithmetic audit"
+    },
+    {
+      "name": "F_X diffusion series, mean 4 Ne",
+      "value": "1 + sum (-1)^i (2i+1) exp(-i(i+1) t/4Ne)",
+      "cite": "standard (Kimura & Ohta 1969 Eq. 15 for the mean; B7b q1)"
+    }
+  ],
+  "values": {
+    "naive_muLT": 7560000,
+    "leading_order": {
+      "10000": 6360000,
+      "50000": 1560000,
+      "63000": 0
+    },
+    "exact_series": {
+      "10000": 6360010.0,
+      "50000": 2281530.0,
+      "63000": 1519110.0
+    },
+    "loss_pct_leading": {
+      "1e4": 15.87,
+      "5e4": 79.37,
+      "6.3e4": 100.0
+    },
+    "exact_over_naive_at_T_eq_4Ne": 0.200941
+  },
+  "positions": {
+    "day": {
+      "reading": "empty start: count = mu L int F_X ~ mu L (T - 4Ne)",
+      "count_Ne_1e4": 6360000,
+      "count_Ne_5e4": 1560000,
+      "count_T_eq_4Ne_printed": 0,
+      "exact_T_eq_4Ne": 1519110.0
+    },
+    "critic": {
+      "reading": "exact for the empty start (a point for Day); from a full start the count is mu L T",
+      "count_full_start": 7560000,
+      "note": "whether the start is empty is M-202 (data-check); pairwise divergence is M-219"
+    }
+  },
+  "notes": "The algebra is exact for an empty start and the leading-order rows reproduce. Rows outside T >> 4Ne understate the exact count: Ne = 5e4 gives 2.28M (loss 69.8%, table 79.4%), and the printed 0 at T = 4Ne is 1.52M exact (20% of mu L T). The start state, not this formula, decides between the two counts (M-202)."
+}

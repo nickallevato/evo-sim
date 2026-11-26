@@ -1,0 +1,110 @@
+{
+  "id": "M-212",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-212.py",
+  "script_sha256": "c6b9300999673b56115ad28bb2be6712ba5e11b15b93f77b91ec3ba9fffc30d3",
+  "object": "M-212",
+  "inputs": [
+    {
+      "name": "McCarthy",
+      "value": "100 x 1e4 / 20 y x 9e6 y x 1/20,000",
+      "cite": "B5a q1-q3; claim file B5a"
+    },
+    {
+      "name": "Mansfield",
+      "value": "2N neutral x 1/(2N)",
+      "cite": "B5b q1, q2"
+    },
+    {
+      "name": "Hancock",
+      "value": "6.4e9 x 1.2e-8 per generation, about 38 million",
+      "cite": "B5c q1, q4"
+    },
+    {
+      "name": "Nesslig20",
+      "value": "mu_G = 75, 2 x 252,000",
+      "cite": "B5e q1, q2"
+    },
+    {
+      "name": "Dumb-and-Dumber / justatest90",
+      "value": "3.2e9 x 1.2e-8 x 252,000; gap under 2",
+      "cite": "B5f q1, q3; claim file B5f"
+    },
+    {
+      "name": "relayed",
+      "value": "6e6/25 x 30",
+      "cite": "B5d q1"
+    },
+    {
+      "name": "Hossjer",
+      "value": "3e9 x 0.45 x 1.25e-8 x 450,000",
+      "cite": "B5h q2; claim file B5h (Eq. 3.1)"
+    },
+    {
+      "name": "Day corrected",
+      "value": "100 x 3,300 x 400,000 / 1.6e10",
+      "cite": "B3e q1, q2; claim file B3e"
+    },
+    {
+      "name": "requirements",
+      "value": {
+        "snv_per_lineage": 17500000.0,
+        "mccarthy_day": 20000000.0
+      },
+      "cite": "claim files B5f (17.5M, Z23003785), B5a/B3e (20M)"
+    }
+  ],
+  "values": {
+    "counts": {
+      "mccarthy": 22500000.0,
+      "mccarthy_time_adj": 20000000.0,
+      "hancock_x2": 38707200.0,
+      "nesslig20": 37800000.0,
+      "dd_haploid": 9676800.0,
+      "relayed": 7200000.0,
+      "hossjer_d": 7593750.0,
+      "day_corrected": 8.25
+    },
+    "mansfield_per_gen": 1,
+    "mansfield_short_20M_450k": 44.4444,
+    "mansfield_short_17.5M_252k": 69.4444,
+    "hancock_per_gen": 76.8,
+    "ratio_17.5M_over": {
+      "mccarthy": 0.777778,
+      "mccarthy_time_adj": 0.875,
+      "hancock_x2": 0.452112,
+      "nesslig20": 0.462963,
+      "dd_haploid": 1.80845,
+      "relayed": 2.43056,
+      "hossjer_d": 2.30453,
+      "day_corrected": 2121210.0
+    },
+    "hossjer_20M_ratio": 2.63374,
+    "hossjer_no_d": 16875000.0,
+    "day_shortfall": 2424240.0,
+    "day_k_over_mu_used": 4.125e-07,
+    "day_k_over_mu_stated_eq": 2424240.0
+  },
+  "positions": {
+    "day": {
+      "count": 8.25,
+      "shortfall": 2424240.0,
+      "claim": "30 mutations cannot fixate per generation",
+      "note": "8.25 uses supply in Ne and P_fix in census N (k/mu = Ne/N = 4.1e-7), the inverse of the same post's k = mu N/Ne"
+    },
+    "critic": {
+      "counts": {
+        "mccarthy": 22500000.0,
+        "mccarthy_time_adj": 20000000.0,
+        "hancock_x2": 38707200.0,
+        "nesslig20": 37800000.0,
+        "dd_haploid": 9676800.0,
+        "relayed": 7200000.0,
+        "hossjer_d": 7593750.0
+      },
+      "within_factor": 2.77778,
+      "note": "Mansfield's 1 per generation (2% neutral) is 44-69x short; the others are within 2.8x of 17.5-20M"
+    }
+  },
+  "notes": "Every stated product reproduces from its own inputs. Hancock's 38M needs x2 lineages (M-213). Hossjer's 7.6M is 2.6x below 20M (the quote says 'a factor of 2'). Day's 8.25 is arithmetic-correct but uses k/mu = Ne/N, 5.9e12x below the k/mu = N/Ne his post states."
+}

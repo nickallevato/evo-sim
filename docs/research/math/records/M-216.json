@@ -1,0 +1,59 @@
+{
+  "id": "M-216",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-216.py",
+  "script_sha256": "dbdac2b8b7eaffc6da102b57de017e861e7fd69dd2620790bab98eb7e2e5af15",
+  "object": "M-216",
+  "inputs": [
+    {
+      "name": "Day: covariance set to zero by fiat",
+      "cite": "B3g q3 (blog 2026-08-27 para 3)"
+    },
+    {
+      "name": "Athos via Day: P(fix) = x0 wrong for real populations",
+      "cite": "Q77, Q78 (B3g q5, q6)"
+    },
+    {
+      "name": "Day Z23188201: 1/(2N) exact for any offspring distribution",
+      "cite": "claim file B3g (E4)"
+    },
+    {
+      "name": "keruru exact chains: 1/(2N_census) to 15 decimals; Ne 5.6x lower",
+      "cite": "B7c q2; claim file B7c"
+    },
+    {
+      "name": "chain size and sweepstakes psi",
+      "value": {
+        "2N": 20,
+        "psi": 0.242105,
+        "N_over_Ne": 5.6
+      },
+      "cite": "this record (illustrative size)"
+    }
+  ],
+  "values": {
+    "c0": {
+      "wright_fisher": 1.0,
+      "sweepstakes_Ne_5.6x_lower": 1.0
+    },
+    "c_nonzero_pfix_x_2N": {
+      "wright_fisher_c-0.05": 0.319395,
+      "wright_fisher_c+0.05": 2.17198,
+      "sweepstakes_Ne_5.6x_lower_c-0.05": 0.844382,
+      "sweepstakes_Ne_5.6x_lower_c+0.05": 1.18428
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "real populations have genotype-reproduction covariance; x0 answers the no-covariance problem",
+      "number": null,
+      "why_none": "Day and Athos name the covariance but give no value; the record shows what any c != 0 does (2.17x and 1.18x at c = +0.05; 0.32x and 0.84x at c = -0.05)"
+    },
+    "critic": {
+      "reading": "a neutral allele has c = 0 by definition; then P(fix) = x0 under any offspring distribution",
+      "pfix_x_2N_wright_fisher": 1.0,
+      "pfix_x_2N_sweepstakes": 1.0
+    }
+  },
+  "notes": "With c = 0, P(fix) = i/2N to 1e-12 in both chains, including the sweepstakes chain with Ne 5.6x below N (keruru's result; Day's Z23188201 sentence). With c != 0 the allele frequency has a drift term, which is selection, and P(fix) moves off 1/(2N). The arithmetic of both readings is fixed; whether a neutral allele can carry covariance is the definitional dispute."
+}

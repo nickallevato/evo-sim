@@ -1,0 +1,70 @@
+{
+  "id": "M-208",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-208.py",
+  "script_sha256": "ac7ac2e135c9a2611f502d1e8dfd4fa89b1cdbeac03d0c75d0a9d7fc5a90eaf1",
+  "object": "M-208",
+  "inputs": [
+    {
+      "name": "Day: k = mu only after one size held ~4Ne",
+      "cite": "B1b q1 (Z22129121 abstract)"
+    },
+    {
+      "name": "Day: far end delivers what near end fed 4Ne back",
+      "cite": "B1b q2 (Z22129121 s Transit Time)"
+    },
+    {
+      "name": "B1b design and numpy results",
+      "value": {
+        "N0": 500,
+        "T": 6000,
+        "constant": 0.996,
+        "contraction": 1.259,
+        "expansion": 0.733,
+        "saturating": 0.085
+      },
+      "cite": "claim file B1b Check (research/checks/b1b_demography.py)"
+    },
+    {
+      "name": "fwdpy11 results",
+      "value": {
+        "constant": 0.979,
+        "contraction": 1.254,
+        "expansion": 0.699
+      },
+      "cite": "R4-XT.md results table, row B1b"
+    }
+  ],
+  "values": {
+    "leading": {
+      "expansion": 0.733333,
+      "contraction": 1.26667,
+      "saturating": -0.6
+    },
+    "finite_T": {
+      "expansion": 0.734573,
+      "contraction": 1.26667
+    },
+    "saturating_bounds": [
+      0.0490905,
+      0.115757
+    ],
+    "xt_expansion_gap": -0.0468182,
+    "xt_constant_gap": -0.021
+  },
+  "positions": {
+    "day": {
+      "reading": "a transient follows any size change; expansion gives a deficit",
+      "expansion_ratio": 0.733333,
+      "confirmed_numpy": true
+    },
+    "critic": {
+      "reading": "standard theory; the sign reverses for contractions; the human-lineage history is B1c's empirical question",
+      "contraction_ratio": 1.26667,
+      "xt_expansion": 0.699,
+      "xt_gap": -0.0468182,
+      "note": "fwdpy11 is also 2.1% low at constant size (R4 XT: an unlocalised U-dependent engine deficit), so the 0.699 miss is not a test of the theory"
+    }
+  },
+  "notes": "Leading order 1 - 4(N2 - N1)/T reproduces the B1b analytic targets (0.733, 1.267) and the numpy runs; N0/5 -> 5N0 is outside the regime and the numpy 0.085 lies inside the computed bounds 0.049-0.116. R4 XT's fwdpy11 expansion 0.699 is 4.7% below target, with the same engine 2.1% low at constant size."
+}

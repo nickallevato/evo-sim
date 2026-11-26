@@ -1,0 +1,79 @@
+{
+  "id": "M-223",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-223.py",
+  "script_sha256": "b61567ce3d7e79ecbba9a4b01a26807eda3edc72c10c4289e4343066319c8445",
+  "object": "M-223",
+  "inputs": [
+    {
+      "name": "Z22903977_2026-09-22_s1_superseded",
+      "quote": "Chalub (2022), solving the neutral Kimura equation explicitly in terms of Gegenbauer polynomials, derives the time-dependent fixation probability as a series of exponential decay terms that converge to the steady-state value only as t → ∞.",
+      "cite": "claim file B1e / quotes-day"
+    },
+    {
+      "name": "Q288_Z22903977_2026-10-13_s1",
+      "quote": "Chalub (2022), solving the neutral Kimura diffusion equation with absorbing boundaries, derives the explicit transient solution as a Gegenbauer polynomial expansion whose terms converge to the steady-state fixation probability u(p) = p only as t → ∞.",
+      "cite": "claim file B1e / quotes-day"
+    },
+    {
+      "name": "Q286_Z22903977_2026-10-13_s1",
+      "quote": "Day and Athos (2026b) extract the dominant eigenvalue of that expansion via diffusion asymptotics in the arcsine-transformed coordinate system, converting Chalub's abstract series into the closed-form finite-time completion fraction F(T) = exp(−π²Nₑ/T)",
+      "cite": "claim file B1e / quotes-day"
+    },
+    {
+      "name": "Q297_blog_2026-08-23_para4",
+      "quote": "Chalub shows that the 1/(2N) is an assumption imported from the Wright-Fisher model. It is not a result produced by the mathematics.",
+      "cite": "claim file B1e / quotes-day"
+    },
+    {
+      "name": "blog_2026-08-23_outcome",
+      "quote": "Impose that assumption and the fixation probability comes out equal to the starting frequency",
+      "cite": "claim file B1e / quotes-day"
+    },
+    {
+      "name": "Chalub2022 abstract_model",
+      "quote": "we consider a population of two types evolving without mutation or selection, the so-called neutral evolution",
+      "cite": "quotes-literature Chalub2022"
+    },
+    {
+      "name": "Chalub2022 abstract_constraints",
+      "quote": "Its solution is required to satisfy not only the equation but a series of conservation laws formulated as integral constraints.",
+      "cite": "quotes-literature Chalub2022"
+    },
+    {
+      "name": "Chalub2022 s3_time_dependent",
+      "quote": "Finally, the time-dependent fixation probability is given by",
+      "cite": "quotes-literature Chalub2022"
+    },
+    {
+      "name": "Chalub2022 s2_classical",
+      "quote": "However, the classical solution decay in the limit t → ∞, and therefore cannot be the correct solution from the modeling point of view.",
+      "cite": "quotes-literature Chalub2022"
+    },
+    {
+      "name": "Athos para 4 (posted by Day, 2026-09-21)",
+      "quote": "For a neutral allele the chance of fixation is just its starting frequency, x₀ — for a new mutation, 1/(2N). That’s the standard result",
+      "cite": "quotes-day Q77 note"
+    }
+  ],
+  "values": {
+    "x0_new_copy_N1e4": 5e-05,
+    "limit_u": "x0",
+    "dominant_decay_rate_per_gen": "1/(2Ne)",
+    "short_time_form": "exp(-pi^2 Ne/T) x (4 pi Ne/T)^1.5 x e^(T/16Ne) (M-204)"
+  },
+  "positions": {
+    "day": {
+      "reading": "Chalub shows the transient, and 1/(2N) is imported from Wright-Fisher, not derived",
+      "superseded_sentence_and_revision_agree": true
+    },
+    "critic": {
+      "reading": "Chalub derives P(fix) = x0 under the neutral constraints; Wright-Fisher sets x0 = 1/(2N) as the starting frequency",
+      "supported_by_day_text": [
+        "blog_2026-08-23_outcome",
+        "Athos para 4"
+      ]
+    }
+  },
+  "notes": "Both Day versions say the series converges to u(p) = p only as t -> inf, which the series confirms (limit x0). Day's own post states the outcome (fixation equals the starting frequency) and Athos para 4 calls 1/(2N) the standard result. The 'dominant eigenvalue' gives the long-time decay exp(-t/2Ne); exp(-pi^2 Ne/T) is the short-time form of the whole series (M-204); the dominant term alone cannot give it (at T = Ne its one-term truncation is negative). A flag on Q286's wording, not on the closed form."
+}

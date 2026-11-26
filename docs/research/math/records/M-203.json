@@ -1,0 +1,76 @@
+{
+  "id": "M-203",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-203.py",
+  "script_sha256": "114524f2d433a908f1c44252217746c4471781f6013bff300d947a7c42d91e02",
+  "object": "M-203",
+  "inputs": [
+    {
+      "name": "mean conditional fixation time",
+      "value": "4 Ne",
+      "cite": "B7b q1 (Kimura & Ohta 1969 p.770, Eq. 15); quotes-literature KimuraOhta1969"
+    },
+    {
+      "name": "K&O Ne/N in man",
+      "value": 0.8,
+      "cite": "B7b q3"
+    },
+    {
+      "name": "Day ancestral pipe",
+      "value": "census ~100,000, 4Ne ~ 228,000",
+      "cite": "B1d q2 (blog 2026-10-01 para 31); Q160"
+    },
+    {
+      "name": "Day modern pipe",
+      "value": "census 8e9, 29 billion",
+      "cite": "B1d q3 (para 31)"
+    },
+    {
+      "name": "Vk",
+      "value": 5,
+      "cite": "claim file B1d audit (Z22129121 Table 1)"
+    },
+    {
+      "name": "Ne values for T/4Ne",
+      "value": [
+        10000.0,
+        33000.0,
+        57143,
+        198000.0
+      ],
+      "cite": "parameters population.Ne_modern_human, Ne_ancestral_hc.day_b1d_implied, yoo_2025_HCB; B5f (justatest90 40,000-132,000)"
+    }
+  ],
+  "values": {
+    "Ne_anc_vk5": 57142.6,
+    "pipe_anc": 228570.0,
+    "Ne_over_N": 0.571426,
+    "pipe_8e9_same_ratio": 18285700000.0,
+    "stated_29e9_over_same_ratio": 1.58594,
+    "Ne_over_N_needed_for_29e9": 0.90625,
+    "pipe_8e9_KO_0.8": 25600000000.0,
+    "T_over_4Ne": {
+      "10000": 6.3,
+      "33000": 1.90909,
+      "57143": 1.1025,
+      "198000": 0.318182
+    }
+  },
+  "positions": {
+    "day": {
+      "pipe_anc": 228000,
+      "reproduces_with_vk5": true,
+      "pipe_8e9_stated": 29000000000.0,
+      "reproduces_same_ratio": false
+    },
+    "critic": {
+      "4Ne_accepted": true,
+      "pipe_8e9_same_ratio": 18285700000.0,
+      "window_long_vs_4Ne_only_if_Ne_small": {
+        "Ne_1e4": 6.3,
+        "Ne_1.98e5": 0.318182
+      }
+    }
+  },
+  "notes": "4 Ne is the textbook mean (both sides accept it). 228,000 reproduces (Vk = 5 is an implicit input). 29 billion is 1.59x the value at the same Ne/N and needs Ne = 0.91 N; K&O's 0.8 would give 2.56e10. The 252,000-generation window is long against 4Ne only for Ne near 1e4."
+}

@@ -1,0 +1,93 @@
+{
+  "id": "M-209",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-209.py",
+  "script_sha256": "da950ea9b8f85ba809ff80ab0f9ae57e1e7d8efce4fe6015c101975ca46b9f56",
+  "object": "M-209",
+  "inputs": [
+    {
+      "name": "Day original",
+      "value": "k = mu N/Ne",
+      "cite": "B3a q1 (Z18525547 eq. 1), Q39 (blog 2026-02-04)"
+    },
+    {
+      "name": "Day concession",
+      "value": "supply 2N mu and P_fix 1/(2N) in the same N cancel",
+      "cite": "B3g q1 (blog 2026-08-27)"
+    },
+    {
+      "name": "Grok exchange",
+      "value": {
+        "N": 8000000000.0,
+        "Ne": 10000.0,
+        "k_over_mu": 800000
+      },
+      "cite": "B3f q1; claim file B3f"
+    },
+    {
+      "name": "Matev sum",
+      "value": "2N x 1/(2Ne) = N/Ne",
+      "cite": "B3i q1 (RF-2)"
+    },
+    {
+      "name": "keruru pre-retraction and retraction",
+      "cite": "B7c q4, q3"
+    },
+    {
+      "name": "Maruyama invariance in Day's Hard Limits",
+      "cite": "B7 q1"
+    },
+    {
+      "name": "fwdpy11 P_fix x 2N at Ne/N 1, .66, .35, .14",
+      "value": [
+        0.985,
+        0.974,
+        0.981,
+        0.995
+      ],
+      "cite": "R4-XT.md row B3"
+    }
+  ],
+  "values": {
+    "k_over_mu_day_form": {
+      "8e+09/1e+04": 800000.0,
+      "1e+06/1e+04": 100.0,
+      "1e+05/3e+03": 30.303,
+      "1e+05/6e+04": 1.75,
+      "1e+04/1e+04": 1.0
+    },
+    "k_over_mu_cancelled": {
+      "8e+09/1e+04": 1,
+      "1e+06/1e+04": 1,
+      "1e+05/3e+03": 1,
+      "1e+05/6e+04": 1,
+      "1e+04/1e+04": 1
+    },
+    "matev_sum_1e6_1e4": 100,
+    "xt_max_dev_from_1": 0.026000000000000023,
+    "xt_dev_from_day_form": [
+      0.015,
+      0.359211,
+      0.662887,
+      0.865541
+    ]
+  },
+  "positions": {
+    "day": {
+      "original": "k/mu = N/Ne",
+      "values": {
+        "8e+09/1e+04": 800000.0,
+        "1e+06/1e+04": 100.0,
+        "1e+05/3e+03": 30.303,
+        "1e+05/6e+04": 1.75,
+        "1e+04/1e+04": 1.0
+      },
+      "later": "conceded 2026-08-27: no Ne on either side; 3rd edition needed (B3g q2)"
+    },
+    "critic": {
+      "reading": "supply and fixation share the same N; k/mu = 1 for every pair",
+      "matev": "sum of per-copy probabilities is N/Ne > 1 under the 1/(2Ne) form, so that form is not a probability"
+    }
+  },
+  "notes": "Both forms are algebraically correct for their premises; they agree only at N = Ne. Under 1/(2Ne) the per-site sum over 2N copies is N/Ne (100 at N = 1e6, Ne = 1e4), which exceeds 1. fwdpy11 P_fix x 2N stays within 2.6% of 1 at Ne/N down to 0.14, 36-87% below Day's N/Ne. Whether offspring-number covariance changes this is M-216."
+}

@@ -1,0 +1,106 @@
+{
+  "id": "M-222",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-222.py",
+  "script_sha256": "6b7b0e4e5fa4860cd9ce39d302d0ca9aca8c306fbb722848bb8cf1f28e7fccee",
+  "object": "M-222",
+  "inputs": [
+    {
+      "name": "Day reductio and premises",
+      "cite": "Q104 (B9 q1); premises in the same comment (quotes-day Q104 note)"
+    },
+    {
+      "name": "Lynch anchors d",
+      "value": [
+        0.005,
+        0.01,
+        0.05
+      ],
+      "cite": "R4-B9.md readings (Lynch 2016)"
+    },
+    {
+      "name": "criterion 'centuries'",
+      "value": "100-999 y",
+      "cite": "R4-B9.md (owner rule 2026-10-11)"
+    },
+    {
+      "name": "premise 2 inputs",
+      "value": {
+        "f": 0.75,
+        "U": [
+          76.8,
+          100
+        ],
+        "s": "0.001 assumed"
+      },
+      "cite": "R4-B9.md results table"
+    },
+    {
+      "name": "Ne",
+      "value": [
+        10000.0,
+        16200.0
+      ],
+      "cite": "parameters population.Ne_histories.takahata_1995, prado_martinez_2013_table1.humans"
+    },
+    {
+      "name": "Kimura u(s)",
+      "value": "Ne 1e4, s -0.001",
+      "cite": "claim file B9"
+    }
+  ],
+  "values": {
+    "lynch_years_W0.5_W0.1": {
+      "0.005": [
+        3457.06,
+        11484.1
+      ],
+      "0.01": [
+        1724.19,
+        5727.63
+      ],
+      "0.05": [
+        337.835,
+        1122.26
+      ]
+    },
+    "premise2_d": {
+      "76.8": 0.0576,
+      "100": 0.075
+    },
+    "premise2_years_W0.5": {
+      "76.8": 292.095,
+      "100": 222.272
+    },
+    "neutral_like_fix_years": {
+      "10000.0": 1000000.0,
+      "16200.0": 1620000.0
+    },
+    "kimura_u_s-0.001": 8.50521e-21
+  },
+  "positions": {
+    "day": {
+      "reading": "A: with selection off, load accumulates within centuries",
+      "years_to_half_fitness": {
+        "lynch_5pct": 337.835,
+        "premise2_s0.1pct": [
+          222.272,
+          292.095
+        ]
+      }
+    },
+    "critic": {
+      "reading": "the premise (all selection off at once) is counterfactual and the 3x ratio is an input",
+      "years_to_half_fitness_lynch_central_mouse": [
+        1724.19,
+        3457.06
+      ],
+      "literal_substitution_years": [
+        1000000.0,
+        1620000.0
+      ],
+      "kimura_u_harmful": 8.50521e-21
+    }
+  },
+  "notes": "Every R4 B9 cell reproduces. Reading A: centuries on Lynch's upper value (338 y) and on Day's premise 2 with an assumed s (222-292 y); millennia on Lynch's central and mouse values (1,724-3,457 y). Reading B: a harmful allele drifting like a neutral one needs 1.0-1.6 My to fix, and with s = -0.001 it fixes with probability 8.5e-21, not 5e-5."
+}

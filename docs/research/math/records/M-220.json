@@ -1,0 +1,85 @@
+{
+  "id": "M-220",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-220.py",
+  "script_sha256": "d9df234f00341c81df190e0766fe71fce5ada8941c9df862d61aa86a4506f095",
+  "object": "M-220",
+  "inputs": [
+    {
+      "name": "Kimura1962",
+      "year": 1962,
+      "quote": "if we let s → 0 in (10), we obtain U = 1/2N, the result known for a neutral gene.",
+      "locator": "Genetics 47:713, p.716 (B7a q2)",
+      "cite": "bib-literature; quotes-literature / claim files B7a, B7b"
+    },
+    {
+      "name": "Kimura1968",
+      "year": 1968,
+      "quote": "Calculating the rate of evolution in terms of nucleotide substitutions seems to give a value so high that many of the mutations involved must be neutral ones.",
+      "locator": "Nature 217:624, abstract (quotes-literature Kimura1968)",
+      "cite": "bib-literature; quotes-literature / claim files B7a, B7b"
+    },
+    {
+      "name": "KimuraOhta1969",
+      "year": 1969,
+      "quote": "a single mutant gene, if it is selectively neutral, takes about 4Ne generations until fixation in a population of effective size Ne.",
+      "locator": "Genetics 61:763, Summary p.770 (B7b q1)",
+      "cite": "bib-literature; quotes-literature / claim files B7a, B7b"
+    },
+    {
+      "name": "Balloux & Lehmann 2012 citing Kimura and Ohta 1971, Kimura 1983",
+      "quote": "One of the central results of the Neutral Theory of evolution (Kimura and Ohta 1971; Kimura 1983) states that the rate k of allele substitution (rate of evolution) at neutral loci is unaffected by fluctuations in population size and is simply equal to the mutation rate.",
+      "cite": "quotes-literature BallouxLehmann2012"
+    },
+    {
+      "name": "Day's earliest dated source",
+      "value": "2019-01-29",
+      "cite": "bib-day B2019-01-29-there-will-be-debate"
+    },
+    {
+      "name": "Hancock",
+      "quote": [
+        "So like drift can still dominate at the molecular level and selection is dominating at the phenotypic level.",
+        "Um the these models existed long before Vox day um and exist completely independently of him."
+      ],
+      "cite": "B5j q1, q2 (t=02:18:21, 02:20:03)"
+    },
+    {
+      "name": "Duffy slide (secondhand)",
+      "quote": "\"Remove selection from the equation and you have removed Darwin.\" (t=02:14:14)",
+      "cite": "claim file B5j"
+    }
+  ],
+  "values": {
+    "years": {
+      "Kimura1962": 1962,
+      "Kimura1968": 1968,
+      "KimuraOhta1969": 1969
+    },
+    "years_before_day_2019": {
+      "Kimura1962": 57,
+      "Kimura1968": 51,
+      "KimuraOhta1969": 50
+    },
+    "later_citations": {
+      "KimuraOhta1971": 1971,
+      "Kimura1983": 1983
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "neutral theory is where neo-Darwinists flee; removing selection removes Darwin",
+      "number": null,
+      "why_none": "the slide's claim is about motive (a 1968 response to Haldane); the held text does not quote Kimura's motive"
+    },
+    "critic": {
+      "reading": "the models predate Day and exist independently of him",
+      "years_before_day": {
+        "Kimura1962": 57,
+        "Kimura1968": 51,
+        "KimuraOhta1969": 50
+      }
+    }
+  },
+  "notes": "The neutral fixation probability (1962), the neutral-majority argument (1968) and the 4Ne fixation time (1969) predate Day's earliest dated source (2019) by 50-57 years. Whether Kimura proposed neutrality in response to Haldane's cost (the slide) is a motive claim the held text does not settle; it does not bear on the dates."
+}

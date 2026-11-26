@@ -1,0 +1,112 @@
+{
+  "id": "M-217",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-217.py",
+  "script_sha256": "bc60f1b8cba5de45b802dfb5ab60f10297f6065e6bc2078d14f84297662e818d",
+  "object": "M-217",
+  "inputs": [
+    {
+      "name": "eq. 7",
+      "cite": "B4 q2 (Z18525547 para 141)"
+    },
+    {
+      "name": "Ne,h, Ne,c, census grid",
+      "value": {
+        "Ne_h": 3300,
+        "Ne_c": 33000,
+        "N_h": [
+          50000,
+          100000
+        ],
+        "N_c": [
+          300000,
+          1000000
+        ]
+      },
+      "cite": "claim file B4 (Z18525547)"
+    },
+    {
+      "name": "outputs",
+      "value": "200-580 kya; 200-360 most plausible",
+      "cite": "B4 q1"
+    },
+    {
+      "name": "census 600,000 -> 68 kya",
+      "cite": "B4b q2; claim file B4b (Biraben 2003)"
+    },
+    {
+      "name": "later range",
+      "value": "250 kya-1.3 Mya",
+      "cite": "Q68 (B4c q1); claim file B4c: no computation in the post"
+    },
+    {
+      "name": "Yoo ancestral Ne",
+      "value": [
+        198000,
+        132000
+      ],
+      "cite": "parameters population.Ne_ancestral_hc.yoo_2025_HCB/HCG; claim file B4"
+    }
+  ],
+  "values": {
+    "table2_kya": {
+      "100000/300000": [
+        305,
+        355,
+        457
+      ],
+      "100000/1000000": [
+        198,
+        231,
+        297
+      ],
+      "50000/300000": [
+        495,
+        578,
+        742
+      ],
+      "50000/1000000": [
+        264,
+        308,
+        396
+      ]
+    },
+    "range_6_7My_kya": [
+      198.0,
+      577.5
+    ],
+    "census_600k_kya": 68.0952,
+    "compression": 95.5882,
+    "census_100k_300k_kya": [
+      330.0,
+      130.0
+    ],
+    "factor_sum_needed_for_250kya_1.3Mya": [
+      50.4,
+      9.69231
+    ],
+    "yoo_Ne_My": {
+      "198000": 12.474,
+      "132000": 8.316
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "supply uses census N, so the clock date shrinks by the mean N/Ne",
+      "range_kya": [
+        198,
+        577
+      ],
+      "census_600k_kya": 68.0952
+    },
+    "critic": {
+      "reading": "with the cancellation (M-209) every N/Ne factor is 1 and t_actual = t_clock",
+      "t_actual_for_6.3My": 6300000.0,
+      "yoo_Ne_reading_My": {
+        "198000": 12.474,
+        "132000": 8.316
+      }
+    }
+  },
+  "notes": "Table 2, the 68 kya and the 130-330 kya alternative all reproduce from the stated inputs. The 250 kya-1.3 Mya revision has no held computation; eq. 7 would need factor sums 9.7-50.4. The recalibration rests on M-209: with the same N in supply and fixation it returns the clock date unchanged, and with Yoo's ancestral Ne at census 1e5 it gives older dates (8.3-12.5 My)."
+}

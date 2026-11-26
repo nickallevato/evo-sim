@@ -1,0 +1,68 @@
+{
+  "id": "M-207",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-207.py",
+  "script_sha256": "15e2fbe28c891fef9a579aedce98ec947022d353972af1cc6a2c88dca7696bda",
+  "object": "M-207",
+  "inputs": [
+    {
+      "name": "Day: pipe never fills; channel shuts in the lineage duration",
+      "cite": "Q157 (B q3)"
+    },
+    {
+      "name": "Day: 'the pipeline cannot fill' after conceding throughput",
+      "cite": "B2d q3, B2d q1 (Q146)"
+    },
+    {
+      "name": "Ne",
+      "value": 57142.6,
+      "cite": "Wright (4N-2)/(Vk+2), census 1e5, Vk 5 (claim file B1d; M-203)"
+    },
+    {
+      "name": "windows",
+      "value": {
+        "6.5My": 260000.0,
+        "6.3My": 252000.0,
+        "2My": 80000.0
+      },
+      "cite": "HL l.249 lineage 6.5 My, l.416 2 My (claim file B); 25 y per generation"
+    },
+    {
+      "name": "Takahata Ne",
+      "value": 100000.0,
+      "cite": "parameters population.Ne_histories.takahata_1995 (human lineage >4.6 My ago ~1e5)"
+    },
+    {
+      "name": "edge",
+      "value": 0.3,
+      "cite": "claim file B, R4 RHclose registered edge"
+    }
+  ],
+  "values": {
+    "F_6.5My": 0.697036,
+    "F_6.3My": 0.67594,
+    "D_6.5My": 0.255642,
+    "D_6.3My": 0.241961,
+    "F_Takahata_1e5_6.5My": 0.280766,
+    "D_Takahata_1e5_6.5My": 0.064873,
+    "F_2My": 0.0254673,
+    "D_2My": 0.00336575
+  },
+  "positions": {
+    "day": {
+      "reading": "same window, no fill: the 2 My window or the delivered share",
+      "F_2My": 0.0254673,
+      "D_6.5My": 0.255642,
+      "F_Takahata_1e5": 0.280766,
+      "all_under_edge": true
+    },
+    "critic": {
+      "reading": "fill over HL's own 6.5 My lineage window",
+      "F_6.5My": 0.697036,
+      "F_6.3My": 0.67594,
+      "over_edge": true,
+      "note": "both numbers assume an empty start; any pre-split fill raises them (start state is M-202)"
+    }
+  },
+  "notes": "Every RHclose reading reproduces from the diffusion law. On the 6.5 My lineage window the pipe is ~70% filled (2.3x the 0.30 edge); on HL's 2 My window it is 2.5% filled; the delivered share over 6.5 My is 26%; Takahata's 1e5 throughout gives 0.28. Which reading the quote takes is rule RD (claim file B); the arithmetic of each is fixed here."
+}

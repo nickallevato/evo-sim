@@ -1,0 +1,116 @@
+{
+  "id": "M-210",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-210.py",
+  "script_sha256": "79e457a03f7c96e844ba73f8e0084e0d735a8efdde119f491927ece714dbf36f",
+  "object": "M-210",
+  "inputs": [
+    {
+      "name": "RRME k",
+      "value": "mu x 6.091/8.2 = 0.743 mu",
+      "cite": "Q40 (B3c q1); parameters rates.day_k_over_mu_0_743"
+    },
+    {
+      "name": "cohort census (billions)",
+      "value": [
+        2.5,
+        4.0,
+        6.1,
+        8.2
+      ],
+      "cite": "claim file B3c formal statement (Z18525262)"
+    },
+    {
+      "name": "B&L with and without overlap",
+      "cite": "B3b q2, q3 (Balloux & Lehmann 2012)"
+    },
+    {
+      "name": "Day on B&L",
+      "cite": "B3b q1 (Z22903977 s6)"
+    },
+    {
+      "name": "B&L effect sizes",
+      "value": {
+        "eq11": "2 - N1/N2, N 50/150",
+        "cycle": "1 - (s/(1-s))(cosh r - 1)",
+        "s": 0.96
+      },
+      "cite": "R4-B3b-C1.md (B3b section)"
+    },
+    {
+      "name": "fwdpy11 B3b and cohort rows",
+      "value": {
+        "b3b": [
+          0.961,
+          0.955,
+          0.948
+        ],
+        "cohort": [
+          0.639,
+          0.629,
+          0.637,
+          0.639
+        ]
+      },
+      "cite": "R4-XT.md"
+    }
+  ],
+  "values": {
+    "rrme_k_over_mu": 0.742847,
+    "per_cohort": [
+      0.305,
+      0.488,
+      0.744,
+      1.0
+    ],
+    "shortfall": 0.257,
+    "window_sensitivity": {
+      "2": 0.868469,
+      "3": 0.779943,
+      "4": 0.720362,
+      "6": 0.653272,
+      "10": 0.609114,
+      "20": 0.597931
+    },
+    "growth_ratio": 1.48579,
+    "bl_eq11": 1.66667,
+    "bl_cycle_s096": {
+      "0.005": 0.9997,
+      "0.016": 0.996928,
+      "0.03": 0.989199
+    },
+    "bl_growth_arrival_factor": 1.37795
+  },
+  "positions": {
+    "day": {
+      "k_over_mu": 0.743,
+      "shortfall": 0.257,
+      "reading": "a mathematical consequence of real census sizes, confirmed by B&L"
+    },
+    "critic": {
+      "reading": "B&L's effect needs overlap plus fluctuation; RRME is a four-cohort window",
+      "bl_no_overlap": 1.0,
+      "bl_human_cycle_range": [
+        0.989199,
+        0.9997
+      ],
+      "rrme_by_window": {
+        "2": 0.868469,
+        "3": 0.779943,
+        "4": 0.720362,
+        "6": 0.653272,
+        "10": 0.609114,
+        "20": 0.597931
+      },
+      "xt_not_reproduced": {
+        "b3b_non_overlap": [
+          0.961,
+          0.955,
+          0.948
+        ],
+        "cohort_factor": 0.636
+      }
+    }
+  },
+  "notes": "RRME arithmetic reproduces (0.7428; column 0.305/0.488/0.744/1). The value is a property of the window: 0.87 to 0.60 for 2 to 20 cohorts at the same growth. B&L give k = mu without overlap; with overlap at human survival the cycle effect is -0.03% to -1.1% and growth raises arrivals 1.38x. fwdpy11 misses (B3b 0.95-0.96, cohort 0.64) track an unlocalised engine deficit (R4 XT), not RRME's form."
+}

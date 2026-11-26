@@ -1,0 +1,61 @@
+{
+  "id": "M-218",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-218.py",
+  "script_sha256": "2a65e0630fab19726700d231d962c23498a547cb481e3afca474c29a4563c022",
+  "object": "M-218",
+  "inputs": [
+    {
+      "name": "retraction",
+      "cite": "Q67 (B4c q2; H1 q1)"
+    },
+    {
+      "name": "three-term framework",
+      "cite": "Q66 (claim file H1)"
+    },
+    {
+      "name": "Term 3 and inputs",
+      "value": {
+        "s_max": 1.0,
+        "d": 0.45,
+        "L": 3100000000.0,
+        "Ne": 3300
+      },
+      "cite": "claim file H1 (Z19984826 s4.3 human case)"
+    },
+    {
+      "name": "total k range",
+      "value": "1e-8 to 1e-7",
+      "cite": "claim file H1 (retraction post)"
+    },
+    {
+      "name": "neutral mu",
+      "value": 1.2e-08,
+      "cite": "parameters mutation.mu_per_site_per_gen.pedigree_human"
+    }
+  ],
+  "values": {
+    "term3_per_site": 8.25265e-12,
+    "term3_log10": -11.0834,
+    "per_genome_per_gen": 0.0255832,
+    "gens_per_adaptive": 39.0881,
+    "adaptive_260k_gens": 6651.64,
+    "term3_over_mu": 0.000687721
+  },
+  "positions": {
+    "day": {
+      "reading": "Term 3 bounds the adaptive rate only; total k from Terms 1 and 2",
+      "term3": 8.25265e-12,
+      "total_k_range": [
+        1e-08,
+        1e-07
+      ]
+    },
+    "critic": {
+      "reading": "concedes the point; the total rate is the neutral rate",
+      "total_k": 1.2e-08,
+      "term3_share_of_total": 0.000687721
+    }
+  },
+  "notes": "Both sides agree on the scope. Term 3 at the stated inputs is 8.3e-12 per site (Day: '~10^-12'), 0.0256 per genome per generation, about 6,650 adaptive substitutions over 260,000 generations, under 0.07% of a neutral rate of 1.2e-8, which lies inside Day's stated total range."
+}
