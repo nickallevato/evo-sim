@@ -2,7 +2,7 @@ objects:
 - id: M-101
   kind: inference
   statement: An observed count over a duration gives an average rate (X/Y); does that rate exist and mean something as a bound when the process is stochastic, non-Gaussian and varies across species and conditions
-  used_by: [G1, G1c]
+  used_by: [G1, G1c, G1b, G2g]
   sources:
   - evo006
   - evo007
@@ -111,7 +111,7 @@ objects:
 - id: M-110
   kind: parameter
   statement: 'Effective generations since the CHLCA: 252,000 nominal (6.3M y / 25 y) at d = 1; 252,000 x 0.80 = 201,600 effective at d = 0.80'
-  used_by: [A4c, A1, B1a]
+  used_by: [A4c, A1, B1a, G2b]
   sources:
   - evo009
   - evo008
@@ -169,7 +169,7 @@ objects:
 - id: M-115
   kind: inference
   statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
-  used_by: [F, F1, F1a, F1b, B2d, B5g, B6c, E2]
+  used_by: [F, F1, F1a, F1b, B2d, B5g, B6c, E2, G1, G1a, G1b, G2a, G2d, G2g, G2h]
   sources:
   - evo008
   positions:
@@ -468,7 +468,7 @@ objects:
 - id: M-221
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
-  used_by: [B, B5, B5j, D2k, D8, D13]
+  used_by: [B, B5, B5j, D2k, D8, D13, G4]
   sources: [B#q1, B5#q2, B5j#q3]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
@@ -865,7 +865,7 @@ objects:
 - id: M-604
   kind: empirical
   statement: 'Parallel sweep capacity under interference: does the active zone of intermediate-frequency alleles cap simultaneous sweeps at about 230 (Z18167588, not derived, worked backward from the constraint), or does R_int stay near 1 with free recombination (0.975 at 272 active loci, N = 1000, s = 0.01, soft selection) and fall with linkage (clonal 0.645 to 0.088; 1.5 M map 0.572); the F2 grid covers N = 1000 and soft selection; the Weissman and Barton asymptotes R/4-R/2 = 8.75-19 per generation at R = 35-38 M bound the interference leg only below adaptive shares of 13-27%'
-  used_by: [F2]
+  used_by: [F2, Gc]
   sources:
   - F2#q1
   - F2#q2
@@ -900,4 +900,188 @@ objects:
     day: Mean 4Ne with a broad distribution, SD about 0.538 x 4Ne, under Kimura diffusion
     critic: The number reproduces by simulation but is not in the cited Kimura and Ohta paper; the expected count formula needs only the mean
   resolution: lookup
+  status: open
+- id: M-701
+  kind: formula
+  statement: 'Bernoulli Barrier fitness differential: for n = 157,000 loci at p = 0.5, N = 10,000, s = 0.01 the count per individual is Binomial(n, 0.5) (mean 78,500, SD 198.1, CV 0.252%); the extreme genotypes at +-3.72 sigma differ by 1,474 alleles (7.44 sigma); the paper prints (1.01)^1,474 = 14.7 against a required 157,000 x 0.01 = 1,570, shortfall 107; (1.01)^1,474 is 2.34e6 and 1.01^157,000 is 10^678, whereas 14.7 = 1,474 x 0.01 and 1,570/14.74 = 106.5 are additive quantities; the figures cover the Z18167588 abstract and s3.1 only'
+  used_by: [G, Ge]
+  sources:
+  - G#q1
+  - Q24
+  - Ge#q1
+  positions:
+    day: 'The best-to-worst genotype differential is 14.7x against 1,570x required, a shortfall above 100-fold; the Barrier remains entirely correct'
+    critic: 'The binomial and order-statistic arithmetic reconcile but the 14.7 and 1,570 are additive differences labelled as ratios (label slip, ledger); the required differential is the all-beneficial genotype, which per-locus sweeps do not need; R4 F2 finds no saturation at 272 active loci with free recombination'
+  resolution: derivation
+  status: open
+- id: M-702
+  kind: inference
+  statement: 'Coefficient of variation against variance: for K ~ Binomial(n, p), Var = n p (1-p) rises with n and CV = sqrt((1-p)/(n p)) falls as 1/sqrt(n) (n = 157,000: Var 39,250, CV 0.252%); does a falling CV of the beneficial allele count mean a falling response to selection, or does the infinitesimal model (many loci of small effect, additive variance maintained) describe the standard regime; the audit has not checked whether the infinitesimal model answers the CV step'
+  used_by: [G, G5, G6]
+  sources:
+  - G5#q1
+  - G6#q1
+  - RF-1
+  - GGR-44
+  positions:
+    day: 'Variance in fitness compresses as n grows (the Barrier uses CV); selection response needs that variance'
+    critic: 'The absolute variance of the allele count rises with n and only the CV falls, so the Barrier substitutes CV for variance; the infinitesimal model is the standard framework for many small-effect loci (panel; no derivation given)'
+  resolution: derivation
+  status: open
+- id: M-703
+  kind: formula
+  statement: 'Joint probability of a pre-specified set of fixations, P = p^n: Ga p = 0.02 (= 2s at s = 0.01), n = 2e7 gives 10^-33,979,400 (printed 10^-34,000,000); Gb p = 0.5, n = 157,000 gives 10^-47,262; the Darwillion as rendered by McCarthy (1/20,000)^(2e7) gives 10^-86,020,600; three different (p, n) pairs, each timing-independent and valid under independence (joint/product 1.03 at free recombination, lower when linked)'
+  used_by: [G2g, G3, G3b, G4, Ga, Gb]
+  sources:
+  - Ga#q1
+  - Gb#q1
+  - G4#q2
+  - G3#q1
+  - Q11
+  - Q28
+  - Q71
+  positions:
+    day: 'P(all) = p^n is the probability that all required fixations occur; it shows parallel or serial fixation is probabilistically self-defeating'
+    critic: 'The arithmetic holds but prices pre-specified arisings, not the event history requires, and is timing-independent so it cannot force sequential fixation'
+  resolution: derivation
+  status: open
+- id: M-704
+  kind: inference
+  statement: "Specific against any: P_specific(n) = product of p_i for a named list, P_any(>= k of M) = P(Binomial(M, p) >= k); at McCarthy's inputs (M = 4.5e11, p = 5e-5, k = 2e7) the mean is 22.5e6, SD 4,743, k is 527 sigma below it, so P_any is about 1 under neutral k = mu; the middle case (k of M interchangeable alternatives) flips at lambda_50 = 12.3-17.2 alternatives per needed change, for the adaptive subset only; Day's dilemma (specific, or interchangeable and neutral) omits it; per-locus lambda is 0.1-6 at s = 0.01 and a gene-level pool clears the flip for about ten needed changes (R4 D1)"
+  used_by: [G2f, G3, G3a, G3b, G4]
+  sources:
+  - G3#q1
+  - G3#q2
+  - G3a#q1
+  - G3b#q1
+  - G4#q2
+  - G2f#q1
+  - MC-01
+  - MC-02
+  - CA-09
+  positions:
+    day: 'Either the specific fixations matter, so the Darwillion applies, or they are interchangeable and neutral noise cannot explain functional divergence'
+    critic: 'History needs some 20 million out of an enormous candidate pool, so P_any is near 1 (McCarthy, Camestros lottery, Bowers); the threshold applies only to the adaptive subset, and the neutral k = mu assumption is disputed'
+  resolution: derivation
+  status: open
+- id: M-705
+  kind: inference
+  statement: 'Does a longer fixation time enter the Darwillion: Day says raising the time to fixation from 1,600 to 40,000 increases the Darwillion by 25x (40,000/1,600 = 25); the Darwillion as rendered, (1/20,000)^(2e7), has no time input, a x25 on P moves log10 by 1.4 of 86,020,600 and a x25 on the exponent moves it 25-fold, and the harvested text does not say which; the formula connecting a fixation time to the Darwillion is in the paywalled book'
+  used_by: [G4b]
+  sources:
+  - G4b#q1
+  positions:
+    day: "Increasing 1,600 to 40,000 enlarges the Darwillion by 25x, so the critic's longer time raises the improbability"
+    critic: 'The Darwillion as rendered carries no time-to-fixation input, so the factor of 25 is not derivable from the held text'
+  resolution: lookup
+  status: blocked
+  blocked_on: "outside: Probability Zero book text (paywalled, not held); the Darwillion formula with a time input"
+- id: M-706
+  kind: inference
+  statement: "Serial against aggregate reading of the fixation count: serial N_fix(T) = T / t_fix with t_fix the time for one allele to fix; aggregate N_fix(T) = T / G_f with G_f = T_obs / n_obs; the two coincide only if fixations do not overlap; p^n is timing-independent, so a serial reading adds nothing to the Bernoulli arithmetic and the critique lands on the Appendix A chain, not on G_f; Day's own statement that the all-cause rate is faster than a sequential rate concedes the 180 is not purely serial; the object covers Hancock, Ghijselen, Camestros, Myers and Bowers on one question, the sources differ in whether they read the 3.0 method or the Appendix A chain"
+  used_by: [G2, G2a, G2c, G2d, G2e, G2f, G2g]
+  sources:
+  - G2#q1
+  - G2a#q1
+  - G2d#q1
+  - G2e#q1
+  - G2e#q2
+  - G2f#q1
+  - G2g#q1
+  - GG-01
+  - DZ-01
+  - CA-05
+  - PZ-01
+  - PZ-05
+  - BO-02
+  positions:
+    day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
+    critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
+  resolution: derivation
+  status: open
+- id: M-707
+  kind: formula
+  statement: "Required beneficial input: C / P_escape = 230 / 0.02 = 11,500 per transit period, times 300,000/440 transit periods = 7.84e6 beneficial mutations; P_escape = 2s = 0.02 (Kimura 1962) at s = 0.01; against about 2.3e11 new mutations over 300,000 generations (77 per individual x 10,000) the need is a fraction 3.4e-5 (1.7e-5 on McCarthy's 4.5e11); the paper calls the beneficial fraction an empirical question"
+  used_by: [Gd]
+  sources:
+  - Gd#q1
+  positions:
+    day: 'The cap of 230 requires about 11,500 beneficial mutations per transit, 7.8 million in total'
+    critic: 'The arithmetic reconciles; this is an any-n-of-M supply calculation and whether the beneficial fraction of 1.7e-5 to 3.4e-5 is attainable is the open empirical question'
+  resolution: derivation
+  status: open
+- id: M-708
+  kind: formula
+  statement: "Derivation of the 230 cap: t_transit = (2/s) ln 9 = 439.4, about 440, fixations <= (T/t_transit) x C with T = 300,000: 681.8 x 230 = 156,818, about 157,000; 230 is exactly the C that reproduces the paper's own n = 157,000, so the match to the requirement is circular; the paper's own criterion (available additive differential 2 z sqrt(n/4) s >= n s, z = 3.72 at N = 10,000) gives n <= 13.8, not 230; near candidates 200 (additive halving) and 100-200 (s6.1 ceiling); the requirement elsewhere is 20e6 or 205e6 (127x and 1,306x of 157,000)"
+  used_by: [Gc]
+  sources:
+  - Gc#q2
+  - Gc#q3
+  - Q26
+  - Q27
+  positions:
+    day: 'Working backward from the constraint, the active zone sustains 200-300 sweeps and 230 matches the requirement for human-chimpanzee divergence'
+    critic: "No derivation is given and 230 is the constant that makes the product equal 157,000, so the match is circular; the paper's own criterion gives about 14"
+  resolution: derivation
+  status: open
+- id: M-709
+  kind: empirical
+  statement: 'Whether MITTENS 3.0 omits the Bernoulli Barrier and the Averaging Problem, and whether both remain entirely correct: in a sha256-matched re-fetch of Z23003785 "Bernoulli" occurs once (s1, a rhetorical clause, undefined and underived) and "averaging problem" 0 times in body and addendum, so the omission half is true as stated; "entirely correct" is a claim about G, whose own external verdict is contested'
+  used_by: [Ge]
+  sources:
+  - Ge#q1
+  positions:
+    day: '3.0 renders the complicating elements moot so both were omitted, and both remain entirely correct'
+    critic: 'The omission is verified but the paper is silent on the Barrier, so omission is not a retraction and not support; whether both remain correct depends on G (contested)'
+  resolution: lookup
+  status: open
+- id: M-710
+  kind: empirical
+  statement: 'Ara+2 fixation events: Day reports 14 sequential fixation events (smallest gap 1,500, largest 9,500 generations) and 5.3 neutral mutations carried per selective fixation; Z23105291 Table 1 gives 66 fixations in 60,500 generations (blog 66 in 60,000, 909 gen per fixation); 66/14 = 4.71 per event (3.71 hitchhikers), 5.3 x 14 = 74 against 66 is 12%; claim file defines parallel as the same 500-generation slice, and sweeps 1,500 or more apart can still overlap during their rise; the basis of 5.3 is unstated'
+  used_by: [G1a]
+  sources:
+  - G1a#q1
+  - G1a#q2
+  positions:
+    day: 'Every Ara+2 sweep event was sequential and each carried 5.3 neutral hitchhikers, so the LTEE count is serial'
+    critic: 'Gaps of 1,500 or more between fixation times do not exclude overlap during the rise, 5.3 does not reconcile with 66 and 14 unless it averages over populations, and one clonal population does not show the human regime'
+  resolution: data-check
+  status: open
+- id: M-711
+  kind: formula
+  statement: "Duffy 180: 252,000 effective generations (6.3e6 y / 25 y) divided by the book's G_f of 1,400 gives 180 fixations; with the 3.0 value 1,322 it is 190.6; against 205e6 required the shortfall is 205e6/180 = 1,138,889 (the paper prints 1,139,000x); the 1,400 is a measured LTEE throughput, so the division is a rate calculation if read as T/G_f"
+  used_by: [G2b, G2g]
+  sources:
+  - G2b#q1
+  - G2b#q2
+  - DU-02
+  - DZ-02
+  positions:
+    day: '180 total fixations is all there is time for at the fastest rate ever observed, against 205 million required'
+    critic: 'The arithmetic reproduces exactly; the fastest-rate claim is not true of the point-mutator LTEE populations (43-183 gen/fix), and dividing by a per-lineage latency is the serial reading (see M-706)'
+  resolution: derivation
+  status: open
+- id: M-712
+  kind: empirical
+  statement: "Prediction of a strictly serial sweep model for segregating variation: Hancock says there would be basically no variation among individuals except the rising mutation; under free recombination neutral diversity at unlinked sites is set by theta = 4 Ne mu and reduced by sweeps only at linked sites; R4 G2c forward simulation (N = 1e4, s = 0.01, free recombination, 500 neutral loci) gives unlinked neutral heterozygosity 0.97-1.03 of the no-sweep control at a sweep rate of 1/1,322 per generation and 1.00-1.01 at about 146 concurrent sweeps against Hancock's falsifier of below 0.10"
+  used_by: [G2c]
+  sources:
+  - G2c#q1
+  - GG-13
+  positions:
+    day: 'MITTENS models parallel fixation, so the premise that sweeps go one at a time does not describe it (Appendix A asserts the serial reading but the 1-22 reply denies it)'
+    critic: 'A strictly serial sweep model makes a specific prediction about polymorphism in the data, which the conditional correctly states'
+  resolution: derivation
+  status: open
+- id: M-713
+  kind: inference
+  statement: "F_max = t_div x d / (g_len x G_f) has no mutation rate, population size or selection coefficient term: it divides a time by an empirical generations-per-fixation figure; Day's reading is that G_f is a measured total throughput that already includes supply, selection and parallelism, so the transfer to humans (not the formula) is the question; the supply scaling (about 690x) favours the critic on transfer"
+  used_by: [G2h]
+  sources:
+  - G2h#q1
+  - G2h#q2
+  positions:
+    day: 'G_f is a measured total throughput of the LTEE, so mutation supply, selection and parallelism are inside the number'
+    critic: 'The formula constrains an observed rate without saying which process produced it, so it is not itself a test of selection; the objection restates the supply objection (M-103)'
+  resolution: derivation
   status: open
