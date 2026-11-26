@@ -169,7 +169,7 @@ objects:
 - id: M-115
   kind: inference
   statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
-  used_by: [F1, F1a, B2d, B5g, B6c]
+  used_by: [F1, F1a, B2d, B5g, B6c, E2]
   sources:
   - evo008
   positions:
@@ -324,7 +324,7 @@ objects:
 - id: M-203
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
-  used_by: [B1, B1a, B1b, B1d, B5f, B7b]
+  used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4]
   sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
@@ -428,7 +428,7 @@ objects:
 - id: M-216
   kind: model-choice
   statement: 'Reproductive covariance between genotype and reproduction (sweepstakes): does P(fix) = 1/(2N) or = x0 hold in real populations; Day 08-27: keruru''s chains set the covariance to zero by fiat; Day 09-21 (Athos, relayed): P(fix) = x0 is the frictionless-coin answer; vs keruru exact chains 1/(2N_census); Day Z23188201: 1/(2N) holds under any offspring distribution by the martingale property'
-  used_by: [B3g, B7c]
+  used_by: [B3g, B7c, E4]
   sources: [B3g#q3, B3g#q4, B3g#q5, B3g#q6, B7c#q2]
   positions: {day: Covariance is the disputed parameter; the maths without it answers the wrong question, critic: 'The neutral case has no covariance by definition: 1/(2N) is exact for neutral alleles under any offspring distribution (martingale)'}
   resolution: derivation
@@ -712,4 +712,109 @@ objects:
   sources: [D2k#q1, D2k#q2, D2k#q3, D2l#q1]
   positions: {day: 'The synthesis was built by naturalists and geneticists who never worked out the probability calculations', critic: 'Mathematically trained founders built population genetics; the narrow claim about a fixation-count budget is a separate matter'}
   resolution: lookup
+  status: open
+- id: M-501
+  kind: formula
+  statement: 'Founder-event hazard: P(at least one CMMRD-equivalent homozygote) per founder event, analytic 0.06 x 0.39 = 2.34% (P(>= 2 carriers) at N = 100, q = 1/280 per diploid, times P(homozygote | >= 2 copies) = 1 - exp(-0.5) = 0.3935) against Wright-Fisher simulation 2.33% (literal reading 2.75%, exact models 2.0-2.75%), and cumulative risk 1 - (1 - p)^n = 90.5% at n = 100 (assumes independent events); the figure covers Z23020792 and Z23034852 only, and the analytic and simulated decompositions differ (0.0509 x 0.147 = 0.75% from Table 2)'
+  used_by: [E, E3]
+  sources:
+  - E#q2
+  - E3#q1
+  - E3#q2
+  - Q73
+  positions:
+    day: The per-event hazard is about 2.3% and the cumulative risk over 100 events exceeds 90%; hypermutation is a hazard to the peripatric mechanism, scoped by the paper as one mechanism of PE
+    critic: Not addressed in the corpus; the audit's own R4 E finds the number reproduces (2.0-2.75%) but the premise (>= 2 carriers needed) is wrong, and the consequence (one homozygote removed by selection in an isolate of 100) and independence of events are open
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 1, est_ram_gb: 1, measured: false}
+- id: M-502
+  kind: empirical
+  statement: 'Which LTEE populations are mutators and by what route: six at 50,000 generations (Ara-1, -2, -3, -4, +3, +6; 96.5% of point mutations, Tenaillon 2016), seven at 60,000 (adds Ara+1, an IS-element mutator about 5x, Z23003785 and Z23105291), and Day''s split of the six into four mutS/mutL and two mutT; 6 of 12 gives a Clopper-Pearson 95% interval of 21-79%; the six-versus-seven figures come from different generation endpoints and classifiers, not from one count'
+  used_by: [E, E8]
+  sources:
+  - E#q1
+  - E8#q1
+  positions:
+    day: Six of twelve populations became mutators through loss of DNA repair (four mismatch repair, two oxidative damage), so hypermutation is common
+    critic: Not addressed; the 96.5% and the six populations match Tenaillon 2016, but the 4+2 gene split is not in the quoted passage and Day's papers use six and seven without reconciling them
+  resolution: lookup
+  status: open
+- id: M-503
+  kind: empirical
+  statement: 'Which counting rule defines an LTEE fixation and so G_f: pooled >= 95% snapshot at 10K marks (non-mutator mean 45.4, 1,322 gen/fix; Ara+5 38 at 30K and 0 at 60K, a non-measurement past its last sample 57,500; clone-pair correction giving -906 for Ara-2 at n = 2), first crossing at >= 95% (8,679; 824 gen/fix), strict lineage-aware whole-population (5,496 over 723,000 population-generations; 1,587 gen/fix) and within-lineage sweeps (7,166); the spread across rules is 3.04x for the non-mutators (523 to 1,587); the figure covers Z23003785, Z23105291 and the Good 2017 clade structure only'
+  used_by: [E1, E5, E6, E7, E9, E10]
+  sources:
+  - E5#q1
+  - E5#q2
+  - E6#q1
+  - E6#q4
+  - E10#q1
+  - Q56
+  - Q58
+  - Q178
+  positions:
+    day: Z23003785 gave 1,322 by a snapshot rule; the later Z23105291 replaces it with strict lineage-aware counts and says the number of fixation events and intervals are not well-defined; snapshot falls (ten of twelve) are real data features
+    critic: A count of fixed mutations cannot be negative and the snapshot estimator is not a count of fixations (RE-03, RE-04, RE-10); Good 2017 shows clade coexistence so pooled >= 95% is not whole-population fixation; Good's own calls never fall by construction
+  resolution: data-check
+  status: open
+- id: M-504
+  kind: empirical
+  statement: 'Beneficial share of LTEE fixations: Barrick 2009 and Tenaillon 2016 report that most fixed mutations in non-mutators were beneficial with neutral mutations accumulating at a constant rate, against Day''s blog pair of 4,615 gen per beneficial fixation and 1,322 per all-cause fixation (implied share 29% only if the two share a time base; Z23003785 gives about 1,408 per beneficial fixation by clone pair); no fitness-effect classification of the 5,496 whole-population fixations exists in the repo'
+  used_by: [E1, E8]
+  sources:
+  - E1#q1
+  - E1#q2
+  - E8#q2
+  - Q61
+  positions:
+    day: Reports both all-cause and beneficial-only figures; the all-cause rate is the one used for the total-difference comparison
+    critic: Hitchhiked neutral and mildly deleterious fixations make all-cause G_f a poor measure of beneficial-sweep throughput (no verbatim critic statement located; the literature says most early fixations were beneficial)
+  resolution: data-check
+  status: open
+- id: M-505
+  kind: inference
+  statement: 'Mutator sublinearity and transfer: does a 100-fold higher mutation rate raise LTEE fixation throughput only R = 8.5x (clone pair 893/104.7), 16.9x (metagenomic 1,322/78) or 19.7x (strict 5,307 over 424,500 against 189 over 298,500), so that supply is not the bottleneck because of clonal interference, and does that bacterial result carry to sexual vertebrates; the quoted 8-17x range covers the clone-pair and metagenomic rules only, the strict counts lie outside it'
+  used_by: [E, E3, E6, E7, E9]
+  sources:
+  - E7#q1
+  - E7#q2
+  - E7#q3
+  - E#q4
+  - E9#q3
+  positions:
+    day: Throughput is sublinear in supply (8-17x for 100x) because beneficial mutations compete; hypermutation cannot rescue the rate, and the hazard side shows it is lethal at tissue level in mammals
+    critic: The LTEE is largely non-recombining bacteria from one clone, so sublinearity does not transfer to sexual vertebrates (RE-07, GA-01, MC-07); the audit's own simulation (free recombination against asexual) is planned, not run
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 4, est_ram_gb: 2, measured: false}
+- id: M-506
+  kind: formula
+  statement: 's_min = 2 K_new ln(2 Ne) / T from K_new serial sweeps each of duration (2/s) ln(2 Ne) within T generations, with K_new = (1 - F_sv) K_total / P (F_sv 0.2-0.7, P 2-10, K_total 20-200); at Ne = 500 s_min = 13.8 K/T, giving three zones (SAFE s < 0.01, DANGER 0.01-0.10, IMPOSSIBLE > 0.10); a floor with no clonal interference; (2/s) ln(2N) overstates the conditional mean fixation time by 1.6-2.2x in the range tested (RESULTS.md B0.4), so the boundaries shift'
+  used_by: [E2]
+  sources:
+  - E2#q1
+  - E2#q2
+  - E2#q3
+  - E2#q4
+  positions:
+    day: s_min is a floor under perfect efficiency; no parameter set is both PE and within the safe zone; parallelism is treated explicitly through P
+    critic: Independent loci sweep in parallel (pipelining, F1), so the required s is lower by at least the B0.4 factor; the objection is the size of P and K_total, not seriality as such; no critic engaged the paper
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 2, est_ram_gb: 1, measured: false}
+- id: M-507
+  kind: formula
+  statement: 'Relictation (Cannings jackpot model): one family replaces a fraction f of 2N gene copies per jackpot generation; exact chain gives t/4Ne above the Wright-Fisher baseline by 14.9%, 20.4% and 28.8% at 2N = 20, 30, 50 (peak ratios 1.071, 1.146, 1.249 at f = 50-60%), no deviation below about 10% replacement, and P_fix = 1/(2N) unchanged; the table covers 2N = 20-50 only, so "keeps growing with N" is an extrapolation'
+  used_by: [E4]
+  sources:
+  - E4#q1
+  - E4#q2
+  - E4#q3
+  - E4#q4
+  - Q72
+  positions:
+    day: Below 10% replacement the formula holds; above it t = 4Ne breaks in quantifiable ways; the mechanism is established multiple-merger theory that is under-applied
+    critic: The result is the known multiple-merger result and P_fix = 1/(2N) agrees with the critics' own chains (keruru); growth with N needs family size proportional to N (sweepstakes), and at 2N >= 1,000 with realistic vertebrate variance f is below 1%
+  resolution: derivation
   status: open
