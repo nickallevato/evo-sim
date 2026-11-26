@@ -1,0 +1,67 @@
+{
+  "id": "M-410",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-410.py",
+  "script_sha256": "a58d0aae4d61ec2039caf01ff43248aeb201519b74f273cdea05351fba0ae645",
+  "object": "M-410",
+  "inputs": [
+    {
+      "name": "per-step chance",
+      "value": {
+        "occur": "1/600",
+        "take_over": "1/500"
+      },
+      "cite": "claim file D7a q1"
+    },
+    {
+      "name": "steps",
+      "value": 500,
+      "cite": "claim file D7a q1"
+    },
+    {
+      "name": "target overall chance",
+      "value": 1e-06,
+      "cite": "claim file D7b q1, q2"
+    },
+    {
+      "name": "candidates per step",
+      "value": 1080000,
+      "cite": "claim file D7b q1, q2"
+    },
+    {
+      "name": "single path disowned",
+      "value": "one cannot simply assume that only one mutation is available",
+      "cite": "claim file D7a q2 (same post)"
+    }
+  ],
+  "values": {
+    "odds_against": {
+      "mantissa": 3.636,
+      "exponent": 2738,
+      "log10": 2738.56
+    },
+    "chance": {
+      "mantissa": 2.75025,
+      "exponent": -2739,
+      "printed": "2.7 x 10^-2739"
+    },
+    "per_step_for_exactly_1e-6": 0.972747,
+    "candidates_for_exactly_1e-6": 1080778,
+    "candidates_for_0.9727": 1080259,
+    "per_step_at_1080000": 0.972676,
+    "overall_at_0.9727": 9.76018e-07,
+    "overall_at_1080000": 9.6427e-07
+  },
+  "positions": {
+    "day": {
+      "reading": "sequential specific mutations are vanishingly improbable",
+      "odds_against_log10": 2738.56,
+      "candidates_per_step_for_1e-6": 1080000
+    },
+    "critic": {
+      "reading": "the same post says the single-specific-path model is not the real count; the chain is not a model of evolution",
+      "number": "none: the critic position rejects the model rather than offering another count; the back-calculation (0.9727, 1,080,000) is the post's own"
+    }
+  },
+  "notes": "300,000^500 = 3.636e2738 (exact integer, 2,739 digits) reproduces '3.6 x 10^2738 to 1'; the chance is 2.750e-2739 against the printed 2.7 (truncated). For exactly 1e-6 overall the step must succeed with 0.972747, which needs 1,080,778 candidate beneficial mutations per step; Day's 0.9727 and 1,080,000 reproduce to 0.07%. All of it assumes one specific path, which the post itself says cannot be assumed."
+}

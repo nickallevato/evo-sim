@@ -1,0 +1,62 @@
+{
+  "id": "M-406",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-406.py",
+  "script_sha256": "0f043dedbf2943b522bc339dae9f6da5852df0e82ffa57ab993cb4fd7aaed7e6",
+  "object": "M-406",
+  "inputs": [
+    {
+      "name": "Eden p.8 inputs",
+      "value": {
+        "steps": 120,
+        "nucleotides": 420,
+        "mu": 1e-06,
+        "N": 1000000.0,
+        "reachable_aa_per_step": "8-9 (8.5 used)",
+        "generations_per_conversion": 20
+      },
+      "cite": "claim file D3c (Eden, Wistar p.8; the list is the claim file's reading, the formula is not printed)"
+    },
+    {
+      "name": "Eden printed result",
+      "value": 2700000,
+      "cite": "claim file D3c q2 (Wistar p.8)"
+    },
+    {
+      "name": "Day's account",
+      "value": "vastly exceeds the time available (no figure)",
+      "cite": "claim file D3c q1"
+    },
+    {
+      "name": "meandering path",
+      "value": "many powers of 10 greater than 120 (no estimate)",
+      "cite": "claim file D3b q4"
+    }
+  ],
+  "values": {
+    "reconstruction_420x8.5": 430800.0,
+    "reconstruction_x3": 1287600.0,
+    "printed_over_reconstructions": [
+      6.26741,
+      2.09692
+    ],
+    "printed_per_step": 22500.0,
+    "printed_wait_per_step": 22480.0,
+    "mu_N_unused": "mu and N enter no reconstruction in claim file D3c; with them Eden's formula stays unrecovered"
+  },
+  "positions": {
+    "day": {
+      "reading": "Eden showed the time vastly exceeds the time available",
+      "number": "none: Day gives no time and no time available; Eden's only computed figure is 2.7e6, which he calls not implausible"
+    },
+    "critic": {
+      "reading": "Eden's own figure is 2.7e6 'not implausible', and his inputs do not reproduce it",
+      "eden_printed": 2700000,
+      "reconstructions": [
+        430800.0,
+        1287600.0
+      ]
+    }
+  },
+  "notes": "Eden's formula is not in the volume as held; T = 120 x (420 x 8.5 + 20) = 430,800 and with a factor 3 1,287,600. The printed 2,700,000 is 2.1x to 6.3x these (under one order), and needs 22,480 generations of waiting per step. The figure Eden prints is his own and he calls it 'not implausible'; Day's 'vastly exceeds' matches only Eden's uncomputed remark on the longer meandering path. Day's 141 and 146 residues are as in Day's text; claim file D3c reads Eden as 140 and 146 (minor, not a number in this object)."
+}

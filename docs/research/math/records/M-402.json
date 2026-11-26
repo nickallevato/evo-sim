@@ -1,0 +1,81 @@
+{
+  "id": "M-402",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-402.py",
+  "script_sha256": "74d957ff96707b1a0c5f0df8043cc8c48cee3dcaed3cd1fce5d7a9dbf55e0221",
+  "object": "M-402",
+  "inputs": [
+    {
+      "name": "Eden biosphere inputs",
+      "value": {
+        "thickness_cm": 1.0,
+        "protein_fraction": 0.3,
+        "density": 1.0,
+        "age_y": 10000000000.0,
+        "lifetime_s": 1.0
+      },
+      "cite": "claim file D3a q1 (Eden, Wistar p.7)"
+    },
+    {
+      "name": "Eden printed counts",
+      "value": {
+        "talk_p7": "about 10^52",
+        "working_paper_p110": "less than 10^55",
+        "species": "say 10^40"
+      },
+      "cite": "claim file D3 q2, q3 and working-paper quote; claim file D3a q2 ('all the useful proteins')"
+    },
+    {
+      "name": "Day ch.6 inputs",
+      "value": {
+        "cells_per_cm3": 1e+18,
+        "protein_concentration": 0.0001,
+        "lifetime_s": 1,
+        "age_y": 10000000000.0,
+        "printed": "approximately 10^52"
+      },
+      "cite": "claim file D3a q3 (Dembski Substack 2026-09-28, ch.6)"
+    },
+    {
+      "name": "reconstruction constants",
+      "value": {
+        "R_cm": 637100000.0,
+        "molar_mass_g": 27500,
+        "N_A": 6.02214076e+23,
+        "age_s": 3.156e+17
+      },
+      "cite": "claim file D3a formal statement (not parameters.yaml keys)"
+    }
+  ],
+  "values": {
+    "biosphere_volume_cm3": 5.10064e+18,
+    "eden_p7_inputs": {
+      "protein_mass_g": 1.53019e+18,
+      "alive": 3.35092e+37,
+      "ever": 1.05755e+55,
+      "log10": 55.0243,
+      "orders_above_printed_1e52": 3.0243
+    },
+    "day_ch6_mass_fraction_reading": {
+      "protein_mass_g": 510064000000000.0,
+      "alive": 1.11697e+34,
+      "ever": 3.52517e+51,
+      "log10": 51.5472
+    },
+    "day_ch6_as_printed_cell_size_nm": 10.0
+  },
+  "positions": {
+    "day": {
+      "reading": "about 10^52 molecules ever, standing for all useful (Day: functional) proteins",
+      "printed": 52,
+      "day_inputs_log10_mass_fraction_reading": 51.5472
+    },
+    "critic": {
+      "reading": "the printed inputs do not give 10^52; the count is of molecules, not functional sequences",
+      "eden_inputs_log10": 55.0243,
+      "species_log10": 40,
+      "note": "the 273-order comparison moves by 3 orders at most (M-401)"
+    }
+  },
+  "notes": "Eden's p.7 inputs give 1.06e55 (10^55.02), 0.02 orders over his working paper's 'less than 10^55' (a match to rounding) and 3.0 orders above the 10^52 printed in the talk. Day's ch.6 inputs give 3.5e51 (approximately 10^52) only if the 1e-4 concentration is a mass fraction of the whole biosphere volume; read as printed, 10^18 cells per cm^3 means 10 nm cells. Either count is of molecules, not distinct sequences: Eden's own 'say 10^40' species is 12 to 15 orders lower. None of this moves the 273-order gap of M-401 by more than 3 orders."
+}

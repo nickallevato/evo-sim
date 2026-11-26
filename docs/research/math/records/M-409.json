@@ -1,0 +1,80 @@
+{
+  "id": "M-409",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-409.py",
+  "script_sha256": "1a425bf7478427cc1b1218e81a6e8667ec707d31632cf49fb11b6b5937f02419",
+  "object": "M-409",
+  "inputs": [
+    {
+      "name": "Ulam scheme",
+      "value": {
+        "M": 100000000000.0,
+        "alpha_per_individual": 1e-10,
+        "gamma": 1e-06,
+        "improvements": 1000000.0,
+        "generation": "1 day"
+      },
+      "cite": "claim file D4 q1-q3 (Wistar p.24)"
+    },
+    {
+      "name": "time available",
+      "value": "one billion years x 365.25 one-day generations",
+      "cite": "claim file D4 formal statement (Ulam's scheme)"
+    },
+    {
+      "name": "Mayr gamma",
+      "value": 0.3,
+      "cite": "claim file D4b q1 (Wistar p.24 discussion)"
+    },
+    {
+      "name": "Mayr simultaneity; Ulam 'only ten individuals'",
+      "value": 10,
+      "cite": "claim file D4b q2"
+    },
+    {
+      "name": "Ulam: numbers 'very optimistic'; Wald: 'a minimum'",
+      "cite": "claim file D2a (p.25); D4b q3"
+    }
+  ],
+  "values": {
+    "improvements_per_generation": 10,
+    "ulam_total": 10000000000000.0,
+    "available_generations": 365250000000.0,
+    "ulam_total_over_available": 27.3785,
+    "logistic_to_half": 23025900.0,
+    "logistic_to_0.99": 27621000.0,
+    "serial_logistic_total": [
+      23025900000000.0,
+      27621000000000.0
+    ],
+    "mayr_gamma_0.3": {
+      "sweep": 76.7528,
+      "serial_total": 76752800.0
+    },
+    "simultaneous_gamma_1e-6": {
+      "arrival": 100000.0,
+      "total": 27721000.0
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "Ulam's serial calculation stands and no faster rate was computed",
+      "ulam_total": 10000000000000.0,
+      "serial_logistic_total": [
+        23025900000000.0,
+        27621000000000.0
+      ],
+      "over_available": [
+        27.3785,
+        63.0413
+      ]
+    },
+    "critic": {
+      "reading": "Mayr: gamma too low and improvements can run simultaneously",
+      "serial_at_gamma_0.3": 76752800.0,
+      "simultaneous_at_gamma_1e-6": 27721000.0,
+      "note": "both fit inside the 3.65e11 available; the R4 D1 shared-pool result is a simulation, not recomputed here"
+    }
+  },
+  "notes": "Ulam's 10 improvements per generation, 1e6 and 1e13 reproduce; the deterministic logistic from p0 = 1e-10 gives 2.30e7 to half and 2.76e7 to 0.99, so his '10^6 to most' is 23x short while the total, 2.3-2.8e13, stays within 3x of 1e13 and is 27-76x the 3.65e11 one-day generations available. Under Mayr's gamma = 0.3 the serial total is 7.7e7; under simultaneity with Ulam's own supply of 10 per generation it is about 2.8e7. Both fit. The serial premise and gamma carry the whole gap; neither is measured in the volume. Drift loss of new improvements (fixation about 2 gamma) is outside Ulam's model and not added."
+}

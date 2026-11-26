@@ -1,0 +1,62 @@
+{
+  "id": "M-407",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-407.py",
+  "script_sha256": "edd25c087fa8d167d99478f581c34209ec593179a57e8c868ed2a545745e7ae8",
+  "object": "M-407",
+  "inputs": [
+    {
+      "name": "Wright twenty questions",
+      "value": {
+        "answers": 20,
+        "objects": "about a million",
+        "questions": "< 1250"
+      },
+      "cite": "claim file D6 q1 (Wistar p.117); D2g"
+    },
+    {
+      "name": "Eden figure Wright answers",
+      "value": "10^350 (working paper p.110); talk p.7 gives 10^325",
+      "cite": "claim file D6 q1; M-401"
+    },
+    {
+      "name": "Wright mutant supply",
+      "value": {
+        "population": 3000000000.0,
+        "rate_per_locus": 1e-05
+      },
+      "cite": "claim file D2g (Wistar p.119)"
+    },
+    {
+      "name": "Eden reply",
+      "value": "correct, but misunderstood my argument",
+      "cite": "claim file D6 (Wistar p.8)"
+    },
+    {
+      "name": "Ulam",
+      "value": "random construction is not the problem at all",
+      "cite": "claim file D4a q1 (Wistar p.21)"
+    }
+  ],
+  "values": {
+    "questions_printed": 1250,
+    "information_bound_bits_20_pow_250": 1080.48,
+    "bits_10_pow_350": 1162.67,
+    "random_assembly_log10_trials": 325.257,
+    "mutants_per_locus_per_generation": 30000.0
+  },
+  "positions": {
+    "day": {
+      "reading": "Wright's analogy needs a fitness signal at every step; Eden said Wright misunderstood the path-length argument; cumulative selection is not random typing either way",
+      "random_assembly_log10_trials": 325.257,
+      "number": "the path-length reading has no number: Eden offers none ('many powers of 10' above 120, M-406, claim file D3b q4), so no count is computed for it here"
+    },
+    "critic": {
+      "reading": "with a per-step signal a specified protein is reached in about 1250 steps, not 10^325 (Wright); Ulam: random construction is not the problem",
+      "questions": 1250,
+      "information_bound_bits": 1080.48,
+      "mutants_per_locus_per_generation": 30000.0
+    }
+  },
+  "notes": "Both sides' numbers reproduce. 250 x 5 = 1250 questions is above the information bound log2 20^250 = 1080.5 bits and above the 1162.7 bits of Eden's 10^350, so it holds for either of Eden's figures; random assembly needs 10^325.3 trials. Eden accepted the arithmetic (p.8) and moved the question to path length and per-step viability (M-405, M-404), which neither Wright's count nor Eden supplies a number for. Wright's 3e9 x 1e-5 = 3e4 mutants per locus per generation bears on mutation supply, not on the signal."
+}

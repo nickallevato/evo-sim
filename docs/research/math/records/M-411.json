@@ -1,0 +1,93 @@
+{
+  "id": "M-411",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-411.py",
+  "script_sha256": "758e040e3ca26aeab020be861454d3e2af685491cf8ba361f27bbd6f4daf6eb3",
+  "object": "M-411",
+  "inputs": [
+    {
+      "name": "population",
+      "value": 10000,
+      "cite": "claim file D9 q3, q4"
+    },
+    {
+      "name": "selection coefficients",
+      "value": [
+        0.05,
+        0.001
+      ],
+      "cite": "claim file D9 q1, q2"
+    },
+    {
+      "name": "letters, in series",
+      "value": 27,
+      "cite": "claim file D9 q1"
+    },
+    {
+      "name": "Dawkins's generations",
+      "value": 50,
+      "cite": "claim file D9a q1"
+    },
+    {
+      "name": "scratch-run means (simulation, not recomputed)",
+      "value": {
+        "s0.001": {
+          "per_letter": 8525,
+          "serial": 230053,
+          "parallel_max": 13092
+        },
+        "s0.05": {
+          "per_letter": 332,
+          "serial": 8956,
+          "parallel_max": 422
+        }
+      },
+      "cite": "claim file D9 Check (exploratory, not committed, not an R4 check)"
+    },
+    {
+      "name": "conditional-mean asymptote",
+      "value": "(2/s)(ln 4Ns + gamma)",
+      "cite": "objects.yaml M-601 (open)"
+    }
+  ],
+  "values": {
+    "per_letter_sweep": {
+      "s0.05": 396.14,
+      "s0.001": 19807.0
+    },
+    "serial_27": {
+      "s0.05": 10695.8,
+      "s0.001": 534788.0
+    },
+    "printed": {
+      "s0.05": [
+        400,
+        11000
+      ],
+      "s0.001": [
+        20000,
+        540000
+      ]
+    },
+    "ratio_to_50": 10800.0,
+    "log10_ratio": 4.03342,
+    "conditional_mean_asymptote": {
+      "s0.05": 327.125,
+      "s0.001": 8532.19
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "fixation times applied to the Weasel give 540,000 generations, 10,800x Dawkins's 50",
+      "serial_27_s0.001": 540000,
+      "ratio": 10800.0
+    },
+    "critic": {
+      "reading": "the Weasel is truncation selection on a known target (a different model, conceded in D9a q2); within Day's model the serial sum overstates the time",
+      "per_letter_conditional_mean_s0.001": 8525,
+      "parallel_max_27_s0.001": 13092,
+      "parallel_over_dawkins": 261.84
+    }
+  },
+  "notes": "Every printed figure reproduces from (2/s) ln(2N) and a serial sum over 27 letters: 396 and 19,807 per letter, 10,696 and 534,788 in total (Day rounds per letter first: 27 x 400 = 10,800 shown as 11,000, 27 x 20,000 = 540,000); 540,000/50 = 10,800, 10^4.03. Within Day's own model the per-letter sweep time is 2.3x the conditional mean (8,532 asymptote; 8,525 simulated) and letters at independent sites need not fix in series: the parallel maximum is about 13,100, 41x below 540,000 and still 262x Dawkins's 50. Which model describes the program is M-408, not this record."
+}

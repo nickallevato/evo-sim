@@ -1,0 +1,77 @@
+{
+  "id": "M-401",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-401.py",
+  "script_sha256": "07ef799a77154ad7857a5f5aac0bbb5016dbcd2d9869b845f52fc6574e8d0031",
+  "object": "M-401",
+  "inputs": [
+    {
+      "name": "alphabet and length",
+      "value": {
+        "A": 20,
+        "L": 250
+      },
+      "cite": "claim file D3 q1 (Eden, Wistar p.7)"
+    },
+    {
+      "name": "Eden talk figures",
+      "value": {
+        "S": "about 10^325",
+        "molecules": "about 10^52",
+        "species": "say 10^40"
+      },
+      "cite": "claim file D3 q1, q2, q3 (Wistar p.7; OCR readings per claim file D3)"
+    },
+    {
+      "name": "Eden working paper",
+      "value": {
+        "S_le_250": "about 10^350",
+        "molecules": "less than 10^55"
+      },
+      "cite": "claim file D3 (Wistar p.110, preliminary working paper)"
+    },
+    {
+      "name": "Day relay",
+      "value": {
+        "S": "~10^325",
+        "functional proteins ever": "~10^52"
+      },
+      "cite": "claim file D q1"
+    },
+    {
+      "name": "molecule count from Eden's p.7 inputs",
+      "value": "10^55.02",
+      "cite": "M-402 record (claim file D3a)"
+    }
+  ],
+  "values": {
+    "S_20_pow_250": {
+      "mantissa": 1.809,
+      "exponent": 325,
+      "log10": 325.257
+    },
+    "S_lengths_le_250": {
+      "log10": 325.28,
+      "over_20_pow_250": 1.05263
+    },
+    "working_paper_10_pow_350_gap_orders": 24.7202,
+    "log10_explored_fraction": {
+      "talk_p7_printed": -273.257,
+      "working_paper_p110_bound": -270.257,
+      "p7_inputs_recomputed_M402": -270.237,
+      "species_say_1e40": -285.257
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "Eden's arithmetic is right and the explored fraction vanishes",
+      "S_log10": 325.257,
+      "explored_fraction_log10_at_1e52": -273.257
+    },
+    "critic": {
+      "reading": "the size of the space bears on search only if the landscape is rugged (M-407, M-404)",
+      "number": "none: the critic position concedes the arithmetic and disputes its relevance; the search count under cumulative selection is M-407"
+    }
+  },
+  "notes": "20^250 = 1.809e325 (10^325.257) reproduces Eden's 'about 10^325'. The working paper's 10^350 for 'length 250 or less' does not reproduce: all lengths up to 250 give 20/19 x 20^250 = 10^325.28, 24.7 orders below the printed figure. Against any of the molecule counts in the corpus (10^40 to 10^55.02) the explored fraction is 10^-270 to 10^-285, so the 273-order comparison does not depend on which count is used. The arithmetic is not in dispute between the sides; its bearing on search is (M-407)."
+}

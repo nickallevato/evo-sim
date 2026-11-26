@@ -1,0 +1,54 @@
+{
+  "id": "M-412",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-412.py",
+  "script_sha256": "260040bcb855bc6c2bf8e868aef20e6f803563d2a910dad414d47c332770ed97",
+  "object": "M-412",
+  "inputs": [
+    {
+      "name": "transposition frequency per sequential pair",
+      "value": "1e-15",
+      "cite": "claim file D14 formal statement (Eden p.9)"
+    },
+    {
+      "name": "specific transposition",
+      "value": "1e-21",
+      "cite": "claim file D14 formal statement (Eden p.9)"
+    },
+    {
+      "name": "E. coli two-hour periods since life began",
+      "value": "1e12",
+      "cite": "claim file D14 formal statement"
+    },
+    {
+      "name": "fraction mating at any instant",
+      "value": "1e-6",
+      "cite": "claim file D14 formal statement"
+    },
+    {
+      "name": "printed counts",
+      "value": {
+        "eden": "something like 10^36",
+        "davis": "about 10 to the 36th power"
+      },
+      "cite": "claim file D14 q2 (Wistar p.9), q1 (RD-03)"
+    }
+  ],
+  "values": {
+    "genetic_transfers": "1e36",
+    "population_cells": "1e30",
+    "transfers_per_cell": "1e6"
+  },
+  "positions": {
+    "day": {
+      "reading": "about 10^36 genetic transfers for one ordered pair of genes (Davis relaying Eden)",
+      "transfers": "1e36",
+      "population": "1e30"
+    },
+    "critic": {
+      "reading": "the probabilities are unsourced and the mechanism is transposition, not point mutation",
+      "number": "none: the critic position disputes the inputs, not the arithmetic; no alternative frequency is in the corpus"
+    }
+  },
+  "notes": "The arithmetic reproduces exactly: 1/(1e-15 x 1e-21) = 1e36 transfers and 1e36/(1e12 x 1e-6) = 1e30 cells. Both inputs are unsourced in the volume and Eden calls the result a very rough estimate. The inputs are read from claim file D14's statement of Eden's chain; Eden's p.9 wording of the E. coli inputs is not held verbatim, and 1e12 two-hour periods is about 2.3e8 years, which this record does not reconcile with 'since life began'."
+}
