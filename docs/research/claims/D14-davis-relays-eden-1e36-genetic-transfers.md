@@ -30,6 +30,8 @@ RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; 
 ## Formal statement
 Eden's chain (p.9): a transposition of chromosomal material 'should occur in an unselected environment with a frequency of 10^-15 for each sequential pair of genetic transfers'; a specific transposition has probability 10^-21 (uniform chain segmenting); so a single ordered gene pair needs 1/(10^-15 * 10^-21) = 10^36 genetic transfers. E. coli: 10^12 two-hour periods since life began, 10^-6 of the population mating at any instant, so the required population is 10^36/(10^12 * 10^-6) = 10^30 cells (Eden: 'about 10^13 tons or a layer ... two centimeters thick'). All reproduce arithmetically.
 
+Note (X-MATHRESOLVE 2026-11-26, M-412 record): 10^12 two-hour periods is about 2.3e8 years, which is not reconciled with 'since life began'; Eden's p.9 wording of the E. coli inputs is not held verbatim (the record reads them from this file). The 10^36 and 10^30 arithmetic reproduces.
+
 ## Assumptions
 - Stated (Eden): 'a very rough estimate'; unselected environment; uniform chain segmenting.
 - Implicit: no selection for intermediate rearrangements; transposition frequency 10^-15 and 10^-21 are unsourced.

@@ -33,7 +33,7 @@ E[F(T)] ≈ μL (T − 4Nₑ), valid for T ≫ E[X] = 4Nₑ.
 |---|---|---|---|
 | steady state 30 × 252,000 | 7,560,000 | 7,560,000 | matches |
 | Nₑ = 10⁴: 30 × (252,000 − 40,000) | 6,360,000 (loss 1.2M, 15.9%) | 6,360,000; loss 1,200,000 = 15.87% | matches |
-| Nₑ = 5×10⁴: 30 × 52,000 | 1,560,000 (loss 79.4%) | 1,560,000; 6.0M/7.56M = 79.37% | matches |
+| Nₑ = 5×10⁴: 30 × 52,000 | 1,560,000 (loss 79.4%) | 1,560,000; 6.0M/7.56M = 79.37% | arithmetic matches the leading-order formula, but T = 252,000 is not ≫ 4Nₑ = 200,000: the exact integral gives 2.28M, loss 69.8% <!-- X-MATHRESOLVE 2026-11-26: was "matches", M-201 record --> |
 | Nₑ = 63,000 (4Nₑ = T) | 0 (100%) | 0 | T = 4Nₑ is **outside** the stated regime T ≫ 4Nₑ; the exact integral is positive, so 0 is a lower bound |
 | §6 prose | "reaches nearly 50% at the upper end of human estimates" | table reaches 100% | internal inconsistency of wording |
 | per-lineage count vs requirement | 7.56M | 7.56M vs 17.5M SNV (Z23003785) = 2.3× short; vs 20M = 2.6×; vs 205M = 27× | the uncorrected neutral expectation is already below the SNV requirement at μL = 30 |

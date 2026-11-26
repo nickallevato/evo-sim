@@ -48,6 +48,7 @@ derived (R2 recompute, python3 stdlib, 2026-10-07; no script committed):
 - Reproduction of Table 1 (T = 25 y, G = 240 / 160 / 200): Kimura 99.92% / 99.95% / 99.19% (paper 99.9 / 99.9 / 99.3); Bio-Cycle 66.2% / 96.2% / 82.7% (paper 66.2 / 96.2 / 82.7). Holds.
 - Error reduction from the paper's own numbers: LCT (24.9-8.8)/24.9 = 64.7%; SLC45A2 (2.9-0.8)/2.9 = 72.4%; TYR (23.3-6.7)/23.3 = 71.2%; mean 69.4%. The paper's "69%" holds.
 - Required d at the paper's s (continuous solve): LCT 0.486, SLC45A2 0.481, TYR 0.381; mean 0.449. These match Z18202768 (0.49, 0.49, 0.38) and the blog, and do not match Z18203514 Table 4 (0.46, 0.43, 0.46). TYR 0.381 vs 0.46 is outside any rounding.
+- Reading of q5 (X-MATHRESOLVE 2026-11-26, M-304 record): "about 75 percent ... carry it" read as carriers of a dominant allele gives allele frequency p = 1 − sqrt(0.25) = 0.5, not 0.75; LCT's required d at s = 0.05 then falls from 0.486 to 0.392.
 - Required s under d = 1 (Table 2 "Kimura req."): 0.0240, 0.0238, 0.0113 (paper 0.024, 0.024, 0.011; holds).
 - Required s at d = 0.45: 0.054, 0.054, 0.025 versus paper 0.048, 0.050, 0.023 (paper values are about 10% lower).
 - d and s enter only as the product s x d in the weak-selection regime (logit gain per generation = ln(1+s) per effective generation). Day's own sensitivity (+/-25% on s moves mean d to 0.36 / 0.56, i.e. 0.45/1.25 = 0.36 and 0.45/0.75 = 0.60) is that identity. Observed trajectories identify s x d, not d.

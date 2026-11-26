@@ -28,7 +28,7 @@ RH tag (2026-10-10 pass): dialectic (stated as a checkable claim or derivation; 
 ## Formal statement
 D = μ t [(N_h/N_e,h) + (N_c/N_e,c)] (Eq. 6) set equal to the clock's D = 2μ t_clock ⇒ Eq. (7). Inputs: Nₑ,h = 3,300 (aDNA drift variance, branch C), Nₑ,c = 33,000 (F_ST across chimp subspecies), census N_h ∈ {50k, 100k}, N_c ∈ {300k, 1M}.
 
-**Arithmetic audit (derived, python3 -I):** Table 2 of the paper reproduces: (100k,300k): N/Nₑ = 30.3 + 9.1 → 305/355/457 kya for clock 6/7/9 My ✓; (100k,1M): 198/231/297 ✓; (50k,300k): 494/577/741 ✓ (paper 494/577/741); (50k,1M): 264/308/396 ✓. "200–580 kya" is the 6–7 My clock range (min 198, max 577); the 9 My column reaches 741.
+**Arithmetic audit (derived, python3 -I):** Table 2 of the paper reproduces: (100k,300k): N/Nₑ = 30.3 + 9.1 → 305/355/457 kya for clock 6/7/9 My ✓; (100k,1M): 198/231/297 ✓; (50k,300k): 495.0/577/741 ✓ (paper 494/577/741; 494 from rounded ratios) <!-- X-MATHRESOLVE 2026-11-26: was 494/577/741, M-217 record -->; (50k,1M): 264/308/396 ✓. "200–580 kya" is the 6–7 My clock range (min 198, max 577); the 9 My column reaches 741.
 **Input sensitivity (derived):** the two parameter sets Day uses for the same human census range disagree: here Nₑ,h = 3,300 for N = 100,000 (N/Nₑ = 30), while Z22129121 and the 2026-10-01 post imply Nₑ = 0.57 N (57,000). With Yoo 2025 ancestral Nₑ (198,000 / 132,000) and census 100,000 the ratio is 0.51 / 0.76 per lineage and Eq. (7) gives 12.5 / 8.3 My (older, not younger) for a 6.3 My clock. Also, Eq. (7) assumes constant N/Nₑ over the whole window.
 The paper's later claim "Ne ≤ N by definition" (Z18637333) is not a definition: Wright's formula Nₑ = (4N−2)/(Vₖ+2) gives Nₑ ≈ 2N at Vₖ = 0.
 

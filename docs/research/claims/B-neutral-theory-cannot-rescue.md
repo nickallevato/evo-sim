@@ -85,6 +85,8 @@ R4 RHclose (research/checks/results/R4-RHclose.md Part 2; fix pass 3c0dccb, post
 | S, current size ('near end', l.464; restates B2) | n/a | dialectic (as a restatement of B2) | non-sequitur at lineage level; B2 itself holds |
 | HL's 2 My window (l.416 'entire lineage') | F 0.025 (D 0.003) | dialectic | non-sequitur |
 So 'nearly empty' is literally true on HL's 2 My window, which l.416 calls 'the entire lineage' while l.249 defines the lineage as 6.5 My (an HL-internal ambiguity of referent as well as R4-B2's slip). Net: B2 holds and C's non-sequitur are unchanged under every reading; only B's own internal verdict is reading-dependent. Under corrected rule RD (owner-approved 2026-10-11: 'most charitable' = the reading under which the quoted statement is most defensible, as for C7 and the critic quotes) the field is non-sequitur (the dialectic readings D, 1e5, S and 2 My are the closest to literally true); the F-over-6.5-My rhetoric reading, holds scoped to B2, is recorded alongside and favours Day. B external stays with B1c / B4a. Ledger entry: `ledgers/slips.md` RH-26.
+Correction (X-MATHRESOLVE 2026-11-26, M-207 record): in row F, 0.697 is 2.32x the edge; 2.25x is the 6.3 My value (0.676). The row is left as printed because the M-207 record quotes it.
+
 
 ## Simulator variables implied
 - fill state

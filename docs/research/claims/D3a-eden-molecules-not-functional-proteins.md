@@ -31,7 +31,7 @@ Source: [Vox Day Interview on Evolutionary Theory](https://billdembski.substack.
 RH tag (2026-10-10 pass): dialectic (literature source, no side).
 ## Formal statement
 Count: N_ever = (protein mass of biosphere / molecular mass) * (age / lifetime). Biosphere volume V = 4*pi*R^2 * 1 cm = 5.10e18 cm^3 (R = 6.371e8 cm); protein mass m = V * density(1 g/cm^3) * c; molecules alive = m*N_A/M; ever = alive * (1e10 yr = 3.156e17 s) / (1 s). With M = 27.5 kDa (250 residues x 110 Da):
-- Eden p.7 inputs (c = 0.30): m = 1.53e18 g; alive 3.35e37; ever **1.06e55** (log10 55.02). Matches Eden's working paper ('less than 10^55', p.110) and is 3 orders above the 10^52 he prints in the talk.
+- Eden p.7 inputs (c = 0.30): m = 1.53e18 g; alive 3.35e37; ever **1.06e55** (log10 55.02). Is 10^55.02, just over Eden's working paper's 'less than 10^55' (p.110; a match to rounding only) <!-- X-MATHRESOLVE 2026-11-26: was "Matches Eden's working paper", M-402 record --> and is 3 orders above the 10^52 he prints in the talk.
 - Day ch.6 inputs read as a 1e-4 mass fraction of the biosphere volume (cell density then irrelevant): m = 5.10e14 g; alive 1.12e34; ever **3.5e51** (log10 51.55), i.e. 'approximately 10^52'. As printed (cells at 10^18 per cm^3 each with proteins at 10^-4) the inputs are not self-consistent: a cell of volume 10^-18 cm^3 is ~10 nm across, below virus size.
 So neither source's printed inputs reproduce Eden's 10^52 with a 27.5 kDa protein except Day's version, read charitably.
 

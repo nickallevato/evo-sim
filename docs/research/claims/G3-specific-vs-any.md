@@ -52,6 +52,7 @@ Not run in this branch. Prediction (critics): under a neutral model with k = μ 
 Link: `research/checks/RESULTS.md` B0.5 (neutral k = U). Arithmetic audit (python3 -I, scratch). Review: pending.
 
 R4 G1 (research/checks/results/R4-G1.md, `research/checks/g1_specific_vs_any.py`): flip table and genome bound added. The middle case (k of M interchangeable alternatives) flips at lambda_50 = 12.3-17.2 alternatives per needed change, for the adaptive subset only. Review: `research/checks/REVIEW.md` (review #5, 2026-10-08).
+Correction (X-MATHRESOLVE 2026-11-26, M-704 record): R4 G1's flip table prints lambda_50 = 7.28 at n_f = 1,000; the closed form -ln(1 - 2^(-1/n_f)) gives 7.275 (rounding, 0.07%). The 12.3-17.2 band is unchanged.
 
 ## Simulator variables implied
 - Event definition: specific list / any k of M / any k of M functional.

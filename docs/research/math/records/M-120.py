@@ -8,7 +8,7 @@ Asserted: 5e-5, 5e-8, 8e7 and 6.25e-9 exactly; the printed 6e-9 is 6.25e-9 trunc
 order, same argument); the post's own "typical" N_e/N of 0.1-0.3 gives 6.25e-10 to 2.08e-10. 5e-5 at N_e = 1e4 is the
 same 1/(2N) the B9 claim file and record M-222 use. Attribution: L17 says Day "asked Claude Athos to solve the problem
 from the Evo-Avengers perspective" and L27 opens "I also asked the Red Team", so L18-L26 (the threshold passage
-included) read as Athos output relayed by Day (rule U); the source map lists L22 as Day's own (flag for the map).
+included) read as Athos output relayed by Day (rule U), as the source map now lists L22.
 The two readings, quoted:
 - Day (L22, L25): the threshold falling with N_e means the models predict ever stronger selection in modern humans,
   which is "obviously, empirically wrong"; selection is differential survival, which d measures.
@@ -91,7 +91,7 @@ NE_N = raw("evo010", "For modern humans with N approaching 8 billion, even a bru
 TYPICAL = raw("evo010", "The typical Ne/N ratio for humans is estimated around 0.1 to 0.3")    # evo010@L23
 WRONG = post("evo010", "That prediction is obviously, empirically wrong. And the models have no mechanism to account "
                        "for why it’s wrong.")                                                   # evo010@L22
-held(SM + "evo010.md", "| evo010@L22 | Vox Day |")                                              # the map's attribution
+held(SM + "evo010.md", "| evo010@L22 | Vox Day (relaying Athos, LLM output) |")                # the map's attribution
 
 # ---- the two readings, quoted -----------------------------------------------------------------------------------
 DIFF = raw("evo010", "Selection isn’t a mathematical force that acts on allele frequencies directly. It’s a "
@@ -138,7 +138,7 @@ finish({
         "threshold_typical_Ne_over_N_0.1_0.3": [6.25e-10, 2.0833e-10],
         "visible_s_at_Ne_8e7_if_d_scales_s_d_0.015": 4.1667e-7,
         "passage_attribution": "L18-L26 sit between 'I asked Claude Athos' (L17) and 'I also asked the Red Team' "
-                               "(L27): Athos output relayed by Day (rule U); the source map lists L22 as Day",
+                               "(L27): Athos output relayed by Day (rule U); the source map lists L22 so",
     },
     "positions": {
         "day": {"reading": "the threshold shrinks as N_e grows, so the models predict the strongest selection ever "

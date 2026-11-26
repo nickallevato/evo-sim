@@ -64,6 +64,7 @@ So the chicken "d ≈ 1.02" depends on the dominance model and on where s falls 
 
 ## Check
 R4 C2d (research/checks/results/R4-H-C2.md): chicken (p 0.44 to 0.97, G = 900) requires d additive 1.43 / 0.845 / 0.471 at s = 0.0029 / 0.0049 / 0.0088; recessive 1.90 / 1.13 / 0.63; dominant 13.5 / 8.0 / 4.5. The paper's 1.02 holds at the point estimate but depends on dominance and s (s conventions differ across models). Loog's posterior is not in the repo. Review: `research/checks/REVIEW.md` (review #4, 2026-10-08)
+Correction (X-MATHRESOLVE 2026-11-26, M-304 record): "the paper's 1.02 holds at the point estimate" (here and R4-H-C2 l.111) is not reproduced: no held recursion gives 1.02 at s = 0.0049 (additive 0.845, recessive 1.13; also genic diploid 1.69, dominant 8.0). Day's Table 4 recursion is not held. The verdict comment "1.02 at the point estimate" is unchanged here (verdict field).
 Earlier note: Script: none yet (spec: bundle with `research/checks/c2c_ratio_identity.py`; solve required d over the Loog s posterior for additive, recessive and dominant forms). · Result: not run · Review: pending
 
 ## Simulator variables implied

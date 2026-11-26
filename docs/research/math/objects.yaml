@@ -34,7 +34,7 @@ objects:
   - evo005
   - evo008
   positions:
-    day: Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency
+    day: 'Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency. As stated this fails: a standing start (p0 0.01-0.5) cuts sweep time 27-50% at Ne = 1e4, capped at 2x for p0 <= 0.5 (M-103 record), which is small against the shortfalls'
     critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
   resolution: derivation
   status: resolved
@@ -321,7 +321,8 @@ objects:
 - id: M-126
   kind: model-choice
   statement: 'Gene flow is "a structural hindrance to the pace of fixation" by selection and drift: a species-wide substitution in a structured species needs migrants to carry an allele between demes, and between diverging lineages gene flow erases differences; does this bear on the rate comparison with the LTEE'
-  used_by: [F]
+  used_by: []
+  new_claim: "Gene flow adds a stage to every fixation and works against divergence, so it cannot close the accounting gap; Day (day side)"
   sources:
   - gene-flow
   positions:
@@ -866,7 +867,7 @@ objects:
   compute: {host: na-workhorse, est_cpu_h: 2, est_ram_gb: 1, measured: false}
 - id: M-507
   kind: formula
-  statement: 'Relictation (Cannings jackpot model): one family replaces a fraction f of 2N gene copies per jackpot generation; exact chain gives t/4Ne above the Wright-Fisher baseline by 14.9%, 20.4% and 28.8% at 2N = 20, 30, 50 (peak ratios 1.071, 1.148, 1.249 at f = 50-60%; the 2N = 30 peak is 1.148 at f = 60% (20.6%)), no deviation below about 10% replacement, and P_fix = 1/(2N) unchanged; the table covers 2N = 20-50 only, so "keeps growing with N" is an extrapolation'
+  statement: 'Relictation (Cannings jackpot model): one family replaces a fraction f of 2N gene copies per jackpot generation; exact chain gives t/4Ne above the Wright-Fisher baseline by 14.9%, 20.6% and 28.8% at 2N = 20, 30, 50 (peak ratios 1.071, 1.148, 1.249 at f = 50-60%; the 2N = 30 peak is 1.148 at f = 60%, not 1.146 at f = 50% (20.4%)), no deviation below about 10% replacement (at a +5% cut: true at 2N = 20 and 30, not at 50, +6.6% at f = 10%), and P_fix = 1/(2N) unchanged; the table covers 2N = 20-50 only, so "keeps growing with N" is an extrapolation'
   used_by: [E4, F6]
   sources:
   - E4#q1

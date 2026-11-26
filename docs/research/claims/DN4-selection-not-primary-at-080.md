@@ -41,6 +41,8 @@ None (not computed).
 ## Check
 R4 L1 fix pass (`research/checks/results/R4-L1.md`, Verdicts section): rule N scored from Day's own ¶6, ¶20 and ¶21 of the same post; no computation. Day-side charitable reading recorded (steelman-day #7). **Integrated 2026-10-11:** internal non-sequitur (N2d, own source), fidelity n/a, external contested (not scored contradicted merely because DN1 is).
 
+Correction (X-MATHRESOLVE 2026-11-26, M-907 record): the verdict comment's "bias-corrected ~9-13%" tops out at 13.5% (Uricchio alpha 0.135, 95% HPD 0.096-0.17; Boyko 9.3%), so the band is 9.3-13.5%. Lower bounds stay above 0; nothing moves. The verdict comment is not edited here.
+
 ## Simulator variables implied
 - per-site selection classes (neutral, purifying, adaptive) needed to separate dN/dS from alpha
 

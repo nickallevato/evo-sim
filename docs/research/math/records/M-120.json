@@ -2,7 +2,7 @@
   "id": "M-120",
   "date": "2026-11-26",
   "script": "docs/research/math/records/M-120.py",
-  "script_sha256": "52018f9f675c26b2b7fd4e0c44aad0fb4b87d87f0d827f40b83e0a16db81d01f",
+  "script_sha256": "9b9ef295be77951d9eb39052ff2f55f35c3be483f4379d2aac528ad5c7de2916",
   "object": "M-120",
   "inputs": [
     {
@@ -49,7 +49,7 @@
       2.0833e-10
     ],
     "visible_s_at_Ne_8e7_if_d_scales_s_d_0.015": 4.1667e-07,
-    "passage_attribution": "L18-L26 sit between 'I asked Claude Athos' (L17) and 'I also asked the Red Team' (L27): Athos output relayed by Day (rule U); the source map lists L22 as Day"
+    "passage_attribution": "L18-L26 sit between 'I asked Claude Athos' (L17) and 'I also asked the Red Team' (L27): Athos output relayed by Day (rule U); the source map lists L22 so"
   },
   "positions": {
     "day": {

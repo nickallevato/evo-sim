@@ -4,7 +4,7 @@
 Object: docs/research/math/objects.yaml M-105 (formula, derivation). evo005@L58-L72 prints (2/s) ln(2Ne s) at s =
 0.00015 for Ne = 1e4, 1e5, 1e6 as 14,648, 45,349 and 76,051 generations against the neutral 4Ne, and divides by d =
 0.80: 14,648 -> 18,310 and 40,000 -> 50,000. The quoted Gemini table (s = 0.01, 0.001) is checked too. All printed
-values reproduce except 76,051, which is 76,050.4 (0.57 high; the source map says 76,050.6). Two checks the post does not make: (a) 2Ne s = 3 at Ne = 1e4, so the
+values reproduce except 76,051, which is 76,050.4 (0.57 high; the source map now says 76,050.4). Two checks the post does not make: (a) 2Ne s = 3 at Ne = 1e4, so the
 formula, an approximation for Ne s >> 1, is outside its domain there; (b) the Kimura-Ohta conditional mean fixation
 time (diffusion, additive, Ne = N, one new copy), validated here against RESULTS B0.4's 8,480 at Ne = 1e4, s = 0.001,
 is 28,898, 62,060 and 92,965 at s = 1.5e-4: the printed values are 2.0x, 1.4x and 1.2x too short, so the formula
@@ -64,7 +64,7 @@ def finish(rec):
 D_D = post("evo005", "Incorporating d means the 14,648-generation fixation time at the empirical s for N_e = 10,000 "
                      "becomes roughly 18,310 generations.")                                             # evo005@LNone
 ROW = held(SM + "evo005.md", "Reproduces: 14,648/0.80 = 18,310; table values at s = 0.00015 reproduce (14,648; 45,349; "
-                             "76,050.6 stated 76,051); Gemini-table 1,060/1,520/1,980 reproduce.")
+                             "76,050.4 stated 76,051); Gemini-table 1,060/1,520/1,980 reproduce.")
 D_OVER = post("evo006", "The only innovation on my part is to provide the necessary time-weighted correction for "
                         "overlapping generations")                                                      # evo006@L44
 if (ROOT / RAW["evo005"]).exists():                                   # table cells and L72 are in the body only
@@ -101,7 +101,7 @@ def cond_fix_time(ne, s, n=20_000):
 # ---- the printed values ----------------------------------------------------------------------------------
 t = {ne: sweep(S_EMP, ne) for ne in (10_000, 100_000, 1_000_000)}
 near(t[10_000], 14_648, 0.5); near(t[100_000], 45_349, 0.5)
-near(t[1_000_000], 76_050.43, 0.005)                                  # printed 76,051; the source-map row says 76,050.6
+near(t[1_000_000], 76_050.43, 0.005)                                  # printed 76,051; the source-map row says 76,050.4
 near(76_051 - t[1_000_000], 0.57, 0.005)                              # rounding slip of under one generation (R1: ledger size)
 assert round(t[1_000_000]) == 76_050
 gem = {(s, ne): sweep(s, ne) for s in (0.01, 0.001) for ne in (10_000, 100_000, 1_000_000)}
