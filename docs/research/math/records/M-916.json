@@ -1,0 +1,209 @@
+{
+  "id": "M-916",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-916.py",
+  "script_sha256": "a9bf532cd3c03580dfe9d8a5089843abbb6bf14d9533d1938f8bb00e03dbac0b",
+  "object": "M-916",
+  "variant_of": "M-007",
+  "inputs": [
+    {
+      "name": "U_human",
+      "value": 38.4,
+      "cite": "kt@L26 (3.2e9 x 1.2e-8; M-007)"
+    },
+    {
+      "name": "U_ecoli",
+      "value": 0.00041,
+      "cite": "kt@L25 (MITTENS 3.0 s4.3 as relayed; M-007)"
+    },
+    {
+      "name": "generations_human",
+      "value": 252000,
+      "cite": "kt@L28"
+    },
+    {
+      "name": "clone_pair_nonmutator",
+      "value": [
+        56,
+        50000
+      ],
+      "cite": "kt@L39, kt@L55 (s4.3 as relayed)"
+    },
+    {
+      "name": "mutator_clone_pair_counts",
+      "value": [
+        110,
+        932,
+        803,
+        978,
+        -906,
+        273,
+        1153
+      ],
+      "cite": "kt@L49 (s5.1 as relayed; claim E5)"
+    },
+    {
+      "name": "Ne_human",
+      "value": [
+        10000,
+        33000
+      ],
+      "cite": "kt@L39 (s8.2 as relayed)"
+    },
+    {
+      "name": "Ne_ltee",
+      "value": 30000000.0,
+      "cite": "kt@L45 (s8.2 as relayed)"
+    },
+    {
+      "name": "table_jumps",
+      "value": {
+        "Ara-5": [
+          7,
+          63
+        ],
+        "Ara+4": [
+          28,
+          68
+        ]
+      },
+      "cite": "kt@L63 (s4.1 as relayed)"
+    },
+    {
+      "name": "clone_pair_vs_metagenomic_50K",
+      "value": [
+        893,
+        1359
+      ],
+      "cite": "kt@L65 (s3.3 as relayed; 1,359 not re-checked)"
+    },
+    {
+      "name": "mutator_fold_range",
+      "value": [
+        70,
+        100
+      ],
+      "cite": "kt@L55"
+    }
+  ],
+  "values": {
+    "ltee_neutral": {
+      "neutral_50K": 20.5,
+      "share_of_56": 0.36607,
+      "rate_meta_over_U": 1.845,
+      "rate_clone_pair_over_U": 2.7317
+    },
+    "human_neutral": {
+      "count": 9676800.0,
+      "required_over_count": 1.8084,
+      "day_gen_per_fix": "2Ne (20,000-66,000)",
+      "four_Ne": [
+        40000,
+        132000
+      ],
+      "empty_start_counts": [
+        8140800,
+        4608000
+      ],
+      "empty_start_short": [
+        2.1497,
+        3.7977
+      ],
+      "ltee_drift_time": 120000000.0
+    },
+    "hancock_relay": {
+      "haploid_snv_both": 19353600.0,
+      "observed_35M_over": 1.8084
+    },
+    "mutators": {
+      "mean_seven": 477.571,
+      "gen_per_fix_seven": 104.696,
+      "gen_per_fix_ara2_out": 70.605,
+      "mean_four": 966.5,
+      "gen_per_fix_four": 51.733,
+      "fold_four": 17.26,
+      "sensitivity": {
+        "all_seven": {
+          "fold": 8.529,
+          "a": 0.4655,
+          "kappa_a": 206.1,
+          "achievable": 39285,
+          "short_17.5M": 445.5,
+          "short_205M": 5218
+        },
+        "ara2_out": {
+          "fold": 12.648,
+          "a": 0.551,
+          "kappa_a": 548.7,
+          "achievable": 104601,
+          "short_17.5M": 167.3,
+          "short_205M": 1960
+        },
+        "kittens_four": {
+          "fold": 17.262,
+          "a": 0.6185,
+          "kappa_a": 1188.8,
+          "achievable": 226610,
+          "short_17.5M": 77.2,
+          "short_205M": 905
+        }
+      },
+      "neutral_prediction": [
+        1435.0,
+        2050.0
+      ],
+      "observed_over_prediction": [
+        0.3917,
+        0.8035
+      ]
+    },
+    "table": {
+      "per_10k": 4.1,
+      "jumps": {
+        "Ara-5": 56,
+        "Ara+4": 40
+      },
+      "jump_over_supply": [
+        13.66,
+        9.76
+      ],
+      "1359_over_893": 1.5218
+    },
+    "requirement": {
+      "reconstruction": 409000000.0,
+      "halved": 205000000.0,
+      "ratio": 11.714,
+      "events_per_lineage": {
+        "hg38": 21050000.0,
+        "t2t": 24140000.0
+      },
+      "non_snv_events": [
+        3550000.0,
+        6640000.0
+      ],
+      "factor_on_events": {
+        "hg38": 9.74,
+        "t2t": 8.49
+      },
+      "r1_move": {
+        "hg38": -0.1686,
+        "t2t": -0.2752
+      },
+      "achievable_over_events": {
+        "hg38": 0.85,
+        "t2t": 0.741
+      }
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the LTEE rate is an empirical ceiling with mutation supply already inside it; mutators show supply scales sublinearly",
+      "holds": "every mutator subset is sublinear (a = 0.47-0.62); on KITTENS's own four lines the SNV-only gap is 77x, not parity; KITTENS's mutator lag argument assumes 50,000 mutator generations"
+    },
+    "critic": {
+      "reading": "the shortfall is the unscaled supply ratio times the base-counted requirement",
+      "holds": "the decomposition reproduces (M-007); 37-54% of the LTEE throughput is the mutation clock, which scales with U by the paper's own s4.3; the human neutral count is 9.7M (1.8x short), not 4-13; the table jumps are 10-14x the per-lineage supply, so they are lineage turnover"
+    }
+  },
+  "notes": "Post fetched read-only 2026-11-26 (Arctic Shift, post-1wxgsjm.json sha256 947b4bc5...; comment tree sha256 46dfb6b8..., identical to the bib row). The thread was removed by a moderator (ktc#pdtfcke); no comment contains maths. MITTENS 3.0 text is not in this checkout: KITTENS's relays are checked only where the library quotes the paper. Self-disclosed AI assistance and from-memory citations (RE-11)."
+}

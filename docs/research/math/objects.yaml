@@ -33,6 +33,11 @@ objects:
   sources:
   - evo005
   - evo008
+  - kt@L43
+  - kt@L45
+  - kt@L73
+  - kt@L75
+  - kt@L92
   positions:
     day: 'Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency. As stated this fails: a standing start (p0 0.01-0.5) cuts sweep time 27-50% at Ne = 1e4, capped at 2x for p0 <= 0.5 (M-103 record), which is small against the shortfalls'
     critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
@@ -98,6 +103,7 @@ objects:
   sources:
   - evo008
   - evo009
+  - kt@L41
   positions:
     day: A total mutation rate must be compared with the total divergence, not the SNP fraction (98.91% omitted); Griffiths was right to flag it
     critic: 'Hancock: the fixation equation does not distinguish mutation types; swapping rate mid-calculation is a Day-side point against Hancock''s whiteboard, and Hancock disputes it'
@@ -137,6 +143,7 @@ objects:
   sources:
   - pgenetics
   - evo009
+  - kt@L43
   positions:
     day: Kimura's k = mu is a steady-state identity, irrelevant to finite-window questions, and the molecular clock is circular; AI answers agree
     critic: 'k = mu is an expectation of the long-run substitution rate; the post cites an arXiv paper outside evolution journals and no derivation is given in it; Hancock: refuted by 1930s population genetics'
@@ -339,7 +346,7 @@ objects:
   kind: formula
   statement: 'Finite-window neutral count from an empty start: E[F(T)] = mu L int_0^T F_X(u) du ~ mu L (T - 4 Ne), against the naive mu L T; with mu L = 30 and T = 252,000, naive = 7,560,000'
   used_by: [B1, B1a, B6a]
-  sources: [B1#q1, B1a#q1, B1a#q2, mc1c#337116873, mc2@L16]
+  sources: [B1#q1, B1a#q1, B1a#q2, mc1c#337116873, mc2@L16, kt@L43]
   positions: {day: Exact for an empty start; the leading-order correction subtracts the mean fixation time from the window, critic: 'Exact for the empty-start case (a point for Day); the premise is the empty start, and F_X holds only for new post-split mutations while pairwise divergence is not reduced by the empty-pipe term (R4 B1c/B4a)'}
   resolution: derivation
   status: resolved
@@ -357,7 +364,7 @@ objects:
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
   used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5, H9]
-  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301, mc2@L10, mc2c#375157428]
+  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301, mc2@L10, mc2c#375157428, kt@L39, kt@L45]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
   status: resolved
@@ -393,7 +400,7 @@ objects:
   kind: inference
   statement: 'Does the pipe fill within the lineage window under the stated demography: HL says the neutral channel shuts because "the pipe never fills"; fill readings F 0.697 (6.5 My), delivered share D 0.256, Takahata Ne = 1e5 F 0.281, current size, HL 2 My window F 0.025 (R4 RHclose); also "the pipeline cannot fill" after conceding steady-state throughput'
   used_by: [B, B2d]
-  sources: [B#q3, B2d#q3]
+  sources: [B#q3, B2d#q3, kt@L43]
   positions: {day: 'The neutral channel closes: same window, no fill', critic: 'Under the lineage window the pipe is about 70% loaded; HL itself gives a partial ancestral load, so "nearly empty" needs an empty lineage pipe its own text excludes'}
   resolution: derivation
   status: resolved
@@ -411,7 +418,7 @@ objects:
   kind: model-choice
   statement: 'Which population size enters neutral substitution: supply 2N mu uses census N; fixation probability is 1/(2Ne) (Day Feb 2026: k = mu N/Ne), vs 1/(2N) in the same N so that k = mu (critics; Day concession 2026-08-27, keruru retraction, Maruyama invariance in Day''s own Hard Limits); includes 2N x 1/(2Ne) = N/Ne > 1 (Matev) and 8e9/1e4 = 800,000 (Grok exchange)'
   used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c, ROOT-DE]
-  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135]
+  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39]
   positions: {day: 'Original: N/Ne enters k; later concession: no Ne on either side of the Kimura identity; 3rd edition needed', critic: 'The cancellation holds: supply and fixation share the same N; N/Ne > 1 is not a probability; neutral mutations fix at the mutation rate (Hancock, Mansfield, DarwinZDF42, Paul King, keruru, Kimura 1962)'}
   resolution: derivation
   status: resolved
@@ -438,7 +445,7 @@ objects:
   kind: formula
   statement: 'Expected neutral fixations on the human lineage as the product of a per-generation mutation count, a fixation probability and generations: McCarthy 450e9/20,000 = 22.5M (20M time-adjusted), Mansfield 1 per generation, Hancock 76.8 per generation, Nesslig20 2 x 75 x 252,000 = 37.8M, justatest90 38.4 x 252,000 = 9.7M, relayed 7.2M, Hossjer d x mu 7.6M, Day corrected 8.25'
   used_by: [B3e, B5a, B5b, B5c, B5d, B5e, B5f, B5h]
-  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310, mc2@L9, mc2@L13-L15, mc2@L16, mc2@L18, mc2c#375371851, mc2c#345248135]
+  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310, mc2@L9, mc2@L13-L15, mc2@L16, mc2@L18, mc2c#375371851, mc2c#345248135, kt@L39, kt@L41, kt@L115]
   positions: {day: 'Mutations are not fixations: 30 cannot fixate per generation; the corrected calculation gives 8.25 fixations against 20 million required', critic: 'Neutral mutations fix at the rate they arise, so supply x 1/(2N) = mu per site per generation gives millions over 252,000 generations, within a factor of 2 of the 17.5-20 million required'}
   resolution: derivation
   status: resolved
@@ -447,7 +454,7 @@ objects:
   kind: identity
   statement: 'Genome-size and lineage-count factors in a neutral-count formula: haploid 3.2e9 vs diploid 6.4e9 (Hancock correction), halving 152 to 76, x 2 for two lineages (38M, 37.8M), Day 2019 15M per lineage x 2 = 30M'
   used_by: [B5c, B5e, B5f, B6b]
-  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2, mc2@L19]
+  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2, mc2@L19, kt@L41]
   positions: {day: 'Day counts each lineage separately: 15M fixed in humans and 15M in chimps', critic: 'Count the haploid genome and the number of lineages explicitly; a flag that drops a factor is wrong (rule: write the formula in full)'}
   resolution: derivation
   status: resolved
@@ -510,7 +517,7 @@ objects:
   kind: inference
   statement: 'Is neutral theory a post-hoc retreat: drift dominates molecular evolution while selection dominates phenotypes; neutral and parallel-fixation models predate Day (Kimura 1968, Ohta)'
   used_by: [B5j]
-  sources: [B5j#q1, B5j#q2, mc2@L6, mc2c#339603943, mc2c#340102853, mc2c#375855613]
+  sources: [B5j#q1, B5j#q2, mc2@L6, mc2c#339603943, mc2c#340102853, mc2c#375855613, kt@L85]
   positions: {day: 'Neutral theory is the fleeing place of neo-Darwinists; removing selection removes Darwin (Duffy slide, relayed)', critic: Neutral theory exists independently of Day and is not a rescue; selection acts at the phenotypic level}
   resolution: lookup
   status: resolved
@@ -519,7 +526,7 @@ objects:
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
   used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG, FM8b]
-  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661]
+  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
   status: resolved
@@ -833,6 +840,10 @@ objects:
   - Q56
   - Q58
   - Q178
+  - kt@L53
+  - kt@L57
+  - kt@L63
+  - kt@L65
   positions:
     day: Z23003785 gave 1,322 by a snapshot rule; the later Z23105291 replaces it with strict lineage-aware counts and says the number of fixation events and intervals are not well-defined; snapshot falls (ten of twelve) are real data features
     critic: A count of fixed mutations cannot be negative and the snapshot estimator is not a count of fixations (RE-03, RE-04, RE-10); Good 2017 shows clade coexistence so pooled >= 95% is not whole-population fixation; Good's own calls never fall by construction
@@ -848,6 +859,7 @@ objects:
   - E1#q2
   - E8#q2
   - Q61
+  - kt@L39
   positions:
     day: Reports both all-cause and beneficial-only figures; the all-cause rate is the one used for the total-difference comparison
     critic: Hitchhiked neutral and mildly deleterious fixations make all-cause G_f a poor measure of beneficial-sweep throughput (no verbatim critic statement located; the literature says most early fixations were beneficial)
@@ -864,6 +876,14 @@ objects:
   - E7#q3
   - E#q4
   - E9#q3
+  - kt@L35
+  - kt@L39
+  - kt@L49
+  - kt@L51
+  - kt@L52
+  - kt@L55
+  - kt@L59
+  - kt@L115
   positions:
     day: Throughput is sublinear in supply (8-17x for 100x) because beneficial mutations compete; hypermutation cannot rescue the rate, and the hazard side shows it is lethal at tissue level in mammals
     critic: "The LTEE is largely non-recombining bacteria from one clone, so sublinearity does not transfer to sexual vertebrates (RE-07, GA-01, MC-07); the audit's own simulation ran in R4-F2-A ('A interpretation'): asexual 100x gives 2.9-4.8x (a = 0.23-0.34, below Day's 0.47-0.61), free recombination gives a = 1.00 (up to 272 active loci, N = 1000, s = 0.01, soft selection), 'not shown at human scale'"
@@ -1114,6 +1134,9 @@ objects:
   - mc2c#375077052
   - mc2c#375157428
   - mc2c#375583044
+  - kt@L39
+  - kt@L91
+  - kt@L92
   positions:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
@@ -1184,6 +1207,7 @@ objects:
   - mc2c#339543355
   - mc2c#339603943
   - mc2c#340102853
+  - kt@L91
   positions:
     day: '180 total fixations is all there is time for at the fastest rate ever observed, against 205 million required'
     critic: 'The arithmetic reproduces exactly; the fastest-rate claim is not true of the point-mutator LTEE populations (43-183 gen/fix), and dividing by a per-lineage latency is the serial reading (see M-706)'
@@ -1233,6 +1257,7 @@ objects:
   - FM5#q1
   - Q47
   - mc2c#375371851
+  - kt@L94
   positions:
     day: 'Haldane''s 10% selective mortality is a total budget for the population, so parallel fixation does not multiply the limit: about 1 beneficial substitution per 300 generations for mammals'
     critic: 'The arithmetic 30/0.10 = 300 is accepted (Nesslig20, Nunney report it); the cost bounds selected substitutions only, applies to hard selection only (M-803), and does not apply to neutral drift'
@@ -1268,6 +1293,7 @@ objects:
   - H2a#q3
   - H7#q1
   - mc2c#375371851
+  - kt@L94
   positions:
     day: 'Nunney confirms that hard selection imposes the cost and that directional change makes hard selection dominate; the budget is real for the adaptive process'
     critic: 'The cost is not a general bound: it needs hard selection, shrinks at M > 1/2 and with standing variation, and no human hard/soft split is given; Nunney restricts soft-selection relief to intraspecific competition (reading-dependent, claim file H2a)'
@@ -1574,6 +1600,7 @@ objects:
   - A2j#q1
   - A2j#q2
   - A5g#q1
+  - kt@L65
   positions:
     day: Cites the LTEE for its fixation rate and updates the figure as the data improve (1,600, 1,322, 1,587)
     critic: The 1,400 matches neither the 1,322 nor the 1,587 count and the 1,600 citation drifts between papers; the version drift is a provenance issue, not an arithmetic one
@@ -1589,6 +1616,7 @@ objects:
   sources:
   - A2f#q1
   - A2f#q2
+  - kt@L39
   positions:
     day: The 1,322 is an all-cause figure; the natural-selection-only count is higher (4,615 or 24,500)
     critic: No formula is shown for 24,500 and the 1,408 uses a different method than the 4,615; three different figures for one quantity
@@ -1624,6 +1652,13 @@ objects:
   sources:
   - A2e#q1
   - A2e#q2
+  - kt@L17
+  - kt@L35
+  - kt@L45
+  - kt@L75
+  - kt@L85
+  - kt@L98
+  - kt@L115
   positions:
     day: LTEE is the best case with every tool deployed under ideal conditions, so human shortfall is a lower bound
     critic: 'The ceiling needs the transfer to hold; a 93,659-fold supply gap and sexual recombination are unscaled (claim file A2e: non-sequitur)'
@@ -1650,6 +1685,11 @@ objects:
   - A5c#q2
   - mc1@L61
   - mc1@L75
+  - kt@L7
+  - kt@L35
+  - kt@L41
+  - kt@L43
+  - kt@L115
   positions:
     day: The formula uses an observed rate so supply is inside G_f; the LTEE per-genome supply is 4.1e-4 as in Day's own s4.3
     critic: The expected fixation rate must be set by genome size and mutation rate; the supply ratio is 94,000x and counts as an artifact of the headline
@@ -1673,6 +1713,9 @@ objects:
   - mc1@L33
   - mc1c#337048907
   - mc2@L21
+  - kt@L35
+  - kt@L39
+  - kt@L69
   positions:
     day: Each version halves a divergence count to a per-lineage requirement; the SNV-only restriction is stated as a concession and still gives 91,600x
     critic: The SNV-only count is 83% of the measured events per lineage on the hg38/panTro6 count (21.05 M, GAP-07b) and 72% on the T2T count (24.14 M, GAP-07t), and the 17.9e6 achievable is a linear-scaling illustration, not a proof
@@ -1697,6 +1740,7 @@ objects:
   - A3z#q1
   - A3z#q2
   - mc2@L20
+  - kt@L69
   positions:
     day: The SI numbers sit on pages 14, 19 and 24, are not additive and carry no total; 410M comes from them
     critic: The stated components do not sum to 410M and 187 Mb and 410 Mb are not in Yoo 2025; base pairs are a different unit from events (M-011)
@@ -1742,6 +1786,8 @@ objects:
   - mc2@L20
   - mc2@L21
   - mc2c#339716645
+  - kt@L35
+  - kt@L69
   positions:
     day: Structural base-pair differences count as fixation-equivalents for the required count; the SNV-only variant is given as a concession
     critic: Bases affected by a rearrangement are not separate mutation events, so the 205M overstates the required events by about 10x
@@ -1815,6 +1861,8 @@ objects:
   - A2h#q2
   - A5h#q1
   - A5h#q2
+  - kt@L59
+  - kt@L81
   positions:
     day: Fitness of a 100-fold supermutator is near zero ("functionally dead")
     critic: The product is 3,840 not 38,400 so the downstream fitnesses are 0.68 and 0.021
@@ -1844,6 +1892,7 @@ objects:
   - A5e
   sources:
   - A5e#q1
+  - kt@L39
   positions:
     day: About 8 achievable fixations against 205 million required
     critic: The printed 8 is 9.13 on its own inputs; the figure is not reproduced but the conclusion is unchanged
@@ -1880,6 +1929,7 @@ objects:
   sources:
   - A6#q2
   - A6a#q1
+  - kt@L43
   positions:
     day: All required fixations are sweeps (linkage blocks are swept whole)
     critic: Only adaptive fixations pass through sweeps; neutral fixations need no sweep
@@ -1945,3 +1995,15 @@ objects:
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-915.json
+- id: M-916
+  kind: identity
+  statement: "KITTENS (Sparky_6_4, RE-2) arithmetic not held elsewhere: LTEE neutral clock 4.1e-4 x 50,000 = 20.5 of 56 (36.6%), 1/1,322 = 1.85 x U_E (clone-pair basis 2.73); human neutral 9.68M is 1.81x short of 17.5M; Day's s8.2 20,000-66,000 generations per neutral fixation are 2Ne (4-13 = 252,000/66,000 and /20,000); 4Ne = 40,000-132,000 < 252,000, empty-start count 38.4 x (252,000 - 4Ne) = 8.14M-4.61M (2.15x-3.80x short); LTEE 4 x 3e7 = 1.2e8; both lineages 2 x 38.4 x 252,000 = 19.35M against 35M; mutators: all seven 8.53x, Ara-2 out 12.65x, KITTENS's four lines 966.5/56.0 = 17.26x (51.7 gen/fix), exponents a = 0.4655 / 0.551 / 0.6185, scaled achievable 39,285 / 104,601 / 226,610 and SNV-only shortfall 445x / 167x / 77x (205M: 5,218x / 1,960x / 905x); neutral mutator prediction 4.1e-4 x 70-100 x 50,000 = 1,435-2,050 against 803-1,153 observed; table jumps 56 and 40 against 4.1 per 10,000 generations (13.7x, 9.8x); 1,359/893 = 1.52; 35e6 + 2 x 187e6 = 409e6; on event counts 21.05M / 24.14M per lineage the '12 times' is 9.74 / 8.49 (-17% / -28%) and RE-08's parity 0.85 / 0.74"
+  variant_of: M-007
+  used_by: [A5b, A5c, A5d, E5, E7, A3x, B1]
+  sources: [RE-08, RE-09, RE-10, RE-11, kt@L7, kt@L35, kt@L39, kt@L41, kt@L43, kt@L45, kt@L49, kt@L55, kt@L59, kt@L63, kt@L65, kt@L69]
+  positions:
+    day: "Every mutator subset is sublinear (a = 0.47-0.62): on KITTENS's own four lines the SNV-only gap is 77x, not parity; KITTENS's lag argument assumes 50,000 mutator generations; the SNV-only count understates the events by 17-28%"
+    critic: "The decomposition reproduces (M-007); 37-54% of LTEE throughput is the mutation clock, which scales with U by the paper's own s4.3; the human neutral count is 9.7M (1.8x short), not 4-13; the table jumps are 10-14x the per-lineage supply, so they are lineage turnover, not fixations"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-916.json
