@@ -13,3 +13,4 @@ people:
   ola-hossjer:    {name: "Ola Hössjer", side: ally, aliases: ["Hössjer", "Hossjer", "HO"]}
   paul-rimmer:    {name: "Paul B. Rimmer (paulnottheapostle Substack)", side: critic, aliases: ["Paul Rimmer", "PR"]}
   dennis-mccarthy: {name: "Dennis McCarthy (All The Mysteries That Remain, Substack)", side: critic, aliases: ["Dennis McCarthy", "McCarthy", "MC"]}
+  joe-bowers:     {name: "Joe Bowers (known only through Day's repost, bib JB-1)", side: critic, aliases: ["Bowers", "Joe Bowers", "Bowers (as reposted by Day)"]}

@@ -38,6 +38,8 @@ objects:
   - kt@L73
   - kt@L75
   - kt@L92
+  - jb1@p9
+  - jb1@p12
   positions:
     day: 'Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency. As stated this fails: a standing start (p0 0.01-0.5) cuts sweep time 27-50% at Ne = 1e4, capped at 2x for p0 <= 0.5 (M-103 record), which is small against the shortfalls'
     critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
@@ -168,6 +170,7 @@ objects:
   used_by: [B7a, F4, B7, D7]
   sources:
   - evo007
+  - jb1@p3
   positions:
     day: Needs N and s; throughput question is separate
     critic: Hancock agrees inputs N and s determine P(fix) and varies with demography and DFE
@@ -180,6 +183,8 @@ objects:
   used_by: [A4a, A4c]
   sources:
   - evo007
+  - jb1@p5
+  - jb1@p13
   positions:
     day: Stated as the human parameter set that "gets an answer"; the post gives no source for g = 29
     critic: 'Version drift inside one fortnight: which set MITTENS 3.0 and the book use is a provenance question (parameters.yaml)'
@@ -193,6 +198,8 @@ objects:
   used_by: [F, F1, F1a, F1b, B2d, B5g, B6c, G1, G1a, G1b, G2a, G2d, G2g, G2h, A]
   sources:
   - evo008
+  - jb1@p10
+  - jb1@p15
   positions:
     day: MITTENS is a rate calculation, not a latency calculation; anticipated in the book
     critic: 'Hancock: the arithmetic assumes each mutation arises and fixes before the next; the LTEE regime may not transfer (M-103)'
@@ -364,7 +371,7 @@ objects:
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
   used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5, H9]
-  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301, mc2@L10, mc2c#375157428, kt@L39, kt@L45, ps1@s3.2]
+  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301, mc2@L10, mc2c#375157428, kt@L39, kt@L45, ps1@s3.2, jb1@p12]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
   status: resolved
@@ -418,7 +425,7 @@ objects:
   kind: model-choice
   statement: 'Which population size enters neutral substitution: supply 2N mu uses census N; fixation probability is 1/(2Ne) (Day Feb 2026: k = mu N/Ne), vs 1/(2N) in the same N so that k = mu (critics; Day concession 2026-08-27, keruru retraction, Maruyama invariance in Day''s own Hard Limits); includes 2N x 1/(2Ne) = N/Ne > 1 (Matev) and 8e9/1e4 = 800,000 (Grok exchange)'
   used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c, ROOT-DE]
-  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39, ps1@s2.1]
+  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39, ps1@s2.1, jb1@p13]
   positions: {day: 'Original: N/Ne enters k; later concession: no Ne on either side of the Kimura identity; 3rd edition needed', critic: 'The cancellation holds: supply and fixation share the same N; N/Ne > 1 is not a probability; neutral mutations fix at the mutation rate (Hancock, Mansfield, DarwinZDF42, Paul King, keruru, Kimura 1962)'}
   resolution: derivation
   status: resolved
@@ -436,7 +443,7 @@ objects:
   kind: inference
   statement: 'Circularity of Ne = 10,000: it comes from theta = 4 Ne mu, which presupposes k = mu (the identity under test)'
   used_by: [B3h, C5, C5a]
-  sources: [B3h#q1, B3h#q2]
+  sources: [B3h#q1, B3h#q2, jb1@p13]
   positions: {day: 'The standard Ne is derived using the identity, so it cannot be used to test it', critic: theta = 4 Ne mu is the equilibrium diversity formula and does not use k = mu; the age of the neutral clock and Ne estimates come from different data}
   resolution: derivation
   status: resolved
@@ -526,7 +533,7 @@ objects:
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
   used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG, FM8b]
-  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab]
+  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab, jb1@p1, jb1@p17, jb1@p19]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
   status: resolved
@@ -978,6 +985,7 @@ objects:
   - F2#q1
   - F2#q2
   - Q25
+  - jb1@p12
   positions:
     day: The active zone imposes a hard capacity near 230 simultaneous sweeps, so pipeline width is limited
     critic: Interference is real under tight linkage but the cap is not reproduced for r = 1/2; Good 2017 shows many simultaneous competing variants, which is parallelism with interference, not a hard cap; human-scale loci and hard selection with linkage are untested
@@ -993,6 +1001,8 @@ objects:
   - F#q3
   - F4a#q1
   - BO-01
+  - jb1@p3
+  - jb1@p11
   positions:
     day: The reviewer confused fixation probability with fixation rate; 1/(2N) contains no time variable and says nothing about when
     critic: Bowers gives the textbook 2s for a beneficial mutation (secondhand); whether Day's reply answers it depends on which quantity the original review addressed, and the original was not found
@@ -1062,6 +1072,9 @@ objects:
   - mc1@L48
   - mc2@L8
   - mc2@L9
+  - jb1@p3
+  - jb1@p4
+  - jb1@p11
   positions:
     day: 'P(all) = p^n is the probability that all required fixations occur; it shows parallel or serial fixation is probabilistically self-defeating'
     critic: 'The arithmetic holds but prices pre-specified arisings, not the event history requires, and is timing-independent so it cannot force sequential fixation'
@@ -1089,6 +1102,10 @@ objects:
   - mc2c#340270022
   - ps1@s1.1
   - ps1@s1.2
+  - jb1@p2
+  - jb1@p9
+  - jb1@p10
+  - jb1@p17
   positions:
     day: 'Either the specific fixations matter, so the Darwillion applies, or they are interchangeable and neutral noise cannot explain functional divergence'
     critic: 'History needs some 20 million out of an enormous candidate pool, so P_any is near 1 (McCarthy, Camestros lottery, Bowers); the threshold applies only to the adaptive subset, and the neutral k = mu assumption is disputed'
@@ -1140,6 +1157,8 @@ objects:
   - kt@L91
   - kt@L92
   - ps1@s3.2
+  - jb1@p4
+  - jb1@p9
   positions:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
@@ -1263,6 +1282,7 @@ objects:
   - mc2c#375371851
   - kt@L94
   - PS-04
+  - jb1@p11
   positions:
     day: 'Haldane''s 10% selective mortality is a total budget for the population, so parallel fixation does not multiply the limit: about 1 beneficial substitution per 300 generations for mammals'
     critic: 'The arithmetic 30/0.10 = 300 is accepted (Nesslig20, Nunney report it); the cost bounds selected substitutions only, applies to hard selection only (M-803), and does not apply to neutral drift'
@@ -1278,6 +1298,8 @@ objects:
   - H#q4
   - H3#q3
   - Q48
+  - jb1@p11
+  - jb1@p14
   positions:
     day: 'The Bio-Cycle correction d = 0.45 rescales the generations available, leaving 146,250 and 487 fixations against 20 million required'
     critic: 'The arithmetic reproduces; d rescales time for overlapping generations (M-107) and is not a feature of a death budget, so the extension is an extra step; d = 0.45 has its own provenance questions (M-114)'
@@ -1395,6 +1417,9 @@ objects:
   - ROOT-FM#q5
   - FM10#q1
   - mc2c#339391408
+  - jb1@p6
+  - jb1@p9
+  - jb1@p14
   positions:
     day: "Every mechanism with a computed bound fails the same rate bound; the asserted rows contribute negligible divergence; the unnamed remainder is the critics' burden (Z18452504 'burden of the alternative'); the time-budget reading is the repo's operational form"
     critic: "No critic addresses ROOT as a whole; they attack the branches (A5, B, F1, G, C1); a universal over unnamed mechanisms is untestable until each is named and 5 of 18 named rows have no computation; 'statistically impossible' is a category error for a covariance, though the time-budget version is a separate claim"
@@ -1559,6 +1584,10 @@ objects:
   - mc1@L58
   - mc2c#340149310
   - mc2c#340102853
+  - jb1@p10
+  - jb1@p11
+  - jb1@p14
+  - jb1@p18
   positions:
     day: Formula is a rate calculation with five stated inputs; all versions after 2019 reconcile; dropping d in 3.0 makes the shortfall smaller than with d (2.39e6 with d = 0.45), so the drop is conservative
     critic: The formula is arithmetic on inputs whose transfer is the dispute (M-103, M-713); the 2019 table does not reconcile (125, 562 against 281.25)
@@ -1985,7 +2014,7 @@ objects:
   statement: "McCarthy MC-1 / MC-1c arithmetic not held elsewhere: the Day text he quotes (100 x 1e4 = 1e6 per generation = 50,000/y at g = 20 y; need 2e7/9e6 = 2.22/y, 1 in 22,727 ('23,000'), 0.0044% ('0.004%'), against supply x p_fix = 2.5/y, 12.5% above the need; two lineages 10^-172,041,200, printed 10^-172,000,000); the RF-7 lag (9e6/25 - 4 x 1e4 = 320,000 generations = 8e6 y, x 50,000/y / 20,000 = 2e7 as written) mixes a 20 y supply with a 25 y lag, single basis 16.0M (25 y, -20%) or 20.5M (20 y, +2.5%), ledger under R1; RF-6 writes 4e11/20,000 as 35M (true 2e7, printed +75%), ratio to F_max = 180 is 111,111 not 194,444, no flip; MC-1's 22.5M is +12.5% over 20M, and 5.6M (5.0M lag-adjusted) if only a quarter of new mutations are neutral (Day's '3x more harmful'); E. coli 1 - 4.1e-4 = 99.959%, human/E. coli per genome 146,341-243,902 at 60-100 de novo; Day's thread 4 x 1e4 x 25 = 1e6 y and 410e6/6e6 = 68.3"
   variant_of: M-212
   used_by: [B5a, B1b, A5, G4]
-  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310, mc2@L9, mc2@L16, mc2c#375371851]
+  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310, mc2@L9, mc2@L16, mc2c#375371851, jb1@p9, jb1@p10]
   positions:
     day: "The count leaves out the fixation time and treats every mutation as neutral; with three harmful mutations per neutral one the expectation is a quarter (5.6M); 1e6 y per neutral fixation at 4Ne = 40,000 and 25 y"
     critic: "On Day's quoted inputs the neutral expectation meets the requirement (22.5M, 16-20.5M lag-adjusted); Day's own quoted need (1 in 22,727) is below his p_fix (1 in 20,000); RF-6's 35M is a slip for 20M and '>> 180' stands"
