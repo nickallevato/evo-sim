@@ -2,7 +2,7 @@
   "id": "M-918",
   "date": "2026-11-26",
   "script": "docs/research/math/records/M-918.py",
-  "script_sha256": "f182a9188ba7cc84740fa5e70d077bd857616a24f92eacb654364a637bf7938a",
+  "script_sha256": "b5d293dd3981bb2e4e6c9c6d215b21e6bf3191416fa8184ae32e6962ea85cc0a",
   "object": "M-918",
   "variant_of": "M-706",
   "inputs": [
@@ -64,7 +64,8 @@
       "ln_ratio": 2.7384,
       "harmonic_ratio": 2.5665,
       "said": 4,
-      "said_over_ln_ratio": 0.461
+      "said_over_ln_ratio": 0.461,
+      "r1_move_to_ln_ratio": -0.3154
     },
     "neutral": {
       "4Ne": 40000,

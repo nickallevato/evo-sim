@@ -14,7 +14,8 @@ The record asserts every number the D-41 item-6 review page states that is not i
   aggregate 60,000, ratio = concurrency; the serial total n t = 240,000 h is n times the parallel finish time;
 - the comment's logarithm: 2e6/200 = 1e4, log10 1e4 = 4; under the exponent reading ln(p^n) = n ln p the ratio stays
   1e4 for any p (checked at p = 0.02 and 1/20,000); under the concurrent-completion reading ln(2e6)/ln(200) = 2.738 and
-  for exponential durations H_2e6 / H_200 = 2.566; the printed 4 is +46% over 2.738;
+  for exponential durations H_2e6 / H_200 = 2.566; the printed 4 is +46% over 2.738, so correcting it to 2.738 moves
+  the stated number by -31.5% (rule R1: past 25%, in the author's favour); under the exponent reading 4 -> 1e4 flips it;
 - neutral fixation time: 4Ne = 40,000 at Ne = 10,000, above the comment's "more than 10 000 generations".
 Every quote in the source map's table is asserted to be in the map and, when this checkout holds the fetch, in the
 fetched captions (video rows) or the uploader's comments (jg1c rows); Day rows are checked against the claim file and
@@ -161,6 +162,9 @@ h_ratio = h_big / h_small
 near(h_ratio, 2.566, 0.0005)
 move = (4 - ln_ratio) / ln_ratio
 near(move, 0.461, 0.0005)                                          # "4" over 2.738: +46% (conclusion unchanged)
+r1_move = (ln_ratio - 4) / 4                                       # rule R1: correcting the stated 4 to 2.738
+near(r1_move, -0.3154, 0.0005)                                     # -31.5%, past 25%; in the author's favour
+assert (10_000 - 4) / 4 > 1                                        # reading A: 4 -> 1e4, flips "only 4 times"
 
 # ---- neutral fixation time (jg1c#AbPZ3OnnqSO) ------------------------------------------------------------------
 NE = 10_000
@@ -196,7 +200,7 @@ finish({
                                    "serial_in_window": int(serial_in_W), "aggregate_in_window": int(aggregate_in_W)},
         "log_comment": {"ratio": ratio, "log10_ratio": 4.0, "exponent_reading_ratio": 10_000,
                         "ln_ratio": round(ln_ratio, 4), "harmonic_ratio": round(h_ratio, 4),
-                        "said": 4, "said_over_ln_ratio": round(move, 3)},
+                        "said": 4, "said_over_ln_ratio": round(move, 3), "r1_move_to_ln_ratio": round(r1_move, 4)},
         "neutral": {"4Ne": 4 * NE, "2Ne": 2 * NE, "said_more_than": 10_000},
         "quotes": {"video_rows": video, "comment_rows": comments, "day_rows": len(rows) - video - comments,
                    "uploader_comments_held": 44 if OWN is not None else None},
