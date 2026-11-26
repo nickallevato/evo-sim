@@ -519,7 +519,8 @@ objects:
   sources: [B#q1, B5#q2, B5j#q3, FM8b#q1]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
-  status: open
+  status: resolved
+  notes: 'Ledger rows in ledgers/slips.md, each with device, audience, function and dialectical core: RH-10 (B#q1, Day), RH-18 (B5#q2, Mansfield), RH-19 (B5j#q3, Hancock), RH-7 (FM8b#q1, Day)'
 - id: M-222
   kind: inference
   statement: 'Extinction under unchecked drift: if drift could fix at the maximum neutral speed, selection is not operating, and 3x more harmful than neutral substitutions would make humans infertile and extinct within centuries'
@@ -1377,7 +1378,7 @@ objects:
   resolved_by: docs/research/math/records/M-904.json
 - id: M-905
   kind: empirical
-  statement: "Genome-wide human-chimp dN/dS and its sensitivity to gene set and filters: Day, 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment; single-SNV codons 71.6% nonsynonymous, 28.4% synonymous, dN/dS 0.71; implied N/S = (71.6/28.4)/0.71 = 3.55 against a correct site ratio of 3.34, at which his 71.6% gives (71.6/28.4)/3.34 = 0.755, not 0.71) against the Consortium's Ka/Ks 0.23 on 13,454 1:1 orthologs (CSAC 2005); 'no combination of quality filters moves the number below 0.65' (full stack 0.64 on 10 genes); gene-set arithmetic 20,400 - 13,454 = 6,946 (34.05% of Day's set), 20,400/13,454 = 1.516, which sets Day's set against CSAC's and is not CSAC's exclusion: CSAC's curation removed 2,591 of its own 16,045 genes (16.2%); audit R4 L1 on hg38/panTro5: all genes 0.271, Ensembl one2one 0.207; R4 L1b on T2T and Cactus: all 0.271 (V0), one2one 0.238, minimum over 32 filter stacks 0.214; no correct-frame computation reproduces 0.80 (range 0.15-0.45); Day's code, gene list and per-gene table are unreleased"
+  statement: "Genome-wide human-chimp dN/dS and its sensitivity to gene set and filters: Day, 0.80 on 20,400 GENCODE v46 genes (Nei-Gojobori, T2T alignment; single-SNV codons 71.6% nonsynonymous, 28.4% synonymous, dN/dS 0.71; implied N/S = (71.6/28.4)/0.71 = 3.55 against a correct site ratio of 3.34, at which his 71.6% gives (71.6/28.4)/3.34 = 0.755, not 0.71) against the Consortium's Ka/Ks 0.23 on 13,454 1:1 orthologs (CSAC 2005); 'no combination of quality filters moves the number below 0.65' (full stack 0.64 on 10 genes); gene-set arithmetic 20,400 - 13,454 = 6,946 (34.05% of Day's set), 20,400/13,454 = 1.516, which sets Day's set against CSAC's and is not CSAC's exclusion: CSAC's curation removed 2,591 of its own 16,045 genes (16.1%); audit R4 L1 on hg38/panTro5: all genes 0.271, Ensembl one2one 0.207; R4 L1b on T2T and Cactus: all 0.271 (V0), one2one 0.238, minimum over 32 filter stacks 0.214; no correct-frame computation reproduces 0.80 (range 0.15-0.45); Day's code, gene list and per-gene table are unreleased"
   used_by: [DN1, DN2, DN3, DN4, DN5, DN6]
   sources:
   - DN1#q1
@@ -1438,7 +1439,8 @@ objects:
     day: "The book is the most rigorous mathematical challenge ever published"
     critic: "A superlative cannot be checked without a comparison set; the endorsement adds no calculation and Myers notes there was no peer review (process point)"
   resolution: rhetoric
-  status: open
+  status: resolved
+  notes: 'Ledger row in ledgers/slips.md with device, audience, function and dialectical core: RH-13 (ROOT-T#q1, Tipler via the interviewer)'
 - id: M-909
   kind: inference
   statement: "Evidential weight of endorsements and credentials: Tipler's foreword and appendix, Keen's preface, Hossjer's review and Dembski's own position as support for ROOT, against the critics' counter that the named endorsers have statistics, physics or mathematics backgrounds, not population genetics, and that ID association should be disclosed; Hossjer's agreement is limited to the main argument (Dembski: not the book as a whole) and he advocates 'uncommon descent'; the audit rule is that a credential count is not a rebuttal (FP-01) and that endorsement of a rate calculation is evidence about the arithmetic, not the biology; Tipler's appendix is in the paywalled book (not retrieved), Hossjer's population-genetics record was not examined and 'similar blunders' names no paper"

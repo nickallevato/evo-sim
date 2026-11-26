@@ -2,7 +2,7 @@
   "id": "M-905",
   "date": "2026-11-26",
   "script": "docs/research/math/records/M-905.py",
-  "script_sha256": "424108eb28720853cc1e374ac84aa69717ef986b8da119e2518ca8a9b814ec11",
+  "script_sha256": "2e53a7f51f65ccd100127a5a9d8ca8e9d7423db03677d1178c870b4ed5d812e6",
   "object": "M-905",
   "inputs": [
     {
@@ -80,5 +80,5 @@
       "holds": "0.80 is 2.95x the measured all-gene value; no correct-frame computation reaches it (0.15-0.45); all 32 filter stacks sit at 0.214-0.283; Day's own two single-SNV figures imply N/S 3.55 against a measured 3.34, and his full stack (0.64) is already below his 0.65 floor"
     }
   },
-  "notes": "Data-check object; no verdict moves. What Day's pipeline did to reach 0.80 cannot be settled without his code, gene list or per-gene table (unreleased; DN1 internal stays pending), but that is DN1's internal verdict, not this object's measurement: the genome-wide value and its sensitivity to gene set and filters are measured twice (L1, L1b). Day's '6,946 thrown out' sets his 20,400 against CSAC's 13,454; CSAC's own start was 16,045 genes, of which its curation removed 2,591 (16.2%). L1's 0.207 is the one2one value on hg38/panTro5; the T2T value is 0.238 (L1b)."
+  "notes": "Data-check object; no verdict moves. What Day's pipeline did to reach 0.80 cannot be settled without his code, gene list or per-gene table (unreleased; DN1 internal stays pending), but that is DN1's internal verdict, not this object's measurement: the genome-wide value and its sensitivity to gene set and filters are measured twice (L1, L1b). Day's '6,946 thrown out' sets his 20,400 against CSAC's 13,454; CSAC's own start was 16,045 genes, of which its curation removed 2,591 (16.1%). L1's 0.207 is the one2one value on hg38/panTro5; the T2T value is 0.238 (L1b)."
 }

@@ -153,6 +153,6 @@ finish({
              "gene list or per-gene table (unreleased; DN1 internal stays pending), but that is DN1's internal verdict, not "
              "this object's measurement: the genome-wide value and its sensitivity to gene set and filters are measured twice "
              "(L1, L1b). Day's '6,946 thrown out' sets his 20,400 against CSAC's 13,454; CSAC's own start was 16,045 genes, "
-             "of which its curation removed 2,591 (16.2%). L1's 0.207 is the one2one value on hg38/panTro5; the T2T value "
+             "of which its curation removed 2,591 (16.1%). L1's 0.207 is the one2one value on hg38/panTro5; the T2T value "
              "is 0.238 (L1b).",
 })
