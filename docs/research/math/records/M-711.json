@@ -1,0 +1,61 @@
+{
+  "id": "M-711",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-711.py",
+  "script_sha256": "74ab84297aafee6a0419953b535a5c8aa483563a0e93cc71efb366c269f6bb45",
+  "object": "M-711",
+  "inputs": [
+    {
+      "name": "t_div, g_len",
+      "value": [
+        6300000.0,
+        25
+      ],
+      "cite": "DZ-02 (G2b q2); parameters divergence.t_div_years.day_2026_mittens3, generation_time_years.day_2026"
+    },
+    {
+      "name": "G_f book, 3.0",
+      "value": [
+        1400,
+        1322
+      ],
+      "cite": "G2b formal statement (Z23003785 s3.3); parameters ltee.gens_per_fixation.day_mittens3_nonmutator"
+    },
+    {
+      "name": "required fixations",
+      "value": 205000000.0,
+      "cite": "parameters divergence.required_fixations.day_2026; G2g q1"
+    },
+    {
+      "name": "LTEE point-mutator range",
+      "value": [
+        43,
+        183
+      ],
+      "cite": "G2b formal statement (A2d), quoted"
+    }
+  ],
+  "values": {
+    "generations": 252000,
+    "fixations_book": 180.0,
+    "fixations_3.0": 190.62,
+    "shortfall_book": 1138888.9,
+    "printed_shortfall": 1139000,
+    "shortfall_3.0": 1075437,
+    "fixations_at_point_mutator_rates": [
+      5860.5,
+      1377.0
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "180 fixations is all there is time for at the fastest rate ever observed, against 205e6",
+      "holds": "252,000 / 1,400 = 180 exactly; shortfall 1,138,889 (printed 1,139,000)"
+    },
+    "critic": {
+      "reading": "not the fastest rate observed; dividing by a per-lineage latency is the serial reading",
+      "holds": "point-mutator LTEE lines run at 43-183 gen/fix (A2d); T/G_f is a rate calculation only if G_f is read as a throughput (M-706)"
+    }
+  },
+  "notes": "The arithmetic reproduces exactly. The 1,400 is the book's G_f; the 3.0 paper's 1,322 gives 190.6 and a shortfall of 1,075,437 (parameters shortfall.mittens3_full 1,075,000). 'Fastest ... in any organism' is false of the LTEE point-mutator lines (43-183 gen/fix, quoted), which Day excludes as mutators (A2d); the record only shows what the same division gives at those rates. Serial versus aggregate is M-706."
+}

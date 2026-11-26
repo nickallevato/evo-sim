@@ -1,0 +1,54 @@
+{
+  "id": "M-702",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-702.py",
+  "script_sha256": "ce5fb8a2baeb96529d26b449b2e77ecb403039ca504b74c9cc152d43982f3939",
+  "object": "M-702",
+  "inputs": [
+    {
+      "name": "n, p, s",
+      "value": [
+        157000,
+        0.5,
+        0.01
+      ],
+      "cite": "G formal statement (Z18167588 s3); G5 formal statement"
+    },
+    {
+      "name": "s7.10 example",
+      "value": {
+        "loci": 1000,
+        "variance": 250,
+        "mean": 500
+      },
+      "cite": "G formal statement (quoted s7.10)"
+    },
+    {
+      "name": "response premise",
+      "value": "Fisher: response proportional to variance",
+      "cite": "G Assumptions (s7.6)"
+    }
+  ],
+  "values": {
+    "var_K": 39250.0,
+    "sd_K": 198.12,
+    "cv_percent": 0.2524,
+    "doubling_n": {
+      "var_factor": 2,
+      "cv_factor": 0.707107
+    },
+    "var_ln_w_multiplicative": 3.8861,
+    "sd_ln_w": 1.9713
+  },
+  "positions": {
+    "day": {
+      "reading": "fitness variance compresses as n grows; selection response needs that variance",
+      "holds": "the CV does fall as 1/sqrt(n) (0.252% at n = 157,000), as Day says (R4 G1)"
+    },
+    "critic": {
+      "reading": "only the CV falls; the variance that sets the response rises with n",
+      "holds": "Var K = n/4 = 39,250 and Var(ln w) = 3.89 both rise linearly in n (exact on rationals)"
+    }
+  },
+  "notes": "Algebra settled: Var K = n p(1 - p) rises with n and CV = sqrt((1 - p)/(n p)) falls as 1/sqrt(n), both exactly. The paper's own s7.10 (variance 250, mean 500 at 1,000 loci) and its stated premise that response is proportional to variance (s7.6) mean the 'variance decreases' wording of s7.6 holds for the CV only; on that premise the falling CV does not imply a falling response (R4 G1: no per-locus fall under multiplicative fitness). Not settled here: whether the infinitesimal model (Fisher 1918, not retrieved) is the standard regime that answers the Barrier (G6, verdict pending); the record adds no literature."
+}

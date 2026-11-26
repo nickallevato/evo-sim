@@ -955,7 +955,8 @@ objects:
     day: 'The best-to-worst genotype differential is 14.7x against 1,570x required, a shortfall above 100-fold; the Barrier remains entirely correct'
     critic: 'The binomial and order-statistic arithmetic reconcile but the 14.7 and 1,570 are additive differences labelled as ratios (label slip, ledger); the required differential is the all-beneficial genotype, which per-locus sweeps do not need; R4 F2 finds no saturation at 272 active loci with free recombination'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-701.json
 - id: M-702
   kind: inference
   statement: 'Coefficient of variation against variance: for K ~ Binomial(n, p), Var = n p (1-p) rises with n and CV = sqrt((1-p)/(n p)) falls as 1/sqrt(n) (n = 157,000: Var 39,250, CV 0.252%); does a falling CV of the beneficial allele count mean a falling response to selection, or does the infinitesimal model (many loci of small effect, additive variance maintained) describe the standard regime; the audit has not checked whether the infinitesimal model answers the CV step'
@@ -969,7 +970,8 @@ objects:
     day: 'Variance in fitness compresses as n grows (the Barrier uses CV); selection response needs that variance'
     critic: 'The absolute variance of the allele count rises with n and only the CV falls, so the Barrier substitutes CV for variance; the infinitesimal model is the standard framework for many small-effect loci (panel; no derivation given)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-702.json
 - id: M-703
   kind: formula
   statement: 'Joint probability of a pre-specified set of fixations, P = p^n: Ga p = 0.02 (= 2s at s = 0.01), n = 2e7 gives 10^-33,979,400 (printed 10^-34,000,000); Gb p = 0.5, n = 157,000 gives 10^-47,262; the Darwillion as rendered by McCarthy (1/20,000)^(2e7) gives 10^-86,020,600; three different (p, n) pairs, each timing-independent and valid under independence (joint/product 1.03 at free recombination, lower when linked)'
@@ -986,7 +988,8 @@ objects:
     day: 'P(all) = p^n is the probability that all required fixations occur; it shows parallel or serial fixation is probabilistically self-defeating'
     critic: 'The arithmetic holds but prices pre-specified arisings, not the event history requires, and is timing-independent so it cannot force sequential fixation'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-703.json
 - id: M-704
   kind: inference
   statement: "Specific against any: P_specific(n) = product of p_i for a named list, P_any(>= k of M) = P(Binomial(M, p) >= k); at McCarthy's inputs (M = 4.5e11, p = 5e-5, k = 2e7) the mean is 22.5e6, SD 4,743, k is 527 sigma below it, so P_any is about 1 under neutral k = mu; the middle case (k of M interchangeable alternatives) flips at lambda_50 = 12.3-17.2 alternatives per needed change, for the adaptive subset only; Day's dilemma (specific, or interchangeable and neutral) omits it; per-locus lambda is 0.1-6 at s = 0.01 and a gene-level pool clears the flip for about ten needed changes (R4 D1)"
@@ -1005,7 +1008,8 @@ objects:
     day: 'Either the specific fixations matter, so the Darwillion applies, or they are interchangeable and neutral noise cannot explain functional divergence'
     critic: 'History needs some 20 million out of an enormous candidate pool, so P_any is near 1 (McCarthy, Camestros lottery, Bowers); the threshold applies only to the adaptive subset, and the neutral k = mu assumption is disputed'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-704.json
 - id: M-705
   kind: inference
   statement: 'Does a longer fixation time enter the Darwillion: Day says raising the time to fixation from 1,600 to 40,000 increases the Darwillion by 25x (40,000/1,600 = 25); the Darwillion as rendered, (1/20,000)^(2e7), has no time input, a x25 on P moves log10 by 1.4 of 86,020,600 and a x25 on the exponent moves it 25-fold, and the harvested text does not say which; the formula connecting a fixation time to the Darwillion is in the paywalled book'
@@ -1040,7 +1044,8 @@ objects:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-706.json
 - id: M-707
   kind: formula
   statement: "Required beneficial input: C / P_escape = 230 / 0.02 = 11,500 per transit period, times 300,000/440 transit periods = 7.84e6 beneficial mutations; P_escape = 2s = 0.02 (Kimura 1962) at s = 0.01; against about 2.3e11 new mutations over 300,000 generations (77 per individual x 10,000) the need is a fraction 3.4e-5 (1.7e-5 on McCarthy's 4.5e11); the paper calls the beneficial fraction an empirical question"
@@ -1051,7 +1056,8 @@ objects:
     day: 'The cap of 230 requires about 11,500 beneficial mutations per transit, 7.8 million in total'
     critic: 'The arithmetic reconciles; this is an any-n-of-M supply calculation and whether the beneficial fraction of 1.7e-5 to 3.4e-5 is attainable is the open empirical question'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-707.json
 - id: M-708
   kind: formula
   statement: "Derivation of the 230 cap: t_transit = (2/s) ln 9 = 439.4, about 440, fixations <= (T/t_transit) x C with T = 300,000: 681.8 x 230 = 156,818, about 157,000; 230 is exactly the C that reproduces the paper's own n = 157,000, so the match to the requirement is circular; the paper's own criterion (available additive differential 2 z sqrt(n/4) s >= n s, z = 3.72 at N = 10,000) gives n <= 13.8, not 230; near candidates 200 (additive halving) and 100-200 (s6.1 ceiling); the requirement elsewhere is 20e6 or 205e6 (127x and 1,306x of 157,000)"
@@ -1065,7 +1071,8 @@ objects:
     day: 'Working backward from the constraint, the active zone sustains 200-300 sweeps and 230 matches the requirement for human-chimpanzee divergence'
     critic: "No derivation is given and 230 is the constant that makes the product equal 157,000, so the match is circular; the paper's own criterion gives about 14"
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-708.json
 - id: M-709
   kind: empirical
   statement: 'Whether MITTENS 3.0 omits the Bernoulli Barrier and the Averaging Problem, and whether both remain entirely correct: in a sha256-matched re-fetch of Z23003785 "Bernoulli" occurs once (s1, a rhetorical clause, undefined and underived) and "averaging problem" 0 times in body and addendum, so the omission half is true as stated; "entirely correct" is a claim about G, whose own external verdict is contested'
@@ -1076,7 +1083,8 @@ objects:
     day: '3.0 renders the complicating elements moot so both were omitted, and both remain entirely correct'
     critic: 'The omission is verified but the paper is silent on the Barrier, so omission is not a retraction and not support; whether both remain correct depends on G (contested)'
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-709.json
 - id: M-710
   kind: empirical
   statement: 'Ara+2 fixation events: Day reports 14 sequential fixation events (smallest gap 1,500, largest 9,500 generations) and 5.3 neutral mutations carried per selective fixation; Z23105291 Table 1 gives 66 fixations in 60,500 generations (blog 66 in 60,000, 909 gen per fixation); 66/14 = 4.71 per event (3.71 hitchhikers), 5.3 x 14 = 74 against 66 is 12%; claim file defines parallel as the same 500-generation slice, and sweeps 1,500 or more apart can still overlap during their rise; the basis of 5.3 is unstated'
@@ -1102,7 +1110,8 @@ objects:
     day: '180 total fixations is all there is time for at the fastest rate ever observed, against 205 million required'
     critic: 'The arithmetic reproduces exactly; the fastest-rate claim is not true of the point-mutator LTEE populations (43-183 gen/fix), and dividing by a per-lineage latency is the serial reading (see M-706)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-711.json
 - id: M-712
   kind: empirical
   statement: "Prediction of a strictly serial sweep model for segregating variation: Hancock says there would be basically no variation among individuals except the rising mutation; under free recombination neutral diversity at unlinked sites is set by theta = 4 Ne mu and reduced by sweeps only at linked sites; R4 G2c forward simulation (N = 1e4, s = 0.01, free recombination, 500 neutral loci) gives unlinked neutral heterozygosity 0.97-1.03 of the no-sweep control at a sweep rate of 1/1,322 per generation and 1.00-1.01 at about 146 concurrent sweeps against Hancock's falsifier of below 0.10"
@@ -1114,7 +1123,8 @@ objects:
     day: 'MITTENS models parallel fixation, so the premise that sweeps go one at a time does not describe it (Appendix A asserts the serial reading but the 1-22 reply denies it)'
     critic: 'A strictly serial sweep model makes a specific prediction about polymorphism in the data, which the conditional correctly states'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-712.json
 - id: M-713
   kind: inference
   statement: "F_max = t_div x d / (g_len x G_f) has no mutation rate, population size or selection coefficient term: it divides a time by an empirical generations-per-fixation figure; Day's reading is that G_f is a measured total throughput that already includes supply, selection and parallelism, so the transfer to humans (not the formula) is the question; the supply scaling (about 690x) favours the critic on transfer"
@@ -1126,7 +1136,8 @@ objects:
     day: 'G_f is a measured total throughput of the LTEE, so mutation supply, selection and parallelism are inside the number'
     critic: 'The formula constrains an observed rate without saying which process produced it, so it is not itself a test of selection; the objection restates the supply objection (M-103)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-713.json
 - id: M-801
   kind: formula
   statement: "Haldane cost budget: cost per substitution C = 30 N selective deaths (diploid, single new copy), sustainable selective mortality 10% of N per generation, so the minimum interval is 30/0.10 = 300 generations per beneficial substitution; the limit bounds selected (adaptive) substitutions, not total substitutions; the 300 is verified only as reported by Nunney 2003 (Haldane 1957 not retrieved) and is restated by Day (Z18168236), Nesslig20 and Hössjer"

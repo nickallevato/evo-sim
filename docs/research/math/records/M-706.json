@@ -1,0 +1,85 @@
+{
+  "id": "M-706",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-706.py",
+  "script_sha256": "29456c8fbd0b665a26fa89f78088425e835013a01c1695cdb07f2aa37780534f",
+  "object": "M-706",
+  "inputs": [
+    {
+      "name": "serial and aggregate forms",
+      "value": [
+        "T / t_fix",
+        "T / G_f, G_f = T_obs / n_obs"
+      ],
+      "cite": "G2 formal statement; GG-01 (G2 q1)"
+    },
+    {
+      "name": "test schedule",
+      "value": {
+        "t_fix": 1000,
+        "window": 60000,
+        "spacings": [
+          1000,
+          "1000/3",
+          2000
+        ]
+      },
+      "cite": "constructed test points"
+    },
+    {
+      "name": "human generations; LTEE G_f",
+      "value": [
+        252000,
+        1322
+      ],
+      "cite": "parameters generations_available.day_2026, ltee.gens_per_fixation.day_mittens3_nonmutator; G1"
+    }
+  ],
+  "values": {
+    "test_points": {
+      "back_to_back": {
+        "spacing": 1000.0,
+        "n_obs": 60,
+        "G_f": 1000.0,
+        "peak_overlap": 1,
+        "serial": 60.0,
+        "aggregate": 60
+      },
+      "overlap_x3": {
+        "spacing": 333.3333333333333,
+        "n_obs": 178,
+        "G_f": 337.07865168539325,
+        "peak_overlap": 3,
+        "serial": 60.0,
+        "aggregate": 178
+      },
+      "gapped_x2": {
+        "spacing": 2000.0,
+        "n_obs": 30,
+        "G_f": 2000.0,
+        "peak_overlap": 1,
+        "serial": 60.0,
+        "aggregate": 30
+      }
+    },
+    "G2_arithmetic": {
+      "252000/1400": 180,
+      "252000/66000": 3.82,
+      "252000/20000": 12.6,
+      "252000/27600": 9.13,
+      "252000/1322": 190.6,
+      "60000/45.4": 1321.6
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "G_f is a measured throughput that already includes parallel fixation (G1 q1)",
+      "holds": "on that reading T/G_f is the aggregate form and no parallelism factor is owed; the identity shows such a G_f is shorter than the per-allele time when sweeps overlap"
+    },
+    "critic": {
+      "reading": "dividing a window by a per-allele time assumes each fixation ends before the next starts",
+      "holds": "the two forms coincide only with no overlap; the critique holds against the Appendix A 'fixation must be sequential' chain (G2g), which Day's para 25 concedes is not purely serial"
+    }
+  },
+  "notes": "Structural, exact on rationals. Over a window, G_f equals the start spacing; the serial and aggregate counts coincide only when it equals t_fix (back to back). Overlap makes the aggregate count larger by the mean concurrency, gaps make it smaller. p^n depends on (p, n) only (M-703), so neither reading changes it. The sources differ in target: Hancock (GG-01), Ghijselen (DZ-01), Camestros (CA-05), Myers (PZ-01, PZ-05) and Bowers (BO-02) are scored against the Appendix A chain or the 'generations per fixation' wording, not against T/G_f read as a throughput. The 66,000 and 20,000 divisions (Z23003785 s8.2) are drift fixation times, so those two are serial readings in Day's own text."
+}

@@ -1,0 +1,60 @@
+{
+  "id": "M-707",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-707.py",
+  "script_sha256": "6b922bb18c32469cc8f139410c33a2174d458a1cfdafd8f56bb9e6db1d58f9e6",
+  "object": "M-707",
+  "inputs": [
+    {
+      "name": "C, P_escape, T, t_transit",
+      "value": [
+        230,
+        0.02,
+        300000,
+        440
+      ],
+      "cite": "Gd q1 (Z18167588 s7.9); Gc formal statement; Kimura 1962 (G)"
+    },
+    {
+      "name": "new mutations per haploid genome",
+      "value": 38.4,
+      "cite": "parameters mutation.new_mutations_per_haploid_genome (3.2e9 x 1.2e-8)"
+    },
+    {
+      "name": "N",
+      "value": 10000.0,
+      "cite": "parameters population.Ne_modern_human (Day's N = 10,000)"
+    },
+    {
+      "name": "McCarthy supply",
+      "value": 450000000000.0,
+      "cite": "MC-03"
+    }
+  ],
+  "values": {
+    "per_transit": 11500.0,
+    "transit_periods": 681.818,
+    "total_required": 7840909,
+    "n_over_P_escape": 7850000.0,
+    "supply": {
+      "per_individual": 76.8,
+      "per_generation": 768000.0,
+      "over_T": 230400000000.0
+    },
+    "beneficial_fraction_needed": {
+      "of_2.3e11": 3.403e-05,
+      "of_4.5e11": 1.742e-05
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the cap of 230 requires about 11,500 beneficial mutations per transit, 7.8 million in total",
+      "holds": "11,500 and 7,840,909 reproduce (printed 7.8 million)"
+    },
+    "critic": {
+      "reading": "an any-n-of-M supply calculation; whether the beneficial fraction is attainable is open",
+      "holds": "the need is 3.4e-5 of 2.3e11 new mutations (1.7e-5 of 4.5e11); the record gives no DFE"
+    }
+  },
+  "notes": "Arithmetic reconciles. The calculation counts any 7.8e6 beneficial arisings, not a named list (R4 G1: Day's own s7.9 is an any-n-of-M calculation). Whether 3.4e-5 (or 1.7e-5) of new mutations are beneficial at s = 0.01 is the empirical question the paper names; no DFE source is held for it here. The 77 is the audit's diploid reading of 3.2e9 x 1.2e-8 per haploid genome (parameters, verified: false)."
+}

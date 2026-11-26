@@ -1,0 +1,66 @@
+{
+  "id": "M-708",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-708.py",
+  "script_sha256": "ed21d431038027dfe8acaf6972ea622e4723147068e3b05ae9df581f6e162e3f",
+  "object": "M-708",
+  "inputs": [
+    {
+      "name": "s, T, C, n",
+      "value": [
+        0.01,
+        300000,
+        230,
+        157000
+      ],
+      "cite": "Gc q1-q3 = Q25-Q27 (Z18167588 abstract, s7.8)"
+    },
+    {
+      "name": "z at N = 10,000",
+      "value": 3.72,
+      "cite": "Gc formal statement (paper +-3.72 sigma); M-701"
+    },
+    {
+      "name": "requirements elsewhere",
+      "value": [
+        20000000.0,
+        205000000.0
+      ],
+      "cite": "parameters divergence.required_fixations.day_2025, day_2026"
+    }
+  ],
+  "values": {
+    "t_transit": 439.44,
+    "transit_periods_at_440": 681.82,
+    "max_fixations": 156818,
+    "C_reproducing_157000": 230.27,
+    "own_criterion": {
+      "n_max_z2": 13.838,
+      "available_at_230": 0.5642,
+      "required_at_230": 2.3000000000000003,
+      "230_over_n_max": 16.62
+    },
+    "near_candidates": {
+      "additive_halving": 200,
+      "s6.1_ceiling": [
+        100,
+        200
+      ]
+    },
+    "requirement_ratios": {
+      "20e6/157000": 127.4,
+      "205e6/157000": 1305.7
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "working backward from the constraint, the active zone sustains 200-300 sweeps; 230 x 681.8 matches",
+      "holds": "the product 156,818 reproduces 157,000; 230 sits inside the stated 200-300"
+    },
+    "critic": {
+      "reading": "230 is the constant that makes the product 157,000, so the match is circular",
+      "holds": "157,000 x 440 / 300,000 = 230.3; the paper's own criterion gives n <= 13.8"
+    }
+  },
+  "notes": "No derivation of 230 is printed; the record shows it equals the paper's n = 157,000 read back through T / t_transit, so the 'appears to match the requirement' is circular if 230 was fitted (Gc non-sequitur). The paper's own s3 criterion applied to n loci bounds n at z^2 = 13.8 (it fails at 230: 0.56 against 2.3). The 200 (additive halving) and 100-200 (s6.1) are different constraints that land near 230. The requirement used elsewhere is 20e6 (127x) or 205e6 (1,306x), not 157,000."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "M-712",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-712.py",
+  "script_sha256": "ce3a01c04413ad7b9ecb03cd3284d8d5ffaa7984a1185b9f0213ddc06f085c69",
+  "object": "M-712",
+  "inputs": [
+    {
+      "name": "Ne, mu",
+      "value": [
+        10000.0,
+        1.2e-08
+      ],
+      "cite": "parameters population.Ne_modern_human, mutation.mu_per_site_per_gen.pedigree_human"
+    },
+    {
+      "name": "theta",
+      "value": "4 Ne mu",
+      "cite": "G2c formal statement"
+    },
+    {
+      "name": "simulated Hn ratios",
+      "value": {
+        "A_1/1322": [
+          1.03,
+          0.968
+        ],
+        "B_146_concurrent": [
+          1.012,
+          1.004
+        ]
+      },
+      "cite": "R4 G2c Results table and verdict line (quoted, not re-simulated)"
+    }
+  ],
+  "values": {
+    "theta_per_site": 0.00048,
+    "expected_heterozygosity": 0.00047977,
+    "fitness_variance_route": {
+      "mean_pq_over_sweep": 0.05048,
+      "var_w_per_sweep": "1.010e-05",
+      "sweeps_for_var_w_10": 990443
+    },
+    "Hn_ratio_ranges": {
+      "A": [
+        0.97,
+        1.03
+      ],
+      "B": [
+        1.0,
+        1.01
+      ]
+    },
+    "falsifier": 0.1,
+    "concurrency_vs_230": [
+      0.635,
+      0.638
+    ]
+  },
+  "positions": {
+    "day": {
+      "reading": "MITTENS models parallel fixation, so a strictly serial premise does not describe it",
+      "holds": "neither 1/1,322 per generation nor ~146 concurrent sweeps erodes unlinked diversity (0.97-1.03)"
+    },
+    "critic": {
+      "reading": "a strictly serial sweep model predicts almost no standing variation",
+      "holds": "true by construction of a strictly serial model; unlinked diversity is set by theta = 4 Ne mu"
+    }
+  },
+  "notes": "theta = 4 Ne mu has no sweep-rate term, so unlinked neutral diversity is not removed by sweeps; only linked sites (hitchhiking, not in R4 G2c) are. The fitness-variance route would need about 1e6 concurrent sweeps for Var(w) of order 10 (closed form here; R4 G2c P4). The ratios are simulation results quoted from R4 G2c: 0.97-1.03 (A) and 1.00-1.01 (B, 146 concurrent, 0.64x of 230); the post hoc B2 rerun at about 228 concurrent gave 0.970-0.981. The conditional is correct for a strictly serial model, which neither side's stated model is."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "M-704",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-704.py",
+  "script_sha256": "b028a151a3fead7670819d26bfe95697436faa91e6d457825b9f2642e319bda8",
+  "object": "M-704",
+  "inputs": [
+    {
+      "name": "M, p, k (McCarthy)",
+      "value": [
+        450000000000.0,
+        5e-05,
+        20000000.0
+      ],
+      "cite": "G3 formal statement; MC-02, MC-03"
+    },
+    {
+      "name": "middle-case model",
+      "value": "P_all = (1 - e^-lambda)^n_f",
+      "cite": "R4 G1 (middle case formalised)"
+    },
+    {
+      "name": "per-locus lambda; gene-level pool",
+      "value": {
+        "lambda_locus": [
+          0.1,
+          6
+        ],
+        "pool_median": 51
+      },
+      "cite": "R4 D1 via G3b Check; R4-D1-spike.md Table A and para after Table C (quoted, not rerun)"
+    }
+  ],
+  "values": {
+    "any_k_of_M": {
+      "mean": 22500000.0,
+      "sd": 4743.3,
+      "sigma_distance": 527.06,
+      "log10_chernoff_bound_P_K_below_k": -62688.8
+    },
+    "log10_P_specific": -86020599.9,
+    "lambda_flip": {
+      "1000": {
+        "l05": 5.812,
+        "l50": 7.275,
+        "l95": 9.878,
+        "width": 4.066
+      },
+      "157000": {
+        "l05": 10.867,
+        "l50": 12.331,
+        "l95": 14.934,
+        "width": 4.067
+      },
+      "200000": {
+        "l05": 11.109,
+        "l50": 12.573,
+        "l95": 15.176,
+        "width": 4.067
+      },
+      "20000000": {
+        "l05": 15.714,
+        "l50": 17.178,
+        "l95": 19.781,
+        "width": 4.067
+      }
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "either the specific fixations matter (Darwillion) or they are interchangeable and neutral",
+      "holds": "at locus granularity lambda 0.1-6 is below the flip (specific horn stands, R4 D1); 'neutral is not functional' is valid"
+    },
+    "critic": {
+      "reading": "history needs some 20 million out of a large pool, so P_any is about 1",
+      "holds": "527 SD below the mean, P(K < k) <= 10^-62,689 under k = mu; the middle case exists and flips at lambda_50 = 12.3-17.2 (adaptive subset only)"
+    }
+  },
+  "notes": "P_any near 1 holds only under McCarthy's neutral k = mu supply, which branch B contests. Day's dilemma (G3b) has two horns; the middle case, k of M interchangeable adaptive alternatives, is a third, with a sharp flip at lambda_50 = -ln(1 - 2^(-1/n_f)): 12.33 at n_f = 157,000, 17.18 at 2e7, band 4.07 wide. R4 G1's n_f = 1,000 row prints 7.28 where the closed form gives 7.275 (a rounding slip, 0.07%; the 12.3-17.2 band is unaffected). The R4 D1 values (per-locus lambda 0.1-6; a gene-level pool of 51 proxy-beneficial SNVs clears the flip for about ten needed changes at s = 0.01, not 25, not at s = 0.001) are measurements quoted with locators."
+}

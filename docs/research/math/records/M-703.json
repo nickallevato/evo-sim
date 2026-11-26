@@ -1,0 +1,61 @@
+{
+  "id": "M-703",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-703.py",
+  "script_sha256": "dc5ad64314839ad4f1b51a8fcf209ff86333325634af27fb39794231182f78b1",
+  "object": "M-703",
+  "inputs": [
+    {
+      "name": "Ga p, n",
+      "value": [
+        0.02,
+        20000000.0
+      ],
+      "cite": "Ga q1 = Q11; parameters divergence.required_fixations.day_2025; p = 2s (Kimura 1962, G)"
+    },
+    {
+      "name": "Gb p, n",
+      "value": [
+        0.5,
+        157000
+      ],
+      "cite": "Gb q1 = Q28"
+    },
+    {
+      "name": "Darwillion p, n (secondhand)",
+      "value": [
+        5e-05,
+        20000000.0
+      ],
+      "cite": "G3 q1 = MC-01; G4 q2 = Q71"
+    },
+    {
+      "name": "joint/product under free recombination",
+      "value": 1.03,
+      "cite": "R4 G1 via Ga Check (quoted, not rerun)"
+    }
+  ],
+  "values": {
+    "log10_P": {
+      "Ga_0.02^2e7": -33979400.1,
+      "Gb_0.5^157000": -47261.71,
+      "Darwillion_(1/20000)^2e7": -86020599.9
+    },
+    "Ga_printed_gap": {
+      "exponent": 20599.9,
+      "fraction": -0.000606
+    },
+    "Darwillion_over_Ga_log_ratio": 2.5316
+  },
+  "positions": {
+    "day": {
+      "reading": "P(all) = p^n is the probability that all required fixations occur",
+      "holds": "every printed power reproduces (Ga to 0.06% of the exponent; Gb and the Darwillion exactly)"
+    },
+    "critic": {
+      "reading": "p^n prices a pre-specified set of arisings and has no timing term",
+      "holds": "the product is order- and schedule-invariant (exact), so it cannot force sequential fixation"
+    }
+  },
+  "notes": "The three figures are three (p, n) pairs, not one quantity: 0.02^(2e7), 0.5^157,000 and (5e-5)^(2e7). Each is a product of per-event probabilities and so is the same for any ordering or overlap of the events (asserted on rationals). Independence is a modelling premise; R4 G1's simulation gives joint/product 1.03 at free recombination and below 1 when linked (Day's direction), quoted here. Which event the history requires (a named list or any k of M) is M-704."
+}

@@ -1,0 +1,72 @@
+{
+  "id": "M-701",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-701.py",
+  "script_sha256": "a73465ff69a278b452668880d5739c3cc3f5c1703a29f4ab94ce2627532f09e4",
+  "object": "M-701",
+  "inputs": [
+    {
+      "name": "n, p, N, s",
+      "value": [
+        157000,
+        0.5,
+        10000,
+        0.01
+      ],
+      "cite": "G formal statement; Z18167588 abstract and s3.1 (Q24)"
+    },
+    {
+      "name": "printed 14.7x, 1,570x, 107x",
+      "value": [
+        14.7,
+        1570,
+        107
+      ],
+      "cite": "G q1 = Q24; G formal statement (paper's s3 formulas)"
+    },
+    {
+      "name": "z for extremes of N",
+      "value": 3.72,
+      "cite": "G formal statement (paper +-3.72 sigma); 1 - 1/N normal quantile 3.719"
+    }
+  ],
+  "values": {
+    "binomial": {
+      "mean": 78500.0,
+      "var": 39250.0,
+      "sd": 198.12,
+      "cv_percent": 0.2524
+    },
+    "extremes": {
+      "z_quantile_1_minus_1_over_N": 3.719,
+      "high": 79237,
+      "low": 77763,
+      "difference_alleles": 1474.0,
+      "difference_sigma": 7.44
+    },
+    "multiplicative": {
+      "ln_1.01^1474": 14.667,
+      "1.01^1474": "2.343e+06",
+      "log10_1.01^157000": 678.46,
+      "log10_shortfall": 672.09
+    },
+    "additive": {
+      "available_1474x0.01": 14.74,
+      "required_157000x0.01": 1570.0,
+      "shortfall_1570/14.74": 106.51,
+      "shortfall_1570/14.7": 106.8,
+      "shortfall_via_ln_14.67": 107.04
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "best-to-worst differential 14.7x against 1,570x required, shortfall above 100-fold",
+      "holds": "binomial and order-statistic numbers reproduce; shortfall 106.5 (additive) or 107.0 (log) > 100"
+    },
+    "critic": {
+      "reading": "14.7 and 1,570 are additive differences labelled as ratios; all-beneficial target not needed",
+      "holds": "(1.01)^1474 = 2.34e6 and 1.01^157000 = 10^678.4, so the printed 'ratio' is a label slip (ledger)"
+    }
+  },
+  "notes": "The printed equation (1.01)^1474 = 14.7 is false as written: its left side is 2.34e6. 14.7 is the additive 1,474 x 0.01 = 14.74 (or ln of the ratio, 14.67), and 1,570 the additive 157,000 x 0.01; their quotient 106.5 (107.0 via 14.67) matches the printed 107 within 0.5%, so the shortfall exceeding 100-fold survives on the additive or log reading (R4 X1: label slip, ledger). On the multiplicative reading the paper's s3.1 states, the gap is 10^672. The +-3.72 sigma is the 1 - 1/N normal quantile (3.719), not the expected maximum of N draws. Whether the all-beneficial genotype is the required target (critic) is a modelling question this record does not settle; R4 F2 found no saturation at 272 active loci with r = 1/2. Day's 'remain entirely correct' (Ge q1) is about G's external verdict (contested), not this arithmetic."
+}

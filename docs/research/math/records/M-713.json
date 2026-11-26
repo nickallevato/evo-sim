@@ -1,0 +1,75 @@
+{
+  "id": "M-713",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-713.py",
+  "script_sha256": "9b08c619eca32a77a6c381e5ed9e8bd6347dd1b9aa1f40a0c818e74e9f43519f",
+  "object": "M-713",
+  "inputs": [
+    {
+      "name": "formula",
+      "value": "t_div x d / (g_len x G_f)",
+      "cite": "G2h formal statement (claim A)"
+    },
+    {
+      "name": "t_div, g_len, G_f, d",
+      "value": [
+        6300000.0,
+        25.0,
+        1322.0,
+        [
+          1,
+          0.45
+        ]
+      ],
+      "cite": "parameters divergence.t_div_years.day_2026_mittens3, generation_time_years.day_2026, ltee.gens_per_fixation.day_mittens3_nonmutator, selection.turnover_d"
+    },
+    {
+      "name": "test points (mu, N, s)",
+      "value": [
+        [
+          1.2e-08,
+          10000,
+          0.01
+        ],
+        [
+          1e-06,
+          100000000,
+          0.001
+        ]
+      ],
+      "cite": "constructed"
+    },
+    {
+      "name": "supply scaling",
+      "value": {
+        "genome_ratio": [
+          674,
+          689
+        ],
+        "kappa": 93659
+      },
+      "cite": "A5 q1 and derived line; parameters mutation.supply_ratio_kappa"
+    }
+  ],
+  "values": {
+    "F_max_d1": 190.62,
+    "F_max_d0.45": 85.779,
+    "invariant_in_mu_N_s": true,
+    "genome_ratio": [
+      673.9,
+      688.9
+    ],
+    "kappa": 93659
+  },
+  "positions": {
+    "day": {
+      "reading": "G_f is a measured LTEE total throughput; supply, selection and parallelism are inside it",
+      "holds": "F_max takes them through G_f only; the open step is transferring G_f to humans"
+    },
+    "critic": {
+      "reading": "the formula has no mutation rate or selection coefficient, so it is not a test of selection",
+      "holds": "literally true: F_max is identical at two test points that differ in mu, N and s"
+    }
+  },
+  "notes": "The identity is structural: F_max is a function of (t_div, d, g_len, G_f) only. Both readings agree on that; they differ on whether an empirical G_f can carry the supply, selection and parallelism of a different organism. The supply ratios the claim files cite (genome 674-689x; per-genome supply kappa 93,659) are asserted as arithmetic; G2h's verdict comment says they favour the critic on transfer, which is an external question (A5, A2e), and the objection restates the supply objection (M-103)."
+}
