@@ -1,0 +1,193 @@
+{
+  "id": "M-917",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-917.py",
+  "script_sha256": "eae26ef4d050d48d6142a51bf0fbd82ee7e88fc74870fb3cb86f809fea5a4a2c",
+  "object": "M-917",
+  "variant_of": "M-212",
+  "inputs": [
+    {
+      "name": "lottery_p",
+      "value": 1e-08,
+      "cite": "ps1@s1.1"
+    },
+    {
+      "name": "mu_G",
+      "value": 75,
+      "cite": "ps1@s2.2 (PS-01), per haploid genome by the s2.1 definition"
+    },
+    {
+      "name": "generations",
+      "value": 252000,
+      "cite": "ps1@s2.2 (6.3e6 / 25, Duffy's values; M-002)"
+    },
+    {
+      "name": "snv_band",
+      "value": [
+        0.01,
+        0.02,
+        3100000000.0
+      ],
+      "cite": "ps1@s2.2 (31-62M; 3.1e9 base implied)"
+    },
+    {
+      "name": "mu_per_site_pedigree",
+      "value": [
+        1.1e-08,
+        1.2e-08,
+        1.5e-08
+      ],
+      "cite": "parameters.yaml mutation.mu_per_site_per_gen.pedigree_human (Kong2012; range)"
+    },
+    {
+      "name": "Ne_values",
+      "value": [
+        1000,
+        10000,
+        132000,
+        198000
+      ],
+      "cite": "ps1@s2.1, ps1@s3.2 (Duffy's 10,000), ps1@s2.2 (Yoo quote)"
+    },
+    {
+      "name": "toy_alignment",
+      "value": {
+        "length": 60,
+        "snv": 1,
+        "gap_bp": 9
+      },
+      "cite": "ps1@s3.1"
+    },
+    {
+      "name": "ltee_counts",
+      "value": {
+        "20K": 45,
+        "26.5K": 60,
+        "40K": 653
+      },
+      "cite": "ps1@s3.5 (as quoted from the paper)"
+    },
+    {
+      "name": "genome_bounds",
+      "value": {
+        "ecoli": [
+          1e-09,
+          4600000.0
+        ],
+        "human": [
+          1e-08,
+          3200000000.0
+        ]
+      },
+      "cite": "ps1@s3.5"
+    },
+    {
+      "name": "U_E",
+      "value": 0.00041,
+      "cite": "M-007 (Day's 3.0 s4.3)"
+    }
+  ],
+  "values": {
+    "lottery": {
+      "n50": 69314717.7,
+      "n50_bound": 69314718,
+      "P_2e8": 0.8647,
+      "P_4e8": 0.9817,
+      "P_any_7e7": 0.5034,
+      "printed": 0.51,
+      "tickets_for_0.51": 71330000.0,
+      "mean": 100000000.0
+    },
+    "p_fix_Ne_1000": 0.0005,
+    "r1_ps01": {
+      "mu_per_site_implied": 2.34375e-08,
+      "haploid": [
+        35.2,
+        38.4,
+        48.0
+      ],
+      "both_lineages": [
+        17740800,
+        19353600,
+        24192000
+      ],
+      "move_vs_37.8M": [
+        -0.5307,
+        -0.488,
+        -0.36
+      ],
+      "zygote_reading_move": -0.5,
+      "mu_at_move_minus_25pct": 1.7578e-08,
+      "snv_band": [
+        31000000.0,
+        62000000.0
+      ],
+      "below_31M": {
+        "19.35M": 0.3757,
+        "18.9M": 0.3903,
+        "24.19M": 0.2196
+      }
+    },
+    "yoo_4Ne": {
+      "132000": 528000,
+      "198000": 792000,
+      "over_window": [
+        2.095,
+        3.143
+      ]
+    },
+    "toy": {
+      "snv": 0.0167,
+      "gap": 0.15,
+      "sum": 0.1667,
+      "bp_at_0.167": 10.02,
+      "half_410M": 205000000.0,
+      "410M_over_3e9": 0.137
+    },
+    "fixation_time": {
+      "median_Ne": 3.4788,
+      "F_4Ne": 0.6063,
+      "q95_Ne": 8.1878,
+      "q99_Ne": 11.4075,
+      "q999_Ne": 16.0127,
+      "first_term_4Ne": 0.594,
+      "first_term_8.19Ne": 0.95,
+      "mean_over_4Ne": 1.0
+    },
+    "empty_start_share_T252000": {
+      "10000": 0.8413,
+      "132000": 0.019,
+      "198000": 0.0017
+    },
+    "theta_gloss": {
+      "mean_sojourn_new_mutation_Ne1e4": 20.96,
+      "post_says": 20000
+    },
+    "ltee": {
+      "G_f_20K_clone": 444.4,
+      "G_f_mutator_clone": 22.77,
+      "mu_G_ecoli": 0.002252,
+      "over_U_E": 5.49,
+      "ecoli_bound": 0.0046,
+      "human_floor": 32
+    },
+    "s3_5_chain": {
+      "G_f_human": 0.01333,
+      "25x0.013": 0.325,
+      "printed_quotient": 38181818,
+      "printed_over_37.8M": 0.0101,
+      "exact": 37800000.0
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "MITTENS is a throughput count with 205M required; the neutral answer rests on its inputs",
+      "holds": "PS-01's 75 per haploid genome is 2x the library's pedigree count (38.4), so PS-02's 37.8M falls 36-53% to 17.7-24.2M and the 'close to 31-62M' match needs the ancestral term the post does not use; at the ancestral Ne the post quotes (132,000-198,000) an empty start delivers 0.17-1.9% of mu T; 444 compares a clone count with a fixation rate; the sharpshooter point does not touch a count of any 205M fixations"
+    },
+    "critic": {
+      "reading": "neutral fixations proceed in parallel at k = mu, and 205M counts bases, not events",
+      "holds": "the k = mu algebra, the fixation-time quantiles (median 3.48Ne, F(4Ne) = 0.606, matching Day's own Hard Limits fill of 0.61) and the toy base-against-event count reproduce; Day's own '1,000,000 years per neutral fixation' is the serial reading the post answers; point-mutator LTEE lines fix faster than 1,400"
+    }
+  },
+  "notes": "Topic fetched read-only 2026-11-26 (Discourse JSON, t-18094.json sha256 82e89a07...; 8 posts). Post 1 is at version 11, updated 2026-10-07T22:58Z; the bib row's copy (9912398e...) is not on disk, so the versions cannot be diffed; PS-01..PS-05 are exact substrings of the fetched text. Duffy's video is not held: his lines are relays (rule U), scored against Day only where Day's own text says the same (Q14, Q15, Q91, mc1c#337074301)."
+}

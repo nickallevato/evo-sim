@@ -346,7 +346,7 @@ objects:
   kind: formula
   statement: 'Finite-window neutral count from an empty start: E[F(T)] = mu L int_0^T F_X(u) du ~ mu L (T - 4 Ne), against the naive mu L T; with mu L = 30 and T = 252,000, naive = 7,560,000'
   used_by: [B1, B1a, B6a]
-  sources: [B1#q1, B1a#q1, B1a#q2, mc1c#337116873, mc2@L16, kt@L43]
+  sources: [B1#q1, B1a#q1, B1a#q2, mc1c#337116873, mc2@L16, kt@L43, ps1@s3.4]
   positions: {day: Exact for an empty start; the leading-order correction subtracts the mean fixation time from the window, critic: 'Exact for the empty-start case (a point for Day); the premise is the empty start, and F_X holds only for new post-split mutations while pairwise divergence is not reduced by the empty-pipe term (R4 B1c/B4a)'}
   resolution: derivation
   status: resolved
@@ -364,7 +364,7 @@ objects:
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
   used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5, H9]
-  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301, mc2@L10, mc2c#375157428, kt@L39, kt@L45]
+  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1, mc1c#337074301, mc2@L10, mc2c#375157428, kt@L39, kt@L45, ps1@s3.2]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
   status: resolved
@@ -418,7 +418,7 @@ objects:
   kind: model-choice
   statement: 'Which population size enters neutral substitution: supply 2N mu uses census N; fixation probability is 1/(2Ne) (Day Feb 2026: k = mu N/Ne), vs 1/(2N) in the same N so that k = mu (critics; Day concession 2026-08-27, keruru retraction, Maruyama invariance in Day''s own Hard Limits); includes 2N x 1/(2Ne) = N/Ne > 1 (Matev) and 8e9/1e4 = 800,000 (Grok exchange)'
   used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c, ROOT-DE]
-  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39]
+  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39, ps1@s2.1]
   positions: {day: 'Original: N/Ne enters k; later concession: no Ne on either side of the Kimura identity; 3rd edition needed', critic: 'The cancellation holds: supply and fixation share the same N; N/Ne > 1 is not a probability; neutral mutations fix at the mutation rate (Hancock, Mansfield, DarwinZDF42, Paul King, keruru, Kimura 1962)'}
   resolution: derivation
   status: resolved
@@ -445,7 +445,7 @@ objects:
   kind: formula
   statement: 'Expected neutral fixations on the human lineage as the product of a per-generation mutation count, a fixation probability and generations: McCarthy 450e9/20,000 = 22.5M (20M time-adjusted), Mansfield 1 per generation, Hancock 76.8 per generation, Nesslig20 2 x 75 x 252,000 = 37.8M, justatest90 38.4 x 252,000 = 9.7M, relayed 7.2M, Hossjer d x mu 7.6M, Day corrected 8.25'
   used_by: [B3e, B5a, B5b, B5c, B5d, B5e, B5f, B5h]
-  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310, mc2@L9, mc2@L13-L15, mc2@L16, mc2@L18, mc2c#375371851, mc2c#345248135, kt@L39, kt@L41, kt@L115]
+  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310, mc2@L9, mc2@L13-L15, mc2@L16, mc2@L18, mc2c#375371851, mc2c#345248135, kt@L39, kt@L41, kt@L115, ps1@s2.2]
   positions: {day: 'Mutations are not fixations: 30 cannot fixate per generation; the corrected calculation gives 8.25 fixations against 20 million required', critic: 'Neutral mutations fix at the rate they arise, so supply x 1/(2N) = mu per site per generation gives millions over 252,000 generations, within a factor of 2 of the 17.5-20 million required'}
   resolution: derivation
   status: resolved
@@ -454,7 +454,7 @@ objects:
   kind: identity
   statement: 'Genome-size and lineage-count factors in a neutral-count formula: haploid 3.2e9 vs diploid 6.4e9 (Hancock correction), halving 152 to 76, x 2 for two lineages (38M, 37.8M), Day 2019 15M per lineage x 2 = 30M'
   used_by: [B5c, B5e, B5f, B6b]
-  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2, mc2@L19, kt@L41]
+  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2, mc2@L19, kt@L41, ps1@s2.2, ps1@s3.5]
   positions: {day: 'Day counts each lineage separately: 15M fixed in humans and 15M in chimps', critic: 'Count the haploid genome and the number of lineages explicitly; a flag that drops a factor is wrong (rule: write the formula in full)'}
   resolution: derivation
   status: resolved
@@ -508,7 +508,7 @@ objects:
   kind: formula
   statement: 'Pairwise human-chimp divergence D = 2 mu T + theta_anc with theta = 4 Ne mu per site (coalescent; t1 6-7 My, t2 1-2 My, Chimp Consortium 2005); differences include post-split fixations and polymorphism; Day: 4 x 1e4 x 1.2e-8 x 3e9 = 1.44M (0.35% of 410M, "a rounding error"); Camestros: Day counts all differences as post-split'
   used_by: [B6, B4a, B6a, B6b]
-  sources: [B4a#q1, B4a#q2, B4a#q3, B6#q1, B6#q2, B6a#q1, B6a#q2, B6b#q1, B6b#q2]
+  sources: [B4a#q1, B4a#q2, B4a#q3, B6#q1, B6#q2, B6a#q1, B6a#q2, B6b#q1, B6b#q2, ps1@s3.4, ps1#p2]
   positions: {day: 'Ancestral polymorphism is a rounding error; the empty-pipe removal exceeds it (as stated, which is the arithmetic flag)', critic: Differences include ancestral polymorphism; pairwise divergence is not reduced by the empty-pipe term (d - 2 mu T = theta_anc); the full ancestral pipe supplies it}
   resolution: derivation
   status: resolved
@@ -1087,6 +1087,8 @@ objects:
   - mc1@L53
   - mc2@L9
   - mc2c#340270022
+  - ps1@s1.1
+  - ps1@s1.2
   positions:
     day: 'Either the specific fixations matter, so the Darwillion applies, or they are interchangeable and neutral noise cannot explain functional divergence'
     critic: 'History needs some 20 million out of an enormous candidate pool, so P_any is near 1 (McCarthy, Camestros lottery, Bowers); the threshold applies only to the adaptive subset, and the neutral k = mu assumption is disputed'
@@ -1137,6 +1139,7 @@ objects:
   - kt@L39
   - kt@L91
   - kt@L92
+  - ps1@s3.2
   positions:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
@@ -1208,6 +1211,7 @@ objects:
   - mc2c#339603943
   - mc2c#340102853
   - kt@L91
+  - ps1@s3.5
   positions:
     day: '180 total fixations is all there is time for at the fastest rate ever observed, against 205 million required'
     critic: 'The arithmetic reproduces exactly; the fastest-rate claim is not true of the point-mutator LTEE populations (43-183 gen/fix), and dividing by a per-lineage latency is the serial reading (see M-706)'
@@ -1258,6 +1262,7 @@ objects:
   - Q47
   - mc2c#375371851
   - kt@L94
+  - PS-04
   positions:
     day: 'Haldane''s 10% selective mortality is a total budget for the population, so parallel fixation does not multiply the limit: about 1 beneficial substitution per 300 generations for mammals'
     critic: 'The arithmetic 30/0.10 = 300 is accepted (Nesslig20, Nunney report it); the cost bounds selected substitutions only, applies to hard selection only (M-803), and does not apply to neutral drift'
@@ -1741,6 +1746,7 @@ objects:
   - A3z#q2
   - mc2@L20
   - kt@L69
+  - ps1@s3.1
   positions:
     day: The SI numbers sit on pages 14, 19 and 24, are not additive and carry no total; 410M comes from them
     critic: The stated components do not sum to 410M and 187 Mb and 410 Mb are not in Yoo 2025; base pairs are a different unit from events (M-011)
@@ -1788,6 +1794,9 @@ objects:
   - mc2c#339716645
   - kt@L35
   - kt@L69
+  - PS-03
+  - PS-05
+  - ps1@s3.1
   positions:
     day: Structural base-pair differences count as fixation-equivalents for the required count; the SNV-only variant is given as a concession
     critic: Bases affected by a rearrangement are not separate mutation events, so the 205M overstates the required events by about 10x
@@ -2007,3 +2016,15 @@ objects:
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-916.json
+- id: M-917
+  kind: identity
+  statement: "Nesslig20 PS-1 (Peaceful Science 18094, post 1 v11) arithmetic not held elsewhere: lottery n_50 = 69,314,717.7 (bound 69,314,718), P(2e8) 0.8647, P(4e8) 0.9817, P(any of 7e7) 0.5034 against the printed 0.51; P_fix 0.05% at Ne 1,000; R1 of PS-01: 75 per haploid genome = 2.34e-8 per site, pedigree 1.1-1.5e-8 gives 35.2-48.0 and 17.74M-24.19M both lineages (-53% to -36% against 37.8M; zygote reading 18.9M, -50%; under 25% only at >= 1.758e-8), 31-62M = 1-2% of 3.1e9, 19.35M is 37.6% below 31M; Yoo ancestral Ne 132,000-198,000 gives 4Ne 528,000-792,000 (2.1x-3.1x the window) and an empty-start delivered share 0.0190-0.0017 (0.8413 at 10,000); conditional fixation-time CDF median 3.4788Ne, F(4Ne) 0.6063, 95/99/99.9% at 8.1878/11.4075/16.0127 Ne, mean 4Ne; theta gloss (2Ne mu)(2Ne) = 4Ne^2 mu, mean sojourn of a new mutation 2 H_(2Ne-1) = 20.96 generations at Ne 10,000, not 2Ne; toy alignment 1/60, 9/60, 10/60; 410e6/2 = 205e6; LTEE 20,000/45 = 444.4 (clone count), 13,500/593 = 22.77, 1/444 = 5.49 U_E; 1e-8 x 3.2e9 = 32; s3.5 printed 12.6e6/0.33 = 38.18M (+1.0%) for the exact 37.8M"
+  variant_of: M-212
+  used_by: [B5e, B5, B1, B1a, A3x, G2b, A5c]
+  sources: [PS-01, PS-02, PS-03, PS-05, ps1@s1.1, ps1@s2.1, ps1@s2.2, ps1@s3.1, ps1@s3.3, ps1@s3.4, ps1@s3.5]
+  positions:
+    day: "PS-01's 75 per haploid genome is twice the pedigree count (38.4), so PS-02's 37.8M falls 36-53% and the match with 31-62M needs the ancestral term the post does not use; at the ancestral Ne the post quotes, an empty start delivers 0.2-1.9% of mu T; 444 is a clone count, not a fixation rate; the sharpshooter point does not touch a count of any 205M fixations"
+    critic: "The k = mu algebra, the fixation-time quantiles (F(4Ne) = 0.606, the same 0.61 as Day's Hard Limits fill) and the base-against-event toy reproduce; Day's own '1,000,000 years per neutral fixation' is the serial reading the post answers; point-mutator LTEE clones accumulate faster than 1,400 generations per mutation"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-917.json
