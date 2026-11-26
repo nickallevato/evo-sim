@@ -1,0 +1,69 @@
+{
+  "id": "M-102",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-102.py",
+  "script_sha256": "87dd094647567bbe0763c1f19240a70e5af84783d208a704c54c09923d09ade5",
+  "object": "M-102",
+  "inputs": [
+    {
+      "name": "divergence, both lineages, from the human perspective",
+      "value": 398673272,
+      "cite": "evo006@L33; refresh-2026-10-15 (Day, 'Evo-Avengers 002')"
+    },
+    {
+      "name": "t_div",
+      "value": 6300000.0,
+      "cite": "parameters divergence.t_div_years.day_2026_mittens3; evo006@L33"
+    },
+    {
+      "name": "generation time",
+      "value": 25,
+      "cite": "parameters generation_time_years.day_2026"
+    },
+    {
+      "name": "d",
+      "value": 0.8,
+      "cite": "evo009@L54 (252,000 x 0.80 = 201,600); the use of 25/0.80 in L35 is inferred (source map)"
+    },
+    {
+      "name": "six-ape mean (printed)",
+      "value": 62.7,
+      "cite": "evo006@L35; individual rates 37.8-99.4 bp/y not listed"
+    },
+    {
+      "name": "events, both lineages",
+      "value": 42100000.0,
+      "cite": "claim file A3x, R4 GAP-07b (hg38 vs panTro6)"
+    }
+  ],
+  "values": {
+    "rate_bp_per_y": 63.28147,
+    "factor_y_per_effective_generation": 31.25,
+    "mean_62.7_times_factor": 1959.375,
+    "printed_per_effective_generation": 1958.81,
+    "gap_bp": 0.565,
+    "gap_relative": 0.000288,
+    "implied_unrounded_mean": 62.68192,
+    "implied_mean_interval": [
+      62.68176,
+      62.68208
+    ],
+    "factor_if_mean_exactly_62.7": 31.241,
+    "chimp_rate_per_effective_generation": 1977.55,
+    "per_lineage_bp_per_y": 31.6407,
+    "per_lineage_bp_per_effective_generation": 988.77,
+    "events_per_y_both_lineages": 6.6825,
+    "bp_per_event": 9.47
+  },
+  "positions": {
+    "day": {
+      "reading": "an average divergence rate with no LTEE input is the speed any mechanism must have run at",
+      "holds": "the arithmetic reproduces: 63.281 exactly, 1,958.81 from an unrounded mean of 62.682 and the inferred factor 25/0.80; no input is from the LTEE (evo006@L40)"
+    },
+    "critic": {
+      "reading": "a required fixation rate needs more steps than divergence / time",
+      "holds": "the numerator is both lineages (Day's own per-lineage figure halves the rate to 31.64 bp/y) and counts base pairs (about 9.5 bp per event on GAP-07b's count); constant rate, fixed rather than polymorphic sites and lineage assignment are not addressed in the post"
+    }
+  },
+  "notes": "Every printed number reproduces. The 0.565 bp gap is the rounding of the six-ape mean: 1,958.81 implies a mean of 62.682 bp/y, which prints as 62.7. The factor 25/0.80 is inferred by the source map; it is the only round factor that fits. 'Rate of post-CHLCA human evolution' (L33) is read on a numerator that Day himself describes as the total over both lineages from the human perspective; on his per-lineage 199,336,636 the rate is 31.64 bp/y. Which reading the post intends is not stated; both are recorded. The six individual rates, the 60.5 My and the 25,302,032,866 bp are not held and not checked."
+}

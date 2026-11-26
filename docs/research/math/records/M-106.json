@@ -1,0 +1,109 @@
+{
+  "id": "M-106",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-106.py",
+  "script_sha256": "e963c435958a8a245a8f12e9354f322e9e8f964ce5aa188b84bcde7ae2401982",
+  "object": "M-106",
+  "inputs": [
+    {
+      "name": "budget rule",
+      "value": "sum(s_i) <= s_max; sum = n x s-bar",
+      "cite": "evo007@L25, @L27; H8 formal statement"
+    },
+    {
+      "name": "sweep time (Term 3)",
+      "value": "tau = (2/(s d)) ln(2Ne)",
+      "cite": "record M-808 (H8)"
+    },
+    {
+      "name": "sweep time (evo005)",
+      "value": "(2/s) ln(2Ne s)",
+      "cite": "evo005@L15 (record M-105)"
+    },
+    {
+      "name": "fixation probability",
+      "value": "(1 - e^(-2s)) / (1 - e^(-4Ns))",
+      "cite": "evo007@L21"
+    },
+    {
+      "name": "d, Ne",
+      "value": [
+        0.45,
+        10000
+      ],
+      "cite": "parameters selection.turnover_d, population.Ne_modern_human"
+    },
+    {
+      "name": "DFEs",
+      "value": {
+        "point": [
+          "1/1000",
+          "1/1000",
+          "1/1000",
+          "1/1000"
+        ],
+        "two_point": [
+          "1/2000",
+          "1/2000",
+          "3/2000",
+          "3/2000"
+        ],
+        "skewed": [
+          "1/4000",
+          "1/4000",
+          "1/4000",
+          "13/4000"
+        ],
+        "supply": {
+          "point": [
+            0.001,
+            0.001
+          ],
+          "two_point": [
+            0.0005,
+            0.0015
+          ],
+          "pos_neg": [
+            0.003,
+            -0.001
+          ]
+        }
+      },
+      "cite": "constructed test points (the post gives no example)"
+    }
+  ],
+  "values": {
+    "term3_throughput_per_generation": {
+      "point": "9.087708e-05",
+      "two_point": "9.087708e-05",
+      "skewed": "9.087708e-05"
+    },
+    "term3_shape_cancels": true,
+    "evo005_form_ratio_to_point": {
+      "point": 1.0,
+      "two_point": 0.9858,
+      "skewed": 0.9321
+    },
+    "mean_pfix_at_mean_s_0.001": {
+      "point": "1.998001e-03",
+      "two_point": "1.997502e-03",
+      "pos_neg": "2.991018e-03"
+    },
+    "pfix_ratio_to_point": {
+      "point": 1.0,
+      "two_point": 0.9998,
+      "pos_neg": 1.497
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the mean is the right statistic for a throughput ceiling; the DFE shape drops out",
+      "holds": "exactly, under the Term 3 sweep time (tau proportional to 1/s): every DFE with the same sum(s_i) gives the same throughput, and sum = n x s-bar is an identity"
+    },
+    "critic": {
+      "reading": "each mutation has its own fixation probability; s_max is not derived",
+      "holds": "the cancellation needs tau proportional to 1/s (under (2/s) ln(2Ne s) the shape shifts the rate 1.4-6.8% in the test DFEs), and at a fixed mean s the shape moves the supply of fixations 1.50x (P(fix), evo007@L21). The post asserts a fixed s_max (implicit premise); it is not derived there"
+    }
+  },
+  "notes": "Derivation on constructed DFEs; the post has no numeric example. The ceiling statement (given a budget, throughput is set by the budget) holds exactly under M-808's sweep time and approximately under evo005's. The critic's point concerns a different quantity: how many new mutations fix (supply), which depends on the DFE shape at a fixed mean. Whether s_max of order unity exists is H8's question (M-808, H8 q3), not settled here."
+}

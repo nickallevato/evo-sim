@@ -11,7 +11,8 @@ objects:
     day: The average exists by arithmetic ("It is division"); averages of fixation times are what 4N_e and (2/s)ln(2N_e s) are; variance affects the tails, not existence
     critic: 'The average exists but is uninformative without the distribution (Hancock: not Gaussian, multimodal; Maddie: wind speed; Matthews: cancer metastasis); rates depend on parameters'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-101.json
 - id: M-102
   kind: formula
   statement: 'Cross-ape average rate: 398,673,272 bp / 6.3 My = 63.281 bp/y; mean over six apes 62.7 bp/y = 1,958.81 bp per effective generation (g=25 y, d=0.80, factor 25/0.8 inferred); read as the speed natural selection, drift and relictation must have run at'
@@ -23,7 +24,8 @@ objects:
     day: Every input is mainstream and none comes from the LTEE; the rate is what any mechanism must reach
     critic: 'Needs the step from an average divergence rate to a required fixation rate: constant rate, all divergence fixed (not polymorphic), assignment to lineages, bp vs events (see pilot A M-021)'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-102.json
 - id: M-103
   kind: model-choice
   statement: 'Does the LTEE generations-per-fixation transfer to humans given clonal start, no recombination and no standing variation: Day says standing variation cannot cut fixation time once selection acts and recombination cannot compensate; critics say the clonal zero-polymorphism start inflates the LTEE rate and recombination speeds sweeps'
@@ -35,7 +37,8 @@ objects:
     day: Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency
     critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-103.json
 - id: M-104
   kind: parameter
   statement: 'Mean selection coefficient of fixed substitutions: 0.875 x 0 + 0.125 x 0.0012 = 1.5e-4, from alpha ~ 12.5% (McDonald-Kreitman, hominids) and s+ = N_e s / N_e = 12/10,000 = 0.0012 (Tataru et al.)'
@@ -47,7 +50,8 @@ objects:
     day: Empirical s for fixations is ~1.5e-4, two orders below s = 0.01
     critic: Averaging s over a neutral/adaptive mixture and putting it in the sweep formula (2/s)ln(2N_e s) is a modelling choice; the sources were not checked here
   resolution: lookup
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-104.json
 - id: M-105
   kind: formula
   statement: 'Fixation time under overlapping generations: dividing the discrete-model time by d = 0.80 (14,648 -> 18,310; 40,000 -> 50,000 generations); sweep time (2/s)ln(2N_e s) for s = 1.5e-4 at N_e 1e4, 1e5, 1e6 = 14,648, 45,349, 76,051'
@@ -59,7 +63,8 @@ objects:
     day: d rescales generations (time-weighted overlap correction)
     critic: Standard N_e scaling already handles overlap (Hancock, vid02); whether dividing by d is the correct correction is open (see pilot A M-025, M-027)
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-105.json
 - id: M-106
   kind: formula
   statement: 'Throughput ceiling: total selection budget sum(s_i) <= s_max over concurrent sweeps, the mean s-bar cancels and the sum is n x s-bar, so the shape of the distribution of fitness effects does not matter'
@@ -70,7 +75,8 @@ objects:
     day: The mean is the right summary statistic for a throughput ceiling; the DFE shape drops out
     critic: 'Hancock: every mutation in the DFE has its own fixation probability and the DFE evolves; whether a fixed budget s_max exists is not derived in the post'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-106.json
 - id: M-107
   kind: model-choice
   statement: 'Is the selective turnover coefficient d coherent and needed beyond N_e scaling: WD says Wright-Fisher and Moran answer how fast drift moves neutral alleles and d answers how fast the gene pool turns over; Hancock says gene-pool turnover is not meaningful because alleles are staggered; Day says rates are averages of staggered events'
@@ -83,7 +89,8 @@ objects:
     day: d is defined, derived and evidenced in a chapter and an appendix; "not meaningful" would invalidate every rate; Hancock must show d incoherent or already captured
     critic: d appears in no population-genetics model; the post gives no definition of its variables; WD says d is "essentially nothing to do with" MITTENS (separability open)
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-107.json
 - id: M-108
   kind: model-choice
   statement: A mutation rate that includes structural variants (76.8 per haploid genome per generation, Perubski et al.; u = 76.8/3e9 = 2.56e-8) compared with a divergence that counts only the ~35M SNV differences
@@ -95,7 +102,8 @@ objects:
     day: A total mutation rate must be compared with the total divergence, not the SNP fraction (98.91% omitted); Griffiths was right to flag it
     critic: 'Hancock: the fixation equation does not distinguish mutation types; swapping rate mid-calculation is a Day-side point against Hancock''s whiteboard, and Hancock disputes it'
   resolution: derivation
-  status: open
+  status: resolved
+  resolved_by: docs/research/math/records/M-108.json
 - id: M-109
   kind: formula
   statement: 'Expected count of neutral fixations landing in the observed divergent sites: WD scales by the 1.09% divergent fraction (76.8 x 201,600 x 35e6/3.2e9 = 169,344) against Hancock/Day: about 90% of the genome is unconstrained, which 1.09% fixes is random, so the neutral expectation applies to the whole genome'

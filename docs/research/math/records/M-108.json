@@ -1,0 +1,74 @@
+{
+  "id": "M-108",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-108.py",
+  "script_sha256": "a35cd9d275178a5456e1075a2037a7e1af5f77a34595387aa81b113c512de2ef",
+  "object": "M-108",
+  "inputs": [
+    {
+      "name": "events per haploid genome per generation",
+      "value": 76.8,
+      "cite": "evo009@L37 (Hancock, relayed); B5c (76.8 = 6.4e9 x 1.2e-8; 152/2 = 76 events incl. SVs)"
+    },
+    {
+      "name": "sites",
+      "value": [
+        3000000000.0,
+        3200000000.0
+      ],
+      "cite": "evo009@L37; evo008@L90"
+    },
+    {
+      "name": "SNV differences",
+      "value": 35000000,
+      "cite": "parameters divergence.snv_differences_total.chimp_consortium_2005"
+    },
+    {
+      "name": "indel events",
+      "value": 5000000,
+      "cite": "parameters divergence.indel_events_total.chimp_consortium_2005"
+    },
+    {
+      "name": "measured events",
+      "value": {
+        "snv": 37770000.0,
+        "all": 42100000.0
+      },
+      "cite": "claim file A3x, R4 GAP-07b"
+    },
+    {
+      "name": "Day's bp total",
+      "value": 398673272,
+      "cite": "refresh-2026-10-15 (Day, 'Evo-Avengers 002')"
+    }
+  ],
+  "values": {
+    "u_on_3e9": 2.56e-08,
+    "u_on_3.2e9": 2.4e-08,
+    "product_as_written": 230400000000.0,
+    "u_over_pedigree_snv_rate": 2.1333,
+    "snv_site_share": 0.0109375,
+    "printed_omitted": 98.91,
+    "omitted_share_of_events": {
+      "csac": 0.125,
+      "gap07b": 0.1029
+    },
+    "all_events_over_snv": {
+      "csac": 1.1429,
+      "gap07b": 1.1146
+    },
+    "omitted_share_of_bp_on_day_total": 0.9122,
+    "like_for_like": false
+  },
+  "positions": {
+    "day": {
+      "reading": "a total mutation rate must be compared with a total divergence, not the SNV fraction",
+      "holds": "the units are mixed: the rate counts events of every type, the 35M counts SNVs only; Duffy (evo008@L83) was right to flag it"
+    },
+    "critic": {
+      "reading": "the fixation equation does not distinguish mutation types; the swap of rate is a point against Hancock's whiteboard, not against neutral theory",
+      "holds": "in events the mismatch is 1.11-1.14x (SNVs are 87.5-89.7% of events); the 98.91% is a share of genome sites, not of the mutations, so it overstates the mismatch about 80-fold"
+    }
+  },
+  "notes": "Not like for like, as Day and Duffy say; the matching comparator for an all-events rate is all events (40M CSAC, 42.10M GAP-07b), not SNVs and not base pairs. The ratio the post draws (98.91% omitted) is 100 - 1.09, where 1.09% = 35e6/3.2e9 is the SNV share of genome sites; read as a share of the divergence it would be 12.5% (events) or 91.2% (Day's bp), and bp cannot be set against an event rate (A3x). The relay's 'u = (3e9)*(76.8)' is a slip for 76.8/3e9. 76.8 is numerically the diploid SNV product 6.4e9 x 1.2e-8 (B5c), while the post calls it a haploid all-events rate (152/2 = 76); which one Hancock meant is not settled here. Duffy's 169,344 is M-109."
+}

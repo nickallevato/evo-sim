@@ -1,0 +1,93 @@
+{
+  "id": "M-105",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-105.py",
+  "script_sha256": "b33d41df5b494c99e55e3be821d12756ef2d1948a7e7fd923235d21e0930fa1e",
+  "object": "M-105",
+  "inputs": [
+    {
+      "name": "s",
+      "value": 0.00015,
+      "cite": "evo005@L55 (record M-104)"
+    },
+    {
+      "name": "Ne",
+      "value": [
+        10000,
+        100000,
+        1000000
+      ],
+      "cite": "evo005 table; parameters population.Ne_modern_human (1e4)"
+    },
+    {
+      "name": "d",
+      "value": 0.8,
+      "cite": "evo005@LNone; evo006@L44 (definition: record M-013)"
+    },
+    {
+      "name": "diffusion check point",
+      "value": {
+        "Ne": 10000,
+        "s": 0.001,
+        "T": 8480
+      },
+      "cite": "RESULTS B0.4 row (quoted in record M-601)"
+    },
+    {
+      "name": "s+ for the mixture",
+      "value": 0.0012,
+      "cite": "evo005@L52 (record M-104)"
+    }
+  ],
+  "values": {
+    "sweep_formula": {
+      "10000": 14648.2,
+      "100000": 45349.3,
+      "1000000": 76050.4
+    },
+    "divided_by_d": {
+      "14648": 18310,
+      "40000": 50000
+    },
+    "gemini_table": {
+      "0.01|10000": 1059.7,
+      "0.01|100000": 1520.2,
+      "0.01|1000000": 1980.7,
+      "0.001|10000": 5991.5,
+      "0.001|100000": 10596.6,
+      "0.001|1000000": 15201.8
+    },
+    "two_Ne_s": {
+      "10000": 3.0,
+      "100000": 30.0,
+      "1000000": 300.0
+    },
+    "conditional_mean_diffusion": {
+      "10000": 28898,
+      "100000": 62060,
+      "1000000": 92965
+    },
+    "diffusion_over_formula": {
+      "10000": 1.973,
+      "100000": 1.368,
+      "1000000": 1.222
+    },
+    "mixture_mean_time_Ne_1e4": {
+      "formula": 35662,
+      "diffusion": 35922,
+      "adaptive_formula": 5296.8,
+      "adaptive_diffusion": 7378
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "(2/s) ln(2Ne s) at the empirical s gives 14,648-76,051 generations; d = 0.80 rescales to 18,310 and 50,000",
+      "holds": "every printed value reproduces; the diffusion mean is longer still (28,898 at Ne = 1e4), so the formula errs in the direction that helps the critics, not Day; the all-fixation average is worse, as L72 says (35,662)"
+    },
+    "critic": {
+      "reading": "Ne scaling already handles overlap (Hancock); dividing by d is open; the formula is applied outside its domain",
+      "holds": "2Ne s = 3 at Ne = 1e4, where the large-Ne s formula is off by 2.0x; feeding a mixture mean s into a sweep formula times an allele that does not exist (87.5% fix neutrally in 4Ne, 12.5% sweep in about 5,300-7,400); the d correction is M-013/M-107"
+    }
+  },
+  "notes": "All printed arithmetic reproduces. The diffusion integral is the standard Kimura-Ohta conditional fixation time with Ne = N, from one new copy; it reproduces B0.4's 8,480 and the neutral 4Ne, and matches the (2/s)(ln 4Ns + gamma) asymptote within 24 generations at Ne = 1e6. It shows the printed (2/s) ln(2Ne s) values understate the conditional mean by 1.2-2.0x at s = 1.5e-4. This does not move Day's direction: the times are longer, not shorter. The division by d is recorded as arithmetic only."
+}

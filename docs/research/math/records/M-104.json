@@ -1,0 +1,61 @@
+{
+  "id": "M-104",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-104.py",
+  "script_sha256": "1feb0a8f72578d83211d7d94aac9488247c812fefd4453db2ca9b6cb714dd0ea",
+  "object": "M-104",
+  "inputs": [
+    {
+      "name": "alpha (MK, hominids)",
+      "value": 0.125,
+      "held": "relayed only (evo005@L52 body sentence; no source named)",
+      "cite": "evo005@L52-L55; source map row L55"
+    },
+    {
+      "name": "N_e s (Tataru et al.)",
+      "value": 12,
+      "held": "relayed only (Tataru 2017 human numbers not read)",
+      "cite": "evo005@L52; bib-literature Tataru2017; refresh-2026-10-10b"
+    },
+    {
+      "name": "N_e",
+      "value": 10000,
+      "cite": "evo005@L52; parameters population.Ne_modern_human"
+    },
+    {
+      "name": "held alpha comparators",
+      "value": {
+        "Uricchio2019": 0.135,
+        "Boyko2008": [
+          0.1,
+          0.2
+        ],
+        "CSAC2005": "about 0"
+      },
+      "held": "Uricchio verbatim (quotes-literature); Boyko and CSAC as summarised in prior-art PA-19",
+      "cite": "quotes-literature Uricchio2019; prior-art PA-19"
+    }
+  ],
+  "values": {
+    "s_plus": 0.0012,
+    "s_bar": 0.00015,
+    "s_bar_at_uricchio_alpha": 0.000162,
+    "uricchio_over_day": 1.08,
+    "s_bar_boyko_range": [
+      0.00012,
+      0.00024
+    ],
+    "s_plus_at_Ne_1e5": 0.00012
+  },
+  "positions": {
+    "day": {
+      "reading": "empirical mean s of human fixations is about 1.5e-4, two orders below s = 0.01",
+      "holds": "the arithmetic is exact; 12.5% sits inside the held human alpha range (Boyko 0.10-0.20) and 7% below Uricchio's 0.135, which gives 1.62e-4"
+    },
+    "critic": {
+      "reading": "a neutral/adaptive mixture mean is a modelling choice, and the inputs are unchecked",
+      "holds": "neither input is held verbatim (both relayed); the held alpha values are protein-coding only, CSAC finds about 0, and s+ = 12/N_e depends on the N_e chosen. Using the mixture mean inside the sweep formula is M-105's question"
+    }
+  },
+  "notes": "Lookup resolved as far as held material allows: the arithmetic reproduces exactly and the two inputs are recorded as relayed, not verified. Not blocked, because the object's number is Day's derivation from stated inputs, and the held literature brackets alpha (0 to 0.20, Uricchio 0.135). Verifying N_e s = 12 would need Tataru 2017's human numbers (bib-literature: retrieved, not read; not under sources/raw in this checkout). Day's L15 'approximately 10⁻⁴' and L55 1.5e-4 agree in order."
+}

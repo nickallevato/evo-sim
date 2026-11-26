@@ -1,0 +1,58 @@
+{
+  "id": "M-101",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-101.py",
+  "script_sha256": "1c261c53f40c358955c2f3bd00bdf8af29d9ac022bd745cde51a79c0c63f9b12",
+  "object": "M-101",
+  "inputs": [
+    {
+      "name": "Day's identity",
+      "value": "rate = X / Y",
+      "cite": "evo006@L30, @L4; evo007@L27, @L34"
+    },
+    {
+      "name": "critics' objection (relayed)",
+      "value": [
+        "wind-speed variance (Maddie)",
+        "not Gaussian (Hancock)"
+      ],
+      "cite": "evo006@L10, evo007@L12 (relays, rule U)"
+    },
+    {
+      "name": "bimodal test sample",
+      "value": {
+        "40000": 7,
+        "5000": 1
+      },
+      "cite": "constructed test point"
+    },
+    {
+      "name": "settled values",
+      "value": {
+        "M-606 cv": 0.53839,
+        "M-005 F_at_1322": 190.62,
+        "M-005 fastest non-mutator": 893,
+        "M-006 F_no_scaling": 191
+      },
+      "cite": "records M-606, M-005, M-006 (cited, not recomputed)"
+    }
+  ],
+  "values": {
+    "bimodal_mean": 35625.0,
+    "bimodal_median": 40000,
+    "bimodal_cv": 0.3249,
+    "mean_attained_by_a_member": false,
+    "neutral_time_cv": 0.53839
+  },
+  "positions": {
+    "day": {
+      "reading": "X/Y exists for any count and duration; a mean needs no Gaussian; 4N_e is itself an average",
+      "holds": "existence and the Gaussian point hold as arithmetic; both sides accept existence (G1b UJ-02, G1c CA-10). Day concedes rates need their parameters (evo007@L31)"
+    },
+    "critic": {
+      "reading": "the average is uninformative without the distribution and the conditions",
+      "holds": "the mean need not be a typical event (bimodal test: mean 35,625, no member near it; 4N_e has CV 0.538, M-606), and an average from one system bounds another only under a transfer model (M-005, M-006). 'Meaningless' read literally (does not exist) fails; read as 'not a bound or a typical time' it holds"
+    }
+  },
+  "notes": "Inference object; no number is printed in the rows. Existence is arithmetic and not in dispute. The relayed critic sentences say 'meaningless', not 'does not exist'; under the reading 'not informative as a bound or a typical time' they are correct, and that reading is the one Day answers with 'rates require specifying the relevant parameters'. Whether an observed average bounds a rate elsewhere is the transfer question of M-006 and M-103, not this object. The bimodal sample is a constructed test point."
+}
