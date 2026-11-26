@@ -1,0 +1,8 @@
+na-workhorse.allevato.io
+Thu Nov 26 07:59:48 AM UTC 2026
+research HEAD 090b04e; script commit 4cfe7e5; 1 process; cmd: research/.venv/bin/python -I research/checks/e5_external.py run sources/raw/l6-good2017-data-2026-10-11 research/checks/results/raw/e5_external.json
+50567901496f137e21c96051ef86fd2a  research/checks/e5_external.py
+9b923ad480d120e6ae1d31e33d1c5f69  research/checks/l6_ltee_undone.py
+Thu Nov 26 08:00:34 AM UTC 2026
+bc70c46e3100d956fa23b1f7064d8089  research/checks/results/raw/e5_external.json
+efadb2c3f084a55c292176d7419d8cf8  research/checks/results/raw/e5_external.out
