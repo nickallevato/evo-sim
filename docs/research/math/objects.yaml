@@ -74,7 +74,7 @@ objects:
 - id: M-107
   kind: model-choice
   statement: 'Is the selective turnover coefficient d coherent and needed beyond N_e scaling: WD says Wright-Fisher and Moran answer how fast drift moves neutral alleles and d answers how fast the gene pool turns over; Hancock says gene-pool turnover is not meaningful because alleles are staggered; Day says rates are averages of staggered events'
-  used_by: [A4, A4e, A4f, B5h]
+  used_by: [A4, A4e, A4f, B5h, C2, C2a]
   sources:
   - evo008
   - evo009
@@ -340,7 +340,7 @@ objects:
 - id: M-205
   kind: formula
   statement: 'Census ceiling: Ne = (4N - 2)/(Vk + 2) with 4 Ne < G gives N < (Vk + 2) G / 16 + 1/2 ("X = (Vk+2) G/16"); stated outputs ~10,000 for a large long-lived vertebrate, 35,000 human species / 100,000 lineage, 28,000 elephant; k = mu confined to demographic conditions no non-endangered species meets'
-  used_by: [B, B2, B1d, B2b]
+  used_by: [B, B2, B1d, B2b, C7]
   sources: [B2#q1, B2b#q1, B2b#q2, B2b#q3, B2#q2]
   positions: {day: Reproductive variance and lineage generations alone fix a ceiling; the domain of k = mu is empty for large vertebrates, critic: 'Algebra is correct; the inputs (Vk, G, equating N to the census) are the dispute: keruru measured Ne three orders away; the domain claim is a statement about current size, not the lineage'}
   resolution: derivation
@@ -348,7 +348,7 @@ objects:
 - id: M-206
   kind: empirical
   statement: 'Census N to effective Ne in real data: diversity-derived Ne is 19-46 times below census in mammals (Day); a temporal Ne from ancient genomes is three orders below Wright 4N/(Vk+2) on the Bronze Age census (keruru, who does not claim the ceiling refuted)'
-  used_by: [B3, B2e]
+  used_by: [B3, B2e, C5b]
   sources: [B2e#q1, B2e#q2, B3#q1]
   positions: {day: 'Census exceeds Ne by a large factor, so N/Ne is not 1', critic: 'The ratio is real but N/Ne does not enter the neutral rate (supply and fixation both use census, M-209); the measured temporal Ne tests the input, not the cancellation'}
   resolution: data-check
@@ -388,7 +388,7 @@ objects:
 - id: M-211
   kind: inference
   statement: 'Circularity of Ne = 10,000: it comes from theta = 4 Ne mu, which presupposes k = mu (the identity under test)'
-  used_by: [B3h]
+  used_by: [B3h, C5, C5a]
   sources: [B3h#q1, B3h#q2]
   positions: {day: 'The standard Ne is derived using the identity, so it cannot be used to test it', critic: theta = 4 Ne mu is the equilibrium diversity formula and does not use k = mu; the age of the neutral clock and Ne estimates come from different data}
   resolution: derivation
@@ -488,4 +488,90 @@ objects:
   sources: [B1e#q1, B1e#q2, B1e#q3, B1e#q4]
   positions: {day: Chalub shows the transient and that 1/(2N) is imported from the model, critic: 'Chalub derives P(fix) = x0 (starting frequency) exactly; the Wright-Fisher model sets 1/(2N) as the starting frequency, which is the standard result (Athos 09-21 para 4 agrees); verified-partial'}
   resolution: lookup
+  status: open
+- id: M-301
+  kind: inference
+  statement: 'Panel ascertainment: the 1240k panel is built from sites polymorphic in modern discovery sets (arrays, Yoruba and San heterozygotes, functional SNPs), so (1) new substitutions inside the window
+    are mostly absent from it and (2) the direction of bias for completions from intermediate frequency is unsettled (African discovery enriches old intermediate-frequency variants, but near-fixed European
+    sites inflate "newly 100%")'
+  used_by: [C1, C1a, C]
+  sources: [C1#q1, C1#q2, C1#q3, C1#q4, C1#q5, C1a#q1]
+  positions: {day: 'Ascertainment toward modern European polymorphism favors detecting recent fixations, so a count of about 0 is conservative (C1a)', critic: 'Panel sites cannot register most new substitutions;
+      the discovery step is African, not European; the sign of the bias is not calculated (R4 C1c, C1d, L5 model the swept-site share)'}
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
+- id: M-302
+  kind: formula
+  statement: 'Expected neutral substitutions in a ~7,000-year window against a panel: genome-wide count (20e6/9e6 y x 7,000 = 15,556; 1.2e-8 x 1.5e8 x 350 = 630; 1.2e-8 x 3.1e9 x 350 = 13,020) compared
+    with 0-3 (C) or 21 (C6) observed on a panel of 1.14-1.23M SNPs; the denominator (genome vs panel) and the panel fraction (3.7e-4, or 8.8-24.7% of swept standing-variant sites) decide the comparison'
+  used_by: [C, C1, C6]
+  sources: [C#q1, C#q4, C6#q2, C6#q4]
+  positions: {day: 'The modern synthesis requires 15,500 fixations (630 in the clock paper) and the data show 0-21', critic: 'The 630 is for 1.5e8 genome-wide sites and the 21 is among 1,233,013 panel SNPs;
+      scaled to the panel 630 becomes 5.2 and 21 is above expectation'}
+  resolution: derivation
+  status: open
+- id: M-303
+  kind: formula
+  statement: 'Neutral expectation for a locus starting at intermediate frequency over 240-350 generations at Ne ~ 1e4: fixation time of order 4Ne = 40,000 generations (240/40,000 = 0.6%), drift SD sqrt(p
+    q t/(2Ne)) = 0.0548 at p = 0.5, so completions from <50% are about 0 (keruru about 1e-29 over a million loci; exact Wright-Fisher 5.1e-45 per locus from 0.5) while 50-90% starts give 0.04-0.11 and a
+    single large excursion (rs35619459, 29.3% to 91.3%) is read against the same SD'
+  used_by: [C, C5, C7, C5a]
+  sources: [C#q3, C5#q1, C5#q2, C5#q3, C5a#q2, C7#q1]
+  positions: {day: Zero from intermediate frequency is evidence that drift is not operating (C7); rs35619459 is a twelve-sigma excursion against the neutral expectation (C5a), critic: 'Zero is the neutral
+      prediction: finding one would have been the falsification (keruru C5); few or no completions in ~280 generations is what drift at Ne ~ 1e4 gives (R4 L5)'}
+  resolution: derivation
+  status: open
+- id: M-304
+  kind: model-choice
+  statement: 'Identifiability of d: trajectory fits identify the product s x d (logit gain s d G), not d, so (i) three-locus convergence on d = 0.45 moves as 1/s (+/-25% on s gives 0.36 / 0.56), (ii) the
+    ratio of required s between two loci is constant for any d, and (iii) the chicken TSHR required d = 1.02 depends on the dominance model (recessive 1.13, additive 0.84) and on s inside Loog''s CI (d
+    0.47-1.43)'
+  used_by: [C2, C2c, C2d]
+  sources: [C2#q2, C2#q3, C2#q4, C2#q5, C2#q6, C2c#q1, C2d#q1, C2d#q3]
+  positions: {day: Three loci independently converge on d = 0.45; the constant ratio across d shows d captures real dynamics; the chicken data require d = 1.02 and cross-species validation is decisive,
+    critic: d is not identifiable apart from s; the constant ratio is an algebraic consequence of weak selection; the chicken value depends on dominance and on where s falls in its interval}
+  resolution: derivation
+  status: open
+- id: M-305
+  kind: formula
+  statement: 'Regression of d on k: d = -2.242 k + 1.229 (r = -0.991) and its consequences: k = 0 gives d = 1.229 (>1), d = 1 gives k = 0.102 mu, k = mu gives d = -1.013, k = 0.5 mu gives d = 0.108, Dp
+    = d s p (1-p) = 7.92e-6 for d = 0.08, s = 0.01, p = 0.01; the claim that k never reaches mu since d < 1'
+  used_by: [C2b]
+  sources: [C2b#q1, C2b#q2, C2b#q3, C2b#q4, C2b#q5]
+  positions: {day: k in humans has been about 0.5 mu or less; it never reaches mu because d never reaches 1.0; selection at d = 0.08 is negligible, critic: The fit extrapolates outside the d range and gives
+      k = 0.102 mu at d = 1 where Day says Kimura holds; data and fit are secondhand from an unidentified doctor; d = 1 point belongs to C2a}
+  resolution: derivation
+  status: open
+- id: M-306
+  kind: formula
+  statement: 'Linear extrapolation of observed spread to a fixation time and its global rescaling: CCR5-delta32 at about 10% after 30 generations gives 300 generations (6,000-7,500 y), rescaled to 840,
+    1,440, 2,278 and another 37,800 generations; used as a human generations-per-fixation (G_f) to compare with the LTEE (1,600 / 1,322)'
+  used_by: [C3]
+  sources: [C3#q1, C3#q2, C3#q3, C3#q4]
+  positions: {day: 'Even a generous linear extrapolation from the strongest observed selection gives 300 to 2,278 generations per fixation in humans', critic: 'Linear extrapolation is not the logistic spread;
+      the rescalings 840, 1,440, 2,278, 37,800 are stated without formulas; the ratio to the LTEE reverses between the 2025 and 2026 posts'}
+  resolution: derivation
+  status: open
+- id: M-307
+  kind: formula
+  statement: 'Temporal Ne from allele-frequency change between dated ancient samples: Day drift-variance proxy (3.3-fold pan-European, 4.6-fold Britain-Ireland, absolute values 0.3-1.4 uninterpretable;
+    later "Ne near 2") against the keruru temporal estimator Ne ~ t/(2[F - 1/(2 S0) - 1/(2 St)]) giving 8,139 (102 gen) and 9,835 (250 gen) with Ne roughly doubling Neolithic to present'
+  used_by: [C4, C5a, C5b]
+  sources: [C4#q1, C4#q2, C4#q3, C4#q4, C5a#q2, C5b#q1, C5b#q2, C5b#q3]
+  positions: {day: 'Ne varied at least 3.3-fold and likely 4-fold across the Holocene, so it cannot be treated as a constant 10,000; a drift-variance Ne near 2', critic: 'The drift-variance values are not
+      Ne by the paper''s own limitation; the temporal method gives about 8,000-10,000 with no mu, and Ne of 2 would saturate every locus within the window'}
+  resolution: data-check
+  status: open
+- id: M-308
+  kind: empirical
+  statement: 'Composition of the observed "fixation" counts in the aDNA panel: blog 0 of 1,211,499 (<10% to >90%); Zenodo 1 and 3 of 1,143,671 from 50-90%; 17,806 / 3,469 newly 100% almost all from 90-99%;
+    Z18525185 timing of 16,299 of 22,428 alleles (99.8% claimed in one 2,000-year window vs 53.6%; 99.86% over three bins before 7,000 BP) and Day''s reading that they are completions of near-fixed alleles,
+    not new substitutions'
+  used_by: [C, C6, C1]
+  sources: [C#q1, C#q2, C#q3, C6#q1, C6#q3]
+  positions: {day: 'Zero (or 1 and 3) completions from intermediate frequency; 99.8% of fixation events fall before 7,000 BP and the rest are completions, so the clock stopped', critic: 'Counts depend on
+      the SNP filter, sample sizes, annotation format and fixation definition and do not overlap between v62 and v66; the 99.8% in a single window is the three-bin share; the observed 1 and 3 are mildly
+      above neutral at Ne 1e4'}
+  resolution: data-check
   status: open
