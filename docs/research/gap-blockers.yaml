@@ -25,7 +25,7 @@ items:
   blocker: owner   # E6-analyst-1 (EVOA-64) feasibility gate failed, cf577ae, lead-approved 2026-11-26
   next: "External `pending`. Feasibility gate failed (results/R4-E6-external-feasibility.md, cf577ae): the held Good 2017 files carry only the well-mixed state, so the strict (clade-aware state 2) count can be applied as written in 3 of 12 populations (935 of 5,496); no Day-side band is reachable from held material. Owner: approve fetching (1) Good 2017 clade-aware HMM state timecourses for the 9 clade populations from LTEE-metagenomic data_files/ and (2) re-placing the Z23105291 text and xlsx (bib-day.md l.55-56), given the corpus freeze (O-7)? Yes: one fetch task, then E6-analyst-2 pre-registers. No: row goes to `outside`."
 - id: F1a
-  blocker: none   # VERIFY-operator-1 2026-11-01
+  blocker: in-flight   # F1a-analyst-1 (fix pass on R4-F1a), 2026-11-26
   next: "Status stays `extracted`: independent review #24 raised MAJOR-1 (design near-circular; REVIEW-R4-F1a-independent.md line 5) and R4-F1a.md Review resolution (line 29) does not answer it. Next task: one fix pass answering MAJOR-1 and the dispersion MINOR, then status `reviewed`. External `pending` is case (b): no existing material supports a value (the check is an engine consistency test), so one check on F1a external after that."
 - id: B3
   blocker: owner   # B3-internal integrated 89b484e (EVOA-57), 2026-11-26
