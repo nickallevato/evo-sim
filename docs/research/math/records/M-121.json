@@ -1,0 +1,54 @@
+{
+  "id": "M-121",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-121.py",
+  "script_sha256": "b0ad500f66853ab0083373cfd9a82ecb7867048989031b7f79e5240ca53facef",
+  "object": "M-121",
+  "inputs": [
+    {
+      "name": "d wild chimps",
+      "value": 0.86,
+      "cite": "evo010@L14 (no source, no parameters key)"
+    },
+    {
+      "name": "d humanity 2026",
+      "value": 0.015,
+      "cite": "evo010@L14 (no source, no parameters key)"
+    },
+    {
+      "name": "d human, MITTENS window",
+      "value": 0.8,
+      "cite": "evo009@L54; record M-110"
+    },
+    {
+      "name": "d human, aDNA estimate",
+      "value": 0.45,
+      "cite": "parameters selection.turnover_d; records M-014, M-114"
+    }
+  ],
+  "values": {
+    "d_values_human_one_fortnight": [
+      0.8,
+      0.45,
+      0.015
+    ],
+    "ratio_0.86_over_0.015": 57.333,
+    "ratio_0.80_over_0.015": 53.333,
+    "ratio_0.45_over_0.015": 30,
+    "ratio_0.80_over_0.45": 1.7778,
+    "chart_held": false,
+    "chart_url": "https://voxday.net/wp-content/uploads/2026/11/image.png",
+    "source_for_0.86_or_0.015_in_held_text": false
+  },
+  "positions": {
+    "day": {
+      "reading": "d = 0.86 in wild chimps, 0.015 in 2026 humanity; at 0.015 selection has 'no medium to work through' and the genome degrades (since about 1800, Q89)",
+      "holds": "both values are stated verbatim and a chart is placed in the post; a falling d over time agrees with Day's earlier dating of the change (Q89)"
+    },
+    "critic": {
+      "reading": "no data, chart source or derivation for either value; three human d values in one fortnight (0.80, 0.45, 0.015)",
+      "holds": "neither value has a held source or parameters key and the chart image is not held; a d that changes over time is Camestros's premise (A4b q1), while MITTENS applies one d (0.80) over the whole window (M-110)"
+    }
+  },
+  "notes": "Lookup. 0.86 and 0.015 are quoted, not sourced; the chart is a link (not held). The 0.80 and 0.45 values are different quantities in time (window average vs aDNA estimate vs 2026 present), so the spread is a provenance question for parameters.yaml, not an arithmetic error. L26 ('no medium') sits in the Athos block (M-120 attribution note)."
+}

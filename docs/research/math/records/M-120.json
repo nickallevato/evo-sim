@@ -1,0 +1,65 @@
+{
+  "id": "M-120",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-120.py",
+  "script_sha256": "52018f9f675c26b2b7fd4e0c44aad0fb4b87d87f0d827f40b83e0a16db81d01f",
+  "object": "M-120",
+  "inputs": [
+    {
+      "name": "threshold",
+      "value": "|s| > 1/(2 N_e)",
+      "cite": "evo010@L20 (Athos output relayed, rule U)"
+    },
+    {
+      "name": "N_e values",
+      "value": [
+        10000,
+        10000000,
+        80000000
+      ],
+      "cite": "evo010@L20, L23"
+    },
+    {
+      "name": "N and N_e/N",
+      "value": {
+        "N": 8000000000.0,
+        "Ne_over_N": 0.01,
+        "typical": [
+          0.1,
+          0.3
+        ]
+      },
+      "cite": "evo010@L23"
+    },
+    {
+      "name": "d entering as s x d",
+      "value": true,
+      "cite": "record M-107"
+    }
+  ],
+  "values": {
+    "threshold_Ne_1e4": 5e-05,
+    "threshold_Ne_1e7": 5e-08,
+    "Ne_at_0.01_of_8e9": 80000000,
+    "threshold_Ne_8e7": 6.25e-09,
+    "printed_threshold": 6e-09,
+    "printed_gap_relative": 0.04,
+    "threshold_typical_Ne_over_N_0.1_0.3": [
+      6.25e-10,
+      2.0833e-10
+    ],
+    "visible_s_at_Ne_8e7_if_d_scales_s_d_0.015": 4.1667e-07,
+    "passage_attribution": "L18-L26 sit between 'I asked Claude Athos' (L17) and 'I also asked the Red Team' (L27): Athos output relayed by Day (rule U); the source map lists L22 as Day"
+  },
+  "positions": {
+    "day": {
+      "reading": "the threshold shrinks as N_e grows, so the models predict the strongest selection ever in modern humans, which is empirically wrong; selection works through differential survival, which d measures and neither Wright-Fisher nor Moran contains",
+      "holds": "the thresholds are correct as stated (5e-5, 5e-8, 6.25e-9 printed as ~6e-9); neither model has an N_e at which selection is impossible (L19)"
+    },
+    "critic": {
+      "reading": "|s| > 1/(2N_e) is a drift-versus-selection visibility criterion (ChatGPT, L29: N_e s << 1); it says which s drift does not swamp, not how large realised differentials are",
+      "holds": "Day's own L13 assigns N_e to drift and d to selection, the same split; if d enters as s x d (M-107) the condition reads |s d| > 1/(2N_e), i.e. 4.2e-7 at N_e = 8e7 and d = 0.015, so a small d is a small effective s inside the standard threshold"
+    }
+  },
+  "notes": "Model-choice. The arithmetic holds on both readings; the dispute is what the threshold measures. Whether s x d is the right way to carry d into the threshold is not shown in held text beyond the formulas M-107 cites. The passage is model output relayed by Day (rule U), as is ChatGPT's answer."
+}

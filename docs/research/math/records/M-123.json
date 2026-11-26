@@ -1,0 +1,213 @@
+{
+  "id": "M-123",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-123.py",
+  "script_sha256": "e5b1849687a8b4771d8202ccb8dde5bbd8c1666742c0988d165c714839a16c5b",
+  "object": "M-123",
+  "inputs": [
+    {
+      "name": "Good 2017 HMM fixed counts at 10K..60K, 12 populations",
+      "value": "l6_undone.json per_pop.hmm_fixed",
+      "cite": "research/checks/results/raw/l6_undone.json (sha256 92c3e20ca0bc55abb9203ff32060dc8f015131f776ad9f377806c3f4ee2179f1); R4-L6"
+    },
+    {
+      "name": "Day's >=95% snapshot table, five non-mutators",
+      "value": {
+        "Ara+2": [
+          19,
+          25,
+          31,
+          45,
+          55,
+          64
+        ],
+        "Ara+4": [
+          4,
+          31,
+          36,
+          38,
+          28,
+          68
+        ],
+        "Ara+5": [
+          16,
+          13,
+          38,
+          34,
+          14,
+          0
+        ],
+        "Ara-5": [
+          9,
+          16,
+          36,
+          7,
+          63,
+          60
+        ],
+        "Ara-6": [
+          15,
+          22,
+          26,
+          24,
+          24,
+          35
+        ]
+      },
+      "cite": "Z23003785 s4.1 via l6_ltee_undone.py"
+    },
+    {
+      "name": "mutator populations",
+      "value": [
+        "Ara+3",
+        "Ara+6",
+        "Ara-1",
+        "Ara-2",
+        "Ara-3",
+        "Ara-4"
+      ],
+      "cite": "Tenaillon 2016 (quotes-literature)"
+    }
+  ],
+  "values": {
+    "days_spreadsheets_held": false,
+    "hmm_increments_per_10k": {
+      "Ara+1": [
+        9,
+        19,
+        24,
+        0,
+        20,
+        29
+      ],
+      "Ara+2": [
+        17,
+        8,
+        6,
+        17,
+        9,
+        9
+      ],
+      "Ara+3": [
+        146,
+        399,
+        256,
+        428,
+        18,
+        369
+      ],
+      "Ara+4": [
+        4,
+        28,
+        5,
+        6,
+        10,
+        20
+      ],
+      "Ara+5": [
+        12,
+        1,
+        0,
+        1,
+        0
+      ],
+      "Ara+6": [
+        108,
+        961,
+        480,
+        49,
+        7,
+        61
+      ],
+      "Ara-1": [
+        13,
+        25,
+        220,
+        5,
+        5,
+        1
+      ],
+      "Ara-2": [
+        66,
+        5,
+        37,
+        510,
+        321,
+        38
+      ],
+      "Ara-3": [
+        16,
+        11,
+        2,
+        18,
+        467,
+        233
+      ],
+      "Ara-4": [
+        165,
+        250,
+        276,
+        114,
+        58,
+        16
+      ],
+      "Ara-5": [
+        1,
+        2,
+        2,
+        4,
+        68,
+        10
+      ],
+      "Ara-6": [
+        15,
+        9,
+        3,
+        1,
+        0,
+        29
+      ]
+    },
+    "hmm_slowing_after_30k": [
+      "Ara+1",
+      "Ara+4",
+      "Ara+5",
+      "Ara+6",
+      "Ara-1",
+      "Ara-4"
+    ],
+    "hmm_pooled_nonmutators_per_pop_interval": [
+      9.1667,
+      13.7059
+    ],
+    "hmm_pooled_mutators_per_pop_interval": [
+      190.889,
+      151.0
+    ],
+    "day_table_net_per_pop_interval_10k30k_vs_30k60k": [
+      10.4,
+      4.0
+    ],
+    "day_table_without_ara+5": [
+      10.25,
+      8.1667
+    ],
+    "hmm_same_five": [
+      6.4,
+      13.1429
+    ],
+    "literature_reports_adaptation_slowing": true,
+    "literature_reports_total_fixation_rate_slowing": false
+  },
+  "positions": {
+    "day": {
+      "reading": "the LTEE fixation rate falls over time, each later fixation gains less, and the literature does not say so",
+      "holds": "on Day's own >=95% table the net rate falls (10.4 -> 4.0 per population-interval; 10.25 -> 8.17 without Ara+5's 0); on Good's HMM, half the populations slow, and the six mutators pooled slow (190.9 -> 151.0); a falling beneficial share is in Tenaillon 2016"
+    },
+    "critic": {
+      "reading": "a slowdown is not shown for fixations as called by the data's authors, and the literature reports the related facts",
+      "holds": "Good's HMM counts for the same five populations rise (6.4 -> 13.1) and the six non-mutators pooled rise (9.17 -> 13.71); Barrick 2009 and Tenaillon 2016 report decelerating adaptation and a declining beneficial fraction, with near-constant genomic change, so the slowdown of adaptation is in the literature"
+    }
+  },
+  "notes": "Lookup on held data. The direction depends on the counting rule (>=95% snapshot vs HMM fixed call), the definitional split R4-L6 put on the record, and on mutator status. 'Missing from the literature' fails for the adaptation reading (Barrick, Tenaillon); for the total-fixation reading, the held literature reports a near-constant rate instead. Day's own spreadsheets are not named or held. Rate vs window for MITTENS's G_f is M-115 (cited, not recomputed)."
+}

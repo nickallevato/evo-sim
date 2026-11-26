@@ -1,0 +1,50 @@
+{
+  "id": "M-119",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-119.py",
+  "script_sha256": "7bd429eb81689c1b40ec53391d4f45a8f70d5410273a926764a4aef22e28235d",
+  "object": "M-119",
+  "inputs": [
+    {
+      "name": "dating formula",
+      "value": "T = D/(2 mu)",
+      "cite": "claim file B4d formal statement (Z22903977 s5)"
+    },
+    {
+      "name": "pedigree mu vs divergence-based mu",
+      "value": "about twofold lower",
+      "cite": "Keightley 2012 abstract (B4d)"
+    },
+    {
+      "name": "fossil-independent date",
+      "value": ">=7e6-8e6 y",
+      "cite": "parameters divergence.t_div_years.langergraber_2012"
+    },
+    {
+      "name": "C6 clock prediction",
+      "value": "1.2e-8 x 1.5e8 x 350",
+      "cite": "branch-C C6 q2; record M-302"
+    }
+  ],
+  "values": {
+    "date_scales_as_1_over_mu": true,
+    "date_factor_at_half_mu": 2,
+    "c6_clock_fixations": 630,
+    "uses_of_k_eq_mu_in_days_own_corpus": [
+      "clock calibration (Z22903977 s5)",
+      "fixation prediction (Z18525185 s5.3)"
+    ],
+    "k_eq_mu_long_run_identity": "M-111"
+  },
+  "positions": {
+    "day": {
+      "reading": "dates come from k = mu and are then cited as confirmation of it; the mutation rate was re-fitted to keep the date; no independent measurement enters (pgenetics@L16; B4d q1-q2)",
+      "holds": "every date from T = D/(2 mu) assumes k = mu per generation, whatever calibrates mu (B4d analysis); the twofold lower pedigree mu doubles the date, the direction Day describes (Keightley 2012); McCarthy (B4e) and Hossjer (B4f) state the same dependence"
+    },
+    "critic": {
+      "reading": "clock dates also rest on calibrations that do not come from k = mu; 'sole practical application' is absolute",
+      "holds": "a pedigree mu is measured without a date, and Langergraber 2012 dates the split at >= 7-8 My without fossil calibration, so the date is not derived from itself; Day's own Z18525185 applies k = mu to predict 630 fixations (C6 q2, M-302), a use other than calibration"
+    }
+  },
+  "notes": "Inference; the two positions answer different questions. Day's holds for 'is the date independent of the k = mu assumption' (no: every clock date uses it). The critics' holds for 'is the date derived from the identity and then cited for it' (not for a pedigree-mu date: mu is measured, not fitted). Whether agreement between fossil-calibrated and pedigree dates tests k = mu is B4d's open external question. The 'sole' wording meets a counter-example in Day's own corpus (C6). No verdict."
+}

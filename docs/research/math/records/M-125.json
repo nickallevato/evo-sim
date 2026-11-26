@@ -1,0 +1,75 @@
+{
+  "id": "M-125",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-125.py",
+  "script_sha256": "d50af72930a22e672df594e23b27d3eea3137ac11325e25d4e4d56dc1bb55da8",
+  "object": "M-125",
+  "inputs": [
+    {
+      "name": "relictation share of selection",
+      "value": "about half",
+      "cite": "smokescreen@L15 (no inputs; not held)"
+    },
+    {
+      "name": "selection + relictation share of divergence",
+      "value": "under 8%",
+      "cite": "smokescreen@L15"
+    },
+    {
+      "name": "D readings",
+      "value": {
+        "snv_35M": 35000000.0,
+        "snv_per_lineage": 17500000.0,
+        "bp_410M": 410000000.0
+      },
+      "cite": "parameters divergence.snv_differences_total.chimp_consortium_2005 (M-109); required_fixations.day_2026"
+    },
+    {
+      "name": "Day's selection counts (fixations)",
+      "value": {
+        "F_max_d0.80 (M-107)": 152.5,
+        "Haldane+d (M-802)": 487.5,
+        "Term 3 (M-808)": 6651.6
+      },
+      "cite": "records M-107, M-802, M-808"
+    }
+  ],
+  "values": {
+    "about_half_checkable_from_held_text": false,
+    "S_share_of_D_below": 0.05333,
+    "R_share_of_D_below": 0.02667,
+    "bounds": {
+      "snv_35M": {
+        "S_plus_R_below": 2800000.0,
+        "S_below": 1866667,
+        "R_below": 933333,
+        "remainder_above": 32200000.0
+      },
+      "snv_per_lineage_17.5M": {
+        "S_plus_R_below": 1400000.0,
+        "S_below": 933333,
+        "R_below": 466667,
+        "remainder_above": 16100000.0
+      },
+      "bp_410M": {
+        "S_plus_R_below": 32800000.0,
+        "S_below": 21866667,
+        "R_below": 10933333,
+        "remainder_above": 377200000.0
+      }
+    },
+    "largest_held_selection_count_x1.5_share_of_35M": 0.000285,
+    "S_at_8pct_edge_over_term3_count": 280.6
+  },
+  "positions": {
+    "day": {
+      "reading": "relictation is identified, proved and quantified; with selection it covers under 8% of the divergence, leaving tens of millions of base pairs no further mechanism will close",
+      "holds": "the 'under 8%' bound holds on every held selection count, by 2-3 orders of magnitude; the remainder is > 32.2M on the 35M SNV total, which is 'tens of millions'"
+    },
+    "critic": {
+      "reading": "no inputs or derivation in either post; the 8% depends on unstated counts and on D",
+      "holds": "'about half' has no held relictation count (E4 gives ratios only; M-112), the 8% is not reproduced by any held count, and the remainder is ~16M per lineage or > 377M on the 410M bp count; hitchhiking moves linked sites with a selected one, quoted here as a route only"
+    }
+  },
+  "notes": "Derivation from Day's own two figures. Bounds and remainders are exact; the relictation count itself is unreleased. Selection counts in the corpus are fixation events, the post counts base pairs, so the comparison is order-of-magnitude only."
+}
