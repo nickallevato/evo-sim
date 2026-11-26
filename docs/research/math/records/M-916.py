@@ -15,7 +15,8 @@ generations, 56 clone-pair fixations (s4.3), the seven clone-pair mutator counts
 10,000-33,000 and 3e7 (s8.2), 7 -> 63 (Ara-5) and 28 -> 68 (Ara+4) (s4.1 table), the 70-100-fold mutator range.
 The record asserts every number the D-41 item-3 review page states that is not in an earlier record:
 - LTEE neutral clock: 4.1e-4 x 50,000 = 20.5 of 56 = 36.6% ("more than a third"); 1/1,322 = 7.56e-4 per generation,
-  1.845x U_E ("about 1.8"); on the clone-pair basis 56/50,000 = 1.12e-3, 2.73x U_E (mixed basis in the post);
+  1.845x U_E ("about 1.8"; the clock is 54.2% of that rate); on the clone-pair basis 56/50,000 = 1.12e-3, 2.73x
+  U_E (mixed basis in the post);
 - human neutral count against 17.5M: 1.808 ("a factor of 1.8"); Day's 20,000-66,000 generations per neutral fixation
   are 2 x Ne at Ne 10,000-33,000 (the conditional mean fixation time is 4Ne, M-203);
 - steady state: 4Ne = 40,000-132,000 ("40,000-130,000") < 252,000; if the start were empty (M-201, Day's reading)
@@ -119,6 +120,7 @@ near(share, 0.36607, 1e-5); assert share > 1 / 3                       # "more t
 rate_meta = 1 / 1322
 near(rate_meta, 7.564e-4, 1e-7)                                         # "7.6x10^-4"
 near(rate_meta / U_E, 1.8450, 1e-4)                                     # "about 1.8"
+near(U_E / rate_meta, 0.5420, 1e-4)                                     # the clock is 54% of the metagenomic rate
 near(N_CP / G_CP / U_E, 2.7317, 1e-4)                                   # the clone-pair basis of the same comparison
 
 # ---- s4: human neutral count, Day's 4-13, the 4Ne transient ---------------------------------------------
