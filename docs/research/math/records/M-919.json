@@ -1,0 +1,104 @@
+{
+  "id": "M-919",
+  "date": "2026-11-26",
+  "script": "docs/research/math/records/M-919.py",
+  "script_sha256": "d3ca7df819d11479df125c87f703e86b94136936cdf211128c6b62fad7c39475",
+  "object": "M-919",
+  "variant_of": "M-212",
+  "inputs": [
+    {
+      "name": "T, G_f, required",
+      "value": [
+        252000,
+        1400,
+        205000000
+      ],
+      "cite": "gg1@01:28:09-01:28:37 (slide; Q91, Q14; M-711)"
+    },
+    {
+      "name": "mu, L diploid, L haploid",
+      "value": [
+        1.2e-08,
+        6400000000.0,
+        3200000000.0
+      ],
+      "cite": "gg1@01:51:08-01:51:32, 01:52:48 (M-213)"
+    },
+    {
+      "name": "de novo range",
+      "value": [
+        98,
+        206
+      ],
+      "cite": "gg1@01:53:22"
+    },
+    {
+      "name": "E. coli mu stated, measured; L",
+      "value": [
+        1e-11,
+        8.9e-11,
+        4600000.0
+      ],
+      "cite": "gg1@01:54:04; M-007"
+    },
+    {
+      "name": "observed SNV divergence (spoken)",
+      "value": [
+        35000000.0,
+        40000000.0
+      ],
+      "cite": "gg1@01:57:02"
+    }
+  ],
+  "values": {
+    "slide_short": 204999820.0,
+    "kimura_limit_2N_u": 1.0,
+    "de_novo_mean": 152.0,
+    "orders_of_magnitude": {
+      "day_rate_per_gen": 0.000714286,
+      "at_76.8": 107520,
+      "at_38.4": 53760
+    },
+    "match_38M": {
+      "first_estimate_move": 0.0334,
+      "snv_over_haploid": [
+        1.808,
+        2.067
+      ]
+    },
+    "bacteria": {
+      "said_4e-5_move": -0.1304,
+      "inverse_4e-5": 25000,
+      "said_22000_move": 0.012,
+      "r1_to_measured": -0.8891
+    },
+    "gg11": {
+      "per_gen_total": 406.746,
+      "over_76.8": 5.296,
+      "rate_diploid": 6.355e-08,
+      "said_rate_move": -0.0402,
+      "rate_haploid": 1.271e-07,
+      "per_gen_per_lineage": 813.492,
+      "per_lineage_over_76.8": 10.592,
+      "per_lineage_over_38.4": 21.185,
+      "per_lineage_rate_haploid": 2.542e-07,
+      "r1_move": 1.0
+    },
+    "quotes": {
+      "map_rows": 64,
+      "on_file": 15,
+      "on_file_exact_in_fetch": 10
+    }
+  },
+  "positions": {
+    "day": {
+      "reading": "the 205M is per human lineage (slide gg1@01:26:49; Q14) and G_f is a parallel throughput (slide gg1@01:28:09; Q125)",
+      "holds": "the factor of two and GG-11's 407 treat 205M as a two-lineage total: per lineage 813.5 per generation, 10.6x 76.8 and 21.2x the haploid SNV 38.4; the 38M match is on the diploid 76.8, and on 38.4 the SNV count is 19.35M, 1.81-2.07x short of the 35-40M he cites; the E. coli 22,000 is 2,439 at the measured mu"
+    },
+    "critic": {
+      "reading": "neutral supply is the null: k = mu, 2 T mu L, with E. coli's supply 93,659x below the human genome's (M-007)",
+      "holds": "k = mu reproduces exactly (2N mu x 2s/(4Ns) = mu); 76.8 per generation is 107,520x the slide's 180 per 252,000 (53,760x at 38.4); 1,400 is E. coli's throughput and 2,439 its neutral clock; the slide's 205M is bases, not events (M-011), so 407 or 813 per generation is not a point-mutation rate"
+    }
+  },
+  "notes": "Rationals for the Taylor identity; floats elsewhere. The Kimura limit is checked numerically at s = 1e-9 and 1e-11 for N = 1e3-1e5. The ancestral-polymorphism remainder (about 15M SNVs) is B5c's R4 B4a and is not recomputed. The fetched caption track differs from the 2026-10-14 copy in recogniser wording only."
+}

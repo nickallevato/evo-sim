@@ -46,6 +46,12 @@ objects:
   - jg1@04:31
   - jg1c#AbOZjfoynVk
   - jg1c#AbOED9OvX2Z
+  - gg1@01:34:08
+  - gg1@01:34:30
+  - gg1@01:37:16
+  - gg1@01:39:52
+  - gg1@01:53:50
+  - gg1@01:54:43
   positions:
     day: 'Standing variation shortens only the wait for a beneficial allele, not the fixation time; admits the LTEE is a worst case for mutation supply; cites Lynch on prokaryote efficiency. As stated this fails: a standing start (p0 0.01-0.5) cuts sweep time 27-50% at Ne = 1e4, capped at 2x for p0 <= 0.5 (M-103 record), which is small against the shortfalls'
     critic: Clonal start and no recombination make the comparison apples-to-oranges (Matthews, in vid02); Day replies to a position critics say they do not hold (that humans fixate faster than bacteria)
@@ -112,6 +118,12 @@ objects:
   - evo008
   - evo009
   - kt@L41
+  - gg1@01:53:22
+  - gg1@01:53:30
+  - gg1@01:57:02
+  - gg1@01:57:50
+  - gg1@02:01:51
+  - gg1@02:02:07
   positions:
     day: A total mutation rate must be compared with the total divergence, not the SNP fraction (98.91% omitted); Griffiths was right to flag it
     critic: 'Hancock: the fixation equation does not distinguish mutation types; swapping rate mid-calculation is a Day-side point against Hancock''s whiteboard, and Hancock disputes it'
@@ -140,6 +152,7 @@ objects:
   - evo008
   - jg1@01:15
   - jg1@01:40
+  - gg1@01:30:13
   positions:
     day: d = 0.80 is the weighted time-average correction for overlap; critics should have used 201,600
     critic: Hancock used the number WD presented; Wright-Fisher/Moran-with-N_e already account for overlap
@@ -217,6 +230,10 @@ objects:
   - jg1c#AbQQxek5pWp
   - jg1c#AbrO2q2aErg
   - B2026-09-30@p7
+  - gg1@01:32:12
+  - gg1@01:32:47
+  - gg1@01:40:27
+  - gg1@01:41:58
   positions:
     day: MITTENS is a rate calculation, not a latency calculation; anticipated in the book
     critic: 'Hancock: the arithmetic assumes each mutation arises and fixes before the next; the LTEE regime may not transfer (M-103)'
@@ -442,7 +459,7 @@ objects:
   kind: model-choice
   statement: 'Which population size enters neutral substitution: supply 2N mu uses census N; fixation probability is 1/(2Ne) (Day Feb 2026: k = mu N/Ne), vs 1/(2N) in the same N so that k = mu (critics; Day concession 2026-08-27, keruru retraction, Maruyama invariance in Day''s own Hard Limits); includes 2N x 1/(2Ne) = N/Ne > 1 (Matev) and 8e9/1e4 = 800,000 (Grok exchange)'
   used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c, ROOT-DE]
-  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39, ps1@s2.1, jb1@p13]
+  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4, mc2@L7, mc2c#375422209, mc2c#375855613, mc2c#345248135, kt@L39, ps1@s2.1, jb1@p13, gg1@01:43:58, gg1@01:45:35, gg1@01:48:50]
   positions: {day: 'Original: N/Ne enters k; later concession: no Ne on either side of the Kimura identity; 3rd edition needed', critic: 'The cancellation holds: supply and fixation share the same N; N/Ne > 1 is not a probability; neutral mutations fix at the mutation rate (Hancock, Mansfield, DarwinZDF42, Paul King, keruru, Kimura 1962)'}
   resolution: derivation
   status: resolved
@@ -469,7 +486,7 @@ objects:
   kind: formula
   statement: 'Expected neutral fixations on the human lineage as the product of a per-generation mutation count, a fixation probability and generations: McCarthy 450e9/20,000 = 22.5M (20M time-adjusted), Mansfield 1 per generation, Hancock 76.8 per generation, Nesslig20 2 x 75 x 252,000 = 37.8M, justatest90 38.4 x 252,000 = 9.7M, relayed 7.2M, Hossjer d x mu 7.6M, Day corrected 8.25'
   used_by: [B3e, B5a, B5b, B5c, B5d, B5e, B5f, B5h]
-  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310, mc2@L9, mc2@L13-L15, mc2@L16, mc2@L18, mc2c#375371851, mc2c#345248135, kt@L39, kt@L41, kt@L115, ps1@s2.2]
+  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2, mc1@L51, mc1@L53, mc1@L54, mc1c#337116873, mc2c#340149310, mc2@L9, mc2@L13-L15, mc2@L16, mc2@L18, mc2c#375371851, mc2c#345248135, kt@L39, kt@L41, kt@L115, ps1@s2.2, gg1@01:45:35, gg1@01:51:08, gg1@01:51:32, gg1@01:52:18, gg1@01:55:25, gg1@01:56:42, gg1@01:58:42, gg1@02:02:07, gg1@02:04:14]
   positions: {day: 'Mutations are not fixations: 30 cannot fixate per generation; the corrected calculation gives 8.25 fixations against 20 million required', critic: 'Neutral mutations fix at the rate they arise, so supply x 1/(2N) = mu per site per generation gives millions over 252,000 generations, within a factor of 2 of the 17.5-20 million required'}
   resolution: derivation
   status: resolved
@@ -478,7 +495,7 @@ objects:
   kind: identity
   statement: 'Genome-size and lineage-count factors in a neutral-count formula: haploid 3.2e9 vs diploid 6.4e9 (Hancock correction), halving 152 to 76, x 2 for two lineages (38M, 37.8M), Day 2019 15M per lineage x 2 = 30M'
   used_by: [B5c, B5e, B5f, B6b]
-  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2, mc2@L19, kt@L41, ps1@s2.2, ps1@s3.5]
+  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2, mc2@L19, kt@L41, ps1@s2.2, ps1@s3.5, gg1@01:51:08, gg1@01:51:32, gg1@01:52:48, gg1@01:53:22, gg1@01:53:30, gg1@01:56:42, gg1@01:57:02, gg1@01:57:50, gg1@01:58:12]
   positions: {day: 'Day counts each lineage separately: 15M fixed in humans and 15M in chimps', critic: 'Count the haploid genome and the number of lineages explicitly; a flag that drops a factor is wrong (rule: write the formula in full)'}
   resolution: derivation
   status: resolved
@@ -550,7 +567,7 @@ objects:
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
   used_by: [B, B5, B5j, D2k, D8, D13, G4, ROOT, ROOT-M, ROOT-B, ROOT-EP, ROOT-PG, FM8b]
-  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab, jb1@p1, jb1@p17, jb1@p19, jg1@00:10, jg1@01:52, jg1c#AbPL4ON-POa, jg1c#AbQ_ZrVnAua, B2026-09-30@title]
+  sources: [B#q1, B5#q2, B5j#q3, FM8b#q1, mc2@L3, mc2@L7, mc2@L11, mc2@L20, mc2c#338945912, mc2c#339661243, mc2c#340154038, mc2c#344346806, mc2c#344345706, mc2c#375243661, kt@title, kt@L1, kt@L75, kt@L115, ktc#pdta6e3, ktc#pdtdju7, ktc#pdtfksi, ktc#pdtfyab, jb1@p1, jb1@p17, jb1@p19, jg1@00:10, jg1@01:52, jg1c#AbPL4ON-POa, jg1c#AbQ_ZrVnAua, B2026-09-30@title, gg1@title, gg1@01:28:48, gg1@01:29:10, gg1@01:33:32, gg1@01:36:48, gg1@01:39:35, gg1@01:40:03, gg1@01:41:03, gg1@02:02:18, gg1@02:02:29, gg1@02:03:19, gg1@02:03:53, gg1@02:04:59]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
   status: resolved
@@ -1189,6 +1206,18 @@ objects:
   - jg1c#AbOED9OvX2Z
   - jg1c#AbrO2q2aErg
   - B2026-09-30@p7
+  - gg1@01:28:09
+  - gg1@01:32:12
+  - gg1@01:32:47
+  - gg1@01:34:08
+  - gg1@01:34:30
+  - gg1@01:35:11
+  - gg1@01:37:16
+  - gg1@01:38:43
+  - gg1@01:39:52
+  - gg1@01:40:27
+  - gg1@01:42:05
+  - gg1@02:04:14
   positions:
     day: 'MITTENS 3.0 includes parallel fixation; G_f is a measured throughput; Appendix A argues fixation must be sequential from the Barrier, which Day says is worded badly but correct'
     critic: "The calculation divides by a per-allele time and so assumes each mutation fixes before the next; evolution acts on populations in parallel; Appendix A's inference from p^n to sequential fixation is a non-sequitur"
@@ -1265,6 +1294,10 @@ objects:
   - jg1@01:40
   - jg1@01:52
   - jg1c#AbPL4ON-POa
+  - gg1@01:27:24
+  - gg1@01:28:09
+  - gg1@01:28:30
+  - gg1@02:03:19
   positions:
     day: '180 total fixations is all there is time for at the fastest rate ever observed, against 205 million required'
     critic: 'The arithmetic reproduces exactly; the fastest-rate claim is not true of the point-mutator LTEE populations (43-183 gen/fix), and dividing by a per-lineage latency is the serial reading (see M-706)'
@@ -1294,6 +1327,10 @@ objects:
   - mc1@L61
   - mc1@L63
   - mc2c#339603943
+  - gg1@01:28:43
+  - gg1@01:36:11
+  - gg1@01:41:58
+  - gg1@01:42:05
   positions:
     day: 'G_f is a measured total throughput of the LTEE, so mutation supply, selection and parallelism are inside the number'
     critic: 'The formula constrains an observed rate without saying which process produced it, so it is not itself a test of selection; the objection restates the supply objection (M-103)'
@@ -1625,6 +1662,9 @@ objects:
   - jg1@00:20
   - jg1@01:15
   - jg1@01:40
+  - gg1@01:28:30
+  - gg1@01:28:43
+  - gg1@01:29:50
   positions:
     day: Formula is a rate calculation with five stated inputs; all versions after 2019 reconcile; dropping d in 3.0 makes the shortfall smaller than with d (2.39e6 with d = 0.45), so the drop is conservative
     critic: The formula is arithmetic on inputs whose transfer is the dispute (M-103, M-713); the 2019 table does not reconcile (125, 562 against 281.25)
@@ -1674,6 +1714,8 @@ objects:
   - kt@L65
   - jg1@01:26
   - jg1c#AbQQxek5pWp
+  - gg1@01:27:24
+  - gg1@01:36:39
   positions:
     day: Cites the LTEE for its fixation rate and updates the figure as the data improve (1,600, 1,322, 1,587)
     critic: The 1,400 matches neither the 1,322 nor the 1,587 count and the 1,600 citation drifts between papers; the version drift is a provenance issue, not an arithmetic one
@@ -1764,6 +1806,11 @@ objects:
   - kt@L41
   - kt@L43
   - kt@L115
+  - gg1@01:53:50
+  - gg1@01:54:04
+  - gg1@01:54:24
+  - gg1@01:54:31
+  - gg1@01:54:43
   positions:
     day: The formula uses an observed rate so supply is inside G_f; the LTEE per-genome supply is 4.1e-4 as in Day's own s4.3
     critic: The expected fixation rate must be set by genome size and mutation rate; the supply ratio is 94,000x and counts as an artifact of the headline
@@ -1866,6 +1913,12 @@ objects:
   - PS-03
   - PS-05
   - ps1@s3.1
+  - gg1@01:58:12
+  - gg1@01:58:58
+  - gg1@01:59:18
+  - gg1@01:59:40
+  - gg1@02:01:51
+  - gg1@02:02:07
   positions:
     day: Structural base-pair differences count as fixation-equivalents for the required count; the SNV-only variant is given as a concession
     critic: Bases affected by a rearrangement are not separate mutation events, so the 205M overstates the required events by about 10x
@@ -1883,6 +1936,10 @@ objects:
   - A3a#q1
   - A3d#q1
   - mc2c#340102853
+  - gg1@01:37:32
+  - gg1@01:37:59
+  - gg1@01:58:58
+  - gg1@02:00:51
   positions:
     day: Required count apportioned symmetrically to the human lineage
     critic: Achievable should be doubled (2 x 180 = 360) if the required count is the total divergence
@@ -1904,6 +1961,7 @@ objects:
   - A4f#q1
   - A4f#q2
   - A4f#q3
+  - gg1@01:30:13
   positions:
     day: d is defined, derived in Ch.13 and App. A, and dimensionless; Hancock's cancellation uses a d that is not Day's
     critic: No equivalent term exists in population genetics; for per-generation s the correction is 1
@@ -2054,7 +2112,7 @@ objects:
   statement: "McCarthy MC-1 / MC-1c arithmetic not held elsewhere: the Day text he quotes (100 x 1e4 = 1e6 per generation = 50,000/y at g = 20 y; need 2e7/9e6 = 2.22/y, 1 in 22,727 ('23,000'), 0.0044% ('0.004%'), against supply x p_fix = 2.5/y, 12.5% above the need; two lineages 10^-172,041,200, printed 10^-172,000,000); the RF-7 lag (9e6/25 - 4 x 1e4 = 320,000 generations = 8e6 y, x 50,000/y / 20,000 = 2e7 as written) mixes a 20 y supply with a 25 y lag, single basis 16.0M (25 y, -20%) or 20.5M (20 y, +2.5%), ledger under R1; RF-6 writes 4e11/20,000 as 35M (true 2e7, printed +75%), ratio to F_max = 180 is 111,111 not 194,444, no flip; MC-1's 22.5M is +12.5% over 20M, and 5.6M (5.0M lag-adjusted) if only a quarter of new mutations are neutral (Day's '3x more harmful'); E. coli 1 - 4.1e-4 = 99.959%, human/E. coli per genome 146,341-243,902 at 60-100 de novo; Day's thread 4 x 1e4 x 25 = 1e6 y and 410e6/6e6 = 68.3"
   variant_of: M-212
   used_by: [B5a, B1b, A5, G4]
-  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310, mc2@L9, mc2@L16, mc2c#375371851, jb1@p9, jb1@p10, jg1c#AbLX0qTkveZ, jg1c#AbPZ3OnnqSO, jg1c#AbTSnGMwWgS]
+  sources: [mc1@L35, mc1@L36, mc1@L42, mc1@L54, mc1@L61, mc1c#337035111, mc1c#337074301, mc1c#337116873, mc1c#337302874, mc2c#340149310, mc2@L9, mc2@L16, mc2c#375371851, jb1@p9, jb1@p10, jg1c#AbLX0qTkveZ, jg1c#AbPZ3OnnqSO, jg1c#AbTSnGMwWgS, gg1@01:55:25]
   positions:
     day: "The count leaves out the fixation time and treats every mutation as neutral; with three harmful mutations per neutral one the expectation is a quarter (5.6M); 1e6 y per neutral fixation at 4Ne = 40,000 and 25 y"
     critic: "On Day's quoted inputs the neutral expectation meets the requirement (22.5M, 16-20.5M lag-adjusted); Day's own quoted need (1 in 22,727) is below his p_fix (1 in 20,000); RF-6's 35M is a slip for 20M and '>> 180' stands"
@@ -2078,7 +2136,7 @@ objects:
   statement: "KITTENS (Sparky_6_4, RE-2) arithmetic not held elsewhere: LTEE neutral clock 4.1e-4 x 50,000 = 20.5 of 56 (36.6%), 1/1,322 = 1.85 x U_E (clone-pair basis 2.73); human neutral 9.68M is 1.81x short of 17.5M; Day's s8.2 20,000-66,000 generations per neutral fixation are 2Ne (4-13 = 252,000/66,000 and /20,000); 4Ne = 40,000-132,000 < 252,000, empty-start count 38.4 x (252,000 - 4Ne) = 8.14M-4.61M (2.15x-3.80x short); LTEE 4 x 3e7 = 1.2e8; both lineages 2 x 38.4 x 252,000 = 19.35M against 35M; mutators: all seven 8.53x, Ara-2 out 12.65x, KITTENS's four lines 966.5/56.0 = 17.26x (51.7 gen/fix), exponents a = 0.4655 / 0.551 / 0.6185, scaled achievable 39,285 / 104,601 / 226,610 and SNV-only shortfall 445x / 167x / 77x (205M: 5,218x / 1,960x / 905x); neutral mutator prediction 4.1e-4 x 70-100 x 50,000 = 1,435-2,050 against 803-1,153 observed; table jumps 56 and 40 against 4.1 per 10,000 generations (13.7x, 9.8x); 1,359/893 = 1.52; 35e6 + 2 x 187e6 = 409e6; on event counts 21.05M / 24.14M per lineage the '12 times' is 9.74 / 8.49 (-17% / -28%) and RE-08's parity 0.85 / 0.74"
   variant_of: M-007
   used_by: [A5b, A5c, A5d, E5, E7, A3x, B1]
-  sources: [RE-08, RE-09, RE-10, RE-11, kt@L7, kt@L35, kt@L39, kt@L41, kt@L43, kt@L45, kt@L49, kt@L55, kt@L59, kt@L63, kt@L65, kt@L69]
+  sources: [RE-08, RE-09, RE-10, RE-11, kt@L7, kt@L35, kt@L39, kt@L41, kt@L43, kt@L45, kt@L49, kt@L55, kt@L59, kt@L63, kt@L65, kt@L69, gg1@01:53:50, gg1@01:54:31, gg1@01:54:43]
   positions:
     day: "Every mutator subset is sublinear (a = 0.47-0.62): on KITTENS's own four lines the SNV-only gap is 77x, not parity; KITTENS's lag argument assumes 50,000 mutator generations; the SNV-only count understates the events by 17-28%"
     critic: "The decomposition reproduces (M-007); 37-54% of LTEE throughput is the mutation clock, which scales with U by the paper's own s4.3; the human neutral count is 9.7M (1.8x short), not 4-13; the table jumps are 10-14x the per-lineage supply, so they are lineage turnover, not fixations"
@@ -2090,7 +2148,7 @@ objects:
   statement: "Nesslig20 PS-1 (Peaceful Science 18094, post 1 v11) arithmetic not held elsewhere: lottery n_50 = 69,314,717.7 (bound 69,314,718), P(2e8) 0.8647, P(4e8) 0.9817, P(any of 7e7) 0.5034 against the printed 0.51; P_fix 0.05% at Ne 1,000; R1 of PS-01: 75 per haploid genome = 2.34e-8 per site, pedigree 1.1-1.5e-8 gives 35.2-48.0 and 17.74M-24.19M both lineages (-53% to -36% against 37.8M; zygote reading 18.9M, -50%; under 25% only at >= 1.758e-8), 31-62M = 1-2% of 3.1e9, 19.35M is 37.6% below 31M; Yoo ancestral Ne 132,000-198,000 gives 4Ne 528,000-792,000 (2.1x-3.1x the window) and an empty-start delivered share 0.0190-0.0017 (0.8413 at 10,000); conditional fixation-time CDF median 3.4788Ne, F(4Ne) 0.6063, 95/99/99.9% at 8.1878/11.4075/16.0127 Ne, mean 4Ne; theta gloss (2Ne mu)(2Ne) = 4Ne^2 mu, mean sojourn of a new mutation 2 H_(2Ne-1) = 20.96 generations at Ne 10,000, not 2Ne; toy alignment 1/60, 9/60, 10/60; 410e6/2 = 205e6; LTEE 20,000/45 = 444.4 (clone count), 13,500/593 = 22.77, 1/444 = 5.49 U_E; 1e-8 x 3.2e9 = 32; s3.5 printed 12.6e6/0.33 = 38.18M (+1.0%) for the exact 37.8M"
   variant_of: M-212
   used_by: [B5e, B5, B1, B1a, A3x, G2b, A5c]
-  sources: [PS-01, PS-02, PS-03, PS-05, ps1@s1.1, ps1@s2.1, ps1@s2.2, ps1@s3.1, ps1@s3.3, ps1@s3.4, ps1@s3.5]
+  sources: [PS-01, PS-02, PS-03, PS-05, ps1@s1.1, ps1@s2.1, ps1@s2.2, ps1@s3.1, ps1@s3.3, ps1@s3.4, ps1@s3.5, gg1@01:55:25]
   positions:
     day: "PS-01's 75 per haploid genome is twice the pedigree count (38.4), so PS-02's 37.8M falls 36-53% and the match with 31-62M needs the ancestral term the post does not use; at the ancestral Ne the post quotes, an empty start delivers 0.2-1.9% of mu T; 444 is a clone count, not a fixation rate; the sharpshooter point does not touch a count of any 205M fixations"
     critic: "The k = mu algebra, the fixation-time quantiles (F(4Ne) = 0.606, the same 0.61 as Day's Hard Limits fill) and the base-against-event toy reproduce; Day's own '1,000,000 years per neutral fixation' is the serial reading the post answers; point-mutator LTEE clones accumulate faster than 1,400 generations per mutation"
@@ -2102,10 +2160,22 @@ objects:
   statement: "Ghijselen JG-1 arithmetic not held elsewhere: the per-fixation time two ways, g x G_f = 25 x 1,400 = 35,000 y and 6.3e6/180 = 35,000 y (T / F_max, one quantity: the mean spacing on the aggregate reading, one allele's time on the serial one); marathon 60,000 x 4 h = 240,000 h = 10,000 d = 27.38 y ('27'); the marathon as M-706's overlap case at a constructed bound (all runners in one 4 h window): 0.24 s per finisher at the line, mean concurrency 60,000, serial count 1 against aggregate 60,000, so the analogy's 4 h is a per-runner latency and T/G_f's analogue is the line time; comment's logarithm: 2e6/200 = 1e4 and log10 1e4 = 4, but the exponent reading keeps the ratio 1e4 (n ln p) and the concurrent-completion reading gives ln(2e6)/ln(200) = 2.738 (H_k ratio 2.566), so the '4 times' reproduces under neither (correcting it to 2.738 is -31.5% on the charitable one); neutral 4Ne = 40,000 > 10,000"
   variant_of: M-706
   used_by: [G2a, G2b]
-  sources: [jg1@02:33, jg1@03:04, jg1@03:32, jg1@04:09, jg1c#AbLX0qTkveZ, jg1c#AbQMQjXiOHQ, jg1c#AbQQxek5pWp, jg1c#AbOZjfoynVk, jg1c#AbPZ3OnnqSO, jg1c#AbrO2q2aErg, B2026-09-30@p6]
+  sources: [jg1@02:33, jg1@03:04, jg1@03:32, jg1@04:09, jg1c#AbLX0qTkveZ, jg1c#AbQMQjXiOHQ, jg1c#AbQQxek5pWp, jg1c#AbOZjfoynVk, jg1c#AbPZ3OnnqSO, jg1c#AbrO2q2aErg, B2026-09-30@p6, gg1@01:32:12]
   positions:
     day: "35,000 years is g G_f, the mean spacing of an observed throughput, not the time one allele takes; the marathon's analogue of G_f is the time per finisher at the line, not 4 h per runner, so the analogy misses T/G_f (M-706); the comment's '4 times' reproduces under no reading"
     critic: "On the serial reading the book's Appendix A gives the 180 (G2g), the marathon is exact (n t against t, a factor of n); concurrent events finish in time growing as ln k, not k (2.74x from 200 to 2e6)"
   resolution: derivation
   status: resolved
   resolved_by: docs/research/math/records/M-918.json
+- id: M-919
+  kind: identity
+  statement: "Gutsick Gibbon + Hancock GG-1 window 1 (t=01:28-02:05) arithmetic not held elsewhere: the slide's 205e6 - 180 = 204,999,820; Kimura's u(1/2N) -> 1/(2N) as s -> 0 and 2N mu x 2s/(4Ns) = mu; (98 + 206)/2 = 152; 'orders of magnitude' 76.8 / (180/252,000) = 107,520 (53,760 at 38.4); first estimate 40M is +3.3% over 38,707,200, and on the haploid SNV 19,353,600 the cited 35-40M SNVs are 1.81-2.07x; E. coli '4e-5' is -13% on 4.6e-5, and the measured mu moves the stated 22,000 to 2,439 (-88.9%) while 4.1e-4 < 1 < 38.4; GG-11 205e6/(2 x 252,000) = 406.75 ('407'), /76.8 = 5.30, /6.4e9 = 6.355e-8 ('6.1e-8', -4.0%), /3.2e9 = 1.271e-7; on Day's per-lineage 205M 813.5 per generation, 10.6x 76.8, 21.2x 38.4, 2.542e-7 per haploid site (+100%)"
+  variant_of: M-212
+  used_by: [B5c, A3d, A3x, A5c, B5]
+  sources: [gg1@01:28:09, gg1@01:43:58, gg1@01:52:18, gg1@01:53:22, gg1@01:54:24, gg1@01:54:31, gg1@01:57:02, gg1@02:00:51, gg1@02:01:07, gg1@02:01:20, gg1@02:01:58]
+  positions:
+    day: "The 205M is per human lineage (slide gg1@01:26:49; Q14), so GG-11 needs 813.5 per generation, 10.6x the 76.8 and 21.2x the haploid SNV 38.4; the 38M match rests on the diploid 76.8, and on 38.4 the post-split SNV count is 19.35M, 1.81-2.07x short of the 35-40M cited; at the measured E. coli mu the neutral clock is 2,439 generations, not 22,000"
+    critic: "k = mu reproduces exactly; human neutral supply is 107,520x the slide's per-generation rate (53,760x at 38.4); 205M is bases, not events (M-011), so neither 407 nor 813 is a point-mutation rate; the SNV remainder is ancestral polymorphism (B5c R4 B4a), which the null leaves out"
+  resolution: derivation
+  status: resolved
+  resolved_by: docs/research/math/records/M-919.json
