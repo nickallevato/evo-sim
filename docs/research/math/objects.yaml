@@ -63,7 +63,7 @@ objects:
 - id: M-106
   kind: formula
   statement: 'Throughput ceiling: total selection budget sum(s_i) <= s_max over concurrent sweeps, the mean s-bar cancels and the sum is n x s-bar, so the shape of the distribution of fitness effects does not matter'
-  used_by: [F1, G2h, D4b]
+  used_by: [F1, G2h, D4b, H, H5, H8]
   sources:
   - evo007
   positions:
@@ -324,7 +324,7 @@ objects:
 - id: M-203
   kind: parameter
   statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
-  used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5]
+  used_by: [B1, B1a, B1b, B1d, B5f, B7b, E4, F, F3, F5, H9]
   sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1]
   positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
   resolution: lookup
@@ -412,7 +412,7 @@ objects:
 - id: M-214
   kind: empirical
   statement: 'Bergeron et al. 2023: pedigree mutation rates vs fossil-calibrated substitution rates in 55 vertebrates differ by a median factor of 25 (R4 B3m: 25.4 from Table 9, n = 55)'
-  used_by: [B3d, B3m]
+  used_by: [B3d, B3m, H1]
   sources: [B3d#q2, B3m#q1]
   positions: {day: The identity is directly falsified by a median factor of 25, critic: 'The 25 is a ratio of two estimates with different calibrations (per-year vs per-generation, fossil dates), not a test of fixation probability; reproduces but proves what it measures only with the dating assumption'}
   resolution: data-check
@@ -420,7 +420,7 @@ objects:
 - id: M-215
   kind: formula
   statement: 'Human-chimp substitution rate vs pedigree mutation rate: Day k = 32.3 mu (Bergeron pedigree rate vs Yoo required count; reconstructs only from base-pair totals, 205M/252,000 over Bergeron mammal mean times 3.1e9 = 32.9, R4 B3); keruru: fossil-calibrated rate about twice the pedigree rate (~1.2e-8), unreconciled'
-  used_by: [B3, B3d, B4g]
+  used_by: [B3, B3d, B4g, H7]
   sources: [B3#q3, B3d#q1, B4g#q1]
   positions: {day: 'k = 32.3 mu, not mu', critic: The factor is ~2 once the calibration is consistent; 32.3 treats base-pair totals as events}
   resolution: data-check
@@ -436,7 +436,7 @@ objects:
 - id: M-217
   kind: formula
   statement: 'Clock recalibration with N/Ne: t_actual = t_clock x 2 / [(Nh/Ne,h) + (Nc/Ne,c)] (eq. 7); outputs: 6-7 Mya becomes 200-580 kya (most plausible 200-360), 6.5 Mya becomes 68 kya at census 600,000 (6.5e6/68e3 = 95.6x), later revised to 250 kya-1.3 Mya'
-  used_by: [B4, B4b, B4c]
+  used_by: [B4, B4b, B4c, H1]
   sources: [B4#q1, B4#q2, B4b#q1, B4b#q2, B4c#q1]
   positions: {day: The consensus date collapses once supply uses census N, critic: The N/Ne factor does not exist if supply and fixation use the same N (M-209); the recalibration depends on that}
   resolution: derivation
@@ -444,7 +444,7 @@ objects:
 - id: M-218
   kind: inference
   statement: 'Which terms of the MITTENS-style bound constrain total k and which only the adaptive rate: Day 05-07 retraction: Term 3 (~1e-12) limits the adaptive rate, total k governed by Terms 1 and 2'
-  used_by: [B4c]
+  used_by: [B4c, H1, H6, H8]
   sources: [B4c#q2]
   positions: {day: 'Retraction: output was misread as a constraint on total k', critic: Concedes the point; the total rate is governed by the neutral terms}
   resolution: derivation
@@ -476,7 +476,7 @@ objects:
 - id: M-222
   kind: inference
   statement: 'Extinction under unchecked drift: if drift could fix at the maximum neutral speed, selection is not operating, and 3x more harmful than neutral substitutions would make humans infertile and extinct within centuries'
-  used_by: [B9]
+  used_by: [B9, H10]
   sources: [B9#q1]
   positions: {day: 'Reductio: if drift changed the genome, deleterious accumulation would extinguish humans', critic: 'R4 B9 reading A: fitness halves in 338-3,457 years (Lynch 2016) but the premise (all selection off at once) is a counterfactual; the 3x ratio is an input'}
   resolution: derivation
@@ -865,7 +865,7 @@ objects:
 - id: M-604
   kind: empirical
   statement: 'Parallel sweep capacity under interference: does the active zone of intermediate-frequency alleles cap simultaneous sweeps at about 230 (Z18167588, not derived, worked backward from the constraint), or does R_int stay near 1 with free recombination (0.975 at 272 active loci, N = 1000, s = 0.01, soft selection) and fall with linkage (clonal 0.645 to 0.088; 1.5 M map 0.572); the F2 grid covers N = 1000 and soft selection; the Weissman and Barton asymptotes R/4-R/2 = 8.75-19 per generation at R = 35-38 M bound the interference leg only below adaptive shares of 13-27%'
-  used_by: [F2, Gc]
+  used_by: [F2, Gc, H9]
   sources:
   - F2#q1
   - F2#q2
@@ -1076,12 +1076,129 @@ objects:
 - id: M-713
   kind: inference
   statement: "F_max = t_div x d / (g_len x G_f) has no mutation rate, population size or selection coefficient term: it divides a time by an empirical generations-per-fixation figure; Day's reading is that G_f is a measured total throughput that already includes supply, selection and parallelism, so the transfer to humans (not the formula) is the question; the supply scaling (about 690x) favours the critic on transfer"
-  used_by: [G2h]
+  used_by: [G2h, H5]
   sources:
   - G2h#q1
   - G2h#q2
   positions:
     day: 'G_f is a measured total throughput of the LTEE, so mutation supply, selection and parallelism are inside the number'
     critic: 'The formula constrains an observed rate without saying which process produced it, so it is not itself a test of selection; the objection restates the supply objection (M-103)'
+  resolution: derivation
+  status: open
+- id: M-801
+  kind: formula
+  statement: "Haldane cost budget: cost per substitution C = 30 N selective deaths (diploid, single new copy), sustainable selective mortality 10% of N per generation, so the minimum interval is 30/0.10 = 300 generations per beneficial substitution; the limit bounds selected (adaptive) substitutions, not total substitutions; the 300 is verified only as reported by Nunney 2003 (Haldane 1957 not retrieved) and is restated by Day (Z18168236), Nesslig20 and Hössjer"
+  used_by: [H, H2, H4, H5, H6]
+  sources:
+  - H#q1
+  - H2#q2
+  - H4#q2
+  - H5#q1
+  - H6#q1
+  - H6#q2
+  - Q47
+  positions:
+    day: 'Haldane''s 10% selective mortality is a total budget for the population, so parallel fixation does not multiply the limit: about 1 beneficial substitution per 300 generations for mammals'
+    critic: 'The arithmetic 30/0.10 = 300 is accepted (Nesslig20, Nunney report it); the cost bounds selected substitutions only, applies to hard selection only (M-803), and does not apply to neutral drift'
+  resolution: derivation
+  status: open
+- id: M-802
+  kind: formula
+  statement: "Day's extension of the Haldane limit with d: G_eff = G x d = 325,000 x 0.45 = 146,250 effective generations, achievable fixations 146,250/300 = 487 (487.5 truncated), shortfall 20,000,000/487 = 41,068-fold; without d 325,000/300 = 1,083; the claim that selection runs at 45% of Haldane's rate applies d to a death-budget argument as an additional step (Z18168236 s4.2; the 88 Million x post uses the same 146,250)"
+  used_by: [H, H3]
+  sources:
+  - H#q2
+  - H#q4
+  - H3#q3
+  - Q48
+  positions:
+    day: 'The Bio-Cycle correction d = 0.45 rescales the generations available, leaving 146,250 and 487 fixations against 20 million required'
+    critic: 'The arithmetic reproduces; d rescales time for overlapping generations (M-107) and is not a feature of a death budget, so the extension is an extra step; d = 0.45 has its own provenance questions (M-114)'
+  resolution: derivation
+  status: open
+- id: M-803
+  kind: model-choice
+  statement: "Does a cost-of-selection budget exist: Nunney 2003 (M = 2Ku new mutations per generation; cost C = C_0(M) + n C_1(M)) finds the cost below Haldane's for M > 1/2 and rising for M < 1/2, soft selection removing the cost and hard selection likely under directional environmental change, with soft selection limited to intraspecific competition; Hancock says the cost applies only to hard selection and is smaller for an allele starting at intermediate frequency; Keightley 2012 reads U = 2.2 as intolerable under hard selection; the M-dependence figures (D about 6.5 at M = 1 up to 99-163 at M = 0.01) are R4 H3 results, Nunney's K = 10,000, u = 5e-6 gives M = 0.1 and extinction below one substitution per 300 generations"
+  used_by: [H2, H2a, H7]
+  sources:
+  - H2#q1
+  - H2#q3
+  - H2#q4
+  - H2#q5
+  - H2a#q1
+  - H2a#q2
+  - H2a#q3
+  - H7#q1
+  positions:
+    day: 'Nunney confirms that hard selection imposes the cost and that directional change makes hard selection dominate; the budget is real for the adaptive process'
+    critic: 'The cost is not a general bound: it needs hard selection, shrinks at M > 1/2 and with standing variation, and no human hard/soft split is given; Nunney restricts soft-selection relief to intraspecific competition (reading-dependent, claim file H2a)'
+  resolution: derivation
+  status: open
+- id: M-804
+  kind: formula
+  statement: "Deleterious-mutation load under hard selection: mean fitness relative to a mutation-free genotype W = e^(-U), with U = 2.2 for the whole diploid genome (W = 0.11, 20 x (1 - 0.1108) = 17.8 selective deaths for 20 offspring per female) and 0.35 for amino-acid-changing mutations (W = 0.70), from mu about 1.1e-8 and about 70 new mutations per diploid genome per generation (Keightley 2012 abstract); the sqrt(N) truncation-selection purge of mutational load (Worden/LessWrong, relayed via a commenter) concerns this deleterious side, which Day says does not speed adaptation"
+  used_by: [H7, H4]
+  sources:
+  - H7#q1
+  - H7#q2
+  - H7#q3
+  - H4#q3
+  positions:
+    day: 'The sqrt(N) trick helps with mutational load, not with the speed of adaptation; the deleterious side is a separate matter from Haldane''s cost of beneficial fixation'
+    critic: 'Keightley: U = 2.2 is too high for hard selection but tolerable under relative-fitness selection or synergistic epistasis, and no detectable fitness decline is expected; the paper does not address beneficial substitutions or Haldane 1957'
+  resolution: derivation
+  status: open
+- id: M-805
+  kind: inference
+  statement: "Hössjer's cost step: F_max = (t_div x d)/(g_len x G_f) = 9e6 x 0.45/(20 x 1,600) = 127 (his eq. 2.2), x (1.25e-8/1e-10) = 15,800 for the human mutation rate (his eq. 3), x (3e9/4.6e6) = 10 million for genome length (his eq. 4), then 'far less than eq. (4), perhaps more in line with eq. (3)'; the cost step is not computed: eq. (3) is a rate scaling, Haldane's limit over 450,000 generations is 1,500, so 15,800 is 10.5 times it (HO-03 and HO-06, p.3 of the Hössjer PDF)"
+  used_by: [H5]
+  sources:
+  - H5#q2
+  - H5#q3
+  - HO-03
+  - HO-06
+  positions:
+    day: 'Ally Hössjer agrees with the conclusion that selected fixations are far fewer than the neutral-style count, after adjusting the MITTENS equation for humans against E. coli'
+    critic: 'The 15,800 is a rate scaling, not a cost computation, and exceeds both cost-based figures in the corpus (487 from H, about 6,650 from Term 3); no derivation links eq. (3) to the cost of selection (claim file H5, internal non-sequitur)'
+  resolution: derivation
+  status: open
+- id: M-806
+  kind: identity
+  statement: "Dawkins figures used by Day: time to half frequency 11,739 generations (dominant) and 321,444 (recessive) for s about 0.001 (999 survive per 1,000, secondhand from The Genetic Book of the Dead); Day takes t_site = 2 x 321,444 = 642,888, divides by G_eff = 146,250 (4.3958) and multiplies by n = 20,000,000 to get 87,916,307x; the doubling from half frequency to fixation is unexplained, the recessive/dominant choice moves the answer by 27.4 (321,444/11,739), and 20M x t_site treats the substitutions as sequential"
+  used_by: [H3]
+  sources:
+  - H3#q1
+  - H3#q2
+  - Q50
+  - Q51
+  positions:
+    day: 'Even 642,888 generations for one base pair exceeds the available time; the shortfall for 20 million is a factor of 87,916,307'
+    critic: 'The arithmetic reproduces; a single-allele time to half frequency is not a fixation time for a parallel process, so the multiplication by 20 million is the serial reading (see M-706 and M-115)'
+  resolution: derivation
+  status: open
+- id: M-807
+  kind: inference
+  statement: "Is Worden's O(1) bits per generation 'exactly the same' as the Haldane-scale limit: O(1) bits per generation equals 1/300 substitutions per generation (0.0033) only if each substitution carries about 300 bits; at one bit per substitution the information limit is 300 times faster; Haldane counts deaths (30 N per substitution), Worden counts information, and the quoted sentence gives no conversion (Worden 1995 not retrieved; the claim file H4 states the unit argument)"
+  used_by: [H4]
+  sources:
+  - H4#q1
+  positions:
+    day: 'Worden''s O(1) bits per generation is exactly the same as the Haldane-scale limit and Yudkowsky does not refute it'
+    critic: 'The equivalence needs a stated bits-per-substitution conversion that the post does not give; the information bound and the death budget are different quantities'
+  resolution: derivation
+  status: open
+- id: M-808
+  kind: formula
+  statement: "Term 3 selection-limited rate: n_max = s_max/s-bar concurrent sweeps each lasting tau = (2/(s-bar d)) ln(2Ne), so K_sel = s_max d/[2 ln(2Ne)] and per site k_sel = K_sel/L; human case s_max = 1, d = 0.45, L = 3.1e9, Ne = 3,300 gives 8.25e-12 per site (paper 8.3e-12), 0.0256 adaptive substitutions per generation (one per 39), about 6,650 over 260,000 generations; Ne = 1e4 gives 7.3e-12; Term 3 allows 17.1 times more adaptive substitutions per generation than Haldane + d (1/39 against 1/667); the 3,300 is unlocated in the corpus and 'ln(2Ne)' is the only place Ne enters (Z19984826 s3.3, s4.3)"
+  used_by: [H8, H1]
+  sources:
+  - H8#q1
+  - H8#q2
+  - H8#q3
+  - H1#q2
+  - H1#q3
+  positions:
+    day: 'Selection cannot operate without reproductive differential; s_max of order unity bounds the adaptive rate at about 1e-12 per site (retracted 2026-05-07 as a bound on total k, still a bound on adaptive substitution)'
+    critic: 'The formula bounds adaptive substitutions only and the retraction concedes it does not constrain total k; Ne = 3,300 has no source and the 300 and 39 generations per substitution of Haldane + d and Term 3 are not reconciled'
   resolution: derivation
   status: open
