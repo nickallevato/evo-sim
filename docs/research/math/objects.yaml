@@ -63,7 +63,7 @@ objects:
 - id: M-106
   kind: formula
   statement: 'Throughput ceiling: total selection budget sum(s_i) <= s_max over concurrent sweeps, the mean s-bar cancels and the sum is n x s-bar, so the shape of the distribution of fitness effects does not matter'
-  used_by: [F1, G2h]
+  used_by: [F1, G2h, D4b]
   sources:
   - evo007
   positions:
@@ -146,7 +146,7 @@ objects:
 - id: M-113
   kind: formula
   statement: 'Kimura fixation probability for a new mutation as given: P(fix) = (1 - e^(-2s)) / (1 - e^(-4Ns))'
-  used_by: [B7a, F4, B7]
+  used_by: [B7a, F4, B7, D7]
   sources:
   - evo007
   positions:
@@ -468,7 +468,7 @@ objects:
 - id: M-221
   kind: inference
   statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
-  used_by: [B, B5, B5j]
+  used_by: [B, B5, B5j, D2k, D8, D13]
   sources: [B#q1, B5#q2, B5j#q3]
   positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
   resolution: rhetoric
@@ -574,4 +574,142 @@ objects:
       the SNP filter, sample sizes, annotation format and fixation definition and do not overlap between v62 and v66; the 99.8% in a single window is the three-bin share; the observed 1 and 3 are mildly
       above neutral at Ne 1e4'}
   resolution: data-check
+  status: open
+- id: M-401
+  kind: identity
+  statement: 'Size of protein sequence space: 20^250 = 10^325.257 (Eden, talk p.7; the working paper p.110 prints 10^350 for length 250 or less) against the count of molecules ever; ratio 10^-273.3'
+  used_by: [D, D1a, D2, D3]
+  sources: [D#q1, D#q3, D1a#q1, D2#q2, D3#q1, D3#q3]
+  positions: {day: 'Eden''s arithmetic is right and shows a vanishing explored fraction', critic: 'The size of the space says nothing about search unless the landscape is rugged; Wright and Ulam call random assembly the wrong model (M-407)'}
+  resolution: derivation
+  status: open
+- id: M-402
+  kind: parameter
+  statement: 'Count of protein molecules that ever existed: Eden''s printed biosphere inputs (1 cm layer, 30% protein, density 1, 10^10 y, 1 s lifetime) give 10^55.0 and the working paper says less than 10^55, against the printed 10^52; Day''s ch.6 inputs reproduce 3.5e51 only if 1e-4 is a mass fraction; molecules are not distinct sequences (Eden''s own ''say 10^40'')'
+  used_by: [D, D3, D3a]
+  sources: [D#q1, D3#q2, D3#q3, D3a#q1, D3a#q2, D3a#q3]
+  positions: {day: 'About 10^52 molecules ever; the figure covers all useful proteins existing to date (Eden p.7), and Day states it as functional proteins', critic: 'The inputs do not reproduce 10^52 as printed; the figure counts molecules, not functional sequences; the 273-order comparison is insensitive to it'}
+  resolution: derivation
+  status: open
+- id: M-403
+  kind: empirical
+  statement: 'Prevalence of function in random sequences and what it implies for search: Axe 1e-64 per signature-consistent sequence and 1e-77 overall (10^52 x 10^-77 = 1e-25 expected hits), Taylor 5.04e23 library for a 100-mer chorismate mutase (about 2e-24, 20^100 = 1.27e130), Keefe and Szostak 4 binders in 6e12 (6.7e-13); different proteins, lengths and functions, spread of about 53 orders of magnitude'
+  used_by: [D, D2e, D2h, D10, D11, D12]
+  sources: [D#q3, D2e#q3, D2h#q1, D10#q1, D10#q2, D11#q1, D11#q2, D11#q3, D11#q4, D12#q1]
+  positions: {day: 'Functional sequences are so rare that random search from a 1e52 budget fails (Axe), and Taylor says one-step isolation is impossible', critic: 'Frequencies measured in random libraries differ by many orders and are for different functions; binding is not catalysis; per-sequence prevalence is not connectivity (R4 D1 leaves it untouched)'}
+  resolution: data-check
+  status: open
+- id: M-404
+  kind: empirical
+  statement: 'Local landscape ruggedness: the fraction of single-residue or single-nucleotide changes that keep function (Wald ''hard put to find'' a neutral hemoglobin change; Lewontin ''a very large proportion'' do not render the molecule meaningless; Waddington a large fraction of the single-step space); R4 D1 measures 53% of singles below 0.8 of the WT-like level in 114 DMS sets, 71% keeping at least half, GB1 one connected component (99.8%)'
+  used_by: [D, D1a, D1d, D2b, D2c, D2e, D2h, D3b]
+  sources: [D#q3, D1a#q1, D1d#q1, D2b#q2, D2b#q4, D2b#q6, D2c#q1, D2c#q2, D2c#q3, D2e#q1, D2e#q3, D2h#q1, D3b#q1]
+  positions: {day: 'Single changes mostly reduce or destroy function, the landscape is rugged and DMS confirms Eden (D2h, unsourced)', critic: 'Most single changes keep some function and the functional set is connected (R4 D1, local level); ''confirmed'' and cross-family connectivity are untested'}
+  resolution: data-check
+  status: open
+- id: M-405
+  kind: inference
+  statement: 'Path viability and path length: each intermediate must be viable (Crosby), functional proteins common or a connected topology (Eden''s two hypotheses), path lengths bounded by the generations available so only short paths can have been taken; Eden offers no path-length distribution and says it is many powers of 10 above the minimal distance 120'
+  used_by: [D2d, D3b]
+  sources: [D2d#q1, D2d#q2, D3b#q1, D3b#q3, D3b#q4]
+  positions: {day: 'Every intermediate must be viable and long paths are inaccessible, so topology and path length decide the case (Eden, Crosby)', critic: 'The size of the space is not the issue (Wright, Ulam); Eden gives no estimate of path length or of viability along the paths'}
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
+- id: M-406
+  kind: formula
+  statement: 'Eden''s hemoglobin conversion time: 120 point mutations by a unique path, 420 nucleotides, 8-9 amino acids reachable per step, 20 generations per conversion, mutation rate 1e-6, population 1e6 gives 2.7e6 generations, ''not implausible'' (Day: ''vastly exceeds the time available''); printed inputs give 120 x (420 x 8.5 + 20) = 430,800 and 1,287,600 with a factor 3'
+  used_by: [D3b, D3c]
+  sources: [D3b#q4, D3c#q1, D3c#q2]
+  positions: {day: 'Day: Eden calculated that the time required vastly exceeds the time available', critic: 'Eden: 2.7e6 generations is ''a little large but not implausible''; his printed inputs do not reproduce it'}
+  resolution: derivation
+  status: open
+- id: M-407
+  kind: inference
+  statement: 'Twenty questions against random assembly: 250 residues x 5 yes-or-no answers = 1250 questions (information bound log2(20^250) = 1080.5 bits) to specify a protein with a per-step signal, against Eden''s 10^325 random typing; Wright also gives 3e9 x 1e-5 = 3e4 new mutants per locus per generation'
+  used_by: [D2g, D4a, D6]
+  sources: [D2g#q3, D2g#q4, D4a#q1, D4a#q2, D6#q1]
+  positions: {day: 'Wright''s analogy needs a fitness signal at each step and Eden replied that he misunderstood the path-length argument; cumulative selection is not random typing', critic: 'Cumulative selection over small steps needs about 1250 steps, not 10^325 (Wright); Ulam: random construction ''is not the problem at all'''}
+  resolution: derivation
+  status: open
+- id: M-408
+  kind: inference
+  statement: 'Provenance of the fitness mapping in simulations: does the success of an evolutionary algorithm (WEASEL, RNA walks, Fraser''s computer genetics) transfer to biology when the programmer supplies the target and the sequence-to-fitness map (Schützenberger: ''without some built-in matching, nothing interesting can occur''; Dembski: the choice of fitness function is the source of information)'
+  used_by: [D1b, D1c, D2g, D2i, D5, D9a, D13]
+  sources: [D1b#q1, D1c#q1, D2g#q5, D2i#q1, D2i#q2, D5#q1, D5#q2, D5#q3, D5#q5, D9a#q1, D9a#q2, D13#q3]
+  positions: {day: 'Every algorithm has a designed fitness function, so it cannot show that biology supplies the mapping', critic: 'Simulations show what selection does once a fitness mapping exists; biological fitness feedback exists and measured landscapes (GB1) are navigable (R4 D1)'}
+  resolution: data-check
+  status: open
+- id: M-409
+  kind: formula
+  statement: 'Ulam''s serial improvement time: 1e11 individuals, 1e-10 per individual, gamma = 1e-6 gives 1e6 generations to spread, 1e7 to near fixation (logistic ln(1e10)/gamma = 2.3e7), times 1e6 improvements in succession = 1e13 generations; whether improvements are serial or simultaneous and whether gamma = 1e-6 is realistic (Mayr: mutants with 30 percent advantage; Ulam: ''very optimistic'')'
+  used_by: [D2, D2a, D2d, D4, D4b]
+  sources: [D2#q2, D2a#q2, D2a#q5, D2d#q4, D4#q1, D4#q2, D4#q3, D4b#q1, D4b#q2, D4b#q3]
+  positions: {day: 'Ulam''s rate calculation stands: no one calculated a faster rate', critic: 'Mayr: gamma is unreasonably low and improvements can go on simultaneously; the shared-pool table (R4 D1) shows stepping-stone success for k = 10'}
+  resolution: derivation
+  status: open
+- id: M-410
+  kind: formula
+  statement: 'Spetner chain: per step 1/600 x 1/500 = 1/300,000, over 500 steps 300,000^500 = 10^2738.56 (3.64e2738 to 1), and the p = 0.9727 per step (1,080,000 candidate beneficial mutations) needed for a 1e-6 overall chance; single specific path assumed, which the same post disowns'
+  used_by: [D7a, D7b]
+  sources: [D7a#q1, D7a#q2, D7b#q1, D7b#q2]
+  positions: {day: 'The chain shows that sequential specific mutations are vanishingly improbable', critic: 'Day''s post says one cannot assume a single mutation is available at each step; the single-path model is not a model of evolution'}
+  resolution: derivation
+  status: open
+- id: M-411
+  kind: formula
+  statement: 'Weasel under population genetics: per-letter fixation time (2/s) ln(2N) = 396 at s = 0.05 and 19,807 at s = 0.001 for N = 10,000, times 27 letters = 10,692 and 540,000 (Day rounds 11,000 and 540,000), against Dawkins''s 50 generations (ratio 10,800); serial letters assumed; claim-file scratch run gives conditional means 332 and 8,525 and a parallel maximum near 13,092'
+  used_by: [D2i, D9, D9a]
+  sources: [D2i#q2, D9#q1, D9#q2, D9#q3, D9#q4, D9a#q1, D9a#q2]
+  positions: {day: 'Applying fixation times to the Weasel gives 540,000 generations, so the program shows the opposite of its purpose', critic: 'Weasel is truncation selection with a known target, a different model; serial letters overstate the time (parallel completion is far shorter)'}
+  resolution: derivation
+  status: open
+- id: M-412
+  kind: formula
+  statement: 'Eden''s genetic-transfer count: 1/(1e-15 x 1e-21) = 1e36 transfers for one ordered pair of genes, population needed 1e36/(1e12 x 1e-6) = 1e30; unsourced probabilities in an operon-transposition model, Eden''s ''very rough estimate'''
+  used_by: [D14]
+  sources: [D14#q1, D14#q2]
+  positions: {day: 'About 10^36 genetic transfers are needed to form one ordered pair of genes (Davis, relaying Eden)', critic: 'The inputs are unsourced and the mechanism is transposition, not point mutation'}
+  resolution: derivation
+  status: open
+- id: M-413
+  kind: formula
+  statement: 'Hössjer, Bechly and Gauger 2021 waiting time for coordinated regulatory mutations: for several genes, a specific new site and non-beneficial intermediates the waiting time far exceeds 9 My; R4 D15 reproduces the model (about 0.3%) and finds the answer flips under beneficial intermediates, redundant sites or a non-specific gene set'
+  used_by: [D15]
+  sources: [D15#q1, D15#q2]
+  positions: {day: 'Waiting time far exceeds 9 million years for several genes and many orders more for an orphan gene', critic: 'The result holds only under the stated premises, which no source in the corpus supplies; outside them the answer flips (R4 D15)'}
+  resolution: simulation
+  status: open
+  compute: {host: na-workhorse, est_cpu_h: 0, est_ram_gb: 0, measured: false}
+- id: M-414
+  kind: parameter
+  statement: 'Stated probability figures with no model: Milton''s 1 in 10^65 for one protein forming by chance (relayed by Day, no derivation) and Schützenberger''s under 10^-1000 for a self-correcting mechanism arising spontaneously and under 10^-100 for meaning-preserving changes (hypothetical program class, no derivation in the volume)'
+  used_by: [D5a, D8]
+  sources: [D5a#q1, D8#q1]
+  positions: {day: 'The figures show astronomical odds against chance formation', critic: 'No model, inputs or derivation are given; the figures cannot be checked or tied to a biological quantity'}
+  resolution: lookup
+  status: open
+- id: M-415
+  kind: empirical
+  statement: 'Did any Wistar biologist or later critic supply a quantitative reply to Eden, Ulam and Schützenberger: Day ''No one calculated a smaller space ... a faster rate''; Rosenhouse ch.4 refutes them (secondhand); counter-evidence in the volume (Wright p.117 1250 questions, p.119 mutation supply, Fraser p.80, Waddington and Mayr assertions) and post-1966 literature (D1d)'
+  used_by: [D, D1, D1c, D1d, D2, D2e, D2f, D2g, D2j, D2l]
+  sources: [D#q2, D#q4, D#q5, D1#q1, D1c#q1, D1c#q2, D1d#q1, D2#q1, D2#q2, D2#q3, D2e#q1, D2f#q1, D2f#q3, D2g#q1, D2g#q2, D2j#q1, D2l#q1]
+  positions: {day: 'No biologist produced one calculation contradicting the mathematicians; ch.4 gives no number, citation or study', critic: 'Wright gave a calculation (1250 questions) and later work exists; Day''s reading ignores them; Rosenhouse''s ch.6 is not retrieved'}
+  resolution: lookup
+  status: open
+- id: M-416
+  kind: empirical
+  statement: 'Fidelity of Day''s account of the Wistar volume: what the volume prints against what Day''s chapter 6 and posts attribute (Ulam ''come to Eden''s conclusions'' is not in the volume; the ''quasi-continuity ... I don''t know'' exchange is Schützenberger p.79 and Levins p.79, not Lewontin; Mayr''s ''this conference'' sentence and the Bossert remark attributed to Eden are not in the volume; Eden''s biosphere inputs and hemoglobin result differ)'
+  used_by: [D2a, D2b, D2d, D2f, D2j, D3a, D3c, D4a, D5]
+  sources: [D2a#q1, D2a#q2, D2a#q5, D2b#q1, D2b#q2, D2b#q3, D2b#q4, D2d#q1, D2f#q1, D2f#q2, D2j#q1, D2j#q3, D3a#q2, D3a#q3, D3c#q1, D4a#q1, D5#q5]
+  positions: {day: 'Day''s chapter and posts summarise the symposium accurately', critic: 'Several quotations and attributions do not match the volume; they affect fidelity of the historical half, not the arithmetic'}
+  resolution: lookup
+  status: open
+- id: M-417
+  kind: empirical
+  statement: 'Who built the modern synthesis: Hancock (Fisher, Wright, Haldane, Pearson and Kingman were mathematically trained; coalescent theory by Kingman) against Day''s slide (''constructed by naturalists and geneticists, not by mathematicians''; founders did not work out the probability calculations); broad reading contradicted, narrow reading (no one computed the fixation-count budget) untested'
+  used_by: [D2k, D2l]
+  sources: [D2k#q1, D2k#q2, D2k#q3, D2l#q1]
+  positions: {day: 'The synthesis was built by naturalists and geneticists who never worked out the probability calculations', critic: 'Mathematically trained founders built population genetics; the narrow claim about a fixation-count budget is a separate matter'}
+  resolution: lookup
   status: open
