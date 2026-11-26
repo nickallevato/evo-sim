@@ -3090,7 +3090,7 @@ nodes:
     target: F3
   load_bearing: true
   sourcing: firsthand
-  status: extracted
+  status: reviewed
   verdicts:
     internal: non-sequitur
     fidelity: n/a

@@ -14,6 +14,8 @@ Files:
 
 **Update 2026-11-01 (L3 integration; reviews #93-#95).** Added d492-d493 (chk:L3: Day-side credit against chk:A2e-alpha-uricchio, `partly`; critic-side case against A2e C, `partly`), d494-d496 (reviews against chk:L3); lineage L-audit-l3-2026. No claim created, so no mini-form. No verdict value moved.
 
+**Update 2026-11-26 (F1a fix-pass integration).** Added rev:R4-F1a-independent; noted the fix pass 4971d70 on the chk:F1a row. No defeater, no new lineage node (no new check or claim), no mini-form. No verdict field moves; F1a `status` -> `reviewed`.
+
 **Update 2026-11-26 (B3-internal integration; review #97).** Added chk:B3-internal and rev:R4-B3-internal-combined to the registry and lineage L-audit-b3-internal-2026. No defeater (the write-up licenses none), no claim created, so no mini-form. No verdict field moves: B3 internal stays `pending`.
 
 **Update 2026-11-26 (E5-external integration; review #98).** Added chk:E5-external and rev:R4-E5-external-combined to the registry and lineage L-audit-e5-external-2026. No defeater (the write-up licenses none), no claim created, so no mini-form. One verdict field moves: E5 external `pending` -> `supported`, scoped.
@@ -174,7 +176,7 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | chk:F1b | audit | in-transit fixation count measured directly (latency vs throughput) | RESULTS §F1b; results/R4-F1b.md (added 2026-10-09) |
 | chk:B5b | audit | Mansfield's supply argument with a sourced neutral fraction (Rands 2014) | RESULTS §B5b; results/R4-B5b.md (added 2026-10-09) |
 | chk:E5E6 | audit | LTEE fixation counts recounted under snapshot, first-crossing, strict and strict-plus-within rules | RESULTS §E5 / E6; results/R4-E5E6.md (added 2026-10-09) |
-| chk:F1a | audit | serial use of the latency-derived 19,800 against parallel sweeps at Day's s and N_e | RESULTS §F1a; results/R4-F1a.md (added 2026-10-09) |
+| chk:F1a | audit | serial use of the latency-derived 19,800 against parallel sweeps at Day's s and N_e; fix pass 4971d70 (2026-11-26): an engine consistency check, counts fixed by construction | RESULTS §F1a; results/R4-F1a.md (added 2026-10-09; fix pass 2026-11-26) |
 | chk:B2b | audit | Hard Limits ceiling and Wright N_e formula against simulated offspring variance | RESULTS §B2b; results/R4-B2b.md (added 2026-10-09) |
 | chk:D15 | audit | Hössjer's regulatory waiting time (2021 model) swept over specific-site, redundancy, intermediate-fitness and gene-set assumptions | RESULTS §D15; results/R4-D15.md (added 2026-10-10) |
 | chk:H8 | audit | Haldane's 1/300 in Haldane's own regime (R 1.05-3, D measured; hard and two soft arms) and Term 3's s_max | RESULTS §H8 / H5; results/R4-H8.md (added 2026-10-10) |
@@ -218,6 +220,7 @@ The Day column is larger because Day's numbers have many dated versions (the ver
 | rev:R4-F1b-combined | audit | combined review (correctness, Day-side and critic-side steelman) of F1b; low-stakes tier | results/REVIEW-R4-F1b-combined.md (2026-10-09) |
 | rev:R4-B5b-combined | audit | combined review (correctness, Day-side and critic-side steelman) of B5b; low-stakes tier | results/REVIEW-R4-B5b-combined.md (2026-10-09) |
 | rev:R4-E5E6-combined | audit | combined review (correctness, Day-side and critic-side steelman) of E5/E6; low-stakes tier | results/REVIEW-R4-E5E6-combined.md (2026-10-09) |
+| rev:R4-F1a-independent | audit | independent re-review (#24, fresh Sonnet) of F1a: 1 MAJOR (near-circular design), dispersion MINOR | results/REVIEW-R4-F1a-independent.md (2026-10-09) |
 | rev:R4-F1a-combined | audit | combined review (correctness, Day-side and critic-side steelman) of F1a; low-stakes tier | results/REVIEW-R4-F1a-combined.md (2026-10-09) |
 | rev:R4-B2b-combined | audit | combined review (correctness, Day-side and critic-side steelman) of B2b; low-stakes tier | results/REVIEW-R4-B2b-combined.md (2026-10-09) |
 | rev:R4-D15-correctness | audit | correctness review of Hössjer regulatory waiting time; load-bearing tier | results/REVIEW-R4-D15-correctness.md (2026-10-10) |
