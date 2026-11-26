@@ -74,7 +74,7 @@ objects:
 - id: M-107
   kind: model-choice
   statement: 'Is the selective turnover coefficient d coherent and needed beyond N_e scaling: WD says Wright-Fisher and Moran answer how fast drift moves neutral alleles and d answers how fast the gene pool turns over; Hancock says gene-pool turnover is not meaningful because alleles are staggered; Day says rates are averages of staggered events'
-  used_by: [A4, A4e, A4f]
+  used_by: [A4, A4e, A4f, B5h]
   sources:
   - evo008
   - evo009
@@ -111,7 +111,7 @@ objects:
 - id: M-110
   kind: parameter
   statement: 'Effective generations since the CHLCA: 252,000 nominal (6.3M y / 25 y) at d = 1; 252,000 x 0.80 = 201,600 effective at d = 0.80'
-  used_by: [A4c, A1]
+  used_by: [A4c, A1, B1a]
   sources:
   - evo009
   - evo008
@@ -123,7 +123,7 @@ objects:
 - id: M-111
   kind: identity
   statement: k = mu holds in finite time only for a static effective population equal to the census size; with overlapping generations no finite period has k = mu (arXiv 2208.00148v1); the identity has no time term so it cannot say whether fixations complete in a window
-  used_by: [B2, B3]
+  used_by: [B2, B3, B1, B7]
   sources:
   - pgenetics
   - evo009
@@ -146,7 +146,7 @@ objects:
 - id: M-113
   kind: formula
   statement: 'Kimura fixation probability for a new mutation as given: P(fix) = (1 - e^(-2s)) / (1 - e^(-4Ns))'
-  used_by: [B7a, F4]
+  used_by: [B7a, F4, B7]
   sources:
   - evo007
   positions:
@@ -169,7 +169,7 @@ objects:
 - id: M-115
   kind: inference
   statement: 'Rate vs latency: an observed generations-per-fixation average holds whether fixations are serial or overlapping (highway: 3,600 s / 360 cars = 10 s per car); does applying it to the divergence time follow'
-  used_by: [F1, F1a]
+  used_by: [F1, F1a, B2d, B5g, B6c]
   sources:
   - evo008
   positions:
@@ -216,7 +216,7 @@ objects:
 - id: M-119
   kind: inference
   statement: 'Molecular-clock circularity: divergence dates are derived from k = mu and then cited as independent confirmation of it (Day: the sole practical application of k = mu)'
-  used_by: [B4d, C6]
+  used_by: [B4d, C6, B4e, B4f]
   sources:
   - pgenetics
   positions:
@@ -304,4 +304,188 @@ objects:
     day: Gene flow adds a stage to every fixation and works against divergence, so it cannot close the accounting gap
     critic: 'Not addressed first-hand. Open: structured-population fixation times can be shorter or longer than panmictic ones depending on migration and selection regime (a derivation, not done); the post gives no transit-time formula; the LTEE is a set of isolated, unstructured flasks'
   resolution: derivation
+  status: open
+- id: M-201
+  kind: formula
+  statement: 'Finite-window neutral count from an empty start: E[F(T)] = mu L int_0^T F_X(u) du ~ mu L (T - 4 Ne), against the naive mu L T; with mu L = 30 and T = 252,000, naive = 7,560,000'
+  used_by: [B1, B1a, B6a]
+  sources: [B1#q1, B1a#q1, B1a#q2]
+  positions: {day: Exact for an empty start; the leading-order correction subtracts the mean fixation time from the window, critic: 'Exact for the empty-start case (a point for Day); the premise is the empty start, and F_X holds only for new post-split mutations while pairwise divergence is not reduced by the empty-pipe term (R4 B1c/B4a)'}
+  resolution: derivation
+  status: open
+- id: M-202
+  kind: inference
+  statement: 'Start state of the ancestral pipeline at the human-chimp split: empty (generation zero, no standing variation) vs full (equilibrium for the ancestral Ne history); Day moved from "functionally nonexistent" (10-01 para 22) to "full but shorter" (para 36)'
+  used_by: [B1, B6, B1c, B1d, B5f]
+  sources: [B1#q3, B1c#q1, B1c#q2, B1d#q1, B5f#q4, B6#q1]
+  positions: {day: 'Empty at generation zero (IR); later: full but shorter, 228,000 generations', critic: 'Full: the ancestral population was already fixing and eliminating variants (Mansfield, justatest90); a sourced Ne history decides it (R4 B1c: per-lineage excess K/UT 1.9-4.0)'}
+  resolution: data-check
+  status: open
+- id: M-203
+  kind: parameter
+  statement: Mean neutral fixation time conditional on fixation = 4 Ne generations (Kimura and Ohta 1969 Eq. 15); the "pipe length"; Day applies 4 Ne = 228,000 at ancestral census ~100,000 (Vk=5) and 29 billion at census 8 billion
+  used_by: [B1, B1a, B1b, B1d, B5f, B7b]
+  sources: [B1a#q1, B1b#q1, B1d#q2, B1d#q3, B7b#q1]
+  positions: {day: 4Ne is the transit time that sets the window correction and the pipe length; at census 8 billion the pipe is 29 billion generations long, critic: 'The 4Ne average is textbook and accepted; the 29 billion does not follow from the same Ne/N (4Ne = 1.83e10); elapsed time is long compared with 4Ne for 252,000 generations only if Ne is small (justatest90)'}
+  resolution: lookup
+  status: open
+- id: M-204
+  kind: formula
+  statement: 'Short-time completion fraction F(T) ~ exp(-pi^2 Ne / T) for T << 4Ne (also Chalub-derived closed form), against the naive fill T/(4Ne); applied to humans, Ne/T ~ 1.8e7 gives exp(-pi^2 x 1.8e7) ~ 10^(-77.15 million) (Day: "seventy-eight-millionth"); a 10^14-locus rescue leaves 10^(-78 million); Day simulation: six fixations against ~750 expected linearly'
+  used_by: [B1e, B2a, B2c]
+  sources: [B2a#q1, B2c#q1, B1e#q3]
+  positions: {day: The linear guess overstates the fill by a vast factor; k(T) = mu F(T); many loci do not rescue, critic: 'Parameters for modern census size do not describe the lineage: HL concedes throughput, drainage and a partial ancestral load, so a current-size tail does not bound lineage fixations (R4 B2)'}
+  resolution: derivation
+  status: open
+- id: M-205
+  kind: formula
+  statement: 'Census ceiling: Ne = (4N - 2)/(Vk + 2) with 4 Ne < G gives N < (Vk + 2) G / 16 + 1/2 ("X = (Vk+2) G/16"); stated outputs ~10,000 for a large long-lived vertebrate, 35,000 human species / 100,000 lineage, 28,000 elephant; k = mu confined to demographic conditions no non-endangered species meets'
+  used_by: [B, B2, B1d, B2b]
+  sources: [B2#q1, B2b#q1, B2b#q2, B2b#q3, B2#q2]
+  positions: {day: Reproductive variance and lineage generations alone fix a ceiling; the domain of k = mu is empty for large vertebrates, critic: 'Algebra is correct; the inputs (Vk, G, equating N to the census) are the dispute: keruru measured Ne three orders away; the domain claim is a statement about current size, not the lineage'}
+  resolution: derivation
+  status: open
+- id: M-206
+  kind: empirical
+  statement: 'Census N to effective Ne in real data: diversity-derived Ne is 19-46 times below census in mammals (Day); a temporal Ne from ancient genomes is three orders below Wright 4N/(Vk+2) on the Bronze Age census (keruru, who does not claim the ceiling refuted)'
+  used_by: [B3, B2e]
+  sources: [B2e#q1, B2e#q2, B3#q1]
+  positions: {day: 'Census exceeds Ne by a large factor, so N/Ne is not 1', critic: 'The ratio is real but N/Ne does not enter the neutral rate (supply and fixation both use census, M-209); the measured temporal Ne tests the input, not the cancellation'}
+  resolution: data-check
+  status: open
+- id: M-207
+  kind: inference
+  statement: 'Does the pipe fill within the lineage window under the stated demography: HL says the neutral channel shuts because "the pipe never fills"; fill readings F 0.697 (6.5 My), delivered share D 0.256, Takahata Ne = 1e5 F 0.281, current size, HL 2 My window F 0.025 (R4 RHclose); also "the pipeline cannot fill" after conceding steady-state throughput'
+  used_by: [B, B2d]
+  sources: [B#q3, B2d#q3]
+  positions: {day: 'The neutral channel closes: same window, no fill', critic: 'Under the lineage window the pipe is about 70% loaded; HL itself gives a partial ancestral load, so "nearly empty" needs an empty lineage pipe its own text excludes'}
+  resolution: derivation
+  status: open
+- id: M-208
+  kind: model-choice
+  statement: 'Size-change transient: k = mu holds only after one size is held ~4 Ne generations; after a change the far end delivers what the near end fed 4 Ne back'
+  used_by: [B1b]
+  sources: [B1b#q1, B1b#q2]
+  positions: {day: Standard transient lag theory (quoted as Day's mechanism), critic: Accepted as theory; whether the human lineage had such a change at the relevant magnitude is the empirical question (B1c); R4 XT did not reproduce the B1b expansion number (0.699 vs 0.733)}
+  resolution: derivation
+  status: open
+- id: M-209
+  kind: model-choice
+  statement: 'Which population size enters neutral substitution: supply 2N mu uses census N; fixation probability is 1/(2Ne) (Day Feb 2026: k = mu N/Ne), vs 1/(2N) in the same N so that k = mu (critics; Day concession 2026-08-27, keruru retraction, Maruyama invariance in Day''s own Hard Limits); includes 2N x 1/(2Ne) = N/Ne > 1 (Matev) and 8e9/1e4 = 800,000 (Grok exchange)'
+  used_by: [B5, B7, B1e, B3a, B3c, B3e, B3f, B3g, B3i, B5b, B5f, B5g, B7a, B7b, B7c]
+  sources: [B3a#q1, B3a#q2, B3a#q3, B3e#q1, B3f#q1, B3f#q2, B3g#q1, B3i#q1, B5#q1, B5#q3, B5g#q1, B7#q1, B7c#q1, B7c#q4]
+  positions: {day: 'Original: N/Ne enters k; later concession: no Ne on either side of the Kimura identity; 3rd edition needed', critic: 'The cancellation holds: supply and fixation share the same N; N/Ne > 1 is not a probability; neutral mutations fix at the mutation rate (Hancock, Mansfield, DarwinZDF42, Paul King, keruru, Kimura 1962)'}
+  resolution: derivation
+  status: open
+- id: M-210
+  kind: formula
+  statement: 'Does census fluctuation with overlapping generations make k differ from mu: RRME k = mu x (sum N_i^2 / sum N_i) / N_t = 0.743 mu from four human census generations (6.091/8.2); Balloux and Lehmann 2012: the neutral rate depends on size fluctuations only with overlapping generations'
+  used_by: [B3, B3b, B3c]
+  sources: [B3#q2, B3b#q1, B3b#q2, B3b#q3, B3c#q1, B3c#q2, B3c#q3]
+  positions: {day: 'k = 0.743 mu; 25.7% shortfall is a mathematical consequence, confirmed by B&L', critic: B&L shows an effect only with overlap plus fluctuation and its size is model-dependent; RRME is a four-generation example; R4 XT did not reproduce B3b non-overlapping k/U (0.95-0.96) nor B3c(e) (0.64)}
+  resolution: derivation
+  status: open
+- id: M-211
+  kind: inference
+  statement: 'Circularity of Ne = 10,000: it comes from theta = 4 Ne mu, which presupposes k = mu (the identity under test)'
+  used_by: [B3h]
+  sources: [B3h#q1, B3h#q2]
+  positions: {day: 'The standard Ne is derived using the identity, so it cannot be used to test it', critic: theta = 4 Ne mu is the equilibrium diversity formula and does not use k = mu; the age of the neutral clock and Ne estimates come from different data}
+  resolution: derivation
+  status: open
+- id: M-212
+  kind: formula
+  statement: 'Expected neutral fixations on the human lineage as the product of a per-generation mutation count, a fixation probability and generations: McCarthy 450e9/20,000 = 22.5M (20M time-adjusted), Mansfield 1 per generation, Hancock 76.8 per generation, Nesslig20 2 x 75 x 252,000 = 37.8M, justatest90 38.4 x 252,000 = 9.7M, relayed 7.2M, Hossjer d x mu 7.6M, Day corrected 8.25'
+  used_by: [B3e, B5a, B5b, B5c, B5d, B5e, B5f, B5h]
+  sources: [B3e#q1, B3e#q2, B5a#q1, B5a#q2, B5a#q3, B5b#q1, B5b#q2, B5c#q1, B5c#q4, B5d#q1, B5d#q2, B5e#q1, B5e#q2, B5f#q1, B5f#q3, B5h#q1, B5h#q2]
+  positions: {day: 'Mutations are not fixations: 30 cannot fixate per generation; the corrected calculation gives 8.25 fixations against 20 million required', critic: 'Neutral mutations fix at the rate they arise, so supply x 1/(2N) = mu per site per generation gives millions over 252,000 generations, within a factor of 2 of the 17.5-20 million required'}
+  resolution: derivation
+  status: open
+- id: M-213
+  kind: identity
+  statement: 'Genome-size and lineage-count factors in a neutral-count formula: haploid 3.2e9 vs diploid 6.4e9 (Hancock correction), halving 152 to 76, x 2 for two lineages (38M, 37.8M), Day 2019 15M per lineage x 2 = 30M'
+  used_by: [B5c, B5e, B5f, B6b]
+  sources: [B5c#q2, B5c#q3, B5c#q4, B5e#q2, B5f#q1, B6b#q2]
+  positions: {day: 'Day counts each lineage separately: 15M fixed in humans and 15M in chimps', critic: 'Count the haploid genome and the number of lineages explicitly; a flag that drops a factor is wrong (rule: write the formula in full)'}
+  resolution: derivation
+  status: open
+- id: M-214
+  kind: empirical
+  statement: 'Bergeron et al. 2023: pedigree mutation rates vs fossil-calibrated substitution rates in 55 vertebrates differ by a median factor of 25 (R4 B3m: 25.4 from Table 9, n = 55)'
+  used_by: [B3d, B3m]
+  sources: [B3d#q2, B3m#q1]
+  positions: {day: The identity is directly falsified by a median factor of 25, critic: 'The 25 is a ratio of two estimates with different calibrations (per-year vs per-generation, fossil dates), not a test of fixation probability; reproduces but proves what it measures only with the dating assumption'}
+  resolution: data-check
+  status: open
+- id: M-215
+  kind: formula
+  statement: 'Human-chimp substitution rate vs pedigree mutation rate: Day k = 32.3 mu (Bergeron pedigree rate vs Yoo required count; reconstructs only from base-pair totals, 205M/252,000 over Bergeron mammal mean times 3.1e9 = 32.9, R4 B3); keruru: fossil-calibrated rate about twice the pedigree rate (~1.2e-8), unreconciled'
+  used_by: [B3, B3d, B4g]
+  sources: [B3#q3, B3d#q1, B4g#q1]
+  positions: {day: 'k = 32.3 mu, not mu', critic: The factor is ~2 once the calibration is consistent; 32.3 treats base-pair totals as events}
+  resolution: data-check
+  status: open
+- id: M-216
+  kind: model-choice
+  statement: 'Reproductive covariance between genotype and reproduction (sweepstakes): does P(fix) = 1/(2N) or = x0 hold in real populations; Day 08-27: keruru''s chains set the covariance to zero by fiat; Day 09-21 (Athos, relayed): P(fix) = x0 is the frictionless-coin answer; vs keruru exact chains 1/(2N_census); Day Z23188201: 1/(2N) holds under any offspring distribution by the martingale property'
+  used_by: [B3g, B7c]
+  sources: [B3g#q3, B3g#q4, B3g#q5, B3g#q6, B7c#q2]
+  positions: {day: Covariance is the disputed parameter; the maths without it answers the wrong question, critic: 'The neutral case has no covariance by definition: 1/(2N) is exact for neutral alleles under any offspring distribution (martingale)'}
+  resolution: derivation
+  status: open
+- id: M-217
+  kind: formula
+  statement: 'Clock recalibration with N/Ne: t_actual = t_clock x 2 / [(Nh/Ne,h) + (Nc/Ne,c)] (eq. 7); outputs: 6-7 Mya becomes 200-580 kya (most plausible 200-360), 6.5 Mya becomes 68 kya at census 600,000 (6.5e6/68e3 = 95.6x), later revised to 250 kya-1.3 Mya'
+  used_by: [B4, B4b, B4c]
+  sources: [B4#q1, B4#q2, B4b#q1, B4b#q2, B4c#q1]
+  positions: {day: The consensus date collapses once supply uses census N, critic: The N/Ne factor does not exist if supply and fixation use the same N (M-209); the recalibration depends on that}
+  resolution: derivation
+  status: open
+- id: M-218
+  kind: inference
+  statement: 'Which terms of the MITTENS-style bound constrain total k and which only the adaptive rate: Day 05-07 retraction: Term 3 (~1e-12) limits the adaptive rate, total k governed by Terms 1 and 2'
+  used_by: [B4c]
+  sources: [B4c#q2]
+  positions: {day: 'Retraction: output was misread as a constraint on total k', critic: Concedes the point; the total rate is governed by the neutral terms}
+  resolution: derivation
+  status: open
+- id: M-219
+  kind: formula
+  statement: 'Pairwise human-chimp divergence D = 2 mu T + theta_anc with theta = 4 Ne mu per site (coalescent; t1 6-7 My, t2 1-2 My, Chimp Consortium 2005); differences include post-split fixations and polymorphism; Day: 4 x 1e4 x 1.2e-8 x 3e9 = 1.44M (0.35% of 410M, "a rounding error"); Camestros: Day counts all differences as post-split'
+  used_by: [B6, B4a, B6a, B6b]
+  sources: [B4a#q1, B4a#q2, B4a#q3, B6#q1, B6#q2, B6a#q1, B6a#q2, B6b#q1, B6b#q2]
+  positions: {day: 'Ancestral polymorphism is a rounding error; the empty-pipe removal exceeds it (as stated, which is the arithmetic flag)', critic: Differences include ancestral polymorphism; pairwise divergence is not reduced by the empty-pipe term (d - 2 mu T = theta_anc); the full ancestral pipe supplies it}
+  resolution: derivation
+  status: open
+- id: M-220
+  kind: inference
+  statement: 'Is neutral theory a post-hoc retreat: drift dominates molecular evolution while selection dominates phenotypes; neutral and parallel-fixation models predate Day (Kimura 1968, Ohta)'
+  used_by: [B5j]
+  sources: [B5j#q1, B5j#q2]
+  positions: {day: 'Neutral theory is the fleeing place of neo-Darwinists; removing selection removes Darwin (Duffy slide, relayed)', critic: Neutral theory exists independently of Day and is not a rescue; selection acts at the phenotypic level}
+  resolution: lookup
+  status: open
+- id: M-221
+  kind: inference
+  statement: 'Rhetorical finality and incredulity statements: "nothing can salvage selection or neutral theory" (Day), "mystifying" (Mansfield), "we are not here to save Darwin as a human" (Hancock); rule RH: no verdict, device and dialectical core recorded in ledgers/slips.md'
+  used_by: [B, B5, B5j]
+  sources: [B#q1, B5#q2, B5j#q3]
+  positions: {day: 'Finality claim: both mechanisms fail', critic: Incredulity and motive disclaimers; the dialectical core is in the neighbouring quotes}
+  resolution: rhetoric
+  status: open
+- id: M-222
+  kind: inference
+  statement: 'Extinction under unchecked drift: if drift could fix at the maximum neutral speed, selection is not operating, and 3x more harmful than neutral substitutions would make humans infertile and extinct within centuries'
+  used_by: [B9]
+  sources: [B9#q1]
+  positions: {day: 'Reductio: if drift changed the genome, deleterious accumulation would extinguish humans', critic: 'R4 B9 reading A: fitness halves in 338-3,457 years (Lynch 2016) but the premise (all selection off at once) is a counterfactual; the 3x ratio is an input'}
+  resolution: derivation
+  status: open
+- id: M-223
+  kind: empirical
+  statement: 'Reading of Chalub 2022 (Gegenbauer solution of the neutral Kimura equation with absorbing boundaries): its time-dependent fixation probability converges to the steady state u(p) = p only as t -> inf (sentence superseded in the 2026-10-13 file but the claim stands); Day and Athos extract the dominant eigenvalue; Day: 1/(2N) is an assumption imported from Wright-Fisher, not a result of the maths'
+  used_by: [B1e]
+  sources: [B1e#q1, B1e#q2, B1e#q3, B1e#q4]
+  positions: {day: Chalub shows the transient and that 1/(2N) is imported from the model, critic: 'Chalub derives P(fix) = x0 (starting frequency) exactly; the Wright-Fisher model sets 1/(2N) as the starting frequency, which is the standard result (Athos 09-21 para 4 agrees); verified-partial'}
+  resolution: lookup
   status: open
